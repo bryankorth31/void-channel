@@ -105,8 +105,9 @@ h2{margin:18px 20px 8px;font-size:18px;display:flex;align-items:baseline;gap:10p
 .rowwrap{position:relative;padding:0 20px}
 .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 10px;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
 .track .card{flex:0 0 156px;scroll-snap-align:start}
-.arrow{position:absolute;top:0;bottom:10px;width:40px;border:0;background:linear-gradient(90deg,var(--bg),transparent);color:var(--fg);font-size:28px;cursor:pointer;z-index:2;opacity:.85}
-.arrow.l{left:0}.arrow.r{right:0;background:linear-gradient(270deg,var(--bg),transparent)}.arrow:hover{opacity:1;color:var(--acc)}
+.arrow{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:2px solid var(--acc);background:rgba(7,8,12,.92);color:var(--acc);font-size:30px;line-height:38px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
+.arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--acc);color:#07080c}
+@media(hover:none){.arrow{display:none}}
 .detail{margin:0 20px 16px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:90px 1fr;gap:14px;animation:drop .18s ease-out}
 @keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .detail img{width:90px;border-radius:6px;display:block}.detail b{font-size:17px}.detail p{margin:6px 0;font-size:14px;max-width:820px}.detail .g{color:var(--dim);font-size:12px}
