@@ -7,7 +7,7 @@ runs `node scripts/site.js` and serves the `site/` folder. No server, no databas
 
 One-time, in the Cloudflare dashboard (B does this; takes ten minutes):
 
-1. Workers & Pages -> Create -> Pages -> Connect to Git -> pick `b-conscious/void-channel`.
+1. Workers & Pages -> Create -> Pages -> Connect to Git -> pick `bryankorth31/void-channel`.
 2. Build settings:
    - Production branch: `master`
    - Build command: `node scripts/site.js --base https://voidtv.net`
