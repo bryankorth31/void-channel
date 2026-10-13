@@ -19,7 +19,12 @@ One-time, in the Cloudflare dashboard (B does this; takes ten minutes):
    the DNS zone, so it offers to create the records; accept. This is the moment the old Vercel site
    stops being served (swap, step 5). Until then the Pages address and voidtv.net coexist.
 
-Every later push to `master` rebuilds and redeploys in about a minute. The catalog is in the repo,
+Every later push to `master` rebuilds and redeploys in about a minute.
+
+**Catalog cadence:** `node scripts/publish.js` commits whatever the builder has written to `catalog/`
+and `docs/` and pushes it (no-op when nothing changed). A Windows Task Scheduler job, "VoidTV
+Publish", runs it every two hours on B's PC (log: `catalog/cache/publish.log`). Remove with
+`schtasks /Delete /TN "VoidTV Publish" /F`; the nightly job will fold this in later. The catalog is in the repo,
 so no secrets are needed at build time. `backend/.env` (the TMDB token) stays local and ignored.
 
 ## What `site/` contains
