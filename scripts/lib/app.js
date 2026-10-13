@@ -7,7 +7,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const SITE_NAME = 'VOIDtv';
 const DONATE_URL = 'https://square.link/u/dJioBmlW';
-const CREDIT = `A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3). Free to use, no set amount, never required; if it gave you something, <a href="${DONATE_URL}" target="_blank" rel="noopener">give back to CASH</a> and be part of the good work. Donations go to real-world events.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
+const CREDIT = `A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3) that works on ways for people to have good things that fit a busy life and a stretched budget. Free to use, no set amount, never required; <a href="${DONATE_URL}" target="_blank" rel="noopener">give back to CASH</a> if the work is worth supporting.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
 
 function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } }
 
@@ -90,7 +90,7 @@ header input{flex:1;max-width:420px;background:var(--panel);border:1px solid var
 header input:focus{border-color:var(--acc)}
 header .donate{margin-left:auto;color:#07080c;background:var(--acc);font-size:14px;font-weight:600;border-radius:999px;padding:8px 16px;white-space:nowrap}header .donate:hover{filter:brightness(1.12)}
 .support{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 20px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;background:var(--panel);font-size:14px}
-.support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support a.btn{background:var(--acc);color:#07080c;border:0;font-weight:600}
+.support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support .acts{display:flex;gap:8px;flex-wrap:wrap}.support a.btn{border:1px solid var(--acc);color:var(--acc);font-weight:600}.support a.btn:last-child{background:var(--acc);color:#07080c}
 footer a{color:var(--acc)}
 @media(max-width:600px){header .donate{padding:7px 11px;font-size:13px}}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
@@ -181,7 +181,7 @@ function browse(){const list=filtered();const any=state.type||state.genre||state
  let h='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
  +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
  +'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>';
- if(!any)h='<div class="support"><span class="sp"><b>VOIDtv is free and stays free.</b> No set amount, never required. Building things people can use for free, and use better, takes time and money. If this gave you something, giving back lets you be part of the good work. Run by the Church of American Strength &amp; Hope, a 501(c)(3); donations go to real-world events.</span><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></div>'+h;
+ if(!any)h='<div class="support"><span class="sp"><b>VOIDtv is free and stays free.</b> The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is the work of CASH, the Church of American Strength &amp; Hope: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it.</span><span class="acts"><a class="btn" href="https://cashvalues.org" target="_blank" rel="noopener">About CASH</a><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></span></div>'+h;
  if(any)h+='<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
  if(any){h+='<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>';}
  else{
