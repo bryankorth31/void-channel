@@ -7,7 +7,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const SITE_NAME = 'VOIDtv';
 const DONATE_URL = 'https://square.link/u/dJioBmlW';
-const CREDIT = `A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3). Free to use; if it's worth something to you, <a href="${DONATE_URL}" target="_blank" rel="noopener">donate to CASH</a> and it goes toward real-world events.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
+const CREDIT = `A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3). Free to use, no set amount, never required; if it gave you something, <a href="${DONATE_URL}" target="_blank" rel="noopener">give back to CASH</a> and be part of the good work. Donations go to real-world events.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
 
 function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } }
 
@@ -181,7 +181,7 @@ function browse(){const list=filtered();const any=state.type||state.genre||state
  let h='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
  +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
  +'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>';
- if(!any)h='<div class="support"><span class="sp"><b>VOIDtv is free and stays free.</b> It is run by the Church of American Strength &amp; Hope, a 501(c)(3). Donations pay for real-world events, not ads or paywalls.</span><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></div>'+h;
+ if(!any)h='<div class="support"><span class="sp"><b>VOIDtv is free and stays free.</b> No set amount, never required. Building things people can use for free, and use better, takes time and money. If this gave you something, giving back lets you be part of the good work. Run by the Church of American Strength &amp; Hope, a 501(c)(3); donations go to real-world events.</span><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></div>'+h;
  if(any)h+='<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
  if(any){h+='<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>';}
  else{
