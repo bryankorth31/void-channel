@@ -109,7 +109,7 @@ footer a{color:var(--acc)}
 .card .more:hover,.card.open .more{border-color:var(--acc);color:var(--acc)}
 h2{margin:18px 20px 8px;font-size:18px;display:flex;align-items:baseline;gap:10px}h2 small{color:var(--dim);font-weight:400;font-size:13px}h2 .all{margin-left:auto;color:var(--acc);font-size:13px;font-weight:400;cursor:pointer}
 .rowwrap{position:relative;padding:0 20px}
-.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 10px;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;scroll-behavior:smooth;padding:4px 2px 10px;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
 .track .card{flex:0 0 156px;scroll-snap-align:start}
 .arrow{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:2px solid var(--acc);background:rgba(7,8,12,.92);color:var(--acc);font-size:30px;line-height:38px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
 .arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--acc);color:#07080c}
@@ -172,11 +172,13 @@ function card(s,ctx){const total=s.eps;const open=state.open===s.slug;return '<d
  +(ctx==='grid'?'<div class="indetail"><p>'+esc(s.overview||'No description yet.')+'</p><p class="g">'+esc(meta(s))+'</p></div>':'')+'</div>'}
 function detail(s){return '<div class="detail">'+(s.poster?'<img src="'+s.poster+'" alt="">':'<div></div>')+'<div><b>'+esc(s.show)+'</b><p>'+esc(s.overview||'No description yet.')+'</p><div class="g">'+esc(meta(s))+'</div><div class="acts"><button class="btn" onclick="go(\\''+s.slug+'\\')">▶ Play</button><button class="btn" onclick="state.open=null;render()">Close</button></div></div></div>'}
 function toggle(slug,ctx){state.open=state.open===slug?null:slug;state.openCtx=ctx;render();if(state.open&&ctx!=='grid'){const d=document.querySelector('.detail');if(d)d.scrollIntoView({block:'nearest',behavior:'smooth'})}}
-function shelf(title,list,key){const id='t'+Math.random().toString(36).slice(2,8);const openHere=state.open&&state.openCtx===key&&list.some(s=>s.slug===state.open);
+function shelf(title,list,key){const id='t-'+key.replace(/[^a-z0-9]+/gi,'-').toLowerCase();const openHere=state.open&&state.openCtx===key&&list.some(s=>s.slug===state.open);
  return '<h2>'+esc(title)+'<small>'+list.length+' shows</small>'+(key.startsWith('type:')?'<span class="all" onclick="state.type=\\''+esc(title)+'\\';render();window.scrollTo(0,0)">See all ›</span>':key.startsWith('tag:')?'<span class="all" onclick="state.tag=\\''+esc(title)+'\\';render();window.scrollTo(0,0)">See all ›</span>':'')+'</h2>'
  +'<div class="rowwrap"><button class="arrow l" onclick="slide(\\''+id+'\\',-1)">‹</button><div class="track" id="'+id+'">'+list.map(s=>card(s,key)).join('')+'</div><button class="arrow r" onclick="slide(\\''+id+'\\',1)">›</button></div>'
  +(openHere?detail(list.find(s=>s.slug===state.open)):'')}
-function slide(id,dir){const t=$(id);if(t)t.scrollBy({left:dir*(t.clientWidth-120),behavior:'smooth'})}
+function slide(id,dir){const t=$(id);if(!t)return;const step=168;t.scrollBy({left:dir*Math.max(step,Math.floor((t.clientWidth-120)/step)*step),behavior:'smooth'})}
+// Re-rendering replaces the whole page, so remember where each shelf was scrolled and put it back (no animation).
+function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach(t=>{pos[t.id]=t.scrollLeft});const y=window.scrollY;fn();document.querySelectorAll('.track').forEach(t=>{if(pos[t.id]){t.style.scrollBehavior='auto';t.scrollLeft=pos[t.id];t.style.scrollBehavior=''}});window.scrollTo(0,y)}
 function browse(){const list=filtered();const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
  let h='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
  +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
@@ -223,7 +225,7 @@ function play(se,e){state.se=se;state.e=e;remember();showView(true)}
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){try{localStorage.setItem('voidtv:'+state.show.slug,JSON.stringify({se:state.se,e:state.e}))}catch(_){}}
 function resume(s){try{const r=JSON.parse(localStorage.getItem('voidtv:'+s.slug)||'');if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r}catch(_){}return{se:0,e:0}}
-function render(){if(state.show)showView(false);else browse()}
+function render(){if(state.show)showView(false);else keepTracks(browse)}
 document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
 window.addEventListener('popstate',()=>go(slugFromUrl(),true));
 go(slugFromUrl(),true);
