@@ -3,7 +3,7 @@
   "slug": "rick-and-morty",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.624Z",
+  "matchedAt": "2026-10-13T20:19:49.417Z",
   "tvmaze": {
     "id": 216,
     "name": "Rick and Morty",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 91,
-    "live": 0,
-    "review": 0,
-    "missing": 91,
-    "pct": 0
+    "live": 2,
+    "review": 2,
+    "missing": 87,
+    "pct": 4
   },
   "seasons": [
     {
@@ -329,24 +329,74 @@
           "number": 6,
           "name": "Never Ricking Morty",
           "airdate": "2020-05-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
+            "item": "rick-and-morty-companion-podcast-live-episode-406-promortyus",
+            "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #406 – PROMORTYUS",
+            "file": "Rick and Morty Companion Podcast Live - EPISODE #406 – PROMORTYUS.mp4",
+            "name": "Rick and Morty Companion Podcast Live - EPISODE #406 – PROMORTYUS",
+            "url": "https://archive.org/download/rick-and-morty-companion-podcast-live-episode-406-promortyus/Rick%20and%20Morty%20Companion%20Podcast%20Live%20-%20EPISODE%20%23406%20%E2%80%93%20PROMORTYUS.mp4",
+            "seconds": 3829,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 402
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Promortyus",
           "airdate": "2020-05-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
+            "item": "rick-and-morty-companion-podcast-live-episode-407-never-ricking-morty",
+            "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #407 – NEVER RICKING MORTY",
+            "file": "Rick and Morty Companion Podcast Live - EPISODE #407 - NEVER RICKING MORTY.mp4",
+            "name": "Rick and Morty Companion Podcast Live - EPISODE #407 - NEVER RICKING MORTY",
+            "url": "https://archive.org/download/rick-and-morty-companion-podcast-live-episode-407-never-ricking-morty/Rick%20and%20Morty%20Companion%20Podcast%20Live%20-%20EPISODE%20%23407%20-%20NEVER%20RICKING%20MORTY.mp4",
+            "seconds": 3566,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 375
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Promortyus\" (0.95)",
+              "item": "rick-and-morty-companion-podcast-live-episode-406-promortyus",
+              "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #406 – PROMORTYUS",
+              "file": "Rick and Morty Companion Podcast Live - EPISODE #406 – PROMORTYUS.mp4",
+              "name": "Rick and Morty Companion Podcast Live - EPISODE #406 – PROMORTYUS",
+              "url": "https://archive.org/download/rick-and-morty-companion-podcast-live-episode-406-promortyus/Rick%20and%20Morty%20Companion%20Podcast%20Live%20-%20EPISODE%20%23406%20%E2%80%93%20PROMORTYUS.mp4",
+              "seconds": 3829,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 402
+            }
+          ]
         },
         {
           "number": 8,
           "name": "The Vat of Acid Episode",
           "airdate": "2020-05-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "S/E in filename + title match",
+            "item": "rick-and-morty-companion-podcast-live-episode-408-the-vat-of-acid-episode",
+            "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #408 – The Vat Of Acid Episode",
+            "file": "Rick and Morty Companion Podcast Live - EPISODE #408 - The Vat of Acid Episode.mp4",
+            "name": "Rick and Morty Companion Podcast Live - EPISODE #408 - The Vat of Acid Episode",
+            "url": "https://archive.org/download/rick-and-morty-companion-podcast-live-episode-408-the-vat-of-acid-episode/Rick%20and%20Morty%20Companion%20Podcast%20Live%20-%20EPISODE%20%23408%20-%20The%20Vat%20of%20Acid%20Episode.mp4",
+            "seconds": 3536,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3816
+          },
           "alternates": []
         },
         {
@@ -361,8 +411,20 @@
           "number": 10,
           "name": "Star Mort Rickturn of the Jerri",
           "airdate": "2020-05-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "rick-and-morty-companion-podcast-live-episode-410-star-mort-rickturn-of-the-jerri",
+            "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #410 – Star Mort Rickturn Of The Jerri",
+            "file": "Rick and Morty Companion Podcast Live - EPISODE #410 - Star Mort Rickturn of the Jerri.mp4",
+            "name": "Rick and Morty Companion Podcast Live - EPISODE #410 - Star Mort Rickturn of the Jerri",
+            "url": "https://archive.org/download/rick-and-morty-companion-podcast-live-episode-410-star-mort-rickturn-of-the-jerri/Rick%20and%20Morty%20Companion%20Podcast%20Live%20-%20EPISODE%20%23410%20-%20Star%20Mort%20Rickturn%20of%20the%20Jerri.mp4",
+            "seconds": 3501,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3562
+          },
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "the-boondocks",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.501Z",
+  "matchedAt": "2026-10-13T20:19:49.290Z",
   "tvmaze": {
     "id": 912,
     "name": "The Boondocks",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 55,
-    "live": 47,
-    "review": 2,
+    "live": 45,
+    "review": 4,
     "missing": 6,
     "pct": 89
   },
@@ -907,9 +907,9 @@
           "number": 6,
           "name": "Attack of the Killer Kung-Fu Wolf Bitch",
           "airdate": "2007-11-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-boondocks-complete",
             "itemTitle": "The Boondocks (Complete Series)",
@@ -923,7 +923,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-boondocks_202410",
               "itemTitle": "The Boondocks The Complete series and Pilot",
@@ -2106,9 +2106,9 @@
           "number": 2,
           "name": "Good Times",
           "airdate": "2014-04-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-boondocks-complete",
             "itemTitle": "The Boondocks (Complete Series)",
@@ -2122,7 +2122,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-boondocks_202410",
               "itemTitle": "The Boondocks The Complete series and Pilot",
@@ -2135,7 +2135,7 @@
               "sizeMB": 134
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",

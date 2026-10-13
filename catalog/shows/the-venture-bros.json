@@ -3,7 +3,7 @@
   "slug": "the-venture-bros",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.432Z",
+  "matchedAt": "2026-10-13T20:19:49.235Z",
   "tvmaze": {
     "id": 304,
     "name": "The Venture Bros.",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 81,
     "live": 0,
-    "review": 26,
-    "missing": 55,
-    "pct": 32
+    "review": 27,
+    "missing": 54,
+    "pct": 33
   },
   "seasons": [
     {
@@ -795,8 +795,20 @@
           "number": 14,
           "name": "Assisted Suicide",
           "airdate": "2010-10-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Assisted Suicide\" (0.95)",
+            "item": "the-venture-bros.-assisted-suicide-recorded-aug-23-2022-toon-e",
+            "itemTitle": "Various TV Recordings (2022)",
+            "file": "The Venture Bros. - Assisted Suicide (Recorded Aug 23,2022,TOON-E).mp4",
+            "name": "The Venture Bros. - Assisted Suicide (Recorded Aug 23,2022,TOON-E)",
+            "url": "https://archive.org/download/the-venture-bros.-assisted-suicide-recorded-aug-23-2022-toon-e/The%20Venture%20Bros.%20-%20Assisted%20Suicide%20(Recorded%20Aug%2023%2C2022%2CTOON-E).mp4",
+            "seconds": 2041,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 202
+          },
           "alternates": []
         },
         {

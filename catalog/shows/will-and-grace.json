@@ -3,7 +3,7 @@
   "slug": "will-and-grace",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-13T15:54:04.196Z",
+  "matchedAt": "2026-10-13T20:19:44.390Z",
   "tvmaze": {
     "id": 549,
     "name": "Will & Grace",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 246,
     "live": 0,
-    "review": 3,
-    "missing": 243,
+    "review": 2,
+    "missing": 244,
     "pct": 1
   },
   "seasons": [
@@ -1714,20 +1714,8 @@
           "number": 10,
           "name": "The Wedding",
           "airdate": "2018-01-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"The Wedding\" (0.95)",
-            "item": "BlankVHSTape6hr02min",
-            "itemTitle": "Blank VHS Tape: Movies & Imcomplete Material (2002/2000)",
-            "file": "The Waltons - The Wedding.mp4",
-            "name": "The Waltons - The Wedding",
-            "url": "https://archive.org/download/BlankVHSTape6hr02min/The%20Waltons%20-%20The%20Wedding.mp4",
-            "seconds": 3533,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1487
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

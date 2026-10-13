@@ -3,7 +3,7 @@
   "slug": "the-shield",
   "type": "Drama",
   "network": "FX",
-  "matchedAt": "2026-10-13T15:54:09.326Z",
+  "matchedAt": "2026-10-13T20:19:50.530Z",
   "tvmaze": {
     "id": 663,
     "name": "The Shield",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 88,
     "live": 0,
-    "review": 0,
-    "missing": 88,
-    "pct": 0
+    "review": 1,
+    "missing": 87,
+    "pct": 1
   },
   "seasons": [
     {
@@ -26,9 +26,35 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2002-03-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Pilot\" (0.95)",
+            "item": "no-ordinary-family_202606",
+            "itemTitle": "No Ordinary Family (2010) Complete",
+            "file": "No Ordinary Family E01 - Pilot.mp4",
+            "name": "No Ordinary Family E01 - Pilot",
+            "url": "https://archive.org/download/no-ordinary-family_202606/No%20Ordinary%20Family%20E01%20-%20Pilot.mp4",
+            "seconds": 2603,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 804
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pilot\" (0.95)",
+              "item": "no-ordinary-family_202608",
+              "itemTitle": "No Ordinary Family (2009)",
+              "file": "No Ordinary Family E01 - Pilot.mp4",
+              "name": "No Ordinary Family E01 - Pilot",
+              "url": "https://archive.org/download/no-ordinary-family_202608/No%20Ordinary%20Family%20E01%20-%20Pilot.mp4",
+              "seconds": 2603,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 804
+            }
+          ]
         },
         {
           "number": 2,

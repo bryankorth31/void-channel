@@ -3,7 +3,7 @@
   "slug": "er",
   "type": "Drama",
   "network": "NBC",
-  "matchedAt": "2026-10-13T15:54:08.748Z",
+  "matchedAt": "2026-10-13T20:19:49.654Z",
   "tvmaze": {
     "id": 547,
     "name": "ER",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 331,
-    "live": 0,
-    "review": 0,
-    "missing": 331,
-    "pct": 0
+    "live": 9,
+    "review": 16,
+    "missing": 306,
+    "pct": 8
   },
   "seasons": [
     {
@@ -26,176 +26,566 @@
           "number": 1,
           "name": "24 Hours",
           "airdate": "1994-09-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 01 (1x01 ) Pilot  (426x240).mp4",
+            "name": "Windfall (2006) episode 01 (1x01 ) Pilot  (426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2001%20(1x01%20)%20Pilot%20%20(426x240).mp4",
+            "seconds": 2536,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 108
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "01 - la decision de Weaver.mp4",
+              "name": "01 - la decision de Weaver",
+              "url": "https://archive.org/download/ER-06/01%20-%20la%20decision%20de%20Weaver.mp4",
+              "seconds": 2666,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 290
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Day One",
           "airdate": "1994-09-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "02 -  Santos Óleos.mp4",
+            "name": "02 -  Santos Óleos",
+            "url": "https://archive.org/download/ER-06/02%20-%20%20Santos%20%C3%93leos.mp4",
+            "seconds": 2671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 290
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Going Home",
           "airdate": "1994-09-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "03 - A Mark le invade la envidia.mp4",
+            "name": "03 - A Mark le invade la envidia",
+            "url": "https://archive.org/download/ER-06/03%20-%20A%20Mark%20le%20invade%20la%20envidia.mp4",
+            "seconds": 2649,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 287
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Hit and Run",
           "airdate": "1994-10-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "04 - Las culpas del padre.mp4",
+            "name": "04 - Las culpas del padre",
+            "url": "https://archive.org/download/ER-06/04%20-%20Las%20culpas%20del%20padre.mp4",
+            "seconds": 2673,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 291
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Into That Good Night",
           "airdate": "1994-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 05 (1x05) (1276x720).mp4",
+            "name": "Windfall (2006) episode 05 (1x05) (1276x720)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2005%20(1x05)%20(1276x720).mp4",
+            "seconds": 2531,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 332
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "05 - Verdad y consecuencias.mp4",
+              "name": "05 - Verdad y consecuencias",
+              "url": "https://archive.org/download/ER-06/05%20-%20Verdad%20y%20consecuencias.mp4",
+              "seconds": 2624,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 285
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Chicago Heat",
           "airdate": "1994-10-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 06 (1x06) (1276x720).mp4",
+            "name": "Windfall (2006) episode 06 (1x06) (1276x720)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2006%20(1x06)%20(1276x720).mp4",
+            "seconds": 2527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 339
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "06 - La paz de las cosas salvajes.mp4",
+              "name": "06 - La paz de las cosas salvajes",
+              "url": "https://archive.org/download/ER-06/06%20-%20La%20paz%20de%20las%20cosas%20salvajes.mp4",
+              "seconds": 2679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Another Perfect Day",
           "airdate": "1994-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "07 - En mil pedazos.mp4",
+            "name": "07 - En mil pedazos",
+            "url": "https://archive.org/download/ER-06/07%20-%20En%20mil%20pedazos.mp4",
+            "seconds": 2640,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 287
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "9 1/2 Hours",
           "airdate": "1994-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 08 (1x08) (426x240).mp4",
+            "name": "Windfall (2006) episode 08 (1x08) (426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2008%20(1x08)%20(426x240).mp4",
+            "seconds": 2535,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 90
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "08 - Grandes esperanzas.mp4",
+              "name": "08 - Grandes esperanzas",
+              "url": "https://archive.org/download/ER-06/08%20-%20Grandes%20esperanzas.mp4",
+              "seconds": 2646,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 9,
           "name": "ER Confidential",
           "airdate": "1994-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 09 (1x09) (426x240).mp4",
+            "name": "Windfall (2006) episode 09 (1x09) (426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2009%20(1x09)%20(426x240).mp4",
+            "seconds": 2532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "09 - Como logro Finch apoderarse de la navidad.mp4",
+              "name": "09 - Como logro Finch apoderarse de la navidad",
+              "url": "https://archive.org/download/ER-06/09%20-%20Como%20logro%20Finch%20apoderarse%20de%20la%20navidad.mp4",
+              "seconds": 2684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 292
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Blizzard",
           "airdate": "1994-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 10 (1x10) (426x240).mp4",
+            "name": "Windfall (2006) episode 10 (1x10) (426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2010%20(1x10)%20(426x240).mp4",
+            "seconds": 2527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 94
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "10 - Asuntos familiares.mp4",
+              "name": "10 - Asuntos familiares",
+              "url": "https://archive.org/download/ER-06/10%20-%20Asuntos%20familiares.mp4",
+              "seconds": 2665,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 289
+            }
+          ]
         },
         {
           "number": 11,
           "name": "The Gift",
           "airdate": "1994-12-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 11 (1x11) (426x240).mp4",
+            "name": "Windfall (2006) episode 11 (1x11) (426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2011%20(1x11)%20(426x240).mp4",
+            "seconds": 2525,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 93
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "11 - Un nuevo corazón.mp4",
+              "name": "11 - Un nuevo corazón",
+              "url": "https://archive.org/download/ER-06/11%20-%20Un%20nuevo%20coraz%C3%B3n.mp4",
+              "seconds": 2647,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 287
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Happy New Year",
           "airdate": "1995-01-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 12 (1x12)(426x240).mp4",
+            "name": "Windfall (2006) episode 12 (1x12)(426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2012%20(1x12)(426x240).mp4",
+            "seconds": 2529,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 86
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "12 - La llegada de Abby.mp4",
+              "name": "12 - La llegada de Abby",
+              "url": "https://archive.org/download/ER-06/12%20-%20La%20llegada%20de%20Abby.mp4",
+              "seconds": 2681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Luck of the Draw",
           "airdate": "1995-01-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "windfall-2006",
+            "itemTitle": "Windfall (2006) all 13 eps -lottery winners -ft Luke Perry",
+            "file": "Windfall (2006) episode 13 (1x13) Finale (426x240).mp4",
+            "name": "Windfall (2006) episode 13 (1x13) Finale (426x240)",
+            "url": "https://archive.org/download/windfall-2006/Windfall%20(2006)%20episode%2013%20(1x13)%20Finale%20(426x240).mp4",
+            "seconds": 2535,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 97
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+              "item": "ER-06",
+              "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+              "file": "13 - Tranquilo, corazón.mp4",
+              "name": "13 - Tranquilo, corazón",
+              "url": "https://archive.org/download/ER-06/13%20-%20Tranquilo%2C%20coraz%C3%B3n.mp4",
+              "seconds": 2706,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 293
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Long Day's Journey",
           "airdate": "1995-01-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "14 - Todo en familia.mp4",
+            "name": "14 - Todo en familia",
+            "url": "https://archive.org/download/ER-06/14%20-%20Todo%20en%20familia.mp4",
+            "seconds": 2645,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 287
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Feb 5, '95",
           "airdate": "1995-02-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "15 - De médico a paciente.mp4",
+            "name": "15 - De médico a paciente",
+            "url": "https://archive.org/download/ER-06/15%20-%20De%20m%C3%A9dico%20a%20paciente.mp4",
+            "seconds": 2704,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 294
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Make of Two Hearts",
           "airdate": "1995-02-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "16 - Bajo control.mp4",
+            "name": "16 - Bajo control",
+            "url": "https://archive.org/download/ER-06/16%20-%20Bajo%20control.mp4",
+            "seconds": 2670,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 288
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "The Birthday Party",
           "airdate": "1995-02-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 17 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "17 - Opciones viables.mp4",
+            "name": "17 - Opciones viables",
+            "url": "https://archive.org/download/ER-06/17%20-%20Opciones%20viables.mp4",
+            "seconds": 2670,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 290
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Sleepless in Chicago",
           "airdate": "1995-02-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 18 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "18 - El uno para el otro.mp4",
+            "name": "18 - El uno para el otro",
+            "url": "https://archive.org/download/ER-06/18%20-%20El%20uno%20para%20el%20otro.mp4",
+            "seconds": 2665,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 290
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Love's Labor Lost",
           "airdate": "1995-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 19 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "19 - El tiempo vuela.mp4",
+            "name": "19 - El tiempo vuela",
+            "url": "https://archive.org/download/ER-06/19%20-%20El%20tiempo%20vuela.mp4",
+            "seconds": 2682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 292
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Full Moon, Saturday Night",
           "airdate": "1995-03-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 20 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "20 - Cabos sueltos.mp4",
+            "name": "20 - Cabos sueltos",
+            "url": "https://archive.org/download/ER-06/20%20-%20Cabos%20sueltos.mp4",
+            "seconds": 2660,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 289
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "House of Cards",
           "airdate": "1995-04-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 21 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "21 - Triste es la ausencia y dulce la despedida.mp4",
+            "name": "21 - Triste es la ausencia y dulce la despedida",
+            "url": "https://archive.org/download/ER-06/21%20-%20Triste%20es%20la%20ausencia%20y%20dulce%20la%20despedida.mp4",
+            "seconds": 2817,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 306
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Men Plan, God Laughs",
           "airdate": "1995-04-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 22 of 22 in \"ER Emergencias - Temporada 6 - (AUDIO LA\"",
+            "item": "ER-06",
+            "itemTitle": "ER Emergencias - Temporada 6 - (AUDIO LATINO)",
+            "file": "22 - Llamada de auxilio.mp4",
+            "name": "22 - Llamada de auxilio",
+            "url": "https://archive.org/download/ER-06/22%20-%20Llamada%20de%20auxilio.mp4",
+            "seconds": 2646,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 287
+          },
           "alternates": []
         },
         {
@@ -1972,8 +2362,20 @@
           "number": 15,
           "name": "Alone in a Crowd",
           "airdate": "2005-02-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Alone in a Crowd\" (0.95)",
+            "item": "JudgingAmyWFMJEarly2005",
+            "itemTitle": "Blank VHS Tape: Judging Amy, 21 WFMJ Goodies from '05 (2005)",
+            "file": "ER - Alone in The Crowd.mp4",
+            "name": "ER - Alone in The Crowd",
+            "url": "https://archive.org/download/JudgingAmyWFMJEarly2005/ER%20-%20Alone%20in%20The%20Crowd.mp4",
+            "seconds": 3628,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1572
+          },
           "alternates": []
         },
         {
@@ -2020,8 +2422,20 @@
           "number": 21,
           "name": "Carter est Amoureux",
           "airdate": "2005-05-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Carter est Amoureux\" (1.00)",
+            "item": "May2005CountryTape",
+            "itemTitle": "Blank VHS Tape: Sweet Home Alabama, Country Music Awards, ER (2005)",
+            "file": "ER - Carter Est Amoureux.mp4",
+            "name": "ER - Carter Est Amoureux",
+            "url": "https://archive.org/download/May2005CountryTape/ER%20-%20Carter%20Est%20Amoureux.mp4",
+            "seconds": 3900,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1639
+          },
           "alternates": []
         },
         {
@@ -2286,8 +2700,20 @@
           "number": 9,
           "name": "Scoop and Run",
           "airdate": "2006-11-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Scoop and Run\" (1.00)",
+            "item": "November2006PennsylvaniaTape",
+            "itemTitle": "Blank VHS Tape: Babe, Thanksgiving Night Shows & Sitcoms (2006)",
+            "file": "ER - Scoop and Run.mp4",
+            "name": "ER - Scoop and Run",
+            "url": "https://archive.org/download/November2006PennsylvaniaTape/ER%20-%20Scoop%20and%20Run.mp4",
+            "seconds": 3576,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1024
+          },
           "alternates": []
         },
         {

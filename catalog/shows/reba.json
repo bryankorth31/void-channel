@@ -3,7 +3,7 @@
   "slug": "reba",
   "type": "2000s and Later Sitcoms",
   "network": "The WB",
-  "matchedAt": "2026-10-13T15:54:05.980Z",
+  "matchedAt": "2026-10-13T20:19:46.116Z",
   "tvmaze": {
     "id": 944,
     "name": "Reba",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 125,
-    "live": 3,
+    "live": 2,
     "review": 96,
-    "missing": 26,
-    "pct": 79
+    "missing": 27,
+    "pct": 78
   },
   "seasons": [
     {
@@ -1090,35 +1090,9 @@
           "number": 1,
           "name": "She's Leaving Home, Bye Bye",
           "airdate": "2003-09-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pee-wees-playhouse-s-03-e-01-reba-eats-and-pterri-runs",
-            "itemTitle": "Pee-wee's Playhouse S03 E01 Reba Eats and Pterri Runs",
-            "file": "Pee-wee's Playhouse S03E01 Reba Eats and Pterri Runs.mp4",
-            "name": "Pee-wee's Playhouse S03E01 Reba Eats and Pterri Runs",
-            "url": "https://archive.org/download/pee-wees-playhouse-s-03-e-01-reba-eats-and-pterri-runs/Pee-wee's%20Playhouse%20S03E01%20Reba%20Eats%20and%20Pterri%20Runs.mp4",
-            "seconds": 1399,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 234
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "pee-wees-playhouse-s-03-e-01-reba-eats-and-pterri-runs_202409",
-              "itemTitle": "Pee-wee's Playhouse Playhouse S03 E01 Reba Eats and Pterri Runs",
-              "file": "Pee-wee's Playhouse S03E01 Reba Eats and Pterri Runs.mp4",
-              "name": "Pee-wee's Playhouse S03E01 Reba Eats and Pterri Runs",
-              "url": "https://archive.org/download/pee-wees-playhouse-s-03-e-01-reba-eats-and-pterri-runs_202409/Pee-wee's%20Playhouse%20S03E01%20Reba%20Eats%20and%20Pterri%20Runs.mp4",
-              "seconds": 1399,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 234
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,

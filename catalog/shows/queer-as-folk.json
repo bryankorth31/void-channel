@@ -3,7 +3,7 @@
   "slug": "queer-as-folk",
   "type": "Drama",
   "network": "Showtime",
-  "matchedAt": "2026-10-13T15:54:09.540Z",
+  "matchedAt": "2026-10-13T20:19:50.833Z",
   "tvmaze": {
     "id": 908,
     "name": "Queer As Folk",
@@ -759,46 +759,19 @@
           "airdate": "2001-04-08",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"French Fried\" (1.00)",
-            "item": "queer-as-folk-us",
-            "itemTitle": "Queer As Folk ( US)",
-            "file": "Queer as Folk (US)/Season 01/[S01.E16] - French Fried.mp4",
-            "name": "Queer as Folk (US)/Season 01/[S01.E16] - French Fried",
-            "url": "https://archive.org/download/queer-as-folk-us/Queer%20as%20Folk%20(US)%2FSeason%2001%2F%5BS01.E16%5D%20-%20French%20Fried.mp4",
-            "seconds": 2883,
-            "format": "h.264",
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 29 in \"Queer As Folk Complete\"",
+            "item": "queer-as-folk-complete",
+            "itemTitle": "Queer As Folk Complete",
+            "file": "Queer As Folk Complete/Queer As Folk S1/QafS01E18.mp4",
+            "name": "Queer As Folk Complete/Queer As Folk S1/QafS01E18",
+            "url": "https://archive.org/download/queer-as-folk-complete/Queer%20As%20Folk%20Complete%2FQueer%20As%20Folk%20S1%2FQafS01E18.mp4",
+            "seconds": 3198,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 289
+            "sizeMB": 557
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"French Fried\" (1.00)",
-              "item": "queer-as-folk-us5",
-              "itemTitle": "Queer As Folk ( US)",
-              "file": "Queer as Folk (US)/Season 01/[S01.E16] - French Fried.mp4",
-              "name": "Queer as Folk (US)/Season 01/[S01.E16] - French Fried",
-              "url": "https://archive.org/download/queer-as-folk-us5/Queer%20as%20Folk%20(US)%2FSeason%2001%2F%5BS01.E16%5D%20-%20French%20Fried.mp4",
-              "seconds": 2883,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 289
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 29 in \"Queer As Folk Complete\"",
-              "item": "queer-as-folk-complete",
-              "itemTitle": "Queer As Folk Complete",
-              "file": "Queer As Folk Complete/Queer As Folk S1/QafS01E18.mp4",
-              "name": "Queer As Folk Complete/Queer As Folk S1/QafS01E18",
-              "url": "https://archive.org/download/queer-as-folk-complete/Queer%20As%20Folk%20Complete%2FQueer%20As%20Folk%20S1%2FQafS01E18.mp4",
-              "seconds": 3198,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 557
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 17,

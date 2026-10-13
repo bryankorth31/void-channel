@@ -3,7 +3,7 @@
   "slug": "unsolved-mysteries",
   "type": "Drama",
   "network": "NBC",
-  "matchedAt": "2026-10-13T15:54:08.672Z",
+  "matchedAt": "2026-10-13T20:19:49.492Z",
   "tvmaze": {
     "id": 40484,
     "name": "Unsolved Mysteries",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 30,
-    "live": 1,
-    "review": 5,
+    "live": 4,
+    "review": 2,
     "missing": 24,
     "pct": 20
   },
@@ -26,41 +26,69 @@
           "number": 1,
           "name": "Mystery on the Rooftop",
           "airdate": "2020-07-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
-            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
-            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
-            "file": "Part 01 [-buA5o4Yrsk].webm",
-            "name": "Part 01 [-buA5o4Yrsk]",
-            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2001%20%5B-buA5o4Yrsk%5D.webm",
-            "seconds": 2245,
-            "format": "WebM",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+            "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+            "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 1.mp4",
+            "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 1",
+            "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%201.mp4",
+            "seconds": 2568,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 372
+            "sizeMB": 206
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
+              "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+              "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+              "file": "Part 01 [-buA5o4Yrsk].webm",
+              "name": "Part 01 [-buA5o4Yrsk]",
+              "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2001%20%5B-buA5o4Yrsk%5D.webm",
+              "seconds": 2245,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 372
+            }
+          ]
         },
         {
           "number": 2,
           "name": "13 Minutes",
           "airdate": "2020-07-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
-            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
-            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
-            "file": "Part 02 [ldS_6y6osVk].webm",
-            "name": "Part 02 [ldS_6y6osVk]",
-            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2002%20%5BldS_6y6osVk%5D.webm",
-            "seconds": 2619,
-            "format": "WebM",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+            "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+            "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 2.mp4",
+            "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 2",
+            "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%202.mp4",
+            "seconds": 2571,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 305
+            "sizeMB": 203
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
+              "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+              "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+              "file": "Part 02 [ldS_6y6osVk].webm",
+              "name": "Part 02 [ldS_6y6osVk]",
+              "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2002%20%5BldS_6y6osVk%5D.webm",
+              "seconds": 2619,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 305
+            }
+          ]
         },
         {
           "number": 3,
@@ -82,6 +110,19 @@
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+              "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+              "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 3.mp4",
+              "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 3",
+              "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%203.mp4",
+              "seconds": 2568,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 198
+            },
+            {
               "conf": 0.55,
               "why": "sequence guess: file 3 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
               "item": "dont-look-at-me-unsolved-mysteries-iceberg",
@@ -100,21 +141,35 @@
           "number": 4,
           "name": "No Ride Home",
           "airdate": "2020-07-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
-            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
-            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
-            "file": "Part 06 - The SURFACE of Layer 2 [iwYhPgrT1K4].webm",
-            "name": "Part 06 - The SURFACE of Layer 2 [iwYhPgrT1K4]",
-            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2006%20-%20The%20SURFACE%20of%20Layer%202%20%5BiwYhPgrT1K4%5D.webm",
-            "seconds": 2808,
-            "format": "WebM",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+            "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+            "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 4.mp4",
+            "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 4",
+            "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%204.mp4",
+            "seconds": 2571,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 663
+            "sizeMB": 200
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 39 in \"don't look at me - Unsolved Mysteries Ic\"",
+              "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+              "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+              "file": "Part 06 - The SURFACE of Layer 2 [iwYhPgrT1K4].webm",
+              "name": "Part 06 - The SURFACE of Layer 2 [iwYhPgrT1K4]",
+              "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2006%20-%20The%20SURFACE%20of%20Layer%202%20%5BiwYhPgrT1K4%5D.webm",
+              "seconds": 2808,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 663
+            }
+          ]
         },
         {
           "number": 5,

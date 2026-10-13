@@ -3,7 +3,7 @@
   "slug": "roswell",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-13T15:54:10.681Z",
+  "matchedAt": "2026-10-13T20:19:53.066Z",
   "tvmaze": {
     "id": 673,
     "name": "Roswell",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 61,
     "live": 1,
-    "review": 1,
-    "missing": 59,
-    "pct": 3
+    "review": 3,
+    "missing": 57,
+    "pct": 7
   },
   "seasons": [
     {
@@ -26,17 +26,129 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "1999-10-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match | not browser-playable: audio (AC3)",
+            "item": "roswell-s01e01-pilot-ml99rp",
+            "itemTitle": "Roswell - S01E01 - Pilot (720p, 1080p, 1440p) [ML99RP]",
+            "file": "Roswell.s01e01.Pilot.1440p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+            "name": "Roswell.s01e01.Pilot.1440p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP",
+            "url": "https://archive.org/download/roswell-s01e01-pilot-ml99rp/Roswell.s01e01.Pilot.1440p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+            "seconds": 2642,
+            "format": "MPEG4",
+            "playable": false,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 6518
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "roswell-s01e01-pilot-ml99rp",
+              "itemTitle": "Roswell - S01E01 - Pilot (720p, 1080p, 1440p) [ML99RP]",
+              "file": "Roswell.s01e01.Pilot.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "name": "Roswell.s01e01.Pilot.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP",
+              "url": "https://archive.org/download/roswell-s01e01-pilot-ml99rp/Roswell.s01e01.Pilot.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "seconds": 2642,
+              "format": "MPEG4",
+              "playable": false,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 3314
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "roswell-s01e01-pilot-ml99rp",
+              "itemTitle": "Roswell - S01E01 - Pilot (720p, 1080p, 1440p) [ML99RP]",
+              "file": "Roswell.s01e01.Pilot.720p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "name": "Roswell.s01e01.Pilot.720p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP",
+              "url": "https://archive.org/download/roswell-s01e01-pilot-ml99rp/Roswell.s01e01.Pilot.720p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "seconds": 2642,
+              "format": "MPEG4",
+              "playable": false,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 2392
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "roswell-s01e01-pilot-ml99rp",
+              "itemTitle": "Roswell - S01E01 - Pilot (720p, 1080p, 1440p) [ML99RP]",
+              "file": "Roswell.s01e01.Pilot.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.ia.mp4",
+              "name": "Roswell.s01e01.Pilot.1080p.10bit.HEVC.AC3.Dual.MULTi",
+              "url": "https://archive.org/download/roswell-s01e01-pilot-ml99rp/Roswell.s01e01.Pilot.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.ia.mp4",
+              "seconds": 2642,
+              "format": "h.264 IA",
+              "playable": false,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 269
+            }
+          ]
         },
         {
           "number": 2,
           "name": "The Morning After",
           "airdate": "1999-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match | not browser-playable: audio (AC3)",
+            "item": "roswell-s01e02-the-morning-after-ml99rp",
+            "itemTitle": "Roswell - S01E02 - The Morning After (720p, 1080p, 1440p) [ML99RP]",
+            "file": "Roswell.s01e02.The.Morning.After.1440p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+            "name": "Roswell.s01e02.The.Morning.After.1440p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP",
+            "url": "https://archive.org/download/roswell-s01e02-the-morning-after-ml99rp/Roswell.s01e02.The.Morning.After.1440p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+            "seconds": 2641,
+            "format": "MPEG4",
+            "playable": false,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 6453
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "roswell-s01e02-the-morning-after-ml99rp",
+              "itemTitle": "Roswell - S01E02 - The Morning After (720p, 1080p, 1440p) [ML99RP]",
+              "file": "Roswell.s01e02.The.Morning.After.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "name": "Roswell.s01e02.The.Morning.After.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP",
+              "url": "https://archive.org/download/roswell-s01e02-the-morning-after-ml99rp/Roswell.s01e02.The.Morning.After.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "seconds": 2641,
+              "format": "MPEG4",
+              "playable": false,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 3271
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "roswell-s01e02-the-morning-after-ml99rp",
+              "itemTitle": "Roswell - S01E02 - The Morning After (720p, 1080p, 1440p) [ML99RP]",
+              "file": "Roswell.s01e02.The.Morning.After.720p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "name": "Roswell.s01e02.The.Morning.After.720p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP",
+              "url": "https://archive.org/download/roswell-s01e02-the-morning-after-ml99rp/Roswell.s01e02.The.Morning.After.720p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.mp4",
+              "seconds": 2641,
+              "format": "MPEG4",
+              "playable": false,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 2404
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "roswell-s01e02-the-morning-after-ml99rp",
+              "itemTitle": "Roswell - S01E02 - The Morning After (720p, 1080p, 1440p) [ML99RP]",
+              "file": "Roswell.s01e02.The.Morning.After.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.ia.mp4",
+              "name": "Roswell.s01e02.The.Morning.After.1080p.10bit.HEVC.AC3.Dual.MULTi",
+              "url": "https://archive.org/download/roswell-s01e02-the-morning-after-ml99rp/Roswell.s01e02.The.Morning.After.1080p.10bit.HEVC.AC3.Dual.MULTi.SUBS-ML99RP.ia.mp4",
+              "seconds": 2641,
+              "format": "h.264 IA",
+              "playable": false,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 264
+            }
+          ]
         },
         {
           "number": 3,

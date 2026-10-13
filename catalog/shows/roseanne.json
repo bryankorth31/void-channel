@@ -3,7 +3,7 @@
   "slug": "roseanne",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-13T15:54:03.636Z",
+  "matchedAt": "2026-10-13T20:19:43.784Z",
   "tvmaze": {
     "id": 690,
     "name": "Roseanne",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 231,
-    "live": 218,
-    "review": 10,
+    "live": 215,
+    "review": 13,
     "missing": 3,
     "pct": 99
   },
@@ -871,9 +871,9 @@
           "number": 20,
           "name": "To Tell the Truth",
           "airdate": "1990-02-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1821,9 +1821,9 @@
           "number": 18,
           "name": "This Old House",
           "airdate": "1992-02-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2040,9 +2040,9 @@
           "number": 3,
           "name": "The Dark Ages",
           "airdate": "1992-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",

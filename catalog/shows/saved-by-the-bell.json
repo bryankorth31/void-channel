@@ -3,7 +3,7 @@
   "slug": "saved-by-the-bell",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-13T15:54:03.744Z",
+  "matchedAt": "2026-10-13T20:19:43.902Z",
   "tvmaze": {
     "id": 1252,
     "name": "Saved by the Bell",
@@ -2188,21 +2188,34 @@
           "airdate": "1991-09-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "saved-by-the-bell-complete-series_20251118",
-            "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
-            "file": "Saved by The Bell S03E05 - Operation Zack.mp4",
-            "name": "Saved by The Bell S03E05 - Operation Zack",
-            "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S03E05%20-%20Operation%20Zack.mp4",
-            "seconds": 1337,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "savedbythebell_202507",
+            "itemTitle": "Saved By The Bell complete series",
+            "file": "Season 3/Saved by the Bell - 03x05 - Summer Vaction - Boss Lady.mp4",
+            "name": "Season 3/Saved by the Bell - 03x05 - Summer Vaction - Boss Lady",
+            "url": "https://archive.org/download/savedbythebell_202507/Season%203%2FSaved%20by%20the%20Bell%20-%2003x05%20-%20Summer%20Vaction%20-%20Boss%20Lady.mp4",
+            "seconds": 1335,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 229
+            "sizeMB": 132
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "saved-by-the-bell-complete-series_20251118",
+              "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
+              "file": "Saved by The Bell S03E05 - Operation Zack.mp4",
+              "name": "Saved by The Bell S03E05 - Operation Zack",
+              "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S03E05%20-%20Operation%20Zack.mp4",
+              "seconds": 1337,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 229
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "saved-by-the-bell-hawaiian-style_202503",
               "itemTitle": "Saved by the Bell + Hawaiian Style",
@@ -2213,32 +2226,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 162
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "savedbythebell_202507",
-              "itemTitle": "Saved By The Bell complete series",
-              "file": "Season 3/Saved by the Bell - 03x05 - Summer Vaction - Boss Lady.mp4",
-              "name": "Season 3/Saved by the Bell - 03x05 - Summer Vaction - Boss Lady",
-              "url": "https://archive.org/download/savedbythebell_202507/Season%203%2FSaved%20by%20the%20Bell%20-%2003x05%20-%20Summer%20Vaction%20-%20Boss%20Lady.mp4",
-              "seconds": 1335,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 132
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Operation Zack\" (0.95)",
-              "item": "savedbythebell_202507",
-              "itemTitle": "Saved By The Bell complete series",
-              "file": "Season 3/Saved by the Bell - 03x09 - Operation Zack.mp4",
-              "name": "Season 3/Saved by the Bell - 03x09 - Operation Zack",
-              "url": "https://archive.org/download/savedbythebell_202507/Season%203%2FSaved%20by%20the%20Bell%20-%2003x09%20-%20Operation%20Zack.mp4",
-              "seconds": 1336,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -2427,19 +2414,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 165
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "savedbythebell_202507",
-              "itemTitle": "Saved By The Bell complete series",
-              "file": "Season 3/Saved by the Bell - 03x09 - Operation Zack.mp4",
-              "name": "Season 3/Saved by the Bell - 03x09 - Operation Zack",
-              "url": "https://archive.org/download/savedbythebell_202507/Season%203%2FSaved%20by%20the%20Bell%20-%2003x09%20-%20Operation%20Zack.mp4",
-              "seconds": 1336,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             },
             {
               "conf": 0.8,

@@ -3,7 +3,7 @@
   "slug": "home-improvement",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-13T15:54:02.364Z",
+  "matchedAt": "2026-10-13T20:19:42.458Z",
   "tvmaze": {
     "id": 544,
     "name": "Home Improvement",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 203,
-    "live": 195,
-    "review": 5,
+    "live": 190,
+    "review": 10,
     "missing": 3,
     "pct": 99
   },
@@ -4082,9 +4082,9 @@
           "number": 10,
           "name": "Doctor in the House",
           "airdate": "1995-11-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-complete-dvd-rip",
             "itemTitle": "Home Improvement Complete DVD Rip",
@@ -4612,9 +4612,9 @@
           "number": 26,
           "name": "Games, Flames And Automobiles",
           "airdate": "1996-05-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-tv-series",
             "itemTitle": "Home Improvement (TV series)",
@@ -4628,7 +4628,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "home-improvement-complete-dvd-rip",
               "itemTitle": "Home Improvement Complete DVD Rip",
@@ -5817,9 +5817,9 @@
           "number": 10,
           "name": "The Dating Game",
           "airdate": "1997-12-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-tv-series",
             "itemTitle": "Home Improvement (TV series)",
@@ -5831,22 +5831,7 @@
             "playable": true,
             "sizeMB": 194
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "home-improvement-complete-dvd-rip",
-              "itemTitle": "Home Improvement Complete DVD Rip",
-              "file": "Home Improvement 1991 Complete DVDRIP x264/Home Improvement 1991 Season 7 Complete DVDRip x264 [i_c]/Home Improvement S07E10 The Dating Game.mkv",
-              "name": "Home Improvement 1991 Complete DVDRIP x264/Home Improvement 1991 Season 7 Complete DVDRip x264 [i_c]/Home Improvement S07E10 The Dating Game",
-              "url": "https://archive.org/download/home-improvement-complete-dvd-rip/Home%20Improvement%201991%20Complete%20DVDRIP%20x264%2FHome%20Improvement%201991%20Season%207%20Complete%20DVDRip%20x264%20%5Bi_c%5D%2FHome%20Improvement%20S07E10%20The%20Dating%20Game.mkv",
-              "seconds": 1332,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 206
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
@@ -6418,9 +6403,9 @@
           "number": 3,
           "name": "All In The Family",
           "airdate": "1998-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-tv-series",
             "itemTitle": "Home Improvement (TV series)",
@@ -6478,9 +6463,9 @@
           "number": 6,
           "name": "Bewitched",
           "airdate": "1998-10-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-tv-series",
             "itemTitle": "Home Improvement (TV series)",

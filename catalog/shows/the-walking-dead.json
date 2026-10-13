@@ -3,7 +3,7 @@
   "slug": "the-walking-dead",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "AMC",
-  "matchedAt": "2026-10-13T15:54:10.752Z",
+  "matchedAt": "2026-10-13T20:19:53.390Z",
   "tvmaze": {
     "id": 73,
     "name": "The Walking Dead",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 177,
     "live": 0,
-    "review": 6,
-    "missing": 171,
-    "pct": 3
+    "review": 7,
+    "missing": 170,
+    "pct": 4
   },
   "seasons": [
     {
@@ -1409,8 +1409,20 @@
           "number": 13,
           "name": "What We Become",
           "airdate": "2020-03-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"What We Become\" (0.63)",
+            "item": "PCLongplay960TheWalkingDeadMichonne",
+            "itemTitle": "PC Longplay [960] The Walking Dead: Michonne",
+            "file": "PC_Longplay_960_The_Walking_Dead_-_Michonne_-_Episode_3_What_We_Deserve.mp4",
+            "name": "PC_Longplay_960_The_Walking_Dead_-_Michonne_-_Episode_3_What_We_Deserve",
+            "url": "https://archive.org/download/PCLongplay960TheWalkingDeadMichonne/PC_Longplay_960_The_Walking_Dead_-_Michonne_-_Episode_3_What_We_Deserve.mp4",
+            "seconds": 3753,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 390
+          },
           "alternates": []
         },
         {

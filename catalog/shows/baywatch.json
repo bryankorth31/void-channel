@@ -3,7 +3,7 @@
   "slug": "baywatch",
   "type": "Drama",
   "network": "Syndicated",
-  "matchedAt": "2026-10-13T15:54:09.225Z",
+  "matchedAt": "2026-10-13T20:19:50.313Z",
   "tvmaze": {
     "id": 1070,
     "name": "Baywatch",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 233,
-    "live": 39,
-    "review": 172,
-    "missing": 22,
-    "pct": 91
+    "live": 38,
+    "review": 168,
+    "missing": 27,
+    "pct": 88
   },
   "seasons": [
     {
@@ -433,47 +433,21 @@
           "number": 8,
           "name": "Cruise Ship",
           "airdate": "1989-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Cruise Ship\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "108-Promised Land(REMASTERED VERSION).mp4",
-            "name": "108-Promised Land(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/108-Promised%20Land(REMASTERED%20VERSION).mp4",
-            "seconds": 2568,
+            "file": "009-Cruise Ship(REMASTERED VERSION).mp4",
+            "name": "009-Cruise Ship(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/009-Cruise%20Ship(REMASTERED%20VERSION).mp4",
+            "seconds": 2833,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1434
+            "sizeMB": 1400
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "108-Promised Land(ORIGINAL VERSION).mp4",
-              "name": "108-Promised Land(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/108-Promised%20Land(ORIGINAL%20VERSION).mp4",
-              "seconds": 2549,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Cruise Ship\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "009-Cruise Ship(REMASTERED VERSION).mp4",
-              "name": "009-Cruise Ship(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/009-Cruise%20Ship(REMASTERED%20VERSION).mp4",
-              "seconds": 2833,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1400
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Cruise Ship\" (1.00)",
@@ -486,6 +460,32 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1400
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Cruise Ship\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "009-Cruise Ship(ORIGINAL VERSION).mp4",
+              "name": "009-Cruise Ship(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/009-Cruise%20Ship(ORIGINAL%20VERSION).mp4",
+              "seconds": 2839,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 48 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "176-White Thunder At Glacier Bay Part 2(ORIGINAL VERSION).mp4",
+              "name": "176-White Thunder At Glacier Bay Part 2(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/176-White%20Thunder%20At%20Glacier%20Bay%20Part%202(ORIGINAL%20VERSION).mp4",
+              "seconds": 2558,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 367
             }
           ]
         },
@@ -3873,20 +3873,8 @@
           "number": 8,
           "name": "K-GAS, the Groove Yard of Solid Gold",
           "airdate": "1994-11-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"K-GAS, the Groove Yard of Solid Gold\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "096-K-GAS, The Groove Yard Of Solid Gold(ORIGINAL VERSION).mp4",
-            "name": "096-K-GAS, The Groove Yard Of Solid Gold(ORIGINAL VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/096-K-GAS%2C%20The%20Groove%20Yard%20Of%20Solid%20Gold(ORIGINAL%20VERSION).mp4",
-            "seconds": 2549,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 365
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4251,35 +4239,9 @@
           "number": 20,
           "name": "Promised Land",
           "airdate": "1995-05-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Promised Land\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "108-Promised Land(REMASTERED VERSION).mp4",
-            "name": "108-Promised Land(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/108-Promised%20Land(REMASTERED%20VERSION).mp4",
-            "seconds": 2568,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1434
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Promised Land\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "108-Promised Land(ORIGINAL VERSION).mp4",
-              "name": "108-Promised Land(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/108-Promised%20Land(ORIGINAL%20VERSION).mp4",
-              "seconds": 2549,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 21,
@@ -4718,20 +4680,8 @@
           "number": 12,
           "name": "Beauty and the Beast",
           "airdate": "1996-01-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Beauty and the Beast\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "124-Beauty And The Beast(ORIGINAL VERSION).mp4",
-            "name": "124-Beauty And The Beast(ORIGINAL VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/124-Beauty%20And%20The%20Beast(ORIGINAL%20VERSION).mp4",
-            "seconds": 2529,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 365
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5562,35 +5512,9 @@
           "number": 21,
           "name": "Golden Girls",
           "airdate": "1997-05-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Golden Girls\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "153-Golden Girls(REMASTERED VERSION).mp4",
-            "name": "153-Golden Girls(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/153-Golden%20Girls(REMASTERED%20VERSION).mp4",
-            "seconds": 2548,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1603
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Golden Girls\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "153-Golden Girls(ORIGINAL VERSION).mp4",
-              "name": "153-Golden Girls(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/153-Golden%20Girls(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 22,
@@ -6778,35 +6702,9 @@
           "number": 19,
           "name": "Double Jeopardy",
           "airdate": "1999-04-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Double Jeopardy\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "193-Double Jeopardy(REMASTERED VERSION).mp4",
-            "name": "193-Double Jeopardy(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/193-Double%20Jeopardy(REMASTERED%20VERSION).mp4",
-            "seconds": 2577,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2172
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Double Jeopardy\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "193-Double Jeopardy(ORIGINAL VERSION).mp4",
-              "name": "193-Double Jeopardy(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/193-Double%20Jeopardy(ORIGINAL%20VERSION).mp4",
-              "seconds": 2565,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 20,

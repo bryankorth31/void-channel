@@ -3,7 +3,7 @@
   "slug": "moral-orel",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.272Z",
+  "matchedAt": "2026-10-13T20:19:48.926Z",
   "tvmaze": {
     "id": 1960,
     "name": "Moral Orel",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 43,
     "live": 2,
-    "review": 40,
-    "missing": 1,
-    "pct": 98
+    "review": 38,
+    "missing": 3,
+    "pct": 93
   },
   "seasons": [
     {
@@ -981,68 +981,17 @@
           "number": 19,
           "name": "Nature (1)",
           "airdate": "2007-07-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Nature (1)\" (0.95)",
-            "item": "moral-orel-season-2",
-            "itemTitle": "Moral Orel Season 2",
-            "file": "#19 Nature (Part 1).mp4",
-            "name": "#19 Nature (Part 1)",
-            "url": "https://archive.org/download/moral-orel-season-2/%2319%20Nature%20(Part%201).mp4",
-            "seconds": 680,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 175
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "Nature (2)",
           "airdate": "2007-07-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Nature (2)\" (0.95)",
-            "item": "moral-orel-season-2",
-            "itemTitle": "Moral Orel Season 2",
-            "file": "#20 Nature (Part 2).mp4",
-            "name": "#20 Nature (Part 2)",
-            "url": "https://archive.org/download/moral-orel-season-2/%2320%20Nature%20(Part%202).mp4",
-            "seconds": 705,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 181
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Nature (2)\" (0.95)",
-              "item": "moral-orel-complete-720p",
-              "itemTitle": "Moral Orel - Complete Series + Beforel Orel 720p HD",
-              "file": "2-19 - Nature (part one).mp4",
-              "name": "2-19 - Nature (part one)",
-              "url": "https://archive.org/download/moral-orel-complete-720p/2-19%20-%20Nature%20(part%20one).mp4",
-              "seconds": 680,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 101
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Nature (2)\" (0.95)",
-              "item": "moral-orel-complete-720p",
-              "itemTitle": "Moral Orel - Complete Series + Beforel Orel 720p HD",
-              "file": "2-20 - Nature (part two).mp4",
-              "name": "2-20 - Nature (part two)",
-              "url": "https://archive.org/download/moral-orel-complete-720p/2-20%20-%20Nature%20(part%20two).mp4",
-              "seconds": 705,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 42
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },

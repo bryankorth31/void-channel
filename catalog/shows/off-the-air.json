@@ -3,7 +3,7 @@
   "slug": "off-the-air",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.653Z",
+  "matchedAt": "2026-10-13T20:19:49.453Z",
   "tvmaze": {
     "id": 3971,
     "name": "Off the Air",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 55,
-    "live": 0,
-    "review": 1,
-    "missing": 54,
-    "pct": 2
+    "live": 1,
+    "review": 22,
+    "missing": 32,
+    "pct": 42
   },
   "seasons": [
     {
@@ -26,33 +26,150 @@
           "number": 1,
           "name": "Animals",
           "airdate": "2011-01-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "off-the-air-101-animals-460p.x-264.vorbis-2.0-449",
+            "itemTitle": "Off The Air Animals (Original Version)",
+            "file": "Off-the-Air-101-Animals-460px264.MP4",
+            "name": "Off-the-Air-101-Animals-460px264",
+            "url": "https://archive.org/download/off-the-air-101-animals-460p.x-264.vorbis-2.0-449/Off-the-Air-101-Animals-460px264.MP4",
+            "seconds": 656,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 93
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Animals\" (0.95)",
+              "item": "animals-off-the-air-adult-swim-1080p",
+              "itemTitle": "Animals - Off The Air - Adult Swim - 1080p",
+              "file": "Animals  Off the Air  Adult Swim_1080p.mp4",
+              "name": "Animals  Off the Air  Adult Swim_1080p",
+              "url": "https://archive.org/download/animals-off-the-air-adult-swim-1080p/Animals%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+              "seconds": 656,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 262
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Animals\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Animals.mp4",
+              "name": "Off the Air/Animals",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FAnimals.mp4",
+              "seconds": 656,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 218
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Food",
           "airdate": "2011-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Food\" (0.95)",
+            "item": "food-off-the-air-adult-swim-1080p",
+            "itemTitle": "Food - Off The Air - Adult Swim - 1080p",
+            "file": "Food  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Food  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/food-off-the-air-adult-swim-1080p/Food%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 286
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Food\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Food.mp4",
+              "name": "Off the Air/Food",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FFood.mp4",
+              "seconds": 672,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 209
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Dance",
           "airdate": "2011-09-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Dance\" (0.95)",
+            "item": "dance-off-the-air-adult-swim-1080p",
+            "itemTitle": "Dance - Off The Air - Adult Swim - 1080p",
+            "file": "Dance  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Dance  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/dance-off-the-air-adult-swim-1080p/Dance%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 669,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 251
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Dance\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Dance.mp4",
+              "name": "Off the Air/Dance",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FDance.mp4",
+              "seconds": 669,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 183
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Space",
           "airdate": "2011-11-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Space\" (0.95)",
+            "item": "space-off-the-air-adult-swim-1080p",
+            "itemTitle": "Space - Off The Air - Adult Swim - 1080p",
+            "file": "Space  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Space  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/space-off-the-air-adult-swim-1080p/Space%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Space\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Space.mp4",
+              "name": "Off the Air/Space",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FSpace.mp4",
+              "seconds": 671,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 157
+            }
+          ]
         },
         {
           "number": 5,
@@ -60,19 +177,46 @@
           "airdate": "2012-06-01",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
+            "conf": 0.8,
             "why": "title ~ \"Body\" (0.95)",
-            "item": "AmplifiedNews",
-            "itemTitle": "Amplified News (Old Channel) - Amphitheater High School in Tucson, AZ",
-            "file": "4-1-16 Amplified News Presents - Student Body Election Speeches 2016 [JqaXISXGbC0].mp4",
-            "name": "4-1-16 Amplified News Presents - Student Body Election Speeches 2016 [JqaXISXGbC0]",
-            "url": "https://archive.org/download/AmplifiedNews/4-1-16%20Amplified%20News%20Presents%20-%20Student%20Body%20Election%20Speeches%202016%20%5BJqaXISXGbC0%5D.mp4",
-            "seconds": 1068,
-            "format": "h.264",
+            "item": "body-off-the-air-adult-swim-1080p",
+            "itemTitle": "Body - Off The Air - Adult Swim - 1080p",
+            "file": "Body  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Body  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/body-off-the-air-adult-swim-1080p/Body%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 671,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 105
+            "sizeMB": 287
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Body\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Body.mp4",
+              "name": "Off the Air/Body",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FBody.mp4",
+              "seconds": 671,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 188
+            },
+            {
+              "conf": 0.65,
+              "why": "title ~ \"Body\" (0.95)",
+              "item": "AmplifiedNews",
+              "itemTitle": "Amplified News (Old Channel) - Amphitheater High School in Tucson, AZ",
+              "file": "4-1-16 Amplified News Presents - Student Body Election Speeches 2016 [JqaXISXGbC0].mp4",
+              "name": "4-1-16 Amplified News Presents - Student Body Election Speeches 2016 [JqaXISXGbC0]",
+              "url": "https://archive.org/download/AmplifiedNews/4-1-16%20Amplified%20News%20Presents%20-%20Student%20Body%20Election%20Speeches%202016%20%5BJqaXISXGbC0%5D.mp4",
+              "seconds": 1068,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 105
+            }
+          ]
         }
       ]
     },
@@ -83,33 +227,137 @@
           "number": 1,
           "name": "Falling",
           "airdate": "2012-08-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Falling\" (0.95)",
+            "item": "falling-off-the-air-adult-swim-1080p",
+            "itemTitle": "Falling - Off The Air - Adult Swim - 1080p",
+            "file": "Falling  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Falling  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/falling-off-the-air-adult-swim-1080p/Falling%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 640,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Falling\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Falling.mp4",
+              "name": "Off the Air/Falling",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FFalling.mp4",
+              "seconds": 640,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Color",
           "airdate": "2012-10-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Color\" (0.95)",
+            "item": "color-off-the-air-adult-swim-1080p",
+            "itemTitle": "Color - Off The Air - Adult Swim - 1080p",
+            "file": "Color  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Color  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/color-off-the-air-adult-swim-1080p/Color%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Color\" (0.89)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Colors.mp4",
+              "name": "Off the Air/Colors",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FColors.mp4",
+              "seconds": 662,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Nightmares",
           "airdate": "2012-12-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Nightmares\" (0.95)",
+            "item": "nightmares-off-the-air-adult-swim-1080p",
+            "itemTitle": "Nightmares - Off The Air - Adult Swim - 1080p",
+            "file": "Nightmares  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Nightmares  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/nightmares-off-the-air-adult-swim-1080p/Nightmares%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 664,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 288
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Nightmares\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Nightmares.mp4",
+              "name": "Off the Air/Nightmares",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FNightmares.mp4",
+              "seconds": 664,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 166
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Light",
           "airdate": "2013-10-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Light\" (0.95)",
+            "item": "light-off-the-air-adult-swim-1080p",
+            "itemTitle": "Light - Off The Air - Adult Swim - 1080p",
+            "file": "Light  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Light  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/light-off-the-air-adult-swim-1080p/Light%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 198
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Light\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Light.mp4",
+              "name": "Off the Air/Light",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FLight.mp4",
+              "seconds": 672,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 176
+            }
+          ]
         },
         {
           "number": 5,
@@ -136,16 +384,54 @@
           "number": 2,
           "name": "Robots",
           "airdate": "2014-01-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Robots\" (0.95)",
+            "item": "robots-off-the-air-adult-swim-1080p",
+            "itemTitle": "Robots - Off The Air - Adult Swim - 1080p",
+            "file": "Robots  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Robots  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/robots-off-the-air-adult-swim-1080p/Robots%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 309
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Robots\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Robots.mp4",
+              "name": "Off the Air/Robots",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FRobots.mp4",
+              "seconds": 671,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 218
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Worship",
           "airdate": "2014-04-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Worship\" (1.00)",
+            "item": "off-the-air",
+            "itemTitle": "Off the Air",
+            "file": "Off the Air/Worship.mp4",
+            "name": "Off the Air/Worship",
+            "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FWorship.mp4",
+            "seconds": 660,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         }
       ]
@@ -157,33 +443,123 @@
           "number": 1,
           "name": "Hair",
           "airdate": "2014-09-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hair\" (1.00)",
+            "item": "off-the-air",
+            "itemTitle": "Off the Air",
+            "file": "Off the Air/Hair.mp4",
+            "name": "Off the Air/Hair",
+            "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FHair.mp4",
+            "seconds": 650,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 209
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Sports",
           "airdate": "2014-12-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sports\" (0.95)",
+            "item": "sports-off-the-air-adult-swim-1080p",
+            "itemTitle": "Sports - Off The Air - Adult Swim - 1080p",
+            "file": "Sports  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Sports  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/sports-off-the-air-adult-swim-1080p/Sports%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Sports\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Sports.mp4",
+              "name": "Off the Air/Sports",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FSports.mp4",
+              "seconds": 662,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 204
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Death",
           "airdate": "2014-12-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Death\" (0.95)",
+            "item": "death-off-the-air-adult-swim-1080p",
+            "itemTitle": "Death - Off The Air - Adult Swim - 1080p",
+            "file": "Death  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Death  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/death-off-the-air-adult-swim-1080p/Death%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 650,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Death\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Death.mp4",
+              "name": "Off the Air/Death",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FDeath.mp4",
+              "seconds": 650,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 183
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Transportation",
           "airdate": "2015-01-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Transportation\" (0.95)",
+            "item": "transportation-off-the-air-adult-swim-1080p",
+            "itemTitle": "Transportation - Off The Air - Adult Swim - 1080p",
+            "file": "Transportation  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Transportation  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/transportation-off-the-air-adult-swim-1080p/Transportation%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 689,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 294
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Transportation\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Transportation.mp4",
+              "name": "Off the Air/Transportation",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FTransportation.mp4",
+              "seconds": 689,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 242
+            }
+          ]
         }
       ]
     },
@@ -194,33 +570,137 @@
           "number": 1,
           "name": "Liquid",
           "airdate": "2015-07-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Liquid\" (0.95)",
+            "item": "liquid-off-the-air-adult-swim-1080p",
+            "itemTitle": "Liquid - Off The Air - Adult Swim - 1080p",
+            "file": "Liquid  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Liquid  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/liquid-off-the-air-adult-swim-1080p/Liquid%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 726,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 270
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Liquid\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Liquid.mp4",
+              "name": "Off the Air/Liquid",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FLiquid.mp4",
+              "seconds": 726,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 233
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Conflict",
           "airdate": "2015-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Conflict\" (0.95)",
+            "item": "conflict-off-the-air-adult-swim-1080p",
+            "itemTitle": "Conflict - Off The Air - Adult Swim - 1080p",
+            "file": "Conflict  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Conflict  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/conflict-off-the-air-adult-swim-1080p/Conflict%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 648,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 254
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Conflict\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Conflict.mp4",
+              "name": "Off the Air/Conflict",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FConflict.mp4",
+              "seconds": 648,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 193
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Holes",
           "airdate": "2015-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Holes\" (0.95)",
+            "item": "holes-off-the-air-adult-swim-1080p",
+            "itemTitle": "Holes - Off The Air - Adult Swim - 1080p",
+            "file": "Holes  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Holes  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/holes-off-the-air-adult-swim-1080p/Holes%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 718,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 346
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Holes\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Holes.mp4",
+              "name": "Off the Air/Holes",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FHoles.mp4",
+              "seconds": 718,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 220
+            }
+          ]
         },
         {
           "number": 4,
           "name": "NEWNOW",
           "airdate": "2015-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"NEWNOW\" (0.95)",
+            "item": "newnow-off-the-air-adult-swim-1080p",
+            "itemTitle": "NEWNOW - Off The Air - Adult Swim - 1080p",
+            "file": "NEWNOW  Off the Air  Adult Swim_1080p.mp4",
+            "name": "NEWNOW  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/newnow-off-the-air-adult-swim-1080p/NEWNOW%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 711,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 305
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"NEWNOW\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/NEWNOW.mp4",
+              "name": "Off the Air/NEWNOW",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FNEWNOW.mp4",
+              "seconds": 711,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 246
+            }
+          ]
         }
       ]
     },
@@ -231,16 +711,54 @@
           "number": 1,
           "name": "Shapes",
           "airdate": "2016-05-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Shapes\" (0.95)",
+            "item": "shapes-off-the-air-adult-swim-1080p",
+            "itemTitle": "Shapes - Off The Air - Adult Swim - 1080p",
+            "file": "Shapes  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Shapes  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/shapes-off-the-air-adult-swim-1080p/Shapes%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 339
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shapes\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Shapes.mp4",
+              "name": "Off the Air/Shapes",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FShapes.mp4",
+              "seconds": 677,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 160
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Clowns",
           "airdate": "2016-09-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Clowns\" (0.95)",
+            "item": "clowns-off-the-air-adult-swim-1080p",
+            "itemTitle": "Clowns - Off The Air - Adult Swim - 1080p",
+            "file": "Clowns  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Clowns  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/clowns-off-the-air-adult-swim-1080p/Clowns%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 314
+          },
           "alternates": []
         },
         {
@@ -268,8 +786,20 @@
           "number": 1,
           "name": "Earth",
           "airdate": "2017-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Earth\" (0.95)",
+            "item": "earth-off-the-air-adult-swim-1080p",
+            "itemTitle": "Earth - Off The Air - Adult Swim - 1080p",
+            "file": "Earth  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Earth  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/earth-off-the-air-adult-swim-1080p/Earth%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 666,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 279
+          },
           "alternates": []
         },
         {
@@ -482,8 +1012,20 @@
           "number": 2,
           "name": "Drugs",
           "airdate": "2023-12-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Drugs\" (0.95)",
+            "item": "drugs-off-the-air-fanmade-2017-runawaysplace",
+            "itemTitle": "Drugs | Off The Air | Fanmade",
+            "file": "Drugs Off The Air Fanmade (2017 runawaysplace).mp4",
+            "name": "Drugs Off The Air Fanmade (2017 runawaysplace)",
+            "url": "https://archive.org/download/drugs-off-the-air-fanmade-2017-runawaysplace/Drugs%20Off%20The%20Air%20Fanmade%20(2017%20runawaysplace).mp4",
+            "seconds": 1033,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 553
+          },
           "alternates": []
         },
         {

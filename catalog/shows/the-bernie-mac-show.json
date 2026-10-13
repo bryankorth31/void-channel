@@ -3,7 +3,7 @@
   "slug": "the-bernie-mac-show",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-13T15:54:05.912Z",
+  "matchedAt": "2026-10-13T20:19:46.042Z",
   "tvmaze": {
     "id": 6836,
     "name": "The Bernie Mac Show",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 104,
-    "live": 99,
-    "review": 2,
+    "live": 98,
+    "review": 3,
     "missing": 3,
     "pct": 97
   },
@@ -3089,9 +3089,9 @@
           "number": 21,
           "name": "Growing Pains",
           "airdate": "2006-04-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -3103,21 +3103,7 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Growing Pains\" (0.95)",
-              "item": "the-bernie-mac-show-s05",
-              "itemTitle": "The Bernie Mac Show Season 5",
-              "file": "the-bernie-mac-show-s05-e21-growing-pains-480p-nf-web-dl-y2bs.com.mp4",
-              "name": "the-bernie-mac-show-s05-e21-growing-pains-480p-nf-web-dl-y2bs.com",
-              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e21-growing-pains-480p-nf-web-dl-y2bs.com.mp4",
-              "seconds": 1322,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 60
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,

@@ -3,7 +3,7 @@
   "slug": "america-undercover",
   "type": "Late Night",
   "network": "HBO",
-  "matchedAt": "2026-10-13T15:54:10.958Z",
+  "matchedAt": "2026-10-13T20:19:53.922Z",
   "tvmaze": {
     "id": 34862,
     "name": "America Undercover",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 79,
     "live": 0,
-    "review": 0,
-    "missing": 79,
-    "pct": 0
+    "review": 3,
+    "missing": 76,
+    "pct": 4
   },
   "seasons": [
     {
@@ -76,8 +76,20 @@
           "number": 1,
           "name": "Acts of Violence",
           "airdate": "1985-05-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Acts of Violence\" (1.00)",
+            "item": "actsofviolence",
+            "itemTitle": "Acts Of Violence",
+            "file": "Acts Of Violence (1985).mp4",
+            "name": "Acts Of Violence (1985)",
+            "url": "https://archive.org/download/actsofviolence/Acts%20Of%20Violence%20(1985).mp4",
+            "seconds": 4537,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 213
+          },
           "alternates": []
         },
         {
@@ -615,8 +627,20 @@
           "number": 1,
           "name": "Bellevue: Inside Out",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bellevue: Inside Out\" (0.95)",
+            "item": "bellevue-hospital-inside-out-2001-hbo-doc-serie-america-undercover",
+            "itemTitle": "Bellevue Hospital Inside Out 2001 Hbo Doc Serie America Undercover",
+            "file": "bellevue hospital inside out 2001 hbo doc serie america undercover.webm",
+            "name": "bellevue hospital inside out 2001 hbo doc serie america undercover",
+            "url": "https://archive.org/download/bellevue-hospital-inside-out-2001-hbo-doc-serie-america-undercover/bellevue%20hospital%20inside%20out%202001%20hbo%20doc%20serie%20america%20undercover.webm",
+            "seconds": 4570,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 301
+          },
           "alternates": []
         },
         {
@@ -660,8 +684,20 @@
           "number": 2,
           "name": "Blue Vinyl",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "title ~ \"Blue Vinyl\" (0.95)",
+            "item": "blue_vinyl_documentary_2002",
+            "itemTitle": "Blue Vinyl Documentary (2002)",
+            "file": "blue_vinyl_documentary_2002.mp4",
+            "name": "blue_vinyl_documentary_2002",
+            "url": "https://archive.org/download/blue_vinyl_documentary_2002/blue_vinyl_documentary_2002.mp4",
+            "seconds": 5581,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 551
+          },
           "alternates": []
         }
       ]

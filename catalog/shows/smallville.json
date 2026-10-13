@@ -3,7 +3,7 @@
   "slug": "smallville",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-13T15:54:10.678Z",
+  "matchedAt": "2026-10-13T20:19:53.008Z",
   "tvmaze": {
     "id": 435,
     "name": "Smallville",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 217,
     "live": 0,
-    "review": 1,
-    "missing": 216,
-    "pct": 0
+    "review": 2,
+    "missing": 215,
+    "pct": 1
   },
   "seasons": [
     {
@@ -1771,8 +1771,20 @@
           "number": 17,
           "name": "Kent",
           "airdate": "2011-04-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Kent\" (0.95)",
+            "item": "galaxy-con-live-comic-con-smallville-cast-day-1-actors-panel-tom-welling-clark-k",
+            "itemTitle": "Galaxy Con Live Comic Con, Smallville Cast Day 1; Actors Panel Tom Welling “ Clark Kent”, Erica Durance “ Lois Lane' 10 12 2020",
+            "file": "GalaxyCon Live Comic-Con, Smallville cast Day 1; Actors Panel Tom Welling “Clark Kent”, Erica Durance “Lois Lane' 10-12-2020.mp4",
+            "name": "GalaxyCon Live Comic-Con, Smallville cast Day 1; Actors Panel Tom Welling “Clark Kent”, Erica Durance “Lois Lane' 10-12-2020",
+            "url": "https://archive.org/download/galaxy-con-live-comic-con-smallville-cast-day-1-actors-panel-tom-welling-clark-k/GalaxyCon%20Live%20Comic-Con%2C%20Smallville%20cast%20Day%201%3B%20Actors%20Panel%20Tom%20Welling%20%E2%80%9CClark%20Kent%E2%80%9D%2C%20Erica%20Durance%20%E2%80%9CLois%20Lane'%2010-12-2020.mp4",
+            "seconds": 3019,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 621
+          },
           "alternates": []
         },
         {

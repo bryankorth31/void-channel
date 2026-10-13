@@ -3,7 +3,7 @@
   "slug": "lexx",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-13T15:54:10.426Z",
+  "matchedAt": "2026-10-13T20:19:52.707Z",
   "tvmaze": {
     "id": 1656,
     "name": "Lexx",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 61,
     "live": 0,
-    "review": 37,
-    "missing": 24,
-    "pct": 61
+    "review": 36,
+    "missing": 25,
+    "pct": 59
   },
   "seasons": [
     {
@@ -421,20 +421,8 @@
           "number": 20,
           "name": "End Of The Universe",
           "airdate": "1999-04-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"End Of The Universe\" (0.95)",
-            "item": "lexx-season2",
-            "itemTitle": "Lexx - Season 2 [1998-99]",
-            "file": "Lexx-S02xE20-End_Of_The_Universe.mp4",
-            "name": "Lexx-S02xE20-End_Of_The_Universe",
-            "url": "https://archive.org/download/lexx-season2/Lexx-S02xE20-End_Of_The_Universe.mp4",
-            "seconds": 2750,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 287
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

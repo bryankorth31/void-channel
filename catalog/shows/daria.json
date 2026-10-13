@@ -3,7 +3,7 @@
   "slug": "daria",
   "type": "Animated",
   "network": "MTV",
-  "matchedAt": "2026-10-13T15:54:06.953Z",
+  "matchedAt": "2026-10-13T20:19:47.210Z",
   "tvmaze": {
     "id": 2554,
     "name": "Daria",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 65,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 64,
-    "pct": 2
+    "missing": 65,
+    "pct": 0
   },
   "seasons": [
     {
@@ -106,20 +106,8 @@
           "number": 11,
           "name": "Road Worrier",
           "airdate": "1997-07-07",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "mtv-cartoon-sushi-6-28-98-s-1-e-11",
-            "itemTitle": "MTV - Cartoon Sushi 6/28/98 (S1 E11) WOC",
-            "file": "MTV - Cartoon Sushi 6-28-98 (S1 E11).mp4",
-            "name": "MTV - Cartoon Sushi 6-28-98 (S1 E11)",
-            "url": "https://archive.org/download/mtv-cartoon-sushi-6-28-98-s-1-e-11/MTV%20-%20Cartoon%20Sushi%206-28-98%20(S1%20E11).mp4",
-            "seconds": 1700,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 177
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

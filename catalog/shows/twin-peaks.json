@@ -3,7 +3,7 @@
   "slug": "twin-peaks",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-13T15:54:08.664Z",
+  "matchedAt": "2026-10-13T20:19:49.474Z",
   "tvmaze": {
     "id": 156,
     "name": "Twin Peaks",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 48,
     "live": 21,
-    "review": 2,
-    "missing": 25,
-    "pct": 48
+    "review": 6,
+    "missing": 21,
+    "pct": 56
   },
   "seasons": [
     {
@@ -41,6 +41,19 @@
             "sizeMB": 502
           },
           "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "tp_fwwm_tms_202606",
+              "itemTitle": "Twin Peaks: Fire Walk With Me - The Missing Season",
+              "file": "EP1 - The Owl Ring.mp4",
+              "name": "EP1 - The Owl Ring",
+              "url": "https://archive.org/download/tp_fwwm_tms_202606/EP1%20-%20The%20Owl%20Ring.mp4",
+              "seconds": 3937,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4588
+            },
             {
               "conf": 0.6,
               "why": "absolute episode number",
@@ -87,6 +100,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 502
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "tp_fwwm_tms_202606",
+              "itemTitle": "Twin Peaks: Fire Walk With Me - The Missing Season",
+              "file": "EP2 - The Path to the Pink Room.mp4",
+              "name": "EP2 - The Path to the Pink Room",
+              "url": "https://archive.org/download/tp_fwwm_tms_202606/EP2%20-%20The%20Path%20to%20the%20Pink%20Room.mp4",
+              "seconds": 3899,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4543
             }
           ]
         },
@@ -315,8 +341,20 @@
           "number": 1,
           "name": "May the Giant Be with You",
           "airdate": "1990-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+            "item": "unobscura",
+            "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+            "file": "Part 1.mp4",
+            "name": "Part 1",
+            "url": "https://archive.org/download/unobscura/Part%201.mp4",
+            "seconds": 4497,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 5942
+          },
           "alternates": []
         },
         {
@@ -337,7 +375,21 @@
             "playable": true,
             "sizeMB": 457
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+              "item": "unobscura",
+              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+              "file": "Part 2.mp4",
+              "name": "Part 2",
+              "url": "https://archive.org/download/unobscura/Part%202.mp4",
+              "seconds": 2808,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3702
+            }
+          ]
         },
         {
           "number": 3,
@@ -357,7 +409,21 @@
             "playable": true,
             "sizeMB": 481
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+              "item": "unobscura",
+              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+              "file": "Part 3.mp4",
+              "name": "Part 3",
+              "url": "https://archive.org/download/unobscura/Part%203.mp4",
+              "seconds": 3721,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4907
+            }
+          ]
         },
         {
           "number": 4,
@@ -377,22 +443,60 @@
             "playable": true,
             "sizeMB": 487
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+              "item": "unobscura",
+              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+              "file": "Part 4.mp4",
+              "name": "Part 4",
+              "url": "https://archive.org/download/unobscura/Part%204.mp4",
+              "seconds": 2660,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3508
+            }
+          ]
         },
         {
           "number": 5,
           "name": "The Orchid's Curse",
           "airdate": "1990-10-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+            "item": "unobscura",
+            "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+            "file": "Part 5.mp4",
+            "name": "Part 5",
+            "url": "https://archive.org/download/unobscura/Part%205.mp4",
+            "seconds": 3417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 4504
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Demons",
           "airdate": "1990-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+            "item": "unobscura",
+            "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+            "file": "Part 8.mp4",
+            "name": "Part 8",
+            "url": "https://archive.org/download/unobscura/Part%208.mp4",
+            "seconds": 3791,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 4998
+          },
           "alternates": []
         },
         {
@@ -413,7 +517,21 @@
             "playable": true,
             "sizeMB": 455
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
+              "item": "unobscura",
+              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
+              "file": "Z - Appendix 2 [Part 6.5] - Invitation To Love James.mp4",
+              "name": "Z - Appendix 2 [Part 6.5] - Invitation To Love James",
+              "url": "https://archive.org/download/unobscura/Z%20-%20Appendix%202%20%5BPart%206.5%5D%20-%20Invitation%20To%20Love%20James.mp4",
+              "seconds": 2596,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3388
+            }
+          ]
         },
         {
           "number": 8,
@@ -712,8 +830,20 @@
           "number": 2,
           "name": "The Return, Part 2",
           "airdate": "2017-05-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Return, Part 2\" (0.95)",
+            "item": "twin-peaks-the-return-the-golden-age-of-tv-part-2-1080p-24fps-h-264-128kbit-aac",
+            "itemTitle": "TWIN PEAKS THE RETURN & The Golden Age Of TV Part 2 - Maggie Mae Fish",
+            "file": "TWIN PEAKS THE RETURN & the Golden Age of TV _ Part 2 (1080p_24fps_H264-128kbit_AAC).mp4",
+            "name": "TWIN PEAKS THE RETURN & the Golden Age of TV _ Part 2 (1080p_24fps_H264-128kbit_AAC)",
+            "url": "https://archive.org/download/twin-peaks-the-return-the-golden-age-of-tv-part-2-1080p-24fps-h-264-128kbit-aac/TWIN%20PEAKS%20THE%20RETURN%20%26%20the%20Golden%20Age%20of%20TV%20_%20Part%202%20(1080p_24fps_H264-128kbit_AAC).mp4",
+            "seconds": 3672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 550
+          },
           "alternates": []
         },
         {

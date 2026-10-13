@@ -3,7 +3,7 @@
   "slug": "buffy-the-vampire-slayer",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-13T15:54:09.652Z",
+  "matchedAt": "2026-10-13T20:19:50.989Z",
   "tvmaze": {
     "id": 427,
     "name": "Buffy the Vampire Slayer",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 144,
     "live": 0,
-    "review": 115,
-    "missing": 29,
-    "pct": 80
+    "review": 109,
+    "missing": 35,
+    "pct": 76
   },
   "seasons": [
     {
@@ -53,19 +53,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1400
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Welcome to the Hellmouth\" (0.67)",
-              "item": "buffy-the-vampire-slayer-the-chosen-collection-bonus-disc",
-              "itemTitle": "Buffy The Vampire Slayer - The Chosen Collection  - Bonus Disc",
-              "file": "1 - Back To The Hellmouth.mp4",
-              "name": "1 - Back To The Hellmouth",
-              "url": "https://archive.org/download/buffy-the-vampire-slayer-the-chosen-collection-bonus-disc/1%20-%20Back%20To%20The%20Hellmouth.mp4",
-              "seconds": 3277,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 327
             }
           ]
         },
@@ -612,35 +599,9 @@
           "number": 9,
           "name": "What's My Line?: Part I",
           "airdate": "1997-11-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"What's My Line?: Part I\" (0.88)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-9_Whats My Line-Part 1.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-9_Whats My Line-Part 1",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-9_Whats%20My%20Line-Part%201.mp4",
-            "seconds": 2634,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1627
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"What's My Line?: Part I\" (0.85)",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-10_Whats My Line-Part 2.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-10_Whats My Line-Part 2",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-10_Whats%20My%20Line-Part%202.mp4",
-              "seconds": 2604,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1611
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 10,
@@ -754,20 +715,8 @@
           "number": 16,
           "name": "Bewitched, Bothered and Bewildered",
           "airdate": "1998-02-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Bewitched, Bothered and Bewildered\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-16_Bewitched-Bothered-and Bewildered.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-16_Bewitched-Bothered-and Bewildered",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-16_Bewitched-Bothered-and%20Bewildered.mp4",
-            "seconds": 2692,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1558
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -961,20 +910,8 @@
           "number": 4,
           "name": "Beauty and the Beasts",
           "airdate": "1998-10-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Beauty and the Beasts\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-4_Beauty and the Beasts.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-4_Beauty and the Beasts",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-4_Beauty%20and%20the%20Beasts.mp4",
-            "seconds": 2695,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1663
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1215,20 +1152,8 @@
           "number": 16,
           "name": "Doppelgangland",
           "airdate": "1999-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Doppelgangland\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-16_Doppelgangland.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-16_Doppelgangland",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-16_Doppelgangland.mp4",
-            "seconds": 2652,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1646
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2123,20 +2048,8 @@
           "number": 18,
           "name": "Intervention",
           "airdate": "2001-04-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Intervention\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-18_Intervention.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-18_Intervention",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-18_Intervention.mp4",
-            "seconds": 2587,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1596
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2819,20 +2732,8 @@
           "number": 22,
           "name": "Chosen",
           "airdate": "2003-05-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Chosen\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-22_Chosen.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-22_Chosen",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%207%2F7-22_Chosen.mp4",
-            "seconds": 2580,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1698
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

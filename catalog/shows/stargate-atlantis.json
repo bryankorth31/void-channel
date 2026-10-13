@@ -3,7 +3,7 @@
   "slug": "stargate-atlantis",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-13T15:54:10.155Z",
+  "matchedAt": "2026-10-13T20:19:52.408Z",
   "tvmaze": {
     "id": 206,
     "name": "Stargate Atlantis",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 100,
     "live": 0,
-    "review": 81,
-    "missing": 19,
-    "pct": 81
+    "review": 80,
+    "missing": 20,
+    "pct": 80
   },
   "seasons": [
     {
@@ -795,20 +795,8 @@
           "number": 13,
           "name": "Critical Mass",
           "airdate": "2006-01-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Critical Mass\" (0.76)",
-            "item": "stargate-atlantis-season-1",
-            "itemTitle": "StarGate Atlantis",
-            "file": "SGA0213CriticalMass.mp4",
-            "name": "SGA0213CriticalMass",
-            "url": "https://archive.org/download/stargate-atlantis-season-1/SGA0213CriticalMass.mp4",
-            "seconds": 2615,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 458
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

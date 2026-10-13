@@ -3,7 +3,7 @@
   "slug": "dexters-laboratory",
   "type": "Animated",
   "network": "Cartoon Network",
-  "matchedAt": "2026-10-13T15:54:07.392Z",
+  "matchedAt": "2026-10-13T20:19:47.671Z",
   "tvmaze": {
     "id": 1953,
     "name": "Dexter's Laboratory",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 78,
-    "live": 62,
-    "review": 16,
+    "live": 60,
+    "review": 18,
     "missing": 0,
     "pct": 100
   },
@@ -733,9 +733,9 @@
           "number": 14,
           "name": "Star Check Unconventional/Dexter is Dirty/Ice Cream Scream",
           "airdate": "1997-10-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "dexters-laboratory_202507",
             "itemTitle": "Dexter's Laboratory (1996) Animated Series",
@@ -1340,55 +1340,27 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Copping an Aptitude/A Failed Lab Experiment/The Grand-Daddy of All Inventions\" (1.00)",
-              "item": "dexters-laboratory_202507",
-              "itemTitle": "Dexter's Laboratory (1996) Animated Series",
-              "file": "Dexter's Laboratory S03E04 Copping an Aptitude, A Failed Lab Experiment, The Grand-Daddy of All Inventions.mp4",
-              "name": "Dexter's Laboratory S03E04 Copping an Aptitude, A Failed Lab Experiment, The Grand-Daddy of All Inventions",
-              "url": "https://archive.org/download/dexters-laboratory_202507/Dexter's%20Laboratory%20S03E04%20Copping%20an%20Aptitude%2C%20A%20Failed%20Lab%20Experiment%2C%20The%20Grand-Daddy%20of%20All%20Inventions.mp4",
-              "seconds": 1332,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 130
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Poppa Wheely/A Mom Cartoon/The Mock Side of the Moon",
           "airdate": "2002-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"Poppa Wheely/A Mom Cartoon/The Mock Side of the Moon\" (1.00)",
             "item": "dexters-laboratory_202507",
             "itemTitle": "Dexter's Laboratory (1996) Animated Series",
-            "file": "Dexter's Laboratory S03E04 Copping an Aptitude, A Failed Lab Experiment, The Grand-Daddy of All Inventions.mp4",
-            "name": "Dexter's Laboratory S03E04 Copping an Aptitude, A Failed Lab Experiment, The Grand-Daddy of All Inventions",
-            "url": "https://archive.org/download/dexters-laboratory_202507/Dexter's%20Laboratory%20S03E04%20Copping%20an%20Aptitude%2C%20A%20Failed%20Lab%20Experiment%2C%20The%20Grand-Daddy%20of%20All%20Inventions.mp4",
-            "seconds": 1332,
+            "file": "Dexter's Laboratory S03E03 Poppa Wheely, A Mom Cartoon, The Mock Side of the Moon.mp4",
+            "name": "Dexter's Laboratory S03E03 Poppa Wheely, A Mom Cartoon, The Mock Side of the Moon",
+            "url": "https://archive.org/download/dexters-laboratory_202507/Dexter's%20Laboratory%20S03E03%20Poppa%20Wheely%2C%20A%20Mom%20Cartoon%2C%20The%20Mock%20Side%20of%20the%20Moon.mp4",
+            "seconds": 1333,
             "format": "h.264",
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Poppa Wheely/A Mom Cartoon/The Mock Side of the Moon\" (1.00)",
-              "item": "dexters-laboratory_202507",
-              "itemTitle": "Dexter's Laboratory (1996) Animated Series",
-              "file": "Dexter's Laboratory S03E03 Poppa Wheely, A Mom Cartoon, The Mock Side of the Moon.mp4",
-              "name": "Dexter's Laboratory S03E03 Poppa Wheely, A Mom Cartoon, The Mock Side of the Moon",
-              "url": "https://archive.org/download/dexters-laboratory_202507/Dexter's%20Laboratory%20S03E03%20Poppa%20Wheely%2C%20A%20Mom%20Cartoon%2C%20The%20Mock%20Side%20of%20the%20Moon.mp4",
-              "seconds": 1333,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 130
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,

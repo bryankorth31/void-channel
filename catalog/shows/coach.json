@@ -3,7 +3,7 @@
   "slug": "coach",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-13T15:54:04.621Z",
+  "matchedAt": "2026-10-13T20:19:44.762Z",
   "tvmaze": {
     "id": 7531,
     "name": "Coach",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 200,
-    "live": 188,
-    "review": 11,
+    "live": 187,
+    "review": 12,
     "missing": 1,
     "pct": 100
   },
@@ -1122,9 +1122,9 @@
           "number": 9,
           "name": "I've Got A Secret",
           "airdate": "1990-01-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "coach-tv-series_202511",
             "itemTitle": "Coach (TV Series)",
@@ -1138,7 +1138,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "coach-season-2_202311",
               "itemTitle": "Coach Season 2",
@@ -1151,7 +1151,7 @@
               "sizeMB": 197
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "coach-tv-series_202502",
               "itemTitle": "Coach (TV Series)",

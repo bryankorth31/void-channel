@@ -3,7 +3,7 @@
   "slug": "popular",
   "type": "Drama",
   "network": "The WB",
-  "matchedAt": "2026-10-13T15:54:09.283Z",
+  "matchedAt": "2026-10-13T20:19:50.438Z",
   "tvmaze": {
     "id": 5998,
     "name": "Popular",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 43,
-    "live": 0,
-    "review": 0,
-    "missing": 43,
-    "pct": 0
+    "live": 16,
+    "review": 25,
+    "missing": 2,
+    "pct": 95
   },
   "seasons": [
     {
@@ -26,177 +26,1125 @@
           "number": 1,
           "name": "The Phantom Menace",
           "airdate": "1999-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "+Popular Season 1 Episode 01 - yt- Sito Vision.mp4",
+            "name": "+Popular Season 1 Episode 01 - yt- Sito Vision",
+            "url": "https://archive.org/download/popular-1999-2001/%2BPopular%20Season%201%20Episode%2001%20-%20yt-%20Sito%20Vision.mp4",
+            "seconds": 2627,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 274
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x01.-.Pilot.ia.mp4",
+              "name": "Hyperion.Bay.(1998).1x01.-",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x01.-.Pilot.ia.mp4",
+              "seconds": 2668,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 390
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x01.-.Pilot.mp4",
+              "name": "Hyperion.Bay.(1998).1x01.-.Pilot",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x01.-.Pilot.mp4",
+              "seconds": 2668,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 390
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "superstar-usa",
+              "itemTitle": "The WB's Superstar USA",
+              "file": "The WB's Superstar USA S01E01 - Pilot, Part 1.mp4",
+              "name": "The WB's Superstar USA S01E01 - Pilot, Part 1",
+              "url": "https://archive.org/download/superstar-usa/The%20WB's%20Superstar%20USA%20S01E01%20-%20Pilot%2C%20Part%201.mp4",
+              "seconds": 2572,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 153
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Mo' Menace, Mo' Problems",
           "airdate": "1999-09-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x02.-.The.Cookie.Crumbles.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x02.-.The.Cookie",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x02.-.The.Cookie.Crumbles.ia.mp4",
+            "seconds": 2646,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 385
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x02.-.The.Cookie.Crumbles.mp4",
+              "name": "Hyperion.Bay.(1998).1x02.-.The.Cookie.Crumbles",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x02.-.The.Cookie.Crumbles.mp4",
+              "seconds": 2646,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 385
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "superstar-usa",
+              "itemTitle": "The WB's Superstar USA",
+              "file": "The WB's Superstar USA S01E02 - Pilot, Part 2.mp4",
+              "name": "The WB's Superstar USA S01E02 - Pilot, Part 2",
+              "url": "https://archive.org/download/superstar-usa/The%20WB's%20Superstar%20USA%20S01E02%20-%20Pilot%2C%20Part%202.mp4",
+              "seconds": 2579,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "superstar-usa_202509",
+              "itemTitle": "Superstar USA (2004)",
+              "file": "Superstar USA - S01E02 - Pilot (2).mp4",
+              "name": "Superstar USA - S01E02 - Pilot (2)",
+              "url": "https://archive.org/download/superstar-usa_202509/Superstar%20USA%20-%20S01E02%20-%20Pilot%20(2).mp4",
+              "seconds": 2578,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 156
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Under Siege",
           "airdate": "1999-10-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x03.-.Static.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x03.-",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x03.-.Static.ia.mp4",
+            "seconds": 2628,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 382
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x03.-.Static.mp4",
+              "name": "Hyperion.Bay.(1998).1x03.-.Static",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x03.-.Static.mp4",
+              "seconds": 2628,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 382
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Under Siege\" (0.95)",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_03__Under Siege (1999) ... ft Sandra Oh.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_03__Under Siege (1999) ... ft Sandra Oh",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_03__Under%20Siege%20(1999)%20...%20ft%20Sandra%20Oh.mp4",
+              "seconds": 2650,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 5 in \"Popular Point Chinese Karaoke Disc Image\"",
+              "item": "PopularPoint",
+              "itemTitle": "Popular Point Chinese Karaoke Disc Image",
+              "file": "popular point2.mp4",
+              "name": "popular point2",
+              "url": "https://archive.org/download/PopularPoint/popular%20point2.mp4",
+              "seconds": 4384,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 456
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Windstruck",
           "airdate": "1999-10-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x04.-.Family.Business.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x04.-.Family",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x04.-.Family.Business.ia.mp4",
+            "seconds": 2657,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 387
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x04 - A Man of Faith.mp4",
+              "name": "1x04 - A Man of Faith",
+              "url": "https://archive.org/download/jackandbobby2004/1x04%20-%20A%20Man%20of%20Faith.mp4",
+              "seconds": 2576,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 5 in \"Popular Point Chinese Karaoke Disc Image\"",
+              "item": "PopularPoint",
+              "itemTitle": "Popular Point Chinese Karaoke Disc Image",
+              "file": "popular point3.mp4",
+              "name": "popular point3",
+              "url": "https://archive.org/download/PopularPoint/popular%20point3.mp4",
+              "seconds": 4359,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 453
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_07__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_07__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_07__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn%20Michaels%20Ron%20Lester.mp4",
+              "seconds": 2650,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Slumber Party Massacre",
           "airdate": "1999-10-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x05.-.Temptation.and.Responsibility.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x05.-.Temptation.and",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x05.-.Temptation.and.Responsibility.ia.mp4",
+            "seconds": 2574,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 375
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x05.-.Temptation.and.Responsibility.mp4",
+              "name": "Hyperion.Bay.(1998).1x05.-.Temptation.and.Responsibility",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x05.-.Temptation.and.Responsibility.mp4",
+              "seconds": 2574,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 375
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 5 in \"Popular Point Chinese Karaoke Disc Image\"",
+              "item": "PopularPoint",
+              "itemTitle": "Popular Point Chinese Karaoke Disc Image",
+              "file": "popular point4.mp4",
+              "name": "popular point4",
+              "url": "https://archive.org/download/PopularPoint/popular%20point4.mp4",
+              "seconds": 4229,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 440
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_08___Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_08___Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_08___Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn%20Michaels%20Ron%20Lester.mp4",
+              "seconds": 2600,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Truth or Consequences",
           "airdate": "1999-11-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x06.-.Some.Common.Words.and.Phrases.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x06.-.Some.Common.Words.and",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x06.-.Some.Common.Words.and.Phrases.ia.mp4",
+            "seconds": 2622,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 379
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x06.-.Some.Common.Words.and.Phrases.mp4",
+              "name": "Hyperion.Bay.(1998).1x06.-.Some.Common.Words.and.Phrases",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x06.-.Some.Common.Words.and.Phrases.mp4",
+              "seconds": 2622,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 379
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x06 - An Innocent Man.mp4",
+              "name": "1x06 - An Innocent Man",
+              "url": "https://archive.org/download/jackandbobby2004/1x06%20-%20An%20Innocent%20Man.mp4",
+              "seconds": 2587,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 90
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Truth or Consequences\" (0.63)",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x11.-.Truth.or.Consequences.ia.mp4",
+              "name": "Hyperion.Bay.(1998).1x11.-.Truth.or",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x11.-.Truth.or.Consequences.ia.mp4",
+              "seconds": 2644,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 386
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Queen B.",
           "airdate": "1999-11-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "superstar-usa",
+            "itemTitle": "The WB's Superstar USA",
+            "file": "The WB's Superstar USA S01E07 - The Duet.mp4",
+            "name": "The WB's Superstar USA S01E07 - The Duet",
+            "url": "https://archive.org/download/superstar-usa/The%20WB's%20Superstar%20USA%20S01E07%20-%20The%20Duet.mp4",
+            "seconds": 2579,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "superstar-usa_202509",
+              "itemTitle": "Superstar USA (2004)",
+              "file": "Superstar USA - S01E07 - The Duet Series Finale.mp4",
+              "name": "Superstar USA - S01E07 - The Duet Series Finale",
+              "url": "https://archive.org/download/superstar-usa_202509/Superstar%20USA%20-%20S01E07%20-%20The%20Duet%20Series%20Finale.mp4",
+              "seconds": 2579,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 168
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x07 - Valentino.mp4",
+              "name": "1x07 - Valentino",
+              "url": "https://archive.org/download/jackandbobby2004/1x07%20-%20Valentino.mp4",
+              "seconds": 2621,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 364
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_10__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_10__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_10__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn%20Michaels%20Ron%20Lester.mp4",
+              "seconds": 2651,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Tonight's the Night",
           "airdate": "1999-11-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x08.-.Houseguests.and.Fish.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x08.-.Houseguests.and",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x08.-.Houseguests.and.Fish.ia.mp4",
+            "seconds": 2585,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 377
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x08.-.Houseguests.and.Fish.mp4",
+              "name": "Hyperion.Bay.(1998).1x08.-.Houseguests.and.Fish",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x08.-.Houseguests.and.Fish.mp4",
+              "seconds": 2585,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 377
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x08 - Election Night.mp4",
+              "name": "1x08 - Election Night",
+              "url": "https://archive.org/download/jackandbobby2004/1x08%20-%20Election%20Night.mp4",
+              "seconds": 2587,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 258
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_11__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_11__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_11__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn%20Michaels%20Ron%20Lester.mp4",
+              "seconds": 2650,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 172
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Wild Wild Mess",
           "airdate": "1999-12-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x09.-.The.Rope.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x09.-.The",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x09.-.The.Rope.ia.mp4",
+            "seconds": 2602,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 365
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x09.-.The.Rope.mp4",
+              "name": "Hyperion.Bay.(1998).1x09.-.The.Rope",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x09.-.The.Rope.mp4",
+              "seconds": 2602,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x09 - Chess Lessons.mp4",
+              "name": "1x09 - Chess Lessons",
+              "url": "https://archive.org/download/jackandbobby2004/1x09%20-%20Chess%20Lessons.mp4",
+              "seconds": 2590,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 256
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_12___Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_12___Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron Lester",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_12___Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn%20Michaels%20Ron%20Lester.mp4",
+              "seconds": 2653,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Fall on Your Knees",
           "airdate": "1999-12-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x10.-.Young.and.on.Fire.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x10.-.Young.and.on",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x10.-.Young.and.on.Fire.ia.mp4",
+            "seconds": 2667,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 390
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x10.-.Young.and.on.Fire.mp4",
+              "name": "Hyperion.Bay.(1998).1x10.-.Young.and.on.Fire",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x10.-.Young.and.on.Fire.mp4",
+              "seconds": 2667,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 390
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x10 - The Lost Boys.mp4",
+              "name": "1x10 - The Lost Boys",
+              "url": "https://archive.org/download/jackandbobby2004/1x10%20-%20The%20Lost%20Boys.mp4",
+              "seconds": 2583,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 254
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_13___Tammy Lynn Michaels Ron Lester Leslie Grossman Lisa Darr Scott Bryce Diane Delano.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_13___Tammy Lynn Michaels Ron Lester Leslie Grossman Lisa Darr Scott Bryce Diane Delano",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_13___Tammy%20Lynn%20Michaels%20Ron%20Lester%20Leslie%20Grossman%20Lisa%20Darr%20Scott%20Bryce%20Diane%20Delano.mp4",
+              "seconds": 2624,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Ex, Lies and Videotape",
           "airdate": "2000-01-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x11.-.Truth.or.Consequences.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x11.-.Truth.or",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x11.-.Truth.or.Consequences.ia.mp4",
+            "seconds": 2644,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 386
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x11 - Today I Am A Man.mp4",
+              "name": "1x11 - Today I Am A Man",
+              "url": "https://archive.org/download/jackandbobby2004/1x11%20-%20Today%20I%20Am%20A%20Man.mp4",
+              "seconds": 2590,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 343
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_14___Tammy Lynn Michaels Ron Lester Leslie Grossman Lisa Darr Scott Bryce Diane Delano.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_14___Tammy Lynn Michaels Ron Lester Leslie Grossman Lisa Darr Scott Bryce Diane Delano",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_14___Tammy%20Lynn%20Michaels%20Ron%20Lester%20Leslie%20Grossman%20Lisa%20Darr%20Scott%20Bryce%20Diane%20Delano.mp4",
+              "seconds": 2655,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 12,
           "name": "The Trial of Emory Dick",
           "airdate": "2000-01-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x12.-.The.Takeover.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x12.-.The",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x12.-.The.Takeover.ia.mp4",
+            "seconds": 2663,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 389
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x12.-.The.Takeover.mp4",
+              "name": "Hyperion.Bay.(1998).1x12.-.The.Takeover",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x12.-.The.Takeover.mp4",
+              "seconds": 2663,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 389
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x12 - Running Scared.mp4",
+              "name": "1x12 - Running Scared",
+              "url": "https://archive.org/download/jackandbobby2004/1x12%20-%20Running%20Scared.mp4",
+              "seconds": 2573,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 361
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_15__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_15__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_15__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn.mp4",
+              "seconds": 2669,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Hope in a Jar",
           "airdate": "2000-01-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x13.-.Strange.Days.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x13.-.Strange",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x13.-.Strange.Days.ia.mp4",
+            "seconds": 2655,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 388
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x13.-.Strange.Days.mp4",
+              "name": "Hyperion.Bay.(1998).1x13.-.Strange.Days",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x13.-.Strange.Days.mp4",
+              "seconds": 2655,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 388
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x13 - A New Frontier.mp4",
+              "name": "1x13 - A New Frontier",
+              "url": "https://archive.org/download/jackandbobby2004/1x13%20-%20A%20New%20Frontier.mp4",
+              "seconds": 2528,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 247
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_16___Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_16___Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn Michaels Ron",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_16___Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn%20Michaels%20Ron.mp4",
+              "seconds": 2654,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 159
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Caged!",
           "airdate": "2000-02-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x14.-.Valentine's.Bay.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x14.-.Valentine's",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x14.-.Valentine's.Bay.ia.mp4",
+            "seconds": 2602,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 380
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x14.-.Valentine's.Bay.mp4",
+              "name": "Hyperion.Bay.(1998).1x14.-.Valentine's.Bay",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x14.-.Valentine's.Bay.mp4",
+              "seconds": 2602,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 380
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x14 - Into the Woods.mp4",
+              "name": "1x14 - Into the Woods",
+              "url": "https://archive.org/download/jackandbobby2004/1x14%20-%20Into%20the%20Woods.mp4",
+              "seconds": 2591,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 366
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_17___pll guy.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_17___pll guy",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_17___pll%20guy.mp4",
+              "seconds": 2654,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Booty Camp",
           "airdate": "2000-02-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "S/E in filename",
+            "item": "jackandbobby2004",
+            "itemTitle": "Jack & Bobby (2004-2005)",
+            "file": "1x15 - Time Out Of Life.mp4",
+            "name": "1x15 - Time Out Of Life",
+            "url": "https://archive.org/download/jackandbobby2004/1x15%20-%20Time%20Out%20Of%20Life.mp4",
+            "seconds": 2588,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 259
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_18__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_18__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_18__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn.mp4",
+              "seconds": 2645,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 16,
           "name": "All About Adam",
           "airdate": "2000-02-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "S/E in filename",
+            "item": "jackandbobby2004",
+            "itemTitle": "Jack & Bobby (2004-2005)",
+            "file": "1x16 - And Justice For All.mp4",
+            "name": "1x16 - And Justice For All",
+            "url": "https://archive.org/download/jackandbobby2004/1x16%20-%20And%20Justice%20For%20All.mp4",
+            "seconds": 2589,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 256
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_19__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_19__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_19__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn.mp4",
+              "seconds": 2651,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 149
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Lord of the Files",
           "airdate": "2000-02-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+            "itemTitle": "Hyperion Bay (US) (1998)",
+            "file": "Hyperion.Bay.(1998).1x17.-.The.Weight.of.the.World.ia.mp4",
+            "name": "Hyperion.Bay.(1998).1x17.-.The.Weight.of.the",
+            "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x17.-.The.Weight.of.the.World.ia.mp4",
+            "seconds": 2621,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 383
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4",
+              "itemTitle": "Hyperion Bay (US) (1998)",
+              "file": "Hyperion.Bay.(1998).1x17.-.The.Weight.of.the.World.mp4",
+              "name": "Hyperion.Bay.(1998).1x17.-.The.Weight.of.the.World",
+              "url": "https://archive.org/download/hyperion.-bay.-us.-1998.-720p.-h.-264.-aac.-stereo.-eng.-mp-4/Hyperion.Bay.(1998).1x17.-.The.Weight.of.the.World.mp4",
+              "seconds": 2621,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 383
+            },
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x17 - Querida Grace.mp4",
+              "name": "1x17 - Querida Grace",
+              "url": "https://archive.org/download/jackandbobby2004/1x17%20-%20Querida%20Grace.mp4",
+              "seconds": 2591,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 252
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_20_Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_20_Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_20_Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn.mp4",
+              "seconds": 2661,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Ch-Ch-Changes",
           "airdate": "2000-04-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 18 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_21__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn.mp4",
+            "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_21__Leslie Bibb Carly Pope Tamara Mello Christopher Gorham Sara Rue Bryce Johnson Tammy Lynn",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_21__Leslie%20Bibb%20Carly%20Pope%20Tamara%20Mello%20Christopher%20Gorham%20Sara%20Rue%20Bryce%20Johnson%20Tammy%20Lynn.mp4",
+            "seconds": 2611,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Hard on the Outside, Soft in the Middle",
           "airdate": "2000-04-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "S/E in filename",
+            "item": "jackandbobby2004",
+            "itemTitle": "Jack & Bobby (2004-2005)",
+            "file": "1x19 - A Child of God.mp4",
+            "name": "1x19 - A Child of God",
+            "url": "https://archive.org/download/jackandbobby2004/1x19%20-%20A%20Child%20of%20God.mp4",
+            "seconds": 2587,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_22 - 123.mp4",
+              "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_22 - 123",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_22%20-%20123.mp4",
+              "seconds": 2649,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         },
         {
           "number": 20,
           "name": "We Are Family",
           "airdate": "2000-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "S/E in filename",
+            "item": "jackandbobby2004",
+            "itemTitle": "Jack & Bobby (2004-2005)",
+            "file": "1x20 - Under the Influence.mp4",
+            "name": "1x20 - Under the Influence",
+            "url": "https://archive.org/download/jackandbobby2004/1x20%20-%20Under%20the%20Influence.mp4",
+            "seconds": 2595,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 366
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 1 - 22 eps/zpopular-_season_01_-_episode_01__only works for first 9 minutes.mp4",
+              "name": "Popular Season 1 - 22 eps/zpopular-_season_01_-_episode_01__only works for first 9 minutes",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fzpopular-_season_01_-_episode_01__only%20works%20for%20first%209%20minutes.mp4",
+              "seconds": 2628,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 84
+            }
+          ]
         },
         {
           "number": 21,
           "name": "What Makes Sammy Run",
           "airdate": "2000-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "S/E in filename",
+            "item": "jackandbobby2004",
+            "itemTitle": "Jack & Bobby (2004-2005)",
+            "file": "1x21 - Stand By Me.mp4",
+            "name": "1x21 - Stand By Me",
+            "url": "https://archive.org/download/jackandbobby2004/1x21%20-%20Stand%20By%20Me.mp4",
+            "seconds": 2590,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 249
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 21 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_16 _F_G_.mp4",
+              "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_16 _F_G_",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_16%20_F_G_.mp4",
+              "seconds": 2644,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 22,
           "name": "Two Weddings and a Funeral",
           "airdate": "2000-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_22 -Popular - Season 1 - Episode 22  Two Weddings and a Funeral  - 1 of 3 eps on streamlare.mp4",
+            "name": "Popular Season 1 - 22 eps/popular-_season_01_-_episode_22 -Popular - Season 1 - Episode 22  Two Weddings and a Funeral  - 1 of 3 eps on streamlare",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%201%20-%2022%20eps%2Fpopular-_season_01_-_episode_22%20-Popular%20-%20Season%201%20-%20Episode%2022%20%20Two%20Weddings%20and%20a%20Funeral%20%20-%201%20of%203%20eps%20on%20streamlare.mp4",
+            "seconds": 2649,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "jackandbobby2004",
+              "itemTitle": "Jack & Bobby (2004-2005)",
+              "file": "1x22 - Legacy.mp4",
+              "name": "1x22 - Legacy",
+              "url": "https://archive.org/download/jackandbobby2004/1x22%20-%20Legacy.mp4",
+              "seconds": 2571,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 254
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 22 in \"Popular (1999-2001) WB dramedy - all 43 \"",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_20  _You Don't Tug On Superman's Cape_.mp4",
+              "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_20  _You Don't Tug On Superman's Cape_",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_20%20%20_You%20Don't%20Tug%20On%20Superman's%20Cape_.mp4",
+              "seconds": 2606,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         }
       ]
     },
@@ -207,120 +1155,328 @@
           "number": 1,
           "name": "Timber!",
           "airdate": "2000-09-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Timber!\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_01 _Timber!_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_01 _Timber!_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_01%20_Timber!_.mp4",
+            "seconds": 2599,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Baby, Don't Do It!",
           "airdate": "2000-09-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Baby, Don't Do It!\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_02 _Baby, Don't Do It!_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_02 _Baby, Don't Do It!_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_02%20_Baby%2C%20Don't%20Do%20It!_.mp4",
+            "seconds": 2650,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 141
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Citizen Shame",
           "airdate": "2000-10-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Citizen Shame\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_03 _Citizen Shame_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_03 _Citizen Shame_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_03%20_Citizen%20Shame_.mp4",
+            "seconds": 2648,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "The Sweetest Taboo",
           "airdate": "2000-10-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Sweetest Taboo\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_04 _The Sweetest Taboo_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_04 _The Sweetest Taboo_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_04%20_The%20Sweetest%20Taboo_.mp4",
+            "seconds": 2649,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 151
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Joe Loves Mary Cherry",
           "airdate": "2000-10-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Joe Loves Mary Cherry\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_05  _Joe Loves Mary Cherry_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_05  _Joe Loves Mary Cherry_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_05%20%20_Joe%20Loves%20Mary%20Cherry_.mp4",
+            "seconds": 2697,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 139
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Style and Substance Abuse (1)",
           "airdate": "2000-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Style and Substance Abuse (1)\" (0.88)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_06  _Style and Substance Abuse_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_06  _Style and Substance Abuse_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_06%20%20_Style%20and%20Substance%20Abuse_.mp4",
+            "seconds": 2667,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Ur-ine Trouble (2)",
           "airdate": "2000-11-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ur-ine Trouble (2)\" (0.81)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_07  _Ur-ine Trouble_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_07  _Ur-ine Trouble_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_07%20%20_Ur-ine%20Trouble_.mp4",
+            "seconds": 2657,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Misery Loathes Company",
           "airdate": "2000-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Misery Loathes Company\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_08  _Misery Loathes Company_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_08  _Misery Loathes Company_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_08%20%20_Misery%20Loathes%20Company_.mp4",
+            "seconds": 2669,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Are You There God? It's Me, Ann-Margret",
           "airdate": "2000-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Are You There God? It's Me, Ann-Margret\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_09  Are You There God It's Me, Ann-Margret  - 1 of 3 eps on streamlare.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_09  Are You There God It's Me, Ann-Margret  - 1 of 3 eps on streamlare",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_09%20%20Are%20You%20There%20God%20It's%20Me%2C%20Ann-Margret%20%20-%201%20of%203%20eps%20on%20streamlare.mp4",
+            "seconds": 2647,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 158
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Are You There God? It's Me, Ann-Margret\" (0.95)",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_09  _Are You There God, It's Me, Ann Margret_.mp4",
+              "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_09  _Are You There God, It's Me, Ann Margret_",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_09%20%20_Are%20You%20There%20God%2C%20It's%20Me%2C%20Ann%20Margret_.mp4",
+              "seconds": 2647,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 10,
           "name": "The Consequences of Falling",
           "airdate": "2000-12-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Consequences of Falling\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_10 _The Consequences of Falling_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_10 _The Consequences of Falling_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_10%20_The%20Consequences%20of%20Falling_.mp4",
+            "seconds": 2748,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 117
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Fire in the Hole",
           "airdate": "2001-01-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Fire in the Hole\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_11  _Fire in the Hole_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_11  _Fire in the Hole_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_11%20%20_Fire%20in%20the%20Hole_.mp4",
+            "seconds": 2656,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Shocking Possession of Harrison John",
           "airdate": "2001-01-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Shocking Possession of Harrison John\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_12 _The Shocking Possession of Harrison John_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_12 _The Shocking Possession of Harrison John_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_12%20_The%20Shocking%20Possession%20of%20Harrison%20John_.mp4",
+            "seconds": 2647,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Mary Charity",
           "airdate": "2001-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mary Charity\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_13  Mary Charity  - 1 of 3 eps on streamlare.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_13  Mary Charity  - 1 of 3 eps on streamlare",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_13%20%20Mary%20Charity%20%20-%201%20of%203%20eps%20on%20streamlare.mp4",
+            "seconds": 2648,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 165
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mary Charity\" (0.95)",
+              "item": "popular-1999-2001",
+              "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+              "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_13  _Mary Charity_.mp4",
+              "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_13  _Mary Charity_",
+              "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_13%20%20_Mary%20Charity_.mp4",
+              "seconds": 2648,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 14,
           "name": "The News of My Death Has Been Greatly Exaggerated",
           "airdate": "2001-02-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The News of My Death Has Been Greatly Exaggerated\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_14 _The News of My Death Has Been Greatly Exaggerated_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_14 _The News of My Death Has Been Greatly Exaggerated_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_14%20_The%20News%20of%20My%20Death%20Has%20Been%20Greatly%20Exaggerated_.mp4",
+            "seconds": 2688,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "It's Greek to Me",
           "airdate": "2001-03-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"It's Greek to Me\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_15  _It's Greek to Me_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_15  _It's Greek to Me_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_15%20%20_It's%20Greek%20to%20Me_.mp4",
+            "seconds": 2626,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
@@ -335,24 +1491,60 @@
           "number": 17,
           "name": "Coup",
           "airdate": "2001-03-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Coup\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_17  _Coup_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_17  _Coup_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_17%20%20_Coup_.mp4",
+            "seconds": 2661,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "The Brain Game",
           "airdate": "2001-04-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Brain Game\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_18 _The Brain Game_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_18 _The Brain Game_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_18%20_The%20Brain%20Game_.mp4",
+            "seconds": 2605,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "I Know What You Did Last Spring Break!",
           "airdate": "2001-05-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"I Know What You Did Last Spring Break!\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_19 _I Know What You Did Last Spring Break!_.mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_19 _I Know What You Did Last Spring Break!_",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_19%20_I%20Know%20What%20You%20Did%20Last%20Spring%20Break!_.mp4",
+            "seconds": 2603,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
+          },
           "alternates": []
         },
         {
@@ -367,8 +1559,20 @@
           "number": 21,
           "name": "Promblems",
           "airdate": "2001-05-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Promblems\" (0.95)",
+            "item": "popular-1999-2001",
+            "itemTitle": "Popular (1999-2001) WB dramedy - all 43 eps",
+            "file": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_21  _Promblems_ [Series Final].mp4",
+            "name": "Popular Season 2 - 21 eps/popular-_season_02_-_episode_21  _Promblems_ [Series Final]",
+            "url": "https://archive.org/download/popular-1999-2001/Popular%20Season%202%20-%2021%20eps%2Fpopular-_season_02_-_episode_21%20%20_Promblems_%20%5BSeries%20Final%5D.mp4",
+            "seconds": 2659,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 127
+          },
           "alternates": []
         }
       ]

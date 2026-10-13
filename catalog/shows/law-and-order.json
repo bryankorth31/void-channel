@@ -3,7 +3,7 @@
   "slug": "law-and-order",
   "type": "Drama",
   "network": "NBC",
-  "matchedAt": "2026-10-13T15:54:08.753Z",
+  "matchedAt": "2026-10-13T20:19:49.684Z",
   "tvmaze": {
     "id": 562,
     "name": "Law & Order",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 548,
     "live": 0,
-    "review": 0,
-    "missing": 548,
+    "review": 1,
+    "missing": 547,
     "pct": 0
   },
   "seasons": [
@@ -2848,8 +2848,20 @@
           "number": 20,
           "name": "Tombstone",
           "airdate": "2005-04-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Tombstone\" (0.95)",
+            "item": "blankvhsapril-2005",
+            "itemTitle": "Blank VHS Tape: The OC, Law & Order, NBC Late Night (2005)",
+            "file": "Law & Order - Tombstone.mp4",
+            "name": "Law & Order - Tombstone",
+            "url": "https://archive.org/download/blankvhsapril-2005/Law%20%26%20Order%20-%20Tombstone.mp4",
+            "seconds": 2975,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 959
+          },
           "alternates": []
         },
         {

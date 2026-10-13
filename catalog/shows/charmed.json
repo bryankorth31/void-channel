@@ -3,7 +3,7 @@
   "slug": "charmed",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-13T15:54:10.675Z",
+  "matchedAt": "2026-10-13T20:19:52.996Z",
   "tvmaze": {
     "id": 506,
     "name": "Charmed",
@@ -713,19 +713,6 @@
             "sizeMB": 256
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Is There a Woogy in the House?\" (0.95)",
-              "item": "charmed_the_complete_series",
-              "itemTitle": "Charmed (1998) The Complete Series",
-              "file": "S01_E15_Episode 15 (Is There A Woogy In The House).mp4",
-              "name": "S01_E15_Episode 15 (Is There A Woogy In The House)",
-              "url": "https://archive.org/download/charmed_the_complete_series/S01_E15_Episode%2015%20(Is%20There%20A%20Woogy%20In%20The%20House).mp4",
-              "seconds": 2631,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 335
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1941,7 +1928,7 @@
           "airdate": "2001-01-18",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "charmed-1998-season-3",
             "itemTitle": "Charmed (1998) – Season 3",

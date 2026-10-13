@@ -3,7 +3,7 @@
   "slug": "hercules-the-legendary-journeys",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Syndicated",
-  "matchedAt": "2026-10-13T15:54:09.759Z",
+  "matchedAt": "2026-10-13T20:19:51.663Z",
   "tvmaze": {
     "id": 905,
     "name": "Hercules: The Legendary Journeys",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 111,
     "live": 0,
-    "review": 0,
-    "missing": 111,
-    "pct": 0
+    "review": 111,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -26,105 +26,414 @@
           "number": 1,
           "name": "The Wrong Path",
           "airdate": "1995-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Wrong Path\" (0.95)",
+            "item": "hercules-the-legendary-journeys-1-the-wrong-path",
+            "itemTitle": "Hercules The Legendary Journeys 1 The Wrong Path",
+            "file": "Hercules the legendary journeys 1 The Wrong Path.mp4",
+            "name": "Hercules the legendary journeys 1 The Wrong Path",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-1-the-wrong-path/Hercules%20the%20legendary%20journeys%201%20The%20Wrong%20Path.mp4",
+            "seconds": 2712,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 354
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2652,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2335
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Eye of the Beholder",
           "airdate": "1995-02-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S01E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S01E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2650,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2535
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Road to Calydon",
           "airdate": "1995-02-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Road to Calydon\" (0.95)",
+            "item": "hercules-the-legendary-journeys-2-the-road-to-calydon",
+            "itemTitle": "Hercules The Legendary Journeys 2 The Road To Calydon",
+            "file": "Hercules the legendary journeys 2 The Road to Calydon.mp4",
+            "name": "Hercules the legendary journeys 2 The Road to Calydon",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-2-the-road-to-calydon/Hercules%20the%20legendary%20journeys%202%20The%20Road%20to%20Calydon.mp4",
+            "seconds": 2738,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2650,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2154
+            }
+          ]
         },
         {
           "number": 4,
           "name": "The Festival of Dionysus",
           "airdate": "1995-02-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Festival of Dionysus\" (0.95)",
+            "item": "hercules-the-legendary-journeys-3-the-festival-of-dionysus",
+            "itemTitle": "Hercules The Legendary Journeys 3 The Festival Of Dionysus",
+            "file": "Hercules The Legendary Journeys 3 The Festival of Dionysus.mp4",
+            "name": "Hercules The Legendary Journeys 3 The Festival of Dionysus",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-3-the-festival-of-dionysus/Hercules%20The%20Legendary%20Journeys%203%20The%20Festival%20of%20Dionysus.mp4",
+            "seconds": 2703,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 278
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2650,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2037
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Ares",
           "airdate": "1995-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ares\" (0.95)",
+            "item": "hercules-the-legendary-journeys-4-ares",
+            "itemTitle": "Hercules The Legendary Journeys 4 Ares",
+            "file": "Hercules the legendary journeys 4 Ares.mp4",
+            "name": "Hercules the legendary journeys 4 Ares",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-4-ares/Hercules%20the%20legendary%20journeys%204%20Ares.mp4",
+            "seconds": 2667,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 319
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2649,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2581
+            }
+          ]
         },
         {
           "number": 6,
           "name": "As Darkness Falls",
           "airdate": "1995-03-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S01E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S01E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2655,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2343
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Pride Comes Before a Brawl",
           "airdate": "1995-03-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S01E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S01E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2651,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2231
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "The March to Freedom",
           "airdate": "1995-03-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The March to Freedom\" (0.95)",
+            "item": "hercules-the-legendary-journeys-8-the-march-to-freedom",
+            "itemTitle": "Hercules The Legendary Journeys 8 The March To Freedom",
+            "file": "Hercules the legendary journeys 8 The March to Freedom.mp4",
+            "name": "Hercules the legendary journeys 8 The March to Freedom",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-8-the-march-to-freedom/Hercules%20the%20legendary%20journeys%208%20The%20March%20to%20Freedom.mp4",
+            "seconds": 2708,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 312
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2395
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Warrior Princess",
           "airdate": "1995-03-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Warrior Princess\" (0.95)",
+            "item": "hercules-the-legendary-journeys-9-the-warrior-princess",
+            "itemTitle": "Hercules The Legendary Journeys 9 The Warrior Princess",
+            "file": "Hercules the legendary journeys 9 The Warrior Princess.mp4",
+            "name": "Hercules the legendary journeys 9 The Warrior Princess",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-9-the-warrior-princess/Hercules%20the%20legendary%20journeys%209%20The%20Warrior%20Princess.mp4",
+            "seconds": 2656,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2656,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2230
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Gladiator",
           "airdate": "1995-04-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Gladiator\" (0.95)",
+            "item": "hercules-the-legendary-journeys-10-gladiator",
+            "itemTitle": "Hercules The Legendary Journeys 10 Gladiator",
+            "file": "Hercules the legendary journeys 10  Gladiator.mp4",
+            "name": "Hercules the legendary journeys 10  Gladiator",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-10-gladiator/Hercules%20the%20legendary%20journeys%2010%20%20Gladiator.mp4",
+            "seconds": 2655,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 143
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2655,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1787
+            }
+          ]
         },
         {
           "number": 11,
           "name": "The Vanishing Dead",
           "airdate": "1995-05-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Vanishing Dead\" (0.95)",
+            "item": "hercules-the-legendary-journeys-11-the-vanishing-dead",
+            "itemTitle": "Hercules The Legendary Journeys 11 The Vanishing Dead",
+            "file": "Hercules the legendary journeys 11 The Vanishing Dead.mp4",
+            "name": "Hercules the legendary journeys 11 The Vanishing Dead",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-11-the-vanishing-dead/Hercules%20the%20legendary%20journeys%2011%20The%20Vanishing%20Dead.mp4",
+            "seconds": 2652,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2652,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1946
+            }
+          ]
         },
         {
           "number": 12,
           "name": "The Gauntlet",
           "airdate": "1995-05-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Gauntlet\" (0.95)",
+            "item": "hercules-the-legendary-journeys-12-the-gauntlet",
+            "itemTitle": "Hercules The Legendary Journeys 12 The Gauntlet",
+            "file": "Hercules the legendary journeys 12 The Gauntlet.mp4",
+            "name": "Hercules the legendary journeys 12 The Gauntlet",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-12-the-gauntlet/Hercules%20the%20legendary%20journeys%2012%20The%20Gauntlet.mp4",
+            "seconds": 2688,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 307
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2655,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1888
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Unchained Heart",
           "airdate": "1995-05-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Unchained Heart\" (0.95)",
+            "item": "hercules-the-legendary-journeys-13-the-unchained-heart",
+            "itemTitle": "Hercules The Legendary Journeys 13 The Unchained Heart",
+            "file": "Hercules the legendary journeys 13  The Unchained Heart.mp4",
+            "name": "Hercules the legendary journeys 13  The Unchained Heart",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-13-the-unchained-heart/Hercules%20the%20legendary%20journeys%2013%20%20The%20Unchained%20Heart.mp4",
+            "seconds": 2667,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S01E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S01E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S01E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2667,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1862
+            }
+          ]
         }
       ]
     },
@@ -135,192 +444,728 @@
           "number": 1,
           "name": "The King of Thieves",
           "airdate": "1995-09-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The King of Thieves\" (0.95)",
+            "item": "hercules-the-legendary-journeys-14-the-king-of-thieves",
+            "itemTitle": "Hercules The Legendary Journeys 14 The King Of Thieves",
+            "file": "Hercules the legendary journeys 14  The King of Thieves.mp4",
+            "name": "Hercules the legendary journeys 14  The King of Thieves",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-14-the-king-of-thieves/Hercules%20the%20legendary%20journeys%2014%20%20The%20King%20of%20Thieves.mp4",
+            "seconds": 2647,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1754
+            }
+          ]
         },
         {
           "number": 2,
           "name": "All That Glitters",
           "airdate": "1995-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"All That Glitters\" (0.95)",
+            "item": "hercules-the-legendary-journeys-15-all-that-glitters",
+            "itemTitle": "Hercules The Legendary Journeys 15 All That Glitters",
+            "file": "Hercules the legendary journeys 15 All That Glitters.mp4",
+            "name": "Hercules the legendary journeys 15 All That Glitters",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-15-all-that-glitters/Hercules%20the%20legendary%20journeys%2015%20All%20That%20Glitters.mp4",
+            "seconds": 2811,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 329
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2655,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2273
+            }
+          ]
         },
         {
           "number": 3,
           "name": "What's in a Name?",
           "airdate": "1995-09-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2649,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1660
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Siege at Naxos",
           "airdate": "1995-10-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Siege at Naxos\" (0.95)",
+            "item": "hercules-the-legendary-journeys-17-siege-at-naxos",
+            "itemTitle": "Hercules The Legendary Journeys 17 Siege At Naxos",
+            "file": "Hercules The Legendary Journeys 17 Siege at Naxos.mp4",
+            "name": "Hercules The Legendary Journeys 17 Siege at Naxos",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-17-siege-at-naxos/Hercules%20The%20Legendary%20Journeys%2017%20Siege%20at%20Naxos.mp4",
+            "seconds": 2781,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2656,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2110
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Outcast",
           "airdate": "1995-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Outcast\" (0.95)",
+            "item": "hercules-the-legendary-journeys-18-outcast",
+            "itemTitle": "Hercules The Legendary Journeys 18 Outcast",
+            "file": "Hercules The Legendary Journeys 18 Outcast.mp4",
+            "name": "Hercules The Legendary Journeys 18 Outcast",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-18-outcast/Hercules%20The%20Legendary%20Journeys%2018%20Outcast.mp4",
+            "seconds": 2769,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 319
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2651,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1855
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Under the Broken Sky",
           "airdate": "1995-10-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Under the Broken Sky\" (0.95)",
+            "item": "hercules-the-legendary-journeys-5-under-the-broken-sky",
+            "itemTitle": "Hercules The Legendary Journeys 5 Under The Broken Sky",
+            "file": "Hercules The Legendary Journeys 5 Under the Broken Sky.mp4",
+            "name": "Hercules The Legendary Journeys 5 Under the Broken Sky",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-5-under-the-broken-sky/Hercules%20The%20Legendary%20Journeys%205%20Under%20the%20Broken%20Sky.mp4",
+            "seconds": 3102,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 407
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2647,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1924
+            }
+          ]
         },
         {
           "number": 7,
           "name": "The Mother of All Monsters",
           "airdate": "1995-10-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2650,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2188
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "The Other Side",
           "airdate": "1995-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Other Side\" (0.95)",
+            "item": "hercules-the-legendary-journeys-21-the-other-side",
+            "itemTitle": "Hercules The Legendary Journeys 21 The Other Side",
+            "file": "Hercules the legendary journeys 21 The Other Side.mp4",
+            "name": "Hercules the legendary journeys 21 The Other Side",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-21-the-other-side/Hercules%20the%20legendary%20journeys%2021%20The%20Other%20Side.mp4",
+            "seconds": 2653,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 109
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1577
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Fire Down Below",
           "airdate": "1995-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Fire Down Below\" (0.95)",
+            "item": "hercules-the-legendary-journeys-22-the-fire-down-below",
+            "itemTitle": "Hercules The Legendary Journeys 22 The Fire Down Below",
+            "file": "Hercules the legendary journeys 22 The Fire Down Below.mp4",
+            "name": "Hercules the legendary journeys 22 The Fire Down Below",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-22-the-fire-down-below/Hercules%20the%20legendary%20journeys%2022%20The%20Fire%20Down%20Below.mp4",
+            "seconds": 2663,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2664,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1842
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Cast a Giant Shadow",
           "airdate": "1995-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Cast a Giant Shadow\" (0.95)",
+            "item": "hercules-the-legendary-journeys-23-cast-a-giant-shadow",
+            "itemTitle": "Hercules The Legendary Journeys 23 Cast A Giant Shadow",
+            "file": "Hercules the legendary journeys 23 Cast a Giant Shadow.mp4",
+            "name": "Hercules the legendary journeys 23 Cast a Giant Shadow",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-23-cast-a-giant-shadow/Hercules%20the%20legendary%20journeys%2023%20Cast%20a%20Giant%20Shadow.mp4",
+            "seconds": 2665,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2666,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1962
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Highway to Hades",
           "airdate": "1995-12-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Highway to Hades\" (0.95)",
+            "item": "hercules-the-legendary-journeys-24-highway-to-hades",
+            "itemTitle": "Hercules The Legendary Journeys 24 Highway To Hades",
+            "file": "Hercules the legendary journeys 24 Highway to Hades.mp4",
+            "name": "Hercules the legendary journeys 24 Highway to Hades",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-24-highway-to-hades/Hercules%20the%20legendary%20journeys%2024%20Highway%20to%20Hades.mp4",
+            "seconds": 2774,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 96
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2660,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1952
+            }
+          ]
         },
         {
           "number": 12,
           "name": "The Sword of Veracity",
           "airdate": "1996-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Sword of Veracity\" (0.95)",
+            "item": "hercules-the-legendary-journeys-25-the-sword-of-veracity",
+            "itemTitle": "Hercules The Legendary Journeys 25 The Sword Of Veracity",
+            "file": "Hercules the legendary journeys 25 The Sword of Veracity.mp4",
+            "name": "Hercules the legendary journeys 25 The Sword of Veracity",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-25-the-sword-of-veracity/Hercules%20the%20legendary%20journeys%2025%20The%20Sword%20of%20Veracity.mp4",
+            "seconds": 2713,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 89
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2656,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1823
+            }
+          ]
         },
         {
           "number": 13,
           "name": "The Enforcer",
           "airdate": "1996-01-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Enforcer\" (0.95)",
+            "item": "hercules-the-legendary-journeys-26-the-enforcer",
+            "itemTitle": "Hercules The Legendary Journeys 26 The Enforcer",
+            "file": "Hercules the legendary journeys 26 The Enforcer.mp4",
+            "name": "Hercules the legendary journeys 26 The Enforcer",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-26-the-enforcer/Hercules%20the%20legendary%20journeys%2026%20The%20Enforcer.mp4",
+            "seconds": 2775,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 121
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1801
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Once a Hero",
           "airdate": "1996-02-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2661,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1994
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Heedless Hearts",
           "airdate": "1996-02-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2663,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1950
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Let the Games Begin",
           "airdate": "1996-02-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2654,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1778
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "The Apple",
           "airdate": "1996-03-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Apple\" (0.95)",
+            "item": "hercules-the-legendary-journeys-30-the-apple",
+            "itemTitle": "Hercules The Legendary Journeys 30 The Apple",
+            "file": "Hercules the legendary journeys 30 The Apple.mp4",
+            "name": "Hercules the legendary journeys 30 The Apple",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-30-the-apple/Hercules%20the%20legendary%20journeys%2030%20The%20Apple.mp4",
+            "seconds": 2780,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 104
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2658,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1465
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Promises",
           "airdate": "1996-03-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Promises\" (0.95)",
+            "item": "hercules-the-legendary-journeys-31-promises",
+            "itemTitle": "Hercules The Legendary Journeys 31 Promises",
+            "file": "Hercules the legendary journeys 31 Promises.mp4",
+            "name": "Hercules the legendary journeys 31 Promises",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-31-promises/Hercules%20the%20legendary%20journeys%2031%20Promises.mp4",
+            "seconds": 2662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 140
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2663,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2256
+            }
+          ]
         },
         {
           "number": 19,
           "name": "King for a Day",
           "airdate": "1996-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"King for a Day\" (0.95)",
+            "item": "hercules-the-legendary-journeys-32-king-for-a-day",
+            "itemTitle": "Hercules The Legendary Journeys 32 King For A Day",
+            "file": "Hercules the legendary journeys  32 King for a Day.mp4",
+            "name": "Hercules the legendary journeys  32 King for a Day",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-32-king-for-a-day/Hercules%20the%20legendary%20journeys%20%2032%20King%20for%20a%20Day.mp4",
+            "seconds": 2660,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 124
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2661,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1922
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Protean Challenge",
           "airdate": "1996-05-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2661,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1876
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "The Wedding of Alcmene",
           "airdate": "1996-05-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2661,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1906
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "The Power",
           "airdate": "1996-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Power\" (0.95)",
+            "item": "hercules-the-legendary-journeys-35-the-power",
+            "itemTitle": "Hercules The Legendary Journeys 35 The Power",
+            "file": "Hercules the legendary journeys 35 The Power.mp4",
+            "name": "Hercules the legendary journeys 35 The Power",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-35-the-power/Hercules%20the%20legendary%20journeys%2035%20The%20Power.mp4",
+            "seconds": 2851,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 109
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2664,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1692
+            }
+          ]
         },
         {
           "number": 23,
           "name": "Centaur Mentor Journey",
           "airdate": "1996-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Centaur Mentor Journey\" (0.95)",
+            "item": "hercules-the-legendary-journeys-36-centaur-mentor-journey",
+            "itemTitle": "Hercules The Legendary Journeys 36 Centaur Mentor Journey",
+            "file": "Hercules the legendary journeys 36 Centaur Mentor Journey.mp4",
+            "name": "Hercules the legendary journeys 36 Centaur Mentor Journey",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-36-centaur-mentor-journey/Hercules%20the%20legendary%20journeys%2036%20Centaur%20Mentor%20Journey.mp4",
+            "seconds": 2664,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S02E23.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S02E23.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E23.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2664,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1918
+            }
+          ]
         },
         {
           "number": 24,
           "name": "The Cave of Echoes",
           "airdate": "1996-07-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S02E24.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S02E24.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S02E24.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2661,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1679
+          },
           "alternates": []
         }
       ]
@@ -332,177 +1177,631 @@
           "number": 1,
           "name": "Mercenary",
           "airdate": "1996-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mercenary\" (0.95)",
+            "item": "hercules-the-legendary-journeys-38-mercenary",
+            "itemTitle": "Hercules The Legendary Journeys 38 Mercenary",
+            "file": "Hercules the legendary journeys 38 Mercenary.mp4",
+            "name": "Hercules the legendary journeys 38 Mercenary",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-38-mercenary/Hercules%20the%20legendary%20journeys%2038%20Mercenary.mp4",
+            "seconds": 2721,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 490
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2661,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2243
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Doomsday",
           "airdate": "1996-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Doomsday\" (0.95)",
+            "item": "hercules-the-legendary-journeys-39-doomsday",
+            "itemTitle": "Hercules The Legendary Journeys 39 Doomsday",
+            "file": "Hercules the legendary journeys 39 Doomsday.mp4",
+            "name": "Hercules the legendary journeys 39 Doomsday",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-39-doomsday/Hercules%20the%20legendary%20journeys%2039%20Doomsday.mp4",
+            "seconds": 2783,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 563
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2659,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2231
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Love Takes a Holiday",
           "airdate": "1996-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Love Takes a Holiday\" (0.95)",
+            "item": "hercules-the-legendary-journeys-40-love-takes-a-holiday",
+            "itemTitle": "Hercules The Legendary Journeys 40 Love Takes A Holiday",
+            "file": "Hercules the legendary journeys 40 Love Takes a Holiday.mp4",
+            "name": "Hercules the legendary journeys 40 Love Takes a Holiday",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-40-love-takes-a-holiday/Hercules%20the%20legendary%20journeys%2040%20Love%20Takes%20a%20Holiday.mp4",
+            "seconds": 2784,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 554
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2668,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2248
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Mummy Dearest",
           "airdate": "1996-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mummy Dearest\" (0.95)",
+            "item": "hercules-the-legendary-journeys-41-mummy-dearest",
+            "itemTitle": "Hercules The Legendary Journeys 41 Mummy Dearest",
+            "file": "Hercules the legendary journeys 41 Mummy Dearest.mp4",
+            "name": "Hercules the legendary journeys 41 Mummy Dearest",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-41-mummy-dearest/Hercules%20the%20legendary%20journeys%2041%20Mummy%20Dearest.mp4",
+            "seconds": 2751,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 540
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2668,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2213
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Not Fade Away",
           "airdate": "1996-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Not Fade Away\" (0.95)",
+            "item": "hercules-the-legendary-journeys-42-not-fade-away",
+            "itemTitle": "Hercules The Legendary Journeys 42 Not Fade Away",
+            "file": "Hercules the legendary journeys 42 Not Fade Away.mp4",
+            "name": "Hercules the legendary journeys 42 Not Fade Away",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-42-not-fade-away/Hercules%20the%20legendary%20journeys%2042%20Not%20Fade%20Away.mp4",
+            "seconds": 2666,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 127
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2662,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2202
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Monster Child in the Promised Land",
           "airdate": "1996-11-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2632,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2171
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Green-Eyed Monster",
           "airdate": "1996-11-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2667,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2205
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Prince Hercules",
           "airdate": "1996-11-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2671,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2221
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "A Star to Guide Them",
           "airdate": "1996-12-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2651,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2203
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "The Lady and the Dragon",
           "airdate": "1997-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2631,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2178
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Long Live the King",
           "airdate": "1997-02-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2660,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2210
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Surprise",
           "airdate": "1997-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Surprise\" (0.95)",
+            "item": "hercules-the-legendary-journeys-49-surprise",
+            "itemTitle": "Hercules The Legendary Journeys 49 Surprise",
+            "file": "Hercules the legendary journeys 49 Surprise.mp4",
+            "name": "Hercules the legendary journeys 49 Surprise",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-49-surprise/Hercules%20the%20legendary%20journeys%2049%20Surprise.mp4",
+            "seconds": 2664,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 132
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2664,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2212
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Encounter",
           "airdate": "1997-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Encounter\" (0.95)",
+            "item": "hercules-the-legendary-journeys-50-encounter",
+            "itemTitle": "Hercules The Legendary Journeys 50 Encounter",
+            "file": "Hercules the legendary journeys 50 Encounter.mp4",
+            "name": "Hercules the legendary journeys 50 Encounter",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-50-encounter/Hercules%20the%20legendary%20journeys%2050%20Encounter.mp4",
+            "seconds": 2797,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 653
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2663,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2209
+            }
+          ]
         },
         {
           "number": 14,
           "name": "When a Man Loves a Woman",
           "airdate": "1997-02-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2663,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2211
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Judgment Day",
           "airdate": "1997-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Judgment Day\" (0.95)",
+            "item": "hercules-the-legendary-journeys-52-judgment-day",
+            "itemTitle": "Hercules The Legendary Journeys 52 Judgment Day",
+            "file": "Hercules the legendary journeys 52  Judgment Day.mp4",
+            "name": "Hercules the legendary journeys 52  Judgment Day",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-52-judgment-day/Hercules%20the%20legendary%20journeys%2052%20%20Judgment%20Day.mp4",
+            "seconds": 2663,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2665,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2212
+            }
+          ]
         },
         {
           "number": 16,
           "name": "The Lost City",
           "airdate": "1997-03-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Lost City\" (0.95)",
+            "item": "hercules-the-legendary-journeys-53-the-lost-city",
+            "itemTitle": "Hercules The Legendary Journeys 53 The Lost City",
+            "file": "Hercules the legendary journeys 53 The Lost City.mp4",
+            "name": "Hercules the legendary journeys 53 The Lost City",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-53-the-lost-city/Hercules%20the%20legendary%20journeys%2053%20The%20Lost%20City.mp4",
+            "seconds": 2781,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 559
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2661,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2210
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Les Contemptibles",
           "airdate": "1997-04-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2662,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2210
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Reign of Terror",
           "airdate": "1997-04-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2603,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2161
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "The End of the Beginning",
           "airdate": "1997-05-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S03E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S03E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2664,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2211
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "War Bride",
           "airdate": "1997-05-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"War Bride\" (0.95)",
+            "item": "hercules-the-legendary-journeys-57-war-bride",
+            "itemTitle": "Hercules The Legendary Journeys 57 War Bride",
+            "file": "Hercules the legendary journeys 57 War bride.mp4",
+            "name": "Hercules the legendary journeys 57 War bride",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-57-war-bride/Hercules%20the%20legendary%20journeys%2057%20War%20bride.mp4",
+            "seconds": 2660,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 570
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2635,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2188
+            }
+          ]
         },
         {
           "number": 21,
           "name": "A Rock and a Hard Place",
           "airdate": "1997-05-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Rock and a Hard Place\" (0.95)",
+            "item": "hercules-the-legendary-journeys-58-a-rock-and-a-hard-place",
+            "itemTitle": "Hercules The Legendary Journeys 58 A Rock And A Hard Place",
+            "file": "Hercules the legendary journeys 58 A Rock and a Hard Place.mp4",
+            "name": "Hercules the legendary journeys 58 A Rock and a Hard Place",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-58-a-rock-and-a-hard-place/Hercules%20the%20legendary%20journeys%2058%20A%20Rock%20and%20a%20Hard%20Place.mp4",
+            "seconds": 2600,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 115
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2600,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2158
+            }
+          ]
         },
         {
           "number": 22,
           "name": "Atlantis",
           "airdate": "1997-05-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Atlantis\" (0.95)",
+            "item": "hercules-the-legendary-journeys-59-atlantis",
+            "itemTitle": "Hercules The Legendary Journeys 59 Atlantis",
+            "file": "Hercules the legendary journeys 59 Atlantis.mp4",
+            "name": "Hercules the legendary journeys 59 Atlantis",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-59-atlantis/Hercules%20the%20legendary%20journeys%2059%20Atlantis.mp4",
+            "seconds": 2632,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 142
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S03E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S03E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S03E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2632,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2184
+            }
+          ]
         }
       ]
     },
@@ -513,176 +1812,602 @@
           "number": 1,
           "name": "Beanstalks and Bad Eggs",
           "airdate": "1997-10-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2660,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1878
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Hero's Heart",
           "airdate": "1997-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2672,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1885
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Regrets... I've Had a Few",
           "airdate": "1997-10-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2667,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1882
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Web of Desire",
           "airdate": "1997-11-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2576,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1817
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Stranger in a Strange World",
           "airdate": "1997-11-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2605,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1839
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Two Men and a Baby",
           "airdate": "1997-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2664,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1880
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Prodigal Sister",
           "airdate": "1997-11-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Prodigal Sister\" (0.95)",
+            "item": "hercules-the-legendary-journeys-66-prodigal-sister",
+            "itemTitle": "Hercules The Legendary Journeys 66 Prodigal Sister",
+            "file": "Hercules the legendary journeys 66 Prodigal Sister.mp4",
+            "name": "Hercules the legendary journeys 66 Prodigal Sister",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-66-prodigal-sister/Hercules%20the%20legendary%20journeys%2066%20Prodigal%20Sister.mp4",
+            "seconds": 2659,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2659,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1874
+            }
+          ]
         },
         {
           "number": 8,
           "name": "...And Fancy Free",
           "airdate": "1997-11-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"...And Fancy Free\" (0.95)",
+            "item": "tape-44-hercules-and-fancy-free",
+            "itemTitle": "Tape 44 - Hercules The Legendary Journeys \"And Fancy Free\"",
+            "file": "Tape 44-Hercules And Fancy Free.mp4",
+            "name": "Tape 44-Hercules And Fancy Free",
+            "url": "https://archive.org/download/tape-44-hercules-and-fancy-free/Tape%2044-Hercules%20And%20Fancy%20Free.mp4",
+            "seconds": 2963,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 301
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2608,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1840
+            }
+          ]
         },
         {
           "number": 9,
           "name": "If I Had a Hammer",
           "airdate": "1998-01-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2664,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1880
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Hercules on Trial",
           "airdate": "1998-01-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2670,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1881
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Medea Culpa",
           "airdate": "1998-02-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2664,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1880
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Men in Pink",
           "airdate": "1998-02-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2666,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1883
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Armageddon Now (1)",
           "airdate": "1998-02-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Armageddon Now (1)\" (0.80)",
+            "item": "hercules-the-legendary-journeys-72-armageddon-now",
+            "itemTitle": "Hercules The Legendary Journeys 72 Armageddon Now",
+            "file": "Hercules the legendary journeys 72 Armageddon Now.mp4",
+            "name": "Hercules the legendary journeys 72 Armageddon Now",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-72-armageddon-now/Hercules%20the%20legendary%20journeys%2072%20Armageddon%20Now.mp4",
+            "seconds": 2594,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2597,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1834
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Armageddon Now (2)",
           "airdate": "1998-02-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Armageddon Now (2)\" (0.95)",
+            "item": "hercules-the-legendary-journeys-73-armageddon-now-part-2",
+            "itemTitle": "Hercules The Legendary Journeys 73 Armageddon Now Part 2",
+            "file": "Hercules the legendary journeys 73 Armageddon Now Part 2.mp4",
+            "name": "Hercules the legendary journeys 73 Armageddon Now Part 2",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-73-armageddon-now-part-2/Hercules%20the%20legendary%20journeys%2073%20Armageddon%20Now%20Part%202.mp4",
+            "seconds": 2605,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2607,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1840
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Yes Virginia, There is a Hercules",
           "airdate": "1998-03-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Yes Virginia, There is a Hercules\" (0.82)",
+            "item": "hercules-the-legendary-journeys-74-yes-virginia-there-is-a-hercules",
+            "itemTitle": "Hercules The Legendary Journeys 74 Yes Virginia There Is A Hercules",
+            "file": "Hercules the legendary journeys 74 Yes Virginia There Is a Hercules.mp4",
+            "name": "Hercules the legendary journeys 74 Yes Virginia There Is a Hercules",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-74-yes-virginia-there-is-a-hercules/Hercules%20the%20legendary%20journeys%2074%20Yes%20Virginia%20There%20Is%20a%20Hercules.mp4",
+            "seconds": 2667,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2668,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1882
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Porkules",
           "airdate": "1998-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Porkules\" (0.95)",
+            "item": "hercules-the-legendary-journeys-75-porkules",
+            "itemTitle": "Hercules The Legendary Journeys 75 Porkules",
+            "file": "Hercules the legendary journeys 75 Porkules.mp4",
+            "name": "Hercules the legendary journeys 75 Porkules",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-75-porkules/Hercules%20the%20legendary%20journeys%2075%20Porkules.mp4",
+            "seconds": 2537,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2540,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1792
+            }
+          ]
         },
         {
           "number": 17,
           "name": "One Fowl Day",
           "airdate": "1998-04-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"One Fowl Day\" (0.95)",
+            "item": "hercules-the-legendary-journeys-76-one-fowl-day",
+            "itemTitle": "Hercules The Legendary Journeys 76 One Fowl Day",
+            "file": "Hercules the legendary journeys 76 One Fowl Day.mp4",
+            "name": "Hercules the legendary journeys 76 One Fowl Day",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-76-one-fowl-day/Hercules%20the%20legendary%20journeys%2076%20One%20Fowl%20Day.mp4",
+            "seconds": 2600,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 149
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2602,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1835
+            }
+          ]
         },
         {
           "number": 18,
           "name": "My Fair Cupcake",
           "airdate": "1998-04-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2665,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1880
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "War Wounds",
           "airdate": "1998-05-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"War Wounds\" (0.95)",
+            "item": "hercules-the-legendary-journeys-78-war-wounds",
+            "itemTitle": "Hercules The Legendary Journeys 78 War Wounds",
+            "file": "Hercules the legendary journeys 78 War Wounds.mp4",
+            "name": "Hercules the legendary journeys 78 War Wounds",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-78-war-wounds/Hercules%20the%20legendary%20journeys%2078%20War%20Wounds.mp4",
+            "seconds": 2538,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 119
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2542,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1792
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Twilight",
           "airdate": "1998-05-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Twilight\" (0.95)",
+            "item": "hercules-the-legendary-journeys-79-twilight",
+            "itemTitle": "Hercules The Legendary Journeys 79 Twilight",
+            "file": "Hercules the legendary journeys 79 Twilight.mp4",
+            "name": "Hercules the legendary journeys 79 Twilight",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-79-twilight/Hercules%20the%20legendary%20journeys%2079%20Twilight.mp4",
+            "seconds": 2660,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2662,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1876
+            }
+          ]
         },
         {
           "number": 21,
           "name": "Top God",
           "airdate": "1998-05-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Top God\" (0.95)",
+            "item": "hercules-the-legendary-journeys-80-top-god",
+            "itemTitle": "Hercules The Legendary Journeys 80 Top God",
+            "file": "Hercules the legendary journeys 80 Top God.mp4",
+            "name": "Hercules the legendary journeys 80 Top God",
+            "url": "https://archive.org/download/hercules-the-legendary-journeys-80-top-god/Hercules%20the%20legendary%20journeys%2080%20Top%20God.mp4",
+            "seconds": 2572,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+              "itemTitle": "Hercules: The Legendary Journeys",
+              "file": "Hercules.The.Legendary.Journeys.S04E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "name": "Hercules.The.Legendary.Journeys.S04E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+              "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+              "seconds": 2572,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1812
+            }
+          ]
         },
         {
           "number": 22,
           "name": "Reunions",
           "airdate": "1998-05-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S04E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S04E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S04E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2604,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1836
+          },
           "alternates": []
         }
       ]
@@ -694,176 +2419,462 @@
           "number": 1,
           "name": "Faith",
           "airdate": "1998-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2601,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2239
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Descent",
           "airdate": "1998-10-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2637,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2318
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Resurrection",
           "airdate": "1998-10-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2669,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2358
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Genies and Grecians and Geeks, Oh My",
           "airdate": "1998-10-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2603,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2302
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Render Unto Caesar",
           "airdate": "1998-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2572,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2267
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Norse by Norsevest",
           "airdate": "1998-11-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2607,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2304
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Somewhere Over the Rainbow Bridge",
           "airdate": "1998-11-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2553,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2251
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Darkness Rising",
           "airdate": "1998-11-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2608,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2201
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "For Those of You Just Joining Us",
           "airdate": "1999-01-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E09.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2603,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2301
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Let There Be Light",
           "airdate": "1999-01-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E10.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2608,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2310
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Redemption",
           "airdate": "1999-01-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E11.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2664,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2357
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Sky High",
           "airdate": "1999-01-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E12.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2609,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2308
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Stranger and Stranger",
           "airdate": "1999-02-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E13.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2605,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2308
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Just Passing Through",
           "airdate": "1999-02-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E14.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2600,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2303
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Greece is Burning",
           "airdate": "1999-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E15.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2577,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2280
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "We'll Always Have Cyprus",
           "airdate": "1999-02-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E16.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2666,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2359
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "The Academy",
           "airdate": "1999-03-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E17.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2666,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2296
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Love on the Rocks",
           "airdate": "1999-04-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E18.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2667,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2360
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Once Upon a Future King",
           "airdate": "1999-05-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E19.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2669,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2363
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Fade Out",
           "airdate": "1999-05-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E20.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2636,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2336
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "My Best Girl's Wedding",
           "airdate": "1999-05-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E21.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2669,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2363
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Revelations",
           "airdate": "1999-05-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S05E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S05E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S05E22.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2553,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2087
+          },
           "alternates": []
         }
       ]
@@ -875,64 +2886,168 @@
           "number": 1,
           "name": "Be Deviled",
           "airdate": "1999-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E01.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2660,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2378
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Love Amazon Style",
           "airdate": "1999-10-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E02.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2665,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1956
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Rebel with a Cause",
           "airdate": "1999-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E03.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2666,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2692
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Darkness Visible",
           "airdate": "1999-10-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E04.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2671,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2540
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Hercules, Tramps & Thieves",
           "airdate": "1999-11-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E05.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2670,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2230
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "City of the Dead",
           "airdate": "1999-11-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E06.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2671,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2100
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "A Wicked Good Time",
           "airdate": "1999-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E07.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2669,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2090
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Full Circle",
           "airdate": "1999-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1",
+            "itemTitle": "Hercules: The Legendary Journeys",
+            "file": "Hercules.The.Legendary.Journeys.S06E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "name": "Hercules.The.Legendary.Journeys.S06E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1",
+            "url": "https://archive.org/download/Hercules.The.Legendary.Journeys.DVD.REMUX-Yatogam1/Hercules.The.Legendary.Journeys.S06E08.480i.DVD-REMUX.MPEG-2.DD5.1.DUAL-Yatogam1.mkv",
+            "seconds": 2669,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2082
+          },
           "alternates": []
         }
       ]

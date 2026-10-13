@@ -3,7 +3,7 @@
   "slug": "step-by-step",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-13T15:54:03.774Z",
+  "matchedAt": "2026-10-13T20:19:43.930Z",
   "tvmaze": {
     "id": 2085,
     "name": "Step by Step",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 160,
     "live": 1,
-    "review": 10,
-    "missing": 149,
-    "pct": 7
+    "review": 9,
+    "missing": 150,
+    "pct": 6
   },
   "seasons": [
     {
@@ -319,20 +319,8 @@
           "number": 6,
           "name": "The Boss",
           "airdate": "1992-10-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Boss\" (0.95)",
-            "item": "teen-angel-1997-1998",
-            "itemTitle": "Teen Angel (1997-98, TGIF)",
-            "file": "14 Who's The Boss.mp4",
-            "name": "14 Who's The Boss",
-            "url": "https://archive.org/download/teen-angel-1997-1998/14%20Who's%20The%20Boss.mp4",
-            "seconds": 1289,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 198
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

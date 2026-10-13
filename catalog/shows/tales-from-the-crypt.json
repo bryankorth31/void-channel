@@ -3,7 +3,7 @@
   "slug": "tales-from-the-crypt",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "HBO",
-  "matchedAt": "2026-10-13T15:54:09.713Z",
+  "matchedAt": "2026-10-13T20:19:51.054Z",
   "tvmaze": {
     "id": 453,
     "name": "Tales from the Crypt",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 93,
-    "live": 89,
-    "review": 1,
-    "missing": 3,
-    "pct": 97
+    "live": 86,
+    "review": 3,
+    "missing": 4,
+    "pct": 96
   },
   "seasons": [
     {
@@ -104,19 +104,6 @@
             {
               "conf": 0.85,
               "why": "S/E in filename",
-              "item": "s-01-e-06-the-works...-in-wax",
-              "itemTitle": "Tales from the Cryptkeeper",
-              "file": "S01E02 - Nature.mp4",
-              "name": "S01E02 - Nature",
-              "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S01E02%20-%20Nature.mp4",
-              "seconds": 1375,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 217
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
               "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
               "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
               "file": "Les Contes De La Crypte (s01e02) - Nuit De Noel Pour Femme Adultère.mp4",
@@ -139,6 +126,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 217
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 6 in \"Tales From the Crypt Season 1\"",
+              "item": "talesfromthecryptseason1",
+              "itemTitle": "Tales From the Crypt Season 1",
+              "file": "Tales From the Crypt Season 1/TALES_FROM_THE_CRYPT_S1_D13.mp4",
+              "name": "Tales From the Crypt Season 1/TALES_FROM_THE_CRYPT_S1_D13",
+              "url": "https://archive.org/download/talesfromthecryptseason1/Tales%20From%20the%20Crypt%20Season%201%2FTALES_FROM_THE_CRYPT_S1_D13.mp4",
+              "seconds": 1321,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
             }
           ]
         },
@@ -175,19 +175,6 @@
               "sizeMB": 231
             },
             {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "s-01-e-06-the-works...-in-wax",
-              "itemTitle": "Tales from the Cryptkeeper",
-              "file": "S01E03 - Pleasant Screams.mp4",
-              "name": "S01E03 - Pleasant Screams",
-              "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S01E03%20-%20Pleasant%20Screams.mp4",
-              "seconds": 1371,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 218
-            },
-            {
               "conf": 0.55,
               "why": "sequence guess: file 3 of 7 in \"Tales from the Cryptkeeper\"",
               "item": "s-01-e-06-the-works...-in-wax",
@@ -199,6 +186,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 219
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 6 in \"Tales From the Crypt Season 1\"",
+              "item": "talesfromthecryptseason1",
+              "itemTitle": "Tales From the Crypt Season 1",
+              "file": "Tales From the Crypt Season 1/TALES_FROM_THE_CRYPT_S1_D14.mp4",
+              "name": "Tales From the Crypt Season 1/TALES_FROM_THE_CRYPT_S1_D14",
+              "url": "https://archive.org/download/talesfromthecryptseason1/Tales%20From%20the%20Crypt%20Season%201%2FTALES_FROM_THE_CRYPT_S1_D14.mp4",
+              "seconds": 1685,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
             }
           ]
         },
@@ -614,20 +614,8 @@
           "number": 8,
           "name": "For Cryin' Out Loud",
           "airdate": "1990-05-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E08 - Growing Pains.mp4",
-            "name": "S02E08 - Growing Pains",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E08%20-%20Growing%20Pains.mp4",
-            "seconds": 1374,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 215
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1285,9 +1273,9 @@
           "number": 14,
           "name": "Yellow",
           "airdate": "1991-08-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
             "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
             "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
@@ -1548,9 +1536,9 @@
           "number": 8,
           "name": "Showdown",
           "airdate": "1992-08-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.8,
             "why": "S/E in filename + title match",
             "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
             "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",

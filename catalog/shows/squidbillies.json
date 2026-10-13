@@ -3,7 +3,7 @@
   "slug": "squidbillies",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.213Z",
+  "matchedAt": "2026-10-13T20:19:48.858Z",
   "tvmaze": {
     "id": 1000,
     "name": "Squidbillies",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 133,
     "live": 0,
-    "review": 0,
-    "missing": 133,
-    "pct": 0
+    "review": 1,
+    "missing": 132,
+    "pct": 1
   },
   "seasons": [
     {
@@ -603,8 +603,20 @@
           "number": 10,
           "name": "Trucked Up!",
           "airdate": "2011-11-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Trucked Up!\" (0.95)",
+            "item": "trucked-up-2-glenns-revenge-squidbillies",
+            "itemTitle": "Trucked Up 2 Glenn's Revenge [ Squidbillies]",
+            "file": "Trucked Up 2   Glenn's Revenge [Squidbillies].mp4",
+            "name": "Trucked Up 2   Glenn's Revenge [Squidbillies]",
+            "url": "https://archive.org/download/trucked-up-2-glenns-revenge-squidbillies/Trucked%20Up%202%20%20%20Glenn's%20Revenge%20%5BSquidbillies%5D.mp4",
+            "seconds": 648,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 32
+          },
           "alternates": []
         }
       ]

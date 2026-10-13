@@ -3,7 +3,7 @@
   "slug": "riverdale",
   "type": "Drama",
   "network": "The CW",
-  "matchedAt": "2026-10-13T15:54:09.324Z",
+  "matchedAt": "2026-10-13T20:19:50.510Z",
   "tvmaze": {
     "id": 5262,
     "name": "Riverdale",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 137,
     "live": 0,
-    "review": 0,
-    "missing": 137,
-    "pct": 0
+    "review": 1,
+    "missing": 136,
+    "pct": 1
   },
   "seasons": [
     {
@@ -34,8 +34,20 @@
           "number": 2,
           "name": "Chapter Two: A Touch of Evil",
           "airdate": "2017-02-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "absolute episode number",
+            "item": "Episode2_20170905",
+            "itemTitle": "Episode 2: Thisary",
+            "file": "Episode 2.mp4",
+            "name": "Episode 2",
+            "url": "https://archive.org/download/Episode2_20170905/Episode%202.mp4",
+            "seconds": 3613,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 667
+          },
           "alternates": []
         },
         {

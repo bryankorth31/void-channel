@@ -3,7 +3,7 @@
   "slug": "minoriteam",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-13T15:54:08.256Z",
+  "matchedAt": "2026-10-13T20:19:48.908Z",
   "tvmaze": {
     "id": 33020,
     "name": "Minoriteam",
@@ -28,45 +28,19 @@
           "airdate": "2005-11-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "Minoriteam",
-            "itemTitle": "Minoriteam Season 1",
-            "file": "Minoriteam - S01E01 - Operation Blackout.mp4",
-            "name": "Minoriteam - S01E01 - Operation Blackout",
-            "url": "https://archive.org/download/Minoriteam/Minoriteam%20-%20S01E01%20-%20Operation%20Blackout.mp4",
-            "seconds": 698,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "minoriteam.s01e01.tribe..prejudice.4k.upgrayedd",
+            "itemTitle": "minoriteam.s01e01.Tribe.&.Prejudice.4K.UPGRAYEDD",
+            "file": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd.mp4",
+            "name": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd",
+            "url": "https://archive.org/download/minoriteam.s01e01.tribe..prejudice.4k.upgrayedd/Minoriteam.S01e01.Tribe.%26.Prejudice.4K.Upgrayedd.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 2750
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "minoriteam-s-01e-01-operation-blackout-rtv",
-              "itemTitle": "Minoriteam - Operation Blackout (2005 Pilot)",
-              "file": "Minoriteam - s01e01 - Operation Blackout [RTV!].mp4",
-              "name": "Minoriteam - s01e01 - Operation Blackout [RTV!]",
-              "url": "https://archive.org/download/minoriteam-s-01e-01-operation-blackout-rtv/Minoriteam%20-%20s01e01%20-%20Operation%20Blackout%20%5BRTV!%5D.mp4",
-              "seconds": 698,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 67
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "minoriteam.s01e01.tribe..prejudice.4k.upgrayedd",
-              "itemTitle": "minoriteam.s01e01.Tribe.&.Prejudice.4K.UPGRAYEDD",
-              "file": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd.mp4",
-              "name": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd",
-              "url": "https://archive.org/download/minoriteam.s01e01.tribe..prejudice.4k.upgrayedd/Minoriteam.S01e01.Tribe.%26.Prejudice.4K.Upgrayedd.mp4",
-              "seconds": 683,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 2750
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -79,6 +53,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "minoriteamcomplete-series-19episodes",
+              "itemTitle": "Minoriteam(all 19 episodes complete)",
+              "file": "Minoriteam - S01 E01 - Tribe and Prejudice.mp4",
+              "name": "Minoriteam - S01 E01 - Tribe and Prejudice",
+              "url": "https://archive.org/download/minoriteamcomplete-series-19episodes/Minoriteam%20-%20S01%20E01%20-%20Tribe%20and%20Prejudice.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 70
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "minoriteam.s01e01.tribe..prejudice.4k.upgrayedd",
+              "itemTitle": "minoriteam.s01e01.Tribe.&.Prejudice.4K.UPGRAYEDD",
+              "file": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd.ia.mp4",
+              "name": "Minoriteam.S01e01.Tribe.&.Prejudice.4K",
+              "url": "https://archive.org/download/minoriteam.s01e01.tribe..prejudice.4k.upgrayedd/Minoriteam.S01e01.Tribe.%26.Prejudice.4K.Upgrayedd.ia.mp4",
+              "seconds": 683,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 67
             }
           ]
         },

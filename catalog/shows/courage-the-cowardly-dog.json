@@ -3,7 +3,7 @@
   "slug": "courage-the-cowardly-dog",
   "type": "Animated",
   "network": "Cartoon Network",
-  "matchedAt": "2026-10-13T15:54:07.442Z",
+  "matchedAt": "2026-10-13T20:19:47.725Z",
   "tvmaze": {
     "id": 1956,
     "name": "Courage the Cowardly Dog",
@@ -2076,21 +2076,34 @@
           "airdate": "2002-09-27",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 4/S4 E04 · The Uncommon Cold Farmer-Hunter, Farmer-Hunted.mp4",
-            "name": "season 4/S4 E04 · The Uncommon Cold Farmer-Hunter, Farmer-Hunted",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%204%2FS4%20E04%20%C2%B7%20The%20Uncommon%20Cold%20Farmer-Hunter%2C%20Farmer-Hunted.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E04.mp4",
+            "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E04",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E04.mp4",
             "seconds": 1364,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164
+            "sizeMB": 134
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 4/S4 E04 · The Uncommon Cold Farmer-Hunter, Farmer-Hunted.mp4",
+              "name": "season 4/S4 E04 · The Uncommon Cold Farmer-Hunter, Farmer-Hunted",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%204%2FS4%20E04%20%C2%B7%20The%20Uncommon%20Cold%20Farmer-Hunter%2C%20Farmer-Hunted.mp4",
+              "seconds": 1364,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
@@ -2101,19 +2114,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 100
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
-              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
-              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E04.mp4",
-              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E04",
-              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E04.mp4",
-              "seconds": 1364,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 134
             }
           ]
         },
