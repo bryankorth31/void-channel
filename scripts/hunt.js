@@ -301,12 +301,14 @@ async function main() {
   if (opt('--open')) MAX_ITEMS_TO_OPEN = +opt('--open') || MAX_ITEMS_TO_OPEN;
   if (opt('--pause')) PAUSE_MS = +opt('--pause') || PAUSE_MS;
   const type = opt('--type');
+  const tag = opt('--tag'); // only shows carrying this collection tag
+  const first = opt('--first'); // with --priority: shows carrying this tag go before every row
   const missing = args.includes('--missing');
   const refresh = args.includes('--refresh');
   const fresh = args.includes('--fresh');
   const pass2 = args.includes('--pass2'); // re-hunt shows under 50% coverage with the narrow net + deeper opening
   const unplayable = args.includes('--unplayable'); // re-hunt shows whose picks will not play in a browser (mkv / AC3 / x265)
-  const valued = new Set(['--budget', '--open', '--pause', '--type']);
+  const valued = new Set(['--budget', '--open', '--pause', '--type', '--tag', '--first']);
   const filter = (args.find((a, i) => !a.startsWith('--') && !valued.has(args[i - 1])) || '').toLowerCase();
   const notThere = new Set(CENSUS.filter((r) => r.verdict === 'NOT THERE').map((r) => r.show));
   const hunted = (s) => fs.existsSync(path.join(OUT_DIR, slug(s.name) + '.json'));
@@ -318,8 +320,8 @@ async function main() {
   const PRIORITY = ['Classic TV', 'Documentary & Geographic', 'MTV', 'Adult Swim', 'Animated', '90s Sitcoms', 'Sketch and Comedy', 'British and Beyond',
     'Internet Comedy', 'Late Night', 'Sci-Fi, Fantasy and Horror', 'Drama', '2000s and Later Sitcoms', 'Reality & Talk', 'Streaming Era', 'Anime', 'World TV'];
   const priority = args.includes('--priority');
-  const rank = (s) => { const i = PRIORITY.indexOf(s.type); return i < 0 ? PRIORITY.length : i; };
-  const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true)
+  const rank = (s) => { if (first && (s.tags || []).includes(first)) return -1; const i = PRIORITY.indexOf(s.type); return i < 0 ? PRIORITY.length : i; };
+  const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
     && (missing ? notThere.has(s.name) : true)
     && (unplayable ? unplayableCount(s) >= 3 : pass2 ? coverage(s) < 50 : (fresh || filter ? true : !hunted(s))))
     .sort((a, b) => (unplayable ? unplayableCount(b) - unplayableCount(a) : priority ? rank(a) - rank(b) : 0));

@@ -191,7 +191,8 @@ async function main() {
   const minVotes = opt('--min-votes') != null ? +opt('--min-votes') : 20;
   const limit = opt('--limit') ? +opt('--limit') : Infinity;
   const kind = opt('--kind');
-  const valued = new Set(['--budget', '--open', '--pause', '--min-votes', '--limit', '--kind']);
+  const valued = new Set(['--budget', '--open', '--pause', '--min-votes', '--limit', '--kind', '--genre-first']);
+  const genreFirst = opt('--genre-first') ? +opt('--genre-first') : null; // TMDB genre id hunted before the rest (36 = History)
   const filter = (args.find((a, i) => !a.startsWith('--') && !valued.has(args[i - 1])) || '').toLowerCase();
   const hunted = (m) => fs.existsSync(path.join(OUT_DIR, `${slug(m.title)}-${m.year || 'x'}.json`));
   // Kids' TV movies are IN (B 2026-10-13: "kids movies are fine"); --no-kids excludes them if ever wanted.
@@ -200,7 +201,7 @@ async function main() {
   let jobs = LIST.filter((m) => m.year && +m.year >= 1990 && !isKids(m))
     .filter((m) => (filter ? m.title.toLowerCase().includes(filter) : (m.votes || 0) >= minVotes && !hunted(m)))
     .filter((m) => (kind ? m.kind === kind : true))
-    .sort((a, b) => (b.votes || 0) - (a.votes || 0)).slice(0, limit);
+    .sort((a, b) => (genreFirst ? ((b.genres || []).includes(genreFirst) - (a.genres || []).includes(genreFirst)) : 0) || (b.votes || 0) - (a.votes || 0)).slice(0, limit);
   console.log(`${jobs.length} titles to hunt (min votes ${minVotes}), budget ${budget} Archive calls, open ${ITEMS_TO_OPEN} items each`);
   let n = 0;
   for (const m of jobs) {
