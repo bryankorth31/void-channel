@@ -88,8 +88,11 @@ header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:16px;
 header .logo{font-size:22px;font-weight:700;letter-spacing:.04em;cursor:pointer}header .logo span{color:var(--acc)}
 header input{flex:1;max-width:420px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:8px;outline:none}
 header input:focus{border-color:var(--acc)}
-header .donate{margin-left:auto;color:var(--dim);font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;white-space:nowrap}header .donate:hover{color:var(--acc);border-color:var(--acc)}
+header .donate{margin-left:auto;color:#07080c;background:var(--acc);font-size:14px;font-weight:600;border-radius:999px;padding:8px 16px;white-space:nowrap}header .donate:hover{filter:brightness(1.12)}
+.support{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 20px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;background:var(--panel);font-size:14px}
+.support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support a.btn{background:var(--acc);color:#07080c;border:0;font-weight:600}
 footer a{color:var(--acc)}
+@media(max-width:600px){header .donate{padding:7px 11px;font-size:13px}}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
 .bar .count{color:var(--dim);margin-left:auto;font-size:13px}
@@ -178,6 +181,7 @@ function browse(){const list=filtered();const any=state.type||state.genre||state
  let h='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
  +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
  +'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>';
+ if(!any)h='<div class="support"><span class="sp"><b>VOIDtv is free and stays free.</b> It is run by the Church of American Strength &amp; Hope, a 501(c)(3). Donations pay for real-world events, not ads or paywalls.</span><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></div>'+h;
  if(any)h+='<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
  if(any){h+='<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>';}
  else{
@@ -245,12 +249,12 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
 <style>${CSS}</style></head><body>
-<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate</a></header>
+<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate to CASH</a></header>
 <main id="main"></main>
 <footer>${CREDIT}</footer>
 ${indexScript}
 <script>
-const SITE=${JSON.stringify(SITE_NAME)};const MODE=${JSON.stringify(mode)};const ROUTES=${JSON.stringify(routes)};const BASE=${JSON.stringify(base)};
+const SITE=${JSON.stringify(SITE_NAME)};const DONATE=${JSON.stringify(DONATE_URL)};const MODE=${JSON.stringify(mode)};const ROUTES=${JSON.stringify(routes)};const BASE=${JSON.stringify(base)};
 const TYPES=${JSON.stringify(types)};
 ${inline}
 ${JS}
