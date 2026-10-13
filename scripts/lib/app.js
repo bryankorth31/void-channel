@@ -82,17 +82,17 @@ const showFile = (s) => ({ slug: s.slug, seasons: s.seasons, cast: s.cast, crew:
 // ---- page --------------------------------------------------------------------------------
 const CSS = `
 :root{--bg:#07080c;--panel:#0f1118;--panel2:#161926;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--rev:#f3c969}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.4 system-ui,Segoe UI,Roboto,sans-serif}
+*{box-sizing:border-box}html,body{overflow-x:hidden;max-width:100%}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.4 system-ui,Segoe UI,Roboto,sans-serif}
 a{color:inherit;text-decoration:none}button,select,input{font:inherit}
 header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:16px;padding:10px 20px;background:rgba(7,8,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header .logo{font-size:22px;font-weight:700;letter-spacing:.04em;cursor:pointer}header .logo span{color:var(--acc)}
-header input{flex:1;max-width:420px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:8px;outline:none}
+header input{flex:1 1 120px;min-width:0;width:0;max-width:420px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:8px;outline:none}
 header input:focus{border-color:var(--acc)}
 header .donate{margin-left:auto;color:#07080c;background:var(--acc);font-size:14px;font-weight:600;border-radius:999px;padding:8px 16px;white-space:nowrap}header .donate:hover{filter:brightness(1.12)}
 .support{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 20px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;background:var(--panel);font-size:14px}
 .support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support .acts{display:flex;gap:8px;flex-wrap:wrap}.support a.btn{border:1px solid var(--acc);color:var(--acc);font-weight:600}.support a.btn:last-child{background:var(--acc);color:#07080c}
 footer a{color:var(--acc)}
-@media(max-width:600px){header .donate{padding:7px 11px;font-size:13px}}
+@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
 .bar .count{color:var(--dim);margin-left:auto;font-size:13px}
@@ -133,6 +133,7 @@ video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 .btn{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 14px;border-radius:8px;cursor:pointer;white-space:nowrap}
 .eps{max-height:76vh;overflow:auto;background:var(--panel);border-radius:8px;padding:6px}
 .eps h3{margin:10px 8px 4px;color:var(--dim);font-weight:600;letter-spacing:.06em;font-size:11px}
+.sehead{display:flex;align-items:center;gap:10px;padding:4px 4px 8px}.sehead select{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--fg);padding:9px 12px;border-radius:8px;font:inherit;font-weight:600}.sehead small{color:var(--dim);white-space:nowrap}
 .ep{display:flex;gap:8px;align-items:center;padding:7px 8px;border-radius:6px;cursor:pointer;font-size:14px}.ep:hover,.ep.on{background:var(--panel2)}
 .ep .n{color:var(--dim);width:34px;flex:none}.ep .m{color:var(--dim);margin-left:auto;flex:none}.ep .rv{color:var(--rev);font-size:11px;border:1px solid var(--rev);border-radius:4px;padding:0 4px}
 .hint{color:var(--dim);font-size:13px;margin-top:12px}
@@ -201,7 +202,9 @@ function showView(autoplay){const s=state.show;if(!s.seasons){$('main').innerHTM
  let h='<div class="show"><button class="back" onclick="go(\\'\\')">← Browse</button>';
  if(!autoplay)h+='<div class="hero">'+(s.backdrop?'<img src="'+s.backdrop+'" alt="">':'')+'<div class="t"><b>'+esc(s.show)+'</b>'+(s.overview?'<p>'+esc(s.overview.slice(0,260))+(s.overview.length>260?'…':'')+'</p>':'')+'<div class="g">'+[s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episodes'].filter(Boolean).join('  ·  ')+'</div></div></div>';
  h+='<div class="player"><div><video id="v" controls '+(autoplay?'autoplay':'')+' src="'+ep.url+'"></video><div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?' <span class="rv">review</span>':'')+'</div><button class="btn" onclick="next()">Next episode ▶</button></div><p class="hint">Space / K play-pause · N next · F fullscreen · ← → skip 10s. "review" = the builder is not sure this file is this episode.</p></div>';
- h+='<div class="eps">'+s.seasons.map((x,si)=>'<h3>SEASON '+x.season+'</h3>'+x.episodes.map((y,ei)=>'<div class="ep '+(si===state.se&&ei===state.e?'on':'')+'" onclick="play('+si+','+ei+')"><span class="n">E'+y.n+'</span><span>'+esc(y.name)+'</span>'+(y.state==='REVIEW'?'<span class="rv">review</span>':'')+'<span class="m">'+y.min+'m</span></div>').join('')).join('')+'</div></div>';
+ const si=state.seView==null?state.se:Math.min(state.seView,s.seasons.length-1);const x=s.seasons[si];
+ h+='<div class="eps"><div class="sehead"><select onchange="state.seView=+this.value;render()">'+s.seasons.map((z,i)=>'<option value="'+i+'"'+(i===si?' selected':'')+'>Season '+z.season+' · '+z.episodes.length+' episode'+(z.episodes.length===1?'':'s')+'</option>').join('')+'</select><small>'+s.seasons.length+' season'+(s.seasons.length===1?'':'s')+'</small></div>'
+ +x.episodes.map((y,ei)=>'<div class="ep '+(si===state.se&&ei===state.e?'on':'')+'" onclick="play('+si+','+ei+')"><span class="n">E'+y.n+'</span><span>'+esc(y.name)+'</span>'+(y.state==='REVIEW'?'<span class="rv">review</span>':'')+'<span class="m">'+y.min+'m</span></div>').join('')+'</div></div>';
  h+=xray(s)+'</div>';
  $('main').innerHTML=h;const v=$('v');v.onended=next;v.onerror=()=>{v.insertAdjacentHTML('afterend','<p style="color:#f66">This file would not play. Next episode in 3s…</p>');setTimeout(next,3000)}}
 function face(p){const open=state.person===p.id;return '<div class="face'+(open?' on':'')+'" onclick="person('+p.id+')">'+(p.photo?'<img loading="lazy" src="'+p.photo+'" alt="">':'<div class="ph"></div>')+'<b>'+esc(p.name)+'</b><small>'+esc(p.as||'')+'</small></div>'}
@@ -220,8 +223,8 @@ function person(id){state.person=state.person===id?null:id;showView(false);const
 function urlFor(slug){return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
 function slugFromUrl(){if(ROUTES==='path'){const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
 async function ensure(s){if(s.seasons)return s;const r=await fetch(BASE+'data/shows/'+s.slug+'.json');const d=await r.json();Object.assign(s,d);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);}catch(_){}}return s}
-async function go(slug,replace){state.person=null;if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;render()}
-function play(se,e){state.se=se;state.e=e;remember();showView(true)}
+async function go(slug,replace){state.person=null;if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
+function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(true)}
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){try{localStorage.setItem('voidtv:'+state.show.slug,JSON.stringify({se:state.se,e:state.e}))}catch(_){}}
 function resume(s){try{const r=JSON.parse(localStorage.getItem('voidtv:'+s.slug)||'');if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r}catch(_){}return{se:0,e:0}}
@@ -251,7 +254,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
 <style>${CSS}</style></head><body>
-<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate to CASH</a></header>
+<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
 <main id="main"></main>
 <footer>${CREDIT}</footer>
 ${indexScript}
