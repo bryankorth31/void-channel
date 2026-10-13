@@ -6,7 +6,8 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..');
 const SITE_NAME = 'VOIDtv';
-const CREDIT = 'Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.';
+const DONATE_URL = 'https://square.link/u/dJioBmlW';
+const CREDIT = `A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3). Free to use; if it's worth something to you, <a href="${DONATE_URL}" target="_blank" rel="noopener">donate to CASH</a> and it goes toward real-world events.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
 
 function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } }
 
@@ -87,6 +88,8 @@ header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:16px;
 header .logo{font-size:22px;font-weight:700;letter-spacing:.04em;cursor:pointer}header .logo span{color:var(--acc)}
 header input{flex:1;max-width:420px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:8px;outline:none}
 header input:focus{border-color:var(--acc)}
+header .donate{margin-left:auto;color:var(--dim);font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;white-space:nowrap}header .donate:hover{color:var(--acc);border-color:var(--acc)}
+footer a{color:var(--acc)}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
 .bar .count{color:var(--dim);margin-left:auto;font-size:13px}
@@ -242,7 +245,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
 <style>${CSS}</style></head><body>
-<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"></header>
+<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate</a></header>
 <main id="main"></main>
 <footer>${CREDIT}</footer>
 ${indexScript}
