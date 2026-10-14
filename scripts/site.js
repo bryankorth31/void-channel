@@ -43,7 +43,9 @@ fs.writeFileSync(path.join(OUT, '_redirects'), '/show/* /index.html 200\n/person
 // when the SITE_PASSWORD variable is set on the Pages project.
 const fnSrc = path.join(ROOT, 'functions');
 if (fs.existsSync(fnSrc)) { fs.mkdirSync(path.join(OUT, 'functions'), { recursive: true }); for (const f of fs.readdirSync(fnSrc)) fs.copyFileSync(path.join(fnSrc, f), path.join(OUT, 'functions', f)); }
-fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n');
+const brandSrc = path.join(ROOT, 'assets', 'brand');
+if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true });
+fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 
 const size = (p) => fs.statSync(p).size;
