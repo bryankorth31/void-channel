@@ -35,3 +35,7 @@ videos/*/renders/
 videos/*/.hyperframes/
 assets/brand/bg/src/
 assets/brand/sheets/
+
+# HQ desktop app build output and deps
+hq-app/node_modules/
+hq-app/dist/

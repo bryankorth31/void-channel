@@ -12,6 +12,12 @@ const cfa = require('./lib/cfa');
 
 const ROOT = path.join(__dirname, '..');
 const PORT = +(process.argv[process.argv.indexOf('--port') + 1] || 0) || 8780;
+// Jobs run under plain node. Inside the desktop app process.execPath is the app itself, so find node.
+function nodeBin() {
+  if (!process.versions.electron) return { bin: process.execPath, env: process.env };
+  try { const w = execSync('where node', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().split(/\r?\n/).find((l) => /node\.exe$/i.test(l.trim())); if (w) return { bin: w.trim(), env: process.env }; } catch (e) { /* fall through */ }
+  return { bin: process.execPath, env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' } };
+}
 const CACHE = path.join(ROOT, 'catalog', 'cache');
 const FILES = {
   list: path.join(ROOT, 'scripts', 'show-list.json'),
@@ -126,7 +132,8 @@ function startJob(name, args) {
   const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
   const log = path.join(CACHE, `hq-${name}-${id}.log`);
   const fd = fs.openSync(log, 'a');
-  const child = spawn(process.execPath, [path.join(ROOT, 'scripts', name + '.js'), ...args], { cwd: ROOT, detached: true, stdio: ['ignore', fd, fd], windowsHide: true });
+  const nb = nodeBin();
+  const child = spawn(nb.bin, [path.join(ROOT, 'scripts', name + '.js'), ...args], { cwd: ROOT, env: nb.env, detached: true, stdio: ['ignore', fd, fd], windowsHide: true });
   child.unref();
   const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), log, done: null, code: null };
   child.on('exit', (code) => { job.done = new Date().toISOString(); job.code = code; });
@@ -229,7 +236,16 @@ const server = http.createServer(async (req, res) => {
   } catch (e) { return send(res, 500, { error: e.message }); }
 });
 
-server.listen(PORT, '127.0.0.1', () => {
-  console.log(`VOIDtv HQ at http://localhost:${PORT}  (Ctrl+C to stop)`);
-  if (process.argv.includes('--open')) { try { execSync(`start http://localhost:${PORT}`, { stdio: 'ignore', shell: true }); } catch (e) { /* fine */ } }
-});
+function start(opts = {}) {
+  const port = opts.port || PORT;
+  return new Promise((ok, no) => {
+    server.once('error', no);
+    server.listen(port, '127.0.0.1', () => {
+      console.log(`VOIDtv HQ at http://localhost:${port}  (Ctrl+C to stop)`);
+      if (opts.open || process.argv.includes('--open')) { try { execSync(`start http://localhost:${port}`, { stdio: 'ignore', shell: true }); } catch (e) { /* fine */ } }
+      ok({ port, server });
+    });
+  });
+}
+module.exports = { start, PORT, ROOT };
+if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });
