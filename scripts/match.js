@@ -8,6 +8,7 @@
 // Writes catalog/shows/<slug>.json (the grid the site will read) and docs/COVERAGE.md.
 // No network. Usage: node scripts/match.js [name substring]
 const fs = require('fs');
+const writeRetry = (file, text) => { for (let a = 0; ; a++) { try { fs.writeFileSync(file, text); return; } catch (e) { if (a >= 4) throw e; const until = Date.now() + 150 * (a + 1); while (Date.now() < until) {} } } };
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
@@ -190,7 +191,7 @@ function matchShow(entry) {
     seasons,
   };
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
+  writeRetry(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
   return out;
 }
 
@@ -237,7 +238,7 @@ function selfGrid(entry, cand, aliases) {
     tvmaze: { id: null, name: show, runtime: null, premiered: null, network: entry.network },
     coverage: { total, live: 0, review: total, missing: 0, pct: 100 }, seasons: list };
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
+  writeRetry(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
   return out;
 }
 
