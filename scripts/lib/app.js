@@ -169,6 +169,8 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .ch.on .cn::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:8px;box-shadow:0 0 8px var(--gold)}
 main{position:relative;z-index:1}
 .bgimg{position:fixed;inset:0;z-index:0;pointer-events:none;background:#07080c center/cover no-repeat;opacity:0;transition:opacity .8s ease,background-image 0s}
+.bgvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;opacity:0;transition:opacity 1.2s ease}body[data-view=home] .bgvid.on{display:block;opacity:.85}
+@media(max-width:700px),(prefers-reduced-motion:reduce){.bgvid{display:none!important}}
 .bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
 body[data-view=home] .bgimg{background-image:url(/assets/brand/bg/static-dark.jpg);opacity:.9}
 body[data-view=show] .bgimg,body[data-view=person] .bgimg{background-image:url(/assets/brand/bg/static-glitch.jpg);opacity:.55}
@@ -463,10 +465,11 @@ function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(tr
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){const s=state.show;const r=ME.history[s.slug];ME.history[s.slug]={se:state.se,e:state.e,at:Date.now(),pos:(r&&r.se===state.se&&r.e===state.e)?(r.pos||0):0};saveMe()}
 function resume(s){const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
-function render(){const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;document.body.dataset.view=state.show?'show':state.view==='me'?'me':state.view==='person'?'person':state.view==='tv'?'tv':any?'grid':'home';if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else keepTracks(browse)}
+function bgReel(view){const v=document.querySelector('.bgvid');if(!v)return;const want=view==='home'&&innerWidth>700&&!matchMedia('(prefers-reduced-motion: reduce)').matches;if(want){if(!v.getAttribute('src')){v.src=BASE+'assets/brand/video/reel.mp4';v.load()}v.classList.add('on');v.play().catch(()=>{})}else{v.classList.remove('on');if(!v.paused)v.pause()}}
+function render(){const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;document.body.dataset.view=state.show?'show':state.view==='me'?'me':state.view==='person'?'person':state.view==='tv'?'tv':any?'grid':'home';bgReel(document.body.dataset.view);if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else keepTracks(browse)}
 document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(state.view==='tv'&&(k.key==='ArrowUp'||k.key==='ArrowDown')){k.preventDefault();surf(k.key==='ArrowUp'?-1:1);return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
 window.addEventListener('popstate',()=>go(slugFromUrl(),true));
-document.addEventListener('visibilitychange',()=>{document.querySelectorAll('.grain,.void').forEach(e=>{e.style.animationPlayState=document.hidden?'paused':'running'})});
+document.addEventListener('visibilitychange',()=>{document.querySelectorAll('.grain,.void').forEach(e=>{e.style.animationPlayState=document.hidden?'paused':'running'});const v=document.querySelector('.bgvid');if(v&&v.classList.contains('on')){document.hidden?v.pause():v.play().catch(()=>{})}});
 go(slugFromUrl(),true);
 `;
 
@@ -493,7 +496,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 ${og}
 <style>${CSS}</style></head><body>
 <header><div class="logo" onclick="go('')"><img class="mark" src="${base}assets/brand/icon-192.png" alt="" onerror="this.remove()"><span class="name">VOID<span>tv</span></span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on"><i class="ico tv"></i><span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history"><i class="ico bookmark"></i><span class="long"> Mine</span></a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope"><i class="ico heart sm"></i> Donate<span class="long"> to CASH</span></a></header>
-<div class="bgimg" aria-hidden="true"></div><div class="void" aria-hidden="true"></div><main id="main"></main><div class="grain" aria-hidden="true"></div>
+<div class="bgimg" aria-hidden="true"><video class="bgvid" muted loop playsinline preload="none"></video></div><div class="void" aria-hidden="true"></div><main id="main"></main><div class="grain" aria-hidden="true"></div>
 <footer>${CREDIT}</footer>
 ${indexScript}
 <script>
