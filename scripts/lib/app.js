@@ -124,14 +124,14 @@ const CSS = `
 *{box-sizing:border-box}html,body{overflow-x:hidden;max-width:100%}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.4 system-ui,Segoe UI,Roboto,sans-serif}
 a{color:inherit;text-decoration:none}button,select,input{font:inherit}
 header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:16px;padding:10px 20px;background:rgba(7,8,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .logo{font-size:22px;font-weight:700;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center}header .logo span{color:var(--acc)}header .logo img{height:30px;display:block}
+header .logo{font-size:22px;font-weight:700;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center}header .logo span{color:var(--acc)}header .logo img.mark{width:34px;height:34px;display:block;margin-right:9px;border-radius:50%}header .logo .name{font-size:20px}
 header input{flex:1 1 120px;min-width:0;width:0;max-width:420px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:8px;outline:none}
 header input:focus{border-color:var(--acc)}
 header .donate{margin-left:auto;color:#07080c;background:var(--gold);font-size:14px;font-weight:600;border-radius:999px;padding:8px 16px;white-space:nowrap}header .donate:hover{filter:brightness(1.12)}
 .support{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 20px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;background:var(--panel);font-size:14px}
 .support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support .acts{display:flex;gap:8px;flex-wrap:wrap}.support a.btn{border:1px solid var(--acc);color:var(--acc);font-weight:600}.support a.btn:last-child{background:var(--gold);border-color:var(--gold);color:#07080c}
 footer a{color:var(--acc)}
-@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .logo img{height:22px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}header .mine-link{padding:6px 8px;font-size:13px}header .mine-link .long{display:none}}
+@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .logo img.mark{width:28px;height:28px;margin-right:7px}header .logo .name{font-size:17px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}header .mine-link{padding:6px 8px;font-size:13px}header .mine-link .long{display:none}}
 header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}header .mine-link:hover{border-color:var(--acc);color:var(--acc)}
 .btn.on{border-color:var(--acc);color:var(--acc)}.mine{display:contents}.acts.mine{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .me{padding:0 20px 20px}.me h1{margin:10px 0 4px;font-size:26px}.me .g{color:var(--dim)}.me>.acts{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.me h2 small{color:var(--dim);font-weight:400;font-size:13px;margin-left:8px}
@@ -425,7 +425,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
 <style>${CSS}</style></head><body>
-<header><div class="logo" onclick="go('')"><img src="${base}assets/brand/wordmark.png" srcset="${base}assets/brand/wordmark@2x.png 2x" alt="VOIDtv" onerror="this.parentNode.innerHTML='VOID<span>tv</span>'"></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on">📺<span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history">★<span class="long"> Mine</span></a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
+<header><div class="logo" onclick="go('')"><img class="mark" src="${base}assets/brand/icon-192.png" alt="" onerror="this.remove()"><span class="name">VOID<span>tv</span></span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on">📺<span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history">★<span class="long"> Mine</span></a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
 <main id="main"></main>
 <footer>${CREDIT}</footer>
 ${indexScript}

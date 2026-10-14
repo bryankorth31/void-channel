@@ -59,7 +59,7 @@ function titleSim(filePart, epName) {
 const AUDIO_RISK = /\b(dd ?5[. ]?1|dd ?2[. ]?0|ddp?\d|dd\+|e-?ac-?3|ac-?3|dts(-hd)?(-ma)?|truehd|atmos|flac)\b/i;
 const VIDEO_RISK = /\b(x ?265|hevc|h[. ]?265|10 ?bit|av1|xvid|divx)\b/i;
 // Dual-audio and foreign-dub rips: the browser plays whichever track comes first, often not English.
-const LANG_RISK = /\b(dual[ .-]?audio|multi[ .-]?audio|multi|hindi|tamil|telugu|urdu|vegamovies|filmyzilla|filmywap|moviesflix|dubbed|dublado|latino|castellano|vf|vff|vfq|truefrench|french|vostfr|ita[ .-]eng|rus[ .-]eng|deutsch|german|espa[nñ]ol|italiano|portugu[eê]s)\b/i;
+const LANG_RISK = /\b(v ?f|s[ée]rie|la serie|dual[ .-]?audio|multi[ .-]?audio|multi|hindi|tamil|telugu|urdu|vegamovies|filmyzilla|filmywap|moviesflix|dubbed|dublado|latino|castellano|vf|vff|vfq|truefrench|french|vostfr|ita[ .-]eng|rus[ .-]eng|deutsch|german|espa[nñ]ol|italiano|portugu[eê]s)\b/i;
 // Release names use . _ - as separators; underscores are word characters, so normalize before testing.
 const tagText = (s) => String(s || '').replace(/[._\-\[\]()]+/g, ' ');
 const langRisk = (s) => LANG_RISK.test(tagText(s));
@@ -129,7 +129,7 @@ function matchShow(entry) {
         let conf = c.base;
         if (f.nameHit) conf += 0.15; else if (itemNamesMe) conf += 0.1;
         conf += f.band === 'episode' ? 0.15 : 0.05;
-        if (fileNamesOther) conf -= 0.6; else if (itemNamesOther && !f.nameHit) conf -= 0.4;
+        if (fileNamesOther) conf -= 0.6; else if (itemNamesOther && !norm(f.name).includes(core)) conf -= 0.4; // "Star Trek" in the file is not "Star Trek: Enterprise"
         else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) conf -= 0.45; // foreign title: words that are neither the show nor an episode
         const foreign = !!(langRisk(f.name) || langRisk(item.title));
         if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
