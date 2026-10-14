@@ -85,6 +85,86 @@ lighter on the Archive.
 - Free, no accounts, same donation framing: the material belongs to the institutions and the
   Archive; the better way to find and follow it is the work of CASH.
 
+## Courses we author ourselves: curriculum first, then the voices (B, 2026-10-13)
+
+B: "Build a course of our own from known areas for things needed and useful to learn, and once we
+build this list and course, from the inverse — people who've shown ability and speak on this — and
+then build that into Void University courses, in addition to the courses we build from the material
+at hand from the Archive in various media formats."
+
+So there are two kinds of course, and they meet in the same graph:
+
+| | **Found courses** | **Authored courses** |
+|---|---|---|
+| Starts from | material that exists (a Berkeley semester, an OCW course) | a need ("things needed and useful to learn") |
+| Order comes from | the institution's syllabus | our curriculum: what a person needs to be able to DO |
+| Teachers are | whoever the institution hired | the **voices**: people who have shown ability and speak on it, chosen by us |
+| Media | mostly lecture video | whatever teaches it best: a talk, a chapter, a documentary, a radio interview, a program to run |
+
+### Step 1 — the curriculum: what is needed and useful
+
+A spine of domains → competencies → outcomes, written in B's voice (the editorial record; see
+`voice:b` primacy). Not "Intro to Economics" but "keep a household solvent." The test for every
+entry: would a busy person on a stretched budget be better off a month after learning it? Starter
+domains to react to (B edits; nothing here is final):
+
+- **Money** — budget, debt, credit, taxes, insurance, how banks and markets actually work
+- **Food** — cook from staples, feed a family cheaply, preserve, nutrition without fads
+- **Home** — fix what breaks (plumbing, electrical basics, drywall), tools, energy, renting and owning
+- **Body** — sleep, strength, first aid, reading a lab result, navigating a hospital
+- **Mind** — how to think (logic, probability, fallacies), how to learn, attention, consciousness
+  (Jaynes belongs here)
+- **Words** — write plainly, speak in a room, argue fairly, read hard books
+- **Law and rights** — contracts, tenancy, police encounters, small claims, what a 501(c)(3) is
+- **Work and trades** — how a trade is learned, running a one-person business, negotiating pay
+- **Machines** — how computers, networks and the internet work; a first program; keeping your data
+- **Making** — drawing, music, woodworking, electronics, photography, film
+- **Land** — growing food, soil, water, weather, animals
+- **Civics and history** — how government works, how we got here, the big arguments
+- **Faith and philosophy** — the traditions, what they claim, how to read them
+- **Family** — raising children, caring for parents, marriage, grief
+- **Emergencies** — fire, flood, power out, bleeding, lost, car broken down
+
+### Step 2 — the inverse: who has shown ability and speaks on it
+
+For each competency, find the **voices**: not the most famous, the most *demonstrated*. The
+standard is evidence of doing, then evidence of teaching clearly, then open material:
+
+1. **Did it** — built, fixed, ran, healed, grew, won, survived the thing (Wikidata occupations,
+   awards and notable works; trade bodies; court records for lawyers; competition results).
+2. **Teaches it well** — talks, lectures, books, interviews where people learned (the Open Syllabus
+   Project — the most-assigned readings across millions of real syllabi — is a known body for the
+   book side; conference archives for talks; LibriVox/Open Library for texts).
+3. **Material is open** — on the Archive, mirrored, public domain, or CC.
+
+Each voice becomes a person node in the same graph as the TV people, with `evidence` (why they
+qualify) and `teaches` (which competencies). Two or three voices per unit from different angles
+(the academic, the practitioner, the critic) so no single voice owns a subject. Grifters fail
+test 1 by construction: selling it is not doing it.
+
+### Step 3 — assemble the course
+
+A course = ordered units. A unit = one primary piece (a talk, a lecture, a chapter read aloud) +
+a reading + a documentary or episode from VoidTV if one fits + a practice ("do this tonight") +
+the voices for that unit. The hunter finds the media the same way it finds episodes: search loose
+(creator, title, collection), judge strict (runtime, source, playability). Progress, notes and
+completion live in Mine.
+
+### Files
+
+- `curriculum/curriculum.json` — domains → competencies → outcomes, B's voice.
+- `curriculum/voices.json` — person → { teaches: [competency], evidence, sources } (TMDB id if a
+  TV person, Wikidata id otherwise).
+- `catalog/courses/<slug>.json` — compiled courses (found and authored alike), same shape as a show
+  grid: units instead of seasons, pieces instead of episodes.
+
+### Why the graph is the point
+
+Anthony Bourdain is a voice in Food and a show in Reality & Talk. Richard Feynman is a voice in
+Mind and Machines, a lecturer in a found course, and a documentary subject. Pick any node and the
+panel shows the rest. That is the same "degrees of separation" idea from B's first Archive-TV
+design, now carrying learning instead of trivia.
+
 ## Order of operations
 
 VoidTV to live first (TV world, nightly job, domain swap). Then: READ mode (the reader B already
