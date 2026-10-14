@@ -159,7 +159,7 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .hero-home{position:relative;margin:0 0 6px;height:min(62vh,560px);min-height:380px;overflow:hidden;background:#000}
 .hero-home .slides{position:absolute;inset:0;background:#000}.hero-home .s{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 1.6s ease;transform:scale(1.04)}.hero-home .s.on{opacity:.8;animation:kb 10s linear forwards}@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.1)}}
 .hero-home .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.12) 0%,rgba(7,8,12,.22) 45%,rgba(7,8,12,.98) 100%),linear-gradient(90deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,0) 60%)}
-.hero-home .copy{position:absolute;left:24px;right:24px;bottom:22px;max-width:760px}
+.hero-home .copy{position:absolute;left:76px;right:76px;bottom:22px;max-width:760px}
 .hero-home .wm{width:min(380px,62vw);display:block;filter:drop-shadow(0 2px 14px rgba(0,0,0,.65))}
 .hero-home .tag{margin:10px 0 0;color:var(--fg);font-size:17px;text-shadow:0 1px 8px rgba(0,0,0,.75)}
 .hero-home .nowon{margin:10px 0 0;color:var(--dim);font-size:14px;min-height:20px}.hero-home .nowon b{color:var(--fg)}
@@ -167,7 +167,7 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .hero-home .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .hero-home .copy{transition:opacity .35s ease}.hero-home .tag{font-size:13px;color:var(--dim);margin:0 0 8px;text-shadow:none}.hero-home .kicker{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 .hero-home h1{font-size:clamp(28px,4.2vw,56px);line-height:1.04;margin:4px 0 10px;text-shadow:0 2px 14px rgba(0,0,0,.75)}.hero-home .ov{max-width:640px;font-size:15px;line-height:1.45;color:var(--fg);text-shadow:0 1px 8px rgba(0,0,0,.85);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin:0}.hero-home .meta{color:var(--dim);font-size:13px;margin-top:8px}
-.hero-home .harrow{position:absolute;top:42%;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(7,8,12,.55);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}.hero-home .harrow:hover{border-color:var(--acc);color:var(--acc)}.hero-home .harrow.l{left:14px}.hero-home .harrow.r{right:14px}@media(hover:none){.hero-home .harrow{display:none}}
+.hero-home .harrow{position:absolute;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(7,8,12,.55);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}.hero-home .harrow:hover{border-color:var(--acc);color:var(--acc)}.hero-home .harrow.l{left:14px}.hero-home .harrow.r{right:14px}@media(hover:none){.hero-home .harrow{display:none}.hero-home .copy{left:16px;right:16px}}
 .hero-home .hcount{position:absolute;right:18px;bottom:14px;color:var(--dim);font-size:12px}
 .finder{margin:0 20px 6px;padding:4px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.frow{display:flex;align-items:flex-start;gap:12px;padding:9px 0}.frow+.frow{border-top:1px solid var(--line)}.frow .lbl{flex:none;width:68px;color:var(--dim);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:7px}.frow .pills{display:flex;flex-wrap:wrap;gap:6px}.frow .chip small{color:var(--dim);margin-left:5px;font-size:11px}.frow .chip:hover{border-color:var(--acc);color:var(--acc)}
 @media(max-width:600px){.finder{margin:0 12px 6px}.frow{flex-direction:column;gap:6px}.frow .lbl{width:auto;padding-top:0}}
@@ -439,13 +439,17 @@ function finder(){const series=VIS().filter(t=>!t.slug.startsWith('movie-'));con
  const pills=(key,list)=>'<span class="pills">'+list.map(([v,c])=>'<span class="chip'+(state[key]===v?' on':'')+'" onclick="state.'+key+'=\\''+esc(v)+'\\';render();window.scrollTo(0,0)">'+esc(v)+(c?'<small>'+c+'</small>':'')+'</span>').join('')+'</span>';
  const genres=tally('genres').filter(([g])=>!SKIP_GENRES.has(g)).slice(0,14);const nets=tally('network').filter(([,c])=>c>=4).slice(0,16);const decs=[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,series.filter(t=>decade(t.year)===d).length]).filter(x=>x[1]);
  return '<div class="finder"><div class="frow"><span class="lbl">Genre</span>'+pills('genre',genres)+'</div><div class="frow"><span class="lbl">Network</span>'+pills('network',nets)+'</div><div class="frow"><span class="lbl">Decade</span>'+pills('decade',decs)+'</div></div>'}
-function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t));
- const byR=ok.filter(t=>t.rating).sort((a,b)=>b.rating-a.rating);const popular=byR.slice(0,40);const pop=new Set(popular);
- const cult=ok.filter(t=>t.eps>=12&&(!t.rating||t.rating<8)&&!pop.has(t)).sort((a,b)=>b.eps-a.eps).slice(0,60);
+function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t)&&t.eps>=6);
+ // three decks: the well-known (rated and deep), the cult (deep but under-rated), the shelves (two from every row and collection); dealt popular-first, then interleaved
+ const QUIET=new Set(['World TV','Anime','Reality & Talk','Late Night','Internet Comedy']);const main=ok.filter(t=>!QUIET.has(t.type));
+ const byR=main.filter(t=>t.rating>=7&&t.eps>=10).sort((a,b)=>b.rating-a.rating||b.eps-a.eps);const popular=byR.slice(0,80);const pop=new Set(popular);
+ const cult=main.filter(t=>t.eps>=20&&!pop.has(t)).sort((a,b)=>b.eps-a.eps).slice(0,50);const cul=new Set(cult);
  const groups={};for(const t of ok){(groups[t.type]=groups[t.type]||[]).push(t);for(const g of t.tags||[])(groups['#'+g]=groups['#'+g]||[]).push(t)}
- const picks=new Set([...popular,...cult]);for(const arr of Object.values(groups))for(const t of arr.slice(0,3))picks.add(t);
- let seed=Math.floor(Date.now()/864e5)*7919+13;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};
- const arr=[...picks];for(let i=arr.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}
+ const shelf=[];for(const arr of Object.values(groups))for(const t of arr.sort((a,b)=>(b.rating||0)-(a.rating||0)).slice(0,2))if(!pop.has(t)&&!cul.has(t)&&!shelf.includes(t))shelf.push(t);
+ let seed=Math.floor(Date.now()/864e5)*7919+13;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};const shuf=(a)=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+ const P=shuf(popular.slice()),C=shuf(cult.slice()),S=shuf(shelf);const arr=[];
+ // pattern per six: popular, popular, cult, popular, shelf, cult — the known faces carry it, the finds keep it alive
+ const pattern=[P,P,C,P,S,C];let k=0;while(P.length||C.length||S.length){const d=pattern[k%6];const t=(d.length?d:(P.length?P:(C.length?C:S))).shift();if(t)arr.push(t);k++}
  state.heroPool=arr;if(state.heroI==null)state.heroI=0;return arr}
 function heroStart(manual){if(state.heroTimer){clearInterval(state.heroTimer);state.heroTimer=null}const pool=heroPool();if(!pool.length)return;heroRender(!manual);state.heroTimer=setInterval(()=>{if(!document.getElementById('herocopy')){clearInterval(state.heroTimer);state.heroTimer=null;return}state.heroI=(state.heroI+1)%pool.length;heroRender(false)},9000)}
 function heroStep(d){const pool=heroPool();if(!pool.length)return;state.heroI=(state.heroI+d+pool.length)%pool.length;heroStart(true)}
