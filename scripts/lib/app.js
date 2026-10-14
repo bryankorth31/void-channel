@@ -154,8 +154,12 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .hero-home .nowon{margin:10px 0 0;color:var(--dim);font-size:14px;min-height:20px}.hero-home .nowon b{color:var(--fg)}
 .live{display:inline-block;background:var(--gold);color:#07080c;font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
 .hero-home .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.hero-home .copy{transition:opacity .35s ease}.hero-home .tag{font-size:13px;color:var(--dim);margin:0 0 8px;text-shadow:none}.hero-home .kicker{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.hero-home h1{font-size:clamp(28px,4.2vw,56px);line-height:1.04;margin:4px 0 10px;text-shadow:0 2px 14px rgba(0,0,0,.75)}.hero-home .ov{max-width:640px;font-size:15px;line-height:1.45;color:var(--fg);text-shadow:0 1px 8px rgba(0,0,0,.85);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin:0}.hero-home .meta{color:var(--dim);font-size:13px;margin-top:8px}
+.hero-home .harrow{position:absolute;top:42%;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(7,8,12,.55);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}.hero-home .harrow:hover{border-color:var(--acc);color:var(--acc)}.hero-home .harrow.l{left:14px}.hero-home .harrow.r{right:14px}@media(hover:none){.hero-home .harrow{display:none}}
+.hero-home .hcount{position:absolute;right:18px;bottom:14px;color:var(--dim);font-size:12px}.genres.nets{margin-top:-8px}
 .btn.gold{background:var(--gold);border-color:var(--gold);color:#07080c;font-weight:600}.btn.ghost{background:rgba(7,8,12,.5);backdrop-filter:blur(6px)}
-@media(max-width:600px){.hero-home{height:60vh;min-height:340px}.hero-home .copy{left:16px;right:16px;bottom:16px}.hero-home .tag{font-size:15px}}
+@media(max-width:600px){.hero-home{height:66vh;min-height:420px}.hero-home h1{font-size:30px}.hero-home .ov{-webkit-line-clamp:3;font-size:14px}.hero-home .copy{left:16px;right:16px;bottom:16px}.hero-home .tag{font-size:15px}}
 .card{transition:transform .18s ease,outline-color .18s ease}.card:hover{transform:translateY(-3px)}.card:focus-visible{outline-color:var(--acc)}
 .card .p.gen{flex-direction:column;gap:6px;background:linear-gradient(160deg,hsl(var(--h) 42% 24%),#0b0d14 72%);color:var(--fg);padding:12px}.card .p.gen b{font-size:44px;line-height:1;font-weight:700;letter-spacing:-.02em;opacity:.95;text-shadow:0 2px 10px rgba(0,0,0,.5)}.card .p.gen span{font-size:12px;line-height:1.25;max-height:3.75em;overflow:hidden}.card .p.gen small{color:var(--dim);font-size:11px}
 .support{border-left:none;background:transparent;font-size:13px;color:var(--dim);padding:10px 14px;margin-top:10px}.support b{color:var(--fg)}.support .cross{width:34px;height:auto;flex:none;opacity:.9}
@@ -282,27 +286,52 @@ function slide(id,dir){const t=$(id);if(!t)return;const step=168;t.scrollBy({lef
 // Re-rendering replaces the whole page, so remember where each shelf was scrolled and put it back (no animation).
 function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach(t=>{pos[t.id]=t.scrollLeft});const y=window.scrollY;fn();document.querySelectorAll('.track').forEach(t=>{if(pos[t.id]){t.style.scrollBehavior='auto';t.scrollLeft=pos[t.id];t.style.scrollBehavior=''}});window.scrollTo(0,y)}
 function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
- let h='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
+ const bar='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
  +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
  +'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>';
- if(!any)h='<section class="hero-home"><div class="bg slides"><img class="s a" alt=""><img class="s b" alt=""></div><div class="shade"></div><div class="copy"><img class="wm" src="'+BASE+'assets/brand/wordmark.png" alt="VOIDtv"><p class="tag">before AI slop, there was human creativity</p><div class="nowon" id="nowon">The Void is always on.</div><div class="acts"><button class="btn gold" onclick="go(\\'tv\\')">▶ Watch The Void</button><button class="btn ghost" onclick="document.querySelector(\\'.bar\\').scrollIntoView({behavior:\\'smooth\\',block:\\'start\\'})">Browse the shows ↓</button></div></div></section><div class="support"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><span class="sp"><b>VOIDtv is free and stays free.</b> The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is the work of CASH, the Church of American Strength &amp; Hope: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it.</span><span class="acts"><a class="btn" href="https://cashvalues.org" target="_blank" rel="noopener">About CASH</a><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></span></div>'+h;
- if(any)h+='<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
- if(any){h+='<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>';}
- else{
-  const recent=VIS().sort((a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')).slice(0,30);
+ let h='';
+ if(any){
+  h=bar+'<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
+  h+='<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>';
+ } else {
+  // 1. the featured wall: one show at a time, varied and endless, with its description and a way in
+  h+='<section class="hero-home"><div class="bg slides"><img class="s a" alt=""><img class="s b" alt=""></div><div class="shade"></div><button class="harrow l" onclick="heroStep(-1)" aria-label="previous">‹</button><button class="harrow r" onclick="heroStep(1)" aria-label="next">›</button><div class="copy" id="herocopy"></div><span class="hcount" id="herocount"></span></section>';
+  h+='<div class="support"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><span class="sp"><b>VOIDtv is free and stays free.</b> The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is the work of CASH, the Church of American Strength &amp; Hope: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it.</span><span class="acts"><a class="btn" href="https://cashvalues.org" target="_blank" rel="noopener">About CASH</a><a class="btn" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a></span></div>';
+  // 2. yours
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
+  // 3. genres and filters
+  h+='<h2>Find something<small>pick a genre, a network, a row or a collection</small></h2>'+bar;
+  h+='<div class="genres">'+counts('genres').map(([g,n])=>'<button onclick="state.genre=\\''+esc(g)+'\\';render();window.scrollTo(0,0)">'+esc(g)+'<small>'+n+' shows</small></button>').join('')+'</div>';
+  h+='<div class="genres nets">'+counts('network').slice(0,24).map(([g,n])=>'<button onclick="state.network=\\''+esc(g)+'\\';render();window.scrollTo(0,0)">'+esc(g)+'<small>'+n+' shows</small></button>').join('')+'</div>';
+  // 4. the rows, in all their splendor
+  const recent=VIS().sort((a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')).slice(0,30);
   h+=shelf('Recently added',recent,'recent');
   const top=VIS().filter(s=>s.rating).sort((a,b)=>b.rating-a.rating||b.eps-a.eps).slice(0,30);
   h+=shelf('Top rated',top,'top');
   for(const [tag] of counts('tags')){const rows=list.filter(s=>(s.tags||[]).includes(tag));if(rows.length)h+=shelf(tag,rows,'tag:'+tag)}
   for(const t of TYPES){const rows=list.filter(s=>s.type===t);if(rows.length)h+=shelf(t,rows,'type:'+t)}
-  h+='<h2>Explore by Genre</h2><div class="genres">'+counts('genres').map(([g,n])=>'<button onclick="state.genre=\\''+esc(g)+'\\';render();window.scrollTo(0,0)">'+esc(g)+'<small>'+n+' shows</small></button>').join('')+'</div>';
-  h+='<h2>By Network</h2><div class="genres">'+counts('network').slice(0,24).map(([g,n])=>'<button onclick="state.network=\\''+esc(g)+'\\';render();window.scrollTo(0,0)">'+esc(g)+'<small>'+n+' shows</small></button>').join('')+'</div>';
  }
- $('main').innerHTML=h;if(!any){fillNowOn();heroSlides()}}
-function heroSlides(){if(state.heroTimer){clearInterval(state.heroTimer);state.heroTimer=null}const a=document.querySelector('.hero-home .s.a'),b=document.querySelector('.hero-home .s.b');if(!a||!b)return;const pool=SHOWS.filter(t=>t.backdrop&&!t.slug.startsWith('movie-')).sort((x,y)=>(y.rating||0)-(x.rating||0)).slice(0,60);if(!pool.length)return;const day=Math.floor(Date.now()/864e5);let i=day%pool.length;let front=a;front.src=pool[i].backdrop;front.classList.add('on');state.heroTimer=setInterval(()=>{if(!document.body.contains(a)){clearInterval(state.heroTimer);state.heroTimer=null;return}i=(i+1)%pool.length;const back=front===a?b:a;back.src=pool[i].backdrop;back.onload=()=>{back.classList.add('on');front.classList.remove('on');front=back}},8000)}
-async function fillNowOn(){if(!$('nowon'))return;try{await ensureTV()}catch(_){return}const c=TV&&TV.find(x=>x.id==='void');const el=$('nowon');if(!c||!el)return;const n=chanNow(c);const it=c.items[n.i];const t=SHOWS[it[0]];if(t)el.innerHTML='<span class="live">LIVE</span>Now on The Void · <b>'+esc(t.show)+'</b> · '+code(it)+' · '+mmss(n.remain)+' left'}
+ $('main').innerHTML=h;if(!any)heroStart()}
+// The featured pool: the best-rated, the cult favourites (long runs that never got the ratings), and
+// a few from every row and collection, shuffled with the day as the seed so it reads differently
+// tomorrow but the same for everyone today.
+function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t));
+ const byR=ok.filter(t=>t.rating).sort((a,b)=>b.rating-a.rating);const popular=byR.slice(0,40);const pop=new Set(popular);
+ const cult=ok.filter(t=>t.eps>=12&&(!t.rating||t.rating<8)&&!pop.has(t)).sort((a,b)=>b.eps-a.eps).slice(0,60);
+ const groups={};for(const t of ok){(groups[t.type]=groups[t.type]||[]).push(t);for(const g of t.tags||[])(groups['#'+g]=groups['#'+g]||[]).push(t)}
+ const picks=new Set([...popular,...cult]);for(const arr of Object.values(groups))for(const t of arr.slice(0,3))picks.add(t);
+ let seed=Math.floor(Date.now()/864e5)*7919+13;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};
+ const arr=[...picks];for(let i=arr.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}
+ state.heroPool=arr;if(state.heroI==null)state.heroI=0;return arr}
+function heroStart(){if(state.heroTimer){clearInterval(state.heroTimer);state.heroTimer=null}const pool=heroPool();if(!pool.length)return;heroRender(true);state.heroTimer=setInterval(()=>{if(!document.getElementById('herocopy')){clearInterval(state.heroTimer);state.heroTimer=null;return}state.heroI=(state.heroI+1)%pool.length;heroRender(false)},9000)}
+function heroStep(d){const pool=heroPool();if(!pool.length)return;state.heroI=(state.heroI+d+pool.length)%pool.length;heroStart()}
+function heroRender(first){const pool=heroPool();const t=pool[state.heroI];const copy=$('herocopy');if(!t||!copy)return;const a=document.querySelector('.hero-home .s.a'),b=document.querySelector('.hero-home .s.b');
+ const front=a.classList.contains('on')?a:(b.classList.contains('on')?b:null);const back=front===a?b:a;
+ if(first&&!front){a.src=t.backdrop;a.classList.add('on')}else{back.src=t.backdrop;back.onload=()=>{back.classList.add('on');if(front)front.classList.remove('on')}}
+ const kick=(t.tags&&t.tags[0])||t.type;const ov=t.overview.length>260?t.overview.slice(0,260).replace(/\\s+\\S*$/,'')+'…':t.overview;
+ copy.style.opacity=0;setTimeout(()=>{copy.innerHTML='<p class="tag">before AI slop, there was human creativity</p><small class="kicker">'+esc(kick)+(t.network?' · '+esc(t.network):'')+(t.year?' · '+t.year:'')+'</small><h1>'+esc(t.show)+'</h1><p class="ov">'+esc(ov)+'</p><div class="meta">'+[(t.genres||[]).slice(0,3).join(' · '),t.rating?'★ '+t.rating:'',t.eps+' episode'+(t.eps===1?'':'s')].filter(Boolean).join('  ·  ')+'</div><div class="acts"><button class="btn gold" onclick="watch(\\''+t.slug+'\\')">▶ Play</button><button class="btn ghost" onclick="go(\\''+t.slug+'\\')">About this show</button><button class="btn ghost" onclick="go(\\'tv\\')">📺 Live TV</button></div>';copy.style.opacity=1;const c=$('herocount');if(c)c.textContent=(state.heroI+1)+' / '+pool.length},first?0:220)}
+async function watch(slug){await go(slug);const s=state.show;if(s&&s.seasons){const r=resume(s);play(r.se,r.e)}}
 function showView(autoplay){const s=state.show;if(!s.seasons){$('main').innerHTML='<div class="loading">Searching the Void for '+esc(s.show)+'…</div>';return}const se=s.seasons[state.se];const ep=se.episodes[state.e];
  let h='<div class="show"><button class="back" onclick="go(\\'\\')">← Browse</button>';
  if(!autoplay)h+='<div class="hero">'+(s.backdrop?'<img src="'+s.backdrop+'" alt="">':'')+'<div class="t"><b>'+esc(s.show)+'</b>'+(s.overview?'<p>'+esc(s.overview.slice(0,260))+(s.overview.length>260?'…':'')+'</p>':'')+'<div class="g">'+[s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episodes'].filter(Boolean).join('  ·  ')+'</div></div></div>';
