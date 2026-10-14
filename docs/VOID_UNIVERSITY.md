@@ -363,8 +363,7 @@ Yes. It is the same machine with a different list, plus one generated layer. Wha
 - *List*: a scope and sequence instead of a show list — strands (reading, writing, math, science,
   history/civics, arts, practical life) × levels, each lesson with an outcome. Not invented from
   scratch: whole K–12 curricula already exist under open licences and give us the spine and the
-  assessments — Core Knowledge (K–8, CC BY-NC-SA), EngageNY / Eureka (K–12 math and ELA with
-  tests, CC BY-NC-SA), Illustrative Mathematics (CC BY), CK-12 (CC BY-NC), OpenStax high-school
+  order — Core Knowledge (K–8, CC BY-NC-SA), EngageNY / Eureka (K–12 math and ELA, CC BY-NC-SA), Illustrative Mathematics (CC BY), CK-12 (CC BY-NC), OpenStax high-school
   texts (CC BY), Khan Academy, Siyavula, Wikisource/Gutenberg for the readings. These are known
   bodies; we match to them like TVmaze.
 - *Hunt*: the lesson's video from the library (Bronowski, Burke, Sagan, Feynman, the Documentary
@@ -373,27 +372,42 @@ Yes. It is the same machine with a different list, plus one generated layer. Wha
   below).
 - *Match*: article = Simple English Wikipedia or Wikipedia section + a public-domain primary source;
   reading = the open textbook chapter or a Gutenberg text; practice = the open curriculum's own
-  exercises where they exist.
+  activities where they fit.
 - *X-Ray*: the subject graph connects a lesson to its voices, to the next lesson, to the
   documentary that shows it, to the machine you can run.
 
+**No grading. (B, 2026-10-13: "I'm not interested in grading or anything on that side of
+things.")** No tests, answer keys, scores, standards codes, transcripts-for-the-state or
+accreditation talk. Void School is a place to learn well, not a place to be measured. What a family
+keeps is what Mine already keeps: what we watched, what we read, where we stopped, what we
+liked — a memory, not a report card.
+
 **The generated layer (the "simple model", builder side, static output)**
-For each lesson the model writes the wrap that the library cannot supply: objectives in plain
-words, a why-it-matters paragraph (entry 4 made mandatory), vocabulary, three questions to ask
-while watching, a 10-question check with answer key, one project or practice, a parent note
-(what to listen for, common misconceptions). Grounded on the actual material (transcript +
-reading), never on the model's memory, so a test asks about what the child watched. Standards
-tagging (Common Core / state codes, which are public) so a parent can map it to what their state
-asks for. B reviews by sampling; a flag on any lesson sends it back. Cost: a lesson pack is
-pennies; a full K–12 pass is low hundreds of dollars, once, then revisions.
+For each lesson the model writes the wrap the library cannot supply, and only that: a
+why-it-matters paragraph in plain words (entry 4 made mandatory — the seed goes in first); three
+questions worth talking about at the table afterwards, open ones, with no key; the words a child
+will meet for the first time; one thing to make, try, visit or look for this week; and a note to the
+parent — what to listen for, what children usually get tangled in, where the piece is wrong or
+dated and what to say about that. Grounded on the actual material (transcript + reading), never on
+the model's memory. B reviews by sampling; a flag on any lesson sends it back. Cost: pennies a
+lesson.
+
+**Care, not volume.** B: "I wish this to have a good amount of effort and care given it." So the
+standard for a Void School lesson is higher than for a VoidTV row, and the throughput lower:
+- every piece watched by a person before it is assigned (B, or someone he trusts), not just
+  judged by the hunter;
+- the voice test applied strictly (did it, teaches it well) and a third test added — *is this the
+  best thing we hold for a child meeting the idea for the first time?* — so one superb Bronowski
+  hour beats five adequate ones;
+- the whole lesson readable by a parent in two minutes before pressing play;
+- sequence that respects nucleation: the why, then the story, then the mechanism, then the
+  practice; and the next lesson chosen so the seed just planted has something to grow on;
+- a strand is finished when it is finished, not when a quota is met. One strand done with care
+  before the second begins.
 
 **What the library cannot do, said plainly**
-- *Grading and feedback at volume*: answer keys and self-checks are static and free; grading a
-  child's written paragraph needs the visitor-side companion with its budget, or the parent. The
-  parent is the teacher; we are the shelf and the planner.
-- *Hands-on*: labs, music practice, sport, making — we can show and assign, not supervise.
-- *Accreditation*: none. Many states accept a portfolio and records; Mine becomes the record
-  (per-child profiles in one household, progress, completed checks, a printable transcript).
+- *Hands-on*: labs, music practice, sport, making — we can show and suggest, not supervise. The
+  parent is the teacher; we are the shelf, the planner and the person who already watched it all.
 - *Socialisation*: the study hall, later, optional.
 
 **The door, and the kids rule.** VoidTV is an adult app behind an 18+ gate; that does not change.
@@ -404,7 +418,7 @@ child) live in the same Mine blob; the sync code moves the household together.
 
 **Order.** VoidTV live → Void University's found courses and the first authored entries → Void
 School, starting with ONE strand end to end (B picks; history/civics or science would use the
-library hardest) to prove the lesson pack before scaling to the K–12 spine.
+library hardest) done with care before the second strand begins.
 
 ## Order of operations
 
