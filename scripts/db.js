@@ -3,6 +3,8 @@
 // always a faithful, queryable copy. Open it with any SQLite viewer. No video is ever stored.
 // Usage: node scripts/db.js
 const fs = require('fs');
+const nz = (v) => (v === undefined ? null : v); // SQLite binds null, never undefined (self-listed episodes have no airdate)
+const run = (stmt, ...a) => stmt.run(...a.map(nz));
 const path = require('path');
 const { DatabaseSync } = require('node:sqlite');
 
@@ -77,21 +79,21 @@ for (const entry of LIST.shows) {
   const f = path.join(SHOWS_DIR, slug + '.json');
   const g = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
   if (!g || !g.seasons) {
-    insShow.run(slug, entry.name, entry.type, entry.network, null, null, null, null, null, null, null, null, null, 0, null, ...artCols(slug, entry));
+    run(insShow, slug, entry.name, entry.type, entry.network, null, null, null, null, null, null, null, null, null, 0, null, ...artCols(slug, entry));
     continue;
   }
-  insShow.run(slug, entry.name, entry.type, entry.network, g.tvmaze.id, g.tvmaze.runtime, g.tvmaze.premiered, g.tvmaze.network,
+  run(insShow, slug, entry.name, entry.type, entry.network, g.tvmaze.id, g.tvmaze.runtime, g.tvmaze.premiered, g.tvmaze.network,
     g.coverage.total, g.coverage.live, g.coverage.review, g.coverage.missing, g.coverage.pct, 1, g.matchedAt, ...artCols(slug, entry));
   shows++;
   const pf = path.join(PEOPLE_DIR, slug + '.json');
   if (fs.existsSync(pf)) {
     const pp = JSON.parse(fs.readFileSync(pf, 'utf8'));
-    for (const c of pp.cast) { insPerson.run(c.id, c.name, c.photo); insSP.run(slug, c.id, c.character || null, 'cast', c.episodes || null); }
-    for (const c of pp.crew) { insPerson.run(c.id, c.name, c.photo); insSP.run(slug, c.id, c.jobs.join(', '), 'crew', c.episodes || null); }
+    for (const c of pp.cast) { run(insPerson, c.id, c.name, c.photo); run(insSP, slug, c.id, c.character || null, 'cast', c.episodes || null); }
+    for (const c of pp.crew) { run(insPerson, c.id, c.name, c.photo); run(insSP, slug, c.id, c.jobs.join(', '), 'crew', c.episodes || null); }
   }
   for (const se of g.seasons) for (const e of se.episodes) {
     const p = e.file;
-    insEp.run(slug, se.season, e.number, e.name, e.airdate, e.state,
+    run(insEp, slug, se.season, e.number, e.name, e.airdate, e.state,
       p ? p.conf : null, p ? p.why : null, p ? p.item : null, p ? p.itemTitle : null, p ? p.file : null, p ? p.url : null,
       p ? p.seconds : null, p ? p.format : null, p ? (p.playable ? 1 : 0) : null, p ? p.sizeMB : null, e.alternates ? e.alternates.length : 0);
     eps++;
@@ -106,7 +108,7 @@ if (fs.existsSync(MOV_DIR)) {
     if (!f.endsWith('.json')) continue;
     const m = JSON.parse(fs.readFileSync(path.join(MOV_DIR, f), 'utf8'));
     const p = m.file;
-    insMov.run(m.tmdbId, m.kind, m.title, m.year ? +m.year : null, m.runtime, m.rating, m.votes, m.poster, m.backdrop, m.overview, m.state,
+    run(insMov, m.tmdbId, m.kind, m.title, m.year ? +m.year : null, m.runtime, m.rating, m.votes, m.poster, m.backdrop, m.overview, m.state,
       p ? p.conf : null, p ? p.item : null, p ? p.itemTitle : null, p ? p.file : null, p ? p.url : null, p ? p.seconds : null, p ? p.format : null,
       p ? (p.playable ? 1 : 0) : null, p ? p.sizeMB : null, m.archiveMentions, m.huntedAt);
     movies++;
