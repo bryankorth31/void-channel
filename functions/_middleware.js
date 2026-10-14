@@ -28,7 +28,9 @@ export async function onRequest({ request, env, next }) {
   if (request.method === 'POST') {
     const form = await request.formData().catch(() => null);
     if (form && form.get('p') === secret) {
-      return new Response(null, { status: 303, headers: { Location: new URL(request.url).pathname || '/', 'Set-Cookie': `${COOKIE}=${want}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax` } });
+      const host = new URL(request.url).hostname;
+      const domain = /(^|\.)voidtv\.net$/.test(host) ? '; Domain=voidtv.net' : ''; // one password for www and the bare domain
+      return new Response(null, { status: 303, headers: { Location: new URL(request.url).pathname || '/', 'Set-Cookie': `${COOKIE}=${want}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax${domain}` } });
     }
     return new Response(PAGE(true), { status: 401, headers: { 'content-type': 'text/html; charset=utf-8' } });
   }
