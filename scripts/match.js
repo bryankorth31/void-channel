@@ -202,13 +202,23 @@ function selfGrid(entry, cand, aliases) {
   const core = norm(show).replace(/^the /, '').replace(/(.*?)/g, '').trim();
   const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
+  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top d+|mashup|trailer|promo|commercial|ad)/i;
+  const items = cand.items.map((item) => {
+    const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
+    const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));
+    const named = names(item.title || '') || idn.includes(core.replace(/ /g, ''));
+    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name));
+    const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
+    return { item, starts, named, vids, med };
+  }).filter((x) => x.named && !langRisk(x.item.title) && !(JUNK.test((x.item.title || '') + ' ' + x.item.id) && !x.starts) && (x.starts || x.vids.length >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
+  if (!items.length) return null;
+  // the anchor is the upload that looks most like a series; others join only if their episodes are the same shape
+  items.sort((a, b) => b.vids.length - a.vids.length || b.starts - a.starts);
+  const anchor = items[0];
+  const kept = items.filter((x) => x === anchor || (x.med >= anchor.med * 0.5 && x.med <= anchor.med * 2));
   const files = [];
-  for (const item of cand.items) {
-    if (!(names(item.title || '') || norm(item.id).replace(/ /g, '').includes(core.replace(/ /g, '')))) continue;
-    if (langRisk(item.title)) continue;
-    for (const f of item.files) {
-      if (!(f.seconds >= 90 && f.seconds <= 3 * 3600)) continue;
-      if (langRisk(f.name)) continue;
+  for (const { item, vids } of kept) {
+    for (const f of vids) {
       const risk = codecRisk(f.name, f.format, f.playable);
       files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: f.ep, conf: 0.6, why: 'self-listed: no TVmaze entry; order from the files' });
     }
@@ -217,10 +227,10 @@ function selfGrid(entry, cand, aliases) {
   const bySE = new Map(); const loose = [];
   for (const f of files) { if (f.ep && f.ep.episode) { const k = (f.ep.season || 1) + 'x' + f.ep.episode; const cur = bySE.get(k); if (!cur || (f.playable && !cur.playable) || (f.playable === cur.playable && (f.sizeMB || 0) > (cur.sizeMB || 0))) bySE.set(k, f); } else loose.push(f); }
   const seasons = {};
-  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); (seasons[se] = seasons[se] || []).push({ number: ep, name: titlePart(f.name, showWords) || ('Episode ' + ep), state: 'REVIEW', file: f, alternates: [] }); }
+  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); const nm = titlePart(f.name, showWords); (seasons[se] = seasons[se] || []).push({ number: ep, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + ep), state: 'REVIEW', file: f, alternates: [] }); }
   loose.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
   const seen = new Set(); let next = (seasons[1] || []).reduce((m, e) => Math.max(m, e.number), 0);
-  for (const f of loose) { const key = norm(f.name); if (seen.has(key)) continue; seen.add(key); next++; (seasons[1] = seasons[1] || []).push({ number: next, name: titlePart(f.name, showWords) || ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
+  for (const f of loose) { const key = norm(f.name).replace(/(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)/g, '').trim(); if (seen.has(key)) continue; seen.add(key); next++; const nm = titlePart(f.name, showWords); (seasons[1] = seasons[1] || []).push({ number: next, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
   const list = Object.keys(seasons).map(Number).sort((a, b) => a - b).map((se) => ({ season: se, episodes: seasons[se].sort((a, b) => a.number - b.number) }));
   const total = list.reduce((m, se) => m + se.episodes.length, 0);
   const out = { show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), selfListed: true,
