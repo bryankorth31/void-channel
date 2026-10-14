@@ -12,6 +12,39 @@ const CREDIT = `A project of the <a href="https://cashvalues.org" target="_blank
 function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } }
 
 // ---- data ---------------------------------------------------------------------------------
+// TV WORLD. Channels are the networks, rows and collections; each carries a fixed lineup of every
+// playable episode it holds, interleaved in ~45-minute blocks so it feels like a schedule rather than
+// one show on repeat. "Now playing" is pure arithmetic on the clock (see TV_EPOCH in the page), so
+// every visitor sees the same thing at the same moment with no server.
+const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+function buildChannels(shows, types) {
+  const series = shows.filter((s) => !s.slug.startsWith('movie-'));
+  const movies = shows.filter((s) => s.slug.startsWith('movie-'));
+  const idx = new Map(shows.map((s, i) => [s.slug, i]));
+  const chans = [];
+  const make = (id, name, kind, list) => {
+    const eps = list.reduce((n, s) => n + s.eps, 0);
+    if (!list.length || eps < 12) return;
+    const queues = list.slice().sort((a, b) => b.eps - a.eps)
+      .map((s) => ({ q: s.seasons.flatMap((se) => se.episodes.map((e) => [idx.get(s.slug), se.season, e.n, Math.max(1, e.min || s.runtime || 30)])) }));
+    const items = [];
+    let active = queues.filter((x) => x.q.length);
+    while (active.length) {
+      for (const x of active) { let m = 0; while (x.q.length && m < 44) { const it = x.q.shift(); items.push(it); m += it[3]; } }
+      active = active.filter((x) => x.q.length);
+    }
+    chans.push({ id, name, kind, shows: list.length, eps, total: items.reduce((n, it) => n + it[3], 0), items });
+  };
+  make('void', 'The Void', 'all', series);
+  for (const t of types) make('row-' + slugify(t), t, 'row', series.filter((s) => s.type === t));
+  const tags = {}; for (const s of series) for (const t of s.tags || []) (tags[t] = tags[t] || []).push(s);
+  for (const [t, list] of Object.entries(tags)) make('tag-' + slugify(t), t, 'collection', list);
+  const nets = {}; for (const s of series) if (s.network) (nets[s.network] = nets[s.network] || []).push(s);
+  for (const [n, list] of Object.entries(nets).sort((a, b) => b[1].length - a[1].length)) if (list.length >= 2) make('net-' + slugify(n), n, 'network', list);
+  if (movies.length) make('movies', 'TV Movies and Specials', 'row', movies);
+  return chans;
+}
+
 function assemble() {
   const LIST = readJson(path.join(ROOT, 'scripts', 'show-list.json'), { types: [], shows: [] });
   const ART = readJson(path.join(ROOT, 'catalog', 'art.json'), {});
@@ -77,7 +110,8 @@ function assemble() {
   const bios = {};
   for (const id of Object.keys(people)) { const b = readJson(path.join(BIO_DIR, id + '.json'), null); if (b) bios[id] = b; }
   const types = [...LIST.types, 'TV Movies', 'Specials'];
-  return { shows, people, links, types, bios };
+  const channels = buildChannels(shows, types);
+  return { shows, people, links, types, bios, channels };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
@@ -97,7 +131,7 @@ header .donate{margin-left:auto;color:#07080c;background:var(--acc);font-size:14
 .support{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 20px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;background:var(--panel);font-size:14px}
 .support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support .acts{display:flex;gap:8px;flex-wrap:wrap}.support a.btn{border:1px solid var(--acc);color:var(--acc);font-weight:600}.support a.btn:last-child{background:var(--acc);color:#07080c}
 footer a{color:var(--acc)}
-@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}header .mine-link{padding:6px 8px;font-size:13px}}
+@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}header .mine-link{padding:6px 8px;font-size:13px}header .mine-link .long{display:none}}
 header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}header .mine-link:hover{border-color:var(--acc);color:var(--acc)}
 .btn.on{border-color:var(--acc);color:var(--acc)}.mine{display:contents}.acts.mine{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .me{padding:0 20px 20px}.me h1{margin:10px 0 4px;font-size:26px}.me .g{color:var(--dim)}.me>.acts{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.me h2 small{color:var(--dim);font-weight:400;font-size:13px;margin-left:8px}
@@ -106,6 +140,11 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:14px}.path .s{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}.path .s:hover{border-color:var(--acc)}.path .v{color:var(--acc);font-size:12px;cursor:pointer}.path .v:hover{text-decoration:underline}
 .person .more{color:var(--acc);cursor:pointer;font-size:12px;margin-left:8px;font-weight:400}.person .bio{font-size:13px;line-height:1.45;margin-top:6px;color:var(--fg)}
 .ppage{padding:0 20px 20px}.ppage .head{display:flex;gap:18px;align-items:flex-start;margin:6px 0 14px}.ppage .head img{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:none}.ppage .head b{font-size:24px}.ppage .bio{max-width:760px;line-height:1.5;margin-top:8px}.ppage .g{color:var(--dim);font-size:13px}.pcard small.role{display:block;color:var(--acc);font-size:12px;padding:4px 2px 0}
+.tv{padding:0 20px 20px}.tv .screen{position:relative;background:#000;border-radius:10px;overflow:hidden}.tv video{width:100%;aspect-ratio:16/9;max-height:70vh;display:block;background:#000}
+.tv .on{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:170px;height:54px;background:var(--acc);color:#07080c;border:0;border-radius:999px;font:inherit;font-weight:600;font-size:16px;cursor:pointer}
+.osd{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 12px;background:var(--panel);font-size:14px;min-height:44px}.osd b{color:var(--acc)}.osd .g{color:var(--dim)}.osd .acts{margin-left:auto;display:flex;gap:6px}
+.guide{margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden}.ch{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:10px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:14px}.ch:last-child{border-bottom:0}.ch:hover,.ch.on{background:var(--panel2)}.ch.on .cn{color:var(--acc)}.ch small{display:block;color:var(--dim);font-size:11px}
+@media(max-width:600px){.ch{grid-template-columns:1fr;gap:2px}.osd .acts{margin-left:0;width:100%}}
 .hist .row{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.hist .row span{flex:1;cursor:pointer}.hist small{color:var(--dim)}.hist .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
@@ -172,7 +211,7 @@ footer{color:var(--dim);font-size:12px;padding:20px;border-top:1px solid var(--l
 // ROUTES 'hash' (#slug) or 'path' (/show/slug, needs a host that serves index.html for unknown paths).
 const JS = `
 const BY_SLUG=Object.fromEntries(SHOWS.map(s=>[s.slug,s]));
-const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null};
+const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null,chan:'void',tvOn:false};
 const $=(id)=>document.getElementById(id);
 const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
@@ -262,6 +301,25 @@ function degSuggest(q){const el=$('degs');if(!el)return;q=q.trim().toLowerCase()
 function degPath(target){const from=state.show.slug;const prev={};prev[from]=null;const via={};const q=[from];let found=from===target;while(q.length&&!found){const a=q.shift();for(const [b,ids] of Object.entries(LINKS[a]||{})){if(prev[b]!==undefined)continue;prev[b]=a;via[b]=ids[0];if(b===target){found=true;break}q.push(b)}}
  const out=$('degp');if($('degs'))$('degs').innerHTML='';if($('degq'))$('degq').value='';if(!found){out.innerHTML='<div class="path">No path to '+esc(BY_SLUG[target].show)+' through the people here (yet).</div>';return}
  const chain=[];for(let c=target;c;c=prev[c])chain.unshift(c);let h='<div class="path">';chain.forEach((sl,i)=>{if(i){const id=via[sl];const p=PEOPLE[id];h+='<span class="v" onclick="person('+id+')">— '+esc(p?p.name:'?')+' —</span>'}h+='<span class="s" onclick="go(\\''+sl+'\\')">'+esc(BY_SLUG[sl].show)+'</span>'});h+='</div><div class="g" style="color:var(--dim);font-size:12px;margin-top:4px">'+(chain.length-1)+' hop'+(chain.length===2?'':'s')+' · every show on the path plays here</div>';out.innerHTML=h}
+const TV_EPOCH=Date.UTC(2026,0,1)/1000;let TV_TOKEN=0;
+async function ensureTV(){if(TV)return TV;const r=await fetch(BASE+'data/tv.json');TV=(await r.json()).channels;return TV}
+function chanNow(c,at){if(!c.pre){let a=0;c.pre=c.items.map(it=>(a+=it[3]*60))}const T=c.pre[c.pre.length-1];const t=((((at||Date.now())/1000-TV_EPOCH)%T)+T)%T;let lo=0,hi=c.pre.length-1;while(lo<hi){const m=(lo+hi)>>1;if(c.pre[m]>t)hi=m;else lo=m+1}const start=lo?c.pre[lo-1]:0;return{i:lo,offset:t-start,remain:c.pre[lo]-t}}
+const mmss=(sec)=>{sec=Math.max(0,Math.round(sec));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60);return h?h+'h '+String(m).padStart(2,'0')+'m':m+' min'};
+const kindName={all:'every show',row:'row',collection:'collection',network:'network'};
+const code=(it)=>'S'+String(it[1]).padStart(2,'0')+'E'+String(it[2]).padStart(2,'0');
+function tune(id){state.chan=id;state.tvOn=true;history.replaceState(null,'',urlFor('tv/'+id));render();window.scrollTo(0,0)}
+function surf(dir){if(!TV)return;const i=TV.findIndex(c=>c.id===state.chan);tune(TV[(i+dir+TV.length)%TV.length].id)}
+function osd(c,i,s,ep){const el=document.querySelector('.osd');if(!el)return;const it=c.items[i];const n=chanNow(c);const nx=SHOWS[c.items[(i+1)%c.items.length][0]];
+ el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(it)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(n.i===i?mmss(n.remain)+' left · ':'')+'next: '+esc(nx?nx.show:'')+'</span><span class="acts"><button class="btn" onclick="surf(-1)">‹ Ch</button><button class="btn" onclick="surf(1)">Ch ›</button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button></span>'}
+async function tvPlay(c,i,offset){const it=c.items[i];const s=SHOWS[it[0]];const v=$('v');if(!v||!s)return;const token=++TV_TOKEN;await ensure(s);if(token!==TV_TOKEN||state.view!=='tv')return;
+ const se=(s.seasons||[]).find(x=>x.season===it[1]);const ep=se&&se.episodes.find(e=>e.n===it[2]);if(!ep){tvPlay(c,(i+1)%c.items.length,0);return}
+ osd(c,i,s,ep);v.src=ep.url;v.onloadedmetadata=()=>{if(offset>5&&offset<v.duration-5)v.currentTime=offset};v.onended=()=>{const n=chanNow(c);tvPlay(c,n.i,n.offset)};v.onerror=()=>{tvPlay(c,(i+1)%c.items.length,0)};if(state.tvOn)v.play().catch(()=>{})}
+async function tvPage(){const main=$('main');if(!TV){main.innerHTML='<div class="loading">Tuning…</div>';try{await ensureTV()}catch(_){main.innerHTML='<div class="loading">The channels did not load.</div>';return}if(state.view!=='tv')return}
+ const chans=TV;const cur=chans.find(c=>c.id===state.chan)||chans[0];state.chan=cur.id;const now=chanNow(cur);const it=cur.items[now.i];const s=SHOWS[it[0]];
+ let h='<div class="tv"><div class="screen"><video id="v" controls playsinline></video>'+(state.tvOn?'':'<button class="on" onclick="state.tvOn=true;render()">▶ Turn on</button>')+'<div class="osd"></div></div>';
+ h+='<p class="hint">Always on, same for everyone: the clock decides what is playing. ↑ ↓ to surf. Nothing here is recorded in Mine unless you open the show.</p>';
+ h+='<div class="guide">'+chans.map(c=>{const n=chanNow(c);const ci=c.items[n.i];const cs=SHOWS[ci[0]];return '<div class="ch'+(c.id===cur.id?' on':'')+'" onclick="tune(\\''+c.id+'\\')"><span class="cn">'+esc(c.name)+'<small>'+c.shows+' show'+(c.shows===1?'':'s')+' · '+c.eps+' episodes · '+kindName[c.kind]+'</small></span><span class="np">'+esc(cs?cs.show:'')+' <small>'+code(ci)+' · '+mmss(n.remain)+' left</small></span></div>'}).join('')+'</div></div>';
+ main.innerHTML=h;document.title=cur.name+' · '+SITE;osd(cur,now.i,s,null);tvPlay(cur,now.i,now.offset)}
 function personPage(){const id=state.personId;const g=PEOPLE[id];const b=bioFor(id);const from=state.personFrom&&BY_SLUG[state.personFrom];const fp=from?findPerson(from,id):{name:'',photo:null};const name=(b&&b.name)||(g&&g.name)||fp.name||'…';const photo=(b&&b.photo)||(g&&g.photo)||fp.photo;const shows=g?Object.entries(g.shows).map(([sl,role])=>[BY_SLUG[sl],role]).filter(x=>x[0]):[];if(!shows.length&&from)shows.push([from,fp.as||'Credited']);
  const facts=b?[b.dept,b.born?'born '+b.born+(b.died?', died '+b.died:''):'',b.place].filter(Boolean).join(' · '):'';
  let h='<div class="ppage"><button class="back" onclick="history.length>1?history.back():go(\\'\\')">← Back</button><div class="head">'+(photo?'<img src="'+photo+'" alt="">':'')+'<div><b>'+esc(name)+'</b><div class="g">'+esc(facts)+(shows.length?(facts?' · ':'')+shows.length+' show'+(shows.length===1?'':'s')+' on VOIDtv':'')+'</div>'+(b&&b.bio?'<div class="bio">'+esc(b.bio)+'</div>':(b===null?'<div class="g">Loading…</div>':''))+'</div></div>';
@@ -282,27 +340,27 @@ function xray(s){const links=LINKS[s.slug]||{};const conn=Object.entries(links).
  if(Object.keys(LINKS).length)h+='<h3>SIX DEGREES</h3><div class="deg"><input id="degq" placeholder="Connect '+esc(s.show).replace(/"/g,'')+' to… (type a show)" oninput="degSuggest(this.value)" autocomplete="off"><div class="sug" id="degs"></div><div id="degp"></div></div>';
  return h+'</div>'}
 function person(id){state.person=state.person===id?null:id;const xr=document.querySelector('.xray');if(xr)xr.outerHTML=xray(state.show);else showView(false);const el=document.querySelector('.person');if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'})}
-function urlFor(slug){if(slug&&slug.startsWith('person/'))return ROUTES==='path'?'/'+slug:'#'+slug;if(slug==='me')return ROUTES==='path'?'/me':'#me';return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
-function slugFromUrl(){if(ROUTES==='path'){if(location.pathname==='/me'||location.pathname==='/me/')return 'me';const pm=location.pathname.match(/^\\/person\\/(\\d+)/);if(pm)return 'person/'+pm[1];const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
+function urlFor(slug){if(slug==='tv'||(slug&&slug.startsWith('tv/')))return ROUTES==='path'?'/'+slug:'#'+slug;if(slug&&slug.startsWith('person/'))return ROUTES==='path'?'/'+slug:'#'+slug;if(slug==='me')return ROUTES==='path'?'/me':'#me';return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
+function slugFromUrl(){if(ROUTES==='path'){if(location.pathname==='/me'||location.pathname==='/me/')return 'me';const pm=location.pathname.match(/^\\/person\\/(\\d+)/);if(pm)return 'person/'+pm[1];const tm=location.pathname.match(/^\\/tv(?:\\/([^/]+))?\\/?$/);if(tm)return tm[1]?'tv/'+tm[1]:'tv';const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
 async function ensure(s){if(s.seasons)return s;const r=await fetch(BASE+'data/shows/'+s.slug+'.json');const d=await r.json();Object.assign(s,d);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);}catch(_){}}return s}
-async function go(slug,replace){state.person=null;if(slug&&slug.startsWith('person/')){state.show=null;state.view='person';state.personId=+slug.slice(7);history[replace?'replaceState':'pushState'](null,'',urlFor(slug));render();window.scrollTo(0,0);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);render()}catch(_){}}return}if(slug==='me'&&!BY_SLUG.me){state.show=null;state.view='me';history[replace?'replaceState':'pushState'](null,'',urlFor('me'));document.title='Mine · '+SITE;render();window.scrollTo(0,0);return}state.view='';if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
+async function go(slug,replace){state.person=null;if(slug==='tv'||(slug&&slug.startsWith('tv/'))){state.show=null;state.view='tv';if(slug.length>3)state.chan=decodeURIComponent(slug.slice(3));history[replace?'replaceState':'pushState'](null,'',urlFor(slug));render();window.scrollTo(0,0);return}if(slug&&slug.startsWith('person/')){state.show=null;state.view='person';state.personId=+slug.slice(7);history[replace?'replaceState':'pushState'](null,'',urlFor(slug));render();window.scrollTo(0,0);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);render()}catch(_){}}return}if(slug==='me'&&!BY_SLUG.me){state.show=null;state.view='me';history[replace?'replaceState':'pushState'](null,'',urlFor('me'));document.title='Mine · '+SITE;render();window.scrollTo(0,0);return}state.view='';if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
 function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(true)}
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){const s=state.show;const r=ME.history[s.slug];ME.history[s.slug]={se:state.se,e:state.e,at:Date.now(),pos:(r&&r.se===state.se&&r.e===state.e)?(r.pos||0):0};saveMe()}
 function resume(s){const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
-function render(){if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else keepTracks(browse)}
-document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
+function render(){if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else keepTracks(browse)}
+document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(state.view==='tv'&&(k.key==='ArrowUp'||k.key==='ArrowDown')){k.preventDefault();surf(k.key==='ArrowUp'?-1:1);return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
 window.addEventListener('popstate',()=>go(slugFromUrl(),true));
 go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types, bios = {} } = data;
+  const { shows, people, links, types, bios = {}, channels = [] } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let GRAPH_LOADED=true;`
-    : `const PEOPLE={};const LINKS={};const BIO={};let GRAPH_LOADED=false;`;
+    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=${JSON.stringify(channels)};let GRAPH_LOADED=true;`
+    : `const PEOPLE={};const LINKS={};const BIO={};let TV=null;let GRAPH_LOADED=false;`;
   const indexScript = mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`;
   const title = meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME;
   const desc = meta.description || 'TV shows from 1990 to now, and the classics behind one door: every episode in order, every one of them plays. From the Internet Archive.';
@@ -316,7 +374,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
 <style>${CSS}</style></head><body>
-<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('me')" title="My List, likes and watch history">★ Mine</a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
+<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on">📺<span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history">★<span class="long"> Mine</span></a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
 <main id="main"></main>
 <footer>${CREDIT}</footer>
 ${indexScript}

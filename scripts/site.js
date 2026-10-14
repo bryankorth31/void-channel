@@ -23,6 +23,7 @@ const data = assemble();
 for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s)));
 fs.writeFileSync(path.join(OUT, 'data', 'index.js'), 'const SHOWS=' + JSON.stringify(data.shows.map(indexEntry)) + ';');
 fs.writeFileSync(path.join(OUT, 'data', 'graph.json'), JSON.stringify({ people: data.people, links: data.links }));
+fs.writeFileSync(path.join(OUT, 'data', 'tv.json'), JSON.stringify({ channels: data.channels }));
 fs.mkdirSync(path.join(OUT, 'data', 'people'), { recursive: true });
 for (const [id, b] of Object.entries(data.bios || {})) fs.writeFileSync(path.join(OUT, 'data', 'people', id + '.json'), JSON.stringify(b));
 
@@ -37,7 +38,7 @@ for (const s of data.shows) {
     description: (s.overview ? s.overview.slice(0, 180).replace(/\s+\S*$/, '') + (s.overview.length > 180 ? '…' : '') + ' ' : '') + bits + ` · ${SITE_NAME}`,
   }));
 }
-fs.writeFileSync(path.join(OUT, '_redirects'), '/show/* /index.html 200\n/person/* /index.html 200\n/me /index.html 200\n');
+fs.writeFileSync(path.join(OUT, '_redirects'), '/show/* /index.html 200\n/person/* /index.html 200\n/tv /index.html 200\n/tv/* /index.html 200\n/me /index.html 200\n');
 // Pages Functions live beside the output: the password gate (functions/_middleware.js) only runs
 // when the SITE_PASSWORD variable is set on the Pages project.
 const fnSrc = path.join(ROOT, 'functions');
@@ -47,4 +48,4 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 
 const size = (p) => fs.statSync(p).size;
 let total = 0; const walk = (d) => { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); fs.statSync(p).isDirectory() ? walk(p) : (total += size(p)); } }; walk(OUT);
-console.log(`${Object.keys(data.bios || {}).length} person pages, ${data.shows.length} shows -> site/ (index ${(size(path.join(OUT, 'index.html')) / 1e6).toFixed(2)} MB, ${data.shows.length} show pages, total ${(total / 1e6).toFixed(1)} MB)`);
+console.log(`${data.channels.length} channels, ${Object.keys(data.bios || {}).length} person pages, ${data.shows.length} shows -> site/ (index ${(size(path.join(OUT, 'index.html')) / 1e6).toFixed(2)} MB, ${data.shows.length} show pages, total ${(total / 1e6).toFixed(1)} MB)`);
