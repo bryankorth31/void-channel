@@ -280,8 +280,8 @@ html{-webkit-tap-highlight-color:transparent}
 .card .more:hover,.card.open .more{border-color:var(--acc);color:var(--acc)}
 h2{margin:18px 20px 8px;font-size:18px;display:flex;align-items:baseline;gap:10px}h2 small{color:var(--dim);font-weight:400;font-size:13px}h2 .all{margin-left:auto;color:var(--acc);font-size:13px;font-weight:400;cursor:pointer}
 .rowwrap{position:relative;padding:0 20px}
-.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;scroll-behavior:smooth;padding:4px 2px 10px;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
-.track .card{flex:0 0 156px;scroll-snap-align:start}
+.track{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;padding:4px 2px 10px;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+.track .card{flex:0 0 156px}
 .arrow{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:2px solid var(--acc);background:rgba(7,8,12,.92);color:var(--acc);font-size:30px;line-height:38px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
 .arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--acc);color:#07080c}
 @media(hover:none){.arrow{display:none}}
