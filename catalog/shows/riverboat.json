@@ -1,0 +1,95 @@
+{
+  "show": "Riverboat",
+  "slug": "riverboat",
+  "type": "Reality & Talk",
+  "network": "DE",
+  "matchedAt": "2026-10-14T13:19:42.371Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Riverboat",
+    "runtime": null,
+    "premiered": null,
+    "network": "DE"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "tv colorized payment in full",
+          "state": "REVIEW",
+          "file": {
+            "item": "riverboat-tv-1959-colorized-s01e01-payment-in-full",
+            "itemTitle": "Riverboat TV 1959 colorized s01e01 Payment in Full",
+            "file": "Riverboat TV 1959 colorized s01e01 Payment in Full.mp4",
+            "name": "Riverboat TV 1959 colorized s01e01 Payment in Full",
+            "url": "https://archive.org/download/riverboat-tv-1959-colorized-s01e01-payment-in-full/Riverboat%20TV%201959%20colorized%20s01e01%20Payment%20in%20Full.mp4",
+            "seconds": 3003,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 359,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "tv colorized landlubbers",
+          "state": "REVIEW",
+          "file": {
+            "item": "riverboat-tv-1960-colorized-s01e17-landlubbers",
+            "itemTitle": "Riverboat TV 1960 colorized s01e17 Landlubbers",
+            "file": "Riverboat TV 1960 colorized s01e17 Landlubbers.mp4",
+            "name": "Riverboat TV 1960 colorized s01e17 Landlubbers",
+            "url": "https://archive.org/download/riverboat-tv-1960-colorized-s01e17-landlubbers/Riverboat%20TV%201960%20colorized%20s01e17%20Landlubbers.mp4",
+            "seconds": 2937,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 335,
+            "ep": {
+              "season": 1,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "wisc riverboats",
+          "state": "REVIEW",
+          "file": {
+            "item": "WiscRiverboats",
+            "itemTitle": "Riverboats of Wisconsin: 1 – \"The Paul L\" (1995)",
+            "file": "Wisc Riverboats.mp4",
+            "name": "Wisc Riverboats",
+            "url": "https://archive.org/download/WiscRiverboats/Wisc%20Riverboats.mp4",
+            "seconds": 1526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 223,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

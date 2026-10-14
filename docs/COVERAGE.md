@@ -1,10 +1,11 @@
 # Coverage
 
-936 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+958 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
 | @midnight with Chris Hardwick | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
+| 25 Words or Less | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | After Midnight | Reality & Talk | 70 | 0 | 70 | 0 | 100% |
 | Amazing Saturday | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
 | America's Got Talent | Reality & Talk | 80 | 0 | 80 | 0 | 100% |
@@ -12,6 +13,7 @@
 | Anderson Cooper 360° | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | Andromeda | Sci-Fi, Fantasy and Horror | 110 | 89 | 21 | 0 | 100% |
 | Ask a Ninja | Internet Comedy | 9 | 0 | 9 | 0 | 100% |
+| Attack on Titan | Anime | 29 | 0 | 29 | 0 | 100% |
 | Babylon 5 | Sci-Fi, Fantasy and Horror | 166 | 0 | 166 | 0 | 100% |
 | Band of Brothers | Drama | 10 | 9 | 1 | 0 | 100% |
 | Battlestar Galactica (1978) | Classic TV | 22 | 0 | 22 | 0 | 100% |
@@ -23,11 +25,13 @@
 | Big Brother | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
 | Big Train | British and Beyond | 12 | 12 | 0 | 0 | 100% |
 | Black Books | British and Beyond | 18 | 0 | 18 | 0 | 100% |
+| Black Clover | Anime | 31 | 0 | 31 | 0 | 100% |
 | Brass Eye | British and Beyond | 6 | 5 | 1 | 0 | 100% |
 | Bravest Warriors | Internet Comedy | 115 | 0 | 115 | 0 | 100% |
 | Breaking Bad | Drama | 62 | 14 | 48 | 0 | 100% |
 | BTS In the SOOP | Reality & Talk | 11 | 0 | 11 | 0 | 100% |
 | Cadfael | British and Beyond | 13 | 12 | 1 | 0 | 100% |
+| Chainsaw Man | Anime | 37 | 0 | 37 | 0 | 100% |
 | Charlie the Unicorn | Internet Comedy | 13 | 0 | 13 | 0 | 100% |
 | Classic Concentration | Classic TV | 825 | 0 | 825 | 0 | 100% |
 | Coach | 90s Sitcoms | 200 | 155 | 44 | 1 | 100% |
@@ -35,12 +39,14 @@
 | Comedians in Cars Getting Coffee | Internet Comedy | 6 | 0 | 6 | 0 | 100% |
 | Conan | Reality & Talk | 1270 | 0 | 1270 | 0 | 100% |
 | Concentration | Classic TV | 251 | 0 | 251 | 0 | 100% |
+| Death Note | Anime | 111 | 0 | 111 | 0 | 100% |
 | Degrassi | Reality & Talk | 95 | 0 | 95 | 0 | 100% |
 | Die Harald Schmidt Show | Reality & Talk | 687 | 0 | 687 | 0 | 100% |
 | Dimension 20 | Internet Comedy | 380 | 0 | 380 | 0 | 100% |
 | Dirty Laundry | Internet Comedy | 11 | 0 | 11 | 0 | 100% |
 | Doctor Who (Classic) | Classic TV | 709 | 0 | 709 | 0 | 100% |
 | Donahue | Classic TV | 19 | 0 | 19 | 0 | 100% |
+| Dragon Ball Super | Anime | 137 | 0 | 137 | 0 | 100% |
 | Drawn Together | Animated | 36 | 26 | 10 | 0 | 100% |
 | Dynasties | Documentary & Geographic | 9 | 4 | 5 | 0 | 100% |
 | El hormiguero | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
@@ -55,6 +61,7 @@
 | Flowers | British and Beyond | 12 | 12 | 0 | 0 | 100% |
 | Forbidden Science | Late Night | 13 | 12 | 1 | 0 | 100% |
 | Freak Show | Animated | 7 | 0 | 7 | 0 | 100% |
+| Fullmetal Alchemist: Brotherhood | Anime | 64 | 0 | 64 | 0 | 100% |
 | G-String Divas | Late Night | 17 | 0 | 17 | 0 | 100% |
 | Game Changer | Internet Comedy | 126 | 0 | 126 | 0 | 100% |
 | Good Mythical Morning | Internet Comedy | 723 | 0 | 723 | 0 | 100% |
@@ -65,7 +72,9 @@
 | Hell's Kitchen | Reality & Talk | 38 | 0 | 38 | 0 | 100% |
 | Helluva Boss | Internet Comedy | 55 | 0 | 55 | 0 | 100% |
 | Hercules: The Legendary Journeys | Sci-Fi, Fantasy and Horror | 111 | 0 | 111 | 0 | 100% |
+| Heti Hetes | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
 | High Rollers | Classic TV | 35 | 0 | 35 | 0 | 100% |
+| High School DxD | Anime | 26 | 0 | 26 | 0 | 100% |
 | Highway to Heaven | Classic TV | 112 | 0 | 112 | 0 | 100% |
 | Hill Street Blues | Classic TV | 146 | 113 | 33 | 0 | 100% |
 | Holby City | Reality & Talk | 7 | 0 | 7 | 0 | 100% |
@@ -75,6 +84,7 @@
 | Hookers at the Point | Late Night | 2 | 0 | 2 | 0 | 100% |
 | Hotel Erotica | Late Night | 26 | 23 | 3 | 0 | 100% |
 | House of Cosbys | Internet Comedy | 3 | 0 | 3 | 0 | 100% |
+| Hunter x Hunter | Anime | 379 | 0 | 379 | 0 | 100% |
 | I, Claudius | Classic TV | 13 | 9 | 4 | 0 | 100% |
 | I'm Alan Partridge | British and Beyond | 12 | 0 | 12 | 0 | 100% |
 | Internet Historian | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
@@ -103,10 +113,15 @@
 | Minoriteam | Adult Swim | 20 | 19 | 1 | 0 | 100% |
 | Mission Hill | Adult Swim | 13 | 13 | 0 | 0 | 100% |
 | Monkey Dust | British and Beyond | 18 | 18 | 0 | 0 | 100% |
+| Morgenmagazin | Reality & Talk | 14 | 0 | 14 | 0 | 100% |
+| My Hero Academia | Anime | 47 | 0 | 47 | 0 | 100% |
 | My Little Old Boy | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
+| Naruto | Anime | 96 | 0 | 96 | 0 | 100% |
 | Nathan Barley | British and Beyond | 6 | 6 | 0 | 0 | 100% |
 | Nathan for You | 2000s and Later Sitcoms | 31 | 30 | 1 | 0 | 100% |
+| Neon Genesis Evangelion | Anime | 143 | 0 | 143 | 0 | 100% |
 | Nostalgia Critic | Internet Comedy | 167 | 0 | 167 | 0 | 100% |
+| One-Punch Man | Anime | 2 | 0 | 2 | 0 | 100% |
 | Password | Classic TV | 995 | 0 | 995 | 0 | 100% |
 | Perfect Hair Forever | Adult Swim | 9 | 7 | 2 | 0 | 100% |
 | Petticoat Junction | Classic TV | 222 | 0 | 221 | 1 | 100% |
@@ -117,9 +132,11 @@
 | Project Runway | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
 | Punky Brewster | Classic TV | 88 | 63 | 25 | 0 | 100% |
 | Queen for a Day | Classic TV | 9 | 0 | 9 | 0 | 100% |
+| Ready, Steady, Cook | Reality & Talk | 7 | 0 | 7 | 0 | 100% |
 | Real Sex | Late Night | 26 | 3 | 23 | 0 | 100% |
 | Real Time with Bill Maher | Reality & Talk | 11 | 0 | 11 | 0 | 100% |
 | Red vs. Blue | Internet Comedy | 164 | 0 | 164 | 0 | 100% |
+| Riverboat | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
 | Robin of Sherwood | Classic TV | 26 | 26 | 0 | 0 | 100% |
 | Run BTS! | Reality & Talk | 12 | 0 | 12 | 0 | 100% |
 | Salad Fingers | Internet Comedy | 14 | 0 | 14 | 0 | 100% |
@@ -133,12 +150,14 @@
 | Snuff Box | British and Beyond | 6 | 0 | 6 | 0 | 100% |
 | Space: 1999 | Classic TV | 48 | 37 | 11 | 0 | 100% |
 | Spaced | British and Beyond | 14 | 14 | 0 | 0 | 100% |
+| SPY x FAMILY | Anime | 13 | 0 | 13 | 0 | 100% |
 | Stroker and Hoop | Adult Swim | 13 | 8 | 5 | 0 | 100% |
 | Sunset Beach | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
 | Survivor | Reality & Talk | 9 | 0 | 9 | 0 | 100% |
 | Texaco Star Theatre | Classic TV | 17 | 0 | 17 | 0 | 100% |
 | The $10,000 Pyramid | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Amazing Race | Reality & Talk | 21 | 0 | 21 | 0 | 100% |
+| The Arena | Reality & Talk | 176 | 0 | 176 | 0 | 100% |
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
 | The Clone | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
 | The Colbert Report | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
@@ -166,6 +185,7 @@
 | The Rachel Maddow Show | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | The Richard Pryor Show | Classic TV | 4 | 4 | 0 | 0 | 100% |
 | The Rockford Files | Classic TV | 135 | 0 | 135 | 0 | 100% |
+| The Seven Deadly Sins | Anime | 14 | 0 | 14 | 0 | 100% |
 | The Show with Ze Frank | Internet Comedy | 246 | 0 | 246 | 0 | 100% |
 | The Steve Allen Show | Classic TV | 7 | 0 | 7 | 0 | 100% |
 | The Tonight Show Starring Jimmy Fallon | Reality & Talk | 7 | 0 | 7 | 0 | 100% |
@@ -178,10 +198,12 @@
 | Tic-Tac-Dough | Classic TV | 10 | 0 | 10 | 0 | 100% |
 | Tigtone | Adult Swim | 20 | 13 | 7 | 0 | 100% |
 | Tim and Eric Nite Live | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
+| Tokyo Ghoul | Anime | 3 | 0 | 3 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 24 | 6 | 0 | 100% |
 | Tomorrow with Tom Snyder | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | Troopers | Internet Comedy | 15 | 0 | 15 | 0 | 100% |
 | Um, Actually | Internet Comedy | 58 | 0 | 58 | 0 | 100% |
+| Unanswered Questions | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
 | USA Up All Night | Late Night | 6 | 0 | 6 | 0 | 100% |
 | Victory at Sea | Documentary & Geographic | 26 | 0 | 26 | 0 | 100% |
 | Vietnam: A Television History | Documentary & Geographic | 11 | 0 | 11 | 0 | 100% |
@@ -941,4 +963,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Breaking News, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, Clarkson's Farm, Porque el Amor Manda, Vecinos, Raw, Dinastía Casillas, The Heart Is Never Wrong, The Graham Norton Show, The Voice, Falling Angel, Miss XV, Running Man, The Polygamist, Doménica Montero, Melrose Place, The Late Late Show with James Corden, La promesa, Ridiculousness, The Late Late Show with Craig Ferguson, The View, Binnelanders, Ici tout commence, Chicago Hope, Tomorrow Is Ours, The Kelly Clarkson Show, Gute Zeiten, schlechte Zeiten, Men on a Mission, Storm of Love, The Secret Lives of Mormon Wives, WWE Superstars, The Jennifer Hudson Show, The One Show, 2 Days and 1 Night, The Celebrity Traitors, Strawberries with Sugar, How Do You Play?, La resistencia, Goede Tijden, Slechte Tijden, Infinite Challenge, The Tamron Hall Show, Quotidien, Physical 100: Italy, Who's the Murderer, Dreams of Freedom, Variety Studio: Actors on Actors, Hello Saturday, Mystery Music Show: King of Mask Singer, Ride the Wind, Weekly Idol, Bares für Rares, You Hee-yeol's Sketchbook, Vivement dimanche, HaHaHaHaHa, Alles was zählt, Volle Kanne, El cor de la ciutat, In All Friendship, Amazing Night, Radio Star, DAS!, Family Affairs, You Quiz on the Block, Nogizaka Under Construction, Trump Card, Natural High, Love Village, Leute heute, Mao Xue Woof, Egoli: Place of Gold, Good Day Live, Barbara Karlich – Talk um 4, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Breaking News, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, Naruto Shippūden, Demon Slayer: Kimetsu no Yaiba, JUJUTSU KAISEN, Bleach, Pokémon, Sword Art Online, InuYasha, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, Clarkson's Farm, Porque el Amor Manda, Vecinos, Raw, Dinastía Casillas, The Heart Is Never Wrong, The Graham Norton Show, The Voice, Falling Angel, Miss XV, Running Man, The Polygamist, Doménica Montero, Melrose Place, The Late Late Show with James Corden, La promesa, Ridiculousness, The Late Late Show with Craig Ferguson, The View, Binnelanders, Ici tout commence, Chicago Hope, Tomorrow Is Ours, The Kelly Clarkson Show, Gute Zeiten, schlechte Zeiten, Men on a Mission, Storm of Love, The Secret Lives of Mormon Wives, WWE Superstars, The Jennifer Hudson Show, The One Show, 2 Days and 1 Night, The Celebrity Traitors, Strawberries with Sugar, How Do You Play?, La resistencia, Goede Tijden, Slechte Tijden, Infinite Challenge, The Tamron Hall Show, Quotidien, Physical 100: Italy, Who's the Murderer, Dreams of Freedom, Variety Studio: Actors on Actors, Hello Saturday, Mystery Music Show: King of Mask Singer, Ride the Wind, Weekly Idol, Bares für Rares, You Hee-yeol's Sketchbook, Vivement dimanche, HaHaHaHaHa, Alles was zählt, Volle Kanne, El cor de la ciutat, In All Friendship, Amazing Night, Radio Star, DAS!, Family Affairs, You Quiz on the Block, Nogizaka Under Construction, Trump Card, Natural High, Love Village, Leute heute, Mao Xue Woof, Egoli: Place of Gold, Good Day Live, Barbara Karlich – Talk um 4, 7de Laan, CentoVetrine, Abendschau, Dee Girls Talk, The Fierce Wife, Lecture Room, Wedding Ring, Comedy Battle, Siyaset Meydanı, Lenßen & Partner, Show! Music Core, 凤凰大视野, Bonsoir bonsoir!, Köln 50667, Kavyanjali, Star Road, Mein Nachmittag, Deadly Tag, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
