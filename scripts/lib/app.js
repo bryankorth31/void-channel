@@ -233,11 +233,11 @@ body[data-era=classic] .bgimg{filter:sepia(.55) saturate(.55) brightness(.9)}bod
 @media(prefers-reduced-motion:reduce){.dust{display:none}}
 .field{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}.field i{position:absolute;display:block;will-change:transform}
 .field i{animation:kb var(--kbd,50s) ease-in-out infinite alternate}@keyframes kb{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(var(--kbx,0),var(--kby,0),0) scale(var(--kbs,1.12))}}
-.fv{-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);mask:radial-gradient(circle,#000 30%,transparent 70%)}.fv::before{content:'';position:absolute;inset:0;background:url(/assets/brand/void-soft.webp) center/contain no-repeat;animation:spin var(--spin,200s) linear infinite var(--dir,normal)}
-.fs{border-radius:50%;background-size:cover;background-position:center;-webkit-mask:radial-gradient(ellipse at center,#000 10%,transparent 62%);mask:radial-gradient(ellipse at center,#000 10%,transparent 62%);mix-blend-mode:screen}
-.fg{border-radius:50%;mix-blend-mode:screen;filter:blur(44px)}
-.fn{border-radius:45%;background-size:cover;background-position:center;-webkit-mask:radial-gradient(ellipse at center,#000 12%,transparent 64%);mask:radial-gradient(ellipse at center,#000 12%,transparent 64%)}
-.fb{left:0;right:0;height:220px;background:repeating-linear-gradient(180deg,rgba(255,255,255,0) 0 3px,rgba(95,212,255,.16) 3px 4px);-webkit-mask:radial-gradient(ellipse at center,#000 10%,transparent 60%);mask:radial-gradient(ellipse at center,#000 10%,transparent 60%)}
+.fv{-webkit-mask:radial-gradient(circle,#000 12%,transparent 56%);mask:radial-gradient(circle,#000 12%,transparent 56%)}.fv::before{content:'';position:absolute;inset:0;background:url(/assets/brand/void-soft.webp) center/contain no-repeat;animation:spin var(--spin,200s) linear infinite var(--dir,normal)}
+.fs{border-radius:50%;background-size:cover;background-position:center;-webkit-mask:radial-gradient(ellipse at center,#000 4%,transparent 52%);mask:radial-gradient(ellipse at center,#000 4%,transparent 52%);mix-blend-mode:screen}
+.fg{border-radius:50%;mix-blend-mode:screen;filter:blur(60px)}
+.fn{border-radius:45%;background-size:cover;background-position:center;-webkit-mask:radial-gradient(ellipse at center,#000 6%,transparent 54%);mask:radial-gradient(ellipse at center,#000 6%,transparent 54%)}
+.fb{left:0;right:0;height:220px;opacity:.5;background:repeating-linear-gradient(180deg,rgba(255,255,255,0) 0 3px,rgba(95,212,255,.16) 3px 4px);-webkit-mask:radial-gradient(ellipse at center,#000 10%,transparent 60%);mask:radial-gradient(ellipse at center,#000 10%,transparent 60%)}
 @media(prefers-reduced-motion:reduce){.field i,.fv::before{animation:none}}
 @media(max-width:700px){.finder,.guide,.eps,.xray .person,.support,.me>.acts,.dd .panel,.btn.ghost{backdrop-filter:none}.fg{filter:none}.field i{animation:none}}
 .tv img.idle{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
@@ -370,18 +370,23 @@ function shelf(title,list,key){const id='t-'+key.replace(/[^a-z0-9]+/gi,'-').toL
 function slide(id,dir){const t=$(id);if(!t)return;const step=168;t.scrollBy({left:dir*Math.max(step,Math.floor((t.clientWidth-120)/step)*step),behavior:'smooth'})}
 // Re-rendering replaces the whole page, so remember where each shelf was scrolled and put it back (no animation).
 function blip(host){const h=host||$('main');if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const b=document.createElement('div');b.className='blip';h.appendChild(b);setTimeout(()=>b.remove(),200)}
-function field(){const main=$('main');if(!main)return;const old=main.querySelector('.field');if(old)old.remove();const H=main.scrollHeight;if(H<1400)return;const f=document.createElement('div');f.className='field';let seed=4242;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};let y=700,k=0,h='';const tints=['95,212,255','242,169,59','212,80,160','63,207,90','95,212,255'];const neon=['sign-pink','wall','watcher-purple','sign-orange','watcher-orange'];
- // every drift rises: the pieces climb slowly as they breathe
- const kb=()=>'--kbd:'+(34+rnd()*40|0)+'s;--kbx:'+((rnd()*6-3)|0)+'%;--kby:-'+(2+rnd()*6|0)+'%;--kbs:'+(1.06+rnd()*0.16).toFixed(2)+';animation-delay:-'+(rnd()*40|0)+'s;';
- while(y<H-400){const pos=y/H;const left=rnd()<0.5;const fade=1-0.3*pos;const op=(0.025+rnd()*0.045)*fade;
-  // the top already carries the big static: swirls and glows up there; statics in the middle; the neon scenes gather toward the bottom
-  let kind;const r=rnd();if(pos<0.35)kind=r<0.55?'v':'g';else if(pos<0.6)kind=r<0.3?'v':r<0.55?'g':r<0.85?'s':'b';else kind=r<0.45?'n':r<0.7?'v':r<0.9?'g':'b';
-  if(kind==='v'){const sz=520+rnd()*760|0;h+='<i class="fv" style="top:'+y+'px;'+(left?'left:-'+(sz*0.4|0):'right:-'+(sz*0.35|0))+'px;width:'+sz+'px;height:'+sz+'px;opacity:'+op.toFixed(3)+';--spin:'+(150+rnd()*220|0)+'s;--dir:'+(rnd()<0.5?'normal':'reverse')+';'+kb()+'"></i>'}
-  else if(kind==='s'){const w=760+rnd()*900|0,hh=360+rnd()*420|0;h+='<i class="fs" style="top:'+y+'px;'+(left?'left:'+(rnd()*14|0)+'%':'right:'+(rnd()*14|0)+'%')+';width:'+w+'px;height:'+hh+'px;opacity:'+(op*1.4).toFixed(3)+';background-image:url('+BASE+'assets/brand/bg/'+(rnd()<0.5?'static-dark':'static-bolt')+'-m.jpg);'+kb()+'"></i>'}
-  else if(kind==='n'){const w=1000+rnd()*600|0,hh=560+rnd()*300|0;h+='<i class="fn" style="top:'+y+'px;'+(left?'left:-'+(rnd()*10|0)+'%':'right:-'+(rnd()*10|0)+'%')+';width:'+w+'px;height:'+hh+'px;opacity:'+(0.10+rnd()*0.08).toFixed(3)+';background-image:url('+BASE+'assets/brand/bg/'+neon[rnd()*neon.length|0]+'-m.jpg);'+kb()+'"></i>'}
-  else if(kind==='g'){const c=tints[rnd()*tints.length|0];const sz=640+rnd()*700|0;h+='<i class="fg" style="top:'+y+'px;'+(left?'left:-'+(sz/3|0):'right:-'+(sz/3|0))+'px;width:'+sz+'px;height:'+sz+'px;opacity:'+(op*2).toFixed(3)+';background:radial-gradient(circle,rgba('+c+',.8) 0%,rgba('+c+',.18) 32%,rgba(0,0,0,0) 68%);'+kb()+'"></i>'}
-  else{h+='<i class="fb" style="top:'+y+'px;opacity:'+(op*1.1).toFixed(3)+';'+kb()+'"></i>'}
-  y+=900+rnd()*800|0;k++}
+function field(){const main=$('main');if(!main)return;const old=main.querySelector('.field');if(old)old.remove();const H=main.scrollHeight;if(H<1400)return;const f=document.createElement('div');f.className='field';let seed=4242;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};
+ const tints=['95,212,255','242,169,59','212,80,160','63,207,90','95,212,255'];const neon=['sign-pink','wall','watcher-purple','sign-orange','watcher-orange'];const stat=['static-dark','static-bolt','static-glitch'];
+ const kb=()=>'--kbd:'+(36+rnd()*44|0)+'s;--kbx:'+((rnd()*6-3)|0)+'%;--kby:-'+(2+rnd()*6|0)+'%;--kbs:'+(1.06+rnd()*0.16).toFixed(2)+';animation-delay:-'+(rnd()*40|0)+'s;';
+ const xs=['-14%','8%','30%','52%','72%'];const W=main.clientWidth||1200;
+ const piece=(kind,y,xi,fade)=>{const x=xs[xi%xs.length];const op=(0.018+rnd()*0.03)*fade;
+  if(kind==='v'){const sz=560+rnd()*760|0;return '<i class="fv" style="top:'+(y-sz/2|0)+'px;left:calc('+x+' - '+(sz/4|0)+'px);width:'+sz+'px;height:'+sz+'px;opacity:'+op.toFixed(3)+';--spin:'+(150+rnd()*220|0)+'s;--dir:'+(rnd()<0.5?'normal':'reverse')+';'+kb()+'"></i>'}
+  if(kind==='s'){const w=820+rnd()*900|0,hh=380+rnd()*420|0;return '<i class="fs" style="top:'+(y-hh/2|0)+'px;left:calc('+x+' - '+(w/4|0)+'px);width:'+w+'px;height:'+hh+'px;opacity:'+(op*1.4).toFixed(3)+';background-image:url('+BASE+'assets/brand/bg/'+stat[rnd()*stat.length|0]+'-m.jpg);'+kb()+'"></i>'}
+  if(kind==='n'){const w=1000+rnd()*640|0,hh=560+rnd()*320|0;return '<i class="fn" style="top:'+(y-hh/2|0)+'px;left:calc('+x+' - '+(w/4|0)+'px);width:'+w+'px;height:'+hh+'px;opacity:'+(0.06+rnd()*0.05).toFixed(3)+';background-image:url('+BASE+'assets/brand/bg/'+neon[rnd()*neon.length|0]+'-m.jpg);'+kb()+'"></i>'}
+  if(kind==='g'){const c=tints[rnd()*tints.length|0];const sz=640+rnd()*760|0;return '<i class="fg" style="top:'+(y-sz/2|0)+'px;left:calc('+x+' - '+(sz/4|0)+'px);width:'+sz+'px;height:'+sz+'px;opacity:'+(op*1.8).toFixed(3)+';background:radial-gradient(circle,rgba('+c+',.8) 0%,rgba('+c+',.16) 30%,rgba(0,0,0,0) 64%);'+kb()+'"></i>'}
+  return '<i class="fb" style="top:'+(y-110)+'px;opacity:'+(op*1.1).toFixed(3)+';'+kb()+'"></i>'};
+ // a slot every ~700 px, always filled; kinds cycle so each one recurs; a second piece in every other slot for the combos
+ const cycleTop=['v','g','v','g','b'],cycleMid=['g','s','v','n','g','s','b'],cycleLow=['n','g','v','n','s','g','v','b'];
+ let y=520,k=0,h='',xi=rnd()*5|0;
+ while(y<H-250){const pos=y/H;const fade=1-0.3*pos;const cyc=pos<0.3?cycleTop:pos<0.55?cycleMid:cycleLow;const kind=cyc[k%cyc.length];
+  h+=piece(kind,y,xi,fade);xi=(xi+2+(rnd()*2|0))%5;
+  if(k%2===1){const second=kind==='g'?'v':'g';h+=piece(second,y+260+(rnd()*200|0),(xi+2)%5,fade*0.9)}
+  y+=620+rnd()*200|0;k++}
  f.innerHTML=h;main.appendChild(f)}
 function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach(t=>{pos[t.id]=t.scrollLeft});const y=window.scrollY;fn();document.querySelectorAll('.track').forEach(t=>{if(pos[t.id]){t.style.scrollBehavior='auto';t.scrollLeft=pos[t.id];t.style.scrollBehavior=''}});window.scrollTo(0,y)}
 function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
