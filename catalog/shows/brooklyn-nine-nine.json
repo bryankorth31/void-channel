@@ -3,7 +3,7 @@
   "slug": "brooklyn-nine-nine",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:17:53.897Z",
+  "matchedAt": "2026-10-14T04:21:32.645Z",
   "tvmaze": {
     "id": 49,
     "name": "Brooklyn Nine-Nine",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 153,
     "live": 0,
-    "review": 1,
-    "missing": 152,
-    "pct": 1
+    "review": 0,
+    "missing": 153,
+    "pct": 0
   },
   "seasons": [
     {
@@ -830,20 +830,8 @@
           "number": 9,
           "name": "99",
           "airdate": "2017-12-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"99\" (0.95)",
-            "item": "TBSRecordingBrooklyn99August2018",
-            "itemTitle": "TBS Broadcast WOC August 22, 2018",
-            "file": "TBS Recording Brooklyn 99 August 2018.mp4",
-            "name": "TBS Recording Brooklyn 99 August 2018",
-            "url": "https://archive.org/download/TBSRecordingBrooklyn99August2018/TBS%20Recording%20Brooklyn%2099%20August%202018.mp4",
-            "seconds": 3632,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2296
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

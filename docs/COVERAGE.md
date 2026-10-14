@@ -1,6 +1,6 @@
 # Coverage
 
-706 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+710 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -127,7 +127,7 @@
 | The A-Team | Classic TV | 98 | 85 | 9 | 4 | 96% |
 | The King of Queens | 2000s and Later Sitcoms | 207 | 193 | 6 | 8 | 96% |
 | 30 Rock | 2000s and Later Sitcoms | 138 | 120 | 11 | 7 | 95% |
-| Highlander: The Series | Sci-Fi, Fantasy and Horror | 40 | 37 | 1 | 2 | 95% |
+| Highlander: The Series | Sci-Fi, Fantasy and Horror | 40 | 28 | 10 | 2 | 95% |
 | Popular | Drama | 43 | 8 | 33 | 2 | 95% |
 | Star Trek: Deep Space Nine | Sci-Fi, Fantasy and Horror | 176 | 27 | 140 | 9 | 95% |
 | Tales from the Crypt | Sci-Fi, Fantasy and Horror | 93 | 36 | 52 | 5 | 95% |
@@ -152,12 +152,12 @@
 | Titan Maximum | Adult Swim | 9 | 8 | 0 | 1 | 89% |
 | Anne of Green Gables | Classic TV | 8 | 0 | 7 | 1 | 88% |
 | Baywatch | Drama | 233 | 36 | 170 | 27 | 88% |
-| Dr. Katz, Professional Therapist | Animated | 81 | 1 | 70 | 10 | 88% |
 | Family Matters | 90s Sitcoms | 215 | 170 | 17 | 28 | 87% |
 | Invader Zim | Animated | 46 | 26 | 14 | 6 | 87% |
 | Godless | Streaming Era | 7 | 6 | 0 | 1 | 86% |
 | Jonathan Strange & Mr Norrell | British and Beyond | 7 | 6 | 0 | 1 | 86% |
 | Murphy Brown | Classic TV | 260 | 214 | 9 | 37 | 86% |
+| Dr. Katz, Professional Therapist | Animated | 81 | 1 | 68 | 12 | 85% |
 | Inside No. 9 | Streaming Era | 54 | 0 | 46 | 8 | 85% |
 | Square Pegs | Classic TV | 20 | 5 | 12 | 3 | 85% |
 | Sharpe | British and Beyond | 18 | 0 | 15 | 3 | 83% |
@@ -208,7 +208,6 @@
 | Avatar: The Last Airbender | Animated | 15 | 0 | 8 | 7 | 53% |
 | The Avengers | Classic TV | 161 | 50 | 32 | 79 | 51% |
 | Cleopatra | Drama | 2 | 0 | 1 | 1 | 50% |
-| Helen of Troy | Drama | 2 | 0 | 1 | 1 | 50% |
 | The Six Wives of Henry VIII | Classic TV | 4 | 0 | 2 | 2 | 50% |
 | Wolf Hall | British and Beyond | 12 | 6 | 0 | 6 | 50% |
 | The Forsyte Saga | British and Beyond | 13 | 0 | 6 | 7 | 46% |
@@ -220,8 +219,8 @@
 | Off the Air | Adult Swim | 55 | 1 | 22 | 32 | 42% |
 | Severance | Streaming Era | 19 | 0 | 8 | 11 | 42% |
 | Shameless | Drama | 134 | 56 | 0 | 78 | 42% |
-| I Dream of Jeannie | Classic TV | 139 | 0 | 55 | 84 | 40% |
 | Black Sails | Drama | 38 | 10 | 5 | 23 | 39% |
+| I Dream of Jeannie | Classic TV | 139 | 0 | 54 | 85 | 39% |
 | Lost in Space | Classic TV | 28 | 0 | 11 | 17 | 39% |
 | Charmed | Sci-Fi, Fantasy and Horror | 178 | 23 | 44 | 111 | 38% |
 | Dharma & Greg | 90s Sitcoms | 119 | 44 | 1 | 74 | 38% |
@@ -230,33 +229,32 @@
 | The Inbetweeners | British and Beyond | 18 | 6 | 0 | 12 | 33% |
 | The Venture Bros. | Adult Swim | 81 | 0 | 27 | 54 | 33% |
 | Scrubs | 2000s and Later Sitcoms | 19 | 0 | 6 | 13 | 32% |
-| Star Trek: Enterprise | Sci-Fi, Fantasy and Horror | 98 | 1 | 30 | 67 | 32% |
 | Batman | Classic TV | 120 | 17 | 20 | 83 | 31% |
+| Star Trek: Enterprise | Sci-Fi, Fantasy and Horror | 98 | 1 | 29 | 68 | 31% |
 | The Borgias | Drama | 29 | 0 | 9 | 20 | 31% |
 | Penny Dreadful | Sci-Fi, Fantasy and Horror | 27 | 0 | 8 | 19 | 30% |
-| Tales from the Darkside | Classic TV | 89 | 23 | 4 | 62 | 30% |
 | Monty Python's Flying Circus | Classic TV | 45 | 0 | 13 | 32 | 29% |
 | Robot Chicken | Adult Swim | 218 | 43 | 21 | 154 | 29% |
+| Tales from the Darkside | Classic TV | 89 | 23 | 3 | 63 | 29% |
 | Webster | Classic TV | 144 | 34 | 6 | 104 | 28% |
 | Only Fools and Horses | Classic TV | 45 | 12 | 0 | 33 | 27% |
 | Password | Classic TV | 41 | 11 | 0 | 30 | 27% |
 | Sanford and Son | Classic TV | 136 | 36 | 1 | 99 | 27% |
 | The Ren & Stimpy Show | Animated | 26 | 0 | 7 | 19 | 27% |
 | Starsky & Hutch | Classic TV | 92 | 23 | 1 | 68 | 26% |
+| Supermarket Sweep | Classic TV | 23 | 5 | 1 | 17 | 26% |
 | That '70s Show | 90s Sitcoms | 200 | 52 | 0 | 148 | 26% |
 | Curb Your Enthusiasm | 2000s and Later Sitcoms | 120 | 0 | 30 | 90 | 25% |
-| Hey Arnold! | Animated | 100 | 16 | 9 | 75 | 25% |
 | Hornblower | British and Beyond | 8 | 0 | 2 | 6 | 25% |
-| The Parkers | 90s Sitcoms | 110 | 0 | 28 | 82 | 25% |
 | The Six Million Dollar Man | Classic TV | 101 | 3 | 22 | 76 | 25% |
+| The Parkers | 90s Sitcoms | 110 | 0 | 26 | 84 | 24% |
 | Delocated | Adult Swim | 30 | 7 | 0 | 23 | 23% |
+| Hey Arnold! | Animated | 100 | 16 | 7 | 77 | 23% |
 | King of the Hill | Animated | 279 | 58 | 2 | 219 | 22% |
-| Boy Meets World | 90s Sitcoms | 158 | 1 | 32 | 125 | 21% |
-| Look Around You | British and Beyond | 14 | 0 | 3 | 11 | 21% |
+| Boy Meets World | 90s Sitcoms | 158 | 0 | 33 | 125 | 21% |
 | Moesha | 90s Sitcoms | 127 | 26 | 1 | 100 | 21% |
 | Stewart Lee's Comedy Vehicle | British and Beyond | 24 | 1 | 4 | 19 | 21% |
 | Welcome Back, Kotter | Classic TV | 95 | 20 | 0 | 75 | 21% |
-| Reno 911! | 2000s and Later Sitcoms | 113 | 0 | 23 | 90 | 20% |
 | Space Ghost Coast to Coast | Adult Swim | 112 | 0 | 22 | 90 | 20% |
 | The Fresh Prince of Bel-Air | 90s Sitcoms | 148 | 0 | 30 | 118 | 20% |
 | Unsolved Mysteries | Drama | 30 | 4 | 2 | 24 | 20% |
@@ -264,7 +262,7 @@
 | Head of the Class | Classic TV | 114 | 0 | 22 | 92 | 19% |
 | Johnny Bravo | Animated | 181 | 0 | 34 | 147 | 19% |
 | MADtv | Sketch and Comedy | 327 | 61 | 0 | 266 | 19% |
-| Metalocalypse | Adult Swim | 62 | 0 | 12 | 50 | 19% |
+| Reno 911! | 2000s and Later Sitcoms | 113 | 0 | 22 | 91 | 19% |
 | Peaky Blinders | Streaming Era | 36 | 6 | 0 | 30 | 17% |
 | Taxi | Classic TV | 114 | 0 | 19 | 95 | 17% |
 | The Waltons | Classic TV | 212 | 36 | 1 | 175 | 17% |
@@ -278,14 +276,13 @@
 | The Beverly Hillbillies | Classic TV | 274 | 0 | 37 | 237 | 14% |
 | Hello Ladies | 2000s and Later Sitcoms | 8 | 1 | 0 | 7 | 13% |
 | Mr. Show | Sketch and Comedy | 30 | 0 | 4 | 26 | 13% |
-| Sabrina the Teenage Witch | 90s Sitcoms | 163 | 4 | 18 | 141 | 13% |
+| Sabrina the Teenage Witch | 90s Sitcoms | 163 | 3 | 19 | 141 | 13% |
 | Spartacus | Drama | 33 | 4 | 0 | 29 | 12% |
 | The Hollywood Squares | Classic TV | 1077 | 61 | 64 | 952 | 12% |
 | Cartoon Planet | Adult Swim | 146 | 0 | 16 | 130 | 11% |
 | Just Shoot Me | 90s Sitcoms | 148 | 3 | 14 | 131 | 11% |
 | Laverne & Shirley | Classic TV | 178 | 19 | 0 | 159 | 11% |
 | Press Your Luck | Classic TV | 72 | 6 | 2 | 64 | 11% |
-| Trailer Park Boys | British and Beyond | 105 | 0 | 12 | 93 | 11% |
 | Fraggle Rock | Classic TV | 96 | 8 | 2 | 86 | 10% |
 | Happy Days | Classic TV | 255 | 19 | 7 | 229 | 10% |
 | Playboy After Dark | Classic TV | 52 | 5 | 0 | 47 | 10% |
@@ -293,24 +290,27 @@
 | The Drew Carey Show | 90s Sitcoms | 233 | 24 | 0 | 209 | 10% |
 | The Dukes of Hazzard | Classic TV | 147 | 1 | 13 | 133 | 10% |
 | The X-Files | Sci-Fi, Fantasy and Horror | 218 | 5 | 16 | 197 | 10% |
+| Trailer Park Boys | British and Beyond | 105 | 0 | 11 | 94 | 10% |
 | Bleak House | British and Beyond | 11 | 1 | 0 | 10 | 9% |
 | Review | 2000s and Later Sitcoms | 22 | 0 | 2 | 20 | 9% |
+| Double Dare | Classic TV | 12 | 0 | 1 | 11 | 8% |
 | ER | Drama | 331 | 9 | 16 | 306 | 8% |
 | Pulling | British and Beyond | 12 | 1 | 0 | 11 | 8% |
-| Simon & Simon | Classic TV | 156 | 0 | 12 | 144 | 8% |
 | The Americans | Drama | 75 | 0 | 6 | 69 | 8% |
 | True Blood | Sci-Fi, Fantasy and Horror | 80 | 0 | 6 | 74 | 8% |
-| Designing Women | Classic TV | 163 | 2 | 10 | 151 | 7% |
+| Designing Women | Classic TV | 163 | 2 | 9 | 152 | 7% |
 | Roswell | Sci-Fi, Fantasy and Horror | 61 | 1 | 3 | 57 | 7% |
 | SpongeBob SquarePants | Animated | 632 | 0 | 42 | 590 | 7% |
 | Charlie's Angels | Classic TV | 115 | 7 | 0 | 108 | 6% |
 | Doug | Animated | 169 | 0 | 10 | 159 | 6% |
-| Step by Step | 90s Sitcoms | 160 | 1 | 9 | 150 | 6% |
+| Simon & Simon | Classic TV | 156 | 0 | 10 | 146 | 6% |
+| Step by Step | 90s Sitcoms | 160 | 1 | 8 | 151 | 6% |
 | The Adventures of Robin Hood | Classic TV | 143 | 5 | 3 | 135 | 6% |
 | Are You Being Served? | Classic TV | 64 | 0 | 3 | 61 | 5% |
 | Christy | Drama | 20 | 0 | 1 | 19 | 5% |
 | Dawson's Creek | Drama | 128 | 5 | 1 | 122 | 5% |
 | Lost | Drama | 121 | 3 | 3 | 115 | 5% |
+| Metalocalypse | Adult Swim | 62 | 0 | 3 | 59 | 5% |
 | Sex and the City | 90s Sitcoms | 94 | 5 | 0 | 89 | 5% |
 | The Jeffersons | Classic TV | 253 | 0 | 13 | 240 | 5% |
 | The Thick of It | British and Beyond | 21 | 1 | 0 | 20 | 5% |
@@ -319,7 +319,6 @@
 | Get Smart | Classic TV | 138 | 5 | 1 | 132 | 4% |
 | Miami Vice | Classic TV | 110 | 4 | 0 | 106 | 4% |
 | PEN15 | Streaming Era | 24 | 1 | 0 | 23 | 4% |
-| People Just Do Nothing | British and Beyond | 27 | 0 | 1 | 26 | 4% |
 | Rick and Morty | Adult Swim | 91 | 2 | 2 | 87 | 4% |
 | The Heart, She Holler | Adult Swim | 28 | 1 | 0 | 27 | 4% |
 | The Jack Benny Program | Classic TV | 260 | 2 | 9 | 249 | 4% |
@@ -331,7 +330,6 @@
 | Family Guy | Animated | 457 | 14 | 1 | 442 | 3% |
 | Good Times | Classic TV | 133 | 2 | 2 | 129 | 3% |
 | It's Always Sunny in Philadelphia | 2000s and Later Sitcoms | 187 | 6 | 0 | 181 | 3% |
-| Kung Fu | Classic TV | 39 | 0 | 1 | 38 | 3% |
 | Matlock | Classic TV | 35 | 0 | 1 | 34 | 3% |
 | Rawhide | Classic TV | 218 | 4 | 2 | 212 | 3% |
 | Red Shoe Diaries | Late Night | 66 | 1 | 1 | 64 | 3% |
@@ -348,7 +346,6 @@
 | Mad Men | Drama | 92 | 0 | 2 | 90 | 2% |
 | Merlin | British and Beyond | 65 | 1 | 0 | 64 | 2% |
 | Sealab 2021 | Adult Swim | 52 | 0 | 1 | 51 | 2% |
-| Seinfeld | 90s Sitcoms | 180 | 0 | 4 | 176 | 2% |
 | The Andy Griffith Show | Classic TV | 249 | 0 | 5 | 244 | 2% |
 | The Crown | Streaming Era | 60 | 0 | 1 | 59 | 2% |
 | The Dating Game | Classic TV | 251 | 0 | 6 | 245 | 2% |
@@ -359,30 +356,24 @@
 | Warehouse 13 | Sci-Fi, Fantasy and Horror | 64 | 0 | 1 | 63 | 2% |
 | What We Do in the Shadows | 2000s and Later Sitcoms | 61 | 0 | 1 | 60 | 2% |
 | Wonder Woman | Classic TV | 60 | 0 | 1 | 59 | 2% |
-| Arrested Development | 2000s and Later Sitcoms | 84 | 0 | 1 | 83 | 1% |
 | Arrow | Sci-Fi, Fantasy and Horror | 170 | 1 | 0 | 169 | 1% |
-| Brooklyn Nine-Nine | 2000s and Later Sitcoms | 153 | 0 | 1 | 152 | 1% |
 | Fantasy Island | Classic TV | 154 | 2 | 0 | 152 | 1% |
-| Homeland | Drama | 96 | 0 | 1 | 95 | 1% |
 | Kate & Allie | Classic TV | 122 | 0 | 1 | 121 | 1% |
 | Malcolm & Eddie | 90s Sitcoms | 89 | 0 | 1 | 88 | 1% |
-| Mr. Belvedere | Classic TV | 117 | 0 | 1 | 116 | 1% |
 | Parks and Recreation | 2000s and Later Sitcoms | 125 | 1 | 0 | 124 | 1% |
 | Penn & Teller: Bullshit! | Late Night | 89 | 0 | 1 | 88 | 1% |
 | Riverdale | Drama | 137 | 0 | 1 | 136 | 1% |
+| Seinfeld | 90s Sitcoms | 180 | 0 | 1 | 179 | 1% |
 | Silver Spoons | Classic TV | 116 | 0 | 1 | 115 | 1% |
 | Smallville | Sci-Fi, Fantasy and Horror | 217 | 0 | 2 | 215 | 1% |
 | South Park | Animated | 335 | 1 | 1 | 333 | 1% |
 | Squidbillies | Adult Swim | 133 | 0 | 1 | 132 | 1% |
-| The Big Bang Theory | 2000s and Later Sitcoms | 279 | 0 | 2 | 277 | 1% |
 | The Facts of Life | Classic TV | 200 | 0 | 1 | 199 | 1% |
 | The Flash | Sci-Fi, Fantasy and Horror | 184 | 0 | 2 | 182 | 1% |
 | The Golden Girls | Classic TV | 180 | 0 | 2 | 178 | 1% |
 | The League | 2000s and Later Sitcoms | 84 | 0 | 1 | 83 | 1% |
 | The Love Boat | Classic TV | 245 | 3 | 0 | 242 | 1% |
-| The Shield | Drama | 88 | 0 | 1 | 87 | 1% |
 | The Tonight Show Starring Johnny Carson | Classic TV | 1660 | 0 | 24 | 1636 | 1% |
-| Will & Grace | 90s Sitcoms | 246 | 0 | 2 | 244 | 1% |
 | WKRP in Cincinnati | Classic TV | 90 | 1 | 0 | 89 | 1% |
 | 1883 | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | 1923 | Streaming Era | 15 | 0 | 0 | 15 | 0% |
@@ -392,6 +383,7 @@
 | Angel | Sci-Fi, Fantasy and Horror | 110 | 0 | 0 | 110 | 0% |
 | Aqua Unit Patrol Squad 1 | Adult Swim | 143 | 0 | 0 | 143 | 0% |
 | Arabian Nights | Drama | 2 | 0 | 0 | 2 | 0% |
+| Arrested Development | 2000s and Later Sitcoms | 84 | 0 | 0 | 84 | 0% |
 | Assy McGee | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | Atlanta | 2000s and Later Sitcoms | 41 | 0 | 0 | 41 | 0% |
 | Attila | Drama | 4 | 0 | 0 | 4 | 0% |
@@ -421,6 +413,7 @@
 | Bridgerton | Streaming Era | 32 | 0 | 0 | 32 | 0% |
 | Britannia | British and Beyond | 27 | 0 | 0 | 27 | 0% |
 | Broad City | 2000s and Later Sitcoms | 50 | 0 | 0 | 50 | 0% |
+| Brooklyn Nine-Nine | 2000s and Later Sitcoms | 153 | 0 | 0 | 153 | 0% |
 | Californication | 2000s and Later Sitcoms | 84 | 0 | 0 | 84 | 0% |
 | Call the Midwife | Streaming Era | 117 | 0 | 0 | 117 | 0% |
 | Camelot | Drama | 10 | 0 | 0 | 10 | 0% |
@@ -485,12 +478,14 @@
 | Gossip Girl | Drama | 121 | 0 | 0 | 121 | 0% |
 | Great News | 2000s and Later Sitcoms | 23 | 0 | 0 | 23 | 0% |
 | Gunpowder | British and Beyond | 3 | 0 | 0 | 3 | 0% |
-| Gunsmoke | Classic TV | 635 | 0 | 1 | 634 | 0% |
+| Gunsmoke | Classic TV | 635 | 0 | 0 | 635 | 0% |
 | Harlots | British and Beyond | 24 | 0 | 0 | 24 | 0% |
 | Hart to Hart | Classic TV | 110 | 0 | 0 | 110 | 0% |
 | Hatfields & McCoys | Drama | 3 | 0 | 0 | 3 | 0% |
 | Hee Haw | Classic TV | 405 | 0 | 1 | 404 | 0% |
+| Helen of Troy | Drama | 2 | 0 | 0 | 2 | 0% |
 | Hogan's Heroes | Classic TV | 168 | 0 | 0 | 168 | 0% |
+| Homeland | Drama | 96 | 0 | 0 | 96 | 0% |
 | Hot Streets | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | How I Met Your Mother | 2000s and Later Sitcoms | 208 | 0 | 1 | 207 | 0% |
 | How To with John Wilson | 2000s and Later Sitcoms | 18 | 0 | 0 | 18 | 0% |
@@ -515,6 +510,7 @@
 | Kidding | 2000s and Later Sitcoms | 20 | 0 | 0 | 20 | 0% |
 | Knightfall | Drama | 18 | 0 | 0 | 18 | 0% |
 | Kroll Show | Sketch and Comedy | 30 | 0 | 0 | 30 | 0% |
+| Kung Fu | Classic TV | 39 | 0 | 0 | 39 | 0% |
 | L.A. Law | Classic TV | 171 | 0 | 0 | 171 | 0% |
 | Lady Dynamite | Streaming Era | 20 | 0 | 0 | 20 | 0% |
 | Lark Rise to Candleford | British and Beyond | 40 | 0 | 0 | 40 | 0% |
@@ -530,6 +526,7 @@
 | Lodge 49 | Drama | 20 | 0 | 0 | 20 | 0% |
 | Loiter Squad | Adult Swim | 31 | 0 | 0 | 31 | 0% |
 | Lonesome Dove | Classic TV | 4 | 0 | 0 | 4 | 0% |
+| Look Around You | British and Beyond | 14 | 0 | 0 | 14 | 0% |
 | Los Espookys | 2000s and Later Sitcoms | 12 | 0 | 0 | 12 | 0% |
 | Louie | 2000s and Later Sitcoms | 61 | 0 | 0 | 61 | 0% |
 | Louis Theroux's Weird Weekends | British and Beyond | 16 | 0 | 0 | 16 | 0% |
@@ -554,6 +551,7 @@
 | Modern Family | 2000s and Later Sitcoms | 250 | 0 | 0 | 250 | 0% |
 | Momma Named Me Sheriff | Adult Swim | 19 | 0 | 0 | 19 | 0% |
 | Mr Selfridge | British and Beyond | 40 | 0 | 0 | 40 | 0% |
+| Mr. Belvedere | Classic TV | 117 | 0 | 0 | 117 | 0% |
 | Mr. Neighbor's House | Adult Swim | 1 | 0 | 0 | 1 | 0% |
 | Mr. Pickles | Adult Swim | 31 | 0 | 0 | 31 | 0% |
 | Name That Tune | Classic TV | 75 | 0 | 0 | 75 | 0% |
@@ -574,6 +572,7 @@
 | Oz | Drama | 56 | 0 | 0 | 56 | 0% |
 | Party Down | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Patriot | Streaming Era | 18 | 0 | 0 | 18 | 0% |
+| People Just Do Nothing | British and Beyond | 27 | 0 | 0 | 27 | 0% |
 | Peter the Great | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | Players | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | Portlandia | Sketch and Comedy | 77 | 0 | 0 | 77 | 0% |
@@ -593,6 +592,7 @@
 | Russian Doll | Streaming Era | 15 | 0 | 0 | 15 | 0% |
 | Sale of the Century | Classic TV | 411 | 0 | 0 | 411 | 0% |
 | Scarecrow and Mrs. King | Classic TV | 88 | 0 | 0 | 88 | 0% |
+| Scrabble | Classic TV | 38 | 0 | 0 | 38 | 0% |
 | Search Party | 2000s and Later Sitcoms | 50 | 0 | 0 | 50 | 0% |
 | Sexual Healing | Late Night | 9 | 0 | 0 | 9 | 0% |
 | Shaka Zulu | Classic TV | 10 | 0 | 0 | 10 | 0% |
@@ -613,6 +613,7 @@
 | Texas Rising | Drama | 5 | 0 | 0 | 5 | 0% |
 | The 700 Club | Classic TV | 1500 | 0 | 0 | 1500 | 0% |
 | The Arsenio Hall Show | Classic TV | 158 | 0 | 0 | 158 | 0% |
+| The Big Bang Theory | 2000s and Later Sitcoms | 279 | 0 | 1 | 278 | 0% |
 | The Big Valley | Classic TV | 112 | 0 | 0 | 112 | 0% |
 | The Carol Burnett Show | Classic TV | 3 | 0 | 0 | 3 | 0% |
 | The Characters | Streaming Era | 8 | 0 | 0 | 8 | 0% |
@@ -655,6 +656,7 @@
 | The Righteous Gemstones | 2000s and Later Sitcoms | 36 | 0 | 0 | 36 | 0% |
 | The Sarah Silverman Program | 2000s and Later Sitcoms | 32 | 0 | 0 | 32 | 0% |
 | The Serpent Queen | Drama | 16 | 0 | 0 | 16 | 0% |
+| The Shield | Drama | 88 | 0 | 0 | 88 | 0% |
 | The Shivering Truth | Adult Swim | 12 | 0 | 0 | 12 | 0% |
 | The Simpsons | Animated | 806 | 0 | 3 | 803 | 0% |
 | The Sopranos | Drama | 86 | 0 | 0 | 86 | 0% |
@@ -704,6 +706,8 @@
 | What's My Line? | Classic TV | 901 | 0 | 0 | 901 | 0% |
 | Wheel of Fortune | Classic TV | 8392 | 0 | 5 | 8387 | 0% |
 | Who's the Boss? | Classic TV | 196 | 0 | 0 | 196 | 0% |
+| Will & Grace | 90s Sitcoms | 246 | 0 | 1 | 245 | 0% |
+| Win, Lose or Draw | Classic TV | 575 | 0 | 0 | 575 | 0% |
 | World Without End | Drama | 8 | 0 | 0 | 8 | 0% |
 | Yes Minister | Classic TV | 21 | 0 | 0 | 21 | 0% |
 | YOLO: Crystal Fantasy | Adult Swim | 24 | 0 | 0 | 24 | 0% |
@@ -711,4 +715,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): X-Men: The Animated Series, Welcome to Eltingville, Babylon 5, G-String Divas, Shock Video, Hookers at the Point, Pimps Up, Ho's Down, Thinking XXX, Sex Bytes, Talk Sex with Sue Johanson, Sexcetera, USA Up All Night, The Outer Limits (1963), The Lawrence Welk Show, The Rockford Files, The Twilight Zone (1985), Battlestar Galactica (1978), Doctor Who (Classic), Highway to Heaven, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Dick Cavett Show, The Merv Griffin Show, Tomorrow with Tom Snyder, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, Later with Bob Costas, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $10,000 Pyramid, Queen for a Day, Tic-Tac-Dough, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): X-Men: The Animated Series, Welcome to Eltingville, Babylon 5, G-String Divas, Shock Video, Hookers at the Point, Pimps Up, Ho's Down, Thinking XXX, Sex Bytes, Talk Sex with Sue Johanson, Sexcetera, USA Up All Night, The Outer Limits (1963), The Lawrence Welk Show, The Rockford Files, The Twilight Zone (1985), Battlestar Galactica (1978), Doctor Who (Classic), Highway to Heaven, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Dick Cavett Show, The Merv Griffin Show, Tomorrow with Tom Snyder, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, Later with Bob Costas, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $10,000 Pyramid, Queen for a Day, Tic-Tac-Dough, The $64,000 Question, Les Misérables, Mr. Show with Bob and David

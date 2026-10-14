@@ -3,7 +3,7 @@
   "slug": "mission-impossible",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:17:22.922Z",
+  "matchedAt": "2026-10-14T04:21:47.908Z",
   "tvmaze": {
     "id": 3620,
     "name": "Mission: Impossible",
@@ -28,58 +28,46 @@
           "airdate": "1966-09-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
-            "item": "an-tt-s-02-e-01-i-p",
-            "itemTitle": "Human Target (1992) (TV Series)",
-            "file": "Human Target S01E01 Pilot.mp4",
-            "name": "Human Target S01E01 Pilot",
-            "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E01%20Pilot.mp4",
-            "seconds": 2594,
+            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+            "file": "Mission Impossible - 1x01 - Complot A Santa Costa - Pilot.mp4",
+            "name": "Mission Impossible - 1x01 - Complot A Santa Costa - Pilot",
+            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%201x01%20-%20Complot%20A%20Santa%20Costa%20-%20Pilot.mp4",
+            "seconds": 2894,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 609
+            "langRisk": true,
+            "sizeMB": 354
           },
           "alternates": [
             {
-              "conf": 0.85,
-              "why": "S/E in filename + title match",
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "an-tt-s-02-e-01-i-p",
+              "itemTitle": "Human Target (1992) (TV Series)",
+              "file": "Human Target S01E01 Pilot.mp4",
+              "name": "Human Target S01E01 Pilot",
+              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E01%20Pilot.mp4",
+              "seconds": 2594,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 609
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 1x01 - Complot A Santa Costa - Pilot.mp4",
-              "name": "Mission Impossible - 1x01 - Complot A Santa Costa - Pilot",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%201x01%20-%20Complot%20A%20Santa%20Costa%20-%20Pilot.mp4",
-              "seconds": 2894,
+              "file": "Mission Impossible 20 Ans Après - 1x01 - Le Tueur (The Killer).mp4",
+              "name": "Mission Impossible 20 Ans Après - 1x01 - Le Tueur (The Killer)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x01%20-%20Le%20Tueur%20(The%20Killer).mp4",
+              "seconds": 2921,
               "format": "MPEG4",
               "playable": true,
               "langRisk": true,
-              "sizeMB": 354
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Pilot\" (0.95)",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S00E00 Human Target Pilot.mp4",
-              "name": "Human Target S00E00 Human Target Pilot",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S00E00%20Human%20Target%20Pilot.mp4",
-              "seconds": 2792,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 190
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Pilot\" (0.95)",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S00E01 Pilot- Original Cast.mp4",
-              "name": "Human Target S00E01 Pilot- Original Cast",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S00E01%20Pilot-%20Original%20Cast.mp4",
-              "seconds": 2965,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 153
+              "sizeMB": 404
             }
           ]
         },
@@ -3652,21 +3640,7 @@
             "langRisk": true,
             "sizeMB": 383
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Image\" (0.95)",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S00E04 Mirror Image.mp4",
-              "name": "Human Target S00E04 Mirror Image",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S00E04%20Mirror%20Image.mp4",
-              "seconds": 2835,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 160
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,

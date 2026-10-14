@@ -3,7 +3,7 @@
   "slug": "people-just-do-nothing",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-14T04:18:02.245Z",
+  "matchedAt": "2026-10-14T04:21:44.618Z",
   "tvmaze": {
     "id": 5295,
     "name": "People Just Do Nothing",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 27,
     "live": 0,
-    "review": 1,
-    "missing": 26,
-    "pct": 4
+    "review": 0,
+    "missing": 27,
+    "pct": 0
   },
   "seasons": [
     {
@@ -201,20 +201,8 @@
           "number": 6,
           "name": "The Wedding",
           "airdate": "2017-09-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Wedding\" (0.95)",
-            "item": "bob-stuff",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "CBeebies/Pingu, Pingu's Family at the Wedding Party (30th December 2011) [CBeebies].mp4",
-            "name": "CBeebies/Pingu, Pingu's Family at the Wedding Party (30th December 2011) [CBeebies]",
-            "url": "https://archive.org/download/bob-stuff/CBeebies%2FPingu%2C%20Pingu's%20Family%20at%20the%20Wedding%20Party%20(30th%20December%202011)%20%5BCBeebies%5D.mp4",
-            "seconds": 2040,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 132
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

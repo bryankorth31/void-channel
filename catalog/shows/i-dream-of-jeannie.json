@@ -3,7 +3,7 @@
   "slug": "i-dream-of-jeannie",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:18:04.323Z",
+  "matchedAt": "2026-10-14T04:21:47.669Z",
   "tvmaze": {
     "id": 2000,
     "name": "I Dream of Jeannie",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 139,
     "live": 0,
-    "review": 55,
-    "missing": 84,
-    "pct": 40
+    "review": 54,
+    "missing": 85,
+    "pct": 39
   },
   "seasons": [
     {
@@ -88,19 +88,6 @@
             "sizeMB": 375
           },
           "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"My Hero?\" (0.95)",
-              "item": "01-wacky-tv-contintued",
-              "itemTitle": "👽🤖𝙒𝑨𝘾𝑲𝙔 𝙏𝑽 𝑪𝙊𝑵𝙏𝑰𝙉𝑼𝙀𝑫🤖👽",
-              "file": "My Favorite Martian_S01E13_How to Be a Hero Without Really Trying.mp4",
-              "name": "My Favorite Martian_S01E13_How to Be a Hero Without Really Trying",
-              "url": "https://archive.org/download/01-wacky-tv-contintued/My%20Favorite%20Martian_S01E13_How%20to%20Be%20a%20Hero%20Without%20Really%20Trying.mp4",
-              "seconds": 1563,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 457
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 2 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
@@ -2278,20 +2265,8 @@
           "number": 11,
           "name": "The Wedding",
           "airdate": "1969-12-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Wedding\" (0.95)",
-            "item": "01-wacky-tv-contintued",
-            "itemTitle": "👽🤖𝙒𝑨𝘾𝑲𝙔 𝙏𝑽 𝑪𝙊𝑵𝙏𝑰𝙉𝑼𝙀𝑫🤖👽",
-            "file": "The Ghost & Mrs. Muir S02E24 - 𝗧𝗢𝗣 𝗥𝗔𝗧𝗘𝗗 Wedding Day❓❓❓❓.mp4",
-            "name": "The Ghost & Mrs. Muir S02E24 - 𝗧𝗢𝗣 𝗥𝗔𝗧𝗘𝗗 Wedding Day❓❓❓❓",
-            "url": "https://archive.org/download/01-wacky-tv-contintued/The%20Ghost%20%26%20Mrs.%20Muir%20S02E24%20-%20%F0%9D%97%A7%F0%9D%97%A2%F0%9D%97%A3%20%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7%F0%9D%97%98%F0%9D%97%97%20Wedding%20Day%E2%9D%93%E2%9D%93%E2%9D%93%E2%9D%93.mp4",
-            "seconds": 1498,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 370
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

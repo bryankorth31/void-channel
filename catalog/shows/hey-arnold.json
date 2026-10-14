@@ -3,7 +3,7 @@
   "slug": "hey-arnold",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-14T04:17:55.074Z",
+  "matchedAt": "2026-10-14T04:21:34.398Z",
   "tvmaze": {
     "id": 6482,
     "name": "Hey Arnold!",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 100,
     "live": 16,
-    "review": 9,
-    "missing": 75,
-    "pct": 25
+    "review": 7,
+    "missing": 77,
+    "pct": 23
   },
   "seasons": [
     {
@@ -1282,40 +1282,16 @@
           "number": 19,
           "name": "The Journal (1)",
           "airdate": "2002-11-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Journal (1)\" (0.95)",
-            "item": "ka-blam-wont-crack-or-peel-nogglevision_202602",
-            "itemTitle": "My Collection of Classic Nickelodeon",
-            "file": "The Journal Part 1.mp4",
-            "name": "The Journal Part 1",
-            "url": "https://archive.org/download/ka-blam-wont-crack-or-peel-nogglevision_202602/The%20Journal%20Part%201.mp4",
-            "seconds": 1516,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 134
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "The Journal (2)",
           "airdate": "2002-11-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Journal (2)\" (0.95)",
-            "item": "ka-blam-wont-crack-or-peel-nogglevision_202602",
-            "itemTitle": "My Collection of Classic Nickelodeon",
-            "file": "The Journal Part 2.mp4",
-            "name": "The Journal Part 2",
-            "url": "https://archive.org/download/ka-blam-wont-crack-or-peel-nogglevision_202602/The%20Journal%20Part%202.mp4",
-            "seconds": 1421,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

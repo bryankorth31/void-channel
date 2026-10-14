@@ -3,7 +3,7 @@
   "slug": "tales-from-the-darkside",
   "type": "Classic TV",
   "network": "Syndicated",
-  "matchedAt": "2026-10-14T04:17:26.482Z",
+  "matchedAt": "2026-10-14T04:21:51.831Z",
   "tvmaze": {
     "id": 3510,
     "name": "Tales from the Darkside",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 89,
     "live": 23,
-    "review": 4,
-    "missing": 62,
-    "pct": 30
+    "review": 3,
+    "missing": 63,
+    "pct": 29
   },
   "seasons": [
     {
@@ -1079,21 +1079,8 @@
           "number": 13,
           "name": "The Apprentice",
           "airdate": "1988-05-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Apprentice\" (0.95) | not browser-playable: audio (DDP2)",
-            "item": "land.of.the.-lost.-1991.-s-01-e-09.-mind.-games.-480p.-amzn.-web-dl.-ddp-2.0.-h.-264",
-            "itemTitle": "Land of the Lost S01-S02 (1991) Web-DL 480p",
-            "file": "Land of the Lost S01-S02 (1991) AMZN/S02/Land.of.the.Lost.1991.S02E25.Sorceresss.Apprentice.480p.AMZN.WEB-DL.DDP2.0.H.264.mp4",
-            "name": "Land of the Lost S01-S02 (1991) AMZN/S02/Land.of.the.Lost.1991.S02E25.Sorceresss.Apprentice.480p.AMZN.WEB-DL.DDP2.0.H.264",
-            "url": "https://archive.org/download/land.of.the.-lost.-1991.-s-01-e-09.-mind.-games.-480p.-amzn.-web-dl.-ddp-2.0.-h.-264/Land%20of%20the%20Lost%20S01-S02%20(1991)%20AMZN%2FS02%2FLand.of.the.Lost.1991.S02E25.Sorceresss.Apprentice.480p.AMZN.WEB-DL.DDP2.0.H.264.mp4",
-            "seconds": 1383,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DDP2)",
-            "sizeMB": 134
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

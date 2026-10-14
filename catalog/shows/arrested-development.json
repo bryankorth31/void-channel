@@ -3,7 +3,7 @@
   "slug": "arrested-development",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:17:53.151Z",
+  "matchedAt": "2026-10-14T04:21:31.476Z",
   "tvmaze": {
     "id": 321,
     "name": "Arrested Development",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 84,
     "live": 0,
-    "review": 1,
-    "missing": 83,
-    "pct": 1
+    "review": 0,
+    "missing": 84,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,20 +26,8 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2003-11-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Pilot\" (0.95)",
-            "item": "jake_effect",
-            "itemTitle": "The Jake Effect",
-            "file": "Jake Effect 01 Pilot.mp4",
-            "name": "Jake Effect 01 Pilot",
-            "url": "https://archive.org/download/jake_effect/Jake%20Effect%2001%20Pilot.mp4",
-            "seconds": 1274,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

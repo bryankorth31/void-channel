@@ -3,7 +3,7 @@
   "slug": "the-parkers",
   "type": "90s Sitcoms",
   "network": "UPN",
-  "matchedAt": "2026-10-14T04:17:52.936Z",
+  "matchedAt": "2026-10-14T04:21:31.139Z",
   "tvmaze": {
     "id": 12342,
     "name": "The Parkers",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 110,
     "live": 0,
-    "review": 28,
-    "missing": 82,
-    "pct": 25
+    "review": 26,
+    "missing": 84,
+    "pct": 24
   },
   "seasons": [
     {
@@ -861,35 +861,9 @@
           "number": 12,
           "name": "The Revolution",
           "airdate": "2002-01-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Revolution\" (0.95)",
-            "item": "parkers-puzzle-cooking-kids-27-and-exercise_202206",
-            "itemTitle": "All Kids Videos Collection #4",
-            "file": "Crumpet Corners The American Revolution (1982).mp4",
-            "name": "Crumpet Corners The American Revolution (1982)",
-            "url": "https://archive.org/download/parkers-puzzle-cooking-kids-27-and-exercise_202206/Crumpet%20Corners%20The%20American%20Revolution%20(1982).mp4",
-            "seconds": 1456,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1044
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Revolution\" (0.95)",
-              "item": "parkers-puzzle-cooking-kids-27-and-exercise",
-              "itemTitle": "All Kids Videos Collection #3",
-              "file": "Crumpet Corners The American Revolution (1982).mp4",
-              "name": "Crumpet Corners The American Revolution (1982)",
-              "url": "https://archive.org/download/parkers-puzzle-cooking-kids-27-and-exercise/Crumpet%20Corners%20The%20American%20Revolution%20(1982).mp4",
-              "seconds": 1456,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1044
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 13,
@@ -1379,20 +1353,8 @@
           "number": 19,
           "name": "At Last",
           "airdate": "2004-05-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"At Last\" (0.95)",
-            "item": "parkers-puzzle-cooking-kids-27-and-exercise_202206",
-            "itemTitle": "All Kids Videos Collection #4",
-            "file": "Fozzie's Last Laugh (Nickelodeon Airing).mp4",
-            "name": "Fozzie's Last Laugh (Nickelodeon Airing)",
-            "url": "https://archive.org/download/parkers-puzzle-cooking-kids-27-and-exercise_202206/Fozzie's%20Last%20Laugh%20(Nickelodeon%20Airing).mp4",
-            "seconds": 1617,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1240
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

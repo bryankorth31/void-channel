@@ -3,7 +3,7 @@
   "slug": "mr-belvedere",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:17:25.941Z",
+  "matchedAt": "2026-10-14T04:21:51.318Z",
   "tvmaze": {
     "id": 7603,
     "name": "Mr. Belvedere",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 117,
     "live": 0,
-    "review": 1,
-    "missing": 116,
-    "pct": 1
+    "review": 0,
+    "missing": 117,
+    "pct": 0
   },
   "seasons": [
     {
@@ -726,35 +726,9 @@
           "number": 15,
           "name": "The Election",
           "airdate": "1989-02-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Election\" (0.95)",
-            "item": "localnewsarchive_others",
-            "itemTitle": "Local News Sample: others",
-            "file": "LOCAL_NY_NEWS_ELECTION_NIGHT_COVERAGE-November_2_1993-Pt_2-dsskRHNAv4U.mp4",
-            "name": "LOCAL_NY_NEWS_ELECTION_NIGHT_COVERAGE-November_2_1993-Pt_2-dsskRHNAv4U",
-            "url": "https://archive.org/download/localnewsarchive_others/LOCAL_NY_NEWS_ELECTION_NIGHT_COVERAGE-November_2_1993-Pt_2-dsskRHNAv4U.mp4",
-            "seconds": 1753,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 193
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"The Election\" (0.95)",
-              "item": "localnewsarchive_others",
-              "itemTitle": "Local News Sample: others",
-              "file": "LOCAL_NY_NEWS_ELECTION_NIGHT_COVERAGE-November_2_1993-Pt_1-2Fmi86iRLxg.mp4",
-              "name": "LOCAL_NY_NEWS_ELECTION_NIGHT_COVERAGE-November_2_1993-Pt_1-2Fmi86iRLxg",
-              "url": "https://archive.org/download/localnewsarchive_others/LOCAL_NY_NEWS_ELECTION_NIGHT_COVERAGE-November_2_1993-Pt_1-2Fmi86iRLxg.mp4",
-              "seconds": 1499,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 175
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 16,

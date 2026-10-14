@@ -3,7 +3,7 @@
   "slug": "boy-meets-world",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:17:49.918Z",
+  "matchedAt": "2026-10-14T04:21:27.942Z",
   "tvmaze": {
     "id": 683,
     "name": "Boy Meets World",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 158,
-    "live": 1,
-    "review": 32,
+    "live": 0,
+    "review": 33,
     "missing": 125,
     "pct": 21
   },
@@ -26,10 +26,10 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "1993-09-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.75,
+            "why": "S/E in filename",
             "item": "zoe-duncan-jack-and-jane-complete-series",
             "itemTitle": "Zoe, Duncan, Jack And Jane - The Complete Series",
             "file": "Zoe, Duncan, Jack and Jane - 1x01 - Pilot.mp4",
@@ -66,19 +66,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 77
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "Brothers_Keeper_ABC_Rarities",
-              "itemTitle": "Brother's Keeper (1998-1999, TGIF)",
-              "file": "101 Pilot.mp4",
-              "name": "101 Pilot",
-              "url": "https://archive.org/download/Brothers_Keeper_ABC_Rarities/101%20Pilot.mp4",
-              "seconds": 1291,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 121
             }
           ]
         },

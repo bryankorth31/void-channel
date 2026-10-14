@@ -3,7 +3,7 @@
   "slug": "homeland",
   "type": "Drama",
   "network": "Showtime",
-  "matchedAt": "2026-10-14T04:17:58.704Z",
+  "matchedAt": "2026-10-14T04:21:39.840Z",
   "tvmaze": {
     "id": 7,
     "name": "Homeland",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 96,
     "live": 0,
-    "review": 1,
-    "missing": 95,
-    "pct": 1
+    "review": 0,
+    "missing": 96,
+    "pct": 0
   },
   "seasons": [
     {
@@ -34,20 +34,8 @@
           "number": 2,
           "name": "Grace",
           "airdate": "2011-10-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Grace\" (1.00)",
-            "item": "grace_20250719",
-            "itemTitle": "Grace Pilot 2011",
-            "file": "Grace.mp4",
-            "name": "Grace",
-            "url": "https://archive.org/download/grace_20250719/Grace.mp4",
-            "seconds": 2565,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 451
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

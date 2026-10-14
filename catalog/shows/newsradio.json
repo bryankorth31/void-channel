@@ -3,7 +3,7 @@
   "slug": "newsradio",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:17:51.751Z",
+  "matchedAt": "2026-10-14T04:21:29.595Z",
   "tvmaze": {
     "id": 4154,
     "name": "NewsRadio",
@@ -30,29 +30,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 101 Pilot.mp4",
-            "name": "George and Leo 101 Pilot",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20101%20Pilot.mp4",
-            "seconds": 1328,
+            "item": "newsradio-1995-99",
+            "itemTitle": "NewsRadio (1995–99) sitcom",
+            "file": "Newsradio Season 1 - all 7 eps/NewsRadio  Season 1 Ep 1 Pilot ( Better Copy).mp4",
+            "name": "Newsradio Season 1 - all 7 eps/NewsRadio  Season 1 Ep 1 Pilot ( Better Copy)",
+            "url": "https://archive.org/download/newsradio-1995-99/Newsradio%20Season%201%20-%20all%207%20eps%2FNewsRadio%20%20Season%201%20Ep%201%20Pilot%20(%20Better%20Copy).mp4",
+            "seconds": 1397,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 171
+            "sizeMB": 162
           },
           "alternates": [
             {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "newsradio-1995-99",
-              "itemTitle": "NewsRadio (1995–99) sitcom",
-              "file": "Newsradio Season 1 - all 7 eps/NewsRadio  Season 1 Ep 1 Pilot ( Better Copy).mp4",
-              "name": "Newsradio Season 1 - all 7 eps/NewsRadio  Season 1 Ep 1 Pilot ( Better Copy)",
-              "url": "https://archive.org/download/newsradio-1995-99/Newsradio%20Season%201%20-%20all%207%20eps%2FNewsRadio%20%20Season%201%20Ep%201%20Pilot%20(%20Better%20Copy).mp4",
-              "seconds": 1397,
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "george-and-leo",
+              "itemTitle": "George & Leo (1997-1998)",
+              "file": "George and Leo 101 Pilot.mp4",
+              "name": "George and Leo 101 Pilot",
+              "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20101%20Pilot.mp4",
+              "seconds": 1328,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 162
+              "sizeMB": 171
             },
             {
               "conf": 0.55,
@@ -853,21 +853,7 @@
             "playable": true,
             "sizeMB": 73
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Halloween\" (0.95)",
-              "item": "george-and-leo",
-              "itemTitle": "George & Leo (1997-1998)",
-              "file": "George and Leo 107 Halloween Show.mp4",
-              "name": "George and Leo 107 Halloween Show",
-              "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20107%20Halloween%20Show.mp4",
-              "seconds": 1314,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 166
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,

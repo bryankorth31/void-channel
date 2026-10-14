@@ -3,7 +3,7 @@
   "slug": "gunsmoke",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:17:22.953Z",
+  "matchedAt": "2026-10-14T04:21:47.948Z",
   "tvmaze": {
     "id": 782,
     "name": "Gunsmoke",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 635,
     "live": 0,
-    "review": 1,
-    "missing": 634,
+    "review": 0,
+    "missing": 635,
     "pct": 0
   },
   "seasons": [
@@ -4418,20 +4418,8 @@
           "number": 1,
           "name": "The Lost",
           "airdate": "1971-09-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Lost\" (0.95)",
-            "item": "red-skelton-the-lost-episodes-1990",
-            "itemTitle": "Red Skelton: The Lost Episodes (1990)",
-            "file": "Skelton_Lost.mp4",
-            "name": "Skelton_Lost",
-            "url": "https://archive.org/download/red-skelton-the-lost-episodes-1990/Skelton_Lost.mp4",
-            "seconds": 4407,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 895
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

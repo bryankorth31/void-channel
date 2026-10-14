@@ -3,7 +3,7 @@
   "slug": "helen-of-troy",
   "type": "Drama",
   "network": "USA Network",
-  "matchedAt": "2026-10-14T04:17:30.736Z",
+  "matchedAt": "2026-10-14T04:21:56.059Z",
   "tvmaze": {
     "id": 18410,
     "name": "Helen of Troy",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 2,
     "live": 0,
-    "review": 1,
-    "missing": 1,
-    "pct": 50
+    "review": 0,
+    "missing": 2,
+    "pct": 0
   },
   "seasons": [
     {
@@ -34,20 +34,8 @@
           "number": 2,
           "name": "Part 2",
           "airdate": "2003-04-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Part 2\" (0.95)",
-            "item": "filmography-brigitte-bardot",
-            "itemTitle": "Filmography: Brigitte Bardot",
-            "file": "1960-2. La Vérité.mp4",
-            "name": "1960-2. La Vérité",
-            "url": "https://archive.org/download/filmography-brigitte-bardot/1960-2.%20La%20V%C3%A9rit%C3%A9.mp4",
-            "seconds": 7700,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 605
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

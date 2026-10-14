@@ -3,7 +3,7 @@
   "slug": "star-trek-enterprise",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-14T04:18:00.135Z",
+  "matchedAt": "2026-10-14T04:21:41.924Z",
   "tvmaze": {
     "id": 714,
     "name": "Star Trek: Enterprise",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 98,
     "live": 1,
-    "review": 30,
-    "missing": 67,
-    "pct": 32
+    "review": 29,
+    "missing": 68,
+    "pct": 31
   },
   "seasons": [
     {
@@ -690,20 +690,8 @@
           "number": 20,
           "name": "Horizon",
           "airdate": "2003-04-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Horizon\" (1.00)",
-            "item": "star-trek-horizon_202309",
-            "itemTitle": "Star Trek: Horizon",
-            "file": "Star Trek - Horizon.mp4",
-            "name": "Star Trek - Horizon",
-            "url": "https://archive.org/download/star-trek-horizon_202309/Star%20Trek%20-%20Horizon.mp4",
-            "seconds": 6155,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 569
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "look-around-you",
   "type": "British and Beyond",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T04:18:02.084Z",
+  "matchedAt": "2026-10-14T04:21:44.386Z",
   "tvmaze": {
     "id": 1950,
     "name": "Look Around You",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 14,
     "live": 0,
-    "review": 3,
-    "missing": 11,
-    "pct": 21
+    "review": 0,
+    "missing": 14,
+    "pct": 0
   },
   "seasons": [
     {
@@ -34,35 +34,9 @@
           "number": 2,
           "name": "Water",
           "airdate": "2002-10-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Water\" (0.95)",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Tweenies Water 28th May 2008 [CBeebies].mp4",
-            "name": "Tweenies Water 28th May 2008 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Tweenies%20Water%2028th%20May%202008%20%5BCBeebies%5D.mp4",
-            "seconds": 1187,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 244
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Water\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Fireman Sam Deep Water 15th November 2007 [CBeebies].mp4",
-              "name": "Fireman Sam Deep Water 15th November 2007 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Fireman%20Sam%20Deep%20Water%2015th%20November%202007%20%5BCBeebies%5D.mp4",
-              "seconds": 905,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 187
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
@@ -92,61 +66,9 @@
           "number": 6,
           "name": "Music",
           "airdate": "2002-11-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Music\" (0.95)",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Mr Bloom's Nursery Music 22nd January 2012 [CBeebies].mp4",
-            "name": "Mr Bloom's Nursery Music 22nd January 2012 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Mr%20Bloom's%20Nursery%20Music%2022nd%20January%202012%20%5BCBeebies%5D.mp4",
-            "seconds": 1277,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 264
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Music\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Mr Bloom's Nursery Music 25th August 2014 [CBeebies].mp4",
-              "name": "Mr Bloom's Nursery Music 25th August 2014 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Mr%20Bloom's%20Nursery%20Music%2025th%20August%202014%20%5BCBeebies%5D.mp4",
-              "seconds": 1254,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 251
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Music\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "The Story of Tracy Beaker Music 28th June 2007 [CBBC on BBC Two].mp4",
-              "name": "The Story of Tracy Beaker Music 28th June 2007 [CBBC on BBC Two]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/The%20Story%20of%20Tracy%20Beaker%20Music%2028th%20June%202007%20%5BCBBC%20on%20BBC%20Two%5D.mp4",
-              "seconds": 878,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Music\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Space Pirates Music to Drum Along To 2nd April 2010 [CBeebies].mp4",
-              "name": "Space Pirates Music to Drum Along To 2nd April 2010 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Space%20Pirates%20Music%20to%20Drum%20Along%20To%202nd%20April%202010%20%5BCBeebies%5D.mp4",
-              "seconds": 1970,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 405
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
@@ -197,61 +119,9 @@
           "number": 4,
           "name": "Food",
           "airdate": "2005-02-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Food\" (0.95)",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Elmo's World Food 17th January 2003 [Channel 5 Milkshake].mp4",
-            "name": "Elmo's World Food 17th January 2003 [Channel 5 Milkshake]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Elmo's%20World%20Food%2017th%20January%202003%20%5BChannel%205%20Milkshake%5D.mp4",
-            "seconds": 1439,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 297
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Food\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Nina and the Neurons Go Eco Food Glorious Food 14th August 2012 [CBeebies on BBC Two].mp4",
-              "name": "Nina and the Neurons Go Eco Food Glorious Food 14th August 2012 [CBeebies on BBC Two]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Nina%20and%20the%20Neurons%20Go%20Eco%20Food%20Glorious%20Food%2014th%20August%202012%20%5BCBeebies%20on%20BBC%20Two%5D.mp4",
-              "seconds": 885,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 288
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Food\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Barnaby Bear Barnaby Bear Find Out About Food 12th November 2009 [BBC Two Schools].mp4",
-              "name": "Barnaby Bear Barnaby Bear Find Out About Food 12th November 2009 [BBC Two Schools]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Barnaby%20Bear%20Barnaby%20Bear%20Find%20Out%20About%20Food%2012th%20November%202009%20%5BBBC%20Two%20Schools%5D.mp4",
-              "seconds": 1245,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 254
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Food\" (0.95)",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "The Shiny Show Indian Food 7th April 2008 [CBeebies].mp4",
-              "name": "The Shiny Show Indian Food 7th April 2008 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/The%20Shiny%20Show%20Indian%20Food%207th%20April%202008%20%5BCBeebies%5D.mp4",
-              "seconds": 1269,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 180
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 5,

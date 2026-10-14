@@ -3,7 +3,7 @@
   "slug": "sabrina-the-teenage-witch",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:17:52.527Z",
+  "matchedAt": "2026-10-14T04:21:30.538Z",
   "tvmaze": {
     "id": 976,
     "name": "Sabrina the Teenage Witch",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 163,
-    "live": 4,
-    "review": 18,
+    "live": 3,
+    "review": 19,
     "missing": 141,
     "pct": 13
   },
@@ -26,10 +26,10 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "1996-09-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.75,
+            "why": "S/E in filename",
             "item": "george-and-leo",
             "itemTitle": "George & Leo (1997-1998)",
             "file": "George and Leo 101 Pilot.mp4",
@@ -53,19 +53,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 133
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "Brothers_Keeper_ABC_Rarities",
-              "itemTitle": "Brother's Keeper (1998-1999, TGIF)",
-              "file": "101 Pilot.mp4",
-              "name": "101 Pilot",
-              "url": "https://archive.org/download/Brothers_Keeper_ABC_Rarities/101%20Pilot.mp4",
-              "seconds": 1291,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 121
             }
           ]
         },

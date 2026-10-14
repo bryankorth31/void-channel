@@ -3,7 +3,7 @@
   "slug": "simon-and-simon",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:17:25.141Z",
+  "matchedAt": "2026-10-14T04:21:50.508Z",
   "tvmaze": {
     "id": 1499,
     "name": "Simon & Simon",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 156,
     "live": 0,
-    "review": 12,
-    "missing": 144,
-    "pct": 8
+    "review": 10,
+    "missing": 146,
+    "pct": 6
   },
   "seasons": [
     {
@@ -391,20 +391,8 @@
           "number": 18,
           "name": "The List",
           "airdate": "1983-02-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The List\" (0.95)",
-            "item": "2_51_12",
-            "itemTitle": "Tenspeed and Brown Shoe (1980) (TV Series)",
-            "file": "Tenspeed and Brown Shoe S01E10 Loose Larry's List of Losers.mp4",
-            "name": "Tenspeed and Brown Shoe S01E10 Loose Larry's List of Losers",
-            "url": "https://archive.org/download/2_51_12/Tenspeed%20and%20Brown%20Shoe%20S01E10%20Loose%20Larry's%20List%20of%20Losers.mp4",
-            "seconds": 2966,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 172
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1055,20 +1043,8 @@
           "number": 5,
           "name": "Treasure",
           "airdate": "1986-10-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Treasure\" (0.95)",
-            "item": "2_51_12",
-            "itemTitle": "Tenspeed and Brown Shoe (1980) (TV Series)",
-            "file": "Tenspeed and Brown Shoe S01E13 The Treasure of Sierra Madre Street.mp4",
-            "name": "Tenspeed and Brown Shoe S01E13 The Treasure of Sierra Madre Street",
-            "url": "https://archive.org/download/2_51_12/Tenspeed%20and%20Brown%20Shoe%20S01E13%20The%20Treasure%20of%20Sierra%20Madre%20Street.mp4",
-            "seconds": 2967,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 167
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

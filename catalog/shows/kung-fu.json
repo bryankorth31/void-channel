@@ -3,7 +3,7 @@
   "slug": "kung-fu",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:17:23.741Z",
+  "matchedAt": "2026-10-14T04:21:49.042Z",
   "tvmaze": {
     "id": 32355,
     "name": "Kung Fu",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 39,
     "live": 0,
-    "review": 1,
-    "missing": 38,
-    "pct": 3
+    "review": 0,
+    "missing": 39,
+    "pct": 0
   },
   "seasons": [
     {
@@ -191,35 +191,9 @@
           "number": 8,
           "name": "Disclosure",
           "airdate": "2022-05-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Disclosure\" (0.95)",
-            "item": "deepsec2007video",
-            "itemTitle": "DeepSec 2007 Video",
-            "file": "DS07.GS.tag2.tp1_Keynote.Reasonable.Disclosure.-.Jeff.Moss.mp4",
-            "name": "DS07.GS.tag2.tp1_Keynote.Reasonable.Disclosure.-.Jeff.Moss",
-            "url": "https://archive.org/download/deepsec2007video/DS07.GS.tag2.tp1_Keynote.Reasonable.Disclosure.-.Jeff.Moss.mp4",
-            "seconds": 3255,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 340
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Disclosure\" (0.95)",
-              "item": "deeepsec2007videolow",
-              "itemTitle": "DeepSec 2007 Video (low)",
-              "file": "deepsec2007_jeff_moss-responsible_disclosure.mp4",
-              "name": "deepsec2007_jeff_moss-responsible_disclosure",
-              "url": "https://archive.org/download/deeepsec2007videolow/deepsec2007_jeff_moss-responsible_disclosure.mp4",
-              "seconds": 3256,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 203
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,

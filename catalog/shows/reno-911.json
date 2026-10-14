@@ -3,7 +3,7 @@
   "slug": "reno-911",
   "type": "2000s and Later Sitcoms",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-14T04:17:54.103Z",
+  "matchedAt": "2026-10-14T04:21:32.945Z",
   "tvmaze": {
     "id": 935,
     "name": "Reno 911!",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 113,
     "live": 0,
-    "review": 23,
-    "missing": 90,
-    "pct": 20
+    "review": 22,
+    "missing": 91,
+    "pct": 19
   },
   "seasons": [
     {
@@ -190,20 +190,8 @@
           "number": 14,
           "name": "Halloween",
           "airdate": "2003-10-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Halloween\" (0.95)",
-            "item": "missing_202403",
-            "itemTitle": "MTV's The State (1994) - 'The TapeFace Collection' - (ORIGINAL VHS & Restoration Project and PANCAKE HOUSE!)",
-            "file": "The State - S09 - 43rd Annual All-Star Halloween Special.mp4",
-            "name": "The State - S09 - 43rd Annual All-Star Halloween Special",
-            "url": "https://archive.org/download/missing_202403/The%20State%20-%20S09%20-%2043rd%20Annual%20All-Star%20Halloween%20Special.mp4",
-            "seconds": 2666,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 278
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
