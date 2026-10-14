@@ -3,7 +3,7 @@
   "slug": "star-trek-voyager",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-14T04:15:42.698Z",
+  "matchedAt": "2026-10-14T04:18:00.032Z",
   "tvmaze": {
     "id": 492,
     "name": "Star Trek: Voyager",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 172,
-    "live": 158,
-    "review": 2,
-    "missing": 12,
-    "pct": 93
+    "live": 47,
+    "review": 111,
+    "missing": 14,
+    "pct": 92
   },
   "seasons": [
     {
@@ -56,31 +56,32 @@
           "airdate": "1995-01-23",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x03 Parallax.mp4",
-            "name": "Star Trek Voyager 1x03 Parallax",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x03%20Parallax.mp4",
-            "seconds": 2642,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E3 - Time and Again.mp4",
+            "name": "Star Trek Voyager S1 E3 - Time and Again",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E3%20-%20Time%20and%20Again.mp4",
+            "seconds": 2754,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 581
+            "sizeMB": 195
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E3 - Time and Again.mp4",
-              "name": "Star Trek Voyager S1 E3 - Time and Again",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E3%20-%20Time%20and%20Again.mp4",
-              "seconds": 2754,
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x03 Parallax.mp4",
+              "name": "Star Trek Voyager 1x03 Parallax",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x03%20Parallax.mp4",
+              "seconds": 2642,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 195
+              "langRisk": true,
+              "sizeMB": 581
             },
             {
               "conf": 0.8,
@@ -105,30 +106,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x04 Encore et Encore.mp4",
-            "name": "Star Trek Voyager 1x04 Encore et Encore",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x04%20Encore%20et%20Encore.mp4",
-            "seconds": 2641,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E4 - Phage.mp4",
+            "name": "Star Trek Voyager S1 E4 - Phage",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E4%20-%20Phage.mp4",
+            "seconds": 2754,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 395
+            "sizeMB": 181
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E4 - Phage.mp4",
-              "name": "Star Trek Voyager S1 E4 - Phage",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E4%20-%20Phage.mp4",
-              "seconds": 2754,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 181
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Time and Again\" (1.00)",
@@ -141,6 +129,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 195
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x04 Encore et Encore.mp4",
+              "name": "Star Trek Voyager 1x04 Encore et Encore",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x04%20Encore%20et%20Encore.mp4",
+              "seconds": 2641,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 395
             }
           ]
         },
@@ -150,31 +152,32 @@
           "airdate": "1995-02-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x05 Phage.mp4",
-            "name": "Star Trek Voyager 1x05 Phage",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x05%20Phage.mp4",
-            "seconds": 2639,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E5 - The Cloud.mp4",
+            "name": "Star Trek Voyager S1 E5 - The Cloud",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E5%20-%20The%20Cloud.mp4",
+            "seconds": 2753,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 561
+            "sizeMB": 183
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E5 - The Cloud.mp4",
-              "name": "Star Trek Voyager S1 E5 - The Cloud",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E5%20-%20The%20Cloud.mp4",
-              "seconds": 2753,
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x05 Phage.mp4",
+              "name": "Star Trek Voyager 1x05 Phage",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x05%20Phage.mp4",
+              "seconds": 2639,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 183
+              "langRisk": true,
+              "sizeMB": 561
             },
             {
               "conf": 0.8,
@@ -199,30 +202,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x06 Le Nuage.mp4",
-            "name": "Star Trek Voyager 1x06 Le Nuage",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x06%20Le%20Nuage.mp4",
-            "seconds": 2638,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E6 - Eye of the Needle.mp4",
+            "name": "Star Trek Voyager S1 E6 - Eye of the Needle",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E6%20-%20Eye%20of%20the%20Needle.mp4",
+            "seconds": 2759,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 579
+            "sizeMB": 157
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E6 - Eye of the Needle.mp4",
-              "name": "Star Trek Voyager S1 E6 - Eye of the Needle",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E6%20-%20Eye%20of%20the%20Needle.mp4",
-              "seconds": 2759,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 157
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"The Cloud\" (1.00)",
@@ -235,6 +225,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 183
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x06 Le Nuage.mp4",
+              "name": "Star Trek Voyager 1x06 Le Nuage",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x06%20Le%20Nuage.mp4",
+              "seconds": 2638,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 579
             }
           ]
         },
@@ -246,30 +250,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x07 Par le Chas d'une Aiguille.mp4",
-            "name": "Star Trek Voyager 1x07 Par le Chas d'une Aiguille",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x07%20Par%20le%20Chas%20d'une%20Aiguille.mp4",
-            "seconds": 2645,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E7 - Ex Post Facto.mp4",
+            "name": "Star Trek Voyager S1 E7 - Ex Post Facto",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E7%20-%20Ex%20Post%20Facto.mp4",
+            "seconds": 2758,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 581
+            "sizeMB": 177
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E7 - Ex Post Facto.mp4",
-              "name": "Star Trek Voyager S1 E7 - Ex Post Facto",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E7%20-%20Ex%20Post%20Facto.mp4",
-              "seconds": 2758,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 177
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Eye of the Needle\" (1.00)",
@@ -282,6 +273,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 157
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x07 Par le Chas d'une Aiguille.mp4",
+              "name": "Star Trek Voyager 1x07 Par le Chas d'une Aiguille",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x07%20Par%20le%20Chas%20d'une%20Aiguille.mp4",
+              "seconds": 2645,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 581
             }
           ]
         },
@@ -293,30 +298,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x08 Une Fois L'Impossible Exclu.mp4",
-            "name": "Star Trek Voyager 1x08 Une Fois L'Impossible Exclu",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x08%20Une%20Fois%20L'Impossible%20Exclu.mp4",
-            "seconds": 2644,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E8 - Emanations.mp4",
+            "name": "Star Trek Voyager S1 E8 - Emanations",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E8%20-%20Emanations.mp4",
+            "seconds": 2745,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 578
+            "sizeMB": 164
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E8 - Emanations.mp4",
-              "name": "Star Trek Voyager S1 E8 - Emanations",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E8%20-%20Emanations.mp4",
-              "seconds": 2745,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 164
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Ex Post Facto\" (1.00)",
@@ -329,6 +321,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 177
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x08 Une Fois L'Impossible Exclu.mp4",
+              "name": "Star Trek Voyager 1x08 Une Fois L'Impossible Exclu",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x08%20Une%20Fois%20L'Impossible%20Exclu.mp4",
+              "seconds": 2644,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 578
             }
           ]
         },
@@ -338,31 +344,32 @@
           "airdate": "1995-03-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x09 Emanations.mp4",
-            "name": "Star Trek Voyager 1x09 Emanations",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x09%20Emanations.mp4",
-            "seconds": 2632,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E9 - Prime Factors.mp4",
+            "name": "Star Trek Voyager S1 E9 - Prime Factors",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E9%20-%20Prime%20Factors.mp4",
+            "seconds": 2747,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 397
+            "sizeMB": 166
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E9 - Prime Factors.mp4",
-              "name": "Star Trek Voyager S1 E9 - Prime Factors",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E9%20-%20Prime%20Factors.mp4",
-              "seconds": 2747,
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x09 Emanations.mp4",
+              "name": "Star Trek Voyager 1x09 Emanations",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x09%20Emanations.mp4",
+              "seconds": 2632,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 166
+              "langRisk": true,
+              "sizeMB": 397
             },
             {
               "conf": 0.8,
@@ -376,19 +383,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 164
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Emanations\" (0.60)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 5x18 Déstination Néant.mp4",
-              "name": "Star Trek Voyager 5x18 Déstination Néant",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%205x18%20D%C3%A9stination%20N%C3%A9ant.mp4",
-              "seconds": 2643,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 554
             }
           ]
         },
@@ -400,30 +394,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x10 Directive Première.mp4",
-            "name": "Star Trek Voyager 1x10 Directive Première",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x10%20Directive%20Premi%C3%A8re.mp4",
-            "seconds": 2633,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E10 - State of Flux.mp4",
+            "name": "Star Trek Voyager S1 E10 - State of Flux",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E10%20-%20State%20of%20Flux.mp4",
+            "seconds": 2752,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 376
+            "sizeMB": 167
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E10 - State of Flux.mp4",
-              "name": "Star Trek Voyager S1 E10 - State of Flux",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E10%20-%20State%20of%20Flux.mp4",
-              "seconds": 2752,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 167
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Prime Factors\" (1.00)",
@@ -436,6 +417,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 166
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x10 Directive Première.mp4",
+              "name": "Star Trek Voyager 1x10 Directive Première",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x10%20Directive%20Premi%C3%A8re.mp4",
+              "seconds": 2633,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 376
             }
           ]
         },
@@ -443,33 +438,34 @@
           "number": 11,
           "name": "State of Flux",
           "airdate": "1995-04-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x11 Félonie.mp4",
-            "name": "Star Trek Voyager 1x11 Félonie",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x11%20F%C3%A9lonie.mp4",
-            "seconds": 2639,
+            "conf": 0.8,
+            "why": "title ~ \"State of Flux\" (1.00)",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E10 - State of Flux.mp4",
+            "name": "Star Trek Voyager S1 E10 - State of Flux",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E10%20-%20State%20of%20Flux.mp4",
+            "seconds": 2752,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 580
+            "sizeMB": 167
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"State of Flux\" (1.00)",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E10 - State of Flux.mp4",
-              "name": "Star Trek Voyager S1 E10 - State of Flux",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E10%20-%20State%20of%20Flux.mp4",
-              "seconds": 2752,
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x11 Félonie.mp4",
+              "name": "Star Trek Voyager 1x11 Félonie",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x11%20F%C3%A9lonie.mp4",
+              "seconds": 2639,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 167
+              "langRisk": true,
+              "sizeMB": 580
             }
           ]
         },
@@ -479,31 +475,32 @@
           "airdate": "1995-04-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x12 Heros et Demons.mp4",
-            "name": "Star Trek Voyager 1x12 Heros et Demons",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x12%20Heros%20et%20Demons.mp4",
-            "seconds": 2638,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E12 - Cathexis.mp4",
+            "name": "Star Trek Voyager S1 E12 - Cathexis",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E12%20-%20Cathexis.mp4",
+            "seconds": 2750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 577
+            "sizeMB": 172
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E12 - Cathexis.mp4",
-              "name": "Star Trek Voyager S1 E12 - Cathexis",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E12%20-%20Cathexis.mp4",
-              "seconds": 2750,
+              "conf": 0.7,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x12 Heros et Demons.mp4",
+              "name": "Star Trek Voyager 1x12 Heros et Demons",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x12%20Heros%20et%20Demons.mp4",
+              "seconds": 2638,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 172
+              "langRisk": true,
+              "sizeMB": 577
             }
           ]
         },
@@ -515,30 +512,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x13 Possession.mp4",
-            "name": "Star Trek Voyager 1x13 Possession",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x13%20Possession.mp4",
-            "seconds": 2638,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E13 - Faces.mp4",
+            "name": "Star Trek Voyager S1 E13 - Faces",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E13%20-%20Faces.mp4",
+            "seconds": 2749,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 378
+            "sizeMB": 176
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E13 - Faces.mp4",
-              "name": "Star Trek Voyager S1 E13 - Faces",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E13%20-%20Faces.mp4",
-              "seconds": 2749,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 176
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Cathexis\" (1.00)",
@@ -551,6 +535,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 172
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x13 Possession.mp4",
+              "name": "Star Trek Voyager 1x13 Possession",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x13%20Possession.mp4",
+              "seconds": 2638,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 378
             }
           ]
         },
@@ -562,30 +560,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x14 Visages.mp4",
-            "name": "Star Trek Voyager 1x14 Visages",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x14%20Visages.mp4",
-            "seconds": 2636,
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E14 - Jetrel.mp4",
+            "name": "Star Trek Voyager S1 E14 - Jetrel",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E14%20-%20Jetrel.mp4",
+            "seconds": 2746,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 579
+            "sizeMB": 170
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E14 - Jetrel.mp4",
-              "name": "Star Trek Voyager S1 E14 - Jetrel",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E14%20-%20Jetrel.mp4",
-              "seconds": 2746,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 170
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Faces\" (1.00)",
@@ -598,6 +583,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 176
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x14 Visages.mp4",
+              "name": "Star Trek Voyager 1x14 Visages",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x14%20Visages.mp4",
+              "seconds": 2636,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 579
             }
           ]
         },
@@ -607,31 +606,32 @@
           "airdate": "1995-05-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x15 Jetrel.mp4",
-            "name": "Star Trek Voyager 1x15 Jetrel",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x15%20Jetrel.mp4",
-            "seconds": 2634,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E15 - Learning Curve.mp4",
+            "name": "Star Trek Voyager S1 E15 - Learning Curve",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E15%20-%20Learning%20Curve.mp4",
+            "seconds": 2750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 377
+            "sizeMB": 181
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E15 - Learning Curve.mp4",
-              "name": "Star Trek Voyager S1 E15 - Learning Curve",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E15%20-%20Learning%20Curve.mp4",
-              "seconds": 2750,
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x15 Jetrel.mp4",
+              "name": "Star Trek Voyager 1x15 Jetrel",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x15%20Jetrel.mp4",
+              "seconds": 2634,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 181
+              "langRisk": true,
+              "sizeMB": 377
             },
             {
               "conf": 0.8,
@@ -652,33 +652,34 @@
           "number": 16,
           "name": "Learning Curve",
           "airdate": "1995-05-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x16 Le Droit Chemin.mp4",
-            "name": "Star Trek Voyager 1x16 Le Droit Chemin",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x16%20Le%20Droit%20Chemin.mp4",
-            "seconds": 2638,
+            "conf": 0.8,
+            "why": "title ~ \"Learning Curve\" (1.00)",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E15 - Learning Curve.mp4",
+            "name": "Star Trek Voyager S1 E15 - Learning Curve",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E15%20-%20Learning%20Curve.mp4",
+            "seconds": 2750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 376
+            "sizeMB": 181
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"Learning Curve\" (1.00)",
-              "item": "star-trek-voyager-s-1-e-1-caretaker",
-              "itemTitle": "Star Trek: Voyager - The Complete First Season",
-              "file": "Star Trek Voyager S1 E15 - Learning Curve.mp4",
-              "name": "Star Trek Voyager S1 E15 - Learning Curve",
-              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E15%20-%20Learning%20Curve.mp4",
-              "seconds": 2750,
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x16 Le Droit Chemin.mp4",
+              "name": "Star Trek Voyager 1x16 Le Droit Chemin",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x16%20Le%20Droit%20Chemin.mp4",
+              "seconds": 2638,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 181
+              "langRisk": true,
+              "sizeMB": 376
             }
           ]
         }
@@ -691,9 +692,9 @@
           "number": 1,
           "name": "The 37's",
           "airdate": "1995-08-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -703,6 +704,7 @@
             "seconds": 2631,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -713,7 +715,7 @@
           "airdate": "1995-09-04",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -723,6 +725,7 @@
             "seconds": 2640,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 570
           },
           "alternates": []
@@ -733,7 +736,7 @@
           "airdate": "1995-09-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -743,6 +746,7 @@
             "seconds": 2634,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 579
           },
           "alternates": []
@@ -753,7 +757,7 @@
           "airdate": "1995-09-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -763,6 +767,7 @@
             "seconds": 2637,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 393
           },
           "alternates": []
@@ -773,7 +778,7 @@
           "airdate": "1995-09-25",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -783,6 +788,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -791,9 +797,9 @@
           "number": 6,
           "name": "Twisted",
           "airdate": "1995-10-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -803,6 +809,7 @@
             "seconds": 2634,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 579
           },
           "alternates": []
@@ -813,7 +820,7 @@
           "airdate": "1995-10-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -823,31 +830,18 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 580
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Parturition\" (0.67)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 3x24 Disparitions.mp4",
-              "name": "Star Trek Voyager 3x24 Disparitions",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%203x24%20Disparitions.mp4",
-              "seconds": 2647,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 557
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Persistence of Vision",
           "airdate": "1995-10-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -857,6 +851,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 557
           },
           "alternates": []
@@ -865,9 +860,9 @@
           "number": 9,
           "name": "Tattoo",
           "airdate": "1995-11-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -877,6 +872,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 393
           },
           "alternates": []
@@ -885,9 +881,9 @@
           "number": 10,
           "name": "Cold Fire",
           "airdate": "1995-11-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -897,6 +893,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -905,9 +902,9 @@
           "number": 11,
           "name": "Maneuvers",
           "airdate": "1995-11-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -917,6 +914,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 574
           },
           "alternates": []
@@ -927,7 +925,7 @@
           "airdate": "1995-11-27",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -937,6 +935,7 @@
             "seconds": 2640,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 393
           },
           "alternates": []
@@ -947,7 +946,7 @@
           "airdate": "1996-01-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -957,6 +956,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 392
           },
           "alternates": []
@@ -967,7 +967,7 @@
           "airdate": "1996-01-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -977,6 +977,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 574
           },
           "alternates": []
@@ -985,9 +986,9 @@
           "number": 15,
           "name": "Threshold",
           "airdate": "1996-01-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -997,6 +998,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 577
           },
           "alternates": []
@@ -1005,9 +1007,9 @@
           "number": 16,
           "name": "Meld",
           "airdate": "1996-02-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1017,6 +1019,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 574
           },
           "alternates": []
@@ -1025,9 +1028,9 @@
           "number": 17,
           "name": "Dreadnought",
           "airdate": "1996-02-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1037,6 +1040,7 @@
             "seconds": 2638,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 393
           },
           "alternates": []
@@ -1045,9 +1049,9 @@
           "number": 18,
           "name": "Death Wish",
           "airdate": "1996-02-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1057,6 +1061,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -1065,9 +1070,9 @@
           "number": 19,
           "name": "Lifesigns",
           "airdate": "1996-02-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1077,6 +1082,7 @@
             "seconds": 2640,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 393
           },
           "alternates": []
@@ -1087,7 +1093,7 @@
           "airdate": "1996-03-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1097,6 +1103,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -1105,9 +1112,9 @@
           "number": 21,
           "name": "Deadlock",
           "airdate": "1996-03-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1117,6 +1124,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 393
           },
           "alternates": []
@@ -1127,7 +1135,7 @@
           "airdate": "1996-04-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1137,6 +1145,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -1145,9 +1154,9 @@
           "number": 23,
           "name": "The Thaw",
           "airdate": "1996-04-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1157,6 +1166,7 @@
             "seconds": 2645,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 575
           },
           "alternates": []
@@ -1167,7 +1177,7 @@
           "airdate": "1996-05-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1177,6 +1187,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 560
           },
           "alternates": []
@@ -1187,7 +1198,7 @@
           "airdate": "1996-05-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1197,6 +1208,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -1205,9 +1217,9 @@
           "number": 26,
           "name": "Basics, Part I",
           "airdate": "1996-05-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1217,6 +1229,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 394
           },
           "alternates": []
@@ -1230,9 +1243,9 @@
           "number": 1,
           "name": "Basics, Part II",
           "airdate": "1996-09-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1242,6 +1255,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 379
           },
           "alternates": []
@@ -1252,7 +1266,7 @@
           "airdate": "1996-09-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1262,6 +1276,7 @@
             "seconds": 2639,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 336
           },
           "alternates": [
@@ -1286,7 +1301,7 @@
           "airdate": "1996-09-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1296,6 +1311,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -1304,9 +1320,9 @@
           "number": 4,
           "name": "The Swarm",
           "airdate": "1996-09-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1316,6 +1332,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 336
           },
           "alternates": []
@@ -1324,9 +1341,9 @@
           "number": 5,
           "name": "False Profits",
           "airdate": "1996-10-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1336,6 +1353,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 571
           },
           "alternates": []
@@ -1344,9 +1362,9 @@
           "number": 6,
           "name": "Remember",
           "airdate": "1996-10-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1356,6 +1374,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 577
           },
           "alternates": []
@@ -1364,9 +1383,9 @@
           "number": 7,
           "name": "Sacred Ground",
           "airdate": "1996-10-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1376,6 +1395,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 336
           },
           "alternates": []
@@ -1384,9 +1404,9 @@
           "number": 8,
           "name": "Future's End, Part I",
           "airdate": "1996-11-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1396,6 +1416,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 574
           },
           "alternates": []
@@ -1404,9 +1425,9 @@
           "number": 9,
           "name": "Future's End, Part II",
           "airdate": "1996-11-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1416,6 +1437,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 556
           },
           "alternates": []
@@ -1424,9 +1446,9 @@
           "number": 10,
           "name": "Warlord",
           "airdate": "1996-11-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1436,6 +1458,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 347
           },
           "alternates": []
@@ -1444,9 +1467,9 @@
           "number": 11,
           "name": "The Q and the Grey",
           "airdate": "1996-11-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1456,6 +1479,7 @@
             "seconds": 2640,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 346
           },
           "alternates": []
@@ -1466,7 +1490,7 @@
           "airdate": "1996-12-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1476,6 +1500,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 346
           },
           "alternates": []
@@ -1484,9 +1509,9 @@
           "number": 13,
           "name": "Fair Trade",
           "airdate": "1997-01-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1496,6 +1521,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 347
           },
           "alternates": []
@@ -1506,7 +1532,7 @@
           "airdate": "1997-01-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1516,6 +1542,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 346
           },
           "alternates": []
@@ -1526,7 +1553,7 @@
           "airdate": "1997-01-29",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1536,6 +1563,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 346
           },
           "alternates": []
@@ -1544,9 +1572,9 @@
           "number": 16,
           "name": "Blood Fever",
           "airdate": "1997-02-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1556,6 +1584,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 346
           },
           "alternates": []
@@ -1566,7 +1595,7 @@
           "airdate": "1997-02-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1576,6 +1605,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 347
           },
           "alternates": []
@@ -1584,9 +1614,9 @@
           "number": 18,
           "name": "The Darkling",
           "airdate": "1997-02-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1596,6 +1626,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 347
           },
           "alternates": []
@@ -1604,9 +1635,9 @@
           "number": 19,
           "name": "Rise",
           "airdate": "1997-02-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1616,6 +1647,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 575
           },
           "alternates": []
@@ -1624,9 +1656,9 @@
           "number": 20,
           "name": "Favorite Son",
           "airdate": "1997-03-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1636,6 +1668,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 575
           },
           "alternates": []
@@ -1644,9 +1677,9 @@
           "number": 21,
           "name": "Before and After",
           "airdate": "1997-04-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1656,6 +1689,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 347
           },
           "alternates": []
@@ -1664,9 +1698,9 @@
           "number": 22,
           "name": "Real Life",
           "airdate": "1997-04-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1676,6 +1710,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 347
           },
           "alternates": []
@@ -1684,9 +1719,9 @@
           "number": 23,
           "name": "Distant Origin",
           "airdate": "1997-04-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1696,6 +1731,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 346
           },
           "alternates": []
@@ -1704,9 +1740,9 @@
           "number": 24,
           "name": "Displaced",
           "airdate": "1997-05-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1716,6 +1752,7 @@
             "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 557
           },
           "alternates": []
@@ -1732,20 +1769,8 @@
           "number": 26,
           "name": "Scorpion, Part I",
           "airdate": "1997-05-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 3x26 Scorpion (Part 1).mp4",
-            "name": "Star Trek Voyager 3x26 Scorpion (Part 1)",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%203x26%20Scorpion%20(Part%201).mp4",
-            "seconds": 2647,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 554
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1765,9 +1790,9 @@
           "number": 2,
           "name": "The Gift",
           "airdate": "1997-09-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1777,6 +1802,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -1785,9 +1811,9 @@
           "number": 3,
           "name": "Day of Honor",
           "airdate": "1997-09-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1797,6 +1823,7 @@
             "seconds": 2645,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 568
           },
           "alternates": []
@@ -1805,9 +1832,9 @@
           "number": 4,
           "name": "Nemesis",
           "airdate": "1997-09-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1817,31 +1844,18 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Nemesis\" (1.00)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 4x03 Nemesis.mp4",
-              "name": "Star Trek Voyager 4x03 Nemesis",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%204x03%20Nemesis.mp4",
-              "seconds": 2645,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 568
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Revulsion",
           "airdate": "1997-10-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1851,6 +1865,7 @@
             "seconds": 2645,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -1859,9 +1874,9 @@
           "number": 6,
           "name": "The Raven",
           "airdate": "1997-10-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1871,6 +1886,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -1879,9 +1895,9 @@
           "number": 7,
           "name": "Scientific Method",
           "airdate": "1997-10-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.7,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1891,6 +1907,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 337
           },
           "alternates": []
@@ -1899,9 +1916,9 @@
           "number": 8,
           "name": "Year of Hell, Part I",
           "airdate": "1997-11-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1911,6 +1928,7 @@
             "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 579
           },
           "alternates": []
@@ -1919,9 +1937,9 @@
           "number": 9,
           "name": "Year of Hell, Part II",
           "airdate": "1997-11-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1931,6 +1949,7 @@
             "seconds": 2651,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 580
           },
           "alternates": []
@@ -1939,9 +1958,9 @@
           "number": 10,
           "name": "Random Thoughts",
           "airdate": "1997-11-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1951,6 +1970,7 @@
             "seconds": 2645,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -1959,9 +1979,9 @@
           "number": 11,
           "name": "Concerning Flight",
           "airdate": "1997-11-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1971,6 +1991,7 @@
             "seconds": 2648,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 575
           },
           "alternates": []
@@ -1979,9 +2000,9 @@
           "number": 12,
           "name": "Mortal Coil",
           "airdate": "1997-12-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -1991,6 +2012,7 @@
             "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
           "alternates": []
@@ -1999,9 +2021,9 @@
           "number": 13,
           "name": "Waking Moments",
           "airdate": "1998-01-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2011,6 +2033,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 336
           },
           "alternates": []
@@ -2019,9 +2042,9 @@
           "number": 14,
           "name": "Message in a Bottle",
           "airdate": "1998-01-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2031,6 +2054,7 @@
             "seconds": 2648,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 579
           },
           "alternates": []
@@ -2039,9 +2063,9 @@
           "number": 15,
           "name": "Hunters",
           "airdate": "1998-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2051,6 +2075,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 575
           },
           "alternates": []
@@ -2059,9 +2084,9 @@
           "number": 16,
           "name": "Prey",
           "airdate": "1998-02-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2071,6 +2096,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
           "alternates": []
@@ -2079,9 +2105,9 @@
           "number": 17,
           "name": "Retrospect",
           "airdate": "1998-02-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2091,6 +2117,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 336
           },
           "alternates": []
@@ -2099,9 +2126,9 @@
           "number": 18,
           "name": "The Killing Game, Part I",
           "airdate": "1998-03-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2111,6 +2138,7 @@
             "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -2119,9 +2147,9 @@
           "number": 19,
           "name": "The Killing Game, Part II",
           "airdate": "1998-03-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2131,6 +2159,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 577
           },
           "alternates": []
@@ -2141,7 +2170,7 @@
           "airdate": "1998-04-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2151,6 +2180,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 579
           },
           "alternates": []
@@ -2161,7 +2191,7 @@
           "airdate": "1998-04-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2171,6 +2201,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -2179,9 +2210,9 @@
           "number": 22,
           "name": "Unforgettable",
           "airdate": "1998-04-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2191,6 +2222,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 581
           },
           "alternates": []
@@ -2207,9 +2239,9 @@
           "number": 24,
           "name": "Demon",
           "airdate": "1998-05-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2219,6 +2251,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 575
           },
           "alternates": []
@@ -2227,9 +2260,9 @@
           "number": 25,
           "name": "One",
           "airdate": "1998-05-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2239,6 +2272,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -2247,9 +2281,9 @@
           "number": 26,
           "name": "Hope and Fear",
           "airdate": "1998-05-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2259,6 +2293,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -2272,9 +2307,9 @@
           "number": 1,
           "name": "Night",
           "airdate": "1998-10-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2284,6 +2319,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 554
           },
           "alternates": []
@@ -2294,7 +2330,7 @@
           "airdate": "1998-10-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2304,6 +2340,7 @@
             "seconds": 2649,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 556
           },
           "alternates": []
@@ -2312,9 +2349,9 @@
           "number": 3,
           "name": "Extreme Risk",
           "airdate": "1998-10-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2324,6 +2361,7 @@
             "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 557
           },
           "alternates": []
@@ -2332,9 +2370,9 @@
           "number": 4,
           "name": "In the Flesh",
           "airdate": "1998-11-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2344,6 +2382,7 @@
             "seconds": 2649,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 558
           },
           "alternates": []
@@ -2352,9 +2391,9 @@
           "number": 5,
           "name": "Once Upon a Time",
           "airdate": "1998-11-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2364,6 +2403,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 559
           },
           "alternates": []
@@ -2372,9 +2412,9 @@
           "number": 6,
           "name": "Timeless",
           "airdate": "1998-11-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2384,31 +2424,18 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 571
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Timeless\" (0.62)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 3x04 L'Essaim.mp4",
-              "name": "Star Trek Voyager 3x04 L'Essaim",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%203x04%20L'Essaim.mp4",
-              "seconds": 2642,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 336
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Infinite Regress",
           "airdate": "1998-11-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2418,6 +2445,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 554
           },
           "alternates": []
@@ -2426,9 +2454,9 @@
           "number": 8,
           "name": "Nothing Human",
           "airdate": "1998-12-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2438,6 +2466,7 @@
             "seconds": 2649,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 554
           },
           "alternates": []
@@ -2446,9 +2475,9 @@
           "number": 9,
           "name": "Thirty Days",
           "airdate": "1998-12-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2458,6 +2487,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 555
           },
           "alternates": []
@@ -2466,9 +2496,9 @@
           "number": 10,
           "name": "Counterpoint",
           "airdate": "1998-12-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2478,6 +2508,7 @@
             "seconds": 2649,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 555
           },
           "alternates": []
@@ -2488,7 +2519,7 @@
           "airdate": "1999-01-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2498,6 +2529,7 @@
             "seconds": 2645,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 336
           },
           "alternates": []
@@ -2506,9 +2538,9 @@
           "number": 12,
           "name": "Bride of Chaotica!",
           "airdate": "1999-01-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2518,6 +2550,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 555
           },
           "alternates": []
@@ -2528,7 +2561,7 @@
           "airdate": "1999-02-03",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2538,6 +2571,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 574
           },
           "alternates": []
@@ -2546,9 +2580,9 @@
           "number": 14,
           "name": "Bliss",
           "airdate": "1999-02-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2558,6 +2592,7 @@
             "seconds": 2648,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 557
           },
           "alternates": []
@@ -2582,9 +2617,9 @@
           "number": 17,
           "name": "The Disease",
           "airdate": "1999-02-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2594,6 +2629,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 318
           },
           "alternates": []
@@ -2602,9 +2638,9 @@
           "number": 18,
           "name": "Course: Oblivion",
           "airdate": "1999-03-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2614,6 +2650,7 @@
             "seconds": 2643,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 554
           },
           "alternates": []
@@ -2622,9 +2659,9 @@
           "number": 19,
           "name": "The Fight",
           "airdate": "1999-03-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2634,6 +2671,7 @@
             "seconds": 2645,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 558
           },
           "alternates": []
@@ -2642,9 +2680,9 @@
           "number": 20,
           "name": "Think Tank",
           "airdate": "1999-03-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2654,6 +2692,7 @@
             "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 556
           },
           "alternates": []
@@ -2662,9 +2701,9 @@
           "number": 21,
           "name": "Juggernaut",
           "airdate": "1999-04-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2674,6 +2713,7 @@
             "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 317
           },
           "alternates": []
@@ -2682,9 +2722,9 @@
           "number": 22,
           "name": "Someone to Watch Over Me",
           "airdate": "1999-04-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2694,6 +2734,7 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 558
           },
           "alternates": []
@@ -2702,9 +2743,9 @@
           "number": 23,
           "name": "11:59",
           "airdate": "1999-05-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2714,6 +2755,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 555
           },
           "alternates": []
@@ -2724,7 +2766,7 @@
           "airdate": "1999-05-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2734,6 +2776,7 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 578
           },
           "alternates": []
@@ -2742,9 +2785,9 @@
           "number": 25,
           "name": "Warhead",
           "airdate": "1999-05-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2754,6 +2797,7 @@
             "seconds": 2644,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 558
           },
           "alternates": []
@@ -2762,9 +2806,9 @@
           "number": 26,
           "name": "Equinox, Part I",
           "airdate": "1999-05-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.7,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2774,11 +2818,12 @@
             "seconds": 2642,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 323
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
               "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2788,20 +2833,8 @@
               "seconds": 2642,
               "format": "h.264 IA",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 262
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Equinox, Part I\" (0.77)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 6x01 L'USS Equinox (Part 2).mp4",
-              "name": "Star Trek Voyager 6x01 L'USS Equinox (Part 2)",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%206x01%20L'USS%20Equinox%20(Part%202).mp4",
-              "seconds": 2528,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 321
             }
           ]
         }
@@ -2814,9 +2847,9 @@
           "number": 1,
           "name": "Equinox, Part II",
           "airdate": "1999-09-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2826,6 +2859,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 321
           },
           "alternates": []
@@ -2834,9 +2868,9 @@
           "number": 2,
           "name": "Survival Instinct",
           "airdate": "1999-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.7,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2846,6 +2880,7 @@
             "seconds": 2530,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 306
           },
           "alternates": []
@@ -2854,9 +2889,9 @@
           "number": 3,
           "name": "Barge of the Dead",
           "airdate": "1999-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2866,6 +2901,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 552
           },
           "alternates": []
@@ -2874,9 +2910,9 @@
           "number": 4,
           "name": "Tinker, Tenor, Doctor, Spy",
           "airdate": "1999-10-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2886,6 +2922,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -2896,7 +2933,7 @@
           "airdate": "1999-10-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2906,6 +2943,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 530
           },
           "alternates": []
@@ -2914,9 +2952,9 @@
           "number": 6,
           "name": "Riddles",
           "airdate": "1999-11-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2926,6 +2964,7 @@
             "seconds": 2529,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 552
           },
           "alternates": []
@@ -2934,9 +2973,9 @@
           "number": 7,
           "name": "Dragon's Teeth",
           "airdate": "1999-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2946,6 +2985,7 @@
             "seconds": 2527,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 546
           },
           "alternates": []
@@ -2954,9 +2994,9 @@
           "number": 8,
           "name": "One Small Step",
           "airdate": "1999-11-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2966,6 +3006,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 527
           },
           "alternates": []
@@ -2974,9 +3015,9 @@
           "number": 9,
           "name": "The Voyager Conspiracy",
           "airdate": "1999-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -2986,6 +3027,7 @@
             "seconds": 2527,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 552
           },
           "alternates": []
@@ -2996,7 +3038,7 @@
           "airdate": "1999-12-01",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3006,6 +3048,7 @@
             "seconds": 2524,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 552
           },
           "alternates": []
@@ -3014,9 +3057,9 @@
           "number": 11,
           "name": "Fair Haven",
           "airdate": "2000-01-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3026,6 +3069,7 @@
             "seconds": 2529,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 547
           },
           "alternates": []
@@ -3034,9 +3078,9 @@
           "number": 12,
           "name": "Blink of an Eye",
           "airdate": "2000-01-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3046,6 +3090,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 304
           },
           "alternates": []
@@ -3056,7 +3101,7 @@
           "airdate": "2000-01-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3066,6 +3111,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 552
           },
           "alternates": []
@@ -3076,7 +3122,7 @@
           "airdate": "2000-02-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3086,6 +3132,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3096,7 +3143,7 @@
           "airdate": "2000-02-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3106,6 +3153,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 542
           },
           "alternates": []
@@ -3114,9 +3162,9 @@
           "number": 16,
           "name": "Collective",
           "airdate": "2000-02-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.7,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3126,6 +3174,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 308
           },
           "alternates": []
@@ -3134,9 +3183,9 @@
           "number": 17,
           "name": "Spirit Folk",
           "airdate": "2000-02-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3146,6 +3195,7 @@
             "seconds": 2527,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3154,9 +3204,9 @@
           "number": 18,
           "name": "Ashes to Ashes",
           "airdate": "2000-03-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3166,6 +3216,7 @@
             "seconds": 2527,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3174,9 +3225,9 @@
           "number": 19,
           "name": "Child's Play",
           "airdate": "2000-03-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3186,6 +3237,7 @@
             "seconds": 2527,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3194,9 +3246,9 @@
           "number": 20,
           "name": "Good Shepherd",
           "airdate": "2000-03-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3206,6 +3258,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 546
           },
           "alternates": []
@@ -3214,9 +3267,9 @@
           "number": 21,
           "name": "Live Fast and Prosper",
           "airdate": "2000-04-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3226,6 +3279,7 @@
             "seconds": 2521,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 301
           },
           "alternates": []
@@ -3236,7 +3290,7 @@
           "airdate": "2000-04-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3246,6 +3300,7 @@
             "seconds": 2523,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 551
           },
           "alternates": []
@@ -3254,9 +3309,9 @@
           "number": 23,
           "name": "Fury",
           "airdate": "2000-05-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3266,6 +3321,7 @@
             "seconds": 2523,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
           "alternates": []
@@ -3274,9 +3330,9 @@
           "number": 24,
           "name": "Life Line",
           "airdate": "2000-05-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3286,6 +3342,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3294,9 +3351,9 @@
           "number": 25,
           "name": "The Haunting of Deck Twelve",
           "airdate": "2000-05-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3306,6 +3363,7 @@
             "seconds": 2527,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3316,7 +3374,7 @@
           "airdate": "2000-05-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3326,23 +3384,10 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 318
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Unimatrix Zero, Part I\" (0.80)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 7x01 Unimatrice Zero (Part 2).mp4",
-              "name": "Star Trek Voyager 7x01 Unimatrice Zero (Part 2)",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%207x01%20Unimatrice%20Zero%20(Part%202).mp4",
-              "seconds": 2523,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 548
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -3353,9 +3398,9 @@
           "number": 1,
           "name": "Unimatrix Zero, Part II",
           "airdate": "2000-10-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3365,6 +3410,7 @@
             "seconds": 2523,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
           "alternates": []
@@ -3375,7 +3421,7 @@
           "airdate": "2000-10-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3385,6 +3431,7 @@
             "seconds": 2523,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
           "alternates": []
@@ -3393,9 +3440,9 @@
           "number": 3,
           "name": "Drive",
           "airdate": "2000-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3405,6 +3452,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 304
           },
           "alternates": []
@@ -3415,7 +3463,7 @@
           "airdate": "2000-10-25",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3425,44 +3473,18 @@
             "seconds": 2523,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Repression\" (0.75)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 5x07 Regression.mp4",
-              "name": "Star Trek Voyager 5x07 Regression",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%205x07%20Regression.mp4",
-              "seconds": 2644,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 554
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Repression\" (0.63)",
-              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-              "file": "Star Trek Voyager 1x13 Possession.mp4",
-              "name": "Star Trek Voyager 1x13 Possession",
-              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x13%20Possession.mp4",
-              "seconds": 2638,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 378
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Critical Care",
           "airdate": "2000-11-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3472,6 +3494,7 @@
             "seconds": 2521,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
           "alternates": []
@@ -3480,9 +3503,9 @@
           "number": 6,
           "name": "Inside Man",
           "airdate": "2000-11-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3492,6 +3515,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3500,9 +3524,9 @@
           "number": 7,
           "name": "Body and Soul",
           "airdate": "2000-11-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3512,6 +3536,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
           "alternates": []
@@ -3522,7 +3547,7 @@
           "airdate": "2000-11-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3532,6 +3557,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3556,9 +3582,9 @@
           "number": 11,
           "name": "Shattered",
           "airdate": "2001-01-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3568,6 +3594,7 @@
             "seconds": 2528,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3576,9 +3603,9 @@
           "number": 12,
           "name": "Lineage",
           "airdate": "2001-01-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3588,6 +3615,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 530
           },
           "alternates": []
@@ -3596,9 +3624,9 @@
           "number": 13,
           "name": "Repentance",
           "airdate": "2001-01-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3608,6 +3636,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 545
           },
           "alternates": []
@@ -3624,9 +3653,9 @@
           "number": 15,
           "name": "The Void",
           "airdate": "2001-02-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3636,6 +3665,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 549
           },
           "alternates": []
@@ -3644,9 +3674,9 @@
           "number": 16,
           "name": "Workforce, Part I",
           "airdate": "2001-02-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3656,6 +3686,7 @@
             "seconds": 2524,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 548
           },
           "alternates": []
@@ -3664,9 +3695,9 @@
           "number": 17,
           "name": "Workforce, Part II",
           "airdate": "2001-02-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3676,6 +3707,7 @@
             "seconds": 2524,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 525
           },
           "alternates": []
@@ -3684,9 +3716,9 @@
           "number": 18,
           "name": "Human Error",
           "airdate": "2001-03-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3696,6 +3728,7 @@
             "seconds": 2525,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 552
           },
           "alternates": []
@@ -3704,9 +3737,9 @@
           "number": 19,
           "name": "Q2",
           "airdate": "2001-04-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3716,6 +3749,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 529
           },
           "alternates": []
@@ -3724,9 +3758,9 @@
           "number": 20,
           "name": "Author, Author",
           "airdate": "2001-04-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3736,6 +3770,7 @@
             "seconds": 2526,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 533
           },
           "alternates": []
@@ -3744,20 +3779,8 @@
           "number": 21,
           "name": "Friendship One",
           "airdate": "2001-04-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 7x21 Friendship 1.mp4",
-            "name": "Star Trek Voyager 7x21 Friendship 1",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%207x21%20Friendship%201.mp4",
-            "seconds": 2526,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 527
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3772,9 +3795,9 @@
           "number": 23,
           "name": "Homestead",
           "airdate": "2001-05-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3784,6 +3807,7 @@
             "seconds": 2523,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 314
           },
           "alternates": []
@@ -3792,9 +3816,9 @@
           "number": 24,
           "name": "Renaissance Man",
           "airdate": "2001-05-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.7,
             "why": "S/E in filename + title match",
             "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
             "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
@@ -3804,6 +3828,7 @@
             "seconds": 2524,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 317
           },
           "alternates": []

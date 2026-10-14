@@ -3,7 +3,7 @@
   "slug": "mission-impossible",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:15:47.830Z",
+  "matchedAt": "2026-10-14T04:17:22.922Z",
   "tvmaze": {
     "id": 3620,
     "name": "Mission: Impossible",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 171,
-    "live": 164,
-    "review": 6,
-    "missing": 1,
-    "pct": 99
+    "live": 138,
+    "review": 26,
+    "missing": 7,
+    "pct": 96
   },
   "seasons": [
     {
@@ -42,7 +42,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -52,20 +52,8 @@
               "seconds": 2894,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 354
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x01 - Le Tueur (The Killer).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x01 - Le Tueur (The Killer)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x01%20-%20Le%20Tueur%20(The%20Killer).mp4",
-              "seconds": 2921,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 404
             },
             {
               "conf": 0.65,
@@ -79,6 +67,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 190
+            },
+            {
+              "conf": 0.65,
+              "why": "title ~ \"Pilot\" (0.95)",
+              "item": "an-tt-s-02-e-01-i-p",
+              "itemTitle": "Human Target (1992) (TV Series)",
+              "file": "Human Target S00E01 Pilot- Original Cast.mp4",
+              "name": "Human Target S00E01 Pilot- Original Cast",
+              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S00E01%20Pilot-%20Original%20Cast.mp4",
+              "seconds": 2965,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 153
             }
           ]
         },
@@ -88,7 +89,7 @@
           "airdate": "1966-09-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -98,6 +99,7 @@
             "seconds": 2895,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": [
@@ -120,9 +122,9 @@
           "number": 3,
           "name": "Operation Rogosh",
           "airdate": "1966-10-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -132,31 +134,18 @@
             "seconds": 2671,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 272
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 1x03 - Opération Rogosh (Operation Rogosh).mp4",
-              "name": "Mission Impossible - 1x03 - Opération Rogosh (Operation Rogosh)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%201x03%20-%20Op%C3%A9ration%20Rogosh%20(Operation%20Rogosh).mp4",
-              "seconds": 3029,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 818
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Old Man Out (1)",
           "airdate": "1966-10-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -166,11 +155,12 @@
             "seconds": 2769,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -180,6 +170,7 @@
               "seconds": 2891,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 356
             }
           ]
@@ -188,23 +179,37 @@
           "number": 5,
           "name": "Old Man Out (2)",
           "airdate": "1966-10-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 1x05 - Les Balladins En Liberté (Partie 2).mp4",
-            "name": "Mission Impossible - 1x05 - Les Balladins En Liberté (Partie 2)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%201x05%20-%20Les%20Balladins%20En%20Libert%C3%A9%20(Partie%202).mp4",
-            "seconds": 2904,
+            "item": "an-tt-s-02-e-01-i-p",
+            "itemTitle": "Human Target (1992) (TV Series)",
+            "file": "Human Target S01E05 Dead Head.mp4",
+            "name": "Human Target S01E05 Dead Head",
+            "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E05%20Dead%20Head.mp4",
+            "seconds": 2632,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 356
+            "sizeMB": 615
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible - 1x05 - Les Balladins En Liberté (Partie 2).mp4",
+              "name": "Mission Impossible - 1x05 - Les Balladins En Liberté (Partie 2)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%201x05%20-%20Les%20Balladins%20En%20Libert%C3%A9%20(Partie%202).mp4",
+              "seconds": 2904,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 356
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -214,20 +219,8 @@
               "seconds": 2733,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 238
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S01E05 Dead Head.mp4",
-              "name": "Human Target S01E05 Dead Head",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E05%20Dead%20Head.mp4",
-              "seconds": 2632,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 615
             }
           ]
         },
@@ -237,7 +230,7 @@
           "airdate": "1966-10-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -247,11 +240,12 @@
             "seconds": 2871,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 354
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -261,6 +255,7 @@
               "seconds": 2747,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 397
             }
           ]
@@ -269,23 +264,37 @@
           "number": 7,
           "name": "Wheels",
           "airdate": "1966-10-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible 20 Ans Après - 1x07 - Le Trafiquant (The Cattle King).mp4",
-            "name": "Mission Impossible 20 Ans Après - 1x07 - Le Trafiquant (The Cattle King)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x07%20-%20Le%20Trafiquant%20(The%20Cattle%20King).mp4",
-            "seconds": 2743,
+            "item": "an-tt-s-02-e-01-i-p",
+            "itemTitle": "Human Target (1992) (TV Series)",
+            "file": "Human Target S01E07 Salvage and Reclamation.mp4",
+            "name": "Human Target S01E07 Salvage and Reclamation",
+            "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E07%20Salvage%20and%20Reclamation.mp4",
+            "seconds": 2641,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 397
+            "sizeMB": 596
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 1x07 - Le Trafiquant (The Cattle King).mp4",
+              "name": "Mission Impossible 20 Ans Après - 1x07 - Le Trafiquant (The Cattle King)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x07%20-%20Le%20Trafiquant%20(The%20Cattle%20King).mp4",
+              "seconds": 2743,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 397
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -295,20 +304,8 @@
               "seconds": 2893,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 356
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S01E07 Salvage and Reclamation.mp4",
-              "name": "Human Target S01E07 Salvage and Reclamation",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E07%20Salvage%20and%20Reclamation.mp4",
-              "seconds": 2641,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 596
             }
           ]
         },
@@ -318,7 +315,7 @@
           "airdate": "1966-11-05",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -328,11 +325,12 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 348
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -342,6 +340,7 @@
               "seconds": 2780,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 280
             }
           ]
@@ -352,7 +351,7 @@
           "airdate": "1966-11-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -362,22 +361,10 @@
             "seconds": 2894,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x09 - Le Spectre  (The Haunting).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x09 - Le Spectre  (The Haunting)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x09%20-%20Le%20Spectre%20%20(The%20Haunting).mp4",
-              "seconds": 2779,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 277
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -390,6 +377,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 566
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 1x09 - Le Spectre  (The Haunting).mp4",
+              "name": "Mission Impossible 20 Ans Après - 1x09 - Le Spectre  (The Haunting)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x09%20-%20Le%20Spectre%20%20(The%20Haunting).mp4",
+              "seconds": 2779,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 277
             }
           ]
         },
@@ -397,46 +398,34 @@
           "number": 10,
           "name": "The Carriers",
           "airdate": "1966-11-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible 20 Ans Après - 1x10 - Les Lions d'Or (The Lions).mp4",
-            "name": "Mission Impossible 20 Ans Après - 1x10 - Les Lions d'Or (The Lions)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x10%20-%20Les%20Lions%20d'Or%20(The%20Lions).mp4",
-            "seconds": 2818,
+            "item": "an-tt-s-02-e-01-i-p",
+            "itemTitle": "Human Target (1992) (TV Series)",
+            "file": "Human Target S01E10 Tanarak.mp4",
+            "name": "Human Target S01E10 Tanarak",
+            "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E10%20Tanarak.mp4",
+            "seconds": 2590,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 391
+            "sizeMB": 577
           },
           "alternates": [
             {
-              "conf": 0.75,
+              "conf": 0.55,
               "why": "S/E in filename",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S01E10 Tanarak.mp4",
-              "name": "Human Target S01E10 Tanarak",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E10%20Tanarak.mp4",
-              "seconds": 2590,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 577
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 1x10 - Meurtre En Différé (The Carriers).mp4",
-              "name": "Mission Impossible - 1x10 - Meurtre En Différé (The Carriers)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%201x10%20-%20Meurtre%20En%20Diff%C3%A9r%C3%A9%20(The%20Carriers).mp4",
-              "seconds": 3029,
+              "file": "Mission Impossible 20 Ans Après - 1x10 - Les Lions d'Or (The Lions).mp4",
+              "name": "Mission Impossible 20 Ans Après - 1x10 - Les Lions d'Or (The Lions)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x10%20-%20Les%20Lions%20d'Or%20(The%20Lions).mp4",
+              "seconds": 2818,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 819
+              "langRisk": true,
+              "sizeMB": 391
             }
           ]
         },
@@ -444,9 +433,9 @@
           "number": 11,
           "name": "Zubrovnik's Ghost",
           "airdate": "1966-11-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -456,6 +445,7 @@
             "seconds": 2816,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 400
           },
           "alternates": []
@@ -464,23 +454,37 @@
           "number": 12,
           "name": "Fakeout",
           "airdate": "1966-12-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible 20 Ans Après - 1x12 - Les Affres du Pouvoir (The Fortune).mp4",
-            "name": "Mission Impossible 20 Ans Après - 1x12 - Les Affres du Pouvoir (The Fortune)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x12%20-%20Les%20Affres%20du%20Pouvoir%20(The%20Fortune).mp4",
-            "seconds": 2838,
+            "item": "an-tt-s-02-e-01-i-p",
+            "itemTitle": "Human Target (1992) (TV Series)",
+            "file": "Human Target S01E12 Christopher Chance.mp4",
+            "name": "Human Target S01E12 Christopher Chance",
+            "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E12%20Christopher%20Chance.mp4",
+            "seconds": 2647,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 409
+            "sizeMB": 519
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 1x12 - Les Affres du Pouvoir (The Fortune).mp4",
+              "name": "Mission Impossible 20 Ans Après - 1x12 - Les Affres du Pouvoir (The Fortune)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x12%20-%20Les%20Affres%20du%20Pouvoir%20(The%20Fortune).mp4",
+              "seconds": 2838,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 409
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -490,20 +494,8 @@
               "seconds": 2866,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 352
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S01E12 Christopher Chance.mp4",
-              "name": "Human Target S01E12 Christopher Chance",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E12%20Christopher%20Chance.mp4",
-              "seconds": 2647,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 519
             }
           ]
         },
@@ -513,7 +505,7 @@
           "airdate": "1966-12-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -523,11 +515,12 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 357
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -537,6 +530,7 @@
               "seconds": 2801,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 401
             }
           ]
@@ -547,7 +541,7 @@
           "airdate": "1966-12-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -557,11 +551,12 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 355
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -571,6 +566,7 @@
               "seconds": 2888,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 409
             }
           ]
@@ -581,7 +577,7 @@
           "airdate": "1967-01-07",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -591,11 +587,12 @@
             "seconds": 2895,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -605,20 +602,8 @@
               "seconds": 2941,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 203
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Legacy\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x05 - Le Legs  (The Legacy).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x05 - Le Legs  (The Legacy)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x05%20-%20Le%20Legs%20%20(The%20Legacy).mp4",
-              "seconds": 2733,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 238
             }
           ]
         },
@@ -628,7 +613,7 @@
           "airdate": "1967-01-14",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -638,11 +623,12 @@
             "seconds": 2892,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -652,6 +638,7 @@
               "seconds": 2822,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 217
             }
           ]
@@ -662,7 +649,7 @@
           "airdate": "1967-01-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -672,11 +659,12 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -686,6 +674,7 @@
               "seconds": 2811,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 399
             }
           ]
@@ -696,7 +685,7 @@
           "airdate": "1967-01-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -706,11 +695,12 @@
             "seconds": 2895,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 100
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -720,20 +710,8 @@
               "seconds": 2779,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 388
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Trial\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 2x24 - Jugé par Haine (Trial by Fury).mp4",
-              "name": "Mission Impossible - 2x24 - Jugé par Haine (Trial by Fury)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%202x24%20-%20Jug%C3%A9%20par%20Haine%20(Trial%20by%20Fury).mp4",
-              "seconds": 2826,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 390
             }
           ]
         },
@@ -743,7 +721,7 @@
           "airdate": "1967-02-04",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -753,11 +731,12 @@
             "seconds": 2888,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 355
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -767,6 +746,7 @@
               "seconds": 2831,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 409
             }
           ]
@@ -777,7 +757,7 @@
           "airdate": "1967-02-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -787,6 +767,7 @@
             "seconds": 2896,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 349
           },
           "alternates": []
@@ -797,7 +778,7 @@
           "airdate": "1967-02-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -807,6 +788,7 @@
             "seconds": 2892,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": []
@@ -817,7 +799,7 @@
           "airdate": "1967-02-25",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -827,6 +809,7 @@
             "seconds": 2893,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": []
@@ -837,7 +820,7 @@
           "airdate": "1967-03-04",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -847,6 +830,7 @@
             "seconds": 2896,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 356
           },
           "alternates": []
@@ -857,7 +841,7 @@
           "airdate": "1967-03-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -867,6 +851,7 @@
             "seconds": 2887,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 355
           },
           "alternates": []
@@ -877,7 +862,7 @@
           "airdate": "1967-03-25",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -887,6 +872,7 @@
             "seconds": 2866,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 352
           },
           "alternates": []
@@ -897,7 +883,7 @@
           "airdate": "1967-04-01",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -907,6 +893,7 @@
             "seconds": 2892,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 100
           },
           "alternates": []
@@ -917,7 +904,7 @@
           "airdate": "1967-04-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -927,6 +914,7 @@
             "seconds": 3029,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 819
           },
           "alternates": []
@@ -937,7 +925,7 @@
           "airdate": "1967-04-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -947,6 +935,7 @@
             "seconds": 2896,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 101
           },
           "alternates": []
@@ -962,7 +951,7 @@
           "airdate": "1967-09-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -972,11 +961,12 @@
             "seconds": 2862,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 375
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -986,6 +976,7 @@
               "seconds": 2913,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 210
             }
           ]
@@ -996,7 +987,7 @@
           "airdate": "1967-09-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1006,22 +997,10 @@
             "seconds": 2879,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 400
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 2x02 - Le Serpent d'Or (Part 2) (The Golden Serpent [2-2].mp4",
-              "name": "Mission Impossible 20 Ans Après - 2x02 - Le Serpent d'Or (Part 2) (The Golden Serpent [2-2]",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x02%20-%20Le%20Serpent%20d'Or%20(Part%202)%20(The%20Golden%20Serpent%20%5B2-2%5D.mp4",
-              "seconds": 2776,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 216
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -1034,6 +1013,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 584
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 2x02 - Le Serpent d'Or (Part 2) (The Golden Serpent [2-2].mp4",
+              "name": "Mission Impossible 20 Ans Après - 2x02 - Le Serpent d'Or (Part 2) (The Golden Serpent [2-2]",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x02%20-%20Le%20Serpent%20d'Or%20(Part%202)%20(The%20Golden%20Serpent%20%5B2-2%5D.mp4",
+              "seconds": 2776,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 216
             }
           ]
         },
@@ -1041,9 +1034,9 @@
           "number": 3,
           "name": "The Survivors",
           "airdate": "1967-09-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1053,23 +1046,10 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 400
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 2x03 - Les Survivants (The Survivors).mp4",
-              "name": "Mission Impossible - 2x03 - Les Survivants (The Survivors)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%202x03%20-%20Les%20Survivants%20(The%20Survivors).mp4",
-              "seconds": 2873,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 399
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -1077,7 +1057,7 @@
           "airdate": "1967-10-01",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1087,22 +1067,10 @@
             "seconds": 2888,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 313
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 2x04 - Soirée de Gala (Command Performance).mp4",
-              "name": "Mission Impossible 20 Ans Après - 2x04 - Soirée de Gala (Command Performance)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x04%20-%20Soir%C3%A9e%20de%20Gala%20(Command%20Performance).mp4",
-              "seconds": 2885,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 198
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -1115,6 +1083,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 615
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 2x04 - Soirée de Gala (Command Performance).mp4",
+              "name": "Mission Impossible 20 Ans Après - 2x04 - Soirée de Gala (Command Performance)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x04%20-%20Soir%C3%A9e%20de%20Gala%20(Command%20Performance).mp4",
+              "seconds": 2885,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 198
             }
           ]
         },
@@ -1124,7 +1106,7 @@
           "airdate": "1967-10-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1134,6 +1116,7 @@
             "seconds": 2864,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 397
           },
           "alternates": [
@@ -1158,7 +1141,7 @@
           "airdate": "1967-10-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1168,22 +1151,10 @@
             "seconds": 2853,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 395
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 2x06 - Astrologie et Art Militaire (War Games).mp4",
-              "name": "Mission Impossible 20 Ans Après - 2x06 - Astrologie et Art Militaire (War Games)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x06%20-%20Astrologie%20et%20Art%20Militaire%20(War%20Games).mp4",
-              "seconds": 2863,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 400
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -1196,6 +1167,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 605
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 2x06 - Astrologie et Art Militaire (War Games).mp4",
+              "name": "Mission Impossible 20 Ans Après - 2x06 - Astrologie et Art Militaire (War Games)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x06%20-%20Astrologie%20et%20Art%20Militaire%20(War%20Games).mp4",
+              "seconds": 2863,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 400
             }
           ]
         },
@@ -1203,46 +1188,34 @@
           "number": 7,
           "name": "Operation Heart",
           "airdate": "1967-10-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible 20 Ans Après - 2x07 - Sos Planète en Danger (Target Earth).mp4",
-            "name": "Mission Impossible 20 Ans Après - 2x07 - Sos Planète en Danger (Target Earth)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x07%20-%20Sos%20Plan%C3%A8te%20en%20Danger%20(Target%20Earth).mp4",
-            "seconds": 2884,
+            "item": "an-tt-s-02-e-01-i-p",
+            "itemTitle": "Human Target (1992) (TV Series)",
+            "file": "Human Target S02E07 A Problem Like Maria, Part 1.mp4",
+            "name": "Human Target S02E07 A Problem Like Maria, Part 1",
+            "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S02E07%20A%20Problem%20Like%20Maria%2C%20Part%201.mp4",
+            "seconds": 2633,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 402
+            "sizeMB": 625
           },
           "alternates": [
             {
-              "conf": 0.75,
+              "conf": 0.55,
               "why": "S/E in filename",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S02E07 A Problem Like Maria, Part 1.mp4",
-              "name": "Human Target S02E07 A Problem Like Maria, Part 1",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S02E07%20A%20Problem%20Like%20Maria%2C%20Part%201.mp4",
-              "seconds": 2633,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 625
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 2x07 - Operation Coeur (Operation Heart).mp4",
-              "name": "Mission Impossible - 2x07 - Operation Coeur (Operation Heart)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%202x07%20-%20Operation%20Coeur%20(Operation%20Heart).mp4",
-              "seconds": 2868,
+              "file": "Mission Impossible 20 Ans Après - 2x07 - Sos Planète en Danger (Target Earth).mp4",
+              "name": "Mission Impossible 20 Ans Après - 2x07 - Sos Planète en Danger (Target Earth)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x07%20-%20Sos%20Plan%C3%A8te%20en%20Danger%20(Target%20Earth).mp4",
+              "seconds": 2884,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 398
+              "langRisk": true,
+              "sizeMB": 402
             }
           ]
         },
@@ -1252,7 +1225,7 @@
           "airdate": "1967-10-29",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1262,11 +1235,12 @@
             "seconds": 2869,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 398
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1276,6 +1250,7 @@
               "seconds": 2892,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 402
             }
           ]
@@ -1286,7 +1261,7 @@
           "airdate": "1967-11-05",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1296,11 +1271,12 @@
             "seconds": 2860,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 399
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1310,6 +1286,7 @@
               "seconds": 2883,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 244
             }
           ]
@@ -1320,7 +1297,7 @@
           "airdate": "1967-11-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1330,22 +1307,10 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 402
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 2x10 - Pour L'Amour de L'Art (For Art's Sake).mp4",
-              "name": "Mission Impossible 20 Ans Après - 2x10 - Pour L'Amour de L'Art (For Art's Sake)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x10%20-%20Pour%20L'Amour%20de%20L'Art%20(For%20Art's%20Sake).mp4",
-              "seconds": 2858,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 399
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -1358,6 +1323,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 568
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 2x10 - Pour L'Amour de L'Art (For Art's Sake).mp4",
+              "name": "Mission Impossible 20 Ans Après - 2x10 - Pour L'Amour de L'Art (For Art's Sake)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x10%20-%20Pour%20L'Amour%20de%20L'Art%20(For%20Art's%20Sake).mp4",
+              "seconds": 2858,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 399
             }
           ]
         },
@@ -1367,7 +1346,7 @@
           "airdate": "1967-11-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1377,11 +1356,12 @@
             "seconds": 2873,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 398
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1391,6 +1371,7 @@
               "seconds": 2878,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 402
             }
           ]
@@ -1401,7 +1382,7 @@
           "airdate": "1967-11-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1411,22 +1392,10 @@
             "seconds": 2871,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 398
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 2x12 - Le Culte de l'Oiseau de Fer (Cargo Cult).mp4",
-              "name": "Mission Impossible 20 Ans Après - 2x12 - Le Culte de l'Oiseau de Fer (Cargo Cult)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x12%20-%20Le%20Culte%20de%20l'Oiseau%20de%20Fer%20(Cargo%20Cult).mp4",
-              "seconds": 2882,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 403
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -1439,6 +1408,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 537
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
+              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
+              "file": "Mission Impossible 20 Ans Après - 2x12 - Le Culte de l'Oiseau de Fer (Cargo Cult).mp4",
+              "name": "Mission Impossible 20 Ans Après - 2x12 - Le Culte de l'Oiseau de Fer (Cargo Cult)",
+              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x12%20-%20Le%20Culte%20de%20l'Oiseau%20de%20Fer%20(Cargo%20Cult).mp4",
+              "seconds": 2882,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 403
             }
           ]
         },
@@ -1448,7 +1431,7 @@
           "airdate": "1967-12-03",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1458,11 +1441,12 @@
             "seconds": 2878,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 399
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1472,6 +1456,7 @@
               "seconds": 2881,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 402
             }
           ]
@@ -1482,7 +1467,7 @@
           "airdate": "1967-12-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1492,11 +1477,12 @@
             "seconds": 2856,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 396
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1506,6 +1492,7 @@
               "seconds": 2881,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 402
             }
           ]
@@ -1516,7 +1503,7 @@
           "airdate": "1967-12-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1526,11 +1513,12 @@
             "seconds": 2863,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 399
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1540,6 +1528,7 @@
               "seconds": 2893,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 404
             }
           ]
@@ -1550,7 +1539,7 @@
           "airdate": "1968-01-07",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1560,23 +1549,10 @@
             "seconds": 2859,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 396
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Spy\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x14 - L'Espion (Spy).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x14 - L'Espion (Spy)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x14%20-%20L'Espion%20(Spy).mp4",
-              "seconds": 2888,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 409
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 17,
@@ -1584,7 +1560,7 @@
           "airdate": "1968-01-14",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1594,6 +1570,7 @@
             "seconds": 2850,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 397
           },
           "alternates": []
@@ -1604,7 +1581,7 @@
           "airdate": "1968-01-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1614,6 +1591,7 @@
             "seconds": 2867,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 397
           },
           "alternates": []
@@ -1624,7 +1602,7 @@
           "airdate": "1968-01-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1634,23 +1612,10 @@
             "seconds": 2860,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 399
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Condemned\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x04 -Le Condamné à Mort  (The Condemned).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x04 -Le Condamné à Mort  (The Condemned)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x04%20-Le%20Condamn%C3%A9%20%C3%A0%20Mort%20%20(The%20Condemned).mp4",
-              "seconds": 2769,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 384
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 20,
@@ -1658,7 +1623,7 @@
           "airdate": "1968-02-04",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1668,6 +1633,7 @@
             "seconds": 3005,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 415
           },
           "alternates": []
@@ -1678,7 +1644,7 @@
           "airdate": "1968-02-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1688,6 +1654,7 @@
             "seconds": 2872,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 398
           },
           "alternates": []
@@ -1698,7 +1665,7 @@
           "airdate": "1968-02-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1708,6 +1675,7 @@
             "seconds": 2874,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 400
           },
           "alternates": []
@@ -1718,7 +1686,7 @@
           "airdate": "1968-03-03",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1728,6 +1696,7 @@
             "seconds": 2870,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 400
           },
           "alternates": []
@@ -1736,9 +1705,9 @@
           "number": 24,
           "name": "Trial by Fury",
           "airdate": "1968-03-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1748,6 +1717,7 @@
             "seconds": 2826,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 390
           },
           "alternates": []
@@ -1758,7 +1728,7 @@
           "airdate": "1968-03-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1768,6 +1738,7 @@
             "seconds": 2875,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 397
           },
           "alternates": []
@@ -1783,7 +1754,7 @@
           "airdate": "1968-09-29",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1793,6 +1764,7 @@
             "seconds": 2901,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 400
           },
           "alternates": []
@@ -1803,7 +1775,7 @@
           "airdate": "1968-10-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1813,6 +1785,7 @@
             "seconds": 2604,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 363
           },
           "alternates": []
@@ -1823,7 +1796,7 @@
           "airdate": "1968-10-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1833,11 +1806,12 @@
             "seconds": 2607,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 363
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1847,6 +1821,7 @@
               "seconds": 2607,
               "format": "h.264 IA",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 257
             }
           ]
@@ -1857,7 +1832,7 @@
           "airdate": "1968-10-27",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1867,6 +1842,7 @@
             "seconds": 2895,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 401
           },
           "alternates": []
@@ -1877,7 +1853,7 @@
           "airdate": "1968-11-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1887,6 +1863,7 @@
             "seconds": 2885,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 234
           },
           "alternates": []
@@ -1897,7 +1874,7 @@
           "airdate": "1968-11-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1907,6 +1884,7 @@
             "seconds": 2864,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 364
           },
           "alternates": []
@@ -1917,7 +1895,7 @@
           "airdate": "1968-11-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1927,6 +1905,7 @@
             "seconds": 3038,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 824
           },
           "alternates": []
@@ -1935,20 +1914,8 @@
           "number": 8,
           "name": "The Diplomat",
           "airdate": "1968-12-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 3x08 - Le Diplomate (The Diplomat).mp4",
-            "name": "Mission Impossible - 3x08 - Le Diplomate (The Diplomat)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%203x08%20-%20Le%20Diplomate%20(The%20Diplomat).mp4",
-            "seconds": 2893,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 402
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1957,7 +1924,7 @@
           "airdate": "1968-12-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -1967,23 +1934,10 @@
             "seconds": 2864,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 301
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Play\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 5x12 - Double Jeu (Squeeze Play).mp4",
-              "name": "Mission Impossible - 5x12 - Double Jeu (Squeeze Play)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%205x12%20-%20Double%20Jeu%20(Squeeze%20Play).mp4",
-              "seconds": 2874,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 382
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -1991,7 +1945,7 @@
           "airdate": "1968-12-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2001,6 +1955,7 @@
             "seconds": 2866,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 251
           },
           "alternates": []
@@ -2011,7 +1966,7 @@
           "airdate": "1968-12-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2021,6 +1976,7 @@
             "seconds": 2885,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 377
           },
           "alternates": []
@@ -2031,7 +1987,7 @@
           "airdate": "1969-01-05",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2041,6 +1997,7 @@
             "seconds": 2874,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 376
           },
           "alternates": []
@@ -2059,7 +2016,7 @@
           "airdate": "1969-01-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2069,6 +2026,7 @@
             "seconds": 2873,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 418
           },
           "alternates": []
@@ -2079,7 +2037,7 @@
           "airdate": "1969-01-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2089,6 +2047,7 @@
             "seconds": 2862,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 416
           },
           "alternates": []
@@ -2099,7 +2058,7 @@
           "airdate": "1969-02-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2109,6 +2068,7 @@
             "seconds": 2874,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 396
           },
           "alternates": []
@@ -2117,9 +2077,9 @@
           "number": 17,
           "name": "Doomsday",
           "airdate": "1969-02-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2129,6 +2089,7 @@
             "seconds": 2872,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 321
           },
           "alternates": []
@@ -2137,20 +2098,8 @@
           "number": 18,
           "name": "Live Bait",
           "airdate": "1969-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 3x18 - L'Appât Vivant (Live Bait).mp4",
-            "name": "Mission Impossible - 3x18 - L'Appât Vivant (Live Bait)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%203x18%20-%20L'App%C3%A2t%20Vivant%20(Live%20Bait).mp4",
-            "seconds": 2845,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 321
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2159,7 +2108,7 @@
           "airdate": "1969-03-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2169,6 +2118,7 @@
             "seconds": 2898,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 122
           },
           "alternates": []
@@ -2179,7 +2129,7 @@
           "airdate": "1969-03-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2189,6 +2139,7 @@
             "seconds": 2896,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
           "alternates": []
@@ -2199,7 +2150,7 @@
           "airdate": "1969-03-23",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2209,6 +2160,7 @@
             "seconds": 2861,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 413
           },
           "alternates": []
@@ -2219,7 +2171,7 @@
           "airdate": "1969-03-30",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2229,6 +2181,7 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 366
           },
           "alternates": []
@@ -2239,7 +2192,7 @@
           "airdate": "1969-04-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2249,6 +2202,7 @@
             "seconds": 2890,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 321
           },
           "alternates": []
@@ -2259,7 +2213,7 @@
           "airdate": "1969-04-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2269,6 +2223,7 @@
             "seconds": 2857,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 363
           },
           "alternates": []
@@ -2279,7 +2234,7 @@
           "airdate": "1969-04-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2289,6 +2244,7 @@
             "seconds": 2844,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 361
           },
           "alternates": []
@@ -2304,7 +2260,7 @@
           "airdate": "1969-09-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2314,6 +2270,7 @@
             "seconds": 3037,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 810
           },
           "alternates": []
@@ -2322,9 +2279,9 @@
           "number": 2,
           "name": "The Numbers Game (aka The Key)",
           "airdate": "1969-10-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.7,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2334,6 +2291,7 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 366
           },
           "alternates": []
@@ -2344,7 +2302,7 @@
           "airdate": "1969-10-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2354,6 +2312,7 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -2364,7 +2323,7 @@
           "airdate": "1969-10-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2374,6 +2333,7 @@
             "seconds": 2839,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 376
           },
           "alternates": []
@@ -2384,7 +2344,7 @@
           "airdate": "1969-10-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2394,6 +2354,7 @@
             "seconds": 2835,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 376
           },
           "alternates": []
@@ -2404,7 +2365,7 @@
           "airdate": "1969-11-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2414,6 +2375,7 @@
             "seconds": 2863,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 364
           },
           "alternates": []
@@ -2422,9 +2384,9 @@
           "number": 7,
           "name": "The Double Circle",
           "airdate": "1969-11-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2434,31 +2396,18 @@
             "seconds": 2884,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 377
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Double Circle\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x09 - Le Bouddha de Pékin (The Double Circle).mp4",
-              "name": "Mission Impossible - 4x09 - Le Bouddha de Pékin (The Double Circle)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x09%20-%20Le%20Bouddha%20de%20P%C3%A9kin%20(The%20Double%20Circle).mp4",
-              "seconds": 2856,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 379
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Submarine",
           "airdate": "1969-11-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2468,57 +2417,18 @@
             "seconds": 2885,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 321
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Submarine\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x18 - Le Sous-marin (Submarine).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x18 - Le Sous-marin (Submarine)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x18%20-%20Le%20Sous-marin%20(Submarine).mp4",
-              "seconds": 2779,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 388
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Submarine\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x16 - Le Sous-Marin (Submarine).mp4",
-              "name": "Mission Impossible - 4x16 - Le Sous-Marin (Submarine)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x16%20-%20Le%20Sous-Marin%20(Submarine).mp4",
-              "seconds": 2851,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 378
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Submarine\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x07 - Le Robot (Submarine).mp4",
-              "name": "Mission Impossible - 4x07 - Le Robot (Submarine)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x07%20-%20Le%20Robot%20(Submarine).mp4",
-              "seconds": 2884,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 377
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
           "name": "Robot",
           "airdate": "1969-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2528,6 +2438,7 @@
             "seconds": 2856,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 379
           },
           "alternates": []
@@ -2536,29 +2447,17 @@
           "number": 10,
           "name": "Mastermind",
           "airdate": "1969-11-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Mastermind\" (0.95)",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 4x08 - Le Successeur (Mastermind).mp4",
-            "name": "Mission Impossible - 4x08 - Le Successeur (Mastermind)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x08%20-%20Le%20Successeur%20(Mastermind).mp4",
-            "seconds": 2885,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 321
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "The Brothers",
           "airdate": "1969-12-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2568,6 +2467,7 @@
             "seconds": 2850,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 378
           },
           "alternates": []
@@ -2576,9 +2476,9 @@
           "number": 12,
           "name": "Time Bomb",
           "airdate": "1969-12-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2588,31 +2488,18 @@
             "seconds": 3036,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 824
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Time Bomb\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x11 - Attentat Nucléaire  (Time Bomb)..mp4",
-              "name": "Mission Impossible - 4x11 - Attentat Nucléaire  (Time Bomb).",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x11%20-%20Attentat%20Nucl%C3%A9aire%20%20(Time%20Bomb)..mp4",
-              "seconds": 2850,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 378
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "The Amnesiac",
           "airdate": "1969-12-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2622,31 +2509,18 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Amnesiac\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x12 - Amnésie (The Amnesiac).mp4",
-              "name": "Mission Impossible - 4x12 - Amnésie (The Amnesiac)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x12%20-%20Amn%C3%A9sie%20(The%20Amnesiac).mp4",
-              "seconds": 3036,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 824
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
           "name": "The Falcon (1)",
           "airdate": "1970-01-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2656,31 +2530,18 @@
             "seconds": 2861,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Falcon (1)\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x13 - Le Faucon (Partie 1) The Falcon (Part 1).mp4",
-              "name": "Mission Impossible - 4x13 - Le Faucon (Partie 1) The Falcon (Part 1)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x13%20-%20Le%20Faucon%20(Partie%201)%20The%20Falcon%20(Part%201).mp4",
-              "seconds": 2882,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 382
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
           "name": "The Falcon (2)",
           "airdate": "1970-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2690,31 +2551,18 @@
             "seconds": 2877,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Falcon (2)\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x14 -  Le Faucon (Partie 2) The Falcon (Part 2).mp4",
-              "name": "Mission Impossible - 4x14 -  Le Faucon (Partie 2) The Falcon (Part 2)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x14%20-%20%20Le%20Faucon%20(Partie%202)%20The%20Falcon%20(Part%202).mp4",
-              "seconds": 2861,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 380
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,
           "name": "The Falcon (3)",
           "airdate": "1970-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2724,23 +2572,10 @@
             "seconds": 2851,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 378
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Falcon (3)\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible - 4x15 - Le Faucon (Partie 3) The Falcon (Part 3).mp4",
-              "name": "Mission Impossible - 4x15 - Le Faucon (Partie 3) The Falcon (Part 3)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x15%20-%20Le%20Faucon%20(Partie%203)%20The%20Falcon%20(Part%203).mp4",
-              "seconds": 2877,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 381
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 17,
@@ -2748,7 +2583,7 @@
           "airdate": "1970-01-25",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2758,6 +2593,7 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -2766,9 +2602,9 @@
           "number": 18,
           "name": "Gitano (aka Toys)",
           "airdate": "1970-02-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2778,6 +2614,7 @@
             "seconds": 2881,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -2788,7 +2625,7 @@
           "airdate": "1970-02-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2798,6 +2635,7 @@
             "seconds": 2925,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 59
           },
           "alternates": []
@@ -2806,20 +2644,8 @@
           "number": 20,
           "name": "Terror",
           "airdate": "1970-02-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 4x20 - La Terreur (Terror).mp4",
-            "name": "Mission Impossible - 4x20 - La Terreur (Terror)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%204x20%20-%20La%20Terreur%20(Terror).mp4",
-            "seconds": 3037,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 811
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2828,7 +2654,7 @@
           "airdate": "1970-02-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2838,6 +2664,7 @@
             "seconds": 2881,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -2848,7 +2675,7 @@
           "airdate": "1970-03-01",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2858,6 +2685,7 @@
             "seconds": 2892,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -2868,7 +2696,7 @@
           "airdate": "1970-03-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2878,6 +2706,7 @@
             "seconds": 2911,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 60
           },
           "alternates": []
@@ -2888,7 +2717,7 @@
           "airdate": "1970-03-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2898,6 +2727,7 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 383
           },
           "alternates": []
@@ -2908,7 +2738,7 @@
           "airdate": "1970-03-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2918,6 +2748,7 @@
             "seconds": 2896,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -2928,7 +2759,7 @@
           "airdate": "1970-03-29",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2938,6 +2769,7 @@
             "seconds": 3035,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 817
           },
           "alternates": []
@@ -2953,7 +2785,7 @@
           "airdate": "1970-09-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2963,23 +2795,10 @@
             "seconds": 3016,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 220
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Killer\" (0.95)",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 1x01 - Le Tueur (The Killer).mp4",
-              "name": "Mission Impossible 20 Ans Après - 1x01 - Le Tueur (The Killer)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%201x01%20-%20Le%20Tueur%20(The%20Killer).mp4",
-              "seconds": 2921,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 404
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -2987,7 +2806,7 @@
           "airdate": "1970-09-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -2997,6 +2816,7 @@
             "seconds": 2858,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 379
           },
           "alternates": []
@@ -3007,7 +2827,7 @@
           "airdate": "1970-10-03",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3017,6 +2837,7 @@
             "seconds": 2863,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
           "alternates": []
@@ -3027,7 +2848,7 @@
           "airdate": "1970-10-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3037,6 +2858,7 @@
             "seconds": 2875,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3047,7 +2869,7 @@
           "airdate": "1970-10-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3057,6 +2879,7 @@
             "seconds": 2865,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
           "alternates": []
@@ -3067,7 +2890,7 @@
           "airdate": "1970-10-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3077,6 +2900,7 @@
             "seconds": 2863,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
           "alternates": []
@@ -3087,7 +2911,7 @@
           "airdate": "1970-10-31",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3097,6 +2921,7 @@
             "seconds": 2869,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
           "alternates": []
@@ -3107,7 +2932,7 @@
           "airdate": "1970-11-07",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3117,6 +2942,7 @@
             "seconds": 2850,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 378
           },
           "alternates": []
@@ -3127,7 +2953,7 @@
           "airdate": "1970-11-14",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3137,6 +2963,7 @@
             "seconds": 2880,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3147,7 +2974,7 @@
           "airdate": "1970-11-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3157,6 +2984,7 @@
             "seconds": 2852,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 379
           },
           "alternates": []
@@ -3167,7 +2995,7 @@
           "airdate": "1970-11-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3177,6 +3005,7 @@
             "seconds": 2864,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
           "alternates": []
@@ -3185,9 +3014,9 @@
           "number": 12,
           "name": "Squeeze Play",
           "airdate": "1970-12-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3197,6 +3026,7 @@
             "seconds": 2874,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3207,7 +3037,7 @@
           "airdate": "1970-12-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3217,6 +3047,7 @@
             "seconds": 2852,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 379
           },
           "alternates": []
@@ -3227,7 +3058,7 @@
           "airdate": "1971-01-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3237,6 +3068,7 @@
             "seconds": 2877,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3247,7 +3079,7 @@
           "airdate": "1971-01-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3257,6 +3089,7 @@
             "seconds": 2855,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 379
           },
           "alternates": []
@@ -3267,7 +3100,7 @@
           "airdate": "1971-01-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3277,6 +3110,7 @@
             "seconds": 3019,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 216
           },
           "alternates": []
@@ -3287,7 +3121,7 @@
           "airdate": "1971-01-23",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3297,6 +3131,7 @@
             "seconds": 2848,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 378
           },
           "alternates": []
@@ -3307,7 +3142,7 @@
           "airdate": "1971-01-30",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3317,6 +3152,7 @@
             "seconds": 2861,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
           "alternates": []
@@ -3327,7 +3163,7 @@
           "airdate": "1971-02-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3337,6 +3173,7 @@
             "seconds": 2881,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3347,7 +3184,7 @@
           "airdate": "1971-02-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3357,6 +3194,7 @@
             "seconds": 2872,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
           "alternates": []
@@ -3367,7 +3205,7 @@
           "airdate": "1971-02-27",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3377,11 +3215,12 @@
             "seconds": 2869,
             "format": "h.264 IA",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3391,6 +3230,7 @@
               "seconds": 2869,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 380
             }
           ]
@@ -3401,7 +3241,7 @@
           "airdate": "1971-03-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3411,6 +3251,7 @@
             "seconds": 2862,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 380
           },
           "alternates": []
@@ -3421,7 +3262,7 @@
           "airdate": "1971-03-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3431,6 +3272,7 @@
             "seconds": 2876,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
           "alternates": []
@@ -3446,7 +3288,7 @@
           "airdate": "1971-09-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3456,6 +3298,7 @@
             "seconds": 2883,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3466,7 +3309,7 @@
           "airdate": "1971-09-25",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3476,6 +3319,7 @@
             "seconds": 2910,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3486,7 +3330,7 @@
           "airdate": "1971-10-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3496,6 +3340,7 @@
             "seconds": 2909,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -3506,7 +3351,7 @@
           "airdate": "1971-10-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3516,6 +3361,7 @@
             "seconds": 2913,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3526,7 +3372,7 @@
           "airdate": "1971-10-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3536,6 +3382,7 @@
             "seconds": 2900,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 385
           },
           "alternates": []
@@ -3546,7 +3393,7 @@
           "airdate": "1971-10-23",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3556,6 +3403,7 @@
             "seconds": 2911,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3566,7 +3414,7 @@
           "airdate": "1971-10-30",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3576,6 +3424,7 @@
             "seconds": 3056,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 816
           },
           "alternates": []
@@ -3586,7 +3435,7 @@
           "airdate": "1971-11-06",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3596,6 +3445,7 @@
             "seconds": 3057,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 816
           },
           "alternates": []
@@ -3606,7 +3456,7 @@
           "airdate": "1971-11-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3616,6 +3466,7 @@
             "seconds": 2911,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -3626,7 +3477,7 @@
           "airdate": "1971-11-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3636,6 +3487,7 @@
             "seconds": 2911,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3646,7 +3498,7 @@
           "airdate": "1971-11-27",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3656,6 +3508,7 @@
             "seconds": 2907,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -3666,7 +3519,7 @@
           "airdate": "1971-12-04",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3676,6 +3529,7 @@
             "seconds": 2670,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 355
           },
           "alternates": []
@@ -3686,7 +3540,7 @@
           "airdate": "1971-12-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3696,6 +3550,7 @@
             "seconds": 2908,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -3706,7 +3561,7 @@
           "airdate": "1971-12-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3716,11 +3571,12 @@
             "seconds": 2912,
             "format": "h.264 IA",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
               "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
               "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3730,6 +3586,7 @@
               "seconds": 2912,
               "format": "MPEG4",
               "playable": true,
+              "langRisk": true,
               "sizeMB": 386
             }
           ]
@@ -3740,7 +3597,7 @@
           "airdate": "1972-01-01",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3750,6 +3607,7 @@
             "seconds": 2915,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 298
           },
           "alternates": []
@@ -3760,7 +3618,7 @@
           "airdate": "1972-01-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3770,6 +3628,7 @@
             "seconds": 2913,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3780,7 +3639,7 @@
           "airdate": "1972-01-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3790,6 +3649,7 @@
             "seconds": 2889,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 383
           },
           "alternates": [
@@ -3814,7 +3674,7 @@
           "airdate": "1972-01-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3824,6 +3684,7 @@
             "seconds": 2879,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -3834,7 +3695,7 @@
           "airdate": "1972-01-29",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3844,6 +3705,7 @@
             "seconds": 2904,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -3854,7 +3716,7 @@
           "airdate": "1972-02-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3864,6 +3726,7 @@
             "seconds": 2889,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -3874,7 +3737,7 @@
           "airdate": "1972-02-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3884,6 +3747,7 @@
             "seconds": 2914,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3892,9 +3756,9 @@
           "number": 22,
           "name": "Trapped",
           "airdate": "1972-02-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3904,6 +3768,7 @@
             "seconds": 2899,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 385
           },
           "alternates": []
@@ -3919,7 +3784,7 @@
           "airdate": "1972-09-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3929,6 +3794,7 @@
             "seconds": 2903,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 385
           },
           "alternates": []
@@ -3939,7 +3805,7 @@
           "airdate": "1972-09-23",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3949,6 +3815,7 @@
             "seconds": 2913,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -3957,9 +3824,9 @@
           "number": 3,
           "name": "The Deal",
           "airdate": "1972-09-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3969,6 +3836,7 @@
             "seconds": 2900,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 385
           },
           "alternates": []
@@ -3979,7 +3847,7 @@
           "airdate": "1972-10-07",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -3989,6 +3857,7 @@
             "seconds": 2918,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -3997,9 +3866,9 @@
           "number": 5,
           "name": "TOD-5 (aka The Carrier)",
           "airdate": "1972-10-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4009,6 +3878,7 @@
             "seconds": 2913,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -4019,7 +3889,7 @@
           "airdate": "1972-10-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4029,6 +3899,7 @@
             "seconds": 2910,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -4037,20 +3908,8 @@
           "number": 7,
           "name": "Underground",
           "airdate": "1972-10-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 7x07 - Le Prix du Silence (Underground).mp4",
-            "name": "Mission Impossible - 7x07 - Le Prix du Silence (Underground)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%207x07%20-%20Le%20Prix%20du%20Silence%20(Underground).mp4",
-            "seconds": 2908,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 385
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4059,7 +3918,7 @@
           "airdate": "1972-11-04",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4069,6 +3928,7 @@
             "seconds": 2907,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -4079,7 +3939,7 @@
           "airdate": "1972-11-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4089,6 +3949,7 @@
             "seconds": 2915,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -4099,7 +3960,7 @@
           "airdate": "1972-11-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4109,6 +3970,7 @@
             "seconds": 2887,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 383
           },
           "alternates": []
@@ -4119,7 +3981,7 @@
           "airdate": "1972-12-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4129,6 +3991,7 @@
             "seconds": 2916,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -4139,7 +4002,7 @@
           "airdate": "1972-12-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4149,6 +4012,7 @@
             "seconds": 2898,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -4159,7 +4023,7 @@
           "airdate": "1972-12-22",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4169,6 +4033,7 @@
             "seconds": 2912,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -4179,7 +4044,7 @@
           "airdate": "1973-01-05",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4189,6 +4054,7 @@
             "seconds": 2890,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 381
           },
           "alternates": []
@@ -4199,7 +4065,7 @@
           "airdate": "1973-01-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4209,6 +4075,7 @@
             "seconds": 2883,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []
@@ -4219,7 +4086,7 @@
           "airdate": "1973-01-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4229,6 +4096,7 @@
             "seconds": 2916,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 387
           },
           "alternates": []
@@ -4239,7 +4107,7 @@
           "airdate": "1973-01-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4249,6 +4117,7 @@
             "seconds": 2915,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 386
           },
           "alternates": []
@@ -4259,7 +4128,7 @@
           "airdate": "1973-02-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4269,6 +4138,7 @@
             "seconds": 2841,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 377
           },
           "alternates": []
@@ -4279,7 +4149,7 @@
           "airdate": "1973-02-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4289,6 +4159,7 @@
             "seconds": 2890,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -4297,20 +4168,8 @@
           "number": 20,
           "name": "The Pendulum",
           "airdate": "1973-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-            "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-            "file": "Mission Impossible - 7x20 - Operation Crépuscule (The Pendulum).mp4",
-            "name": "Mission Impossible - 7x20 - Operation Crépuscule (The Pendulum)",
-            "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%20-%207x20%20-%20Operation%20Cr%C3%A9puscule%20(The%20Pendulum).mp4",
-            "seconds": 2818,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 374
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4319,7 +4178,7 @@
           "airdate": "1973-03-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4329,6 +4188,7 @@
             "seconds": 2896,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 384
           },
           "alternates": []
@@ -4339,7 +4199,7 @@
           "airdate": "1973-03-30",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
@@ -4349,6 +4209,7 @@
             "seconds": 2879,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 382
           },
           "alternates": []

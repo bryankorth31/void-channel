@@ -3,7 +3,7 @@
   "slug": "star-trek-enterprise",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-14T04:15:42.803Z",
+  "matchedAt": "2026-10-14T04:18:00.135Z",
   "tvmaze": {
     "id": 714,
     "name": "Star Trek: Enterprise",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 98,
-    "live": 30,
-    "review": 17,
-    "missing": 51,
-    "pct": 48
+    "live": 1,
+    "review": 30,
+    "missing": 67,
+    "pct": 32
   },
   "seasons": [
     {
@@ -26,29 +26,17 @@
           "number": 1,
           "name": "Broken Bow",
           "airdate": "2001-09-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 1x01 Salutations Vulcaines.mp4",
-            "name": "Star Trek Discovery 1x01 Salutations Vulcaines",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%201x01%20Salutations%20Vulcaines.mp4",
-            "seconds": 2556,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 368
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Broken Bow",
           "airdate": "2001-09-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -58,6 +46,7 @@
             "seconds": 2538,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 361
           },
           "alternates": []
@@ -66,9 +55,9 @@
           "number": 3,
           "name": "Fight or Flight",
           "airdate": "2001-10-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -78,6 +67,7 @@
             "seconds": 2541,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 323
           },
           "alternates": []
@@ -86,9 +76,9 @@
           "number": 4,
           "name": "Strange New World",
           "airdate": "2001-10-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -98,6 +88,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 308
           },
           "alternates": []
@@ -106,9 +97,9 @@
           "number": 5,
           "name": "Unexpected",
           "airdate": "2001-10-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -118,6 +109,7 @@
             "seconds": 2550,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 344
           },
           "alternates": []
@@ -128,7 +120,7 @@
           "airdate": "2001-10-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -138,6 +130,7 @@
             "seconds": 2671,
             "format": "h.264",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 268
           },
           "alternates": []
@@ -146,9 +139,9 @@
           "number": 7,
           "name": "The Andorian Incident",
           "airdate": "2001-10-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -158,6 +151,7 @@
             "seconds": 2547,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 344
           },
           "alternates": []
@@ -166,9 +160,9 @@
           "number": 8,
           "name": "Breaking the Ice",
           "airdate": "2001-11-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -178,6 +172,7 @@
             "seconds": 2552,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 330
           },
           "alternates": []
@@ -186,29 +181,17 @@
           "number": 9,
           "name": "Civilization",
           "airdate": "2001-11-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 1x09 Je M'Enfonce Dans La Forêt.mp4",
-            "name": "Star Trek Discovery 1x09 Je M'Enfonce Dans La Forêt",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%201x09%20Je%20M'Enfonce%20Dans%20La%20For%C3%AAt.mp4",
-            "seconds": 2853,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 391
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Fortunate Son",
           "airdate": "2001-11-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -218,6 +201,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 332
           },
           "alternates": []
@@ -226,9 +210,9 @@
           "number": 11,
           "name": "Cold Front",
           "airdate": "2001-11-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -238,6 +222,7 @@
             "seconds": 2553,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 305
           },
           "alternates": []
@@ -246,9 +231,9 @@
           "number": 12,
           "name": "Silent Enemy",
           "airdate": "2002-01-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -258,6 +243,7 @@
             "seconds": 2549,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 308
           },
           "alternates": []
@@ -266,9 +252,9 @@
           "number": 13,
           "name": "Dear Doctor",
           "airdate": "2002-01-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -278,31 +264,18 @@
             "seconds": 2552,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 332
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-              "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-              "file": "Star Trek Discovery 1x13 Le Passé N'est Qu'un Prologue.mp4",
-              "name": "Star Trek Discovery 1x13 Le Passé N'est Qu'un Prologue",
-              "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%201x13%20Le%20Pass%C3%A9%20N'est%20Qu'un%20Prologue.mp4",
-              "seconds": 2617,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 357
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
           "name": "Sleeping Dogs",
           "airdate": "2002-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -312,6 +285,7 @@
             "seconds": 2552,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
           "alternates": []
@@ -320,9 +294,9 @@
           "number": 15,
           "name": "Shadows of P'Jem",
           "airdate": "2002-02-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -332,6 +306,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 338
           },
           "alternates": []
@@ -340,9 +315,9 @@
           "number": 16,
           "name": "Shuttlepod One",
           "airdate": "2002-02-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -352,6 +327,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 328
           },
           "alternates": []
@@ -360,9 +336,9 @@
           "number": 17,
           "name": "Fusion",
           "airdate": "2002-02-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -372,6 +348,7 @@
             "seconds": 2550,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 368
           },
           "alternates": []
@@ -380,9 +357,9 @@
           "number": 18,
           "name": "Rogue Planet",
           "airdate": "2002-03-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -392,6 +369,7 @@
             "seconds": 2550,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 367
           },
           "alternates": []
@@ -400,9 +378,9 @@
           "number": 19,
           "name": "Acquisition",
           "airdate": "2002-03-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -412,6 +390,7 @@
             "seconds": 2552,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 321
           },
           "alternates": []
@@ -420,9 +399,9 @@
           "number": 20,
           "name": "Oasis",
           "airdate": "2002-04-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -432,6 +411,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 324
           },
           "alternates": []
@@ -440,9 +420,9 @@
           "number": 21,
           "name": "Detained",
           "airdate": "2002-04-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -452,6 +432,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 325
           },
           "alternates": []
@@ -460,9 +441,9 @@
           "number": 22,
           "name": "Vox Sola",
           "airdate": "2002-05-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -472,6 +453,7 @@
             "seconds": 2553,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 325
           },
           "alternates": []
@@ -488,9 +470,9 @@
           "number": 24,
           "name": "Desert Crossing",
           "airdate": "2002-05-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -500,6 +482,7 @@
             "seconds": 2552,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 327
           },
           "alternates": []
@@ -508,9 +491,9 @@
           "number": 25,
           "name": "Two Days and Two Nights",
           "airdate": "2002-05-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -520,6 +503,7 @@
             "seconds": 2551,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 328
           },
           "alternates": []
@@ -528,9 +512,9 @@
           "number": 26,
           "name": "Shockwave (1)",
           "airdate": "2002-05-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -540,6 +524,7 @@
             "seconds": 2553,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 325
           },
           "alternates": []
@@ -553,20 +538,8 @@
           "number": 1,
           "name": "Shockwave (2)",
           "airdate": "2002-09-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 2x01 Frère.mp4",
-            "name": "Star Trek Discovery 2x01 Frère",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%202x01%20Fr%C3%A8re.mp4",
-            "seconds": 3650,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1140
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -637,20 +610,8 @@
           "number": 10,
           "name": "Vanishing Point",
           "airdate": "2002-11-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 2x10 L'Ange Rouge .mp4",
-            "name": "Star Trek Discovery 2x10 L'Ange Rouge ",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%202x10%20L'Ange%20Rouge%20.mp4",
-            "seconds": 2888,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 334
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -665,60 +626,24 @@
           "number": 12,
           "name": "The Catwalk",
           "airdate": "2002-12-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 2x12 À Travers La Vallée des Ombres.mp4",
-            "name": "Star Trek Discovery 2x12 À Travers La Vallée des Ombres",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%202x12%20%C3%80%20Travers%20La%20Vall%C3%A9e%20des%20Ombres.mp4",
-            "seconds": 2763,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 336
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Dawn",
           "airdate": "2003-01-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 2x13 Une si Douce Peine (partie 1).mp4",
-            "name": "Star Trek Discovery 2x13 Une si Douce Peine (partie 1)",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%202x13%20Une%20si%20Douce%20Peine%20(partie%201).mp4",
-            "seconds": 2908,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 352
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Stigma",
           "airdate": "2003-02-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 2x14 Une si Douce Peine (partie 2).mp4",
-            "name": "Star Trek Discovery 2x14 Une si Douce Peine (partie 2)",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%202x14%20Une%20si%20Douce%20Peine%20(partie%202).mp4",
-            "seconds": 3931,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1312
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -838,29 +763,17 @@
           "number": 1,
           "name": "The Xindi",
           "airdate": "2003-09-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 3x01 Cet Espoir, c'est Vous (partie 1).mp4",
-            "name": "Star Trek Discovery 3x01 Cet Espoir, c'est Vous (partie 1)",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x01%20Cet%20Espoir%2C%20c'est%20Vous%20(partie%201).mp4",
-            "seconds": 3167,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 993
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Anomaly",
           "airdate": "2003-09-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -870,6 +783,7 @@
             "seconds": 2553,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 312
           },
           "alternates": []
@@ -878,9 +792,9 @@
           "number": 3,
           "name": "Extinction",
           "airdate": "2003-09-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -890,6 +804,7 @@
             "seconds": 2568,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 324
           },
           "alternates": []
@@ -906,9 +821,9 @@
           "number": 5,
           "name": "Impulse",
           "airdate": "2003-10-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -918,6 +833,7 @@
             "seconds": 2553,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 312
           },
           "alternates": []
@@ -926,54 +842,16 @@
           "number": 6,
           "name": "Exile",
           "airdate": "2003-10-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 3x06 Charognards.mp4",
-            "name": "Star Trek Discovery 3x06 Charognards",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x06%20Charognards.mp4",
-            "seconds": 2940,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 359
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-              "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-              "file": "Star Trek Discovery 3x06.Charognards.ia.mp4",
-              "name": "Star Trek Discovery 3x06",
-              "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x06.Charognards.ia.mp4",
-              "seconds": 2940,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 294
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
           "name": "The Shipment",
           "airdate": "2003-10-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 3x07 Unification III.mp4",
-            "name": "Star Trek Discovery 3x07 Unification III",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x07%20Unification%20III.mp4",
-            "seconds": 3031,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 355
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -988,40 +866,16 @@
           "number": 9,
           "name": "North Star",
           "airdate": "2003-11-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 3x09 Terra Firma, (partie1).mp4",
-            "name": "Star Trek Discovery 3x09 Terra Firma, (partie1)",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x09%20Terra%20Firma%2C%20(partie1).mp4",
-            "seconds": 2904,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 323
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Similitude",
           "airdate": "2003-11-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 3x10 Terra Firma, (partie2).mp4",
-            "name": "Star Trek Discovery 3x10 Terra Firma, (partie2)",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x10%20Terra%20Firma%2C%20(partie2).mp4",
-            "seconds": 2975,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 363
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1036,29 +890,17 @@
           "number": 12,
           "name": "Chosen Realm",
           "airdate": "2004-01-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 3x12 Il y a Une Marée.mp4",
-            "name": "Star Trek Discovery 3x12 Il y a Une Marée",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x12%20Il%20y%20a%20Une%20Mar%C3%A9e.mp4",
-            "seconds": 2881,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 352
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Proving Ground",
           "airdate": "2004-01-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -1068,31 +910,18 @@
             "seconds": 2552,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-              "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-              "file": "Star Trek Discovery 3x13 Cet Espoir, c'est Vous (partie 2).mp4",
-              "name": "Star Trek Discovery 3x13 Cet Espoir, c'est Vous (partie 2)",
-              "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x13%20Cet%20Espoir%2C%20c'est%20Vous%20(partie%202).mp4",
-              "seconds": 3717,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1164
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
           "name": "Stratagem",
           "airdate": "2004-02-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -1102,6 +931,7 @@
             "seconds": 2553,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
           "alternates": []
@@ -1110,9 +940,9 @@
           "number": 15,
           "name": "Harbinger",
           "airdate": "2004-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -1122,6 +952,7 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
           "alternates": []
@@ -1154,9 +985,9 @@
           "number": 19,
           "name": "Damage",
           "airdate": "2004-04-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
             "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
             "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
@@ -1166,6 +997,7 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
+            "langRisk": true,
             "sizeMB": 335
           },
           "alternates": []
@@ -1182,61 +1014,9 @@
           "number": 21,
           "name": "E²",
           "airdate": "2004-05-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"E²\" (0.95)",
-            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
-            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
-            "file": "Star Trek Enterprise 1x24 La Traversée du Désert.mp4",
-            "name": "Star Trek Enterprise 1x24 La Traversée du Désert",
-            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x24%20La%20Travers%C3%A9e%20du%20D%C3%A9sert.mp4",
-            "seconds": 2552,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 327
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"E²\" (0.95)",
-              "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
-              "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
-              "file": "Star Trek Enterprise 3x05 Piégée.mp4",
-              "name": "Star Trek Enterprise 3x05 Piégée",
-              "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%203x05%20Pi%C3%A9g%C3%A9e.mp4",
-              "seconds": 2553,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 312
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"E²\" (0.95)",
-              "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-              "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-              "file": "Star Trek Discovery 3x12 Il y a Une Marée.mp4",
-              "name": "Star Trek Discovery 3x12 Il y a Une Marée",
-              "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%203x12%20Il%20y%20a%20Une%20Mar%C3%A9e.mp4",
-              "seconds": 2881,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 352
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"E²\" (0.95)",
-              "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-              "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-              "file": "Star Trek Discovery 2x12 À Travers La Vallée des Ombres.mp4",
-              "name": "Star Trek Discovery 2x12 À Travers La Vallée des Ombres",
-              "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%202x12%20%C3%80%20Travers%20La%20Vall%C3%A9e%20des%20Ombres.mp4",
-              "seconds": 2763,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 336
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 22,
@@ -1279,20 +1059,8 @@
           "number": 2,
           "name": "Storm Front (2)",
           "airdate": "2004-10-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 4x02 L'Anomalie.mp4",
-            "name": "Star Trek Discovery 4x02 L'Anomalie",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%204x02%20L'Anomalie.mp4",
-            "seconds": 2953,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 355
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1331,20 +1099,8 @@
           "number": 7,
           "name": "The Forge (1)",
           "airdate": "2004-11-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "star-trek-discovery-la-serie-v.f.-2017-2024",
-            "itemTitle": "Star Trek ☆ Discovery ☆ La Série V.F. ☆ 2017-2024",
-            "file": "Star Trek Discovery 4x07…Pour se Connecter.mp4",
-            "name": "Star Trek Discovery 4x07…Pour se Connecter",
-            "url": "https://archive.org/download/star-trek-discovery-la-serie-v.f.-2017-2024/Star%20Trek%20Discovery%204x07%E2%80%A6Pour%20se%20Connecter.mp4",
-            "seconds": 2641,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 298
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

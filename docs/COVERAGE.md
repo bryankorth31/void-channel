@@ -1,6 +1,6 @@
 # Coverage
 
-705 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+706 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -79,7 +79,7 @@
 | The Bob Newhart Show | Classic TV | 142 | 140 | 2 | 0 | 100% |
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
 | The Dresden Files | Sci-Fi, Fantasy and Horror | 12 | 9 | 3 | 0 | 100% |
-| The Outer Limits | Sci-Fi, Fantasy and Horror | 154 | 151 | 3 | 0 | 100% |
+| The Outer Limits | Sci-Fi, Fantasy and Horror | 154 | 139 | 15 | 0 | 100% |
 | The Paradise | British and Beyond | 16 | 15 | 1 | 0 | 100% |
 | The Prisoner | Classic TV | 6 | 6 | 0 | 0 | 100% |
 | The Wonder Years | 90s Sitcoms | 32 | 15 | 17 | 0 | 100% |
@@ -98,11 +98,9 @@
 | Growing Pains | Classic TV | 166 | 158 | 7 | 1 | 99% |
 | Home Improvement | 90s Sitcoms | 203 | 188 | 12 | 3 | 99% |
 | Hunter | Classic TV | 152 | 144 | 7 | 1 | 99% |
-| Mission: Impossible | Classic TV | 171 | 164 | 6 | 1 | 99% |
 | Mister Ed | Classic TV | 143 | 141 | 1 | 1 | 99% |
 | Newhart | Classic TV | 184 | 176 | 7 | 1 | 99% |
 | Roseanne | 90s Sitcoms | 231 | 214 | 14 | 3 | 99% |
-| The Twilight Zone | Classic TV | 156 | 135 | 20 | 1 | 99% |
 | ALF | Classic TV | 102 | 98 | 2 | 2 | 98% |
 | Amazing Stories | Classic TV | 45 | 39 | 5 | 1 | 98% |
 | Barney Miller | Classic TV | 170 | 161 | 5 | 4 | 98% |
@@ -114,6 +112,7 @@
 | Poldark | British and Beyond | 43 | 41 | 1 | 1 | 98% |
 | Queer as Folk | Drama | 83 | 2 | 79 | 2 | 98% |
 | Sliders | Sci-Fi, Fantasy and Horror | 87 | 78 | 7 | 2 | 98% |
+| The Twilight Zone | Classic TV | 156 | 114 | 39 | 3 | 98% |
 | Green Acres | Classic TV | 170 | 36 | 129 | 5 | 97% |
 | Harvey Birdman, Attorney at Law | Adult Swim | 39 | 38 | 0 | 1 | 97% |
 | Soap | Classic TV | 90 | 87 | 0 | 3 | 97% |
@@ -121,24 +120,25 @@
 | Ugly Americans | Animated | 31 | 30 | 0 | 1 | 97% |
 | Upright Citizens Brigade | Sketch and Comedy | 30 | 27 | 2 | 1 | 97% |
 | Knight Rider | Classic TV | 84 | 75 | 6 | 3 | 96% |
+| Mission: Impossible | Classic TV | 171 | 138 | 26 | 7 | 96% |
 | Mystery Science Theater 3000 | Sci-Fi, Fantasy and Horror | 213 | 182 | 23 | 8 | 96% |
 | Quincy, M.E. | Classic TV | 148 | 133 | 9 | 6 | 96% |
 | Star Trek: The Next Generation | Sci-Fi, Fantasy and Horror | 178 | 165 | 6 | 7 | 96% |
-| Tales from the Crypt | Sci-Fi, Fantasy and Horror | 93 | 86 | 3 | 4 | 96% |
 | The A-Team | Classic TV | 98 | 85 | 9 | 4 | 96% |
 | The King of Queens | 2000s and Later Sitcoms | 207 | 193 | 6 | 8 | 96% |
 | 30 Rock | 2000s and Later Sitcoms | 138 | 120 | 11 | 7 | 95% |
 | Highlander: The Series | Sci-Fi, Fantasy and Horror | 40 | 37 | 1 | 2 | 95% |
 | Popular | Drama | 43 | 8 | 33 | 2 | 95% |
-| Star Trek: Deep Space Nine | Sci-Fi, Fantasy and Horror | 176 | 165 | 3 | 8 | 95% |
+| Star Trek: Deep Space Nine | Sci-Fi, Fantasy and Horror | 176 | 27 | 140 | 9 | 95% |
+| Tales from the Crypt | Sci-Fi, Fantasy and Horror | 93 | 36 | 52 | 5 | 95% |
 | Aqua Teen Hunger Force | Adult Swim | 143 | 129 | 5 | 9 | 94% |
 | SCTV | Classic TV | 78 | 66 | 7 | 5 | 94% |
 | In the Heat of the Night | Classic TV | 146 | 125 | 11 | 10 | 93% |
 | Moral Orel | Adult Swim | 43 | 2 | 38 | 3 | 93% |
 | NYPD Blue | Drama | 261 | 39 | 204 | 18 | 93% |
-| Star Trek: Voyager | Sci-Fi, Fantasy and Horror | 172 | 158 | 2 | 12 | 93% |
 | Xena: Warrior Princess | Sci-Fi, Fantasy and Horror | 134 | 0 | 124 | 10 | 93% |
 | Extras | British and Beyond | 12 | 11 | 0 | 1 | 92% |
+| Star Trek: Voyager | Sci-Fi, Fantasy and Horror | 172 | 47 | 111 | 14 | 92% |
 | The Erotic Traveler | Late Night | 13 | 11 | 1 | 1 | 92% |
 | The Oblongs | Adult Swim | 13 | 12 | 0 | 1 | 92% |
 | Eureka | Sci-Fi, Fantasy and Horror | 76 | 65 | 4 | 7 | 91% |
@@ -211,7 +211,6 @@
 | Helen of Troy | Drama | 2 | 0 | 1 | 1 | 50% |
 | The Six Wives of Henry VIII | Classic TV | 4 | 0 | 2 | 2 | 50% |
 | Wolf Hall | British and Beyond | 12 | 6 | 0 | 6 | 50% |
-| Star Trek: Enterprise | Sci-Fi, Fantasy and Horror | 98 | 30 | 17 | 51 | 48% |
 | The Forsyte Saga | British and Beyond | 13 | 0 | 6 | 7 | 46% |
 | The Jellies! | Adult Swim | 20 | 7 | 2 | 11 | 45% |
 | The Son | Drama | 20 | 8 | 1 | 11 | 45% |
@@ -231,6 +230,7 @@
 | The Inbetweeners | British and Beyond | 18 | 6 | 0 | 12 | 33% |
 | The Venture Bros. | Adult Swim | 81 | 0 | 27 | 54 | 33% |
 | Scrubs | 2000s and Later Sitcoms | 19 | 0 | 6 | 13 | 32% |
+| Star Trek: Enterprise | Sci-Fi, Fantasy and Horror | 98 | 1 | 30 | 67 | 32% |
 | Batman | Classic TV | 120 | 17 | 20 | 83 | 31% |
 | The Borgias | Drama | 29 | 0 | 9 | 20 | 31% |
 | Penny Dreadful | Sci-Fi, Fantasy and Horror | 27 | 0 | 8 | 19 | 30% |
@@ -316,7 +316,6 @@
 | The Thick of It | British and Beyond | 21 | 1 | 0 | 20 | 5% |
 | The Wayans Bros. | 90s Sitcoms | 102 | 1 | 4 | 97 | 5% |
 | V | Classic TV | 22 | 1 | 0 | 21 | 5% |
-| America Undercover | Late Night | 79 | 0 | 3 | 76 | 4% |
 | Get Smart | Classic TV | 138 | 5 | 1 | 132 | 4% |
 | Miami Vice | Classic TV | 110 | 4 | 0 | 106 | 4% |
 | PEN15 | Streaming Era | 24 | 1 | 0 | 23 | 4% |
@@ -325,6 +324,7 @@
 | The Heart, She Holler | Adult Swim | 28 | 1 | 0 | 27 | 4% |
 | The Jack Benny Program | Classic TV | 260 | 2 | 9 | 249 | 4% |
 | The Joey Bishop Show | Classic TV | 123 | 4 | 1 | 118 | 4% |
+| America Undercover | Late Night | 79 | 0 | 2 | 77 | 3% |
 | American Dad! | Animated | 401 | 0 | 13 | 388 | 3% |
 | American Horror Story | Sci-Fi, Fantasy and Horror | 145 | 0 | 5 | 140 | 3% |
 | Animaniacs | Animated | 274 | 0 | 7 | 267 | 3% |
@@ -683,6 +683,7 @@
 | Truth or Consequences | Classic TV | 1 | 0 | 0 | 1 | 0% |
 | Tuca & Bertie | Animated | 30 | 0 | 0 | 30 | 0% |
 | Turn: Washington's Spies | Drama | 40 | 0 | 0 | 40 | 0% |
+| Twenty-One | Classic TV | 16 | 0 | 0 | 16 | 0% |
 | Two and a Half Men | 2000s and Later Sitcoms | 262 | 0 | 0 | 262 | 0% |
 | Undone | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | Undressed | Late Night | 223 | 0 | 0 | 223 | 0% |
