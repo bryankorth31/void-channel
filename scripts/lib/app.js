@@ -18,6 +18,7 @@ function assemble() {
   const GRAPH = readJson(path.join(ROOT, 'catalog', 'graph.json'), { people: {}, showLinks: {} });
   const SHOWS_DIR = path.join(ROOT, 'catalog', 'shows');
   const PEOPLE_DIR = path.join(ROOT, 'catalog', 'people');
+  const BIO_DIR = path.join(ROOT, 'catalog', 'people-bios');
   const MOV_DIR = path.join(ROOT, 'catalog', 'movies');
   const TVM = readJson(path.join(ROOT, 'catalog', 'tvmovies-list.json'), { items: [] });
   const TVM_BY_ID = Object.fromEntries(TVM.items.map((m) => [m.tmdbId, m]));
@@ -35,6 +36,7 @@ function assemble() {
         seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.filter((e) => e.file && e.file.playable).map((e) => ({ n: e.number, name: e.name, state: e.state, url: e.file.url, min: Math.round(e.file.seconds / 60), item: e.file.item })) })).filter((se) => se.episodes.length),
         cast: p ? p.cast.slice(0, 14).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.character, eps: c.episodes })) : [],
         crew: p ? p.crew.slice(0, 6).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.jobs.join(', ') })) : [],
+        credits: p && p.episodes ? p.episodes : {},
       };
     })
     .filter((s) => s.seasons.length)
@@ -55,7 +57,7 @@ function assemble() {
       show: m.title, slug: 'movie-' + m.tmdbId, type: m.kind === 'special' ? 'Specials' : 'TV Movies', network: (ref.companies || [])[0] || (m.kind === 'special' ? 'Special' : 'TV Movie'), tags,
       year: m.year, runtime: m.runtime, poster: m.poster, backdrop: m.backdrop, overview: m.overview, genres: [], rating: m.rating, country: null, matchedAt: m.huntedAt,
       seasons: [{ season: 1, episodes: [{ n: 1, name: m.title + (m.year ? ' (' + m.year + ')' : ''), state: m.state, url: m.file.url, min: Math.round(m.file.seconds / 60), item: m.file.item }] }],
-      eps: 1, cast: [], crew: [],
+      eps: 1, cast: [], crew: [], credits: {},
     });
   }
 
@@ -71,13 +73,16 @@ function assemble() {
     if (!onPage.has(a)) continue;
     for (const [b, ids] of Object.entries(l)) if (onPage.has(b)) (links[a] = links[a] || {})[b] = ids;
   }
+  // Bios ride along only for people who connect shows here (the person pages).
+  const bios = {};
+  for (const id of Object.keys(people)) { const b = readJson(path.join(BIO_DIR, id + '.json'), null); if (b) bios[id] = b; }
   const types = [...LIST.types, 'TV Movies', 'Specials'];
-  return { shows, people, links, types };
+  return { shows, people, links, types, bios };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
 const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt, eps: s.eps, seasonCount: s.seasons.length });
-const showFile = (s) => ({ slug: s.slug, seasons: s.seasons, cast: s.cast, crew: s.crew });
+const showFile = (s) => ({ slug: s.slug, seasons: s.seasons, cast: s.cast, crew: s.crew, credits: s.credits || {} });
 
 // ---- page --------------------------------------------------------------------------------
 const CSS = `
@@ -96,6 +101,11 @@ footer a{color:var(--acc)}
 header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}header .mine-link:hover{border-color:var(--acc);color:var(--acc)}
 .btn.on{border-color:var(--acc);color:var(--acc)}.mine{display:contents}.acts.mine{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .me{padding:0 20px 20px}.me h1{margin:10px 0 4px;font-size:26px}.me .g{color:var(--dim)}.me>.acts{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.me h2 small{color:var(--dim);font-weight:400;font-size:13px;margin-left:8px}
+.inep{margin-top:6px}.inep .by{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--dim);margin-bottom:6px}.inep .by span{color:var(--fg);cursor:pointer;border-bottom:1px dotted var(--line)}.inep .by span:hover{color:var(--acc);border-color:var(--acc)}
+.deg input{width:100%;max-width:420px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 12px;border-radius:8px;outline:none}.deg input:focus{border-color:var(--acc)}.deg .sug{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.deg .g{color:var(--dim);font-size:13px}
+.path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:14px}.path .s{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}.path .s:hover{border-color:var(--acc)}.path .v{color:var(--acc);font-size:12px;cursor:pointer}.path .v:hover{text-decoration:underline}
+.person .more{color:var(--acc);cursor:pointer;font-size:12px;margin-left:8px;font-weight:400}.person .bio{font-size:13px;line-height:1.45;margin-top:6px;color:var(--fg)}
+.ppage{padding:0 20px 20px}.ppage .head{display:flex;gap:18px;align-items:flex-start;margin:6px 0 14px}.ppage .head img{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:none}.ppage .head b{font-size:24px}.ppage .bio{max-width:760px;line-height:1.5;margin-top:8px}.ppage .g{color:var(--dim);font-size:13px}.pcard small.role{display:block;color:var(--acc);font-size:12px;padding:4px 2px 0}
 .hist .row{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.hist .row span{flex:1;cursor:pointer}.hist small{color:var(--dim)}.hist .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
@@ -141,7 +151,7 @@ video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 .ep{display:flex;gap:8px;align-items:center;padding:7px 8px;border-radius:6px;cursor:pointer;font-size:14px}.ep:hover,.ep.on{background:var(--panel2)}
 .ep .n{color:var(--dim);width:34px;flex:none}.ep .m{color:var(--dim);margin-left:auto;flex:none}.ep .rv{color:var(--rev);font-size:11px;border:1px solid var(--rev);border-radius:4px;padding:0 4px}
 .hint{color:var(--dim);font-size:13px;margin-top:12px}
-.xray h3{margin:22px 0 8px;font-size:15px;letter-spacing:.04em;color:var(--dim);font-weight:600}
+.xray h3,.inep h3{margin:22px 0 8px;font-size:15px;letter-spacing:.04em;color:var(--dim);font-weight:600}
 .faces{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}
 .face{flex:0 0 96px;cursor:pointer;text-align:center;border-radius:8px;padding:6px 4px;outline:2px solid transparent}.face:hover,.face.on{background:var(--panel);outline-color:var(--acc)}
 .face img,.face .ph{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--panel2);display:block;margin:0 auto 6px}
@@ -162,7 +172,7 @@ footer{color:var(--dim);font-size:12px;padding:20px;border-top:1px solid var(--l
 // ROUTES 'hash' (#slug) or 'path' (/show/slug, needs a host that serves index.html for unknown paths).
 const JS = `
 const BY_SLUG=Object.fromEntries(SHOWS.map(s=>[s.slug,s]));
-const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:''};
+const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null};
 const $=(id)=>document.getElementById(id);
 const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
@@ -237,46 +247,62 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
 function showView(autoplay){const s=state.show;if(!s.seasons){$('main').innerHTML='<div class="loading">Loading '+esc(s.show)+'…</div>';return}const se=s.seasons[state.se];const ep=se.episodes[state.e];
  let h='<div class="show"><button class="back" onclick="go(\\'\\')">← Browse</button>';
  if(!autoplay)h+='<div class="hero">'+(s.backdrop?'<img src="'+s.backdrop+'" alt="">':'')+'<div class="t"><b>'+esc(s.show)+'</b>'+(s.overview?'<p>'+esc(s.overview.slice(0,260))+(s.overview.length>260?'…':'')+'</p>':'')+'<div class="g">'+[s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episodes'].filter(Boolean).join('  ·  ')+'</div></div></div>';
- h+='<div class="player"><div><video id="v" controls '+(autoplay?'autoplay':'')+' src="'+ep.url+'"></video><div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?' <span class="rv">review</span>':'')+'</div><button class="btn" onclick="next()">Next episode ▶</button></div><p class="hint">Space / K play-pause · N next · F fullscreen · ← → skip 10s. "review" = the builder is not sure this file is this episode.</p><div class="acts mine" data-slug="'+s.slug+'">'+acts(s)+repBtn(s,se,ep)+'</div></div>';
+ h+='<div class="player"><div><video id="v" controls '+(autoplay?'autoplay':'')+' src="'+ep.url+'"></video><div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?' <span class="rv">review</span>':'')+'</div><button class="btn" onclick="next()">Next episode ▶</button></div><p class="hint">Space / K play-pause · N next · F fullscreen · ← → skip 10s. "review" = the builder is not sure this file is this episode.</p><div class="acts mine" data-slug="'+s.slug+'">'+acts(s)+repBtn(s,se,ep)+'</div>'+epXray(s,se,ep)+'</div>';
  const si=state.seView==null?state.se:Math.min(state.seView,s.seasons.length-1);const x=s.seasons[si];
  h+='<div class="eps"><div class="sehead"><select onchange="state.seView=+this.value;render()">'+s.seasons.map((z,i)=>'<option value="'+i+'"'+(i===si?' selected':'')+'>Season '+z.season+' · '+z.episodes.length+' episode'+(z.episodes.length===1?'':'s')+'</option>').join('')+'</select><small>'+s.seasons.length+' season'+(s.seasons.length===1?'':'s')+'</small></div>'
  +x.episodes.map((y,ei)=>'<div class="ep '+(si===state.se&&ei===state.e?'on':'')+'" onclick="play('+si+','+ei+')"><span class="n">E'+y.n+'</span><span>'+esc(y.name)+'</span>'+(y.state==='REVIEW'?'<span class="rv">review</span>':'')+'<span class="m">'+y.min+'m</span></div>').join('')+'</div></div>';
  h+=xray(s)+'</div>';
  $('main').innerHTML=h;const v=$('v');v.onended=next;const hr=ME.history[s.slug];if(hr&&hr.se===state.se&&hr.e===state.e&&hr.pos>20)v.addEventListener('loadedmetadata',()=>{if(v.duration&&hr.pos<v.duration-30)v.currentTime=hr.pos},{once:true});v.onplay=()=>{const r=ME.history[s.slug];if(!r||r.se!==state.se||r.e!==state.e)remember()};let lastSave=0;v.ontimeupdate=()=>{const t=Date.now();if(t-lastSave>5000){lastSave=t;const r=ME.history[s.slug];if(r&&r.se===state.se&&r.e===state.e){r.pos=Math.floor(v.currentTime);r.at=t;saveMe()}}};v.onerror=()=>{v.insertAdjacentHTML('afterend','<p style="color:#f66">This file would not play. Next episode in 3s…</p>');setTimeout(next,3000)}}
 function face(p){const open=state.person===p.id;return '<div class="face'+(open?' on':'')+'" onclick="person('+p.id+')">'+(p.photo?'<img loading="lazy" src="'+p.photo+'" alt="">':'<div class="ph"></div>')+'<b>'+esc(p.name)+'</b><small>'+esc(p.as||'')+'</small></div>'}
-function personPanel(id,fallback){const g=PEOPLE[id];const name=g?g.name:fallback.name,photo=g?g.photo:fallback.photo;const others=g?Object.entries(g.shows).filter(([sl])=>sl!==state.show.slug&&BY_SLUG[sl]):[];
- return '<div class="person">'+(photo?'<img src="'+photo+'" alt="">':'<div></div>')+'<div><b>'+esc(name)+'</b><div class="g">'+(others.length?'Also on VOIDtv in '+others.length+' other show'+(others.length===1?'':'s'):'No other VOIDtv shows yet')+'</div>'
+function findPerson(s,id){const pool=[...(s.cast||[]),...(s.crew||[])];for(const c of Object.values(s.credits||{}))pool.push(...c.d,...c.w,...c.g);return pool.find(x=>x.id===id)||{name:'',photo:null}}
+function bioFor(id){if(BIO[id]!==undefined)return BIO[id];BIO[id]=null;fetch(BASE+'data/people/'+id+'.json').then(r=>r.ok?r.json():null).then(b=>{BIO[id]=b||false;const el=document.querySelector('.person');if(el&&state.show&&state.person===id)el.outerHTML=personPanel(id,findPerson(state.show,id));if(state.view==='person'&&state.personId===id)render()}).catch(()=>{BIO[id]=false});return null}
+function epXray(s,se,ep){const c=(s.credits||{})[se.season+'x'+ep.n];if(!c)return '';const chips=(arr)=>arr.map(p=>'<span onclick="person('+p.id+')">'+esc(p.name)+'</span>').join(', ');
+ return '<div class="inep"><h3>IN THIS EPISODE</h3>'+((c.d.length||c.w.length)?'<div class="by">'+(c.d.length?'<div>Directed by '+chips(c.d)+'</div>':'')+(c.w.length?'<div>Written by '+chips(c.w)+'</div>':'')+'</div>':'')+(c.g.length?'<div class="faces">'+c.g.map(p=>face({id:p.id,name:p.name,photo:p.photo,as:p.as?'as '+p.as:'Guest'})).join('')+'</div>':'')+'</div>'}
+function degSuggest(q){const el=$('degs');if(!el)return;q=q.trim().toLowerCase();if(q.length<2){el.innerHTML='';return}const m=SHOWS.filter(t=>t.slug!==state.show.slug&&t.show.toLowerCase().includes(q)).slice(0,8);el.innerHTML=m.map(t=>'<span class="chip" onclick="degPath(\\''+t.slug+'\\')">'+esc(t.show)+'</span>').join('')||'<span class="g">No show by that name here.</span>'}
+function degPath(target){const from=state.show.slug;const prev={};prev[from]=null;const via={};const q=[from];let found=from===target;while(q.length&&!found){const a=q.shift();for(const [b,ids] of Object.entries(LINKS[a]||{})){if(prev[b]!==undefined)continue;prev[b]=a;via[b]=ids[0];if(b===target){found=true;break}q.push(b)}}
+ const out=$('degp');if($('degs'))$('degs').innerHTML='';if($('degq'))$('degq').value='';if(!found){out.innerHTML='<div class="path">No path to '+esc(BY_SLUG[target].show)+' through the people here (yet).</div>';return}
+ const chain=[];for(let c=target;c;c=prev[c])chain.unshift(c);let h='<div class="path">';chain.forEach((sl,i)=>{if(i){const id=via[sl];const p=PEOPLE[id];h+='<span class="v" onclick="person('+id+')">— '+esc(p?p.name:'?')+' —</span>'}h+='<span class="s" onclick="go(\\''+sl+'\\')">'+esc(BY_SLUG[sl].show)+'</span>'});h+='</div><div class="g" style="color:var(--dim);font-size:12px;margin-top:4px">'+(chain.length-1)+' hop'+(chain.length===2?'':'s')+' · every show on the path plays here</div>';out.innerHTML=h}
+function personPage(){const id=state.personId;const g=PEOPLE[id];const b=bioFor(id);const from=state.personFrom&&BY_SLUG[state.personFrom];const fp=from?findPerson(from,id):{name:'',photo:null};const name=(b&&b.name)||(g&&g.name)||fp.name||'…';const photo=(b&&b.photo)||(g&&g.photo)||fp.photo;const shows=g?Object.entries(g.shows).map(([sl,role])=>[BY_SLUG[sl],role]).filter(x=>x[0]):[];if(!shows.length&&from)shows.push([from,fp.as||'Credited']);
+ const facts=b?[b.dept,b.born?'born '+b.born+(b.died?', died '+b.died:''):'',b.place].filter(Boolean).join(' · '):'';
+ let h='<div class="ppage"><button class="back" onclick="history.length>1?history.back():go(\\'\\')">← Back</button><div class="head">'+(photo?'<img src="'+photo+'" alt="">':'')+'<div><b>'+esc(name)+'</b><div class="g">'+esc(facts)+(shows.length?(facts?' · ':'')+shows.length+' show'+(shows.length===1?'':'s')+' on VOIDtv':'')+'</div>'+(b&&b.bio?'<div class="bio">'+esc(b.bio)+'</div>':(b===null?'<div class="g">Loading…</div>':''))+'</div></div>';
+ if(shows.length)h+='<h2>On VOIDtv</h2><div class="grid">'+shows.map(([t,role])=>'<div class="pcard">'+card(t,'person')+'<small class="role">'+esc(role)+'</small></div>').join('')+'</div>';
+ else if(GRAPH_LOADED)h+='<p class="g">Only one show here so far; open it from the X-Ray panel.</p>';
+ $('main').innerHTML=h+'</div>';document.title=name+' · '+SITE}
+function personPanel(id,fallback){const g=PEOPLE[id];const b=bioFor(id);const name=(b&&b.name)||(g?g.name:fallback.name),photo=(g&&g.photo)||fallback.photo||(b&&b.photo);const others=g?Object.entries(g.shows).filter(([sl])=>sl!==state.show.slug&&BY_SLUG[sl]):[];
+ const facts=b?[b.dept,b.born?'born '+b.born.slice(0,4)+(b.died?'–'+b.died.slice(0,4):''):'',b.place].filter(Boolean).join(' · '):'';
+ return '<div class="person">'+(photo?'<img src="'+photo+'" alt="">':'<div></div>')+'<div><b>'+esc(name)+'</b><span class="more" onclick="state.personFrom=state.show.slug;go(\\'person/'+id+'\\')">Open page →</span><div class="g">'+(facts?esc(facts)+' · ':'')+(others.length?'Also on VOIDtv in '+others.length+' other show'+(others.length===1?'':'s'):'No other VOIDtv shows yet')+'</div>'+(b&&b.bio?'<div class="bio">'+esc(b.bio.length>320?b.bio.slice(0,320).replace(/\\s+\\S*$/,'')+'…':b.bio)+'</div>':'')
  +(others.length?'<div class="links">'+others.map(([sl,role])=>{const t=BY_SLUG[sl];return '<div class="plink" onclick="go(\\''+sl+'\\')">'+(t.poster?'<img src="'+t.poster+'" alt="">':'')+'<span>'+esc(t.show)+'<small>'+esc(role)+'</small></span></div>'}).join('')+'</div>':'')+'</div></div>'}
 function xray(s){const links=LINKS[s.slug]||{};const conn=Object.entries(links).map(([sl,ids])=>({t:BY_SLUG[sl],via:ids.map(i=>PEOPLE[i]&&PEOPLE[i].name).filter(Boolean)})).filter(c=>c.t).sort((a,b)=>b.via.length-a.via.length).slice(0,24);
- const cast=s.cast||[],crew=s.crew||[];if(!cast.length&&!crew.length&&!conn.length)return '';
+ const cast=s.cast||[],crew=s.crew||[];if(!cast.length&&!crew.length&&!conn.length&&state.person==null)return '';
  let h='<div class="xray">';
  if(cast.length){h+='<h3>CAST</h3><div class="faces">'+cast.map(face).join('')+'</div>';}
  if(crew.length){h+='<h3>MADE BY</h3><div class="faces">'+crew.map(face).join('')+'</div>';}
- if(state.person!=null){const p=[...cast,...crew].find(x=>x.id===state.person)||{name:'',photo:null};h+=personPanel(state.person,p);}
+ if(state.person!=null){h+=personPanel(state.person,findPerson(s,state.person));}
  if(conn.length){h+='<h3>CONNECTED SHOWS <small style="color:var(--dim);font-weight:400">· through the people above</small></h3><div class="conn">'+conn.map(c=>'<div class="card" onclick="go(\\''+c.t.slug+'\\')">'+(c.t.poster?'<div class="p"><img loading="lazy" src="'+c.t.poster+'" alt=""></div>':'<div class="p">'+esc(c.t.show)+'</div>')+'<div class="t"><b>'+esc(c.t.show)+'</b><span class="via">via '+esc(c.via.slice(0,2).join(', '))+(c.via.length>2?' +'+(c.via.length-2):'')+'</span></div></div>').join('')+'</div>';}
+ if(Object.keys(LINKS).length)h+='<h3>SIX DEGREES</h3><div class="deg"><input id="degq" placeholder="Connect '+esc(s.show).replace(/"/g,'')+' to… (type a show)" oninput="degSuggest(this.value)" autocomplete="off"><div class="sug" id="degs"></div><div id="degp"></div></div>';
  return h+'</div>'}
 function person(id){state.person=state.person===id?null:id;const xr=document.querySelector('.xray');if(xr)xr.outerHTML=xray(state.show);else showView(false);const el=document.querySelector('.person');if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'})}
-function urlFor(slug){if(slug==='me')return ROUTES==='path'?'/me':'#me';return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
-function slugFromUrl(){if(ROUTES==='path'){if(location.pathname==='/me'||location.pathname==='/me/')return 'me';const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
+function urlFor(slug){if(slug&&slug.startsWith('person/'))return ROUTES==='path'?'/'+slug:'#'+slug;if(slug==='me')return ROUTES==='path'?'/me':'#me';return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
+function slugFromUrl(){if(ROUTES==='path'){if(location.pathname==='/me'||location.pathname==='/me/')return 'me';const pm=location.pathname.match(/^\\/person\\/(\\d+)/);if(pm)return 'person/'+pm[1];const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
 async function ensure(s){if(s.seasons)return s;const r=await fetch(BASE+'data/shows/'+s.slug+'.json');const d=await r.json();Object.assign(s,d);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);}catch(_){}}return s}
-async function go(slug,replace){state.person=null;if(slug==='me'&&!BY_SLUG.me){state.show=null;state.view='me';history[replace?'replaceState':'pushState'](null,'',urlFor('me'));document.title='Mine · '+SITE;render();window.scrollTo(0,0);return}state.view='';if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
+async function go(slug,replace){state.person=null;if(slug&&slug.startsWith('person/')){state.show=null;state.view='person';state.personId=+slug.slice(7);history[replace?'replaceState':'pushState'](null,'',urlFor(slug));render();window.scrollTo(0,0);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);render()}catch(_){}}return}if(slug==='me'&&!BY_SLUG.me){state.show=null;state.view='me';history[replace?'replaceState':'pushState'](null,'',urlFor('me'));document.title='Mine · '+SITE;render();window.scrollTo(0,0);return}state.view='';if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
 function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(true)}
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){const s=state.show;const r=ME.history[s.slug];ME.history[s.slug]={se:state.se,e:state.e,at:Date.now(),pos:(r&&r.se===state.se&&r.e===state.e)?(r.pos||0):0};saveMe()}
 function resume(s){const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
-function render(){if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else keepTracks(browse)}
+function render(){if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else keepTracks(browse)}
 document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
 window.addEventListener('popstate',()=>go(slugFromUrl(),true));
 go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types } = data;
+  const { shows, people, links, types, bios = {} } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};let GRAPH_LOADED=true;`
-    : `const PEOPLE={};const LINKS={};let GRAPH_LOADED=false;`;
+    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let GRAPH_LOADED=true;`
+    : `const PEOPLE={};const LINKS={};const BIO={};let GRAPH_LOADED=false;`;
   const indexScript = mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`;
   const title = meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME;
   const desc = meta.description || 'TV shows from 1990 to now, and the classics behind one door: every episode in order, every one of them plays. From the Internet Archive.';
