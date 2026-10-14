@@ -137,6 +137,14 @@ domains to react to (B edits; nothing here is final):
    discipline's border when the answer lives on the other side; tell measurement from
    interpretation; keep your own records.
 
+3. **IFTTT and the mechanisms** (B, 2026-10-13). If-this-then-that as a way of seeing: everything
+   from a toaster to a government to a news feed is a mechanism with triggers, actions and feedback,
+   and most of them are running on you. Outcomes: take a thing apart (in your head or on the bench)
+   until you can say what triggers what; recognise feedback loops, delays and incentives ("show me
+   the incentive and I'll show you the outcome"); see the mechanism behind a feed, a fee, a form, a
+   habit; build your own small automations (a spreadsheet rule, an IFTTT/Shortcuts recipe, a script)
+   so the machine works for you instead; know when a mechanism is designed to be opaque.
+
 **The rule** (B: "without using the predetermined silos as the walls the media and content needs
 to come from"): the material for an authored course is not fenced by where it came from. A
 university lecture, a 1970s public-television hour, a trade's apprenticeship film, a radio
@@ -206,6 +214,38 @@ public domain). All angles mixed on purpose: scientists, a magician, a schooltea
 - Claude Shannon — engineer [D: information theory itself; T: lectures; O: Archive] — what data is
 - Cathy O'Neil — mathematician and former quant [D: built the models; T: Weapons of Math
   Destruction; O: talks] — the critic angle on data used as a wall
+
+*IFTTT and the mechanisms*
+- Tim Hunkin — engineer and cartoonist [D: builds working machines for a living; T: The Secret
+  Life of Machines (Channel 4, 1988–93), which he released freely himself; O: Archive, by the
+  maker's own wish] — the anchor: a toaster, a fax, a washing machine, taken apart on camera
+- James Burke — science historian [T: Connections (BBC 1978), The Day the Universe Changed; O:
+  Archive] — mechanisms of change across centuries; one trigger, ten consequences
+- Donella Meadows — systems scientist [D: Limits to Growth; T: Thinking in Systems, "Leverage
+  Points"; O: lectures on the Archive] — stocks, flows, feedback, delay: the grammar of mechanisms
+- Buckminster Fuller — inventor [D: the dome, the Dymaxion work; T: "Everything I Know" (42 hours,
+  1975); O: Archive, released by his estate] — the long-form voice
+- Richard Hamming — mathematician [D: Bell Labs, error-correcting codes; T: "You and Your
+  Research", The Art of Doing Science and Engineering lectures; O: Archive]
+- Norbert Wiener — mathematician [D: founded cybernetics; T: The Human Use of Human Beings; O:
+  readings] — feedback as the idea behind the idea
+- Seymour Papert — mathematician and educator [D: LOGO, the Turtle; T: Mindstorms; O: talks and
+  the LOGO software itself, runnable in the browser] — learn a mechanism by building one
+- Charlie Munger — investor [D: the record; T: the "Psychology of Human Misjudgment" talk, the
+  mental-models speeches; O: mirrored talks] — incentives as the master mechanism
+- Bill Hammack ("engineerguy") — chemical engineer [D: practising engineer; T: the engineerguy
+  films; O: he publishes them freely] — a modern Hunkin
+- Adam Savage — maker [D: builds; T: MythBusters method, Tested; O: episodes/talks mirrored]
+- Don Norman — cognitive scientist [T: The Design of Everyday Things; O: talks] — why the door
+  says push: mechanisms designed for or against you
+- Ivan Illich — priest and critic [T: Tools for Conviviality, Deschooling Society; O: Archive] and
+  Jacques Ellul — sociologist [T: The Technological Society; O: readings] — the critic angle: when
+  the mechanism owns the user
+- B. F. Skinner — psychologist [D: the operant chamber; T: the lectures; O: Archive] — the
+  reinforcement schedule, which is what every feed runs; paired with Tristan Harris [D: ex-Google
+  design ethicist; T: the attention-economy talks; O: mirrored] for the present tense
+- Practice layer, not voices: IFTTT, Apple Shortcuts, Android Tasker, a spreadsheet, a first
+  shell script — and the Archive's emulated machines for taking old software apart
 
 Deliberately not here: pundits, politicians, anyone whose evidence is an audience rather than a
 result. The hard exclude (politics/government/news) holds in Void University too.
