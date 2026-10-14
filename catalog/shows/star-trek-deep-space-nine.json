@@ -3,7 +3,7 @@
   "slug": "star-trek-deep-space-nine",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Syndicated",
-  "matchedAt": "2026-10-14T04:28:52.357Z",
+  "matchedAt": "2026-10-14T05:18:44.554Z",
   "tvmaze": {
     "id": 493,
     "name": "Star Trek: Deep Space Nine",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 176,
     "live": 27,
-    "review": 140,
-    "missing": 9,
-    "pct": 95
+    "review": 126,
+    "missing": 23,
+    "pct": 87
   },
   "seasons": [
     {
@@ -26,40 +26,16 @@
           "number": 1,
           "name": "Emissary, Part I",
           "airdate": "1993-01-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 6 in \"Star Trek: Deep Space Nine - Best Buy Bo\"",
-            "item": "StarTrek-DS9-BonusDVDs",
-            "itemTitle": "Star Trek: Deep Space Nine - Best Buy Bonus DVDs",
-            "file": "DS9_BONUSSAMPLER_SEASON4.mp4",
-            "name": "DS9_BONUSSAMPLER_SEASON4",
-            "url": "https://archive.org/download/StarTrek-DS9-BonusDVDs/DS9_BONUSSAMPLER_SEASON4.mp4",
-            "seconds": 2742,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 244
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Emissary, Part II",
           "airdate": "1993-01-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 6 in \"Star Trek: Deep Space Nine - Best Buy Bo\"",
-            "item": "StarTrek-DS9-BonusDVDs",
-            "itemTitle": "Star Trek: Deep Space Nine - Best Buy Bonus DVDs",
-            "file": "DS9_BONUSSAMPLER_SEASON420.mp4",
-            "name": "DS9_BONUSSAMPLER_SEASON420",
-            "url": "https://archive.org/download/StarTrek-DS9-BonusDVDs/DS9_BONUSSAMPLER_SEASON420.mp4",
-            "seconds": 2742,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 244
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -81,21 +57,7 @@
             "langRisk": true,
             "sizeMB": 359
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 6 in \"Star Trek: Deep Space Nine - Best Buy Bo\"",
-              "item": "StarTrek-DS9-BonusDVDs",
-              "itemTitle": "Star Trek: Deep Space Nine - Best Buy Bonus DVDs",
-              "file": "DS9_BONUSSAMPLER_SEASON421.mp4",
-              "name": "DS9_BONUSSAMPLER_SEASON421",
-              "url": "https://archive.org/download/StarTrek-DS9-BonusDVDs/DS9_BONUSSAMPLER_SEASON421.mp4",
-              "seconds": 2742,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 244
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -116,21 +78,7 @@
             "langRisk": true,
             "sizeMB": 358
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 6 in \"Star Trek: Deep Space Nine - Best Buy Bo\"",
-              "item": "StarTrek-DS9-BonusDVDs",
-              "itemTitle": "Star Trek: Deep Space Nine - Best Buy Bonus DVDs",
-              "file": "DS9_BONUSSAMPLER_SEASON433.mp4",
-              "name": "DS9_BONUSSAMPLER_SEASON433",
-              "url": "https://archive.org/download/StarTrek-DS9-BonusDVDs/DS9_BONUSSAMPLER_SEASON433.mp4",
-              "seconds": 2742,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 244
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -151,21 +99,7 @@
             "langRisk": true,
             "sizeMB": 361
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 6 in \"Star Trek: Deep Space Nine - Best Buy Bo\"",
-              "item": "StarTrek-DS9-BonusDVDs",
-              "itemTitle": "Star Trek: Deep Space Nine - Best Buy Bonus DVDs",
-              "file": "DS9_BONUSSAMPLER_SEASON434.mp4",
-              "name": "DS9_BONUSSAMPLER_SEASON434",
-              "url": "https://archive.org/download/StarTrek-DS9-BonusDVDs/DS9_BONUSSAMPLER_SEASON434.mp4",
-              "seconds": 2742,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 244
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -200,19 +134,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 264
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 6 in \"Star Trek: Deep Space Nine - Best Buy Bo\"",
-              "item": "StarTrek-DS9-BonusDVDs",
-              "itemTitle": "Star Trek: Deep Space Nine - Best Buy Bonus DVDs",
-              "file": "DS9_BONUSSAMPLER_SEASON442.mp4",
-              "name": "DS9_BONUSSAMPLER_SEASON442",
-              "url": "https://archive.org/download/StarTrek-DS9-BonusDVDs/DS9_BONUSSAMPLER_SEASON442.mp4",
-              "seconds": 2742,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 244
             }
           ]
         },
@@ -277,21 +198,8 @@
           "number": 9,
           "name": "The Passenger",
           "airdate": "1993-02-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.7,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 1x09 Le Passager.mp4",
-            "name": "Star Trek Deep Space Nine 1x09 Le Passager",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%201x09%20Le%20Passager.mp4",
-            "seconds": 2618,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 395
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -923,21 +831,8 @@
           "number": 18,
           "name": "Profit and Loss",
           "airdate": "1994-03-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 2x18 Pertes et Profits.mp4",
-            "name": "Star Trek Deep Space Nine 2x18 Pertes et Profits",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%202x18%20Pertes%20et%20Profits.mp4",
-            "seconds": 2616,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 357
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1159,21 +1054,8 @@
           "number": 3,
           "name": "The House of Quark",
           "airdate": "1994-10-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 3x03 La Maison de Quark.mp4",
-            "name": "Star Trek Deep Space Nine 3x03 La Maison de Quark",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%203x03%20La%20Maison%20de%20Quark.mp4",
-            "seconds": 2617,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 364
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1327,57 +1209,16 @@
           "number": 11,
           "name": "Past Tense, Part I",
           "airdate": "1995-01-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 3x11 Passé Décomposé (Part 1).mp4",
-            "name": "Star Trek Deep Space Nine 3x11 Passé Décomposé (Part 1)",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%203x11%20Pass%C3%A9%20D%C3%A9compos%C3%A9%20(Part%201).mp4",
-            "seconds": 2619,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 358
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-              "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-              "file": "Star Trek Deep Space Nine 3x11 Passé Décompos .(Part 1).ia.mp4",
-              "name": "Star Trek Deep Space Nine 3x11 Passé Décompos ",
-              "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%203x11%20Pass%C3%A9%20D%C3%A9compos%20.(Part%201).ia.mp4",
-              "seconds": 2619,
-              "format": "h.264 IA",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 258
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Past Tense, Part II",
           "airdate": "1995-01-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 3x12 Passé Décomposé (Part 2).mp4",
-            "name": "Star Trek Deep Space Nine 3x12 Passé Décomposé (Part 2)",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%203x12%20Pass%C3%A9%20D%C3%A9compos%C3%A9%20(Part%202).mp4",
-            "seconds": 2603,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 371
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1596,21 +1437,8 @@
           "number": 23,
           "name": "Family Business",
           "airdate": "1995-05-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 3x23 Affaires de Famille.mp4",
-            "name": "Star Trek Deep Space Nine 3x23 Affaires de Famille",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%203x23%20Affaires%20de%20Famille.mp4",
-            "seconds": 2617,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 358
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2240,21 +2068,8 @@
           "number": 1,
           "name": "Apocalypse Rising",
           "airdate": "1996-09-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.7,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 5x01 L'Apocalypse.mp4",
-            "name": "Star Trek Deep Space Nine 5x01 L'Apocalypse",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%205x01%20L'Apocalypse.mp4",
-            "seconds": 2618,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 358
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2423,21 +2238,8 @@
           "number": 9,
           "name": "The Ascent",
           "airdate": "1996-11-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 5x09 L'Ascension.mp4",
-            "name": "Star Trek Deep Space Nine 5x09 L'Ascension",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%205x09%20L'Ascension.mp4",
-            "seconds": 2616,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 357
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2627,21 +2429,8 @@
           "number": 18,
           "name": "Business as Usual",
           "airdate": "1997-04-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 5x18 Les Affaires Sont Les Affaires.mp4",
-            "name": "Star Trek Deep Space Nine 5x18 Les Affaires Sont Les Affaires",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%205x18%20Les%20Affaires%20Sont%20Les%20Affaires.mp4",
-            "seconds": 2616,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 357
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3257,21 +3046,8 @@
           "number": 23,
           "name": "Profit and Lace",
           "airdate": "1998-05-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 6x23 Profits Dans La Dentelle.mp4",
-            "name": "Star Trek Deep Space Nine 6x23 Profits Dans La Dentelle",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%206x23%20Profits%20Dans%20La%20Dentelle.mp4",
-            "seconds": 2603,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 357
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3747,21 +3523,8 @@
           "number": 20,
           "name": "The Changing Face of Evil",
           "airdate": "1999-04-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 7x20 Le Visage Changeant Du Mal.mp4",
-            "name": "Star Trek Deep Space Nine 7x20 Le Visage Changeant Du Mal",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%207x20%20Le%20Visage%20Changeant%20Du%20Mal.mp4",
-            "seconds": 2600,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 357
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3810,21 +3573,8 @@
           "number": 23,
           "name": "Extreme Measures",
           "airdate": "1999-05-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
-            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
-            "file": "Star Trek Deep Space Nine 7x23 Décisions Extrêmes.mp4",
-            "name": "Star Trek Deep Space Nine 7x23 Décisions Extrêmes",
-            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%207x23%20D%C3%A9cisions%20Extr%C3%AAmes.mp4",
-            "seconds": 2596,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 357
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

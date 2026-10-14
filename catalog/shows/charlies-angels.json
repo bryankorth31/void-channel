@@ -3,7 +3,7 @@
   "slug": "charlies-angels",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:59.492Z",
+  "matchedAt": "2026-10-14T05:18:57.661Z",
   "tvmaze": {
     "id": 474,
     "name": "Charlie's Angels",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 115,
-    "live": 7,
-    "review": 0,
-    "missing": 108,
-    "pct": 6
+    "live": 0,
+    "review": 5,
+    "missing": 110,
+    "pct": 4
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Hellride",
           "airdate": "1976-09-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "charlies-angels-1976-season-1-episode-1-hellride",
             "itemTitle": "Charlie's Angels (1976) Season 1 Episode 1 (Hellride)",
@@ -46,9 +46,9 @@
           "number": 2,
           "name": "The Mexican Connection",
           "airdate": "1976-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "charlies-angels-1976-season-1-episode-2-the-mexican-connection",
             "itemTitle": "Charlie's Angels (1976) Season 1 Episode 2 (The Mexican Connection)",
@@ -66,9 +66,9 @@
           "number": 3,
           "name": "Night of the Strangler",
           "airdate": "1976-10-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "charlies-angels-1976-season-1-episode-3-night-of-the-strangler",
             "itemTitle": "Charlie's Angels  (1976) Season 1 Episode 3 (Night of the Strangler)",
@@ -86,49 +86,25 @@
           "number": 4,
           "name": "Angels in Chains",
           "airdate": "1976-10-20",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "charlies-angels-1976-season-1-episode-4-angels-in-chains",
-            "itemTitle": "Charlie's Angels (1976) Season 1 Episode 4 (Angels in Chains)",
-            "file": "Charlie's Angels (1976) Season 1  Episode 4  (Angels In Chains).mp4",
-            "name": "Charlie's Angels (1976) Season 1  Episode 4  (Angels In Chains)",
-            "url": "https://archive.org/download/charlies-angels-1976-season-1-episode-4-angels-in-chains/Charlie's%20Angels%20(1976)%20Season%201%20%20Episode%204%20%20(Angels%20In%20Chains).mp4",
-            "seconds": 2999,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 148
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Target: Angels",
           "airdate": "1976-10-27",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "charlies-angels-1976-season-1-episode-5-target-angels",
-            "itemTitle": "Charlie's Angels (1976) Season 1 Episode 5 (Target Angels)",
-            "file": "Charlie's Angels (1976) Season 1  Episode 5  (Target Angels).mp4",
-            "name": "Charlie's Angels (1976) Season 1  Episode 5  (Target Angels)",
-            "url": "https://archive.org/download/charlies-angels-1976-season-1-episode-5-target-angels/Charlie's%20Angels%20(1976)%20Season%201%20%20Episode%205%20%20(Target%20Angels).mp4",
-            "seconds": 2990,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 123
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Killing Kind",
           "airdate": "1976-11-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "charlies-angels-1976-season-1-episode-6-the-killing-kind",
             "itemTitle": "Charlie's Angels (1976) Season 1 Episode 6 (The Killing Kind)",
@@ -154,9 +130,9 @@
           "number": 8,
           "name": "Lady Killer",
           "airdate": "1976-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "charlies-angels-1976-season-1-episode-8-lady-killer",
             "itemTitle": "Charlie's Angels (1976) Season 1 Episode 8 (Lady Killer)",

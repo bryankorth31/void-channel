@@ -3,7 +3,7 @@
   "slug": "twin-peaks",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:49.572Z",
+  "matchedAt": "2026-10-14T05:18:39.293Z",
   "tvmaze": {
     "id": 156,
     "name": "Twin Peaks",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 48,
-    "live": 21,
-    "review": 6,
-    "missing": 21,
-    "pct": 56
+    "live": 0,
+    "review": 16,
+    "missing": 32,
+    "pct": 33
   },
   "seasons": [
     {
@@ -26,310 +26,76 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "1990-04-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.6,
+            "why": "absolute episode number",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 2/Season 1 Episode 1 - Traces To Nowhere (2).mp4",
-            "name": "Twin Peaks Disk 2/Season 1 Episode 1 - Traces To Nowhere (2)",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%201%20-%20Traces%20To%20Nowhere%20(2).mp4",
-            "seconds": 2787,
+            "file": "twin peaks disk 2/Episode 1.mp4",
+            "name": "twin peaks disk 2/Episode 1",
+            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/twin%20peaks%20disk%202%2FEpisode%201.mp4",
+            "seconds": 8395,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 502
+            "sizeMB": 1535
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "tp_fwwm_tms_202606",
-              "itemTitle": "Twin Peaks: Fire Walk With Me - The Missing Season",
-              "file": "EP1 - The Owl Ring.mp4",
-              "name": "EP1 - The Owl Ring",
-              "url": "https://archive.org/download/tp_fwwm_tms_202606/EP1%20-%20The%20Owl%20Ring.mp4",
-              "seconds": 3937,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4588
-            },
-            {
-              "conf": 0.6,
-              "why": "absolute episode number",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "twin peaks disk 2/Episode 1.mp4",
-              "name": "twin peaks disk 2/Episode 1",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/twin%20peaks%20disk%202%2FEpisode%201.mp4",
-              "seconds": 8395,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1535
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Traces to Nowhere",
           "airdate": "1990-04-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 2/Season 1 Episode 2 - Zen Or The Skill To Catch A Killer.mp4",
-            "name": "Twin Peaks Disk 2/Season 1 Episode 2 - Zen Or The Skill To Catch A Killer",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%202%20-%20Zen%20Or%20The%20Skill%20To%20Catch%20A%20Killer.mp4",
-            "seconds": 2894,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 503
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Traces to Nowhere\" (0.95)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 2/Season 1 Episode 1 - Traces To Nowhere (2).mp4",
-              "name": "Twin Peaks Disk 2/Season 1 Episode 1 - Traces To Nowhere (2)",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%201%20-%20Traces%20To%20Nowhere%20(2).mp4",
-              "seconds": 2787,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 502
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "tp_fwwm_tms_202606",
-              "itemTitle": "Twin Peaks: Fire Walk With Me - The Missing Season",
-              "file": "EP2 - The Path to the Pink Room.mp4",
-              "name": "EP2 - The Path to the Pink Room",
-              "url": "https://archive.org/download/tp_fwwm_tms_202606/EP2%20-%20The%20Path%20to%20the%20Pink%20Room.mp4",
-              "seconds": 3899,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4543
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Zen, or the Skill to Catch a Killer",
           "airdate": "1990-04-19",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 2/Season 1 Episode 3 - Rest In Pain.mp4",
-            "name": "Twin Peaks Disk 2/Season 1 Episode 3 - Rest In Pain",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%203%20-%20Rest%20In%20Pain.mp4",
-            "seconds": 2815,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 505
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Zen, or the Skill to Catch a Killer\" (0.96)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 2/Season 1 Episode 2 - Zen Or The Skill To Catch A Killer.mp4",
-              "name": "Twin Peaks Disk 2/Season 1 Episode 2 - Zen Or The Skill To Catch A Killer",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%202%20-%20Zen%20Or%20The%20Skill%20To%20Catch%20A%20Killer.mp4",
-              "seconds": 2894,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 503
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Rest in Pain",
           "airdate": "1990-04-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 2/Season 1 Episode 4 -  The One-Armed Man.mp4",
-            "name": "Twin Peaks Disk 2/Season 1 Episode 4 -  The One-Armed Man",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%204%20-%20%20The%20One-Armed%20Man.mp4",
-            "seconds": 2817,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 533
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Rest in Pain\" (0.95)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 2/Season 1 Episode 3 - Rest In Pain.mp4",
-              "name": "Twin Peaks Disk 2/Season 1 Episode 3 - Rest In Pain",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%203%20-%20Rest%20In%20Pain.mp4",
-              "seconds": 2815,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 505
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 5,
           "name": "The One-Armed Man",
           "airdate": "1990-05-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams 2.mp4",
-            "name": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams 2",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%205%20-%20Cooper's%20Dreams%202.mp4",
-            "seconds": 2785,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 548
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams.mp4",
-              "name": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%205%20-%20Cooper's%20Dreams.mp4",
-              "seconds": 8399,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1535
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The One-Armed Man\" (0.95)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 2/Season 1 Episode 4 -  The One-Armed Man.mp4",
-              "name": "Twin Peaks Disk 2/Season 1 Episode 4 -  The One-Armed Man",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%202%2FSeason%201%20Episode%204%20-%20%20The%20One-Armed%20Man.mp4",
-              "seconds": 2817,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 533
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Cooper's Dreams",
           "airdate": "1990-05-10",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 3/Season 1 Episode 6 - Realization Time.mp4",
-            "name": "Twin Peaks Disk 3/Season 1 Episode 6 - Realization Time",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%206%20-%20Realization%20Time.mp4",
-            "seconds": 2815,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 498
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Cooper's Dreams\" (0.95)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams 2.mp4",
-              "name": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams 2",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%205%20-%20Cooper's%20Dreams%202.mp4",
-              "seconds": 2785,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 548
-            },
-            {
-              "conf": 0.7,
-              "why": "title ~ \"Cooper's Dreams\" (0.95)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams.mp4",
-              "name": "Twin Peaks Disk 3/Season 1 Episode 5 - Cooper's Dreams",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%205%20-%20Cooper's%20Dreams.mp4",
-              "seconds": 8399,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1535
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Realization Time",
           "airdate": "1990-05-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 3/Season 1 Episode 7 - The Last Evening.mp4",
-            "name": "Twin Peaks Disk 3/Season 1 Episode 7 - The Last Evening",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%207%20-%20The%20Last%20Evening.mp4",
-            "seconds": 2805,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 490
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Realization Time\" (0.95)",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin Peaks Disk 3/Season 1 Episode 6 - Realization Time.mp4",
-              "name": "Twin Peaks Disk 3/Season 1 Episode 6 - Realization Time",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%206%20-%20Realization%20Time.mp4",
-              "seconds": 2815,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 498
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 8,
           "name": "The Last Evening",
           "airdate": "1990-05-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Last Evening\" (0.95)",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin Peaks Disk 3/Season 1 Episode 7 - The Last Evening.mp4",
-            "name": "Twin Peaks Disk 3/Season 1 Episode 7 - The Last Evening",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20Peaks%20Disk%203%2FSeason%201%20Episode%207%20-%20The%20Last%20Evening.mp4",
-            "seconds": 2805,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 490
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -341,29 +107,17 @@
           "number": 1,
           "name": "May the Giant Be with You",
           "airdate": "1990-09-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-            "item": "unobscura",
-            "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-            "file": "Part 1.mp4",
-            "name": "Part 1",
-            "url": "https://archive.org/download/unobscura/Part%201.mp4",
-            "seconds": 4497,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 5942
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Coma",
           "airdate": "1990-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -375,29 +129,15 @@
             "playable": true,
             "sizeMB": 457
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-              "item": "unobscura",
-              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-              "file": "Part 2.mp4",
-              "name": "Part 2",
-              "url": "https://archive.org/download/unobscura/Part%202.mp4",
-              "seconds": 2808,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 3702
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "The Man Behind the Glass",
           "airdate": "1990-10-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -409,29 +149,15 @@
             "playable": true,
             "sizeMB": 481
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-              "item": "unobscura",
-              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-              "file": "Part 3.mp4",
-              "name": "Part 3",
-              "url": "https://archive.org/download/unobscura/Part%203.mp4",
-              "seconds": 3721,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4907
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Laura's Secret Diary",
           "airdate": "1990-10-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -443,69 +169,31 @@
             "playable": true,
             "sizeMB": 487
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-              "item": "unobscura",
-              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-              "file": "Part 4.mp4",
-              "name": "Part 4",
-              "url": "https://archive.org/download/unobscura/Part%204.mp4",
-              "seconds": 2660,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 3508
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "The Orchid's Curse",
           "airdate": "1990-10-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-            "item": "unobscura",
-            "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-            "file": "Part 5.mp4",
-            "name": "Part 5",
-            "url": "https://archive.org/download/unobscura/Part%205.mp4",
-            "seconds": 3417,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 4504
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Demons",
           "airdate": "1990-11-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-            "item": "unobscura",
-            "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-            "file": "Part 8.mp4",
-            "name": "Part 8",
-            "url": "https://archive.org/download/unobscura/Part%208.mp4",
-            "seconds": 3791,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 4998
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Lonely Souls",
           "airdate": "1990-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -517,29 +205,15 @@
             "playable": true,
             "sizeMB": 455
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 7 in \"Twin Peaks Season 2 [The Archivist's Uno\"",
-              "item": "unobscura",
-              "itemTitle": "Twin Peaks Season 2 [The Archivist's Unobscura Edit]",
-              "file": "Z - Appendix 2 [Part 6.5] - Invitation To Love James.mp4",
-              "name": "Z - Appendix 2 [Part 6.5] - Invitation To Love James",
-              "url": "https://archive.org/download/unobscura/Z%20-%20Appendix%202%20%5BPart%206.5%5D%20-%20Invitation%20To%20Love%20James.mp4",
-              "seconds": 2596,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 3388
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Drive with a Dead Girl",
           "airdate": "1990-11-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -557,9 +231,9 @@
           "number": 9,
           "name": "Arbitrary Law",
           "airdate": "1990-12-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -597,9 +271,9 @@
           "number": 11,
           "name": "Masked Ball",
           "airdate": "1990-12-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -617,9 +291,9 @@
           "number": 12,
           "name": "The Black Widow",
           "airdate": "1991-01-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -633,7 +307,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "season-2-episode-8-drive-with-a-dead-girl",
               "itemTitle": "Twin Peaks Complete Original Series",
@@ -667,9 +341,9 @@
           "number": 15,
           "name": "Slaves and Masters",
           "airdate": "1991-02-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -687,9 +361,9 @@
           "number": 16,
           "name": "The Condemned Woman",
           "airdate": "1991-02-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -707,9 +381,9 @@
           "number": 17,
           "name": "Wounds and Scars",
           "airdate": "1991-03-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -727,9 +401,9 @@
           "number": 18,
           "name": "On the Wings of Love",
           "airdate": "1991-04-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -747,9 +421,9 @@
           "number": 19,
           "name": "Variations and Relations",
           "airdate": "1991-04-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "season-2-episode-8-drive-with-a-dead-girl",
             "itemTitle": "Twin Peaks Complete Original Series",
@@ -767,35 +441,9 @@
           "number": 20,
           "name": "The Path to the Black Lodge",
           "airdate": "1991-04-18",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "season-2-episode-8-drive-with-a-dead-girl",
-            "itemTitle": "Twin Peaks Complete Original Series",
-            "file": "Twin peaks disk 9/Season 2 Episode 20 - The Path To The Black House.mp4",
-            "name": "Twin peaks disk 9/Season 2 Episode 20 - The Path To The Black House",
-            "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20peaks%20disk%209%2FSeason%202%20Episode%2020%20-%20The%20Path%20To%20The%20Black%20House.mp4",
-            "seconds": 3072,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 538
-          },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "season-2-episode-8-drive-with-a-dead-girl",
-              "itemTitle": "Twin Peaks Complete Original Series",
-              "file": "Twin peaks disk 9/Season 2 Episode 20 - The Path To The Black House (2).mp4",
-              "name": "Twin peaks disk 9/Season 2 Episode 20 - The Path To The Black House (2)",
-              "url": "https://archive.org/download/season-2-episode-8-drive-with-a-dead-girl/Twin%20peaks%20disk%209%2FSeason%202%20Episode%2020%20-%20The%20Path%20To%20The%20Black%20House%20(2).mp4",
-              "seconds": 2806,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 478
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 21,

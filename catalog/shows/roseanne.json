@@ -3,7 +3,7 @@
   "slug": "roseanne",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:29:30.824Z",
+  "matchedAt": "2026-10-14T05:18:27.003Z",
   "tvmaze": {
     "id": 690,
     "name": "Roseanne",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 231,
-    "live": 214,
-    "review": 14,
+    "live": 174,
+    "review": 54,
     "missing": 3,
     "pct": 99
   },
@@ -306,9 +306,9 @@
           "number": 15,
           "name": "Nightmare on Oak Street",
           "airdate": "1989-02-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -346,9 +346,9 @@
           "number": 17,
           "name": "Becky's Choice",
           "airdate": "1989-02-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -511,9 +511,9 @@
           "number": 2,
           "name": "The Little Sister",
           "airdate": "1989-09-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -651,9 +651,9 @@
           "number": 9,
           "name": "We Gather Together",
           "airdate": "1989-11-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -671,9 +671,9 @@
           "number": 10,
           "name": "Brain-Dead Poets Society",
           "airdate": "1989-11-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -791,9 +791,9 @@
           "number": 16,
           "name": "Born to Be Wild",
           "airdate": "1990-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1196,9 +1196,9 @@
           "number": 12,
           "name": "Confessions",
           "airdate": "1990-12-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1216,9 +1216,9 @@
           "number": 13,
           "name": "The Courtship of Eddie, Dan's Father (1)",
           "airdate": "1991-01-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1296,9 +1296,9 @@
           "number": 17,
           "name": "Valentine's Day",
           "airdate": "1991-02-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1456,9 +1456,9 @@
           "number": 25,
           "name": "The Pied Piper of Lanford",
           "airdate": "1991-05-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1481,9 +1481,9 @@
           "number": 1,
           "name": "A Bitter Pill to Swallow",
           "airdate": "1991-09-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1661,9 +1661,9 @@
           "number": 10,
           "name": "Thanksgiving '91",
           "airdate": "1991-11-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -1895,21 +1895,7 @@
             "playable": true,
             "sizeMB": 266
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Lies\" (0.95)",
-              "item": "roseanne-season-6",
-              "itemTitle": "Roseanne Season 6",
-              "file": "Roseanne Season 6 Episode 21 Lies My Father Told Me.mp4",
-              "name": "Roseanne Season 6 Episode 21 Lies My Father Told Me",
-              "url": "https://archive.org/download/roseanne-season-6/Roseanne%20Season%206%20Episode%2021%20Lies%20My%20Father%20Told%20Me.mp4",
-              "seconds": 1407,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 60
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,
@@ -1935,9 +1921,9 @@
           "number": 23,
           "name": "Secrets",
           "airdate": "1992-04-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2000,9 +1986,9 @@
           "number": 1,
           "name": "Terms of Estrangement (1)",
           "airdate": "1992-09-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2020,9 +2006,9 @@
           "number": 2,
           "name": "Terms of Estrangement (2)",
           "airdate": "1992-09-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2100,9 +2086,9 @@
           "number": 6,
           "name": "Looking for Loans in All the Wrong Places",
           "airdate": "1992-10-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2140,9 +2126,9 @@
           "number": 8,
           "name": "Ladies' Choice",
           "airdate": "1992-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2180,9 +2166,9 @@
           "number": 10,
           "name": "Good Girls, Bad Girls",
           "airdate": "1992-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2240,9 +2226,9 @@
           "number": 13,
           "name": "Crime and Punishment (1)",
           "airdate": "1993-01-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2420,9 +2406,9 @@
           "number": 22,
           "name": "Promises, Promises",
           "airdate": "1993-04-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2541,7 +2527,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2575,7 +2561,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2609,7 +2595,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2643,7 +2629,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2697,7 +2683,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2735,9 +2721,9 @@
           "number": 9,
           "name": "Homecoming",
           "airdate": "1993-11-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2755,9 +2741,9 @@
           "number": 10,
           "name": "Thanksgiving '93",
           "airdate": "1993-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2771,7 +2757,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2789,9 +2775,9 @@
           "number": 11,
           "name": "The Driver's Seat",
           "airdate": "1993-11-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2825,7 +2811,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2859,7 +2845,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2877,9 +2863,9 @@
           "number": 14,
           "name": "Busted",
           "airdate": "1994-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2893,7 +2879,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2911,9 +2897,9 @@
           "number": 15,
           "name": "David vs. Goliath",
           "airdate": "1994-02-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -2927,7 +2913,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2961,7 +2947,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -2995,7 +2981,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -3069,7 +3055,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -3101,21 +3087,7 @@
             "playable": true,
             "sizeMB": 267
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "roseanne-season-6",
-              "itemTitle": "Roseanne Season 6",
-              "file": "Roseanne Season 6 Episode 21 Lies My Father Told Me.mp4",
-              "name": "Roseanne Season 6 Episode 21 Lies My Father Told Me",
-              "url": "https://archive.org/download/roseanne-season-6/Roseanne%20Season%206%20Episode%2021%20Lies%20My%20Father%20Told%20Me.mp4",
-              "seconds": 1407,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 60
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,
@@ -3137,7 +3109,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -3171,7 +3143,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -3203,21 +3175,7 @@
             "playable": true,
             "sizeMB": 268
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "roseanne-season-6",
-              "itemTitle": "Roseanne Season 6",
-              "file": "Roseanne Season 6 Episode 24 Isn.mp4",
-              "name": "Roseanne Season 6 Episode 24 Isn",
-              "url": "https://archive.org/download/roseanne-season-6/Roseanne%20Season%206%20Episode%2024%20Isn.mp4",
-              "seconds": 1408,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 65
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 25,
@@ -3239,7 +3197,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-season-6",
               "itemTitle": "Roseanne Season 6",
@@ -3442,9 +3400,9 @@
           "number": 10,
           "name": "Thanksgiving '94",
           "airdate": "1994-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -3522,9 +3480,9 @@
           "number": 14,
           "name": "My Name is Bev",
           "airdate": "1995-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -3542,9 +3500,9 @@
           "number": 15,
           "name": "Bed and Bored",
           "airdate": "1995-02-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -3562,9 +3520,9 @@
           "number": 16,
           "name": "Sisters",
           "airdate": "1995-02-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -3602,9 +3560,9 @@
           "number": 18,
           "name": "Single Married Female",
           "airdate": "1995-02-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -3738,9 +3696,9 @@
           "number": 26,
           "name": "Sherwood Schwartz: A Loving Tribute",
           "airdate": "1995-05-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -3863,9 +3821,9 @@
           "number": 6,
           "name": "The Fifties Show",
           "airdate": "1995-11-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -4003,9 +3961,9 @@
           "number": 13,
           "name": "The White Sheep of the Family",
           "airdate": "1996-01-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -4237,9 +4195,9 @@
           "number": 24,
           "name": "Heart & Soul",
           "airdate": "1996-05-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -4342,9 +4300,9 @@
           "number": 4,
           "name": "Honor Thy Mother",
           "airdate": "1996-10-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -4610,9 +4568,9 @@
           "number": 18,
           "name": "A Second Chance",
           "airdate": "1997-02-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -4670,9 +4628,9 @@
           "number": 21,
           "name": "The Truth Be Told",
           "airdate": "1997-03-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-tv-series",
             "itemTitle": "Roseanne",
@@ -4925,9 +4883,9 @@
           "number": 6,
           "name": "No Country for Old Women",
           "airdate": "2018-05-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-s10-2018-verison",
             "itemTitle": "Roseanne Season 10 Laugh Track Verison",
@@ -4941,7 +4899,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-tv-series",
               "itemTitle": "Roseanne",
@@ -4959,9 +4917,9 @@
           "number": 7,
           "name": "Go Cubs",
           "airdate": "2018-05-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-s10-2018-verison",
             "itemTitle": "Roseanne Season 10 Laugh Track Verison",
@@ -4975,7 +4933,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-tv-series",
               "itemTitle": "Roseanne",
@@ -4993,9 +4951,9 @@
           "number": 8,
           "name": "Netflix & Pill",
           "airdate": "2018-05-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "roseanne-s10-2018-verison",
             "itemTitle": "Roseanne Season 10 Laugh Track Verison",
@@ -5009,7 +4967,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "roseanne-tv-series",
               "itemTitle": "Roseanne",

@@ -3,7 +3,7 @@
   "slug": "the-simpsons",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:28:46.451Z",
+  "matchedAt": "2026-10-14T05:18:33.270Z",
   "tvmaze": {
     "id": 83,
     "name": "The Simpsons",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 806,
     "live": 0,
-    "review": 3,
-    "missing": 803,
+    "review": 1,
+    "missing": 805,
     "pct": 0
   },
   "seasons": [
@@ -621,20 +621,8 @@
           "number": 13,
           "name": "Selma's Choice",
           "airdate": "1993-01-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Selma's Choice\" (0.95)",
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The Simpsons- Selma's Choice (most).mp4",
-            "name": "The Simpsons- Selma's Choice (most)",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Selma's%20Choice%20(most).mp4",
-            "seconds": 1465,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 723
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3404,20 +3392,8 @@
           "number": 9,
           "name": "Eternal Moonshine of the Simpson Mind",
           "airdate": "2007-12-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Eternal Moonshine of the Simpson Mind\" (1.00)",
-            "item": "eternal-moonshine-of-the-simpson-mind",
-            "itemTitle": "The Simpsons: Eternal Moonshine Of The Simpson Mind Animatic (S19E9)",
-            "file": "Eternal Moonshine of the Simpson Mind.mp4",
-            "name": "Eternal Moonshine of the Simpson Mind",
-            "url": "https://archive.org/download/eternal-moonshine-of-the-simpson-mind/Eternal%20Moonshine%20of%20the%20Simpson%20Mind.mp4",
-            "seconds": 1642,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

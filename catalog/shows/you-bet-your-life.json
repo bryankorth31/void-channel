@@ -3,7 +3,7 @@
   "slug": "you-bet-your-life",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:29:04.402Z",
+  "matchedAt": "2026-10-14T05:19:05.200Z",
   "tvmaze": {
     "id": 2197,
     "name": "You Bet Your Life",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 174,
     "live": 0,
-    "review": 5,
-    "missing": 169,
-    "pct": 3
+    "review": 2,
+    "missing": 172,
+    "pct": 1
   },
   "seasons": [
     {
@@ -26,35 +26,9 @@
           "number": 1,
           "name": "Wall",
           "airdate": "1950-10-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Wall\" (0.95)",
-            "item": "Wall_1950s-game-show",
-            "itemTitle": "1950's Television: \"You Bet Your Life with Groucho Marx\" - Secret Word ''Wall''",
-            "file": "Secret_Word_wall.mp4",
-            "name": "Secret_Word_wall",
-            "url": "https://archive.org/download/Wall_1950s-game-show/Secret_Word_wall.mp4",
-            "seconds": 1770,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 132
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Wall\" (0.95)",
-              "item": "Wall_1950s-game-show",
-              "itemTitle": "1950's Television: \"You Bet Your Life with Groucho Marx\" - Secret Word ''Wall''",
-              "file": "Secret_Word_wall_512kb.mp4",
-              "name": "Secret_Word_wall_512kb",
-              "url": "https://archive.org/download/Wall_1950s-game-show/Secret_Word_wall_512kb.mp4",
-              "seconds": 1770,
-              "format": "512Kb MPEG4",
-              "playable": true,
-              "sizeMB": 128
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -351,35 +325,9 @@
           "number": 23,
           "name": "Clock",
           "airdate": "1954-02-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Clock\" (0.95)",
-            "item": "You_Bet_Your_Life_Clock",
-            "itemTitle": "''You Bet Your Life with Groucho Marx'' - Secret Word Clock",
-            "file": "YouBet_Your_Life_Clock.mp4",
-            "name": "YouBet_Your_Life_Clock",
-            "url": "https://archive.org/download/You_Bet_Your_Life_Clock/YouBet_Your_Life_Clock.mp4",
-            "seconds": 1770,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 132
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Clock\" (0.95)",
-              "item": "You_Bet_Your_Life_Clock",
-              "itemTitle": "''You Bet Your Life with Groucho Marx'' - Secret Word Clock",
-              "file": "YouBet_Your_Life_Clock_512kb.mp4",
-              "name": "YouBet_Your_Life_Clock_512kb",
-              "url": "https://archive.org/download/You_Bet_Your_Life_Clock/YouBet_Your_Life_Clock_512kb.mp4",
-              "seconds": 1770,
-              "format": "512Kb MPEG4",
-              "playable": true,
-              "sizeMB": 128
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 26,
@@ -478,35 +426,9 @@
           "number": 17,
           "name": "Water",
           "airdate": "1955-01-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Water\" (0.95)",
-            "item": "Groucho_Marx_Water",
-            "itemTitle": "'You Bet Your Life' - Secret Word: Water",
-            "file": "Water_Groucho.mp4",
-            "name": "Water_Groucho",
-            "url": "https://archive.org/download/Groucho_Marx_Water/Water_Groucho.mp4",
-            "seconds": 1621,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Water\" (0.95)",
-              "item": "Groucho_Marx_Water",
-              "itemTitle": "'You Bet Your Life' - Secret Word: Water",
-              "file": "Water_Groucho_512kb.mp4",
-              "name": "Water_Groucho_512kb",
-              "url": "https://archive.org/download/Groucho_Marx_Water/Water_Groucho_512kb.mp4",
-              "seconds": 1621,
-              "format": "512Kb MPEG4",
-              "playable": true,
-              "sizeMB": 118
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 18,

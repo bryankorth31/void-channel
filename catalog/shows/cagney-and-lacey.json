@@ -3,7 +3,7 @@
   "slug": "cagney-and-lacey",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:29:00.731Z",
+  "matchedAt": "2026-10-14T05:19:00.029Z",
   "tvmaze": {
     "id": 12374,
     "name": "Cagney & Lacey",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 125,
-    "live": 121,
-    "review": 4,
-    "missing": 0,
-    "pct": 100
+    "live": 95,
+    "review": 29,
+    "missing": 1,
+    "pct": 99
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "You Call This Plain Clothes?",
           "airdate": "1982-03-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -42,7 +42,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-01",
               "itemTitle": "Cagney & Lacey Season 1",
@@ -53,19 +53,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 283
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"You Call This Plain Clothes?\" (0.95)",
-              "item": "cagneylaceys01",
-              "itemTitle": "Cagney & Lacey Season 1 (1982)",
-              "file": "S01E001_You Call This Plain Clothes_chf3_prob4.mp4",
-              "name": "S01E001_You Call This Plain Clothes_chf3_prob4",
-              "url": "https://archive.org/download/cagneylaceys01/S01E001_You%20Call%20This%20Plain%20Clothes_chf3_prob4.mp4",
-              "seconds": 2947,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4427
             }
           ]
         },
@@ -100,19 +87,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 283
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Pop Used to Work Chinatown\" (0.95)",
-              "item": "cagneylaceys01",
-              "itemTitle": "Cagney & Lacey Season 1 (1982)",
-              "file": "S01E002_Pop Used To Work In Chinatown_chf3_prob4.mp4",
-              "name": "S01E002_Pop Used To Work In Chinatown_chf3_prob4",
-              "url": "https://archive.org/download/cagneylaceys01/S01E002_Pop%20Used%20To%20Work%20In%20Chinatown_chf3_prob4.mp4",
-              "seconds": 2950,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4364
             }
           ]
         },
@@ -147,19 +121,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 267
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Beyond the Golden Door\" (0.95)",
-              "item": "cagneylaceys01",
-              "itemTitle": "Cagney & Lacey Season 1 (1982)",
-              "file": "S01E003_Beyond The Golden Door_1_chf3_prob4.mp4",
-              "name": "S01E003_Beyond The Golden Door_1_chf3_prob4",
-              "url": "https://archive.org/download/cagneylaceys01/S01E003_Beyond%20The%20Golden%20Door_1_chf3_prob4.mp4",
-              "seconds": 2950,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4088
             }
           ]
         },
@@ -167,9 +128,9 @@
           "number": 4,
           "name": "Street Scene",
           "airdate": "1982-04-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -183,7 +144,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-01",
               "itemTitle": "Cagney & Lacey Season 1",
@@ -194,19 +155,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 270
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Street Scene\" (0.95)",
-              "item": "cagneylaceys01",
-              "itemTitle": "Cagney & Lacey Season 1 (1982)",
-              "file": "S01E004_Street Scene_chf3_prob4.mp4",
-              "name": "S01E004_Street Scene_chf3_prob4",
-              "url": "https://archive.org/download/cagneylaceys01/S01E004_Street%20Scene_chf3_prob4.mp4",
-              "seconds": 2949,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4416
             }
           ]
         },
@@ -214,9 +162,9 @@
           "number": 5,
           "name": "Suffer the Children",
           "airdate": "1982-04-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -230,7 +178,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-01",
               "itemTitle": "Cagney & Lacey Season 1",
@@ -241,19 +189,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 270
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Suffer the Children\" (0.95)",
-              "item": "cagneylaceys01",
-              "itemTitle": "Cagney & Lacey Season 1 (1982)",
-              "file": "S01E005_Suffer The Children_chf3_prob4.mp4",
-              "name": "S01E005_Suffer The Children_chf3_prob4",
-              "url": "https://archive.org/download/cagneylaceys01/S01E005_Suffer%20The%20Children_chf3_prob4.mp4",
-              "seconds": 2951,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4291
             }
           ]
         },
@@ -288,19 +223,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 275
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Better Than Equal\" (0.95)",
-              "item": "cagneylaceys01",
-              "itemTitle": "Cagney & Lacey Season 1 (1982)",
-              "file": "S01E006_Better Than Equal_chf3_prob4.mp4",
-              "name": "S01E006_Better Than Equal_chf3_prob4",
-              "url": "https://archive.org/download/cagneylaceys01/S01E006_Better%20Than%20Equal_chf3_prob4.mp4",
-              "seconds": 2953,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 4229
             }
           ]
         }
@@ -313,9 +235,9 @@
           "number": 1,
           "name": "Witness to an Incident",
           "airdate": "1982-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -329,7 +251,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-and-lacey-season-2",
               "itemTitle": "Cagney & Lacey Season 2",
@@ -381,9 +303,9 @@
           "number": 3,
           "name": "Beauty Burglars",
           "airdate": "1982-11-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -397,7 +319,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-and-lacey-season-2",
               "itemTitle": "Cagney & Lacey Season 2",
@@ -449,9 +371,9 @@
           "number": 5,
           "name": "Hot Line",
           "airdate": "1982-11-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -465,7 +387,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-and-lacey-season-2",
               "itemTitle": "Cagney & Lacey Season 2",
@@ -483,35 +405,9 @@
           "number": 6,
           "name": "Internal Affairs",
           "airdate": "1982-11-29",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "y_20251021",
-            "itemTitle": "Cagney & Lacey",
-            "file": "Cagney and Lacey S02E06-Internal Affairs.mp4",
-            "name": "Cagney and Lacey S02E06-Internal Affairs",
-            "url": "https://archive.org/download/y_20251021/Cagney%20and%20Lacey%20S02E06-Internal%20Affairs.mp4",
-            "seconds": 2942,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 283
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "cagney-and-lacey-season-2",
-              "itemTitle": "Cagney & Lacey Season 2",
-              "file": "Cagney and Lacey S02E06-Internal Affairs.mp4",
-              "name": "Cagney and Lacey S02E06-Internal Affairs",
-              "url": "https://archive.org/download/cagney-and-lacey-season-2/Cagney%20and%20Lacey%20S02E06-Internal%20Affairs.mp4",
-              "seconds": 2942,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 283
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
@@ -551,9 +447,9 @@
           "number": 8,
           "name": "Conduct Unbecoming",
           "airdate": "1982-12-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -567,7 +463,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-and-lacey-season-2",
               "itemTitle": "Cagney & Lacey Season 2",
@@ -721,9 +617,9 @@
           "number": 13,
           "name": "Affirmative Action",
           "airdate": "1983-01-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -737,7 +633,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-and-lacey-season-2",
               "itemTitle": "Cagney & Lacey Season 2",
@@ -1027,9 +923,9 @@
           "number": 22,
           "name": "The Informant",
           "airdate": "1983-05-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -1043,7 +939,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-and-lacey-season-2",
               "itemTitle": "Cagney & Lacey Season 2",
@@ -1134,9 +1030,9 @@
           "number": 3,
           "name": "Victimless Crime",
           "airdate": "1984-04-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -1150,7 +1046,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-03",
               "itemTitle": "Cagney & Lacey Season 3",
@@ -1236,9 +1132,9 @@
           "number": 6,
           "name": "Partners",
           "airdate": "1984-05-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -1252,7 +1148,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-03",
               "itemTitle": "Cagney & Lacey Season 3",
@@ -1270,9 +1166,9 @@
           "number": 7,
           "name": "Choices",
           "airdate": "1984-05-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -1286,7 +1182,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-03",
               "itemTitle": "Cagney & Lacey Season 3",
@@ -1309,9 +1205,9 @@
           "number": 1,
           "name": "Child Witness",
           "airdate": "1984-10-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -1325,7 +1221,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-04",
               "itemTitle": "Cagney & Lacey Season 4",
@@ -1479,9 +1375,9 @@
           "number": 6,
           "name": "Taxi Cab Murders",
           "airdate": "1984-11-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -1495,7 +1391,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-04",
               "itemTitle": "Cagney & Lacey Season 4",
@@ -2023,9 +1919,9 @@
           "number": 22,
           "name": "Organized Crime",
           "airdate": "1985-04-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -2039,7 +1935,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-04",
               "itemTitle": "Cagney & Lacey Season 4",
@@ -2062,9 +1958,9 @@
           "number": 1,
           "name": "On the Street",
           "airdate": "1985-09-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -2182,9 +2078,9 @@
           "number": 7,
           "name": "Mothers & Sons",
           "airdate": "1985-11-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -2607,9 +2503,9 @@
           "number": 4,
           "name": "Disenfranchised (aka Incest)",
           "airdate": "1986-10-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -2687,9 +2583,9 @@
           "number": 8,
           "name": "Rites of Passage",
           "airdate": "1986-12-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -2707,9 +2603,9 @@
           "number": 9,
           "name": "Revenge",
           "airdate": "1986-12-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -2847,9 +2743,9 @@
           "number": 16,
           "name": "To Sir, with Love",
           "airdate": "1987-02-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -3132,9 +3028,9 @@
           "number": 8,
           "name": "Secrets",
           "airdate": "1987-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -3172,9 +3068,9 @@
           "number": 10,
           "name": "Old Flames",
           "airdate": "1988-01-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -3232,9 +3128,9 @@
           "number": 13,
           "name": "Hello Goodbye",
           "airdate": "1988-02-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -3292,9 +3188,9 @@
           "number": 16,
           "name": "A Class Act",
           "airdate": "1988-03-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",

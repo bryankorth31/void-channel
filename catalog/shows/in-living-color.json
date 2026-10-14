@@ -3,7 +3,7 @@
   "slug": "in-living-color",
   "type": "Sketch and Comedy",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:28:54.764Z",
+  "matchedAt": "2026-10-14T05:18:49.385Z",
   "tvmaze": {
     "id": 6050,
     "name": "In Living Color",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 127,
-    "live": 89,
+    "live": 13,
     "review": 0,
-    "missing": 38,
-    "pct": 70
+    "missing": 114,
+    "pct": 10
   },
   "seasons": [
     {
@@ -30,30 +30,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E01.mp4",
-            "name": "Season 1/In Living Color - S01E01",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E01.mp4",
+            "item": "in-living-color-1990-s-01-e-01",
+            "itemTitle": "In Living Color",
+            "file": "In Living Color 1990 S01E01.mp4",
+            "name": "In Living Color 1990 S01E01",
+            "url": "https://archive.org/download/in-living-color-1990-s-01-e-01/In%20Living%20Color%201990%20S01E01.mp4",
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 182
+            "sizeMB": 78
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-1990-s-01-e-01",
-              "itemTitle": "In Living Color",
-              "file": "In Living Color 1990 S01E01.mp4",
-              "name": "In Living Color 1990 S01E01",
-              "url": "https://archive.org/download/in-living-color-1990-s-01-e-01/In%20Living%20Color%201990%20S01E01.mp4",
-              "seconds": 1381,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 78
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -66,19 +53,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 65
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 6 in \"Walt Disney Treasures - Mickey Mouse in \"",
-              "item": "walt_disney_treasures_mickey_mouse_in_lc_v2_d2",
-              "itemTitle": "Walt Disney Treasures - Mickey Mouse in Living Color - Volume II - Disc 2",
-              "file": "LC_V2_D2.mp4",
-              "name": "LC_V2_D2",
-              "url": "https://archive.org/download/walt_disney_treasures_mickey_mouse_in_lc_v2_d2/LC_V2_D2.mp4",
-              "seconds": 1598,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 162
             }
           ]
         },
@@ -90,44 +64,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E02.mp4",
-            "name": "Season 1/In Living Color - S01E02",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E02.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E02.mp4",
+            "name": "In Living Color S01E02",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E02.mp4",
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 187
+            "sizeMB": 69
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E02.mp4",
-              "name": "In Living Color S01E02",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E02.mp4",
-              "seconds": 1381,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 69
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 6 in \"Walt Disney Treasures - Mickey Mouse in \"",
-              "item": "walt_disney_treasures_mickey_mouse_in_lc_v2_d2",
-              "itemTitle": "Walt Disney Treasures - Mickey Mouse in Living Color - Volume II - Disc 2",
-              "file": "LC_V2_D21.mp4",
-              "name": "LC_V2_D21",
-              "url": "https://archive.org/download/walt_disney_treasures_mickey_mouse_in_lc_v2_d2/LC_V2_D21.mp4",
-              "seconds": 1613,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 163
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -137,44 +84,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E03.mp4",
-            "name": "Season 1/In Living Color - S01E03",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E03.mp4",
-            "seconds": 1380,
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E03.mp4",
+            "name": "In Living Color S01E03",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E03.mp4",
+            "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 191
+            "sizeMB": 72
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E03.mp4",
-              "name": "In Living Color S01E03",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E03.mp4",
-              "seconds": 1379,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 72
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 6 in \"Walt Disney Treasures - Mickey Mouse in \"",
-              "item": "walt_disney_treasures_mickey_mouse_in_lc_v2_d2",
-              "itemTitle": "Walt Disney Treasures - Mickey Mouse in Living Color - Volume II - Disc 2",
-              "file": "LC_V2_D23.mp4",
-              "name": "LC_V2_D23",
-              "url": "https://archive.org/download/walt_disney_treasures_mickey_mouse_in_lc_v2_d2/LC_V2_D23.mp4",
-              "seconds": 1563,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 157
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -184,44 +104,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E04.mp4",
-            "name": "Season 1/In Living Color - S01E04",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E04.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E04.mp4",
+            "name": "In Living Color S01E04",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E04.mp4",
             "seconds": 1393,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 66
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E04.mp4",
-              "name": "In Living Color S01E04",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E04.mp4",
-              "seconds": 1393,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 66
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 6 in \"Walt Disney Treasures - Mickey Mouse in \"",
-              "item": "walt_disney_treasures_mickey_mouse_in_lc_v2_d2",
-              "itemTitle": "Walt Disney Treasures - Mickey Mouse in Living Color - Volume II - Disc 2",
-              "file": "LC_V2_D26.mp4",
-              "name": "LC_V2_D26",
-              "url": "https://archive.org/download/walt_disney_treasures_mickey_mouse_in_lc_v2_d2/LC_V2_D26.mp4",
-              "seconds": 1470,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 144
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -231,44 +124,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E05.mp4",
-            "name": "Season 1/In Living Color - S01E05",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E05.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E05.mp4",
+            "name": "In Living Color S01E05",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E05.mp4",
             "seconds": 1382,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 185
+            "sizeMB": 69
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E05.mp4",
-              "name": "In Living Color S01E05",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E05.mp4",
-              "seconds": 1382,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 69
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 6 in \"Walt Disney Treasures - Mickey Mouse in \"",
-              "item": "walt_disney_treasures_mickey_mouse_in_lc_v2_d2",
-              "itemTitle": "Walt Disney Treasures - Mickey Mouse in Living Color - Volume II - Disc 2",
-              "file": "LC_V2_D212.mp4",
-              "name": "LC_V2_D212",
-              "url": "https://archive.org/download/walt_disney_treasures_mickey_mouse_in_lc_v2_d2/LC_V2_D212.mp4",
-              "seconds": 1495,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -278,44 +144,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E06.mp4",
-            "name": "Season 1/In Living Color - S01E06",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E06.mp4",
-            "seconds": 1389,
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E06.mp4",
+            "name": "In Living Color S01E06",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E06.mp4",
+            "seconds": 1388,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 193
+            "sizeMB": 70
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E06.mp4",
-              "name": "In Living Color S01E06",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E06.mp4",
-              "seconds": 1388,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 70
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 6 in \"Walt Disney Treasures - Mickey Mouse in \"",
-              "item": "walt_disney_treasures_mickey_mouse_in_lc_v2_d2",
-              "itemTitle": "Walt Disney Treasures - Mickey Mouse in Living Color - Volume II - Disc 2",
-              "file": "LC_V2_D217.mp4",
-              "name": "LC_V2_D217",
-              "url": "https://archive.org/download/walt_disney_treasures_mickey_mouse_in_lc_v2_d2/LC_V2_D217.mp4",
-              "seconds": 1547,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 156
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -325,31 +164,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E07.mp4",
-            "name": "Season 1/In Living Color - S01E07",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E07.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E07.mp4",
+            "name": "In Living Color S01E07",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E07.mp4",
             "seconds": 1391,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 186
+            "sizeMB": 71
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E07.mp4",
-              "name": "In Living Color S01E07",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E07.mp4",
-              "seconds": 1391,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 71
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -359,31 +184,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E08.mp4",
-            "name": "Season 1/In Living Color - S01E08",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E08.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E08.mp4",
+            "name": "In Living Color S01E08",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E08.mp4",
             "seconds": 1393,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 188
+            "sizeMB": 70
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E08.mp4",
-              "name": "In Living Color S01E08",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E08.mp4",
-              "seconds": 1393,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 70
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -393,31 +204,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E09.mp4",
-            "name": "Season 1/In Living Color - S01E09",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E09.mp4",
-            "seconds": 1392,
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E09.mp4",
+            "name": "In Living Color S01E09",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E09.mp4",
+            "seconds": 1391,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 195
+            "sizeMB": 74
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E09.mp4",
-              "name": "In Living Color S01E09",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E09.mp4",
-              "seconds": 1391,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 74
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -427,31 +224,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E10.mp4",
-            "name": "Season 1/In Living Color - S01E10",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E10.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E10.mp4",
+            "name": "In Living Color S01E10",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E10.mp4",
             "seconds": 1392,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 185
+            "sizeMB": 69
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E10.mp4",
-              "name": "In Living Color S01E10",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E10.mp4",
-              "seconds": 1392,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 69
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
@@ -461,31 +244,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E11.mp4",
-            "name": "Season 1/In Living Color - S01E11",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E11.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E11.mp4",
+            "name": "In Living Color S01E11",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E11.mp4",
             "seconds": 1390,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 195
+            "sizeMB": 69
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E11.mp4",
-              "name": "In Living Color S01E11",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E11.mp4",
-              "seconds": 1390,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 69
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -495,31 +264,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E12.mp4",
-            "name": "Season 1/In Living Color - S01E12",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E12.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E12.mp4",
+            "name": "In Living Color S01E12",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E12.mp4",
             "seconds": 1391,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 231
+            "sizeMB": 85
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E12.mp4",
-              "name": "In Living Color S01E12",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E12.mp4",
-              "seconds": 1391,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 85
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
@@ -529,31 +284,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 1/In Living Color - S01E13.mp4",
-            "name": "Season 1/In Living Color - S01E13",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%201%2FIn%20Living%20Color%20-%20S01E13.mp4",
+            "item": "in-living-color-season-one",
+            "itemTitle": "''In Living Color'' Season One",
+            "file": "In Living Color S01E13.mp4",
+            "name": "In Living Color S01E13",
+            "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E13.mp4",
             "seconds": 1390,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 194
+            "sizeMB": 74
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "in-living-color-season-one",
-              "itemTitle": "''In Living Color'' Season One",
-              "file": "In Living Color S01E13.mp4",
-              "name": "In Living Color S01E13",
-              "url": "https://archive.org/download/in-living-color-season-one/In%20Living%20Color%20S01E13.mp4",
-              "seconds": 1390,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 74
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -564,160 +305,64 @@
           "number": 1,
           "name": "Big Brother",
           "airdate": "1990-09-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E01.mp4",
-            "name": "Season 2/In Living Color - S02E01",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E01.mp4",
-            "seconds": 1393,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 181
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Anton at the Recruiter",
           "airdate": "1990-09-30",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E02.mp4",
-            "name": "Season 2/In Living Color - S02E02",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E02.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 181
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Spike's Joint",
           "airdate": "1990-10-07",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E03.mp4",
-            "name": "Season 2/In Living Color - S02E03",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E03.mp4",
-            "seconds": 1306,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 189
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Hour of Power",
           "airdate": "1990-10-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E04.mp4",
-            "name": "Season 2/In Living Color - S02E04",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E04.mp4",
-            "seconds": 1392,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 195
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Miss Black Person USA",
           "airdate": "1990-10-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E05.mp4",
-            "name": "Season 2/In Living Color - S02E05",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E05.mp4",
-            "seconds": 1393,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 219
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Black Man's Guide to Understanding the Black Woman",
           "airdate": "1990-10-28",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E06.mp4",
-            "name": "Season 2/In Living Color - S02E06",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E06.mp4",
-            "seconds": 1394,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Funky Finger Productions",
           "airdate": "1990-11-04",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E07.mp4",
-            "name": "Season 2/In Living Color - S02E07",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E07.mp4",
-            "seconds": 1393,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 202
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Laquita Meets Billy Dee",
           "airdate": "1990-11-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E08.mp4",
-            "name": "Season 2/In Living Color - S02E08",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E08.mp4",
-            "seconds": 1393,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 210
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -732,100 +377,40 @@
           "number": 10,
           "name": "Anton's Thanksgiving",
           "airdate": "1990-11-25",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E10.mp4",
-            "name": "Season 2/In Living Color - S02E10",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E10.mp4",
-            "seconds": 1391,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 191
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Justice Legions of America",
           "airdate": "1990-12-16",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E11.mp4",
-            "name": "Season 2/In Living Color - S02E11",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E11.mp4",
-            "seconds": 1389,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 197
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Veracosa",
           "airdate": "1990-12-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E12.mp4",
-            "name": "Season 2/In Living Color - S02E12",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E12.mp4",
-            "seconds": 1390,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 219
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Johnny Abdul",
           "airdate": "1991-01-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E13.mp4",
-            "name": "Season 2/In Living Color - S02E13",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E13.mp4",
-            "seconds": 1390,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 210
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Introducing..Fire Marshal Bill",
           "airdate": "1991-02-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E14.mp4",
-            "name": "Season 2/In Living Color - S02E14",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E14.mp4",
-            "seconds": 1283,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 195
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -840,140 +425,56 @@
           "number": 16,
           "name": "Anton in the Burbs",
           "airdate": "1991-02-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E16.mp4",
-            "name": "Season 2/In Living Color - S02E16",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E16.mp4",
-            "seconds": 1379,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 199
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "PCN's Win, Lose or Draw",
           "airdate": "1991-02-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E17.mp4",
-            "name": "Season 2/In Living Color - S02E17",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E17.mp4",
-            "seconds": 1377,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 193
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Lil Magic's School Play",
           "airdate": "1991-03-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E18.mp4",
-            "name": "Season 2/In Living Color - S02E18",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E18.mp4",
-            "seconds": 1378,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 228
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
           "name": "Hour of Power: Tag Team Evangalists",
           "airdate": "1991-03-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E19.mp4",
-            "name": "Season 2/In Living Color - S02E19",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E19.mp4",
-            "seconds": 1378,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 204
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "Super Fly",
           "airdate": "1991-03-31",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E20.mp4",
-            "name": "Season 2/In Living Color - S02E20",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E20.mp4",
-            "seconds": 1364,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 206
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "Anton at the Recruiter",
           "airdate": "1991-04-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E21.mp4",
-            "name": "Season 2/In Living Color - S02E21",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E21.mp4",
-            "seconds": 1366,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 171
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
           "name": "Arsenio Hall of Justice",
           "airdate": "1991-04-28",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E22.mp4",
-            "name": "Season 2/In Living Color - S02E22",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E22.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 199
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -988,60 +489,24 @@
           "number": 24,
           "name": "Homey the Sellout: Part 1",
           "airdate": "1991-05-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E24.mp4",
-            "name": "Season 2/In Living Color - S02E24",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E24.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 220
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 25,
           "name": "Dickie Peterson: Cherub of Justice",
           "airdate": "1991-08-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E25.mp4",
-            "name": "Season 2/In Living Color - S02E25",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E25.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 206
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 26,
           "name": "Men on Vacation",
           "airdate": "1991-09-01",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 2/In Living Color - S02E26.mp4",
-            "name": "Season 2/In Living Color - S02E26",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%202%2FIn%20Living%20Color%20-%20S02E26.mp4",
-            "seconds": 1377,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 192
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1061,140 +526,56 @@
           "number": 2,
           "name": "Men on Televison Part 2: What Happened to Blaine?",
           "airdate": "1991-09-29",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E02.mp4",
-            "name": "Season 3/In Living Color - S03E02",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E02.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 162
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Clarance Thomas's First Day",
           "airdate": "1991-10-06",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E03.mp4",
-            "name": "Season 3/In Living Color - S03E03",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E03.mp4",
-            "seconds": 1363,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 195
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Green Eggs and the Guvment Cheese",
           "airdate": "1991-10-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E04.mp4",
-            "name": "Season 3/In Living Color - S03E04",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E04.mp4",
-            "seconds": 1286,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 213
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Adventures of Handi-Boy",
           "airdate": "1991-10-20",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E05.mp4",
-            "name": "Season 3/In Living Color - S03E05",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E05.mp4",
-            "seconds": 1260,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 208
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Home Alone Again",
           "airdate": "1991-10-27",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E06.mp4",
-            "name": "Season 3/In Living Color - S03E06",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E06.mp4",
-            "seconds": 1377,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 192
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Jackson Bunch",
           "airdate": "1991-11-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E07.mp4",
-            "name": "Season 3/In Living Color - S03E07",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E07.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 208
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Late Night with Mike Tyson",
           "airdate": "1991-11-10",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E08.mp4",
-            "name": "Season 3/In Living Color - S03E08",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E08.mp4",
-            "seconds": 1290,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 194
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1209,80 +590,32 @@
           "number": 10,
           "name": "My Left Foot of Fury",
           "airdate": "1991-11-01",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E10.mp4",
-            "name": "Season 3/In Living Color - S03E10",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E10.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 201
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Anton and the Reporter",
           "airdate": "1991-12-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E11.mp4",
-            "name": "Season 3/In Living Color - S03E11",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E11.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 194
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Sidekick in Nam",
           "airdate": "1991-12-15",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E12.mp4",
-            "name": "Season 3/In Living Color - S03E12",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E12.mp4",
-            "seconds": 1378,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 208
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Santa Fire Marshall Bill",
           "airdate": "1991-12-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E13.mp4",
-            "name": "Season 3/In Living Color - S03E13",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E13.mp4",
-            "seconds": 1366,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 203
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1305,40 +638,16 @@
           "number": 16,
           "name": "Live Super Bowl Show",
           "airdate": "1992-01-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E16.mp4",
-            "name": "Season 3/In Living Color - S03E16",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E16.mp4",
-            "seconds": 1397,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 203
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "George Bush Meets Tommy Wu",
           "airdate": "1992-02-02",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E17.mp4",
-            "name": "Season 3/In Living Color - S03E17",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E17.mp4",
-            "seconds": 1372,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 172
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1353,40 +662,16 @@
           "number": 19,
           "name": "The Fist That Rocks the Cradle",
           "airdate": "1992-02-16",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E19.mp4",
-            "name": "Season 3/In Living Color - S03E19",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E19.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 244
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "Club Ozone",
           "airdate": "1992-02-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E20.mp4",
-            "name": "Season 3/In Living Color - S03E20",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E20.mp4",
-            "seconds": 1376,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 221
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1401,140 +686,56 @@
           "number": 22,
           "name": "Player's Club",
           "airdate": "1992-03-15",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E22.mp4",
-            "name": "Season 3/In Living Color - S03E22",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E22.mp4",
-            "seconds": 1378,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 201
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
           "name": "The Last Man on Earth",
           "airdate": "1992-03-29",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E23.mp4",
-            "name": "Season 3/In Living Color - S03E23",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E23.mp4",
-            "seconds": 1377,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 190
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 24,
           "name": "Anton Gets Rich",
           "airdate": "1992-04-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E24.mp4",
-            "name": "Season 3/In Living Color - S03E24",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E24.mp4",
-            "seconds": 1378,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 198
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 25,
           "name": "Best of Season 3",
           "airdate": "1992-04-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E25.mp4",
-            "name": "Season 3/In Living Color - S03E25",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E25.mp4",
-            "seconds": 1334,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 26,
           "name": "Bloopers",
           "airdate": "1992-04-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E26.mp4",
-            "name": "Season 3/In Living Color - S03E26",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E26.mp4",
-            "seconds": 1374,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 254
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 27,
           "name": "Cousin Elsee",
           "airdate": "1992-05-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E27.mp4",
-            "name": "Season 3/In Living Color - S03E27",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E27.mp4",
-            "seconds": 1373,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 207
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 28,
           "name": "Michael Bolton",
           "airdate": "1992-05-07",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 3/In Living Color - S03E28.mp4",
-            "name": "Season 3/In Living Color - S03E28",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E28.mp4",
-            "seconds": 1376,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 191
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1562,80 +763,32 @@
           "number": 1,
           "name": "Rodney King and Reginald Deny Speak Out",
           "airdate": "1992-09-27",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E01.mp4",
-            "name": "Season 4/In Living Color - S04E01",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E01.mp4",
-            "seconds": 1382,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Basic Instank",
           "airdate": "1992-10-04",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E02.mp4",
-            "name": "Season 4/In Living Color - S04E02",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E02.mp4",
-            "seconds": 1344,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 192
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Mr. and Mrs. Brooks",
           "airdate": "1992-10-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E03.mp4",
-            "name": "Season 4/In Living Color - S04E03",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E03.mp4",
-            "seconds": 1261,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 218
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Black People Awards",
           "airdate": "1992-10-18",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E04.mp4",
-            "name": "Season 4/In Living Color - S04E04",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E04.mp4",
-            "seconds": 1287,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 190
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1666,60 +819,24 @@
           "number": 8,
           "name": "Handi-Man Returns",
           "airdate": "1992-11-15",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E08.mp4",
-            "name": "Season 4/In Living Color - S04E08",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E08.mp4",
-            "seconds": 1381,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 220
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Men on Cooking",
           "airdate": "1992-11-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E09.mp4",
-            "name": "Season 4/In Living Color - S04E09",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E09.mp4",
-            "seconds": 1265,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 212
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Gays in the Military",
           "airdate": "1992-12-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E10.mp4",
-            "name": "Season 4/In Living Color - S04E10",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E10.mp4",
-            "seconds": 1260,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 197
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1734,20 +851,8 @@
           "number": 12,
           "name": "The Dysfunctional Home Christmas Show",
           "airdate": "1993-01-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E12.mp4",
-            "name": "Season 4/In Living Color - S04E12",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E12.mp4",
-            "seconds": 1362,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 229
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1762,20 +867,8 @@
           "number": 14,
           "name": "Best of Michael Jackson",
           "airdate": "1993-02-04",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E14.mp4",
-            "name": "Season 4/In Living Color - S04E14",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E14.mp4",
-            "seconds": 1386,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 208
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1790,100 +883,40 @@
           "number": 16,
           "name": "Valentine's Show",
           "airdate": "1993-02-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E16.mp4",
-            "name": "Season 4/In Living Color - S04E16",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E16.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 207
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "Forever Silky",
           "airdate": "1993-02-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E17.mp4",
-            "name": "Season 4/In Living Color - S04E17",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E17.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 187
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Dirty Little Dick",
           "airdate": "1993-02-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E18.mp4",
-            "name": "Season 4/In Living Color - S04E18",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E18.mp4",
-            "seconds": 1366,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 200
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
           "name": "Men on Film Festival",
           "airdate": "1993-02-25",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E19.mp4",
-            "name": "Season 4/In Living Color - S04E19",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E19.mp4",
-            "seconds": 1263,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 177
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "Passenger 227",
           "airdate": "1993-02-28",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E20.mp4",
-            "name": "Season 4/In Living Color - S04E20",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E20.mp4",
-            "seconds": 1385,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 180
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1898,20 +931,8 @@
           "number": 22,
           "name": "Mr. Rogers",
           "airdate": "1993-03-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E22.mp4",
-            "name": "Season 4/In Living Color - S04E22",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E22.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 229
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1934,40 +955,16 @@
           "number": 25,
           "name": "Stacy Koon's Police Academy",
           "airdate": "1993-04-25",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E25.mp4",
-            "name": "Season 4/In Living Color - S04E25",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E25.mp4",
-            "seconds": 1361,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 210
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 26,
           "name": "Best Commercial Parodies",
           "airdate": "1993-04-29",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E26.mp4",
-            "name": "Season 4/In Living Color - S04E26",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E26.mp4",
-            "seconds": 1331,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 195
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1990,40 +987,16 @@
           "number": 29,
           "name": "Thelma and Louise Jefferson",
           "airdate": "1993-05-09",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E29.mp4",
-            "name": "Season 4/In Living Color - S04E29",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E29.mp4",
-            "seconds": 1381,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 202
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 30,
           "name": "Best Celebrity Impersonations",
           "airdate": "1993-05-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E30.mp4",
-            "name": "Season 4/In Living Color - S04E30",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E30.mp4",
-            "seconds": 1372,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 219
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2038,61 +1011,9 @@
           "number": 32,
           "name": "In Living Color's Feedback Line",
           "airdate": "1993-05-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 4/In Living Color - S04E32.mp4",
-            "name": "Season 4/In Living Color - S04E32",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%204%2FIn%20Living%20Color%20-%20S04E32.mp4",
-            "seconds": 1364,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 233
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"In Living Color's Feedback Line\" (0.63)",
-              "item": "inlivingcolor-s-1-d-2",
-              "itemTitle": "In Living Color Season 1 DVD 3Disc Set ISO",
-              "file": "INLIVINGCOLOR_S1_D35.mp4",
-              "name": "INLIVINGCOLOR_S1_D35",
-              "url": "https://archive.org/download/inlivingcolor-s-1-d-2/INLIVINGCOLOR_S1_D35.mp4",
-              "seconds": 2008,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 194
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"In Living Color's Feedback Line\" (0.63)",
-              "item": "inlivingcolor-s-1-d-2",
-              "itemTitle": "In Living Color Season 1 DVD 3Disc Set ISO",
-              "file": "INLIVINGCOLOR_S1_D26.mp4",
-              "name": "INLIVINGCOLOR_S1_D26",
-              "url": "https://archive.org/download/inlivingcolor-s-1-d-2/INLIVINGCOLOR_S1_D26.mp4",
-              "seconds": 1521,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 152
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"In Living Color's Feedback Line\" (0.63)",
-              "item": "inlivingcolor-s-1-d-2",
-              "itemTitle": "In Living Color Season 1 DVD 3Disc Set ISO",
-              "file": "INLIVINGCOLOR_S1_D34.mp4",
-              "name": "INLIVINGCOLOR_S1_D34",
-              "url": "https://archive.org/download/inlivingcolor-s-1-d-2/INLIVINGCOLOR_S1_D34.mp4",
-              "seconds": 1519,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 151
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -2159,60 +1080,24 @@
           "number": 8,
           "name": "Sam Kinison: Live from Hell",
           "airdate": "1993-11-04",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E08.mp4",
-            "name": "Season 5/In Living Color - S05E08",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E08.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 188
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "All Up in the Family",
           "airdate": "1993-11-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E09.mp4",
-            "name": "Season 5/In Living Color - S05E09",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E09.mp4",
-            "seconds": 1326,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 197
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Wile E Coyote on Trial",
           "airdate": "1993-11-18",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E10.mp4",
-            "name": "Season 5/In Living Color - S05E10",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E10.mp4",
-            "seconds": 1345,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 188
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2227,60 +1112,24 @@
           "number": 12,
           "name": "Mary Tyler Mo",
           "airdate": "1993-12-16",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E12.mp4",
-            "name": "Season 5/In Living Color - S05E12",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E12.mp4",
-            "seconds": 1322,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 192
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Wheel of Dozens",
           "airdate": "1993-12-30",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E13.mp4",
-            "name": "Season 5/In Living Color - S05E13",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E13.mp4",
-            "seconds": 1357,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 238
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "The Gangsta Group",
           "airdate": "1994-01-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E14.mp4",
-            "name": "Season 5/In Living Color - S05E14",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E14.mp4",
-            "seconds": 1362,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 211
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2295,20 +1144,8 @@
           "number": 16,
           "name": "Hemorrhoid Guy",
           "airdate": "1994-02-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E16.mp4",
-            "name": "Season 5/In Living Color - S05E16",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E16.mp4",
-            "seconds": 1306,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 223
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2323,20 +1160,8 @@
           "number": 18,
           "name": "Mrs. Ikefire",
           "airdate": "1994-02-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E18.mp4",
-            "name": "Season 5/In Living Color - S05E18",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E18.mp4",
-            "seconds": 1371,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 213
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2351,40 +1176,16 @@
           "number": 20,
           "name": "Thugs",
           "airdate": "1994-03-10",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E20.mp4",
-            "name": "Season 5/In Living Color - S05E20",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E20.mp4",
-            "seconds": 1304,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 205
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "Academy Awards",
           "airdate": "1994-03-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E21.mp4",
-            "name": "Season 5/In Living Color - S05E21",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E21.mp4",
-            "seconds": 1353,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 272
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2415,20 +1216,8 @@
           "number": 25,
           "name": "Infomercial Awards",
           "airdate": "1994-05-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "in-living-color-s-01-e-12",
-            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
-            "file": "Season 5/In Living Color - S05E25.mp4",
-            "name": "Season 5/In Living Color - S05E25",
-            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%205%2FIn%20Living%20Color%20-%20S05E25.mp4",
-            "seconds": 1277,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 220
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

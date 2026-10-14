@@ -3,7 +3,7 @@
   "slug": "punky-brewster",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:28:59.904Z",
+  "matchedAt": "2026-10-14T05:18:58.427Z",
   "tvmaze": {
     "id": 1253,
     "name": "Punky Brewster",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 88,
-    "live": 82,
-    "review": 6,
+    "live": 63,
+    "review": 25,
     "missing": 0,
     "pct": 100
   },
@@ -86,9 +86,9 @@
           "number": 4,
           "name": "Punky Gets Her Own Room / Lost and Found",
           "airdate": "1984-10-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -140,21 +140,7 @@
             "playable": true,
             "sizeMB": 354
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Take Me Out to the Ballgame\" (1.00)",
-              "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
-              "itemTitle": "Punky Brewster S01-S04",
-              "file": "Punky Brewster - S01E08 - Take Me Out to the Ballgame.mp4",
-              "name": "Punky Brewster - S01E08 - Take Me Out to the Ballgame",
-              "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E08%20-%20Take%20Me%20Out%20to%20the%20Ballgame.mp4",
-              "seconds": 1468,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 355
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -180,35 +166,21 @@
           "number": 8,
           "name": "Go to Sleep / A Visit to the Doctor",
           "airdate": "1984-11-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"Go to Sleep / A Visit to the Doctor\" (0.95)",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
-            "file": "Punky Brewster - S01E08 - Take Me Out to the Ballgame.mp4",
-            "name": "Punky Brewster - S01E08 - Take Me Out to the Ballgame",
-            "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E08%20-%20Take%20Me%20Out%20to%20the%20Ballgame.mp4",
-            "seconds": 1468,
+            "file": "Punky Brewster - S01E10-E11 - Go to Sleep - A Visit to the Doctor.mp4",
+            "name": "Punky Brewster - S01E10-E11 - Go to Sleep - A Visit to the Doctor",
+            "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E10-E11%20-%20Go%20to%20Sleep%20-%20A%20Visit%20to%20the%20Doctor.mp4",
+            "seconds": 1464,
             "format": "MPEG4",
             "playable": true,
             "sizeMB": 355
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Go to Sleep / A Visit to the Doctor\" (0.95)",
-              "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
-              "itemTitle": "Punky Brewster S01-S04",
-              "file": "Punky Brewster - S01E10-E11 - Go to Sleep - A Visit to the Doctor.mp4",
-              "name": "Punky Brewster - S01E10-E11 - Go to Sleep - A Visit to the Doctor",
-              "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E10-E11%20-%20Go%20to%20Sleep%20-%20A%20Visit%20to%20the%20Doctor.mp4",
-              "seconds": 1464,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 355
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -444,21 +416,7 @@
             "playable": true,
             "sizeMB": 354
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"My Aged Valentine\" (1.00)",
-              "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
-              "itemTitle": "Punky Brewster S01-S04",
-              "file": "Punky Brewster - S01E20 - My Aged Valentine.mp4",
-              "name": "Punky Brewster - S01E20 - My Aged Valentine",
-              "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E20%20-%20My%20Aged%20Valentine.mp4",
-              "seconds": 1462,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 354
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,
@@ -545,35 +503,21 @@
           "number": 20,
           "name": "Gals and Dolls",
           "airdate": "1985-03-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"Gals and Dolls\" (1.00)",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
-            "file": "Punky Brewster - S01E20 - My Aged Valentine.mp4",
-            "name": "Punky Brewster - S01E20 - My Aged Valentine",
-            "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E20%20-%20My%20Aged%20Valentine.mp4",
-            "seconds": 1462,
+            "file": "Punky Brewster - S01E23 - Gals and Dolls.mp4",
+            "name": "Punky Brewster - S01E23 - Gals and Dolls",
+            "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E23%20-%20Gals%20and%20Dolls.mp4",
+            "seconds": 1456,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 354
+            "sizeMB": 352
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Gals and Dolls\" (1.00)",
-              "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
-              "itemTitle": "Punky Brewster S01-S04",
-              "file": "Punky Brewster - S01E23 - Gals and Dolls.mp4",
-              "name": "Punky Brewster - S01E23 - Gals and Dolls",
-              "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E23%20-%20Gals%20and%20Dolls.mp4",
-              "seconds": 1456,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 352
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 21,
@@ -678,9 +622,9 @@
           "number": 3,
           "name": "Cheaters Never Win",
           "airdate": "1985-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -698,9 +642,9 @@
           "number": 4,
           "name": "Baby Buddies, Inc",
           "airdate": "1985-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -812,9 +756,9 @@
           "number": 9,
           "name": "The Search",
           "airdate": "1985-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -972,9 +916,9 @@
           "number": 17,
           "name": "Changes (1)",
           "airdate": "1986-02-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -992,9 +936,9 @@
           "number": 18,
           "name": "Changes (2)",
           "airdate": "1986-02-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1012,9 +956,9 @@
           "number": 19,
           "name": "Changes (3)",
           "airdate": "1986-02-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1032,9 +976,9 @@
           "number": 20,
           "name": "Changes (4)",
           "airdate": "1986-02-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1052,9 +996,9 @@
           "number": 21,
           "name": "Changes (5)",
           "airdate": "1986-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1072,9 +1016,9 @@
           "number": 22,
           "name": "Accidents Happen",
           "airdate": "1986-03-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1117,9 +1061,9 @@
           "number": 2,
           "name": "Punky's Big Story",
           "airdate": "1987-11-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1157,9 +1101,9 @@
           "number": 4,
           "name": "Divorce Anderson Style",
           "airdate": "1987-11-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1417,9 +1361,9 @@
           "number": 17,
           "name": "So Long, Studio",
           "airdate": "1987-12-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1437,9 +1381,9 @@
           "number": 18,
           "name": "Help Wanted",
           "airdate": "1987-12-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1582,9 +1526,9 @@
           "number": 3,
           "name": "Going to Camp",
           "airdate": "1988-04-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1642,9 +1586,9 @@
           "number": 6,
           "name": "Passed Away at Punky's Place",
           "airdate": "1988-05-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -1962,9 +1906,9 @@
           "number": 22,
           "name": "Wedding Bells for Brandon",
           "airdate": "1988-05-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",

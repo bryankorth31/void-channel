@@ -3,7 +3,7 @@
   "slug": "bojack-horseman",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-14T04:28:54.055Z",
+  "matchedAt": "2026-10-14T05:18:47.520Z",
   "tvmaze": {
     "id": 184,
     "name": "BoJack Horseman",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 76,
-    "live": 49,
-    "review": 27,
-    "missing": 0,
-    "pct": 100
+    "live": 21,
+    "review": 22,
+    "missing": 33,
+    "pct": 57
   },
   "seasons": [
     {
@@ -386,34 +386,21 @@
           "number": 7,
           "name": "Say Anything",
           "airdate": "2014-08-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S01E07 Say Anything - The Evil Princess Carolyn Massacre.mp4",
-            "name": "S01E07 Say Anything - The Evil Princess Carolyn Massacre",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S01E07%20Say%20Anything%20-%20The%20Evil%20Princess%20Carolyn%20Massacre.mp4",
-            "seconds": 1806,
-            "format": "MPEG4",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "bo-jack-horseman-temp-04-ep-03",
+            "itemTitle": "BoJack Horseman (season 4)",
+            "file": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 07.mp4",
+            "name": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 07",
+            "url": "https://archive.org/download/bo-jack-horseman-temp-04-ep-03/Bojack%20Horseman%20(2017)%20Temporada%2004%2FBoJack%20Horseman%20-%20Temp%2004%20Ep%2007.mp4",
+            "seconds": 1576,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 462
+            "sizeMB": 153
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bo-jack-horseman-temp-04-ep-03",
-              "itemTitle": "BoJack Horseman (season 4)",
-              "file": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 07.mp4",
-              "name": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 07",
-              "url": "https://archive.org/download/bo-jack-horseman-temp-04-ep-03/Bojack%20Horseman%20(2017)%20Temporada%2004%2FBoJack%20Horseman%20-%20Temp%2004%20Ep%2007.mp4",
-              "seconds": 1576,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 153
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -439,6 +426,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 152
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "bojack-horseman-eas-scenarios",
+              "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
+              "file": "S01E07 Say Anything - The Evil Princess Carolyn Massacre.mp4",
+              "name": "S01E07 Say Anything - The Evil Princess Carolyn Massacre",
+              "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S01E07%20Say%20Anything%20-%20The%20Evil%20Princess%20Carolyn%20Massacre.mp4",
+              "seconds": 1806,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 462
             }
           ]
         },
@@ -626,34 +626,21 @@
           "number": 11,
           "name": "Downer Ending",
           "airdate": "2014-08-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S01E11 Downer Ending - A Carson and a Moore Attacks.mp4",
-            "name": "S01E11 Downer Ending - A Carson and a Moore Attacks",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S01E11%20Downer%20Ending%20-%20A%20Carson%20and%20a%20Moore%20Attacks.mp4",
-            "seconds": 1771,
-            "format": "MPEG4",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "bo-jack-horseman-temp-04-ep-03",
+            "itemTitle": "BoJack Horseman (season 4)",
+            "file": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 11.mp4",
+            "name": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 11",
+            "url": "https://archive.org/download/bo-jack-horseman-temp-04-ep-03/Bojack%20Horseman%20(2017)%20Temporada%2004%2FBoJack%20Horseman%20-%20Temp%2004%20Ep%2011.mp4",
+            "seconds": 1580,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 576
+            "sizeMB": 153
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bo-jack-horseman-temp-04-ep-03",
-              "itemTitle": "BoJack Horseman (season 4)",
-              "file": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 11.mp4",
-              "name": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 11",
-              "url": "https://archive.org/download/bo-jack-horseman-temp-04-ep-03/Bojack%20Horseman%20(2017)%20Temporada%2004%2FBoJack%20Horseman%20-%20Temp%2004%20Ep%2011.mp4",
-              "seconds": 1580,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 153
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -679,6 +666,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 151
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "bojack-horseman-eas-scenarios",
+              "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
+              "file": "S01E11 Downer Ending - A Carson and a Moore Attacks.mp4",
+              "name": "S01E11 Downer Ending - A Carson and a Moore Attacks",
+              "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S01E11%20Downer%20Ending%20-%20A%20Carson%20and%20a%20Moore%20Attacks.mp4",
+              "seconds": 1771,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 576
             }
           ]
         },
@@ -686,34 +686,21 @@
           "number": 12,
           "name": "Later",
           "airdate": "2014-08-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S01E12 Later - The Very Last Season 1 Episode, Really!.mp4",
-            "name": "S01E12 Later - The Very Last Season 1 Episode, Really!",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S01E12%20Later%20-%20The%20Very%20Last%20Season%201%20Episode%2C%20Really!.mp4",
-            "seconds": 1957,
-            "format": "MPEG4",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "bo-jack-horseman-temp-04-ep-03",
+            "itemTitle": "BoJack Horseman (season 4)",
+            "file": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 12.mp4",
+            "name": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 12",
+            "url": "https://archive.org/download/bo-jack-horseman-temp-04-ep-03/Bojack%20Horseman%20(2017)%20Temporada%2004%2FBoJack%20Horseman%20-%20Temp%2004%20Ep%2012.mp4",
+            "seconds": 1588,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 458
+            "sizeMB": 154
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bo-jack-horseman-temp-04-ep-03",
-              "itemTitle": "BoJack Horseman (season 4)",
-              "file": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 12.mp4",
-              "name": "Bojack Horseman (2017) Temporada 04/BoJack Horseman - Temp 04 Ep 12",
-              "url": "https://archive.org/download/bo-jack-horseman-temp-04-ep-03/Bojack%20Horseman%20(2017)%20Temporada%2004%2FBoJack%20Horseman%20-%20Temp%2004%20Ep%2012.mp4",
-              "seconds": 1588,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 154
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -739,6 +726,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 151
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "bojack-horseman-eas-scenarios",
+              "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
+              "file": "S01E12 Later - The Very Last Season 1 Episode, Really!.mp4",
+              "name": "S01E12 Later - The Very Last Season 1 Episode, Really!",
+              "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S01E12%20Later%20-%20The%20Very%20Last%20Season%201%20Episode%2C%20Really!.mp4",
+              "seconds": 1957,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 458
             }
           ]
         }
@@ -753,7 +753,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -774,7 +774,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -809,7 +809,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "readme_20250925",
               "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -830,7 +830,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -851,7 +851,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -872,7 +872,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -893,7 +893,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -914,7 +914,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -935,7 +935,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -956,7 +956,7 @@
           "airdate": "2015-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -975,30 +975,17 @@
           "number": 11,
           "name": "Escape from L.A.",
           "airdate": "2015-07-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 2/BoJack.Horseman.S02E11.Escape.from.LA.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 2/BoJack.Horseman.S02E11.Escape.from.LA.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%202%2FBoJack.Horseman.S02E11.Escape.from.LA.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1537,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 150
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Out to Sea",
           "airdate": "2015-07-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "bojack-horseman-eas-scenarios",
             "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
@@ -1012,7 +999,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "readme_20250925",
               "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -1050,119 +1037,38 @@
             "playable": true,
             "sizeMB": 531
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E01.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E01.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E01.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1560,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD5 1)",
-              "sizeMB": 151
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "The BoJack Horseman Show",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S03E02 The BoJack Horseman Show - What's Up Bitches, BoJack is Attacking You.mp4",
-            "name": "S03E02 The BoJack Horseman Show - What's Up Bitches, BoJack is Attacking You",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S03E02%20The%20BoJack%20Horseman%20Show%20-%20What's%20Up%20Bitches%2C%20BoJack%20is%20Attacking%20You.mp4",
-            "seconds": 3223,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 549
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E02.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E02.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E02.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1566,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD5 1)",
-              "sizeMB": 151
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
           "name": "BoJack Kills",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E03.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E03.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E03.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1562,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Fish Out of Water",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E04.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E04.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E04.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1576,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 156
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Love and/or Marriage",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E05.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E05.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E05.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1566,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1183,113 +1089,31 @@
             "playable": true,
             "sizeMB": 655
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E06.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E06.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E06.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1558,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD5 1)",
-              "sizeMB": 150
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Stop the Presses",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E07.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E07.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E07.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1564,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 151
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Old Acquaintance",
           "airdate": "2016-07-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S03E08 Old Acquaintance - New Year's Fireworks Disaster.mp4",
-            "name": "S03E08 Old Acquaintance - New Year's Fireworks Disaster",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S03E08%20Old%20Acquaintance%20-%20New%20Year's%20Fireworks%20Disaster.mp4",
-            "seconds": 2804,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 623
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E08.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E08.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E08.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1572,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD5 1)",
-              "sizeMB": 153
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
           "name": "Best Thing That Ever Happened",
           "airdate": "2016-07-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S03E09 Best Thing That Ever Happened - A Giant Break Up.mp4",
-            "name": "S03E09 Best Thing That Ever Happened - A Giant Break Up",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S03E09%20Best%20Thing%20That%20Ever%20Happened%20-%20A%20Giant%20Break%20Up.mp4",
-            "seconds": 3074,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 555
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E09.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E09.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E09.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1558,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD5 1)",
-              "sizeMB": 150
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 10,
@@ -1309,63 +1133,22 @@
             "playable": true,
             "sizeMB": 733
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E10.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E10.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E10.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1616,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD5 1)",
-              "sizeMB": 159
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "That's Too Much, Man!",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E11.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E11.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E11.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1556,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 151
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "That Went Well",
           "airdate": "2016-07-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD5 1)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E12.1080p.NF.WEBRip.DD5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 3/BoJack.Horseman.S03E12.1080p.NF.WEBRip.DD5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%203%2FBoJack.Horseman.S03E12.1080p.NF.WEBRip.DD5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1582,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 154
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1377,89 +1160,25 @@
           "number": 1,
           "name": "See Mr. Peanutbutter Run",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S04E01 See Mr Peanutbutter Run - Woodchuck Strikes Again.mp4",
-            "name": "S04E01 See Mr Peanutbutter Run - Woodchuck Strikes Again",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S04E01%20See%20Mr%20Peanutbutter%20Run%20-%20Woodchuck%20Strikes%20Again.mp4",
-            "seconds": 3236,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 797
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e01.1080p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e01.1080p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e01.1080p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1592,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 153
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
           "name": "The Old Sugarman Place",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e02.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e02.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e02.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1592,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 154
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Hooray! Todd Episode!",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S04E03 Hooray! Todd Episode! - Todd Attacks the Living.mp4",
-            "name": "S04E03 Hooray! Todd Episode! - Todd Attacks the Living",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S04E03%20Hooray!%20Todd%20Episode!%20-%20Todd%20Attacks%20the%20Living.mp4",
-            "seconds": 3099,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 665
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e03.1080p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e03.1080p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e03.1080p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1600,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 155
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
@@ -1479,120 +1198,46 @@
             "playable": true,
             "sizeMB": 668
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e04.1080p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e04.1080p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e04.1080p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1570,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 152
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Thoughts and Prayers",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e05.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e05.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e05.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1578,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Stupid Piece of Sh*t",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e06.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e06.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e06.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1564,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 150
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Underground",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e07.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e07.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e07.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1576,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "The Judge",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e08.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e08.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e08.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1572,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Ruthie",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e09.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e09.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e09.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1596,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1613,60 +1258,22 @@
             "playable": true,
             "sizeMB": 595
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e10.1080p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e10.1080p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e10.1080p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1580,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 153
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Time's Arrow",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e11.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e11.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e11.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1580,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "What Time Is It Right Now",
           "airdate": "2017-09-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e12.1080p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 4/bojack.horseman.s04e12.1080p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%204%2Fbojack.horseman.s04e12.1080p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1588,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1692,94 +1299,42 @@
             "playable": true,
             "sizeMB": 512
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e01.720p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e01.720p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e01.720p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1574,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 152
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "The Dog Days Are Over",
           "airdate": "2018-09-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e02.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e02.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e02.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1628,
-            "format": "h.264",
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "bojack-horseman-eas-scenarios",
+            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
+            "file": "S05E02 The Dog Days Are Over - Yet Another Diane Emergency!.mp4",
+            "name": "S05E02 The Dog Days Are Over - Yet Another Diane Emergency!",
+            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S05E02%20The%20Dog%20Days%20Are%20Over%20-%20Yet%20Another%20Diane%20Emergency!.mp4",
+            "seconds": 2058,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 158
+            "sizeMB": 550
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
-              "item": "bojack-horseman-eas-scenarios",
-              "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-              "file": "S05E02 The Dog Days Are Over - Yet Another Diane Emergency!.mp4",
-              "name": "S05E02 The Dog Days Are Over - Yet Another Diane Emergency!",
-              "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S05E02%20The%20Dog%20Days%20Are%20Over%20-%20Yet%20Another%20Diane%20Emergency!.mp4",
-              "seconds": 2058,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 550
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Planned Obsolescence",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e03.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e03.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e03.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1576,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "BoJack the Feminist",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e04.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e04.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e04.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1566,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1800,74 +1355,35 @@
             "playable": true,
             "sizeMB": 1014
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e05.720p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e05.720p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e05.720p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1568,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 151
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Free Churro",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e06.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e06.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e06.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1568,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "INT. SUB",
           "airdate": "2018-09-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e07.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e07.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e07.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1578,
-            "format": "h.264",
+            "item": "bojack-horseman-eas-scenarios",
+            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
+            "file": "S05E07 INT. SUB - Dr Indira, Mary-Beth and Dr Janet Kills Everyone.ia.mp4",
+            "name": "S05E07 INT",
+            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S05E07%20INT.%20SUB%20-%20Dr%20Indira%2C%20Mary-Beth%20and%20Dr%20Janet%20Kills%20Everyone.ia.mp4",
+            "seconds": 3298,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 788
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "bojack-horseman-eas-scenarios",
-              "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-              "file": "S05E07 INT. SUB - Dr Indira, Mary-Beth and Dr Janet Kills Everyone.ia.mp4",
-              "name": "S05E07 INT",
-              "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S05E07%20INT.%20SUB%20-%20Dr%20Indira%2C%20Mary-Beth%20and%20Dr%20Janet%20Kills%20Everyone.ia.mp4",
-              "seconds": 3298,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 788
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -1901,115 +1417,39 @@
             "playable": true,
             "sizeMB": 847
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e08.720p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e08.720p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e08.720p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1564,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 151
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
           "name": "Ancient History",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e09.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e09.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e09.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1580,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Head in the Clouds",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e10.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e10.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e10.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1574,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "The Showstopper",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e11.720p.web.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e11.720p.web.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e11.720p.web.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1566,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Stopped Show",
           "airdate": "2018-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S05E12 The Stopped Show - The Final Season 5 Episode.mp4",
-            "name": "S05E12 The Stopped Show - The Final Season 5 Episode",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S05E12%20The%20Stopped%20Show%20-%20The%20Final%20Season%205%20Episode.mp4",
-            "seconds": 3176,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 770
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e12.720p.web.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 5/bojack.horseman.s05e12.720p.web.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%205%2Fbojack.horseman.s05e12.720p.web.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1578,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 153
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -2022,7 +1462,7 @@
           "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2043,7 +1483,7 @@
           "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2062,36 +1502,22 @@
           "number": 3,
           "name": "Feel-Good Story",
           "airdate": "2019-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S06E03 Feel Good Story - Guy Attacks the Living!.mp4",
-            "name": "S06E03 Feel Good Story - Guy Attacks the Living!",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S06E03%20Feel%20Good%20Story%20-%20Guy%20Attacks%20the%20Living!.mp4",
-            "seconds": 2790,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 780
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
+            "item": "readme_20250925",
+            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
+            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E03.Feel-Good.Story.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
+            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E03.Feel-Good.Story.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
+            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E03.Feel-Good.Story.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
+            "seconds": 1570,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "audio (DD+)",
+            "sizeMB": 152
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E03.Feel-Good.Story.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E03.Feel-Good.Story.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E03.Feel-Good.Story.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1570,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD+)",
-              "sizeMB": 152
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -2099,7 +1525,7 @@
           "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2120,7 +1546,7 @@
           "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2141,7 +1567,7 @@
           "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2162,7 +1588,7 @@
           "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DD+)",
             "item": "readme_20250925",
             "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2197,7 +1623,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "readme_20250925",
               "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
@@ -2216,119 +1642,40 @@
           "number": 9,
           "name": "Intermediate Scene Study w/ BoJack Horseman",
           "airdate": "2020-01-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD+)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E09.Episode.9.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E09.Episode.9.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E09.Episode.9.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1608,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD+)",
-            "sizeMB": 155
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Good Damage",
           "airdate": "2020-01-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD+)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E10.Episode.10.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E10.Episode.10.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E10.Episode.10.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1600,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD+)",
-            "sizeMB": 154
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Sunk Cost and All That",
           "airdate": "2020-01-31",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S06E11 Sunk Cost and All That - Elefino Attacks the Living.mp4",
-            "name": "S06E11 Sunk Cost and All That - Elefino Attacks the Living",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S06E11%20Sunk%20Cost%20and%20All%20That%20-%20Elefino%20Attacks%20the%20Living.mp4",
-            "seconds": 3015,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 868
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E11.Episode.11.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E11.Episode.11.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E11.Episode.11.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1572,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD+)",
-              "sizeMB": 151
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Xerox of a Xerox",
           "airdate": "2020-01-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD+)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E12.Episode.12.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E12.Episode.12.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E12.Episode.12.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1582,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD+)",
-            "sizeMB": 152
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "The Horny Unicorn",
           "airdate": "2020-01-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DD+)",
-            "item": "readme_20250925",
-            "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-            "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E13.Episode.13.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-            "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E13.Episode.13.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-            "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E13.Episode.13.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-            "seconds": 1588,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DD+)",
-            "sizeMB": 153
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2349,57 +1696,15 @@
             "playable": true,
             "sizeMB": 1015
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E14.Episode.14.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E14.Episode.14.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E14.Episode.14.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1606,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD+)",
-              "sizeMB": 155
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
           "name": "The View from Halfway Down",
           "airdate": "2020-01-31",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "bojack-horseman-eas-scenarios",
-            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
-            "file": "S06E15 The View from Halfway Down - Attack of the Bodies.mp4",
-            "name": "S06E15 The View from Halfway Down - Attack of the Bodies",
-            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S06E15%20The%20View%20from%20Halfway%20Down%20-%20Attack%20of%20the%20Bodies.mp4",
-            "seconds": 3176,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 857
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E15.Episode.15.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E15.Episode.15.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E15.Episode.15.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1562,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD+)",
-              "sizeMB": 151
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 16,
@@ -2419,22 +1724,7 @@
             "playable": true,
             "sizeMB": 498
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "readme_20250925",
-              "itemTitle": "Bojack Horseman: The Complete Series + Bonus Features from official Blu-ray release",
-              "file": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E16.Episode.16.1080p.NF.WEB-DL.DD+5.1.x264 [Platz].mp4",
-              "name": "BoJack Horseman Complete Series + Features/BoJack Horseman COMPLETE/Season 6 (Part 1 and  2 )/BoJack.Horseman.S06E16.Episode.16.1080p.NF.WEB-DL.DD+5.1.x264 [Platz]",
-              "url": "https://archive.org/download/readme_20250925/BoJack%20Horseman%20Complete%20Series%20%2B%20Features%2FBoJack%20Horseman%20COMPLETE%2FSeason%206%20(Part%201%20and%20%202%20)%2FBoJack.Horseman.S06E16.Episode.16.1080p.NF.WEB-DL.DD%2B5.1.x264%20%5BPlatz%5D.mp4",
-              "seconds": 1644,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DD+)",
-              "sizeMB": 161
-            }
-          ]
+          "alternates": []
         }
       ]
     }

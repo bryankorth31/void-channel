@@ -3,7 +3,7 @@
   "slug": "that-70s-show",
   "type": "90s Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:29:31.133Z",
+  "matchedAt": "2026-10-14T05:18:27.612Z",
   "tvmaze": {
     "id": 587,
     "name": "That '70s Show",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 200,
-    "live": 52,
-    "review": 0,
+    "live": 49,
+    "review": 3,
     "missing": 148,
     "pct": 26
   },
@@ -60,34 +60,7 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "days-like-these",
-              "itemTitle": "Days Like These (Incomplete)",
-              "file": "Days Like These - S01E02 - Eric's Birthday (WOC).mp4",
-              "name": "Days Like These - S01E02 - Eric's Birthday (WOC)",
-              "url": "https://archive.org/download/days-like-these/Days%20Like%20These%20-%20S01E02%20-%20Eric's%20Birthday%20(WOC).mp4",
-              "seconds": 1687,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 170
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "days-like-these",
-              "itemTitle": "Days Like These (Incomplete)",
-              "file": "Days Like These - S01E02 - Eric's Birthday.mp4",
-              "name": "Days Like These - S01E02 - Eric's Birthday",
-              "url": "https://archive.org/download/days-like-these/Days%20Like%20These%20-%20S01E02%20-%20Eric's%20Birthday.mp4",
-              "seconds": 1451,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 158
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -213,9 +186,9 @@
           "number": 9,
           "name": "Thanksgiving",
           "airdate": "1998-11-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "that-70s-show-season-1",
             "itemTitle": "That '70s Show Season 1 Fox",
@@ -1006,9 +979,9 @@
           "number": 24,
           "name": "Red Fired Up",
           "airdate": "2000-05-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "that-70s-show-season-2",
             "itemTitle": "That '70s Show Season 2 Fox",
@@ -1967,9 +1940,9 @@
           "number": 7,
           "name": "Mother's Little Helper",
           "airdate": "2004-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "that-70s-show-s-07-e-07-mothers-little-helper.-woc-july-24-2007",
             "itemTitle": "That 70's Show S07E07 (Mother's Little Helper. WOC July 24, 2007)",

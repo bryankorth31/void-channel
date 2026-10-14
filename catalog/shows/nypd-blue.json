@@ -3,7 +3,7 @@
   "slug": "nypd-blue",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:50.077Z",
+  "matchedAt": "2026-10-14T05:18:40.264Z",
   "tvmaze": {
     "id": 570,
     "name": "NYPD Blue",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 261,
-    "live": 39,
-    "review": 204,
-    "missing": 18,
-    "pct": 93
+    "live": 38,
+    "review": 184,
+    "missing": 39,
+    "pct": 85
   },
   "seasons": [
     {
@@ -186,19 +186,6 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"True Confessions\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "004-True Confessions.mp4",
-              "name": "004-True Confessions",
-              "url": "https://archive.org/download/001-nypd-blue/004-True%20Confessions.mp4",
-              "seconds": 2911,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1241
-            },
-            {
               "conf": 0.9,
               "why": "S/E in filename",
               "item": "nypd-blue-s01-dvdrip",
@@ -301,36 +288,22 @@
           "number": 7,
           "name": "NYPD Lou",
           "airdate": "1993-11-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "107-Prostrate Before The Law.mp4",
-            "name": "107-Prostrate Before The Law",
-            "url": "https://archive.org/download/001-nypd-blue/107-Prostrate%20Before%20The%20Law.mp4",
-            "seconds": 2688,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 731
+            "conf": 0.9,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E07.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E07.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E07.DVDRip.XviD-LOL.mp4",
+            "seconds": 2923,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 290
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E07.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E07.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E07.DVDRip.XviD-LOL.mp4",
-              "seconds": 2923,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 290
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -351,19 +324,6 @@
             "sizeMB": 733
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Tempest in a C-Cup\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "008-Tempest In A C-Cup.mp4",
-              "name": "008-Tempest In A C-Cup",
-              "url": "https://archive.org/download/001-nypd-blue/008-Tempest%20In%20A%20C-Cup.mp4",
-              "seconds": 2925,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 785
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -447,19 +407,6 @@
             "sizeMB": 796
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Oscar, Meyer, Weiner\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "010-Oscar, Meyer, Weiner.mp4",
-              "name": "010-Oscar, Meyer, Weiner",
-              "url": "https://archive.org/download/001-nypd-blue/010-Oscar%2C%20Meyer%2C%20Weiner.mp4",
-              "seconds": 2922,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 889
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -591,19 +538,6 @@
             "sizeMB": 908
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Abandando Abandoned\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "013-Abandando Abandoned.mp4",
-              "name": "013-Abandando Abandoned",
-              "url": "https://archive.org/download/001-nypd-blue/013-Abandando%20Abandoned.mp4",
-              "seconds": 2931,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 869
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1138,21 +1072,7 @@
             "playable": true,
             "sizeMB": 670
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Dead and Gone\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "026-Dead And Gone.mp4",
-              "name": "026-Dead And Gone",
-              "url": "https://archive.org/download/001-nypd-blue/026-Dead%20And%20Gone.mp4",
-              "seconds": 2794,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 811
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -1424,21 +1344,7 @@
             "playable": true,
             "sizeMB": 669
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"A Murder With Teeth in It\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "036-A Murder With Teeth In It.mp4",
-              "name": "036-A Murder With Teeth In It",
-              "url": "https://archive.org/download/001-nypd-blue/036-A%20Murder%20With%20Teeth%20In%20It.mp4",
-              "seconds": 2825,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 666
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
@@ -1696,21 +1602,7 @@
             "playable": true,
             "sizeMB": 709
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"A.D.A. Sipowicz\" (1.00)",
-              "item": "001-nypd-blue",
-              "itemTitle": "NYPD Blue(The Complete Series)",
-              "file": "044-A.D.A. Sipowicz.mp4",
-              "name": "044-A.D.A. Sipowicz",
-              "url": "https://archive.org/download/001-nypd-blue/044-A.D.A.%20Sipowicz.mp4",
-              "seconds": 2712,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 718
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -1761,20 +1653,8 @@
           "number": 3,
           "name": "One Big Happy Family",
           "airdate": "1995-11-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"One Big Happy Family\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "047-One Big Happy Family.mp4",
-            "name": "047-One Big Happy Family",
-            "url": "https://archive.org/download/001-nypd-blue/047-One%20Big%20Happy%20Family.mp4",
-            "seconds": 2784,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 898
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1869,20 +1749,8 @@
           "number": 9,
           "name": "Sorry, Wong Suspect",
           "airdate": "1996-01-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Sorry, Wong Suspect\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "053-Sorry, Wong Suspect.mp4",
-            "name": "053-Sorry, Wong Suspect",
-            "url": "https://archive.org/download/001-nypd-blue/053-Sorry%2C%20Wong%20Suspect.mp4",
-            "seconds": 2750,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 881
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1989,20 +1857,8 @@
           "number": 15,
           "name": "Head Case",
           "airdate": "1996-02-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Head Case\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "059-Head Case.mp4",
-            "name": "059-Head Case",
-            "url": "https://archive.org/download/001-nypd-blue/059-Head%20Case.mp4",
-            "seconds": 2753,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 735
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2089,20 +1945,8 @@
           "number": 20,
           "name": "A Death in the Family",
           "airdate": "1996-05-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"A Death in the Family\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "064-A Death In The Family.mp4",
-            "name": "064-A Death In The Family",
-            "url": "https://archive.org/download/001-nypd-blue/064-A%20Death%20In%20The%20Family.mp4",
-            "seconds": 2753,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 766
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2194,20 +2038,8 @@
           "number": 3,
           "name": "Yes, We Have No Cannolis",
           "airdate": "1996-10-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Yes, We Have No Cannolis\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "069-Yes, We Have No Cannolis.mp4",
-            "name": "069-Yes, We Have No Cannolis",
-            "url": "https://archive.org/download/001-nypd-blue/069-Yes%2C%20We%20Have%20No%20Cannolis.mp4",
-            "seconds": 2700,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 889
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2274,20 +2106,8 @@
           "number": 7,
           "name": "Ted and Carey's Bogus Adventure",
           "airdate": "1996-12-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Ted and Carey's Bogus Adventure\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "073-Ted And Carey's Bogus Adventure.mp4",
-            "name": "073-Ted And Carey's Bogus Adventure",
-            "url": "https://archive.org/download/001-nypd-blue/073-Ted%20And%20Carey's%20Bogus%20Adventure.mp4",
-            "seconds": 2705,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 827
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2603,60 +2423,24 @@
           "number": 3,
           "name": "Three Girls and a Baby",
           "airdate": "1997-10-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Three Girls and a Baby\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "091-Three Girls And A Baby.mp4",
-            "name": "091-Three Girls And A Baby",
-            "url": "https://archive.org/download/001-nypd-blue/091-Three%20Girls%20And%20A%20Baby.mp4",
-            "seconds": 2686,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 839
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "The Truth is Out There",
           "airdate": "1997-10-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Truth is Out There\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "092-The Truth Is Out There.mp4",
-            "name": "092-The Truth Is Out There",
-            "url": "https://archive.org/download/001-nypd-blue/092-The%20Truth%20Is%20Out%20There.mp4",
-            "seconds": 2607,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 793
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "It Takes a Village",
           "airdate": "1997-11-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"It Takes a Village\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "093-It Takes A Village.mp4",
-            "name": "093-It Takes A Village",
-            "url": "https://archive.org/download/001-nypd-blue/093-It%20Takes%20A%20Village.mp4",
-            "seconds": 2647,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 754
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2923,20 +2707,8 @@
           "number": 19,
           "name": "Prostrate Before the Law",
           "airdate": "1998-04-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Prostrate Before the Law\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "107-Prostrate Before The Law.mp4",
-            "name": "107-Prostrate Before The Law",
-            "url": "https://archive.org/download/001-nypd-blue/107-Prostrate%20Before%20The%20Law.mp4",
-            "seconds": 2688,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 731
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3284,20 +3056,8 @@
           "number": 16,
           "name": "Tain't Misbehavin",
           "airdate": "1999-04-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Tain't Misbehavin\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "126-Tain't Misbehavin'.mp4",
-            "name": "126-Tain't Misbehavin'",
-            "url": "https://archive.org/download/001-nypd-blue/126-Tain't%20Misbehavin'.mp4",
-            "seconds": 2683,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 778
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3489,20 +3249,8 @@
           "number": 4,
           "name": "The Naked are the Dead",
           "airdate": "2000-02-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Naked are the Dead\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "136-The Naked Are The Dead.mp4",
-            "name": "136-The Naked Are The Dead",
-            "url": "https://archive.org/download/001-nypd-blue/136-The%20Naked%20Are%20The%20Dead.mp4",
-            "seconds": 2630,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 809
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3585,20 +3333,8 @@
           "number": 10,
           "name": "Who Murders Sleep",
           "airdate": "2000-03-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Who Murders Sleep\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "142-Who Murders Sleep.mp4",
-            "name": "142-Who Murders Sleep",
-            "url": "https://archive.org/download/001-nypd-blue/142-Who%20Murders%20Sleep.mp4",
-            "seconds": 2600,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 767
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3625,20 +3361,8 @@
           "number": 12,
           "name": "Welcome to New York",
           "airdate": "2000-03-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Welcome to New York\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "144-Welcome To New York.mp4",
-            "name": "144-Welcome To New York",
-            "url": "https://archive.org/download/001-nypd-blue/144-Welcome%20To%20New%20York.mp4",
-            "seconds": 2683,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 795
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3850,20 +3574,8 @@
           "number": 1,
           "name": "Daveless in New York",
           "airdate": "2001-01-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Daveless in New York\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "155-Daveless In New York.mp4",
-            "name": "155-Daveless In New York",
-            "url": "https://archive.org/download/001-nypd-blue/155-Daveless%20In%20New%20York.mp4",
-            "seconds": 2624,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 881
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3958,20 +3670,8 @@
           "number": 7,
           "name": "In-Laws, Outlaws",
           "airdate": "2001-02-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"In-Laws, Outlaws\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "161-In-Laws, Outlaws.mp4",
-            "name": "161-In-Laws, Outlaws",
-            "url": "https://archive.org/download/001-nypd-blue/161-In-Laws%2C%20Outlaws.mp4",
-            "seconds": 2664,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 713
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4198,20 +3898,8 @@
           "number": 19,
           "name": "Under Covers",
           "airdate": "2001-05-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Under Covers\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "173-Under Covers.mp4",
-            "name": "173-Under Covers",
-            "url": "https://archive.org/download/001-nypd-blue/173-Under%20Covers.mp4",
-            "seconds": 2640,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 706
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4283,40 +3971,16 @@
           "number": 3,
           "name": "Two Clarks in a Bar",
           "airdate": "2001-11-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Two Clarks in a Bar\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "177-Two Clarks In A Bar.mp4",
-            "name": "177-Two Clarks In A Bar",
-            "url": "https://archive.org/download/001-nypd-blue/177-Two%20Clarks%20In%20A%20Bar.mp4",
-            "seconds": 2685,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 708
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Hit the Road, Clark",
           "airdate": "2001-11-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Hit the Road, Clark\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "178-Hit the Road, Clark.mp4",
-            "name": "178-Hit the Road, Clark",
-            "url": "https://archive.org/download/001-nypd-blue/178-Hit%20the%20Road%2C%20Clark.mp4",
-            "seconds": 2674,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 626
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5586,20 +5250,8 @@
           "number": 4,
           "name": "Divorce Detective Style",
           "airdate": "2004-10-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Divorce Detective Style\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "244-Divorce Detective Style.mp4",
-            "name": "244-Divorce Detective Style",
-            "url": "https://archive.org/download/001-nypd-blue/244-Divorce%20Detective%20Style.mp4",
-            "seconds": 2588,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 649
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5826,20 +5478,8 @@
           "number": 16,
           "name": "Old Man Quiver",
           "airdate": "2005-02-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Old Man Quiver\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "256-Old Man Quiver.mp4",
-            "name": "256-Old Man Quiver",
-            "url": "https://archive.org/download/001-nypd-blue/256-Old%20Man%20Quiver.mp4",
-            "seconds": 2573,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 573
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

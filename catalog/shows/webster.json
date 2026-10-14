@@ -3,7 +3,7 @@
   "slug": "webster",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:59.953Z",
+  "matchedAt": "2026-10-14T05:18:58.508Z",
   "tvmaze": {
     "id": 7219,
     "name": "Webster",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 144,
-    "live": 34,
-    "review": 6,
+    "live": 4,
+    "review": 36,
     "missing": 104,
     "pct": 28
   },
@@ -43,19 +43,6 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_202512.mp4",
-              "name": "WBSTR_S1_DSC1_202512",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_202512.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 146
-            },
-            {
-              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -66,19 +53,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 144
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t00.mp4",
-              "name": "B1_t00",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t00.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -86,9 +60,9 @@
           "number": 2,
           "name": "Happy Un-Birthday",
           "airdate": "1983-09-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -102,7 +76,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -113,32 +87,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1848
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_2025126.mp4",
-              "name": "WBSTR_S1_DSC1_2025126",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_2025126.mp4",
-              "seconds": 1473,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t03.mp4",
-              "name": "B1_t03",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t03.mp4",
-              "seconds": 1414,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
             }
           ]
         },
@@ -173,32 +121,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1696
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_2025127.mp4",
-              "name": "WBSTR_S1_DSC1_2025127",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_2025127.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 146
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t04.mp4",
-              "name": "B1_t04",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t04.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -206,9 +128,9 @@
           "number": 4,
           "name": "Katherine's Swan Song",
           "airdate": "1983-10-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -222,7 +144,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -233,32 +155,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 145
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_2025128.mp4",
-              "name": "WBSTR_S1_DSC1_2025128",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_2025128.mp4",
-              "seconds": 1452,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 146
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t05.mp4",
-              "name": "B1_t05",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t05.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -266,9 +162,9 @@
           "number": 5,
           "name": "Saying Goodbye",
           "airdate": "1983-10-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -282,7 +178,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -293,32 +189,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1595
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_2025129.mp4",
-              "name": "WBSTR_S1_DSC1_2025129",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_2025129.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 146
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t06.mp4",
-              "name": "B1_t06",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t06.mp4",
-              "seconds": 1372,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
             }
           ]
         },
@@ -353,32 +223,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1887
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_20251211.mp4",
-              "name": "WBSTR_S1_DSC1_20251211",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_20251211.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 148
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t07.mp4",
-              "name": "B1_t07",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t07.mp4",
-              "seconds": 1363,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -386,9 +230,9 @@
           "number": 7,
           "name": "Second Time Around",
           "airdate": "1983-11-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -402,7 +246,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -413,32 +257,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 146
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_20251212.mp4",
-              "name": "WBSTR_S1_DSC1_20251212",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_20251212.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 147
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "B1_t08.mp4",
-              "name": "B1_t08",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/B1_t08.mp4",
-              "seconds": 1422,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 143
             }
           ]
         },
@@ -446,9 +264,9 @@
           "number": 8,
           "name": "Travis",
           "airdate": "1983-11-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -462,7 +280,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -473,32 +291,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1916
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC1_20251213.mp4",
-              "name": "WBSTR_S1_DSC1_20251213",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC1_20251213.mp4",
-              "seconds": 1575,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 154
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_202512.mp4",
-              "name": "WBSTR_S1_DSC3_202512",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_202512.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -506,9 +298,9 @@
           "number": 9,
           "name": "That's Entertainment",
           "airdate": "1983-11-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -522,7 +314,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -533,32 +325,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 144
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_202512.mp4",
-              "name": "WBSTR_S1_DSC2_202512",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_202512.mp4",
-              "seconds": 1484,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_2025124.mp4",
-              "name": "WBSTR_S1_DSC3_2025124",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_2025124.mp4",
-              "seconds": 1414,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
             }
           ]
         },
@@ -566,9 +332,9 @@
           "number": 10,
           "name": "Educating Katherine",
           "airdate": "1983-11-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -582,7 +348,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -593,32 +359,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 138
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_2025125.mp4",
-              "name": "WBSTR_S1_DSC3_2025125",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_2025125.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_2025124.mp4",
-              "name": "WBSTR_S1_DSC2_2025124",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_2025124.mp4",
-              "seconds": 1420,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
             }
           ]
         },
@@ -626,9 +366,9 @@
           "number": 11,
           "name": "Teddy Bear Scare",
           "airdate": "1983-12-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -642,7 +382,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -653,32 +393,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 145
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_2025125.mp4",
-              "name": "WBSTR_S1_DSC2_2025125",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_2025125.mp4",
-              "seconds": 1484,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 146
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_2025126.mp4",
-              "name": "WBSTR_S1_DSC3_2025126",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_2025126.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -686,9 +400,9 @@
           "number": 12,
           "name": "A Question of Honor",
           "airdate": "1983-12-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -702,7 +416,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -713,32 +427,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 149
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_2025126.mp4",
-              "name": "WBSTR_S1_DSC2_2025126",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_2025126.mp4",
-              "seconds": 1484,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 150
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_2025127.mp4",
-              "name": "WBSTR_S1_DSC3_2025127",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_2025127.mp4",
-              "seconds": 1372,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
             }
           ]
         },
@@ -746,9 +434,9 @@
           "number": 13,
           "name": "Don't Jump, George",
           "airdate": "1983-12-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -762,7 +450,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -773,32 +461,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 144
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_2025127.mp4",
-              "name": "WBSTR_S1_DSC2_2025127",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_2025127.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_2025129.mp4",
-              "name": "WBSTR_S1_DSC3_2025129",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_2025129.mp4",
-              "seconds": 1363,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -806,9 +468,9 @@
           "number": 14,
           "name": "George, the Patient in Spite of Himself",
           "airdate": "1984-01-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -822,7 +484,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -833,32 +495,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 145
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_2025129.mp4",
-              "name": "WBSTR_S1_DSC2_2025129",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_2025129.mp4",
-              "seconds": 1483,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 147
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 14 in \"Webster - Season 1 (Disc 3/Interlaced Ma\"",
-              "item": "WBSTR_S1_DSC3_INT-MKV_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/Interlaced MakeMKV Rip)",
-              "file": "WBSTR_S1_DSC3_20251210.mp4",
-              "name": "WBSTR_S1_DSC3_20251210",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_INT-MKV_202507/WBSTR_S1_DSC3_20251210.mp4",
-              "seconds": 1460,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
             }
           ]
         },
@@ -866,9 +502,9 @@
           "number": 15,
           "name": "Maybe Baby",
           "airdate": "1984-01-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -882,7 +518,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -893,19 +529,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1852
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 15 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC2_20251210.mp4",
-              "name": "WBSTR_S1_DSC2_20251210",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC2_20251210.mp4",
-              "seconds": 1515,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 150
             }
           ]
         },
@@ -913,9 +536,9 @@
           "number": 16,
           "name": "Missing",
           "airdate": "1984-01-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -929,7 +552,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC3_202507",
               "itemTitle": "Webster - Season 1 (Disc 3/PS4 Rip)",
@@ -942,7 +565,7 @@
               "sizeMB": 577
             },
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -953,19 +576,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_202512.mp4",
-              "name": "WBSTR_S1_DSC3_202512",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_202512.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -973,9 +583,9 @@
           "number": 17,
           "name": "Secrets of the Night",
           "airdate": "1984-01-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -989,7 +599,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC3_202507",
               "itemTitle": "Webster - Season 1 (Disc 3/PS4 Rip)",
@@ -1002,7 +612,7 @@
               "sizeMB": 608
             },
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1013,19 +623,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 17 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_2025124.mp4",
-              "name": "WBSTR_S1_DSC3_2025124",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_2025124.mp4",
-              "seconds": 1414,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
             }
           ]
         },
@@ -1063,19 +660,6 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 18 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_2025125.mp4",
-              "name": "WBSTR_S1_DSC3_2025125",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_2025125.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1093,36 +677,23 @@
           "number": 19,
           "name": "Uncle Phillip",
           "airdate": "1984-02-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
-            "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-            "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-            "file": "S1E19 - Uncle Philip (59.94p).mp4",
-            "name": "S1E19 - Uncle Philip (59.94p)",
-            "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/S1E19%20-%20Uncle%20Philip%20(59.94p).mp4",
-            "seconds": 1423,
+            "item": "WBSTR_S1_DSC3_202507",
+            "itemTitle": "Webster - Season 1 (Disc 3/PS4 Rip)",
+            "file": "S1E19 - Uncle Philip.mp4",
+            "name": "S1E19 - Uncle Philip",
+            "url": "https://archive.org/download/WBSTR_S1_DSC3_202507/S1E19%20-%20Uncle%20Philip.mp4",
+            "seconds": 1421,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1902
+            "sizeMB": 571
           },
           "alternates": [
             {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "WBSTR_S1_DSC3_202507",
-              "itemTitle": "Webster - Season 1 (Disc 3/PS4 Rip)",
-              "file": "S1E19 - Uncle Philip.mp4",
-              "name": "S1E19 - Uncle Philip",
-              "url": "https://archive.org/download/WBSTR_S1_DSC3_202507/S1E19%20-%20Uncle%20Philip.mp4",
-              "seconds": 1421,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 571
-            },
-            {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1135,17 +706,17 @@
               "sizeMB": 139
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 19 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_2025126.mp4",
-              "name": "WBSTR_S1_DSC3_2025126",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_2025126.mp4",
+              "file": "S1E19 - Uncle Philip (59.94p).mp4",
+              "name": "S1E19 - Uncle Philip (59.94p)",
+              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/S1E19%20-%20Uncle%20Philip%20(59.94p).mp4",
               "seconds": 1423,
-              "format": "h.264",
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 140
+              "sizeMB": 1902
             }
           ]
         },
@@ -1153,9 +724,9 @@
           "number": 20,
           "name": "More Than a Memory",
           "airdate": "1984-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1169,7 +740,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC3_202507",
               "itemTitle": "Webster - Season 1 (Disc 3/PS4 Rip)",
@@ -1182,7 +753,7 @@
               "sizeMB": 604
             },
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1193,19 +764,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 134
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 20 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_2025127.mp4",
-              "name": "WBSTR_S1_DSC3_2025127",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_2025127.mp4",
-              "seconds": 1372,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
             }
           ]
         },
@@ -1213,9 +771,9 @@
           "number": 21,
           "name": "Dreamland",
           "airdate": "1984-03-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
             "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1229,7 +787,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
               "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
@@ -1242,7 +800,7 @@
               "sizeMB": 1738
             },
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "WBSTR_S1_DSC3_202507",
               "itemTitle": "Webster - Season 1 (Disc 3/PS4 Rip)",
@@ -1253,19 +811,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 546
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 21 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_2025129.mp4",
-              "name": "WBSTR_S1_DSC3_2025129",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_2025129.mp4",
-              "seconds": 1363,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -1313,19 +858,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 142
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 22 of 22 in \"Webster - Season 1 (29.97i MKV to 59.94p\"",
-              "item": "WBSTR_S1_DSC1_DEINT-MP4_202601",
-              "itemTitle": "Webster - Season 1 (29.97i MKV to 59.94p MP4)",
-              "file": "WBSTR_S1_DSC3_20251210.mp4",
-              "name": "WBSTR_S1_DSC3_20251210",
-              "url": "https://archive.org/download/WBSTR_S1_DSC1_DEINT-MP4_202601/WBSTR_S1_DSC3_20251210.mp4",
-              "seconds": 1460,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
             }
           ]
         }
@@ -1378,9 +910,9 @@
           "number": 3,
           "name": "The Great Walnutto",
           "airdate": "1984-10-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S2_DSC1_202507",
             "itemTitle": "Webster - Season 2 (Disc 1/PS4 Rip)",
@@ -1398,9 +930,9 @@
           "number": 4,
           "name": "Knock, Knock",
           "airdate": "1984-10-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S2_DSC1_202507",
             "itemTitle": "Webster - Season 2 (Disc 1/PS4 Rip)",
@@ -1418,9 +950,9 @@
           "number": 5,
           "name": "Burn Out",
           "airdate": "1984-10-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S2_DSC1_202507",
             "itemTitle": "Webster - Season 2 (Disc 1/PS4 Rip)",
@@ -1458,9 +990,9 @@
           "number": 7,
           "name": "You Can't Go Home Again",
           "airdate": "1984-11-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_S2_DSC1_202507",
             "itemTitle": "Webster - Season 2 (Disc 1/PS4 Rip)",
@@ -1526,9 +1058,9 @@
           "number": 14,
           "name": "Runaway",
           "airdate": "1985-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -1546,9 +1078,9 @@
           "number": 15,
           "name": "Keep on Truckin', Papa",
           "airdate": "1985-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -1598,9 +1130,9 @@
           "number": 20,
           "name": "What is Art?",
           "airdate": "1985-02-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -1699,9 +1231,9 @@
           "number": 5,
           "name": "Alien",
           "airdate": "1985-10-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -1719,9 +1251,9 @@
           "number": 6,
           "name": "Parent Trap",
           "airdate": "1985-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -1739,9 +1271,9 @@
           "number": 7,
           "name": "Good Grief",
           "airdate": "1985-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -1799,9 +1331,9 @@
           "number": 13,
           "name": "The Triangle",
           "airdate": "1985-12-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -2004,9 +1536,9 @@
           "number": 10,
           "name": "The Big Sleepover",
           "airdate": "1986-12-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",
@@ -2056,9 +1588,9 @@
           "number": 15,
           "name": "Freedom of the Press",
           "airdate": "1987-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "WBSTR_20-TMLS-EPS_DSC2_202507",
             "itemTitle": "Webster - 20 Timeless Episodes (Disc 2/PS4 Rip)",

@@ -3,7 +3,7 @@
   "slug": "supermarket-sweep",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:29:04.586Z",
+  "matchedAt": "2026-10-14T05:19:05.545Z",
   "tvmaze": {
     "id": 45815,
     "name": "Supermarket Sweep",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 23,
-    "live": 5,
-    "review": 1,
-    "missing": 17,
-    "pct": 26
+    "live": 1,
+    "review": 4,
+    "missing": 18,
+    "pct": 22
   },
   "seasons": [
     {
@@ -111,9 +111,9 @@
           "number": 1,
           "name": "You Shoud've Grabbed a Lot More Triscuits!",
           "airdate": "2021-09-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "ss-s02e01",
             "itemTitle": "Supermarket Sweep - S02E01 (September 26, 2021)",
@@ -163,9 +163,9 @@
           "number": 6,
           "name": "I Love Bacon! Bacon, Bacon, Bacon!",
           "airdate": "2021-11-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "ss-s02e06",
             "itemTitle": "Supermarket Sweep - S02E06 (November 7, 2021)",
@@ -183,9 +183,9 @@
           "number": 7,
           "name": "Don't Be Twerking on My Show!",
           "airdate": "2021-11-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "ss-s02e07",
             "itemTitle": "Supermarket Sweep - S02E07 (November 14, 2021)",
@@ -223,9 +223,9 @@
           "number": 9,
           "name": "Gingerbread Is Not Money For Redheads, Neil!",
           "airdate": "2021-12-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "ss-s02e09",
             "itemTitle": "Supermarket Sweep - S02E09 (December 12, 2021)",
@@ -267,20 +267,8 @@
           "number": 13,
           "name": "280 Pounds of Twisted Steel and Sex Appeal",
           "airdate": "2022-01-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"280 Pounds of Twisted Steel and Sex Appeal\" (0.79)",
-            "item": "ss-s02e13",
-            "itemTitle": "Supermarket Sweep - S02E13 (January 30, 2022) - Series Finale",
-            "file": "The New Supermarket Sweep 2020 (Season 2 Finale)_ 280 Pounds of Twisted Steel and Sex Appeal! (720p).mp4",
-            "name": "The New Supermarket Sweep 2020 (Season 2 Finale)_ 280 Pounds of Twisted Steel and Sex Appeal! (720p)",
-            "url": "https://archive.org/download/ss-s02e13/The%20New%20Supermarket%20Sweep%202020%20(Season%202%20Finale)_%20280%20Pounds%20of%20Twisted%20Steel%20and%20Sex%20Appeal!%20(720p).mp4",
-            "seconds": 2553,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 563
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

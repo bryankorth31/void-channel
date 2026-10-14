@@ -3,7 +3,7 @@
   "slug": "off-the-air",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T04:28:49.542Z",
+  "matchedAt": "2026-10-14T05:18:39.205Z",
   "tvmaze": {
     "id": 3971,
     "name": "Off the Air",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 55,
-    "live": 1,
-    "review": 22,
-    "missing": 32,
-    "pct": 42
+    "live": 0,
+    "review": 21,
+    "missing": 34,
+    "pct": 38
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Animals",
           "airdate": "2011-01-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "off-the-air-101-animals-460p.x-264.vorbis-2.0-449",
             "itemTitle": "Off The Air Animals (Original Version)",
@@ -40,34 +40,7 @@
             "playable": true,
             "sizeMB": 93
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Animals\" (0.95)",
-              "item": "animals-off-the-air-adult-swim-1080p",
-              "itemTitle": "Animals - Off The Air - Adult Swim - 1080p",
-              "file": "Animals  Off the Air  Adult Swim_1080p.mp4",
-              "name": "Animals  Off the Air  Adult Swim_1080p",
-              "url": "https://archive.org/download/animals-off-the-air-adult-swim-1080p/Animals%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
-              "seconds": 656,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 262
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Animals\" (1.00)",
-              "item": "off-the-air",
-              "itemTitle": "Off the Air",
-              "file": "Off the Air/Animals.mp4",
-              "name": "Off the Air/Animals",
-              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FAnimals.mp4",
-              "seconds": 656,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 218
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -214,35 +187,9 @@
           "number": 1,
           "name": "Falling",
           "airdate": "2012-08-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Falling\" (0.95)",
-            "item": "falling-off-the-air-adult-swim-1080p",
-            "itemTitle": "Falling - Off The Air - Adult Swim - 1080p",
-            "file": "Falling  Off the Air  Adult Swim_1080p.mp4",
-            "name": "Falling  Off the Air  Adult Swim_1080p",
-            "url": "https://archive.org/download/falling-off-the-air-adult-swim-1080p/Falling%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
-            "seconds": 640,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 214
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Falling\" (1.00)",
-              "item": "off-the-air",
-              "itemTitle": "Off the Air",
-              "file": "Off the Air/Falling.mp4",
-              "name": "Off the Air/Falling",
-              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FFalling.mp4",
-              "seconds": 640,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 195
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -999,20 +946,8 @@
           "number": 2,
           "name": "Drugs",
           "airdate": "2023-12-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Drugs\" (0.95)",
-            "item": "drugs-off-the-air-fanmade-2017-runawaysplace",
-            "itemTitle": "Drugs | Off The Air | Fanmade",
-            "file": "Drugs Off The Air Fanmade (2017 runawaysplace).mp4",
-            "name": "Drugs Off The Air Fanmade (2017 runawaysplace)",
-            "url": "https://archive.org/download/drugs-off-the-air-fanmade-2017-runawaysplace/Drugs%20Off%20The%20Air%20Fanmade%20(2017%20runawaysplace).mp4",
-            "seconds": 1033,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 553
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

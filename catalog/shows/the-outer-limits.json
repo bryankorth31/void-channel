@@ -3,7 +3,7 @@
   "slug": "the-outer-limits",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Showtime",
-  "matchedAt": "2026-10-14T04:28:51.683Z",
+  "matchedAt": "2026-10-14T05:18:43.346Z",
   "tvmaze": {
     "id": 2289,
     "name": "The Outer Limits",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 154,
-    "live": 139,
-    "review": 15,
-    "missing": 0,
-    "pct": 100
+    "live": 121,
+    "review": 32,
+    "missing": 1,
+    "pct": 99
   },
   "seasons": [
     {
@@ -129,16 +129,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 10 in \"The Outer Limits (1963) Season 1\"",
-              "item": "the-outer-limits-1963-season-1",
-              "itemTitle": "The Outer Limits (1963) Season 1",
-              "file": "The-Outer-Limits-1963-S01E24/The-Outer-Limits-1963-S01E24.mp4",
-              "name": "The-Outer-Limits-1963-S01E24/The-Outer-Limits-1963-S01E24",
-              "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E24%2FThe-Outer-Limits-1963-S01E24.mp4",
-              "seconds": 3090,
+              "why": "sequence guess: file 2 of 7 in \"The Outer Limits 1x 01 02 The Sandkings\"",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits S01E25 The Mutant.mp4",
+              "name": "The Outer Limits S01E25 The Mutant",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20S01E25%20The%20Mutant.mp4",
+              "seconds": 3077,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 1062
+              "sizeMB": 167
             }
           ]
         },
@@ -388,32 +388,19 @@
           "airdate": "1995-04-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 1x07 - The Choice.mp4",
-            "name": "The Outer Limits - 1x07 - The Choice",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x07%20-%20The%20Choice.mp4",
-            "seconds": 2538,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-1963-season-1",
+            "itemTitle": "The Outer Limits (1963) Season 1",
+            "file": "The-Outer-Limits-1963-S01E07/The-Outer-Limits-1963-S01E07.mp4",
+            "name": "The-Outer-Limits-1963-S01E07/The-Outer-Limits-1963-S01E07",
+            "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E07%2FThe-Outer-Limits-1963-S01E07.mp4",
+            "seconds": 3079,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 245
+            "sizeMB": 1065
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1963-season-1",
-              "itemTitle": "The Outer Limits (1963) Season 1",
-              "file": "The-Outer-Limits-1963-S01E07/The-Outer-Limits-1963-S01E07.mp4",
-              "name": "The-Outer-Limits-1963-S01E07/The-Outer-Limits-1963-S01E07",
-              "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E07%2FThe-Outer-Limits-1963-S01E07.mp4",
-              "seconds": 3079,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1065
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -439,6 +426,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 303
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits S01E07 O.B.I.T..mp4",
+              "name": "The Outer Limits S01E07 O.B.I.T.",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20S01E07%20O.B.I.T..mp4",
+              "seconds": 3079,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 99
             }
           ]
         },
@@ -568,32 +568,19 @@
           "airdate": "1995-05-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 1x10 - Corner Of The Eye.mp4",
-            "name": "The Outer Limits - 1x10 - Corner Of The Eye",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x10%20-%20Corner%20Of%20The%20Eye.mp4",
-            "seconds": 2543,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-1963-season-1",
+            "itemTitle": "The Outer Limits (1963) Season 1",
+            "file": "The-Outer-Limits-1963-S01E10/The-Outer-Limits-1963-S01E10.mp4",
+            "name": "The-Outer-Limits-1963-S01E10/The-Outer-Limits-1963-S01E10",
+            "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E10%2FThe-Outer-Limits-1963-S01E10.mp4",
+            "seconds": 3087,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 246
+            "sizeMB": 1077
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1963-season-1",
-              "itemTitle": "The Outer Limits (1963) Season 1",
-              "file": "The-Outer-Limits-1963-S01E10/The-Outer-Limits-1963-S01E10.mp4",
-              "name": "The-Outer-Limits-1963-S01E10/The-Outer-Limits-1963-S01E10",
-              "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E10%2FThe-Outer-Limits-1963-S01E10.mp4",
-              "seconds": 3087,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1077
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -619,6 +606,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 105
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 1x10 - Corner Of The Eye.mp4",
+              "name": "The Outer Limits - 1x10 - Corner Of The Eye",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x10%20-%20Corner%20Of%20The%20Eye.mp4",
+              "seconds": 2543,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 246
             }
           ]
         },
@@ -715,19 +715,6 @@
               "sizeMB": 303
             },
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits S01E12 The Borderland.mp4",
-              "name": "The Outer Limits S01E12 The Borderland",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20S01E12%20The%20Borderland.mp4",
-              "seconds": 3088,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 193
-            },
-            {
               "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-outer-limits-1-7-tv-series",
@@ -739,6 +726,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 240
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serie-outer-limits-1995-2001-by-artblood",
+              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+              "file": "Serie - Outer Limits - 1995-2001 - S01E12 - Das Geisterschiff - by ARTBLOOD.mp4",
+              "name": "Serie - Outer Limits - 1995-2001 - S01E12 - Das Geisterschiff - by ARTBLOOD",
+              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S01E12%20-%20Das%20Geisterschiff%20-%20by%20ARTBLOOD.mp4",
+              "seconds": 2551,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 255
             }
           ]
         },
@@ -869,32 +870,19 @@
           "airdate": "1995-06-23",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 1x15 - Caught In The Act.mp4",
-            "name": "The Outer Limits - 1x15 - Caught In The Act",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x15%20-%20Caught%20In%20The%20Act.mp4",
-            "seconds": 2534,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-1963-season-1",
+            "itemTitle": "The Outer Limits (1963) Season 1",
+            "file": "The-Outer-Limits-1963-S01E15/The-Outer-Limits-1963-S01E15.mp4",
+            "name": "The-Outer-Limits-1963-S01E15/The-Outer-Limits-1963-S01E15",
+            "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E15%2FThe-Outer-Limits-1963-S01E15.mp4",
+            "seconds": 3096,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 241
+            "sizeMB": 1069
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1963-season-1",
-              "itemTitle": "The Outer Limits (1963) Season 1",
-              "file": "The-Outer-Limits-1963-S01E15/The-Outer-Limits-1963-S01E15.mp4",
-              "name": "The-Outer-Limits-1963-S01E15/The-Outer-Limits-1963-S01E15",
-              "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E15%2FThe-Outer-Limits-1963-S01E15.mp4",
-              "seconds": 3096,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1069
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -920,6 +908,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 175
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 1x15 - Caught In The Act.mp4",
+              "name": "The Outer Limits - 1x15 - Caught In The Act",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x15%20-%20Caught%20In%20The%20Act.mp4",
+              "seconds": 2534,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 241
             }
           ]
         },
@@ -1049,32 +1050,19 @@
           "airdate": "1995-07-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 1x18 - The Message.mp4",
-            "name": "The Outer Limits - 1x18 - The Message",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x18%20-%20The%20Message.mp4",
-            "seconds": 2576,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-1963-season-1",
+            "itemTitle": "The Outer Limits (1963) Season 1",
+            "file": "The-Outer-Limits-1963-S01E18/The-Outer-Limits-1963-S01E18.mp4",
+            "name": "The-Outer-Limits-1963-S01E18/The-Outer-Limits-1963-S01E18",
+            "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E18%2FThe-Outer-Limits-1963-S01E18.mp4",
+            "seconds": 3091,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 252
+            "sizeMB": 1065
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1963-season-1",
-              "itemTitle": "The Outer Limits (1963) Season 1",
-              "file": "The-Outer-Limits-1963-S01E18/The-Outer-Limits-1963-S01E18.mp4",
-              "name": "The-Outer-Limits-1963-S01E18/The-Outer-Limits-1963-S01E18",
-              "url": "https://archive.org/download/the-outer-limits-1963-season-1/The-Outer-Limits-1963-S01E18%2FThe-Outer-Limits-1963-S01E18.mp4",
-              "seconds": 3091,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1065
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1100,6 +1088,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 127
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 1x18 - The Message.mp4",
+              "name": "The Outer Limits - 1x18 - The Message",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%201x18%20-%20The%20Message.mp4",
+              "seconds": 2576,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 252
             }
           ]
         },
@@ -1270,17 +1271,18 @@
               "sizeMB": 291
             },
             {
-              "conf": 0.9,
+              "conf": 0.55,
               "why": "S/E in filename",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits S01E21 The Children of Spider County.mp4",
-              "name": "The Outer Limits S01E21 The Children of Spider County",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20S01E21%20The%20Children%20of%20Spider%20County.mp4",
-              "seconds": 3076,
-              "format": "MPEG4",
+              "item": "serie-outer-limits-1995-2001-by-artblood",
+              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+              "file": "Serie - Outer Limits - 1995-2001 - S01E21 - Wer bin ich - by ARTBLOOD.mp4",
+              "name": "Serie - Outer Limits - 1995-2001 - S01E21 - Wer bin ich - by ARTBLOOD",
+              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S01E21%20-%20Wer%20bin%20ich%20-%20by%20ARTBLOOD.mp4",
+              "seconds": 2551,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 141
+              "langRisk": true,
+              "sizeMB": 256
             }
           ]
         },
@@ -1417,32 +1419,19 @@
           "airdate": "1996-01-14",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 2x02 - Resurrection.mp4",
-            "name": "The Outer Limits - 2x02 - Resurrection",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x02%20-%20Resurrection.mp4",
-            "seconds": 2537,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
+            "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
+            "file": "the outer limits-s2e2-1964-colorized-576p-sd.mp4",
+            "name": "the outer limits-s2e2-1964-colorized-576p-sd",
+            "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e2-1964-colorized-576p-sd.mp4",
+            "seconds": 3140,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 250
+            "sizeMB": 302
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
-              "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
-              "file": "the outer limits-s2e2-1964-colorized-576p-sd.mp4",
-              "name": "the outer limits-s2e2-1964-colorized-576p-sd",
-              "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e2-1964-colorized-576p-sd.mp4",
-              "seconds": 3140,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 302
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1455,6 +1444,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 144
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 2x02 - Resurrection.mp4",
+              "name": "The Outer Limits - 2x02 - Resurrection",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x02%20-%20Resurrection.mp4",
+              "seconds": 2537,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 250
             },
             {
               "conf": 0.55,
@@ -1539,32 +1541,19 @@
           "airdate": "1996-01-26",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 2x04 - I Hear You Calling.mp4",
-            "name": "The Outer Limits - 2x04 - I Hear You Calling",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x04%20-%20I%20Hear%20You%20Calling.mp4",
-            "seconds": 2576,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
+            "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
+            "file": "the outer limits-s2e4-1964-colorized-576p-sd.mp4",
+            "name": "the outer limits-s2e4-1964-colorized-576p-sd",
+            "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e4-1964-colorized-576p-sd.mp4",
+            "seconds": 3143,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 253
+            "sizeMB": 303
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
-              "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
-              "file": "the outer limits-s2e4-1964-colorized-576p-sd.mp4",
-              "name": "the outer limits-s2e4-1964-colorized-576p-sd",
-              "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e4-1964-colorized-576p-sd.mp4",
-              "seconds": 3143,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 303
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1577,6 +1566,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 130
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 2x04 - I Hear You Calling.mp4",
+              "name": "The Outer Limits - 2x04 - I Hear You Calling",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x04%20-%20I%20Hear%20You%20Calling.mp4",
+              "seconds": 2576,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 253
             },
             {
               "conf": 0.55,
@@ -2210,32 +2212,19 @@
           "airdate": "1996-05-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 2x15 - Afterlife.mp4",
-            "name": "The Outer Limits - 2x15 - Afterlife",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x15%20-%20Afterlife.mp4",
-            "seconds": 2576,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
+            "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
+            "file": "the outer limits-s2e15-1964-colorized-576p-sd.mp4",
+            "name": "the outer limits-s2e15-1964-colorized-576p-sd",
+            "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e15-1964-colorized-576p-sd.mp4",
+            "seconds": 3080,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 247
+            "sizeMB": 296
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
-              "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
-              "file": "the outer limits-s2e15-1964-colorized-576p-sd.mp4",
-              "name": "the outer limits-s2e15-1964-colorized-576p-sd",
-              "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e15-1964-colorized-576p-sd.mp4",
-              "seconds": 3080,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 296
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -2248,6 +2237,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 113
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 2x15 - Afterlife.mp4",
+              "name": "The Outer Limits - 2x15 - Afterlife",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x15%20-%20Afterlife.mp4",
+              "seconds": 2576,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 247
             },
             {
               "conf": 0.55,
@@ -2441,9 +2443,9 @@
           "number": 19,
           "name": "Falling Star",
           "airdate": "1996-06-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -2469,20 +2471,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 256
-            },
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 2x19 - Une Star Déchue.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 2x19 - Une Star Déchue",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%202x19%20-%20Une%20Star%20D%C3%A9chue.mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 315
             }
           ]
         },
@@ -2532,20 +2520,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 353
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 2/outer.limits.tns.220.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 2/outer.limits.tns.220.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%202%2Fouter.limits.tns.220.dvdrip.xvid-ositv.mp4",
-              "seconds": 2644,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 263
             }
           ]
         },
@@ -2645,20 +2619,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 256
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 2/outer.limits.tns.222.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 2/outer.limits.tns.222.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%202%2Fouter.limits.tns.222.dvdrip.xvid-ositv.mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 266
             }
           ]
         }
@@ -2699,20 +2659,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 339
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.301.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.301.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.301.dvdrip.xvid-ositv.mp4",
-              "seconds": 2668,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 275
             }
           ]
         },
@@ -2722,49 +2668,20 @@
           "airdate": "1997-01-19",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-            "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-            "file": "Au-Delà Du Réel, L'Aventure Continue - 3x02 - L'Homme Qui Avait Plusieurs Tetes (Second thoughts).mp4",
-            "name": "Au-Delà Du Réel, L'Aventure Continue - 3x02 - L'Homme Qui Avait Plusieurs Tetes (Second thoughts)",
-            "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%203x02%20-%20L'Homme%20Qui%20Avait%20Plusieurs%20Tetes%20(Second%20thoughts).mp4",
-            "seconds": 2542,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "serie-outer-limits-1995-2001-by-artblood",
+            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+            "file": "Serie - Outer Limits - 1995-2001 - S03E02 - Fremde Gedanken - by ARTBLOOD.mp4",
+            "name": "Serie - Outer Limits - 1995-2001 - S03E02 - Fremde Gedanken - by ARTBLOOD",
+            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S03E02%20-%20Fremde%20Gedanken%20-%20by%20ARTBLOOD.mp4",
+            "seconds": 2529,
+            "format": "h.264",
             "playable": true,
             "langRisk": true,
-            "sizeMB": 339
+            "sizeMB": 257
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S03E02 - Fremde Gedanken - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S03E02 - Fremde Gedanken - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S03E02%20-%20Fremde%20Gedanken%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2529,
-              "format": "h.264",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 257
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.302.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.302.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.302.dvdrip.xvid-ositv.mp4",
-              "seconds": 2668,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 270
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -2812,20 +2729,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 339
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.303.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.303.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.303.dvdrip.xvid-ositv.mp4",
-              "seconds": 2669,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 269
             }
           ]
         },
@@ -2923,20 +2826,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 342
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.305.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.305.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.305.dvdrip.xvid-ositv.mp4",
-              "seconds": 2669,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 268
             }
           ]
         },
@@ -2986,20 +2875,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 336
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.306.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.306.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.306.dvdrip.xvid-ositv.mp4",
-              "seconds": 2669,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 270
             }
           ]
         },
@@ -3049,20 +2924,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 257
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.307.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.307.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.307.dvdrip.xvid-ositv.mp4",
-              "seconds": 2670,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 273
             }
           ]
         },
@@ -3112,20 +2973,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 343
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.308.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.308.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.308.dvdrip.xvid-ositv.mp4",
-              "seconds": 2670,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 271
             }
           ]
         },
@@ -3133,9 +2980,9 @@
           "number": 9,
           "name": "Tempests",
           "airdate": "1997-03-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -3175,20 +3022,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 340
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.309.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.309.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.309.dvdrip.xvid-ositv.mp4",
-              "seconds": 2670,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 269
             }
           ]
         },
@@ -3238,20 +3071,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 341
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.310.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.310.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.310.dvdrip.xvid-ositv.mp4",
-              "seconds": 2669,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 270
             }
           ]
         },
@@ -3301,20 +3120,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 334
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.311.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.311.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.311.dvdrip.xvid-ositv.mp4",
-              "seconds": 2670,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 271
             }
           ]
         },
@@ -3350,34 +3155,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 257
-            },
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 3x12 - Le Message Galactique.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 3x12 - Le Message Galactique",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%203x12%20-%20Le%20Message%20Galactique.mp4",
-              "seconds": 2542,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 343
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.312.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.312.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.312.dvdrip.xvid-ositv.mp4",
-              "seconds": 2669,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 270
             }
           ]
         },
@@ -3413,20 +3190,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 333
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.313.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.313.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.313.dvdrip.xvid-ositv.mp4",
-              "seconds": 2671,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 267
             }
           ]
         },
@@ -3469,9 +3232,9 @@
           "number": 15,
           "name": "Revelations of 'Becka Paulson",
           "airdate": "1997-06-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -3485,20 +3248,6 @@
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "S/E in filename + title match",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 3x15 - Les Revelations De Becka Paulson.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 3x15 - Les Revelations De Becka Paulson",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%203x15%20-%20Les%20Revelations%20De%20Becka%20Paulson.mp4",
-              "seconds": 2542,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 336
-            },
-            {
               "conf": 0.55,
               "why": "S/E in filename",
               "item": "serie-outer-limits-1995-2001-by-artblood",
@@ -3511,20 +3260,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 256
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 3/outer.limits.tns.315.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 3/outer.limits.tns.315.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%203%2Fouter.limits.tns.315.dvdrip.xvid-ositv.mp4",
-              "seconds": 2670,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 270
             }
           ]
         },
@@ -3532,9 +3267,9 @@
           "number": 16,
           "name": "Bodies of Evidence",
           "airdate": "1997-06-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -3704,20 +3439,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 346
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.402.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.402.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%204%2Fthe.outer.limits.tns.402.dvdrip.xvid-ositv.mp4",
-              "seconds": 2679,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 276
             }
           ]
         },
@@ -3725,48 +3446,22 @@
           "number": 3,
           "name": "Hearts and Minds",
           "airdate": "1998-02-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 4x003 - Relativity Theory.mp4",
-            "name": "The Outer Limits - 4x003 - Relativity Theory",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x003%20-%20Relativity%20Theory.mp4",
-            "seconds": 2537,
+            "item": "serie-outer-limits-1995-2001-by-artblood",
+            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+            "file": "Serie - Outer Limits - 1995-2001 - S04E03 - Halluzination - by ARTBLOOD.mp4",
+            "name": "Serie - Outer Limits - 1995-2001 - S04E03 - Halluzination - by ARTBLOOD",
+            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E03%20-%20Halluzination%20-%20by%20ARTBLOOD.mp4",
+            "seconds": 2530,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 248
+            "langRisk": true,
+            "sizeMB": 257
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Hearts and Minds\" (0.95)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 03x19 - Hearts And Minds.mp4",
-              "name": "The Outer Limits - 03x19 - Hearts And Minds",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%2003x19%20-%20Hearts%20And%20Minds.mp4",
-              "seconds": 2566,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 254
-            },
-            {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S04E03 - Halluzination - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S04E03 - Halluzination - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E03%20-%20Halluzination%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2530,
-              "format": "h.264",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 257
-            },
             {
               "conf": 0.5,
               "why": "S/E in filename",
@@ -3829,20 +3524,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 341
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.404.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.404.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%204%2Fthe.outer.limits.tns.404.dvdrip.xvid-ositv.mp4",
-              "seconds": 2681,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 273
             }
           ]
         },
@@ -3912,48 +3593,22 @@
           "number": 6,
           "name": "Relativity Theory",
           "airdate": "1998-02-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
+            "conf": 0.55,
             "why": "S/E in filename",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 4x006 - Identity Crisis.mp4",
-            "name": "The Outer Limits - 4x006 - Identity Crisis",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x006%20-%20Identity%20Crisis.mp4",
-            "seconds": 2545,
+            "item": "serie-outer-limits-1995-2001-by-artblood",
+            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+            "file": "Serie - Outer Limits - 1995-2001 - S04E06 - Die Echsen - by ARTBLOOD.mp4",
+            "name": "Serie - Outer Limits - 1995-2001 - S04E06 - Die Echsen - by ARTBLOOD",
+            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E06%20-%20Die%20Echsen%20-%20by%20ARTBLOOD.mp4",
+            "seconds": 2529,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 242
+            "langRisk": true,
+            "sizeMB": 256
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Relativity Theory\" (0.97)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 4x003 - Relativity Theory.mp4",
-              "name": "The Outer Limits - 4x003 - Relativity Theory",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x003%20-%20Relativity%20Theory.mp4",
-              "seconds": 2537,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 248
-            },
-            {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S04E06 - Die Echsen - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S04E06 - Die Echsen - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E06%20-%20Die%20Echsen%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2529,
-              "format": "h.264",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 256
-            },
             {
               "conf": 0.5,
               "why": "S/E in filename",
@@ -4015,20 +3670,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 245
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.407.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.407.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%204%2Fthe.outer.limits.tns.407.dvdrip.xvid-ositv.mp4",
-              "seconds": 2681,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 275
             }
           ]
         },
@@ -4036,63 +3677,9 @@
           "number": 8,
           "name": "Rite of Passage",
           "airdate": "1998-03-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 4x008 - Fear Itself.mp4",
-            "name": "The Outer Limits - 4x008 - Fear Itself",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x008%20-%20Fear%20Itself.mp4",
-            "seconds": 2527,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 248
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Rite of Passage\" (0.95)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 03x22 - Rite Of Passage.mp4",
-              "name": "The Outer Limits - 03x22 - Rite Of Passage",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%2003x22%20-%20Rite%20Of%20Passage.mp4",
-              "seconds": 2569,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 246
-            },
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 4x08 - Le Passage.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 4x08 - Le Passage",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%204x08%20-%20Le%20Passage.mp4",
-              "seconds": 2542,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 345
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.408.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.408.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%204%2Fthe.outer.limits.tns.408.dvdrip.xvid-ositv.mp4",
-              "seconds": 2681,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 275
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
@@ -4148,33 +3735,20 @@
           "airdate": "1998-03-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Identity Crisis\" (0.95)",
-            "item": "the-outer-limits-1-7-tv-series",
-            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-            "file": "The Outer Limits - 4x006 - Identity Crisis.mp4",
-            "name": "The Outer Limits - 4x006 - Identity Crisis",
-            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x006%20-%20Identity%20Crisis.mp4",
-            "seconds": 2545,
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "serie-outer-limits-1995-2001-by-artblood",
+            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+            "file": "Serie - Outer Limits - 1995-2001 - S04E10 - Transfer der Seelen - by ARTBLOOD.mp4",
+            "name": "Serie - Outer Limits - 1995-2001 - S04E10 - Transfer der Seelen - by ARTBLOOD",
+            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E10%20-%20Transfer%20der%20Seelen%20-%20by%20ARTBLOOD.mp4",
+            "seconds": 2529,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 242
+            "langRisk": true,
+            "sizeMB": 253
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S04E10 - Transfer der Seelen - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S04E10 - Transfer der Seelen - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E10%20-%20Transfer%20der%20Seelen%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2529,
-              "format": "h.264",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 253
-            },
             {
               "conf": 0.5,
               "why": "S/E in filename",
@@ -4188,20 +3762,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 337
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.410.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.410.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%204%2Fthe.outer.limits.tns.410.dvdrip.xvid-ositv.mp4",
-              "seconds": 2681,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 271
             }
           ]
         },
@@ -4286,19 +3846,6 @@
             "sizeMB": 247
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Fear Itself\" (0.95)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 4x008 - Fear Itself.mp4",
-              "name": "The Outer Limits - 4x008 - Fear Itself",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x008%20-%20Fear%20Itself.mp4",
-              "seconds": 2527,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 248
-            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -4737,36 +4284,7 @@
             "langRisk": true,
             "sizeMB": 255
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 4x21 - La Terre Promise.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 4x21 - La Terre Promise",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%204x21%20-%20La%20Terre%20Promise.mp4",
-              "seconds": 2543,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 343
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.421.dvdrip.xvid-ositv.mp4",
-              "name": "The Outer Limits (1995)/Season 4/the.outer.limits.tns.421.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/The%20Outer%20Limits%20(1995)%2FSeason%204%2Fthe.outer.limits.tns.421.dvdrip.xvid-ositv.mp4",
-              "seconds": 2681,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 276
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,
@@ -4905,37 +4423,22 @@
           "number": 25,
           "name": "Black Box",
           "airdate": "1998-12-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename + title match",
-            "item": "serie-outer-limits-1995-2001-by-artblood",
-            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-            "file": "Serie - Outer Limits - 1995-2001 - S04E25 - Black Box - by ARTBLOOD.mp4",
-            "name": "Serie - Outer Limits - 1995-2001 - S04E25 - Black Box - by ARTBLOOD",
-            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E25%20-%20Black%20Box%20-%20by%20ARTBLOOD.mp4",
-            "seconds": 2530,
-            "format": "h.264",
+            "conf": 0.5,
+            "why": "S/E in filename",
+            "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
+            "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
+            "file": "Au-Delà Du Réel, L'Aventure Continue - 4x25 - La Boite Noire.mp4",
+            "name": "Au-Delà Du Réel, L'Aventure Continue - 4x25 - La Boite Noire",
+            "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%204x25%20-%20La%20Boite%20Noire.mp4",
+            "seconds": 2542,
+            "format": "MPEG4",
             "playable": true,
             "langRisk": true,
-            "sizeMB": 256
+            "sizeMB": 335
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 4x25 - La Boite Noire.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 4x25 - La Boite Noire",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%204x25%20-%20La%20Boite%20Noire.mp4",
-              "seconds": 2542,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 335
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 26,
@@ -5184,20 +4687,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 342
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.504.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.504.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.504.dvdrip.xvid-ositv.mp4",
-              "seconds": 2668,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 274
             }
           ]
         },
@@ -5296,20 +4785,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 338
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.506.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.506.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.506.dvdrip.xvid-ositv.mp4",
-              "seconds": 2668,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 272
             }
           ]
         },
@@ -5345,34 +4820,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 263
-            },
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 5x07 - Le Facteur Humain (The Human Factor) vostfr.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 5x07 - Le Facteur Humain (The Human Factor) vostfr",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%205x07%20-%20Le%20Facteur%20Humain%20(The%20Human%20Factor)%20vostfr.mp4",
-              "seconds": 2981,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 410
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.507.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.507.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.507.dvdrip.xvid-ositv.mp4",
-              "seconds": 2668,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 272
             }
           ]
         },
@@ -5569,20 +5016,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 342
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.511.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.511.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.511.dvdrip.xvid-ositv.mp4",
-              "seconds": 2667,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 274
             }
           ]
         },
@@ -5668,20 +5101,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 338
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.513.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.513.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.513.dvdrip.xvid-ositv.mp4",
-              "seconds": 2667,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 273
             }
           ]
         },
@@ -5731,20 +5150,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 341
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.514.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.514.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.514.dvdrip.xvid-ositv.mp4",
-              "seconds": 2667,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 272
             }
           ]
         },
@@ -5843,20 +5248,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 374
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.516.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.516.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.516.dvdrip.xvid-ositv.mp4",
-              "seconds": 2666,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 273
             }
           ]
         },
@@ -5974,9 +5365,9 @@
           "number": 19,
           "name": "Stranded",
           "airdate": "1999-07-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -6016,20 +5407,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 374
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.519.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.519.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.519.dvdrip.xvid-ositv.mp4",
-              "seconds": 2666,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 273
             }
           ]
         },
@@ -6079,20 +5456,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 372
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.520.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.520.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.520.dvdrip.xvid-ositv.mp4",
-              "seconds": 2667,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 261
             }
           ]
         },
@@ -6191,20 +5554,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 340
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-1995_202304",
-              "itemTitle": "The Outer Limits (1995)",
-              "file": "Season 5/the.outer.limits.tns.522.dvdrip.xvid-ositv.mp4",
-              "name": "Season 5/the.outer.limits.tns.522.dvdrip.xvid-ositv",
-              "url": "https://archive.org/download/the-outer-limits-1995_202304/Season%205%2Fthe.outer.limits.tns.522.dvdrip.xvid-ositv.mp4",
-              "seconds": 2667,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 261
             }
           ]
         }
@@ -6315,9 +5664,9 @@
           "number": 3,
           "name": "Skin Deep",
           "airdate": "2000-02-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -6330,20 +5679,6 @@
             "sizeMB": 253
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename + title match",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 6x03 - Imposture Fatale (Skin Deep).mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 6x03 - Imposture Fatale (Skin Deep)",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%206x03%20-%20Imposture%20Fatale%20(Skin%20Deep).mp4",
-              "seconds": 2538,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 372
-            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -6364,9 +5699,9 @@
           "number": 4,
           "name": "Manifest Destiny",
           "airdate": "2000-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -6565,20 +5900,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 267
-            },
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 6x07 - Les Graines de La Destruction.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 6x07 - Les Graines de La Destruction",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%206x07%20-%20Les%20Graines%20de%20La%20Destruction.mp4",
-              "seconds": 2538,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 367
             }
           ]
         },
@@ -6670,9 +5991,9 @@
           "number": 10,
           "name": "Down to Earth",
           "airdate": "2000-04-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -6845,20 +6166,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 268
-            },
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 6x13 - Dépressurisation.mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 6x13 - Dépressurisation",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%206x13%20-%20D%C3%A9pressurisation.mp4",
-              "seconds": 2538,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 374
             }
           ]
         },
@@ -6964,9 +6271,9 @@
           "number": 16,
           "name": "Revival",
           "airdate": "2000-07-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "OuterLimitsUNCENSOREDCollection2",
             "itemTitle": "The Outer Limits UNCENSORED Collection Part 2",
@@ -6980,7 +6287,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-outer-limits-1-7-tv-series",
               "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -7310,9 +6617,9 @@
           "number": 1,
           "name": "Family Values",
           "airdate": "2001-03-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -7326,7 +6633,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-outer-limits-s-07-e-15-time-to-time",
               "itemTitle": "The Outer Limits Season 7 E01 to E22",
@@ -7358,9 +6665,9 @@
           "number": 2,
           "name": "Patient Zero",
           "airdate": "2001-03-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-s-07-e-15-time-to-time",
             "itemTitle": "The Outer Limits Season 7 E01 to E22",
@@ -7372,22 +6679,7 @@
             "playable": true,
             "sizeMB": 117
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S07E02 - Patient Nr. Null - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S07E02 - Patient Nr. Null - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S07E02%20-%20Patient%20Nr.%20Null%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2626,
-              "format": "h.264",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 263
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -7633,9 +6925,9 @@
           "number": 8,
           "name": "Think Like a Dinosaur",
           "airdate": "2001-06-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-s-07-e-15-time-to-time",
             "itemTitle": "The Outer Limits Season 7 E01 to E22",
@@ -8120,9 +7412,9 @@
           "number": 19,
           "name": "The Tipping Point",
           "airdate": "2001-09-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -8136,7 +7428,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-outer-limits-s-07-e-15-time-to-time",
               "itemTitle": "The Outer Limits Season 7 E01 to E22",
@@ -8230,9 +7522,9 @@
           "number": 21,
           "name": "The Human Factor",
           "airdate": "2002-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-outer-limits-1-7-tv-series",
             "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -8246,7 +7538,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-outer-limits-s-07-e-15-time-to-time",
               "itemTitle": "The Outer Limits Season 7 E01 to E22",
@@ -8257,19 +7549,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 106
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Human Factor\" (0.96)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits S01E08 The Human Factor.mp4",
-              "name": "The Outer Limits S01E08 The Human Factor",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20S01E08%20The%20Human%20Factor.mp4",
-              "seconds": 3086,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 154
             },
             {
               "conf": 0.55,

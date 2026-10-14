@@ -3,7 +3,7 @@
   "slug": "firefly",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:28:53.447Z",
+  "matchedAt": "2026-10-14T05:18:46.319Z",
   "tvmaze": {
     "id": 180,
     "name": "Firefly",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 14,
-    "live": 3,
-    "review": 11,
-    "missing": 0,
-    "pct": 100
+    "live": 0,
+    "review": 12,
+    "missing": 2,
+    "pct": 86
   },
   "seasons": [
     {
@@ -26,49 +26,9 @@
           "number": 1,
           "name": "The Train Job",
           "airdate": "2002-09-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Train Job\" (0.95)",
-            "item": "episode-1-serenity",
-            "itemTitle": "Firefly Season 1",
-            "file": "Episode 2 - The Train Job.mp4",
-            "name": "Episode 2 - The Train Job",
-            "url": "https://archive.org/download/episode-1-serenity/Episode%202%20-%20The%20Train%20Job.mp4",
-            "seconds": 2564,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 250
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 4 - Shindig.mp4",
-              "name": "Episode 4 - Shindig",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%204%20-%20Shindig.mp4",
-              "seconds": 2639,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 258
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Train Job\" (0.95)",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E02 - The Train Job (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E02 - The Train Job (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E02%20-%20The%20Train%20Job%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2564,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 253
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -88,108 +48,39 @@
             "playable": true,
             "sizeMB": 399
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Bushwhacked\" (0.80)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 3 - Bushwacked.mp4",
-              "name": "Episode 3 - Bushwacked",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%203%20-%20Bushwacked.mp4",
-              "seconds": 2635,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 259
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 5 - Safe.mp4",
-              "name": "Episode 5 - Safe",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%205%20-%20Safe.mp4",
-              "seconds": 2566,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 251
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E02 - The Train Job (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E02 - The Train Job (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E02%20-%20The%20Train%20Job%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2564,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 253
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Our Mrs. Reynolds",
           "airdate": "2002-10-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.95,
-            "why": "absolute episode number + title match",
-            "item": "episode-1-serenity",
-            "itemTitle": "Firefly Season 1",
-            "file": "Episode 6 - Our Mrs Reynolds.mp4",
-            "name": "Episode 6 - Our Mrs Reynolds",
-            "url": "https://archive.org/download/episode-1-serenity/Episode%206%20-%20Our%20Mrs%20Reynolds.mp4",
-            "seconds": 2636,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Our Mrs. Reynolds\" (0.95)",
+            "item": "firefly_202601",
+            "itemTitle": "Firefly (2002) Complete Series",
+            "file": "Firefly E03 - Our Mrs Reynolds.mp4",
+            "name": "Firefly E03 - Our Mrs Reynolds",
+            "url": "https://archive.org/download/firefly_202601/Firefly%20E03%20-%20Our%20Mrs%20Reynolds.mp4",
+            "seconds": 2635,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 258
+            "sizeMB": 371
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"Our Mrs. Reynolds\" (0.95)",
-              "item": "firefly_202601",
-              "itemTitle": "Firefly (2002) Complete Series",
-              "file": "Firefly E03 - Our Mrs Reynolds.mp4",
-              "name": "Firefly E03 - Our Mrs Reynolds",
-              "url": "https://archive.org/download/firefly_202601/Firefly%20E03%20-%20Our%20Mrs%20Reynolds.mp4",
-              "seconds": 2635,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 371
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E03 - Bushwhacked (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E03 - Bushwhacked (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E03%20-%20Bushwhacked%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2635,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 261
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Our Mrs. Reynolds\" (0.95)",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E06 - Our Mrs. Reynolds (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E06 - Our Mrs. Reynolds (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E06%20-%20Our%20Mrs.%20Reynolds%20(1080p%20BluRay%20x265%20Silence).mp4",
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "episode-1-serenity",
+              "itemTitle": "Firefly Season 1",
+              "file": "Episode 6 - Our Mrs Reynolds.mp4",
+              "name": "Episode 6 - Our Mrs Reynolds",
+              "url": "https://archive.org/download/episode-1-serenity/Episode%206%20-%20Our%20Mrs%20Reynolds.mp4",
               "seconds": 2636,
               "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
+              "playable": true,
+              "sizeMB": 258
             }
           ]
         },
@@ -197,61 +88,33 @@
           "number": 4,
           "name": "Jaynestown",
           "airdate": "2002-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.95,
-            "why": "absolute episode number + title match",
-            "item": "episode-1-serenity",
-            "itemTitle": "Firefly Season 1",
-            "file": "Episode 7 - Jaynestown.mp4",
-            "name": "Episode 7 - Jaynestown",
-            "url": "https://archive.org/download/episode-1-serenity/Episode%207%20-%20Jaynestown.mp4",
+            "conf": 0.8,
+            "why": "title ~ \"Jaynestown\" (0.95)",
+            "item": "firefly_202601",
+            "itemTitle": "Firefly (2002) Complete Series",
+            "file": "Firefly E04 - Jaynestown.mp4",
+            "name": "Firefly E04 - Jaynestown",
+            "url": "https://archive.org/download/firefly_202601/Firefly%20E04%20-%20Jaynestown.mp4",
             "seconds": 2639,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 257
+            "sizeMB": 410
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"Jaynestown\" (0.95)",
-              "item": "firefly_202601",
-              "itemTitle": "Firefly (2002) Complete Series",
-              "file": "Firefly E04 - Jaynestown.mp4",
-              "name": "Firefly E04 - Jaynestown",
-              "url": "https://archive.org/download/firefly_202601/Firefly%20E04%20-%20Jaynestown.mp4",
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "episode-1-serenity",
+              "itemTitle": "Firefly Season 1",
+              "file": "Episode 7 - Jaynestown.mp4",
+              "name": "Episode 7 - Jaynestown",
+              "url": "https://archive.org/download/episode-1-serenity/Episode%207%20-%20Jaynestown.mp4",
               "seconds": 2639,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 410
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E04 - Shindig (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E04 - Shindig (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E04%20-%20Shindig%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2639,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Jaynestown\" (0.95)",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E07 - Jaynestown (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E07 - Jaynestown (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E07%20-%20Jaynestown%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2639,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 260
+              "sizeMB": 257
             }
           ]
         },
@@ -259,61 +122,33 @@
           "number": 5,
           "name": "Out of Gas",
           "airdate": "2002-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.95,
-            "why": "absolute episode number + title match",
-            "item": "episode-1-serenity",
-            "itemTitle": "Firefly Season 1",
-            "file": "Episode 8 - Out of Gas.mp4",
-            "name": "Episode 8 - Out of Gas",
-            "url": "https://archive.org/download/episode-1-serenity/Episode%208%20-%20Out%20of%20Gas.mp4",
-            "seconds": 2637,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Out of Gas\" (0.95)",
+            "item": "firefly_202601",
+            "itemTitle": "Firefly (2002) Complete Series",
+            "file": "Firefly E05 - Out of Gas.mp4",
+            "name": "Firefly E05 - Out of Gas",
+            "url": "https://archive.org/download/firefly_202601/Firefly%20E05%20-%20Out%20of%20Gas.mp4",
+            "seconds": 2566,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 259
+            "sizeMB": 395
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"Out of Gas\" (0.95)",
-              "item": "firefly_202601",
-              "itemTitle": "Firefly (2002) Complete Series",
-              "file": "Firefly E05 - Out of Gas.mp4",
-              "name": "Firefly E05 - Out of Gas",
-              "url": "https://archive.org/download/firefly_202601/Firefly%20E05%20-%20Out%20of%20Gas.mp4",
-              "seconds": 2566,
-              "format": "MPEG4",
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "episode-1-serenity",
+              "itemTitle": "Firefly Season 1",
+              "file": "Episode 8 - Out of Gas.mp4",
+              "name": "Episode 8 - Out of Gas",
+              "url": "https://archive.org/download/episode-1-serenity/Episode%208%20-%20Out%20of%20Gas.mp4",
+              "seconds": 2637,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 395
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E05 - Safe (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E05 - Safe (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E05%20-%20Safe%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2566,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 252
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Out of Gas\" (0.95)",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E08 - Out of Gas (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E08 - Out of Gas (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E08%20-%20Out%20of%20Gas%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2638,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
+              "sizeMB": 259
             }
           ]
         },
@@ -335,48 +170,7 @@
             "playable": true,
             "sizeMB": 317
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shindig\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 4 - Shindig.mp4",
-              "name": "Episode 4 - Shindig",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%204%20-%20Shindig.mp4",
-              "seconds": 2639,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 258
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 9 - Ariel.mp4",
-              "name": "Episode 9 - Ariel",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%209%20-%20Ariel.mp4",
-              "seconds": 2570,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 252
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E06 - Our Mrs. Reynolds (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E06 - Our Mrs. Reynolds (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E06%20-%20Our%20Mrs.%20Reynolds%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2636,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -396,48 +190,7 @@
             "playable": true,
             "sizeMB": 477
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Safe\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 5 - Safe.mp4",
-              "name": "Episode 5 - Safe",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%205%20-%20Safe.mp4",
-              "seconds": 2566,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 251
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 10 - War Stories.mp4",
-              "name": "Episode 10 - War Stories",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2010%20-%20War%20Stories.mp4",
-              "seconds": 2574,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 252
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E07 - Jaynestown (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E07 - Jaynestown (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E07%20-%20Jaynestown%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2639,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 260
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -457,48 +210,7 @@
             "playable": true,
             "sizeMB": 381
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Ariel\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 9 - Ariel.mp4",
-              "name": "Episode 9 - Ariel",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%209%20-%20Ariel.mp4",
-              "seconds": 2570,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 252
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 11 - Trash.mp4",
-              "name": "Episode 11 - Trash",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2011%20-%20Trash.mp4",
-              "seconds": 2623,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 258
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E08 - Out of Gas (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E08 - Out of Gas (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E08%20-%20Out%20of%20Gas%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2638,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -518,48 +230,7 @@
             "playable": true,
             "sizeMB": 465
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"War Stories\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 10 - War Stories.mp4",
-              "name": "Episode 10 - War Stories",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2010%20-%20War%20Stories.mp4",
-              "seconds": 2574,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 252
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 12 - The Message.mp4",
-              "name": "Episode 12 - The Message",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2012%20-%20The%20Message.mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 259
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E09 - Ariel (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E09 - Ariel (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E09%20-%20Ariel%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2570,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 255
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -579,48 +250,7 @@
             "playable": true,
             "sizeMB": 354
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Objects in Space\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 14 - Objects in Space.mp4",
-              "name": "Episode 14 - Objects in Space",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2014%20-%20Objects%20in%20Space.mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 261
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 13 - Heart of Gold.mp4",
-              "name": "Episode 13 - Heart of Gold",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2013%20-%20Heart%20of%20Gold.mp4",
-              "seconds": 2548,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 250
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E10 - War Stories (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E10 - War Stories (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E10%20-%20War%20Stories%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2574,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 254
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
@@ -640,49 +270,7 @@
             "playable": true,
             "sizeMB": 412
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 14 - Objects in Space.mp4",
-              "name": "Episode 14 - Objects in Space",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2014%20-%20Objects%20in%20Space.mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 261
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E11 - Trash (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E11 - Trash (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E11%20-%20Trash%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2623,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 260
-            },
-            {
-              "conf": 0.7,
-              "why": "title ~ \"Serenity\" (0.95)",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/Serenity (2005)/S00E01 - Serenity (2005) (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/Serenity (2005)/S00E01 - Serenity (2005) (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FSerenity%20(2005)%2FS00E01%20-%20Serenity%20(2005)%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 7143,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 728
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -702,110 +290,15 @@
             "playable": true,
             "sizeMB": 369
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Trash\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 11 - Trash.mp4",
-              "name": "Episode 11 - Trash",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2011%20-%20Trash.mp4",
-              "seconds": 2623,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 258
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E12 - The Message (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E12 - The Message (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E12%20-%20The%20Message%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Trash\" (0.95)",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E11 - Trash (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E11 - Trash (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E11%20-%20Trash%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2623,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 260
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "The Message",
           "airdate": "",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Message\" (0.95)",
-            "item": "firefly_202601",
-            "itemTitle": "Firefly (2002) Complete Series",
-            "file": "Firefly E14 - The Message.mp4",
-            "name": "Firefly E14 - The Message",
-            "url": "https://archive.org/download/firefly_202601/Firefly%20E14%20-%20The%20Message.mp4",
-            "seconds": 2645,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 332
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Message\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 12 - The Message.mp4",
-              "name": "Episode 12 - The Message",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2012%20-%20The%20Message.mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 259
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 2 - The Train Job.mp4",
-              "name": "Episode 2 - The Train Job",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%202%20-%20The%20Train%20Job.mp4",
-              "seconds": 2564,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 250
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E13 - Heart of Gold (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E13 - Heart of Gold (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E13%20-%20Heart%20of%20Gold%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2548,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 252
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 14,
@@ -825,48 +318,7 @@
             "playable": true,
             "sizeMB": 414
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Heart of Gold\" (0.95)",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 13 - Heart of Gold.mp4",
-              "name": "Episode 13 - Heart of Gold",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%2013%20-%20Heart%20of%20Gold.mp4",
-              "seconds": 2548,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 250
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "episode-1-serenity",
-              "itemTitle": "Firefly Season 1",
-              "file": "Episode 3 - Bushwacked.mp4",
-              "name": "Episode 3 - Bushwacked",
-              "url": "https://archive.org/download/episode-1-serenity/Episode%203%20-%20Bushwacked.mp4",
-              "seconds": 2635,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 259
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509",
-              "itemTitle": "Firefly (2002) + Serenity",
-              "file": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E14 - Objects in Space (1080p BluRay x265 Silence).mp4",
-              "name": "Firefly (2002) Season 1 S01 (1080p BluRay x265 HEVC 10bit AAC Silence)/S01/Firefly (2002) - S01E14 - Objects in Space (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/firefly-2002-s-01-e-01-serenity-1080p-x-265-silence_202509/Firefly%20(2002)%20Season%201%20S01%20(1080p%20BluRay%20x265%20HEVC%2010bit%20AAC%20Silence)%2FS01%2FFirefly%20(2002)%20-%20S01E14%20-%20Objects%20in%20Space%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2645,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 262
-            }
-          ]
+          "alternates": []
         }
       ]
     }

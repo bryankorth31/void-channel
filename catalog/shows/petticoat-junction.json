@@ -3,7 +3,7 @@
   "slug": "petticoat-junction",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:28:56.387Z",
+  "matchedAt": "2026-10-14T05:18:51.815Z",
   "tvmaze": {
     "id": 2134,
     "name": "Petticoat Junction",
@@ -13,9 +13,9 @@
   },
   "coverage": {
     "total": 222,
-    "live": 216,
-    "review": 6,
-    "missing": 0,
+    "live": 0,
+    "review": 221,
+    "missing": 1,
     "pct": 100
   },
   "seasons": [
@@ -26,43 +26,17 @@
           "number": 1,
           "name": "Spur Line to Shady Rest (1)",
           "airdate": "1963-09-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "Petticoat_Junction_Series",
-            "itemTitle": "Petticoat Junction",
-            "file": "Petticoat Junction - Season 1/Petticoat Junction S01E01 - Spur Lane to Shady Rest (Part 1 of 2).mp4",
-            "name": "Petticoat Junction - Season 1/Petticoat Junction S01E01 - Spur Lane to Shady Rest (Part 1 of 2)",
-            "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E01%20-%20Spur%20Lane%20to%20Shady%20Rest%20(Part%201%20of%202).mp4",
-            "seconds": 1544,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 160
-          },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e01.mp4",
-              "name": "s01e01",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e01.mp4",
-              "seconds": 1544,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 121
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Quick, Hide the Railroad (2)",
           "airdate": "1963-10-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -74,63 +48,35 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e02.mp4",
-              "name": "s01e02",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e02.mp4",
-              "seconds": 1540,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 128
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "The President Who Came to Dinner (1)",
           "airdate": "1963-10-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "petticoatjunction_20170809",
-            "itemTitle": "Petticoat Junction PD Episodes",
-            "file": "s01e03.mp4",
-            "name": "s01e03",
-            "url": "https://archive.org/download/petticoatjunction_20170809/s01e03.mp4",
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
+            "item": "Petticoat_Junction_Series",
+            "itemTitle": "Petticoat Junction",
+            "file": "Petticoat Junction - Season 1/Petticoat Junction S01E03 - The President Who Came to Dinner (Part 1 of 2).mp4",
+            "name": "Petticoat Junction - Season 1/Petticoat Junction S01E03 - The President Who Came to Dinner (Part 1 of 2)",
+            "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E03%20-%20The%20President%20Who%20Came%20to%20Dinner%20(Part%201%20of%202).mp4",
             "seconds": 1539,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 125
+            "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "Petticoat_Junction_Series",
-              "itemTitle": "Petticoat Junction",
-              "file": "Petticoat Junction - Season 1/Petticoat Junction S01E03 - The President Who Came to Dinner (Part 1 of 2).mp4",
-              "name": "Petticoat Junction - Season 1/Petticoat Junction S01E03 - The President Who Came to Dinner (Part 1 of 2)",
-              "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E03%20-%20The%20President%20Who%20Came%20to%20Dinner%20(Part%201%20of%202).mp4",
-              "seconds": 1539,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 160
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Is There a Doctor in the Roundhouse? (2)",
           "airdate": "1963-10-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -142,29 +88,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e04.mp4",
-              "name": "s01e04",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e04.mp4",
-              "seconds": 1542,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 127
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "The Courtship of Floyd Smoot",
           "airdate": "1963-10-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -176,29 +108,15 @@
             "playable": true,
             "sizeMB": 158
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e05.mp4",
-              "name": "s01e05",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e05.mp4",
-              "seconds": 1520,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 126
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Please Buy My Violets",
           "airdate": "1963-10-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -210,29 +128,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e06.mp4",
-              "name": "s01e06",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e06.mp4",
-              "seconds": 1542,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 133
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "The Ringer",
           "airdate": "1963-11-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -244,29 +148,15 @@
             "playable": true,
             "sizeMB": 159
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e07.mp4",
-              "name": "s01e07",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e07.mp4",
-              "seconds": 1539,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 130
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Kate's Recipe for Hot Rhubarb",
           "airdate": "1963-11-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -278,29 +168,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e08.mp4",
-              "name": "s01e08",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e08.mp4",
-              "seconds": 1544,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 119
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
           "name": "The Little Train Robbery",
           "airdate": "1963-11-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -312,29 +188,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e09.mp4",
-              "name": "s01e09",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e09.mp4",
-              "seconds": 1544,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 132
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
           "name": "Bedloe Strikes Again",
           "airdate": "1963-11-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -346,29 +208,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e10.mp4",
-              "name": "s01e10",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e10.mp4",
-              "seconds": 1546,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Uncle Joe's Replacement",
           "airdate": "1963-12-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -380,29 +228,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e11.mp4",
-              "name": "s01e11",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e11.mp4",
-              "seconds": 1543,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 122
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Honeymoon Hotel",
           "airdate": "1963-12-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -414,29 +248,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e12.mp4",
-              "name": "s01e12",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e12.mp4",
-              "seconds": 1543,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 124
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "A Night at the Hooterville Hilton",
           "airdate": "1963-12-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -448,29 +268,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e13.mp4",
-              "name": "s01e13",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e13.mp4",
-              "seconds": 1545,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 121
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
           "name": "Cannonball Christmas",
           "airdate": "1963-12-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -482,29 +288,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e14.mp4",
-              "name": "s01e14",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e14.mp4",
-              "seconds": 1541,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 118
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
           "name": "Herbie Gets Drafted",
           "airdate": "1963-12-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -516,29 +308,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e15.mp4",
-              "name": "s01e15",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e15.mp4",
-              "seconds": 1543,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 109
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,
           "name": "Bobbie Jo and the Beatnik",
           "airdate": "1964-01-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -550,29 +328,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e16.mp4",
-              "name": "s01e16",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e16.mp4",
-              "seconds": 1543,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 105
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 17,
           "name": "My Daughter the Doctor",
           "airdate": "1964-01-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -584,29 +348,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e17.mp4",
-              "name": "s01e17",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e17.mp4",
-              "seconds": 1543,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 116
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,
           "name": "Hooterville vs. Hollywood",
           "airdate": "1964-01-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -618,29 +368,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e18.mp4",
-              "name": "s01e18",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e18.mp4",
-              "seconds": 1544,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 118
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 19,
           "name": "Visit From a Big Star",
           "airdate": "1964-01-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -652,29 +388,15 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e19.mp4",
-              "name": "s01e19",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e19.mp4",
-              "seconds": 1540,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 101
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 20,
           "name": "Last Chance Farm",
           "airdate": "1964-02-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -686,29 +408,15 @@
             "playable": true,
             "sizeMB": 159
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e20.mp4",
-              "name": "s01e20",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e20.mp4",
-              "seconds": 1532,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 123
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 21,
           "name": "The Very Old Antique",
           "airdate": "1964-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -722,7 +430,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -733,19 +441,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 160
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "petticoatjunction_20170809",
-              "itemTitle": "Petticoat Junction PD Episodes",
-              "file": "s01e21.mp4",
-              "name": "s01e21",
-              "url": "https://archive.org/download/petticoatjunction_20170809/s01e21.mp4",
-              "seconds": 1545,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 115
             }
           ]
         },
@@ -753,9 +448,9 @@
           "number": 22,
           "name": "The Art Game",
           "airdate": "1964-02-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -769,7 +464,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -787,9 +482,9 @@
           "number": 23,
           "name": "Betty Jo's First Love",
           "airdate": "1964-02-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -807,9 +502,9 @@
           "number": 24,
           "name": "Behind All Silver, There's a Cloud Lining",
           "airdate": "1964-03-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -827,9 +522,9 @@
           "number": 25,
           "name": "The Talent Contest",
           "airdate": "1964-03-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -847,9 +542,9 @@
           "number": 26,
           "name": "Kate and the Manpower Problem",
           "airdate": "1964-03-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -867,9 +562,9 @@
           "number": 27,
           "name": "The Ladybugs",
           "airdate": "1964-03-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -887,9 +582,9 @@
           "number": 28,
           "name": "The Hooterville Flivverball",
           "airdate": "1964-03-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -907,9 +602,9 @@
           "number": 29,
           "name": "Kate the Stockholder",
           "airdate": "1964-04-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -923,7 +618,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -941,9 +636,9 @@
           "number": 30,
           "name": "Kate and the Dowager",
           "airdate": "1964-04-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -961,77 +656,49 @@
           "number": 31,
           "name": "Charley Abandons the Cannonball",
           "airdate": "1964-04-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
-            "file": "Petticoat Junction - Season 1/Season 1 Episodes with the Original Commercials (inferior videos)/Petticoat Junction S01E31 - Charlie Abandons the Cannonball (original commercials).mp4",
-            "name": "Petticoat Junction - Season 1/Season 1 Episodes with the Original Commercials (inferior videos)/Petticoat Junction S01E31 - Charlie Abandons the Cannonball (original commercials)",
-            "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FSeason%201%20Episodes%20with%20the%20Original%20Commercials%20(inferior%20videos)%2FPetticoat%20Junction%20S01E31%20-%20Charlie%20Abandons%20the%20Cannonball%20(original%20commercials).mp4",
-            "seconds": 1739,
+            "file": "Petticoat Junction - Season 1/Petticoat Junction S01E31 - Charley Abandons the Cannonball.mp4",
+            "name": "Petticoat Junction - Season 1/Petticoat Junction S01E31 - Charley Abandons the Cannonball",
+            "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E31%20-%20Charley%20Abandons%20the%20Cannonball.mp4",
+            "seconds": 1543,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "Petticoat_Junction_Series",
-              "itemTitle": "Petticoat Junction",
-              "file": "Petticoat Junction - Season 1/Petticoat Junction S01E31 - Charley Abandons the Cannonball.mp4",
-              "name": "Petticoat Junction - Season 1/Petticoat Junction S01E31 - Charley Abandons the Cannonball",
-              "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E31%20-%20Charley%20Abandons%20the%20Cannonball.mp4",
-              "seconds": 1543,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 160
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 32,
           "name": "Dog Days at Shady Rest",
           "airdate": "1964-04-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
-            "file": "Petticoat Junction - Season 1/Season 1 Episodes with the Original Commercials (inferior videos)/Petticoat Junction S01E32 - Dog Day at Shady Rest (original commercials).mp4",
-            "name": "Petticoat Junction - Season 1/Season 1 Episodes with the Original Commercials (inferior videos)/Petticoat Junction S01E32 - Dog Day at Shady Rest (original commercials)",
-            "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FSeason%201%20Episodes%20with%20the%20Original%20Commercials%20(inferior%20videos)%2FPetticoat%20Junction%20S01E32%20-%20Dog%20Day%20at%20Shady%20Rest%20(original%20commercials).mp4",
-            "seconds": 1753,
+            "file": "Petticoat Junction - Season 1/Petticoat Junction S01E32 - Dog Days at Shady Rest.mp4",
+            "name": "Petticoat Junction - Season 1/Petticoat Junction S01E32 - Dog Days at Shady Rest",
+            "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E32%20-%20Dog%20Days%20at%20Shady%20Rest.mp4",
+            "seconds": 1532,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 183
+            "sizeMB": 159
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "Petticoat_Junction_Series",
-              "itemTitle": "Petticoat Junction",
-              "file": "Petticoat Junction - Season 1/Petticoat Junction S01E32 - Dog Days at Shady Rest.mp4",
-              "name": "Petticoat Junction - Season 1/Petticoat Junction S01E32 - Dog Days at Shady Rest",
-              "url": "https://archive.org/download/Petticoat_Junction_Series/Petticoat%20Junction%20-%20Season%201%2FPetticoat%20Junction%20S01E32%20-%20Dog%20Days%20at%20Shady%20Rest.mp4",
-              "seconds": 1532,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 159
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 33,
           "name": "A Millionaire for Kate",
           "airdate": "1964-05-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1045,7 +712,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1063,9 +730,9 @@
           "number": 34,
           "name": "Bedloe and Son",
           "airdate": "1964-05-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1083,9 +750,9 @@
           "number": 35,
           "name": "Local Girl Makes Good",
           "airdate": "1964-05-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1099,7 +766,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1117,9 +784,9 @@
           "number": 36,
           "name": "Cave Woman",
           "airdate": "1964-05-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1137,9 +804,9 @@
           "number": 37,
           "name": "Kate Flat on Her Back",
           "airdate": "1964-06-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1153,7 +820,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1171,9 +838,9 @@
           "number": 38,
           "name": "The Genghis Keane Story",
           "airdate": "1964-06-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1196,9 +863,9 @@
           "number": 1,
           "name": "Betty Jo's Dog",
           "airdate": "1964-09-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1216,9 +883,9 @@
           "number": 2,
           "name": "Race Against the Stork",
           "airdate": "1964-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1236,9 +903,9 @@
           "number": 3,
           "name": "Have Library, Will Travel",
           "airdate": "1964-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1252,7 +919,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1270,9 +937,9 @@
           "number": 4,
           "name": "The Umquaw Strip",
           "airdate": "1964-10-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1286,7 +953,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1304,9 +971,9 @@
           "number": 5,
           "name": "As Hooterville Goes",
           "airdate": "1964-10-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1324,9 +991,9 @@
           "number": 6,
           "name": "My Dog the Actor",
           "airdate": "1964-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1344,9 +1011,9 @@
           "number": 7,
           "name": "The Great Buffalo Hunt",
           "airdate": "1964-11-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1364,9 +1031,9 @@
           "number": 8,
           "name": "Betty Jo's Pen Pal",
           "airdate": "1964-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1380,7 +1047,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1398,9 +1065,9 @@
           "number": 9,
           "name": "Bedloe's Nightmare",
           "airdate": "1964-12-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1414,7 +1081,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1432,9 +1099,9 @@
           "number": 10,
           "name": "Kate's Bachelor Butter",
           "airdate": "1964-12-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1452,9 +1119,9 @@
           "number": 11,
           "name": "Mother of the Bride",
           "airdate": "1964-12-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1468,7 +1135,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1486,9 +1153,9 @@
           "number": 12,
           "name": "The Lost Patrol",
           "airdate": "1964-12-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1502,7 +1169,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1520,9 +1187,9 @@
           "number": 13,
           "name": "Smoke-Eaters",
           "airdate": "1965-01-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1540,9 +1207,9 @@
           "number": 14,
           "name": "The Curse of Chester W. Farnsworth",
           "airdate": "1965-01-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1560,9 +1227,9 @@
           "number": 15,
           "name": "There's No Flame Like an Old Flame",
           "airdate": "1965-01-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1580,9 +1247,9 @@
           "number": 16,
           "name": "Billie Jo's First Job",
           "airdate": "1965-01-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1600,9 +1267,9 @@
           "number": 17,
           "name": "A Matter of Communication",
           "airdate": "1965-02-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1616,7 +1283,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1634,9 +1301,9 @@
           "number": 18,
           "name": "Kate Bradley, Girl Volunteer",
           "airdate": "1965-02-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1654,9 +1321,9 @@
           "number": 19,
           "name": "Hooterville Crime Wave",
           "airdate": "1965-02-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1674,9 +1341,9 @@
           "number": 20,
           "name": "For the Birds",
           "airdate": "1965-02-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1694,9 +1361,9 @@
           "number": 21,
           "name": "Modern Merchandising",
           "airdate": "1965-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1714,9 +1381,9 @@
           "number": 22,
           "name": "Visit from the Governor",
           "airdate": "1965-03-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1730,7 +1397,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1748,9 +1415,9 @@
           "number": 23,
           "name": "A Borderline Story",
           "airdate": "1965-03-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1764,7 +1431,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1782,9 +1449,9 @@
           "number": 24,
           "name": "The Shady Rest Hotel Corporation",
           "airdate": "1965-03-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1802,9 +1469,9 @@
           "number": 25,
           "name": "A Tale of Two Dogs",
           "airdate": "1965-03-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1818,7 +1485,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1836,9 +1503,9 @@
           "number": 26,
           "name": "The Black Box",
           "airdate": "1965-04-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1852,7 +1519,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1870,9 +1537,9 @@
           "number": 27,
           "name": "Bedloe's Most Fiendish Scheme (1)",
           "airdate": "1965-04-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1890,9 +1557,9 @@
           "number": 28,
           "name": "Bedloe Gets His Comeuppance (2)",
           "airdate": "1965-04-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1910,9 +1577,9 @@
           "number": 29,
           "name": "The Mayor of Hooterville",
           "airdate": "1965-04-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1926,7 +1593,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -1944,9 +1611,9 @@
           "number": 30,
           "name": "Who's Afraid of the Big Bad Jinx?",
           "airdate": "1965-05-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1964,9 +1631,9 @@
           "number": 31,
           "name": "The Chicken Killer",
           "airdate": "1965-05-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -1984,9 +1651,9 @@
           "number": 32,
           "name": "Why Girls Leave Home",
           "airdate": "1965-05-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2000,7 +1667,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -2018,9 +1685,9 @@
           "number": 33,
           "name": "There's No Stove Like an Old Stove",
           "airdate": "1965-05-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2038,9 +1705,9 @@
           "number": 34,
           "name": "The Brontosaurus Caper",
           "airdate": "1965-06-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2054,7 +1721,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Petticoat_Junction_Series",
               "itemTitle": "Petticoat Junction",
@@ -2072,9 +1739,9 @@
           "number": 35,
           "name": "The Hairbrained Scheme",
           "airdate": "1965-06-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2092,9 +1759,9 @@
           "number": 36,
           "name": "There's No Business with Show Business",
           "airdate": "1965-06-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2117,9 +1784,9 @@
           "number": 1,
           "name": "Dear Minerva",
           "airdate": "1965-09-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2137,9 +1804,9 @@
           "number": 2,
           "name": "The Baffling Raffle",
           "airdate": "1965-09-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2157,9 +1824,9 @@
           "number": 3,
           "name": "The Dog Turns Playboy",
           "airdate": "1965-09-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2177,9 +1844,9 @@
           "number": 4,
           "name": "The Good Luck Ring",
           "airdate": "1965-10-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2197,9 +1864,9 @@
           "number": 5,
           "name": "Joe Carson, General Contractor",
           "airdate": "1965-10-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2217,9 +1884,9 @@
           "number": 6,
           "name": "Bobbie Jo's Sorority",
           "airdate": "1965-10-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2257,9 +1924,9 @@
           "number": 8,
           "name": "Hooterville A-Go-Go",
           "airdate": "1965-11-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2277,9 +1944,9 @@
           "number": 9,
           "name": "Hooterville Hurricane",
           "airdate": "1965-11-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2297,9 +1964,9 @@
           "number": 10,
           "name": "Betty Jo Goes to New York",
           "airdate": "1965-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2317,9 +1984,9 @@
           "number": 11,
           "name": "Bedloe's Successor",
           "airdate": "1965-11-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2377,9 +2044,9 @@
           "number": 14,
           "name": "What's a Trajectory?",
           "airdate": "1965-12-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2397,9 +2064,9 @@
           "number": 15,
           "name": "The Butler Did It",
           "airdate": "1965-12-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2417,9 +2084,9 @@
           "number": 16,
           "name": "Better Never Than Late",
           "airdate": "1966-01-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2437,9 +2104,9 @@
           "number": 17,
           "name": "Betty Jo Catches the Bouquet",
           "airdate": "1966-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2457,9 +2124,9 @@
           "number": 18,
           "name": "Billie Jo's Independence Day",
           "airdate": "1966-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2477,9 +2144,9 @@
           "number": 19,
           "name": "Yogurt, Anyone?",
           "airdate": "1966-01-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2497,9 +2164,9 @@
           "number": 20,
           "name": "Only Boy in the Class",
           "airdate": "1966-02-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2517,9 +2184,9 @@
           "number": 21,
           "name": "The County Fair",
           "airdate": "1966-02-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2537,9 +2204,9 @@
           "number": 22,
           "name": "Jury at the Shady Rest",
           "airdate": "1966-02-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2557,9 +2224,9 @@
           "number": 23,
           "name": "The Invisible Mr. Dobble",
           "airdate": "1966-02-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2577,9 +2244,9 @@
           "number": 24,
           "name": "It's Not the Principle, It's the Money",
           "airdate": "1966-03-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2597,9 +2264,9 @@
           "number": 25,
           "name": "War of the Hotels",
           "airdate": "1966-03-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2617,9 +2284,9 @@
           "number": 26,
           "name": "The Windfall",
           "airdate": "1966-03-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2637,9 +2304,9 @@
           "number": 27,
           "name": "Second Honeymoon",
           "airdate": "1966-03-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2657,9 +2324,9 @@
           "number": 28,
           "name": "Kate Sells the Hotel",
           "airdate": "1966-03-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2697,9 +2364,9 @@
           "number": 30,
           "name": "Whatever Happened to Betty Jo?",
           "airdate": "1966-04-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2717,9 +2384,9 @@
           "number": 31,
           "name": "Every Bachelor Should Have a Family",
           "airdate": "1966-04-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2737,9 +2404,9 @@
           "number": 32,
           "name": "The Young Matchmakers",
           "airdate": "1966-04-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2757,9 +2424,9 @@
           "number": 33,
           "name": "Hooterville Valley Project",
           "airdate": "1966-05-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2777,9 +2444,9 @@
           "number": 34,
           "name": "Betty Jo's Bike",
           "airdate": "1966-05-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2802,9 +2469,9 @@
           "number": 1,
           "name": "Young Love",
           "airdate": "1966-09-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2822,9 +2489,9 @@
           "number": 2,
           "name": "Birdman of Shady Rest (1)",
           "airdate": "1966-09-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2842,9 +2509,9 @@
           "number": 3,
           "name": "Hooterville, You're All Heart (2)",
           "airdate": "1966-09-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2862,9 +2529,9 @@
           "number": 4,
           "name": "He Loves Us, He Loves Us Not",
           "airdate": "1966-10-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2882,9 +2549,9 @@
           "number": 5,
           "name": "The All-Night Party",
           "airdate": "1966-10-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2902,9 +2569,9 @@
           "number": 6,
           "name": "Cannonball, Inc.",
           "airdate": "1966-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2922,9 +2589,9 @@
           "number": 7,
           "name": "Kate Grounds Selma Plout",
           "airdate": "1966-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2942,9 +2609,9 @@
           "number": 8,
           "name": "The Almost Annual Charity Show",
           "airdate": "1966-11-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2962,9 +2629,9 @@
           "number": 9,
           "name": "How Bugged Was My Valley",
           "airdate": "1966-11-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -2982,9 +2649,9 @@
           "number": 10,
           "name": "Twenty-Five Years Too Late",
           "airdate": "1966-11-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3002,9 +2669,9 @@
           "number": 11,
           "name": "The Runt Strikes Back",
           "airdate": "1966-11-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3022,9 +2689,9 @@
           "number": 12,
           "name": "Is There a Doctor in the Valley?",
           "airdate": "1966-12-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3042,9 +2709,9 @@
           "number": 13,
           "name": "The Santa Claus Special",
           "airdate": "1966-12-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3062,9 +2729,9 @@
           "number": 14,
           "name": "My Daughter the Secretary",
           "airdate": "1966-12-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3082,9 +2749,9 @@
           "number": 15,
           "name": "The Rise and Fall of a Tycoon",
           "airdate": "1967-01-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3102,9 +2769,9 @@
           "number": 16,
           "name": "His Highness the Dog",
           "airdate": "1967-01-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3122,9 +2789,9 @@
           "number": 17,
           "name": "Girls! Girls! Girls!",
           "airdate": "1967-01-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3142,9 +2809,9 @@
           "number": 18,
           "name": "Temperance, Temperance",
           "airdate": "1967-01-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3162,9 +2829,9 @@
           "number": 19,
           "name": "A Star is Born",
           "airdate": "1967-02-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3182,9 +2849,9 @@
           "number": 20,
           "name": "Shoplifter at the Shady Rest",
           "airdate": "1967-02-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3202,9 +2869,9 @@
           "number": 21,
           "name": "Don't Call Us",
           "airdate": "1967-02-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3222,9 +2889,9 @@
           "number": 22,
           "name": "Hey, Look Me Over",
           "airdate": "1967-02-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3242,9 +2909,9 @@
           "number": 23,
           "name": "That's Max???",
           "airdate": "1967-03-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3262,9 +2929,9 @@
           "number": 24,
           "name": "The Fishing Derby",
           "airdate": "1967-03-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3282,9 +2949,9 @@
           "number": 25,
           "name": "Kate's Big Deal",
           "airdate": "1967-03-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3302,9 +2969,9 @@
           "number": 26,
           "name": "Author! Author!",
           "airdate": "1967-03-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3322,9 +2989,9 @@
           "number": 27,
           "name": "Steve's Ol' Buddy",
           "airdate": "1967-04-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3342,9 +3009,9 @@
           "number": 28,
           "name": "That Was the Night That Was",
           "airdate": "1967-04-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3362,9 +3029,9 @@
           "number": 29,
           "name": "The Eternal Rectangle",
           "airdate": "1967-04-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3382,9 +3049,9 @@
           "number": 30,
           "name": "Kate's Cousin Mae",
           "airdate": "1967-04-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3402,9 +3069,9 @@
           "number": 31,
           "name": "A House Divided",
           "airdate": "1967-05-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3422,9 +3089,9 @@
           "number": 32,
           "name": "Go Away, Fat",
           "airdate": "1967-05-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3447,9 +3114,9 @@
           "number": 1,
           "name": "Is This My Daughter?",
           "airdate": "1967-09-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3467,9 +3134,9 @@
           "number": 2,
           "name": "It's Not Easy to Be a Mother",
           "airdate": "1967-09-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3487,9 +3154,9 @@
           "number": 3,
           "name": "One Dozen Roses",
           "airdate": "1967-09-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3507,9 +3174,9 @@
           "number": 4,
           "name": "You Know I Can't Hear You When the Thunder is Clapping",
           "airdate": "1967-09-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3527,9 +3194,9 @@
           "number": 5,
           "name": "Pop Goes the Question",
           "airdate": "1967-10-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3547,9 +3214,9 @@
           "number": 6,
           "name": "A Cottage for Two",
           "airdate": "1967-10-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3567,9 +3234,9 @@
           "number": 7,
           "name": "Mind If We Join Your Wedding",
           "airdate": "1967-10-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3587,9 +3254,9 @@
           "number": 8,
           "name": "Meet the In-Laws",
           "airdate": "1967-10-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3607,9 +3274,9 @@
           "number": 9,
           "name": "With This Gown I Thee Wed",
           "airdate": "1967-11-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3627,9 +3294,9 @@
           "number": 10,
           "name": "Hawaii Calling",
           "airdate": "1967-11-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3647,9 +3314,9 @@
           "number": 11,
           "name": "Kate's Birthday",
           "airdate": "1967-11-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3667,9 +3334,9 @@
           "number": 12,
           "name": "The Honeymoon is Over",
           "airdate": "1967-11-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3687,9 +3354,9 @@
           "number": 13,
           "name": "A Horse On You, Mr. Bedloe",
           "airdate": "1967-12-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3707,9 +3374,9 @@
           "number": 14,
           "name": "Kate's Day in Court",
           "airdate": "1967-12-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3727,9 +3394,9 @@
           "number": 15,
           "name": "Uncle Joe and the Master Plan",
           "airdate": "1967-12-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3747,9 +3414,9 @@
           "number": 16,
           "name": "All That Buzzes Ain't Bees",
           "airdate": "1967-12-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3767,9 +3434,9 @@
           "number": 17,
           "name": "All Sales Final",
           "airdate": "1967-12-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3787,9 +3454,9 @@
           "number": 18,
           "name": "The Power of the Press",
           "airdate": "1968-01-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3807,9 +3474,9 @@
           "number": 19,
           "name": "Steve, the Apple Polisher",
           "airdate": "1968-01-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3827,9 +3494,9 @@
           "number": 20,
           "name": "The Barber Shop Quartet",
           "airdate": "1968-01-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3847,9 +3514,9 @@
           "number": 21,
           "name": "Higgins Come Home",
           "airdate": "1968-01-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3867,9 +3534,9 @@
           "number": 22,
           "name": "Girl of Our Dreams",
           "airdate": "1968-02-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3887,9 +3554,9 @@
           "number": 23,
           "name": "Uncle Joe Runs the Hotel",
           "airdate": "1968-02-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3907,9 +3574,9 @@
           "number": 24,
           "name": "Billie Jo's First Record",
           "airdate": "1968-02-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3927,9 +3594,9 @@
           "number": 25,
           "name": "Mae's Helping Hand",
           "airdate": "1968-02-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3947,9 +3614,9 @@
           "number": 26,
           "name": "Bad Day at Shady Rest",
           "airdate": "1968-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3967,9 +3634,9 @@
           "number": 27,
           "name": "Cannonball for Sale",
           "airdate": "1968-03-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -3987,9 +3654,9 @@
           "number": 28,
           "name": "My Pal Sam",
           "airdate": "1968-03-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4007,9 +3674,9 @@
           "number": 29,
           "name": "Ring-a-Ding-Ding",
           "airdate": "1968-03-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4027,9 +3694,9 @@
           "number": 30,
           "name": "Kate's Homecoming",
           "airdate": "1968-03-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4072,9 +3739,9 @@
           "number": 2,
           "name": "The Singing Sweethearts",
           "airdate": "1968-10-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4092,9 +3759,9 @@
           "number": 3,
           "name": "Only a Husband",
           "airdate": "1968-10-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4112,9 +3779,9 @@
           "number": 4,
           "name": "The Valley Has a Baby",
           "airdate": "1968-10-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4132,9 +3799,9 @@
           "number": 5,
           "name": "Granny, the Baby Expert",
           "airdate": "1968-11-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4152,9 +3819,9 @@
           "number": 6,
           "name": "Wings",
           "airdate": "1968-11-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4172,9 +3839,9 @@
           "number": 7,
           "name": "The Lady Doctor",
           "airdate": "1968-11-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4192,9 +3859,9 @@
           "number": 8,
           "name": "The Sneaky Ways of a Woman Who is Both Beautiful and Smart",
           "airdate": "1968-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4212,9 +3879,9 @@
           "number": 9,
           "name": "The Strange Case of Joseph P. Carson",
           "airdate": "1968-11-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4232,9 +3899,9 @@
           "number": 10,
           "name": "Bye, Bye, Doctor",
           "airdate": "1968-12-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4252,9 +3919,9 @@
           "number": 11,
           "name": "First Night Out",
           "airdate": "1968-12-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4272,9 +3939,9 @@
           "number": 12,
           "name": "A Cake from Granny",
           "airdate": "1968-12-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4292,9 +3959,9 @@
           "number": 13,
           "name": "The Feminine Mistake",
           "airdate": "1968-12-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4312,9 +3979,9 @@
           "number": 14,
           "name": "The Ballad of the Everyday Housewife",
           "airdate": "1969-01-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4332,9 +3999,9 @@
           "number": 15,
           "name": "The Christening",
           "airdate": "1969-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4352,9 +4019,9 @@
           "number": 16,
           "name": "Billie Jo and the Big Big Star",
           "airdate": "1969-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4372,9 +4039,9 @@
           "number": 17,
           "name": "Steve's New Job",
           "airdate": "1969-01-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4392,9 +4059,9 @@
           "number": 18,
           "name": "The Cannonball Bookmobile",
           "airdate": "1969-02-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4412,9 +4079,9 @@
           "number": 19,
           "name": "A Man Called Cyrus Plout",
           "airdate": "1969-02-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4452,9 +4119,9 @@
           "number": 21,
           "name": "I'm Allergic to Daddy",
           "airdate": "1969-02-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4472,9 +4139,9 @@
           "number": 22,
           "name": "Uncle Joe Retires",
           "airdate": "1969-03-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4492,9 +4159,9 @@
           "number": 23,
           "name": "The Organ Fund",
           "airdate": "1969-03-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4512,9 +4179,9 @@
           "number": 24,
           "name": "The Great Race",
           "airdate": "1969-03-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4532,9 +4199,9 @@
           "number": 25,
           "name": "Tune in Next Year",
           "airdate": "1969-03-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4552,9 +4219,9 @@
           "number": 26,
           "name": "By the Book",
           "airdate": "1969-03-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4577,9 +4244,9 @@
           "number": 1,
           "name": "Make Room for Baby",
           "airdate": "1969-09-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4597,9 +4264,9 @@
           "number": 2,
           "name": "The Game Warden",
           "airdate": "1969-10-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4617,9 +4284,9 @@
           "number": 3,
           "name": "The Other Woman",
           "airdate": "1969-10-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4637,9 +4304,9 @@
           "number": 4,
           "name": "One of Our Chickens is Missing",
           "airdate": "1969-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4657,9 +4324,9 @@
           "number": 5,
           "name": "The Three Queens",
           "airdate": "1969-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4677,9 +4344,9 @@
           "number": 6,
           "name": "The Glen Tinker Caper",
           "airdate": "1969-11-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4697,9 +4364,9 @@
           "number": 7,
           "name": "The Tenant",
           "airdate": "1969-11-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4717,9 +4384,9 @@
           "number": 8,
           "name": "Sorry Doctor, I Ain't Taking No Shots",
           "airdate": "1969-11-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4737,9 +4404,9 @@
           "number": 9,
           "name": "A Most Momentous Occasion",
           "airdate": "1969-11-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4757,9 +4424,9 @@
           "number": 10,
           "name": "The Camping Trip",
           "airdate": "1969-11-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4777,9 +4444,9 @@
           "number": 11,
           "name": "Kathy Jo's First Birthday (1)",
           "airdate": "1969-12-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4797,9 +4464,9 @@
           "number": 12,
           "name": "Goodbye, Mr. Chimp (2)",
           "airdate": "1969-12-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4817,9 +4484,9 @@
           "number": 13,
           "name": "The Golden Spike Ceremony",
           "airdate": "1969-12-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4837,9 +4504,9 @@
           "number": 14,
           "name": "But I've Never Been in Erie, PA",
           "airdate": "1969-12-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4857,9 +4524,9 @@
           "number": 15,
           "name": "How to Arrange a Marriage",
           "airdate": "1970-01-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4877,9 +4544,9 @@
           "number": 16,
           "name": "Selma Plout's Plot",
           "airdate": "1970-01-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4897,9 +4564,9 @@
           "number": 17,
           "name": "With This Ring...",
           "airdate": "1970-01-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4917,9 +4584,9 @@
           "number": 18,
           "name": "The Valley's New Owner",
           "airdate": "1970-01-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4937,9 +4604,9 @@
           "number": 19,
           "name": "Steve's Uncle George",
           "airdate": "1970-01-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4957,9 +4624,9 @@
           "number": 20,
           "name": "Susan B. Anthony, I Love You",
           "airdate": "1970-02-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4977,9 +4644,9 @@
           "number": 21,
           "name": "Spare That Cottage",
           "airdate": "1970-02-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -4997,9 +4664,9 @@
           "number": 22,
           "name": "Whiplash, Whiplash",
           "airdate": "1970-02-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -5017,9 +4684,9 @@
           "number": 23,
           "name": "Last Train to Pixley",
           "airdate": "1970-03-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -5037,9 +4704,9 @@
           "number": 24,
           "name": "Love Rears Its Ugly Head",
           "airdate": "1970-03-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -5057,9 +4724,9 @@
           "number": 25,
           "name": "No, No, You Can't Take Her Away",
           "airdate": "1970-03-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",
@@ -5077,9 +4744,9 @@
           "number": 26,
           "name": "Betty Jo's Business",
           "airdate": "1970-04-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "Petticoat_Junction_Series",
             "itemTitle": "Petticoat Junction",

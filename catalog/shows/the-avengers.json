@@ -3,7 +3,7 @@
   "slug": "the-avengers",
   "type": "Classic TV",
   "network": "ITV",
-  "matchedAt": "2026-10-14T04:29:01.052Z",
+  "matchedAt": "2026-10-14T05:19:00.822Z",
   "tvmaze": {
     "id": 1929,
     "name": "The Avengers",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 161,
     "live": 50,
-    "review": 32,
-    "missing": 79,
-    "pct": 51
+    "review": 25,
+    "missing": 86,
+    "pct": 47
   },
   "seasons": [
     {
@@ -691,31 +691,31 @@
           "airdate": "1965-10-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "the.-avengers.-s-04-e-01.-the.-town.of.-no.-return",
-            "itemTitle": "The. Avengers. S 04 E 01. The. Town.of. No. Return",
-            "file": "The.Avengers.S04E01.The.Town.of.No.Return.mp4",
-            "name": "The.Avengers.S04E01.The.Town.of.No.Return",
-            "url": "https://archive.org/download/the.-avengers.-s-04-e-01.-the.-town.of.-no.-return/The.Avengers.S04E01.The.Town.of.No.Return.mp4",
-            "seconds": 3105,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-avengers-s-4e-1",
+            "itemTitle": "The Avengers - Complete Season 4 (24 Episodes) (restored, colorized) (1966, TV series)",
+            "file": "the avengers s4e1.mp4",
+            "name": "the avengers s4e1",
+            "url": "https://archive.org/download/the-avengers-s-4e-1/the%20avengers%20s4e1.mp4",
+            "seconds": 3136,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 303
+            "sizeMB": 302
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-avengers-s-4e-1",
-              "itemTitle": "The Avengers - Complete Season 4 (24 Episodes) (restored, colorized) (1966, TV series)",
-              "file": "the avengers s4e1.mp4",
-              "name": "the avengers s4e1",
-              "url": "https://archive.org/download/the-avengers-s-4e-1/the%20avengers%20s4e1.mp4",
-              "seconds": 3136,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the.-avengers.-s-04-e-01.-the.-town.of.-no.-return",
+              "itemTitle": "The. Avengers. S 04 E 01. The. Town.of. No. Return",
+              "file": "The.Avengers.S04E01.The.Town.of.No.Return.mp4",
+              "name": "The.Avengers.S04E01.The.Town.of.No.Return",
+              "url": "https://archive.org/download/the.-avengers.-s-04-e-01.-the.-town.of.-no.-return/The.Avengers.S04E01.The.Town.of.No.Return.mp4",
+              "seconds": 3105,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 302
+              "sizeMB": 303
             }
           ]
         },
@@ -1761,21 +1761,8 @@
           "number": 3,
           "name": "Super Secret Cypher Snatch",
           "airdate": "1968-10-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E03 - Le Document Disparu (The Super Secret Cypher Snatch).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E03 - Le Document Disparu (The Super Secret Cypher Snatch)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E03%20-%20Le%20Document%20Disparu%20(The%20Super%20Secret%20Cypher%20Snatch).mp4",
-            "seconds": 2891,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 489
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1845,21 +1832,8 @@
           "number": 7,
           "name": "False Witness",
           "airdate": "1968-11-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E07 - Faux-Témoins (False Witness).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E07 - Faux-Témoins (False Witness)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E07%20-%20Faux-T%C3%A9moins%20(False%20Witness).mp4",
-            "seconds": 2971,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 502
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1971,21 +1945,8 @@
           "number": 13,
           "name": "They Keep Killing Steed",
           "airdate": "1968-12-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E13 - Mais qui est Steed (They keep killing Steed).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E13 - Mais qui est Steed (They keep killing Steed)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E13%20-%20Mais%20qui%20est%20Steed%20(They%20keep%20killing%20Steed).mp4",
-            "seconds": 2971,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 465
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2034,21 +1995,8 @@
           "number": 16,
           "name": "Invasion of the Earthmen",
           "airdate": "1969-01-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E16 - L'Invasion des Terriens (Invasion of the Earthmen).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E16 - L'Invasion des Terriens (Invasion of the Earthmen)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E16%20-%20L'Invasion%20des%20Terriens%20(Invasion%20of%20the%20Earthmen).mp4",
-            "seconds": 2892,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 453
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2118,21 +2066,8 @@
           "number": 20,
           "name": "Wish You Were Here",
           "airdate": "1969-02-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E20 - Etrange Hôtel (Wish You Were Here).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E20 - Etrange Hôtel (Wish You Were Here)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E20%20-%20E%C2%89trange%20H%C3%B4tel%20(Wish%20You%20Were%20Here).mp4",
-            "seconds": 2970,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 465
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2337,21 +2272,8 @@
           "number": 29,
           "name": "Requiem",
           "airdate": "1969-04-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E29 - Requiem (Requiem).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E29 - Requiem (Requiem)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E29%20-%20Requiem%20(Requiem).mp4",
-            "seconds": 2981,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 505
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2379,21 +2301,8 @@
           "number": 31,
           "name": "Pandora",
           "airdate": "1969-04-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename + title match",
-            "item": "chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405",
-            "itemTitle": "Chapeau Melon et Bottes de Cuir ☆ The Avengers ☆ S6 VF ☆ 1968-1969",
-            "file": "Chapeau Melon et Bottes de Cuir - S6E31 - Mademoiselle Pandora (Pandora).mp4",
-            "name": "Chapeau Melon et Bottes de Cuir - S6E31 - Mademoiselle Pandora (Pandora)",
-            "url": "https://archive.org/download/chapeau-melon-et-bottes-de-cuir-the-avengers-s6-fr-1968-1969_202405/Chapeau%20Melon%20et%20Bottes%20de%20Cuir%20-%20S6E31%20-%20Mademoiselle%20Pandora%20(Pandora).mp4",
-            "seconds": 2908,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 492
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

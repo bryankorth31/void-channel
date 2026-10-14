@@ -3,7 +3,7 @@
   "slug": "the-crown",
   "type": "Streaming Era",
   "network": "GB",
-  "matchedAt": "2026-10-14T04:28:54.058Z",
+  "matchedAt": "2026-10-14T05:18:47.530Z",
   "tvmaze": {
     "id": 3594,
     "name": "The Crown",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 60,
     "live": 0,
-    "review": 1,
-    "missing": 59,
-    "pct": 2
+    "review": 0,
+    "missing": 60,
+    "pct": 0
   },
   "seasons": [
     {
@@ -50,20 +50,8 @@
           "number": 4,
           "name": "Act of God",
           "airdate": "2016-11-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "secrets-of-the-royals-inside-the-crown-ep-4-of-4-the-top-job-british-royal-documentary",
-            "itemTitle": "Secrets Of The Royals Inside The Crown Ep 4 of 4 (The Top Job) British Royal Documentary",
-            "file": "Secrets Of The Royals - Inside The Crown Ep 4 of 4 (The Top Job) British Royal Documentary.mp4",
-            "name": "Secrets Of The Royals - Inside The Crown Ep 4 of 4 (The Top Job) British Royal Documentary",
-            "url": "https://archive.org/download/secrets-of-the-royals-inside-the-crown-ep-4-of-4-the-top-job-british-royal-documentary/Secrets%20Of%20The%20Royals%20-%20Inside%20The%20Crown%20Ep%204%20of%204%20(The%20Top%20Job)%20British%20Royal%20Documentary.mp4",
-            "seconds": 3040,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 171
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

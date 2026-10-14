@@ -3,7 +3,7 @@
   "slug": "highlander-the-raven",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Syndication",
-  "matchedAt": "2026-10-14T04:29:06.434Z",
+  "matchedAt": "2026-10-14T05:19:09.598Z",
   "tvmaze": {
     "id": 1912,
     "name": "Highlander: The Raven",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 22,
-    "live": 19,
-    "review": 3,
-    "missing": 0,
-    "pct": 100
+    "live": 13,
+    "review": 8,
+    "missing": 1,
+    "pct": 95
   },
   "seasons": [
     {
@@ -80,9 +80,9 @@
           "number": 3,
           "name": "Bloodlines",
           "airdate": "1998-10-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "highlander-the-raven-1x-01-reborn",
             "itemTitle": "Highlander The Raven The Complete Series",
@@ -94,21 +94,7 @@
             "playable": true,
             "sizeMB": 289
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Bloodlines\" (0.95)",
-              "item": "highlander-the-raven-09-cloak-and-dagger",
-              "itemTitle": "Highlander The Raven",
-              "file": "Highlander The Raven 03 Bloodlines.mp4",
-              "name": "Highlander The Raven 03 Bloodlines",
-              "url": "https://archive.org/download/highlander-the-raven-09-cloak-and-dagger/Highlander%20The%20Raven%2003%20Bloodlines.mp4",
-              "seconds": 2778,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 6980
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -216,9 +202,9 @@
           "number": 7,
           "name": "Crime and Punishment",
           "airdate": "1998-11-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "highlander-the-raven-1x-01-reborn",
             "itemTitle": "Highlander The Raven The Complete Series",
@@ -230,21 +216,7 @@
             "playable": true,
             "sizeMB": 269
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Crime and Punishment\" (0.95)",
-              "item": "highlander-the-raven-09-cloak-and-dagger",
-              "itemTitle": "Highlander The Raven",
-              "file": "Highlander The Raven 07 Crime and Punishment.mp4",
-              "name": "Highlander The Raven 07 Crime and Punishment",
-              "url": "https://archive.org/download/highlander-the-raven-09-cloak-and-dagger/Highlander%20The%20Raven%2007%20Crime%20and%20Punishment.mp4",
-              "seconds": 2778,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 6949
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -318,9 +290,9 @@
           "number": 10,
           "name": "Passion Play",
           "airdate": "1998-11-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "highlander-the-raven-1x-01-reborn",
             "itemTitle": "Highlander The Raven The Complete Series",
@@ -332,21 +304,7 @@
             "playable": true,
             "sizeMB": 289
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Passion Play\" (0.95)",
-              "item": "highlander-the-raven-09-cloak-and-dagger",
-              "itemTitle": "Highlander The Raven",
-              "file": "Highlander The Raven 10 Passion Play.mp4",
-              "name": "Highlander The Raven 10 Passion Play",
-              "url": "https://archive.org/download/highlander-the-raven-09-cloak-and-dagger/Highlander%20The%20Raven%2010%20Passion%20Play.mp4",
-              "seconds": 2779,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 6982
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
@@ -420,21 +378,8 @@
           "number": 13,
           "name": "The French Connection",
           "airdate": "1999-02-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename + title match",
-            "item": "highlander-the-raven-1x-01-reborn",
-            "itemTitle": "Highlander The Raven The Complete Series",
-            "file": "Highlander The Raven 1x13 - The French Connection.mp4",
-            "name": "Highlander The Raven 1x13 - The French Connection",
-            "url": "https://archive.org/download/highlander-the-raven-1x-01-reborn/Highlander%20The%20Raven%201x13%20-%20The%20French%20Connection.mp4",
-            "seconds": 2779,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 290
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -543,9 +488,9 @@
           "number": 17,
           "name": "Love and Death",
           "airdate": "1999-04-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "highlander-the-raven-1x-01-reborn",
             "itemTitle": "Highlander The Raven The Complete Series",
@@ -557,29 +502,15 @@
             "playable": true,
             "sizeMB": 289
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Love and Death\" (0.95)",
-              "item": "highlander-the-raven-09-cloak-and-dagger",
-              "itemTitle": "Highlander The Raven",
-              "file": "Highlander The Raven 17 Love and Death.mp4",
-              "name": "Highlander The Raven 17 Love and Death",
-              "url": "https://archive.org/download/highlander-the-raven-09-cloak-and-dagger/Highlander%20The%20Raven%2017%20Love%20and%20Death.mp4",
-              "seconds": 2779,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 6980
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,
           "name": "Thick as Thieves",
           "airdate": "1999-04-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "highlander-the-raven-1x-01-reborn",
             "itemTitle": "Highlander The Raven The Complete Series",
@@ -591,21 +522,7 @@
             "playable": true,
             "sizeMB": 289
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Thick as Thieves\" (0.95)",
-              "item": "highlander-the-raven-09-cloak-and-dagger",
-              "itemTitle": "Highlander The Raven",
-              "file": "Highlander The Raven 18 Thick as Thieves.mp4",
-              "name": "Highlander The Raven 18 Thick as Thieves",
-              "url": "https://archive.org/download/highlander-the-raven-09-cloak-and-dagger/Highlander%20The%20Raven%2018%20Thick%20as%20Thieves.mp4",
-              "seconds": 2779,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 6974
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 19,

@@ -3,7 +3,7 @@
   "slug": "breaking-bad",
   "type": "Drama",
   "network": "AMC",
-  "matchedAt": "2026-10-14T04:28:49.710Z",
+  "matchedAt": "2026-10-14T05:18:39.752Z",
   "tvmaze": {
     "id": 169,
     "name": "Breaking Bad",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 62,
-    "live": 61,
-    "review": 1,
+    "live": 14,
+    "review": 48,
     "missing": 0,
     "pct": 100
   },
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2008-01-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "20200522_20200522_1309breaking-bad-season-01",
             "itemTitle": "Breaking Bad Season 01",
@@ -42,7 +42,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -55,7 +55,7 @@
               "sizeMB": 350
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -68,7 +68,7 @@
               "sizeMB": 350
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -86,9 +86,9 @@
           "number": 2,
           "name": "Cat's in the Bag...",
           "airdate": "2008-01-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "20200522_20200522_1309breaking-bad-season-01",
             "itemTitle": "Breaking Bad Season 01",
@@ -102,7 +102,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -115,7 +115,7 @@
               "sizeMB": 288
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -128,7 +128,7 @@
               "sizeMB": 288
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -150,19 +150,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "20200522_20200522_1309breaking-bad-season-01",
-            "itemTitle": "Breaking Bad Season 01",
-            "file": "Breaking Bad Season 01/Breaking Bad - S01E03 - ...and the Bag's in the River.mp4",
-            "name": "Breaking Bad Season 01/Breaking Bad - S01E03 - ...and the Bag's in the River",
-            "url": "https://archive.org/download/20200522_20200522_1309breaking-bad-season-01/Breaking%20Bad%20Season%2001%2FBreaking%20Bad%20-%20S01E03%20-%20...and%20the%20Bag's%20in%20the%20River.mp4",
-            "seconds": 2885,
+            "item": "breaking-bad-s-01-e-06-crazy-handful-of-nothin",
+            "itemTitle": "Breaking Bad S 01 E 06 Crazy Handful Of Nothin'",
+            "file": "Breaking Bad - S01E03 - ...And the Bag's in the River.mp4",
+            "name": "Breaking Bad - S01E03 - ...And the Bag's in the River",
+            "url": "https://archive.org/download/breaking-bad-s-01-e-06-crazy-handful-of-nothin/Breaking%20Bad%20-%20S01E03%20-%20...And%20the%20Bag's%20in%20the%20River.mp4",
+            "seconds": 2892,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 299
+            "sizeMB": 283
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "20200522_20200522_1309breaking-bad-season-01",
+              "itemTitle": "Breaking Bad Season 01",
+              "file": "Breaking Bad Season 01/Breaking Bad - S01E03 - ...and the Bag's in the River.mp4",
+              "name": "Breaking Bad Season 01/Breaking Bad - S01E03 - ...and the Bag's in the River",
+              "url": "https://archive.org/download/20200522_20200522_1309breaking-bad-season-01/Breaking%20Bad%20Season%2001%2FBreaking%20Bad%20-%20S01E03%20-%20...and%20the%20Bag's%20in%20the%20River.mp4",
+              "seconds": 2885,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 299
+            },
+            {
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -175,7 +188,7 @@
               "sizeMB": 289
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -186,19 +199,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 289
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "brkngbd-mmf",
-              "itemTitle": "Breaking Bad",
-              "file": "Breaking Bad/Season 1/Breaking Bad - S01E03 - ...And the Bag's in the River - MyMeFlix.com.mp4",
-              "name": "Breaking Bad/Season 1/Breaking Bad - S01E03 - ...And the Bag's in the River - MyMeFlix.com",
-              "url": "https://archive.org/download/brkngbd-mmf/Breaking%20Bad%2FSeason%201%2FBreaking%20Bad%20-%20S01E03%20-%20...And%20the%20Bag's%20in%20the%20River%20-%20MyMeFlix.com.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 287
             }
           ]
         },
@@ -206,9 +206,9 @@
           "number": 4,
           "name": "Cancer Man",
           "airdate": "2008-02-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "20200522_20200522_1309breaking-bad-season-01",
             "itemTitle": "Breaking Bad Season 01",
@@ -222,7 +222,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -235,7 +235,7 @@
               "sizeMB": 289
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -248,7 +248,7 @@
               "sizeMB": 289
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -266,9 +266,9 @@
           "number": 5,
           "name": "Gray Matter",
           "airdate": "2008-02-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "20200522_20200522_1309breaking-bad-season-01",
             "itemTitle": "Breaking Bad Season 01",
@@ -282,7 +282,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -295,7 +295,7 @@
               "sizeMB": 288
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -308,7 +308,7 @@
               "sizeMB": 288
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -326,9 +326,9 @@
           "number": 6,
           "name": "Crazy Handful of Nothin'",
           "airdate": "2008-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "20200522_20200522_1309breaking-bad-season-01",
             "itemTitle": "Breaking Bad Season 01",
@@ -342,7 +342,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -355,7 +355,7 @@
               "sizeMB": 289
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -368,7 +368,7 @@
               "sizeMB": 289
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -386,9 +386,9 @@
           "number": 7,
           "name": "A No-Rough-Stuff-Type Deal",
           "airdate": "2008-03-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "20200522_20200522_1309breaking-bad-season-01",
             "itemTitle": "Breaking Bad Season 01",
@@ -402,7 +402,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -415,7 +415,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -428,7 +428,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -451,9 +451,9 @@
           "number": 1,
           "name": "Seven Thirty-Seven",
           "airdate": "2009-03-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -467,7 +467,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -480,7 +480,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -498,9 +498,9 @@
           "number": 2,
           "name": "Grilled",
           "airdate": "2009-03-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -514,7 +514,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -527,7 +527,7 @@
               "sizeMB": 285
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -545,9 +545,9 @@
           "number": 3,
           "name": "Bit by a Dead Bee",
           "airdate": "2009-03-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -561,7 +561,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -574,7 +574,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -592,9 +592,9 @@
           "number": 4,
           "name": "Down",
           "airdate": "2009-03-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -608,7 +608,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -621,7 +621,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -639,9 +639,9 @@
           "number": 5,
           "name": "Breakage",
           "airdate": "2009-04-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -655,7 +655,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -668,7 +668,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -702,7 +702,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -715,7 +715,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -728,7 +728,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -746,9 +746,9 @@
           "number": 7,
           "name": "Negro Y Azul",
           "airdate": "2009-04-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -762,7 +762,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -775,7 +775,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -840,9 +840,9 @@
           "number": 9,
           "name": "4 Days Out",
           "airdate": "2009-05-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -856,7 +856,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -869,7 +869,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -887,9 +887,9 @@
           "number": 10,
           "name": "Over",
           "airdate": "2009-05-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -903,7 +903,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -916,7 +916,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -927,19 +927,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 280
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Over\" (0.95)",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.Season.5.S05.1080p.H264.BluRay/54 - Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.Season.5.S05.1080p.H264.BluRay/54 - Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.Season.5.S05.1080p.H264.BluRay%2F54%20-%20Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
-              "seconds": 2842,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 284
             }
           ]
         },
@@ -947,9 +934,9 @@
           "number": 11,
           "name": "Mandala",
           "airdate": "2009-05-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -963,7 +950,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -976,7 +963,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -994,9 +981,9 @@
           "number": 12,
           "name": "Phoenix",
           "airdate": "2009-05-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1010,7 +997,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1023,7 +1010,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1041,9 +1028,9 @@
           "number": 13,
           "name": "ABQ",
           "airdate": "2009-05-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1057,7 +1044,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1070,7 +1057,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1093,9 +1080,9 @@
           "number": 1,
           "name": "No Más",
           "airdate": "2010-03-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1109,7 +1096,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1122,7 +1109,7 @@
               "sizeMB": 289
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1140,9 +1127,9 @@
           "number": 2,
           "name": "Caballo sin Nombre",
           "airdate": "2010-03-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1156,7 +1143,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1169,7 +1156,7 @@
               "sizeMB": 285
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1187,9 +1174,9 @@
           "number": 3,
           "name": "I.F.T.",
           "airdate": "2010-04-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1203,7 +1190,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1216,7 +1203,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1250,7 +1237,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1263,7 +1250,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1276,7 +1263,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1310,7 +1297,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1323,7 +1310,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1336,7 +1323,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1370,7 +1357,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1383,7 +1370,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1396,7 +1383,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1430,7 +1417,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1443,7 +1430,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1456,7 +1443,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1490,7 +1477,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1503,7 +1490,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1516,7 +1503,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1534,9 +1521,9 @@
           "number": 9,
           "name": "Kafkaesque",
           "airdate": "2010-05-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1550,7 +1537,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1563,7 +1550,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1581,9 +1568,9 @@
           "number": 10,
           "name": "Fly",
           "airdate": "2010-05-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1597,7 +1584,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1610,7 +1597,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1628,9 +1615,9 @@
           "number": 11,
           "name": "Abiquiu",
           "airdate": "2010-05-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1644,7 +1631,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1657,7 +1644,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1675,9 +1662,9 @@
           "number": 12,
           "name": "Half Measures",
           "airdate": "2010-06-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1691,7 +1678,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1704,7 +1691,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1722,9 +1709,9 @@
           "number": 13,
           "name": "Full Measure",
           "airdate": "2010-06-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
             "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1738,7 +1725,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1751,7 +1738,7 @@
               "sizeMB": 285
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1774,9 +1761,9 @@
           "number": 1,
           "name": "Box Cutter",
           "airdate": "2011-07-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -1790,7 +1777,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1803,7 +1790,7 @@
               "sizeMB": 287
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1816,7 +1803,7 @@
               "sizeMB": 287
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1834,9 +1821,9 @@
           "number": 2,
           "name": "Thirty-Eight Snub",
           "airdate": "2011-07-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -1850,7 +1837,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1863,7 +1850,7 @@
               "sizeMB": 277
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1876,7 +1863,7 @@
               "sizeMB": 277
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -1898,32 +1885,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-04",
-            "itemTitle": "Breaking Bad Season 04",
-            "file": "Breaking Bad Season 04/Breaking Bad - S04E03 - Open House.mp4",
-            "name": "Breaking Bad Season 04/Breaking Bad - S04E03 - Open House",
-            "url": "https://archive.org/download/breaking-bad-season-04/Breaking%20Bad%20Season%2004%2FBreaking%20Bad%20-%20S04E03%20-%20Open%20House.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S04E03.Open.House.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S04E03.Open.House.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S04E03.Open.House.1080p.H264.BluRay.mp4",
             "seconds": 2774,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 287
+            "sizeMB": 275
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S04E03.Open.House.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S04E03.Open.House.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S04E03.Open.House.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-04",
+              "itemTitle": "Breaking Bad Season 04",
+              "file": "Breaking Bad Season 04/Breaking Bad - S04E03 - Open House.mp4",
+              "name": "Breaking Bad Season 04/Breaking Bad - S04E03 - Open House",
+              "url": "https://archive.org/download/breaking-bad-season-04/Breaking%20Bad%20Season%2004%2FBreaking%20Bad%20-%20S04E03%20-%20Open%20House.mp4",
               "seconds": 2774,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 275
+              "sizeMB": 287
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1936,7 +1923,7 @@
               "sizeMB": 275
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1954,9 +1941,9 @@
           "number": 4,
           "name": "Bullet Points",
           "airdate": "2011-08-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -1970,7 +1957,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1983,7 +1970,7 @@
               "sizeMB": 270
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -1996,7 +1983,7 @@
               "sizeMB": 270
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2018,32 +2005,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-04",
-            "itemTitle": "Breaking Bad Season 04",
-            "file": "Breaking Bad Season 04/Breaking Bad - S04E05 - Shotgun.mp4",
-            "name": "Breaking Bad Season 04/Breaking Bad - S04E05 - Shotgun",
-            "url": "https://archive.org/download/breaking-bad-season-04/Breaking%20Bad%20Season%2004%2FBreaking%20Bad%20-%20S04E05%20-%20Shotgun.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S04E05.Shotgun.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S04E05.Shotgun.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S04E05.Shotgun.1080p.H264.BluRay.mp4",
             "seconds": 2833,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 294
+            "sizeMB": 286
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S04E05.Shotgun.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S04E05.Shotgun.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S04E05.Shotgun.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-04",
+              "itemTitle": "Breaking Bad Season 04",
+              "file": "Breaking Bad Season 04/Breaking Bad - S04E05 - Shotgun.mp4",
+              "name": "Breaking Bad Season 04/Breaking Bad - S04E05 - Shotgun",
+              "url": "https://archive.org/download/breaking-bad-season-04/Breaking%20Bad%20Season%2004%2FBreaking%20Bad%20-%20S04E05%20-%20Shotgun.mp4",
               "seconds": 2833,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 286
+              "sizeMB": 294
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2056,7 +2043,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2074,9 +2061,9 @@
           "number": 6,
           "name": "Cornered",
           "airdate": "2011-08-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2090,7 +2077,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2103,7 +2090,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2116,7 +2103,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2138,32 +2125,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-04",
-            "itemTitle": "Breaking Bad Season 04",
-            "file": "Breaking Bad Season 04/Breaking Bad - S04E07 - Problem Dog.mp4",
-            "name": "Breaking Bad Season 04/Breaking Bad - S04E07 - Problem Dog",
-            "url": "https://archive.org/download/breaking-bad-season-04/Breaking%20Bad%20Season%2004%2FBreaking%20Bad%20-%20S04E07%20-%20Problem%20Dog.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S04E07.Problem.Dog.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S04E07.Problem.Dog.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S04E07.Problem.Dog.1080p.H264.BluRay.mp4",
             "seconds": 2833,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 294
+            "sizeMB": 281
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S04E07.Problem.Dog.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S04E07.Problem.Dog.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S04E07.Problem.Dog.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-04",
+              "itemTitle": "Breaking Bad Season 04",
+              "file": "Breaking Bad Season 04/Breaking Bad - S04E07 - Problem Dog.mp4",
+              "name": "Breaking Bad Season 04/Breaking Bad - S04E07 - Problem Dog",
+              "url": "https://archive.org/download/breaking-bad-season-04/Breaking%20Bad%20Season%2004%2FBreaking%20Bad%20-%20S04E07%20-%20Problem%20Dog.mp4",
               "seconds": 2833,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 281
+              "sizeMB": 294
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2176,7 +2163,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2194,9 +2181,9 @@
           "number": 8,
           "name": "Hermanos",
           "airdate": "2011-09-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2210,7 +2197,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2223,7 +2210,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2236,7 +2223,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2254,9 +2241,9 @@
           "number": 9,
           "name": "Bug",
           "airdate": "2011-09-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2270,7 +2257,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2283,7 +2270,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2296,7 +2283,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2314,9 +2301,9 @@
           "number": 10,
           "name": "Salud",
           "airdate": "2011-09-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2330,7 +2317,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2343,7 +2330,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2356,7 +2343,7 @@
               "sizeMB": 283
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2374,9 +2361,9 @@
           "number": 11,
           "name": "Crawl Space",
           "airdate": "2011-09-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2390,7 +2377,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2403,7 +2390,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2416,7 +2403,7 @@
               "sizeMB": 281
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2434,9 +2421,9 @@
           "number": 12,
           "name": "End Times",
           "airdate": "2011-10-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2450,7 +2437,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2463,7 +2450,7 @@
               "sizeMB": 277
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2476,7 +2463,7 @@
               "sizeMB": 277
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2494,9 +2481,9 @@
           "number": 13,
           "name": "Face Off",
           "airdate": "2011-10-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-04",
             "itemTitle": "Breaking Bad Season 04",
@@ -2510,7 +2497,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2523,7 +2510,7 @@
               "sizeMB": 304
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2536,7 +2523,7 @@
               "sizeMB": 304
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2559,9 +2546,9 @@
           "number": 1,
           "name": "Live Free or Die",
           "airdate": "2012-07-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -2575,7 +2562,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2588,7 +2575,7 @@
               "sizeMB": 260
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2601,7 +2588,7 @@
               "sizeMB": 260
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2619,9 +2606,9 @@
           "number": 2,
           "name": "Madrigal",
           "airdate": "2012-07-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -2635,7 +2622,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2648,7 +2635,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2661,7 +2648,7 @@
               "sizeMB": 282
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2679,9 +2666,9 @@
           "number": 3,
           "name": "Hazard Pay",
           "airdate": "2012-07-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -2695,7 +2682,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2708,7 +2695,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2721,7 +2708,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2739,9 +2726,9 @@
           "number": 4,
           "name": "Fifty-One",
           "airdate": "2012-08-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -2755,7 +2742,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2768,7 +2755,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2781,7 +2768,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -2803,32 +2790,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-05",
-            "itemTitle": "Breaking Bad Season 05",
-            "file": "Breaking Bad Season 05/Breaking Bad - S05E05 - Dead Freight.mp4",
-            "name": "Breaking Bad Season 05/Breaking Bad - S05E05 - Dead Freight",
-            "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E05%20-%20Dead%20Freight.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S05E05.Dead.Freight.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S05E05.Dead.Freight.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E05.Dead.Freight.1080p.H264.BluRay.mp4",
             "seconds": 2884,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 299
+            "sizeMB": 292
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S05E05.Dead.Freight.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S05E05.Dead.Freight.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E05.Dead.Freight.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-05",
+              "itemTitle": "Breaking Bad Season 05",
+              "file": "Breaking Bad Season 05/Breaking Bad - S05E05 - Dead Freight.mp4",
+              "name": "Breaking Bad Season 05/Breaking Bad - S05E05 - Dead Freight",
+              "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E05%20-%20Dead%20Freight.mp4",
               "seconds": 2884,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 292
+              "sizeMB": 299
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2841,7 +2828,7 @@
               "sizeMB": 292
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2863,32 +2850,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-05",
-            "itemTitle": "Breaking Bad Season 05",
-            "file": "Breaking Bad Season 05/Breaking Bad - S05E06 - Buyout.mp4",
-            "name": "Breaking Bad Season 05/Breaking Bad - S05E06 - Buyout",
-            "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E06%20-%20Buyout.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S05E06.Buyout.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S05E06.Buyout.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E06.Buyout.1080p.H264.BluRay.mp4",
             "seconds": 2846,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 295
+            "sizeMB": 285
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S05E06.Buyout.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S05E06.Buyout.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E06.Buyout.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-05",
+              "itemTitle": "Breaking Bad Season 05",
+              "file": "Breaking Bad Season 05/Breaking Bad - S05E06 - Buyout.mp4",
+              "name": "Breaking Bad Season 05/Breaking Bad - S05E06 - Buyout",
+              "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E06%20-%20Buyout.mp4",
               "seconds": 2846,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 285
+              "sizeMB": 295
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2901,7 +2888,7 @@
               "sizeMB": 285
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2919,9 +2906,9 @@
           "number": 7,
           "name": "Say My Name",
           "airdate": "2012-08-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -2935,7 +2922,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2948,7 +2935,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2961,7 +2948,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -2983,51 +2970,38 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-05",
-            "itemTitle": "Breaking Bad Season 05",
-            "file": "Breaking Bad Season 05/Breaking Bad - S05E08 - Gliding Over All.mp4",
-            "name": "Breaking Bad Season 05/Breaking Bad - S05E08 - Gliding Over All",
-            "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E08%20-%20Gliding%20Over%20All.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
             "seconds": 2842,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 294
+            "sizeMB": 284
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-05",
+              "itemTitle": "Breaking Bad Season 05",
+              "file": "Breaking Bad Season 05/Breaking Bad - S05E08 - Gliding Over All.mp4",
+              "name": "Breaking Bad Season 05/Breaking Bad - S05E08 - Gliding Over All",
+              "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E08%20-%20Gliding%20Over%20All.mp4",
               "seconds": 2842,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 284
+              "sizeMB": 294
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
               "file": "Breaking.Bad.Season.5.S05.1080p.H264.BluRay/Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
               "name": "Breaking.Bad.Season.5.S05.1080p.H264.BluRay/Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay",
               "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.Season.5.S05.1080p.H264.BluRay%2FBreaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
-              "seconds": 2842,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 284
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.Season.5.S05.1080p.H264.BluRay/54 - Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.Season.5.S05.1080p.H264.BluRay/54 - Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.Season.5.S05.1080p.H264.BluRay%2F54%20-%20Breaking.Bad.S05E08.Gliding.Over.All.1080p.H264.BluRay.mp4",
               "seconds": 2842,
               "format": "h.264",
               "playable": true,
@@ -3039,9 +3013,9 @@
           "number": 9,
           "name": "Blood Money",
           "airdate": "2013-08-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3055,7 +3029,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3068,7 +3042,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3081,7 +3055,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -3099,9 +3073,9 @@
           "number": 10,
           "name": "Buried",
           "airdate": "2013-08-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3115,7 +3089,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3128,7 +3102,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3141,7 +3115,7 @@
               "sizeMB": 286
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -3159,9 +3133,9 @@
           "number": 11,
           "name": "Confessions",
           "airdate": "2013-08-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3175,7 +3149,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3188,7 +3162,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3201,7 +3175,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3219,9 +3193,9 @@
           "number": 12,
           "name": "Rabid Dog",
           "airdate": "2013-09-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3235,7 +3209,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3248,7 +3222,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3261,7 +3235,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -3279,9 +3253,9 @@
           "number": 13,
           "name": "To'hajiilee",
           "airdate": "2013-09-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3295,7 +3269,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3308,7 +3282,7 @@
               "sizeMB": 280
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3321,7 +3295,7 @@
               "sizeMB": 280
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -3343,32 +3317,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "breaking-bad-season-05",
-            "itemTitle": "Breaking Bad Season 05",
-            "file": "Breaking Bad Season 05/Breaking Bad - S05E14 - Ozymandias.mp4",
-            "name": "Breaking Bad Season 05/Breaking Bad - S05E14 - Ozymandias",
-            "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E14%20-%20Ozymandias.mp4",
+            "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
+            "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
+            "file": "Breaking.Bad.S05E14.Ozymandias.1080p.H264.BluRay.mp4",
+            "name": "Breaking.Bad.S05E14.Ozymandias.1080p.H264.BluRay",
+            "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E14.Ozymandias.1080p.H264.BluRay.mp4",
             "seconds": 2834,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 294
+            "sizeMB": 284
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
-              "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
-              "file": "Breaking.Bad.S05E14.Ozymandias.1080p.H264.BluRay.mp4",
-              "name": "Breaking.Bad.S05E14.Ozymandias.1080p.H264.BluRay",
-              "url": "https://archive.org/download/breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray/Breaking.Bad.S05E14.Ozymandias.1080p.H264.BluRay.mp4",
+              "item": "breaking-bad-season-05",
+              "itemTitle": "Breaking Bad Season 05",
+              "file": "Breaking Bad Season 05/Breaking Bad - S05E14 - Ozymandias.mp4",
+              "name": "Breaking Bad Season 05/Breaking Bad - S05E14 - Ozymandias",
+              "url": "https://archive.org/download/breaking-bad-season-05/Breaking%20Bad%20Season%2005%2FBreaking%20Bad%20-%20S05E14%20-%20Ozymandias.mp4",
               "seconds": 2834,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 284
+              "sizeMB": 294
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3381,7 +3355,7 @@
               "sizeMB": 284
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3399,9 +3373,9 @@
           "number": 15,
           "name": "Granite State",
           "airdate": "2013-09-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3415,7 +3389,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3428,7 +3402,7 @@
               "sizeMB": 321
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3441,7 +3415,7 @@
               "sizeMB": 321
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",
@@ -3459,9 +3433,9 @@
           "number": 16,
           "name": "Felina",
           "airdate": "2013-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "breaking-bad-season-05",
             "itemTitle": "Breaking Bad Season 05",
@@ -3475,7 +3449,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3488,7 +3462,7 @@
               "sizeMB": 330
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "breaking.-bad.-s-01-e-01.-pilot.-1080p.-h-264.-blu-ray",
               "itemTitle": "Breaking Bad: The Complete Series [Blu-ray] [1080p] [DTS]",
@@ -3501,7 +3475,7 @@
               "sizeMB": 330
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "brkngbd-mmf",
               "itemTitle": "Breaking Bad",

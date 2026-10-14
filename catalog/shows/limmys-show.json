@@ -3,7 +3,7 @@
   "slug": "limmys-show",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-14T04:28:54.458Z",
+  "matchedAt": "2026-10-14T05:18:48.618Z",
   "tvmaze": {
     "id": 13842,
     "name": "Limmy's Show",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 18,
-    "live": 12,
-    "review": 6,
-    "missing": 0,
-    "pct": 100
+    "live": 0,
+    "review": 12,
+    "missing": 6,
+    "pct": 67
   },
   "seasons": [
     {
@@ -26,34 +26,21 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2010-01-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e01.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e01.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e01.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1734,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "dcdc/Limmy's Show - Series 2 Episode 1 - Director's Commentary [wtOz0m-bS08].webm",
+            "name": "dcdc/Limmy's Show - Series 2 Episode 1 - Director's Commentary [wtOz0m-bS08]",
+            "url": "https://archive.org/download/limmysshow_240p/dcdc%2FLimmy's%20Show%20-%20Series%202%20Episode%201%20-%20Director's%20Commentary%20%5BwtOz0m-bS08%5D.webm",
+            "seconds": 1740,
+            "format": "WebM",
             "playable": true,
-            "sizeMB": 173
+            "sizeMB": 71
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "limmysshow_240p",
-              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
-              "file": "dcdc/Limmy's Show - Series 2 Episode 1 - Director's Commentary [wtOz0m-bS08].webm",
-              "name": "dcdc/Limmy's Show - Series 2 Episode 1 - Director's Commentary [wtOz0m-bS08]",
-              "url": "https://archive.org/download/limmysshow_240p/dcdc%2FLimmy's%20Show%20-%20Series%202%20Episode%201%20-%20Director's%20Commentary%20%5BwtOz0m-bS08%5D.webm",
-              "seconds": 1740,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 71
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -79,6 +66,19 @@
               "format": "WebM",
               "playable": true,
               "sizeMB": 53
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "limmysshow_240p",
+              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+              "file": "showshow/Limmys Show Series 3 - Episode 1 [t9IB6zZ6SUM].webm",
+              "name": "showshow/Limmys Show Series 3 - Episode 1 [t9IB6zZ6SUM]",
+              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%203%20-%20Episode%201%20%5Bt9IB6zZ6SUM%5D.webm",
+              "seconds": 1721,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 52
             }
           ]
         },
@@ -86,34 +86,21 @@
           "number": 2,
           "name": "Episode 2",
           "airdate": "2010-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e02.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e02.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e02.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1739,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmy's Show Series 2 - Episode 2 [6y_vMcpX34g].webm",
+            "name": "showshow/Limmy's Show Series 2 - Episode 2 [6y_vMcpX34g]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmy's%20Show%20Series%202%20-%20Episode%202%20%5B6y_vMcpX34g%5D.webm",
+            "seconds": 1733,
+            "format": "WebM",
             "playable": true,
-            "sizeMB": 175
+            "sizeMB": 56
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "limmysshow_240p",
-              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
-              "file": "showshow/Limmy's Show Series 2 - Episode 2 [6y_vMcpX34g].webm",
-              "name": "showshow/Limmy's Show Series 2 - Episode 2 [6y_vMcpX34g]",
-              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmy's%20Show%20Series%202%20-%20Episode%202%20%5B6y_vMcpX34g%5D.webm",
-              "seconds": 1733,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 56
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -139,6 +126,19 @@
               "format": "WebM",
               "playable": true,
               "sizeMB": 53
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "limmysshow_240p",
+              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+              "file": "showshow/Limmy's Show Series 1 - Episode 2 [YEanmveXwV4].webm",
+              "name": "showshow/Limmy's Show Series 1 - Episode 2 [YEanmveXwV4]",
+              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmy's%20Show%20Series%201%20-%20Episode%202%20%5BYEanmveXwV4%5D.webm",
+              "seconds": 1735,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 51
             }
           ]
         },
@@ -146,34 +146,21 @@
           "number": 3,
           "name": "Episode 3",
           "airdate": "2010-01-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e03.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e03.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e03.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1731,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmys Show Series 3 - Episode 3 [QEfXMdDEcHc].webm",
+            "name": "showshow/Limmys Show Series 3 - Episode 3 [QEfXMdDEcHc]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%203%20-%20Episode%203%20%5BQEfXMdDEcHc%5D.webm",
+            "seconds": 1729,
+            "format": "WebM",
             "playable": true,
-            "sizeMB": 175
+            "sizeMB": 58
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "limmysshow_240p",
-              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
-              "file": "showshow/Limmys Show Series 3 - Episode 3 [QEfXMdDEcHc].webm",
-              "name": "showshow/Limmys Show Series 3 - Episode 3 [QEfXMdDEcHc]",
-              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%203%20-%20Episode%203%20%5BQEfXMdDEcHc%5D.webm",
-              "seconds": 1729,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 58
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -199,6 +186,19 @@
               "format": "WebM",
               "playable": true,
               "sizeMB": 51
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "limmysshow_240p",
+              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+              "file": "dcdc/Limmy's Show - Series 2 Episode 3 - Director's Commentary [n0Ibuo0CTOg].webm",
+              "name": "dcdc/Limmy's Show - Series 2 Episode 3 - Director's Commentary [n0Ibuo0CTOg]",
+              "url": "https://archive.org/download/limmysshow_240p/dcdc%2FLimmy's%20Show%20-%20Series%202%20Episode%203%20-%20Director's%20Commentary%20%5Bn0Ibuo0CTOg%5D.webm",
+              "seconds": 1748,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 43
             }
           ]
         },
@@ -206,34 +206,21 @@
           "number": 4,
           "name": "Episode 4",
           "airdate": "2010-02-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e04.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e04.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e04.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1754,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmys Show Series 2 Episode 4 [EeflwgexI0k].webm",
+            "name": "showshow/Limmys Show Series 2 Episode 4 [EeflwgexI0k]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%202%20Episode%204%20%5BEeflwgexI0k%5D.webm",
+            "seconds": 1744,
+            "format": "WebM",
             "playable": true,
-            "sizeMB": 177
+            "sizeMB": 78
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "limmysshow_240p",
-              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
-              "file": "showshow/Limmys Show Series 2 Episode 4 [EeflwgexI0k].webm",
-              "name": "showshow/Limmys Show Series 2 Episode 4 [EeflwgexI0k]",
-              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%202%20Episode%204%20%5BEeflwgexI0k%5D.webm",
-              "seconds": 1744,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 78
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -259,6 +246,19 @@
               "format": "WebM",
               "playable": true,
               "sizeMB": 56
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "limmysshow_240p",
+              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+              "file": "dcdc/Limmy's Show - Series 1 Episode 4 - Director's Commentary [n_JTyzya1F0].webm",
+              "name": "dcdc/Limmy's Show - Series 1 Episode 4 - Director's Commentary [n_JTyzya1F0]",
+              "url": "https://archive.org/download/limmysshow_240p/dcdc%2FLimmy's%20Show%20-%20Series%201%20Episode%204%20-%20Director's%20Commentary%20%5Bn_JTyzya1F0%5D.webm",
+              "seconds": 1755,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 51
             }
           ]
         },
@@ -266,34 +266,21 @@
           "number": 5,
           "name": "Episode 5",
           "airdate": "2010-02-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e05.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e05.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e05.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1735,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmys Show Series 2 Episode 5 [_WY_DnNbDAQ].webm",
+            "name": "showshow/Limmys Show Series 2 Episode 5 [_WY_DnNbDAQ]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%202%20Episode%205%20%5B_WY_DnNbDAQ%5D.webm",
+            "seconds": 1743,
+            "format": "WebM",
             "playable": true,
-            "sizeMB": 175
+            "sizeMB": 59
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "limmysshow_240p",
-              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
-              "file": "showshow/Limmys Show Series 2 Episode 5 [_WY_DnNbDAQ].webm",
-              "name": "showshow/Limmys Show Series 2 Episode 5 [_WY_DnNbDAQ]",
-              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%202%20Episode%205%20%5B_WY_DnNbDAQ%5D.webm",
-              "seconds": 1743,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 59
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -319,6 +306,19 @@
               "format": "WebM",
               "playable": true,
               "sizeMB": 52
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "limmysshow_240p",
+              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+              "file": "showshow/Limmy's Show Series 1 - Episode 5 [iOj7NxhXh9I].webm",
+              "name": "showshow/Limmy's Show Series 1 - Episode 5 [iOj7NxhXh9I]",
+              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmy's%20Show%20Series%201%20-%20Episode%205%20%5BiOj7NxhXh9I%5D.webm",
+              "seconds": 1731,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 52
             }
           ]
         },
@@ -326,34 +326,21 @@
           "number": 6,
           "name": "Episode 6",
           "airdate": "2010-02-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e06.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e06.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e06.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1734,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmys Show Series 3 Episode 6 [4BQZZBvHc_8].webm",
+            "name": "showshow/Limmys Show Series 3 Episode 6 [4BQZZBvHc_8]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%203%20Episode%206%20%5B4BQZZBvHc_8%5D.webm",
+            "seconds": 1730,
+            "format": "WebM",
             "playable": true,
-            "sizeMB": 174
+            "sizeMB": 61
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "limmysshow_240p",
-              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
-              "file": "showshow/Limmys Show Series 3 Episode 6 [4BQZZBvHc_8].webm",
-              "name": "showshow/Limmys Show Series 3 Episode 6 [4BQZZBvHc_8]",
-              "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20Series%203%20Episode%206%20%5B4BQZZBvHc_8%5D.webm",
-              "seconds": 1730,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 61
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -379,6 +366,19 @@
               "format": "WebM",
               "playable": true,
               "sizeMB": 53
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "limmysshow_240p",
+              "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+              "file": "dcdc/Limmy's Show - Series 2 Episode 6 - Director's Commentary [e4m0DsMHi3c].webm",
+              "name": "dcdc/Limmy's Show - Series 2 Episode 6 - Director's Commentary [e4m0DsMHi3c]",
+              "url": "https://archive.org/download/limmysshow_240p/dcdc%2FLimmy's%20Show%20-%20Series%202%20Episode%206%20-%20Director's%20Commentary%20%5Be4m0DsMHi3c%5D.webm",
+              "seconds": 1734,
+              "format": "WebM",
+              "playable": true,
+              "sizeMB": 47
             }
           ]
         }
@@ -391,120 +391,48 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2011-02-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e01.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e01.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e01.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1740,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 176
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2011-02-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e02.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e02.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e02.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1735,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 174
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2011-03-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e03.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e03.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e03.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1748,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 176
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2011-03-10",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e04.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e04.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e04.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1744,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 176
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2011-03-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e05.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e05.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e05.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1743,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 175
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2011-03-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "limmys.show.576p",
-            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
-            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e06.576p.DVDRIP_GIRLDONG.mp4",
-            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e06.576p.DVDRIP_GIRLDONG",
-            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e06.576p.DVDRIP_GIRLDONG.mp4",
-            "seconds": 1734,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 176
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "star-trek-enterprise",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-14T04:28:52.564Z",
+  "matchedAt": "2026-10-14T05:18:44.873Z",
   "tvmaze": {
     "id": 714,
     "name": "Star Trek: Enterprise",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 98,
-    "live": 1,
-    "review": 29,
-    "missing": 68,
-    "pct": 31
+    "live": 0,
+    "review": 28,
+    "missing": 70,
+    "pct": 29
   },
   "seasons": [
     {
@@ -118,21 +118,8 @@
           "number": 6,
           "name": "Terra Nova",
           "airdate": "2001-10-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
-            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
-            "file": "Star Trek Enterprise 1x06 Terra Nova (La Colonie Perdue) multilang.mp4",
-            "name": "Star Trek Enterprise 1x06 Terra Nova (La Colonie Perdue) multilang",
-            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x06%20Terra%20Nova%20(La%20Colonie%20Perdue)%20multilang.mp4",
-            "seconds": 2671,
-            "format": "h.264",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 268
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -441,21 +428,8 @@
           "number": 22,
           "name": "Vox Sola",
           "airdate": "2002-05-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
-            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
-            "file": "Star Trek Enterprise 1x22 Passager Clandestin.mp4",
-            "name": "Star Trek Enterprise 1x22 Passager Clandestin",
-            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x22%20Passager%20Clandestin.mp4",
-            "seconds": 2553,
-            "format": "MPEG4",
-            "playable": true,
-            "langRisk": true,
-            "sizeMB": 325
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

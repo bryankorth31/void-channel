@@ -1,0 +1,74 @@
+{
+  "show": "The Dinah Shore Chevy Show",
+  "slug": "the-dinah-shore-chevy-show",
+  "type": "Classic TV",
+  "network": "NBC",
+  "matchedAt": "2026-10-14T05:19:08.782Z",
+  "tvmaze": {
+    "id": 10603,
+    "name": "The Dinah Shore Chevy Show",
+    "runtime": 60,
+    "premiered": "1956-11-02",
+    "network": "NBC"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 1,
+    "missing": 2,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "November 2, 1956",
+          "airdate": "1956-11-02",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"November 2, 1956\" (0.61)",
+            "item": "TheDinahShoreChevyShow1November1959",
+            "itemTitle": "''The Dinah Shore Chevy Show'' - 1 November 1959",
+            "file": "The Dinah Shore Chevy Show - 1 November 1959.mp4",
+            "name": "The Dinah Shore Chevy Show - 1 November 1959",
+            "url": "https://archive.org/download/TheDinahShoreChevyShow1November1959/The%20Dinah%20Shore%20Chevy%20Show%20-%201%20November%201959.mp4",
+            "seconds": 3533,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 368
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 26,
+          "name": "Mar 29, 1959",
+          "airdate": "1959-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 18,
+          "name": "Swingin' at The Summit",
+          "airdate": "1961-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

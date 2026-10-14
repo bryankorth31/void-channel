@@ -3,7 +3,7 @@
   "slug": "moonlighting",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:58.889Z",
+  "matchedAt": "2026-10-14T05:18:56.361Z",
   "tvmaze": {
     "id": 1487,
     "name": "Moonlighting",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 67,
-    "live": 25,
-    "review": 3,
-    "missing": 39,
-    "pct": 42
+    "live": 17,
+    "review": 7,
+    "missing": 43,
+    "pct": 36
   },
   "seasons": [
     {
@@ -46,20 +46,8 @@
           "number": 2,
           "name": "Moonlighting",
           "airdate": "1985-03-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "sk_20251022",
-            "itemTitle": "Moonlighting",
-            "file": "Moonlighting S01E02 Gunfight at the So So Corral.mp4",
-            "name": "Moonlighting S01E02 Gunfight at the So So Corral",
-            "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E02%20Gunfight%20at%20the%20So%20So%20Corral.mp4",
-            "seconds": 3420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 161
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -80,21 +68,7 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Gunfight at the So-So Corral\" (1.00)",
-              "item": "sk_20251022",
-              "itemTitle": "Moonlighting",
-              "file": "Moonlighting S01E02 Gunfight at the So So Corral.mp4",
-              "name": "Moonlighting S01E02 Gunfight at the So So Corral",
-              "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E02%20Gunfight%20at%20the%20So%20So%20Corral.mp4",
-              "seconds": 3420,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 161
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -120,88 +94,24 @@
           "number": 5,
           "name": "The Next Murder You Hear",
           "airdate": "1985-03-19",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "sk_20251022",
-            "itemTitle": "Moonlighting",
-            "file": "Moonlighting S01E05 Next Stop Murder.mp4",
-            "name": "Moonlighting S01E05 Next Stop Murder",
-            "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E05%20Next%20Stop%20Murder.mp4",
-            "seconds": 3368,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 164
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Next Murder You Hear\" (0.95)",
-              "item": "sk_20251022",
-              "itemTitle": "Moonlighting",
-              "file": "Moonlighting S01E04The Next Murder You Hear.mp4",
-              "name": "Moonlighting S01E04The Next Murder You Hear",
-              "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E04The%20Next%20Murder%20You%20Hear.mp4",
-              "seconds": 3499,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 172
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Next Stop Murder",
           "airdate": "1985-03-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "sk_20251022",
-            "itemTitle": "Moonlighting",
-            "file": "Moonlighting S01E06 The Murder's in the Mail.mp4",
-            "name": "Moonlighting S01E06 The Murder's in the Mail",
-            "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E06%20The%20Murder's%20in%20the%20Mail.mp4",
-            "seconds": 2741,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 137
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Next Stop Murder\" (1.00)",
-              "item": "sk_20251022",
-              "itemTitle": "Moonlighting",
-              "file": "Moonlighting S01E05 Next Stop Murder.mp4",
-              "name": "Moonlighting S01E05 Next Stop Murder",
-              "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E05%20Next%20Stop%20Murder.mp4",
-              "seconds": 3368,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 164
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
           "name": "The Murder's in the Mail",
           "airdate": "1985-04-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Murder's in the Mail\" (1.00)",
-            "item": "sk_20251022",
-            "itemTitle": "Moonlighting",
-            "file": "Moonlighting S01E06 The Murder's in the Mail.mp4",
-            "name": "Moonlighting S01E06 The Murder's in the Mail",
-            "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E06%20The%20Murder's%20in%20the%20Mail.mp4",
-            "seconds": 2741,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 137
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -213,9 +123,9 @@
           "number": 1,
           "name": "Brother, Can You Spare a Blonde?",
           "airdate": "1985-09-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sk_20251022",
             "itemTitle": "Moonlighting",
@@ -429,9 +339,9 @@
           "number": 13,
           "name": "In God We Strongly Suspect",
           "airdate": "1986-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sk_20251022",
             "itemTitle": "Moonlighting",
@@ -550,9 +460,9 @@
           "number": 5,
           "name": "All Creatures Great and ... Not So Great",
           "airdate": "1986-11-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sk_20251022",
             "itemTitle": "Moonlighting",
@@ -674,9 +584,9 @@
           "number": 13,
           "name": "Maddie's Turn to Cry (3)",
           "airdate": "1987-03-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sk_20251022",
             "itemTitle": "Moonlighting",
@@ -694,9 +604,9 @@
           "number": 14,
           "name": "I Am Curious... Maddie (4)",
           "airdate": "1987-03-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sk_20251022",
             "itemTitle": "Moonlighting",

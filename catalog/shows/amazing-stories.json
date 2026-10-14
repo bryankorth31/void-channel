@@ -3,7 +3,7 @@
   "slug": "amazing-stories",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:29:00.524Z",
+  "matchedAt": "2026-10-14T05:18:59.545Z",
   "tvmaze": {
     "id": 1122,
     "name": "Amazing Stories",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 45,
-    "live": 39,
-    "review": 5,
+    "live": 30,
+    "review": 14,
     "missing": 1,
     "pct": 98
   },
@@ -56,7 +56,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 1 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories101-GhostTrain.mp4",
@@ -73,37 +73,37 @@
           "number": 2,
           "name": "The Main Attraction",
           "airdate": "1985-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "amazing-stories-1985-1987-complete-series",
-            "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
-            "file": "Amazing Stories (1985) - S01E02 - The Main Attraction.mp4",
-            "name": "Amazing Stories (1985) - S01E02 - The Main Attraction",
-            "url": "https://archive.org/download/amazing-stories-1985-1987-complete-series/Amazing%20Stories%20(1985)%20-%20S01E02%20-%20The%20Main%20Attraction.mp4",
-            "seconds": 1480,
+            "conf": 0.8,
+            "why": "S/E in filename",
+            "item": "apple-tv-original-series-amazing-stories-2000-season-01",
+            "itemTitle": "Apple Tv Original Series Amazing Stories (2000) Season 01,Created By: Steven Spielberg, The Series Was Produced For Apple TV+ And It's Executive Producers For The Series Included Spielberg, Edward Kitsis, Adam Horowitz, Darryl Frank, And Justin Falvey.",
+            "file": "Amazing Stories (2020) S01E02 The Heat.mp4",
+            "name": "Amazing Stories (2020) S01E02 The Heat",
+            "url": "https://archive.org/download/apple-tv-original-series-amazing-stories-2000-season-01/Amazing%20Stories%20(2020)%20S01E02%20The%20Heat.mp4",
+            "seconds": 3186,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 232
+            "sizeMB": 888
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "apple-tv-original-series-amazing-stories-2000-season-01",
-              "itemTitle": "Apple Tv Original Series Amazing Stories (2000) Season 01,Created By: Steven Spielberg, The Series Was Produced For Apple TV+ And It's Executive Producers For The Series Included Spielberg, Edward Kitsis, Adam Horowitz, Darryl Frank, And Justin Falvey.",
-              "file": "Amazing Stories (2020) S01E02 The Heat.mp4",
-              "name": "Amazing Stories (2020) S01E02 The Heat",
-              "url": "https://archive.org/download/apple-tv-original-series-amazing-stories-2000-season-01/Amazing%20Stories%20(2020)%20S01E02%20The%20Heat.mp4",
-              "seconds": 3186,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "amazing-stories-1985-1987-complete-series",
+              "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
+              "file": "Amazing Stories (1985) - S01E02 - The Main Attraction.mp4",
+              "name": "Amazing Stories (1985) - S01E02 - The Main Attraction",
+              "url": "https://archive.org/download/amazing-stories-1985-1987-complete-series/Amazing%20Stories%20(1985)%20-%20S01E02%20-%20The%20Main%20Attraction.mp4",
+              "seconds": 1480,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 888
+              "sizeMB": 232
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 2 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories103-AlamoJobe.mp4",
@@ -113,19 +113,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 154
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The Main Attraction\" (0.68)",
-              "item": "AmazingStories",
-              "itemTitle": "Amazing Stories",
-              "file": "AmazingStories102-TheMainAttraction.mp4",
-              "name": "AmazingStories102-TheMainAttraction",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories102-TheMainAttraction.mp4",
-              "seconds": 1480,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 153
             }
           ]
         },
@@ -150,7 +137,7 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 3 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 3 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories104-MummyDaddy.mp4",
@@ -197,7 +184,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 4 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 4 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories107-FineTuning.mp4",
@@ -217,7 +204,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 16 in \"Amazing Stories\"",
+            "why": "sequence guess: file 5 of 13 in \"Amazing Stories\"",
             "item": "AmazingStories",
             "itemTitle": "Amazing Stories",
             "file": "AmazingStories109-GuiltTrip.mp4",
@@ -264,7 +251,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 6 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 6 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories111-Santa85.mp4",
@@ -298,7 +285,7 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 7 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 7 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories113-TheSitter.mp4",
@@ -345,7 +332,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 8 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
               "file": "AmazingStories119-MirrorMirror.mp4",
@@ -379,13 +366,13 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 9 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 9 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
-              "file": "AmazingStories120-SecretCinema.mp4",
-              "name": "AmazingStories120-SecretCinema",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories120-SecretCinema.mp4",
-              "seconds": 1482,
+              "file": "AmazingStories121-HellToupee.mp4",
+              "name": "AmazingStories121-HellToupee",
+              "url": "https://archive.org/download/AmazingStories/AmazingStories121-HellToupee.mp4",
+              "seconds": 1483,
               "format": "h.264",
               "playable": true,
               "sizeMB": 154
@@ -426,13 +413,13 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 10 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 10 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
-              "file": "AmazingStories121-HellToupee.mp4",
-              "name": "AmazingStories121-HellToupee",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories121-HellToupee.mp4",
-              "seconds": 1483,
+              "file": "AmazingStories122-TheDoll.mp4",
+              "name": "AmazingStories122-TheDoll",
+              "url": "https://archive.org/download/AmazingStories/AmazingStories122-TheDoll.mp4",
+              "seconds": 1481,
               "format": "h.264",
               "playable": true,
               "sizeMB": 154
@@ -460,16 +447,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 11 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 11 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
-              "file": "AmazingStories122-TheDoll.mp4",
-              "name": "AmazingStories122-TheDoll",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories122-TheDoll.mp4",
-              "seconds": 1481,
-              "format": "h.264",
+              "file": "AmazingStories214-BlueManDown.m4v",
+              "name": "AmazingStories214-BlueManDown",
+              "url": "https://archive.org/download/AmazingStories/AmazingStories214-BlueManDown.m4v",
+              "seconds": 1388,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 154
+              "sizeMB": 173
             }
           ]
         },
@@ -494,16 +481,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 12 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 12 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
-              "file": "AmazingStories213-LaneChange.m4v",
-              "name": "AmazingStories213-LaneChange",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories213-LaneChange.m4v",
-              "seconds": 1310,
+              "file": "AmazingStories215-The21InchSun.m4v",
+              "name": "AmazingStories215-The21InchSun",
+              "url": "https://archive.org/download/AmazingStories/AmazingStories215-The21InchSun.m4v",
+              "seconds": 1313,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 123
+              "sizeMB": 435
             }
           ]
         },
@@ -528,16 +515,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 13 of 16 in \"Amazing Stories\"",
+              "why": "sequence guess: file 13 of 13 in \"Amazing Stories\"",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
-              "file": "AmazingStories214-BlueManDown.m4v",
-              "name": "AmazingStories214-BlueManDown",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories214-BlueManDown.m4v",
-              "seconds": 1388,
+              "file": "AmazingStories221-MissStardust.m4v",
+              "name": "AmazingStories221-MissStardust",
+              "url": "https://archive.org/download/AmazingStories/AmazingStories221-MissStardust.m4v",
+              "seconds": 1448,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 173
+              "sizeMB": 352
             }
           ]
         },
@@ -560,19 +547,6 @@
             "sizeMB": 210
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 16 in \"Amazing Stories\"",
-              "item": "AmazingStories",
-              "itemTitle": "Amazing Stories",
-              "file": "AmazingStories215-The21InchSun.m4v",
-              "name": "AmazingStories215-The21InchSun",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories215-The21InchSun.m4v",
-              "seconds": 1313,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 435
-            },
             {
               "conf": 0.55,
               "why": "title ~ \"No Day at the Beach\" (0.62)",
@@ -609,19 +583,6 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 15 of 16 in \"Amazing Stories\"",
-              "item": "AmazingStories",
-              "itemTitle": "Amazing Stories",
-              "file": "AmazingStories216-FamilyDog.m4v",
-              "name": "AmazingStories216-FamilyDog",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories216-FamilyDog.m4v",
-              "seconds": 1325,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 567
-            },
-            {
-              "conf": 0.55,
               "why": "title ~ \"One for the Road\" (0.60)",
               "item": "AmazingStories",
               "itemTitle": "Amazing Stories",
@@ -654,19 +615,6 @@
             "sizeMB": 165
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 16 in \"Amazing Stories\"",
-              "item": "AmazingStories",
-              "itemTitle": "Amazing Stories",
-              "file": "AmazingStories221-MissStardust.m4v",
-              "name": "AmazingStories221-MissStardust",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories221-MissStardust.m4v",
-              "seconds": 1448,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 352
-            },
             {
               "conf": 0.55,
               "why": "title ~ \"Gather Ye Acorns\" (0.62)",
@@ -774,9 +722,9 @@
           "number": 20,
           "name": "Secret Cinema",
           "airdate": "1986-04-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1001,9 +949,9 @@
           "number": 5,
           "name": "You Gotta Believe Me",
           "airdate": "1986-10-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1015,21 +963,7 @@
             "playable": true,
             "sizeMB": 158
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"You Gotta Believe Me\" (0.67)",
-              "item": "AmazingStories",
-              "itemTitle": "Amazing Stories",
-              "file": "AmazingStories205-YouGottaBelieveMe.m4v",
-              "name": "AmazingStories205-YouGottaBelieveMe",
-              "url": "https://archive.org/download/AmazingStories/AmazingStories205-YouGottaBelieveMe.m4v",
-              "seconds": 1315,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 124
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -1055,9 +989,9 @@
           "number": 7,
           "name": "Life on Death Row",
           "airdate": "1986-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1097,9 +1031,9 @@
           "number": 9,
           "name": "Thanksgiving",
           "airdate": "1986-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1151,9 +1085,9 @@
           "number": 11,
           "name": "What If...?",
           "airdate": "1986-12-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1191,9 +1125,9 @@
           "number": 13,
           "name": "Lane Change",
           "airdate": "1987-01-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1211,9 +1145,9 @@
           "number": 14,
           "name": "Blue Man Down",
           "airdate": "1987-01-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",
@@ -1305,9 +1239,9 @@
           "number": 18,
           "name": "Such Interesting Neighbors",
           "airdate": "1987-03-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "amazing-stories-1985-1987-complete-series",
             "itemTitle": "Amazing Stories (1985-1987) Complete Series, Genre: Anthology Fantasy Science-Fiction Comedy Drama,This Series Originally Ran On NBC Network, In The United States From September 29, 1985, To April 10, 1987",

@@ -3,7 +3,7 @@
   "slug": "the-drinky-crow-show",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T04:28:49.425Z",
+  "matchedAt": "2026-10-14T05:18:38.859Z",
   "tvmaze": {
     "id": 5022,
     "name": "The Drinky Crow Show",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 10,
     "live": 0,
-    "review": 9,
-    "missing": 1,
-    "pct": 90
+    "review": 8,
+    "missing": 2,
+    "pct": 80
   },
   "seasons": [
     {
@@ -109,20 +109,8 @@
           "number": 5,
           "name": "Old Girlfriend",
           "airdate": "2008-12-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Old Girlfriend\" (0.95)",
-            "item": "the-drinky-crow-show",
-            "itemTitle": "The Drinky Crow - Full Series",
-            "file": "The Drinky Crow Show 05 Old Girlfriend (ws) [DrinkyCrow].mp4",
-            "name": "The Drinky Crow Show 05 Old Girlfriend (ws) [DrinkyCrow]",
-            "url": "https://archive.org/download/the-drinky-crow-show/The%20Drinky%20Crow%20Show%2005%20Old%20Girlfriend%20(ws)%20%5BDrinkyCrow%5D.mp4",
-            "seconds": 707,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 70
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

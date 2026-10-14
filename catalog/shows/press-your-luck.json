@@ -3,7 +3,7 @@
   "slug": "press-your-luck",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:29:04.421Z",
+  "matchedAt": "2026-10-14T05:19:05.249Z",
   "tvmaze": {
     "id": 41827,
     "name": "Press Your Luck",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 72,
-    "live": 6,
-    "review": 2,
-    "missing": 64,
-    "pct": 11
+    "live": 2,
+    "review": 4,
+    "missing": 66,
+    "pct": 8
   },
   "seasons": [
     {
@@ -95,20 +95,8 @@
           "number": 1,
           "name": "I'm Not Crying, You're Crying",
           "airdate": "2020-05-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"I'm Not Crying, You're Crying\" (0.95)",
-            "item": "pyl-s04e02",
-            "itemTitle": "Press Your Luck - S04E02 (July 14, 2022)",
-            "file": "The New Press Your Luck 2019 (Season 4 Episode 2)_  I'm Not Crying, You're Crying Part II.mp4",
-            "name": "The New Press Your Luck 2019 (Season 4 Episode 2)_  I'm Not Crying, You're Crying Part II",
-            "url": "https://archive.org/download/pyl-s04e02/The%20New%20Press%20Your%20Luck%202019%20(Season%204%20Episode%202)_%20%20I'm%20Not%20Crying%2C%20You're%20Crying%20Part%20II.mp4",
-            "seconds": 2553,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 630
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -285,9 +273,9 @@
           "number": 1,
           "name": "It's Gettin' Hot In Here",
           "airdate": "2022-07-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "pyl-s04e01",
             "itemTitle": "Press Your Luck - S04E01 (July 7, 2022)",
@@ -305,29 +293,17 @@
           "number": 2,
           "name": "I'm Not Crying, You're Crying Part II",
           "airdate": "2022-07-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pyl-s04e02",
-            "itemTitle": "Press Your Luck - S04E02 (July 14, 2022)",
-            "file": "The New Press Your Luck 2019 (Season 4 Episode 2)_  I'm Not Crying, You're Crying Part II.mp4",
-            "name": "The New Press Your Luck 2019 (Season 4 Episode 2)_  I'm Not Crying, You're Crying Part II",
-            "url": "https://archive.org/download/pyl-s04e02/The%20New%20Press%20Your%20Luck%202019%20(Season%204%20Episode%202)_%20%20I'm%20Not%20Crying%2C%20You're%20Crying%20Part%20II.mp4",
-            "seconds": 2553,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 630
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Polar Bear",
           "airdate": "2022-07-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "pyl-s04e03",
             "itemTitle": "Press Your Luck - S04E03 (July 28, 2022)",
@@ -345,9 +321,9 @@
           "number": 4,
           "name": "Oh Mylanta!",
           "airdate": "2022-08-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "pyl-s04e04",
             "itemTitle": "Press Your Luck - S04E04 (August 4, 2022)",

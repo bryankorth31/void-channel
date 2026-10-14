@@ -3,7 +3,7 @@
   "slug": "merlin",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T04:29:06.399Z",
+  "matchedAt": "2026-10-14T05:19:09.478Z",
   "tvmaze": {
     "id": 789,
     "name": "Merlin",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 65,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 64,
-    "pct": 2
+    "missing": 65,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,20 +26,8 @@
           "number": 1,
           "name": "The Dragon's Call",
           "airdate": "2008-09-20",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "merlinsecretsnmagicviddiariesetc",
-            "itemTitle": "Merlin (2008) EXTRAS",
-            "file": "Secrets & Magic/1x01 - Merlin Time.mp4",
-            "name": "Secrets & Magic/1x01 - Merlin Time",
-            "url": "https://archive.org/download/merlinsecretsnmagicviddiariesetc/Secrets%20%26%20Magic%2F1x01%20-%20Merlin%20Time.mp4",
-            "seconds": 2914,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

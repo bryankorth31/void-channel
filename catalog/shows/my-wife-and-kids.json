@@ -3,7 +3,7 @@
   "slug": "my-wife-and-kids",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:45.520Z",
+  "matchedAt": "2026-10-14T05:18:31.464Z",
   "tvmaze": {
     "id": 952,
     "name": "My Wife and Kids",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 123,
-    "live": 105,
-    "review": 4,
-    "missing": 14,
-    "pct": 89
+    "live": 94,
+    "review": 13,
+    "missing": 16,
+    "pct": 87
   },
   "seasons": [
     {
@@ -126,9 +126,9 @@
           "number": 6,
           "name": "Working It",
           "airdate": "2001-04-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -140,21 +140,7 @@
             "playable": true,
             "sizeMB": 260
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Working It\" (0.95)",
-              "item": "my-wife-and-kids-complete-series_202511",
-              "itemTitle": "My Wife & Kids: The Complete Series",
-              "file": "My Wife & Kids S02E22 - Working Relationship.mp4",
-              "name": "My Wife & Kids S02E22 - Working Relationship",
-              "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S02E22%20-%20Working%20Relationship.mp4",
-              "seconds": 1270,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 252
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -639,9 +625,9 @@
           "number": 19,
           "name": "Failure to Communicate",
           "airdate": "2002-02-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -699,29 +685,17 @@
           "number": 22,
           "name": "Working Relationship",
           "airdate": "2002-03-20",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "my-wife-and-kids-complete-series_202511",
-            "itemTitle": "My Wife & Kids: The Complete Series",
-            "file": "My Wife & Kids S02E22 - Working Relationship.mp4",
-            "name": "My Wife & Kids S02E22 - Working Relationship",
-            "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S02E22%20-%20Working%20Relationship.mp4",
-            "seconds": 1270,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 252
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
           "name": "Jr. Kyle, Boy Genius",
           "airdate": "2002-03-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -852,9 +826,9 @@
           "number": 1,
           "name": "The Kyles Go to Hawaii (1)",
           "airdate": "2002-09-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -872,9 +846,9 @@
           "number": 2,
           "name": "The Kyles Go to Hawaii (2)",
           "airdate": "2002-09-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -892,9 +866,9 @@
           "number": 3,
           "name": "The Kyles Go to Hawaii (3)",
           "airdate": "2002-10-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -1012,9 +986,9 @@
           "number": 9,
           "name": "Sister Story",
           "airdate": "2002-11-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -1950,29 +1924,17 @@
           "number": 3,
           "name": "Child-Care Class",
           "airdate": "2004-09-28",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "my-wife-and-kids-complete-series_202511",
-            "itemTitle": "My Wife & Kids: The Complete Series",
-            "file": "My Wife & Kids S05E03 - Resolutions.mp4",
-            "name": "My Wife & Kids S05E03 - Resolutions",
-            "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E03%20-%20Resolutions.mp4",
-            "seconds": 1261,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 252
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Class Reunion",
           "airdate": "2004-10-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -2112,55 +2074,27 @@
             "playable": true,
             "sizeMB": 235
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Careful What You Wish For\" (0.95)",
-              "item": "my-wife-and-kids-complete-series_202511",
-              "itemTitle": "My Wife & Kids: The Complete Series",
-              "file": "My Wife & Kids S05E12 - Careful What You Wish For.mp4",
-              "name": "My Wife & Kids S05E12 - Careful What You Wish For",
-              "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E12%20-%20Careful%20What%20You%20Wish%20For.mp4",
-              "seconds": 1295,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 260
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
           "name": "They Call Me El Foosay",
           "airdate": "2005-01-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"They Call Me El Foosay\" (0.95)",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
-            "file": "My Wife & Kids S05E12 - Careful What You Wish For.mp4",
-            "name": "My Wife & Kids S05E12 - Careful What You Wish For",
-            "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E12%20-%20Careful%20What%20You%20Wish%20For.mp4",
-            "seconds": 1295,
+            "file": "My Wife & Kids S05E11 - They Call Me El Foosay.mp4",
+            "name": "My Wife & Kids S05E11 - They Call Me El Foosay",
+            "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E11%20-%20They%20Call%20Me%20El%20Foosay.mp4",
+            "seconds": 1301,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 260
+            "sizeMB": 235
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"They Call Me El Foosay\" (0.95)",
-              "item": "my-wife-and-kids-complete-series_202511",
-              "itemTitle": "My Wife & Kids: The Complete Series",
-              "file": "My Wife & Kids S05E11 - They Call Me El Foosay.mp4",
-              "name": "My Wife & Kids S05E11 - They Call Me El Foosay",
-              "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E11%20-%20They%20Call%20Me%20El%20Foosay.mp4",
-              "seconds": 1301,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 235
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,

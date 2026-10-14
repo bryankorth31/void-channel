@@ -3,7 +3,7 @@
   "slug": "smallville",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-14T04:28:53.563Z",
+  "matchedAt": "2026-10-14T05:18:46.548Z",
   "tvmaze": {
     "id": 435,
     "name": "Smallville",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 217,
     "live": 0,
-    "review": 2,
-    "missing": 215,
-    "pct": 1
+    "review": 1,
+    "missing": 216,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,20 +26,8 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2001-10-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Pilot\" (0.95)",
-            "item": "making-off-smallville-2001",
-            "itemTitle": "Making Off Smallville 2001",
-            "file": "SPECIALS/S00E01 - Unaired Pilot.mp4",
-            "name": "SPECIALS/S00E01 - Unaired Pilot",
-            "url": "https://archive.org/download/making-off-smallville-2001/SPECIALS%2FS00E01%20-%20Unaired%20Pilot.mp4",
-            "seconds": 3008,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 303
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

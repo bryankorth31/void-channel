@@ -3,7 +3,7 @@
   "slug": "i-claudius",
   "type": "Classic TV",
   "network": "BBC Two",
-  "matchedAt": "2026-10-14T04:29:06.438Z",
+  "matchedAt": "2026-10-14T05:19:09.617Z",
   "tvmaze": {
     "id": 1104,
     "name": "I, Claudius",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 13,
-    "live": 11,
-    "review": 2,
+    "live": 9,
+    "review": 4,
     "missing": 0,
     "pct": 100
   },
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "A Touch of Murder",
           "airdate": "1976-09-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "i-claudius-the-complete-series-1976",
             "itemTitle": "I, Claudius: The Complete Series (1976)",
@@ -126,9 +126,9 @@
           "number": 6,
           "name": "Some Justice",
           "airdate": "1976-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "i-claudius-the-complete-series-1976",
             "itemTitle": "I, Claudius: The Complete Series (1976)",

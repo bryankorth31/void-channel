@@ -3,7 +3,7 @@
   "slug": "the-inbetweeners",
   "type": "British and Beyond",
   "network": "E4",
-  "matchedAt": "2026-10-14T04:28:54.383Z",
+  "matchedAt": "2026-10-14T05:18:48.361Z",
   "tvmaze": {
     "id": 953,
     "name": "The Inbetweeners",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 18,
-    "live": 6,
-    "review": 0,
+    "live": 5,
+    "review": 1,
     "missing": 12,
     "pct": 33
   },
@@ -68,17 +68,18 @@
               "sizeMB": 194
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"First Day\" (0.95)",
-              "item": "episode-two-bunk-off",
-              "itemTitle": "The Inbetweeners - Season 1",
-              "file": "Episode One - First Day.mp4",
-              "name": "Episode One - First Day",
-              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20One%20-%20First%20Day.mp4",
-              "seconds": 1307,
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-inbetweeners-2008-s-01-e-01-first-day-576p-dvd-x-265-panda",
+              "itemTitle": "The Inbetweeners ( 2008) S 01 E 01 First Day ( 576p DVD X 265 Panda)",
+              "file": "The Inbetweeners (2008) - S01E01 - First Day (576p DVD x265 Panda).mp4",
+              "name": "The Inbetweeners (2008) - S01E01 - First Day (576p DVD x265 Panda)",
+              "url": "https://archive.org/download/the-inbetweeners-2008-s-01-e-01-first-day-576p-dvd-x-265-panda/The%20Inbetweeners%20(2008)%20-%20S01E01%20-%20First%20Day%20(576p%20DVD%20x265%20Panda).mp4",
+              "seconds": 1314,
               "format": "h.264",
-              "playable": true,
-              "sizeMB": 132
+              "playable": false,
+              "codecRisk": "video (x265)",
+              "sizeMB": 129
             }
           ]
         },
@@ -100,21 +101,7 @@
             "playable": true,
             "sizeMB": 143
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Bunk Off\" (0.95)",
-              "item": "episode-two-bunk-off",
-              "itemTitle": "The Inbetweeners - Season 1",
-              "file": "Episode Two - Bunk Off.mp4",
-              "name": "Episode Two - Bunk Off",
-              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Two%20-%20Bunk%20Off.mp4",
-              "seconds": 1438,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -134,29 +121,15 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Thorpe Park\" (0.95)",
-              "item": "episode-two-bunk-off",
-              "itemTitle": "The Inbetweeners - Season 1",
-              "file": "Episode Three - Thorpe Park.mp4",
-              "name": "Episode Three - Thorpe Park",
-              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Three%20-%20Thorpe%20Park.mp4",
-              "seconds": 1344,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Girlfriend",
           "airdate": "2008-05-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-inbetweeners-series1",
             "itemTitle": "The Inbetweeners - Series 1 (2008)",
@@ -168,21 +141,7 @@
             "playable": true,
             "sizeMB": 143
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Girlfriend\" (0.95)",
-              "item": "episode-two-bunk-off",
-              "itemTitle": "The Inbetweeners - Season 1",
-              "file": "Episode Four - Girlfriend.mp4",
-              "name": "Episode Four - Girlfriend",
-              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Four%20-%20Girlfriend.mp4",
-              "seconds": 1420,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -202,21 +161,7 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Caravan Club\" (0.95)",
-              "item": "episode-two-bunk-off",
-              "itemTitle": "The Inbetweeners - Season 1",
-              "file": "Episode Five - Caravan Club.mp4",
-              "name": "Episode Five - Caravan Club",
-              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Five%20-%20Caravan%20Club.mp4",
-              "seconds": 1352,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -236,21 +181,7 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Xmas Party\" (0.95)",
-              "item": "episode-two-bunk-off",
-              "itemTitle": "The Inbetweeners - Season 1",
-              "file": "Episode Six - Xmas Party.mp4",
-              "name": "Episode Six - Xmas Party",
-              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Six%20-%20Xmas%20Party.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            }
-          ]
+          "alternates": []
         }
       ]
     },

@@ -3,7 +3,7 @@
   "slug": "poldark",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T04:29:06.352Z",
+  "matchedAt": "2026-10-14T05:19:09.340Z",
   "tvmaze": {
     "id": 1678,
     "name": "Poldark",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 43,
-    "live": 41,
-    "review": 1,
-    "missing": 1,
-    "pct": 98
+    "live": 18,
+    "review": 0,
+    "missing": 25,
+    "pct": 42
   },
   "seasons": [
     {
@@ -40,34 +40,7 @@
             "playable": true,
             "sizeMB": 195
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 1.mp4",
-              "name": "Season 1 Episode 1",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%201.mp4",
-              "seconds": 3172,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1053
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E09.mp4",
-              "name": "Poldark 1975 S1E09",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E09.mp4",
-              "seconds": 3087,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 199
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -87,34 +60,7 @@
             "playable": true,
             "sizeMB": 211
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 2.mp4",
-              "name": "Season 1 Episode 2",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%202.mp4",
-              "seconds": 3170,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1052
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E10.mp4",
-              "name": "Poldark 1975 S1E10",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E10.mp4",
-              "seconds": 3108,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 219
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -134,34 +80,7 @@
             "playable": true,
             "sizeMB": 206
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 3.mp4",
-              "name": "Season 1 Episode 3",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%203.mp4",
-              "seconds": 3143,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1233
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E11.mp4",
-              "name": "Poldark 1975 S1E11",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E11.mp4",
-              "seconds": 3071,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 224
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -181,34 +100,7 @@
             "playable": true,
             "sizeMB": 206
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 4.mp4",
-              "name": "Season 1 Episode 4",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%204.mp4",
-              "seconds": 3171,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1052
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E12.mp4",
-              "name": "Poldark 1975 S1E12",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E12.mp4",
-              "seconds": 2944,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 229
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -228,34 +120,7 @@
             "playable": true,
             "sizeMB": 207
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 5.mp4",
-              "name": "Season 1 Episode 5",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%205.mp4",
-              "seconds": 3171,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1052
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E13.mp4",
-              "name": "Poldark 1975 S1E13",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E13.mp4",
-              "seconds": 3121,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 188
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -275,34 +140,7 @@
             "playable": true,
             "sizeMB": 185
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 6.mp4",
-              "name": "Season 1 Episode 6",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%206.mp4",
-              "seconds": 3172,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1244
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E14.mp4",
-              "name": "Poldark 1975 S1E14",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E14.mp4",
-              "seconds": 3078,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 212
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -322,34 +160,7 @@
             "playable": true,
             "sizeMB": 174
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 1 Episode 7.mp4",
-              "name": "Season 1 Episode 7",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%201%20Episode%207.mp4",
-              "seconds": 6516,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 2555
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E15.mp4",
-              "name": "Poldark 1975 S1E15",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E15.mp4",
-              "seconds": 3093,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 193
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -369,21 +180,7 @@
             "playable": true,
             "sizeMB": 196
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 8 in \"Poldark (1975) Season 1\"",
-              "item": "poldark-1975-season-1",
-              "itemTitle": "Poldark (1975) Season 1",
-              "file": "Poldark 1975 S1E16.mp4",
-              "name": "Poldark 1975 S1E16",
-              "url": "https://archive.org/download/poldark-1975-season-1/Poldark%201975%20S1E16.mp4",
-              "seconds": 3067,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 234
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -408,21 +205,7 @@
             "playable": true,
             "sizeMB": 113
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 1.mp4",
-              "name": "Season 2 Episode 1",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%201.mp4",
-              "seconds": 6782,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 2629
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -442,21 +225,7 @@
             "playable": true,
             "sizeMB": 132
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 2.mp4",
-              "name": "Season 2 Episode 2",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%202.mp4",
-              "seconds": 3182,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -476,21 +245,7 @@
             "playable": true,
             "sizeMB": 120
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 3.mp4",
-              "name": "Season 2 Episode 3",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%203.mp4",
-              "seconds": 3183,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -510,21 +265,7 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 4.mp4",
-              "name": "Season 2 Episode 4",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%204.mp4",
-              "seconds": 3182,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -544,21 +285,7 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 5.mp4",
-              "name": "Season 2 Episode 5",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%205.mp4",
-              "seconds": 3182,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -578,21 +305,7 @@
             "playable": true,
             "sizeMB": 119
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 6.mp4",
-              "name": "Season 2 Episode 6",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%206.mp4",
-              "seconds": 3182,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -612,21 +325,7 @@
             "playable": true,
             "sizeMB": 164
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 7.mp4",
-              "name": "Season 2 Episode 7",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%207.mp4",
-              "seconds": 3183,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -646,21 +345,7 @@
             "playable": true,
             "sizeMB": 228
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 8.mp4",
-              "name": "Season 2 Episode 8",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%208.mp4",
-              "seconds": 3183,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1234
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -680,21 +365,7 @@
             "playable": true,
             "sizeMB": 216
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "Masterpiece-Poldark",
-              "itemTitle": "MASTERPIECE: Poldark",
-              "file": "Season 2 Episode 9.mp4",
-              "name": "Season 2 Episode 9",
-              "url": "https://archive.org/download/Masterpiece-Poldark/Season%202%20Episode%209.mp4",
-              "seconds": 3162,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1226
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -725,160 +396,64 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2017-06-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 1.mp4",
-            "name": "Season 3 Episode 1",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%201.mp4",
-            "seconds": 6782,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2629
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2017-06-18",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 2.mp4",
-            "name": "Season 3 Episode 2",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%202.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2017-06-25",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 3.mp4",
-            "name": "Season 3 Episode 3",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%203.mp4",
-            "seconds": 3182,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1233
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2017-07-02",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 4.mp4",
-            "name": "Season 3 Episode 4",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%204.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2017-07-09",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 5.mp4",
-            "name": "Season 3 Episode 5",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%205.mp4",
-            "seconds": 3182,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2017-07-16",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 6.mp4",
-            "name": "Season 3 Episode 6",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%206.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Episode 7",
           "airdate": "2017-07-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 7.mp4",
-            "name": "Season 3 Episode 7",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%207.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Episode 8",
           "airdate": "2017-07-30",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 3 Episode 8.mp4",
-            "name": "Season 3 Episode 8",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%203%20Episode%208.mp4",
-            "seconds": 3162,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1226
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -898,160 +473,64 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2018-06-10",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 1.mp4",
-            "name": "Season 4 Episode 1",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%201.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2018-06-17",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 2.mp4",
-            "name": "Season 4 Episode 2",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%202.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2018-06-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 3.mp4",
-            "name": "Season 4 Episode 3",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%203.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2018-07-01",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 4.mp4",
-            "name": "Season 4 Episode 4",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%204.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2018-07-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 5.mp4",
-            "name": "Season 4 Episode 5",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%205.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2018-07-15",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 6.mp4",
-            "name": "Season 4 Episode 6",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%206.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Episode 7",
           "airdate": "2018-07-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 7.mp4",
-            "name": "Season 4 Episode 7",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%207.mp4",
-            "seconds": 3183,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Episode 8",
           "airdate": "2018-07-29",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 4 Episode 8.mp4",
-            "name": "Season 4 Episode 8",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%204%20Episode%208.mp4",
-            "seconds": 3162,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1226
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1063,160 +542,64 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2019-07-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 1.mp4",
-            "name": "Season 5 Episode 1",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%201.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2019-07-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 2.mp4",
-            "name": "Season 5 Episode 2",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%202.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2019-07-28",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 3.mp4",
-            "name": "Season 5 Episode 3",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%203.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2019-08-04",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 4.mp4",
-            "name": "Season 5 Episode 4",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%204.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2019-08-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 5.mp4",
-            "name": "Season 5 Episode 5",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%205.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2019-08-18",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 6.mp4",
-            "name": "Season 5 Episode 6",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%206.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Episode 7",
           "airdate": "2019-08-25",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 7.mp4",
-            "name": "Season 5 Episode 7",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%207.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Episode 8",
           "airdate": "2019-08-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "Masterpiece-Poldark",
-            "itemTitle": "MASTERPIECE: Poldark",
-            "file": "Season 5 Episode 8.mp4",
-            "name": "Season 5 Episode 8",
-            "url": "https://archive.org/download/Masterpiece-Poldark/Season%205%20Episode%208.mp4",
-            "seconds": 3166,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1227
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

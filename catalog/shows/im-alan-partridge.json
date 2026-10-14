@@ -3,7 +3,7 @@
   "slug": "im-alan-partridge",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-14T04:28:54.411Z",
+  "matchedAt": "2026-10-14T05:18:48.457Z",
   "tvmaze": {
     "id": 2575,
     "name": "I'm Alan Partridge",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 12,
-    "live": 1,
-    "review": 11,
+    "live": 0,
+    "review": 12,
     "missing": 0,
     "pct": 100
   },
@@ -73,34 +73,21 @@
           "number": 2,
           "name": "Alan Attraction",
           "airdate": "1997-11-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "ImAlanPartridgeSeason01Episode02AlanAttraction",
-            "itemTitle": "I'm Alan Partridge Season 01 Episode 02 Alan Attraction",
-            "file": "I'm Alan Partridge Season 01 Episode 02 - Alan Attraction.mp4",
-            "name": "I'm Alan Partridge Season 01 Episode 02 - Alan Attraction",
-            "url": "https://archive.org/download/ImAlanPartridgeSeason01Episode02AlanAttraction/I'm%20Alan%20Partridge%20Season%2001%20Episode%2002%20-%20Alan%20Attraction.mp4",
-            "seconds": 1745,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "im-alan-partridge-1997-s-1-ep-1",
+            "itemTitle": "I'm Alan Partridge (1997/2002 TV Sitcom)",
+            "file": "I'm Alan Partridge (2002) (S2, Ep 2).m4v",
+            "name": "I'm Alan Partridge (2002) (S2, Ep 2)",
+            "url": "https://archive.org/download/im-alan-partridge-1997-s-1-ep-1/I'm%20Alan%20Partridge%20(2002)%20(S2%2C%20Ep%202).m4v",
+            "seconds": 1725,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 182
+            "sizeMB": 385
           },
           "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "im-alan-partridge-1997-s-1-ep-1",
-              "itemTitle": "I'm Alan Partridge (1997/2002 TV Sitcom)",
-              "file": "I'm Alan Partridge (2002) (S2, Ep 2).m4v",
-              "name": "I'm Alan Partridge (2002) (S2, Ep 2)",
-              "url": "https://archive.org/download/im-alan-partridge-1997-s-1-ep-1/I'm%20Alan%20Partridge%20(2002)%20(S2%2C%20Ep%202).m4v",
-              "seconds": 1725,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 385
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",

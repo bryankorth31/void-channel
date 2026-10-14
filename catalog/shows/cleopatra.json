@@ -3,7 +3,7 @@
   "slug": "cleopatra",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:29:06.261Z",
+  "matchedAt": "2026-10-14T05:19:09.072Z",
   "tvmaze": {
     "id": 18411,
     "name": "Cleopatra",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 2,
     "live": 0,
-    "review": 1,
-    "missing": 1,
-    "pct": 50
+    "review": 0,
+    "missing": 2,
+    "pct": 0
   },
   "seasons": [
     {
@@ -34,20 +34,8 @@
           "number": 2,
           "name": "Part 2",
           "airdate": "1999-05-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Part 2\" (0.95)",
-            "item": "19991023-2145-telecinco-cleopatra-1999-parte-2",
-            "itemTitle": "[1999-10-23 21:45] Cleopatra (1999) (Parte 2) [Telecinco] [Teletexto incluído]",
-            "file": "6-atv [1999-10-23 21-45] [Telecinco] [Cleopatra (1999) (2ª parte)].mp4",
-            "name": "6-atv [1999-10-23 21-45] [Telecinco] [Cleopatra (1999) (2ª parte)]",
-            "url": "https://archive.org/download/19991023-2145-telecinco-cleopatra-1999-parte-2/6-atv%20%5B1999-10-23%2021-45%5D%20%5BTelecinco%5D%20%5BCleopatra%20(1999)%20(2%C2%AA%20parte)%5D.mp4",
-            "seconds": 5256,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 763
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

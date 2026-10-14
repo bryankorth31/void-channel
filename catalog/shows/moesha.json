@@ -3,7 +3,7 @@
   "slug": "moesha",
   "type": "90s Sitcoms",
   "network": "UPN",
-  "matchedAt": "2026-10-14T04:28:43.530Z",
+  "matchedAt": "2026-10-14T05:18:28.376Z",
   "tvmaze": {
     "id": 7703,
     "name": "Moesha",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 127,
     "live": 26,
-    "review": 1,
-    "missing": 100,
-    "pct": 21
+    "review": 0,
+    "missing": 101,
+    "pct": 20
   },
   "seasons": [
     {
@@ -837,20 +837,8 @@
           "number": 2,
           "name": "Homecoming",
           "airdate": "1998-10-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Homecoming\" (1.00)",
-            "item": "UPN15WLYHMay291999",
-            "itemTitle": "Blank VHS Tape: Last Man Standing, UPN Sitcoms, Misc. (1999)",
-            "file": "Moesha - Homecoming.mp4",
-            "name": "Moesha - Homecoming",
-            "url": "https://archive.org/download/UPN15WLYHMay291999/Moesha%20-%20Homecoming.mp4",
-            "seconds": 1800,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 654
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

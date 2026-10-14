@@ -3,7 +3,7 @@
   "slug": "mad-about-you",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:29:31.429Z",
+  "matchedAt": "2026-10-14T05:18:28.076Z",
   "tvmaze": {
     "id": 1115,
     "name": "Mad About You",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 176,
-    "live": 155,
-    "review": 17,
-    "missing": 4,
-    "pct": 98
+    "live": 133,
+    "review": 38,
+    "missing": 5,
+    "pct": 97
   },
   "seasons": [
     {
@@ -61,9 +61,9 @@
           "number": 2,
           "name": "Sofa's Choice",
           "airdate": "1992-09-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -89,20 +89,6 @@
               "playable": false,
               "codecRisk": "audio (DDP2)",
               "sizeMB": 134
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Sofa's Choice\" (0.95)",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S01E04.Sofas.Choice.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S01E04.Sofas.Choice.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S01E04.Sofas.Choice.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1359,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 137
             }
           ]
         },
@@ -161,20 +147,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S01E04.Sofas.Choice.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S01E04.Sofas.Choice.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S01E04.Sofas.Choice.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1359,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 137
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Out of the Past\" (0.95)",
               "item": "mad.about.you.1992.complete",
@@ -194,9 +166,9 @@
           "number": 5,
           "name": "Paul in the Family",
           "airdate": "1992-10-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -222,20 +194,6 @@
               "playable": false,
               "codecRisk": "audio (DDP2)",
               "sizeMB": 136
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Paul in the Family\" (0.95)",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S01E06.Paul.In.The.Family.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S01E06.Paul.In.The.Family.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S01E06.Paul.In.The.Family.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1311,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 131
             }
           ]
         },
@@ -258,20 +216,6 @@
             "sizeMB": 129
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S01E06.Paul.In.The.Family.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S01E06.Paul.In.The.Family.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S01E06.Paul.In.The.Family.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1311,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 131
-            },
             {
               "conf": 0.6,
               "why": "title ~ \"I'm Just So Happy for You\" (0.76)",
@@ -441,7 +385,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -613,9 +557,9 @@
           "number": 15,
           "name": "The Wedding Affair",
           "airdate": "1993-02-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -629,7 +573,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1087,9 +1031,9 @@
           "number": 4,
           "name": "Married to the Job",
           "airdate": "1993-10-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -1103,7 +1047,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1122,9 +1066,9 @@
           "number": 5,
           "name": "So I Married a Hair Murderer",
           "airdate": "1993-10-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -1138,7 +1082,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1157,9 +1101,9 @@
           "number": 6,
           "name": "The Unplanned Child",
           "airdate": "1993-10-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -1173,7 +1117,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1500,20 +1444,6 @@
               "playable": false,
               "codecRisk": "audio (DDP2)",
               "sizeMB": 137
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Virtual Reality\" (0.95)",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S07E13.Virtual.Reality.II.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S07E13.Virtual.Reality.II.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E13.Virtual.Reality.II.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1332,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 133
             }
           ]
         },
@@ -1521,9 +1451,9 @@
           "number": 16,
           "name": "Cold Feet",
           "airdate": "1994-02-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -1537,7 +1467,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1677,7 +1607,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1766,9 +1696,9 @@
           "number": 23,
           "name": "Up All Night",
           "airdate": "1994-05-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -1782,7 +1712,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1876,9 +1806,9 @@
           "number": 1,
           "name": "Escape from New York",
           "airdate": "1994-09-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -1892,7 +1822,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -1953,20 +1883,6 @@
               "playable": false,
               "codecRisk": "audio (DDP2)",
               "sizeMB": 142
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Home\" (0.95)",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S06E01.Coming.Home.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S06E01.Coming.Home.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S06E01.Coming.Home.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1345,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 134
             }
           ]
         },
@@ -2079,9 +1995,9 @@
           "number": 6,
           "name": "Pandora's Box",
           "airdate": "1994-11-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -2095,7 +2011,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -2569,9 +2485,9 @@
           "number": 20,
           "name": "Money Changes Everything",
           "airdate": "1995-04-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -2585,7 +2501,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -3141,9 +3057,9 @@
           "number": 13,
           "name": "Hot and Cold",
           "airdate": "1996-02-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -3157,7 +3073,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -3733,9 +3649,9 @@
           "number": 5,
           "name": "Burt's Building",
           "airdate": "1996-10-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -3749,7 +3665,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -4293,9 +4209,9 @@
           "number": 21,
           "name": "Guardianhood",
           "airdate": "1997-05-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -4309,7 +4225,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -4397,9 +4313,9 @@
           "number": 1,
           "name": "Coming Home",
           "airdate": "1997-09-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -4411,22 +4327,7 @@
             "playable": true,
             "sizeMB": 62
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S06E01.Coming.Home.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S06E01.Coming.Home.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S06E01.Coming.Home.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1345,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 134
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -4992,9 +4893,9 @@
           "number": 20,
           "name": "Mother's Day",
           "airdate": "1998-05-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5008,7 +4909,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5110,21 +5011,8 @@
           "number": 1,
           "name": "Season Opener",
           "airdate": "1998-09-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DDP2)",
-            "item": "mad.about.you.1992.complete",
-            "itemTitle": "Mad About You (1992) (Complete)",
-            "file": "Mad.About.You.S07E01.Season.Opener.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-            "name": "Mad.About.You.S07E01.Season.Opener.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-            "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E01.Season.Opener.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-            "seconds": 1293,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DDP2)",
-            "sizeMB": 126
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5203,7 +5091,7 @@
           "airdate": "1998-11-03",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: audio (DDP2)",
             "item": "mad.about.you.1992.complete",
             "itemTitle": "Mad About You (1992) (Complete)",
@@ -5292,9 +5180,9 @@
           "number": 7,
           "name": "The Thanksgiving Show",
           "airdate": "1998-11-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5308,7 +5196,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5327,9 +5215,9 @@
           "number": 8,
           "name": "The Buried Fight",
           "airdate": "1998-12-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5343,7 +5231,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5467,9 +5355,9 @@
           "number": 12,
           "name": "Valentine's Day",
           "airdate": "1999-02-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5483,7 +5371,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5516,22 +5404,7 @@
             "playable": true,
             "sizeMB": 56
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S07E13.Virtual.Reality.II.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S07E13.Virtual.Reality.II.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E13.Virtual.Reality.II.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1332,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 133
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
@@ -5607,9 +5480,9 @@
           "number": 16,
           "name": "Millennium Bug",
           "airdate": "1999-04-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5623,7 +5496,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5733,9 +5606,9 @@
           "number": 20,
           "name": "The Dirty Little Secret",
           "airdate": "1999-05-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5749,7 +5622,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5889,9 +5762,9 @@
           "number": 6,
           "name": "Monkeys, Lies and Withholding",
           "airdate": "2019-11-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad.about.you.1992.complete",
             "itemTitle": "Mad About You (1992) (Complete)",

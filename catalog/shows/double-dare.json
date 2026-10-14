@@ -3,7 +3,7 @@
   "slug": "double-dare",
   "type": "Classic TV",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-14T04:29:04.633Z",
+  "matchedAt": "2026-10-14T05:19:05.699Z",
   "tvmaze": {
     "id": 22449,
     "name": "Double Dare",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 12,
     "live": 0,
-    "review": 1,
-    "missing": 11,
-    "pct": 8
+    "review": 0,
+    "missing": 12,
+    "pct": 0
   },
   "seasons": [
     {
@@ -58,20 +58,8 @@
           "number": 5,
           "name": "Dynamite Duo (Russ & Bridgette) vs. Odd Couple (Brian & Michelle)",
           "airdate": "1986-10-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Dynamite Duo (Russ & Bridgette) vs. Odd Couple (Brian & Michelle)\" (0.62)",
-            "item": "doubledare-1986_202010",
-            "itemTitle": "Nickelodeon's Double Dare - 1986 (Complete)",
-            "file": "Double Dare (1986) - Dynamite Duo vs. Odd Couple.mp4",
-            "name": "Double Dare (1986) - Dynamite Duo vs. Odd Couple",
-            "url": "https://archive.org/download/doubledare-1986_202010/Double%20Dare%20(1986)%20-%20Dynamite%20Duo%20vs.%20Odd%20Couple.mp4",
-            "seconds": 1411,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 147
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

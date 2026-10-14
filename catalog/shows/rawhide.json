@@ -3,7 +3,7 @@
   "slug": "rawhide",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:28:56.966Z",
+  "matchedAt": "2026-10-14T05:18:52.828Z",
   "tvmaze": {
     "id": 3488,
     "name": "Rawhide",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 218,
     "live": 0,
-    "review": 6,
-    "missing": 212,
-    "pct": 3
+    "review": 5,
+    "missing": 213,
+    "pct": 2
   },
   "seasons": [
     {
@@ -203,32 +203,19 @@
           "airdate": "1959-02-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "S/E in filename + title match",
-            "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
-            "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
-            "file": "S01E05 Incident On The Edge Of Madness.mp4",
-            "name": "S01E05 Incident On The Edge Of Madness",
-            "url": "https://archive.org/download/s-01-e-11-incident-of-the-coyote-weed_202312/S01E05%20Incident%20On%20The%20Edge%20Of%20Madness.mp4",
-            "seconds": 3058,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 5 in \"RAWHIDE DISK 5\"",
+            "item": "vts-05-1_20220111_1955",
+            "itemTitle": "RAWHIDE DISK 5",
+            "file": "VTS_05_1.mp4",
+            "name": "VTS_05_1",
+            "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_05_1.mp4",
+            "seconds": 3060,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 445
+            "sizeMB": 306
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 5 in \"RAWHIDE DISK 5\"",
-              "item": "vts-05-1_20220111_1955",
-              "itemTitle": "RAWHIDE DISK 5",
-              "file": "VTS_05_1.mp4",
-              "name": "VTS_05_1",
-              "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_05_1.mp4",
-              "seconds": 3060,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 306
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 5 of 5 in \"RAWHIDE DISK 1\"",
@@ -336,20 +323,8 @@
           "number": 17,
           "name": "Incident of Fear in the Streets",
           "airdate": "1959-05-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Incident of Fear in the Streets\" (0.79)",
-            "item": "rawhide-fear-in-the-streets",
-            "itemTitle": "Rawhide - Incident of Fear in the Streets",
-            "file": "Rawhide - fear in the streets.mp4",
-            "name": "Rawhide - fear in the streets",
-            "url": "https://archive.org/download/rawhide-fear-in-the-streets/Rawhide%20-%20fear%20in%20the%20streets.mp4",
-            "seconds": 3064,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 149
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

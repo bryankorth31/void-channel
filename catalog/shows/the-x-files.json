@@ -3,7 +3,7 @@
   "slug": "the-x-files",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:28:51.168Z",
+  "matchedAt": "2026-10-14T05:18:42.406Z",
   "tvmaze": {
     "id": 430,
     "name": "The X-Files",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 218,
-    "live": 5,
-    "review": 16,
-    "missing": 197,
-    "pct": 10
+    "live": 0,
+    "review": 4,
+    "missing": 214,
+    "pct": 2
   },
   "seasons": [
     {
@@ -26,274 +26,104 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "1993-09-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Pilot\" (0.95)",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 01 - Pilot (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 01 - Pilot (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2001%20-%20Pilot%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2561,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 583
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-              "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-              "itemTitle": "The Lone Gunmen - X-Files spinoff",
-              "file": "The LONE Gunmen - Ep. 01 - Pilot (576p - DVDRip).ia.mp4",
-              "name": "The LONE Gunmen - Ep",
-              "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2001%20-%20Pilot%20(576p%20-%20DVDRip).ia.mp4",
-              "seconds": 2561,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 493
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Deep Throat",
           "airdate": "1993-09-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 02 - Bond, Jimmy Bond (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 02 - Bond, Jimmy Bond (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2002%20-%20Bond%2C%20Jimmy%20Bond%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2559,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 609
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Squeeze",
           "airdate": "1993-09-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 03 - Eine Kleine Frohike (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 03 - Eine Kleine Frohike (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2003%20-%20Eine%20Kleine%20Frohike%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2559,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 471
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Conduit",
           "airdate": "1993-10-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 04 - Like Water for Octane (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 04 - Like Water for Octane (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2004%20-%20Like%20Water%20for%20Octane%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2559,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 483
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Jersey Devil",
           "airdate": "1993-10-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 05 - Three Men and a Smoking Diaper (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 05 - Three Men and a Smoking Diaper (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2005%20-%20Three%20Men%20and%20a%20Smoking%20Diaper%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 548
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Shadows",
           "airdate": "1993-10-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 06 - Madam, I'm Adam (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 06 - Madam, I'm Adam (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2006%20-%20Madam%2C%20I'm%20Adam%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2559,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 490
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Ghost in the Machine",
           "airdate": "1993-10-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 07 - Planet of the Frohikes (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 07 - Planet of the Frohikes (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2007%20-%20Planet%20of%20the%20Frohikes%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 480
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Ice",
           "airdate": "1993-11-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 08 - Maximum Byers (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 08 - Maximum Byers (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2008%20-%20Maximum%20Byers%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2561,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 535
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Space",
           "airdate": "1993-11-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 09 - Diagnosis, Jimmy (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 09 - Diagnosis, Jimmy (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2009%20-%20Diagnosis%2C%20Jimmy%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2561,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 514
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Fallen Angel",
           "airdate": "1993-11-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 10 - Tango de los Pistoleros (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 10 - Tango de los Pistoleros (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2010%20-%20Tango%20de%20los%20Pistoleros%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 501
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Eve",
           "airdate": "1993-12-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 11 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 11 - The Lying Game (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 11 - The Lying Game (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2011%20-%20The%20Lying%20Game%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 435
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Fire",
           "airdate": "1993-12-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 12 - The Cap'n Toby Show (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 12 - The Cap'n Toby Show (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2012%20-%20The%20Cap'n%20Toby%20Show%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 496
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Beyond the Sea",
           "airdate": "1994-01-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 13 of 13 in \"The Lone Gunmen - X-Files spinoff\"",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - Ep. 13 - All About Yves (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - Ep. 13 - All About Yves (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20Ep.%2013%20-%20All%20About%20Yves%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 468
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -803,20 +633,8 @@
           "number": 2,
           "name": "Home",
           "airdate": "1996-10-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Home\" (0.95)",
-            "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
-            "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
-            "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again.mp4",
-            "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again",
-            "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E04%20Home%20Again.mp4",
-            "seconds": 2640,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 260
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1816,20 +1634,8 @@
           "number": 15,
           "name": "Jump the Shark",
           "airdate": "2002-04-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Jump the Shark\" (0.95)",
-            "item": "the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip",
-            "itemTitle": "The Lone Gunmen - X-Files spinoff",
-            "file": "The LONE Gunmen - S00 E02 - Jump the Shark (576p - DVDRip).mp4",
-            "name": "The LONE Gunmen - S00 E02 - Jump the Shark (576p - DVDRip)",
-            "url": "https://archive.org/download/the-lone-gunmen-ep.-02-bond-jimmy-bond-576p-dvdrip/The%20LONE%20Gunmen%20-%20S00%20E02%20-%20Jump%20the%20Shark%20(576p%20-%20DVDRip).mp4",
-            "seconds": 2538,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 508
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1881,9 +1687,9 @@
           "number": 1,
           "name": "My Struggle",
           "airdate": "2016-01-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1895,29 +1701,15 @@
             "playable": true,
             "sizeMB": 261
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"My Struggle\" (0.95)",
-              "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
-              "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
-              "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II.mp4",
-              "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II",
-              "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E06%20My%20Struggle%20II.mp4",
-              "seconds": 2626,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 259
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Founder's Mutation",
           "airdate": "2016-01-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1955,29 +1747,17 @@
           "number": 4,
           "name": "Home Again",
           "airdate": "2016-02-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
-            "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
-            "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again.mp4",
-            "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again",
-            "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E04%20Home%20Again.mp4",
-            "seconds": 2640,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 260
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Babylon",
           "airdate": "2016-02-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1995,20 +1775,8 @@
           "number": 6,
           "name": "My Struggle II",
           "airdate": "2016-02-22",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
-            "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
-            "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II.mp4",
-            "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II",
-            "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E06%20My%20Struggle%20II.mp4",
-            "seconds": 2626,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 259
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

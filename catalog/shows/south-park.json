@@ -3,7 +3,7 @@
   "slug": "south-park",
   "type": "Animated",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-14T04:28:46.653Z",
+  "matchedAt": "2026-10-14T05:18:33.575Z",
   "tvmaze": {
     "id": 112,
     "name": "South Park",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 335,
     "live": 1,
-    "review": 1,
-    "missing": 333,
-    "pct": 1
+    "review": 0,
+    "missing": 334,
+    "pct": 0
   },
   "seasons": [
     {
@@ -1372,20 +1372,8 @@
           "number": 10,
           "name": "Imaginationland: Episode I",
           "airdate": "2007-10-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Imaginationland: Episode I\" (0.80)",
-            "item": "southpark-movie-collection",
-            "itemTitle": "South Park Movie Collection",
-            "file": "Imaginationland.mp4",
-            "name": "Imaginationland",
-            "url": "https://archive.org/download/southpark-movie-collection/Imaginationland.mp4",
-            "seconds": 4061,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 403
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

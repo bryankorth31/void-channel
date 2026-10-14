@@ -3,7 +3,7 @@
   "slug": "charmed",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-14T04:28:53.550Z",
+  "matchedAt": "2026-10-14T05:18:46.518Z",
   "tvmaze": {
     "id": 506,
     "name": "Charmed",
@@ -330,19 +330,6 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"The Fourth Sister\" (0.96)",
-              "item": "charmed_the_complete_series",
-              "itemTitle": "Charmed (1998) The Complete Series",
-              "file": "S01_E7_Episode 7 (The Fourth Sister).mp4",
-              "name": "S01_E7_Episode 7 (The Fourth Sister)",
-              "url": "https://archive.org/download/charmed_the_complete_series/S01_E7_Episode%207%20(The%20Fourth%20Sister).mp4",
-              "seconds": 2605,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 265
-            },
-            {
               "conf": 0.9,
               "why": "S/E in filename",
               "item": "charmed-1998-season-1",
@@ -377,19 +364,6 @@
             "sizeMB": 261
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Truth Is Out There... and It Hurts\" (0.98)",
-              "item": "charmed_the_complete_series",
-              "itemTitle": "Charmed (1998) The Complete Series",
-              "file": "S01_E8_Episode 8 (The Truth Is Out There And It Hurts).mp4",
-              "name": "S01_E8_Episode 8 (The Truth Is Out There And It Hurts)",
-              "url": "https://archive.org/download/charmed_the_complete_series/S01_E8_Episode%208%20(The%20Truth%20Is%20Out%20There%20And%20It%20Hurts).mp4",
-              "seconds": 2679,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 280
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -665,19 +639,6 @@
             "sizeMB": 262
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Secrets and Guys\" (0.95)",
-              "item": "charmed_the_complete_series",
-              "itemTitle": "Charmed (1998) The Complete Series",
-              "file": "S01_E14_Episode 14 (Secrets And Guys).mp4",
-              "name": "S01_E14_Episode 14 (Secrets And Guys)",
-              "url": "https://archive.org/download/charmed_the_complete_series/S01_E14_Episode%2014%20(Secrets%20And%20Guys).mp4",
-              "seconds": 2685,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 304
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1426,34 +1387,20 @@
           "airdate": "2000-01-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Reckless Abandon\" (0.95)",
-            "item": "charmed_the_complete_series",
-            "itemTitle": "Charmed (1998) The Complete Series",
-            "file": "S02_E11_Episode 11 (Reckless Abandon).mp4",
-            "name": "S02_E11_Episode 11 (Reckless Abandon)",
-            "url": "https://archive.org/download/charmed_the_complete_series/S02_E11_Episode%2011%20(Reckless%20Abandon).mp4",
-            "seconds": 2639,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 310
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "charmed-1998-season-2",
+            "itemTitle": "Charmed (1998) – Season 2",
+            "file": "Charmed (1998) - S02E11 - Reckless Abandon (1080p BluRay x265 Silence).mp4",
+            "name": "Charmed (1998) - S02E11 - Reckless Abandon (1080p BluRay x265 Silence)",
+            "url": "https://archive.org/download/charmed-1998-season-2/Charmed%20(1998)%20-%20S02E11%20-%20Reckless%20Abandon%20(1080p%20BluRay%20x265%20Silence).mp4",
+            "seconds": 2638,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 260
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "charmed-1998-season-2",
-              "itemTitle": "Charmed (1998) – Season 2",
-              "file": "Charmed (1998) - S02E11 - Reckless Abandon (1080p BluRay x265 Silence).mp4",
-              "name": "Charmed (1998) - S02E11 - Reckless Abandon (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/charmed-1998-season-2/Charmed%20(1998)%20-%20S02E11%20-%20Reckless%20Abandon%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2638,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 260
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -1496,34 +1443,20 @@
           "airdate": "2000-02-10",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Animal Pragmatism\" (0.95)",
-            "item": "charmed_the_complete_series",
-            "itemTitle": "Charmed (1998) The Complete Series",
-            "file": "S02_E13_Episode 13 (Animal Pragmatism).mp4",
-            "name": "S02_E13_Episode 13 (Animal Pragmatism)",
-            "url": "https://archive.org/download/charmed_the_complete_series/S02_E13_Episode%2013%20(Animal%20Pragmatism).mp4",
-            "seconds": 2634,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 337
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "charmed-1998-season-2",
+            "itemTitle": "Charmed (1998) – Season 2",
+            "file": "Charmed (1998) - S02E13 - Animal Pragmatism (1080p BluRay x265 Silence).mp4",
+            "name": "Charmed (1998) - S02E13 - Animal Pragmatism (1080p BluRay x265 Silence)",
+            "url": "https://archive.org/download/charmed-1998-season-2/Charmed%20(1998)%20-%20S02E13%20-%20Animal%20Pragmatism%20(1080p%20BluRay%20x265%20Silence).mp4",
+            "seconds": 2633,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 259
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "charmed-1998-season-2",
-              "itemTitle": "Charmed (1998) – Season 2",
-              "file": "Charmed (1998) - S02E13 - Animal Pragmatism (1080p BluRay x265 Silence).mp4",
-              "name": "Charmed (1998) - S02E13 - Animal Pragmatism (1080p BluRay x265 Silence)",
-              "url": "https://archive.org/download/charmed-1998-season-2/Charmed%20(1998)%20-%20S02E13%20-%20Animal%20Pragmatism%20(1080p%20BluRay%20x265%20Silence).mp4",
-              "seconds": 2633,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 259
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
@@ -1692,7 +1625,7 @@
           "airdate": "2000-05-11",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "charmed-1998-season-2",
             "itemTitle": "Charmed (1998) – Season 2",
@@ -1970,7 +1903,7 @@
           "airdate": "2001-02-02",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "charmed-1998-season-3",
             "itemTitle": "Charmed (1998) – Season 3",
@@ -2012,7 +1945,7 @@
           "airdate": "2001-02-15",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "charmed-1998-season-3",
             "itemTitle": "Charmed (1998) – Season 3",
@@ -2117,7 +2050,7 @@
           "airdate": "2001-04-26",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "charmed-1998-season-3",
             "itemTitle": "Charmed (1998) – Season 3",
@@ -2180,7 +2113,7 @@
           "airdate": "2001-05-17",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "charmed-1998-season-3",
             "itemTitle": "Charmed (1998) – Season 3",

@@ -3,7 +3,7 @@
   "slug": "the-bible",
   "type": "Streaming Era",
   "network": "History",
-  "matchedAt": "2026-10-14T04:28:54.114Z",
+  "matchedAt": "2026-10-14T05:18:47.668Z",
   "tvmaze": {
     "id": 1721,
     "name": "The Bible",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 10,
     "live": 0,
-    "review": 10,
-    "missing": 0,
-    "pct": 100
+    "review": 8,
+    "missing": 2,
+    "pct": 80
   },
   "seasons": [
     {
@@ -29,7 +29,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 1 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 1 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "1. Introduction to the Historical Context of the Bible.mp4",
@@ -40,21 +40,7 @@
             "playable": true,
             "sizeMB": 222
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 6 in \"King James Version - English Dramatized \"",
-              "item": "01-genesis_20240808",
-              "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-              "file": "15 - Ezra.mp4",
-              "name": "15 - Ezra",
-              "url": "https://archive.org/download/01-genesis_20240808/15%20-%20Ezra.mp4",
-              "seconds": 2879,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 66
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -63,7 +49,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 2 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "2. Genesis 1 and Enuma Elish.mp4",
@@ -74,21 +60,7 @@
             "playable": true,
             "sizeMB": 207
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 6 in \"King James Version - English Dramatized \"",
-              "item": "01-genesis_20240808",
-              "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-              "file": "16 - Nehemiah.mp4",
-              "name": "16 - Nehemiah",
-              "url": "https://archive.org/download/01-genesis_20240808/16%20-%20Nehemiah.mp4",
-              "seconds": 3886,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 92
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -97,7 +69,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 3 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 3 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "6. The Adventures of Abraham in Egypt.mp4",
@@ -108,21 +80,7 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 6 in \"King James Version - English Dramatized \"",
-              "item": "01-genesis_20240808",
-              "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-              "file": "26 - Daniel.mp4",
-              "name": "26 - Daniel",
-              "url": "https://archive.org/download/01-genesis_20240808/26%20-%20Daniel.mp4",
-              "seconds": 4738,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 103
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -131,41 +89,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 4 of 12 in \"The Bible and History (Lecture Series)\"",
-            "item": "1.-introduction-to-the-historical-context-of-the-bible",
-            "itemTitle": "The Bible and History (Lecture Series)",
-            "file": "23. The Greeks Seek for Wisdom.mp4",
-            "name": "23. The Greeks Seek for Wisdom",
-            "url": "https://archive.org/download/1.-introduction-to-the-historical-context-of-the-bible/23.%20The%20Greeks%20Seek%20for%20Wisdom.mp4",
-            "seconds": 2647,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 128
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 6 in \"King James Version - English Dramatized \"",
-              "item": "01-genesis_20240808",
-              "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-              "file": "44 - Romans.mp4",
-              "name": "44 - Romans",
-              "url": "https://archive.org/download/01-genesis_20240808/44%20-%20Romans.mp4",
-              "seconds": 3982,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 94
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "name": "Survival",
-          "airdate": "2013-03-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 4 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "26. Antiochus Epiphanes and the Maccabees.mp4",
@@ -176,30 +100,16 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 6 in \"King James Version - English Dramatized \"",
-              "item": "01-genesis_20240808",
-              "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-              "file": "45 - 1 Corinthians.mp4",
-              "name": "45 - 1 Corinthians",
-              "url": "https://archive.org/download/01-genesis_20240808/45%20-%201%20Corinthians.mp4",
-              "seconds": 3866,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 83
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 6,
-          "name": "Hope",
+          "number": 5,
+          "name": "Survival",
           "airdate": "2013-03-17",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 6 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 5 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "29. The Rise of the Roman Republic.mp4",
@@ -210,30 +120,16 @@
             "playable": true,
             "sizeMB": 115
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 6 in \"King James Version - English Dramatized \"",
-              "item": "01-genesis_20240808",
-              "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-              "file": "57 - Hebrews.mp4",
-              "name": "57 - Hebrews",
-              "url": "https://archive.org/download/01-genesis_20240808/57%20-%20Hebrews.mp4",
-              "seconds": 2713,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 65
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 7,
-          "name": "Mission",
-          "airdate": "2013-03-24",
+          "number": 6,
+          "name": "Hope",
+          "airdate": "2013-03-17",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 7 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 6 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "31. Augustus Caesar and Imperial Rome.mp4",
@@ -247,13 +143,13 @@
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "Betrayal",
+          "number": 7,
+          "name": "Mission",
           "airdate": "2013-03-24",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 8 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 7 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
             "file": "32. Herod the Great.mp4",
@@ -267,43 +163,39 @@
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "Passion",
-          "airdate": "2013-03-31",
+          "number": 8,
+          "name": "Betrayal",
+          "airdate": "2013-03-24",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 9 of 12 in \"The Bible and History (Lecture Series)\"",
+            "why": "sequence guess: file 8 of 8 in \"The Bible and History (Lecture Series)\"",
             "item": "1.-introduction-to-the-historical-context-of-the-bible",
             "itemTitle": "The Bible and History (Lecture Series)",
-            "file": "33. Tiberius and Christian Beginnings.mp4",
-            "name": "33. Tiberius and Christian Beginnings",
-            "url": "https://archive.org/download/1.-introduction-to-the-historical-context-of-the-bible/33.%20Tiberius%20and%20Christian%20Beginnings.mp4",
-            "seconds": 2831,
+            "file": "36. Nero and Imperial Persecution of Christians.mp4",
+            "name": "36. Nero and Imperial Persecution of Christians",
+            "url": "https://archive.org/download/1.-introduction-to-the-historical-context-of-the-bible/36.%20Nero%20and%20Imperial%20Persecution%20of%20Christians.mp4",
+            "seconds": 2866,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 109
+            "sizeMB": 120
           },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Passion",
+          "airdate": "2013-03-31",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Courage",
           "airdate": "2013-03-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 12 in \"The Bible and History (Lecture Series)\"",
-            "item": "1.-introduction-to-the-historical-context-of-the-bible",
-            "itemTitle": "The Bible and History (Lecture Series)",
-            "file": "34. Caligula, Agrippa, and a Sermon to Cornelius.mp4",
-            "name": "34. Caligula, Agrippa, and a Sermon to Cornelius",
-            "url": "https://archive.org/download/1.-introduction-to-the-historical-context-of-the-bible/34.%20Caligula%2C%20Agrippa%2C%20and%20a%20Sermon%20to%20Cornelius.mp4",
-            "seconds": 2525,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 97
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "riptide",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:29:00.578Z",
+  "matchedAt": "2026-10-14T05:18:59.701Z",
   "tvmaze": {
     "id": 1497,
     "name": "Riptide",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 56,
-    "live": 35,
-    "review": 2,
-    "missing": 19,
-    "pct": 66
+    "live": 0,
+    "review": 36,
+    "missing": 20,
+    "pct": 64
   },
   "seasons": [
     {
@@ -26,56 +26,17 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "1984-01-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 20 in \"Riptide: The Complete Third and Final Se\"",
-            "item": "riptide-s3",
-            "itemTitle": "Riptide: The Complete Third and Final Season",
-            "file": "RIPTIDE_S3_DISC1.mp4",
-            "name": "RIPTIDE_S3_DISC1",
-            "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC1.mp4",
-            "seconds": 3244,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 327
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC2.mp4",
-              "name": "RIPTIDE_DISC2",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC2.mp4",
-              "seconds": 3216,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 324
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC1.mp4",
-              "name": "RIPTIDE_S2_DISC1",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC1.mp4",
-              "seconds": 3055,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 300
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Conflict of Interest",
           "airdate": "1984-01-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -87,55 +48,15 @@
             "playable": true,
             "sizeMB": 278
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC3.mp4",
-              "name": "RIPTIDE_DISC3",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC3.mp4",
-              "seconds": 3025,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 310
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC2.mp4",
-              "name": "RIPTIDE_S2_DISC2",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC2.mp4",
-              "seconds": 3099,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 308
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC2.mp4",
-              "name": "RIPTIDE_S3_DISC2",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC2.mp4",
-              "seconds": 3026,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 300
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Somebody's Killing the Great Geeks of America",
           "airdate": "1984-01-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -147,55 +68,15 @@
             "playable": true,
             "sizeMB": 278
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC3.mp4",
-              "name": "RIPTIDE_S2_DISC3",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC3.mp4",
-              "seconds": 3005,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 297
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC13.mp4",
-              "name": "RIPTIDE_DISC13",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC13.mp4",
-              "seconds": 3012,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 294
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC3.mp4",
-              "name": "RIPTIDE_S3_DISC3",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC3.mp4",
-              "seconds": 2983,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 293
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Hatchet Job",
           "airdate": "1984-01-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -207,55 +88,15 @@
             "playable": true,
             "sizeMB": 271
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC14.mp4",
-              "name": "RIPTIDE_DISC14",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC14.mp4",
-              "seconds": 3168,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 317
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC5.mp4",
-              "name": "RIPTIDE_S3_DISC5",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC5.mp4",
-              "seconds": 3026,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 304
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC4.mp4",
-              "name": "RIPTIDE_S2_DISC4",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC4.mp4",
-              "seconds": 3018,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 300
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "The Mean Green Love Machine",
           "airdate": "1984-02-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -267,55 +108,15 @@
             "playable": true,
             "sizeMB": 272
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC15.mp4",
-              "name": "RIPTIDE_DISC15",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC15.mp4",
-              "seconds": 3202,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 320
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC11.mp4",
-              "name": "RIPTIDE_S3_DISC11",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC11.mp4",
-              "seconds": 3157,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 314
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC5.mp4",
-              "name": "RIPTIDE_S2_DISC5",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC5.mp4",
-              "seconds": 3014,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 297
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Diamonds Are for Never",
           "airdate": "1984-02-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -327,55 +128,15 @@
             "playable": true,
             "sizeMB": 263
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC13.mp4",
-              "name": "RIPTIDE_S3_DISC13",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC13.mp4",
-              "seconds": 3176,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 312
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC23.mp4",
-              "name": "RIPTIDE_DISC23",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC23.mp4",
-              "seconds": 2977,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 298
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC11.mp4",
-              "name": "RIPTIDE_S2_DISC11",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC11.mp4",
-              "seconds": 2961,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 291
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "The Hardcase",
           "airdate": "1984-02-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -387,55 +148,15 @@
             "playable": true,
             "sizeMB": 269
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC12.mp4",
-              "name": "RIPTIDE_S2_DISC12",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC12.mp4",
-              "seconds": 3207,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 320
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC14.mp4",
-              "name": "RIPTIDE_S3_DISC14",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC14.mp4",
-              "seconds": 3183,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 320
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC24.mp4",
-              "name": "RIPTIDE_DISC24",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC24.mp4",
-              "seconds": 3022,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 297
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Four-Eyes",
           "airdate": "1984-03-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -447,55 +168,15 @@
             "playable": true,
             "sizeMB": 265
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC25.mp4",
-              "name": "RIPTIDE_DISC25",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC25.mp4",
-              "seconds": 3187,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 327
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC15.mp4",
-              "name": "RIPTIDE_S3_DISC15",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC15.mp4",
-              "seconds": 3113,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 310
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC13.mp4",
-              "name": "RIPTIDE_S2_DISC13",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC13.mp4",
-              "seconds": 2933,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 289
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
           "name": "#1 with a Bullet",
           "airdate": "1984-03-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -507,55 +188,15 @@
             "playable": true,
             "sizeMB": 269
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC14.mp4",
-              "name": "RIPTIDE_S2_DISC14",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC14.mp4",
-              "seconds": 3186,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 315
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC26.mp4",
-              "name": "RIPTIDE_DISC26",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC26.mp4",
-              "seconds": 3019,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 302
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC22.mp4",
-              "name": "RIPTIDE_S3_DISC22",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC22.mp4",
-              "seconds": 2930,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 291
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
           "name": "Long Distance Daddy",
           "airdate": "1984-03-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -567,55 +208,15 @@
             "playable": true,
             "sizeMB": 269
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC32.mp4",
-              "name": "RIPTIDE_DISC32",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC32.mp4",
-              "seconds": 3206,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 314
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC21.mp4",
-              "name": "RIPTIDE_S2_DISC21",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC21.mp4",
-              "seconds": 2998,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 296
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC23.mp4",
-              "name": "RIPTIDE_S3_DISC23",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC23.mp4",
-              "seconds": 2938,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 288
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Double Your Pleasure",
           "airdate": "1984-04-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -627,55 +228,15 @@
             "playable": true,
             "sizeMB": 270
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC24.mp4",
-              "name": "RIPTIDE_S3_DISC24",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC24.mp4",
-              "seconds": 3194,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 318
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC34.mp4",
-              "name": "RIPTIDE_DISC34",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC34.mp4",
-              "seconds": 3207,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 312
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC23.mp4",
-              "name": "RIPTIDE_S2_DISC23",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC23.mp4",
-              "seconds": 2583,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 259
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Raiders of the Lost Sub",
           "airdate": "1984-05-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -687,55 +248,15 @@
             "playable": true,
             "sizeMB": 266
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC24.mp4",
-              "name": "RIPTIDE_S2_DISC24",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC24.mp4",
-              "seconds": 3204,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 318
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC35.mp4",
-              "name": "RIPTIDE_DISC35",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC35.mp4",
-              "seconds": 3002,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 307
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC31.mp4",
-              "name": "RIPTIDE_S3_DISC31",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC31.mp4",
-              "seconds": 2967,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 293
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "Something Fishy",
           "airdate": "1984-05-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-1-e-1-pilot_202603",
             "itemTitle": "Riptide (1984) Complete Season 1",
@@ -747,47 +268,7 @@
             "playable": true,
             "sizeMB": 267
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 22 in \"Riptide: The Complete Second Season\"",
-              "item": "riptide-s2",
-              "itemTitle": "Riptide: The Complete Second Season",
-              "file": "RIPTIDE_S2_DISC25.mp4",
-              "name": "RIPTIDE_S2_DISC25",
-              "url": "https://archive.org/download/riptide-s2/RIPTIDE_S2_DISC25.mp4",
-              "seconds": 3149,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 313
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 20 in \"Riptide: The Complete Third and Final Se\"",
-              "item": "riptide-s3",
-              "itemTitle": "Riptide: The Complete Third and Final Season",
-              "file": "RIPTIDE_S3_DISC32.mp4",
-              "name": "RIPTIDE_S3_DISC32",
-              "url": "https://archive.org/download/riptide-s3/RIPTIDE_S3_DISC32.mp4",
-              "seconds": 3160,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 311
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 13 in \"Riptide: The Complete First Season\"",
-              "item": "riptide-s1",
-              "itemTitle": "Riptide: The Complete First Season",
-              "file": "RIPTIDE_DISC36.mp4",
-              "name": "RIPTIDE_DISC36",
-              "url": "https://archive.org/download/riptide-s1/RIPTIDE_DISC36.mp4",
-              "seconds": 2716,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 271
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -798,9 +279,9 @@
           "number": 1,
           "name": "Where the Girls Are",
           "airdate": "1984-10-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -818,9 +299,9 @@
           "number": 2,
           "name": "The Orange Grove",
           "airdate": "1984-10-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -838,9 +319,9 @@
           "number": 3,
           "name": "Catch of the Day",
           "airdate": "1984-10-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -858,9 +339,9 @@
           "number": 4,
           "name": "Mirage",
           "airdate": "1984-10-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -878,9 +359,9 @@
           "number": 5,
           "name": "Beat the Box",
           "airdate": "1984-11-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -898,9 +379,9 @@
           "number": 6,
           "name": "Father's Day",
           "airdate": "1984-11-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -918,9 +399,9 @@
           "number": 7,
           "name": "Be True to Your School",
           "airdate": "1984-11-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -954,9 +435,9 @@
           "number": 10,
           "name": "Catch a Fallen Star",
           "airdate": "1984-12-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -974,9 +455,9 @@
           "number": 11,
           "name": "Gams People Play",
           "airdate": "1985-01-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1014,9 +495,9 @@
           "number": 13,
           "name": "Baxter and Boz",
           "airdate": "1985-01-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1034,9 +515,9 @@
           "number": 14,
           "name": "Curse of the Mary Aberdeen",
           "airdate": "1985-01-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1054,9 +535,9 @@
           "number": 15,
           "name": "Boz Busters",
           "airdate": "1985-02-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1074,9 +555,9 @@
           "number": 16,
           "name": "Oil Bets Are Off",
           "airdate": "1985-02-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1094,9 +575,9 @@
           "number": 17,
           "name": "Girls Night Out",
           "airdate": "1985-02-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1114,9 +595,9 @@
           "number": 18,
           "name": "Polly Want an Explanation",
           "airdate": "1985-03-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1134,9 +615,9 @@
           "number": 19,
           "name": "The Twisted Cross",
           "airdate": "1985-03-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1154,9 +635,9 @@
           "number": 20,
           "name": "Fuzzy Vision",
           "airdate": "1985-03-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1174,9 +655,9 @@
           "number": 21,
           "name": "Arrivederci, Baby",
           "airdate": "1985-05-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1194,9 +675,9 @@
           "number": 22,
           "name": "Harmony and Grits",
           "airdate": "1985-05-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-2-e-2-the-orange-grove",
             "itemTitle": "Riptide (1985) Season 2 Complete",
@@ -1219,9 +700,9 @@
           "number": 1,
           "name": "Wipe Out",
           "airdate": "1985-10-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-3-e-3-does-not-compute",
             "itemTitle": "Riptide (1986) Season 3",
@@ -1239,9 +720,9 @@
           "number": 2,
           "name": "Thirty-Six Hours 'til Dawn",
           "airdate": "1985-10-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-3-e-3-does-not-compute",
             "itemTitle": "Riptide (1986) Season 3",
@@ -1259,9 +740,9 @@
           "number": 3,
           "name": "Does Not Compute",
           "airdate": "1985-10-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-3-e-3-does-not-compute",
             "itemTitle": "Riptide (1986) Season 3",
@@ -1279,9 +760,9 @@
           "number": 4,
           "name": "The Bargain Department",
           "airdate": "1985-11-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "s-3-e-3-does-not-compute",
             "itemTitle": "Riptide (1986) Season 3",

@@ -3,7 +3,7 @@
   "slug": "sctv",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:29:00.930Z",
+  "matchedAt": "2026-10-14T05:19:00.497Z",
   "tvmaze": {
     "id": 5762,
     "name": "SCTV",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 78,
-    "live": 66,
-    "review": 7,
-    "missing": 5,
-    "pct": 94
+    "live": 58,
+    "review": 13,
+    "missing": 7,
+    "pct": 91
   },
   "seasons": [
     {
@@ -26,59 +26,33 @@
           "number": 1,
           "name": "Backstage",
           "airdate": "1976-09-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV - S01E01 Backstage.mp4",
-            "name": "SCTV - S01E01 Backstage",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E01%20Backstage.mp4",
-            "seconds": 1427,
-            "format": "h.264",
+            "file": "S01E01 - SCTV Network 90 - #79  _One On The Town_.m4v",
+            "name": "S01E01 - SCTV Network 90 - #79  _One On The Town_",
+            "url": "https://archive.org/download/sctv-stuff/S01E01%20-%20SCTV%20Network%2090%20-%20%2379%20%20_One%20On%20The%20Town_.m4v",
+            "seconds": 3978,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 829
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "S/E in filename",
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "S01E01 - SCTV Network 90 - #79  _One On The Town_.m4v",
-              "name": "S01E01 - SCTV Network 90 - #79  _One On The Town_",
-              "url": "https://archive.org/download/sctv-stuff/S01E01%20-%20SCTV%20Network%2090%20-%20%2379%20%20_One%20On%20The%20Town_.m4v",
-              "seconds": 3978,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 829
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Backstage\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "01 - Backstage [001] - [Season 1].mp4",
-              "name": "01 - Backstage [001] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/01%20-%20Backstage%20%5B001%5D%20-%20%5BSeason%201%5D.mp4",
+              "file": "SCTV - S01E01 Backstage.mp4",
+              "name": "SCTV - S01E01 Backstage",
+              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E01%20Backstage.mp4",
               "seconds": 1427,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 141
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "Couch Candy with Jim Belushi -FULL SHOW _ Adult Language_ (720p_24fps_H264-192kbit_AAC).mp4",
-              "name": "Couch Candy with Jim Belushi -FULL SHOW _ Adult Language_ (720p_24fps_H264-192kbit_AAC)",
-              "url": "https://archive.org/download/sctv-stuff/Couch%20Candy%20with%20Jim%20Belushi%20-FULL%20SHOW%20_%20Adult%20Language_%20(720p_24fps_H264-192kbit_AAC).mp4",
-              "seconds": 2302,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 409
+              "sizeMB": 139
             }
           ]
         },
@@ -86,61 +60,21 @@
           "number": 2,
           "name": "Murder at SCTV",
           "airdate": "1976-10-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV - S01E02 Murder at SCTV.mp4",
-            "name": "SCTV - S01E02 Murder at SCTV",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E02%20Murder%20at%20SCTV.mp4",
-            "seconds": 1431,
-            "format": "h.264",
+            "file": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_.m4v",
+            "name": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_",
+            "url": "https://archive.org/download/sctv-stuff/S01E02%20-%20SCTV%20Network%2090%20-%20%2380%20%20_Polynesiantown_.m4v",
+            "seconds": 3986,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 831
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_.m4v",
-              "name": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_",
-              "url": "https://archive.org/download/sctv-stuff/S01E02%20-%20SCTV%20Network%2090%20-%20%2380%20%20_Polynesiantown_.m4v",
-              "seconds": 3986,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 831
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Murder at SCTV\" (0.67)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "02 - Murder at SCTV [002] - [Season 1].mp4",
-              "name": "02 - Murder at SCTV [002] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/02%20-%20Murder%20at%20SCTV%20%5B002%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1431,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S00E05 - Origins of SCTV (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "S00E05 - Origins of SCTV (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/sctv-stuff/S00E05%20-%20Origins%20of%20SCTV%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1538,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 67
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -173,32 +107,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 833
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Ethnic Humour\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "03 - Ethnic Humour [003] - [Season 1].mp4",
-              "name": "03 - Ethnic Humour [003] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/03%20-%20Ethnic%20Humour%20%5B003%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S00E07 - SCTV Remembers_ Part 1 (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "S00E07 - SCTV Remembers_ Part 1 (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/sctv-stuff/S00E07%20-%20SCTV%20Remembers_%20Part%201%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1851,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 106
             }
           ]
         },
@@ -233,32 +141,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 829
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Crosswords\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "04 - Crosswords [004] - [Season 1].mp4",
-              "name": "04 - Crosswords [004] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/04%20-%20Crosswords%20%5B004%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1424,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S00E08 - Craft of SCTV (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "S00E08 - Craft of SCTV (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/sctv-stuff/S00E08%20-%20Craft%20of%20SCTV%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1746,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 151
             }
           ]
         },
@@ -280,47 +162,7 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S01E05 - SCTV Network 90 - #83  _Lunchtime Street Beef_.m4v",
-              "name": "S01E05 - SCTV Network 90 - #83  _Lunchtime Street Beef_",
-              "url": "https://archive.org/download/sctv-stuff/S01E05%20-%20SCTV%20Network%2090%20-%20%2383%20%20_Lunchtime%20Street%20Beef_.m4v",
-              "seconds": 3980,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 829
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Match Unto My Feet\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "05 - Match Unto My Feet [005] - [Season 1].mp4",
-              "name": "05 - Match Unto My Feet [005] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/05%20-%20Match%20Unto%20My%20Feet%20%5B005%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1428,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S00E11 - (1988) The Enigma of Bobby Bittman (360p_30fps_H264-128kbit_AAC).mp4",
-              "name": "S00E11 - (1988) The Enigma of Bobby Bittman (360p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/sctv-stuff/S00E11%20-%20(1988)%20The%20Enigma%20of%20Bobby%20Bittman%20(360p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1823,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 137
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -353,32 +195,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 805
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Memoirs of Anton Chekhov\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "06 - Memoirs of Anton Chekhov [006] - [Season 1].mp4",
-              "name": "06 - Memoirs of Anton Chekhov [006] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/06%20-%20Memoirs%20of%20Anton%20Chekhov%20%5B006%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1426,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S00E12 - SCTV -The Writers -Feat. SCTV Comedy Series Writers Discussion (480p_30fps_H264-128kbit_AAC).ia.mp4",
-              "name": "S00E12 - SCTV -The Writers -Feat",
-              "url": "https://archive.org/download/sctv-stuff/S00E12%20-%20SCTV%20-The%20Writers%20-Feat.%20SCTV%20Comedy%20Series%20Writers%20Discussion%20(480p_30fps_H264-128kbit_AAC).ia.mp4",
-              "seconds": 1514,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 114
             }
           ]
         },
@@ -413,32 +229,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 821
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Dialing for Dollars\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "07 - Dialing For Dollars [007] - [Season 1].mp4",
-              "name": "07 - Dialing For Dollars [007] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/07%20-%20Dialing%20For%20Dollars%20%5B007%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1423,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 7 in \"SCTV collection\"",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S00E12 - SCTV -The Writers -Feat. SCTV Comedy Series Writers Discussion (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "S00E12 - SCTV -The Writers -Feat. SCTV Comedy Series Writers Discussion (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/sctv-stuff/S00E12%20-%20SCTV%20-The%20Writers%20-Feat.%20SCTV%20Comedy%20Series%20Writers%20Discussion%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1514,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 114
             }
           ]
         },
@@ -460,34 +250,7 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S01E08 - SCTV Network 90 - #86  _Bouncin' Back To You_.m4v",
-              "name": "S01E08 - SCTV Network 90 - #86  _Bouncin' Back To You_",
-              "url": "https://archive.org/download/sctv-stuff/S01E08%20-%20SCTV%20Network%2090%20-%20%2386%20%20_Bouncin'%20Back%20To%20You_.m4v",
-              "seconds": 3951,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 823
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shock Theatre\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "08 - Shock Theatre [008] - [Season 1].mp4",
-              "name": "08 - Shock Theatre [008] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/08%20-%20Shock%20Theatre%20%5B008%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1429,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -495,32 +258,19 @@
           "airdate": "1977-03-24",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV - S01E09 Philosophy Street.mp4",
-            "name": "SCTV - S01E09 Philosophy Street",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E09%20Philosophy%20Street.mp4",
-            "seconds": 1424,
+            "file": "SCTV Channel - S01E09 - Just For Fun Black Like Vic.mp4",
+            "name": "SCTV Channel - S01E09 - Just For Fun Black Like Vic",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E09%20-%20Just%20For%20Fun%20Black%20Like%20Vic.mp4",
+            "seconds": 2260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 219
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "SCTV Channel - S01E09 - Just For Fun Black Like Vic.mp4",
-              "name": "SCTV Channel - S01E09 - Just For Fun Black Like Vic",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E09%20-%20Just%20For%20Fun%20Black%20Like%20Vic.mp4",
-              "seconds": 2260,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 219
-            },
             {
               "conf": 0.8,
               "why": "S/E in filename",
@@ -535,17 +285,17 @@
               "sizeMB": 822
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"Philosophy Street\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "09 - Philosophy Street [009] - [Season 1].mp4",
-              "name": "09 - Philosophy Street [009] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/09%20-%20Philosophy%20Street%20%5B009%5D%20-%20%5BSeason%201%5D.mp4",
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "sctv-stuff",
+              "itemTitle": "SCTV collection",
+              "file": "SCTV - S01E09 Philosophy Street.mp4",
+              "name": "SCTV - S01E09 Philosophy Street",
+              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E09%20Philosophy%20Street.mp4",
               "seconds": 1424,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 140
+              "sizeMB": 139
             }
           ]
         },
@@ -567,42 +317,15 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "SCTV Channel - S01E10 - Youth, Do They Give a Damn or What Happy Hour.mp4",
-              "name": "SCTV Channel - S01E10 - Youth, Do They Give a Damn or What Happy Hour",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E10%20-%20Youth%2C%20Do%20They%20Give%20a%20Damn%20or%20What%20Happy%20Hour.mp4",
-              "seconds": 2349,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 228
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Therese et Joe\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "10 - Therese et Joe [010] - [Season 1].mp4",
-              "name": "10 - Therese et Joe [010] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/10%20-%20Therese%20et%20Joe%20%5B010%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1426,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 142
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Broads Behind Bars",
           "airdate": "1977-04-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -614,21 +337,7 @@
             "playable": true,
             "sizeMB": 245
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Broads Behind Bars\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "11 - Broads Behind Bars [011] - [Season 1].mp4",
-              "name": "11 - Broads Behind Bars [011] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/11%20-%20Broads%20Behind%20Bars%20%5B011%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1422,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -661,19 +370,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 202
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Taxidermist\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "12 - The Taxidermist [012] - [Season 1].mp4",
-              "name": "12 - The Taxidermist [012] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/12%20-%20The%20Taxidermist%20%5B012%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1431,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -683,44 +379,31 @@
           "airdate": "1977-05-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV - S01E13 Ben-Hur.mp4",
-            "name": "SCTV - S01E13 Ben-Hur",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E13%20Ben-Hur.mp4",
-            "seconds": 1425,
-            "format": "MPEG4",
+            "file": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond.mp4",
+            "name": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E13%20-%202009%20Jupiter%20and%20Beyond.mp4",
+            "seconds": 2195,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 244
+            "sizeMB": 211
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond.mp4",
-              "name": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E13%20-%202009%20Jupiter%20and%20Beyond.mp4",
-              "seconds": 2195,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 211
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Ben Hur\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "13 - Ben Hur [013] - [Season 1].mp4",
-              "name": "13 - Ben Hur [013] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/13%20-%20Ben%20Hur%20%5B013%5D%20-%20%5BSeason%201%5D.mp4",
+              "file": "SCTV - S01E13 Ben-Hur.mp4",
+              "name": "SCTV - S01E13 Ben-Hur",
+              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E13%20Ben-Hur.mp4",
               "seconds": 1425,
-              "format": "h.264",
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 139
+              "sizeMB": 244
             }
           ]
         },
@@ -742,21 +425,7 @@
             "playable": true,
             "sizeMB": 245
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "SCTV Channel - S01E14 - Halfwits Save The World Parade.mp4",
-              "name": "SCTV Channel - S01E14 - Halfwits Save The World Parade",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E14%20-%20Halfwits%20Save%20The%20World%20Parade.mp4",
-              "seconds": 2172,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 210
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
@@ -809,19 +478,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 203
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Goodbye America\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "16 - Goodbye America [016] - [Season 1].mp4",
-              "name": "16 - Goodbye America [016] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/16%20-%20Goodbye%20America%20%5B016%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1422,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
             }
           ]
         },
@@ -843,34 +499,7 @@
             "playable": true,
             "sizeMB": 244
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "SCTV Channel - S01E17 - You're On Happy Hour.mp4",
-              "name": "SCTV Channel - S01E17 - You're On Happy Hour",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E17%20-%20You're%20On%20Happy%20Hour.mp4",
-              "seconds": 2365,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 230
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Galaxy 66\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "17 - Galaxy 66 [017] - [Season 1].mp4",
-              "name": "17 - Galaxy 66 [017] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/17%20-%20Galaxy%2066%20%5B017%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1397,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,
@@ -903,19 +532,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 219
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Madame Blitzman\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "18 - Madame Blitzman [018] - [Season 1].mp4",
-              "name": "18 - Madame Blitzman [018] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/18%20-%20Madame%20Blitzman%20%5B018%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -970,19 +586,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 227
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Dr. Tongue's House of Wax, SCTV Boogie\" (0.73)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "20 - Dr Tongue's House of Wax [020] - [Season 1].mp4",
-              "name": "20 - Dr Tongue's House of Wax [020] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/20%20-%20Dr%20Tongue's%20House%20of%20Wax%20%5B020%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1426,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -1017,19 +620,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 132
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Sammy Maudlin Show\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "21 - Sammy Maudlin Show [021] - [Season 1].mp4",
-              "name": "21 - Sammy Maudlin Show [021] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/21%20-%20Sammy%20Maudlin%20Show%20%5B021%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1420,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
             }
           ]
         },
@@ -1071,21 +661,7 @@
             "playable": true,
             "sizeMB": 244
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Grapes of Mud\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "23 - The Grapes of Mud [023] - [Season 1].mp4",
-              "name": "23 - The Grapes of Mud [023] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/23%20-%20The%20Grapes%20of%20Mud%20%5B023%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1444,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 24,
@@ -1111,35 +687,9 @@
           "number": 25,
           "name": "The Man Who Would Be King of the Popes",
           "airdate": "1977-12-05",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "sctv-stuff",
-            "itemTitle": "SCTV collection",
-            "file": "SCTV - S01E25 King Of The Popes.mp4",
-            "name": "SCTV - S01E25 King Of The Popes",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E25%20King%20Of%20The%20Popes.mp4",
-            "seconds": 1421,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 244
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The Man Who Would Be King of the Popes\" (0.60)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "25 - King of the Popes [025] - [Season 1].mp4",
-              "name": "25 - King of the Popes [025] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/25%20-%20King%20of%20the%20Popes%20%5B025%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 26,
@@ -1159,21 +709,7 @@
             "playable": true,
             "sizeMB": 244
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Lust for Paint\" (0.95)",
-              "item": "07-dialing-for-dollars-007-season-1",
-              "itemTitle": "SCTV: Season 1 - The Syndicated Series",
-              "file": "26 - Lust for Paint [026] - [Season 1].mp4",
-              "name": "26 - Lust for Paint [026] - [Season 1]",
-              "url": "https://archive.org/download/07-dialing-for-dollars-007-season-1/26%20-%20Lust%20for%20Paint%20%5B026%5D%20-%20%5BSeason%201%5D.mp4",
-              "seconds": 1418,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -1211,19 +747,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 836
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Season 2 Premiere\" (0.63)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "01 - Premiere [027] - [Season 2].mp4",
-              "name": "01 - Premiere [027] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/01%20-%20Premiere%20%5B027%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1382,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -1258,19 +781,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 832
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Bob Hope Desert Classic\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "02 - Bob Hope Desert Classic [028] - [Season 2].mp4",
-              "name": "02 - Bob Hope Desert Classic [028] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/02%20-%20Bob%20Hope%20Desert%20Classic%20%5B028%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
             }
           ]
         },
@@ -1305,19 +815,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 835
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Kidnapping of Moe Green\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "03 - Kidnapping of Moe Green [029] - [Season 2].mp4",
-              "name": "03 - Kidnapping of Moe Green [029] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/03%20-%20Kidnapping%20of%20Moe%20Green%20%5B029%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1420,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
             }
           ]
         },
@@ -1359,46 +856,33 @@
           "number": 5,
           "name": "Writer's Strike",
           "airdate": "1978-10-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV - S02E05 Writer Strike.mp4",
-            "name": "SCTV - S02E05 Writer Strike",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S02E05%20Writer%20Strike.mp4",
-            "seconds": 1345,
+            "file": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_.m4v",
+            "name": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_",
+            "url": "https://archive.org/download/sctv-stuff/S02E05%20-%20SCTV%20Network%2090%20-%20%2392%20%20_Doorway%20To%20Hell_.m4v",
+            "seconds": 3944,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 199
+            "sizeMB": 833
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "S/E in filename",
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_.m4v",
-              "name": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_",
-              "url": "https://archive.org/download/sctv-stuff/S02E05%20-%20SCTV%20Network%2090%20-%20%2392%20%20_Doorway%20To%20Hell_.m4v",
-              "seconds": 3944,
+              "file": "SCTV - S02E05 Writer Strike.mp4",
+              "name": "SCTV - S02E05 Writer Strike",
+              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S02E05%20Writer%20Strike.mp4",
+              "seconds": 1345,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 833
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Writer's Strike\" (0.83)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "05 - Writer Strike [031] - [Season 2].mp4",
-              "name": "05 - Writer Strike [031] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/05%20-%20Writer%20Strike%20%5B031%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1418,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
+              "sizeMB": 199
             }
           ]
         },
@@ -1433,19 +917,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 835
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"1978 Melonville Municipal Elections\" (0.67)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "06 - Municipal Election [032] - [Season 2].mp4",
-              "name": "06 - Municipal Election [032] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/06%20-%20Municipal%20Election%20%5B032%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1420,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
             }
           ]
         },
@@ -1480,19 +951,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 836
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Farm Film Report, Arabs\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "07 - Farm Film Report - Arabs [033] - [Season 2].mp4",
-              "name": "07 - Farm Film Report - Arabs [033] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/07%20-%20Farm%20Film%20Report%20-%20Arabs%20%5B033%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1419,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
             }
           ]
         },
@@ -1514,21 +972,7 @@
             "playable": true,
             "sizeMB": 198
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Mirthmakers, Happy Endings\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "08 - The Mirthmakers - Happy Endings [034] - [Season 2].mp4",
-              "name": "08 - The Mirthmakers - Happy Endings [034] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/08%20-%20The%20Mirthmakers%20-%20Happy%20Endings%20%5B034%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -1561,19 +1005,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 827
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Undersea World\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "09 - Undersea World [035] - [Season 2].mp4",
-              "name": "09 - Undersea World [035] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/09%20-%20Undersea%20World%20%5B035%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1417,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
             }
           ]
         },
@@ -1615,21 +1046,7 @@
             "playable": true,
             "sizeMB": 198
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"SCTV's 30th Anniversary Show\" (0.82)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "11 - SCTV 30th Anniversary Show [037] - [Season 2].mp4",
-              "name": "11 - SCTV 30th Anniversary Show [037] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/11%20-%20SCTV%2030th%20Anniversary%20Show%20%5B037%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1409,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -1655,9 +1072,9 @@
           "number": 13,
           "name": "Bad Acting in Hollywood",
           "airdate": "1978-12-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -1669,21 +1086,7 @@
             "playable": true,
             "sizeMB": 200
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Bad Acting in Hollywood\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "13 - Bad Acting In Hollywood [039] - [Season 2].mp4",
-              "name": "13 - Bad Acting In Hollywood [039] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/13%20-%20Bad%20Acting%20In%20Hollywood%20%5B039%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1414,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
@@ -1723,21 +1126,7 @@
             "playable": true,
             "sizeMB": 196
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Fighting Air Dogs\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "15 - Fighting Air Dogs [041] - [Season 2].mp4",
-              "name": "15 - Fighting Air Dogs [041] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/15%20-%20Fighting%20Air%20Dogs%20%5B041%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1418,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,
@@ -1757,21 +1146,7 @@
             "playable": true,
             "sizeMB": 204
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Death Takes No Holiday\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "16 - Death Takes No Holiday [042] - [Season 2].mp4",
-              "name": "16 - Death Takes No Holiday [042] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/16%20-%20Death%20Takes%20No%20Holiday%20%5B042%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1407,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 17,
@@ -1804,19 +1179,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 133
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Rock Concert\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "17 - Rock Concert [043] - [Season 2].mp4",
-              "name": "17 - Rock Concert [043] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/17%20-%20Rock%20Concert%20%5B043%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
             }
           ]
         },
@@ -1858,21 +1220,7 @@
             "playable": true,
             "sizeMB": 202
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"On the Waterfront Again\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "19 - On the Waterfront, Again [045] - [Season 2].mp4",
-              "name": "19 - On the Waterfront, Again [045] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/19%20-%20On%20the%20Waterfront%2C%20Again%20%5B045%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1409,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 20,
@@ -1912,29 +1260,15 @@
             "playable": true,
             "sizeMB": 197
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Pipeline\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "21 - Pipeline [047] - [Season 2].mp4",
-              "name": "21 - Pipeline [047] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/21%20-%20Pipeline%20%5B047%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,
           "name": "Consumer Action Line",
           "airdate": "1979-02-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -1946,21 +1280,7 @@
             "playable": true,
             "sizeMB": 198
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Consumer Action Line\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "22 - Consumer Action Line [048] - [Season 2].mp4",
-              "name": "22 - Consumer Action Line [048] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/22%20-%20Consumer%20Action%20Line%20%5B048%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1416,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 23,
@@ -1980,21 +1300,7 @@
             "playable": true,
             "sizeMB": 198
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Relaxing with Raoul, Dining with LaRue\" (0.76)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "23 - Relaxing with Raoul [049] - [Season 2].mp4",
-              "name": "23 - Relaxing with Raoul [049] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/23%20-%20Relaxing%20with%20Raoul%20%5B049%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1415,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 141
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 24,
@@ -2014,21 +1320,7 @@
             "playable": true,
             "sizeMB": 201
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Flaming Turkey\" (0.95)",
-              "item": "sctv-season-2-syndicated-series",
-              "itemTitle": "SCTV: Season 2 - The Syndicated Series",
-              "file": "24 - The Flaming Turkey [050] - [Season 2].mp4",
-              "name": "24 - The Flaming Turkey [050] - [Season 2]",
-              "url": "https://archive.org/download/sctv-season-2-syndicated-series/24%20-%20The%20Flaming%20Turkey%20%5B050%5D%20-%20%5BSeason%202%5D.mp4",
-              "seconds": 1422,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 25,
@@ -2069,21 +1361,7 @@
             "playable": true,
             "sizeMB": 133
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S03E01 - SCTV Network 90 - #97  _The Great White North Palace_.m4v",
-              "name": "S03E01 - SCTV Network 90 - #97  _The Great White North Palace_",
-              "url": "https://archive.org/download/sctv-stuff/S03E01%20-%20SCTV%20Network%2090%20-%20%2397%20%20_The%20Great%20White%20North%20Palace_.m4v",
-              "seconds": 3812,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 795
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -2123,20 +1401,8 @@
           "number": 3,
           "name": "Death of a Salesman",
           "airdate": "1980-10-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename",
-            "item": "sctv-stuff",
-            "itemTitle": "SCTV collection",
-            "file": "S03E03 - SCTV Network 90 - #99  _The People's Global Golden Choice Awards_.m4v",
-            "name": "S03E03 - SCTV Network 90 - #99  _The People's Global Golden Choice Awards_",
-            "url": "https://archive.org/download/sctv-stuff/S03E03%20-%20SCTV%20Network%2090%20-%20%2399%20%20_The%20People's%20Global%20Golden%20Choice%20Awards_.m4v",
-            "seconds": 3996,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 833
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2327,21 +1593,7 @@
             "playable": true,
             "sizeMB": 127
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "S/E in filename",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "S03E09 - SCTV Network 90 - #105  _The Days Of The Week_Street Beef_.m4v",
-              "name": "S03E09 - SCTV Network 90 - #105  _The Days Of The Week_Street Beef_",
-              "url": "https://archive.org/download/sctv-stuff/S03E09%20-%20SCTV%20Network%2090%20-%20%23105%20%20_The%20Days%20Of%20The%20Week_Street%20Beef_.m4v",
-              "seconds": 3912,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 816
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -2537,9 +1789,9 @@
           "number": 20,
           "name": "Cookery Crock, Cartoon Coroner",
           "airdate": "1981-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",

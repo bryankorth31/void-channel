@@ -3,7 +3,7 @@
   "slug": "the-rifleman",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:57.802Z",
+  "matchedAt": "2026-10-14T05:18:54.094Z",
   "tvmaze": {
     "id": 3877,
     "name": "The Rifleman",
@@ -13,9 +13,9 @@
   },
   "coverage": {
     "total": 168,
-    "live": 2,
-    "review": 2,
-    "missing": 164,
+    "live": 0,
+    "review": 3,
+    "missing": 165,
     "pct": 2
   },
   "seasons": [
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "The Sharpshooter",
           "airdate": "1958-09-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-rifleman-tv-1958-colorized-s01e01-the-sharpshooter",
             "itemTitle": "The Rifleman TV 1958 colorized s01e01 The Sharpshooter",
@@ -62,9 +62,9 @@
           "number": 4,
           "name": "The Marshal",
           "airdate": "1958-10-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-rifleman-tv-1958-s01e04-the-marshal",
             "itemTitle": "The Rifleman TV 1958 colorized s01e04 The Marshal",
@@ -346,35 +346,9 @@
           "number": 38,
           "name": "Outlaw's Inheritance",
           "airdate": "1959-06-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Outlaw's Inheritance\" (0.95)",
-            "item": "The_Rifleman_-_Outlaws_Inheritance",
-            "itemTitle": "The Rifleman - Outlaw's Inheritance",
-            "file": "The_Rifleman_-_Outlaws_Inheritance.ogv",
-            "name": "The_Rifleman_-_Outlaws_Inheritance",
-            "url": "https://archive.org/download/The_Rifleman_-_Outlaws_Inheritance/The_Rifleman_-_Outlaws_Inheritance.ogv",
-            "seconds": 1477,
-            "format": "Ogg Video",
-            "playable": true,
-            "sizeMB": 124
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Outlaw's Inheritance\" (0.95)",
-              "item": "The_Rifleman_-_Outlaws_Inheritance",
-              "itemTitle": "The Rifleman - Outlaw's Inheritance",
-              "file": "The_Rifleman_-_Outlaws_Inheritance_512kb.mp4",
-              "name": "The_Rifleman_-_Outlaws_Inheritance_512kb",
-              "url": "https://archive.org/download/The_Rifleman_-_Outlaws_Inheritance/The_Rifleman_-_Outlaws_Inheritance_512kb.mp4",
-              "seconds": 1477,
-              "format": "512Kb MPEG4",
-              "playable": true,
-              "sizeMB": 107
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 39,

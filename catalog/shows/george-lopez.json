@@ -3,7 +3,7 @@
   "slug": "george-lopez",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:45.757Z",
+  "matchedAt": "2026-10-14T05:18:31.904Z",
   "tvmaze": {
     "id": 4129,
     "name": "George Lopez",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 120,
     "live": 0,
-    "review": 17,
-    "missing": 103,
-    "pct": 14
+    "review": 16,
+    "missing": 104,
+    "pct": 13
   },
   "seasons": [
     {
@@ -260,37 +260,9 @@
           "number": 1,
           "name": "Dubya, Dad and Dating (1)",
           "airdate": "2003-09-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (x265)",
-            "item": "gl-fullseries",
-            "itemTitle": "George Lopez",
-            "file": "George Lopez - S03E01 - Dubya, Dad and Dating (1080p x265 EDGE2020).ia.mp4",
-            "name": "George Lopez - S03E01 - Dubya, Dad and Dating (1080p x265 EDGE2020)",
-            "url": "https://archive.org/download/gl-fullseries/George%20Lopez%20-%20S03E01%20-%20Dubya%2C%20Dad%20and%20Dating%20(1080p%20x265%20EDGE2020).ia.mp4",
-            "seconds": 1261,
-            "format": "h.264 IA",
-            "playable": false,
-            "codecRisk": "video (x265)",
-            "sizeMB": 147
-          },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "gl-fullseries",
-              "itemTitle": "George Lopez",
-              "file": "George Lopez - S03E01 - Dubya, Dad and Dating (480p x265 EDGE2020).mp4",
-              "name": "George Lopez - S03E01 - Dubya, Dad and Dating (480p x265 EDGE2020)",
-              "url": "https://archive.org/download/gl-fullseries/George%20Lopez%20-%20S03E01%20-%20Dubya%2C%20Dad%20and%20Dating%20(480p%20x265%20EDGE2020).mp4",
-              "seconds": 1261,
-              "format": "MPEG4",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 147
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -306,7 +278,7 @@
           "airdate": "2003-10-03",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",
@@ -548,7 +520,7 @@
           "airdate": "2004-02-20",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",
@@ -664,7 +636,7 @@
           "airdate": "2004-05-07",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",

@@ -3,7 +3,7 @@
   "slug": "wolf-hall",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-14T04:29:06.358Z",
+  "matchedAt": "2026-10-14T05:19:09.360Z",
   "tvmaze": {
     "id": 1432,
     "name": "Wolf Hall",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 12,
-    "live": 6,
-    "review": 0,
+    "live": 5,
+    "review": 1,
     "missing": 6,
     "pct": 50
   },
@@ -261,9 +261,9 @@
           "number": 6,
           "name": "Master of Phantoms",
           "airdate": "2015-02-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "wolf-hall_202606",
             "itemTitle": "Wolf Hall (2015) Complete",
@@ -277,7 +277,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "wolf-hall_202608",
               "itemTitle": "Wolf Hall (2015)",

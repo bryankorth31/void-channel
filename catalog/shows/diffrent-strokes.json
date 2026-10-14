@@ -3,7 +3,7 @@
   "slug": "diffrent-strokes",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:28:59.856Z",
+  "matchedAt": "2026-10-14T05:18:58.323Z",
   "tvmaze": {
     "id": 4606,
     "name": "Diff'rent Strokes",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 189,
-    "live": 180,
-    "review": 6,
-    "missing": 3,
-    "pct": 98
+    "live": 152,
+    "review": 28,
+    "missing": 9,
+    "pct": 95
   },
   "seasons": [
     {
@@ -107,9 +107,9 @@
           "number": 3,
           "name": "Mother's Last Visit",
           "airdate": "1978-11-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -123,7 +123,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffrent-strokes-Lando18",
               "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -675,19 +675,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S01E17 (Mrs. Garrett's Crisis).mp4",
-              "name": "Diff'rent Strokes - S01E17 (Mrs. Garrett's Crisis)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S01E17%20(Mrs.%20Garrett's%20Crisis).mp4",
-              "seconds": 1511,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 164
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Willis' Privacy\" (1.00)",
               "item": "diffrent-strokes-Lando18",
@@ -708,44 +695,31 @@
           "airdate": "1979-03-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S01e18 1979-03-02 Mrs Garretts Crisis 2020-10-09-1555-15.mp4",
-            "name": "Diff'rent Strokes S01e18 1979-03-02 Mrs Garretts Crisis 2020-10-09-1555-15",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S01e18%201979-03-02%20Mrs%20Garretts%20Crisis%202020-10-09-1555-15.mp4",
-            "seconds": 1320,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S01E18 (The Job).mp4",
+            "name": "Diff'rent Strokes - S01E18 (The Job)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S01E18%20(The%20Job).mp4",
+            "seconds": 1522,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 122
+            "sizeMB": 174
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S01E18 (The Job).mp4",
-              "name": "Diff'rent Strokes - S01E18 (The Job)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S01E18%20(The%20Job).mp4",
-              "seconds": 1522,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S01e18 1979-03-02 Mrs Garretts Crisis 2020-10-09-1555-15.mp4",
+              "name": "Diff'rent Strokes S01e18 1979-03-02 Mrs Garretts Crisis 2020-10-09-1555-15",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S01e18%201979-03-02%20Mrs%20Garretts%20Crisis%202020-10-09-1555-15.mp4",
+              "seconds": 1320,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 174
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Mrs. Garrett's Crisis\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S01E17 (Mrs. Garrett's Crisis).mp4",
-              "name": "Diff'rent Strokes - S01E17 (Mrs. Garrett's Crisis)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S01E17%20(Mrs.%20Garrett's%20Crisis).mp4",
-              "seconds": 1511,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 164
+              "sizeMB": 122
             }
           ]
         },
@@ -987,56 +961,29 @@
           "number": 1,
           "name": "Arnold's Girlfriend - Part 1",
           "airdate": "1979-09-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S02e01 1979-09-21 Arnolds Girlfriend 2020-10-15-1555-21.mp4",
-            "name": "Diff'rent Strokes S02e01 1979-09-21 Arnolds Girlfriend 2020-10-15-1555-21",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e01%201979-09-21%20Arnolds%20Girlfriend%202020-10-15-1555-21.mp4",
-            "seconds": 2420,
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S02E01 (Arnold's Girlfriend - pt1).mp4",
+            "name": "Diff'rent Strokes - S02E01 (Arnold's Girlfriend - pt1)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E01%20(Arnold's%20Girlfriend%20-%20pt1).mp4",
+            "seconds": 1589,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 210
+            "sizeMB": 165
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S02E01 (Arnold's Girlfriend - pt1).mp4",
-              "name": "Diff'rent Strokes - S02E01 (Arnold's Girlfriend - pt1)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E01%20(Arnold's%20Girlfriend%20-%20pt1).mp4",
-              "seconds": 1589,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 165
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Arnold's Girlfriend - Part 1\" (0.70)",
-              "item": "diffstrokes-antennatv",
-              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-              "file": "Diff'rent Strokes S02e02 1979-09-21 Arnolds Girlfriend 2020-10-15-1625-22.mp4",
-              "name": "Diff'rent Strokes S02e02 1979-09-21 Arnolds Girlfriend 2020-10-15-1625-22",
-              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e02%201979-09-21%20Arnolds%20Girlfriend%202020-10-15-1625-22.mp4",
-              "seconds": 2400,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 209
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Arnold's Girlfriend - Part 2",
           "airdate": "1979-09-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -1048,21 +995,7 @@
             "playable": true,
             "sizeMB": 164
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffstrokes-antennatv",
-              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-              "file": "Diff'rent Strokes S02e02 1979-09-21 Arnolds Girlfriend 2020-10-15-1625-22.mp4",
-              "name": "Diff'rent Strokes S02e02 1979-09-21 Arnolds Girlfriend 2020-10-15-1625-22",
-              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e02%201979-09-21%20Arnolds%20Girlfriend%202020-10-15-1625-22.mp4",
-              "seconds": 2400,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 209
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -1258,43 +1191,29 @@
           "number": 9,
           "name": "The Adoption - Part 2",
           "airdate": "1979-11-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"The Adoption - Part 2\" (0.89)",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
-            "file": "Diff'rent Strokes - S02E09 (Father and Son Day).mp4",
-            "name": "Diff'rent Strokes - S02E09 (Father and Son Day)",
-            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E09%20(Father%20and%20Son%20Day).mp4",
-            "seconds": 1517,
+            "file": "Diff'rent Strokes - S02E08 (The Adoption - pt2).mp4",
+            "name": "Diff'rent Strokes - S02E08 (The Adoption - pt2)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E08%20(The%20Adoption%20-%20pt2).mp4",
+            "seconds": 1502,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166
+            "sizeMB": 177
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Adoption - Part 2\" (0.89)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S02E08 (The Adoption - pt2).mp4",
-              "name": "Diff'rent Strokes - S02E08 (The Adoption - pt2)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E08%20(The%20Adoption%20-%20pt2).mp4",
-              "seconds": 1502,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 177
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
           "name": "Father and Son Day",
           "airdate": "1979-11-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -1306,55 +1225,15 @@
             "playable": true,
             "sizeMB": 233
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Father and Son Day\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S02E09 (Father and Son Day).mp4",
-              "name": "Diff'rent Strokes - S02E09 (Father and Son Day)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E09%20(Father%20and%20Son%20Day).mp4",
-              "seconds": 1517,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 166
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Thanksgiving Crossover - Part 1",
           "airdate": "1979-11-28",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S02e11 1979-11-28 Thanksgiving Crossover 2020-10-22-1555-26.mp4",
-            "name": "Diff'rent Strokes S02e11 1979-11-28 Thanksgiving Crossover 2020-10-22-1555-26",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e11%201979-11-28%20Thanksgiving%20Crossover%202020-10-22-1555-26.mp4",
-            "seconds": 2390,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 230
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Thanksgiving Crossover - Part 1\" (0.74)",
-              "item": "diffstrokes-antennatv",
-              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-              "file": "Diff'rent Strokes S02e12 1979-11-28 Thanksgiving Crossover 2020-10-22-1625-27.mp4",
-              "name": "Diff'rent Strokes S02e12 1979-11-28 Thanksgiving Crossover 2020-10-22-1625-27",
-              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e12%201979-11-28%20Thanksgiving%20Crossover%202020-10-22-1625-27.mp4",
-              "seconds": 2400,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 237
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,
@@ -1364,31 +1243,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S02e12 1979-11-28 Thanksgiving Crossover 2020-10-22-1625-27.mp4",
-            "name": "Diff'rent Strokes S02e12 1979-11-28 Thanksgiving Crossover 2020-10-22-1625-27",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e12%201979-11-28%20Thanksgiving%20Crossover%202020-10-22-1625-27.mp4",
-            "seconds": 2400,
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S02E12 (Hot Watch).mp4",
+            "name": "Diff'rent Strokes - S02E12 (Hot Watch)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E12%20(Hot%20Watch).mp4",
+            "seconds": 1502,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 237
+            "sizeMB": 191
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S02E12 (Hot Watch).mp4",
-              "name": "Diff'rent Strokes - S02E12 (Hot Watch)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E12%20(Hot%20Watch).mp4",
-              "seconds": 1502,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 191
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
@@ -1611,35 +1476,21 @@
           "number": 19,
           "name": "Big Business",
           "airdate": "1980-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"Big Business\" (1.00)",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
-            "file": "Diff'rent Strokes - S02E19 (Valentine Day Retrospect).mp4",
-            "name": "Diff'rent Strokes - S02E19 (Valentine Day Retrospect)",
-            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E19%20(Valentine%20Day%20Retrospect).mp4",
-            "seconds": 1515,
+            "file": "Diff'rent Strokes - S02E17 (Big Business).mp4",
+            "name": "Diff'rent Strokes - S02E17 (Big Business)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E17%20(Big%20Business).mp4",
+            "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 182
+            "sizeMB": 218
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Big Business\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S02E17 (Big Business).mp4",
-              "name": "Diff'rent Strokes - S02E17 (Big Business)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E17%20(Big%20Business).mp4",
-              "seconds": 1513,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 218
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 20,
@@ -1692,35 +1543,9 @@
           "number": 21,
           "name": "Valentine's Day Retrospective (a.k.a.) Valentine's Vigil",
           "airdate": "1980-02-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S02e21 1980-02-13 Valentines Day Retrospective 2020-10-28-1625-32.mp4",
-            "name": "Diff'rent Strokes S02e21 1980-02-13 Valentines Day Retrospective 2020-10-28-1625-32",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S02e21%201980-02-13%20Valentines%20Day%20Retrospective%202020-10-28-1625-32.mp4",
-            "seconds": 2400,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 228
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Valentine's Day Retrospective (a.k.a.) Valentine's Vigil\" (0.74)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S02E19 (Valentine Day Retrospect).mp4",
-              "name": "Diff'rent Strokes - S02E19 (Valentine Day Retrospect)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E19%20(Valentine%20Day%20Retrospect).mp4",
-              "seconds": 1515,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 182
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 22,
@@ -1929,54 +1754,16 @@
           "number": 5,
           "name": "The Accident - Part 1",
           "airdate": "1980-12-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S03e05 1980-12-03 The Accident 2020-11-05-1555-36.mp4",
-            "name": "Diff'rent Strokes S03e05 1980-12-03 The Accident 2020-11-05-1555-36",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S03e05%201980-12-03%20The%20Accident%202020-11-05-1555-36.mp4",
-            "seconds": 2410,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 224
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"The Accident - Part 1\" (0.63)",
-              "item": "diffstrokes-antennatv",
-              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-              "file": "Diff'rent Strokes S03e06 1980-12-03 The Accident 2020-11-05-1625-37.mp4",
-              "name": "Diff'rent Strokes S03e06 1980-12-03 The Accident 2020-11-05-1625-37",
-              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S03e06%201980-12-03%20The%20Accident%202020-11-05-1625-37.mp4",
-              "seconds": 2410,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
           "name": "The Accident - Part 2",
           "airdate": "1980-12-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S03e06 1980-12-03 The Accident 2020-11-05-1625-37.mp4",
-            "name": "Diff'rent Strokes S03e06 1980-12-03 The Accident 2020-11-05-1625-37",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S03e06%201980-12-03%20The%20Accident%202020-11-05-1625-37.mp4",
-            "seconds": 2410,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 205
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2378,9 +2165,9 @@
           "number": 1,
           "name": "Growing Up",
           "airdate": "1981-10-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -3225,35 +3012,21 @@
           "number": 8,
           "name": "A Case of Overexposure (a.k.a.) Overexposure",
           "airdate": "1982-11-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S05e08 1982-11-20 A Case Of Overexposure 2020-12-15-1555-56.mp4",
-            "name": "Diff'rent Strokes S05e08 1982-11-20 A Case Of Overexposure 2020-12-15-1555-56",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S05e08%201982-11-20%20A%20Case%20Of%20Overexposure%202020-12-15-1555-56.mp4",
-            "seconds": 2400,
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S05E08 (A Case of Overexposure).mp4",
+            "name": "Diff'rent Strokes - S05E08 (A Case of Overexposure)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S05E08%20(A%20Case%20of%20Overexposure).mp4",
+            "seconds": 1500,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 257
+            "sizeMB": 198
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S05E08 (A Case of Overexposure).mp4",
-              "name": "Diff'rent Strokes - S05E08 (A Case of Overexposure)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S05E08%20(A%20Case%20of%20Overexposure).mp4",
-              "seconds": 1500,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 198
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -3577,9 +3350,9 @@
           "number": 18,
           "name": "Family on Ice",
           "airdate": "1983-02-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -3593,7 +3366,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffrent-strokes-Lando18",
               "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -3679,9 +3452,9 @@
           "number": 21,
           "name": "Roommates",
           "airdate": "1983-03-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -3695,7 +3468,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffstrokes-antennatv",
               "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -3713,9 +3486,9 @@
           "number": 22,
           "name": "The Reporter",
           "airdate": "1983-03-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -3729,7 +3502,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffrent-strokes-Lando18",
               "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -3954,9 +3727,9 @@
           "number": 7,
           "name": "The Moonlighter",
           "airdate": "1983-11-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -3974,9 +3747,9 @@
           "number": 8,
           "name": "Coming of Age",
           "airdate": "1983-12-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -4203,9 +3976,9 @@
           "number": 16,
           "name": "Hooray for Hollywood (1)",
           "airdate": "1984-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -4217,40 +3990,14 @@
             "playable": true,
             "sizeMB": 198
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Hooray for Hollywood (1)\" (0.88)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2).mp4",
-              "name": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S06E17%20(Hooray%20for%20Hollywood%20-%20pt2).mp4",
-              "seconds": 1498,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 200
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 17,
           "name": "Hooray for Hollywood (2)",
           "airdate": "1984-02-18",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "diffrent-strokes-Lando18",
-            "itemTitle": "Diff'rent Strokes (complete TV series)",
-            "file": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2).mp4",
-            "name": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2)",
-            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S06E17%20(Hooray%20for%20Hollywood%20-%20pt2).mp4",
-            "seconds": 1498,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 200
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4416,9 +4163,9 @@
           "number": 1,
           "name": "A Haunting We Will Go",
           "airdate": "1984-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -4436,9 +4183,9 @@
           "number": 2,
           "name": "Arnold and Lisa's Mother",
           "airdate": "1984-10-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -4496,9 +4243,9 @@
           "number": 5,
           "name": "Arnold's Strike",
           "airdate": "1984-10-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -4950,9 +4697,9 @@
           "number": 20,
           "name": "A Camping We Will Go",
           "airdate": "1985-02-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -4966,7 +4713,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffrent-strokes-Lando18",
               "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -4984,9 +4731,9 @@
           "number": 21,
           "name": "Beauty is in the Eye of Arnold",
           "airdate": "1985-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -5000,7 +4747,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffrent-strokes-Lando18",
               "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -5052,9 +4799,9 @@
           "number": 23,
           "name": "Street Smarts",
           "airdate": "1985-03-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -5068,7 +4815,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "diffrent-strokes-Lando18",
               "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -5125,35 +4872,9 @@
           "number": 1,
           "name": "Sam's Missing - Part 1",
           "airdate": "1985-09-27",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S08e01 1985-09-27 Sams Missing 2020-09-15-1555-95.mp4",
-            "name": "Diff'rent Strokes S08e01 1985-09-27 Sams Missing 2020-09-15-1555-95",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e01%201985-09-27%20Sams%20Missing%202020-09-15-1555-95.mp4",
-            "seconds": 2389,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 227
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Sam's Missing - Part 1\" (0.63)",
-              "item": "diffstrokes-antennatv",
-              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-              "file": "Diff'rent Strokes S08e02 1985-09-27 Sams Missing 2020-09-15-1625-96.mp4",
-              "name": "Diff'rent Strokes S08e02 1985-09-27 Sams Missing 2020-09-15-1625-96",
-              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e02%201985-09-27%20Sams%20Missing%202020-09-15-1625-96.mp4",
-              "seconds": 2390,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 224
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -5163,31 +4884,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S08e02 1985-09-27 Sams Missing 2020-09-15-1625-96.mp4",
-            "name": "Diff'rent Strokes S08e02 1985-09-27 Sams Missing 2020-09-15-1625-96",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e02%201985-09-27%20Sams%20Missing%202020-09-15-1625-96.mp4",
-            "seconds": 2390,
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S08E02 (Bully for Arnold).mp4",
+            "name": "Diff'rent Strokes - S08E02 (Bully for Arnold)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E02%20(Bully%20for%20Arnold).mp4",
+            "seconds": 1488,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 224
+            "sizeMB": 187
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E02 (Bully for Arnold).mp4",
-              "name": "Diff'rent Strokes - S08E02 (Bully for Arnold)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E02%20(Bully%20for%20Arnold).mp4",
-              "seconds": 1488,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 187
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -5209,19 +4916,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E03 (Love on the Run).mp4",
-              "name": "Diff'rent Strokes - S08E03 (Love on the Run)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E03%20(Love%20on%20the%20Run).mp4",
-              "seconds": 1488,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 192
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Bully for Arnold\" (1.00)",
               "item": "diffrent-strokes-Lando18",
@@ -5240,9 +4934,9 @@
           "number": 4,
           "name": "Love on the Run",
           "airdate": "1985-10-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "diffstrokes-antennatv",
             "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
@@ -5254,34 +4948,7 @@
             "playable": true,
             "sizeMB": 218
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E04 (Willis Goes to College).mp4",
-              "name": "Diff'rent Strokes - S08E04 (Willis Goes to College)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E04%20(Willis%20Goes%20to%20College).mp4",
-              "seconds": 1488,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 199
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Love on the Run\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E03 (Love on the Run).mp4",
-              "name": "Diff'rent Strokes - S08E03 (Love on the Run)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E03%20(Love%20on%20the%20Run).mp4",
-              "seconds": 1488,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 192
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -5289,44 +4956,31 @@
           "airdate": "1985-10-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S08e05 1985-10-18 Willis Goes To College 2020-09-17-1555-99.mp4",
-            "name": "Diff'rent Strokes S08e05 1985-10-18 Willis Goes To College 2020-09-17-1555-99",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e05%201985-10-18%20Willis%20Goes%20To%20College%202020-09-17-1555-99.mp4",
-            "seconds": 2410,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S08E05 (Arnold's Job).mp4",
+            "name": "Diff'rent Strokes - S08E05 (Arnold's Job)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E05%20(Arnold's%20Job).mp4",
+            "seconds": 1487,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 222
+            "sizeMB": 200
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E05 (Arnold's Job).mp4",
-              "name": "Diff'rent Strokes - S08E05 (Arnold's Job)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E05%20(Arnold's%20Job).mp4",
-              "seconds": 1487,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S08e05 1985-10-18 Willis Goes To College 2020-09-17-1555-99.mp4",
+              "name": "Diff'rent Strokes S08e05 1985-10-18 Willis Goes To College 2020-09-17-1555-99",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e05%201985-10-18%20Willis%20Goes%20To%20College%202020-09-17-1555-99.mp4",
+              "seconds": 2410,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 200
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Willis Goes to College\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E04 (Willis Goes to College).mp4",
-              "name": "Diff'rent Strokes - S08E04 (Willis Goes to College)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E04%20(Willis%20Goes%20to%20College).mp4",
-              "seconds": 1488,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 199
+              "sizeMB": 222
             }
           ]
         },
@@ -5368,35 +5022,21 @@
           "number": 7,
           "name": "A Tale of Two Teachers",
           "airdate": "1985-11-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "diffrent-strokes-Lando18",
-            "itemTitle": "Diff'rent Strokes (complete TV series)",
-            "file": "Diff'rent Strokes - S08E07 (So You Want to be a Rock Star).mp4",
-            "name": "Diff'rent Strokes - S08E07 (So You Want to be a Rock Star)",
-            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E07%20(So%20You%20Want%20to%20be%20a%20Rock%20Star).mp4",
-            "seconds": 1490,
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
+            "item": "diffstrokes-antennatv",
+            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+            "file": "Diff'rent Strokes S08e07 1985-11-08 A Tale Of Two Teachers 2020-09-18-1555-101.mp4",
+            "name": "Diff'rent Strokes S08e07 1985-11-08 A Tale Of Two Teachers 2020-09-18-1555-101",
+            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e07%201985-11-08%20A%20Tale%20Of%20Two%20Teachers%202020-09-18-1555-101.mp4",
+            "seconds": 2400,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 215
+            "sizeMB": 191
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "diffstrokes-antennatv",
-              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-              "file": "Diff'rent Strokes S08e07 1985-11-08 A Tale Of Two Teachers 2020-09-18-1555-101.mp4",
-              "name": "Diff'rent Strokes S08e07 1985-11-08 A Tale Of Two Teachers 2020-09-18-1555-101",
-              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e07%201985-11-08%20A%20Tale%20Of%20Two%20Teachers%202020-09-18-1555-101.mp4",
-              "seconds": 2400,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 191
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -5404,44 +5044,31 @@
           "airdate": "1985-11-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S08e08 1985-11-15 So You Want To Be A Rock Star 2020-09-18-1625-102.mp4",
-            "name": "Diff'rent Strokes S08e08 1985-11-15 So You Want To Be A Rock Star 2020-09-18-1625-102",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e08%201985-11-15%20So%20You%20Want%20To%20Be%20A%20Rock%20Star%202020-09-18-1625-102.mp4",
-            "seconds": 2400,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S08E08 (Speak No Evil).mp4",
+            "name": "Diff'rent Strokes - S08E08 (Speak No Evil)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E08%20(Speak%20No%20Evil).mp4",
+            "seconds": 1489,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 206
+            "sizeMB": 203
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E08 (Speak No Evil).mp4",
-              "name": "Diff'rent Strokes - S08E08 (Speak No Evil)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E08%20(Speak%20No%20Evil).mp4",
-              "seconds": 1489,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S08e08 1985-11-15 So You Want To Be A Rock Star 2020-09-18-1625-102.mp4",
+              "name": "Diff'rent Strokes S08e08 1985-11-15 So You Want To Be A Rock Star 2020-09-18-1625-102",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e08%201985-11-15%20So%20You%20Want%20To%20Be%20A%20Rock%20Star%202020-09-18-1625-102.mp4",
+              "seconds": 2400,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 203
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"So You Want to Be a Rock Star\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E07 (So You Want to be a Rock Star).mp4",
-              "name": "Diff'rent Strokes - S08E07 (So You Want to be a Rock Star)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E07%20(So%20You%20Want%20to%20be%20a%20Rock%20Star).mp4",
-              "seconds": 1490,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 215
+              "sizeMB": 206
             }
           ]
         },
@@ -5559,19 +5186,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E11 (Arnold's Initiation).mp4",
-              "name": "Diff'rent Strokes - S08E11 (Arnold's Initiation)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E11%20(Arnold's%20Initiation).mp4",
-              "seconds": 1490,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 201
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"It's My Party and I'll Cry If I Want To\" (1.00)",
               "item": "diffrent-strokes-Lando18",
@@ -5592,44 +5206,31 @@
           "airdate": "1986-01-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S08e12 1986-01-10 Arnolds Initiation 2020-09-22-1625-106.mp4",
-            "name": "Diff'rent Strokes S08e12 1986-01-10 Arnolds Initiation 2020-09-22-1625-106",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e12%201986-01-10%20Arnolds%20Initiation%202020-09-22-1625-106.mp4",
-            "seconds": 2040,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S08E12 (Bulimia).mp4",
+            "name": "Diff'rent Strokes - S08E12 (Bulimia)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E12%20(Bulimia).mp4",
+            "seconds": 1490,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 226
+            "sizeMB": 204
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E12 (Bulimia).mp4",
-              "name": "Diff'rent Strokes - S08E12 (Bulimia)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E12%20(Bulimia).mp4",
-              "seconds": 1490,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S08e12 1986-01-10 Arnolds Initiation 2020-09-22-1625-106.mp4",
+              "name": "Diff'rent Strokes S08e12 1986-01-10 Arnolds Initiation 2020-09-22-1625-106",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e12%201986-01-10%20Arnolds%20Initiation%202020-09-22-1625-106.mp4",
+              "seconds": 2040,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 204
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Arnold's Initiation\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E11 (Arnold's Initiation).mp4",
-              "name": "Diff'rent Strokes - S08E11 (Arnold's Initiation)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E11%20(Arnold's%20Initiation).mp4",
-              "seconds": 1490,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 201
+              "sizeMB": 226
             }
           ]
         },
@@ -5801,19 +5402,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E17 (The Photo Club).mp4",
-              "name": "Diff'rent Strokes - S08E17 (The Photo Club)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E17%20(The%20Photo%20Club).mp4",
-              "seconds": 1460,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 195
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"The Big Bribe\" (1.00)",
               "item": "diffrent-strokes-Lando18",
@@ -5834,44 +5422,31 @@
           "airdate": "1986-02-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "diffstrokes-antennatv",
-            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
-            "file": "Diff'rent Strokes S08e18 1986-02-28 The Photo Club 2020-09-25-1625-112.mp4",
-            "name": "Diff'rent Strokes S08e18 1986-02-28 The Photo Club 2020-09-25-1625-112",
-            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e18%201986-02-28%20The%20Photo%20Club%202020-09-25-1625-112.mp4",
-            "seconds": 2400,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S08E18 (The Front Page).mp4",
+            "name": "Diff'rent Strokes - S08E18 (The Front Page)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E18%20(The%20Front%20Page).mp4",
+            "seconds": 1459,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214
+            "sizeMB": 210
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E18 (The Front Page).mp4",
-              "name": "Diff'rent Strokes - S08E18 (The Front Page)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E18%20(The%20Front%20Page).mp4",
-              "seconds": 1459,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S08e18 1986-02-28 The Photo Club 2020-09-25-1625-112.mp4",
+              "name": "Diff'rent Strokes S08e18 1986-02-28 The Photo Club 2020-09-25-1625-112",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S08e18%201986-02-28%20The%20Photo%20Club%202020-09-25-1625-112.mp4",
+              "seconds": 2400,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 210
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Photo Club\" (1.00)",
-              "item": "diffrent-strokes-Lando18",
-              "itemTitle": "Diff'rent Strokes (complete TV series)",
-              "file": "Diff'rent Strokes - S08E17 (The Photo Club).mp4",
-              "name": "Diff'rent Strokes - S08E17 (The Photo Club)",
-              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E17%20(The%20Photo%20Club).mp4",
-              "seconds": 1460,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 195
+              "sizeMB": 214
             }
           ]
         },

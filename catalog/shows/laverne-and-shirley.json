@@ -3,7 +3,7 @@
   "slug": "laverne-and-shirley",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:28:58.048Z",
+  "matchedAt": "2026-10-14T05:18:54.641Z",
   "tvmaze": {
     "id": 5814,
     "name": "Laverne & Shirley",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 178,
-    "live": 19,
+    "live": 17,
     "review": 0,
-    "missing": 159,
-    "pct": 11
+    "missing": 161,
+    "pct": 10
   },
   "seasons": [
     {
@@ -26,35 +26,9 @@
           "number": 1,
           "name": "The Society Party",
           "airdate": "1976-01-27",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "laverne-and-shirley-in-the-army_202605",
-            "itemTitle": "Laverne and Shirley in the Army",
-            "file": "Laverne and Shirley in the Army S01E01 (Invasion of the Boobie Hatchers).mp4",
-            "name": "Laverne and Shirley in the Army S01E01 (Invasion of the Boobie Hatchers)",
-            "url": "https://archive.org/download/laverne-and-shirley-in-the-army_202605/Laverne%20and%20Shirley%20in%20the%20Army%20S01E01%20(Invasion%20of%20the%20Boobie%20Hatchers).mp4",
-            "seconds": 1409,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 738
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "laverne-and-shirley-in-the-army",
-              "itemTitle": "Laverne & Shirley in the Army",
-              "file": "Laverne & Shirley In The Army 1x01 Invasion Of The Booby Hatchers [Animated80s].mp4",
-              "name": "Laverne & Shirley In The Army 1x01 Invasion Of The Booby Hatchers [Animated80s]",
-              "url": "https://archive.org/download/laverne-and-shirley-in-the-army/Laverne%20%26%20Shirley%20In%20The%20Army%201x01%20Invasion%20Of%20The%20Booby%20Hatchers%20%5BAnimated80s%5D.mp4",
-              "seconds": 1287,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 126
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -571,20 +545,8 @@
           "number": 5,
           "name": "Bridal Shower",
           "airdate": "1976-11-09",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "laverne-and-shirley-in-the-army_202605",
-            "itemTitle": "Laverne and Shirley in the Army",
-            "file": "Laverne and Shirley in the Army S02E05 The Robot Recruit.mp4",
-            "name": "Laverne and Shirley in the Army S02E05 The Robot Recruit",
-            "url": "https://archive.org/download/laverne-and-shirley-in-the-army_202605/Laverne%20and%20Shirley%20in%20the%20Army%20S02E05%20The%20Robot%20Recruit.mp4",
-            "seconds": 1322,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 223
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

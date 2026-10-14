@@ -3,7 +3,7 @@
   "slug": "police-squad",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:29:00.813Z",
+  "matchedAt": "2026-10-14T05:19:00.209Z",
   "tvmaze": {
     "id": 2256,
     "name": "Police Squad!",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 6,
-    "live": 5,
-    "review": 1,
+    "live": 3,
+    "review": 3,
     "missing": 0,
     "pct": 100
   },
@@ -26,36 +26,22 @@
           "number": 1,
           "name": "A Substantial Gift (The Broken Promise)",
           "airdate": "1982-03-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "policesquad_202407",
-            "itemTitle": "Police Squad",
-            "file": "POLICE_SQUAD Ep1 - A Substaintial Gift (The Broken Promise).mp4",
-            "name": "POLICE_SQUAD Ep1 - A Substaintial Gift (The Broken Promise)",
-            "url": "https://archive.org/download/policesquad_202407/POLICE_SQUAD%20Ep1%20-%20A%20Substaintial%20Gift%20(The%20Broken%20Promise).mp4",
-            "seconds": 1508,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: audio (DTS)",
+            "item": "police_squad",
+            "itemTitle": "Police Squad! (1982) [Complete Series + Extras]",
+            "file": "Police.Squad.S01E01.A.Substantial.Gift.The.Broken.Promise.1080p.BluRay.Plus.Comm.DTS.x264-MaG.mp4",
+            "name": "Police.Squad.S01E01.A.Substantial.Gift.The.Broken.Promise.1080p.BluRay.Plus.Comm.DTS.x264-MaG",
+            "url": "https://archive.org/download/police_squad/Police.Squad.S01E01.A.Substantial.Gift.The.Broken.Promise.1080p.BluRay.Plus.Comm.DTS.x264-MaG.mp4",
+            "seconds": 1506,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "police_squad",
-              "itemTitle": "Police Squad! (1982) [Complete Series + Extras]",
-              "file": "Police.Squad.S01E01.A.Substantial.Gift.The.Broken.Promise.1080p.BluRay.Plus.Comm.DTS.x264-MaG.mp4",
-              "name": "Police.Squad.S01E01.A.Substantial.Gift.The.Broken.Promise.1080p.BluRay.Plus.Comm.DTS.x264-MaG",
-              "url": "https://archive.org/download/police_squad/Police.Squad.S01E01.A.Substantial.Gift.The.Broken.Promise.1080p.BluRay.Plus.Comm.DTS.x264-MaG.mp4",
-              "seconds": 1506,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -131,36 +117,22 @@
           "number": 4,
           "name": "Revenge and Remorse (The Guilty Alibi)",
           "airdate": "1982-03-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "policesquad_202407",
-            "itemTitle": "Police Squad",
-            "file": "POLICE_SQUAD Ep4 - Revenge and Remorse (The Guilty Alibi).mp4",
-            "name": "POLICE_SQUAD Ep4 - Revenge and Remorse (The Guilty Alibi)",
-            "url": "https://archive.org/download/policesquad_202407/POLICE_SQUAD%20Ep4%20-%20Revenge%20and%20Remorse%20(The%20Guilty%20Alibi).mp4",
-            "seconds": 1509,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 163
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: audio (DTS)",
+            "item": "police_squad",
+            "itemTitle": "Police Squad! (1982) [Complete Series + Extras]",
+            "file": "Police.Squad.S01E04.Revenge.And.Remorse.The.Guilty.Alibi.1080p.BluRay.DTS.x264-MaG.mp4",
+            "name": "Police.Squad.S01E04.Revenge.And.Remorse.The.Guilty.Alibi.1080p.BluRay.DTS.x264-MaG",
+            "url": "https://archive.org/download/police_squad/Police.Squad.S01E04.Revenge.And.Remorse.The.Guilty.Alibi.1080p.BluRay.DTS.x264-MaG.mp4",
+            "seconds": 1507,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "police_squad",
-              "itemTitle": "Police Squad! (1982) [Complete Series + Extras]",
-              "file": "Police.Squad.S01E04.Revenge.And.Remorse.The.Guilty.Alibi.1080p.BluRay.DTS.x264-MaG.mp4",
-              "name": "Police.Squad.S01E04.Revenge.And.Remorse.The.Guilty.Alibi.1080p.BluRay.DTS.x264-MaG",
-              "url": "https://archive.org/download/police_squad/Police.Squad.S01E04.Revenge.And.Remorse.The.Guilty.Alibi.1080p.BluRay.DTS.x264-MaG.mp4",
-              "seconds": 1507,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,

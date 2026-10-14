@@ -3,7 +3,7 @@
   "slug": "the-alienist",
   "type": "Drama",
   "network": "TNT",
-  "matchedAt": "2026-10-14T04:29:06.238Z",
+  "matchedAt": "2026-10-14T05:19:09.009Z",
   "tvmaze": {
     "id": 8800,
     "name": "The Alienist",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 18,
-    "live": 16,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "live": 7,
+    "review": 5,
+    "missing": 6,
+    "pct": 67
   },
   "seasons": [
     {
@@ -46,9 +46,9 @@
           "number": 2,
           "name": "A Fruitful Partnership",
           "airdate": "2018-01-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-alienist_202601",
             "itemTitle": "The Alienist (2018)",
@@ -126,9 +126,9 @@
           "number": 6,
           "name": "Ascension",
           "airdate": "2018-02-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-alienist_202601",
             "itemTitle": "The Alienist (2018)",
@@ -186,9 +186,9 @@
           "number": 9,
           "name": "Requiem",
           "airdate": "2018-03-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-alienist_202601",
             "itemTitle": "The Alienist (2018)",
@@ -271,120 +271,48 @@
           "number": 3,
           "name": "Labyrinth",
           "airdate": "2020-07-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-alienist_202601",
-            "itemTitle": "The Alienist (2018)",
-            "file": "The Alienist S2 E03 - Angel of Darkness Labyri.mp4",
-            "name": "The Alienist S2 E03 - Angel of Darkness Labyri",
-            "url": "https://archive.org/download/the-alienist_202601/The%20Alienist%20S2%20E03%20-%20Angel%20of%20Darkness%20Labyri.mp4",
-            "seconds": 2865,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 368
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Gilded Cage",
           "airdate": "2020-07-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-alienist_202601",
-            "itemTitle": "The Alienist (2018)",
-            "file": "The Alienist S2 E04 - Angel of Darkness Gilded.mp4",
-            "name": "The Alienist S2 E04 - Angel of Darkness Gilded",
-            "url": "https://archive.org/download/the-alienist_202601/The%20Alienist%20S2%20E04%20-%20Angel%20of%20Darkness%20Gilded.mp4",
-            "seconds": 3041,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 466
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Belly of the Beast",
           "airdate": "2020-08-02",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-alienist_202601",
-            "itemTitle": "The Alienist (2018)",
-            "file": "The Alienist S2 E05 - Angel of Darkness Belly.mp4",
-            "name": "The Alienist S2 E05 - Angel of Darkness Belly",
-            "url": "https://archive.org/download/the-alienist_202601/The%20Alienist%20S2%20E05%20-%20Angel%20of%20Darkness%20Belly.mp4",
-            "seconds": 2890,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 345
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Memento Mori",
           "airdate": "2020-08-02",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-alienist_202601",
-            "itemTitle": "The Alienist (2018)",
-            "file": "The Alienist S2 E06 - Angel of Darkness Mement.mp4",
-            "name": "The Alienist S2 E06 - Angel of Darkness Mement",
-            "url": "https://archive.org/download/the-alienist_202601/The%20Alienist%20S2%20E06%20-%20Angel%20of%20Darkness%20Mement.mp4",
-            "seconds": 2839,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 466
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Last Exit to Brooklyn",
           "airdate": "2020-08-09",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-alienist_202601",
-            "itemTitle": "The Alienist (2018)",
-            "file": "The Alienist S2 E07 - Angel of Darkness Last E.mp4",
-            "name": "The Alienist S2 E07 - Angel of Darkness Last E",
-            "url": "https://archive.org/download/the-alienist_202601/The%20Alienist%20S2%20E07%20-%20Angel%20of%20Darkness%20Last%20E.mp4",
-            "seconds": 2722,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 396
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Better Angels",
           "airdate": "2020-08-09",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-alienist_202601",
-            "itemTitle": "The Alienist (2018)",
-            "file": "The Alienist S2 E08 - Angel of Darkness Better.mp4",
-            "name": "The Alienist S2 E08 - Angel of Darkness Better",
-            "url": "https://archive.org/download/the-alienist_202601/The%20Alienist%20S2%20E08%20-%20Angel%20of%20Darkness%20Better.mp4",
-            "seconds": 3250,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 415
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

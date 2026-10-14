@@ -3,7 +3,7 @@
   "slug": "the-larry-sanders-show",
   "type": "90s Sitcoms",
   "network": "HBO",
-  "matchedAt": "2026-10-14T04:28:44.781Z",
+  "matchedAt": "2026-10-14T05:18:30.225Z",
   "tvmaze": {
     "id": 4521,
     "name": "The Larry Sanders Show",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 90,
-    "live": 76,
-    "review": 6,
-    "missing": 8,
-    "pct": 91
+    "live": 63,
+    "review": 17,
+    "missing": 10,
+    "pct": 89
   },
   "seasons": [
     {
@@ -60,9 +60,9 @@
           "number": 2,
           "name": "The Promise",
           "airdate": "1992-08-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -76,7 +76,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-larry-sanders-show-s-01-e-03-the-spider-episode",
               "itemTitle": "The Larry Sanders Show Season 1",
@@ -473,9 +473,9 @@
           "number": 1,
           "name": "The Breakdown (1)",
           "airdate": "1993-06-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -493,9 +493,9 @@
           "number": 2,
           "name": "The Breakdown (2)",
           "airdate": "1993-06-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -533,33 +533,33 @@
           "number": 4,
           "name": "The Stalker",
           "airdate": "1993-06-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.6,
+            "why": "title ~ \"The Stalker\" (0.67)",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
-            "file": "The Larry Sanders Show S02E04 The Stalker.mp4",
-            "name": "The Larry Sanders Show S02E04 The Stalker",
-            "url": "https://archive.org/download/TheLarrySandersShow/The%20Larry%20Sanders%20Show%20S02E04%20The%20Stalker.mp4",
-            "seconds": 1428,
+            "file": "The Larry Sanders Show S01E09 Talk Show.mp4",
+            "name": "The Larry Sanders Show S01E09 Talk Show",
+            "url": "https://archive.org/download/TheLarrySandersShow/The%20Larry%20Sanders%20Show%20S01E09%20Talk%20Show.mp4",
+            "seconds": 1471,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 149
+            "sizeMB": 153
           },
           "alternates": [
             {
               "conf": 0.6,
-              "why": "title ~ \"The Stalker\" (0.67)",
+              "why": "S/E in filename + title match",
               "item": "TheLarrySandersShow",
               "itemTitle": "The Larry Sanders Show",
-              "file": "The Larry Sanders Show S01E09 Talk Show.mp4",
-              "name": "The Larry Sanders Show S01E09 Talk Show",
-              "url": "https://archive.org/download/TheLarrySandersShow/The%20Larry%20Sanders%20Show%20S01E09%20Talk%20Show.mp4",
-              "seconds": 1471,
+              "file": "The Larry Sanders Show S02E04 The Stalker.mp4",
+              "name": "The Larry Sanders Show S02E04 The Stalker",
+              "url": "https://archive.org/download/TheLarrySandersShow/The%20Larry%20Sanders%20Show%20S02E04%20The%20Stalker.mp4",
+              "seconds": 1428,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 153
+              "sizeMB": 149
             },
             {
               "conf": 0.6,
@@ -921,9 +921,9 @@
           "number": 5,
           "name": "People's Choice",
           "airdate": "1994-07-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -1129,40 +1129,16 @@
           "number": 16,
           "name": "Arthur's Crises (a.k.a. Artie's Crisis)",
           "airdate": "1994-10-05",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "TheLarrySandersShow",
-            "itemTitle": "The Larry Sanders Show",
-            "file": "The Larry Sanders Show S03E16 Arthur's Crisis.mp4",
-            "name": "The Larry Sanders Show S03E16 Arthur's Crisis",
-            "url": "https://archive.org/download/TheLarrySandersShow/The%20Larry%20Sanders%20Show%20S03E16%20Arthur's%20Crisis.mp4",
-            "seconds": 1278,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "End of the Season",
           "airdate": "1994-10-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "TheLarrySandersShow",
-            "itemTitle": "The Larry Sanders Show",
-            "file": "The Larry Sanders Show S03E17 End of The Season.mp4",
-            "name": "The Larry Sanders Show S03E17 End of The Season",
-            "url": "https://archive.org/download/TheLarrySandersShow/The%20Larry%20Sanders%20Show%20S03E17%20End%20of%20The%20Season.mp4",
-            "seconds": 1275,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1194,9 +1170,9 @@
           "number": 2,
           "name": "Hank's New Assistant",
           "airdate": "1995-07-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -1503,9 +1479,9 @@
           "number": 2,
           "name": "My Name is Asher Kingsley",
           "airdate": "1996-11-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -1611,9 +1587,9 @@
           "number": 8,
           "name": "Arthur and Angie and Hank and Hercules",
           "airdate": "1997-01-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -1784,9 +1760,9 @@
           "number": 4,
           "name": "Pilots and Pens Lost",
           "airdate": "1998-04-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -1844,9 +1820,9 @@
           "number": 7,
           "name": "Beverly's Secret",
           "airdate": "1998-04-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",
@@ -1864,9 +1840,9 @@
           "number": 8,
           "name": "I Buried Sid",
           "airdate": "1998-05-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "TheLarrySandersShow",
             "itemTitle": "The Larry Sanders Show",

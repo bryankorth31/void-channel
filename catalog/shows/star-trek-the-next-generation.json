@@ -3,7 +3,7 @@
   "slug": "star-trek-the-next-generation",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Syndicated",
-  "matchedAt": "2026-10-14T04:28:52.235Z",
+  "matchedAt": "2026-10-14T05:18:44.363Z",
   "tvmaze": {
     "id": 491,
     "name": "Star Trek: The Next Generation",
@@ -13,9 +13,9 @@
   },
   "coverage": {
     "total": 178,
-    "live": 165,
-    "review": 6,
-    "missing": 7,
+    "live": 133,
+    "review": 37,
+    "missing": 8,
     "pct": 96
   },
   "seasons": [
@@ -112,9 +112,9 @@
           "number": 5,
           "name": "The Last Outpost",
           "airdate": "1987-10-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -126,30 +126,15 @@
             "playable": true,
             "sizeMB": 275
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"The Last Outpost\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E05 - The Last Outpost.mkv",
-              "name": "E05 - The Last Outpost",
-              "url": "https://archive.org/download/TNG01/E05%20-%20The%20Last%20Outpost.mkv",
-              "seconds": 2736,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 700
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Where No One Has Gone Before",
           "airdate": "1987-10-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -161,30 +146,15 @@
             "playable": true,
             "sizeMB": 275
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Where No One Has Gone Before\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E06 - Where No One Has Gone Before.mkv",
-              "name": "E06 - Where No One Has Gone Before",
-              "url": "https://archive.org/download/TNG01/E06%20-%20Where%20No%20One%20Has%20Gone%20Before.mkv",
-              "seconds": 2735,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 699
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Lonely Among Us",
           "airdate": "1987-11-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -196,30 +166,15 @@
             "playable": true,
             "sizeMB": 277
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Lonely Among Us\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E07 - Lonely Among Us.mkv",
-              "name": "E07 - Lonely Among Us",
-              "url": "https://archive.org/download/TNG01/E07%20-%20Lonely%20Among%20Us.mkv",
-              "seconds": 2733,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 697
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Justice",
           "airdate": "1987-11-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -231,22 +186,7 @@
             "playable": true,
             "sizeMB": 275
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Justice\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E08 - Justice.mkv",
-              "name": "E08 - Justice",
-              "url": "https://archive.org/download/TNG01/E08%20-%20Justice.mkv",
-              "seconds": 2734,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 698
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -497,29 +437,17 @@
           "number": 16,
           "name": "Too Short a Season",
           "airdate": "1988-02-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
-            "itemTitle": "Star Trek: The Next Generation Complete Series",
-            "file": "Star.Trek.TNG.S01E16 - Too Short a Season.mp4",
-            "name": "Star.Trek.TNG.S01E16 - Too Short a Season",
-            "url": "https://archive.org/download/star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609/Star.Trek.TNG.S01E16%20-%20Too%20Short%20a%20Season.mp4",
-            "seconds": 2731,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 274
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "When the Bough Breaks",
           "airdate": "1988-02-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -531,22 +459,7 @@
             "playable": true,
             "sizeMB": 275
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"When the Bough Breaks\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E17 - When the Bough Breaks.mkv",
-              "name": "E17 - When the Bough Breaks",
-              "url": "https://archive.org/download/TNG01/E17%20-%20When%20the%20Bough%20Breaks.mkv",
-              "seconds": 2736,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 700
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,
@@ -587,9 +500,9 @@
           "number": 19,
           "name": "Coming of Age",
           "airdate": "1988-03-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -601,22 +514,7 @@
             "playable": true,
             "sizeMB": 275
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Coming of Age\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E19 - Coming of Age.mkv",
-              "name": "E19 - Coming of Age",
-              "url": "https://archive.org/download/TNG01/E19%20-%20Coming%20of%20Age.mkv",
-              "seconds": 2736,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 697
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 20,
@@ -797,9 +695,9 @@
           "number": 25,
           "name": "Conspiracy",
           "airdate": "1988-05-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -811,22 +709,7 @@
             "playable": true,
             "sizeMB": 274
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Conspiracy\" (0.95)",
-              "item": "TNG01",
-              "itemTitle": "Star Trek: The Next Generation",
-              "file": "E25 - Conspiracy.mkv",
-              "name": "E25 - Conspiracy",
-              "url": "https://archive.org/download/TNG01/E25%20-%20Conspiracy.mkv",
-              "seconds": 2737,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 696
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 26,
@@ -966,9 +849,9 @@
           "number": 5,
           "name": "Loud as a Whisper",
           "airdate": "1989-01-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1246,9 +1129,9 @@
           "number": 19,
           "name": "Manhunt",
           "airdate": "1989-06-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1331,9 +1214,9 @@
           "number": 1,
           "name": "Evolution",
           "airdate": "1989-09-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1391,9 +1274,9 @@
           "number": 4,
           "name": "Who Watches the Watchers",
           "airdate": "1989-10-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1545,9 +1428,9 @@
           "number": 11,
           "name": "The Hunted",
           "airdate": "1990-01-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1685,9 +1568,9 @@
           "number": 18,
           "name": "Allegiance",
           "airdate": "1990-03-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1725,9 +1608,9 @@
           "number": 20,
           "name": "Tin Man",
           "airdate": "1990-04-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1866,9 +1749,9 @@
           "number": 2,
           "name": "Family",
           "airdate": "1990-10-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -1966,9 +1849,9 @@
           "number": 7,
           "name": "Reunion",
           "airdate": "1990-11-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -2126,9 +2009,9 @@
           "number": 15,
           "name": "First Contact",
           "airdate": "1991-02-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -2186,9 +2069,9 @@
           "number": 18,
           "name": "Identity Crisis",
           "airdate": "1991-03-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -2599,9 +2482,9 @@
           "number": 13,
           "name": "The Masterpiece Society",
           "airdate": "1992-02-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -2679,9 +2562,9 @@
           "number": 17,
           "name": "The Outcast",
           "airdate": "1992-03-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -2938,9 +2821,9 @@
           "number": 3,
           "name": "Man of the People",
           "airdate": "1992-10-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3078,9 +2961,9 @@
           "number": 10,
           "name": "Chain of Command, Part I",
           "airdate": "1992-12-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3098,9 +2981,9 @@
           "number": 11,
           "name": "Chain of Command, Part II",
           "airdate": "1992-12-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3318,9 +3201,9 @@
           "number": 22,
           "name": "Suspicions",
           "airdate": "1993-05-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3358,9 +3241,9 @@
           "number": 24,
           "name": "Second Chances",
           "airdate": "1993-05-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3443,9 +3326,9 @@
           "number": 2,
           "name": "Liaisons",
           "airdate": "1993-09-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3603,9 +3486,9 @@
           "number": 10,
           "name": "Inheritance",
           "airdate": "1993-11-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3623,9 +3506,9 @@
           "number": 11,
           "name": "Parallels",
           "airdate": "1993-11-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3857,9 +3740,9 @@
           "number": 22,
           "name": "Bloodlines",
           "airdate": "1994-05-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3877,9 +3760,9 @@
           "number": 23,
           "name": "Emergence",
           "airdate": "1994-05-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",
@@ -3897,9 +3780,9 @@
           "number": 24,
           "name": "Preemptive Strike",
           "airdate": "1994-05-16",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "star.-trek.-tng.-s-01-e-01-e-02-encounter-at-farpoint_202609",
             "itemTitle": "Star Trek: The Next Generation Complete Series",

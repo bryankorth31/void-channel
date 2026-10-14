@@ -3,7 +3,7 @@
   "slug": "perfect-strangers",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:29:00.110Z",
+  "matchedAt": "2026-10-14T05:18:58.808Z",
   "tvmaze": {
     "id": 4304,
     "name": "Perfect Strangers",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 150,
-    "live": 144,
-    "review": 6,
-    "missing": 0,
-    "pct": 100
+    "live": 122,
+    "review": 25,
+    "missing": 3,
+    "pct": 98
   },
   "seasons": [
     {
@@ -53,19 +53,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 146
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "perfect_strangers",
-              "itemTitle": "Perfect Strangers",
-              "file": "Primo Cruzado Ep01.mp4",
-              "name": "Primo Cruzado Ep01",
-              "url": "https://archive.org/download/perfect_strangers/Primo%20Cruzado%20Ep01.mp4",
-              "seconds": 1494,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 145
             }
           ]
         },
@@ -87,21 +74,7 @@
             "playable": true,
             "sizeMB": 316
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "perfect_strangers",
-              "itemTitle": "Perfect Strangers",
-              "file": "Primo Cruzado Ep02.mp4",
-              "name": "Primo Cruzado Ep02",
-              "url": "https://archive.org/download/perfect_strangers/Primo%20Cruzado%20Ep02.mp4",
-              "seconds": 1444,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -300,63 +273,35 @@
             "playable": true,
             "sizeMB": 318
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Babes in Babylon\" (1.00)",
-              "item": "perfect-strangers-Lando18",
-              "itemTitle": "Perfect Strangers (complete TV series)",
-              "file": "Perfect Strangers S02E06 (Babes in Babylon).mp4",
-              "name": "Perfect Strangers S02E06 (Babes in Babylon)",
-              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E06%20(Babes%20in%20Babylon).mp4",
-              "seconds": 1524,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 331
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Ladies and Germs",
           "airdate": "1986-11-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"Ladies and Germs\" (1.00)",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S02E06 (Babes in Babylon).mp4",
-            "name": "Perfect Strangers S02E06 (Babes in Babylon)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E06%20(Babes%20in%20Babylon).mp4",
+            "file": "Perfect Strangers S02E04 (Ladies and Germs...).mp4",
+            "name": "Perfect Strangers S02E04 (Ladies and Germs...)",
+            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E04%20(Ladies%20and%20Germs...).mp4",
             "seconds": 1524,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 331
+            "sizeMB": 326
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Ladies and Germs\" (1.00)",
-              "item": "perfect-strangers-Lando18",
-              "itemTitle": "Perfect Strangers (complete TV series)",
-              "file": "Perfect Strangers S02E04 (Ladies and Germs...).mp4",
-              "name": "Perfect Strangers S02E04 (Ladies and Germs...)",
-              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E04%20(Ladies%20and%20Germs...).mp4",
-              "seconds": 1524,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 326
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Falling in Love Is...",
           "airdate": "1986-11-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -374,77 +319,25 @@
           "number": 8,
           "name": "Can I Get a Witness?",
           "airdate": "1986-11-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "perfect-strangers-Lando18",
-            "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S02E08 (Two Men and a Cradle).mp4",
-            "name": "Perfect Strangers S02E08 (Two Men and a Cradle)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E08%20(Two%20Men%20and%20a%20Cradle).mp4",
-            "seconds": 1523,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 321
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Can I Get a Witness?\" (1.00)",
-              "item": "perfect-strangers-Lando18",
-              "itemTitle": "Perfect Strangers (complete TV series)",
-              "file": "Perfect Strangers S02E09 (Can I Get a Witness).mp4",
-              "name": "Perfect Strangers S02E09 (Can I Get a Witness)",
-              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E09%20(Can%20I%20Get%20a%20Witness).mp4",
-              "seconds": 1523,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 336
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
           "name": "Two Men and a Cradle",
           "airdate": "1986-12-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "perfect-strangers-Lando18",
-            "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S02E09 (Can I Get a Witness).mp4",
-            "name": "Perfect Strangers S02E09 (Can I Get a Witness)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E09%20(Can%20I%20Get%20a%20Witness).mp4",
-            "seconds": 1523,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 336
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Two Men and a Cradle\" (1.00)",
-              "item": "perfect-strangers-Lando18",
-              "itemTitle": "Perfect Strangers (complete TV series)",
-              "file": "Perfect Strangers S02E08 (Two Men and a Cradle).mp4",
-              "name": "Perfect Strangers S02E08 (Two Men and a Cradle)",
-              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E08%20(Two%20Men%20and%20a%20Cradle).mp4",
-              "seconds": 1523,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 321
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 10,
           "name": "The Rent Strike",
           "airdate": "1986-12-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -582,9 +475,9 @@
           "number": 17,
           "name": "Ten Speed and a Soft Touch",
           "airdate": "1987-02-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -1498,9 +1391,9 @@
           "number": 5,
           "name": "High Society",
           "airdate": "1988-11-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -1712,9 +1605,9 @@
           "number": 15,
           "name": "Blind Alley",
           "airdate": "1989-02-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -1752,9 +1645,9 @@
           "number": 17,
           "name": "Prose and Cons",
           "airdate": "1989-03-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -1957,9 +1850,9 @@
           "number": 5,
           "name": "Dog Day Mid-Afternoon",
           "airdate": "1989-10-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -2297,9 +2190,9 @@
           "number": 22,
           "name": "Eyewitless Reports",
           "airdate": "1990-04-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -2536,9 +2429,9 @@
           "number": 9,
           "name": "The Ring",
           "airdate": "1990-11-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -2616,9 +2509,9 @@
           "number": 13,
           "name": "Finders Keepers",
           "airdate": "1991-01-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -2776,9 +2669,9 @@
           "number": 21,
           "name": "A Catered Affair",
           "airdate": "1991-03-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -2861,9 +2754,9 @@
           "number": 1,
           "name": "Bachelor Party",
           "airdate": "1991-09-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -2955,9 +2848,9 @@
           "number": 5,
           "name": "Weekend at Ferdinand's",
           "airdate": "1991-10-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -3149,9 +3042,9 @@
           "number": 14,
           "name": "Missing",
           "airdate": "1992-01-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -3249,9 +3142,9 @@
           "number": 19,
           "name": "The Play's the Thing",
           "airdate": "1992-03-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -3329,9 +3222,9 @@
           "number": 23,
           "name": "It Had to Be You (1)",
           "airdate": "1992-04-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -3414,9 +3307,9 @@
           "number": 3,
           "name": "Lethal Weapon",
           "airdate": "1993-07-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -3454,9 +3347,9 @@
           "number": 5,
           "name": "Up, Up and Away (1)",
           "airdate": "1993-08-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
@@ -3468,40 +3361,14 @@
             "playable": true,
             "sizeMB": 331
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Up, Up and Away (1)\" (0.82)",
-              "item": "perfect-strangers-Lando18",
-              "itemTitle": "Perfect Strangers (complete TV series)",
-              "file": "Perfect Strangers S08E06 (Up, Up And Away - Pt2).mp4",
-              "name": "Perfect Strangers S08E06 (Up, Up And Away - Pt2)",
-              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S08E06%20(Up%2C%20Up%20And%20Away%20-%20Pt2).mp4",
-              "seconds": 1387,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 326
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Up, Up and Away (2)",
           "airdate": "1993-08-06",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "perfect-strangers-Lando18",
-            "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S08E06 (Up, Up And Away - Pt2).mp4",
-            "name": "Perfect Strangers S08E06 (Up, Up And Away - Pt2)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S08E06%20(Up%2C%20Up%20And%20Away%20-%20Pt2).mp4",
-            "seconds": 1387,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 326
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

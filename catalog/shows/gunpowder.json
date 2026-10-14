@@ -3,7 +3,7 @@
   "slug": "gunpowder",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T04:29:06.424Z",
+  "matchedAt": "2026-10-14T05:19:09.553Z",
   "tvmaze": {
     "id": 25488,
     "name": "Gunpowder",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 3,
     "live": 0,
-    "review": 3,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 3,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,60 +26,24 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2017-10-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 7 in \"Crusoe ( 2008) S01\"",
-            "item": "crusoe-2008-s-01-e-01-e-02-rum-gunpowder",
-            "itemTitle": "Crusoe ( 2008) S01",
-            "file": "Crusoe (2008) - S01E05 - High Water.mp4",
-            "name": "Crusoe (2008) - S01E05 - High Water",
-            "url": "https://archive.org/download/crusoe-2008-s-01-e-01-e-02-rum-gunpowder/Crusoe%20(2008)%20-%20S01E05%20-%20High%20Water.mp4",
-            "seconds": 2532,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 797
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2017-10-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 7 in \"Crusoe ( 2008) S01\"",
-            "item": "crusoe-2008-s-01-e-01-e-02-rum-gunpowder",
-            "itemTitle": "Crusoe ( 2008) S01",
-            "file": "Crusoe (2008) - S01E06 - Long Pig.mp4",
-            "name": "Crusoe (2008) - S01E06 - Long Pig",
-            "url": "https://archive.org/download/crusoe-2008-s-01-e-01-e-02-rum-gunpowder/Crusoe%20(2008)%20-%20S01E06%20-%20Long%20Pig.mp4",
-            "seconds": 2537,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 798
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2017-10-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 7 in \"Crusoe ( 2008) S01\"",
-            "item": "crusoe-2008-s-01-e-01-e-02-rum-gunpowder",
-            "itemTitle": "Crusoe ( 2008) S01",
-            "file": "Crusoe (2008) - S01E09 - The Name of the Game.mp4",
-            "name": "Crusoe (2008) - S01E09 - The Name of the Game",
-            "url": "https://archive.org/download/crusoe-2008-s-01-e-01-e-02-rum-gunpowder/Crusoe%20(2008)%20-%20S01E09%20-%20The%20Name%20of%20the%20Game.mp4",
-            "seconds": 2581,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 812
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "buffy-the-vampire-slayer",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-14T04:28:51.248Z",
+  "matchedAt": "2026-10-14T05:18:42.553Z",
   "tvmaze": {
     "id": 427,
     "name": "Buffy the Vampire Slayer",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 144,
     "live": 0,
-    "review": 109,
-    "missing": 35,
-    "pct": 76
+    "review": 0,
+    "missing": 144,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,409 +26,97 @@
           "number": 1,
           "name": "Welcome to the Hellmouth",
           "airdate": "1997-03-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Welcome to the Hellmouth\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-1_Welcome to the Hellmouth.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-1_Welcome to the Hellmouth",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-1_Welcome%20to%20the%20Hellmouth.mp4",
-            "seconds": 2609,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1610
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-1_Audio Commentary by Joss Whedon.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-1_Audio Commentary by Joss Whedon",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-1_Audio%20Commentary%20by%20Joss%20Whedon.mp4",
-              "seconds": 2608,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1400
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
           "name": "The Harvest",
           "airdate": "1997-03-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Harvest\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-2_The Harvest.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-2_The Harvest",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-2_The%20Harvest.mp4",
-            "seconds": 2703,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1670
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-2_Audio Commentary by Joss Whedon.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-2_Audio Commentary by Joss Whedon",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-2_Audio%20Commentary%20by%20Joss%20Whedon.mp4",
-              "seconds": 2703,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1452
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Witch",
           "airdate": "1997-03-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Witch\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-3_Witch.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-3_Witch",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-3_Witch.mp4",
-            "seconds": 2702,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1562
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-5_Commentary by David Greenwalt.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-5_Commentary by David Greenwalt",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-5_Commentary%20by%20David%20Greenwalt.mp4",
-              "seconds": 2635,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1419
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Teacher's Pet",
           "airdate": "1997-03-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Teacher's Pet\" (0.91)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-4_Teacher-s Pet.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-4_Teacher-s Pet",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-4_Teacher-s%20Pet.mp4",
-            "seconds": 2706,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1564
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-9_Commentary by Marti Noxon.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-9_Commentary by Marti Noxon",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-9_Commentary%20by%20Marti%20Noxon.mp4",
-              "seconds": 2634,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1627
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Never Kill a Boy on the First Date",
           "airdate": "1997-03-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Never Kill a Boy on the First Date\" (0.96)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-5_Never Kill a Boy on the First Date.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-5_Never Kill a Boy on the First Date",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-5_Never%20Kill%20a%20Boy%20on%20the%20First%20Date.mp4",
-            "seconds": 2692,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1555
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-10_Commentary by Marti Noxon.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-10_Commentary by Marti Noxon",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-10_Commentary%20by%20Marti%20Noxon.mp4",
-              "seconds": 2604,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1611
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
           "name": "The Pack",
           "airdate": "1997-04-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Pack\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-6_The Pack.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-6_The Pack",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-6_The%20Pack.mp4",
-            "seconds": 2693,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1557
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-14_Commentary by Joss Whedon.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-14_Commentary by Joss Whedon",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-14_Commentary%20by%20Joss%20Whedon.mp4",
-              "seconds": 2657,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1430
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Angel",
           "airdate": "1997-04-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Angel\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-7_Angel.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-7_Angel",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-7_Angel.mp4",
-            "seconds": 2680,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1548
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/S2 Special Features/Featurettes.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/S2 Special Features/Featurettes",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2FS2%20Special%20Features%2FFeaturettes.mp4",
-              "seconds": 2817,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1508
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 8,
           "name": "I, Robot... You, Jane",
           "airdate": "1997-04-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"I, Robot... You, Jane\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-8_I Robot-You Jane.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-8_I Robot-You Jane",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-8_I%20Robot-You%20Jane.mp4",
-            "seconds": 2690,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1555
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-12_Commentary by David Fury.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-12_Commentary by David Fury",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-12_Commentary%20by%20David%20Fury.mp4",
-              "seconds": 2681,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1449
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
           "name": "The Puppet Show",
           "airdate": "1997-05-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Puppet Show\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-9_The Puppet Show.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-9_The Puppet Show",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-9_The%20Puppet%20Show.mp4",
-            "seconds": 2691,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1562
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-14_Commentary by Doug Petrie.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-14_Commentary by Doug Petrie",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-14_Commentary%20by%20Doug%20Petrie.mp4",
-              "seconds": 2671,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1444
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 10,
           "name": "Nightmares",
           "airdate": "1997-05-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Nightmares\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-10_Nightmares.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-10_Nightmares",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-10_Nightmares.mp4",
-            "seconds": 2691,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1556
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-15_Commentary by Michael Gershman.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-15_Commentary by Michael Gershman",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-15_Commentary%20by%20Michael%20Gershman.mp4",
-              "seconds": 2587,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1399
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Out of Mind, Out of Sight",
           "airdate": "1997-05-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Out of Mind, Out of Sight\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-11_Out of Mind-Out of Sight.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-11_Out of Mind-Out of Sight",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-11_Out%20of%20Mind-Out%20of%20Sight.mp4",
-            "seconds": 2685,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1552
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-18_Commentary by Jane Espenson.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-18_Commentary by Jane Espenson",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-18_Commentary%20by%20Jane%20Espenson.mp4",
-              "seconds": 2650,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1425
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Prophecy Girl",
           "airdate": "1997-06-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Prophecy Girl\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-12_Prophecy Girl.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 1/1-12_Prophecy Girl",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%201%2F1-12_Prophecy%20Girl.mp4",
-            "seconds": 2687,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1554
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 34 in \"Buffy The Vampire Slayer\"",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-6_Commentary by Joss Whedon-Marti Noxon-and-Seth Green.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-6_Commentary by Joss Whedon-Marti Noxon-and-Seth Green",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-6_Commentary%20by%20Joss%20Whedon-Marti%20Noxon-and-Seth%20Green.mp4",
-              "seconds": 2666,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1421
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -439,160 +127,64 @@
           "number": 1,
           "name": "When She Was Bad",
           "airdate": "1997-09-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"When She Was Bad\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-1_When She Was Bad.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-1_When She Was Bad",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-1_When%20She%20Was%20Bad.mp4",
-            "seconds": 2725,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1575
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Some Assembly Required",
           "airdate": "1997-09-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Some Assembly Required\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-2_Some Assembly Required.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-2_Some Assembly Required",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-2_Some%20Assembly%20Required.mp4",
-            "seconds": 2643,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1527
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "School Hard",
           "airdate": "1997-09-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"School Hard\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-3_School Hard.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-3_School Hard",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-3_School%20Hard.mp4",
-            "seconds": 2681,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1550
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Inca Mummy Girl",
           "airdate": "1997-10-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Inca Mummy Girl\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-4_Inca Mummy Girl.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-4_Inca Mummy Girl",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-4_Inca%20Mummy%20Girl.mp4",
-            "seconds": 2682,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1558
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Reptile Boy",
           "airdate": "1997-10-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Reptile Boy\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-5_Reptile Boy.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-5_Reptile Boy",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-5_Reptile%20Boy.mp4",
-            "seconds": 2635,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1631
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Halloween",
           "airdate": "1997-10-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Halloween\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-6_Halloween.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-6_Halloween",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-6_Halloween.mp4",
-            "seconds": 2637,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1523
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Lie to Me",
           "airdate": "1997-11-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Lie to Me\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-7_Lie to Me.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-7_Lie to Me",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-7_Lie%20to%20Me.mp4",
-            "seconds": 2692,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1553
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "The Dark Age",
           "airdate": "1997-11-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Dark Age\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-8_The Dark Age.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-8_The Dark Age",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-8_The%20Dark%20Age.mp4",
-            "seconds": 2689,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1553
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -615,100 +207,40 @@
           "number": 11,
           "name": "Ted",
           "airdate": "1997-12-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Ted\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-11_Ted.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-11_Ted",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-11_Ted.mp4",
-            "seconds": 2688,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1555
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Bad Eggs",
           "airdate": "1998-01-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Bad Eggs\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-12_Bad Eggs.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-12_Bad Eggs",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-12_Bad%20Eggs.mp4",
-            "seconds": 2660,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1538
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Surprise",
           "airdate": "1998-01-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Surprise\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-13_Surprise.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-13_Surprise",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-13_Surprise.mp4",
-            "seconds": 2665,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1541
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Innocence",
           "airdate": "1998-01-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Innocence\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-14_Innocence.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-14_Innocence",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-14_Innocence.mp4",
-            "seconds": 2657,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1644
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
           "name": "Phases",
           "airdate": "1998-01-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Phases\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-15_Phases.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-15_Phases",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-15_Phases.mp4",
-            "seconds": 2644,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1529
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -723,115 +255,41 @@
           "number": 17,
           "name": "Passion",
           "airdate": "1998-02-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Passion\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-17_Passion.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-17_Passion",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-17_Passion.mp4",
-            "seconds": 2614,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1517
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Killed by Death",
           "airdate": "1998-03-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Killed by Death\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-18_Killed By Death.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-18_Killed By Death",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-18_Killed%20By%20Death.mp4",
-            "seconds": 2592,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1498
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
           "name": "I Only Have Eyes for You",
           "airdate": "1998-04-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"I Only Have Eyes for You\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-19_I Only Have Eyes for You.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-19_I Only Have Eyes for You",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-19_I%20Only%20Have%20Eyes%20for%20You.mp4",
-            "seconds": 2671,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1543
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "Go Fish",
           "airdate": "1998-05-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Go Fish\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-20_Go Fish.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-20_Go Fish",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-20_Go%20Fish.mp4",
-            "seconds": 2574,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1485
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "Becoming: Part I",
           "airdate": "1998-05-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Becoming: Part I\" (0.85)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-22_Becoming Part 2.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-22_Becoming Part 2",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-22_Becoming%20Part%202.mp4",
-            "seconds": 2652,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1532
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Becoming: Part I\" (0.81)",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-21_Becoming Part 1.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 2/2-21_Becoming Part 1",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%202%2F2-21_Becoming%20Part%201.mp4",
-              "seconds": 2647,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1527
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 22,
@@ -850,60 +308,24 @@
           "number": 1,
           "name": "Anne",
           "airdate": "1998-09-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Anne\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-1_Anne.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-1_Anne",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-1_Anne.mp4",
-            "seconds": 2695,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1668
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Dead Man's Party",
           "airdate": "1998-10-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Dead Man's Party\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-2_Dead Mans Party.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-2_Dead Mans Party",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-2_Dead%20Mans%20Party.mp4",
-            "seconds": 2645,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1633
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Faith, Hope & Trick",
           "airdate": "1998-10-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Faith, Hope & Trick\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-3_Faith-Hope-and Trick.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-3_Faith-Hope-and Trick",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-3_Faith-Hope-and%20Trick.mp4",
-            "seconds": 2691,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1665
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -918,234 +340,88 @@
           "number": 5,
           "name": "Homecoming",
           "airdate": "1998-11-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Homecoming\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-5_Homecoming.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-5_Homecoming",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-5_Homecoming.mp4",
-            "seconds": 2690,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1664
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Band Candy",
           "airdate": "1998-11-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Band Candy\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-6_Band Candy.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-6_Band Candy",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-6_Band%20Candy.mp4",
-            "seconds": 2665,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1648
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Revelations",
           "airdate": "1998-11-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Revelations\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-7_Revelations.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-7_Revelations",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-7_Revelations.mp4",
-            "seconds": 2694,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1666
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Revelations\" (0.95)",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/Special Features/Featurettes_Hush-The Sets of Sunnydale-Spike, me-Buffy, Inside the Music-Oz Revelations A Full moon.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/Special Features/Featurettes_Hush-The Sets of Sunnydale-Spike, me-Buffy, Inside the Music-Oz Revelations A Full moon",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2FSpecial%20Features%2FFeaturettes_Hush-The%20Sets%20of%20Sunnydale-Spike%2C%20me-Buffy%2C%20Inside%20the%20Music-Oz%20Revelations%20A%20Full%20moon.mp4",
-              "seconds": 3044,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1645
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Lovers Walk",
           "airdate": "1998-11-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Lovers Walk\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-8_Lovers Walk.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-8_Lovers Walk",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-8_Lovers%20Walk.mp4",
-            "seconds": 2695,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1667
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Wish",
           "airdate": "1998-12-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Wish\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-9_The Wish.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-9_The Wish",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-9_The%20Wish.mp4",
-            "seconds": 2689,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1666
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Amends",
           "airdate": "1998-12-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Amends\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-10_Amends.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-10_Amends",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-10_Amends.mp4",
-            "seconds": 2693,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1666
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Gingerbread",
           "airdate": "1999-01-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Gingerbread\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-11_Gingerbread.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-11_Gingerbread",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-11_Gingerbread.mp4",
-            "seconds": 2664,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1654
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Helpless",
           "airdate": "1999-01-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Helpless\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-12_Helpless.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-12_Helpless",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-12_Helpless.mp4",
-            "seconds": 2681,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1773
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "The Zeppo",
           "airdate": "1999-01-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Zeppo\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-13_The Zeppo.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-13_The Zeppo",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-13_The%20Zeppo.mp4",
-            "seconds": 2655,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1649
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Bad Girls",
           "airdate": "1999-02-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Bad Girls\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-14_Bad Girls.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-14_Bad Girls",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-14_Bad%20Girls.mp4",
-            "seconds": 2671,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1767
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
           "name": "Consequences",
           "airdate": "1999-02-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Consequences\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-15_Consequences.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-15_Consequences",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-15_Consequences.mp4",
-            "seconds": 2587,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1711
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1160,115 +436,41 @@
           "number": 17,
           "name": "Enemies",
           "airdate": "1999-03-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Enemies\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-17_Enemies.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-17_Enemies",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-17_Enemies.mp4",
-            "seconds": 2673,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1651
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Earshot",
           "airdate": "1999-04-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Earshot\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-18_Earshot.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-18_Earshot",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-18_Earshot.mp4",
-            "seconds": 2650,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1745
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
           "name": "Choices",
           "airdate": "1999-05-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Choices\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-19_Choices.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-19_Choices",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-19_Choices.mp4",
-            "seconds": 2571,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1590
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "The Prom",
           "airdate": "1999-05-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Prom\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-20_The Prom.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-20_The Prom",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-20_The%20Prom.mp4",
-            "seconds": 2668,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1648
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "Graduation Day: Part I",
           "airdate": "1999-05-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Graduation Day: Part I\" (0.84)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-22_Graduation Day Part Two.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-22_Graduation Day Part Two",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-22_Graduation%20Day%20Part%20Two.mp4",
-            "seconds": 2631,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1632
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Graduation Day: Part I\" (0.86)",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-21_Graduation Day Part One.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 3/3-21_Graduation Day Part One",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%203%2F3-21_Graduation%20Day%20Part%20One.mp4",
-              "seconds": 2625,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1622
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 22,
@@ -1287,20 +489,8 @@
           "number": 1,
           "name": "The Freshman",
           "airdate": "1999-10-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Freshman\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-1_The Freshman.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-1_The Freshman",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-1_The%20Freshman.mp4",
-            "seconds": 2664,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1649
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1315,20 +505,8 @@
           "number": 3,
           "name": "The Harsh Light of Day",
           "airdate": "1999-10-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Harsh Light of Day\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-3_The Harsh Light of Day.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-3_The Harsh Light of Day",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-3_The%20Harsh%20Light%20of%20Day.mp4",
-            "seconds": 2654,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1640
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1343,360 +521,144 @@
           "number": 5,
           "name": "Beer Bad",
           "airdate": "1999-11-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Beer Bad\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-5_Beer Bad.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-5_Beer Bad",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-5_Beer%20Bad.mp4",
-            "seconds": 2567,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1587
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Wild at Heart",
           "airdate": "1999-11-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Wild at Heart\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-6_Wild at Heart.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-6_Wild at Heart",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-6_Wild%20at%20Heart.mp4",
-            "seconds": 2666,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1741
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Initiative",
           "airdate": "1999-11-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Initiative\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-7_The Initiative.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-7_The Initiative",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-7_The%20Initiative.mp4",
-            "seconds": 2639,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1738
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Pangs",
           "airdate": "1999-11-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Pangs\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-8_Pangs.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-8_Pangs",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-8_Pangs.mp4",
-            "seconds": 2618,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1618
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Something Blue",
           "airdate": "1999-11-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Something Blue\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-9_Something Blue.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-9_Something Blue",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-9_Something%20Blue.mp4",
-            "seconds": 2649,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1641
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Hush",
           "airdate": "1999-12-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Hush\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-10_Hush.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-10_Hush",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-10_Hush.mp4",
-            "seconds": 2669,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1760
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Doomed",
           "airdate": "2000-01-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Doomed\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-11_Doomed.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-11_Doomed",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-11_Doomed.mp4",
-            "seconds": 2640,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1634
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "A New Man",
           "airdate": "2000-01-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"A New Man\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-12_A New Man.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-12_A New Man",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-12_A%20New%20Man.mp4",
-            "seconds": 2637,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1630
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "The I in Team",
           "airdate": "2000-02-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The I in Team\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-13_The I in Team.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-13_The I in Team",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-13_The%20I%20in%20Team.mp4",
-            "seconds": 2643,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1632
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Goodbye Iowa",
           "airdate": "2000-02-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Goodbye Iowa\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-14_Goodbye Iowa.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-14_Goodbye Iowa",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-14_Goodbye%20Iowa.mp4",
-            "seconds": 2589,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1598
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
           "name": "This Year's Girl",
           "airdate": "2000-02-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"This Year's Girl\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-15_This Years Girl.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-15_This Years Girl",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-15_This%20Years%20Girl.mp4",
-            "seconds": 2533,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1668
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
           "name": "Who Are You?",
           "airdate": "2000-02-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Who Are You?\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-16_Who Are You.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-16_Who Are You",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-16_Who%20Are%20You.mp4",
-            "seconds": 2647,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1637
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "Superstar",
           "airdate": "2000-04-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Superstar\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-17_Superstar.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-17_Superstar",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-17_Superstar.mp4",
-            "seconds": 2633,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1733
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Where the Wild Things Are",
           "airdate": "2000-04-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Where the Wild Things Are\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-18_Where The Wild Things Are.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-18_Where The Wild Things Are",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-18_Where%20The%20Wild%20Things%20Are.mp4",
-            "seconds": 2638,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1630
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
           "name": "New Moon Rising",
           "airdate": "2000-05-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"New Moon Rising\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-19_New Moon Rising.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-19_New Moon Rising",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-19_New%20Moon%20Rising.mp4",
-            "seconds": 2629,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1623
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "The Yoko Factor",
           "airdate": "2000-05-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Yoko Factor\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-20_The. Yoko Factor.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-20_The. Yoko Factor",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-20_The.%20Yoko%20Factor.mp4",
-            "seconds": 2575,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1592
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "Primeval",
           "airdate": "2000-05-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Primeval\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-21_Primeval.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-21_Primeval",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-21_Primeval.mp4",
-            "seconds": 2578,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1695
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
           "name": "Restless",
           "airdate": "2000-05-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Restless\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-22_Restless.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 4/4-22_Restless",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%204%2F4-22_Restless.mp4",
-            "seconds": 2638,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1735
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1708,340 +670,136 @@
           "number": 1,
           "name": "Buffy vs. Dracula",
           "airdate": "2000-09-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Buffy vs. Dracula\" (0.70)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/  5-1_Buffy VS Dracula.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/  5-1_Buffy VS Dracula",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F%20%205-1_Buffy%20VS%20Dracula.mp4",
-            "seconds": 2605,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1611
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Real Me",
           "airdate": "2000-10-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Real Me\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-2_Real Me.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-2_Real Me",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-2_Real%20Me.mp4",
-            "seconds": 2526,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1664
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Replacement",
           "airdate": "2000-10-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Replacement\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-3_The Replacement.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-3_The Replacement",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-3_The%20Replacement.mp4",
-            "seconds": 2627,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1623
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Out of My Mind",
           "airdate": "2000-10-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Out of My Mind\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-4_Out of My Mind.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-4_Out of My Mind",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-4_Out%20of%20My%20Mind.mp4",
-            "seconds": 2607,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1611
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "No Place Like Home",
           "airdate": "2000-10-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"No Place Like Home\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-5_No Place Like Home.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-5_No Place Like Home",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-5_No%20Place%20Like%20Home.mp4",
-            "seconds": 2622,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1624
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Family",
           "airdate": "2000-11-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Family\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-6_Family.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-6_Family",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-6_Family.mp4",
-            "seconds": 2635,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1631
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Fool for Love",
           "airdate": "2000-11-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Fool for Love\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-7_Fool for Love.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-7_Fool for Love",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-7_Fool%20for%20Love.mp4",
-            "seconds": 2621,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1726
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Shadow",
           "airdate": "2000-11-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shadow\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-8_Shadow.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-8_Shadow",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-8_Shadow.mp4",
-            "seconds": 2536,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1567
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Listening to Fear",
           "airdate": "2000-11-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Listening to Fear\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-9_Listening to Fear.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-9_Listening to Fear",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-9_Listening%20to%20Fear.mp4",
-            "seconds": 2574,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1591
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Into the Woods",
           "airdate": "2000-12-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Into the Woods\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-10_Into The Woods.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-10_Into The Woods",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-10_Into%20The%20Woods.mp4",
-            "seconds": 2634,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1627
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Triangle",
           "airdate": "2001-01-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Triangle\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-11_Triangle.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-11_Triangle",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-11_Triangle.mp4",
-            "seconds": 2600,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1608
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Checkpoint",
           "airdate": "2001-01-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Checkpoint\" (0.82)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-12_Chheckpoint.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-12_Chheckpoint",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-12_Chheckpoint.mp4",
-            "seconds": 2629,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1628
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Blood Ties",
           "airdate": "2001-02-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Blood Ties\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-13_Blood Ties.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-13_Blood Ties",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-13_Blood%20Ties.mp4",
-            "seconds": 2627,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1626
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Crush",
           "airdate": "2001-02-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Crush\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-14_Crush.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-14_Crush",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-14_Crush.mp4",
-            "seconds": 2643,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1634
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
           "name": "I Was Made to Love You",
           "airdate": "2001-02-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"I Was Made to Love You\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-15_I Was Made To Love You.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-15_I Was Made To Love You",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-15_I%20Was%20Made%20To%20Love%20You.mp4",
-            "seconds": 2543,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1673
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
           "name": "The Body",
           "airdate": "2001-02-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Body\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-16_The Body.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-16_The Body",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-16_The%20Body.mp4",
-            "seconds": 2664,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1756
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "Forever",
           "airdate": "2001-04-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Forever\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-17_Forever.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-17_Forever",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-17_Forever.mp4",
-            "seconds": 2650,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1640
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2056,80 +814,32 @@
           "number": 19,
           "name": "Tough Love",
           "airdate": "2001-05-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Tough Love\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-19_Tough Love.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-19_Tough Love",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-19_Tough%20Love.mp4",
-            "seconds": 2631,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1625
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
           "name": "Spiral",
           "airdate": "2001-05-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Spiral\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-20_Spiral.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-20_Spiral",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-20_Spiral.mp4",
-            "seconds": 2592,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1600
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "The Weight of the World",
           "airdate": "2001-05-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Weight of the World\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-21_The Weight of the World.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-21_The Weight of the World",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-21_The%20Weight%20of%20the%20World.mp4",
-            "seconds": 2600,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1607
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
           "name": "The Gift",
           "airdate": "2001-05-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Gift\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-22_The Gift.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 5/5-22_The Gift",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%205%2F5-22_The%20Gift.mp4",
-            "seconds": 2635,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1626
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -2157,20 +867,8 @@
           "number": 3,
           "name": "After Life",
           "airdate": "2001-10-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"After Life\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-3_After Life.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-3_After Life",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-3_After%20Life.mp4",
-            "seconds": 2543,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1575
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2185,95 +883,33 @@
           "number": 5,
           "name": "Life Serial",
           "airdate": "2001-10-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Life Serial\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-5_Life Serial.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-5_Life Serial",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-5_Life%20Serial.mp4",
-            "seconds": 2542,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1568
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "All the Way",
           "airdate": "2001-10-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"All the Way\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-6_All The Way.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-6_All The Way",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-6_All%20The%20Way.mp4",
-            "seconds": 2549,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1575
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Once More, with Feeling",
           "airdate": "2001-11-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Once More, with Feeling\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-7_Once More With Feeling.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-7_Once More With Feeling",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-7_Once%20More%20With%20Feeling.mp4",
-            "seconds": 3007,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1974
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Tabula Rasa",
           "airdate": "2001-11-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Tabula Rasa\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-8_Tabula. Rasa.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-8_Tabula. Rasa",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-8_Tabula.%20Rasa.mp4",
-            "seconds": 2546,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1571
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Tabula Rasa\" (0.63)",
-              "item": "btvs_20260710",
-              "itemTitle": "Buffy The Vampire Slayer",
-              "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-8_Tabula. Rasa.ia.mp4",
-              "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-8_Tabula",
-              "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-8_Tabula.%20Rasa.ia.mp4",
-              "seconds": 2546,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 1571
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
@@ -2287,200 +923,80 @@
           "number": 10,
           "name": "Wrecked",
           "airdate": "2001-11-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Wrecked\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-10_Wrecked.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-10_Wrecked",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-10_Wrecked.mp4",
-            "seconds": 2530,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1559
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Gone",
           "airdate": "2002-01-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Gone\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-11_Gone.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-11_Gone",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-11_Gone.mp4",
-            "seconds": 2567,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1583
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Doublemeat Palace",
           "airdate": "2002-01-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Doublemeat Palace\" (0.91)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-12_Double Meat Palace.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-12_Double Meat Palace",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-12_Double%20Meat%20Palace.mp4",
-            "seconds": 2531,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1561
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "Dead Things",
           "airdate": "2002-02-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Dead Things\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-13_Dead Things.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-13_Dead Things",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-13_Dead%20Things.mp4",
-            "seconds": 2559,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1576
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Older and Far Away",
           "airdate": "2002-02-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Older and Far Away\" (0.90)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-14_Older and Faraway.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-14_Older and Faraway",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-14_Older%20and%20Faraway.mp4",
-            "seconds": 2535,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1563
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
           "name": "As You Were",
           "airdate": "2002-02-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"As You Were\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-15_As You Were.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-15_As You Were",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-15_As%20You%20Were.mp4",
-            "seconds": 2571,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1586
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
           "name": "Hell's Bells",
           "airdate": "2002-03-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Hell's Bells\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-16_Hells Bells.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-16_Hells Bells",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-16_Hells%20Bells.mp4",
-            "seconds": 2534,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1666
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "Normal Again",
           "airdate": "2002-03-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Normal Again\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-17_Normal Again.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-17_Normal Again",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-17_Normal%20Again.mp4",
-            "seconds": 2551,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1676
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Entropy",
           "airdate": "2002-04-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Entropy\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-18_Entropy.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-18_Entropy",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-18_Entropy.mp4",
-            "seconds": 2560,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1579
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
           "name": "Seeing Red",
           "airdate": "2002-05-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Seeing Red\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-19_Seeing Red.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-19_Seeing Red",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-19_Seeing%20Red.mp4",
-            "seconds": 2531,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1563
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2503,20 +1019,8 @@
           "number": 22,
           "name": "Grave",
           "airdate": "2002-05-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Grave\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-22_Grave.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 6/6-22_Grave",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%206%2F6-22_Grave.mp4",
-            "seconds": 2530,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1664
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -2568,40 +1072,16 @@
           "number": 6,
           "name": "Him",
           "airdate": "2002-11-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Him\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-6_Him.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-6_Him",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%207%2F7-6_Him.mp4",
-            "seconds": 2535,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1566
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Conversations with Dead People",
           "airdate": "2002-11-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Conversations with Dead People\" (0.96)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-7_Conversations with Dead People.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-7_Conversations with Dead People",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%207%2F7-7_Conversations%20with%20Dead%20People.mp4",
-            "seconds": 2530,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1666
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -2680,20 +1160,8 @@
           "number": 17,
           "name": "Lies My Parents Told Me",
           "airdate": "2003-03-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Lies My Parents Told Me\" (0.95)",
-            "item": "btvs_20260710",
-            "itemTitle": "Buffy The Vampire Slayer",
-            "file": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-17_Lies My Parents Told Me.mp4",
-            "name": "Buffy the Vampire Slayer (1992+1997–2003)/Season 7/7-17_Lies My Parents Told Me",
-            "url": "https://archive.org/download/btvs_20260710/Buffy%20the%20Vampire%20Slayer%20(1992%2B1997%E2%80%932003)%2FSeason%207%2F7-17_Lies%20My%20Parents%20Told%20Me.mp4",
-            "seconds": 2526,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1663
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "miami-vice",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:28:59.168Z",
+  "matchedAt": "2026-10-14T05:18:57.092Z",
   "tvmaze": {
     "id": 760,
     "name": "Miami Vice",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 110,
-    "live": 4,
-    "review": 0,
+    "live": 2,
+    "review": 2,
     "missing": 106,
     "pct": 4
   },
@@ -313,21 +313,7 @@
             "playable": true,
             "sizeMB": 290
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "miamivicedefinitleymiamiseason2episode12",
-              "itemTitle": "Miami Vice Definitley Miami Season 2 Episode 12",
-              "file": "Miami Vice- Definitley Miami Season 2 Episode 12.mp4",
-              "name": "Miami Vice- Definitley Miami Season 2 Episode 12",
-              "url": "https://archive.org/download/miamivicedefinitleymiamiseason2episode12/Miami%20Vice-%20Definitley%20Miami%20Season%202%20Episode%2012.mp4",
-              "seconds": 2951,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 102
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
@@ -349,9 +335,9 @@
           "number": 15,
           "name": "Little Miss Dangerous",
           "airdate": "1986-01-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "watchmiamivicelittlemissdangerousseason2episode15",
             "itemTitle": "Watch Miami Vice Little Miss Dangerous Season 2 Episode 15",
@@ -409,9 +395,9 @@
           "number": 21,
           "name": "Trust Fund Pirates",
           "airdate": "1986-05-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "miamiviceseason2episode21trustfundpiratesmay286",
             "itemTitle": "Miami Vice Season 2 Episode 21 Trust Fund Pirates May 2 86",

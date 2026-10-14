@@ -3,7 +3,7 @@
   "slug": "the-jack-benny-program",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:28:54.902Z",
+  "matchedAt": "2026-10-14T05:18:49.697Z",
   "tvmaze": {
     "id": 21690,
     "name": "The Jack Benny Program",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 260,
-    "live": 2,
-    "review": 9,
+    "live": 1,
+    "review": 10,
     "missing": 249,
     "pct": 4
   },
@@ -239,9 +239,9 @@
           "number": 3,
           "name": "Humphrey Bogart Show",
           "airdate": "1953-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.75,
             "why": "S/E in filename + title match",
             "item": "TheJackBennyProgramSeason4Episode3HumphreyBogartGuest-Aired",
             "itemTitle": "The Jack Benny Program, Season 4, Episode 3 â  Humphrey Bogart guest - Aired: 10/25/1951",
@@ -255,7 +255,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.75,
               "why": "S/E in filename + title match",
               "item": "TheJackBennyProgramSeason4Episode3HumphreyBogartGuest-Aired",
               "itemTitle": "The Jack Benny Program, Season 4, Episode 3 â  Humphrey Bogart guest - Aired: 10/25/1951",

@@ -3,7 +3,7 @@
   "slug": "aqua-teen-hunger-force",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T04:28:48.698Z",
+  "matchedAt": "2026-10-14T05:18:37.221Z",
   "tvmaze": {
     "id": 382,
     "name": "Aqua Teen Hunger Force",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 143,
-    "live": 129,
-    "review": 5,
+    "live": 114,
+    "review": 20,
     "missing": 9,
     "pct": 94
   },
@@ -153,9 +153,9 @@
           "number": 6,
           "name": "Space Conflict from Beyond Pluto",
           "airdate": "2002-04-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -193,9 +193,9 @@
           "number": 8,
           "name": "Revenge of the Mooninites",
           "airdate": "2002-05-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -273,9 +273,9 @@
           "number": 12,
           "name": "Circus",
           "airdate": "2002-11-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -658,9 +658,9 @@
           "number": 13,
           "name": "Revenge of the Trees",
           "airdate": "2003-10-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -1188,9 +1188,9 @@
           "number": 2,
           "name": "Boost Mobile",
           "airdate": "2005-12-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -1352,55 +1352,27 @@
             "playable": true,
             "sizeMB": 68
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Grim Reaper Gutters\" (1.00)",
-              "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
-              "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
-              "file": "Aqua Teen Hunger Force (2000) - s04e09 - Grim Reaper Gutters.mp4",
-              "name": "Aqua Teen Hunger Force (2000) - s04e09 - Grim Reaper Gutters",
-              "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e09%20-%20Grim%20Reaper%20Gutters.mp4",
-              "seconds": 679,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 67
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
           "name": "Moonajuana",
           "airdate": "2006-11-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.8,
+            "why": "title ~ \"Moonajuana\" (1.00)",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
-            "file": "Aqua Teen Hunger Force (2000) - s04e09 - Grim Reaper Gutters.mp4",
-            "name": "Aqua Teen Hunger Force (2000) - s04e09 - Grim Reaper Gutters",
-            "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e09%20-%20Grim%20Reaper%20Gutters.mp4",
-            "seconds": 679,
+            "file": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana.mp4",
+            "name": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana",
+            "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e10%20-%20Moonajuana.mp4",
+            "seconds": 691,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 68
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Moonajuana\" (1.00)",
-              "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
-              "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
-              "file": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana.mp4",
-              "name": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana",
-              "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e10%20-%20Moonajuana.mp4",
-              "seconds": 691,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 68
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -1567,9 +1539,9 @@
           "number": 2,
           "name": "Sirens",
           "airdate": "2008-01-27",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -1808,9 +1780,9 @@
           "number": 3,
           "name": "She Creature",
           "airdate": "2009-04-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -1848,9 +1820,9 @@
           "number": 5,
           "name": "Creature from Plaque Lagoon",
           "airdate": "2009-04-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -1888,9 +1860,9 @@
           "number": 7,
           "name": "2-and-a-Half-Star Wars Out of Five",
           "airdate": "2009-05-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -1948,9 +1920,9 @@
           "number": 10,
           "name": "The Last Last One Forever and Ever",
           "airdate": "2009-05-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -2597,9 +2569,9 @@
           "number": 5,
           "name": "The Granite Family",
           "airdate": "2012-07-22",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -2722,9 +2694,9 @@
           "number": 1,
           "name": "Muscles",
           "airdate": "2013-08-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -2802,9 +2774,9 @@
           "number": 5,
           "name": "Working Stiffs",
           "airdate": "2013-09-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
@@ -3075,9 +3047,9 @@
           "number": 9,
           "name": "The Greatest Story Ever Told",
           "airdate": "2015-08-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",

@@ -3,7 +3,7 @@
   "slug": "lexx",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-14T04:28:53.238Z",
+  "matchedAt": "2026-10-14T05:18:45.906Z",
   "tvmaze": {
     "id": 1656,
     "name": "Lexx",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 61,
     "live": 0,
-    "review": 36,
-    "missing": 25,
-    "pct": 59
+    "review": 35,
+    "missing": 26,
+    "pct": 57
   },
   "seasons": [
     {
@@ -563,31 +563,17 @@
           "file": {
             "conf": 0.8,
             "why": "title ~ \"P4X\" (0.95)",
-            "item": "lexx-season-4-ep-3-p-4-x",
-            "itemTitle": "LEXX SEASON 4 Ep 3 - P4X",
-            "file": "LEXX_SEASON4_Ep-3 P4X.mp4",
-            "name": "LEXX_SEASON4_Ep-3 P4X",
-            "url": "https://archive.org/download/lexx-season-4-ep-3-p-4-x/LEXX_SEASON4_Ep-3%20P4X.mp4",
-            "seconds": 2698,
-            "format": "MPEG4",
+            "item": "lexx-season4",
+            "itemTitle": "Lexx - Season 4 [2001-02]",
+            "file": "Lexx-S04xE03-P4X.mp4",
+            "name": "Lexx-S04xE03-P4X",
+            "url": "https://archive.org/download/lexx-season4/Lexx-S04xE03-P4X.mp4",
+            "seconds": 2696,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 921
+            "sizeMB": 282
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"P4X\" (0.95)",
-              "item": "lexx-season4",
-              "itemTitle": "Lexx - Season 4 [2001-02]",
-              "file": "Lexx-S04xE03-P4X.mp4",
-              "name": "Lexx-S04xE03-P4X",
-              "url": "https://archive.org/download/lexx-season4/Lexx-S04xE03-P4X.mp4",
-              "seconds": 2696,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 282
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -753,20 +739,8 @@
           "number": 12,
           "name": "Bad Carrot",
           "airdate": "2002-02-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Bad Carrot\" (0.95)",
-            "item": "lexx-season4",
-            "itemTitle": "Lexx - Season 4 [2001-02]",
-            "file": "Lexx-S04xE12-Bad_Carrot.mp4",
-            "name": "Lexx-S04xE12-Bad_Carrot",
-            "url": "https://archive.org/download/lexx-season4/Lexx-S04xE12-Bad_Carrot.mp4",
-            "seconds": 2721,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 285
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

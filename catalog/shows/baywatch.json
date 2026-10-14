@@ -3,7 +3,7 @@
   "slug": "baywatch",
   "type": "Drama",
   "network": "Syndicated",
-  "matchedAt": "2026-10-14T04:28:50.507Z",
+  "matchedAt": "2026-10-14T05:18:40.913Z",
   "tvmaze": {
     "id": 1070,
     "name": "Baywatch",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 233,
-    "live": 36,
-    "review": 170,
-    "missing": 27,
-    "pct": 88
+    "live": 28,
+    "review": 141,
+    "missing": 64,
+    "pct": 73
   },
   "seasons": [
     {
@@ -59,26 +59,26 @@
               "why": "title ~ \"In Deep\" (0.95)",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
-              "file": "002-In Deep(REMASTERED VERSION).mp4",
-              "name": "002-In Deep(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/002-In%20Deep(REMASTERED%20VERSION).mp4",
-              "seconds": 2800,
+              "file": "107-Deep Trouble(REMASTERED VERSION).mp4",
+              "name": "107-Deep Trouble(REMASTERED VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/107-Deep%20Trouble(REMASTERED%20VERSION).mp4",
+              "seconds": 2568,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 1611
+              "sizeMB": 1415
             },
             {
               "conf": 0.75,
-              "why": "title ~ \"In Deep\" (1.00)",
+              "why": "title ~ \"In Deep\" (0.95)",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
-              "file": "002-In Deep.ia.mp4",
-              "name": "002-In Deep",
-              "url": "https://archive.org/download/baywatch_202212/002-In%20Deep.ia.mp4",
-              "seconds": 2800,
-              "format": "h.264 IA",
+              "file": "208-Gold From The Deep(REMASTERED VERSION).mp4",
+              "name": "208-Gold From The Deep(REMASTERED VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/208-Gold%20From%20The%20Deep(REMASTERED%20VERSION).mp4",
+              "seconds": 2565,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 1611
+              "sizeMB": 1284
             }
           ]
         },
@@ -86,47 +86,21 @@
           "number": 2,
           "name": "Heat Wave",
           "airdate": "1989-09-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Heat Wave\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "102-Homecoming(REMASTERED VERSION).mp4",
-            "name": "102-Homecoming(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/102-Homecoming(REMASTERED%20VERSION).mp4",
-            "seconds": 2569,
+            "file": "003-Heat Wave(REMASTERED VERSION).mp4",
+            "name": "003-Heat Wave(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/003-Heat%20Wave(REMASTERED%20VERSION).mp4",
+            "seconds": 2786,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1615
+            "sizeMB": 1419
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "102-Homecoming(ORIGINAL VERSION).mp4",
-              "name": "102-Homecoming(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/102-Homecoming(ORIGINAL%20VERSION).mp4",
-              "seconds": 2547,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Heat Wave\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "003-Heat Wave(REMASTERED VERSION).mp4",
-              "name": "003-Heat Wave(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/003-Heat%20Wave(REMASTERED%20VERSION).mp4",
-              "seconds": 2786,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1419
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Heat Wave\" (1.00)",
@@ -139,6 +113,32 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1419
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Heat Wave\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "003-Heat Wave(ORIGINAL VERSION).mp4",
+              "name": "003-Heat Wave(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/003-Heat%20Wave(ORIGINAL%20VERSION).mp4",
+              "seconds": 2778,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 367
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 40 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "126-Baywatch Angels(REMASTERED VERSION).mp4",
+              "name": "126-Baywatch Angels(REMASTERED VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/126-Baywatch%20Angels(REMASTERED%20VERSION).mp4",
+              "seconds": 2522,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1828
             }
           ]
         },
@@ -235,30 +235,17 @@
               "sizeMB": 365
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"Message in a Bottle\" (0.95)",
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 40 in \"Baywatch(The Complete Series)\"",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
-              "file": "005-Message In A Bottle(REMASTERED VERSION).mp4",
-              "name": "005-Message In A Bottle(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/005-Message%20In%20A%20Bottle(REMASTERED%20VERSION).mp4",
-              "seconds": 2837,
+              "file": "162-Eel Nino(ORIGINAL VERSION).mp4",
+              "name": "162-Eel Nino(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/162-Eel%20Nino(ORIGINAL%20VERSION).mp4",
+              "seconds": 2559,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 1604
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Message in a Bottle\" (1.00)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "005-Message In A Bottle.ia.mp4",
-              "name": "005-Message In A Bottle",
-              "url": "https://archive.org/download/baywatch_202212/005-Message%20In%20A%20Bottle.ia.mp4",
-              "seconds": 2837,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 1604
+              "sizeMB": 366
             }
           ]
         },
@@ -295,30 +282,17 @@
               "sizeMB": 365
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"The Sky is Falling\" (0.95)",
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 40 in \"Baywatch(The Complete Series)\"",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
-              "file": "006-The Sky Is Falling(REMASTERED VERSION).mp4",
-              "name": "006-The Sky Is Falling(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/006-The%20Sky%20Is%20Falling(REMASTERED%20VERSION).mp4",
-              "seconds": 2891,
+              "file": "174-Bon Voyage(ORIGINAL VERSION).mp4",
+              "name": "174-Bon Voyage(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/174-Bon%20Voyage(ORIGINAL%20VERSION).mp4",
+              "seconds": 2558,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 1533
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Sky is Falling\" (1.00)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "006-The Sky Is Falling.ia.mp4",
-              "name": "006-The Sky Is Falling",
-              "url": "https://archive.org/download/baywatch_202212/006-The%20Sky%20Is%20Falling.ia.mp4",
-              "seconds": 2891,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 1533
+              "sizeMB": 367
             }
           ]
         },
@@ -416,7 +390,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 7 of 48 in \"Baywatch(The Complete Series)\"",
+              "why": "sequence guess: file 7 of 40 in \"Baywatch(The Complete Series)\"",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
               "file": "175-White Thunder At Glacier Bay Part 1(ORIGINAL VERSION).mp4",
@@ -476,7 +450,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 48 in \"Baywatch(The Complete Series)\"",
+              "why": "sequence guess: file 8 of 40 in \"Baywatch(The Complete Series)\"",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
               "file": "176-White Thunder At Glacier Bay Part 2(ORIGINAL VERSION).mp4",
@@ -493,34 +467,21 @@
           "number": 9,
           "name": "The Cretin of the Shallows",
           "airdate": "1989-12-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"The Cretin of the Shallows\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "109-The Runaways(ORIGINAL VERSION).mp4",
-            "name": "109-The Runaways(ORIGINAL VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/109-The%20Runaways(ORIGINAL%20VERSION).mp4",
-            "seconds": 2549,
+            "file": "010-The Cretin Of The Shallows(REMASTERED VERSION).mp4",
+            "name": "010-The Cretin Of The Shallows(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/010-The%20Cretin%20Of%20The%20Shallows(REMASTERED%20VERSION).mp4",
+            "seconds": 2867,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 365
+            "sizeMB": 1766
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Cretin of the Shallows\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "010-The Cretin Of The Shallows(REMASTERED VERSION).mp4",
-              "name": "010-The Cretin Of The Shallows(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/010-The%20Cretin%20Of%20The%20Shallows(REMASTERED%20VERSION).mp4",
-              "seconds": 2867,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1766
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"The Cretin of the Shallows\" (1.00)",
@@ -546,6 +507,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 365
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 40 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "176-White Thunder At Glacier Bay Part 2(REMASTERED VERSION).mp4",
+              "name": "176-White Thunder At Glacier Bay Part 2(REMASTERED VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/176-White%20Thunder%20At%20Glacier%20Bay%20Part%202(REMASTERED%20VERSION).mp4",
+              "seconds": 2524,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1421
             }
           ]
         },
@@ -615,59 +589,19 @@
           "airdate": "1989-12-15",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Reunion\" (0.95)",
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 40 in \"Baywatch(The Complete Series)\"",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "012-The Reunion(REMASTERED VERSION).mp4",
-            "name": "012-The Reunion(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/012-The%20Reunion(REMASTERED%20VERSION).mp4",
-            "seconds": 2891,
+            "file": "244-Pursuit(BAYWATCH NIGHTS).mp4",
+            "name": "244-Pursuit(BAYWATCH NIGHTS)",
+            "url": "https://archive.org/download/baywatch_202212/244-Pursuit(BAYWATCH%20NIGHTS).mp4",
+            "seconds": 2570,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2008
+            "sizeMB": 365
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Reunion\" (1.00)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "012-The Reunion.ia.mp4",
-              "name": "012-The Reunion",
-              "url": "https://archive.org/download/baywatch_202212/012-The%20Reunion.ia.mp4",
-              "seconds": 2891,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 2008
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Reunion\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "034-Reunion(ORIGINAL VERSION).mp4",
-              "name": "034-Reunion(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/034-Reunion(ORIGINAL%20VERSION).mp4",
-              "seconds": 2622,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Reunion\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "012-The Reunion(ORIGINAL VERSION).mp4",
-              "name": "012-The Reunion(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/012-The%20Reunion(ORIGINAL%20VERSION).mp4",
-              "seconds": 2810,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -675,105 +609,39 @@
           "airdate": "1990-01-05",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Armored Car\" (0.95)",
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 40 in \"Baywatch(The Complete Series)\"",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "013-Armored Car(REMASTERED VERSION).mp4",
-            "name": "013-Armored Car(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/013-Armored%20Car(REMASTERED%20VERSION).mp4",
-            "seconds": 2924,
+            "file": "245-Bad Blades(BAYWATCH NIGHTS).mp4",
+            "name": "245-Bad Blades(BAYWATCH NIGHTS)",
+            "url": "https://archive.org/download/baywatch_202212/245-Bad%20Blades(BAYWATCH%20NIGHTS).mp4",
+            "seconds": 2570,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1716
+            "sizeMB": 365
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Armored Car\" (1.00)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "013-Armored Car.ia.mp4",
-              "name": "013-Armored Car",
-              "url": "https://archive.org/download/baywatch_202212/013-Armored%20Car.ia.mp4",
-              "seconds": 2924,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 1716
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Armored Car\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "013-Armored Car(ORIGINAL VERSION).mp4",
-              "name": "013-Armored Car(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/013-Armored%20Car(ORIGINAL%20VERSION).mp4",
-              "seconds": 2841,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 48 in \"Baywatch(The Complete Series)\"",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "245-Bad Blades(BAYWATCH NIGHTS).mp4",
-              "name": "245-Bad Blades(BAYWATCH NIGHTS)",
-              "url": "https://archive.org/download/baywatch_202212/245-Bad%20Blades(BAYWATCH%20NIGHTS).mp4",
-              "seconds": 2570,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "Home Cort",
           "airdate": "1990-01-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Home Cort\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "113-Trapped Beneath The Sea Part 1(REMASTERED VERSION).mp4",
-            "name": "113-Trapped Beneath The Sea Part 1(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/113-Trapped%20Beneath%20The%20Sea%20Part%201(REMASTERED%20VERSION).mp4",
-            "seconds": 2546,
+            "file": "014-Home Cort(REMASTERED VERSION).mp4",
+            "name": "014-Home Cort(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/014-Home%20Cort(REMASTERED%20VERSION).mp4",
+            "seconds": 2922,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1848
+            "sizeMB": 1528
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "113-Trapped Beneath The Sea Part 1(ORIGINAL VERSION).mp4",
-              "name": "113-Trapped Beneath The Sea Part 1(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/113-Trapped%20Beneath%20The%20Sea%20Part%201(ORIGINAL%20VERSION).mp4",
-              "seconds": 2528,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Home Cort\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "014-Home Cort(REMASTERED VERSION).mp4",
-              "name": "014-Home Cort(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/014-Home%20Cort(REMASTERED%20VERSION).mp4",
-              "seconds": 2922,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1528
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Home Cort\" (1.00)",
@@ -786,6 +654,32 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1528
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Home Cort\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "014-Home Cort(ORIGINAL VERSION).mp4",
+              "name": "014-Home Cort(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/014-Home%20Cort(ORIGINAL%20VERSION).mp4",
+              "seconds": 2837,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 40 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "247-Deadly Vision(BAYWATCH NIGHTS).mp4",
+              "name": "247-Deadly Vision(BAYWATCH NIGHTS)",
+              "url": "https://archive.org/download/baywatch_202212/247-Deadly%20Vision(BAYWATCH%20NIGHTS).mp4",
+              "seconds": 2568,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
             }
           ]
         },
@@ -793,61 +687,21 @@
           "number": 14,
           "name": "We Need a Vacation",
           "airdate": "1990-01-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 40 in \"Baywatch(The Complete Series)\"",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "114-Trapped Beneath The Sea Part 2(REMASTERED VERSION).mp4",
-            "name": "114-Trapped Beneath The Sea Part 2(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/114-Trapped%20Beneath%20The%20Sea%20Part%202(REMASTERED%20VERSION).mp4",
-            "seconds": 2545,
+            "file": "248-Just A Gigolo(BAYWATCH NIGHTS).mp4",
+            "name": "248-Just A Gigolo(BAYWATCH NIGHTS)",
+            "url": "https://archive.org/download/baywatch_202212/248-Just%20A%20Gigolo(BAYWATCH%20NIGHTS).mp4",
+            "seconds": 2572,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2117
+            "sizeMB": 365
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "114-Trapped Beneath The Sea Part 2(ORIGINAL VERSION).mp4",
-              "name": "114-Trapped Beneath The Sea Part 2(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/114-Trapped%20Beneath%20The%20Sea%20Part%202(ORIGINAL%20VERSION).mp4",
-              "seconds": 2527,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"We Need a Vacation\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "015-We Need A Vacation(REMASTERED VERSION).mp4",
-              "name": "015-We Need A Vacation(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/015-We%20Need%20A%20Vacation(REMASTERED%20VERSION).mp4",
-              "seconds": 2866,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1532
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"We Need a Vacation\" (1.00)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "015-We Need A Vacation.ia.mp4",
-              "name": "015-We Need A Vacation",
-              "url": "https://archive.org/download/baywatch_202212/015-We%20Need%20A%20Vacation.ia.mp4",
-              "seconds": 2866,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 1532
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
@@ -973,47 +827,21 @@
           "number": 17,
           "name": "Eclipse",
           "airdate": "1990-02-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Eclipse\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "117-To Everything There Is A Season(REMASTERED VERSION).mp4",
-            "name": "117-To Everything There Is A Season(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/117-To%20Everything%20There%20Is%20A%20Season(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
+            "file": "018-Eclipse(REMASTERED VERSION).mp4",
+            "name": "018-Eclipse(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/018-Eclipse(REMASTERED%20VERSION).mp4",
+            "seconds": 2866,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1936
+            "sizeMB": 1616
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "117-To Everything There Is A Season(ORIGINAL VERSION).mp4",
-              "name": "117-To Everything There Is A Season(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/117-To%20Everything%20There%20Is%20A%20Season(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Eclipse\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "018-Eclipse(REMASTERED VERSION).mp4",
-              "name": "018-Eclipse(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/018-Eclipse(REMASTERED%20VERSION).mp4",
-              "seconds": 2866,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1616
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Eclipse\" (1.00)",
@@ -1026,6 +854,32 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1616
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Eclipse\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "018-Eclipse(ORIGINAL VERSION).mp4",
+              "name": "018-Eclipse(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/018-Eclipse(ORIGINAL%20VERSION).mp4",
+              "seconds": 2779,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 40 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "251-Balancing Act(BAYWATCH NIGHTS).mp4",
+              "name": "251-Balancing Act(BAYWATCH NIGHTS)",
+              "url": "https://archive.org/download/baywatch_202212/251-Balancing%20Act(BAYWATCH%20NIGHTS).mp4",
+              "seconds": 2572,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
             }
           ]
         },
@@ -1033,47 +887,21 @@
           "number": 18,
           "name": "Shark Derby",
           "airdate": "1990-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Shark Derby\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "118-Leap Of Faith(REMASTERED VERSION).mp4",
-            "name": "118-Leap Of Faith(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/118-Leap%20Of%20Faith(REMASTERED%20VERSION).mp4",
-            "seconds": 2544,
+            "file": "019-Shark Derby(REMASTERED VERSION).mp4",
+            "name": "019-Shark Derby(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/019-Shark%20Derby(REMASTERED%20VERSION).mp4",
+            "seconds": 2865,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1946
+            "sizeMB": 1611
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "118-Leap Of Faith(ORIGINAL VERSION).mp4",
-              "name": "118-Leap Of Faith(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/118-Leap%20Of%20Faith(ORIGINAL%20VERSION).mp4",
-              "seconds": 2532,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shark Derby\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "019-Shark Derby(REMASTERED VERSION).mp4",
-              "name": "019-Shark Derby(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/019-Shark%20Derby(REMASTERED%20VERSION).mp4",
-              "seconds": 2865,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1611
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Shark Derby\" (1.00)",
@@ -1086,6 +914,32 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1611
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Shark Derby\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "019-Shark Derby(ORIGINAL VERSION).mp4",
+              "name": "019-Shark Derby(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/019-Shark%20Derby(ORIGINAL%20VERSION).mp4",
+              "seconds": 2781,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 40 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "252-Blues Boy(BAYWATCH NIGHTS).mp4",
+              "name": "252-Blues Boy(BAYWATCH NIGHTS)",
+              "url": "https://archive.org/download/baywatch_202212/252-Blues%20Boy(BAYWATCH%20NIGHTS).mp4",
+              "seconds": 2574,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
             }
           ]
         },
@@ -1183,7 +1037,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 20 of 48 in \"Baywatch(The Complete Series)\"",
+              "why": "sequence guess: file 20 of 40 in \"Baywatch(The Complete Series)\"",
               "item": "baywatch_202212",
               "itemTitle": "Baywatch(The Complete Series)",
               "file": "254-Takeover(BAYWATCH NIGHTS).mp4",
@@ -1346,47 +1200,21 @@
           "number": 3,
           "name": "Money, Honey",
           "airdate": "1991-10-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Money, Honey\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "203-Strike Team(REMASTERED VERSION).mp4",
-            "name": "203-Strike Team(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/203-Strike%20Team(REMASTERED%20VERSION).mp4",
-            "seconds": 2565,
+            "file": "026-Money, Honey(REMASTERED VERSION).mp4",
+            "name": "026-Money, Honey(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/026-Money%2C%20Honey(REMASTERED%20VERSION).mp4",
+            "seconds": 2600,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1548
+            "sizeMB": 1423
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "203-Strike Team(ORIGINAL VERSION).mp4",
-              "name": "203-Strike Team(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/203-Strike%20Team(ORIGINAL%20VERSION).mp4",
-              "seconds": 2536,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Money, Honey\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "026-Money, Honey(REMASTERED VERSION).mp4",
-              "name": "026-Money, Honey(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/026-Money%2C%20Honey(REMASTERED%20VERSION).mp4",
-              "seconds": 2600,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1423
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Money, Honey\" (1.00)",
@@ -1399,6 +1227,19 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1423
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Money, Honey\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "026-Money, Honey(ORIGINAL VERSION).mp4",
+              "name": "026-Money, Honey(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/026-Money%2C%20Honey(ORIGINAL%20VERSION).mp4",
+              "seconds": 2625,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 366
             }
           ]
         },
@@ -1981,19 +1822,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Sea of Flames\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "037-Sea Of Flames(ORIGINAL VERSION).mp4",
-              "name": "037-Sea Of Flames(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/037-Sea%20Of%20Flames(ORIGINAL%20VERSION).mp4",
-              "seconds": 2623,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
             }
           ]
         },
@@ -2249,61 +2077,9 @@
           "number": 20,
           "name": "Game of Chance",
           "airdate": "1992-05-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "220-Killing Machine(REMASTERED VERSION).mp4",
-            "name": "220-Killing Machine(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/220-Killing%20Machine(REMASTERED%20VERSION).mp4",
-            "seconds": 2567,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1300
-          },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "220-Killing Machine(ORIGINAL VERSION).mp4",
-              "name": "220-Killing Machine(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/220-Killing%20Machine(ORIGINAL%20VERSION).mp4",
-              "seconds": 2538,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Game of Chance\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "043-Game Of Chance(REMASTERED VERSION).mp4",
-              "name": "043-Game Of Chance(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/043-Game%20Of%20Chance(REMASTERED%20VERSION).mp4",
-              "seconds": 2583,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1378
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Game of Chance\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "043-Game Of Chance(ORIGINAL VERSION).mp4",
-              "name": "043-Game Of Chance(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/043-Game%20Of%20Chance(ORIGINAL%20VERSION).mp4",
-              "seconds": 2622,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 21,
@@ -2348,48 +2124,9 @@
           "number": 1,
           "name": "River of No Return",
           "airdate": "1992-09-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"River of No Return\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "045-River Of No Return Part 1(REMASTERED VERSION).mp4",
-            "name": "045-River Of No Return Part 1(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/045-River%20Of%20No%20Return%20Part%201(REMASTERED%20VERSION).mp4",
-            "seconds": 2540,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2542
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"River of No Return\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "045-River Of No Return Part 1(ORIGINAL VERSION).mp4",
-              "name": "045-River Of No Return Part 1(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/045-River%20Of%20No%20Return%20Part%201(ORIGINAL%20VERSION).mp4",
-              "seconds": 2589,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"River of No Return\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "046-River Of No Return Part 2(ORIGINAL VERSION).mp4",
-              "name": "046-River Of No Return Part 2(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/046-River%20Of%20No%20Return%20Part%202(ORIGINAL%20VERSION).mp4",
-              "seconds": 2588,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -2539,35 +2276,9 @@
           "number": 7,
           "name": "Princess of Tides",
           "airdate": "1992-11-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Princess of Tides\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "052-Princess Of Tides(REMASTERED VERSION).mp4",
-            "name": "052-Princess Of Tides(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/052-Princess%20Of%20Tides(REMASTERED%20VERSION).mp4",
-            "seconds": 2597,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1408
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Princess of Tides\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "052-Princess Of Tides(ORIGINAL VERSION).mp4",
-              "name": "052-Princess Of Tides(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/052-Princess%20Of%20Tides(ORIGINAL%20VERSION).mp4",
-              "seconds": 2625,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 8,
@@ -2873,69 +2584,17 @@
           "number": 18,
           "name": "Shattered (1)",
           "airdate": "1993-04-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Shattered (1)\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "063-Shattered Part 1(REMASTERED VERSION).mp4",
-            "name": "063-Shattered Part 1(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/063-Shattered%20Part%201(REMASTERED%20VERSION).mp4",
-            "seconds": 2566,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1429
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shattered (1)\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "063-Shattered Part 1(ORIGINAL VERSION).mp4",
-              "name": "063-Shattered Part 1(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/063-Shattered%20Part%201(ORIGINAL%20VERSION).mp4",
-              "seconds": 2624,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 19,
           "name": "Shattered (2)",
           "airdate": "1993-04-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Shattered (2)\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "064-Shattered Part 2(REMASTERED VERSION).mp4",
-            "name": "064-Shattered Part 2(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/064-Shattered%20Part%202(REMASTERED%20VERSION).mp4",
-            "seconds": 2538,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1318
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shattered (2)\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "064-Shattered Part 2(ORIGINAL VERSION).mp4",
-              "name": "064-Shattered Part 2(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/064-Shattered%20Part%202(ORIGINAL%20VERSION).mp4",
-              "seconds": 2625,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 20,
@@ -2975,35 +2634,9 @@
           "number": 21,
           "name": "Fatal Exchange",
           "airdate": "1993-05-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Fatal Exchange\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "066-Fatal Exchange(REMASTERED VERSION).mp4",
-            "name": "066-Fatal Exchange(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/066-Fatal%20Exchange(REMASTERED%20VERSION).mp4",
-            "seconds": 2597,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1414
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Fatal Exchange\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "066-Fatal Exchange(ORIGINAL VERSION).mp4",
-              "name": "066-Fatal Exchange(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/066-Fatal%20Exchange(ORIGINAL%20VERSION).mp4",
-              "seconds": 2624,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -3279,35 +2912,9 @@
           "number": 10,
           "name": "The Child Inside",
           "airdate": "1993-11-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Child Inside\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "077-The Child Inside(REMASTERED VERSION).mp4",
-            "name": "077-The Child Inside(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/077-The%20Child%20Inside(REMASTERED%20VERSION).mp4",
-            "seconds": 2566,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1326
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Child Inside\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "077-The Child Inside(ORIGINAL VERSION).mp4",
-              "name": "077-The Child Inside(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/077-The%20Child%20Inside(ORIGINAL%20VERSION).mp4",
-              "seconds": 2547,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 11,
@@ -3468,35 +3075,9 @@
           "number": 16,
           "name": "The Falcon Manifesto",
           "airdate": "1994-02-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Falcon Manifesto\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "083-The Falcon Manifesto(REMASTERED VERSION).mp4",
-            "name": "083-The Falcon Manifesto(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/083-The%20Falcon%20Manifesto(REMASTERED%20VERSION).mp4",
-            "seconds": 2567,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1686
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Falcon Manifesto\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "083-The Falcon Manifesto(ORIGINAL VERSION).mp4",
-              "name": "083-The Falcon Manifesto(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/083-The%20Falcon%20Manifesto(ORIGINAL%20VERSION).mp4",
-              "seconds": 2549,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 17,
@@ -3536,20 +3117,8 @@
           "number": 18,
           "name": "Western Exposure",
           "airdate": "1994-04-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Western Exposure\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "085-Western Exposure(ORIGINAL VERSION).mp4",
-            "name": "085-Western Exposure(ORIGINAL VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/085-Western%20Exposure(ORIGINAL%20VERSION).mp4",
-            "seconds": 2545,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 365
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4009,61 +3578,9 @@
           "number": 14,
           "name": "Homecoming",
           "airdate": "1995-02-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Homecoming\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "102-Homecoming(REMASTERED VERSION).mp4",
-            "name": "102-Homecoming(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/102-Homecoming(REMASTERED%20VERSION).mp4",
-            "seconds": 2569,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1615
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Homecoming\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "163-Homecoming(REMASTERED VERSION).mp4",
-              "name": "163-Homecoming(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/163-Homecoming(REMASTERED%20VERSION).mp4",
-              "seconds": 2576,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1197
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Homecoming\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "163-Homecoming(ORIGINAL VERSION).mp4",
-              "name": "163-Homecoming(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/163-Homecoming(ORIGINAL%20VERSION).mp4",
-              "seconds": 2560,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Homecoming\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "102-Homecoming(ORIGINAL VERSION).mp4",
-              "name": "102-Homecoming(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/102-Homecoming(ORIGINAL%20VERSION).mp4",
-              "seconds": 2547,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 15,
@@ -4247,20 +3764,8 @@
           "number": 21,
           "name": "The Runaways",
           "airdate": "1995-05-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Runaways\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "109-The Runaways(ORIGINAL VERSION).mp4",
-            "name": "109-The Runaways(ORIGINAL VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/109-The%20Runaways(ORIGINAL%20VERSION).mp4",
-            "seconds": 2549,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 365
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4306,69 +3811,17 @@
           "number": 1,
           "name": "Trapped Beneath the Sea (1)",
           "airdate": "1995-09-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Trapped Beneath the Sea (1)\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "113-Trapped Beneath The Sea Part 1(REMASTERED VERSION).mp4",
-            "name": "113-Trapped Beneath The Sea Part 1(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/113-Trapped%20Beneath%20The%20Sea%20Part%201(REMASTERED%20VERSION).mp4",
-            "seconds": 2546,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1848
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Trapped Beneath the Sea (1)\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "113-Trapped Beneath The Sea Part 1(ORIGINAL VERSION).mp4",
-              "name": "113-Trapped Beneath The Sea Part 1(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/113-Trapped%20Beneath%20The%20Sea%20Part%201(ORIGINAL%20VERSION).mp4",
-              "seconds": 2528,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Trapped Beneath the Sea (2)",
           "airdate": "1995-10-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Trapped Beneath the Sea (2)\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "114-Trapped Beneath The Sea Part 2(REMASTERED VERSION).mp4",
-            "name": "114-Trapped Beneath The Sea Part 2(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/114-Trapped%20Beneath%20The%20Sea%20Part%202(REMASTERED%20VERSION).mp4",
-            "seconds": 2545,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2117
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Trapped Beneath the Sea (2)\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "114-Trapped Beneath The Sea Part 2(ORIGINAL VERSION).mp4",
-              "name": "114-Trapped Beneath The Sea Part 2(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/114-Trapped%20Beneath%20The%20Sea%20Part%202(ORIGINAL%20VERSION).mp4",
-              "seconds": 2527,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
@@ -4442,69 +3895,17 @@
           "number": 5,
           "name": "To Everything There is a Season",
           "airdate": "1995-10-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"To Everything There is a Season\" (0.82)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "117-To Everything There Is A Season(REMASTERED VERSION).mp4",
-            "name": "117-To Everything There Is A Season(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/117-To%20Everything%20There%20Is%20A%20Season(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1936
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"To Everything There is a Season\" (0.71)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "117-To Everything There Is A Season(ORIGINAL VERSION).mp4",
-              "name": "117-To Everything There Is A Season(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/117-To%20Everything%20There%20Is%20A%20Season(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Leap of Faith",
           "airdate": "1995-10-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Leap of Faith\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "118-Leap Of Faith(REMASTERED VERSION).mp4",
-            "name": "118-Leap Of Faith(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/118-Leap%20Of%20Faith(REMASTERED%20VERSION).mp4",
-            "seconds": 2544,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1946
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Leap of Faith\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "118-Leap Of Faith(ORIGINAL VERSION).mp4",
-              "name": "118-Leap Of Faith(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/118-Leap%20Of%20Faith(ORIGINAL%20VERSION).mp4",
-              "seconds": 2532,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
@@ -4993,35 +4394,9 @@
           "number": 3,
           "name": "Liquid Assets",
           "airdate": "1996-10-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Liquid Assets\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "135-Liquid Assets(REMASTERED VERSION).mp4",
-            "name": "135-Liquid Assets(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/135-Liquid%20Assets(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1805
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Liquid Assets\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "135-Liquid Assets(ORIGINAL VERSION).mp4",
-              "name": "135-Liquid Assets(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/135-Liquid%20Assets(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
@@ -5143,69 +4518,17 @@
           "number": 9,
           "name": "Buried",
           "airdate": "1996-11-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Buried\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "141-Buried(REMASTERED VERSION).mp4",
-            "name": "141-Buried(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/141-Buried(REMASTERED%20VERSION).mp4",
-            "seconds": 2548,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1423
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Buried\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "141-Buried(ORIGINAL VERSION).mp4",
-              "name": "141-Buried(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/141-Buried(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 10,
           "name": "Search & Rescue",
           "airdate": "1997-01-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Search & Rescue\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "142-Search And Rescue(REMASTERED VERSION).mp4",
-            "name": "142-Search And Rescue(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/142-Search%20And%20Rescue(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1539
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Search & Rescue\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "142-Search And Rescue(ORIGINAL VERSION).mp4",
-              "name": "142-Search And Rescue(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/142-Search%20And%20Rescue(ORIGINAL%20VERSION).mp4",
-              "seconds": 2528,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 11,
@@ -5219,69 +4542,17 @@
           "number": 12,
           "name": "Bachelor of the Month",
           "airdate": "1997-02-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Bachelor of the Month\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "144-Bachelor Of The Month(REMASTERED VERSION).mp4",
-            "name": "144-Bachelor Of The Month(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/144-Bachelor%20Of%20The%20Month(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1633
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Bachelor of the Month\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "144-Bachelor Of The Month(ORIGINAL VERSION).mp4",
-              "name": "144-Bachelor Of The Month(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/144-Bachelor%20Of%20The%20Month(ORIGINAL%20VERSION).mp4",
-              "seconds": 2528,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 13,
           "name": "Chance of a Lifetime",
           "airdate": "1997-02-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Chance of a Lifetime\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "145-Chance Of A Lifetime(REMASTERED VERSION).mp4",
-            "name": "145-Chance Of A Lifetime(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/145-Chance%20Of%20A%20Lifetime(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1601
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Chance of a Lifetime\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "145-Chance Of A Lifetime(ORIGINAL VERSION).mp4",
-              "name": "145-Chance Of A Lifetime(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/145-Chance%20Of%20A%20Lifetime(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 14,
@@ -5321,35 +4592,9 @@
           "number": 15,
           "name": "Life Guardian",
           "airdate": "1997-02-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Life Guardian\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "147-Life Guardian(REMASTERED VERSION).mp4",
-            "name": "147-Life Guardian(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/147-Life%20Guardian(REMASTERED%20VERSION).mp4",
-            "seconds": 2547,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1452
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Life Guardian\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "147-Life Guardian(ORIGINAL VERSION).mp4",
-              "name": "147-Life Guardian(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/147-Life%20Guardian(ORIGINAL%20VERSION).mp4",
-              "seconds": 2529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 16,
@@ -5601,35 +4846,9 @@
           "number": 3,
           "name": "The Choice",
           "airdate": "1997-10-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Choice\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "157-The Choice(REMASTERED VERSION).mp4",
-            "name": "157-The Choice(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/157-The%20Choice(REMASTERED%20VERSION).mp4",
-            "seconds": 2577,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1587
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Choice\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "157-The Choice(ORIGINAL VERSION).mp4",
-              "name": "157-The Choice(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/157-The%20Choice(ORIGINAL%20VERSION).mp4",
-              "seconds": 2559,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
@@ -5703,69 +4922,17 @@
           "number": 6,
           "name": "Lifeguard Confidential",
           "airdate": "1997-10-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Lifeguard Confidential\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "160-Lifeguard Confidential(REMASTERED VERSION).mp4",
-            "name": "160-Lifeguard Confidential(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/160-Lifeguard%20Confidential(REMASTERED%20VERSION).mp4",
-            "seconds": 2575,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1544
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Lifeguard Confidential\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "160-Lifeguard Confidential(ORIGINAL VERSION).mp4",
-              "name": "160-Lifeguard Confidential(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/160-Lifeguard%20Confidential(ORIGINAL%20VERSION).mp4",
-              "seconds": 2559,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Out of the Blue",
           "airdate": "1997-11-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Out of the Blue\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "161-Out Of The Blue(REMASTERED VERSION).mp4",
-            "name": "161-Out Of The Blue(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/161-Out%20Of%20The%20Blue(REMASTERED%20VERSION).mp4",
-            "seconds": 2576,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1586
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Out of the Blue\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "161-Out Of The Blue(ORIGINAL VERSION).mp4",
-              "name": "161-Out Of The Blue(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/161-Out%20Of%20The%20Blue(ORIGINAL%20VERSION).mp4",
-              "seconds": 2559,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 8,
@@ -5799,69 +4966,17 @@
           "number": 10,
           "name": "Missing",
           "airdate": "1997-11-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Missing\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "164-Missing(REMASTERED VERSION).mp4",
-            "name": "164-Missing(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/164-Missing(REMASTERED%20VERSION).mp4",
-            "seconds": 2576,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1693
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Missing\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "164-Missing(ORIGINAL VERSION).mp4",
-              "name": "164-Missing(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/164-Missing(ORIGINAL%20VERSION).mp4",
-              "seconds": 2559,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Hijacked",
           "airdate": "1997-12-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Hijacked\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "165-Hijacked(REMASTERED VERSION).mp4",
-            "name": "165-Hijacked(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/165-Hijacked(REMASTERED%20VERSION).mp4",
-            "seconds": 2577,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1437
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Hijacked\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "165-Hijacked(ORIGINAL VERSION).mp4",
-              "name": "165-Hijacked(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/165-Hijacked(ORIGINAL%20VERSION).mp4",
-              "seconds": 2559,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,
@@ -5901,35 +5016,9 @@
           "number": 13,
           "name": "Countdown",
           "airdate": "1998-02-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Countdown\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "167-Countdown(REMASTERED VERSION).mp4",
-            "name": "167-Countdown(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/167-Countdown(REMASTERED%20VERSION).mp4",
-            "seconds": 2575,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1549
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Countdown\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "167-Countdown(ORIGINAL VERSION).mp4",
-              "name": "167-Countdown(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/167-Countdown(ORIGINAL%20VERSION).mp4",
-              "seconds": 2558,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 14,
@@ -6003,35 +5092,9 @@
           "number": 16,
           "name": "Night of the Dolphin",
           "airdate": "1998-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Night of the Dolphin\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "170-Night Of The Dolphin(REMASTERED VERSION).mp4",
-            "name": "170-Night Of The Dolphin(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/170-Night%20Of%20The%20Dolphin(REMASTERED%20VERSION).mp4",
-            "seconds": 2576,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1349
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Night of the Dolphin\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "170-Night Of The Dolphin(ORIGINAL VERSION).mp4",
-              "name": "170-Night Of The Dolphin(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/170-Night%20Of%20The%20Dolphin(ORIGINAL%20VERSION).mp4",
-              "seconds": 2559,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 367
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 17,
@@ -6478,35 +5541,9 @@
           "number": 12,
           "name": "The Big Blue",
           "airdate": "1999-01-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Big Blue\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "188-The Big Blue(REMASTERED VERSION).mp4",
-            "name": "188-The Big Blue(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/188-The%20Big%20Blue(REMASTERED%20VERSION).mp4",
-            "seconds": 2577,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2115
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Big Blue\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "188-The Big Blue(ORIGINAL VERSION).mp4",
-              "name": "188-The Big Blue(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/188-The%20Big%20Blue(ORIGINAL%20VERSION).mp4",
-              "seconds": 2588,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 13,
@@ -6580,35 +5617,9 @@
           "number": 15,
           "name": "Baywatch Grand Prix",
           "airdate": "1999-02-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Baywatch Grand Prix\" (0.63)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "191-Baywatch Grand Prix(REMASTERED VERSION).mp4",
-            "name": "191-Baywatch Grand Prix(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/191-Baywatch%20Grand%20Prix(REMASTERED%20VERSION).mp4",
-            "seconds": 2577,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2085
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Baywatch Grand Prix\" (0.63)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "191-Baywatch Grand Prix(ORIGINAL VERSION).mp4",
-              "name": "191-Baywatch Grand Prix(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/191-Baywatch%20Grand%20Prix(ORIGINAL%20VERSION).mp4",
-              "seconds": 2587,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 16,
@@ -6785,20 +5796,8 @@
           "number": 2,
           "name": "Mahalo, Hawaii",
           "airdate": "1999-09-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Mahalo, Hawaii\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "200-Mahalo, Hawaii(ORIGINAL VERSION).mp4",
-            "name": "200-Mahalo, Hawaii(ORIGINAL VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/200-Mahalo%2C%20Hawaii(ORIGINAL%20VERSION).mp4",
-            "seconds": 2538,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 365
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -6847,35 +5846,9 @@
           "number": 5,
           "name": "Strike Team",
           "airdate": "1999-10-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Strike Team\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "203-Strike Team(REMASTERED VERSION).mp4",
-            "name": "203-Strike Team(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/203-Strike%20Team(REMASTERED%20VERSION).mp4",
-            "seconds": 2565,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1548
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Strike Team\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "203-Strike Team(ORIGINAL VERSION).mp4",
-              "name": "203-Strike Team(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/203-Strike%20Team(ORIGINAL%20VERSION).mp4",
-              "seconds": 2536,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
@@ -7359,35 +6332,9 @@
           "number": 22,
           "name": "Killing Machine",
           "airdate": "2000-05-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Killing Machine\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "220-Killing Machine(REMASTERED VERSION).mp4",
-            "name": "220-Killing Machine(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/220-Killing%20Machine(REMASTERED%20VERSION).mp4",
-            "seconds": 2567,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1300
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Killing Machine\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "220-Killing Machine(ORIGINAL VERSION).mp4",
-              "name": "220-Killing Machine(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/220-Killing%20Machine(ORIGINAL%20VERSION).mp4",
-              "seconds": 2538,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -7542,35 +6489,9 @@
           "number": 6,
           "name": "Broken Promises",
           "airdate": "2000-11-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Broken Promises\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "226-Broken Promises(REMASTERED VERSION).mp4",
-            "name": "226-Broken Promises(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/226-Broken%20Promises(REMASTERED%20VERSION).mp4",
-            "seconds": 2611,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1303
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Broken Promises\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "226-Broken Promises(ORIGINAL VERSION).mp4",
-              "name": "226-Broken Promises(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/226-Broken%20Promises(ORIGINAL%20VERSION).mp4",
-              "seconds": 2550,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 7,
@@ -7754,35 +6675,9 @@
           "number": 13,
           "name": "The Stalker",
           "airdate": "2001-02-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Stalker\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "233-The Stalker(REMASTERED VERSION).mp4",
-            "name": "233-The Stalker(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/233-The%20Stalker(REMASTERED%20VERSION).mp4",
-            "seconds": 2609,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1352
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Stalker\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "233-The Stalker(ORIGINAL VERSION).mp4",
-              "name": "233-The Stalker(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/233-The%20Stalker(ORIGINAL%20VERSION).mp4",
-              "seconds": 2543,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 14,
@@ -7864,35 +6759,9 @@
           "number": 17,
           "name": "Boiling Point",
           "airdate": "2001-04-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Boiling Point\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "237-Boiling Point(REMASTERED VERSION).mp4",
-            "name": "237-Boiling Point(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/237-Boiling%20Point(REMASTERED%20VERSION).mp4",
-            "seconds": 2608,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1318
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Boiling Point\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "237-Boiling Point(ORIGINAL VERSION).mp4",
-              "name": "237-Boiling Point(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/237-Boiling%20Point(ORIGINAL%20VERSION).mp4",
-              "seconds": 2542,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 18,
@@ -7932,35 +6801,9 @@
           "number": 19,
           "name": "Trapped",
           "airdate": "2001-04-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Trapped\" (0.95)",
-            "item": "baywatch_202212",
-            "itemTitle": "Baywatch(The Complete Series)",
-            "file": "239-Trapped(REMASTERED VERSION).mp4",
-            "name": "239-Trapped(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/239-Trapped(REMASTERED%20VERSION).mp4",
-            "seconds": 2604,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1216
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Trapped\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "239-Trapped(ORIGINAL VERSION).mp4",
-              "name": "239-Trapped(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/239-Trapped(ORIGINAL%20VERSION).mp4",
-              "seconds": 2535,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 20,

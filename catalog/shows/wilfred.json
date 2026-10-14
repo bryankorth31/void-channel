@@ -3,7 +3,7 @@
   "slug": "wilfred",
   "type": "2000s and Later Sitcoms",
   "network": "FX",
-  "matchedAt": "2026-10-14T04:28:46.360Z",
+  "matchedAt": "2026-10-14T05:18:33.148Z",
   "tvmaze": {
     "id": 556,
     "name": "Wilfred",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 49,
-    "live": 16,
-    "review": 22,
-    "missing": 11,
-    "pct": 78
+    "live": 12,
+    "review": 25,
+    "missing": 12,
+    "pct": 76
   },
   "seasons": [
     {
@@ -77,7 +77,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -112,7 +112,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -147,20 +147,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51/20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51.mp4",
-              "name": "20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51/20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221216%20-%202Arv6eU0z01G%20-%20Enoch's%20Animal%20Dream%20Vision%20104%20Animation.%20Answers%20In%20First%20Enoch%20Part%2051%2F20221216%20-%202Arv6eU0z01G%20-%20Enoch's%20Animal%20Dream%20Vision%20104%20Animation.%20Answers%20In%20First%20Enoch%20Part%2051.mp4",
-              "seconds": 3869,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 104
-            },
-            {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -179,35 +166,9 @@
           "number": 5,
           "name": "Respect",
           "airdate": "2011-07-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E05 - The Dog Whisperer-v2.mp4",
-            "name": "Wilfred - S01E05 - The Dog Whisperer-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E05%20-%20The%20Dog%20Whisperer-v2.mp4",
-            "seconds": 1449,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale/20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale.mp4",
-              "name": "20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale/20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221223%20-%20KdxLdVWgterH%20-%20Enoch's%20Animal%20Dream%20Vision%20105%20Animation.%20Answers%20In%20First%20Enoch%20Part%2052%20Series%20Finale%2F20221223%20-%20KdxLdVWgterH%20-%20Enoch's%20Animal%20Dream%20Vision%20105%20Animation.%20Answers%20In%20First%20Enoch%20Part%2052%20Series%20Finale.mp4",
-              "seconds": 3143,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 108
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,
@@ -229,7 +190,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -248,36 +209,22 @@
           "number": 7,
           "name": "Pride",
           "airdate": "2011-08-04",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E07 - Barking Behind Bars-v2.mp4",
-            "name": "Wilfred - S01E07 - Barking Behind Bars-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E07%20-%20Barking%20Behind%20Bars-v2.mp4",
-            "seconds": 1484,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E07 - Pride (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E07 - Pride (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E07%20-%20Pride%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1293,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 146
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E07 - Pride (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E07 - Pride (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E07%20-%20Pride%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1293,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -299,7 +246,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -328,7 +275,7 @@
           "airdate": "2011-08-18",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -349,7 +296,7 @@
           "airdate": "2011-08-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -391,7 +338,7 @@
           "airdate": "2011-09-08",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -431,7 +378,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -466,7 +413,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -501,7 +448,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -520,36 +467,22 @@
           "number": 4,
           "name": "Guilt",
           "airdate": "2012-07-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E04 - Honey You're Killing The Dog - v2.mp4",
-            "name": "Wilfred - S02E04 - Honey You're Killing The Dog - v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E04%20-%20Honey%20You're%20Killing%20The%20Dog%20-%20v2.mp4",
-            "seconds": 1481,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E04 - Guilt (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E04 - Guilt (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E04%20-%20Guilt%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1283,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 146
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E04 - Guilt (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E04 - Guilt (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E04%20-%20Guilt%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1283,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -571,20 +504,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"Now\" (0.95)",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221220 - 6bLpyLUE28Ah - The Final World Power. The Third Head Rising Now! Answers in 2nd Esdras Part 6/20221220 - 6bLpyLUE28Ah - The Final World Power. The Third Head Rising Now! Answers in 2nd Esdras Part 6.mp4",
-              "name": "20221220 - 6bLpyLUE28Ah - The Final World Power. The Third Head Rising Now! Answers in 2nd Esdras Part 6/20221220 - 6bLpyLUE28Ah - The Final World Power. The Third Head Rising Now! Answers in 2nd Esdras Part 6",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221220%20-%206bLpyLUE28Ah%20-%20The%20Final%20World%20Power.%20The%20Third%20Head%20Rising%20Now!%20Answers%20in%202nd%20Esdras%20Part%206%2F20221220%20-%206bLpyLUE28Ah%20-%20The%20Final%20World%20Power.%20The%20Third%20Head%20Rising%20Now!%20Answers%20in%202nd%20Esdras%20Part%206.mp4",
-              "seconds": 2370,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 79
-            },
-            {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -619,20 +539,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"Control\" (0.95)",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221213 - o3daisGJhUHW - LEO HOHMANN - TRACK AND CONTROL GRID BEING ERECTED RIGHT UNDER OUR NOSES!/20221213 - o3daisGJhUHW - LEO HOHMANN - TRACK AND CONTROL GRID BEING ERECTED RIGHT UNDER OUR NOSES!.mp4",
-              "name": "20221213 - o3daisGJhUHW - LEO HOHMANN - TRACK AND CONTROL GRID BEING ERECTED RIGHT UNDER OUR NOSES!/20221213 - o3daisGJhUHW - LEO HOHMANN - TRACK AND CONTROL GRID BEING ERECTED RIGHT UNDER OUR NOSES!",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221213%20-%20o3daisGJhUHW%20-%20LEO%20HOHMANN%20-%20TRACK%20AND%20CONTROL%20GRID%20BEING%20ERECTED%20RIGHT%20UNDER%20OUR%20NOSES!%2F20221213%20-%20o3daisGJhUHW%20-%20LEO%20HOHMANN%20-%20TRACK%20AND%20CONTROL%20GRID%20BEING%20ERECTED%20RIGHT%20UNDER%20OUR%20NOSES!.mp4",
-              "seconds": 2275,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 51
-            },
-            {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -667,7 +574,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "w-i-l-f-r-e-d",
               "itemTitle": "Wilfred (2011–2014)",
@@ -686,36 +593,22 @@
           "number": 8,
           "name": "Truth",
           "airdate": "2012-08-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E08 - Bite Club - v3.mp4",
-            "name": "Wilfred - S02E08 - Bite Club - v3",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E08%20-%20Bite%20Club%20-%20v3.mp4",
-            "seconds": 1503,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E08 - Truth (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E08 - Truth (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E08%20-%20Truth%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1274,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 148
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 123
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E08 - Truth (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E08 - Truth (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E08%20-%20Truth%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1274,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 123
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -723,7 +616,7 @@
           "airdate": "2012-08-16",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -744,7 +637,7 @@
           "airdate": "2012-08-23",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -765,7 +658,7 @@
           "airdate": "2012-08-30",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -786,7 +679,7 @@
           "airdate": "2012-09-13",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -807,7 +700,7 @@
           "airdate": "2012-09-20",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -833,7 +726,7 @@
           "airdate": "2013-06-20",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -854,7 +747,7 @@
           "airdate": "2013-06-20",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -875,7 +768,7 @@
           "airdate": "2013-06-27",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -896,7 +789,7 @@
           "airdate": "2013-06-27",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -917,7 +810,7 @@
           "airdate": "2013-07-11",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -938,7 +831,7 @@
           "airdate": "2013-07-18",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -959,7 +852,7 @@
           "airdate": "2013-07-25",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -988,7 +881,7 @@
           "airdate": "2013-08-08",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -1009,7 +902,7 @@
           "airdate": "2013-08-15",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -1030,7 +923,7 @@
           "airdate": "2013-08-22",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -1051,7 +944,7 @@
           "airdate": "2013-08-29",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -1072,7 +965,7 @@
           "airdate": "2013-09-05",
           "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match | not browser-playable: video (x265)",
             "item": "w-i-l-f-r-e-d",
             "itemTitle": "Wilfred (2011–2014)",
@@ -1134,47 +1027,7 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Answers\" (0.95)",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221220 - 0Rfq7ESetPby - The Final World Power in the 7 Ekklesias of Revelation. The Key. Answers In 2nd Esdras Part 7/20221220 - 0Rfq7ESetPby - The Final World Power in the 7 Ekklesias of Revelation. The Key. Answers In 2nd Esdras Part 7.mp4",
-              "name": "20221220 - 0Rfq7ESetPby - The Final World Power in the 7 Ekklesias of Revelation. The Key. Answers In 2nd Esdras Part 7/20221220 - 0Rfq7ESetPby - The Final World Power in the 7 Ekklesias of Revelation. The Key. Answers In 2nd Esdras Part 7",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221220%20-%200Rfq7ESetPby%20-%20The%20Final%20World%20Power%20in%20the%207%20Ekklesias%20of%20Revelation.%20The%20Key.%20Answers%20In%202nd%20Esdras%20Part%207%2F20221220%20-%200Rfq7ESetPby%20-%20The%20Final%20World%20Power%20in%20the%207%20Ekklesias%20of%20Revelation.%20The%20Key.%20Answers%20In%202nd%20Esdras%20Part%207.mp4",
-              "seconds": 3789,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 110
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Answers\" (0.95)",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale/20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale.mp4",
-              "name": "20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale/20221223 - KdxLdVWgterH - Enoch's Animal Dream Vision 105 Animation. Answers In First Enoch Part 52 Series Finale",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221223%20-%20KdxLdVWgterH%20-%20Enoch's%20Animal%20Dream%20Vision%20105%20Animation.%20Answers%20In%20First%20Enoch%20Part%2052%20Series%20Finale%2F20221223%20-%20KdxLdVWgterH%20-%20Enoch's%20Animal%20Dream%20Vision%20105%20Animation.%20Answers%20In%20First%20Enoch%20Part%2052%20Series%20Finale.mp4",
-              "seconds": 3143,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 108
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Answers\" (0.95)",
-              "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-              "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-              "file": "20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51/20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51.mp4",
-              "name": "20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51/20221216 - 2Arv6eU0z01G - Enoch's Animal Dream Vision 104 Animation. Answers In First Enoch Part 51",
-              "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221216%20-%202Arv6eU0z01G%20-%20Enoch's%20Animal%20Dream%20Vision%20104%20Animation.%20Answers%20In%20First%20Enoch%20Part%2051%2F20221216%20-%202Arv6eU0z01G%20-%20Enoch's%20Animal%20Dream%20Vision%20104%20Animation.%20Answers%20In%20First%20Enoch%20Part%2051.mp4",
-              "seconds": 3869,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 104
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,

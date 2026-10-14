@@ -3,7 +3,7 @@
   "slug": "perfect-hair-forever",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T04:28:48.915Z",
+  "matchedAt": "2026-10-14T05:18:37.780Z",
   "tvmaze": {
     "id": 27720,
     "name": "Perfect Hair Forever",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 9,
-    "live": 9,
-    "review": 0,
+    "live": 7,
+    "review": 2,
     "missing": 0,
     "pct": 100
   },
@@ -443,9 +443,9 @@
           "number": 1,
           "name": "Muscular Distraction - A",
           "airdate": "2014-04-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-hair-forever-HQ",
             "itemTitle": "(HQ) Perfect Hair Forever",
@@ -459,7 +459,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "perfect-hair-forever-s-01-e-06-tusk",
               "itemTitle": "Perfect Hair Forever (2004-2007;2014)",
@@ -472,7 +472,7 @@
               "sizeMB": 65
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "perfect-hair-forever-s-2-e-01-return-to-balding-victory",
               "itemTitle": "Perfect Hair Forever Complete Series + EXTRAS and April Fools Day Subs",
@@ -483,19 +483,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 40
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "perfect-hair-forever-HQ",
-              "itemTitle": "(HQ) Perfect Hair Forever",
-              "file": "S3E1 - Perfect Hair Forever - Muscular Distraction - B.mp4",
-              "name": "S3E1 - Perfect Hair Forever - Muscular Distraction - B",
-              "url": "https://archive.org/download/perfect-hair-forever-HQ/S3E1%20-%20Perfect%20Hair%20Forever%20-%20Muscular%20Distraction%20-%20B.mp4",
-              "seconds": 674,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 727
             }
           ]
         },
@@ -503,9 +490,9 @@
           "number": 2,
           "name": "Muscular Distraction - B",
           "airdate": "2014-04-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "perfect-hair-forever-s-01-e-06-tusk",
             "itemTitle": "Perfect Hair Forever (2004-2007;2014)",
@@ -517,21 +504,7 @@
             "playable": true,
             "sizeMB": 65
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Muscular Distraction - B\" (1.00)",
-              "item": "perfect-hair-forever-HQ",
-              "itemTitle": "(HQ) Perfect Hair Forever",
-              "file": "S3E1 - Perfect Hair Forever - Muscular Distraction - B.mp4",
-              "name": "S3E1 - Perfect Hair Forever - Muscular Distraction - B",
-              "url": "https://archive.org/download/perfect-hair-forever-HQ/S3E1%20-%20Perfect%20Hair%20Forever%20-%20Muscular%20Distraction%20-%20B.mp4",
-              "seconds": 674,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 727
-            }
-          ]
+          "alternates": []
         }
       ]
     }

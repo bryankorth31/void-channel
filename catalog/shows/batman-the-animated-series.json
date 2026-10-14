@@ -3,7 +3,7 @@
   "slug": "batman-the-animated-series",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-14T04:28:47.434Z",
+  "matchedAt": "2026-10-14T05:18:34.926Z",
   "tvmaze": {
     "id": 757,
     "name": "Batman: The Animated Series",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 85,
-    "live": 6,
-    "review": 54,
+    "live": 5,
+    "review": 55,
     "missing": 25,
     "pct": 71
   },
@@ -28,32 +28,19 @@
           "airdate": "1992-09-05",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Cat and the Claw\" (0.95)",
-            "item": "batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503",
-            "itemTitle": "Saturday Morning Cartoons (September 6, 1992) Batman The Animated Series WOC 1992 09 12 The Cat And The Claw Part II [ DVD Source]",
-            "file": "Batman the Animated Series WOC 1992-09-12 - The Cat and The Claw part II [DVD source].mp4",
-            "name": "Batman the Animated Series WOC 1992-09-12 - The Cat and The Claw part II [DVD source]",
-            "url": "https://archive.org/download/batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503/Batman%20the%20Animated%20Series%20WOC%201992-09-12%20-%20The%20Cat%20and%20The%20Claw%20part%20II%20%5BDVD%20source%5D.mp4",
-            "seconds": 1810,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 82 in \"Batman: The Animated Series (1992–1995)\"",
+            "item": "Batman_The_Animated_Series_1992-1995",
+            "itemTitle": "Batman: The Animated Series (1992–1995)",
+            "file": "Batman The Complete S1D1.mp4",
+            "name": "Batman The Complete S1D1",
+            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D1.mp4",
+            "seconds": 1346,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 257
+            "sizeMB": 136
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-              "item": "Batman_The_Animated_Series_1992-1995",
-              "itemTitle": "Batman: The Animated Series (1992–1995)",
-              "file": "Batman The Complete S1D1.mp4",
-              "name": "Batman The Complete S1D1",
-              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D1.mp4",
-              "seconds": 1346,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -81,6 +68,20 @@
               "playable": false,
               "codecRisk": "video (x265)",
               "sizeMB": 132
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Cat and the Claw\" (0.95)",
+              "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
+              "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
+              "file": "Batman The Animated Series (1992) - S01E08 - The Cat & the Claw (Part 2) (1080p BluRay x265 RCVR).mp4",
+              "name": "Batman The Animated Series (1992) - S01E08 - The Cat & the Claw (Part 2) (1080p BluRay x265 RCVR)",
+              "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E08%20-%20The%20Cat%20%26%20the%20Claw%20(Part%202)%20(1080p%20BluRay%20x265%20RCVR).mp4",
+              "seconds": 1347,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (x265)",
+              "sizeMB": 133
             }
           ]
         },
@@ -90,32 +91,19 @@
           "airdate": "1992-09-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"On Leather Wings\" (0.95)",
-            "item": "batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503",
-            "itemTitle": "Saturday Morning Cartoons (September 6, 1992) Batman The Animated Series WOC 1992 09 12 The Cat And The Claw Part II [ DVD Source]",
-            "file": "Batman the Animated Series WOC 1992-09-06 - On Leather Wings [DVD source].mp4",
-            "name": "Batman the Animated Series WOC 1992-09-06 - On Leather Wings [DVD source]",
-            "url": "https://archive.org/download/batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503/Batman%20the%20Animated%20Series%20WOC%201992-09-06%20-%20On%20Leather%20Wings%20%5BDVD%20source%5D.mp4",
-            "seconds": 1731,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 82 in \"Batman: The Animated Series (1992–1995)\"",
+            "item": "Batman_The_Animated_Series_1992-1995",
+            "itemTitle": "Batman: The Animated Series (1992–1995)",
+            "file": "Batman The Complete S1D2.mp4",
+            "name": "Batman The Complete S1D2",
+            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D2.mp4",
+            "seconds": 1347,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 244
+            "sizeMB": 136
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-              "item": "Batman_The_Animated_Series_1992-1995",
-              "itemTitle": "Batman: The Animated Series (1992–1995)",
-              "file": "Batman The Complete S1D2.mp4",
-              "name": "Batman The Complete S1D2",
-              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D2.mp4",
-              "seconds": 1347,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -152,32 +140,19 @@
           "airdate": "1992-09-07",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Heart of Ice\" (0.95)",
-            "item": "batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503",
-            "itemTitle": "Saturday Morning Cartoons (September 6, 1992) Batman The Animated Series WOC 1992 09 12 The Cat And The Claw Part II [ DVD Source]",
-            "file": "Batman the Animated Series WOC 1992-09-07 - Heart of Ice [DVD source].mp4",
-            "name": "Batman the Animated Series WOC 1992-09-07 - Heart of Ice [DVD source]",
-            "url": "https://archive.org/download/batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503/Batman%20the%20Animated%20Series%20WOC%201992-09-07%20-%20Heart%20of%20Ice%20%5BDVD%20source%5D.mp4",
-            "seconds": 1711,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 82 in \"Batman: The Animated Series (1992–1995)\"",
+            "item": "Batman_The_Animated_Series_1992-1995",
+            "itemTitle": "Batman: The Animated Series (1992–1995)",
+            "file": "Batman The Complete S1D3.mp4",
+            "name": "Batman The Complete S1D3",
+            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D3.mp4",
+            "seconds": 1341,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 242
+            "sizeMB": 136
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-              "item": "Batman_The_Animated_Series_1992-1995",
-              "itemTitle": "Batman: The Animated Series (1992–1995)",
-              "file": "Batman The Complete S1D3.mp4",
-              "name": "Batman The Complete S1D3",
-              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D3.mp4",
-              "seconds": 1341,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -499,32 +474,19 @@
           "airdate": "1992-09-16",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Be a Clown\" (0.95)",
-            "item": "batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503",
-            "itemTitle": "Saturday Morning Cartoons (September 6, 1992) Batman The Animated Series WOC 1992 09 12 The Cat And The Claw Part II [ DVD Source]",
-            "file": "Batman the Animated Series WOC 1992-09-16 - Be a Clown [DVD source].mp4",
-            "name": "Batman the Animated Series WOC 1992-09-16 - Be a Clown [DVD source]",
-            "url": "https://archive.org/download/batman-the-animated-series-woc-1992-09-12-the-cat-and-the-claw-part-ii-dvd-source_202503/Batman%20the%20Animated%20Series%20WOC%201992-09-16%20-%20Be%20a%20Clown%20%5BDVD%20source%5D.mp4",
-            "seconds": 1705,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 82 in \"Batman: The Animated Series (1992–1995)\"",
+            "item": "Batman_The_Animated_Series_1992-1995",
+            "itemTitle": "Batman: The Animated Series (1992–1995)",
+            "file": "Batman The Complete S1D27.mp4",
+            "name": "Batman The Complete S1D27",
+            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D27.mp4",
+            "seconds": 1345,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 241
+            "sizeMB": 135
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-              "item": "Batman_The_Animated_Series_1992-1995",
-              "itemTitle": "Batman: The Animated Series (1992–1995)",
-              "file": "Batman The Complete S1D27.mp4",
-              "name": "Batman The Complete S1D27",
-              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S1D27.mp4",
-              "seconds": 1345,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -1014,7 +976,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1049,7 +1011,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1097,7 +1059,7 @@
               "sizeMB": 137
             },
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1132,7 +1094,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1188,34 +1150,21 @@
           "airdate": "1992-10-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Night of the Ninja\" (1.00)",
+            "conf": 0.55,
+            "why": "sequence guess: file 28 of 82 in \"Batman: The Animated Series (1992–1995)\"",
             "item": "Batman_The_Animated_Series_1992-1995",
             "itemTitle": "Batman: The Animated Series (1992–1995)",
-            "file": "Batman; The Animated Series S1E36 - Night of the Ninja.mp4",
-            "name": "Batman; The Animated Series S1E36 - Night of the Ninja",
-            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%3B%20The%20Animated%20Series%20S1E36%20-%20Night%20of%20the%20Ninja.mp4",
-            "seconds": 1345,
-            "format": "MPEG4",
+            "file": "Batman The Complete S2D3.mp4",
+            "name": "Batman The Complete S2D3",
+            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S2D3.mp4",
+            "seconds": 1340,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 268
+            "sizeMB": 137
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 28 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-              "item": "Batman_The_Animated_Series_1992-1995",
-              "itemTitle": "Batman: The Animated Series (1992–1995)",
-              "file": "Batman The Complete S2D3.mp4",
-              "name": "Batman The Complete S2D3",
-              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S2D3.mp4",
-              "seconds": 1340,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
-            },
-            {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1250,7 +1199,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1320,7 +1269,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1438,7 +1387,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1492,34 +1441,21 @@
           "number": 36,
           "name": "Moon of the Wolf",
           "airdate": "1992-11-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 0.55,
+            "why": "sequence guess: file 36 of 82 in \"Batman: The Animated Series (1992–1995)\"",
             "item": "Batman_The_Animated_Series_1992-1995",
             "itemTitle": "Batman: The Animated Series (1992–1995)",
-            "file": "Batman; The Animated Series S1E36 - Night of the Ninja.mp4",
-            "name": "Batman; The Animated Series S1E36 - Night of the Ninja",
-            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%3B%20The%20Animated%20Series%20S1E36%20-%20Night%20of%20the%20Ninja.mp4",
-            "seconds": 1345,
-            "format": "MPEG4",
+            "file": "Batman The Complete S2D25.mp4",
+            "name": "Batman The Complete S2D25",
+            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S2D25.mp4",
+            "seconds": 1309,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 268
+            "sizeMB": 133
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 36 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-              "item": "Batman_The_Animated_Series_1992-1995",
-              "itemTitle": "Batman: The Animated Series (1992–1995)",
-              "file": "Batman The Complete S2D25.mp4",
-              "name": "Batman The Complete S2D25",
-              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S2D25.mp4",
-              "seconds": 1309,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -2218,7 +2154,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -2336,7 +2272,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -2344,20 +2280,6 @@
               "name": "Batman The Animated Series (1992) - S01E57 - The Demon's Quest (Part 1) (1080p BluRay x265 RCVR)",
               "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E57%20-%20The%20Demon's%20Quest%20(Part%201)%20(1080p%20BluRay%20x265%20RCVR).mp4",
               "seconds": 1345,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 133
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Demon's Quest\" (0.95)",
-              "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
-              "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
-              "file": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR).mp4",
-              "name": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR)",
-              "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E58%20-%20The%20Demon's%20Quest%20(Part%202)%20(1080p%20BluRay%20x265%20RCVR).mp4",
-              "seconds": 1341,
               "format": "h.264",
               "playable": false,
               "codecRisk": "video (x265)",
@@ -2383,22 +2305,7 @@
             "playable": true,
             "sizeMB": 135
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
-              "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
-              "file": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR).mp4",
-              "name": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR)",
-              "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E58%20-%20The%20Demon's%20Quest%20(Part%202)%20(1080p%20BluRay%20x265%20RCVR).mp4",
-              "seconds": 1341,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 133
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 59,
@@ -2455,7 +2362,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
               "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
