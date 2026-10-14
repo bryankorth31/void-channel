@@ -1,0 +1,89 @@
+{
+  "show": "Teen Mom",
+  "slug": "teen-mom",
+  "type": "MTV",
+  "network": "MTV",
+  "matchedAt": "2026-10-14T23:19:31.094Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Teen Mom",
+    "runtime": null,
+    "premiered": null,
+    "network": "MTV"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the next chapter",
+          "state": "REVIEW",
+          "file": {
+            "item": "prkcitut-Teen_Mom_-_The_Next_Chapter",
+            "itemTitle": "Teen Mom: The Next Chapter",
+            "file": "Teen_Mom_-_The_Next_Chapter.mp4",
+            "name": "Teen_Mom_-_The_Next_Chapter",
+            "url": "https://archive.org/download/prkcitut-Teen_Mom_-_The_Next_Chapter/Teen_Mom_-_The_Next_Chapter.mp4",
+            "seconds": 412,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 39,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "young pregnant",
+          "state": "REVIEW",
+          "file": {
+            "item": "prkcitut-Teen_Mom_-_Young_Pregnant",
+            "itemTitle": "Teen Mom: Young & Pregnant",
+            "file": "Teen_Mom_-_Young_Pregnant.mp4",
+            "name": "Teen_Mom_-_Young_Pregnant",
+            "url": "https://archive.org/download/prkcitut-Teen_Mom_-_Young_Pregnant/Teen_Mom_-_Young_Pregnant.mp4",
+            "seconds": 382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 38,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "2 with ashley jones",
+          "state": "REVIEW",
+          "file": {
+            "item": "prkcitut-Teen_Mom_2_with_Ashley_Jones",
+            "itemTitle": "Teen Mom 2 with Ashley Jones",
+            "file": "Teen_Mom_2_with_Ashley_Jones.mp4",
+            "name": "Teen_Mom_2_with_Ashley_Jones",
+            "url": "https://archive.org/download/prkcitut-Teen_Mom_2_with_Ashley_Jones/Teen_Mom_2_with_Ashley_Jones.mp4",
+            "seconds": 288,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 28,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

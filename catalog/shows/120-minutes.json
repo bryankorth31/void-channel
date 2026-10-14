@@ -1,0 +1,69 @@
+{
+  "show": "120 Minutes",
+  "slug": "120-minutes",
+  "type": "MTV",
+  "network": "MTV",
+  "matchedAt": "2026-10-14T23:19:31.078Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "120 Minutes",
+    "runtime": null,
+    "premiered": null,
+    "network": "MTV"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "cmj mtv 11 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "120-minutes-cmj-mtv-1991-11-24",
+            "itemTitle": "MTV - 120 Minutes - November 24th 1991 (Full Episode WOC)",
+            "file": "120_Minutes_CMJ_MTV_1991-11-24.mp4",
+            "name": "120_Minutes_CMJ_MTV_1991-11-24",
+            "url": "https://archive.org/download/120-minutes-cmj-mtv-1991-11-24/120_Minutes_CMJ_MTV_1991-11-24.mp4",
+            "seconds": 6191,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 644,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "mtv 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "120-minutes-mtv-1994-10",
+            "itemTitle": "MTV - 120 Minutes (10/9/94) Incomplete, WOC",
+            "file": "120_Minutes_MTV_1994-10.mp4",
+            "name": "120_Minutes_MTV_1994-10",
+            "url": "https://archive.org/download/120-minutes-mtv-1994-10/120_Minutes_MTV_1994-10.mp4",
+            "seconds": 3108,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 324,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
