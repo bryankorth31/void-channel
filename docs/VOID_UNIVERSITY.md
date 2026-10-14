@@ -125,6 +125,26 @@ domains to react to (B edits; nothing here is final):
 - **Family** — raising children, caring for parents, marriage, grief
 - **Emergencies** — fire, flood, power out, bleeding, lost, car broken down
 
+#### B's first two entries (2026-10-13), and a rule that comes with them
+
+1. **Critical thinking.** Outcomes: tell a claim from its evidence; spot the standard ways an
+   argument cheats; know what a number can and cannot say; notice when a story is doing the
+   thinking for you; change your mind in public without shame; read a hard text without an
+   intermediary telling you what it means.
+2. **Data — without the predetermined silos as the walls.** Outcomes: find the primary source
+   (the dataset, the filing, the paper, the transcript) instead of the report about it; read a
+   table, a chart, a rate, a base rate; know how a statistic is manufactured and by whom; cross a
+   discipline's border when the answer lives on the other side; tell measurement from
+   interpretation; keep your own records.
+
+**The rule** (B: "without using the predetermined silos as the walls the media and content needs
+to come from"): the material for an authored course is not fenced by where it came from. A
+university lecture, a 1970s public-television hour, a trade's apprenticeship film, a radio
+interview, a hobbyist's demonstration, a court transcript and a chapter read aloud all qualify on
+the same test — does it teach the outcome, and is the person demonstrated. The institution is one
+source among many, not the wall. This applies to Step 2 as well: a demonstrated amateur beats an
+undemonstrated credential.
+
 ### Step 2 — the inverse: who has shown ability and speaks on it
 
 For each competency, find the **voices**: not the most famous, the most *demonstrated*. The
@@ -141,6 +161,54 @@ Each voice becomes a person node in the same graph as the TV people, with `evide
 qualify) and `teaches` (which competencies). Two or three voices per unit from different angles
 (the academic, the practitioner, the critic) so no single voice owns a subject. Grifters fail
 test 1 by construction: selling it is not doing it.
+
+#### Draft voices for the first two entries (candidates; B approves or strikes)
+
+Evidence in brackets: D = did it, T = teaches it well, O = open material exists (Archive / mirrors /
+public domain). All angles mixed on purpose: scientists, a magician, a schoolteacher, a doctor.
+
+*Critical thinking*
+- Richard Feynman — physicist [D: Nobel, Challenger inquiry; T: "Cargo Cult Science", Messenger
+  Lectures; O: lectures and interviews on the Archive]
+- Carl Sagan — astronomer [D: Voyager, Viking; T: the "baloney detection kit", Cosmos; O: Cosmos,
+  talks]
+- Neil Postman — media critic and teacher [D: 40 years teaching; T: "Bullshit and the Art of
+  Crap-Detection" (1969 talk), Amusing Ourselves to Death; O: talks and readings on the Archive]
+- James Randi — stage magician and investigator [D: exposed Geller, Popoff, faith healers with
+  demonstrations, not arguments; T: lectures, the Million Dollar Challenge; O: Archive]
+- Bertrand Russell — philosopher [D: Principia, a life of public argument; T: the 1959 BBC
+  interviews, "ten commandments" of thinking; O: public domain and Archive]
+- Daniel Kahneman — psychologist [D: Nobel for showing how judgment fails; T: Thinking, Fast and
+  Slow, lectures; O: talks mirrored]
+- John Taylor Gatto — schoolteacher [D: 30 years in NYC classrooms, NY State Teacher of the Year,
+  then quit in public; T: "The Underground History of American Education", talks; O: Archive] —
+  the critic angle on where thinking gets trained out of people
+- Harry Frankfurt — philosopher [T: "On Bullshit"; O: readings] — short, exact, the vocabulary
+- Julian Jaynes — psychologist [T: The Origin of Consciousness in the Breakdown of the Bicameral
+  Mind, the 1980s lectures; O: Archive] — B's own reading of consciousness; the Mind domain's door
+
+*Data without silos*
+- Hans Rosling — physician and statistician [D: practiced medicine in Mozambique, built Gapminder;
+  T: the bubble-chart talks that made a billion people read a trend; O: talks mirrored]
+- Edward Tufte — statistician [D: the Challenger analysis; T: The Visual Display of Quantitative
+  Information, the one-day course; O: lectures mirrored]
+- Darrell Huff — journalist [T: How to Lie with Statistics (1954), the most-read statistics book
+  ever written; O: Archive]
+- W. Edwards Deming — statistician [D: rebuilt Japanese industry's quality from data; T: the
+  four-day seminars, Out of the Crisis; O: 1980 NBC "If Japan Can, Why Can't We?" and seminars on
+  the Archive]
+- John Ioannidis — physician [D/T: "Why Most Published Research Findings Are False"; O: lectures]
+- Ben Goldacre — physician [D: ran AllTrials; T: Bad Science, "Battling Bad Science"; O: talks]
+- Nassim Taleb — trader turned scholar [D: made and kept money on tail risk; T: Fooled by
+  Randomness, lectures; O: lectures mirrored] — the practitioner angle: skin in the game
+- Tim Harford — economist and broadcaster [T: More or Less (BBC), How to Make the World Add Up; O:
+  episodes mirrored] — how a number gets into the news
+- Claude Shannon — engineer [D: information theory itself; T: lectures; O: Archive] — what data is
+- Cathy O'Neil — mathematician and former quant [D: built the models; T: Weapons of Math
+  Destruction; O: talks] — the critic angle on data used as a wall
+
+Deliberately not here: pundits, politicians, anyone whose evidence is an audience rather than a
+result. The hard exclude (politics/government/news) holds in Void University too.
 
 ### Step 3 — assemble the course
 
