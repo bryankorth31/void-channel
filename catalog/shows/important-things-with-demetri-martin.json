@@ -3,7 +3,7 @@
   "slug": "important-things-with-demetri-martin",
   "type": "Sketch and Comedy",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-14T18:14:48.923Z",
+  "matchedAt": "2026-10-14T19:19:00.948Z",
   "tvmaze": {
     "id": 1273,
     "name": "Important Things with Demetri Martin",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 17,
-    "live": 12,
-    "review": 0,
-    "missing": 5,
-    "pct": 71
+    "live": 13,
+    "review": 1,
+    "missing": 3,
+    "pct": 82
   },
   "seasons": [
     {
@@ -303,8 +303,20 @@
           "number": 8,
           "name": "Nature",
           "airdate": "2010-04-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
+            "item": "s-02-e-4.-money-important-things-with-demetri-martin",
+            "itemTitle": "IMPORTANT THINGS with Demetri Martin (480p)",
+            "file": "IMPORTANT THINGS/S02E8. NATURE - Important Things With Demetri Martin.mp4",
+            "name": "IMPORTANT THINGS/S02E8. NATURE - Important Things With Demetri Martin",
+            "url": "https://archive.org/download/s-02-e-4.-money-important-things-with-demetri-martin/IMPORTANT%20THINGS%2FS02E8.%20NATURE%20-%20Important%20Things%20With%20Demetri%20Martin.mp4",
+            "seconds": 1260,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 100
+          },
           "alternates": []
         },
         {
@@ -331,8 +343,20 @@
           "number": 10,
           "name": "Control",
           "airdate": "2010-04-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-02-e-4.-money-important-things-with-demetri-martin",
+            "itemTitle": "IMPORTANT THINGS with Demetri Martin (480p)",
+            "file": "IMPORTANT THINGS/S02E10. CONTROL - Important Things With Demetri Martin.mp4",
+            "name": "IMPORTANT THINGS/S02E10. CONTROL - Important Things With Demetri Martin",
+            "url": "https://archive.org/download/s-02-e-4.-money-important-things-with-demetri-martin/IMPORTANT%20THINGS%2FS02E10.%20CONTROL%20-%20Important%20Things%20With%20Demetri%20Martin.mp4",
+            "seconds": 1260,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 74
+          },
           "alternates": []
         }
       ]

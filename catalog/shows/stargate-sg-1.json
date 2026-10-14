@@ -3,7 +3,7 @@
   "slug": "stargate-sg-1",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-14T18:15:28.421Z",
+  "matchedAt": "2026-10-14T19:19:42.465Z",
   "tvmaze": {
     "id": 204,
     "name": "Stargate SG·1",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 213,
-    "live": 0,
-    "review": 2,
+    "live": 2,
+    "review": 0,
     "missing": 211,
     "pct": 1
   },
@@ -1429,10 +1429,10 @@
           "number": 19,
           "name": "Moebius",
           "airdate": "2005-03-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "why": "S/E in filename + title match",
             "item": "stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020",
             "itemTitle": "Stargate SG 1 S 08 E 18 Threads ( 1080p X 265 EDGE 2020)",
             "file": "Stargate SG-1 - S08E19 - Moebius (1) (1080p x265 EDGE2020).mp4",
@@ -1440,7 +1440,7 @@
             "url": "https://archive.org/download/stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020/Stargate%20SG-1%20-%20S08E19%20-%20Moebius%20(1)%20(1080p%20x265%20EDGE2020).mp4",
             "seconds": 2618,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (x265)",
             "sizeMB": 255
           },
@@ -1455,7 +1455,7 @@
               "url": "https://archive.org/download/stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020/Stargate%20SG-1%20-%20S08E20%20-%20Moebius%20(2)%20(1080p%20x265%20EDGE2020).mp4",
               "seconds": 2610,
               "format": "MPEG4",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 253
             }
@@ -1465,10 +1465,10 @@
           "number": 20,
           "name": "Moebius Part 2",
           "airdate": "2005-03-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: video (x265)",
+            "why": "S/E in filename",
             "item": "stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020",
             "itemTitle": "Stargate SG 1 S 08 E 18 Threads ( 1080p X 265 EDGE 2020)",
             "file": "Stargate SG-1 - S08E20 - Moebius (2) (1080p x265 EDGE2020).mp4",
@@ -1476,7 +1476,7 @@
             "url": "https://archive.org/download/stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020/Stargate%20SG-1%20-%20S08E20%20-%20Moebius%20(2)%20(1080p%20x265%20EDGE2020).mp4",
             "seconds": 2610,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (x265)",
             "sizeMB": 253
           },

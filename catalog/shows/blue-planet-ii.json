@@ -3,7 +3,7 @@
   "slug": "blue-planet-ii",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T18:14:26.025Z",
+  "matchedAt": "2026-10-14T19:19:48.563Z",
   "tvmaze": {
     "id": 25504,
     "name": "Blue Planet II",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 7,
-    "live": 0,
-    "review": 6,
+    "live": 6,
+    "review": 0,
     "missing": 1,
     "pct": 86
   },
@@ -26,21 +26,35 @@
           "number": 1,
           "name": "One Ocean",
           "airdate": "2017-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"One Ocean\" (0.95)",
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_01_one_ocean.mp4",
-            "name": "blue_planet_ii_01_one_ocean",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_01_one_ocean.mp4",
-            "seconds": 3621,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "BluePlanetIISeason012017Remux2160p",
+            "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
+            "file": "Blue.Planet.II.2017.S01E01.One.Ocean.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "name": "Blue.Planet.II.2017.S01E01.One.Ocean.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
+            "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E01.One.Ocean.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "seconds": 2956,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1066
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 307
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"One Ocean\" (0.95)",
+              "item": "blue-planet-ii",
+              "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
+              "file": "blue_planet_ii_01_one_ocean.mp4",
+              "name": "blue_planet_ii_01_one_ocean",
+              "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_01_one_ocean.mp4",
+              "seconds": 3621,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1066
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"One Ocean\" (0.95)",
@@ -53,20 +67,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 875
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "BluePlanetIISeason012017Remux2160p",
-              "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
-              "file": "Blue.Planet.II.2017.S01E01.One.Ocean.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "name": "Blue.Planet.II.2017.S01E01.One.Ocean.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
-              "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E01.One.Ocean.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "seconds": 2956,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 307
             }
           ]
         },
@@ -74,21 +74,35 @@
           "number": 2,
           "name": "The Deep",
           "airdate": "2017-11-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Deep\" (0.95)",
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_02_the_deep.mp4",
-            "name": "blue_planet_ii_02_the_deep",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_02_the_deep.mp4",
-            "seconds": 3636,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "BluePlanetIISeason012017Remux2160p",
+            "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
+            "file": "Blue.Planet.II.2017.S01E02.The.Deep.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "name": "Blue.Planet.II.2017.S01E02.The.Deep.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
+            "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E02.The.Deep.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "seconds": 3085,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 682
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 321
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Deep\" (0.95)",
+              "item": "blue-planet-ii",
+              "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
+              "file": "blue_planet_ii_02_the_deep.mp4",
+              "name": "blue_planet_ii_02_the_deep",
+              "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_02_the_deep.mp4",
+              "seconds": 3636,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 682
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"The Deep\" (0.95)",
@@ -101,20 +115,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 879
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "BluePlanetIISeason012017Remux2160p",
-              "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
-              "file": "Blue.Planet.II.2017.S01E02.The.Deep.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "name": "Blue.Planet.II.2017.S01E02.The.Deep.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
-              "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E02.The.Deep.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "seconds": 3085,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 321
             }
           ]
         },
@@ -122,21 +122,35 @@
           "number": 3,
           "name": "Coral Reefs",
           "airdate": "2017-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Coral Reefs\" (0.95)",
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_03_coral_reefs.mp4",
-            "name": "blue_planet_ii_03_coral_reefs",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_03_coral_reefs.mp4",
-            "seconds": 3630,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "BluePlanetIISeason012017Remux2160p",
+            "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
+            "file": "Blue.Planet.II.2017.S01E03.Coral.Reefs.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "name": "Blue.Planet.II.2017.S01E03.Coral.Reefs.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
+            "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E03.Coral.Reefs.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "seconds": 2933,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1035
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 305
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Coral Reefs\" (0.95)",
+              "item": "blue-planet-ii",
+              "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
+              "file": "blue_planet_ii_03_coral_reefs.mp4",
+              "name": "blue_planet_ii_03_coral_reefs",
+              "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_03_coral_reefs.mp4",
+              "seconds": 3630,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1035
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Coral Reefs\" (0.95)",
@@ -149,20 +163,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 877
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "BluePlanetIISeason012017Remux2160p",
-              "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
-              "file": "Blue.Planet.II.2017.S01E03.Coral.Reefs.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "name": "Blue.Planet.II.2017.S01E03.Coral.Reefs.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
-              "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E03.Coral.Reefs.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "seconds": 2933,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 305
             }
           ]
         },
@@ -178,21 +178,35 @@
           "number": 5,
           "name": "Green Seas",
           "airdate": "2017-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Green Seas\" (0.95)",
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_05_green_seas.mp4",
-            "name": "blue_planet_ii_05_green_seas",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_05_green_seas.mp4",
-            "seconds": 3631,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "BluePlanetIISeason012017Remux2160p",
+            "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
+            "file": "Blue.Planet.II.2017.S01E05.Green.Seas.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "name": "Blue.Planet.II.2017.S01E05.Green.Seas.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
+            "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E05.Green.Seas.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "seconds": 3069,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1206
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 319
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Green Seas\" (0.95)",
+              "item": "blue-planet-ii",
+              "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
+              "file": "blue_planet_ii_05_green_seas.mp4",
+              "name": "blue_planet_ii_05_green_seas",
+              "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_05_green_seas.mp4",
+              "seconds": 3631,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1206
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Green Seas\" (0.95)",
@@ -205,20 +219,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 878
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "BluePlanetIISeason012017Remux2160p",
-              "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
-              "file": "Blue.Planet.II.2017.S01E05.Green.Seas.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "name": "Blue.Planet.II.2017.S01E05.Green.Seas.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
-              "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E05.Green.Seas.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "seconds": 3069,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 319
             }
           ]
         },
@@ -226,21 +226,35 @@
           "number": 6,
           "name": "Coasts",
           "airdate": "2017-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Coasts\" (0.95)",
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_06_coasts.mp4",
-            "name": "blue_planet_ii_06_coasts",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_06_coasts.mp4",
-            "seconds": 3616,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "BluePlanetIISeason012017Remux2160p",
+            "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
+            "file": "Blue.Planet.II.2017.S01E06.Coasts.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "name": "Blue.Planet.II.2017.S01E06.Coasts.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
+            "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E06.Coasts.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "seconds": 2905,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1112
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 302
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Coasts\" (0.95)",
+              "item": "blue-planet-ii",
+              "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
+              "file": "blue_planet_ii_06_coasts.mp4",
+              "name": "blue_planet_ii_06_coasts",
+              "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_06_coasts.mp4",
+              "seconds": 3616,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1112
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Coasts\" (0.95)",
@@ -253,20 +267,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1866
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "BluePlanetIISeason012017Remux2160p",
-              "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
-              "file": "Blue.Planet.II.2017.S01E06.Coasts.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "name": "Blue.Planet.II.2017.S01E06.Coasts.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
-              "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E06.Coasts.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
-              "seconds": 2905,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DTS)",
-              "sizeMB": 302
             }
           ]
         },
@@ -274,10 +274,10 @@
           "number": 7,
           "name": "Our Blue Planet",
           "airdate": "2017-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: audio (DTS)",
+            "why": "S/E in filename",
             "item": "BluePlanetIISeason012017Remux2160p",
             "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
             "file": "Blue.Planet.II.2017.S01E07.Our.Blue.Planet.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
@@ -285,7 +285,7 @@
             "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E07.Our.Blue.Planet.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
             "seconds": 3472,
             "format": "h.264",
-            "playable": false,
+            "playable": true,
             "codecRisk": "audio (DTS)",
             "sizeMB": 362
           },

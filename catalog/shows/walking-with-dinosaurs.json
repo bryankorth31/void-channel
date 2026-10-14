@@ -3,7 +3,7 @@
   "slug": "walking-with-dinosaurs",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T18:14:26.147Z",
+  "matchedAt": "2026-10-14T19:19:48.690Z",
   "tvmaze": {
     "id": 77692,
     "name": "Walking with Dinosaurs",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 6,
-    "live": 1,
-    "review": 5,
+    "live": 4,
+    "review": 2,
     "missing": 0,
     "pct": 100
   },
@@ -26,21 +26,35 @@
           "number": 1,
           "name": "The Orphan",
           "airdate": "2025-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Orphan\" (0.95)",
-            "item": "walking-with-dinosaurs-2025",
-            "itemTitle": "Walking With Dinosaurs 2025",
-            "file": "Walking with Dinosaurs_01_The Orphan.mp4",
-            "name": "Walking with Dinosaurs_01_The Orphan",
-            "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking%20with%20Dinosaurs_01_The%20Orphan.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "walking-with-dinosaurs-2025-tv-series",
+            "itemTitle": "Walking with Dinosaurs (2025 TV series)",
+            "file": "Walking.With.Dinosaurs.2025.S01E01.The.Orphan.1080p.HEVC.x265-MeGusta.mp4",
+            "name": "Walking.With.Dinosaurs.2025.S01E01.The.Orphan.1080p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E01.The.Orphan.1080p.HEVC.x265-MeGusta.mp4",
             "seconds": 2940,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1739
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 296
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Orphan\" (0.95)",
+              "item": "walking-with-dinosaurs-2025",
+              "itemTitle": "Walking With Dinosaurs 2025",
+              "file": "Walking with Dinosaurs_01_The Orphan.mp4",
+              "name": "Walking with Dinosaurs_01_The Orphan",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking%20with%20Dinosaurs_01_The%20Orphan.mp4",
+              "seconds": 2940,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1739
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"The Orphan\" (0.95)",
@@ -66,20 +80,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1913
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "walking-with-dinosaurs-2025-tv-series",
-              "itemTitle": "Walking with Dinosaurs (2025 TV series)",
-              "file": "Walking.With.Dinosaurs.2025.S01E01.The.Orphan.1080p.HEVC.x265-MeGusta.mp4",
-              "name": "Walking.With.Dinosaurs.2025.S01E01.The.Orphan.1080p.HEVC.x265-MeGusta",
-              "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E01.The.Orphan.1080p.HEVC.x265-MeGusta.mp4",
-              "seconds": 2940,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (HEVC)",
-              "sizeMB": 296
             }
           ]
         },
@@ -87,21 +87,35 @@
           "number": 2,
           "name": "The River Dragon",
           "airdate": "2025-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The River Dragon\" (0.95)",
-            "item": "walking-with-dinosaurs-2025",
-            "itemTitle": "Walking With Dinosaurs 2025",
-            "file": "Walking_With_Dinosaurs_02_The_River_Dragon.mp4",
-            "name": "Walking_With_Dinosaurs_02_The_River_Dragon",
-            "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking_With_Dinosaurs_02_The_River_Dragon.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "walking-with-dinosaurs-2025-tv-series",
+            "itemTitle": "Walking with Dinosaurs (2025 TV series)",
+            "file": "Walking.With.Dinosaurs.2025.S01E02.The.River.Dragon.1080p.HEVC.x265-MeGusta.mp4",
+            "name": "Walking.With.Dinosaurs.2025.S01E02.The.River.Dragon.1080p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E02.The.River.Dragon.1080p.HEVC.x265-MeGusta.mp4",
             "seconds": 2900,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1827
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The River Dragon\" (0.95)",
+              "item": "walking-with-dinosaurs-2025",
+              "itemTitle": "Walking With Dinosaurs 2025",
+              "file": "Walking_With_Dinosaurs_02_The_River_Dragon.mp4",
+              "name": "Walking_With_Dinosaurs_02_The_River_Dragon",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking_With_Dinosaurs_02_The_River_Dragon.mp4",
+              "seconds": 2900,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1827
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"The River Dragon\" (0.95)",
@@ -127,20 +141,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1787
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "walking-with-dinosaurs-2025-tv-series",
-              "itemTitle": "Walking with Dinosaurs (2025 TV series)",
-              "file": "Walking.With.Dinosaurs.2025.S01E02.The.River.Dragon.1080p.HEVC.x265-MeGusta.mp4",
-              "name": "Walking.With.Dinosaurs.2025.S01E02.The.River.Dragon.1080p.HEVC.x265-MeGusta",
-              "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E02.The.River.Dragon.1080p.HEVC.x265-MeGusta.mp4",
-              "seconds": 2900,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (HEVC)",
-              "sizeMB": 291
             }
           ]
         },
@@ -151,7 +151,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.6,
-            "why": "S/E in filename + title match | not browser-playable: video (AV1)",
+            "why": "S/E in filename + title match",
             "item": "walking-with-dinosaurs-2025-tv-series",
             "itemTitle": "Walking with Dinosaurs (2025 TV series)",
             "file": "Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta.mp4",
@@ -159,7 +159,7 @@
             "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta.mp4",
             "seconds": 2900,
             "format": "h.264",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (AV1)",
             "sizeMB": 291
           },
@@ -185,6 +185,20 @@
           },
           "alternates": [
             {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "walking-with-dinosaurs-2025-tv-series",
+              "itemTitle": "Walking with Dinosaurs (2025 TV series)",
+              "file": "Walking.With.Dinosaurs.2025.S01E04.The.Pack.1080p.HEVC.x265-MeGusta.mp4",
+              "name": "Walking.With.Dinosaurs.2025.S01E04.The.Pack.1080p.HEVC.x265-MeGusta",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E04.The.Pack.1080p.HEVC.x265-MeGusta.mp4",
+              "seconds": 2900,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (HEVC)",
+              "sizeMB": 292
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"The Pack\" (0.95)",
               "item": "walking-with-dinosaurs-2025",
@@ -209,20 +223,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1856
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "walking-with-dinosaurs-2025-tv-series",
-              "itemTitle": "Walking with Dinosaurs (2025 TV series)",
-              "file": "Walking.With.Dinosaurs.2025.S01E04.The.Pack.1080p.HEVC.x265-MeGusta.mp4",
-              "name": "Walking.With.Dinosaurs.2025.S01E04.The.Pack.1080p.HEVC.x265-MeGusta",
-              "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E04.The.Pack.1080p.HEVC.x265-MeGusta.mp4",
-              "seconds": 2900,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (HEVC)",
-              "sizeMB": 292
             }
           ]
         },
@@ -230,21 +230,35 @@
           "number": 5,
           "name": "The Journey North",
           "airdate": "2025-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Journey North\" (0.95)",
-            "item": "walking-with-dinosaurs-2025",
-            "itemTitle": "Walking With Dinosaurs 2025",
-            "file": "Walking with Dinosaurs_05_The Journey North.mp4",
-            "name": "Walking with Dinosaurs_05_The Journey North",
-            "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking%20with%20Dinosaurs_05_The%20Journey%20North.mp4",
-            "seconds": 2903,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "walking-with-dinosaurs-2025-tv-series",
+            "itemTitle": "Walking with Dinosaurs (2025 TV series)",
+            "file": "Walking.With.Dinosaurs.2025.S01E05.The.Journey.North.1080p.HEVC.x265-MeGusta.mp4",
+            "name": "Walking.With.Dinosaurs.2025.S01E05.The.Journey.North.1080p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E05.The.Journey.North.1080p.HEVC.x265-MeGusta.mp4",
+            "seconds": 2900,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1712
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Journey North\" (0.95)",
+              "item": "walking-with-dinosaurs-2025",
+              "itemTitle": "Walking With Dinosaurs 2025",
+              "file": "Walking with Dinosaurs_05_The Journey North.mp4",
+              "name": "Walking with Dinosaurs_05_The Journey North",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking%20with%20Dinosaurs_05_The%20Journey%20North.mp4",
+              "seconds": 2903,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1712
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"The Journey North\" (0.95)",
@@ -270,20 +284,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1004
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "walking-with-dinosaurs-2025-tv-series",
-              "itemTitle": "Walking with Dinosaurs (2025 TV series)",
-              "file": "Walking.With.Dinosaurs.2025.S01E05.The.Journey.North.1080p.HEVC.x265-MeGusta.mp4",
-              "name": "Walking.With.Dinosaurs.2025.S01E05.The.Journey.North.1080p.HEVC.x265-MeGusta",
-              "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E05.The.Journey.North.1080p.HEVC.x265-MeGusta.mp4",
-              "seconds": 2900,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (HEVC)",
-              "sizeMB": 291
             }
           ]
         },
@@ -294,7 +294,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.6,
-            "why": "S/E in filename + title match | not browser-playable: video (HEVC)",
+            "why": "S/E in filename + title match",
             "item": "walking-with-dinosaurs-2025-tv-series",
             "itemTitle": "Walking with Dinosaurs (2025 TV series)",
             "file": "Walking.With.Dinosaurs.2025.S01E06.Island.of.Giants.1080p.HEVC.x265-MeGusta.mp4",
@@ -302,7 +302,7 @@
             "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E06.Island.of.Giants.1080p.HEVC.x265-MeGusta.mp4",
             "seconds": 2880,
             "format": "h.264",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (HEVC)",
             "sizeMB": 291
           },

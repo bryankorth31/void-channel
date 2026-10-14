@@ -3,7 +3,7 @@
   "slug": "the-paradise",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T18:14:48.408Z",
+  "matchedAt": "2026-10-14T19:19:00.449Z",
   "tvmaze": {
     "id": 1162,
     "name": "The Paradise",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 16,
-    "live": 15,
-    "review": 1,
+    "live": 16,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -166,10 +166,10 @@
           "number": 8,
           "name": "Episode 8",
           "airdate": "2012-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: video (XVID)",
+            "why": "S/E in filename",
             "item": "the_paradise_club",
             "itemTitle": "The Paradise Club (1989) [Complete Series]",
             "file": "The Paradise Club S01 E08 (BBC Drama 1989) XVID (repaired) TV Rip.mp4",
@@ -177,7 +177,7 @@
             "url": "https://archive.org/download/the_paradise_club/The%20Paradise%20Club%20S01%20E08%20(BBC%20Drama%201989)%20XVID%20(repaired)%20TV%20Rip.mp4",
             "seconds": 3001,
             "format": "h.264",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (XVID)",
             "sizeMB": 296
           },

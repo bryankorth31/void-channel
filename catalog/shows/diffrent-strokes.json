@@ -3,7 +3,7 @@
   "slug": "diffrent-strokes",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T18:14:36.927Z",
+  "matchedAt": "2026-10-14T19:19:59.466Z",
   "tvmaze": {
     "id": 4606,
     "name": "Diff'rent Strokes",
@@ -3524,17 +3524,31 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "diffrent-strokes-Lando18",
-            "itemTitle": "Diff'rent Strokes (complete TV series)",
-            "file": "Diff'rent Strokes - S05E23 (Romeo and Juliet).mp4",
-            "name": "Diff'rent Strokes - S05E23 (Romeo and Juliet)",
-            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S05E23%20(Romeo%20and%20Juliet).mp4",
-            "seconds": 1500,
+            "item": "diffstrokes-antennatv",
+            "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+            "file": "Diff'rent Strokes S05e23 1983-04-30 Romeo And Juliet 2020-09-20-1155-70.mp4",
+            "name": "Diff'rent Strokes S05e23 1983-04-30 Romeo And Juliet 2020-09-20-1155-70",
+            "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S05e23%201983-04-30%20Romeo%20And%20Juliet%202020-09-20-1155-70.mp4",
+            "seconds": 2430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 179
+            "sizeMB": 243
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S05E23 (Romeo and Juliet).mp4",
+              "name": "Diff'rent Strokes - S05E23 (Romeo and Juliet)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S05E23%20(Romeo%20and%20Juliet).mp4",
+              "seconds": 1500,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 179
+            }
+          ]
         },
         {
           "number": 24,

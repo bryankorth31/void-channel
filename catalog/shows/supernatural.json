@@ -3,7 +3,7 @@
   "slug": "supernatural",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-14T18:14:21.743Z",
+  "matchedAt": "2026-10-14T19:19:44.178Z",
   "tvmaze": {
     "id": 19,
     "name": "Supernatural",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 327,
     "live": 0,
-    "review": 207,
-    "missing": 120,
-    "pct": 63
+    "review": 209,
+    "missing": 118,
+    "pct": 64
   },
   "seasons": [
     {
@@ -306,8 +306,20 @@
           "number": 18,
           "name": "Something Wicked",
           "airdate": "2006-04-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
+            "item": "supernatural-seasons-01-15-1080p-bluray-x265-hevc-10bit-aac-5.1",
+            "itemTitle": "Supernatural Seasons 01-15 1080p BluRay x265 HEVC 10bit AAC 5.1 + Extras",
+            "file": "Season 01/Supernatural - S01E18 - Something Wicked.mp4",
+            "name": "Season 01/Supernatural - S01E18 - Something Wicked",
+            "url": "https://archive.org/download/supernatural-seasons-01-15-1080p-bluray-x265-hevc-10bit-aac-5.1/Season%2001%2FSupernatural%20-%20S01E18%20-%20Something%20Wicked.mp4",
+            "seconds": 2520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 249
+          },
           "alternates": []
         },
         {
@@ -4587,8 +4599,20 @@
           "number": 6,
           "name": "Optimism",
           "airdate": "2018-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
+            "item": "supernatural-seasons-01-15-1080p-bluray-x265-hevc-10bit-aac-5.1",
+            "itemTitle": "Supernatural Seasons 01-15 1080p BluRay x265 HEVC 10bit AAC 5.1 + Extras",
+            "file": "Season 14/Supernatural - S14E06 - Optimism.mp4",
+            "name": "Season 14/Supernatural - S14E06 - Optimism",
+            "url": "https://archive.org/download/supernatural-seasons-01-15-1080p-bluray-x265-hevc-10bit-aac-5.1/Season%2014%2FSupernatural%20-%20S14E06%20-%20Optimism.mp4",
+            "seconds": 2520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 253
+          },
           "alternates": []
         },
         {

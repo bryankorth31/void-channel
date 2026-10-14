@@ -3,7 +3,7 @@
   "slug": "nypd-blue",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-14T18:15:23.259Z",
+  "matchedAt": "2026-10-14T19:19:37.476Z",
   "tvmaze": {
     "id": 570,
     "name": "NYPD Blue",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 261,
-    "live": 38,
-    "review": 185,
+    "live": 41,
+    "review": 182,
     "missing": 38,
     "pct": 85
   },
@@ -42,6 +42,20 @@
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "nypd-blue-s01-dvdrip",
+              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+              "file": "NYPD.Blue.S01/NYPD.Blue.S01E01.DVDRip.XviD-LOL.mp4",
+              "name": "NYPD.Blue.S01/NYPD.Blue.S01E01.DVDRip.XviD-LOL",
+              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E01.DVDRip.XviD-LOL.mp4",
+              "seconds": 2907,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 289
+            },
+            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "001-nypd-blue",
@@ -53,20 +67,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 683
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E01.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E01.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E01.DVDRip.XviD-LOL.mp4",
-              "seconds": 2907,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 289
             }
           ]
         },
@@ -76,19 +76,33 @@
           "airdate": "1993-09-28",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "102-Weaver Of Hate.mp4",
-            "name": "102-Weaver Of Hate",
-            "url": "https://archive.org/download/001-nypd-blue/102-Weaver%20Of%20Hate.mp4",
-            "seconds": 2688,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E02.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E02.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E02.DVDRip.XviD-LOL.mp4",
+            "seconds": 2883,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 736
+            "codecRisk": "video (XviD)",
+            "sizeMB": 287
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "102-Weaver Of Hate.mp4",
+              "name": "102-Weaver Of Hate",
+              "url": "https://archive.org/download/001-nypd-blue/102-Weaver%20Of%20Hate.mp4",
+              "seconds": 2688,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 736
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"4B or Not 4B\" (1.00)",
@@ -101,20 +115,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 974
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E02.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E02.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E02.DVDRip.XviD-LOL.mp4",
-              "seconds": 2883,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 287
             }
           ]
         },
@@ -124,19 +124,33 @@
           "airdate": "1993-10-05",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "103-Don't Kill The Messenger.mp4",
-            "name": "103-Don't Kill The Messenger",
-            "url": "https://archive.org/download/001-nypd-blue/103-Don't%20Kill%20The%20Messenger.mp4",
-            "seconds": 2644,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E03.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E03.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E03.DVDRip.XviD-LOL.mp4",
+            "seconds": 2926,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 697
+            "codecRisk": "video (XviD)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "103-Don't Kill The Messenger.mp4",
+              "name": "103-Don't Kill The Messenger",
+              "url": "https://archive.org/download/001-nypd-blue/103-Don't%20Kill%20The%20Messenger.mp4",
+              "seconds": 2644,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 697
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Brown Appetit\" (1.00)",
@@ -149,20 +163,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 881
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E03.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E03.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E03.DVDRip.XviD-LOL.mp4",
-              "seconds": 2926,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 291
             }
           ]
         },
@@ -172,32 +172,32 @@
           "airdate": "1993-10-12",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "104-The One That Got Away.mp4",
-            "name": "104-The One That Got Away",
-            "url": "https://archive.org/download/001-nypd-blue/104-The%20One%20That%20Got%20Away.mp4",
-            "seconds": 2662,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E04.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E04.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E04.DVDRip.XviD-LOL.mp4",
+            "seconds": 2910,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 696
+            "codecRisk": "video (XviD)",
+            "sizeMB": 289
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.85,
               "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E04.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E04.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E04.DVDRip.XviD-LOL.mp4",
-              "seconds": 2910,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 289
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "104-The One That Got Away.mp4",
+              "name": "104-The One That Got Away",
+              "url": "https://archive.org/download/001-nypd-blue/104-The%20One%20That%20Got%20Away.mp4",
+              "seconds": 2662,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 696
             }
           ]
         },
@@ -207,19 +207,33 @@
           "airdate": "1993-10-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "105-Speak For Yourself, Bruce Clayton.mp4",
-            "name": "105-Speak For Yourself, Bruce Clayton",
-            "url": "https://archive.org/download/001-nypd-blue/105-Speak%20For%20Yourself%2C%20Bruce%20Clayton.mp4",
-            "seconds": 2631,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E05.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E05.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E05.DVDRip.XviD-LOL.mp4",
+            "seconds": 2911,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 676
+            "codecRisk": "video (XviD)",
+            "sizeMB": 290
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "105-Speak For Yourself, Bruce Clayton.mp4",
+              "name": "105-Speak For Yourself, Bruce Clayton",
+              "url": "https://archive.org/download/001-nypd-blue/105-Speak%20For%20Yourself%2C%20Bruce%20Clayton.mp4",
+              "seconds": 2631,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 676
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Emission Accomplished\" (1.00)",
@@ -232,20 +246,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1211
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E05.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E05.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E05.DVDRip.XviD-LOL.mp4",
-              "seconds": 2911,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 290
             }
           ]
         },
@@ -255,32 +255,32 @@
           "airdate": "1993-10-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "106-I Don't Wanna Dye.mp4",
-            "name": "106-I Don't Wanna Dye",
-            "url": "https://archive.org/download/001-nypd-blue/106-I%20Don't%20Wanna%20Dye.mp4",
-            "seconds": 2657,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E06.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E06.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E06.DVDRip.XviD-LOL.mp4",
+            "seconds": 2898,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 849
+            "codecRisk": "video (XviD)",
+            "sizeMB": 289
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.85,
               "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E06.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E06.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E06.DVDRip.XviD-LOL.mp4",
-              "seconds": 2898,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 289
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "106-I Don't Wanna Dye.mp4",
+              "name": "106-I Don't Wanna Dye",
+              "url": "https://archive.org/download/001-nypd-blue/106-I%20Don't%20Wanna%20Dye.mp4",
+              "seconds": 2657,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 849
             }
           ]
         },
@@ -288,10 +288,10 @@
           "number": 7,
           "name": "NYPD Lou",
           "airdate": "1993-11-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "why": "S/E in filename",
             "item": "nypd-blue-s01-dvdrip",
             "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
             "file": "NYPD.Blue.S01/NYPD.Blue.S01E07.DVDRip.XviD-LOL.mp4",
@@ -299,7 +299,7 @@
             "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E07.DVDRip.XviD-LOL.mp4",
             "seconds": 2923,
             "format": "h.264",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (XviD)",
             "sizeMB": 290
           },
@@ -311,32 +311,32 @@
           "airdate": "1993-11-16",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "108-Hammer Time.mp4",
-            "name": "108-Hammer Time",
-            "url": "https://archive.org/download/001-nypd-blue/108-Hammer%20Time.mp4",
-            "seconds": 2686,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E08.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E08.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E08.DVDRip.XviD-LOL.mp4",
+            "seconds": 2927,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 733
+            "codecRisk": "video (XviD)",
+            "sizeMB": 290
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.85,
               "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E08.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E08.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E08.DVDRip.XviD-LOL.mp4",
-              "seconds": 2927,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 290
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "108-Hammer Time.mp4",
+              "name": "108-Hammer Time",
+              "url": "https://archive.org/download/001-nypd-blue/108-Hammer%20Time.mp4",
+              "seconds": 2686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 733
             }
           ]
         },
@@ -346,19 +346,33 @@
           "airdate": "1993-11-30",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "109-Seminal Thinking.mp4",
-            "name": "109-Seminal Thinking",
-            "url": "https://archive.org/download/001-nypd-blue/109-Seminal%20Thinking.mp4",
-            "seconds": 2688,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E09.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E09.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E09.DVDRip.XviD-LOL.mp4",
+            "seconds": 2853,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 830
+            "codecRisk": "video (XviD)",
+            "sizeMB": 284
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "109-Seminal Thinking.mp4",
+              "name": "109-Seminal Thinking",
+              "url": "https://archive.org/download/001-nypd-blue/109-Seminal%20Thinking.mp4",
+              "seconds": 2688,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 830
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Ice Follies\" (1.00)",
@@ -371,20 +385,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 901
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E09.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E09.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E09.DVDRip.XviD-LOL.mp4",
-              "seconds": 2853,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 284
             }
           ]
         },
@@ -394,32 +394,32 @@
           "airdate": "1993-12-07",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "110-Honeymoon At Viagra Falls.mp4",
-            "name": "110-Honeymoon At Viagra Falls",
-            "url": "https://archive.org/download/001-nypd-blue/110-Honeymoon%20At%20Viagra%20Falls.mp4",
-            "seconds": 2685,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E10.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E10.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E10.DVDRip.XviD-LOL.mp4",
+            "seconds": 2923,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 796
+            "codecRisk": "video (XviD)",
+            "sizeMB": 292
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.85,
               "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E10.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E10.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E10.DVDRip.XviD-LOL.mp4",
-              "seconds": 2923,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 292
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "110-Honeymoon At Viagra Falls.mp4",
+              "name": "110-Honeymoon At Viagra Falls",
+              "url": "https://archive.org/download/001-nypd-blue/110-Honeymoon%20At%20Viagra%20Falls.mp4",
+              "seconds": 2685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 796
             }
           ]
         },
@@ -429,19 +429,33 @@
           "airdate": "1993-12-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "111-Top Gum.mp4",
-            "name": "111-Top Gum",
-            "url": "https://archive.org/download/001-nypd-blue/111-Top%20Gum.mp4",
-            "seconds": 2641,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E11.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E11.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E11.DVDRip.XviD-LOL.mp4",
+            "seconds": 2880,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 798
+            "codecRisk": "video (XviD)",
+            "sizeMB": 288
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "111-Top Gum.mp4",
+              "name": "111-Top Gum",
+              "url": "https://archive.org/download/001-nypd-blue/111-Top%20Gum.mp4",
+              "seconds": 2641,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 798
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"From Hare to Eternity\" (1.00)",
@@ -454,20 +468,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 871
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E11.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E11.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E11.DVDRip.XviD-LOL.mp4",
-              "seconds": 2880,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 288
             }
           ]
         },
@@ -477,19 +477,33 @@
           "airdate": "1994-01-04",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "112-Cop In A Bottle.mp4",
-            "name": "112-Cop In A Bottle",
-            "url": "https://archive.org/download/001-nypd-blue/112-Cop%20In%20A%20Bottle.mp4",
-            "seconds": 2640,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E12.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E12.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E12.DVDRip.XviD-LOL.mp4",
+            "seconds": 2911,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 901
+            "codecRisk": "video (XviD)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "112-Cop In A Bottle.mp4",
+              "name": "112-Cop In A Bottle",
+              "url": "https://archive.org/download/001-nypd-blue/112-Cop%20In%20A%20Bottle.mp4",
+              "seconds": 2640,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 901
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Up on the Roof\" (1.00)",
@@ -502,20 +516,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 764
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E12.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E12.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E12.DVDRip.XviD-LOL.mp4",
-              "seconds": 2911,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 291
             }
           ]
         },
@@ -525,32 +525,32 @@
           "airdate": "1994-01-11",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "113-Numb And Number.mp4",
-            "name": "113-Numb And Number",
-            "url": "https://archive.org/download/001-nypd-blue/113-Numb%20And%20Number.mp4",
-            "seconds": 2606,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E13.DVDRip.DivX-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E13.DVDRip.DivX-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E13.DVDRip.DivX-LOL.mp4",
+            "seconds": 2932,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 908
+            "codecRisk": "video (DivX)",
+            "sizeMB": 291
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.85,
               "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E13.DVDRip.DivX-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E13.DVDRip.DivX-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E13.DVDRip.DivX-LOL.mp4",
-              "seconds": 2932,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 291
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "113-Numb And Number.mp4",
+              "name": "113-Numb And Number",
+              "url": "https://archive.org/download/001-nypd-blue/113-Numb%20And%20Number.mp4",
+              "seconds": 2606,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 908
             }
           ]
         },
@@ -558,34 +558,34 @@
           "number": 14,
           "name": "Jumpin' Jack Fleishman",
           "airdate": "1994-01-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Jumpin' Jack Fleishman\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "014-Jumpin' Jack Fleishman.mp4",
-            "name": "014-Jumpin' Jack Fleishman",
-            "url": "https://archive.org/download/001-nypd-blue/014-Jumpin'%20Jack%20Fleishman.mp4",
-            "seconds": 2896,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E14.DVDRip.DivX-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E14.DVDRip.DivX-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E14.DVDRip.DivX-LOL.mp4",
+            "seconds": 2898,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 859
+            "codecRisk": "video (DivX)",
+            "sizeMB": 289
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E14.DVDRip.DivX-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E14.DVDRip.DivX-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E14.DVDRip.DivX-LOL.mp4",
-              "seconds": 2898,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 289
+              "conf": 0.75,
+              "why": "title ~ \"Jumpin' Jack Fleishman\" (1.00)",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "014-Jumpin' Jack Fleishman.mp4",
+              "name": "014-Jumpin' Jack Fleishman",
+              "url": "https://archive.org/download/001-nypd-blue/014-Jumpin'%20Jack%20Fleishman.mp4",
+              "seconds": 2896,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 859
             }
           ]
         },
@@ -595,19 +595,33 @@
           "airdate": "1994-02-08",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "115-Hearts And Souls.mp4",
-            "name": "115-Hearts And Souls",
-            "url": "https://archive.org/download/001-nypd-blue/115-Hearts%20And%20Souls.mp4",
-            "seconds": 2682,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E15.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E15.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E15.DVDRip.XviD-LOL.mp4",
+            "seconds": 2931,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 865
+            "codecRisk": "video (XviD)",
+            "sizeMB": 290
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "115-Hearts And Souls.mp4",
+              "name": "115-Hearts And Souls",
+              "url": "https://archive.org/download/001-nypd-blue/115-Hearts%20And%20Souls.mp4",
+              "seconds": 2682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 865
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Steroid Roy\" (1.00)",
@@ -620,20 +634,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 726
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E15.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E15.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E15.DVDRip.XviD-LOL.mp4",
-              "seconds": 2931,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 290
             }
           ]
         },
@@ -643,19 +643,33 @@
           "airdate": "1994-02-15",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "116-Danny Boy.mp4",
-            "name": "116-Danny Boy",
-            "url": "https://archive.org/download/001-nypd-blue/116-Danny%20Boy.mp4",
-            "seconds": 2684,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E16.DVDRip.DivX-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E16.DVDRip.DivX-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E16.DVDRip.DivX-LOL.mp4",
+            "seconds": 2927,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 799
+            "codecRisk": "video (DivX)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "116-Danny Boy.mp4",
+              "name": "116-Danny Boy",
+              "url": "https://archive.org/download/001-nypd-blue/116-Danny%20Boy.mp4",
+              "seconds": 2684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 799
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"A Sudden Fish\" (1.00)",
@@ -668,20 +682,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 826
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E16.DVDRip.DivX-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E16.DVDRip.DivX-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E16.DVDRip.DivX-LOL.mp4",
-              "seconds": 2927,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 291
             }
           ]
         },
@@ -691,19 +691,33 @@
           "airdate": "1994-03-01",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "117-Czech Bouncer.mp4",
-            "name": "117-Czech Bouncer",
-            "url": "https://archive.org/download/001-nypd-blue/117-Czech%20Bouncer.mp4",
-            "seconds": 2650,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E17.DVDRip.DivX-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E17.DVDRip.DivX-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E17.DVDRip.DivX-LOL.mp4",
+            "seconds": 2897,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1016
+            "codecRisk": "video (DivX)",
+            "sizeMB": 288
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "117-Czech Bouncer.mp4",
+              "name": "117-Czech Bouncer",
+              "url": "https://archive.org/download/001-nypd-blue/117-Czech%20Bouncer.mp4",
+              "seconds": 2650,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1016
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Black Men Can Jump\" (1.00)",
@@ -716,20 +730,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 803
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E17.DVDRip.DivX-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E17.DVDRip.DivX-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E17.DVDRip.DivX-LOL.mp4",
-              "seconds": 2897,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 288
             }
           ]
         },
@@ -739,32 +739,32 @@
           "airdate": "1994-03-22",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "118-Raging Bulls.mp4",
-            "name": "118-Raging Bulls",
-            "url": "https://archive.org/download/001-nypd-blue/118-Raging%20Bulls.mp4",
-            "seconds": 2619,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E18.DVDRip.DivX-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E18.DVDRip.DivX-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E18.DVDRip.DivX-LOL.mp4",
+            "seconds": 2874,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 777
+            "codecRisk": "video (DivX)",
+            "sizeMB": 286
           },
           "alternates": [
             {
-              "conf": 0.9,
+              "conf": 0.85,
               "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E18.DVDRip.DivX-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E18.DVDRip.DivX-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E18.DVDRip.DivX-LOL.mp4",
-              "seconds": 2874,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 286
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "118-Raging Bulls.mp4",
+              "name": "118-Raging Bulls",
+              "url": "https://archive.org/download/001-nypd-blue/118-Raging%20Bulls.mp4",
+              "seconds": 2619,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 777
             }
           ]
         },
@@ -774,19 +774,33 @@
           "airdate": "1994-03-29",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "119-Grime Scene.mp4",
-            "name": "119-Grime Scene",
-            "url": "https://archive.org/download/001-nypd-blue/119-Grime%20Scene.mp4",
-            "seconds": 2673,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E19.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E19.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E19.DVDRip.XviD-LOL.mp4",
+            "seconds": 2929,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 737
+            "codecRisk": "video (XviD)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "119-Grime Scene.mp4",
+              "name": "119-Grime Scene",
+              "url": "https://archive.org/download/001-nypd-blue/119-Grime%20Scene.mp4",
+              "seconds": 2673,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 737
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Serge the Concierge\" (1.00)",
@@ -799,20 +813,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 750
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E19.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E19.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E19.DVDRip.XviD-LOL.mp4",
-              "seconds": 2929,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 291
             }
           ]
         },
@@ -822,19 +822,33 @@
           "airdate": "1994-05-03",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "120-Show And Tell.mp4",
-            "name": "120-Show And Tell",
-            "url": "https://archive.org/download/001-nypd-blue/120-Show%20And%20Tell.mp4",
-            "seconds": 2681,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E20.DVDRip.DivX-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E20.DVDRip.DivX-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E20.DVDRip.DivX-LOL.mp4",
+            "seconds": 2929,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 782
+            "codecRisk": "video (DivX)",
+            "sizeMB": 291
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "120-Show And Tell.mp4",
+              "name": "120-Show And Tell",
+              "url": "https://archive.org/download/001-nypd-blue/120-Show%20And%20Tell.mp4",
+              "seconds": 2681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 782
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Good Time Charlie\" (1.00)",
@@ -847,20 +861,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 799
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E20.DVDRip.DivX-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E20.DVDRip.DivX-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E20.DVDRip.DivX-LOL.mp4",
-              "seconds": 2929,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 291
             }
           ]
         },
@@ -868,34 +868,34 @@
           "number": 21,
           "name": "Guns 'n Rosaries",
           "airdate": "1994-05-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Guns 'n Rosaries\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "021-Guns N Rosaries.mp4",
-            "name": "021-Guns N Rosaries",
-            "url": "https://archive.org/download/001-nypd-blue/021-Guns%20N%20Rosaries.mp4",
-            "seconds": 2926,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E21.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E21.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E21.DVDRip.XviD-LOL.mp4",
+            "seconds": 2927,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 976
+            "codecRisk": "video (XviD)",
+            "sizeMB": 290
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E21.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E21.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E21.DVDRip.XviD-LOL.mp4",
-              "seconds": 2927,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 290
+              "conf": 0.75,
+              "why": "title ~ \"Guns 'n Rosaries\" (1.00)",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "021-Guns N Rosaries.mp4",
+              "name": "021-Guns N Rosaries",
+              "url": "https://archive.org/download/001-nypd-blue/021-Guns%20N%20Rosaries.mp4",
+              "seconds": 2926,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 976
             }
           ]
         },
@@ -905,19 +905,33 @@
           "airdate": "1994-05-17",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "122-What's Up, Chuck.mp4",
-            "name": "122-What's Up, Chuck",
-            "url": "https://archive.org/download/001-nypd-blue/122-What's%20Up%2C%20Chuck.mp4",
-            "seconds": 2654,
-            "format": "MPEG4",
+            "item": "nypd-blue-s01-dvdrip",
+            "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
+            "file": "NYPD.Blue.S01/NYPD.Blue.S01E22.DVDRip.XviD-LOL.mp4",
+            "name": "NYPD.Blue.S01/NYPD.Blue.S01E22.DVDRip.XviD-LOL",
+            "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E22.DVDRip.XviD-LOL.mp4",
+            "seconds": 2926,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1035
+            "codecRisk": "video (XviD)",
+            "sizeMB": 292
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "122-What's Up, Chuck.mp4",
+              "name": "122-What's Up, Chuck",
+              "url": "https://archive.org/download/001-nypd-blue/122-What's%20Up%2C%20Chuck.mp4",
+              "seconds": 2654,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1035
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Rockin' Robin\" (1.00)",
@@ -930,20 +944,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 953
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "nypd-blue-s01-dvdrip",
-              "itemTitle": "NYPD Blue (1993) Season 1 S01 DVDRip",
-              "file": "NYPD.Blue.S01/NYPD.Blue.S01E22.DVDRip.XviD-LOL.mp4",
-              "name": "NYPD.Blue.S01/NYPD.Blue.S01E22.DVDRip.XviD-LOL",
-              "url": "https://archive.org/download/nypd-blue-s01-dvdrip/NYPD.Blue.S01%2FNYPD.Blue.S01E22.DVDRip.XviD-LOL.mp4",
-              "seconds": 2926,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 292
             }
           ]
         }

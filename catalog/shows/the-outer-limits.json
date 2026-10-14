@@ -3,7 +3,7 @@
   "slug": "the-outer-limits",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Showtime",
-  "matchedAt": "2026-10-14T18:15:26.466Z",
+  "matchedAt": "2026-10-14T19:19:40.581Z",
   "tvmaze": {
     "id": 2289,
     "name": "The Outer Limits",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 154,
-    "live": 121,
-    "review": 32,
+    "live": 123,
+    "review": 30,
     "missing": 1,
     "pct": 99
   },
@@ -2374,18 +2374,18 @@
               "sizeMB": 689
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S02E17 - Der Gang ins Licht - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S02E17 - Der Gang ins Licht - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S02E17%20-%20Der%20Gang%20ins%20Licht%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2526,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 2x17 - Paradise (xvid-lol).mp4",
+              "name": "The Outer Limits - 2x17 - Paradise (xvid-lol)",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x17%20-%20Paradise%20(xvid-lol).mp4",
+              "seconds": 2549,
               "format": "h.264",
               "playable": true,
-              "langRisk": true,
-              "sizeMB": 254
+              "codecRisk": "video (xvid)",
+              "sizeMB": 256
             }
           ]
         },
@@ -2393,22 +2393,36 @@
           "number": 18,
           "name": "The Light Brigade",
           "airdate": "1996-06-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serie-outer-limits-1995-2001-by-artblood",
-            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-            "file": "Serie - Outer Limits - 1995-2001 - S02E18 - Die Superbombe - by ARTBLOOD.mp4",
-            "name": "Serie - Outer Limits - 1995-2001 - S02E18 - Die Superbombe - by ARTBLOOD",
-            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S02E18%20-%20Die%20Superbombe%20-%20by%20ARTBLOOD.mp4",
-            "seconds": 2526,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-outer-limits-1-7-tv-series",
+            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+            "file": "The Outer Limits - 2x18 - The Light Brigade (xvid-lol).mp4",
+            "name": "The Outer Limits - 2x18 - The Light Brigade (xvid-lol)",
+            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x18%20-%20The%20Light%20Brigade%20(xvid-lol).mp4",
+            "seconds": 2544,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 254
+            "codecRisk": "video (xvid)",
+            "sizeMB": 259
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serie-outer-limits-1995-2001-by-artblood",
+              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+              "file": "Serie - Outer Limits - 1995-2001 - S02E18 - Die Superbombe - by ARTBLOOD.mp4",
+              "name": "Serie - Outer Limits - 1995-2001 - S02E18 - Die Superbombe - by ARTBLOOD",
+              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S02E18%20-%20Die%20Superbombe%20-%20by%20ARTBLOOD.mp4",
+              "seconds": 2526,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 254
+            },
             {
               "conf": 0.5,
               "why": "S/E in filename",
@@ -2422,20 +2436,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 313
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 2x18 - The Light Brigade (xvid-lol).mp4",
-              "name": "The Outer Limits - 2x18 - The Light Brigade (xvid-lol)",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x18%20-%20The%20Light%20Brigade%20(xvid-lol).mp4",
-              "seconds": 2544,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 259
             }
           ]
         },
@@ -2527,22 +2527,36 @@
           "number": 21,
           "name": "Vanishing Act",
           "airdate": "1996-07-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serie-outer-limits-1995-2001-by-artblood",
-            "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-            "file": "Serie - Outer Limits - 1995-2001 - S02E21 - Spurlos verschwunden - by ARTBLOOD.mp4",
-            "name": "Serie - Outer Limits - 1995-2001 - S02E21 - Spurlos verschwunden - by ARTBLOOD",
-            "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S02E21%20-%20Spurlos%20verschwunden%20-%20by%20ARTBLOOD.mp4",
-            "seconds": 2528,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-outer-limits-1-7-tv-series",
+            "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+            "file": "The Outer Limits - 2x21 - Vanishing Act (xvid-lol).mp4",
+            "name": "The Outer Limits - 2x21 - Vanishing Act (xvid-lol)",
+            "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x21%20-%20Vanishing%20Act%20(xvid-lol).mp4",
+            "seconds": 2542,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 256
+            "codecRisk": "video (xvid)",
+            "sizeMB": 257
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serie-outer-limits-1995-2001-by-artblood",
+              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+              "file": "Serie - Outer Limits - 1995-2001 - S02E21 - Spurlos verschwunden - by ARTBLOOD.mp4",
+              "name": "Serie - Outer Limits - 1995-2001 - S02E21 - Spurlos verschwunden - by ARTBLOOD",
+              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S02E21%20-%20Spurlos%20verschwunden%20-%20by%20ARTBLOOD.mp4",
+              "seconds": 2528,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 256
+            },
             {
               "conf": 0.5,
               "why": "S/E in filename",
@@ -2556,20 +2570,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 312
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 2x21 - Vanishing Act (xvid-lol).mp4",
-              "name": "The Outer Limits - 2x21 - Vanishing Act (xvid-lol)",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%202x21%20-%20Vanishing%20Act%20(xvid-lol).mp4",
-              "seconds": 2542,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 257
             }
           ]
         },

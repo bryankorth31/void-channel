@@ -3,7 +3,7 @@
   "slug": "monkey-dust",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-14T18:14:49.737Z",
+  "matchedAt": "2026-10-14T19:19:01.834Z",
   "tvmaze": {
     "id": 5057,
     "name": "Monkey Dust",
@@ -28,19 +28,47 @@
           "airdate": "2003-02-03",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "S1E01.mp4",
-            "name": "S1E01",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E01.mp4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s01/Monkey Dust s01e01 (DivX 640x352).mp4",
+            "name": "Monkey Dust s01/Monkey Dust s01e01 (DivX 640x352)",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e01%20(DivX%20640x352).mp4",
             "seconds": 1726,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 237
+            "codecRisk": "video (DivX)",
+            "sizeMB": 174
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s01e01 (DivX 640x352).ia.mp4",
+              "name": "Monkey Dust s01e01 (DivX 640x352)",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e01%20(DivX%20640x352).ia.mp4",
+              "seconds": 1726,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "video (DivX)",
+              "sizeMB": 173
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "S1E01.mp4",
+              "name": "S1E01",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E01.mp4",
+              "seconds": 1726,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 237
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -53,34 +81,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 237
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s01/Monkey Dust s01e01 (DivX 640x352).mp4",
-              "name": "Monkey Dust s01/Monkey Dust s01e01 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e01%20(DivX%20640x352).mp4",
-              "seconds": 1726,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 174
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-01e-06-div-x-640x-352",
-              "itemTitle": "Monkey Dust Complete Series",
-              "file": "Monkey Dust s01e01 (DivX 640x352).ia.mp4",
-              "name": "Monkey Dust s01e01 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e01%20(DivX%20640x352).ia.mp4",
-              "seconds": 1726,
-              "format": "h.264 IA",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 173
             }
           ]
         },
@@ -90,19 +90,47 @@
           "airdate": "2003-02-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "S1E02.mp4",
-            "name": "S1E02",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E02.mp4",
-            "seconds": 1715,
-            "format": "MPEG4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s01/Monkey Dust s01e02 (DivX 640x352).mp4",
+            "name": "Monkey Dust s01/Monkey Dust s01e02 (DivX 640x352)",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e02%20(DivX%20640x352).mp4",
+            "seconds": 1716,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 236
+            "codecRisk": "video (DivX)",
+            "sizeMB": 173
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s01e02 (DivX 640x352).ia.mp4",
+              "name": "Monkey Dust s01e02 (DivX 640x352)",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e02%20(DivX%20640x352).ia.mp4",
+              "seconds": 1715,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "video (DivX)",
+              "sizeMB": 172
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "S1E02.mp4",
+              "name": "S1E02",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E02.mp4",
+              "seconds": 1715,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 236
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -115,34 +143,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 172
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s01/Monkey Dust s01e02 (DivX 640x352).mp4",
-              "name": "Monkey Dust s01/Monkey Dust s01e02 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e02%20(DivX%20640x352).mp4",
-              "seconds": 1716,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 173
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-01e-06-div-x-640x-352",
-              "itemTitle": "Monkey Dust Complete Series",
-              "file": "Monkey Dust s01e02 (DivX 640x352).ia.mp4",
-              "name": "Monkey Dust s01e02 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e02%20(DivX%20640x352).ia.mp4",
-              "seconds": 1715,
-              "format": "h.264 IA",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 172
             }
           ]
         },
@@ -152,33 +152,20 @@
           "airdate": "2003-02-17",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "S1E03.mp4",
-            "name": "S1E03",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E03.mp4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s01/Monkey Dust s01e03 (DivX 640x352).mp4",
+            "name": "Monkey Dust s01/Monkey Dust s01e03 (DivX 640x352)",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e03%20(DivX%20640x352).mp4",
             "seconds": 1714,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 219
+            "codecRisk": "video (DivX)",
+            "sizeMB": 173
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s01/Monkey Dust s01e03 (DivX 640x352).mp4",
-              "name": "Monkey Dust s01/Monkey Dust s01e03 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e03%20(DivX%20640x352).mp4",
-              "seconds": 1714,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 173
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -189,9 +176,22 @@
               "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e03%20(DivX%20640x352).ia.mp4",
               "seconds": 1714,
               "format": "h.264 IA",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (DivX)",
               "sizeMB": 172
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "S1E03.mp4",
+              "name": "S1E03",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E03.mp4",
+              "seconds": 1714,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 219
             }
           ]
         },
@@ -201,33 +201,20 @@
           "airdate": "2003-02-24",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
             "item": "monkey-dust-s-01e-06-div-x-640x-352",
             "itemTitle": "Monkey Dust Complete Series",
-            "file": "S1E04.mp4",
-            "name": "S1E04",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E04.mp4",
+            "file": "Monkey Dust s01e04 (DivX 640x352).ia.mp4",
+            "name": "Monkey Dust s01e04 (DivX 640x352)",
+            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e04%20(DivX%20640x352).ia.mp4",
             "seconds": 1717,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 237
+            "codecRisk": "video (DivX)",
+            "sizeMB": 172
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-01e-06-div-x-640x-352",
-              "itemTitle": "Monkey Dust Complete Series",
-              "file": "Monkey Dust s01e04 (DivX 640x352).ia.mp4",
-              "name": "Monkey Dust s01e04 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e04%20(DivX%20640x352).ia.mp4",
-              "seconds": 1717,
-              "format": "h.264 IA",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 172
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -238,9 +225,22 @@
               "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e04%20(DivX%20640x352).mp4",
               "seconds": 1717,
               "format": "h.264",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (DivX)",
               "sizeMB": 172
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "S1E04.mp4",
+              "name": "S1E04",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E04.mp4",
+              "seconds": 1717,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 237
             }
           ]
         },
@@ -250,33 +250,20 @@
           "airdate": "2003-03-03",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
             "item": "monkey-dust-s-01e-06-div-x-640x-352",
             "itemTitle": "Monkey Dust Complete Series",
-            "file": "S1E05.mp4",
-            "name": "S1E05",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E05.mp4",
+            "file": "Monkey Dust s01e05 (DivX 640x352).ia.mp4",
+            "name": "Monkey Dust s01e05 (DivX 640x352)",
+            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e05%20(DivX%20640x352).ia.mp4",
             "seconds": 1703,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 240
+            "codecRisk": "video (DivX)",
+            "sizeMB": 170
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-01e-06-div-x-640x-352",
-              "itemTitle": "Monkey Dust Complete Series",
-              "file": "Monkey Dust s01e05 (DivX 640x352).ia.mp4",
-              "name": "Monkey Dust s01e05 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e05%20(DivX%20640x352).ia.mp4",
-              "seconds": 1703,
-              "format": "h.264 IA",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 170
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -287,9 +274,22 @@
               "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e05%20(DivX%20640x352).mp4",
               "seconds": 1703,
               "format": "h.264",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (DivX)",
               "sizeMB": 170
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "S1E05.mp4",
+              "name": "S1E05",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E05.mp4",
+              "seconds": 1703,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 240
             }
           ]
         },
@@ -299,19 +299,47 @@
           "airdate": "2003-03-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
             "item": "monkey-dust-s-01e-06-div-x-640x-352",
             "itemTitle": "Monkey Dust Complete Series",
-            "file": "S1E06.mp4",
-            "name": "S1E06",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E06.mp4",
+            "file": "Monkey Dust s01e06 (DivX 640x352).ia.mp4",
+            "name": "Monkey Dust s01e06 (DivX 640x352)",
+            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e06%20(DivX%20640x352).ia.mp4",
             "seconds": 1727,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 242
+            "codecRisk": "video (DivX)",
+            "sizeMB": 173
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-02e-06.ws.divx",
+              "itemTitle": "Monkey Dust",
+              "file": "Monkey Dust s01/Monkey Dust s01e06 (DivX 640x352).mp4",
+              "name": "Monkey Dust s01/Monkey Dust s01e06 (DivX 640x352)",
+              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e06%20(DivX%20640x352).mp4",
+              "seconds": 1727,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (DivX)",
+              "sizeMB": 173
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "S1E06.mp4",
+              "name": "S1E06",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/S1E06.mp4",
+              "seconds": 1727,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 242
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -324,34 +352,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 242
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-01e-06-div-x-640x-352",
-              "itemTitle": "Monkey Dust Complete Series",
-              "file": "Monkey Dust s01e06 (DivX 640x352).ia.mp4",
-              "name": "Monkey Dust s01e06 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s01e06%20(DivX%20640x352).ia.mp4",
-              "seconds": 1727,
-              "format": "h.264 IA",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 173
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s01/Monkey Dust s01e06 (DivX 640x352).mp4",
-              "name": "Monkey Dust s01/Monkey Dust s01e06 (DivX 640x352)",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s01%2FMonkey%20Dust%20s01e06%20(DivX%20640x352).mp4",
-              "seconds": 1727,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (DivX)",
-              "sizeMB": 173
             }
           ]
         }
@@ -382,6 +382,20 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
+              "item": "monkey-dust-s-02e-06.ws.divx",
+              "itemTitle": "Monkey Dust",
+              "file": "Monkey Dust s02/Monkey Dust s02e01.ws.divx.mp4",
+              "name": "Monkey Dust s02/Monkey Dust s02e01.ws.divx",
+              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e01.ws.divx.mp4",
+              "seconds": 1717,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (divx)",
+              "sizeMB": 170
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
               "item": "monkey-dust-s-01e-06-div-x-640x-352",
               "itemTitle": "Monkey Dust Complete Series",
               "file": "Monkey Dust s02e01.ws.divx.ia.mp4",
@@ -404,20 +418,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 358
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s02/Monkey Dust s02e01.ws.divx.mp4",
-              "name": "Monkey Dust s02/Monkey Dust s02e01.ws.divx",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e01.ws.divx.mp4",
-              "seconds": 1717,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (divx)",
-              "sizeMB": 170
             }
           ]
         },
@@ -429,17 +429,31 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "Monkey Dust s02e02.ws.divx.ia.mp4",
-            "name": "Monkey Dust s02e02.ws",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e02.ws.divx.ia.mp4",
-            "seconds": 1713,
-            "format": "h.264 IA",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s02/Monkey Dust s02e02.ws.divx.mp4",
+            "name": "Monkey Dust s02/Monkey Dust s02e02.ws.divx",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e02.ws.divx.mp4",
+            "seconds": 1714,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 166
+            "codecRisk": "video (divx)",
+            "sizeMB": 168
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s02e02.ws.divx.ia.mp4",
+              "name": "Monkey Dust s02e02.ws",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e02.ws.divx.ia.mp4",
+              "seconds": 1713,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 166
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -465,20 +479,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 305
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s02/Monkey Dust s02e02.ws.divx.mp4",
-              "name": "Monkey Dust s02/Monkey Dust s02e02.ws.divx",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e02.ws.divx.mp4",
-              "seconds": 1714,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (divx)",
-              "sizeMB": 168
             }
           ]
         },
@@ -490,17 +490,31 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "Monkey Dust s02e03.ws.divx.ia.mp4",
-            "name": "Monkey Dust s02e03.ws",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e03.ws.divx.ia.mp4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s02/Monkey Dust s02e03.ws.divx.mp4",
+            "name": "Monkey Dust s02/Monkey Dust s02e03.ws.divx",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e03.ws.divx.mp4",
             "seconds": 1718,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 166
+            "codecRisk": "video (divx)",
+            "sizeMB": 167
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s02e03.ws.divx.ia.mp4",
+              "name": "Monkey Dust s02e03.ws",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e03.ws.divx.ia.mp4",
+              "seconds": 1718,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 166
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -526,20 +540,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 325
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s02/Monkey Dust s02e03.ws.divx.mp4",
-              "name": "Monkey Dust s02/Monkey Dust s02e03.ws.divx",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e03.ws.divx.mp4",
-              "seconds": 1718,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (divx)",
-              "sizeMB": 167
             }
           ]
         },
@@ -551,17 +551,31 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "Monkey Dust s02e04.ws.divx.ia.mp4",
-            "name": "Monkey Dust s02e04.ws",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e04.ws.divx.ia.mp4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s02/Monkey Dust s02e04.ws.divx.mp4",
+            "name": "Monkey Dust s02/Monkey Dust s02e04.ws.divx",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e04.ws.divx.mp4",
             "seconds": 1718,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 169
+            "codecRisk": "video (divx)",
+            "sizeMB": 170
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s02e04.ws.divx.ia.mp4",
+              "name": "Monkey Dust s02e04.ws",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e04.ws.divx.ia.mp4",
+              "seconds": 1718,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 169
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -587,20 +601,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 314
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s02/Monkey Dust s02e04.ws.divx.mp4",
-              "name": "Monkey Dust s02/Monkey Dust s02e04.ws.divx",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e04.ws.divx.mp4",
-              "seconds": 1718,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (divx)",
-              "sizeMB": 170
             }
           ]
         },
@@ -612,17 +612,31 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "Monkey Dust s02e05.ws.divx.ia.mp4",
-            "name": "Monkey Dust s02e05.ws",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e05.ws.divx.ia.mp4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s02/Monkey Dust s02e05.ws.divx.mp4",
+            "name": "Monkey Dust s02/Monkey Dust s02e05.ws.divx",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e05.ws.divx.mp4",
             "seconds": 1715,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 169
+            "codecRisk": "video (divx)",
+            "sizeMB": 170
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s02e05.ws.divx.ia.mp4",
+              "name": "Monkey Dust s02e05.ws",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e05.ws.divx.ia.mp4",
+              "seconds": 1715,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 169
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -648,20 +662,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 323
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s02/Monkey Dust s02e05.ws.divx.mp4",
-              "name": "Monkey Dust s02/Monkey Dust s02e05.ws.divx",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e05.ws.divx.mp4",
-              "seconds": 1715,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (divx)",
-              "sizeMB": 170
             }
           ]
         },
@@ -673,17 +673,31 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "monkey-dust-s-01e-06-div-x-640x-352",
-            "itemTitle": "Monkey Dust Complete Series",
-            "file": "Monkey Dust s02e06.ws.divx.ia.mp4",
-            "name": "Monkey Dust s02e06.ws",
-            "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e06.ws.divx.ia.mp4",
+            "item": "monkey-dust-s-02e-06.ws.divx",
+            "itemTitle": "Monkey Dust",
+            "file": "Monkey Dust s02/Monkey Dust s02e06.ws.divx.mp4",
+            "name": "Monkey Dust s02/Monkey Dust s02e06.ws.divx",
+            "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e06.ws.divx.mp4",
             "seconds": 1721,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 169
+            "codecRisk": "video (divx)",
+            "sizeMB": 171
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "monkey-dust-s-01e-06-div-x-640x-352",
+              "itemTitle": "Monkey Dust Complete Series",
+              "file": "Monkey Dust s02e06.ws.divx.ia.mp4",
+              "name": "Monkey Dust s02e06.ws",
+              "url": "https://archive.org/download/monkey-dust-s-01e-06-div-x-640x-352/Monkey%20Dust%20s02e06.ws.divx.ia.mp4",
+              "seconds": 1721,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 169
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -709,20 +723,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 303
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "monkey-dust-s-02e-06.ws.divx",
-              "itemTitle": "Monkey Dust",
-              "file": "Monkey Dust s02/Monkey Dust s02e06.ws.divx.mp4",
-              "name": "Monkey Dust s02/Monkey Dust s02e06.ws.divx",
-              "url": "https://archive.org/download/monkey-dust-s-02e-06.ws.divx/Monkey%20Dust%20s02%2FMonkey%20Dust%20s02e06.ws.divx.mp4",
-              "seconds": 1721,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (divx)",
-              "sizeMB": 171
             }
           ]
         }

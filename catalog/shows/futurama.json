@@ -3,7 +3,7 @@
   "slug": "futurama",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-14T18:15:16.632Z",
+  "matchedAt": "2026-10-14T19:19:30.882Z",
   "tvmaze": {
     "id": 538,
     "name": "Futurama",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 164,
-    "live": 1,
-    "review": 3,
+    "live": 3,
+    "review": 1,
     "missing": 160,
     "pct": 2
   },
@@ -288,10 +288,10 @@
           "number": 2,
           "name": "War Is the H-Word",
           "airdate": "2000-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: video (x265)",
+            "why": "S/E in filename",
             "item": "futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502",
             "itemTitle": "Futurama episodes and all movies",
             "file": "Futurama S03E02 Parasites Lost -1080p x265 10bit Joy-.mp4",
@@ -299,7 +299,7 @@
             "url": "https://archive.org/download/futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502/Futurama%20S03E02%20Parasites%20Lost%20-1080p%20x265%2010bit%20Joy-.mp4",
             "seconds": 1355,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (x265)",
             "sizeMB": 132
           },
@@ -317,10 +317,10 @@
           "number": 4,
           "name": "Parasites Lost",
           "airdate": "2001-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 0.9,
-            "why": "S/E in filename | not browser-playable: video (x265)",
+            "why": "S/E in filename",
             "item": "futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502",
             "itemTitle": "Futurama episodes and all movies",
             "file": "Futurama S03E04 The Luck Of The Fryrish  [1080p x265 10bit Joy].mp4",
@@ -328,7 +328,7 @@
             "url": "https://archive.org/download/futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502/Futurama%20S03E04%20The%20Luck%20Of%20The%20Fryrish%20%20%5B1080p%20x265%2010bit%20Joy%5D.mp4",
             "seconds": 1386,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (x265)",
             "sizeMB": 132
           },
@@ -343,7 +343,7 @@
               "url": "https://archive.org/download/futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502/Futurama%20S03E02%20Parasites%20Lost%20-1080p%20x265%2010bit%20Joy-.mp4",
               "seconds": 1355,
               "format": "MPEG4",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 132
             }
@@ -396,7 +396,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.8,
-            "why": "title ~ \"Luck of the Fryrish\" (0.95) | not browser-playable: video (x265)",
+            "why": "title ~ \"Luck of the Fryrish\" (0.95)",
             "item": "futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502",
             "itemTitle": "Futurama episodes and all movies",
             "file": "Futurama S03E04 The Luck Of The Fryrish  [1080p x265 10bit Joy].mp4",
@@ -404,7 +404,7 @@
             "url": "https://archive.org/download/futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502/Futurama%20S03E04%20The%20Luck%20Of%20The%20Fryrish%20%20%5B1080p%20x265%2010bit%20Joy%5D.mp4",
             "seconds": 1386,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (x265)",
             "sizeMB": 132
           },

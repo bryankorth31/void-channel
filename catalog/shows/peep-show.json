@@ -3,7 +3,7 @@
   "slug": "peep-show",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-14T18:14:22.883Z",
+  "matchedAt": "2026-10-14T19:19:45.398Z",
   "tvmaze": {
     "id": 383,
     "name": "Peep Show",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 54,
-    "live": 36,
-    "review": 16,
+    "live": 41,
+    "review": 11,
     "missing": 2,
     "pct": 96
   },
@@ -1108,7 +1108,7 @@
               "url": "https://archive.org/download/peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone/Peep%20Show%20S05E01%20Burgling%20720p%20WEB-DL%20H265%20BONE.ia.mp4",
               "seconds": 1427,
               "format": "h.264 IA",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (H265)",
               "sizeMB": 139
             }
@@ -1156,7 +1156,7 @@
               "url": "https://archive.org/download/peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone/Peep%20Show%20S05E02%20Spin%20War%20720p%20WEB-DL%20H265%20BONE.ia.mp4",
               "seconds": 1454,
               "format": "h.264 IA",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (H265)",
               "sizeMB": 142
             }
@@ -1204,7 +1204,7 @@
               "url": "https://archive.org/download/peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone/Peep%20Show%20S05E03%20Jeremy%20Broke%20720p%20WEB-DL%20H265%20BONE.ia.mp4",
               "seconds": 1501,
               "format": "h.264 IA",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (H265)",
               "sizeMB": 147
             }
@@ -1252,7 +1252,7 @@
               "url": "https://archive.org/download/peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone/Peep%20Show%20S05E04%20Jeremy%20S%20Mummy%20720p%20WEB-DL%20H265%20BONE.ia.mp4",
               "seconds": 1471,
               "format": "h.264 IA",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (H265)",
               "sizeMB": 144
             }
@@ -1300,7 +1300,7 @@
               "url": "https://archive.org/download/peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone/Peep%20Show%20S05E05%20Jeremy%20S%20Manager%20720p%20WEB-DL%20H265%20BONE.ia.mp4",
               "seconds": 1500,
               "format": "h.264 IA",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (H265)",
               "sizeMB": 147
             }
@@ -1335,7 +1335,7 @@
               "url": "https://archive.org/download/peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone/Peep%20Show%20S05E06%20Mark%20S%20Women%20720p%20WEB-DL%20H265%20BONE.mp4",
               "seconds": 1545,
               "format": "MPEG4",
-              "playable": false,
+              "playable": true,
               "codecRisk": "video (H265)",
               "sizeMB": 202
             }
@@ -1350,10 +1350,10 @@
           "number": 1,
           "name": "Jeremy at JLB",
           "airdate": "2009-09-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (H265)",
+            "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
             "file": "Peep Show S06E01 Jeremy At Jlb 720p WEB-DL H265 BONE.mp4",
@@ -1361,7 +1361,7 @@
             "url": "https://archive.org/download/peep-show-s-06/Peep%20Show%20S06E01%20Jeremy%20At%20Jlb%20720p%20WEB-DL%20H265%20BONE.mp4",
             "seconds": 1444,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (H265)",
             "sizeMB": 189
           },
@@ -1371,10 +1371,10 @@
           "number": 2,
           "name": "The Test",
           "airdate": "2009-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (H265)",
+            "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
             "file": "Peep Show S06E02 The Test 720p WEB-DL H265 BONE.mp4",
@@ -1382,7 +1382,7 @@
             "url": "https://archive.org/download/peep-show-s-06/Peep%20Show%20S06E02%20The%20Test%20720p%20WEB-DL%20H265%20BONE.mp4",
             "seconds": 1482,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (H265)",
             "sizeMB": 193
           },
@@ -1392,10 +1392,10 @@
           "number": 3,
           "name": "Jeremy in Love",
           "airdate": "2009-10-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (H265)",
+            "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
             "file": "Peep Show S06E03 Jeremy In Love 720p WEB-DL H265 BONE.mp4",
@@ -1403,7 +1403,7 @@
             "url": "https://archive.org/download/peep-show-s-06/Peep%20Show%20S06E03%20Jeremy%20In%20Love%20720p%20WEB-DL%20H265%20BONE.mp4",
             "seconds": 1430,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (H265)",
             "sizeMB": 186
           },
@@ -1416,7 +1416,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.6,
-            "why": "S/E in filename + title match | not browser-playable: video (H265)",
+            "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
             "file": "Peep Show S06E04 The Affair 720p WEB-DL H265 BONE.mp4",
@@ -1424,7 +1424,7 @@
             "url": "https://archive.org/download/peep-show-s-06/Peep%20Show%20S06E04%20The%20Affair%20720p%20WEB-DL%20H265%20BONE.mp4",
             "seconds": 1501,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (H265)",
             "sizeMB": 195
           },
@@ -1434,10 +1434,10 @@
           "number": 5,
           "name": "The Party",
           "airdate": "2009-10-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (H265)",
+            "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
             "file": "Peep Show S06E05 The Party 720p WEB-DL H265 BONE.mp4",
@@ -1445,7 +1445,7 @@
             "url": "https://archive.org/download/peep-show-s-06/Peep%20Show%20S06E05%20The%20Party%20720p%20WEB-DL%20H265%20BONE.mp4",
             "seconds": 1477,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (H265)",
             "sizeMB": 193
           },
@@ -1455,10 +1455,10 @@
           "number": 6,
           "name": "Das Boot",
           "airdate": "2009-10-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: video (H265)",
+            "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
             "file": "Peep Show S06E06 Das Boot 720p WEB-DL H265 BONE.mp4",
@@ -1466,7 +1466,7 @@
             "url": "https://archive.org/download/peep-show-s-06/Peep%20Show%20S06E06%20Das%20Boot%20720p%20WEB-DL%20H265%20BONE.mp4",
             "seconds": 1455,
             "format": "MPEG4",
-            "playable": false,
+            "playable": true,
             "codecRisk": "video (H265)",
             "sizeMB": 189
           },
