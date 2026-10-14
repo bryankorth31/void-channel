@@ -3,7 +3,7 @@
   "slug": "nypd-blue",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-13T21:19:58.140Z",
+  "matchedAt": "2026-10-14T00:00:49.516Z",
   "tvmaze": {
     "id": 570,
     "name": "NYPD Blue",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 261,
     "live": 39,
-    "review": 205,
-    "missing": 17,
+    "review": 204,
+    "missing": 18,
     "pct": 93
   },
   "seasons": [
@@ -2374,20 +2374,8 @@
           "number": 12,
           "name": "Upstairs, Downstairs",
           "airdate": "1997-01-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Upstairs, Downstairs\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "078-Upstairs, Downstairs.mp4",
-            "name": "078-Upstairs, Downstairs",
-            "url": "https://archive.org/download/001-nypd-blue/078-Upstairs%2C%20Downstairs.mp4",
-            "seconds": 2726,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 770
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

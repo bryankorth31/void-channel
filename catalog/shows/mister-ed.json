@@ -3,7 +3,7 @@
   "slug": "mister-ed",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-13T21:20:03.671Z",
+  "matchedAt": "2026-10-14T00:00:55.250Z",
   "tvmaze": {
     "id": 4133,
     "name": "Mister Ed",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 143,
-    "live": 142,
-    "review": 0,
+    "live": 141,
+    "review": 1,
     "missing": 1,
     "pct": 99
   },
@@ -3590,9 +3590,9 @@
           "number": 23,
           "name": "Robin Hood Ed",
           "airdate": "1965-05-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mister-ed-Lando18",
             "itemTitle": "Mister Ed (complete TV series)",
@@ -3606,7 +3606,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "mr-ed-season-5",
               "itemTitle": "Mister Ed - Season 5",

@@ -3,7 +3,7 @@
   "slug": "mission-impossible",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-13T21:20:04.034Z",
+  "matchedAt": "2026-10-14T00:00:55.619Z",
   "tvmaze": {
     "id": 3620,
     "name": "Mission: Impossible",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 171,
-    "live": 165,
-    "review": 5,
+    "live": 164,
+    "review": 6,
     "missing": 1,
     "pct": 99
   },
@@ -510,21 +510,7 @@
             "playable": true,
             "sizeMB": 400
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "an-tt-s-02-e-01-i-p",
-              "itemTitle": "Human Target (1992) (TV Series)",
-              "file": "Human Target S01E11 Victoria.mp4",
-              "name": "Human Target S01E11 Victoria",
-              "url": "https://archive.org/download/an-tt-s-02-e-01-i-p/Human%20Target%20S01E11%20Victoria.mp4",
-              "seconds": 2556,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 544
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
@@ -1229,19 +1215,6 @@
             "sizeMB": 397
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
-              "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",
-              "file": "Mission Impossible 20 Ans Après - 2x05 - Belle, Fanatique et Terroriste (Countdown).mp4",
-              "name": "Mission Impossible 20 Ans Après - 2x05 - Belle, Fanatique et Terroriste (Countdown)",
-              "url": "https://archive.org/download/mission-impossible-bruce-geller-la-serie-v.f.-1966-73/Mission%20Impossible%2020%20Ans%20Apr%C3%A8s%20-%202x05%20-%20Belle%2C%20Fanatique%20et%20Terroriste%20(Countdown).mp4",
-              "seconds": 2885,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 403
-            },
             {
               "conf": 0.75,
               "why": "S/E in filename",
@@ -2950,9 +2923,9 @@
           "number": 20,
           "name": "Terror",
           "airdate": "1970-02-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mission-impossible-bruce-geller-la-serie-v.f.-1966-73",
             "itemTitle": "Mission Impossible ☆ Bruce Geller ☆ La Série V.F. ☆ 1966-73 & 20 Ans Après ☆ 1988-90",

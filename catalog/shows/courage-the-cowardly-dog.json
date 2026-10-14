@@ -3,7 +3,7 @@
   "slug": "courage-the-cowardly-dog",
   "type": "Animated",
   "network": "Cartoon Network",
-  "matchedAt": "2026-10-13T21:19:56.034Z",
+  "matchedAt": "2026-10-14T00:00:47.398Z",
   "tvmaze": {
     "id": 1956,
     "name": "Courage the Cowardly Dog",
@@ -1358,21 +1358,34 @@
           "airdate": "2002-02-08",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 3/S3 E02 · Campsite of Terror  Record Deal.mp4",
-            "name": "season 3/S3 E02 · Campsite of Terror  Record Deal",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E02%20%C2%B7%20Campsite%20of%20Terror%20%20Record%20Deal.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E02.mp4",
+            "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E02",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E02.mp4",
             "seconds": 1369,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 146
+            "sizeMB": 136
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 3/S3 E02 · Campsite of Terror  Record Deal.mp4",
+              "name": "season 3/S3 E02 · Campsite of Terror  Record Deal",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E02%20%C2%B7%20Campsite%20of%20Terror%20%20Record%20Deal.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 146
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
@@ -1383,19 +1396,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 122
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
-              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
-              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E02.mp4",
-              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E02",
-              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E02.mp4",
-              "seconds": 1369,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 136
             }
           ]
         },

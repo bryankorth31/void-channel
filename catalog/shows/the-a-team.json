@@ -3,7 +3,7 @@
   "slug": "the-a-team",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-13T21:20:06.060Z",
+  "matchedAt": "2026-10-14T00:00:57.673Z",
   "tvmaze": {
     "id": 1058,
     "name": "The A-Team",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 98,
-    "live": 86,
-    "review": 8,
+    "live": 85,
+    "review": 9,
     "missing": 4,
     "pct": 96
   },
@@ -42,9 +42,9 @@
           "number": 3,
           "name": "Children of Jamestown",
           "airdate": "1983-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "the-a-team-tv-series-1983-1987-complete-series-tv-pg",
             "itemTitle": "The A-Team TV Series 1983–1987 Complete Series TV-PG",
@@ -58,7 +58,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "the-a-team-s-01",
               "itemTitle": "The A Team Season 1-5 Complete",

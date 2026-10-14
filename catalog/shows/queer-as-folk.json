@@ -3,7 +3,7 @@
   "slug": "queer-as-folk",
   "type": "Drama",
   "network": "Showtime",
-  "matchedAt": "2026-10-13T21:19:59.035Z",
+  "matchedAt": "2026-10-14T00:00:50.423Z",
   "tvmaze": {
     "id": 908,
     "name": "Queer As Folk",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 83,
     "live": 2,
-    "review": 80,
-    "missing": 1,
-    "pct": 99
+    "review": 79,
+    "missing": 2,
+    "pct": 98
   },
   "seasons": [
     {
@@ -2549,35 +2549,9 @@
           "number": 10,
           "name": "The Snake in Paradise",
           "airdate": "2004-06-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Snake in Paradise\" (1.00)",
-            "item": "queer-as-folk-us",
-            "itemTitle": "Queer As Folk ( US)",
-            "file": "Queer as Folk (US)/Season 04/[S04.E10] - The Snake in Paradise.mp4",
-            "name": "Queer as Folk (US)/Season 04/[S04.E10] - The Snake in Paradise",
-            "url": "https://archive.org/download/queer-as-folk-us/Queer%20as%20Folk%20(US)%2FSeason%2004%2F%5BS04.E10%5D%20-%20The%20Snake%20in%20Paradise.mp4",
-            "seconds": 3431,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 334
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Snake in Paradise\" (1.00)",
-              "item": "queer-as-folk-us5",
-              "itemTitle": "Queer As Folk ( US)",
-              "file": "Queer as Folk (US)/Season 04/[S04.E10] - The Snake in Paradise.mp4",
-              "name": "Queer as Folk (US)/Season 04/[S04.E10] - The Snake in Paradise",
-              "url": "https://archive.org/download/queer-as-folk-us5/Queer%20as%20Folk%20(US)%2FSeason%2004%2F%5BS04.E10%5D%20-%20The%20Snake%20in%20Paradise.mp4",
-              "seconds": 3431,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 334
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 11,

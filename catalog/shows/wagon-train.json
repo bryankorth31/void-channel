@@ -3,7 +3,7 @@
   "slug": "wagon-train",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-13T21:20:04.645Z",
+  "matchedAt": "2026-10-14T00:00:56.235Z",
   "tvmaze": {
     "id": 8420,
     "name": "Wagon Train",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 284,
-    "live": 276,
-    "review": 8,
+    "live": 275,
+    "review": 9,
     "missing": 0,
     "pct": 100
   },
@@ -5221,9 +5221,9 @@
           "number": 21,
           "name": "The Odyssey of Flint McCullough",
           "airdate": "1961-02-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "y_20251113",
             "itemTitle": "Wagon Train",
@@ -5235,21 +5235,7 @@
             "playable": true,
             "sizeMB": 287
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Odyssey of Flint McCullough\" (0.98)",
-              "item": "wagon-train-s-01-e-101-ep-101-the-willy-moran-story_202512",
-              "itemTitle": "🌵𖥞 Wαɠσɳ Tɾαιɳ 𖥞🌵",
-              "file": "Wagon Train_S04E21_The Odyssey Of Flint McCullough 1.mp4",
-              "name": "Wagon Train_S04E21_The Odyssey Of Flint McCullough 1",
-              "url": "https://archive.org/download/wagon-train-s-01-e-101-ep-101-the-willy-moran-story_202512/Wagon%20Train_S04E21_The%20Odyssey%20Of%20Flint%20McCullough%201.mp4",
-              "seconds": 3026,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 188
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,

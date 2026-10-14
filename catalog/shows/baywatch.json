@@ -3,7 +3,7 @@
   "slug": "baywatch",
   "type": "Drama",
   "network": "Syndicated",
-  "matchedAt": "2026-10-13T21:19:58.525Z",
+  "matchedAt": "2026-10-14T00:00:49.903Z",
   "tvmaze": {
     "id": 1070,
     "name": "Baywatch",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 233,
-    "live": 38,
-    "review": 168,
+    "live": 36,
+    "review": 170,
     "missing": 27,
     "pct": 88
   },
@@ -55,19 +55,6 @@
               "sizeMB": 365
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"In Deep\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "266-Terror Of The Deep(BAYWATCH NIGHTS).mp4",
-              "name": "266-Terror Of The Deep(BAYWATCH NIGHTS)",
-              "url": "https://archive.org/download/baywatch_202212/266-Terror%20Of%20The%20Deep(BAYWATCH%20NIGHTS).mp4",
-              "seconds": 2572,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
               "conf": 0.75,
               "why": "title ~ \"In Deep\" (0.95)",
               "item": "baywatch_202212",
@@ -77,6 +64,19 @@
               "url": "https://archive.org/download/baywatch_202212/002-In%20Deep(REMASTERED%20VERSION).mp4",
               "seconds": 2800,
               "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1611
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"In Deep\" (1.00)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "002-In Deep.ia.mp4",
+              "name": "002-In Deep",
+              "url": "https://archive.org/download/baywatch_202212/002-In%20Deep.ia.mp4",
+              "seconds": 2800,
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1611
             }
@@ -613,34 +613,21 @@
           "number": 11,
           "name": "The Reunion",
           "airdate": "1989-12-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"The Reunion\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "111-Forbidden Paradise Part 1(REMASTERED VERSION).mp4",
-            "name": "111-Forbidden Paradise Part 1(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/111-Forbidden%20Paradise%20Part%201(REMASTERED%20VERSION).mp4",
-            "seconds": 2542,
+            "file": "012-The Reunion(REMASTERED VERSION).mp4",
+            "name": "012-The Reunion(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/012-The%20Reunion(REMASTERED%20VERSION).mp4",
+            "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2202
+            "sizeMB": 2008
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Reunion\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "012-The Reunion(REMASTERED VERSION).mp4",
-              "name": "012-The Reunion(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/012-The%20Reunion(REMASTERED%20VERSION).mp4",
-              "seconds": 2891,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 2008
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"The Reunion\" (1.00)",
@@ -666,6 +653,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 367
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Reunion\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "012-The Reunion(ORIGINAL VERSION).mp4",
+              "name": "012-The Reunion(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/012-The%20Reunion(ORIGINAL%20VERSION).mp4",
+              "seconds": 2810,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
             }
           ]
         },
@@ -673,47 +673,21 @@
           "number": 12,
           "name": "Armored Car",
           "airdate": "1990-01-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
+            "conf": 0.75,
+            "why": "title ~ \"Armored Car\" (0.95)",
             "item": "baywatch_202212",
             "itemTitle": "Baywatch(The Complete Series)",
-            "file": "112-Forbidden Paradise Part 2(REMASTERED VERSION).mp4",
-            "name": "112-Forbidden Paradise Part 2(REMASTERED VERSION)",
-            "url": "https://archive.org/download/baywatch_202212/112-Forbidden%20Paradise%20Part%202(REMASTERED%20VERSION).mp4",
-            "seconds": 2567,
+            "file": "013-Armored Car(REMASTERED VERSION).mp4",
+            "name": "013-Armored Car(REMASTERED VERSION)",
+            "url": "https://archive.org/download/baywatch_202212/013-Armored%20Car(REMASTERED%20VERSION).mp4",
+            "seconds": 2924,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2165
+            "sizeMB": 1716
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "112-Forbidden Paradise Part 2(ORIGINAL VERSION).mp4",
-              "name": "112-Forbidden Paradise Part 2(ORIGINAL VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/112-Forbidden%20Paradise%20Part%202(ORIGINAL%20VERSION).mp4",
-              "seconds": 2547,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 365
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Armored Car\" (0.95)",
-              "item": "baywatch_202212",
-              "itemTitle": "Baywatch(The Complete Series)",
-              "file": "013-Armored Car(REMASTERED VERSION).mp4",
-              "name": "013-Armored Car(REMASTERED VERSION)",
-              "url": "https://archive.org/download/baywatch_202212/013-Armored%20Car(REMASTERED%20VERSION).mp4",
-              "seconds": 2924,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1716
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Armored Car\" (1.00)",
@@ -726,6 +700,32 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 1716
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Armored Car\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "013-Armored Car(ORIGINAL VERSION).mp4",
+              "name": "013-Armored Car(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/013-Armored%20Car(ORIGINAL%20VERSION).mp4",
+              "seconds": 2841,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 48 in \"Baywatch(The Complete Series)\"",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "245-Bad Blades(BAYWATCH NIGHTS).mp4",
+              "name": "245-Bad Blades(BAYWATCH NIGHTS)",
+              "url": "https://archive.org/download/baywatch_202212/245-Bad%20Blades(BAYWATCH%20NIGHTS).mp4",
+              "seconds": 2570,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
             }
           ]
         },

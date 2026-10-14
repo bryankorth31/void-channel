@@ -1,0 +1,900 @@
+{
+  "show": "UFO",
+  "slug": "ufo",
+  "type": "Classic TV",
+  "network": "ITV",
+  "matchedAt": "2026-10-14T00:00:59.544Z",
+  "tvmaze": {
+    "id": 5919,
+    "name": "UFO",
+    "runtime": 60,
+    "premiered": "1970-09-16",
+    "network": "ITV1"
+  },
+  "coverage": {
+    "total": 26,
+    "live": 13,
+    "review": 13,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Identified",
+          "airdate": "1970-09-16",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E01 - The Washington DC Incident.mp4",
+            "name": "Project UFO S01E01 - The Washington DC Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E01%20-%20The%20Washington%20DC%20Incident.mp4",
+            "seconds": 2923,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Identified\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.01.Identified.mp4",
+              "name": "UFO.01.Identified",
+              "url": "https://archive.org/download/UFO.complete/UFO.01.Identified.mp4",
+              "seconds": 3075,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 320
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E01 - The Underwater Incident.mp4",
+              "name": "Project UFO S02E01 - The Underwater Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E01%20-%20The%20Underwater%20Incident.mp4",
+              "seconds": 2911,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Exposed",
+          "airdate": "1970-09-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E02 - The Joshua Flats Incident.mp4",
+            "name": "Project UFO S01E02 - The Joshua Flats Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E02%20-%20The%20Joshua%20Flats%20Incident.mp4",
+            "seconds": 2917,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Exposed\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.02.Exposed.mp4",
+              "name": "UFO.02.Exposed",
+              "url": "https://archive.org/download/UFO.complete/UFO.02.Exposed.mp4",
+              "seconds": 2967,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E02 - The Devilish Davidson Lights Incident.mp4",
+              "name": "Project UFO S02E02 - The Devilish Davidson Lights Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E02%20-%20The%20Devilish%20Davidson%20Lights%20Incident.mp4",
+              "seconds": 2906,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "The Cat with Ten Lives",
+          "airdate": "1970-09-30",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E03 - The Fremont Incident.mp4",
+            "name": "Project UFO S01E03 - The Fremont Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E03%20-%20The%20Fremont%20Incident.mp4",
+            "seconds": 2910,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Cat with Ten Lives\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.03.The Cat With Ten Lives.mp4",
+              "name": "UFO.03.The Cat With Ten Lives",
+              "url": "https://archive.org/download/UFO.complete/UFO.03.The%20Cat%20With%20Ten%20Lives.mp4",
+              "seconds": 2963,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E03 - The Pipeline Incident.mp4",
+              "name": "Project UFO S02E03 - The Pipeline Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E03%20-%20The%20Pipeline%20Incident.mp4",
+              "seconds": 2910,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Conflict",
+          "airdate": "1970-10-07",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E04 - The Howard Crossing Incident.mp4",
+            "name": "Project UFO S01E04 - The Howard Crossing Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E04%20-%20The%20Howard%20Crossing%20Incident.mp4",
+            "seconds": 2899,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Conflict\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.04.Conflict.mp4",
+              "name": "UFO.04.Conflict",
+              "url": "https://archive.org/download/UFO.complete/UFO.04.Conflict.mp4",
+              "seconds": 2971,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E04 - The Incident on the Cliffs.mp4",
+              "name": "Project UFO S02E04 - The Incident on the Cliffs",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E04%20-%20The%20Incident%20on%20the%20Cliffs.mp4",
+              "seconds": 2904,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "A Question of Priorities",
+          "airdate": "1970-10-14",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E05 - The Medicine Bow Incident.mp4",
+            "name": "Project UFO S01E05 - The Medicine Bow Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E05%20-%20The%20Medicine%20Bow%20Incident.mp4",
+            "seconds": 2910,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Question of Priorities\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.05.A Question of Priorities.mp4",
+              "name": "UFO.05.A Question of Priorities",
+              "url": "https://archive.org/download/UFO.complete/UFO.05.A%20Question%20of%20Priorities.mp4",
+              "seconds": 2988,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 310
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E05 - The Believe It or Not Incident.mp4",
+              "name": "Project UFO S02E05 - The Believe It or Not Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E05%20-%20The%20Believe%20It%20or%20Not%20Incident.mp4",
+              "seconds": 2902,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "name": "E.S.P.",
+          "airdate": "1970-10-21",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E06 - The Nevada Desert Incident.mp4",
+            "name": "Project UFO S01E06 - The Nevada Desert Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E06%20-%20The%20Nevada%20Desert%20Incident.mp4",
+            "seconds": 2895,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"E.S.P.\" (0.67)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.06.ESP.mp4",
+              "name": "UFO.06.ESP",
+              "url": "https://archive.org/download/UFO.complete/UFO.06.ESP.mp4",
+              "seconds": 2988,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 312
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E06 - The Camouflage Incident.mp4",
+              "name": "Project UFO S02E06 - The Camouflage Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E06%20-%20The%20Camouflage%20Incident.mp4",
+              "seconds": 2908,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Kill Straker!",
+          "airdate": "1970-11-04",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E07 - The Forest City Incident.mp4",
+            "name": "Project UFO S01E07 - The Forest City Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E07%20-%20The%20Forest%20City%20Incident.mp4",
+            "seconds": 2898,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Kill Straker!\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.07.Kill Straker.mp4",
+              "name": "UFO.07.Kill Straker",
+              "url": "https://archive.org/download/UFO.complete/UFO.07.Kill%20Straker.mp4",
+              "seconds": 2975,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 310
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E08 - The Superstition Mountain Incident.mp4",
+              "name": "Project UFO S02E08 - The Superstition Mountain Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E08%20-%20The%20Superstition%20Mountain%20Incident.mp4",
+              "seconds": 2906,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "name": "Sub-Smash",
+          "airdate": "1970-11-11",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E08 - The Desert Springs Incident.mp4",
+            "name": "Project UFO S01E08 - The Desert Springs Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E08%20-%20The%20Desert%20Springs%20Incident.mp4",
+            "seconds": 2910,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 278
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Sub-Smash\" (0.62)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.08.Sub Smash.mp4",
+              "name": "UFO.08.Sub Smash",
+              "url": "https://archive.org/download/UFO.complete/UFO.08.Sub%20Smash.mp4",
+              "seconds": 2974,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 310
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E09 - The I-Man Incident.mp4",
+              "name": "Project UFO S02E09 - The I-Man Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E09%20-%20The%20I-Man%20Incident.mp4",
+              "seconds": 2904,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Destruction",
+          "airdate": "1970-12-02",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Destruction\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.09.Destruction.mp4",
+            "name": "UFO.09.Destruction",
+            "url": "https://archive.org/download/UFO.complete/UFO.09.Destruction.mp4",
+            "seconds": 2972,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 310
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S01E09 - The French Incident.mp4",
+              "name": "Project UFO S01E09 - The French Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E09%20-%20The%20French%20Incident.mp4",
+              "seconds": 2912,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 277
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E10 - The Scoutmaster Incident.mp4",
+              "name": "Project UFO S02E10 - The Scoutmaster Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E10%20-%20The%20Scoutmaster%20Incident.mp4",
+              "seconds": 2894,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "name": "The Square Triangle",
+          "airdate": "1970-12-09",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E10 - The Waterford Incident.mp4",
+            "name": "Project UFO S01E10 - The Waterford Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E10%20-%20The%20Waterford%20Incident.mp4",
+            "seconds": 2906,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Square Triangle\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.10.The Square Triangle.mp4",
+              "name": "UFO.10.The Square Triangle",
+              "url": "https://archive.org/download/UFO.complete/UFO.10.The%20Square%20Triangle.mp4",
+              "seconds": 2976,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E11 - The Atlantic Queen Incident.mp4",
+              "name": "Project UFO S02E11 - The Atlantic Queen Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E11%20-%20The%20Atlantic%20Queen%20Incident.mp4",
+              "seconds": 2891,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "Close Up",
+          "airdate": "1970-12-16",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E11 - The Doll House Incident.mp4",
+            "name": "Project UFO S01E11 - The Doll House Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E11%20-%20The%20Doll%20House%20Incident.mp4",
+            "seconds": 2875,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 273
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Close Up\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.11.Close Up.mp4",
+              "name": "UFO.11.Close Up",
+              "url": "https://archive.org/download/UFO.complete/UFO.11.Close%20Up.mp4",
+              "seconds": 2941,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 306
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E12 - The Whitman Tower Incident.mp4",
+              "name": "Project UFO S02E12 - The Whitman Tower Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E12%20-%20The%20Whitman%20Tower%20Incident.mp4",
+              "seconds": 2909,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "name": "The Psychobombs",
+          "airdate": "1970-12-30",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E12 - The Rock and Hard Place Incident.mp4",
+            "name": "Project UFO S01E12 - The Rock and Hard Place Incident",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E12%20-%20The%20Rock%20and%20Hard%20Place%20Incident.mp4",
+            "seconds": 2866,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 272
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Psychobombs\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.12.The Psychobombs.mp4",
+              "name": "UFO.12.The Psychobombs",
+              "url": "https://archive.org/download/UFO.complete/UFO.12.The%20Psychobombs.mp4",
+              "seconds": 2966,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E13 - The Wild Blue Yonder Incident.mp4",
+              "name": "Project UFO S02E13 - The Wild Blue Yonder Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E13%20-%20The%20Wild%20Blue%20Yonder%20Incident.mp4",
+              "seconds": 2910,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "name": "Survival",
+          "airdate": "1971-01-06",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "project-ufo-complete-series-1978",
+            "itemTitle": "Project UFO - Complete Series 1978",
+            "file": "Project UFO S01E13 - The St. Hillary Inci.mp4",
+            "name": "Project UFO S01E13 - The St. Hillary Inci",
+            "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S01E13%20-%20The%20St.%20Hillary%20Inci.mp4",
+            "seconds": 2904,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 275
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Survival\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.13.Survival.mp4",
+              "name": "UFO.13.Survival",
+              "url": "https://archive.org/download/UFO.complete/UFO.13.Survival.mp4",
+              "seconds": 2910,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 302
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "name": "Mindbender",
+          "airdate": "1971-01-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mindbender\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.14.Mindbender.mp4",
+            "name": "UFO.14.Mindbender",
+            "url": "https://archive.org/download/UFO.complete/UFO.14.Mindbender.mp4",
+            "seconds": 2840,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 295
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Flight Path",
+          "airdate": "1971-01-20",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Flight Path\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.15.Flight Path.mp4",
+            "name": "UFO.15.Flight Path",
+            "url": "https://archive.org/download/UFO.complete/UFO.15.Flight%20Path.mp4",
+            "seconds": 2973,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 309
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Man Who Came Back",
+          "airdate": "1971-02-03",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Man Who Came Back\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.16.The Man Who Came Back.mp4",
+            "name": "UFO.16.The Man Who Came Back",
+            "url": "https://archive.org/download/UFO.complete/UFO.16.The%20Man%20Who%20Came%20Back.mp4",
+            "seconds": 2962,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 308
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Dalotek Affair",
+          "airdate": "1971-02-10",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Dalotek Affair\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.17.The Dalotek Affair.mp4",
+            "name": "UFO.17.The Dalotek Affair",
+            "url": "https://archive.org/download/UFO.complete/UFO.17.The%20Dalotek%20Affair.mp4",
+            "seconds": 2971,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 309
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Timelash",
+          "airdate": "1971-02-17",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Timelash\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.18.Timelash.mp4",
+            "name": "UFO.18.Timelash",
+            "url": "https://archive.org/download/UFO.complete/UFO.18.Timelash.mp4",
+            "seconds": 2860,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 298
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Ordeal",
+          "airdate": "1971-04-14",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ordeal\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.19.Ordeal.mp4",
+            "name": "UFO.19.Ordeal",
+            "url": "https://archive.org/download/UFO.complete/UFO.19.Ordeal.mp4",
+            "seconds": 2968,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 310
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Court Martial",
+          "airdate": "1971-05-01",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Court Martial\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.20.Court Martial.mp4",
+            "name": "UFO.20.Court Martial",
+            "url": "https://archive.org/download/UFO.complete/UFO.20.Court%20Martial.mp4",
+            "seconds": 2976,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 310
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Computer Affair",
+          "airdate": "1971-05-15",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Computer Affair\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.21.Computer Affair.mp4",
+            "name": "UFO.21.Computer Affair",
+            "url": "https://archive.org/download/UFO.complete/UFO.21.Computer%20Affair.mp4",
+            "seconds": 2953,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 307
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Confetti Check A-O.K.",
+          "airdate": "1971-07-10",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Confetti Check A-O.K.\" (0.94)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.22.Confetti Check A OK.mp4",
+            "name": "UFO.22.Confetti Check A OK",
+            "url": "https://archive.org/download/UFO.complete/UFO.22.Confetti%20Check%20A%20OK.mp4",
+            "seconds": 2968,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 309
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Sound of Silence",
+          "airdate": "1971-07-17",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "ufo-episode-23-the-sound-of-silence-1971",
+            "itemTitle": "UFO (Gerry Anderson) HD/The Sound Of Silence (1971)",
+            "file": "UFO Episode 23 The Sound of Silence (1971).mp4",
+            "name": "UFO Episode 23 The Sound of Silence (1971)",
+            "url": "https://archive.org/download/ufo-episode-23-the-sound-of-silence-1971/UFO%20Episode%2023%20The%20Sound%20of%20Silence%20(1971).mp4",
+            "seconds": 2972,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1572
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Sound of Silence\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.23.The Sound of Silence.mp4",
+              "name": "UFO.23.The Sound of Silence",
+              "url": "https://archive.org/download/UFO.complete/UFO.23.The%20Sound%20of%20Silence.mp4",
+              "seconds": 2973,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 310
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "name": "Reflections in the Water",
+          "airdate": "1971-07-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Reflections in the Water\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.24.Reflections In The Water.mp4",
+            "name": "UFO.24.Reflections In The Water",
+            "url": "https://archive.org/download/UFO.complete/UFO.24.Reflections%20In%20The%20Water.mp4",
+            "seconds": 2849,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 296
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "The Responsibility Seat",
+          "airdate": "1971-07-31",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Responsibility Seat\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.25.The Responsibility Seat.mp4",
+            "name": "UFO.25.The Responsibility Seat",
+            "url": "https://archive.org/download/UFO.complete/UFO.25.The%20Responsibility%20Seat.mp4",
+            "seconds": 2970,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 311
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "The Long Sleep",
+          "airdate": "1971-08-07",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Long Sleep\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.26.The Long Sleep.mp4",
+            "name": "UFO.26.The Long Sleep",
+            "url": "https://archive.org/download/UFO.complete/UFO.26.The%20Long%20Sleep.mp4",
+            "seconds": 2849,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 296
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

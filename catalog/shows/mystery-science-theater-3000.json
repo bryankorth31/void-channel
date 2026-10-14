@@ -3,7 +3,7 @@
   "slug": "mystery-science-theater-3000",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-13T21:20:00.832Z",
+  "matchedAt": "2026-10-14T00:00:52.278Z",
   "tvmaze": {
     "id": 19499,
     "name": "Mystery Science Theater 3000",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 213,
-    "live": 186,
-    "review": 19,
+    "live": 182,
+    "review": 23,
     "missing": 8,
     "pct": 96
   },
@@ -573,9 +573,9 @@
           "number": 6,
           "name": "Ring of Terror",
           "airdate": "1990-11-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "the-ultimate-mst3k",
             "itemTitle": "The Ultimate Mystery Science Theater 3000",
@@ -2530,9 +2530,9 @@
           "number": 6,
           "name": "The Creeping Terror",
           "airdate": "1994-09-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "the-ultimate-mst3k",
             "itemTitle": "The Ultimate Mystery Science Theater 3000",
@@ -3299,9 +3299,9 @@
           "number": 7,
           "name": "Terror from the Year 5000",
           "airdate": "1997-03-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.55,
             "why": "S/E in filename + title match",
             "item": "the-ultimate-mst3k",
             "itemTitle": "The Ultimate Mystery Science Theater 3000",
@@ -3313,21 +3313,7 @@
             "playable": true,
             "sizeMB": 553
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "mst3k-lost-episodes-mike-2x",
-              "itemTitle": "Mystery Science Theater 3000: The Lost Episodes (Mike Era, Part 2)",
-              "file": "MST3K - S08E07 - Terror from the Year 5000.mp4",
-              "name": "MST3K - S08E07 - Terror from the Year 5000",
-              "url": "https://archive.org/download/mst3k-lost-episodes-mike-2x/MST3K%20-%20S08E07%20-%20Terror%20from%20the%20Year%205000.mp4",
-              "seconds": 5529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 553
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -4068,9 +4054,9 @@
           "number": 3,
           "name": "Merlin's Shop of Mystical Wonders",
           "airdate": "1999-09-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mst-3-k-s-10-e-05-blood-waters-of-dr-z",
             "itemTitle": "Mystery Science Theater 3000 Season 10",
@@ -4084,7 +4070,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "the-ultimate-mst3k",
               "itemTitle": "The Ultimate Mystery Science Theater 3000",

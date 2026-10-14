@@ -3,7 +3,7 @@
   "slug": "mad-about-you",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-13T21:19:52.646Z",
+  "matchedAt": "2026-10-14T00:00:43.995Z",
   "tvmaze": {
     "id": 1115,
     "name": "Mad About You",
@@ -13,9 +13,9 @@
   },
   "coverage": {
     "total": 176,
-    "live": 158,
-    "review": 15,
-    "missing": 3,
+    "live": 156,
+    "review": 16,
+    "missing": 4,
     "pct": 98
   },
   "seasons": [
@@ -2563,9 +2563,9 @@
           "number": 19,
           "name": "Two Tickets to Paradise",
           "airdate": "1995-03-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -2579,7 +2579,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "mad.about.you.1992.complete",
               "itemTitle": "Mad About You (1992) (Complete)",
@@ -5797,59 +5797,17 @@
           "number": 21,
           "name": "The Final Frontier (1)",
           "airdate": "1999-05-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match | not browser-playable: audio (DDP2)",
-            "item": "mad.about.you.1992.complete",
-            "itemTitle": "Mad About You (1992) (Complete)",
-            "file": "Mad.About.You.S07E21.The.Final.Frontier.Part.I.AMZN.WEB-DL.DDP2.0.H.264-WELP.mp4",
-            "name": "Mad.About.You.S07E21.The.Final.Frontier.Part.I.AMZN.WEB-DL.DDP2.0.H.264-WELP",
-            "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E21.The.Final.Frontier.Part.I.AMZN.WEB-DL.DDP2.0.H.264-WELP.mp4",
-            "seconds": 1315,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "audio (DDP2)",
-            "sizeMB": 132
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"The Final Frontier (1)\" (0.64)",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S07E22.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S07E22.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E22.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1436,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 143
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"The Final Frontier (1)\" (0.64)",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S07E23.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S07E23.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E23.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1436,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 143
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 22,
           "name": "The Final Frontier (2)",
           "airdate": "1999-05-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "mad-about-you-complete-series",
             "itemTitle": "Mad About You: The Complete Series",
@@ -5861,22 +5819,7 @@
             "playable": true,
             "sizeMB": 74
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mad.about.you.1992.complete",
-              "itemTitle": "Mad About You (1992) (Complete)",
-              "file": "Mad.About.You.S07E22.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "name": "Mad.About.You.S07E22.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD",
-              "url": "https://archive.org/download/mad.about.you.1992.complete/Mad.About.You.S07E22.The.Final.Frontier.AMZN.WEB-DL.DDP2.0.H.264.DUAL-alfaHD.mp4",
-              "seconds": 1436,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "audio (DDP2)",
-              "sizeMB": 143
-            }
-          ]
+          "alternates": []
         }
       ]
     },

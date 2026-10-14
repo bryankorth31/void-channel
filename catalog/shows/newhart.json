@@ -3,7 +3,7 @@
   "slug": "newhart",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-13T21:20:05.584Z",
+  "matchedAt": "2026-10-14T00:00:57.190Z",
   "tvmaze": {
     "id": 1488,
     "name": "Newhart",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 184,
-    "live": 178,
-    "review": 5,
+    "live": 176,
+    "review": 7,
     "missing": 1,
     "pct": 99
   },
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "In the Beginning...",
           "airdate": "1982-10-25",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "NewhartSeries",
             "itemTitle": "Newhart Season 1",
@@ -551,9 +551,9 @@
           "number": 5,
           "name": "The Girl From Manhattan",
           "airdate": "1983-11-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "NewhartSeries2",
             "itemTitle": "Newhart Season 2",

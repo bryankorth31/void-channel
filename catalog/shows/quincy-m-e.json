@@ -3,7 +3,7 @@
   "slug": "quincy-m-e",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-13T21:20:06.393Z",
+  "matchedAt": "2026-10-14T00:00:58.013Z",
   "tvmaze": {
     "id": 841,
     "name": "Quincy, M.E.",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 148,
-    "live": 135,
-    "review": 7,
+    "live": 134,
+    "review": 8,
     "missing": 6,
     "pct": 96
   },
@@ -2437,9 +2437,9 @@
           "number": 6,
           "name": "Welcome to Paradise Palms",
           "airdate": "1980-12-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "quincy-m.-e.-s-02-e-01-e-02-snake-eyes",
             "itemTitle": "Quincy, M. E. ",
@@ -2453,7 +2453,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Quincy-Lando18",
               "itemTitle": "Quincy, M. E. (complete TV series)",

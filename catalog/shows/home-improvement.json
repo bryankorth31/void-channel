@@ -3,7 +3,7 @@
   "slug": "home-improvement",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-13T21:21:03.737Z",
+  "matchedAt": "2026-10-14T00:00:42.120Z",
   "tvmaze": {
     "id": 544,
     "name": "Home Improvement",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 203,
-    "live": 190,
-    "review": 10,
+    "live": 188,
+    "review": 12,
     "missing": 3,
     "pct": 99
   },
@@ -1639,9 +1639,9 @@
           "number": 14,
           "name": "Howard's End",
           "airdate": "1993-01-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-tv-series",
             "itemTitle": "Home Improvement (TV series)",
@@ -1655,7 +1655,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "home-improvement-complete-dvd-rip",
               "itemTitle": "Home Improvement Complete DVD Rip",
@@ -6303,9 +6303,9 @@
           "number": 24,
           "name": "Tool-Thousand-One: A Space Odyssey",
           "airdate": "1998-05-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "home-improvement-tv-series",
             "itemTitle": "Home Improvement (TV series)",
@@ -6317,22 +6317,7 @@
             "playable": true,
             "sizeMB": 170
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "home-improvement-complete-dvd-rip",
-              "itemTitle": "Home Improvement Complete DVD Rip",
-              "file": "Home Improvement 1991 Complete DVDRIP x264/Home Improvement 1991 Season 7 Complete DVDRip x264 [i_c]/Home Improvement S07E24 Tool-Thousand-One - a Space Odyssey.mkv",
-              "name": "Home Improvement 1991 Complete DVDRIP x264/Home Improvement 1991 Season 7 Complete DVDRip x264 [i_c]/Home Improvement S07E24 Tool-Thousand-One - a Space Odyssey",
-              "url": "https://archive.org/download/home-improvement-complete-dvd-rip/Home%20Improvement%201991%20Complete%20DVDRIP%20x264%2FHome%20Improvement%201991%20Season%207%20Complete%20DVDRip%20x264%20%5Bi_c%5D%2FHome%20Improvement%20S07E24%20Tool-Thousand-One%20-%20a%20Space%20Odyssey.mkv",
-              "seconds": 1321,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 195
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 25,

@@ -3,7 +3,7 @@
   "slug": "the-outer-limits",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Showtime",
-  "matchedAt": "2026-10-13T21:19:59.587Z",
+  "matchedAt": "2026-10-14T00:00:50.999Z",
   "tvmaze": {
     "id": 2289,
     "name": "The Outer Limits",
@@ -2313,45 +2313,19 @@
           "airdate": "1996-06-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "OuterLimitsUNCENSOREDCollection2",
-            "itemTitle": "The Outer Limits UNCENSORED Collection Part 2",
-            "file": "Outer Limits S02E17 - Paradise.mp4",
-            "name": "Outer Limits S02E17 - Paradise",
-            "url": "https://archive.org/download/OuterLimitsUNCENSOREDCollection2/Outer%20Limits%20S02E17%20-%20Paradise.mp4",
-            "seconds": 2580,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
+            "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
+            "file": "the outer limits-s2e17-1964-colorized-576p-sd.mp4",
+            "name": "the outer limits-s2e17-1964-colorized-576p-sd",
+            "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e17-1964-colorized-576p-sd.mp4",
+            "seconds": 3151,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 689
+            "sizeMB": 303
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 2x17 - Une Lueur Dans La Nuit (Paradise).mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 2x17 - Une Lueur Dans La Nuit (Paradise)",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%202x17%20-%20Une%20Lueur%20Dans%20La%20Nuit%20(Paradise).mp4",
-              "seconds": 2526,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 304
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-outer-limits-s-2e-3-1964-colorized-576p-sd",
-              "itemTitle": "The Outer Limits – Complete Season 2 (17 Episodes) (restored, colorized) (1964, TV Series)",
-              "file": "the outer limits-s2e17-1964-colorized-576p-sd.mp4",
-              "name": "the outer limits-s2e17-1964-colorized-576p-sd",
-              "url": "https://archive.org/download/the-outer-limits-s-2e-3-1964-colorized-576p-sd/the%20outer%20limits-s2e17-1964-colorized-576p-sd.mp4",
-              "seconds": 3151,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 303
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -2364,6 +2338,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 126
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "OuterLimitsUNCENSOREDCollection2",
+              "itemTitle": "The Outer Limits UNCENSORED Collection Part 2",
+              "file": "Outer Limits S02E17 - Paradise.mp4",
+              "name": "Outer Limits S02E17 - Paradise",
+              "url": "https://archive.org/download/OuterLimitsUNCENSOREDCollection2/Outer%20Limits%20S02E17%20-%20Paradise.mp4",
+              "seconds": 2580,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 689
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
+              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
+              "file": "Au-Delà Du Réel, L'Aventure Continue - 2x17 - Une Lueur Dans La Nuit (Paradise).mp4",
+              "name": "Au-Delà Du Réel, L'Aventure Continue - 2x17 - Une Lueur Dans La Nuit (Paradise)",
+              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%202x17%20-%20Une%20Lueur%20Dans%20La%20Nuit%20(Paradise).mp4",
+              "seconds": 2526,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 304
             }
           ]
         },
