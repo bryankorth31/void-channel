@@ -38,12 +38,19 @@ function tvmazeYear(show) {
   try { return parseInt(JSON.parse(fs.readFileSync(f, 'utf8')).premiered.slice(0, 4), 10) || null; } catch (e) { return null; }
 }
 
+const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
 async function lookup(entry) {
   const show = entry.name;
   const year = tvmazeYear(show);
   const cf = path.join(CACHE_DIR, 'tmdb-' + slug(show) + '.json');
+  const ov = OVERRIDES[slug(show)] || {};
   let detail;
   if (fs.existsSync(cf)) detail = JSON.parse(fs.readFileSync(cf, 'utf8'));
+  else if (ov.tmdbId) { // a fixed id from overrides.json wins (name collisions)
+    detail = await tmdb('/tv/' + ov.tmdbId);
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+    fs.writeFileSync(cf, JSON.stringify(detail));
+  }
   else {
     const q = show.replace(/\s*\(.*?\)\s*/g, ' ').trim();
     let res = (await tmdb('/search/tv', { query: q, ...(year ? { first_air_date_year: String(year) } : {}) })).results || [];
