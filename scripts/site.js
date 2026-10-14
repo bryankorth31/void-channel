@@ -52,7 +52,7 @@ fs.writeFileSync(path.join(OUT, '_redirects'), hostRules + '/show/* /index.html 
 // Pages Functions live beside the output: the password gate (functions/_middleware.js) only runs
 // when the SITE_PASSWORD variable is set on the Pages project.
 const fnSrc = path.join(ROOT, 'functions');
-if (fs.existsSync(fnSrc)) { fs.mkdirSync(path.join(OUT, 'functions'), { recursive: true }); for (const f of fs.readdirSync(fnSrc)) fs.copyFileSync(path.join(fnSrc, f), path.join(OUT, 'functions', f)); }
+if (fs.existsSync(fnSrc)) fs.cpSync(fnSrc, path.join(OUT, 'functions'), { recursive: true });
 const brandSrc = path.join(ROOT, 'assets', 'brand');
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
