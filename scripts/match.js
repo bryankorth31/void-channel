@@ -215,7 +215,7 @@ function selfGrid(entry, cand, aliases) {
     const net = norm(entry.network || '').replace(/ /g, '');
     const mentionsNet = !!net && net.length > 2 && (norm((item.title || '') + ' ' + item.id + ' ' + (Array.isArray(item.collection) ? item.collection.join(' ') : item.collection || '')).replace(/ /g, '').includes(net));
     return { item, starts, named, vids, distinct, med, mentionsNet };
-  }).filter((x) => x.named && !langRisk(x.item.title) && !(JUNK.test((x.item.title || '') + ' ' + x.item.id) && !x.starts) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
+  }).filter((x) => x.named && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !(JUNK.test((x.item.title || '') + ' ' + x.item.id) && !x.starts) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
   if (!items.length) return null;
   // when some uploads name the network (channel101-yacht-rock), the ones that do not are someone else's Yacht Rock
   const netItems = items.filter((x) => x.mentionsNet); if (netItems.length) items.splice(0, items.length, ...netItems);
