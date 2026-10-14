@@ -87,6 +87,7 @@ async function tvmaze(show) {
     const r = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(show.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()), { signal: AbortSignal.timeout(20000) });
     if (!r.ok) return null;
     const s = await r.json();
+    if (!ov.tvmazeId) { const a = norm(show).replace(/(.*?)/g, '').trim(), b = norm(s.name); const bag = (t) => new Set(t.split(' ').filter((w) => w.length > 2)); const A = bag(a), B = bag(b); let hit = 0; for (const w of A) if (B.has(w)) hit++; const sim = A.size ? hit / A.size : 0; if (!b.includes(a) && !a.includes(b) && sim < 0.6) { console.log(`   TVmaze offered "${s.name}" for "${show}": not the same show, treating as no match`); return null; } }
     const er = await fetch(`https://api.tvmaze.com/shows/${s.id}/episodes`, { signal: AbortSignal.timeout(20000) });
     const eps = er.ok ? await er.json() : [];
     const out = {
