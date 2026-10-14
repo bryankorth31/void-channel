@@ -1,0 +1,84 @@
+{
+  "show": "Wonders of the Universe",
+  "slug": "wonders-of-the-universe",
+  "type": "Documentary & Geographic",
+  "network": "BBC Two",
+  "matchedAt": "2026-10-14T07:18:25.677Z",
+  "tvmaze": {
+    "id": 5095,
+    "name": "Wonders of the Universe",
+    "runtime": 60,
+    "premiered": "2011-03-06",
+    "network": "BBC Two"
+  },
+  "coverage": {
+    "total": 4,
+    "live": 0,
+    "review": 2,
+    "missing": 2,
+    "pct": 50
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Destiny",
+          "airdate": "2011-03-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Destiny\" (0.95)",
+            "item": "Wonders-of-the-Universe-Sindhi",
+            "itemTitle": "Wonders of the Universe in Sindhi by Nawaz Soomro",
+            "file": "WoU - Sindhi Destiny.mp4",
+            "name": "WoU - Sindhi Destiny",
+            "url": "https://archive.org/download/Wonders-of-the-Universe-Sindhi/WoU%20-%20Sindhi%20Destiny.mp4",
+            "seconds": 3544,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3618
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Stardust",
+          "airdate": "2011-03-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Stardust\" (0.95)",
+            "item": "Wonders-of-the-Universe-Sindhi",
+            "itemTitle": "Wonders of the Universe in Sindhi by Nawaz Soomro",
+            "file": "WoU -Sindhi Stardust.m4v",
+            "name": "WoU -Sindhi Stardust",
+            "url": "https://archive.org/download/Wonders-of-the-Universe-Sindhi/WoU%20-Sindhi%20Stardust.m4v",
+            "seconds": 3512,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 453
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Falling",
+          "airdate": "2011-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Messengers",
+          "airdate": "2011-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

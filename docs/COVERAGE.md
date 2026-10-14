@@ -1,6 +1,6 @@
 # Coverage
 
-744 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+813 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -15,6 +15,7 @@
 | Coach | 90s Sitcoms | 200 | 155 | 44 | 1 | 100% |
 | Concentration | Classic TV | 251 | 0 | 251 | 0 | 100% |
 | Drawn Together | Animated | 36 | 26 | 10 | 0 | 100% |
+| Dynasties | Documentary & Geographic | 9 | 4 | 5 | 0 | 100% |
 | Elizabeth R | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | Everybody Loves Raymond | 90s Sitcoms | 209 | 174 | 34 | 1 | 100% |
 | Fat Guy Stuck in Internet | Adult Swim | 10 | 9 | 1 | 0 | 100% |
@@ -46,6 +47,7 @@
 | Nathan for You | 2000s and Later Sitcoms | 31 | 30 | 1 | 0 | 100% |
 | Perfect Hair Forever | Adult Swim | 9 | 7 | 2 | 0 | 100% |
 | Petticoat Junction | Classic TV | 222 | 0 | 221 | 1 | 100% |
+| Planet Earth II | Documentary & Geographic | 6 | 0 | 6 | 0 | 100% |
 | Police Squad! | Classic TV | 6 | 3 | 3 | 0 | 100% |
 | Pornucopia | Late Night | 6 | 5 | 1 | 0 | 100% |
 | Punky Brewster | Classic TV | 88 | 63 | 25 | 0 | 100% |
@@ -60,13 +62,19 @@
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
 | The Dresden Files | Sci-Fi, Fantasy and Horror | 12 | 7 | 5 | 0 | 100% |
 | The Joker's Wild | Classic TV | 1 | 1 | 0 | 0 | 100% |
+| The Life of Mammals | Documentary & Geographic | 10 | 9 | 1 | 0 | 100% |
 | The Paradise | British and Beyond | 16 | 15 | 1 | 0 | 100% |
 | The Prisoner | Classic TV | 6 | 6 | 0 | 0 | 100% |
 | The Richard Pryor Show | Classic TV | 4 | 4 | 0 | 0 | 100% |
+| The Trials of Life | Documentary & Geographic | 12 | 0 | 12 | 0 | 100% |
+| The Undersea World of Jacques Cousteau | Documentary & Geographic | 36 | 26 | 10 | 0 | 100% |
 | The Young Ones | Classic TV | 12 | 0 | 12 | 0 | 100% |
 | Tigtone | Adult Swim | 20 | 13 | 7 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 24 | 6 | 0 | 100% |
+| Victory at Sea | Documentary & Geographic | 26 | 0 | 26 | 0 | 100% |
+| Vietnam: A Television History | Documentary & Geographic | 11 | 0 | 11 | 0 | 100% |
 | Wagon Train | Classic TV | 284 | 251 | 33 | 0 | 100% |
+| Walking with Dinosaurs | Documentary & Geographic | 6 | 1 | 5 | 0 | 100% |
 | What's Happening!! | Classic TV | 65 | 53 | 12 | 0 | 100% |
 | Workaholics | 2000s and Later Sitcoms | 86 | 70 | 16 | 0 | 100% |
 | Xavier: Renegade Angel | Adult Swim | 20 | 20 | 0 | 0 | 100% |
@@ -86,6 +94,7 @@
 | Nurse Jackie | 2000s and Later Sitcoms | 80 | 0 | 78 | 2 | 98% |
 | Perfect Strangers | Classic TV | 150 | 122 | 25 | 3 | 98% |
 | Sliders | Sci-Fi, Fantasy and Horror | 87 | 60 | 25 | 2 | 98% |
+| Bill Nye the Science Guy | Documentary & Geographic | 100 | 80 | 17 | 3 | 97% |
 | Davey and Goliath | Classic TV | 66 | 54 | 10 | 2 | 97% |
 | Harvey Birdman, Attorney at Law | Adult Swim | 39 | 38 | 0 | 1 | 97% |
 | Mad About You | 90s Sitcoms | 176 | 133 | 38 | 5 | 97% |
@@ -103,8 +112,10 @@
 | Barney Miller | Classic TV | 170 | 145 | 17 | 8 | 95% |
 | Diff'rent Strokes | Classic TV | 189 | 152 | 28 | 9 | 95% |
 | Highlander: The Raven | Sci-Fi, Fantasy and Horror | 22 | 13 | 8 | 1 | 95% |
+| The Joy of Painting | Documentary & Geographic | 403 | 174 | 208 | 21 | 95% |
 | Aqua Teen Hunger Force | Adult Swim | 143 | 114 | 20 | 9 | 94% |
 | Courage the Cowardly Dog | Animated | 53 | 0 | 50 | 3 | 94% |
+| The Crocodile Hunter | Documentary & Geographic | 64 | 52 | 8 | 4 | 94% |
 | The Wonder Years | 90s Sitcoms | 32 | 13 | 17 | 2 | 94% |
 | Ugly Americans | Animated | 31 | 29 | 0 | 2 | 94% |
 | 30 Rock | 2000s and Later Sitcoms | 138 | 95 | 34 | 9 | 93% |
@@ -130,12 +141,14 @@
 | UFO | Classic TV | 26 | 9 | 14 | 3 | 88% |
 | My Wife and Kids | 2000s and Later Sitcoms | 123 | 94 | 13 | 16 | 87% |
 | Star Trek: Deep Space Nine | Sci-Fi, Fantasy and Horror | 176 | 27 | 126 | 23 | 87% |
+| Blue Planet II | Documentary & Geographic | 7 | 0 | 6 | 1 | 86% |
 | Firefly | Sci-Fi, Fantasy and Horror | 14 | 0 | 12 | 2 | 86% |
 | Godless | Streaming Era | 7 | 5 | 1 | 1 | 86% |
 | Jonathan Strange & Mr Norrell | British and Beyond | 7 | 6 | 0 | 1 | 86% |
 | NYPD Blue | Drama | 261 | 38 | 184 | 39 | 85% |
 | Star Trek: Voyager | Sci-Fi, Fantasy and Horror | 172 | 42 | 105 | 25 | 85% |
 | Knight Rider | Classic TV | 84 | 55 | 15 | 14 | 83% |
+| The Living Planet | Documentary & Geographic | 12 | 0 | 10 | 2 | 83% |
 | Murphy Brown | Classic TV | 260 | 0 | 212 | 48 | 82% |
 | Earth: Final Conflict | Sci-Fi, Fantasy and Horror | 110 | 64 | 24 | 22 | 80% |
 | The Bible | Streaming Era | 10 | 0 | 8 | 2 | 80% |
@@ -157,7 +170,9 @@
 | Blackadder | Classic TV | 24 | 0 | 17 | 7 | 71% |
 | Important Things with Demetri Martin | Sketch and Comedy | 17 | 12 | 0 | 5 | 71% |
 | Pee-wee's Playhouse | Classic TV | 45 | 0 | 32 | 13 | 71% |
+| The Roosevelts: An Intimate History | Documentary & Geographic | 7 | 4 | 1 | 2 | 71% |
 | Alfred Hitchcock Presents | Classic TV | 268 | 187 | 0 | 81 | 70% |
+| The Day the Universe Changed | Documentary & Geographic | 10 | 7 | 0 | 3 | 70% |
 | Apollo Gauntlet | Adult Swim | 6 | 0 | 4 | 2 | 67% |
 | Homeboys in Outer Space | 90s Sitcoms | 21 | 0 | 14 | 7 | 67% |
 | Limmy's Show | British and Beyond | 18 | 0 | 12 | 6 | 67% |
@@ -165,6 +180,7 @@
 | Upright Citizens Brigade | Sketch and Comedy | 30 | 6 | 14 | 10 | 67% |
 | Murder, She Wrote | Classic TV | 264 | 137 | 34 | 93 | 65% |
 | Brickleberry | Animated | 36 | 0 | 23 | 13 | 64% |
+| Eyes on the Prize | Documentary & Geographic | 14 | 0 | 9 | 5 | 64% |
 | Riptide | Classic TV | 56 | 0 | 36 | 20 | 64% |
 | Stargate Atlantis | Sci-Fi, Fantasy and Horror | 100 | 0 | 64 | 36 | 64% |
 | Supernatural | Sci-Fi, Fantasy and Horror | 327 | 0 | 208 | 119 | 64% |
@@ -183,12 +199,18 @@
 | Legion | Sci-Fi, Fantasy and Horror | 27 | 0 | 15 | 12 | 56% |
 | Beavis and Butt-Head | Animated | 210 | 11 | 105 | 94 | 55% |
 | The Mary Tyler Moore Show | Classic TV | 168 | 38 | 55 | 75 | 55% |
+| The Ascent of Man | Documentary & Geographic | 13 | 0 | 7 | 6 | 54% |
 | Avatar: The Last Airbender | Animated | 15 | 0 | 8 | 7 | 53% |
 | Invader Zim | Animated | 46 | 4 | 19 | 23 | 50% |
 | Sharpe | British and Beyond | 18 | 0 | 9 | 9 | 50% |
+| Tales of the Gun | Documentary & Geographic | 52 | 0 | 26 | 26 | 50% |
+| The Life of Birds | Documentary & Geographic | 10 | 0 | 5 | 5 | 50% |
+| The Morton Downey Jr. Show | Classic TV | 2 | 0 | 1 | 1 | 50% |
 | The Six Wives of Henry VIII | Classic TV | 4 | 0 | 2 | 2 | 50% |
 | Wolf Hall | British and Beyond | 12 | 5 | 1 | 6 | 50% |
+| Wonders of the Universe | Documentary & Geographic | 4 | 0 | 2 | 2 | 50% |
 | The Avengers | Classic TV | 161 | 50 | 25 | 86 | 47% |
+| Baseball | Documentary & Geographic | 11 | 0 | 5 | 6 | 45% |
 | Highlander: The Series | Sci-Fi, Fantasy and Horror | 40 | 0 | 18 | 22 | 45% |
 | The Son | Drama | 20 | 7 | 2 | 11 | 45% |
 | The Dick Van Dyke Show | Classic TV | 158 | 68 | 0 | 90 | 43% |
@@ -205,6 +227,7 @@
 | Amos 'n' Andy | Classic TV | 78 | 21 | 6 | 51 | 35% |
 | Blake's 7 | Classic TV | 52 | 10 | 8 | 34 | 35% |
 | Full House | 90s Sitcoms | 192 | 65 | 1 | 126 | 34% |
+| Cosmos: A Personal Voyage | Documentary & Geographic | 39 | 11 | 2 | 26 | 33% |
 | Sister, Sister | 90s Sitcoms | 119 | 16 | 23 | 80 | 33% |
 | The Dinah Shore Chevy Show | Classic TV | 3 | 0 | 1 | 2 | 33% |
 | The Inbetweeners | British and Beyond | 18 | 5 | 1 | 12 | 33% |
@@ -222,6 +245,7 @@
 | That '70s Show | 90s Sitcoms | 200 | 49 | 3 | 148 | 26% |
 | Hornblower | British and Beyond | 8 | 0 | 2 | 6 | 25% |
 | Superjail! | Adult Swim | 36 | 9 | 0 | 27 | 25% |
+| MythBusters | Documentary & Geographic | 273 | 1 | 65 | 207 | 24% |
 | Delocated | Adult Swim | 30 | 6 | 1 | 23 | 23% |
 | Joe Pera Talks with You | Adult Swim | 31 | 0 | 7 | 24 | 23% |
 | Curb Your Enthusiasm | 2000s and Later Sitcoms | 120 | 0 | 26 | 94 | 22% |
@@ -238,10 +262,10 @@
 | Johnny Bravo | Animated | 181 | 0 | 34 | 147 | 19% |
 | MADtv | Sketch and Comedy | 327 | 61 | 0 | 266 | 19% |
 | Batman | Classic TV | 120 | 12 | 9 | 99 | 18% |
-| Password | Classic TV | 41 | 7 | 0 | 34 | 17% |
 | Peaky Blinders | Streaming Era | 36 | 5 | 1 | 30 | 17% |
 | The Waltons | Classic TV | 212 | 29 | 8 | 175 | 17% |
 | CHiPs | Classic TV | 139 | 20 | 2 | 117 | 16% |
+| How the Universe Works | Documentary & Geographic | 92 | 0 | 14 | 78 | 15% |
 | Key & Peele | Sketch and Comedy | 53 | 8 | 0 | 45 | 15% |
 | Living Single | 90s Sitcoms | 118 | 10 | 8 | 100 | 15% |
 | The Honeymooners | Classic TV | 225 | 32 | 1 | 192 | 15% |
@@ -265,9 +289,11 @@
 | Pulling | British and Beyond | 12 | 1 | 0 | 11 | 8% |
 | Robot Chicken | Adult Swim | 218 | 0 | 17 | 201 | 8% |
 | The Americans | Drama | 75 | 0 | 6 | 69 | 8% |
+| Through the Wormhole | Documentary & Geographic | 62 | 3 | 2 | 57 | 8% |
 | ER | Drama | 331 | 0 | 22 | 309 | 7% |
 | Happy Days | Classic TV | 255 | 15 | 2 | 238 | 7% |
 | Doug | Animated | 169 | 0 | 10 | 159 | 6% |
+| NOVA | Documentary & Geographic | 1014 | 2 | 55 | 957 | 6% |
 | Christy | Drama | 20 | 0 | 1 | 19 | 5% |
 | Dawson's Creek | Drama | 128 | 4 | 2 | 122 | 5% |
 | Starsky & Hutch | Classic TV | 92 | 0 | 5 | 87 | 5% |
@@ -282,11 +308,13 @@
 | Miami Vice | Classic TV | 110 | 2 | 2 | 106 | 4% |
 | PEN15 | Streaming Era | 24 | 1 | 0 | 23 | 4% |
 | Rick and Morty | Adult Swim | 91 | 2 | 2 | 87 | 4% |
+| Secrets of the Dead | Documentary & Geographic | 128 | 2 | 3 | 123 | 4% |
 | Stewart Lee's Comedy Vehicle | British and Beyond | 24 | 1 | 0 | 23 | 4% |
 | The Heart, She Holler | Adult Swim | 28 | 1 | 0 | 27 | 4% |
 | The Jack Benny Program | Classic TV | 260 | 1 | 10 | 249 | 4% |
 | The Joey Bishop Show | Classic TV | 123 | 4 | 1 | 118 | 4% |
 | The Smothers Brothers Comedy Hour | Classic TV | 72 | 0 | 3 | 69 | 4% |
+| 3-2-1 Contact | Documentary & Geographic | 225 | 2 | 4 | 219 | 3% |
 | Good Times | Classic TV | 133 | 2 | 2 | 129 | 3% |
 | Green Acres | Classic TV | 170 | 3 | 2 | 165 | 3% |
 | Hollywood Palace | Classic TV | 192 | 6 | 0 | 186 | 3% |
@@ -297,6 +325,7 @@
 | Spartacus | Drama | 33 | 1 | 0 | 32 | 3% |
 | The Comeback | 2000s and Later Sitcoms | 29 | 0 | 1 | 28 | 3% |
 | The Walking Dead | Sci-Fi, Fantasy and Horror | 177 | 0 | 5 | 172 | 3% |
+| American Experience | Documentary & Geographic | 420 | 4 | 3 | 413 | 2% |
 | Bonanza | Classic TV | 431 | 0 | 7 | 424 | 2% |
 | Co-Ed Confidential | Late Night | 52 | 0 | 1 | 51 | 2% |
 | Futurama | Animated | 164 | 1 | 3 | 160 | 2% |
@@ -307,6 +336,7 @@
 | Rugrats | Animated | 166 | 1 | 3 | 162 | 2% |
 | Sabrina the Teenage Witch | 90s Sitcoms | 163 | 3 | 1 | 159 | 2% |
 | Sealab 2021 | Adult Swim | 52 | 0 | 1 | 51 | 2% |
+| Shark Week | Documentary & Geographic | 348 | 0 | 6 | 342 | 2% |
 | Solid Gold | Classic TV | 342 | 7 | 0 | 335 | 2% |
 | The Andy Griffith Show | Classic TV | 249 | 0 | 4 | 245 | 2% |
 | The Dating Game | Classic TV | 251 | 0 | 6 | 245 | 2% |
@@ -315,6 +345,7 @@
 | The Rifleman | Classic TV | 168 | 0 | 3 | 165 | 2% |
 | The Steve Harvey Show | 90s Sitcoms | 122 | 1 | 1 | 120 | 2% |
 | The X-Files | Sci-Fi, Fantasy and Horror | 218 | 0 | 4 | 214 | 2% |
+| Unsolved History | Documentary & Geographic | 46 | 0 | 1 | 45 | 2% |
 | Wonder Woman | Classic TV | 60 | 0 | 1 | 59 | 2% |
 | Animaniacs | Animated | 274 | 0 | 4 | 270 | 1% |
 | Arrow | Sci-Fi, Fantasy and Horror | 170 | 1 | 0 | 169 | 1% |
@@ -334,11 +365,15 @@
 | The Dukes of Hazzard | Classic TV | 147 | 1 | 1 | 145 | 1% |
 | The Facts of Life | Classic TV | 200 | 0 | 1 | 199 | 1% |
 | The George Burns and Gracie Allen Show | Classic TV | 291 | 0 | 2 | 289 | 1% |
+| The Jerry Springer Show | Classic TV | 346 | 0 | 2 | 344 | 1% |
 | The League | 2000s and Later Sitcoms | 84 | 0 | 1 | 83 | 1% |
 | The Love Boat | Classic TV | 245 | 3 | 0 | 242 | 1% |
+| The New Yankee Workshop | Documentary & Geographic | 286 | 1 | 1 | 284 | 1% |
 | The Parkers | 90s Sitcoms | 110 | 0 | 1 | 109 | 1% |
 | The Tonight Show Starring Johnny Carson | Classic TV | 1660 | 0 | 17 | 1643 | 1% |
+| The Universe | Documentary & Geographic | 88 | 0 | 1 | 87 | 1% |
 | The Wayans Bros. | 90s Sitcoms | 102 | 1 | 0 | 101 | 1% |
+| This Old House | Documentary & Geographic | 1196 | 0 | 9 | 1187 | 1% |
 | WKRP in Cincinnati | Classic TV | 90 | 1 | 0 | 89 | 1% |
 | You Bet Your Life | Classic TV | 174 | 0 | 2 | 172 | 1% |
 | 1883 | Streaming Era | 10 | 0 | 0 | 10 | 0% |
@@ -346,8 +381,10 @@
 | 3rd Rock from the Sun | 90s Sitcoms | 139 | 0 | 0 | 139 | 0% |
 | 7th Heaven | Drama | 243 | 0 | 0 | 243 | 0% |
 | A.D. The Bible Continues | Streaming Era | 12 | 0 | 0 | 12 | 0% |
+| Africa | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
 | All in the Family | Classic TV | 210 | 0 | 0 | 210 | 0% |
 | America Undercover | Late Night | 79 | 0 | 0 | 79 | 0% |
+| America: The Story of Us | Documentary & Geographic | 12 | 0 | 0 | 12 | 0% |
 | American Bandstand | Classic TV | 2821 | 0 | 0 | 2821 | 0% |
 | American Dad! | Animated | 401 | 0 | 0 | 401 | 0% |
 | American Horror Story | Sci-Fi, Fantasy and Horror | 145 | 0 | 0 | 145 | 0% |
@@ -375,6 +412,7 @@
 | Beef House | Adult Swim | 6 | 0 | 0 | 6 | 0% |
 | Bewitched | Classic TV | 254 | 0 | 0 | 254 | 0% |
 | Billions | Drama | 84 | 0 | 0 | 84 | 0% |
+| Biography | Documentary & Geographic | 616 | 0 | 0 | 616 | 0% |
 | Birdgirl | Adult Swim | 12 | 0 | 0 | 12 | 0% |
 | Black Dynamite | Adult Swim | 19 | 0 | 0 | 19 | 0% |
 | Black Sails | Drama | 38 | 0 | 0 | 38 | 0% |
@@ -407,12 +445,15 @@
 | Cheers | Classic TV | 273 | 0 | 0 | 273 | 0% |
 | Chewing Gum | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Children's Hospital | Adult Swim | 85 | 0 | 0 | 85 | 0% |
+| Civilisation | Documentary & Geographic | 13 | 0 | 0 | 13 | 0% |
 | Cleopatra | Drama | 2 | 0 | 0 | 2 | 0% |
 | Columbo | Classic TV | 69 | 0 | 0 | 69 | 0% |
 | Comedy Bang! Bang! | Sketch and Comedy | 110 | 0 | 0 | 110 | 0% |
 | Community | 2000s and Later Sitcoms | 110 | 0 | 0 | 110 | 0% |
+| Connections | Documentary & Geographic | 40 | 0 | 0 | 40 | 0% |
 | Copper | Drama | 23 | 0 | 0 | 23 | 0% |
 | Corporate | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
+| Cosmos: A Spacetime Odyssey | Documentary & Geographic | 39 | 0 | 0 | 39 | 0% |
 | Crazy Ex-Girlfriend | 2000s and Later Sitcoms | 62 | 0 | 0 | 62 | 0% |
 | Cuckoo | British and Beyond | 32 | 0 | 0 | 32 | 0% |
 | Da Vinci's Demons | Drama | 28 | 0 | 0 | 28 | 0% |
@@ -459,6 +500,7 @@
 | Garrow's Law | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Garth Marenghi's Darkplace | British and Beyond | 6 | 0 | 0 | 6 | 0% |
 | Gentleman Jack | British and Beyond | 16 | 0 | 0 | 16 | 0% |
+| Geraldo | Classic TV | 11 | 0 | 0 | 11 | 0% |
 | Gilmore Girls | Drama | 153 | 0 | 0 | 153 | 0% |
 | Gomer Pyle, U.S.M.C. | Classic TV | 150 | 0 | 0 | 150 | 0% |
 | Gossip Girl | Drama | 121 | 0 | 0 | 121 | 0% |
@@ -470,10 +512,12 @@
 | Hatfields & McCoys | Drama | 3 | 0 | 0 | 3 | 0% |
 | Hee Haw | Classic TV | 405 | 0 | 1 | 404 | 0% |
 | Helen of Troy | Drama | 2 | 0 | 0 | 2 | 0% |
+| History's Mysteries | Documentary & Geographic | 38 | 0 | 0 | 38 | 0% |
 | Hogan's Heroes | Classic TV | 168 | 0 | 0 | 168 | 0% |
 | Homeland | Drama | 96 | 0 | 0 | 96 | 0% |
 | Hot Streets | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | How I Met Your Mother | 2000s and Later Sitcoms | 208 | 0 | 1 | 207 | 0% |
+| How It's Made | Documentary & Geographic | 416 | 0 | 0 | 416 | 0% |
 | How To with John Wilson | 2000s and Later Sitcoms | 18 | 0 | 0 | 18 | 0% |
 | Howards End | British and Beyond | 4 | 0 | 0 | 4 | 0% |
 | Human Remains | British and Beyond | 6 | 0 | 0 | 6 | 0% |
@@ -482,12 +526,15 @@
 | I'm a Virgo | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | I've Got a Secret | Classic TV | 592 | 0 | 0 | 592 | 0% |
 | Ideal | British and Beyond | 52 | 0 | 0 | 52 | 0% |
+| In Search of... | Documentary & Geographic | 152 | 0 | 0 | 152 | 0% |
 | In the Beginning | Drama | 2 | 0 | 0 | 2 | 0% |
+| Independent Lens | Documentary & Geographic | 546 | 0 | 0 | 546 | 0% |
 | Into the West | Drama | 6 | 0 | 0 | 6 | 0% |
 | It's Garry Shandling's Show | Classic TV | 72 | 0 | 0 | 72 | 0% |
 | Jamestown | British and Beyond | 24 | 0 | 0 | 24 | 0% |
 | Jane the Virgin | 2000s and Later Sitcoms | 100 | 0 | 0 | 100 | 0% |
 | Jason and the Argonauts | Drama | 2 | 0 | 0 | 2 | 0% |
+| Jazz | Documentary & Geographic | 10 | 0 | 0 | 10 | 0% |
 | Jeopardy! | Classic TV | 9585 | 0 | 0 | 9585 | 0% |
 | Jesus of Nazareth | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | John Adams | Drama | 7 | 0 | 0 | 7 | 0% |
@@ -506,6 +553,8 @@
 | Lazor Wulf | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | Legit | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Let's Make a Deal | Classic TV | 1686 | 0 | 0 | 1686 | 0% |
+| Life | Documentary & Geographic | 32 | 0 | 0 | 32 | 0% |
+| Life on Earth | Documentary & Geographic | 13 | 0 | 0 | 13 | 0% |
 | Life on Top | Late Night | 26 | 0 | 0 | 26 | 0% |
 | Lingerie | Late Night | 31 | 0 | 0 | 31 | 0% |
 | Little Dorrit | British and Beyond | 14 | 0 | 0 | 14 | 0% |
@@ -525,6 +574,7 @@
 | Manhattan | Drama | 23 | 0 | 0 | 23 | 0% |
 | Maniac | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | Marion and Geoff | British and Beyond | 16 | 0 | 0 | 16 | 0% |
+| Mark Twain | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
 | Martin | 90s Sitcoms | 132 | 0 | 0 | 132 | 0% |
 | Mary & George | British and Beyond | 7 | 0 | 0 | 7 | 0% |
 | Mary Shelley's Frankenhole | Adult Swim | 19 | 0 | 0 | 19 | 0% |
@@ -538,25 +588,32 @@
 | Middlemarch | British and Beyond | 6 | 0 | 0 | 6 | 0% |
 | Mo | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | Modern Family | 2000s and Later Sitcoms | 250 | 0 | 0 | 250 | 0% |
+| Modern Marvels | Documentary & Geographic | 730 | 0 | 2 | 728 | 0% |
 | Momma Named Me Sheriff | Adult Swim | 19 | 0 | 0 | 19 | 0% |
 | Mr Selfridge | British and Beyond | 40 | 0 | 0 | 40 | 0% |
 | Mr. Belvedere | Classic TV | 117 | 0 | 0 | 117 | 0% |
 | Mr. Neighbor's House | Adult Swim | 1 | 0 | 0 | 1 | 0% |
 | Mr. Pickles | Adult Swim | 31 | 0 | 0 | 31 | 0% |
 | Mr. Show | Sketch and Comedy | 30 | 0 | 0 | 30 | 0% |
+| Mutual of Omaha's Wild Kingdom | Documentary & Geographic | 71 | 0 | 0 | 71 | 0% |
 | Name That Tune | Classic TV | 75 | 0 | 0 | 75 | 0% |
 | Napoleon | Drama | 4 | 0 | 0 | 4 | 0% |
+| National Geographic Explorer | Documentary & Geographic | 245 | 0 | 0 | 245 | 0% |
+| Nature | Documentary & Geographic | 695 | 0 | 1 | 694 | 0% |
 | Neon Joe, Werewolf Hunter | Adult Swim | 10 | 0 | 0 | 10 | 0% |
 | Newsreaders | Adult Swim | 24 | 0 | 0 | 24 | 0% |
+| Newton's Apple | Documentary & Geographic | 195 | 0 | 0 | 195 | 0% |
 | Night Calls | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Nighty Night | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Nip/Tuck | Drama | 100 | 0 | 0 | 100 | 0% |
 | Nirvanna the Band the Show | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Noah's Ark | Drama | 23 | 0 | 0 | 23 | 0% |
 | North & South | British and Beyond | 15 | 0 | 0 | 15 | 0% |
+| Nova scienceNOW | Documentary & Geographic | 36 | 0 | 0 | 36 | 0% |
 | NTSF:SD:SUV:: | Adult Swim | 38 | 0 | 0 | 38 | 0% |
 | On Cinema | Adult Swim | 163 | 0 | 0 | 163 | 0% |
 | One Tree Hill | Drama | 187 | 0 | 0 | 187 | 0% |
+| Our Planet | Documentary & Geographic | 12 | 0 | 0 | 12 | 0% |
 | Outlander | Streaming Era | 101 | 0 | 0 | 101 | 0% |
 | Oz | Drama | 56 | 0 | 0 | 56 | 0% |
 | Party Down | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
@@ -567,7 +624,9 @@
 | Peter the Great | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | Players | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | Portlandia | Sketch and Comedy | 77 | 0 | 0 | 77 | 0% |
+| POV | Documentary & Geographic | 568 | 0 | 0 | 568 | 0% |
 | Pride and Prejudice | British and Beyond | 6 | 0 | 0 | 6 | 0% |
+| Prohibition | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Psychoville | British and Beyond | 13 | 0 | 0 | 13 | 0% |
 | Ramy | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | Reign | Drama | 78 | 0 | 0 | 78 | 0% |
@@ -588,6 +647,7 @@
 | Sanditon | British and Beyond | 20 | 0 | 0 | 20 | 0% |
 | Saturday Night Live | Classic TV | 1017 | 0 | 0 | 1017 | 0% |
 | Scarecrow and Mrs. King | Classic TV | 88 | 0 | 0 | 88 | 0% |
+| Scientific American Frontiers | Documentary & Geographic | 96 | 0 | 0 | 96 | 0% |
 | Scrabble | Classic TV | 38 | 0 | 0 | 38 | 0% |
 | Search Party | 2000s and Later Sitcoms | 50 | 0 | 0 | 50 | 0% |
 | Sex and the City | 90s Sitcoms | 94 | 0 | 0 | 94 | 0% |
@@ -649,6 +709,7 @@
 | The Increasingly Poor Decisions of Todd Margaret | 2000s and Later Sitcoms | 18 | 0 | 0 | 18 | 0% |
 | The Incredible Hulk | Classic TV | 82 | 0 | 0 | 82 | 0% |
 | The Jamie Foxx Show | 90s Sitcoms | 100 | 0 | 0 | 100 | 0% |
+| The Jeff Corwin Experience | Documentary & Geographic | 1 | 0 | 0 | 1 | 0% |
 | The Jeffersons | Classic TV | 253 | 0 | 0 | 253 | 0% |
 | The Kids in the Hall | Sketch and Comedy | 109 | 0 | 0 | 109 | 0% |
 | The Knick | Drama | 20 | 0 | 0 | 20 | 0% |
@@ -658,6 +719,7 @@
 | The Late Show with David Letterman | Classic TV | 4262 | 0 | 0 | 4262 | 0% |
 | The League of Gentlemen | British and Beyond | 21 | 0 | 0 | 21 | 0% |
 | The Leftovers | Drama | 28 | 0 | 0 | 28 | 0% |
+| The Maury Povich Show | Classic TV | 973 | 0 | 0 | 973 | 0% |
 | The Men Who Built America | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
 | The Midnight Special | Classic TV | 350 | 0 | 1 | 349 | 0% |
 | The Mike Douglas Show | Classic TV | 671 | 0 | 0 | 671 | 0% |
@@ -666,6 +728,7 @@
 | The Mists of Avalon | Drama | 2 | 0 | 0 | 2 | 0% |
 | The Musketeers | British and Beyond | 30 | 0 | 0 | 30 | 0% |
 | The Name of the Rose | British and Beyond | 8 | 0 | 0 | 8 | 0% |
+| The National Parks: America's Best Idea | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
 | The Newsroom | Drama | 25 | 0 | 0 | 25 | 0% |
 | The Odyssey | Drama | 2 | 0 | 0 | 2 | 0% |
 | The Office | 2000s and Later Sitcoms | 202 | 0 | 0 | 202 | 0% |
@@ -678,6 +741,7 @@
 | The Red Skelton Show | Classic TV | 478 | 0 | 0 | 478 | 0% |
 | The Rehearsal | 2000s and Later Sitcoms | 12 | 0 | 0 | 12 | 0% |
 | The Ren & Stimpy Show | Animated | 26 | 0 | 0 | 26 | 0% |
+| The Ricki Lake Show | Classic TV | 2 | 0 | 0 | 2 | 0% |
 | The Righteous Gemstones | 2000s and Later Sitcoms | 36 | 0 | 0 | 36 | 0% |
 | The Sarah Silverman Program | 2000s and Later Sitcoms | 32 | 0 | 0 | 32 | 0% |
 | The Serpent Queen | Drama | 16 | 0 | 0 | 16 | 0% |
@@ -695,9 +759,11 @@
 | The Tudors | Drama | 38 | 0 | 0 | 38 | 0% |
 | The Vampire Diaries | Sci-Fi, Fantasy and Horror | 171 | 0 | 0 | 171 | 0% |
 | The Venture Bros. | Adult Swim | 81 | 0 | 0 | 81 | 0% |
+| The War | Documentary & Geographic | 7 | 0 | 0 | 7 | 0% |
 | The White Princess | Drama | 8 | 0 | 0 | 8 | 0% |
 | The White Queen | British and Beyond | 10 | 0 | 0 | 10 | 0% |
 | The Wire | Drama | 60 | 0 | 0 | 60 | 0% |
+| The World at War | Documentary & Geographic | 26 | 0 | 0 | 26 | 0% |
 | The Young Indiana Jones Chronicles | Drama | 28 | 0 | 0 | 28 | 0% |
 | Thirtysomething | Classic TV | 85 | 0 | 0 | 85 | 0% |
 | This Is Your Life | Classic TV | 497 | 0 | 0 | 497 | 0% |
@@ -731,6 +797,7 @@
 | Vikings | Streaming Era | 89 | 0 | 0 | 89 | 0% |
 | Vikings: Valhalla | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | Walker, Texas Ranger | Drama | 202 | 0 | 0 | 202 | 0% |
+| Walking with Beasts | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
 | War & Peace | British and Beyond | 6 | 0 | 0 | 6 | 0% |
 | Warehouse 13 | Sci-Fi, Fantasy and Horror | 64 | 0 | 0 | 64 | 0% |
 | Weeds | 2000s and Later Sitcoms | 102 | 0 | 0 | 102 | 0% |
@@ -739,8 +806,10 @@
 | What's My Line? | Classic TV | 901 | 0 | 0 | 901 | 0% |
 | Wheel of Fortune | Classic TV | 8392 | 0 | 0 | 8392 | 0% |
 | Who's the Boss? | Classic TV | 196 | 0 | 0 | 196 | 0% |
+| Wild America | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Will & Grace | 90s Sitcoms | 246 | 0 | 0 | 246 | 0% |
 | Win, Lose or Draw | Classic TV | 575 | 0 | 0 | 575 | 0% |
+| Wonders of the Solar System | Documentary & Geographic | 5 | 0 | 0 | 5 | 0% |
 | World Without End | Drama | 8 | 0 | 0 | 8 | 0% |
 | Yes Minister | Classic TV | 21 | 0 | 0 | 21 | 0% |
 | YOLO: Crystal Fantasy | Adult Swim | 24 | 0 | 0 | 24 | 0% |
@@ -749,4 +818,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): X-Men: The Animated Series, Welcome to Eltingville, Babylon 5, G-String Divas, Shock Video, Hookers at the Point, Pimps Up, Ho's Down, Thinking XXX, Sex Bytes, Talk Sex with Sue Johanson, Sexcetera, USA Up All Night, The Outer Limits (1963), The Lawrence Welk Show, The Rockford Files, The Twilight Zone (1985), Battlestar Galactica (1978), Doctor Who (Classic), Highway to Heaven, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Dick Cavett Show, The Merv Griffin Show, Tomorrow with Tom Snyder, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, Later with Bob Costas, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $10,000 Pyramid, Queen for a Day, Tic-Tac-Dough, The $64,000 Question, High Rollers, Classic Concentration, Texaco Star Theatre, The Jackie Gleason Show, The David Susskind Show, The Phil Donahue Show, The Mike Wallace Interview, Art Linkletter's House Party, The Steve Allen Show, The Garry Moore Show, Don Kirshner's Rock Concert, The Nat King Cole Show, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): X-Men: The Animated Series, Welcome to Eltingville, Babylon 5, National Geographic Specials, Wild Discovery, Hardcore History, Ken Burns: Lewis & Clark, Unforgivable Blackness, G-String Divas, Shock Video, Hookers at the Point, Pimps Up, Ho's Down, Thinking XXX, Sex Bytes, Talk Sex with Sue Johanson, Sexcetera, USA Up All Night, The Outer Limits (1963), The Lawrence Welk Show, The Rockford Files, The Twilight Zone (1985), Battlestar Galactica (1978), Doctor Who (Classic), Highway to Heaven, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Dick Cavett Show, The Merv Griffin Show, Tomorrow with Tom Snyder, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, Later with Bob Costas, The Pat Sajak Show, The Dennis Miller Show, Password, The Newlywed Game, The $10,000 Pyramid, Queen for a Day, Tic-Tac-Dough, The $64,000 Question, High Rollers, Classic Concentration, Texaco Star Theatre, The Jackie Gleason Show, The David Susskind Show, The Phil Donahue Show, The Mike Wallace Interview, Art Linkletter's House Party, The Steve Allen Show, The Garry Moore Show, Don Kirshner's Rock Concert, The Nat King Cole Show, Sally Jessy Raphael, The Jenny Jones Show, The Montel Williams Show, Donahue, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
