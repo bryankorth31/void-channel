@@ -1,6 +1,6 @@
 # Coverage
 
-713 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+715 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -222,6 +222,7 @@
 | Review | 2000s and Later Sitcoms | 22 | 0 | 9 | 13 | 41% |
 | Black Sails | Drama | 38 | 10 | 5 | 23 | 39% |
 | Lost in Space | Classic TV | 28 | 0 | 11 | 17 | 39% |
+| Body Language | Classic TV | 26 | 0 | 10 | 16 | 38% |
 | Charmed | Sci-Fi, Fantasy and Horror | 178 | 23 | 44 | 111 | 38% |
 | Dharma & Greg | 90s Sitcoms | 119 | 44 | 1 | 74 | 38% |
 | Sister, Sister | 90s Sitcoms | 119 | 22 | 21 | 76 | 36% |
@@ -601,6 +602,7 @@
 | Star Trek | Classic TV | 79 | 0 | 0 | 79 | 0% |
 | Stella | Sketch and Comedy | 58 | 0 | 0 | 58 | 0% |
 | Strangers with Candy | 90s Sitcoms | 30 | 0 | 0 | 30 | 0% |
+| Super Password | Classic TV | 1147 | 0 | 0 | 1147 | 0% |
 | Swarm | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | Taboo | British and Beyond | 8 | 0 | 0 | 8 | 0% |
 | Taxi | Classic TV | 114 | 0 | 0 | 114 | 0% |
