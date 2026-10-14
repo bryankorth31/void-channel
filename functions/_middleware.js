@@ -10,12 +10,13 @@ async function token(secret) {
 
 const PAGE = (wrong) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>VOIDtv</title><style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#07080c url(/assets/brand/bg/sign-pink.jpg) center/cover no-repeat;color:#e8e8ee;font:16px system-ui,Segoe UI,Roboto,sans-serif}
-form{text-align:center;background:rgba(7,8,12,.72);padding:28px 32px;border-radius:14px;border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(6px)}b{font-size:34px;letter-spacing:.04em}b span{color:#5fd4ff}p{color:#8a8fa3;margin:8px 0 18px}
-input{background:#0f1118;border:1px solid #1d2130;color:#e8e8ee;padding:10px 14px;border-radius:8px;font:inherit;width:220px}
-button{background:#5fd4ff;border:0;color:#07080c;padding:10px 16px;border-radius:8px;font:inherit;font-weight:600;margin-left:6px;cursor:pointer}
-.w{color:#f3c969;font-size:13px;margin-top:10px}
-</style></head><body><form method="post"><b>VOID<span>tv</span></b><p>before AI slop, there was human creativity</p>
+body{margin:0;min-height:100vh;display:grid;place-items:end center;padding-bottom:9vh;box-sizing:border-box;background:#07080c url(/assets/brand/bg/sign-pink.jpg) center/cover no-repeat;color:#e8e8ee;font:16px system-ui,Segoe UI,Roboto,sans-serif}
+form{text-align:center;padding:0 16px}p{color:#d9dbe6;margin:0 0 14px;font-size:17px;text-shadow:0 2px 12px rgba(0,0,0,.9)}
+input{background:rgba(7,8,12,.78);border:1px solid rgba(255,255,255,.14);color:#e8e8ee;padding:12px 16px;border-radius:10px;font:inherit;width:min(260px,62vw)}
+button{background:#5fd4ff;border:0;color:#07080c;padding:12px 18px;border-radius:10px;font:inherit;font-weight:600;margin-left:6px;cursor:pointer}
+.w{color:#f3c969;font-size:13px;margin-top:10px;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+@media(max-width:600px){body{background-image:url(/assets/brand/bg/sign-pink-m.jpg)}}
+</style></head><body><form method="post"><p>before AI slop, there was human creativity</p>
 <input type="password" name="p" placeholder="password" autofocus><button>enter</button>${wrong ? '<div class="w">not it</div>' : ''}</form></body></html>`;
 
 export async function onRequest({ request, env, next }) {
