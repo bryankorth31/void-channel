@@ -441,7 +441,7 @@ function finder(){const series=VIS().filter(t=>!t.slug.startsWith('movie-'));con
  return '<div class="finder"><div class="frow"><span class="lbl">Genre</span>'+pills('genre',genres)+'</div><div class="frow"><span class="lbl">Network</span>'+pills('network',nets)+'</div><div class="frow"><span class="lbl">Decade</span>'+pills('decade',decs)+'</div></div>'}
 function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t)&&t.eps>=6);
  // three decks: the well-known (rated and deep), the cult (deep but under-rated), the shelves (two from every row and collection); dealt popular-first, then interleaved
- const QUIET=new Set(['World TV','Anime','Reality & Talk','Late Night','Internet Comedy','Classic TV']); // the front page is 1990 on; these rows reach the wall only as shelf picksconst main=ok.filter(t=>!QUIET.has(t.type));
+ const QUIET=new Set(['World TV','Anime','Reality & Talk','Late Night','Internet Comedy','Classic TV']);const main=ok.filter(t=>!QUIET.has(t.type));
  const byR=main.filter(t=>t.rating>=7&&t.eps>=10).sort((a,b)=>b.rating-a.rating||b.eps-a.eps);const popular=byR.slice(0,80);const pop=new Set(popular);
  const cult=main.filter(t=>t.eps>=20&&!pop.has(t)).sort((a,b)=>b.eps-a.eps).slice(0,50);const cul=new Set(cult);
  const groups={};for(const t of ok){(groups[t.type]=groups[t.type]||[]).push(t);for(const g of t.tags||[])(groups['#'+g]=groups['#'+g]||[]).push(t)}
