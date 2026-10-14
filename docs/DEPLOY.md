@@ -21,35 +21,23 @@ One-time, in the Cloudflare dashboard (B does this; takes ten minutes):
 
 Every later push to `master` rebuilds and redeploys in about a minute.
 
-## Swap day (B said go on 2026-10-14)
+## Swap day (B said go on 2026-10-14; password STAYS)
 
-In the Pages project `voidtvsite`, in this order:
+B's call: the test password stays on after the domain moves, so he can control who tests it and the
+~100 visitors a day voidtv.net still gets are not part of it yet. They see the gate page instead of
+the old Vercel app. Steps, in the Pages project `voidtvsite`:
 
-1. **Settings -> Variables and Secrets:** delete `SITE_PASSWORD` (the test gate; the middleware is inert
-   without it). Then **Deployments -> latest -> Retry deployment** so the build picks up the change.
-2. **Custom domains -> Set up a custom domain:** `voidtv.net`. Cloudflare sees the zone in the same
-   account and offers to replace the existing records (today they are proxied records pointing at
-   Vercel); accept. Then add `www.voidtv.net` the same way. Status goes Pending -> Active in a minute
-   or two; the certificate is automatic.
-3. Check `https://voidtv.net/` (new site, no password), `https://www.voidtv.net/` (redirects to the bare
-   domain) and `https://voidtv.net/show/seinfeld` (deep link renders).
-4. Vercel: the old project can be deleted once step 3 passes. Nothing else points at it.
+1. **Custom domains -> Set up a custom domain:** `voidtv.net`. Cloudflare sees the zone in the same
+   account and offers to replace the existing records (proxied records pointing at Vercel); accept.
+   Then add `www.voidtv.net` the same way. Status goes Pending -> Active in a minute or two.
+2. Check `https://voidtv.net/` (gate page, then the new site after the password),
+   `https://www.voidtv.net/` (redirects to the bare domain), `https://voidtv.net/show/seinfeld`.
+3. Vercel: the old project can be deleted once step 2 passes. Nothing else points at it.
+4. **Opening day, whenever B says:** Settings -> Variables and Secrets -> delete `SITE_PASSWORD`,
+   then Deployments -> latest -> Retry deployment. That is the whole launch.
 
-The build already stamps `https://voidtv.net` into share links and OG tags; the _redirects file folds
-www into the bare domain. The `voidtvsite.pages.dev` address keeps working as a second door.
-
-**Catalog cadence:** `node scripts/publish.js` commits whatever the builder has written to `catalog/`
-and `docs/` and pushes it (no-op when nothing changed). A Windows Task Scheduler job, "VoidTV
-Publish", runs it every two hours on B's PC (log: `catalog/cache/publish.log`). Remove with
-`schtasks /Delete /TN "VoidTV Publish" /F`.
-
-**Nightly pass:** `node scripts/nightly.js` runs the whole builder in order — hunt (skipped if a hunt
-is already running; two Archive jobs is the ceiling), TV-movie hunt, art, people (episode credits +
-bios + graph), db, publish — each step time-limited, failures logged and skipped so the publish
-still happens. Task Scheduler job "VoidTV Nightly", 3:30 AM daily; log `catalog/cache/nightly.log`.
-Remove with `schtasks /Delete /TN "VoidTV Nightly" /F`. The two-hour publish job stays alongside
-while the long hunts run; once they finish, the nightly pass alone is enough. The catalog is in the repo,
-so no secrets are needed at build time. `backend/.env` (the TMDB token) stays local and ignored.
+The build already stamps `https://voidtv.net` into share links and OG tags; _redirects folds www into
+the bare domain. `voidtvsite.pages.dev` keeps working as a second door (same gate).
 
 ## What `site/` contains
 
