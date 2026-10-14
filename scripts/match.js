@@ -201,18 +201,24 @@ function matchShow(entry) {
 function selfGrid(entry, cand, aliases) {
   const show = entry.name;
   const core = norm(show).replace(/^the /, '').replace(/(.*?)/g, '').trim();
+  if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
-  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top d+|mashup|trailer|promo|commercial|ad)/i;
+  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook)/i;
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));
     const named = names(item.title || '') || idn.includes(core.replace(/ /g, ''));
     const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name));
+    const distinct = new Set(vids.map((f) => norm(f.name).replace(/(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)/g, '').trim())).size; // format variants count once
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
-    return { item, starts, named, vids, med };
-  }).filter((x) => x.named && !langRisk(x.item.title) && !(JUNK.test((x.item.title || '') + ' ' + x.item.id) && !x.starts) && (x.starts || x.vids.length >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
+    const net = norm(entry.network || '').replace(/ /g, '');
+    const mentionsNet = !!net && net.length > 2 && (norm((item.title || '') + ' ' + item.id + ' ' + (Array.isArray(item.collection) ? item.collection.join(' ') : item.collection || '')).replace(/ /g, '').includes(net));
+    return { item, starts, named, vids, distinct, med, mentionsNet };
+  }).filter((x) => x.named && !langRisk(x.item.title) && !(JUNK.test((x.item.title || '') + ' ' + x.item.id) && !x.starts) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
   if (!items.length) return null;
+  // when some uploads name the network (channel101-yacht-rock), the ones that do not are someone else's Yacht Rock
+  const netItems = items.filter((x) => x.mentionsNet); if (netItems.length) items.splice(0, items.length, ...netItems);
   // the anchor is the upload that looks most like a series; others join only if their episodes are the same shape
   items.sort((a, b) => b.vids.length - a.vids.length || b.starts - a.starts);
   const anchor = items[0];
