@@ -182,9 +182,15 @@ function matchShow(entry) {
   for (const s of [...new Set(tv.episodes.map((e) => e.season))].sort((a, b) => a - b)) {
     const eps = tv.episodes.filter((e) => e.season === s).sort((a, b) => a.number - b.number).map((e) => {
       // A file that plays in a browser beats a cleaner-named one that will not; then confidence.
-      const opts = (assignments.get(`${e.season}x${e.number}`) || []).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
+      // B's decisions from HQ (catalog/overrides.json): rejectFiles never show again; acceptFiles win the
+      // episode outright at full confidence (he watched it play), even when the codec judge was unsure.
+      const fkey = (p) => p.item + '|' + p.name;
+      const rejected = new Set(ov.rejectFiles || []), accepted = new Set(ov.acceptFiles || []);
+      let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !rejected.has(fkey(o))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
+      const acc = opts.find((o) => accepted.has(fkey(o)));
+      if (acc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; opts = [acc, ...opts.filter((o) => o !== acc)]; }
       const pick = opts[0] || null;
-      const state = !pick ? 'MISSING' : (pick.conf >= LIVE && pick.playable) ? 'LIVE' : 'REVIEW';
+      const state = !pick ? 'MISSING' : (pick.conf >= LIVE && (pick.playable || acc === pick)) ? 'LIVE' : 'REVIEW';
       if (pick && !pick.playable) pick.why += ` | not browser-playable: ${pick.codecRisk}`;
       if (state === 'LIVE') live++; else if (state === 'REVIEW') review++;
       return { number: e.number, name: e.name, airdate: e.airdate, state, file: pick, alternates: opts.slice(1, 4) };

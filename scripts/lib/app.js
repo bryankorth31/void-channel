@@ -58,11 +58,12 @@ function assemble() {
   const BIO_DIR = path.join(ROOT, 'catalog', 'people-bios');
   const MOV_DIR = path.join(ROOT, 'catalog', 'movies');
   const TVM = readJson(path.join(ROOT, 'catalog', 'tvmovies-list.json'), { items: [] });
+  const OV = readJson(path.join(ROOT, 'catalog', 'overrides.json'), {}); // B's edits layer (HQ writes it): hidden shows stay off the site
   const TVM_BY_ID = Object.fromEntries(TVM.items.map((m) => [m.tmdbId, m]));
   const byName = Object.fromEntries(LIST.shows.map((s) => [s.name, s]));
 
   const shows = (fs.existsSync(SHOWS_DIR) ? fs.readdirSync(SHOWS_DIR) : []).filter((f) => f.endsWith('.json'))
-    .map((f) => readJson(path.join(SHOWS_DIR, f), null)).filter((s) => s && s.seasons)
+    .map((f) => readJson(path.join(SHOWS_DIR, f), null)).filter((s) => s && s.seasons && !(OV[s.slug] && OV[s.slug].hidden))
     .map((s) => {
       const a = ART[s.slug] || {};
       const entry = byName[s.show] || {};
@@ -129,7 +130,10 @@ function assemble() {
     ['type', 'Classic TV'], ['tag', 'Late Night Classics'], ['type', 'Late Night'],
   ];
   const channels = buildChannels(shows, types);
-  return { shows, people, links, types, bios, channels, homeOrder: HOME_ORDER };
+  // HQ can rewrite the order into catalog/home-order.json; the list above is the fallback.
+  const fileOrder = readJson(path.join(ROOT, 'catalog', 'home-order.json'), null);
+  const homeOrder = Array.isArray(fileOrder) && fileOrder.length ? fileOrder : HOME_ORDER;
+  return { shows, people, links, types, bios, channels, homeOrder };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
