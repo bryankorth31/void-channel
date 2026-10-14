@@ -1,11 +1,10 @@
 # Coverage
 
-886 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+885 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
 | Andromeda | Sci-Fi, Fantasy and Horror | 110 | 89 | 21 | 0 | 100% |
-| Annoying Orange | Internet Comedy | 71 | 0 | 71 | 0 | 100% |
 | Ask a Ninja | Internet Comedy | 9 | 0 | 9 | 0 | 100% |
 | Babylon 5 | Sci-Fi, Fantasy and Horror | 166 | 0 | 166 | 0 | 100% |
 | Band of Brothers | Drama | 10 | 9 | 1 | 0 | 100% |
@@ -26,7 +25,7 @@
 | Coach | 90s Sitcoms | 200 | 155 | 44 | 1 | 100% |
 | Comedians in Cars Getting Coffee | Internet Comedy | 6 | 0 | 6 | 0 | 100% |
 | Concentration | Classic TV | 251 | 0 | 251 | 0 | 100% |
-| Dimension 20 | Internet Comedy | 401 | 0 | 401 | 0 | 100% |
+| Dimension 20 | Internet Comedy | 380 | 0 | 380 | 0 | 100% |
 | Dirty Laundry | Internet Comedy | 11 | 0 | 11 | 0 | 100% |
 | Doctor Who (Classic) | Classic TV | 709 | 0 | 709 | 0 | 100% |
 | Donahue | Classic TV | 19 | 0 | 19 | 0 | 100% |
@@ -44,9 +43,9 @@
 | Forbidden Science | Late Night | 13 | 12 | 1 | 0 | 100% |
 | Freak Show | Animated | 7 | 0 | 7 | 0 | 100% |
 | G-String Divas | Late Night | 17 | 0 | 17 | 0 | 100% |
-| Game Changer | Internet Comedy | 130 | 0 | 130 | 0 | 100% |
+| Game Changer | Internet Comedy | 126 | 0 | 126 | 0 | 100% |
 | Good Mythical Morning | Internet Comedy | 723 | 0 | 723 | 0 | 100% |
-| Half in the Bag | Internet Comedy | 85 | 0 | 85 | 0 | 100% |
+| Half in the Bag | Internet Comedy | 84 | 0 | 84 | 0 | 100% |
 | Happy Tree Friends | Internet Comedy | 181 | 0 | 181 | 0 | 100% |
 | Hazbin Hotel | Internet Comedy | 24 | 0 | 24 | 0 | 100% |
 | Hell on Wheels | Drama | 57 | 49 | 8 | 0 | 100% |
@@ -73,7 +72,7 @@
 | Laser Fart | Internet Comedy | 7 | 0 | 7 | 0 | 100% |
 | Later with Bob Costas | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | Lucy, the Daughter of the Devil | Adult Swim | 11 | 8 | 3 | 0 | 100% |
-| Make Some Noise | Internet Comedy | 80 | 0 | 80 | 0 | 100% |
+| Make Some Noise | Internet Comedy | 79 | 0 | 79 | 0 | 100% |
 | Max Headroom | Classic TV | 14 | 13 | 1 | 0 | 100% |
 | Michael & Michael Have Issues | Sketch and Comedy | 7 | 6 | 1 | 0 | 100% |
 | Minoriteam | Adult Swim | 20 | 19 | 1 | 0 | 100% |
@@ -105,8 +104,9 @@
 | Spaced | British and Beyond | 14 | 14 | 0 | 0 | 100% |
 | Stroker and Hoop | Adult Swim | 13 | 8 | 5 | 0 | 100% |
 | Texaco Star Theatre | Classic TV | 17 | 0 | 17 | 0 | 100% |
-| The $10,000 Pyramid | Classic TV | 11 | 0 | 11 | 0 | 100% |
+| The $10,000 Pyramid | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
+| The Daily Show | Reality & Talk | 7 | 0 | 7 | 0 | 100% |
 | The Dick Cavett Show | Classic TV | 239 | 0 | 239 | 0 | 100% |
 | The Dresden Files | Sci-Fi, Fantasy and Horror | 12 | 7 | 5 | 0 | 100% |
 | The Garry Moore Show | Classic TV | 2 | 0 | 2 | 0 | 100% |
@@ -118,7 +118,6 @@
 | The Mike Wallace Interview | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | The Montel Williams Show | Classic TV | 8 | 0 | 8 | 0 | 100% |
 | The Nat King Cole Show | Classic TV | 9 | 0 | 9 | 0 | 100% |
-| The Newlywed Game | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Outer Limits (1963) | Classic TV | 85 | 0 | 85 | 0 | 100% |
 | The Paradise | British and Beyond | 16 | 15 | 1 | 0 | 100% |
 | The Phil Donahue Show | Classic TV | 18 | 0 | 18 | 0 | 100% |
@@ -136,7 +135,7 @@
 | Tigtone | Adult Swim | 20 | 13 | 7 | 0 | 100% |
 | Tim and Eric Nite Live | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 24 | 6 | 0 | 100% |
-| Tomorrow with Tom Snyder | Classic TV | 4 | 0 | 4 | 0 | 100% |
+| Tomorrow with Tom Snyder | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | Troopers | Internet Comedy | 15 | 0 | 15 | 0 | 100% |
 | Um, Actually | Internet Comedy | 58 | 0 | 58 | 0 | 100% |
 | USA Up All Night | Late Night | 6 | 0 | 6 | 0 | 100% |
@@ -151,7 +150,7 @@
 | Workaholics | 2000s and Later Sitcoms | 86 | 70 | 16 | 0 | 100% |
 | X-Men: The Animated Series | Animated | 204 | 0 | 204 | 0 | 100% |
 | Xavier: Renegade Angel | Adult Swim | 20 | 20 | 0 | 0 | 100% |
-| Yacht Rock | Internet Comedy | 29 | 0 | 29 | 0 | 100% |
+| Yacht Rock | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
 | Yo soy Betty, la fea | Reality & Talk | 504 | 0 | 504 | 0 | 100% |
 | Zero Punctuation | Internet Comedy | 847 | 0 | 847 | 0 | 100% |
 | Amen | Classic TV | 110 | 86 | 23 | 1 | 99% |
@@ -891,4 +890,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
