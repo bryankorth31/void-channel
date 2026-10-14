@@ -20,7 +20,7 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });
 const data = assemble();
 
-for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s)));
+for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s, data)));
 fs.writeFileSync(path.join(OUT, 'data', 'index.js'), 'const SHOWS=' + JSON.stringify(data.shows.map(indexEntry)) + ';');
 fs.writeFileSync(path.join(OUT, 'data', 'graph.json'), JSON.stringify({ people: data.people, links: data.links }));
 fs.writeFileSync(path.join(OUT, 'data', 'tv.json'), JSON.stringify({ channels: data.channels }));
