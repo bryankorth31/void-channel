@@ -30,10 +30,11 @@ for (const [id, b] of Object.entries(data.bios || {})) fs.writeFileSync(path.joi
 const shell = (meta) => page({ data, mode: 'split', routes: 'path', base: '/', meta });
 // Refuse to ship a page whose script does not parse (a bad quote once took the whole site down).
 { const html = shell({ url: ORIGIN + '/' }); const js = html.slice(html.lastIndexOf('<script>') + 8, html.lastIndexOf('</script>')); try { new Function(js); } catch (e) { console.error('PAGE SCRIPT DOES NOT PARSE: ' + e.message); process.exit(1); }
-  // The client code is one function per line, so a // comment silently eats the rest of its line (it has, twice).
-  const stripped = (l) => l.replace(/'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"/g, '');
-  const bad = js.split('\n').map((l, i) => [i + 1, l]).filter(([, l]) => /(^|[^:])\/\//.test(stripped(l)));
-  if (bad.length) { console.error('PAGE SCRIPT HAS LINE COMMENTS (they swallow code): ' + bad.map(([i, l]) => i + ': ' + l.slice(0, 90)).join(' | ')); process.exit(1); } }
+  // The client code is one function per line, so a // comment placed after code silently eats the rest of
+  // that line (it has, twice). Whole-line comments are fine; a trailing one is refused.
+  const stripped = (l) => l.replace(/'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"|`(?:[^`\\]|\\.)*`/g, '');
+  const bad = js.split('\n').map((l, i) => [i + 1, l]).filter(([, l]) => { const s = stripped(l); return !/^\s*\/\//.test(s) && /[^:]\/\//.test(s); });
+  if (bad.length) { console.error('PAGE SCRIPT HAS TRAILING LINE COMMENTS (they swallow code): ' + bad.map(([i, l]) => i + ': ' + l.slice(0, 90)).join(' | ')); process.exit(1); } }
 fs.writeFileSync(path.join(OUT, 'index.html'), shell({ url: ORIGIN + '/' }));
 for (const s of data.shows) {
   const dir = path.join(OUT, 'show', s.slug);
