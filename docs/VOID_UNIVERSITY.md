@@ -484,7 +484,9 @@ The honest caveat: with no server, the gate is a promise the page keeps, not a l
 knows developer tools can defeat it in a minute; so can a reload if we are careless, so progress
 is written to Mine every few seconds. That is the right strength for a home: it holds the honest
 child to the lesson and asks nothing of the parent's trust it cannot earn. If a stronger lock is
-ever wanted, it needs accounts and a server, and we will say so rather than pretend.
+ever wanted, it needs accounts and a server, and we will say so rather than pretend. (B,
+2026-10-13: "for this part we will get some space; until then this will be fine" — so the
+page-kept promise now, a small server-side check when School has its own hosting.)
 
 Same mode, optional, for Void University's authored courses (a learner can switch it on for
 themselves: "don't let me skip").
