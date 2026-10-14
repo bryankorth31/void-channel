@@ -271,5 +271,393 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-13T18:30:23.716Z"
+ "fetchedAt": "2026-10-13T18:30:23.716Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 1214800,
+     "name": "Lauren MacMullan",
+     "photo": "https://image.tmdb.org/t/p/w185/1K55bVLf94SdhCvrti5QW0GRMr0.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1216642,
+     "name": "Josh Weinstein",
+     "photo": null
+    },
+    {
+     "id": 1216618,
+     "name": "Bill Oakley",
+     "photo": "https://image.tmdb.org/t/p/w185/AuvdJwqYB6OP1x0dgzy4jLy7ZVP.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 61961,
+     "name": "Dave Thomas",
+     "photo": "https://image.tmdb.org/t/p/w185/rr7Oqu4mlUOKBevTuHHMKdvAtlu.jpg",
+     "as": "Mr. Czelanski (voice)"
+    },
+    {
+     "id": 1213732,
+     "name": "Byrne Offutt",
+     "photo": "https://image.tmdb.org/t/p/w185/521qY2heEvI30lorK2euQ4SchGV.jpg",
+     "as": ""
+    },
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 1229003,
+     "name": "Gary McCarver",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1216615,
+     "name": "Andrew Kreisberg",
+     "photo": "https://image.tmdb.org/t/p/w185/dm1kNRSLuPKYW4X1CPdO50cqyYJ.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 61961,
+     "name": "Dave Thomas",
+     "photo": "https://image.tmdb.org/t/p/w185/rr7Oqu4mlUOKBevTuHHMKdvAtlu.jpg",
+     "as": "Mr. Czelanski (voice)"
+    },
+    {
+     "id": 207106,
+     "name": "Lisa Arch",
+     "photo": "https://image.tmdb.org/t/p/w185/5U0ijZ5BJcDGPFw6ipZGu5EAzpc.jpg",
+     "as": "Miss Peck (voice)"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 1229000,
+     "name": "Tricia Garcia",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 12084,
+     "name": "J. David Stem",
+     "photo": "https://image.tmdb.org/t/p/w185/lv9FcrTlG5YWPokeSDeLkhwuJ1o.jpg"
+    },
+    {
+     "id": 12085,
+     "name": "David N. Weiss",
+     "photo": "https://image.tmdb.org/t/p/w185/lg5LCRqU3tpWbOxae58SK2LPljQ.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 61961,
+     "name": "Dave Thomas",
+     "photo": "https://image.tmdb.org/t/p/w185/rr7Oqu4mlUOKBevTuHHMKdvAtlu.jpg",
+     "as": "Mr. Czelanski (voice)"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 1215719,
+     "name": "Christian Roman",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1219888,
+     "name": "Ben Kull",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 1224463,
+     "name": "Mike Kim",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 58461,
+     "name": "Michael Panes",
+     "photo": "https://image.tmdb.org/t/p/w185/gw3rt6rMitHeQZght3IW2Aexs9q.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 58461,
+     "name": "Michael Panes",
+     "photo": "https://image.tmdb.org/t/p/w185/gw3rt6rMitHeQZght3IW2Aexs9q.jpg",
+     "as": ""
+    },
+    {
+     "id": 1213732,
+     "name": "Byrne Offutt",
+     "photo": "https://image.tmdb.org/t/p/w185/521qY2heEvI30lorK2euQ4SchGV.jpg",
+     "as": ""
+    },
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    },
+    {
+     "id": 207106,
+     "name": "Lisa Arch",
+     "photo": "https://image.tmdb.org/t/p/w185/5U0ijZ5BJcDGPFw6ipZGu5EAzpc.jpg",
+     "as": "Tina (voice)"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 1223625,
+     "name": "Dominic Polcino",
+     "photo": "https://image.tmdb.org/t/p/w185/ljpCeWo1W0oRUsRmJDuGuaOdl1B.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 58461,
+     "name": "Michael Panes",
+     "photo": "https://image.tmdb.org/t/p/w185/gw3rt6rMitHeQZght3IW2Aexs9q.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 34983,
+     "name": "Tress MacNeille",
+     "photo": "https://image.tmdb.org/t/p/w185/gI2LsgByvSffQY34vabVnPmrHzw.jpg",
+     "as": ""
+    },
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 1229002,
+     "name": "Ilya Skorupsky",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 12084,
+     "name": "J. David Stem",
+     "photo": "https://image.tmdb.org/t/p/w185/lv9FcrTlG5YWPokeSDeLkhwuJ1o.jpg"
+    },
+    {
+     "id": 12085,
+     "name": "David N. Weiss",
+     "photo": "https://image.tmdb.org/t/p/w185/lg5LCRqU3tpWbOxae58SK2LPljQ.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 61961,
+     "name": "Dave Thomas",
+     "photo": "https://image.tmdb.org/t/p/w185/rr7Oqu4mlUOKBevTuHHMKdvAtlu.jpg",
+     "as": "Mr. Czelanski (voice)"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 3119813,
+     "name": "Scott Alberts",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1223650,
+     "name": "Robin J. Stein",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    }
+   ]
+  },
+  "1x9": {
+   "d": [
+    {
+     "id": 1190517,
+     "name": "Michael Dante DiMartino",
+     "photo": "https://image.tmdb.org/t/p/w185/8ey06cRWYe5TlKl5tyYQf57kknw.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1190519,
+     "name": "Aaron Ehasz",
+     "photo": "https://image.tmdb.org/t/p/w185/7utBZe9bjQ3OI3QOHiy62CtIhAF.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 15412,
+     "name": "David Clennon",
+     "photo": "https://image.tmdb.org/t/p/w185/jLOf8nYolcb4P8LUDOW7QK5Y9pH.jpg",
+     "as": ""
+    },
+    {
+     "id": 34983,
+     "name": "Tress MacNeille",
+     "photo": "https://image.tmdb.org/t/p/w185/gI2LsgByvSffQY34vabVnPmrHzw.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x10": {
+   "d": [
+    {
+     "id": 4233523,
+     "name": "Cynthia Wells",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1216622,
+     "name": "Dan McGrath",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 10431,
+     "name": "Jennifer Jason Leigh",
+     "photo": "https://image.tmdb.org/t/p/w185/7DbG2AO3nygHAkNC866HLPKkxv9.jpg",
+     "as": "Eunice 'Weirdie' Eulmeyer (voice)"
+    },
+    {
+     "id": 61961,
+     "name": "Dave Thomas",
+     "photo": "https://image.tmdb.org/t/p/w185/rr7Oqu4mlUOKBevTuHHMKdvAtlu.jpg",
+     "as": "Dr. Eulmeyer (voice)"
+    }
+   ]
+  },
+  "1x11": {
+   "d": [
+    {
+     "id": 1215719,
+     "name": "Christian Roman",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1216622,
+     "name": "Dan McGrath",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 15412,
+     "name": "David Clennon",
+     "photo": "https://image.tmdb.org/t/p/w185/jLOf8nYolcb4P8LUDOW7QK5Y9pH.jpg",
+     "as": ""
+    },
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    }
+   ]
+  },
+  "1x12": {
+   "d": [
+    {
+     "id": 1224463,
+     "name": "Mike Kim",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 4865672,
+     "name": "Rob Schwartz",
+     "photo": null
+    },
+    {
+     "id": 2855614,
+     "name": "Richard Siegel",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    }
+   ]
+  },
+  "1x13": {
+   "d": [
+    {
+     "id": 3328879,
+     "name": "Jim Shellhorn",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1216622,
+     "name": "Dan McGrath",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 35157,
+     "name": "Jane Wiedlin",
+     "photo": "https://image.tmdb.org/t/p/w185/qLyqdzATuW3AuusloCrRGc6KfTt.jpg",
+     "as": "Gwen (voice)"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-14T01:16:49.464Z"
 }

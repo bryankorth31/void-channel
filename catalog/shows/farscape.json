@@ -3,7 +3,7 @@
   "slug": "farscape",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-14T00:11:16.500Z",
+  "matchedAt": "2026-10-14T01:43:20.120Z",
   "tvmaze": {
     "id": 429,
     "name": "Farscape",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 88,
-    "live": 83,
-    "review": 5,
+    "live": 82,
+    "review": 6,
     "missing": 0,
     "pct": 100
   },
@@ -2911,9 +2911,9 @@
           "number": 17,
           "name": "A Constellation of Doubt",
           "airdate": "2003-02-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "farscape-s-04",
             "itemTitle": "Farscape Season 4",
@@ -2925,21 +2925,7 @@
             "playable": true,
             "sizeMB": 270
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"A Constellation of Doubt\" (0.76)",
-              "item": "far-scape-Season-1",
-              "itemTitle": "FarScape",
-              "file": "FarScape0417AConstellationOfDoubt.mp4",
-              "name": "FarScape0417AConstellationOfDoubt",
-              "url": "https://archive.org/download/far-scape-Season-1/FarScape0417AConstellationOfDoubt.mp4",
-              "seconds": 2760,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 280
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,

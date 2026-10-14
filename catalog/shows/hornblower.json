@@ -1,0 +1,145 @@
+{
+  "show": "Hornblower",
+  "slug": "hornblower",
+  "type": "British and Beyond",
+  "network": "ITV",
+  "matchedAt": "2026-10-14T01:43:31.253Z",
+  "tvmaze": {
+    "id": 1632,
+    "name": "C.S. Forester's Horatio Hornblower",
+    "runtime": 120,
+    "premiered": "1998-10-07",
+    "network": "ITV1"
+  },
+  "coverage": {
+    "total": 8,
+    "live": 0,
+    "review": 2,
+    "missing": 6,
+    "pct": 25
+  },
+  "seasons": [
+    {
+      "season": 1998,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Hornblower: The Even Chance",
+          "airdate": "1998-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Hornblower: The Examination for Lieutenant",
+          "airdate": "1998-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Hornblower: The Duchess and the Devil",
+          "airdate": "1998-10-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Hornblower: The Duchess and the Devil\" (0.73)",
+            "item": "hornblower_01to08",
+            "itemTitle": "Hornblower(01-08) with Extra",
+            "file": "Hornblower- 03 - The Duchess and the Devil.mp4",
+            "name": "Hornblower- 03 - The Duchess and the Devil",
+            "url": "https://archive.org/download/hornblower_01to08/Hornblower-%2003%20-%20The%20Duchess%20and%20the%20Devil.mp4",
+            "seconds": 7277,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2347
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Hornblower: The Duchess and the Devil\" (0.73)",
+              "item": "hornblower-04-the-wrong-war",
+              "itemTitle": "Hornblower 04 The Wrong War",
+              "file": "Hornblower - 03 - The Duchess and the Devil.mp4",
+              "name": "Hornblower - 03 - The Duchess and the Devil",
+              "url": "https://archive.org/download/hornblower-04-the-wrong-war/Hornblower%20-%2003%20-%20The%20Duchess%20and%20the%20Devil.mp4",
+              "seconds": 7277,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2347
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 1999,
+      "episodes": [
+        {
+          "number": 4,
+          "name": "Hornblower: The Frogs and the Lobsters",
+          "airdate": "1999-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2001,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Hornblower: Mutiny",
+          "airdate": "2001-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Hornblower: Retribution",
+          "airdate": "2001-03-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Hornblower: Retribution\" (0.63)",
+            "item": "hornblower_01to08",
+            "itemTitle": "Hornblower(01-08) with Extra",
+            "file": "Hornblower - 06 - RETRIBUTION.mp4",
+            "name": "Hornblower - 06 - RETRIBUTION",
+            "url": "https://archive.org/download/hornblower_01to08/Hornblower%20-%2006%20-%20RETRIBUTION.mp4",
+            "seconds": 5588,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1517
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2003,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Hornblower: Loyalty",
+          "airdate": "2003-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Hornblower: Duty",
+          "airdate": "2003-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

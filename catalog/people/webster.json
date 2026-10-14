@@ -299,5 +299,596 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-14T00:09:22.245Z"
+ "fetchedAt": "2026-10-14T00:09:22.245Z",
+ "episodes": {
+  "1x2": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 8874,
+     "name": "Ernie Hudson",
+     "photo": "https://image.tmdb.org/t/p/w185/kgAdQA2ItCDVvKXufeDHc6Omiso.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 7139,
+     "name": "Norman Alden",
+     "photo": "https://image.tmdb.org/t/p/w185/zfClMw6EEImQtxArqunRcjbjvMg.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 1242488,
+     "name": "Bob Claver",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 10086,
+     "name": "Heather O'Rourke",
+     "photo": "https://image.tmdb.org/t/p/w185/ksRZu1R7NMmhCol43GZytJcYPo.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 2249,
+     "name": "Clyde Kusatsu",
+     "photo": "https://image.tmdb.org/t/p/w185/5dTSe1F9cnReZGHYzbCbVy7vbcf.jpg",
+     "as": ""
+    },
+    {
+     "id": 10086,
+     "name": "Heather O'Rourke",
+     "photo": "https://image.tmdb.org/t/p/w185/ksRZu1R7NMmhCol43GZytJcYPo.jpg",
+     "as": ""
+    },
+    {
+     "id": 45101,
+     "name": "Harrison Page",
+     "photo": "https://image.tmdb.org/t/p/w185/uqoZdiO6ar3hVeX09u9JARVvfkA.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x6": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 2174,
+     "name": "Kimberly Beck",
+     "photo": "https://image.tmdb.org/t/p/w185/hdeafwyoYDEF1i3zR7TX0skACcS.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1212009,
+     "name": "Russ Woody",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 29364,
+     "name": "Billy Sands",
+     "photo": "https://image.tmdb.org/t/p/w185/ph0mCUvWDwkFn7qOyUmx0aepJJ9.jpg",
+     "as": ""
+    },
+    {
+     "id": 10086,
+     "name": "Heather O'Rourke",
+     "photo": "https://image.tmdb.org/t/p/w185/ksRZu1R7NMmhCol43GZytJcYPo.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 10086,
+     "name": "Heather O'Rourke",
+     "photo": "https://image.tmdb.org/t/p/w185/ksRZu1R7NMmhCol43GZytJcYPo.jpg",
+     "as": ""
+    },
+    {
+     "id": 45101,
+     "name": "Harrison Page",
+     "photo": "https://image.tmdb.org/t/p/w185/uqoZdiO6ar3hVeX09u9JARVvfkA.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x9": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 26664,
+     "name": "Ben Vereen",
+     "photo": "https://image.tmdb.org/t/p/w185/krMLkdkj1rtLsU2h2BBPCK0E7HH.jpg",
+     "as": ""
+    },
+    {
+     "id": 170107,
+     "name": "Ami Foster",
+     "photo": "https://image.tmdb.org/t/p/w185/A3uYQK6IYjosn8DQCvhUXp6TCVs.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x10": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1730508,
+     "name": "Susan Borowitz",
+     "photo": null
+    },
+    {
+     "id": 4555284,
+     "name": "Richard Raskind",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 35111,
+     "name": "Bumper Robinson",
+     "photo": "https://image.tmdb.org/t/p/w185/9KU72zZXIfsGAPgHmhlJmTYvor9.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x11": {
+   "d": [],
+   "w": [
+    {
+     "id": 1212009,
+     "name": "Russ Woody",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x12": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 57371,
+     "name": "Jeff Cohen",
+     "photo": "https://image.tmdb.org/t/p/w185/iuD0UN3cdRc9ZSnmebeJUy14lde.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x13": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 25626,
+     "name": "Robert Ridgely",
+     "photo": "https://image.tmdb.org/t/p/w185/9KXMqTrSeIxcW6hlCJZ6CTzNeMB.jpg",
+     "as": "The Host"
+    },
+    {
+     "id": 4928535,
+     "name": "Debbie Combs",
+     "photo": null,
+     "as": "Trudy"
+    },
+    {
+     "id": 6115427,
+     "name": "Jean G. Alan",
+     "photo": null,
+     "as": "Stage Manager"
+    },
+    {
+     "id": 157499,
+     "name": "Denise Gallup",
+     "photo": "https://image.tmdb.org/t/p/w185/tozB98p80cmvNvMfIOtnBeMshtg.jpg",
+     "as": "Hostess"
+    },
+    {
+     "id": 157498,
+     "name": "Dian Gallup",
+     "photo": null,
+     "as": "Hostess"
+    }
+   ]
+  },
+  "1x14": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1212814,
+     "name": "Greg Antonacci",
+     "photo": "https://image.tmdb.org/t/p/w185/i8bXPzjY78o6GK26YWUhA66E1qS.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1212010,
+     "name": "Reid Shelton",
+     "photo": "https://image.tmdb.org/t/p/w185/v2I2P62UjKm1oDZCwbnKBWrQkxJ.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x16": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 29364,
+     "name": "Billy Sands",
+     "photo": "https://image.tmdb.org/t/p/w185/ph0mCUvWDwkFn7qOyUmx0aepJJ9.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x17": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 35111,
+     "name": "Bumper Robinson",
+     "photo": "https://image.tmdb.org/t/p/w185/9KU72zZXIfsGAPgHmhlJmTYvor9.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x18": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": [
+    {
+     "id": 35111,
+     "name": "Bumper Robinson",
+     "photo": "https://image.tmdb.org/t/p/w185/9KU72zZXIfsGAPgHmhlJmTYvor9.jpg",
+     "as": ""
+    },
+    {
+     "id": 1227998,
+     "name": "Paul Stout",
+     "photo": null,
+     "as": ""
+    }
+   ]
+  },
+  "1x19": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 26664,
+     "name": "Ben Vereen",
+     "photo": "https://image.tmdb.org/t/p/w185/krMLkdkj1rtLsU2h2BBPCK0E7HH.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x20": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 44818,
+     "name": "Mark Holton",
+     "photo": "https://image.tmdb.org/t/p/w185/2NleIh4ohQcw9M5i8mNYzq5qqwE.jpg",
+     "as": "Clown / Mr. Fleck / Stanley"
+    }
+   ]
+  },
+  "1x21": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 52141,
+     "name": "Robert Jayne",
+     "photo": "https://image.tmdb.org/t/p/w185/17HP8sL3FM28cjE8K8zMYCzz7Mm.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "1x22": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 26664,
+     "name": "Ben Vereen",
+     "photo": "https://image.tmdb.org/t/p/w185/krMLkdkj1rtLsU2h2BBPCK0E7HH.jpg",
+     "as": ""
+    }
+   ]
+  },
+  "2x1": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "2x17": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 44818,
+     "name": "Mark Holton",
+     "photo": "https://image.tmdb.org/t/p/w185/2NleIh4ohQcw9M5i8mNYzq5qqwE.jpg",
+     "as": "Clown / Mr. Fleck / Stanley"
+    }
+   ]
+  },
+  "2x24": {
+   "d": [
+    {
+     "id": 1215868,
+     "name": "Tom Trbovich",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "3x1": {
+   "d": [],
+   "w": [
+    {
+     "id": 1227032,
+     "name": "April Kelly",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "3x2": {
+   "d": [],
+   "w": [
+    {
+     "id": 1227032,
+     "name": "April Kelly",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "3x11": {
+   "d": [
+    {
+     "id": 54644,
+     "name": "Joel Zwick",
+     "photo": "https://image.tmdb.org/t/p/w185/jA9eJVJMmngFNIIhSZddKglrCCf.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1214016,
+     "name": "Gene Braunstein",
+     "photo": null
+    },
+    {
+     "id": 1216542,
+     "name": "Bob Perlow",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 158713,
+     "name": "Jamie Abbott",
+     "photo": "https://image.tmdb.org/t/p/w185/8fzBMZFXALNdS3sql9OTlpxzP3f.jpg",
+     "as": "Brett"
+    },
+    {
+     "id": 3699923,
+     "name": "Jennifer Ursitti",
+     "photo": null,
+     "as": "Cindy"
+    }
+   ]
+  },
+  "3x12": {
+   "d": [
+    {
+     "id": 134133,
+     "name": "Shelley Jensen",
+     "photo": "https://image.tmdb.org/t/p/w185/AbXIXwaMVQ04GA3aZDMN22IQPsY.jpg"
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "3x14": {
+   "d": [
+    {
+     "id": 134133,
+     "name": "Shelley Jensen",
+     "photo": "https://image.tmdb.org/t/p/w185/AbXIXwaMVQ04GA3aZDMN22IQPsY.jpg"
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "3x19": {
+   "d": [
+    {
+     "id": 134133,
+     "name": "Shelley Jensen",
+     "photo": "https://image.tmdb.org/t/p/w185/AbXIXwaMVQ04GA3aZDMN22IQPsY.jpg"
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "3x20": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 96706,
+     "name": "Lynn Hamilton",
+     "photo": "https://image.tmdb.org/t/p/w185/i87uK2l8vRaNcDiBdJOPTjCuzaf.jpg",
+     "as": "Mrs. Matthews"
+    }
+   ]
+  },
+  "3x25": {
+   "d": [
+    {
+     "id": 1212558,
+     "name": "Gerren Keith",
+     "photo": "https://image.tmdb.org/t/p/w185/wDylneD3VLETBRz9Pd0h83A2VT2.jpg"
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "4x3": {
+   "d": [
+    {
+     "id": 1217148,
+     "name": "Mel Ferber",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "4x20": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 3441400,
+     "name": "Alan Roberts",
+     "photo": null,
+     "as": "Noah"
+    }
+   ]
+  },
+  "4x21": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 1189238,
+     "name": "Craig Schaefer",
+     "photo": "https://image.tmdb.org/t/p/w185/j6eb4m86SLIXSKPfMnqrV3TAP8j.jpg",
+     "as": "Official"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-14T01:20:43.616Z"
 }

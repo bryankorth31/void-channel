@@ -1,0 +1,96 @@
+{
+  "show": "Joan of Arc",
+  "slug": "joan-of-arc",
+  "type": "Drama",
+  "network": "CBS",
+  "matchedAt": "2026-10-14T01:43:31.142Z",
+  "tvmaze": {
+    "id": 31871,
+    "name": "Joan of Arc",
+    "runtime": 90,
+    "premiered": "1999-05-16",
+    "network": "CBC"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 2,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part 1",
+          "airdate": "1999-05-16",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "jo_20251104",
+            "itemTitle": "Joan of Arc",
+            "file": "Joan of Arc S01E01 Part I.mp4",
+            "name": "Joan of Arc S01E01 Part I",
+            "url": "https://archive.org/download/jo_20251104/Joan%20of%20Arc%20S01E01%20Part%20I.mp4",
+            "seconds": 5520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 557
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Part 1\" (0.95)",
+              "item": "joan-of-arc-1999-part-1_202409",
+              "itemTitle": "Joan of Arc (1999 miniseries)",
+              "file": "Joan_of_Arc-1999_Part_1.mp4",
+              "name": "Joan_of_Arc-1999_Part_1",
+              "url": "https://archive.org/download/joan-of-arc-1999-part-1_202409/Joan_of_Arc-1999_Part_1.mp4",
+              "seconds": 5520,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 557
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "1999-05-18",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "jo_20251104",
+            "itemTitle": "Joan of Arc",
+            "file": "Joan of Arc S01E02 Part II.mp4",
+            "name": "Joan of Arc S01E02 Part II",
+            "url": "https://archive.org/download/jo_20251104/Joan%20of%20Arc%20S01E02%20Part%20II.mp4",
+            "seconds": 5503,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 568
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Part 2\" (0.95)",
+              "item": "joan-of-arc-1999-part-1_202409",
+              "itemTitle": "Joan of Arc (1999 miniseries)",
+              "file": "Joan_of_Arc-1999_Part_2.mp4",
+              "name": "Joan_of_Arc-1999_Part_2",
+              "url": "https://archive.org/download/joan-of-arc-1999-part-1_202409/Joan_of_Arc-1999_Part_2.mp4",
+              "seconds": 5503,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 568
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

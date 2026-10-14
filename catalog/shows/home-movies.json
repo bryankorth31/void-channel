@@ -3,7 +3,7 @@
   "slug": "home-movies",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T00:11:12.988Z",
+  "matchedAt": "2026-10-14T01:44:29.146Z",
   "tvmaze": {
     "id": 7760,
     "name": "Home Movies",
@@ -308,17 +308,17 @@
               "sizeMB": 85
             },
             {
-              "conf": 0.85,
-              "why": "S/E in filename + title match",
-              "item": "home-movies-CASTELLANO-VHSRIP",
-              "itemTitle": "Home Movies [Castellano Europeo]",
-              "file": "Home Movies - 01x05 - Yoko [Castellano europeo] [VHSRip].mp4",
-              "name": "Home Movies - 01x05 - Yoko [Castellano europeo] [VHSRip]",
-              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2001x05%20-%20Yoko%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
-              "seconds": 1288,
+              "conf": 0.8,
+              "why": "title ~ \"Yoko\" (0.95)",
+              "item": "Home-Movies-Cartoon-Series",
+              "itemTitle": "Home Movies Cartoon Series",
+              "file": "Home Movies/Home Movies - 1-5 - Yoko (480p_30fps_H264-128kbit_AAC).mp4",
+              "name": "Home Movies/Home Movies - 1-5 - Yoko (480p_30fps_H264-128kbit_AAC)",
+              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%201-5%20-%20Yoko%20(480p_30fps_H264-128kbit_AAC).mp4",
+              "seconds": 1307,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 47
+              "sizeMB": 74
             }
           ]
         },
@@ -368,17 +368,17 @@
               "sizeMB": 77
             },
             {
-              "conf": 0.85,
-              "why": "S/E in filename + title match",
-              "item": "home-movies-CASTELLANO-VHSRIP",
-              "itemTitle": "Home Movies [Castellano Europeo]",
-              "file": "Home Movies - 01x06 - El Montaje del Director (Director's Cut) [Castellano europeo] [VHSRip].mp4",
-              "name": "Home Movies - 01x06 - El Montaje del Director (Director's Cut) [Castellano europeo] [VHSRip]",
-              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2001x06%20-%20El%20Montaje%20del%20Director%20(Director's%20Cut)%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
-              "seconds": 1295,
+              "conf": 0.8,
+              "why": "title ~ \"Director's Cut\" (0.95)",
+              "item": "Home-Movies-Cartoon-Series",
+              "itemTitle": "Home Movies Cartoon Series",
+              "file": "Home Movies/Home Movies - 1-6 - Director's Cut (480p_30fps_H264-128kbit_AAC).mp4",
+              "name": "Home Movies/Home Movies - 1-6 - Director's Cut (480p_30fps_H264-128kbit_AAC)",
+              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%201-6%20-%20Director's%20Cut%20(480p_30fps_H264-128kbit_AAC).mp4",
+              "seconds": 1340,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 66
+              "sizeMB": 113
             }
           ]
         },
@@ -1020,19 +1020,6 @@
               "sizeMB": 68
             },
             {
-              "conf": 0.85,
-              "why": "S/E in filename + title match",
-              "item": "home-movies-CASTELLANO-VHSRIP",
-              "itemTitle": "Home Movies [Castellano Europeo]",
-              "file": "Home Movies - 02x04 - Negocios y Placer (Business & Pleasure) [Castellano europeo] [VHSRip].mp4",
-              "name": "Home Movies - 02x04 - Negocios y Placer (Business & Pleasure) [Castellano europeo] [VHSRip]",
-              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2002x04%20-%20Negocios%20y%20Placer%20(Business%20%26%20Pleasure)%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
-              "seconds": 1330,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 51
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Business & Pleasure\" (0.95)",
               "item": "HomeMoviesS2Complete",
@@ -1044,6 +1031,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 133
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Business & Pleasure\" (0.95)",
+              "item": "Home-Movies-Cartoon-Series",
+              "itemTitle": "Home Movies Cartoon Series",
+              "file": "Home Movies/Home Movies - 2-4 - Business and Pleasure (480p_30fps_H264-128kbit_AAC).mp4",
+              "name": "Home Movies/Home Movies - 2-4 - Business and Pleasure (480p_30fps_H264-128kbit_AAC)",
+              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-4%20-%20Business%20and%20Pleasure%20(480p_30fps_H264-128kbit_AAC).mp4",
+              "seconds": 1338,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 76
             }
           ]
         },
@@ -1393,17 +1393,17 @@
               "sizeMB": 73
             },
             {
-              "conf": 0.85,
-              "why": "S/E in filename + title match",
-              "item": "home-movies-CASTELLANO-VHSRIP",
-              "itemTitle": "Home Movies [Castellano Europeo]",
-              "file": "Home Movies - 02x10 - Historia (History) [Castellano europeo] [VHSRip].mp4",
-              "name": "Home Movies - 02x10 - Historia (History) [Castellano europeo] [VHSRip]",
-              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2002x10%20-%20Historia%20(History)%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
-              "seconds": 1342,
+              "conf": 0.8,
+              "why": "title ~ \"History\" (0.95)",
+              "item": "Home-Movies-Cartoon-Series",
+              "itemTitle": "Home Movies Cartoon Series",
+              "file": "Home Movies/Home Movies - 2-10 - History (480p_30fps_H264-128kbit_AAC).mp4",
+              "name": "Home Movies/Home Movies - 2-10 - History (480p_30fps_H264-128kbit_AAC)",
+              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-10%20-%20History%20(480p_30fps_H264-128kbit_AAC).mp4",
+              "seconds": 1353,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 60
+              "sizeMB": 74
             }
           ]
         },

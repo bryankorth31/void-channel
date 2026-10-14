@@ -3,7 +3,7 @@
   "slug": "quincy-m-e",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T00:11:22.695Z",
+  "matchedAt": "2026-10-14T01:43:26.646Z",
   "tvmaze": {
     "id": 841,
     "name": "Quincy, M.E.",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 148,
-    "live": 134,
-    "review": 8,
+    "live": 133,
+    "review": 9,
     "missing": 6,
     "pct": 96
   },
@@ -2641,9 +2641,9 @@
           "number": 12,
           "name": "Jury Duty",
           "airdate": "1981-02-18",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "quincy-m.-e.-s-02-e-01-e-02-snake-eyes",
             "itemTitle": "Quincy, M. E. ",
@@ -2657,7 +2657,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.6,
               "why": "S/E in filename + title match",
               "item": "Quincy-Lando18",
               "itemTitle": "Quincy, M. E. (complete TV series)",

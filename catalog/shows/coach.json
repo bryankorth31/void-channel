@@ -3,7 +3,7 @@
   "slug": "coach",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T00:11:09.026Z",
+  "matchedAt": "2026-10-14T01:44:24.765Z",
   "tvmaze": {
     "id": 7531,
     "name": "Coach",
@@ -3662,19 +3662,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "coach-season-5",
-              "itemTitle": "Coach Season 5",
-              "file": "Coach S05E10 The Patriot Bowl.mp4",
-              "name": "Coach S05E10 The Patriot Bowl",
-              "url": "https://archive.org/download/coach-season-5/Coach%20S05E10%20The%20Patriot%20Bowl.mp4",
-              "seconds": 1289,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 112
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Vows\" (1.00)",
               "item": "coach-season-5",
@@ -3695,44 +3682,31 @@
           "airdate": "1992-12-02",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "coach-tv-series_202511",
-            "itemTitle": "Coach (TV Series)",
-            "file": "Coach - S05E11 - The Patriot Bowl.mp4",
-            "name": "Coach - S05E11 - The Patriot Bowl",
-            "url": "https://archive.org/download/coach-tv-series_202511/Coach%20-%20S05E11%20-%20The%20Patriot%20Bowl.mp4",
-            "seconds": 1325,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "coach-season-5",
+            "itemTitle": "Coach Season 5",
+            "file": "Coach S05E11 My True Love Gave To Me.mp4",
+            "name": "Coach S05E11 My True Love Gave To Me",
+            "url": "https://archive.org/download/coach-season-5/Coach%20S05E11%20My%20True%20Love%20Gave%20To%20Me.mp4",
+            "seconds": 1299,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 253
+            "sizeMB": 138
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "coach-season-5",
-              "itemTitle": "Coach Season 5",
-              "file": "Coach S05E11 My True Love Gave To Me.mp4",
-              "name": "Coach S05E11 My True Love Gave To Me",
-              "url": "https://archive.org/download/coach-season-5/Coach%20S05E11%20My%20True%20Love%20Gave%20To%20Me.mp4",
-              "seconds": 1299,
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "coach-tv-series_202511",
+              "itemTitle": "Coach (TV Series)",
+              "file": "Coach - S05E11 - The Patriot Bowl.mp4",
+              "name": "Coach - S05E11 - The Patriot Bowl",
+              "url": "https://archive.org/download/coach-tv-series_202511/Coach%20-%20S05E11%20-%20The%20Patriot%20Bowl.mp4",
+              "seconds": 1325,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 138
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Patriot Bowl\" (1.00)",
-              "item": "coach-season-5",
-              "itemTitle": "Coach Season 5",
-              "file": "Coach S05E10 The Patriot Bowl.mp4",
-              "name": "Coach S05E10 The Patriot Bowl",
-              "url": "https://archive.org/download/coach-season-5/Coach%20S05E10%20The%20Patriot%20Bowl.mp4",
-              "seconds": 1289,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 112
+              "sizeMB": 253
             }
           ]
         },

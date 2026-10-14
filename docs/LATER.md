@@ -53,6 +53,8 @@ jumps the queue.
 - **Name collisions** needing per-show search/TVmaze overrides: The Office (UK), Shameless (UK),
   CBC's The Newsroom, AU Wilfred and Review. Also Password (list says CBS 1961; TVmaze matched the
   2022 NBC revival) and the 1980 Shōgun / 1981 Borgias, held out of the Historical collection for this.
+  TMDB-side too: "The Clone" (the Brazilian novela) got Star Wars: The Clone Wars' record, so George
+  Lucas shows up as its creator in X-Ray; art.js needs a year/network check, not just a title search.
 - **TV apps: Fire Stick and Roku (B 2026-10-13).** The static catalog makes this cheap: every client
   reads the same data/index.js + per-show JSON and plays the same archive.org MP4 URLs. Order: (1) a
   TV mode of the web app (D-pad focus, bigger cards, no hover) so Fire TV's Silk browser works today;

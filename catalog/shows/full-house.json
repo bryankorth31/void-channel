@@ -3,7 +3,7 @@
   "slug": "full-house",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T00:11:06.836Z",
+  "matchedAt": "2026-10-14T01:44:22.451Z",
   "tvmaze": {
     "id": 1251,
     "name": "Full House",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 192,
-    "live": 68,
-    "review": 2,
+    "live": 67,
+    "review": 3,
     "missing": 122,
     "pct": 36
   },
@@ -2122,35 +2122,21 @@
           "number": 6,
           "name": "Star Search",
           "airdate": "1989-11-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.75,
             "why": "S/E in filename",
-            "item": "full-house-stagione-3-ita",
-            "itemTitle": "Full House stagione 3 ita",
-            "file": "3x06 - Cercasi stella.mp4",
-            "name": "3x06 - Cercasi stella",
-            "url": "https://archive.org/download/full-house-stagione-3-ita/3x06%20-%20Cercasi%20stella.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
+            "item": "duet-open-house",
+            "itemTitle": "Duet / Open House (1987-1990)",
+            "file": "Duet S03E06 - One Man Out.mp4",
+            "name": "Duet S03E06 - One Man Out",
+            "url": "https://archive.org/download/duet-open-house/Duet%20S03E06%20-%20One%20Man%20Out.mp4",
+            "seconds": 1731,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 241
+            "sizeMB": 171
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "duet-open-house",
-              "itemTitle": "Duet / Open House (1987-1990)",
-              "file": "Duet S03E06 - One Man Out.mp4",
-              "name": "Duet S03E06 - One Man Out",
-              "url": "https://archive.org/download/duet-open-house/Duet%20S03E06%20-%20One%20Man%20Out.mp4",
-              "seconds": 1731,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 171
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
