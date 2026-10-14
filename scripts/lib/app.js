@@ -92,7 +92,11 @@ header .donate{margin-left:auto;color:#07080c;background:var(--acc);font-size:14
 .support{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 20px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;background:var(--panel);font-size:14px}
 .support b{color:var(--acc)}.support .sp{flex:1;min-width:240px}.support .acts{display:flex;gap:8px;flex-wrap:wrap}.support a.btn{border:1px solid var(--acc);color:var(--acc);font-weight:600}.support a.btn:last-child{background:var(--acc);color:#07080c}
 footer a{color:var(--acc)}
-@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}}
+@media(max-width:600px){header{gap:10px;padding:10px 12px}header .logo{font-size:19px}header .donate{padding:7px 11px;font-size:13px}header .donate .long{display:none}header .mine-link{padding:6px 8px;font-size:13px}}
+header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}header .mine-link:hover{border-color:var(--acc);color:var(--acc)}
+.btn.on{border-color:var(--acc);color:var(--acc)}.mine{display:contents}.acts.mine{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.me{padding:0 20px 20px}.me h1{margin:10px 0 4px;font-size:26px}.me .g{color:var(--dim)}.me>.acts{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.me h2 small{color:var(--dim);font-weight:400;font-size:13px;margin-left:8px}
+.hist .row{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.hist .row span{flex:1;cursor:pointer}.hist small{color:var(--dim)}.hist .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
 .bar .count{color:var(--dim);margin-left:auto;font-size:13px}
@@ -158,10 +162,40 @@ footer{color:var(--dim);font-size:12px;padding:20px;border-top:1px solid var(--l
 // ROUTES 'hash' (#slug) or 'path' (/show/slug, needs a host that serves index.html for unknown paths).
 const JS = `
 const BY_SLUG=Object.fromEntries(SHOWS.map(s=>[s.slug,s]));
-const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null};
+const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:''};
 const $=(id)=>document.getElementById(id);
 const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
+// MINE: list, likes, history and reports live in one blob (voidtv:me) so a later sync code can move it whole.
+const ME=(()=>{let m=null;try{m=JSON.parse(localStorage.getItem('voidtv:me')||'null')}catch(_){}if(!m||m.v!==1)m={v:1,list:{},likes:{},history:{},reports:{}};
+ try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&k!=='voidtv:me'){const sl=k.slice(7);if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}}}catch(_){}
+ return m})();
+function saveMe(){try{localStorage.setItem('voidtv:me',JSON.stringify(ME))}catch(_){}}
+const hidden=(s)=>ME.likes[s.slug]===-1;
+const VIS=()=>SHOWS.filter(s=>!hidden(s));
+const histShows=()=>Object.entries(ME.history).sort((a,b)=>(b[1].at||0)-(a[1].at||0)).map(([sl])=>BY_SLUG[sl]).filter(Boolean);
+const listShows=()=>Object.entries(ME.list).sort((a,b)=>b[1]-a[1]).map(([sl])=>BY_SLUG[sl]).filter(Boolean);
+const likedShows=()=>Object.keys(ME.likes).filter(k=>ME.likes[k]===1).map(k=>BY_SLUG[k]).filter(Boolean);
+function afterMe(slug){if(state.show){document.querySelectorAll('.mine[data-slug="'+slug+'"]').forEach(e=>{e.innerHTML=acts(BY_SLUG[slug])})}else render()}
+function like(slug,v){ME.likes[slug]=ME.likes[slug]===v?0:v;saveMe();afterMe(slug)}
+function listToggle(slug){if(ME.list[slug])delete ME.list[slug];else ME.list[slug]=Date.now();saveMe();afterMe(slug)}
+function acts(s){const l=ME.likes[s.slug]||0;return '<button class="btn'+(ME.list[s.slug]?' on':'')+'" onclick="event.stopPropagation();listToggle(\\''+s.slug+'\\')">'+(ME.list[s.slug]?'✓ In My List':'+ My List')+'</button><button class="btn'+(l===1?' on':'')+'" title="Like" onclick="event.stopPropagation();like(\\''+s.slug+'\\',1)">👍'+(l===1?' Liked':'')+'</button><button class="btn'+(l===-1?' on':'')+'" title="Not for me: hides it from the rows (search still finds it)" onclick="event.stopPropagation();like(\\''+s.slug+'\\',-1)">👎'+(l===-1?' Hidden':' Not for me')+'</button>'}
+const repKey=(s,se,ep)=>s.slug+'/'+se.season+'/'+ep.n;
+function repBtn(s,se,ep){const on=!!ME.reports[repKey(s,se,ep)];return '<button class="btn'+(on?' on':'')+'" id="rep" title="Tell the builder this file is the wrong episode or will not play" onclick="report()">⚑ '+(on?'Reported':'Wrong file?')+'</button>'}
+function report(){const s=state.show,se=s.seasons[state.se],ep=se.episodes[state.e],k=repKey(s,se,ep);if(ME.reports[k])delete ME.reports[k];else ME.reports[k]={show:s.show,season:se.season,ep:ep.n,name:ep.name,item:ep.item,url:ep.url,at:Date.now()};saveMe();const b=$('rep');if(b)b.outerHTML=repBtn(s,se,ep)}
+function exportMe(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(ME,null,1)],{type:'application/json'}));a.download='voidtv-mine.json';a.click()}
+function importMe(f){if(!f)return;f.text().then(t=>{const m=JSON.parse(t);if(!m||m.v!==1)throw 0;for(const k of ['list','likes','history','reports'])Object.assign(ME[k],m[k]||{});saveMe();render()}).catch(()=>alert('That file is not a VOIDtv export.'))}
+function clearMe(){ME.list={};ME.likes={};ME.history={};ME.reports={};saveMe();render()}
+function mePage(){const cont=histShows(),mine=listShows(),liked=likedShows(),hid=Object.keys(ME.likes).filter(k=>ME.likes[k]===-1).map(k=>BY_SLUG[k]).filter(Boolean),reps=Object.entries(ME.reports).sort((a,b)=>b[1].at-a[1].at);
+ let h='<div class="me"><button class="back" onclick="go(\\'\\')">← Browse</button><h1>Mine</h1><p class="g">Your list, likes and watch history live in this browser only for now. Export to move them to another device; a sync code is coming.</p><div class="acts"><button class="btn" onclick="exportMe()">Export</button><label class="btn">Import<input type="file" accept="application/json,.json" style="display:none" onchange="importMe(this.files[0])"></label><button class="btn" onclick="if(confirm(\\'Clear your list, likes and history on this device?\\'))clearMe()">Clear</button></div>';
+ if(cont.length)h+=shelf('Continue watching',cont,'continue');
+ if(mine.length)h+=shelf('My List',mine,'list');
+ if(liked.length)h+=shelf('Liked',liked,'liked');
+ if(hid.length)h+='<h2>Not for me<small>'+hid.length+' hidden from the rows</small></h2><div class="chips">'+hid.map(s=>'<span class="chip" title="Show it again" onclick="like(\\''+s.slug+'\\',-1)">'+esc(s.show)+' ✕</span>').join('')+'</div>';
+ if(cont.length)h+='<h2>History</h2><div class="hist">'+cont.slice(0,100).map(s=>{const r=ME.history[s.slug];return '<div class="row"><span onclick="go(\\''+s.slug+'\\')">'+esc(s.show)+'</span><small>'+(r.at?new Date(r.at).toLocaleDateString():'')+'</small><button class="x" title="Forget" onclick="delete ME.history[\\''+s.slug+'\\'];saveMe();render()">✕</button></div>'}).join('')+'</div>';
+ if(reps.length)h+='<h2>Reported files<small>'+reps.length+'</small></h2><div class="hist">'+reps.map(([k,r])=>'<div class="row"><span>'+esc(r.show)+' S'+r.season+'E'+r.ep+' · '+esc(r.name)+'</span><small>'+esc(r.item||'')+'</small><button class="x" title="Forget" onclick="delete ME.reports[\\''+k+'\\'];saveMe();render()">✕</button></div>').join('')+'</div>';
+ if(!cont.length&&!mine.length&&!liked.length)h+='<p class="g">Nothing here yet. Play something, or add shows to My List from the ▾ on any card.</p>';
+ $('main').innerHTML=h+'</div>'}
 function counts(key){const m={};for(const s of SHOWS){const v=(key==='genres'||key==='tags')?(s[key]||[]):[s[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])}
 function filtered(){const q=state.q.trim().toLowerCase();let r=SHOWS.filter(s=>(!state.type||s.type===state.type)&&(!state.genre||s.genres.includes(state.genre))&&(!state.network||s.network===state.network)&&(!state.decade||decade(s.year)===state.decade)&&(!state.tag||(s.tags||[]).includes(state.tag))&&(!q||s.show.toLowerCase().includes(q)||s.genres.join(' ').toLowerCase().includes(q)||(s.network||'').toLowerCase().includes(q)||(s.tags||[]).join(' ').toLowerCase().includes(q)));
  const by={eps:(a,b)=>b.eps-a.eps,rating:(a,b)=>(b.rating||0)-(a.rating||0)||b.eps-a.eps,year:(a,b)=>(+b.year||0)-(+a.year||0),old:(a,b)=>(+a.year||9999)-(+b.year||9999),az:(a,b)=>a.show.localeCompare(b.show),added:(a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')};return r.sort(by[state.sort]||by.eps)}
@@ -171,7 +205,7 @@ function card(s,ctx){const total=s.eps;const open=state.open===s.slug;return '<d
  +'<button class="more" title="Details" onclick="event.stopPropagation();toggle(\\''+s.slug+'\\',\\''+ctx+'\\')">'+(open?'▴':'▾')+'</button>'
  +(s.poster?'<div class="p"><img loading="lazy" src="'+s.poster+'" alt=""></div>':'<div class="p">'+esc(s.show)+'</div>')+'<div class="t"><b>'+esc(s.show)+'</b><small>'+esc(s.network||'')+(s.year?' · '+s.year:'')+' · '+total+' ep'+(total===1?'':'s')+(s.rating?' · ★ '+s.rating:'')+'</small></div>'
  +(ctx==='grid'?'<div class="indetail"><p>'+esc(s.overview||'No description yet.')+'</p><p class="g">'+esc(meta(s))+'</p></div>':'')+'</div>'}
-function detail(s){return '<div class="detail">'+(s.poster?'<img src="'+s.poster+'" alt="">':'<div></div>')+'<div><b>'+esc(s.show)+'</b><p>'+esc(s.overview||'No description yet.')+'</p><div class="g">'+esc(meta(s))+'</div><div class="acts"><button class="btn" onclick="go(\\''+s.slug+'\\')">▶ Play</button><button class="btn" onclick="state.open=null;render()">Close</button></div></div></div>'}
+function detail(s){return '<div class="detail">'+(s.poster?'<img src="'+s.poster+'" alt="">':'<div></div>')+'<div><b>'+esc(s.show)+'</b><p>'+esc(s.overview||'No description yet.')+'</p><div class="g">'+esc(meta(s))+'</div><div class="acts"><button class="btn" onclick="go(\\''+s.slug+'\\')">▶ Play</button><button class="btn" onclick="state.open=null;render()">Close</button><span class="mine" data-slug="'+s.slug+'">'+acts(s)+'</span></div></div></div>'}
 function toggle(slug,ctx){state.open=state.open===slug?null:slug;state.openCtx=ctx;render();if(state.open&&ctx!=='grid'){const d=document.querySelector('.detail');if(d)d.scrollIntoView({block:'nearest',behavior:'smooth'})}}
 function shelf(title,list,key){const id='t-'+key.replace(/[^a-z0-9]+/gi,'-').toLowerCase();const openHere=state.open&&state.openCtx===key&&list.some(s=>s.slug===state.open);
  return '<h2>'+esc(title)+'<small>'+list.length+' shows</small>'+(key.startsWith('type:')?'<span class="all" onclick="state.type=\\''+esc(title)+'\\';render();window.scrollTo(0,0)">See all ›</span>':key.startsWith('tag:')?'<span class="all" onclick="state.tag=\\''+esc(title)+'\\';render();window.scrollTo(0,0)">See all ›</span>':'')+'</h2>'
@@ -180,7 +214,7 @@ function shelf(title,list,key){const id='t-'+key.replace(/[^a-z0-9]+/gi,'-').toL
 function slide(id,dir){const t=$(id);if(!t)return;const step=168;t.scrollBy({left:dir*Math.max(step,Math.floor((t.clientWidth-120)/step)*step),behavior:'smooth'})}
 // Re-rendering replaces the whole page, so remember where each shelf was scrolled and put it back (no animation).
 function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach(t=>{pos[t.id]=t.scrollLeft});const y=window.scrollY;fn();document.querySelectorAll('.track').forEach(t=>{if(pos[t.id]){t.style.scrollBehavior='auto';t.scrollLeft=pos[t.id];t.style.scrollBehavior=''}});window.scrollTo(0,y)}
-function browse(){const list=filtered();const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
+function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
  let h='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
  +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
  +'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>';
@@ -188,9 +222,11 @@ function browse(){const list=filtered();const any=state.type||state.genre||state
  if(any)h+='<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
  if(any){h+='<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>';}
  else{
-  const recent=[...SHOWS].sort((a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')).slice(0,30);
+  const recent=VIS().sort((a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')).slice(0,30);
+  const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
+  const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
   h+=shelf('Recently added',recent,'recent');
-  const top=[...SHOWS].filter(s=>s.rating).sort((a,b)=>b.rating-a.rating||b.eps-a.eps).slice(0,30);
+  const top=VIS().filter(s=>s.rating).sort((a,b)=>b.rating-a.rating||b.eps-a.eps).slice(0,30);
   h+=shelf('Top rated',top,'top');
   for(const [tag] of counts('tags')){const rows=list.filter(s=>(s.tags||[]).includes(tag));if(rows.length)h+=shelf(tag,rows,'tag:'+tag)}
   for(const t of TYPES){const rows=list.filter(s=>s.type===t);if(rows.length)h+=shelf(t,rows,'type:'+t)}
@@ -201,12 +237,12 @@ function browse(){const list=filtered();const any=state.type||state.genre||state
 function showView(autoplay){const s=state.show;if(!s.seasons){$('main').innerHTML='<div class="loading">Loading '+esc(s.show)+'…</div>';return}const se=s.seasons[state.se];const ep=se.episodes[state.e];
  let h='<div class="show"><button class="back" onclick="go(\\'\\')">← Browse</button>';
  if(!autoplay)h+='<div class="hero">'+(s.backdrop?'<img src="'+s.backdrop+'" alt="">':'')+'<div class="t"><b>'+esc(s.show)+'</b>'+(s.overview?'<p>'+esc(s.overview.slice(0,260))+(s.overview.length>260?'…':'')+'</p>':'')+'<div class="g">'+[s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episodes'].filter(Boolean).join('  ·  ')+'</div></div></div>';
- h+='<div class="player"><div><video id="v" controls '+(autoplay?'autoplay':'')+' src="'+ep.url+'"></video><div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?' <span class="rv">review</span>':'')+'</div><button class="btn" onclick="next()">Next episode ▶</button></div><p class="hint">Space / K play-pause · N next · F fullscreen · ← → skip 10s. "review" = the builder is not sure this file is this episode.</p></div>';
+ h+='<div class="player"><div><video id="v" controls '+(autoplay?'autoplay':'')+' src="'+ep.url+'"></video><div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?' <span class="rv">review</span>':'')+'</div><button class="btn" onclick="next()">Next episode ▶</button></div><p class="hint">Space / K play-pause · N next · F fullscreen · ← → skip 10s. "review" = the builder is not sure this file is this episode.</p><div class="acts mine" data-slug="'+s.slug+'">'+acts(s)+repBtn(s,se,ep)+'</div></div>';
  const si=state.seView==null?state.se:Math.min(state.seView,s.seasons.length-1);const x=s.seasons[si];
  h+='<div class="eps"><div class="sehead"><select onchange="state.seView=+this.value;render()">'+s.seasons.map((z,i)=>'<option value="'+i+'"'+(i===si?' selected':'')+'>Season '+z.season+' · '+z.episodes.length+' episode'+(z.episodes.length===1?'':'s')+'</option>').join('')+'</select><small>'+s.seasons.length+' season'+(s.seasons.length===1?'':'s')+'</small></div>'
  +x.episodes.map((y,ei)=>'<div class="ep '+(si===state.se&&ei===state.e?'on':'')+'" onclick="play('+si+','+ei+')"><span class="n">E'+y.n+'</span><span>'+esc(y.name)+'</span>'+(y.state==='REVIEW'?'<span class="rv">review</span>':'')+'<span class="m">'+y.min+'m</span></div>').join('')+'</div></div>';
  h+=xray(s)+'</div>';
- $('main').innerHTML=h;const v=$('v');v.onended=next;v.onerror=()=>{v.insertAdjacentHTML('afterend','<p style="color:#f66">This file would not play. Next episode in 3s…</p>');setTimeout(next,3000)}}
+ $('main').innerHTML=h;const v=$('v');v.onended=next;const hr=ME.history[s.slug];if(hr&&hr.se===state.se&&hr.e===state.e&&hr.pos>20)v.addEventListener('loadedmetadata',()=>{if(v.duration&&hr.pos<v.duration-30)v.currentTime=hr.pos},{once:true});v.onplay=()=>{const r=ME.history[s.slug];if(!r||r.se!==state.se||r.e!==state.e)remember()};let lastSave=0;v.ontimeupdate=()=>{const t=Date.now();if(t-lastSave>5000){lastSave=t;const r=ME.history[s.slug];if(r&&r.se===state.se&&r.e===state.e){r.pos=Math.floor(v.currentTime);r.at=t;saveMe()}}};v.onerror=()=>{v.insertAdjacentHTML('afterend','<p style="color:#f66">This file would not play. Next episode in 3s…</p>');setTimeout(next,3000)}}
 function face(p){const open=state.person===p.id;return '<div class="face'+(open?' on':'')+'" onclick="person('+p.id+')">'+(p.photo?'<img loading="lazy" src="'+p.photo+'" alt="">':'<div class="ph"></div>')+'<b>'+esc(p.name)+'</b><small>'+esc(p.as||'')+'</small></div>'}
 function personPanel(id,fallback){const g=PEOPLE[id];const name=g?g.name:fallback.name,photo=g?g.photo:fallback.photo;const others=g?Object.entries(g.shows).filter(([sl])=>sl!==state.show.slug&&BY_SLUG[sl]):[];
  return '<div class="person">'+(photo?'<img src="'+photo+'" alt="">':'<div></div>')+'<div><b>'+esc(name)+'</b><div class="g">'+(others.length?'Also on VOIDtv in '+others.length+' other show'+(others.length===1?'':'s'):'No other VOIDtv shows yet')+'</div>'
@@ -219,16 +255,16 @@ function xray(s){const links=LINKS[s.slug]||{};const conn=Object.entries(links).
  if(state.person!=null){const p=[...cast,...crew].find(x=>x.id===state.person)||{name:'',photo:null};h+=personPanel(state.person,p);}
  if(conn.length){h+='<h3>CONNECTED SHOWS <small style="color:var(--dim);font-weight:400">· through the people above</small></h3><div class="conn">'+conn.map(c=>'<div class="card" onclick="go(\\''+c.t.slug+'\\')">'+(c.t.poster?'<div class="p"><img loading="lazy" src="'+c.t.poster+'" alt=""></div>':'<div class="p">'+esc(c.t.show)+'</div>')+'<div class="t"><b>'+esc(c.t.show)+'</b><span class="via">via '+esc(c.via.slice(0,2).join(', '))+(c.via.length>2?' +'+(c.via.length-2):'')+'</span></div></div>').join('')+'</div>';}
  return h+'</div>'}
-function person(id){state.person=state.person===id?null:id;showView(false);const el=document.querySelector('.person');if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'})}
-function urlFor(slug){return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
-function slugFromUrl(){if(ROUTES==='path'){const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
+function person(id){state.person=state.person===id?null:id;const xr=document.querySelector('.xray');if(xr)xr.outerHTML=xray(state.show);else showView(false);const el=document.querySelector('.person');if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'})}
+function urlFor(slug){if(slug==='me')return ROUTES==='path'?'/me':'#me';return ROUTES==='path'?(slug?'/show/'+slug:'/'):(slug?'#'+slug:'#')}
+function slugFromUrl(){if(ROUTES==='path'){if(location.pathname==='/me'||location.pathname==='/me/')return 'me';const m=location.pathname.match(/^\\/show\\/([^/]+)/);if(m)return decodeURIComponent(m[1]);}return location.hash.length>1?location.hash.slice(1):''}
 async function ensure(s){if(s.seasons)return s;const r=await fetch(BASE+'data/shows/'+s.slug+'.json');const d=await r.json();Object.assign(s,d);if(!GRAPH_LOADED){GRAPH_LOADED=true;try{const g=await (await fetch(BASE+'data/graph.json')).json();Object.assign(PEOPLE,g.people);Object.assign(LINKS,g.links);}catch(_){}}return s}
-async function go(slug,replace){state.person=null;if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
+async function go(slug,replace){state.person=null;if(slug==='me'&&!BY_SLUG.me){state.show=null;state.view='me';history[replace?'replaceState':'pushState'](null,'',urlFor('me'));document.title='Mine · '+SITE;render();window.scrollTo(0,0);return}state.view='';if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',urlFor(''));document.title=SITE;render();return}const s=BY_SLUG[slug];if(!s)return;state.show=s;history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);await ensure(s);if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;state.seView=null;render()}
 function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(true)}
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
-function remember(){try{localStorage.setItem('voidtv:'+state.show.slug,JSON.stringify({se:state.se,e:state.e}))}catch(_){}}
-function resume(s){try{const r=JSON.parse(localStorage.getItem('voidtv:'+s.slug)||'');if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r}catch(_){}return{se:0,e:0}}
-function render(){if(state.show)showView(false);else keepTracks(browse)}
+function remember(){const s=state.show;const r=ME.history[s.slug];ME.history[s.slug]={se:state.se,e:state.e,at:Date.now(),pos:(r&&r.se===state.se&&r.e===state.e)?(r.pos||0):0};saveMe()}
+function resume(s){const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
+function render(){if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else keepTracks(browse)}
 document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
 window.addEventListener('popstate',()=>go(slugFromUrl(),true));
 go(slugFromUrl(),true);
@@ -254,7 +290,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
 <style>${CSS}</style></head><body>
-<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
+<header><div class="logo" onclick="go('')">VOID<span>tv</span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('me')" title="My List, likes and watch history">★ Mine</a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
 <main id="main"></main>
 <footer>${CREDIT}</footer>
 ${indexScript}
