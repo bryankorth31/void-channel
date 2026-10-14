@@ -72,6 +72,23 @@ can move them up.
 - **Always Sunny** was an aside about taste, not a tier. Nothing leads the page because of it.
 - **Kids row**: no. Kids TV movies: yes (in the movie shelf).
 
+## Finding more (the three scouts)
+
+- **`node scripts/networks.js`** — TMDB, no Archive calls: every series from 1990 on across ~45
+  networks we care about (HBO to Hallmark, Adult Swim to Channel 4), minus what is on the list,
+  grouped by network with a suggested row, plus a tally of genres we see a lot of and have no row
+  for. `--add` puts all of them on the list. Report: `docs/NETWORKS.md`.
+- **`node scripts/scout.js`** — the Archive, worked backwards: uploads whose titles read like series
+  rips, plus everything else our trusted uploaders (the ones behind files we accepted) have put up;
+  grouped by inferred title, confirmed against TVmaze, with the episode-shaped file count of the
+  best upload and the Archive subjects uploaders actually use — public access, web series and
+  compilations show up here as leads TVmaze does not know. One polite Archive job; waits its turn
+  behind the two hunts. Report: `docs/SCOUT.md`.
+- **`node scripts/candidates.js`** — TMDB popular / top-rated / trending, the original list builder.
+
+All three run in the nightly pass. Nothing is added to the list by a scout on its own: B (or I, on
+his word) moves names from the reports into `show-list.json`, and the hunt takes it from there.
+
 ## How a new category gets added
 
 1. Add the shows to `scripts/show-list.json` (type = row, `tags` = collections).

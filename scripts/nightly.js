@@ -40,7 +40,9 @@ if (running) log(`   ${running} hunt process(es) already running; skipping the h
 else {
   step('hunt', ['scripts/hunt.js', '--priority', '--open', '8', '--pause', '2500', '--budget', '6000', '--refresh'], 240);
   step('movies', ['scripts/hunt-movies.js', '--min-votes', '20', '--budget', '4000', '--pause', '2500', '--open', '6'], 150);
+  step('scout', ['scripts/scout.js', '--budget', '500', '--pause', '4000', '--open', '60'], 90); // leads for new shows and categories -> docs/SCOUT.md
 }
+step('networks', ['scripts/networks.js'], 30); // TMDB network sweeps -> docs/NETWORKS.md (no Archive calls)
 step('art', ['scripts/art.js'], 30);
 step('people', ['scripts/people.js', '--episodes', '--bios', '4000'], 120);
 step('db', ['scripts/db.js'], 20);
