@@ -48,7 +48,7 @@ for (const s of data.shows) {
 // www and the old Pages address fold into the bare domain once voidtv.net is attached (host-level rules are inert until then).
 const HOST = ORIGIN.replace(/^https?:\/\//, '');
 const hostRules = HOST === 'voidtv.net' ? 'https://www.voidtv.net/* https://voidtv.net/:splat 301\n' : '';
-fs.writeFileSync(path.join(OUT, '_redirects'), hostRules + '/show/* /index.html 200\n/person/* /index.html 200\n/tv /index.html 200\n/tv/* /index.html 200\n/me /index.html 200\n');
+fs.writeFileSync(path.join(OUT, '_redirects'), hostRules + '/show/* /index.html 200\n/person/* /index.html 200\n/tv /index.html 200\n/tv/* /index.html 200\n/me /index.html 200\n/about /index.html 200\n/cash /index.html 200\n');
 // Pages Functions live beside the output: the password gate (functions/_middleware.js) only runs
 // when the SITE_PASSWORD variable is set on the Pages project.
 const fnSrc = path.join(ROOT, 'functions');
@@ -57,6 +57,8 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
+// Web app manifest: phones and TVs can add VOIDtv to the home screen and open it full-screen.
+fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify({ name: 'VOIDtv', short_name: 'VOIDtv', description: 'TV shows from the Internet Archive, 1990 to now. Before AI slop, there was human creativity.', start_url: '/', display: 'standalone', background_color: '#07080c', theme_color: '#07080c', icons: [{ src: '/assets/brand/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/assets/brand/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }] }));
 
 const size = (p) => fs.statSync(p).size;
 let total = 0; const walk = (d) => { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); fs.statSync(p).isDirectory() ? walk(p) : (total += size(p)); } }; walk(OUT);
