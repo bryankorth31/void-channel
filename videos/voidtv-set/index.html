@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>VOIDtv set</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #07080c; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #07080c; }
+      .clip { position: absolute; inset: 0; }
+      #cam { position: absolute; inset: 0; }
+      #set { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; display: block; filter: saturate(.85) brightness(.92); }
+      /* the glass: a rounded box laid over the set's screen; everything the set "shows" lives inside */
+      #screen { position: absolute; left: 366px; top: 72px; width: 1202px; height: 902px; border-radius: 86px / 92px; overflow: hidden; background: #050607; }
+      #screen .ch { position: absolute; left: 0; top: 0; width: 1202px; height: 902px; object-fit: cover; display: block; opacity: 0; filter: saturate(.9) contrast(1.05); }
+      #static { position: absolute; inset: 0; overflow: hidden; opacity: 1; }
+      #grain { position: absolute; left: 0; top: 0; width: 401px; height: 301px; background: #b7bcc8; filter: url(#snow) contrast(1.9) brightness(1.02); transform: scale(3); transform-origin: 0 0; image-rendering: pixelated; }
+      #logo { position: absolute; left: 50%; top: 50%; width: 560px; height: 560px; margin: -280px 0 0 -280px; }
+      #logo img, #logo div { position: absolute; left: 0; top: 0; width: 560px; height: 560px; display: block; }
+      #swirl { opacity: 0; filter: drop-shadow(0 0 20px rgba(95,212,255,.35)); }
+      #letters { opacity: 0; }
+      #bloom { background: url(assets/letters.png) center/560px 560px no-repeat; opacity: 0; filter: blur(16px) saturate(1.6) brightness(1.4); }
+      #logo-glow { position: absolute; left: 50%; top: 50%; width: 1000px; height: 1000px; margin: -500px 0 0 -500px; border-radius: 50%; background: radial-gradient(circle, rgba(95,212,255,.40) 0%, rgba(95,212,255,.12) 30%, rgba(0,0,0,0) 62%); opacity: 0; }
+      #scan { position: absolute; inset: 0; opacity: .20; background: repeating-linear-gradient(180deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,.5) 3px 4px); }
+      #glass { position: absolute; inset: 0; background:
+        radial-gradient(ellipse at 28% 18%, rgba(255,255,255,.14) 0%, rgba(255,255,255,.04) 22%, rgba(255,255,255,0) 40%),
+        radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
+      #curve { position: absolute; inset: 0; box-shadow: inset 0 0 60px 18px rgba(0,0,0,.75); border-radius: 86px / 92px; }
+      /* light the room when the void arrives */
+      #room-glow { position: absolute; left: 967px; top: 523px; width: 1700px; height: 1300px; margin: -650px 0 0 -850px; border-radius: 50%; background: radial-gradient(ellipse, rgba(95,212,255,.26) 0%, rgba(95,212,255,.08) 35%, rgba(0,0,0,0) 65%); mix-blend-mode: screen; opacity: 0; }
+      #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(7,8,12,0) 50%, rgba(7,8,12,.7) 100%); }
+      #grainfilm { position: absolute; inset: 0; opacity: .08; background: url(assets/set.png); mix-blend-mode: overlay; filter: url(#snow) grayscale(1); }
+      #svgdefs { position: absolute; width: 0; height: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13" data-width="1920" data-height="1080">
+      <svg id="svgdefs" aria-hidden="true">
+        <filter id="snow" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="1" stitchTiles="stitch" result="n" />
+          <feColorMatrix type="saturate" values="0" in="n" result="g" />
+          <feComponentTransfer in="g">
+            <feFuncR type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1" />
+            <feFuncG type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1" />
+            <feFuncB type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1" />
+          </feComponentTransfer>
+        </filter>
+      </svg>
+      <section id="stage" class="clip" data-start="0" data-duration="13" data-track-index="0">
+        <div id="cam">
+          <img id="set" src="assets/set.png" alt="" />
+          <div id="screen">
+            <img class="ch" id="ch1" src="assets/ch-the-x-files.jpg" alt="" />
+            <img class="ch" id="ch2" src="assets/ch-twin-peaks.jpg" alt="" />
+            <img class="ch" id="ch3" src="assets/ch-sealab-2021.jpg" alt="" />
+            <img class="ch" id="ch4" src="assets/ch-seinfeld.jpg" alt="" />
+            <img class="ch" id="ch5" src="assets/ch-deadwood.jpg" alt="" />
+            <img class="ch" id="ch6" src="assets/ch-buffy-the-vampire-slayer.jpg" alt="" />
+            <img class="ch" id="ch7" src="assets/ch-the-sopranos.jpg" alt="" />
+            <img class="ch" id="ch8" src="assets/ch-star-trek-the-next-generation.jpg" alt="" />
+            <div id="logo-glow"></div>
+            <div id="logo">
+              <img id="swirl" src="assets/swirl.png" alt="" />
+              <div id="bloom"></div>
+              <img id="letters" src="assets/letters.png" alt="" />
+            </div>
+            <div id="static"><div id="grain"></div></div>
+            <div id="scan"></div>
+            <div id="glass"></div>
+            <div id="curve"></div>
+          </div>
+          <div id="room-glow"></div>
+        </div>
+        <div id="vignette"></div>
+      </section>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("turb");
+      const seed = { v: 1 };
+      // snow seed steps every frame for the whole piece (deterministic per time); visibility is toggled below
+      tl.to(seed, { v: 390, duration: 13, ease: "none", snap: { v: 1 }, onUpdate: () => turb.setAttribute("seed", String(seed.v)) }, 0);
+      // slow push into the set
+      tl.fromTo("#cam", { scale: 1 }, { scale: 1.045, duration: 13, ease: "none", transformOrigin: "50% 48%" }, 0);
+
+      // channel surf: [id, start, end]; a blip of snow between each
+      const chans = [["#ch1", 2.6, 3.55], ["#ch2", 3.67, 4.55], ["#ch3", 4.67, 5.35], ["#ch4", 5.47, 6.15], ["#ch5", 6.27, 6.95], ["#ch6", 7.07, 7.75], ["#ch7", 7.87, 8.6], ["#ch8", 8.72, 10.0]];
+      for (const [id, a, b] of chans) {
+        tl.set(id, { opacity: 1 }, a);
+        tl.set("#static", { opacity: 0 }, a);
+        tl.fromTo(id, { scale: 1.06 }, { scale: 1.12, duration: b - a, ease: "none", immediateRender: false }, a);
+        tl.set(id, { opacity: 0 }, b);
+        tl.set("#static", { opacity: 1 }, b);
+      }
+      // the last show is a real find: a brief pause on it, then the set hunts once more and the void answers
+      tl.set("#static", { opacity: 0 }, 10.12);
+      tl.fromTo("#swirl", { opacity: 0, scale: 1.18 }, { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out", immediateRender: false }, 10.12);
+      tl.fromTo("#swirl", { rotation: 0 }, { rotation: 335, duration: 13, ease: "none" }, 0);
+      tl.fromTo("#logo-glow", { opacity: 0, scale: .8 }, { opacity: .6, scale: 1, duration: .6, ease: "sine.out", immediateRender: false }, 10.1);
+      tl.fromTo("#letters", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out", immediateRender: false }, 10.55);
+      tl.fromTo("#bloom", { opacity: 0, scale: 1.1 }, { opacity: 0.9, scale: 1.02, duration: 0.3, ease: "power2.out", immediateRender: false }, 10.6);
+      tl.to("#bloom", { opacity: 0.28, scale: 1, duration: 0.8, ease: "sine.out" }, 10.92);
+      tl.fromTo("#room-glow", { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "sine.out", immediateRender: false }, 10.3);
+      tl.to("#logo-glow", { opacity: .4, duration: 1.4, ease: "sine.inOut" }, 11.0);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

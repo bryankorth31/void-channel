@@ -28,3 +28,8 @@ catalog/cache/
 catalog/voidtv.db*
 catalog/preview.html
 site/
+
+# HyperFrames brand projects: keep sources, not node_modules, renders or check artifacts
+videos/*/node_modules/
+videos/*/renders/
+videos/*/.hyperframes/
