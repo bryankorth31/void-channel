@@ -461,6 +461,34 @@ them the media we have that qualifies").** Same shelf component, same cards, sam
   text}], why, questions, words, practice, parentNote, partOf, reviewedBy, reviewedAt. The site builder turns it into rows exactly
   as it turns the show list into rows today.
 
+**Guided mode: the HR-training player, done kindly (B, 2026-10-13: "a player that draws from
+corporate HR videos that don't allow going to the next page until the entire thing, or all the
+media, is selected or played").** Yes, and it is a mode of the player we already have, not a new
+one. A parent switches a child's profile (or a single bundle) into *guided mode*; then:
+
+- **The main piece plays through.** The scrub bar cannot jump ahead of the furthest point
+  actually watched (rewinding is always allowed); playback speed is capped at 1×; the piece counts
+  as watched when the end is reached, with a small margin for credits.
+- **Every companion must be opened** — and, for a reading or a listen, kept open for a minimum
+  time scaled to its length — before the bundle's **Next** lights up. The ▾ shows the checklist:
+  watch ✓, read ◻, listen ◻, do ◻. "Do" is marked by the child or parent, since nobody can see the
+  kitchen table.
+- **Next** goes to the next bundle in the week the aid or the parent planned. Outside guided mode,
+  Next is just a suggestion and everything is free.
+- **Completion is a memory, not a mark.** It lands in Mine as "finished" with the date, and in the
+  parent's note. No score, no streak, no badge economy.
+- **Pausing is never punished.** Leaving the tab pauses the piece and holds the spot; coming back
+  resumes. Children are allowed to go to the bathroom.
+
+The honest caveat: with no server, the gate is a promise the page keeps, not a lock. A child who
+knows developer tools can defeat it in a minute; so can a reload if we are careless, so progress
+is written to Mine every few seconds. That is the right strength for a home: it holds the honest
+child to the lesson and asks nothing of the parent's trust it cannot earn. If a stronger lock is
+ever wanted, it needs accounts and a server, and we will say so rather than pretend.
+
+Same mode, optional, for Void University's authored courses (a learner can switch it on for
+themselves: "don't let me skip").
+
 **Later: the teacher's aid (B, 2026-10-13: "in this area we can in the future build a teacher's
 aid model that can act as a semi-automated instructor").** The study companion from "The model"
 above, grown up and given a classroom. *Semi*-automated is the design: the parent sets it, it
