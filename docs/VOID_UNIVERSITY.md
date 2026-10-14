@@ -350,6 +350,62 @@ material; a reading partner that sits beside it.
 What the model does NOT do: choose the curriculum (that is B's voice), rank voices by fame,
 summarise a lecture so you can skip it, or talk to a visitor who did not press the button.
 
+## Void School: the homeschool toolkit (B, 2026-10-13)
+
+B: "Could we build this using our full library to be homeschool tools — the entire class, videos to
+go with, tests and study material and articles in all forms? I see this as no more than continuing
+to apply the same way to all the rest, assigning criteria and filtering cross-connections with a
+simple model."
+
+Yes. It is the same machine with a different list, plus one generated layer. What changes, honestly:
+
+**Same machine**
+- *List*: a scope and sequence instead of a show list — strands (reading, writing, math, science,
+  history/civics, arts, practical life) × levels, each lesson with an outcome. Not invented from
+  scratch: whole K–12 curricula already exist under open licences and give us the spine and the
+  assessments — Core Knowledge (K–8, CC BY-NC-SA), EngageNY / Eureka (K–12 math and ELA with
+  tests, CC BY-NC-SA), Illustrative Mathematics (CC BY), CK-12 (CC BY-NC), OpenStax high-school
+  texts (CC BY), Khan Academy, Siyavula, Wikisource/Gutenberg for the readings. These are known
+  bodies; we match to them like TVmaze.
+- *Hunt*: the lesson's video from the library (Bronowski, Burke, Sagan, Feynman, the Documentary
+  and Nature & Science rows, Computer Chronicles, the found courses), judged by the same criteria
+  — right outcome, demonstrated voice, playable — plus **level** and **suitability** (see the door
+  below).
+- *Match*: article = Simple English Wikipedia or Wikipedia section + a public-domain primary source;
+  reading = the open textbook chapter or a Gutenberg text; practice = the open curriculum's own
+  exercises where they exist.
+- *X-Ray*: the subject graph connects a lesson to its voices, to the next lesson, to the
+  documentary that shows it, to the machine you can run.
+
+**The generated layer (the "simple model", builder side, static output)**
+For each lesson the model writes the wrap that the library cannot supply: objectives in plain
+words, a why-it-matters paragraph (entry 4 made mandatory), vocabulary, three questions to ask
+while watching, a 10-question check with answer key, one project or practice, a parent note
+(what to listen for, common misconceptions). Grounded on the actual material (transcript +
+reading), never on the model's memory, so a test asks about what the child watched. Standards
+tagging (Common Core / state codes, which are public) so a parent can map it to what their state
+asks for. B reviews by sampling; a flag on any lesson sends it back. Cost: a lesson pack is
+pennies; a full K–12 pass is low hundreds of dollars, once, then revisions.
+
+**What the library cannot do, said plainly**
+- *Grading and feedback at volume*: answer keys and self-checks are static and free; grading a
+  child's written paragraph needs the visitor-side companion with its budget, or the parent. The
+  parent is the teacher; we are the shelf and the planner.
+- *Hands-on*: labs, music practice, sport, making — we can show and assign, not supervise.
+- *Accreditation*: none. Many states accept a portfolio and records; Mine becomes the record
+  (per-child profiles in one household, progress, completed checks, a printable transcript).
+- *Socialisation*: the study hall, later, optional.
+
+**The door, and the kids rule.** VoidTV is an adult app behind an 18+ gate; that does not change.
+Void School is a separate door with its own list and its own filter: every piece passes a
+suitability check (level, content, the hard excludes) before it can be assigned, and nothing from
+the Late Night or mature shelves is reachable from inside it. Household profiles (parent, each
+child) live in the same Mine blob; the sync code moves the household together.
+
+**Order.** VoidTV live → Void University's found courses and the first authored entries → Void
+School, starting with ONE strand end to end (B picks; history/civics or science would use the
+library hardest) to prove the lesson pack before scaling to the K–12 spine.
+
 ## Order of operations
 
 VoidTV to live first (TV world, nightly job, domain swap). Then: READ mode (the reader B already
