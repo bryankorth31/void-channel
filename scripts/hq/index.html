@@ -66,7 +66,7 @@ async function shows(m){if(showSlug&&!showSlug.includes('='))return showPage(m,s
  drawShows(f)}
 function applyFilters(){const p=new URLSearchParams();if($('#fq').value)p.set('q',$('#fq').value);if($('#ft').value)p.set('type',$('#ft').value);if($('#fg').value)p.set('tag',$('#fg').value);if($('#fs').value)p.set('state',$('#fs').value);location.hash='#shows/'+p.toString()}
 function drawShows(f){let rows=SHOWS.rows.filter(r=>(!f.q||r.name.toLowerCase().includes(f.q.toLowerCase()))&&(!f.type||r.type===f.type)&&(!f.tag||r.tags.includes(f.tag)));
- const st=f.state;rows=rows.filter(r=>{const s=r.stats;switch(st){case 'playing':return s&&s.playing>0;case 'review':return s&&s.review>0&&!s.playing;case 'unplayable':return s&&s.unplayable>0;case 'missing':return r.hunted&&(!s||s.total===0||(s.live+s.review)===0);case 'unhunted':return !r.hunted;case 'hidden':return r.hidden;case 'edited':return r.edited;case 'self':return r.selfListed;default:return true}});
+ const st=f.state;rows=rows.filter(r=>{const s=r.stats;switch(st){case 'playing':return s&&s.playing>0;case 'review':return s&&s.review>0;case 'unplayable':return s&&s.unplayable>0;case 'missing':return r.hunted&&(!s||s.total===0||(s.live+s.review)===0);case 'unhunted':return !r.hunted;case 'hidden':return r.hidden;case 'edited':return r.edited;case 'self':return r.selfListed;default:return true}});
  const val=(r,k)=>k==='name'?r.name.toLowerCase():k==='playing'?(r.stats?r.stats.playing:-1):k==='review'?(r.stats?r.stats.review:-1):k==='total'?(r.stats?r.stats.total:-1):k==='matchedAt'?(r.matchedAt||''):(r[k]||'');
  rows.sort((a,b)=>{const x=val(a,sortKey),y=val(b,sortKey);return (x>y?1:x<y?-1:0)*sortDir});
  $('#fcount').textContent=rows.length+' shows';
