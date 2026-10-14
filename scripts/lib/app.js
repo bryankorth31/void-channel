@@ -175,7 +175,7 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 @media(max-width:600px){.hero-home{height:66vh;min-height:420px}.hero-home h1{font-size:30px}.hero-home .ov{-webkit-line-clamp:3;font-size:14px}.hero-home .copy{left:16px;right:16px;bottom:16px}.hero-home .tag{font-size:15px}}
 .card{transition:transform .18s ease,outline-color .18s ease}.card:hover{transform:translateY(-3px)}.card:focus-visible{outline-color:var(--acc)}
 .card .p.gen{flex-direction:column;gap:6px;background:linear-gradient(160deg,hsl(var(--h) 42% 24%),#0b0d14 72%);color:var(--fg);padding:12px}.card .p.gen b{font-size:44px;line-height:1;font-weight:700;letter-spacing:-.02em;opacity:.95;text-shadow:0 2px 10px rgba(0,0,0,.5)}.card .p.gen span{font-size:12px;line-height:1.25;max-height:3.75em;overflow:hidden}.card .p.gen small{color:var(--dim);font-size:11px}
-.support{border-left:none;background:transparent;font-size:13px;color:var(--dim);padding:10px 14px;margin-top:10px}.support b{color:var(--fg)}.support .cross{width:34px;height:auto;flex:none;opacity:.9}
+.support{border:1px solid rgba(242,169,59,.5);border-left:5px solid var(--gold);background:linear-gradient(90deg,rgba(242,169,59,.14),rgba(12,14,20,.75) 55%);font-size:15px;line-height:1.5;color:var(--fg);padding:14px 18px;margin-top:12px;box-shadow:0 0 24px rgba(242,169,59,.12)}.support b{color:var(--gold);font-size:17px}.support .cross{width:46px;height:auto;flex:none;filter:drop-shadow(0 0 8px rgba(242,169,59,.5))}.support .acts .btn{font-size:15px;padding:10px 16px}
 .tv video.idle{width:100%;aspect-ratio:16/9;max-height:70vh;object-fit:cover;display:block;background:#000}
 .ch.on .cn::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:8px;box-shadow:0 0 8px var(--gold)}
 main{position:relative;z-index:1}
@@ -303,7 +303,7 @@ video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 .conn{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}
 .conn .card{flex:0 0 140px}.conn .card .via{display:block;color:var(--acc);font-size:11px;margin-top:3px;line-height:1.2}
 .loading{padding:40px 20px;color:var(--dim)}
-footer{color:var(--dim);font-size:12px;padding:20px;border-top:1px solid var(--line);margin-top:20px}
+footer{color:var(--fg);font-size:13px;padding:20px;border-top:1px solid var(--line);margin-top:20px}
 @media(max-width:860px){.player{grid-template-columns:1fr}.eps{max-height:40vh}.hero .t b{font-size:22px}}
 `;
 
