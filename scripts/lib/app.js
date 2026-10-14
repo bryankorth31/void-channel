@@ -168,6 +168,16 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .tv video.idle{width:100%;aspect-ratio:16/9;max-height:70vh;object-fit:cover;display:block;background:#000}
 .ch.on .cn::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:8px;box-shadow:0 0 8px var(--gold)}
 main{position:relative;z-index:1}
+.bgimg{position:fixed;inset:0;z-index:0;pointer-events:none;background:#07080c center/cover no-repeat;opacity:0;transition:opacity .8s ease,background-image 0s}
+.bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
+body[data-view=home] .bgimg{background-image:url(/assets/brand/bg/static-dark.jpg);opacity:.9}
+body[data-view=show] .bgimg,body[data-view=person] .bgimg{background-image:url(/assets/brand/bg/static-glitch.jpg);opacity:.55}
+body[data-view=tv] .bgimg{background-image:url(/assets/brand/bg/wall.jpg);opacity:.85}
+body[data-view=me] .bgimg{background-image:url(/assets/brand/bg/watcher-purple.jpg);opacity:.8}
+body[data-view=grid] .bgimg{background-image:url(/assets/brand/bg/static-bolt.jpg);opacity:.5}
+body:not([data-view=home]) .void{display:none}
+@media(max-width:700px){body[data-view=home] .bgimg{background-image:url(/assets/brand/bg/static-dark-m.jpg)}body[data-view=show] .bgimg,body[data-view=person] .bgimg{background-image:url(/assets/brand/bg/static-glitch-m.jpg)}body[data-view=tv] .bgimg{background-image:url(/assets/brand/bg/wall-m.jpg)}body[data-view=me] .bgimg{background-image:url(/assets/brand/bg/watcher-purple-m.jpg)}body[data-view=grid] .bgimg{background-image:url(/assets/brand/bg/static-bolt-m.jpg)}}
+.finder,.guide,.eps,.xray .person,.support,.me>.acts,.dd .panel{backdrop-filter:blur(2px)}
 .grain{position:fixed;left:-50%;top:-50%;width:200%;height:200%;pointer-events:none;z-index:1000;opacity:.045;background:url(/assets/brand/noise.png) repeat;background-size:160px 160px;mix-blend-mode:screen;animation:grain .6s steps(6) infinite;will-change:transform}
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,-8%)}40%{transform:translate(-12%,4%)}60%{transform:translate(6%,-18%)}80%{transform:translate(-4%,18%)}100%{transform:translate(9%,0)}}
 .void{position:fixed;right:-18vw;bottom:-22vw;width:64vw;height:64vw;max-width:900px;max-height:900px;pointer-events:none;z-index:0;background:url(/assets/brand/void-soft.webp) center/contain no-repeat;opacity:.07;animation:spin 240s linear infinite;will-change:transform}
@@ -431,7 +441,7 @@ function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(tr
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){const s=state.show;const r=ME.history[s.slug];ME.history[s.slug]={se:state.se,e:state.e,at:Date.now(),pos:(r&&r.se===state.se&&r.e===state.e)?(r.pos||0):0};saveMe()}
 function resume(s){const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
-function render(){if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else keepTracks(browse)}
+function render(){const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;document.body.dataset.view=state.show?'show':state.view==='me'?'me':state.view==='person'?'person':state.view==='tv'?'tv':any?'grid':'home';if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else keepTracks(browse)}
 document.addEventListener('keydown',(k)=>{if(k.target.tagName==='INPUT'||k.target.tagName==='SELECT')return;const v=$('v');if(k.key==='/'){k.preventDefault();$('q').focus();return}if(state.view==='tv'&&(k.key==='ArrowUp'||k.key==='ArrowDown')){k.preventDefault();surf(k.key==='ArrowUp'?-1:1);return}if(!v)return;if(k.key===' '||k.key==='k'){k.preventDefault();v.paused?v.play():v.pause()}if(k.key==='n')next();if(k.key==='f')v.requestFullscreen&&v.requestFullscreen();if(k.key==='ArrowRight')v.currentTime+=10;if(k.key==='ArrowLeft')v.currentTime-=10;if(k.key==='Escape')go('')});
 window.addEventListener('popstate',()=>go(slugFromUrl(),true));
 document.addEventListener('visibilitychange',()=>{document.querySelectorAll('.grain,.void').forEach(e=>{e.style.animationPlayState=document.hidden?'paused':'running'})});
@@ -461,7 +471,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 ${og}
 <style>${CSS}</style></head><body>
 <header><div class="logo" onclick="go('')"><img class="mark" src="${base}assets/brand/icon-192.png" alt="" onerror="this.remove()"><span class="name">VOID<span>tv</span></span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;render()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on">📺<span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history">★<span class="long"> Mine</span></a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to the Church of American Strength &amp; Hope">♥ Donate<span class="long"> to CASH</span></a></header>
-<div class="void" aria-hidden="true"></div><main id="main"></main><div class="grain" aria-hidden="true"></div>
+<div class="bgimg" aria-hidden="true"></div><div class="void" aria-hidden="true"></div><main id="main"></main><div class="grain" aria-hidden="true"></div>
 <footer>${CREDIT}</footer>
 ${indexScript}
 <script>
