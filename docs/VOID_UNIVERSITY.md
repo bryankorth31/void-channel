@@ -273,6 +273,42 @@ Mind and Machines, a lecturer in a found course, and a documentary subject. Pick
 panel shows the rest. That is the same "degrees of separation" idea from B's first Archive-TV
 design, now carrying learning instead of trivia.
 
+## The model: where it adds (B, 2026-10-13: "build a model into this area where it adds")
+
+Three places a model earns its keep here, in the order they pay off. Everything keeps the house
+rules: the site stays static and free, no accounts, nothing required of the visitor.
+
+**1. The course-drafting engine (builder side, on B's PC; first).** Given a curriculum entry, the
+model does what I did by hand above, but against the actual bodies: queries Wikidata for people
+whose occupations, works and awards match the competency; Open Syllabus for the most-assigned
+texts; the Archive's search for talks, series and readings by those people; TVmaze/TMDB for the
+documentary and episode tie-ins we already hold. It returns voices **with evidence** (did it /
+teaches it / open), candidate units with the exact Archive items, and a draft syllabus in B's
+voice. B approves, strikes, reorders in the Control Room; nothing publishes without him. Cost:
+pennies per course, zero per visitor. Model: Claude (claude-sonnet-5-5 for drafting; the same
+loop can run from a Claude Code session today without any new code).
+
+**2. Transcripts and the connections index (builder side; alongside).** Most Archive lectures have
+no transcript. Whisper on B's PC transcribes from the audio stream (no video stored) and writes
+timed text per piece. That alone adds: search inside a lecture, "jump to where Feynman says it",
+quotable passages with timestamps, captions. Then a local embedding model over transcripts,
+chapters and episode overviews builds the **subject graph** statically: "what else teaches this"
+across media types, computed once in the builder, shipped as neighbour lists. No inference at
+visit time.
+
+**3. The study companion (visitor side; after the site is live).** An "Ask" button on a unit,
+grounded ONLY in that unit's transcript and readings (so it quotes Feynman rather than
+impersonating him), that does three things: answers "what did he mean by X" with the timestamp,
+asks the viewer one Socratic question back after a piece (the critical-thinking entry turned into
+practice), and points to the connected piece in another medium. Runs as a Cloudflare Worker with a
+monthly budget (Workers AI small model free tier first; claude-haiku-5-5 behind it if the
+quality isn't there), rate-limited per IP, no login, opt-in per click. If the budget is spent,
+the button says so and the course still works without it. Never a chatbot that replaces the
+material; a reading partner that sits beside it.
+
+What the model does NOT do: choose the curriculum (that is B's voice), rank voices by fame,
+summarise a lecture so you can skip it, or talk to a visitor who did not press the button.
+
 ## Order of operations
 
 VoidTV to live first (TV world, nightly job, domain swap). Then: READ mode (the reader B already
