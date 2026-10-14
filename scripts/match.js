@@ -93,7 +93,7 @@ function matchShow(entry) {
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
   const aliases = (ov.aliases || []).map(norm).filter(Boolean);
   const tv = loadTv(show);
-  if (!tv || !tv.episodes.length) return { show, type: entry.type, network: entry.network, noTvmaze: true };
+  if (!tv || !tv.episodes.length) return selfGrid(entry, cand, ((OVERRIDES[slug(show)] || {}).aliases || []).map(norm).filter(Boolean)) || { show, type: entry.type, network: entry.network, noTvmaze: true };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
@@ -189,6 +189,43 @@ function matchShow(entry) {
     coverage: { total, live, review, missing: total - live - review, pct: Math.round(((live + review) / total) * 100) },
     seasons,
   };
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+  fs.writeFileSync(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
+  return out;
+}
+
+// No TVmaze entry (web series, one-off documentaries, local shows): list the show from its own files.
+// Only uploads that NAME the show count; S/E in filenames sets the order, the rest follow in name
+// order as season 1. Everything is REVIEW: honest about where the order came from.
+function selfGrid(entry, cand, aliases) {
+  const show = entry.name;
+  const core = norm(show).replace(/^the /, '').replace(/(.*?)/g, '').trim();
+  const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
+  const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
+  const files = [];
+  for (const item of cand.items) {
+    if (!(names(item.title || '') || norm(item.id).replace(/ /g, '').includes(core.replace(/ /g, '')))) continue;
+    if (langRisk(item.title)) continue;
+    for (const f of item.files) {
+      if (!(f.seconds >= 90 && f.seconds <= 3 * 3600)) continue;
+      if (langRisk(f.name)) continue;
+      const risk = codecRisk(f.name, f.format, f.playable);
+      files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: f.ep, conf: 0.6, why: 'self-listed: no TVmaze entry; order from the files' });
+    }
+  }
+  if (files.length < 2) return null;
+  const bySE = new Map(); const loose = [];
+  for (const f of files) { if (f.ep && f.ep.episode) { const k = (f.ep.season || 1) + 'x' + f.ep.episode; const cur = bySE.get(k); if (!cur || (f.playable && !cur.playable) || (f.playable === cur.playable && (f.sizeMB || 0) > (cur.sizeMB || 0))) bySE.set(k, f); } else loose.push(f); }
+  const seasons = {};
+  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); (seasons[se] = seasons[se] || []).push({ number: ep, name: titlePart(f.name, showWords) || ('Episode ' + ep), state: 'REVIEW', file: f, alternates: [] }); }
+  loose.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+  const seen = new Set(); let next = (seasons[1] || []).reduce((m, e) => Math.max(m, e.number), 0);
+  for (const f of loose) { const key = norm(f.name); if (seen.has(key)) continue; seen.add(key); next++; (seasons[1] = seasons[1] || []).push({ number: next, name: titlePart(f.name, showWords) || ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
+  const list = Object.keys(seasons).map(Number).sort((a, b) => a - b).map((se) => ({ season: se, episodes: seasons[se].sort((a, b) => a.number - b.number) }));
+  const total = list.reduce((m, se) => m + se.episodes.length, 0);
+  const out = { show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), selfListed: true,
+    tvmaze: { id: null, name: show, runtime: null, premiered: null, network: entry.network },
+    coverage: { total, live: 0, review: total, missing: 0, pct: 100 }, seasons: list };
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
   return out;
