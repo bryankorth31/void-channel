@@ -14,7 +14,9 @@
       #set { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; display: block; filter: saturate(.85) brightness(.92); }
       /* the glass: a rounded box laid over the set's screen; everything the set "shows" lives inside */
       #screen { position: absolute; left: 366px; top: 72px; width: 1202px; height: 902px; border-radius: 86px / 92px; overflow: hidden; background: #050607; }
-      #screen .ch { position: absolute; left: 0; top: 0; width: 1202px; height: 902px; object-fit: cover; display: block; opacity: 0; filter: saturate(.9) contrast(1.05); }
+      #tube { position: absolute; inset: 0; filter: url(#barrel); }
+      #age { position: absolute; left: 0; top: 0; width: 1202px; height: 902px; display: block; pointer-events: none; }
+      #screen .ch { position: absolute; left: 0; top: 0; width: 1202px; height: 902px; object-fit: cover; display: block; opacity: 0; filter: saturate(1.02) contrast(1.04); }
       #static { position: absolute; inset: 0; overflow: hidden; opacity: 1; }
       #grain { position: absolute; left: 0; top: 0; width: 401px; height: 301px; background: #b7bcc8; filter: url(#snow) contrast(1.9) brightness(1.02); transform: scale(3); transform-origin: 0 0; image-rendering: pixelated; }
       #logo { position: absolute; left: 50%; top: 50%; width: 560px; height: 560px; margin: -280px 0 0 -280px; }
@@ -23,11 +25,11 @@
       #letters { opacity: 0; }
       #bloom { background: url(assets/letters.png) center/560px 560px no-repeat; opacity: 0; filter: blur(16px) saturate(1.6) brightness(1.4); }
       #logo-glow { position: absolute; left: 50%; top: 50%; width: 1000px; height: 1000px; margin: -500px 0 0 -500px; border-radius: 50%; background: radial-gradient(circle, rgba(95,212,255,.40) 0%, rgba(95,212,255,.12) 30%, rgba(0,0,0,0) 62%); opacity: 0; }
-      #scan { position: absolute; inset: 0; opacity: .20; background: repeating-linear-gradient(180deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,.5) 3px 4px); }
+      #scan { position: absolute; inset: 0; opacity: .10; background: repeating-linear-gradient(180deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,.5) 3px 4px); }
       #glass { position: absolute; inset: 0; background:
         radial-gradient(ellipse at 28% 18%, rgba(255,255,255,.14) 0%, rgba(255,255,255,.04) 22%, rgba(255,255,255,0) 40%),
-        radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
-      #curve { position: absolute; inset: 0; box-shadow: inset 0 0 60px 18px rgba(0,0,0,.75); border-radius: 86px / 92px; }
+        radial-gradient(ellipse at center, rgba(0,0,0,0) 62%, rgba(0,0,0,.35) 100%); }
+      #curve { position: absolute; inset: 0; box-shadow: inset 0 0 34px 6px rgba(0,0,0,.6), inset 0 0 2px 1px rgba(95,212,255,.10); border-radius: 86px / 92px; }
       /* light the room when the void arrives */
       #room-glow { position: absolute; left: 967px; top: 523px; width: 1700px; height: 1300px; margin: -650px 0 0 -850px; border-radius: 50%; background: radial-gradient(ellipse, rgba(95,212,255,.26) 0%, rgba(95,212,255,.08) 35%, rgba(0,0,0,0) 65%); mix-blend-mode: screen; opacity: 0; }
       #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(7,8,12,0) 50%, rgba(7,8,12,.7) 100%); }
@@ -38,6 +40,7 @@
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="13" data-width="1920" data-height="1080">
       <svg id="svgdefs" aria-hidden="true">
+        <filter id="barrel" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feImage href="assets/barrel.png" result="map" preserveAspectRatio="none" /><feDisplacementMap in="SourceGraphic" in2="map" scale="12" xChannelSelector="R" yChannelSelector="G" /></filter>
         <filter id="snow" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
           <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="1" stitchTiles="stitch" result="n" />
           <feColorMatrix type="saturate" values="0" in="n" result="g" />
@@ -51,7 +54,7 @@
       <section id="stage" class="clip" data-start="0" data-duration="13" data-track-index="0">
         <div id="cam">
           <img id="set" src="assets/set.png" alt="" />
-          <div id="screen">
+          <div id="screen"><div id="tube">
             <img class="ch" id="ch1" src="assets/ch-the-x-files.jpg" alt="" />
             <img class="ch" id="ch2" src="assets/ch-twin-peaks.jpg" alt="" />
             <img class="ch" id="ch3" src="assets/ch-sealab-2021.jpg" alt="" />
@@ -67,8 +70,9 @@
               <img id="letters" src="assets/letters.png" alt="" />
             </div>
             <div id="static"><div id="grain"></div></div>
-            <div id="scan"></div>
+            <div id="scan"></div></div>
             <div id="glass"></div>
+            <img id="age" src="assets/glass-edge.png" alt="" />
             <div id="curve"></div>
           </div>
           <div id="room-glow"></div>
