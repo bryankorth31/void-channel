@@ -94,7 +94,7 @@ function matchShow(entry) {
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
   const aliases = (ov.aliases || []).map(norm).filter(Boolean);
   const tv = loadTv(show);
-  if (!tv || !tv.episodes.length) return selfGrid(entry, cand, ((OVERRIDES[slug(show)] || {}).aliases || []).map(norm).filter(Boolean)) || { show, type: entry.type, network: entry.network, noTvmaze: true };
+  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, ((OVERRIDES[slug(show)] || {}).aliases || []).map(norm).filter(Boolean)); if (sg) return sg; try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
@@ -209,7 +209,7 @@ function selfGrid(entry, cand, aliases) {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));
     const named = names(item.title || '') || idn.includes(core.replace(/ /g, ''));
-    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name));
+    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !/(podcast|audiobook)/i.test(f.name));
     const distinct = new Set(vids.map((f) => norm(f.name).replace(/(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)/g, '').trim())).size; // format variants count once
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
     const net = norm(entry.network || '').replace(/ /g, '');
