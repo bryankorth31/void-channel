@@ -1,0 +1,69 @@
+{
+  "show": "Fire Force",
+  "slug": "fire-force",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T15:19:23.581Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Fire Force",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "fire-force-season-2-e-2-720p",
+            "itemTitle": "Fire Force Season 2 E 2 720p",
+            "file": "Fire_Force_Season_2-E2-720p.mp4",
+            "name": "Fire_Force_Season_2-E2-720p",
+            "url": "https://archive.org/download/fire-force-season-2-e-2-720p/Fire_Force_Season_2-E2-720p.mp4",
+            "seconds": 1484,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 169,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "fire-force-season-2-e-6-720p",
+            "itemTitle": "Fire Force Season 2 E 6 720p",
+            "file": "Fire_Force_Season_2-E6-720p.mp4",
+            "name": "Fire_Force_Season_2-E6-720p",
+            "url": "https://archive.org/download/fire-force-season-2-e-6-720p/Fire_Force_Season_2-E6-720p.mp4",
+            "seconds": 1484,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 157,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

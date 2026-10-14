@@ -1,0 +1,69 @@
+{
+  "show": "BLUE LOCK",
+  "slug": "blue-lock",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T15:19:23.579Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "BLUE LOCK",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "youcut 20260509 120027008",
+          "state": "REVIEW",
+          "file": {
+            "item": "you-cut-20260509-120027008",
+            "itemTitle": "Blue Lock & Tokyo Revengers episode 13 Toonami airing",
+            "file": "YouCut_20260509_120027008.mp4",
+            "name": "YouCut_20260509_120027008",
+            "url": "https://archive.org/download/you-cut-20260509-120027008/YouCut_20260509_120027008.mp4",
+            "seconds": 3632,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 783,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "youcut 20260609 175118638",
+          "state": "REVIEW",
+          "file": {
+            "item": "you-cut-20260609-175118638",
+            "itemTitle": "Blue Lock & Tokyo Revengers episode 17 Toonami Airing",
+            "file": "YouCut_20260609_175118638.mp4",
+            "name": "YouCut_20260609_175118638",
+            "url": "https://archive.org/download/you-cut-20260609-175118638/YouCut_20260609_175118638.mp4",
+            "seconds": 3654,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 774,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

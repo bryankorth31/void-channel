@@ -1,0 +1,89 @@
+{
+  "show": "JoJo's Bizarre Adventure",
+  "slug": "jojos-bizarre-adventure",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T15:19:23.523Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "JoJo's Bizarre Adventure",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "vts 01 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "jojosbizarreadventurephantombloodmoviecollection",
+            "itemTitle": "Jojo's Bizarre Adventure: Phantom Blood Movie Collection",
+            "file": "2004 Preview DVD/VIDEO_TS/VTS_01_1.mp4",
+            "name": "2004 Preview DVD/VIDEO_TS/VTS_01_1",
+            "url": "https://archive.org/download/jojosbizarreadventurephantombloodmoviecollection/2004%20Preview%20DVD%2FVIDEO_TS%2FVTS_01_1.mp4",
+            "seconds": 150,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "notelus preview restoration",
+          "state": "REVIEW",
+          "file": {
+            "item": "jojosbizarreadventurephantombloodmoviecollection",
+            "itemTitle": "Jojo's Bizarre Adventure: Phantom Blood Movie Collection",
+            "file": "2004 Preview/Notelu's 2004 Preview Restoration.mp4",
+            "name": "2004 Preview/Notelu's 2004 Preview Restoration",
+            "url": "https://archive.org/download/jojosbizarreadventurephantombloodmoviecollection/2004%20Preview%2FNotelu's%202004%20Preview%20Restoration.mp4",
+            "seconds": 155,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 786,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "notelus preview restoration",
+          "state": "REVIEW",
+          "file": {
+            "item": "jojosbizarreadventurephantombloodmoviecollection",
+            "itemTitle": "Jojo's Bizarre Adventure: Phantom Blood Movie Collection",
+            "file": "Notelu's 2004 Preview Restoration.ogv",
+            "name": "Notelu's 2004 Preview Restoration",
+            "url": "https://archive.org/download/jojosbizarreadventurephantombloodmoviecollection/Notelu's%202004%20Preview%20Restoration.ogv",
+            "seconds": 155,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 12,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
