@@ -3,7 +3,7 @@
   "slug": "the-flash",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The CW",
-  "matchedAt": "2026-10-14T04:21:43.694Z",
+  "matchedAt": "2026-10-14T04:26:31.409Z",
   "tvmaze": {
     "id": 13,
     "name": "The Flash",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 184,
     "live": 0,
-    "review": 2,
-    "missing": 182,
-    "pct": 1
+    "review": 0,
+    "missing": 184,
+    "pct": 0
   },
   "seasons": [
     {
@@ -74,20 +74,8 @@
           "number": 7,
           "name": "Power Outage",
           "airdate": "2014-11-25",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "pokemon-season-1-episode-25-and-pokemon-xy-kalos-quest-season-18-episode-15_202604",
-            "itemTitle": "Pokemon Vortexx on The CW",
-            "file": "Glitter Force (Season 1 Episode 7 & 8).mp4",
-            "name": "Glitter Force (Season 1 Episode 7 & 8)",
-            "url": "https://archive.org/download/pokemon-season-1-episode-25-and-pokemon-xy-kalos-quest-season-18-episode-15_202604/Glitter%20Force%20(Season%201%20Episode%207%20%26%208).mp4",
-            "seconds": 2733,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 116
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -214,20 +202,8 @@
           "number": 23,
           "name": "Fast Enough",
           "airdate": "2015-05-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "pokemon-season-1-episode-25-and-pokemon-xy-kalos-quest-season-18-episode-15_202604",
-            "itemTitle": "Pokemon Vortexx on The CW",
-            "file": "Pokemon (Season 1 Episode 23 & 24).mp4",
-            "name": "Pokemon (Season 1 Episode 23 & 24)",
-            "url": "https://archive.org/download/pokemon-season-1-episode-25-and-pokemon-xy-kalos-quest-season-18-episode-15_202604/Pokemon%20(Season%201%20Episode%2023%20%26%2024).mp4",
-            "seconds": 2684,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 93
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

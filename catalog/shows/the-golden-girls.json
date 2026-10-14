@@ -3,7 +3,7 @@
   "slug": "the-golden-girls",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:21:50.181Z",
+  "matchedAt": "2026-10-14T04:26:36.141Z",
   "tvmaze": {
     "id": 722,
     "name": "The Golden Girls",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 180,
     "live": 0,
-    "review": 2,
-    "missing": 178,
-    "pct": 1
+    "review": 0,
+    "missing": 180,
+    "pct": 0
   },
   "seasons": [
     {
@@ -146,20 +146,8 @@
           "number": 16,
           "name": "The Truth Will Out",
           "airdate": "1986-01-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Truth Will Out\" (0.95)",
-            "item": "01-buying-a-hotel",
-            "itemTitle": "Can't Stand Losing You",
-            "file": "26 The Truth Will Out.mp4",
-            "name": "26 The Truth Will Out",
-            "url": "https://archive.org/download/01-buying-a-hotel/26%20The%20Truth%20Will%20Out.mp4",
-            "seconds": 1458,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 141
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -930,20 +918,8 @@
           "number": 8,
           "name": "That Old Feeling",
           "airdate": "1989-11-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"That Old Feeling\" (0.63)",
-            "item": "01-buying-a-hotel",
-            "itemTitle": "Can't Stand Losing You",
-            "file": "18 You've Lost That Livin' Feeling.mp4",
-            "name": "18 You've Lost That Livin' Feeling",
-            "url": "https://archive.org/download/01-buying-a-hotel/18%20You've%20Lost%20That%20Livin'%20Feeling.mp4",
-            "seconds": 1319,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 125
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

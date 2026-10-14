@@ -3,7 +3,7 @@
   "slug": "step-by-step",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:21:29.147Z",
+  "matchedAt": "2026-10-14T04:26:21.653Z",
   "tvmaze": {
     "id": 2085,
     "name": "Step by Step",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 160,
     "live": 1,
-    "review": 8,
-    "missing": 151,
-    "pct": 6
+    "review": 7,
+    "missing": 152,
+    "pct": 5
   },
   "seasons": [
     {
@@ -1187,20 +1187,8 @@
           "number": 14,
           "name": "Future Shock",
           "airdate": "1997-06-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Future Shock\" (0.95)",
-            "item": "you-wish-1997-1998",
-            "itemTitle": "You Wish (1997-98, TGIF)",
-            "file": "09 Future Shock.mp4",
-            "name": "09 Future Shock",
-            "url": "https://archive.org/download/you-wish-1997-1998/09%20Future%20Shock.mp4",
-            "seconds": 1281,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 180
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

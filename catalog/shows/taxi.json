@@ -3,7 +3,7 @@
   "slug": "taxi",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:21:49.404Z",
+  "matchedAt": "2026-10-14T04:26:35.405Z",
   "tvmaze": {
     "id": 2218,
     "name": "Taxi",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 114,
     "live": 0,
-    "review": 19,
-    "missing": 95,
-    "pct": 17
+    "review": 0,
+    "missing": 114,
+    "pct": 0
   },
   "seasons": [
     {
@@ -34,80 +34,32 @@
           "number": 2,
           "name": "One-Punch Banta",
           "airdate": "1978-09-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 102 The Wedding.mp4",
-            "name": "George and Leo 102 The Wedding",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20102%20The%20Wedding.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 162
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Blind Date",
           "airdate": "1978-09-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 103 The Bribe.mp4",
-            "name": "George and Leo 103 The Bribe",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20103%20The%20Bribe.mp4",
-            "seconds": 1374,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 248
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Bobby's Acting Career",
           "airdate": "1978-10-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 104 Baby Care Class.mp4",
-            "name": "George and Leo 104 Baby Care Class",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20104%20Baby%20Care%20Class.mp4",
-            "seconds": 1294,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 167
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Come as You Aren't",
           "airdate": "1978-10-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 105 The Job.mp4",
-            "name": "George and Leo 105 The Job",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20105%20The%20Job.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 160
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -122,240 +74,96 @@
           "number": 7,
           "name": "High School Reunion",
           "airdate": "1978-10-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 107 Halloween Show.mp4",
-            "name": "George and Leo 107 Halloween Show",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20107%20Halloween%20Show.mp4",
-            "seconds": 1314,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 166
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Paper Marriage",
           "airdate": "1978-10-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 108 The Cameo Show.mp4",
-            "name": "George and Leo 108 The Cameo Show",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20108%20The%20Cameo%20Show.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 167
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Money Troubles",
           "airdate": "1978-11-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 109 The Housekeeper.mp4",
-            "name": "George and Leo 109 The Housekeeper",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20109%20The%20Housekeeper.mp4",
-            "seconds": 1316,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 169
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Men are Such Beasts",
           "airdate": "1978-11-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 110 The Witness.mp4",
-            "name": "George and Leo 110 The Witness",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20110%20The%20Witness.mp4",
-            "seconds": 1309,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 171
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Memories of Cab 804 (1)",
           "airdate": "1978-11-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 111 Thanksgiving Show.mp4",
-            "name": "George and Leo 111 Thanksgiving Show",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20111%20Thanksgiving%20Show.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 176
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Memories of Cab 804 (2)",
           "airdate": "1978-12-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 112 The Smokers.mp4",
-            "name": "George and Leo 112 The Smokers",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20112%20The%20Smokers.mp4",
-            "seconds": 1307,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 154
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
           "name": "A Full House for Christmas",
           "airdate": "1978-12-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 113 The Eggnogg.mp4",
-            "name": "George and Leo 113 The Eggnogg",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20113%20The%20Eggnogg.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
           "name": "Sugar Mama",
           "airdate": "1979-01-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 114 The Other Bookstore.mp4",
-            "name": "George and Leo 114 The Other Bookstore",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20114%20The%20Other%20Bookstore.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 161
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
           "name": "Friends",
           "airdate": "1979-01-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 115 The Nine Wives of Leo Wagonman.mp4",
-            "name": "George and Leo 115 The Nine Wives of Leo Wagonman",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20115%20The%20Nine%20Wives%20of%20Leo%20Wagonman.mp4",
-            "seconds": 1312,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 168
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
           "name": "Louie Sees the Light",
           "airdate": "1979-02-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 116 The Teacher.mp4",
-            "name": "George and Leo 116 The Teacher",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20116%20The%20Teacher.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 173
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
           "name": "Elaine and the Lame Duck",
           "airdate": "1979-02-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 117 The Poker Game.mp4",
-            "name": "George and Leo 117 The Poker Game",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20117%20The%20Poker%20Game.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 149
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
           "name": "Bobby's Big Break",
           "airdate": "1979-02-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 118 The Gift.mp4",
-            "name": "George and Leo 118 The Gift",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20118%20The%20Gift.mp4",
-            "seconds": 1371,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 220
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -370,60 +178,24 @@
           "number": 20,
           "name": "Alex Tastes Death and Finds a Nice Restaurant",
           "airdate": "1979-03-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 120 The Massage (I).mp4",
-            "name": "George and Leo 120 The Massage (I)",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20120%20The%20Massage%20(I).mp4",
-            "seconds": 1291,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 165
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
           "name": "Hollywood Calling",
           "airdate": "1979-05-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 121 The Massage (II).mp4",
-            "name": "George and Leo 121 The Massage (II)",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20121%20The%20Massage%20(II).mp4",
-            "seconds": 1263,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 161
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
           "name": "Substitute Father",
           "airdate": "1979-05-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 122 The Bongos.mp4",
-            "name": "George and Leo 122 The Bongos",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20122%20The%20Bongos.mp4",
-            "seconds": 1281,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 160
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

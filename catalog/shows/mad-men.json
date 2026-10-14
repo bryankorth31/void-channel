@@ -3,7 +3,7 @@
   "slug": "mad-men",
   "type": "Drama",
   "network": "AMC",
-  "matchedAt": "2026-10-14T04:21:39.872Z",
+  "matchedAt": "2026-10-14T04:26:28.849Z",
   "tvmaze": {
     "id": 385,
     "name": "Mad Men",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 92,
     "live": 0,
-    "review": 2,
-    "missing": 90,
-    "pct": 2
+    "review": 1,
+    "missing": 91,
+    "pct": 1
   },
   "seasons": [
     {
@@ -369,35 +369,9 @@
           "number": 3,
           "name": "The Good News",
           "airdate": "2010-08-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"The Good News\" (0.95)",
-            "item": "WMAR_20090812_110000_ABC_News_Good_Morning_America",
-            "itemTitle": "ABC News Good Morning America : WMAR : August 12, 2009 7:00am-9:00am EDT",
-            "file": "WMAR_20090812_110000_ABC_News_Good_Morning_America.mp4",
-            "name": "WMAR_20090812_110000_ABC_News_Good_Morning_America",
-            "url": "https://archive.org/download/WMAR_20090812_110000_ABC_News_Good_Morning_America/WMAR_20090812_110000_ABC_News_Good_Morning_America.mp4",
-            "seconds": 7201,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 745
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"The Good News\" (0.95)",
-              "item": "WJLA_20090812_110000_ABC_News_Good_Morning_America",
-              "itemTitle": "ABC News Good Morning America : WJLA : August 12, 2009 7:00am-9:00am EDT",
-              "file": "WJLA_20090812_110000_ABC_News_Good_Morning_America.mp4",
-              "name": "WJLA_20090812_110000_ABC_News_Good_Morning_America",
-              "url": "https://archive.org/download/WJLA_20090812_110000_ABC_News_Good_Morning_America/WJLA_20090812_110000_ABC_News_Good_Morning_America.mp4",
-              "seconds": 7200,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 410
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,

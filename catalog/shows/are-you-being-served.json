@@ -3,7 +3,7 @@
   "slug": "are-you-being-served",
   "type": "Classic TV",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T04:21:52.299Z",
+  "matchedAt": "2026-10-14T04:26:38.204Z",
   "tvmaze": {
     "id": 4529,
     "name": "Are You Being Served?",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 64,
     "live": 0,
-    "review": 3,
-    "missing": 61,
-    "pct": 5
+    "review": 0,
+    "missing": 64,
+    "pct": 0
   },
   "seasons": [
     {
@@ -34,20 +34,8 @@
           "number": 2,
           "name": "Our Figures are Slipping",
           "airdate": "1973-03-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "s-01-e-00-pilot-episode",
-            "itemTitle": "Come Back Mrs Noah (1977)",
-            "file": "S01E02 To the Rescue.mp4",
-            "name": "S01E02 To the Rescue",
-            "url": "https://archive.org/download/s-01-e-00-pilot-episode/S01E02%20To%20the%20Rescue.mp4",
-            "seconds": 1652,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 335
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -62,40 +50,16 @@
           "number": 4,
           "name": "His and Hers",
           "airdate": "1973-04-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "s-01-e-00-pilot-episode",
-            "itemTitle": "Come Back Mrs Noah (1977)",
-            "file": "S01E04 The Housing Problem.mp4",
-            "name": "S01E04 The Housing Problem",
-            "url": "https://archive.org/download/s-01-e-00-pilot-episode/S01E04%20The%20Housing%20Problem.mp4",
-            "seconds": 1833,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 370
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Diamonds are a Man's Best Friend",
           "airdate": "1973-04-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "s-01-e-00-pilot-episode",
-            "itemTitle": "Come Back Mrs Noah (1977)",
-            "file": "S01E05 The Last Chance.mp4",
-            "name": "S01E05 The Last Chance",
-            "url": "https://archive.org/download/s-01-e-00-pilot-episode/S01E05%20The%20Last%20Chance.mp4",
-            "seconds": 1791,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 363
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

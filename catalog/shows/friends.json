@@ -3,7 +3,7 @@
   "slug": "friends",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-14T04:21:26.795Z",
+  "matchedAt": "2026-10-14T04:26:19.371Z",
   "tvmaze": {
     "id": 431,
     "name": "Friends",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 236,
-    "live": 6,
-    "review": 27,
-    "missing": 203,
-    "pct": 14
+    "live": 5,
+    "review": 21,
+    "missing": 210,
+    "pct": 11
   },
   "seasons": [
     {
@@ -42,43 +42,17 @@
           },
           "alternates": [
             {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "partners-1995-96",
-              "itemTitle": "Partners (1995–96) sitcom - Jon Cryer, Tate Donovan",
-              "file": "+ Partners (1995) S01 E01 - The Viewing Room.mp4",
-              "name": "+ Partners (1995) S01 E01 - The Viewing Room",
-              "url": "https://archive.org/download/partners-1995-96/%2B%20Partners%20(1995)%20S01%20E01%20-%20The%20Viewing%20Room.mp4",
-              "seconds": 1309,
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "episode-1.-friends-sitcom-my-face-a-situation-comedy-podcast",
+              "itemTitle": "Episode 1. FRIENDS (1994-2004) - Sitcom My Face: A Situation Comedy Podcast",
+              "file": "Episode 1. FRIENDS - Sitcom My Face A Situation Comedy Podcast.mp4",
+              "name": "Episode 1. FRIENDS - Sitcom My Face A Situation Comedy Podcast",
+              "url": "https://archive.org/download/episode-1.-friends-sitcom-my-face-a-situation-comedy-podcast/Episode%201.%20FRIENDS%20-%20Sitcom%20My%20Face%20A%20Situation%20Comedy%20Podcast.mp4",
+              "seconds": 4420,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 77
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "muddling-through-complete-series",
-              "itemTitle": "Muddling Through (1994) - Complete Series",
-              "file": "S01E01 - The More Things Change The More They Stay Insane.mp4",
-              "name": "S01E01 - The More Things Change The More They Stay Insane",
-              "url": "https://archive.org/download/muddling-through-complete-series/S01E01%20-%20The%20More%20Things%20Change%20The%20More%20They%20Stay%20Insane.mp4",
-              "seconds": 1418,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X01 'Pilot' (Jason Gedrick, Lisa Dean Ryan, Megan Ward, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X01 'Pilot' (Jason Gedrick, Lisa Dean Ryan, Megan Ward, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X01%20'Pilot'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Megan%20Ward%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3527,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 305
+              "sizeMB": 729
             }
           ]
         },
@@ -86,35 +60,9 @@
           "number": 2,
           "name": "The One With the Sonogram at the End",
           "airdate": "1994-09-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "102 - Joey and the Student.mp4",
-            "name": "102 - Joey and the Student",
-            "url": "https://archive.org/download/101-pilot_202311/102%20-%20Joey%20and%20the%20Student.mp4",
-            "seconds": 1427,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 219
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "muddling-through-complete-series",
-              "itemTitle": "Muddling Through (1994) - Complete Series",
-              "file": "S01E02 - Let It Be Normal.mp4",
-              "name": "S01E02 - Let It Be Normal",
-              "url": "https://archive.org/download/muddling-through-complete-series/S01E02%20-%20Let%20It%20Be%20Normal.mp4",
-              "seconds": 1417,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 138
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
@@ -134,34 +82,7 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "101-pilot_202311",
-              "itemTitle": "Joey Season 1",
-              "file": "103 - Joey and the Party.mp4",
-              "name": "103 - Joey and the Party",
-              "url": "https://archive.org/download/101-pilot_202311/103%20-%20Joey%20and%20the%20Party.mp4",
-              "seconds": 1296,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 197
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X03 'Breaking Up is Hard to Overdue' (Jason Gedrick,  Kari Wuhrer, Megan Ward).mp4",
-              "name": "Class of '96 (1993) 1X03 'Breaking Up is Hard to Overdue' (Jason Gedrick,  Kari Wuhrer, Megan Ward)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X03%20'Breaking%20Up%20is%20Hard%20to%20Overdue'%20(Jason%20Gedrick%2C%20%20Kari%20Wuhrer%2C%20Megan%20Ward).mp4",
-              "seconds": 3529,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 240
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -181,47 +102,7 @@
             "playable": true,
             "sizeMB": 159
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "101-pilot_202311",
-              "itemTitle": "Joey Season 1",
-              "file": "104 - Joey and the Book Club.mp4",
-              "name": "104 - Joey and the Book Club",
-              "url": "https://archive.org/download/101-pilot_202311/104%20-%20Joey%20and%20the%20Book%20Club.mp4",
-              "seconds": 1301,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 176
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "muddling-through-complete-series",
-              "itemTitle": "Muddling Through (1994) - Complete Series",
-              "file": "S01E04 - It's A Date.mp4",
-              "name": "S01E04 - It's A Date",
-              "url": "https://archive.org/download/muddling-through-complete-series/S01E04%20-%20It's%20A%20Date.mp4",
-              "seconds": 1418,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X04 'Midterm Madness' (Jason Gedrick, Lisa Dean Ryan, Megan Ward, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X04 'Midterm Madness' (Jason Gedrick, Lisa Dean Ryan, Megan Ward, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X04%20'Midterm%20Madness'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Megan%20Ward%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3528,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 258
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -241,47 +122,7 @@
             "playable": true,
             "sizeMB": 159
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "101-pilot_202311",
-              "itemTitle": "Joey Season 1",
-              "file": "105 - Joey and the Perfect Storm.mp4",
-              "name": "105 - Joey and the Perfect Storm",
-              "url": "https://archive.org/download/101-pilot_202311/105%20-%20Joey%20and%20the%20Perfect%20Storm.mp4",
-              "seconds": 1300,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "muddling-through-complete-series",
-              "itemTitle": "Muddling Through (1994) - Complete Series",
-              "file": "S01E05 - Second Times The Charm.mp4",
-              "name": "S01E05 - Second Times The Charm",
-              "url": "https://archive.org/download/muddling-through-complete-series/S01E05%20-%20Second%20Times%20The%20Charm.mp4",
-              "seconds": 1417,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X05 'Look Homeward Angela' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X05 'Look Homeward Angela' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X05%20'Look%20Homeward%20Angela'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3524,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 258
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -289,47 +130,20 @@
           "airdate": "1994-10-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "106 - Joey and the Nemesis.mp4",
-            "name": "106 - Joey and the Nemesis",
-            "url": "https://archive.org/download/101-pilot_202311/106%20-%20Joey%20and%20the%20Nemesis.mp4",
-            "seconds": 1300,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 191
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "106 - Change of Mind  Temp Trouble  The Perfect Match DVDRip XviD [PhZ].mp4",
+            "name": "106 - Change of Mind  Temp Trouble  The Perfect Match DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/106%20-%20Change%20of%20Mind%20%20Temp%20Trouble%20%20The%20Perfect%20Match%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X06 'The Adventures of Pat's Man and Robin' (Jason Gedrick,  Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X06 'The Adventures of Pat's Man and Robin' (Jason Gedrick,  Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X06%20'The%20Adventures%20of%20Pat's%20Man%20and%20Robin'%20(Jason%20Gedrick%2C%20%20Kari%20Wuhrer).mp4",
-              "seconds": 3526,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 249
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "106 - Change of Mind  Temp Trouble  The Perfect Match DVDRip XviD [PhZ].mp4",
-              "name": "106 - Change of Mind  Temp Trouble  The Perfect Match DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/106%20-%20Change%20of%20Mind%20%20Temp%20Trouble%20%20The%20Perfect%20Match%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -337,94 +151,28 @@
           "airdate": "1994-11-03",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "107 - Joey and the Husband.mp4",
-            "name": "107 - Joey and the Husband",
-            "url": "https://archive.org/download/101-pilot_202311/107%20-%20Joey%20and%20the%20Husband.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 204
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "107 - The Legend of Johnny Ragweedseed, Grape Expectations (part one), Catch As Cats Can't DVDRip XviD [PhZ].mp4",
+            "name": "107 - The Legend of Johnny Ragweedseed, Grape Expectations (part one), Catch As Cats Can't DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/107%20-%20The%20Legend%20of%20Johnny%20Ragweedseed%2C%20Grape%20Expectations%20(part%20one)%2C%20Catch%20As%20Cats%20Can't%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X07 David is Authorized' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X07 David is Authorized' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X07%20David%20is%20Authorized'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3347,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 235
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "107 - The Legend of Johnny Ragweedseed, Grape Expectations (part one), Catch As Cats Can't DVDRip XviD [PhZ].mp4",
-              "name": "107 - The Legend of Johnny Ragweedseed, Grape Expectations (part one), Catch As Cats Can't DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/107%20-%20The%20Legend%20of%20Johnny%20Ragweedseed%2C%20Grape%20Expectations%20(part%20one)%2C%20Catch%20As%20Cats%20Can't%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "The One Where Nana Dies Twice",
           "airdate": "1994-11-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "108 - Joey and the Dream Girl Part 1.mp4",
-            "name": "108 - Joey and the Dream Girl Part 1",
-            "url": "https://archive.org/download/101-pilot_202311/108%20-%20Joey%20and%20the%20Dream%20Girl%20Part%201.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 193
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "muddling-through-complete-series",
-              "itemTitle": "Muddling Through (1994) - Complete Series",
-              "file": "S01E08 - Ooh, Maybe Baby (fixed).mp4",
-              "name": "S01E08 - Ooh, Maybe Baby (fixed)",
-              "url": "https://archive.org/download/muddling-through-complete-series/S01E08%20-%20Ooh%2C%20Maybe%20Baby%20(fixed).mp4",
-              "seconds": 1417,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 137
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X08 'The Accused' (Jason Gedrick, Gillian Anderson, Megan Ward, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X08 'The Accused' (Jason Gedrick, Gillian Anderson, Megan Ward, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X08%20'The%20Accused'%20(Jason%20Gedrick%2C%20Gillian%20Anderson%2C%20Megan%20Ward%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3255,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 346
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
@@ -432,47 +180,20 @@
           "airdate": "1994-11-17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "muddling-through-complete-series",
-            "itemTitle": "Muddling Through (1994) - Complete Series",
-            "file": "S01E09 - Guess Who's Coming To Dinner.mp4",
-            "name": "S01E09 - Guess Who's Coming To Dinner",
-            "url": "https://archive.org/download/muddling-through-complete-series/S01E09%20-%20Guess%20Who's%20Coming%20To%20Dinner.mp4",
-            "seconds": 1419,
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "109 - My Fair Feline, Double Trouble Talk, Half-Baked Alaska DVDRip XviD [PhZ].mp4",
+            "name": "109 - My Fair Feline, Double Trouble Talk, Half-Baked Alaska DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/109%20-%20My%20Fair%20Feline%2C%20Double%20Trouble%20Talk%2C%20Half-Baked%20Alaska%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1425,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 140
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X09 'When Whitney Met Linda' (Jason Gedrick,  Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X09 'When Whitney Met Linda' (Jason Gedrick,  Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X09%20'When%20Whitney%20Met%20Linda'%20(Jason%20Gedrick%2C%20%20Kari%20Wuhrer).mp4",
-              "seconds": 3681,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 366
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "109 - My Fair Feline, Double Trouble Talk, Half-Baked Alaska DVDRip XviD [PhZ].mp4",
-              "name": "109 - My Fair Feline, Double Trouble Talk, Half-Baked Alaska DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/109%20-%20My%20Fair%20Feline%2C%20Double%20Trouble%20Talk%2C%20Half-Baked%20Alaska%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -480,94 +201,28 @@
           "airdate": "1994-12-15",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "110 - Joey and the Big Audition.mp4",
-            "name": "110 - Joey and the Big Audition",
-            "url": "https://archive.org/download/101-pilot_202311/110%20-%20Joey%20and%20the%20Big%20Audition.mp4",
-            "seconds": 1302,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 177
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "110 - Puss in High-Tops  Egg Over Easy (part one)  The Beast from Beyond DVDRip XviD [PhZ].mp4",
+            "name": "110 - Puss in High-Tops  Egg Over Easy (part one)  The Beast from Beyond DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/110%20-%20Puss%20in%20High-Tops%20%20Egg%20Over%20Easy%20(part%20one)%20%20The%20Beast%20from%20Beyond%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "muddling-through-complete-series",
-              "itemTitle": "Muddling Through (1994) - Complete Series",
-              "file": "S01E10 - Take Any Job And Shove It.mp4",
-              "name": "S01E10 - Take Any Job And Shove It",
-              "url": "https://archive.org/download/muddling-through-complete-series/S01E10%20-%20Take%20Any%20Job%20And%20Shove%20It.mp4",
-              "seconds": 1418,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X10 'Parents Weekend' (Jason Gedrick, Lisa Dean Ryan, Megan Ward, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X10 'Parents Weekend' (Jason Gedrick, Lisa Dean Ryan, Megan Ward, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X10%20'Parents%20Weekend'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Megan%20Ward%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3549,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 348
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "110 - Puss in High-Tops  Egg Over Easy (part one)  The Beast from Beyond DVDRip XviD [PhZ].mp4",
-              "name": "110 - Puss in High-Tops  Egg Over Easy (part one)  The Beast from Beyond DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/110%20-%20Puss%20in%20High-Tops%20%20Egg%20Over%20Easy%20(part%20one)%20%20The%20Beast%20from%20Beyond%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "The One With Mrs. Bing",
           "airdate": "1995-01-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "111 - Joey and the Road Trip.mp4",
-            "name": "111 - Joey and the Road Trip",
-            "url": "https://archive.org/download/101-pilot_202311/111%20-%20Joey%20and%20the%20Road%20Trip.mp4",
-            "seconds": 1276,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 170
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X11 'The Best Little Frat House at Havenhurst' (Jason Gedrick,  Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X11 'The Best Little Frat House at Havenhurst' (Jason Gedrick,  Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X11%20'The%20Best%20Little%20Frat%20House%20at%20Havenhurst'%20(Jason%20Gedrick%2C%20%20Kari%20Wuhrer).mp4",
-              "seconds": 3602,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 346
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,
@@ -575,47 +230,20 @@
           "airdate": "1995-01-12",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "112 - Joey and the Plot Twist.mp4",
-            "name": "112 - Joey and the Plot Twist",
-            "url": "https://archive.org/download/101-pilot_202311/112%20-%20Joey%20and%20the%20Plot%20Twist.mp4",
-            "seconds": 1281,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 193
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "112 - Guy of Her Dreams, The Discount of Monte Cristo, The Fairy Dogmother DVDRip XviD [PhZ].mp4",
+            "name": "112 - Guy of Her Dreams, The Discount of Monte Cristo, The Fairy Dogmother DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/112%20-%20Guy%20of%20Her%20Dreams%2C%20The%20Discount%20of%20Monte%20Cristo%2C%20The%20Fairy%20Dogmother%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X12 'Bright Smoke, Cold Fire' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X12 'Bright Smoke, Cold Fire' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X12%20'Bright%20Smoke%2C%20Cold%20Fire'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3600,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 315
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "112 - Guy of Her Dreams, The Discount of Monte Cristo, The Fairy Dogmother DVDRip XviD [PhZ].mp4",
-              "name": "112 - Guy of Her Dreams, The Discount of Monte Cristo, The Fairy Dogmother DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/112%20-%20Guy%20of%20Her%20Dreams%2C%20The%20Discount%20of%20Monte%20Cristo%2C%20The%20Fairy%20Dogmother%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
@@ -623,47 +251,20 @@
           "airdate": "1995-01-19",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "113 - Joey and the Taste Test.mp4",
-            "name": "113 - Joey and the Taste Test",
-            "url": "https://archive.org/download/101-pilot_202311/113%20-%20Joey%20and%20the%20Taste%20Test.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 208
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "113 - The Stand-Up Mouse, Daydream Doctor, Happy Garfield Day DVDRip XviD [PhZ].mp4",
+            "name": "113 - The Stand-Up Mouse, Daydream Doctor, Happy Garfield Day DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/113%20-%20The%20Stand-Up%20Mouse%2C%20Daydream%20Doctor%2C%20Happy%20Garfield%20Day%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1424,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename",
-              "item": "class-of-96-1993",
-              "itemTitle": "Class of '96 (1993) drama",
-              "file": "Class of '96 (1993) 1X13 'Greenwich Mean Time' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer).mp4",
-              "name": "Class of '96 (1993) 1X13 'Greenwich Mean Time' (Jason Gedrick, Lisa Dean Ryan, Kari Wuhrer)",
-              "url": "https://archive.org/download/class-of-96-1993/Class%20of%20'96%20(1993)%201X13%20'Greenwich%20Mean%20Time'%20(Jason%20Gedrick%2C%20Lisa%20Dean%20Ryan%2C%20Kari%20Wuhrer).mp4",
-              "seconds": 3515,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 351
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "113 - The Stand-Up Mouse, Daydream Doctor, Happy Garfield Day DVDRip XviD [PhZ].mp4",
-              "name": "113 - The Stand-Up Mouse, Daydream Doctor, Happy Garfield Day DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/113%20-%20The%20Stand-Up%20Mouse%2C%20Daydream%20Doctor%2C%20Happy%20Garfield%20Day%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1424,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
@@ -671,34 +272,20 @@
           "airdate": "1995-02-09",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "114 - Joey and the Premiere.mp4",
-            "name": "114 - Joey and the Premiere",
-            "url": "https://archive.org/download/101-pilot_202311/114%20-%20Joey%20and%20the%20Premiere.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 189
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "114 - Sit on It, Kiddy Korner, Brainware Broadcast DVDRip XviD [PhZ].mp4",
+            "name": "114 - Sit on It, Kiddy Korner, Brainware Broadcast DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/114%20-%20Sit%20on%20It%2C%20Kiddy%20Korner%2C%20Brainware%20Broadcast%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1428,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "114 - Sit on It, Kiddy Korner, Brainware Broadcast DVDRip XviD [PhZ].mp4",
-              "name": "114 - Sit on It, Kiddy Korner, Brainware Broadcast DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/114%20-%20Sit%20on%20It%2C%20Kiddy%20Korner%2C%20Brainware%20Broadcast%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1428,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
@@ -706,34 +293,20 @@
           "airdate": "1995-02-16",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "115 - Joey and the Assistant.mp4",
-            "name": "115 - Joey and the Assistant",
-            "url": "https://archive.org/download/101-pilot_202311/115%20-%20Joey%20and%20the%20Assistant.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 183
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "115 - The Suburban Jungle, The Thing in the Box, The Feline Philosopher DVDRip XviD [PhZ].mp4",
+            "name": "115 - The Suburban Jungle, The Thing in the Box, The Feline Philosopher DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/115%20-%20The%20Suburban%20Jungle%2C%20The%20Thing%20in%20the%20Box%2C%20The%20Feline%20Philosopher%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1427,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "115 - The Suburban Jungle, The Thing in the Box, The Feline Philosopher DVDRip XviD [PhZ].mp4",
-              "name": "115 - The Suburban Jungle, The Thing in the Box, The Feline Philosopher DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/115%20-%20The%20Suburban%20Jungle%2C%20The%20Thing%20in%20the%20Box%2C%20The%20Feline%20Philosopher%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1427,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,
@@ -762,95 +335,41 @@
           "airdate": "1995-02-23",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "117 - Joey and the Valentines Date.mp4",
-            "name": "117 - Joey and the Valentines Date",
-            "url": "https://archive.org/download/101-pilot_202311/117%20-%20Joey%20and%20the%20Valentines%20Date.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 193
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "117 - The Jelly Roger, The Farmyard Feline Philosopher, Dogmother II The Dog Alley City Adventure DVDRip XviD [PhZ].mp4",
+            "name": "117 - The Jelly Roger, The Farmyard Feline Philosopher, Dogmother II The Dog Alley City Adventure DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/117%20-%20The%20Jelly%20Roger%2C%20The%20Farmyard%20Feline%20Philosopher%2C%20Dogmother%20II%20The%20Dog%20Alley%20City%20Adventure%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1428,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "117 - The Jelly Roger, The Farmyard Feline Philosopher, Dogmother II The Dog Alley City Adventure DVDRip XviD [PhZ].mp4",
-              "name": "117 - The Jelly Roger, The Farmyard Feline Philosopher, Dogmother II The Dog Alley City Adventure DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/117%20-%20The%20Jelly%20Roger%2C%20The%20Farmyard%20Feline%20Philosopher%2C%20Dogmother%20II%20The%20Dog%20Alley%20City%20Adventure%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1428,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 18,
           "name": "The One With All the Poker",
           "airdate": "1995-03-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
             "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv",
-            "itemTitle": "Joey TV Show • Rare / Double Episodes",
-            "file": "Joey.S1E18.Joey and the Wrong Name (Out of focus shot fixed).mp4",
-            "name": "Joey.S1E18.Joey and the Wrong Name (Out of focus shot fixed)",
-            "url": "https://archive.org/download/joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv/Joey.S1E18.Joey%20and%20the%20Wrong%20Name%20(Out%20of%20focus%20shot%20fixed).mp4",
-            "seconds": 1298,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 3259
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "118 - Alley Katta and the 40 Thieves, If It's Tuesday This Must Be Alpha Centauri, Clash of the Titans DVDRip XviD [PhZ].mp4",
+            "name": "118 - Alley Katta and the 40 Thieves, If It's Tuesday This Must Be Alpha Centauri, Clash of the Titans DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/118%20-%20Alley%20Katta%20and%20the%2040%20Thieves%2C%20If%20It's%20Tuesday%20This%20Must%20Be%20Alpha%20Centauri%2C%20Clash%20of%20the%20Titans%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv",
-              "itemTitle": "Joey TV Show • Rare / Double Episodes",
-              "file": "Joey.S1E18.Joey and the Wrong Name (Out of focus shot fixed).ia.mp4",
-              "name": "Joey.S1E18",
-              "url": "https://archive.org/download/joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv/Joey.S1E18.Joey%20and%20the%20Wrong%20Name%20(Out%20of%20focus%20shot%20fixed).ia.mp4",
-              "seconds": 1298,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 129
-            },
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "101-pilot_202311",
-              "itemTitle": "Joey Season 1",
-              "file": "118 - Joey and the Wrong Name.mp4",
-              "name": "118 - Joey and the Wrong Name",
-              "url": "https://archive.org/download/101-pilot_202311/118%20-%20Joey%20and%20the%20Wrong%20Name.mp4",
-              "seconds": 1301,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 177
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "118 - Alley Katta and the 40 Thieves, If It's Tuesday This Must Be Alpha Centauri, Clash of the Titans DVDRip XviD [PhZ].mp4",
-              "name": "118 - Alley Katta and the 40 Thieves, If It's Tuesday This Must Be Alpha Centauri, Clash of the Titans DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/118%20-%20Alley%20Katta%20and%20the%2040%20Thieves%2C%20If%20It's%20Tuesday%20This%20Must%20Be%20Alpha%20Centauri%2C%20Clash%20of%20the%20Titans%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1425,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 19,
@@ -871,19 +390,6 @@
             "sizeMB": 2397
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "101-pilot_202311",
-              "itemTitle": "Joey Season 1",
-              "file": "119 - Joey and the Fancy Sister.mp4",
-              "name": "119 - Joey and the Fancy Sister",
-              "url": "https://archive.org/download/101-pilot_202311/119%20-%20Joey%20and%20the%20Fancy%20Sister.mp4",
-              "seconds": 1291,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 193
-            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -906,93 +412,43 @@
           "airdate": "1995-04-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "120 - Joey and the Neighbor.mp4",
-            "name": "120 - Joey and the Neighbor",
-            "url": "https://archive.org/download/101-pilot_202311/120%20-%20Joey%20and%20the%20Neighbor.mp4",
-            "seconds": 1271,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185
+            "conf": 0.85,
+            "why": "S/E in filename | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ].mp4",
+            "name": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/120%20-%20The%20Horror%20Hostess%20(part%20one)%2C%20Newsworthy%20Wade%2C%20The%20Horror%20Hostess%20(part%20two)%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1426,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ].mp4",
-              "name": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/120%20-%20The%20Horror%20Hostess%20(part%20one)%2C%20Newsworthy%20Wade%2C%20The%20Horror%20Hostess%20(part%20two)%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1426,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 21,
           "name": "The One With the Fake Monica",
           "airdate": "1995-04-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "121 - Joey and the Spying.mp4",
-            "name": "121 - Joey and the Spying",
-            "url": "https://archive.org/download/101-pilot_202311/121%20-%20Joey%20and%20the%20Spying.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 171
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
           "name": "The One With the Ick Factor",
           "airdate": "1995-05-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "122 - Joey and the Temptation.mp4",
-            "name": "122 - Joey and the Temptation",
-            "url": "https://archive.org/download/101-pilot_202311/122%20-%20Joey%20and%20the%20Temptation.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
           "name": "The One With the Birth",
           "airdate": "1995-05-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "101-pilot_202311",
-            "itemTitle": "Joey Season 1",
-            "file": "123 - Joey and the Breakup.mp4",
-            "name": "123 - Joey and the Breakup",
-            "url": "https://archive.org/download/101-pilot_202311/123%20-%20Joey%20and%20the%20Breakup.mp4",
-            "seconds": 1301,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 181
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1183,47 +639,19 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "title ~ \"The One With the Two Parties\" (0.63)",
-            "item": "joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv",
-            "itemTitle": "Joey TV Show • Rare / Double Episodes",
-            "file": "Joey.S01E00.The.One.Where.Joey.Gets.Cancelled.Two.Episodes.In.DVDScr.XviD-m00tv.ia.mp4",
-            "name": "Joey.S01E00.The.One.Where.Joey.Gets.Cancelled.Two.Episodes.In.DVDScr",
-            "url": "https://archive.org/download/joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv/Joey.S01E00.The.One.Where.Joey.Gets.Cancelled.Two.Episodes.In.DVDScr.XviD-m00tv.ia.mp4",
-            "seconds": 1606,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 249
+            "why": "title ~ \"The One With the Two Parties\" (0.63) | not browser-playable: video (XviD)",
+            "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
+            "itemTitle": "Garfield and Friends Season 7 (1994)",
+            "file": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ].mp4",
+            "name": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ]",
+            "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/120%20-%20The%20Horror%20Hostess%20(part%20one)%2C%20Newsworthy%20Wade%2C%20The%20Horror%20Hostess%20(part%20two)%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
+            "seconds": 1426,
+            "format": "h.264",
+            "playable": false,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The One With the Two Parties\" (0.63)",
-              "item": "joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv",
-              "itemTitle": "Joey TV Show • Rare / Double Episodes",
-              "file": "Joey.S01E00.The.One.Where.Joey.Gets.Cancelled.Two.Episodes.In.DVDScr.XviD-m00tv.mp4",
-              "name": "Joey.S01E00.The.One.Where.Joey.Gets.Cancelled.Two.Episodes.In.DVDScr.XviD-m00tv",
-              "url": "https://archive.org/download/joey.-s-01-e-00.-the.-one.-where.-joey.-gets.-cancelled.-two.-episodes.-in.-dvdscr.-xvi-d-m-00tv/Joey.S01E00.The.One.Where.Joey.Gets.Cancelled.Two.Episodes.In.DVDScr.XviD-m00tv.mp4",
-              "seconds": 1606,
-              "format": "MPEG4",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 249
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The One With the Two Parties\" (0.63)",
-              "item": "116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz",
-              "itemTitle": "Garfield and Friends Season 7 (1994)",
-              "file": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ].mp4",
-              "name": "120 - The Horror Hostess (part one), Newsworthy Wade, The Horror Hostess (part two) DVDRip XviD [PhZ]",
-              "url": "https://archive.org/download/116thoroughlymixedupmousetheoldmanofthemountainfoodfighterdvdripxvidphz/120%20-%20The%20Horror%20Hostess%20(part%20one)%2C%20Newsworthy%20Wade%2C%20The%20Horror%20Hostess%20(part%20two)%20DVDRip%20XviD%20%5BPhZ%5D.mp4",
-              "seconds": 1426,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (XviD)",
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 23,
@@ -1828,35 +1256,9 @@
           "number": 23,
           "name": "The One in Vegas, Part 1",
           "airdate": "1999-05-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"The One in Vegas, Part 1\" (0.63)",
-            "item": "partners-1995-96",
-            "itemTitle": "Partners (1995–96) sitcom - Jon Cryer, Tate Donovan",
-            "file": "22 Partners- 1.22 - one of 2 on ARCHIVE James E. Woods.ia.mp4",
-            "name": "22 Partners- 1.22 - one of 2 on ARCHIVE James E",
-            "url": "https://archive.org/download/partners-1995-96/22%20Partners-%201.22%20-%20one%20of%202%20on%20ARCHIVE%20James%20E.%20Woods.ia.mp4",
-            "seconds": 1283,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 663
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The One in Vegas, Part 1\" (0.63)",
-              "item": "partners-1995-96",
-              "itemTitle": "Partners (1995–96) sitcom - Jon Cryer, Tate Donovan",
-              "file": "22 Partners- 1.22 - one of 2 on ARCHIVE James E. Woods.mp4",
-              "name": "22 Partners- 1.22 - one of 2 on ARCHIVE James E. Woods",
-              "url": "https://archive.org/download/partners-1995-96/22%20Partners-%201.22%20-%20one%20of%202%20on%20ARCHIVE%20James%20E.%20Woods.mp4",
-              "seconds": 1283,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 663
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 24,

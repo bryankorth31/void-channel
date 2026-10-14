@@ -3,7 +3,7 @@
   "slug": "rawhide",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:21:47.977Z",
+  "matchedAt": "2026-10-14T04:26:34.231Z",
   "tvmaze": {
     "id": 3488,
     "name": "Rawhide",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 218,
-    "live": 4,
-    "review": 2,
+    "live": 0,
+    "review": 6,
     "missing": 212,
     "pct": 3
   },
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Incident of the Tumbleweed",
           "airdate": "1959-01-09",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.65,
             "why": "S/E in filename + title match",
             "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
             "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
@@ -107,9 +107,9 @@
           "number": 3,
           "name": "Incident with an Executioner",
           "airdate": "1959-01-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.65,
             "why": "S/E in filename + title match",
             "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
             "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
@@ -154,9 +154,9 @@
           "number": 4,
           "name": "Incident of the Widowed Dove",
           "airdate": "1959-01-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.65,
             "why": "S/E in filename + title match",
             "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
             "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
@@ -201,9 +201,9 @@
           "number": 5,
           "name": "Incident on the Edge of Madness",
           "airdate": "1959-02-06",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.65,
             "why": "S/E in filename + title match",
             "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
             "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",

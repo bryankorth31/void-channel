@@ -3,7 +3,7 @@
   "slug": "ideal",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-14T04:21:44.464Z",
+  "matchedAt": "2026-10-14T04:26:31.920Z",
   "tvmaze": {
     "id": 3993,
     "name": "Ideal",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 52,
     "live": 0,
-    "review": 1,
-    "missing": 51,
-    "pct": 2
+    "review": 0,
+    "missing": 52,
+    "pct": 0
   },
   "seasons": [
     {
@@ -50,35 +50,9 @@
           "number": 4,
           "name": "The Affair",
           "airdate": "2005-02-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "videoplayback-8_20220830",
-            "itemTitle": "Mechanoids BBC Three 2003-2004 2 of 6 Episodes",
-            "file": "MECHANOIDS EP4   1 2004.mp4",
-            "name": "MECHANOIDS EP4   1 2004",
-            "url": "https://archive.org/download/videoplayback-8_20220830/MECHANOIDS%20EP4%20%20%201%202004.mp4",
-            "seconds": 1743,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 187
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "mechanoids-ep-4-1-2004",
-              "itemTitle": "MECHANOIDS EP 4 1 2004",
-              "file": "MECHANOIDS EP4   1 2004.mp4",
-              "name": "MECHANOIDS EP4   1 2004",
-              "url": "https://archive.org/download/mechanoids-ep-4-1-2004/MECHANOIDS%20EP4%20%20%201%202004.mp4",
-              "seconds": 1743,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 187
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 5,

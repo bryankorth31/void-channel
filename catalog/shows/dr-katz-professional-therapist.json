@@ -3,7 +3,7 @@
   "slug": "dr-katz-professional-therapist",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-14T04:21:36.182Z",
+  "matchedAt": "2026-10-14T04:26:26.419Z",
   "tvmaze": {
     "id": 7218,
     "name": "Dr. Katz, Professional Therapist",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 81,
-    "live": 1,
-    "review": 68,
-    "missing": 12,
-    "pct": 85
+    "live": 68,
+    "review": 4,
+    "missing": 9,
+    "pct": 89
   },
   "seasons": [
     {
@@ -42,6 +42,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S01E01.mp4",
+              "name": "Dr.Katz.S01E01",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E01.mp4",
+              "seconds": 1335,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"Pot-Bellied Pigs\" (0.95)",
               "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
@@ -61,72 +74,153 @@
           "number": 2,
           "name": "Pretzelkins",
           "airdate": "1995-06-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Pretzelkins\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0102 Pretzelkins (Ray Romano, Wendy Liebman).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0102 Pretzelkins (Ray Romano, Wendy Liebman)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200102%20Pretzelkins%20(Ray%20Romano%2C%20Wendy%20Liebman).mp4",
-            "seconds": 1327,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 129
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S01E02.Pretzelkins.mp4",
+            "name": "Dr.Katz.S01E02.Pretzelkins",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E02.Pretzelkins.mp4",
+            "seconds": 1347,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S01E02.Pretzelkins.ia.mp4",
+              "name": "Dr.Katz.S01E02",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E02.Pretzelkins.ia.mp4",
+              "seconds": 1347,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 132
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Pretzelkins\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0102 Pretzelkins (Ray Romano, Wendy Liebman).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0102 Pretzelkins (Ray Romano, Wendy Liebman)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200102%20Pretzelkins%20(Ray%20Romano%2C%20Wendy%20Liebman).mp4",
+              "seconds": 1327,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Bully",
           "airdate": "1995-06-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Bully\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0103 Bully (Ray Romano, Joy Behar).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0103 Bully (Ray Romano, Joy Behar)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200103%20Bully%20(Ray%20Romano%2C%20Joy%20Behar).mp4",
-            "seconds": 1339,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 130
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S01E03.Bully.mp4",
+            "name": "Dr.Katz.S01E03.Bully",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E03.Bully.mp4",
+            "seconds": 1362,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S01E03.Bully.ia.mp4",
+              "name": "Dr.Katz.S01E03",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E03.Bully.ia.mp4",
+              "seconds": 1362,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 132
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bully\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0103 Bully (Ray Romano, Joy Behar).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0103 Bully (Ray Romano, Joy Behar)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200103%20Bully%20(Ray%20Romano%2C%20Joy%20Behar).mp4",
+              "seconds": 1339,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 130
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Cholesterol",
           "airdate": "1995-06-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Cholesterol\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0104 Cholesterol (Dave Attell, Laura Kightlinger).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0104 Cholesterol (Dave Attell, Laura Kightlinger)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200104%20Cholesterol%20(Dave%20Attell%2C%20Laura%20Kightlinger).mp4",
-            "seconds": 1362,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 132
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S01E04.Cholesterol.mp4",
+            "name": "Dr.Katz.S01E04.Cholesterol",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E04.Cholesterol.mp4",
+            "seconds": 1382,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S01E04.Cholesterol.ia.mp4",
+              "name": "Dr.Katz.S01E04",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E04.Cholesterol.ia.mp4",
+              "seconds": 1382,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Cholesterol\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0104 Cholesterol (Dave Attell, Laura Kightlinger).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0104 Cholesterol (Dave Attell, Laura Kightlinger)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200104%20Cholesterol%20(Dave%20Attell%2C%20Laura%20Kightlinger).mp4",
+              "seconds": 1362,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Everybody's Got a Tushy",
           "airdate": "1995-06-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -140,7 +234,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -172,33 +266,33 @@
           "number": 6,
           "name": "Family Car",
           "airdate": "1995-07-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
-            "file": "Dr.Katz.S01E06.Family.Car.mp4",
-            "name": "Dr.Katz.S01E06.Family.Car",
-            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E06.Family.Car.mp4",
-            "seconds": 1338,
-            "format": "MPEG4",
+            "file": "Dr.Katz.S01E06.Family.Car.ia.mp4",
+            "name": "Dr.Katz.S01E06.Family",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E06.Family.Car.ia.mp4",
+            "seconds": 1339,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 131
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
-              "file": "Dr.Katz.S01E06.Family.Car.ia.mp4",
-              "name": "Dr.Katz.S01E06.Family",
-              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E06.Family.Car.ia.mp4",
-              "seconds": 1339,
-              "format": "h.264 IA",
+              "file": "Dr.Katz.S01E06.Family.Car.mp4",
+              "name": "Dr.Katz.S01E06.Family.Car",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S01E06.Family.Car.mp4",
+              "seconds": 1338,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 131
+              "sizeMB": 127
             },
             {
               "conf": 0.8,
@@ -225,9 +319,9 @@
           "number": 1,
           "name": "Bystander Ben",
           "airdate": "1995-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -260,9 +354,9 @@
           "number": 2,
           "name": "Real Estate",
           "airdate": "1995-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -331,9 +425,9 @@
           "number": 6,
           "name": "Drinky the Drunk Guy",
           "airdate": "1996-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -374,9 +468,9 @@
           "number": 8,
           "name": "It Takes Some Getting Used To",
           "airdate": "1996-04-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -394,9 +488,9 @@
           "number": 9,
           "name": "The Particle Board",
           "airdate": "1996-04-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -429,9 +523,9 @@
           "number": 10,
           "name": "A Journey for the Betterment of People",
           "airdate": "1996-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -505,9 +599,9 @@
           "number": 1,
           "name": "Monte Carlo",
           "airdate": "1996-10-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -548,51 +642,105 @@
           "number": 3,
           "name": "Fructose",
           "airdate": "1996-10-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Fructose\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0303 Fructose (Marc Maron, Bob Odenkirk, Emo Philips).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0303 Fructose (Marc Maron, Bob Odenkirk, Emo Philips)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200303%20Fructose%20(Marc%20Maron%2C%20Bob%20Odenkirk%2C%20Emo%20Philips).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S03E03.Fructose.mp4",
+            "name": "Dr.Katz.S03E03.Fructose",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E03.Fructose.mp4",
             "seconds": 1327,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 129
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E03.Fructose.ia.mp4",
+              "name": "Dr.Katz.S03E03",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E03.Fructose.ia.mp4",
+              "seconds": 1327,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Fructose\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0303 Fructose (Marc Maron, Bob Odenkirk, Emo Philips).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0303 Fructose (Marc Maron, Bob Odenkirk, Emo Philips)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200303%20Fructose%20(Marc%20Maron%2C%20Bob%20Odenkirk%2C%20Emo%20Philips).mp4",
+              "seconds": 1327,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Earring",
           "airdate": "1996-10-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Earring\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0304 Earring (Jack Gallagher, Kevin Nealon).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0304 Earring (Jack Gallagher, Kevin Nealon)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200304%20Earring%20(Jack%20Gallagher%2C%20Kevin%20Nealon).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S03E04.Earring.mp4",
+            "name": "Dr.Katz.S03E04.Earring",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E04.Earring.mp4",
             "seconds": 1311,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 127
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 177
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E04.Earring.ia.mp4",
+              "name": "Dr.Katz.S03E04",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E04.Earring.ia.mp4",
+              "seconds": 1311,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Earring\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0304 Earring (Jack Gallagher, Kevin Nealon).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0304 Earring (Jack Gallagher, Kevin Nealon)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200304%20Earring%20(Jack%20Gallagher%2C%20Kevin%20Nealon).mp4",
+              "seconds": 1311,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Koppleman and Katz",
           "airdate": "1996-11-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -606,7 +754,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -624,9 +772,9 @@
           "number": 6,
           "name": "Guess Who",
           "airdate": "1997-01-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -640,7 +788,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -672,9 +820,9 @@
           "number": 7,
           "name": "Day Planner",
           "airdate": "1997-01-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -687,6 +835,19 @@
             "sizeMB": 179
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E07.Day.Planner.ia.mp4",
+              "name": "Dr.Katz.S03E07.Day",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E07.Day.Planner.ia.mp4",
+              "seconds": 1325,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Day Planner\" (0.95)",
@@ -707,9 +868,35 @@
           "number": 8,
           "name": "Studio Guy",
           "airdate": "1997-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S03E08.Mourning.Person.mp4",
+            "name": "Dr.Katz.S03E08.Mourning.Person",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E08.Mourning.Person.mp4",
+            "seconds": 1295,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E08.Mourning.Person.ia.mp4",
+              "name": "Dr.Katz.S03E08.Mourning",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E08.Mourning.Person.ia.mp4",
+              "seconds": 1295,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 9,
@@ -717,28 +904,55 @@
           "airdate": "1997-01-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Mourning Person\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0308 Mourning Person (Margaret Smith, Andy Kindler).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0308 Mourning Person (Margaret Smith, Andy Kindler)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200308%20Mourning%20Person%20(Margaret%20Smith%2C%20Andy%20Kindler).mp4",
-            "seconds": 1296,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 126
+            "conf": 0.75,
+            "why": "title ~ \"Mourning Person\" (1.00)",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S03E08.Mourning.Person.mp4",
+            "name": "Dr.Katz.S03E08.Mourning.Person",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E08.Mourning.Person.mp4",
+            "seconds": 1295,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Mourning Person\" (0.70)",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E08.Mourning.Person.ia.mp4",
+              "name": "Dr.Katz.S03E08.Mourning",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E08.Mourning.Person.ia.mp4",
+              "seconds": 1295,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mourning Person\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0308 Mourning Person (Margaret Smith, Andy Kindler).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0308 Mourning Person (Margaret Smith, Andy Kindler)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200308%20Mourning%20Person%20(Margaret%20Smith%2C%20Andy%20Kindler).mp4",
+              "seconds": 1296,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 10,
           "name": "L'il Helper",
           "airdate": "1997-02-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -751,6 +965,19 @@
             "sizeMB": 175
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E10.Lil'.Helper.ia.mp4",
+              "name": "Dr.Katz.S03E10.Lil'",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E10.Lil'.Helper.ia.mp4",
+              "seconds": 1294,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"L'il Helper\" (0.95)",
@@ -779,9 +1006,9 @@
           "number": 12,
           "name": "New Phone System",
           "airdate": "1997-03-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -795,7 +1022,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -827,22 +1054,49 @@
           "number": 13,
           "name": "Reunion",
           "airdate": "1997-03-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Reunion\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0313 Reunion (Dom Irrera, Lisa Kudrow).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0313 Reunion (Dom Irrera, Lisa Kudrow)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200313%20Reunion%20(Dom%20Irrera%2C%20Lisa%20Kudrow).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S03E13.Reunion.mp4",
+            "name": "Dr.Katz.S03E13.Reunion",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E13.Reunion.mp4",
             "seconds": 1299,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 126
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S03E13.Reunion.ia.mp4",
+              "name": "Dr.Katz.S03E13",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S03E13.Reunion.ia.mp4",
+              "seconds": 1299,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 125
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Reunion\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0313 Reunion (Dom Irrera, Lisa Kudrow).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0313 Reunion (Dom Irrera, Lisa Kudrow)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200313%20Reunion%20(Dom%20Irrera%2C%20Lisa%20Kudrow).mp4",
+              "seconds": 1299,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 126
+            }
+          ]
         }
       ]
     },
@@ -861,30 +1115,57 @@
           "number": 2,
           "name": "Memoirs",
           "airdate": "1997-06-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Memoirs\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0401 Memoirs (Fred Stoller, Ron Lynch, Louis CK).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0401 Memoirs (Fred Stoller, Ron Lynch, Louis CK)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200401%20Memoirs%20(Fred%20Stoller%2C%20Ron%20Lynch%2C%20Louis%20CK).mp4",
-            "seconds": 1301,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 126
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S04E02.Memoirs.mp4",
+            "name": "Dr.Katz.S04E02.Memoirs",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E02.Memoirs.mp4",
+            "seconds": 1313,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E02.Memoirs.ia.mp4",
+              "name": "Dr.Katz.S04E02",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E02.Memoirs.ia.mp4",
+              "seconds": 1313,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Memoirs\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0401 Memoirs (Fred Stoller, Ron Lynch, Louis CK).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0401 Memoirs (Fred Stoller, Ron Lynch, Louis CK)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200401%20Memoirs%20(Fred%20Stoller%2C%20Ron%20Lynch%2C%20Louis%20CK).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Electric Bike",
           "airdate": "1997-06-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -898,7 +1179,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -930,9 +1211,9 @@
           "number": 4,
           "name": "Broadcast Ben",
           "airdate": "1997-07-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -946,7 +1227,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -964,9 +1245,9 @@
           "number": 5,
           "name": "Trash Day",
           "airdate": "1997-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -980,7 +1261,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1012,9 +1293,9 @@
           "number": 6,
           "name": "Sharon Meyers",
           "airdate": "1997-07-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1028,7 +1309,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1046,25 +1327,77 @@
           "number": 7,
           "name": "Mask",
           "airdate": "1997-08-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S04E07.Mask.mp4",
+            "name": "Dr.Katz.S04E07.Mask",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E07.Mask.mp4",
+            "seconds": 1270,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E07.Mask.ia.mp4",
+              "name": "Dr.Katz.S04E07",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E07.Mask.ia.mp4",
+              "seconds": 1270,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Closets",
           "airdate": "1997-08-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S04E08.Closets.mp4",
+            "name": "Dr.Katz.S04E08.Closets",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E08.Closets.mp4",
+            "seconds": 1271,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E08.Closets.ia.mp4",
+              "name": "Dr.Katz.S04E08",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E08.Closets.ia.mp4",
+              "seconds": 1271,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Wild Weekend",
           "airdate": "1997-08-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1076,57 +1409,125 @@
             "playable": true,
             "sizeMB": 180
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E09.Wild.Weekend.ia.mp4",
+              "name": "Dr.Katz.S04E09.Wild",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E09.Wild.Weekend.ia.mp4",
+              "seconds": 1266,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Chopper",
           "airdate": "1997-08-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Chopper\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0410 Chopper (Dom Irrera, Conan O'Brien).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0410 Chopper (Dom Irrera, Conan O'Brien)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200410%20Chopper%20(Dom%20Irrera%2C%20Conan%20O'Brien).mp4",
-            "seconds": 1265,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 123
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S04E10.Chopper.mp4",
+            "name": "Dr.Katz.S04E10.Chopper",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E10.Chopper.mp4",
+            "seconds": 1279,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E10.Chopper.ia.mp4",
+              "name": "Dr.Katz.S04E10",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E10.Chopper.ia.mp4",
+              "seconds": 1279,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Chopper\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0410 Chopper (Dom Irrera, Conan O'Brien).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0410 Chopper (Dom Irrera, Conan O'Brien)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200410%20Chopper%20(Dom%20Irrera%2C%20Conan%20O'Brien).mp4",
+              "seconds": 1265,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Alibi",
           "airdate": "1997-08-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Alibi\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0411 Alibi (Tony V, Jeff Garlin).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0411 Alibi (Tony V, Jeff Garlin)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200411%20Alibi%20(Tony%20V%2C%20Jeff%20Garlin).mp4",
-            "seconds": 1303,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 127
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S04E11.Alibi.mp4",
+            "name": "Dr.Katz.S04E11.Alibi",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E11.Alibi.mp4",
+            "seconds": 1316,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 187
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E11.Alibi.ia.mp4",
+              "name": "Dr.Katz.S04E11",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E11.Alibi.ia.mp4",
+              "seconds": 1316,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 129
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Alibi\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0411 Alibi (Tony V, Jeff Garlin).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0411 Alibi (Tony V, Jeff Garlin)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200411%20Alibi%20(Tony%20V%2C%20Jeff%20Garlin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Ben-Centennial",
           "airdate": "1997-09-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1138,15 +1539,29 @@
             "playable": true,
             "sizeMB": 187
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E12.Ben-Centennial.ia.mp4",
+              "name": "Dr.Katz.S04E12",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E12.Ben-Centennial.ia.mp4",
+              "seconds": 1320,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Undercover Ben",
           "airdate": "1997-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1158,7 +1573,21 @@
             "playable": true,
             "sizeMB": 186
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S04E13.Undercover.ia.mp4",
+              "name": "Dr.Katz.S04E13",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S04E13.Undercover.ia.mp4",
+              "seconds": 1310,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
         }
       ]
     },
@@ -1169,9 +1598,9 @@
           "number": 1,
           "name": "Old Man",
           "airdate": "1998-06-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1184,6 +1613,19 @@
             "sizeMB": 179
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E01.Old.Man.ia.mp4",
+              "name": "Dr.Katz.S05E01.Old",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E01.Old.Man.ia.mp4",
+              "seconds": 1306,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Old Man\" (0.95)",
@@ -1204,9 +1646,9 @@
           "number": 2,
           "name": "Fanny Pack",
           "airdate": "1998-06-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1220,7 +1662,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1252,64 +1694,145 @@
           "number": 3,
           "name": "Metaphors",
           "airdate": "1998-06-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Metaphors\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0505 Metaphors (David Duchovny, Brian Regan).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0505 Metaphors (David Duchovny, Brian Regan)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200505%20Metaphors%20(David%20Duchovny%2C%20Brian%20Regan).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E03.Metaphors.mp4",
+            "name": "Dr.Katz.S05E03.Metaphors",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E03.Metaphors.mp4",
             "seconds": 1300,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 127
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E03.Metaphors.ia.mp4",
+              "name": "Dr.Katz.S05E03",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E03.Metaphors.ia.mp4",
+              "seconds": 1300,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 125
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Metaphors\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0505 Metaphors (David Duchovny, Brian Regan).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0505 Metaphors (David Duchovny, Brian Regan)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200505%20Metaphors%20(David%20Duchovny%2C%20Brian%20Regan).mp4",
+              "seconds": 1300,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Movies",
           "airdate": "1998-07-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Movies\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0502 Movies (Patton Oswalt, Sam Brown).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0502 Movies (Patton Oswalt, Sam Brown)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200502%20Movies%20(Patton%20Oswalt%2C%20Sam%20Brown).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E04.Movies.mp4",
+            "name": "Dr.Katz.S05E04.Movies",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E04.Movies.mp4",
             "seconds": 1321,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 128
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E04.Movies.ia.mp4",
+              "name": "Dr.Katz.S05E04",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E04.Movies.ia.mp4",
+              "seconds": 1321,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 127
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Movies\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0502 Movies (Patton Oswalt, Sam Brown).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0502 Movies (Patton Oswalt, Sam Brown)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200502%20Movies%20(Patton%20Oswalt%2C%20Sam%20Brown).mp4",
+              "seconds": 1321,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Ticket",
           "airdate": "1998-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Ticket\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0512 Ticket (Jann Karam, Ben Stiller).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0512 Ticket (Jann Karam, Ben Stiller)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200512%20Ticket%20(Jann%20Karam%2C%20Ben%20Stiller).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E05.Ticket.mp4",
+            "name": "Dr.Katz.S05E05.Ticket",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E05.Ticket.mp4",
             "seconds": 1317,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 129
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E05.Ticket.ia.mp4",
+              "name": "Dr.Katz.S05E05",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E05.Ticket.ia.mp4",
+              "seconds": 1317,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Ticket\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0512 Ticket (Jann Karam, Ben Stiller).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0512 Ticket (Jann Karam, Ben Stiller)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200512%20Ticket%20(Jann%20Karam%2C%20Ben%20Stiller).mp4",
+              "seconds": 1317,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 6,
@@ -1323,9 +1846,9 @@
           "number": 7,
           "name": "Chain Letter",
           "airdate": "1998-07-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1338,6 +1861,19 @@
             "sizeMB": 175
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E07.Chain.Letter.ia.mp4",
+              "name": "Dr.Katz.S05E07.Chain",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E07.Chain.Letter.ia.mp4",
+              "seconds": 1278,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 123
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Chain Letter\" (0.95)",
@@ -1358,9 +1894,9 @@
           "number": 8,
           "name": "Babysitting Ben",
           "airdate": "1998-08-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1374,7 +1910,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1406,9 +1942,9 @@
           "number": 9,
           "name": "Miles Away",
           "airdate": "1998-08-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1422,7 +1958,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1454,9 +1990,9 @@
           "number": 10,
           "name": "London Broil",
           "airdate": "1998-08-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1470,7 +2006,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1502,9 +2038,9 @@
           "number": 11,
           "name": "Feng Shui",
           "airdate": "1998-08-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1518,7 +2054,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1550,85 +2086,193 @@
           "number": 12,
           "name": "Alderman",
           "airdate": "1998-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Alderman\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0511 Alderman (Sarah Silverman, Louis CK).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0511 Alderman (Sarah Silverman, Louis CK)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200511%20Alderman%20(Sarah%20Silverman%2C%20Louis%20CK).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E12.Alderman.mp4",
+            "name": "Dr.Katz.S05E12.Alderman",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E12.Alderman.mp4",
             "seconds": 1297,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 126
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E12.Alderman.ia.mp4",
+              "name": "Dr.Katz.S05E12",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E12.Alderman.ia.mp4",
+              "seconds": 1297,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Alderman\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0511 Alderman (Sarah Silverman, Louis CK).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0511 Alderman (Sarah Silverman, Louis CK)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200511%20Alderman%20(Sarah%20Silverman%2C%20Louis%20CK).mp4",
+              "seconds": 1297,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Paranoia",
           "airdate": "1998-09-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Paranoia\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0513 Paranoia (David Cross, Lew Schneider).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0513 Paranoia (David Cross, Lew Schneider)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200513%20Paranoia%20(David%20Cross%2C%20Lew%20Schneider).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E13.Paranoia.mp4",
+            "name": "Dr.Katz.S05E13.Paranoia",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E13.Paranoia.mp4",
             "seconds": 1287,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 125
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 188
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E13.Paranoia.ia.mp4",
+              "name": "Dr.Katz.S05E13",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E13.Paranoia.ia.mp4",
+              "seconds": 1287,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Paranoia\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0513 Paranoia (David Cross, Lew Schneider).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0513 Paranoia (David Cross, Lew Schneider)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200513%20Paranoia%20(David%20Cross%2C%20Lew%20Schneider).mp4",
+              "seconds": 1287,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Waltz",
           "airdate": "1998-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Waltz\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0514 Waltz (Todd Barry, Susie Essman, Ron Lynch).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0514 Waltz (Todd Barry, Susie Essman, Ron Lynch)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200514%20Waltz%20(Todd%20Barry%2C%20Susie%20Essman%2C%20Ron%20Lynch).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E14.Waltz.mp4",
+            "name": "Dr.Katz.S05E14.Waltz",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E14.Waltz.mp4",
             "seconds": 1310,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 128
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 191
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E14.Waltz.ia.mp4",
+              "name": "Dr.Katz.S05E14",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E14.Waltz.ia.mp4",
+              "seconds": 1310,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Waltz\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0514 Waltz (Todd Barry, Susie Essman, Ron Lynch).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0514 Waltz (Todd Barry, Susie Essman, Ron Lynch)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200514%20Waltz%20(Todd%20Barry%2C%20Susie%20Essman%2C%20Ron%20Lynch).mp4",
+              "seconds": 1310,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Anniversary",
           "airdate": "1998-10-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Anniversary\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0515 Anniversary (Dom Irrera, Bonnie McFarlane).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0515 Anniversary (Dom Irrera, Bonnie McFarlane)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200515%20Anniversary%20(Dom%20Irrera%2C%20Bonnie%20McFarlane).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E15.Anniversary.mp4",
+            "name": "Dr.Katz.S05E15.Anniversary",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E15.Anniversary.mp4",
             "seconds": 1263,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 124
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 184
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E15.Anniversary.ia.mp4",
+              "name": "Dr.Katz.S05E15",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E15.Anniversary.ia.mp4",
+              "seconds": 1263,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 123
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Anniversary\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0515 Anniversary (Dom Irrera, Bonnie McFarlane).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0515 Anniversary (Dom Irrera, Bonnie McFarlane)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200515%20Anniversary%20(Dom%20Irrera%2C%20Bonnie%20McFarlane).mp4",
+              "seconds": 1263,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 16,
@@ -1654,9 +2298,9 @@
           "number": 17,
           "name": "Ping-Pong",
           "airdate": "1998-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1669,6 +2313,19 @@
             "sizeMB": 188
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E17.Ping-Pong.ia.mp4",
+              "name": "Dr.Katz.S05E17",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E17.Ping-Pong.ia.mp4",
+              "seconds": 1293,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Ping-Pong\" (0.95)",
@@ -1689,22 +2346,49 @@
           "number": 18,
           "name": "Thanksgiving",
           "airdate": "1998-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Thanksgiving\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0518 Thanksgiving (Todd Barry, Dom Irerra).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0518 Thanksgiving (Todd Barry, Dom Irerra)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200518%20Thanksgiving%20(Todd%20Barry%2C%20Dom%20Irerra).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S05E18.Thanksgiving.mp4",
+            "name": "Dr.Katz.S05E18.Thanksgiving",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E18.Thanksgiving.mp4",
             "seconds": 1297,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 128
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 189
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S05E18.Thanksgiving.ia.mp4",
+              "name": "Dr.Katz.S05E18",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S05E18.Thanksgiving.ia.mp4",
+              "seconds": 1297,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 125
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Thanksgiving\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0518 Thanksgiving (Todd Barry, Dom Irerra).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0518 Thanksgiving (Todd Barry, Dom Irerra)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200518%20Thanksgiving%20(Todd%20Barry%2C%20Dom%20Irerra).mp4",
+              "seconds": 1297,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 128
+            }
+          ]
         }
       ]
     },
@@ -1715,9 +2399,9 @@
           "number": 1,
           "name": "Sissy Boy",
           "airdate": "1999-06-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1731,7 +2415,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1763,9 +2447,9 @@
           "number": 2,
           "name": "Pullman Square",
           "airdate": "1999-06-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1779,7 +2463,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1811,9 +2495,9 @@
           "number": 3,
           "name": "Wisdom Teeth",
           "airdate": "1999-06-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1827,7 +2511,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1859,9 +2543,9 @@
           "number": 4,
           "name": "Past Lives",
           "airdate": "1999-07-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1874,6 +2558,19 @@
             "sizeMB": 180
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E04.Past.Lives.ia.mp4",
+              "name": "Dr.Katz.S06E04.Past",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E04.Past.Lives.ia.mp4",
+              "seconds": 1313,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Past Lives\" (0.95)",
@@ -1894,9 +2591,9 @@
           "number": 5,
           "name": "Ben's Partay",
           "airdate": "1999-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1909,6 +2606,19 @@
             "sizeMB": 180
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E05.Ben's.Partay.ia.mp4",
+              "name": "Dr.Katz.S06E05.Ben's",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E05.Ben's.Partay.ia.mp4",
+              "seconds": 1312,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Ben's Partay\" (0.95)",
@@ -1929,9 +2639,9 @@
           "number": 6,
           "name": "Walk for Hunger",
           "airdate": "1999-07-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1945,7 +2655,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1977,9 +2687,9 @@
           "number": 7,
           "name": "Used Car",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -1993,7 +2703,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2025,9 +2735,9 @@
           "number": 8,
           "name": "Ball and Chain",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2041,7 +2751,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2073,9 +2783,9 @@
           "number": 9,
           "name": "Snow Day",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2089,7 +2799,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2121,51 +2831,105 @@
           "number": 10,
           "name": "Garden",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Garden\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0609 Garden (Matt Siegal, Mitch Hedberg).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0609 Garden (Matt Siegal, Mitch Hedberg)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200609%20Garden%20(Matt%20Siegal%2C%20Mitch%20Hedberg).mp4",
-            "seconds": 1321,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 129
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S06E10.Garden.mp4",
+            "name": "Dr.Katz.S06E10.Garden",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E10.Garden.mp4",
+            "seconds": 1320,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E10.Garden.ia.mp4",
+              "name": "Dr.Katz.S06E10",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E10.Garden.ia.mp4",
+              "seconds": 1320,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Garden\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0609 Garden (Matt Siegal, Mitch Hedberg).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0609 Garden (Matt Siegal, Mitch Hedberg)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200609%20Garden%20(Matt%20Siegal%2C%20Mitch%20Hedberg).mp4",
+              "seconds": 1321,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Big TV",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Big TV\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0610 Big TV (Todd Barry, Dom Irrera, Al Lubel).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0610 Big TV (Todd Barry, Dom Irrera, Al Lubel)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200610%20Big%20TV%20(Todd%20Barry%2C%20Dom%20Irrera%2C%20Al%20Lubel).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S06E11.Big.TV.mp4",
+            "name": "Dr.Katz.S06E11.Big.TV",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E11.Big.TV.mp4",
             "seconds": 1319,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 129
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E11.Big.TV.ia.mp4",
+              "name": "Dr.Katz.S06E11.Big",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E11.Big.TV.ia.mp4",
+              "seconds": 1319,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Big TV\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0610 Big TV (Todd Barry, Dom Irrera, Al Lubel).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0610 Big TV (Todd Barry, Dom Irrera, Al Lubel)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200610%20Big%20TV%20(Todd%20Barry%2C%20Dom%20Irrera%2C%20Al%20Lubel).mp4",
+              "seconds": 1319,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Vow of Silence",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2178,6 +2942,19 @@
             "sizeMB": 180
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E12.Vow.of.Silence.ia.mp4",
+              "name": "Dr.Katz.S06E12.Vow.of",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E12.Vow.of.Silence.ia.mp4",
+              "seconds": 1318,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 126
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Vow of Silence\" (0.95)",
@@ -2198,9 +2975,9 @@
           "number": 13,
           "name": "You're Belinda",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2213,6 +2990,19 @@
             "sizeMB": 181
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E13.You're.Belinda.ia.mp4",
+              "name": "Dr.Katz.S06E13.You're",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E13.You're.Belinda.ia.mp4",
+              "seconds": 1321,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 129
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"You're Belinda\" (0.95)",
@@ -2233,9 +3023,9 @@
           "number": 14,
           "name": "Radio Katz",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2249,7 +3039,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2267,9 +3057,9 @@
           "number": 15,
           "name": "Expert Witness",
           "airdate": "1999-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2282,6 +3072,19 @@
             "sizeMB": 181
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E15.Expert.Witness.ia.mp4",
+              "name": "Dr.Katz.S06E15.Expert",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E15.Expert.Witness.ia.mp4",
+              "seconds": 1322,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 127
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Expert Witness\" (0.95)",
@@ -2302,9 +3105,9 @@
           "number": 16,
           "name": "Bakery Ben",
           "airdate": "2002-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2318,7 +3121,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dr.-katz.-s-05-e-16.-community.-theater",
               "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2350,9 +3153,9 @@
           "number": 17,
           "name": "Uncle Nothing",
           "airdate": "2002-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dr.-katz.-s-05-e-16.-community.-theater",
             "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
@@ -2365,6 +3168,19 @@
             "sizeMB": 181
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E17.Uncle.Nothing.ia.mp4",
+              "name": "Dr.Katz.S06E17.Uncle",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E17.Uncle.Nothing.ia.mp4",
+              "seconds": 1325,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Uncle Nothing\" (0.95)",
@@ -2385,22 +3201,49 @@
           "number": 18,
           "name": "Lerapy",
           "airdate": "2002-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Lerapy\" (0.95) | not browser-playable: video (XviD)",
-            "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
-            "itemTitle": "Dr Katz Professional Therapist",
-            "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0618 Lerapy (Whoopi Goldberg, Conan O'Brien).mp4",
-            "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0618 Lerapy (Whoopi Goldberg, Conan O'Brien)",
-            "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200618%20Lerapy%20(Whoopi%20Goldberg%2C%20Conan%20O'Brien).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "dr.-katz.-s-05-e-16.-community.-theater",
+            "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+            "file": "Dr.Katz.S06E18.Lerapy.mp4",
+            "name": "Dr.Katz.S06E18.Lerapy",
+            "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E18.Lerapy.mp4",
             "seconds": 1324,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 130
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dr.-katz.-s-05-e-16.-community.-theater",
+              "itemTitle": "Dr. Katz. S 05 E 16. Community. Theater",
+              "file": "Dr.Katz.S06E18.Lerapy.ia.mp4",
+              "name": "Dr.Katz.S06E18",
+              "url": "https://archive.org/download/dr.-katz.-s-05-e-16.-community.-theater/Dr.Katz.S06E18.Lerapy.ia.mp4",
+              "seconds": 1324,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Lerapy\" (0.95)",
+              "item": "dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck",
+              "itemTitle": "Dr Katz Professional Therapist",
+              "file": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0618 Lerapy (Whoopi Goldberg, Conan O'Brien).mp4",
+              "name": "Dr Katz Professional Therapist COMPLETE XviD-IPT/Dr Katz, Professional Therapist 0618 Lerapy (Whoopi Goldberg, Conan O'Brien)",
+              "url": "https://archive.org/download/dr-katz-professional-therapist-0205-bees-and-sids-dom-irerra-louis-ck/Dr%20Katz%20Professional%20Therapist%20COMPLETE%20XviD-IPT%2FDr%20Katz%2C%20Professional%20Therapist%200618%20Lerapy%20(Whoopi%20Goldberg%2C%20Conan%20O'Brien).mp4",
+              "seconds": 1324,
+              "format": "h.264",
+              "playable": false,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 130
+            }
+          ]
         }
       ]
     }

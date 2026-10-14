@@ -3,7 +3,7 @@
   "slug": "all-in-the-family",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T04:21:49.081Z",
+  "matchedAt": "2026-10-14T04:26:35.082Z",
   "tvmaze": {
     "id": 1784,
     "name": "All in the Family",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 210,
     "live": 0,
-    "review": 4,
-    "missing": 206,
-    "pct": 2
+    "review": 0,
+    "missing": 210,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,20 +26,8 @@
           "number": 1,
           "name": "Meet the Bunkers",
           "airdate": "1971-01-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "704hauser_202404",
-            "itemTitle": "704 Hauser (Season 1)",
-            "file": "S01E01- Meet the Cumberbatchs.mp4",
-            "name": "S01E01- Meet the Cumberbatchs",
-            "url": "https://archive.org/download/704hauser_202404/S01E01-%20Meet%20the%20Cumberbatchs.mp4",
-            "seconds": 1395,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 129
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -54,20 +42,8 @@
           "number": 3,
           "name": "Oh, My Aching Back",
           "airdate": "1971-01-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "704hauser_202404",
-            "itemTitle": "704 Hauser (Season 1)",
-            "file": "S01E03- Ernie Live on Tape.mp4",
-            "name": "S01E03- Ernie Live on Tape",
-            "url": "https://archive.org/download/704hauser_202404/S01E03-%20Ernie%20Live%20on%20Tape.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 62
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -82,40 +58,16 @@
           "number": 5,
           "name": "Judging Books by Covers",
           "airdate": "1971-02-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "704hauser_202404",
-            "itemTitle": "704 Hauser (Season 1)",
-            "file": "S01E05- All That Jasmine.mp4",
-            "name": "S01E05- All That Jasmine",
-            "url": "https://archive.org/download/704hauser_202404/S01E05-%20All%20That%20Jasmine.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 61
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Gloria's Pregnancy",
           "airdate": "1971-02-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "704hauser_202404",
-            "itemTitle": "704 Hauser (Season 1)",
-            "file": "S01E06- Revelations.mp4",
-            "name": "S01E06- Revelations",
-            "url": "https://archive.org/download/704hauser_202404/S01E06-%20Revelations.mp4",
-            "seconds": 1387,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 99
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

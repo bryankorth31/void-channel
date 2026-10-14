@@ -3,7 +3,7 @@
   "slug": "george-lopez",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T04:21:32.485Z",
+  "matchedAt": "2026-10-14T04:26:23.980Z",
   "tvmaze": {
     "id": 4129,
     "name": "George Lopez",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 120,
     "live": 0,
-    "review": 19,
-    "missing": 101,
-    "pct": 16
+    "review": 17,
+    "missing": 103,
+    "pct": 14
   },
   "seasons": [
     {
@@ -42,42 +42,16 @@
           "number": 3,
           "name": "Happy Birthdays",
           "airdate": "2002-04-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename | not browser-playable: video (x265)",
-            "item": "greetingsfromtucson",
-            "itemTitle": "\"Greetings from Tucson\" (Full 2002 WB series) [HEVC.x265]",
-            "file": "01x03 Driving.x265.mp4",
-            "name": "01x03 Driving.x265",
-            "url": "https://archive.org/download/greetingsfromtucson/01x03%20Driving.x265.mp4",
-            "seconds": 1345,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (x265)",
-            "sizeMB": 131
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Max's Big Adventure",
           "airdate": "2002-04-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename | not browser-playable: video (x265)",
-            "item": "greetingsfromtucson",
-            "itemTitle": "\"Greetings from Tucson\" (Full 2002 WB series) [HEVC.x265]",
-            "file": "01x04 Work Ethic.x265.mp4",
-            "name": "01x04 Work Ethic.x265",
-            "url": "https://archive.org/download/greetingsfromtucson/01x04%20Work%20Ethic.x265.mp4",
-            "seconds": 1329,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (x265)",
-            "sizeMB": 130
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -495,22 +469,7 @@
             "codecRisk": "video (x265)",
             "sizeMB": 158
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Christmas Punch\" (0.80)",
-              "item": "greetingsfromtucson",
-              "itemTitle": "\"Greetings from Tucson\" (Full 2002 WB series) [HEVC.x265]",
-              "file": "01x09 Christmas.x265.mp4",
-              "name": "01x09 Christmas.x265",
-              "url": "https://archive.org/download/greetingsfromtucson/01x09%20Christmas.x265.mp4",
-              "seconds": 1352,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 132
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
