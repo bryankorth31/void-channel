@@ -157,7 +157,9 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .hero-home .copy{transition:opacity .35s ease}.hero-home .tag{font-size:13px;color:var(--dim);margin:0 0 8px;text-shadow:none}.hero-home .kicker{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 .hero-home h1{font-size:clamp(28px,4.2vw,56px);line-height:1.04;margin:4px 0 10px;text-shadow:0 2px 14px rgba(0,0,0,.75)}.hero-home .ov{max-width:640px;font-size:15px;line-height:1.45;color:var(--fg);text-shadow:0 1px 8px rgba(0,0,0,.85);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin:0}.hero-home .meta{color:var(--dim);font-size:13px;margin-top:8px}
 .hero-home .harrow{position:absolute;top:42%;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(7,8,12,.55);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}.hero-home .harrow:hover{border-color:var(--acc);color:var(--acc)}.hero-home .harrow.l{left:14px}.hero-home .harrow.r{right:14px}@media(hover:none){.hero-home .harrow{display:none}}
-.hero-home .hcount{position:absolute;right:18px;bottom:14px;color:var(--dim);font-size:12px}.genres.nets{margin-top:-8px}
+.hero-home .hcount{position:absolute;right:18px;bottom:14px;color:var(--dim);font-size:12px}
+.finder{margin:0 20px 6px;padding:4px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.frow{display:flex;align-items:flex-start;gap:12px;padding:9px 0}.frow+.frow{border-top:1px solid var(--line)}.frow .lbl{flex:none;width:68px;color:var(--dim);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:7px}.frow .pills{display:flex;flex-wrap:wrap;gap:6px}.frow .chip small{color:var(--dim);margin-left:5px;font-size:11px}.frow .chip:hover{border-color:var(--acc);color:var(--acc)}
+@media(max-width:600px){.finder{margin:0 12px 6px}.frow{flex-direction:column;gap:6px}.frow .lbl{width:auto;padding-top:0}}
 .btn.gold{background:var(--gold);border-color:var(--gold);color:#07080c;font-weight:600}.btn.ghost{background:rgba(7,8,12,.5);backdrop-filter:blur(6px)}
 @media(max-width:600px){.hero-home{height:66vh;min-height:420px}.hero-home h1{font-size:30px}.hero-home .ov{-webkit-line-clamp:3;font-size:14px}.hero-home .copy{left:16px;right:16px;bottom:16px}.hero-home .tag{font-size:15px}}
 .card{transition:transform .18s ease,outline-color .18s ease}.card:hover{transform:translateY(-3px)}.card:focus-visible{outline-color:var(--acc)}
@@ -302,8 +304,7 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
   // 3. genres and filters
   h+='<h2>Find something<small>pick a genre, a network, a row or a collection</small></h2>'+bar;
-  h+='<div class="genres">'+counts('genres').map(([g,n])=>'<button onclick="state.genre=\\''+esc(g)+'\\';render();window.scrollTo(0,0)">'+esc(g)+'<small>'+n+' shows</small></button>').join('')+'</div>';
-  h+='<div class="genres nets">'+counts('network').slice(0,24).map(([g,n])=>'<button onclick="state.network=\\''+esc(g)+'\\';render();window.scrollTo(0,0)">'+esc(g)+'<small>'+n+' shows</small></button>').join('')+'</div>';
+  h+=finder();
   // 4. the rows, in all their splendor
   const recent=VIS().sort((a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')).slice(0,30);
   h+=shelf('Recently added',recent,'recent');
@@ -316,6 +317,11 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
 // The featured pool: the best-rated, the cult favourites (long runs that never got the ratings), and
 // a few from every row and collection, shuffled with the day as the seed so it reads differently
 // tomorrow but the same for everyone today.
+const SKIP_GENRES=new Set(['Kids','TV Movie','News']);
+function finder(){const series=VIS().filter(t=>!t.slug.startsWith('movie-'));const tally=(key)=>{const m={};for(const t of series){const v=key==='genres'?(t.genres||[]):[t[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])};
+ const pills=(key,list)=>'<span class="pills">'+list.map(([v,c])=>'<span class="chip'+(state[key]===v?' on':'')+'" onclick="state.'+key+'=\\''+esc(v)+'\\';render();window.scrollTo(0,0)">'+esc(v)+(c?'<small>'+c+'</small>':'')+'</span>').join('')+'</span>';
+ const genres=tally('genres').filter(([g])=>!SKIP_GENRES.has(g)).slice(0,14);const nets=tally('network').filter(([,c])=>c>=4).slice(0,16);const decs=[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,series.filter(t=>decade(t.year)===d).length]).filter(x=>x[1]);
+ return '<div class="finder"><div class="frow"><span class="lbl">Genre</span>'+pills('genre',genres)+'</div><div class="frow"><span class="lbl">Network</span>'+pills('network',nets)+'</div><div class="frow"><span class="lbl">Decade</span>'+pills('decade',decs)+'</div></div>'}
 function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t));
  const byR=ok.filter(t=>t.rating).sort((a,b)=>b.rating-a.rating);const popular=byR.slice(0,40);const pop=new Set(popular);
  const cult=ok.filter(t=>t.eps>=12&&(!t.rating||t.rating<8)&&!pop.has(t)).sort((a,b)=>b.eps-a.eps).slice(0,60);
