@@ -24,7 +24,14 @@ Every later push to `master` rebuilds and redeploys in about a minute.
 **Catalog cadence:** `node scripts/publish.js` commits whatever the builder has written to `catalog/`
 and `docs/` and pushes it (no-op when nothing changed). A Windows Task Scheduler job, "VoidTV
 Publish", runs it every two hours on B's PC (log: `catalog/cache/publish.log`). Remove with
-`schtasks /Delete /TN "VoidTV Publish" /F`; the nightly job will fold this in later. The catalog is in the repo,
+`schtasks /Delete /TN "VoidTV Publish" /F`.
+
+**Nightly pass:** `node scripts/nightly.js` runs the whole builder in order — hunt (skipped if a hunt
+is already running; two Archive jobs is the ceiling), TV-movie hunt, art, people (episode credits +
+bios + graph), db, publish — each step time-limited, failures logged and skipped so the publish
+still happens. Task Scheduler job "VoidTV Nightly", 3:30 AM daily; log `catalog/cache/nightly.log`.
+Remove with `schtasks /Delete /TN "VoidTV Nightly" /F`. The two-hour publish job stays alongside
+while the long hunts run; once they finish, the nightly pass alone is enough. The catalog is in the repo,
 so no secrets are needed at build time. `backend/.env` (the TMDB token) stays local and ignored.
 
 ## What `site/` contains
