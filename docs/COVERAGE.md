@@ -18,7 +18,6 @@
 | Brass Eye | British and Beyond | 6 | 5 | 1 | 0 | 100% |
 | Bravest Warriors | Internet Comedy | 115 | 0 | 115 | 0 | 100% |
 | Breaking Bad | Drama | 62 | 14 | 48 | 0 | 100% |
-| Breaking News | Internet Comedy | 2 | 0 | 2 | 0 | 100% |
 | Cadfael | British and Beyond | 13 | 12 | 1 | 0 | 100% |
 | Charlie the Unicorn | Internet Comedy | 13 | 0 | 13 | 0 | 100% |
 | Classic Concentration | Classic TV | 825 | 0 | 825 | 0 | 100% |
@@ -103,6 +102,7 @@
 | Space: 1999 | Classic TV | 48 | 37 | 11 | 0 | 100% |
 | Spaced | British and Beyond | 14 | 14 | 0 | 0 | 100% |
 | Stroker and Hoop | Adult Swim | 13 | 8 | 5 | 0 | 100% |
+| Survivor | Reality & Talk | 9 | 0 | 9 | 0 | 100% |
 | Texaco Star Theatre | Classic TV | 17 | 0 | 17 | 0 | 100% |
 | The $10,000 Pyramid | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
@@ -151,7 +151,7 @@
 | X-Men: The Animated Series | Animated | 204 | 0 | 204 | 0 | 100% |
 | Xavier: Renegade Angel | Adult Swim | 20 | 20 | 0 | 0 | 100% |
 | Yacht Rock | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
-| Yo soy Betty, la fea | Reality & Talk | 504 | 0 | 504 | 0 | 100% |
+| Yo soy Betty, la fea | Reality & Talk | 335 | 0 | 335 | 0 | 100% |
 | Zero Punctuation | Internet Comedy | 847 | 0 | 847 | 0 | 100% |
 | Amen | Classic TV | 110 | 86 | 23 | 1 | 99% |
 | Cagney & Lacey | Classic TV | 125 | 95 | 29 | 1 | 99% |
@@ -890,4 +890,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, Clarkson's Farm, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Breaking News, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, Clarkson's Farm, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
