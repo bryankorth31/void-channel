@@ -452,6 +452,33 @@ them the media we have that qualifies").** Same shelf component, same cards, sam
   words, practice, parentNote, reviewedBy, reviewedAt. The site builder turns it into rows exactly
   as it turns the show list into rows today.
 
+**Later: the teacher's aid (B, 2026-10-13: "in this area we can in the future build a teacher's
+aid model that can act as a semi-automated instructor").** The study companion from "The model"
+above, grown up and given a classroom. *Semi*-automated is the design: the parent sets it, it
+runs the day, the parent sees everything. What it does, in the order a lesson happens:
+
+1. **Plans the week** from the rows: given a child's band, the subjects the parent chose and what
+   was finished last week, it lays out a sequence that respects nucleation — the why, the story,
+   the mechanism, the practice — and the parent approves or drags it around.
+2. **Introduces each piece** before play, in the child's register: the why-it-matters, the two
+   words to listen for, what to notice. Thirty seconds, then the piece plays untouched.
+3. **Talks afterwards**: asks the talk-about questions, listens to the answer (typed, later
+   spoken), follows up once or twice, and if the child is stuck, explains using the piece itself —
+   "go back to the part where Bronowski is standing in the ..." with the timestamp — never from its
+   own memory.
+4. **Hands over the practice** and, at the end of the day, writes the parent a short note: what
+   was watched, what the child said, where they lit up, where they got tangled, what to talk about
+   at dinner. A note, not a grade.
+
+Rules that do not bend: grounded only in the lesson's transcript, readings and wrap; no grades,
+scores or rankings of the child; nothing a child types leaves the household except to the model
+call itself, and the parent can read every exchange; a child-safe system prompt that refuses to
+go off-material; per-household monthly budget with a plain "the aid is resting until next month"
+when it is spent; always optional — every lesson works with the aid switched off, because the
+parent is the teacher and the aid is the aide. Built on the same Worker as the companion,
+claude-haiku-5-5 behind it; needs transcripts (Whisper pass) first. Position in the order:
+after the School rows exist and one strand is done with care.
+
 **Order.** VoidTV live → Void University's found courses and the first authored entries → Void
 School, starting with ONE strand end to end (B picks; history/civics or science would use the
 library hardest) done with care before the second strand begins.
