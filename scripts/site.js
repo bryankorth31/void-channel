@@ -28,6 +28,8 @@ fs.mkdirSync(path.join(OUT, 'data', 'people'), { recursive: true });
 for (const [id, b] of Object.entries(data.bios || {})) fs.writeFileSync(path.join(OUT, 'data', 'people', id + '.json'), JSON.stringify(b));
 
 const shell = (meta) => page({ data, mode: 'split', routes: 'path', base: '/', meta });
+// Refuse to ship a page whose script does not parse (a bad quote once took the whole site down).
+{ const html = shell({ url: ORIGIN + '/' }); const js = html.slice(html.lastIndexOf('<script>') + 8, html.lastIndexOf('</script>')); try { new Function(js); } catch (e) { console.error('PAGE SCRIPT DOES NOT PARSE: ' + e.message); process.exit(1); } }
 fs.writeFileSync(path.join(OUT, 'index.html'), shell({ url: ORIGIN + '/' }));
 for (const s of data.shows) {
   const dir = path.join(OUT, 'show', s.slug);
