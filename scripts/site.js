@@ -45,7 +45,10 @@ for (const s of data.shows) {
     description: (s.overview ? s.overview.slice(0, 180).replace(/\s+\S*$/, '') + (s.overview.length > 180 ? '…' : '') + ' ' : '') + bits + ` · ${SITE_NAME}`,
   }));
 }
-fs.writeFileSync(path.join(OUT, '_redirects'), '/show/* /index.html 200\n/person/* /index.html 200\n/tv /index.html 200\n/tv/* /index.html 200\n/me /index.html 200\n');
+// www and the old Pages address fold into the bare domain once voidtv.net is attached (host-level rules are inert until then).
+const HOST = ORIGIN.replace(/^https?:\/\//, '');
+const hostRules = HOST === 'voidtv.net' ? 'https://www.voidtv.net/* https://voidtv.net/:splat 301\n' : '';
+fs.writeFileSync(path.join(OUT, '_redirects'), hostRules + '/show/* /index.html 200\n/person/* /index.html 200\n/tv /index.html 200\n/tv/* /index.html 200\n/me /index.html 200\n');
 // Pages Functions live beside the output: the password gate (functions/_middleware.js) only runs
 // when the SITE_PASSWORD variable is set on the Pages project.
 const fnSrc = path.join(ROOT, 'functions');

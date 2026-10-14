@@ -21,6 +21,23 @@ One-time, in the Cloudflare dashboard (B does this; takes ten minutes):
 
 Every later push to `master` rebuilds and redeploys in about a minute.
 
+## Swap day (B said go on 2026-10-14)
+
+In the Pages project `voidtvsite`, in this order:
+
+1. **Settings -> Variables and Secrets:** delete `SITE_PASSWORD` (the test gate; the middleware is inert
+   without it). Then **Deployments -> latest -> Retry deployment** so the build picks up the change.
+2. **Custom domains -> Set up a custom domain:** `voidtv.net`. Cloudflare sees the zone in the same
+   account and offers to replace the existing records (today they are proxied records pointing at
+   Vercel); accept. Then add `www.voidtv.net` the same way. Status goes Pending -> Active in a minute
+   or two; the certificate is automatic.
+3. Check `https://voidtv.net/` (new site, no password), `https://www.voidtv.net/` (redirects to the bare
+   domain) and `https://voidtv.net/show/seinfeld` (deep link renders).
+4. Vercel: the old project can be deleted once step 3 passes. Nothing else points at it.
+
+The build already stamps `https://voidtv.net` into share links and OG tags; the _redirects file folds
+www into the bare domain. The `voidtvsite.pages.dev` address keeps working as a second door.
+
 **Catalog cadence:** `node scripts/publish.js` commits whatever the builder has written to `catalog/`
 and `docs/` and pushes it (no-op when nothing changed). A Windows Task Scheduler job, "VoidTV
 Publish", runs it every two hours on B's PC (log: `catalog/cache/publish.log`). Remove with
