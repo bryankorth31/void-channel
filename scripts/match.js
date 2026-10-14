@@ -83,11 +83,14 @@ function namesOtherShow(text, show) {
   return OTHER_SHOWS.some((o) => o.core !== me && !me.includes(o.core) && !o.core.includes(me) && t.includes(o.core));
 }
 
+const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
 function matchShow(entry) {
   const show = entry.name;
   const cf = path.join(CAND_DIR, slug(show) + '.json');
   if (!fs.existsSync(cf)) return null;
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
+  const ov = OVERRIDES[slug(show)] || {};
+  if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
   const tv = loadTv(show);
   if (!tv || !tv.episodes.length) return { show, type: entry.type, network: entry.network, noTvmaze: true };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
@@ -127,12 +130,14 @@ function matchShow(entry) {
         if (f.nameHit) conf += 0.15; else if (itemNamesMe) conf += 0.1;
         conf += f.band === 'episode' ? 0.15 : 0.05;
         if (fileNamesOther) conf -= 0.6; else if (itemNamesOther && !f.nameHit) conf -= 0.4;
-        if (langRisk(f.name) || langRisk(item.title)) conf -= 0.35; // REVIEW, never LIVE
+        else if (!f.nameHit && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) conf -= 0.45; // foreign title: words that are neither the show nor an episode
+        const foreign = !!(langRisk(f.name) || langRisk(item.title));
+        if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
         if (!f.playable) conf -= 0.1;
         conf = Math.max(0, Math.min(1, conf));
         if (conf < REVIEW) continue;
         const risk = codecRisk(f.name, f.format, f.playable);
-        push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, sizeMB: f.sizeMB });
+        push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
       }
     }
     // Sequence fallback: a DVD/season rip whose files carry no names ("Disc 1 10", "VTS_03_1").
