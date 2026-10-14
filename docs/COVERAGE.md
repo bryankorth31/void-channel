@@ -1,6 +1,6 @@
 # Coverage
 
-469 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+478 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -49,6 +49,7 @@
 | Space: 1999 | Classic TV | 48 | 46 | 2 | 0 | 100% |
 | St. Elsewhere | Classic TV | 137 | 129 | 8 | 0 | 100% |
 | Stroker and Hoop | Adult Swim | 13 | 13 | 0 | 0 | 100% |
+| The Alienist | Drama | 18 | 16 | 2 | 0 | 100% |
 | The Bible | Streaming Era | 10 | 0 | 10 | 0 | 100% |
 | The Bob Newhart Show | Classic TV | 142 | 140 | 2 | 0 | 100% |
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
@@ -162,6 +163,7 @@
 | Avatar: The Last Airbender | Animated | 15 | 0 | 8 | 7 | 53% |
 | The Avengers | Classic TV | 161 | 50 | 32 | 79 | 51% |
 | Zane's Sex Chronicles | Late Night | 25 | 12 | 0 | 13 | 48% |
+| The Son | Drama | 20 | 8 | 1 | 11 | 45% |
 | Perry Mason | Classic TV | 16 | 5 | 2 | 9 | 44% |
 | The Dick Van Dyke Show | Classic TV | 158 | 68 | 0 | 90 | 43% |
 | Moonlighting | Classic TV | 67 | 25 | 3 | 39 | 42% |
@@ -236,6 +238,7 @@
 | Happy Days | Classic TV | 255 | 19 | 7 | 229 | 10% |
 | Playboy After Dark | Classic TV | 52 | 5 | 0 | 47 | 10% |
 | Sex and the City | 90s Sitcoms | 94 | 9 | 0 | 85 | 10% |
+| The Bastard Executioner | Drama | 10 | 0 | 1 | 9 | 10% |
 | The Drew Carey Show | 90s Sitcoms | 233 | 24 | 0 | 209 | 10% |
 | The Dukes of Hazzard | Classic TV | 147 | 1 | 13 | 133 | 10% |
 | The X-Files | Sci-Fi, Fantasy and Horror | 218 | 5 | 16 | 197 | 10% |
@@ -333,6 +336,7 @@
 | Baskets | 2000s and Later Sitcoms | 40 | 0 | 0 | 40 | 0% |
 | Battlestar Galactica | Sci-Fi, Fantasy and Horror | 73 | 0 | 0 | 73 | 0% |
 | Beauty and the Beast | Classic TV | 70 | 0 | 0 | 70 | 0% |
+| Becoming Elizabeth | Drama | 8 | 0 | 0 | 8 | 0% |
 | Bewitched | Classic TV | 254 | 0 | 0 | 254 | 0% |
 | Billions | Drama | 84 | 0 | 0 | 84 | 0% |
 | Black Dynamite | Adult Swim | 19 | 0 | 0 | 19 | 0% |
@@ -399,8 +403,10 @@
 | Loveline | Late Night | 7 | 0 | 0 | 7 | 0% |
 | M*A*S*H | Classic TV | 10 | 0 | 0 | 10 | 0% |
 | Man Seeking Woman | 2000s and Later Sitcoms | 30 | 0 | 0 | 30 | 0% |
+| Manhattan | Drama | 23 | 0 | 0 | 23 | 0% |
 | Martin | 90s Sitcoms | 132 | 0 | 0 | 132 | 0% |
 | Mary Shelley's Frankenhole | Adult Swim | 19 | 0 | 0 | 19 | 0% |
+| Masters of Sex | Drama | 46 | 0 | 0 | 46 | 0% |
 | Match Game | Classic TV | 73 | 0 | 0 | 73 | 0% |
 | Maverick | Classic TV | 124 | 0 | 0 | 124 | 0% |
 | Modern Family | 2000s and Later Sitcoms | 250 | 0 | 0 | 250 | 0% |
@@ -440,6 +446,7 @@
 | The Eric Andre Show | Adult Swim | 60 | 0 | 0 | 60 | 0% |
 | The Great | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | The Incredible Hulk | Classic TV | 82 | 0 | 0 | 82 | 0% |
+| The Knick | Drama | 20 | 0 | 0 | 20 | 0% |
 | The Last Kingdom | Streaming Era | 46 | 0 | 0 | 46 | 0% |
 | The Late Show with David Letterman | Classic TV | 4262 | 0 | 0 | 4262 | 0% |
 | The Men Who Built America | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
@@ -449,8 +456,10 @@
 | The Pacific | Drama | 10 | 0 | 0 | 10 | 0% |
 | The Pillars of the Earth | Drama | 8 | 0 | 0 | 8 | 0% |
 | The Price Is Right | Classic TV | 7169 | 0 | 0 | 7169 | 0% |
+| The Serpent Queen | Drama | 16 | 0 | 0 | 16 | 0% |
 | The Simpsons | Animated | 806 | 0 | 3 | 803 | 0% |
 | The Sopranos | Drama | 86 | 0 | 0 | 86 | 0% |
+| The Terror | Drama | 26 | 0 | 0 | 26 | 0% |
 | The Tudors | Drama | 38 | 0 | 0 | 38 | 0% |
 | The Vampire Diaries | Sci-Fi, Fantasy and Horror | 171 | 0 | 0 | 171 | 0% |
 | The Wire | Drama | 60 | 0 | 0 | 60 | 0% |
