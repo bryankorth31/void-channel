@@ -434,11 +434,19 @@ them the media we have that qualifies").** Same shelf component, same cards, sam
 - **Rows by subject** below: Reading & Literature, Writing & Speaking, Math, Science, Nature &
   Earth, History & Civics, Geography & World, Arts & Music, Machines & Making, Practical Life,
   Faith & Philosophy (for families who want it; its own row, never mixed in).
-- **A card is a piece**, not a show: one episode, one lecture, one documentary hour, one book, one
-  program to run. Poster or still, title, a small format badge (watch / read / listen / do) and the
-  level. The ▾ details open the lesson wrap: why it matters first, the standards it serves with
-  codes, the talk-about questions, the parent note, and "part of" (the course or strand it belongs
-  to, if any). Play opens the same player; read opens the reader.
+- **A card is a bundle, not a single file** (B, 2026-10-13: "a card would not just be one type of
+  media; it would be the main media in that category, but also connecting and corresponding media
+  that goes with it, in a drop-down"). The face of the card is the **main piece** for that subject
+  and level — one episode, one lecture, one documentary hour — with its poster or still, title,
+  level, and small marks showing what travels with it (watch · read · listen · do). The ▾ opens
+  the bundle: first the wrap (why it matters, the standards with codes, the talk-about questions,
+  the parent note), then the **companions**, each with its own button — *Read* (the book chapter,
+  the article, the primary source), *Listen* (the radio hour, the audiobook chapter), *Watch also*
+  (the second documentary, the TV episode that shows it, from the library behind suitability),
+  *Do* (the program to run, the practice, the thing to build), *Who* (the voices, to their person
+  pages), and *Part of* (the course or strand). This is nucleation made into furniture: the main
+  piece is the seed, the drop-down is what crystallises around it. Play opens the same player;
+  Read opens the reader; nothing leaves the bundle without a way back to it.
 - **Filters bar**: grade, subject, format, standards framework (Common Core / NGSS / C3 / state),
   length. **Explore by standard** grid under the rows, the way TV has Explore by Genre: pick a
   code, see every piece that serves it.
@@ -447,9 +455,10 @@ them the media we have that qualifies").** Same shelf component, same cards, sam
 - **What qualifies** for a row: passed suitability; level and subject assigned by the model and
   confirmed by a person; the voice test; and the "best thing we hold for a first meeting" test for
   anything placed in a K–2 or 3–5 row. A piece without a why-it-matters paragraph is not shown.
-- **Data**: `catalog/school/pieces.json` — one record per piece: source (show + season + episode,
-  course lecture, book id), grades, subjects, standards [{framework, code, text}], why, questions,
-  words, practice, parentNote, reviewedBy, reviewedAt. The site builder turns it into rows exactly
+- **Data**: `catalog/school/pieces.json` — one record per bundle: main (show + season + episode,
+  course lecture, or book id), companions [{role: read | listen | watch | do, source, title,
+  minutes, why-this-one}], voices [person ids], grades, subjects, standards [{framework, code,
+  text}], why, questions, words, practice, parentNote, partOf, reviewedBy, reviewedAt. The site builder turns it into rows exactly
   as it turns the show list into rows today.
 
 **Later: the teacher's aid (B, 2026-10-13: "in this area we can in the future build a teacher's
