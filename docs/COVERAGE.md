@@ -1,6 +1,6 @@
 # Coverage
 
-704 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+705 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -591,6 +591,7 @@
 | Rowan & Martin's Laugh-In | Classic TV | 141 | 0 | 0 | 141 | 0% |
 | Royal Crackers | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | Russian Doll | Streaming Era | 15 | 0 | 0 | 15 | 0% |
+| Sale of the Century | Classic TV | 411 | 0 | 0 | 411 | 0% |
 | Scarecrow and Mrs. King | Classic TV | 88 | 0 | 0 | 88 | 0% |
 | Search Party | 2000s and Later Sitcoms | 50 | 0 | 0 | 50 | 0% |
 | Sexual Healing | Late Night | 9 | 0 | 0 | 9 | 0% |
