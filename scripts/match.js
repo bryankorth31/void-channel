@@ -80,6 +80,8 @@ function loadTv(show) {
     const counters = {};
     for (const e of [...tv.episodes].sort((a, b) => (a.airdate || '').localeCompare(b.airdate || ''))) { if (e.number == null) e.number = (counters[e.season] = (counters[e.season] || 0) + 1) + 10000; }
   }
+  // ...and TVmaze sometimes repeats a season/number pair (specials, re-airs): later duplicates get unique high numbers
+  if (tv && tv.episodes) { const seen = new Set(); let extra = 20000; for (const e of tv.episodes) { const k = e.season + 'x' + e.number; if (seen.has(k)) e.number = ++extra; seen.add(e.season + 'x' + e.number); } }
   return tv;
 }
 
@@ -266,6 +268,7 @@ function writeCoverage(rows) {
 
 function main() {
   const filter = (process.argv[2] || '').toLowerCase();
+  const partial = !!filter;
   const rows = [];
   for (const entry of LIST.shows) {
     if (filter && !entry.name.toLowerCase().includes(filter)) continue;
@@ -275,7 +278,7 @@ function main() {
     if (r.noTvmaze) console.log(`${entry.name}: no TVmaze episode list`);
     else console.log(`${entry.name}: ${r.coverage.live} live, ${r.coverage.review} review, ${r.coverage.missing} missing of ${r.coverage.total} (${r.coverage.pct}%)`);
   }
-  writeCoverage(rows);
+  if (!partial) writeCoverage(rows); // a filtered run leaves the full report alone
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
 main();
