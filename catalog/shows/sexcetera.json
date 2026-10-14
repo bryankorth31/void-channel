@@ -1,0 +1,69 @@
+{
+  "show": "Sexcetera",
+  "slug": "sexcetera",
+  "type": "Late Night",
+  "network": "Playboy TV",
+  "matchedAt": "2026-10-14T07:34:20.420Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Sexcetera",
+    "runtime": null,
+    "premiered": null,
+    "network": "Playboy TV"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "playboy aerobic",
+          "state": "REVIEW",
+          "file": {
+            "item": "playboy-aerobics",
+            "itemTitle": "VHS Recordings: Uncensored Hits the Bar, Playboy Aerobics and a portion of Sexcetera [1983]",
+            "file": "Playboy Aerobic.mp4",
+            "name": "Playboy Aerobic",
+            "url": "https://archive.org/download/playboy-aerobics/Playboy%20Aerobic.mp4",
+            "seconds": 2650,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1054,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "playboybestofsexcetera",
+          "state": "REVIEW",
+          "file": {
+            "item": "playboy-best-of-sexcetera",
+            "itemTitle": "Playboy Best of Sexcetera",
+            "file": "PlayboyBestOfSexcetera.mp4",
+            "name": "PlayboyBestOfSexcetera",
+            "url": "https://archive.org/download/playboy-best-of-sexcetera/PlayboyBestOfSexcetera.mp4",
+            "seconds": 4641,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 886,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

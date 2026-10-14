@@ -1,19 +1,24 @@
 # Coverage
 
-813 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+862 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
 | Andromeda | Sci-Fi, Fantasy and Horror | 110 | 89 | 21 | 0 | 100% |
+| Babylon 5 | Sci-Fi, Fantasy and Horror | 178 | 0 | 178 | 0 | 100% |
 | Band of Brothers | Drama | 10 | 9 | 1 | 0 | 100% |
+| Battlestar Galactica (1978) | Classic TV | 24 | 0 | 24 | 0 | 100% |
 | Benson | Classic TV | 158 | 158 | 0 | 0 | 100% |
 | Big Train | British and Beyond | 12 | 12 | 0 | 0 | 100% |
 | Black Books | British and Beyond | 18 | 0 | 18 | 0 | 100% |
 | Brass Eye | British and Beyond | 6 | 5 | 1 | 0 | 100% |
 | Breaking Bad | Drama | 62 | 14 | 48 | 0 | 100% |
 | Cadfael | British and Beyond | 13 | 12 | 1 | 0 | 100% |
+| Classic Concentration | Classic TV | 832 | 0 | 832 | 0 | 100% |
 | Coach | 90s Sitcoms | 200 | 155 | 44 | 1 | 100% |
 | Concentration | Classic TV | 251 | 0 | 251 | 0 | 100% |
+| Doctor Who (Classic) | Classic TV | 711 | 0 | 711 | 0 | 100% |
+| Donahue | Classic TV | 20 | 0 | 20 | 0 | 100% |
 | Drawn Together | Animated | 36 | 26 | 10 | 0 | 100% |
 | Dynasties | Documentary & Geographic | 9 | 4 | 5 | 0 | 100% |
 | Elizabeth R | Classic TV | 6 | 0 | 6 | 0 | 100% |
@@ -24,11 +29,18 @@
 | Flowers | British and Beyond | 12 | 12 | 0 | 0 | 100% |
 | Forbidden Science | Late Night | 13 | 12 | 1 | 0 | 100% |
 | Freak Show | Animated | 7 | 0 | 7 | 0 | 100% |
+| G-String Divas | Late Night | 17 | 0 | 17 | 0 | 100% |
+| Hallmark Hall of Fame | Classic TV | 6 | 0 | 6 | 0 | 100% |
+| Hardcore History | Documentary & Geographic | 2 | 0 | 2 | 0 | 100% |
 | Hell on Wheels | Drama | 57 | 49 | 8 | 0 | 100% |
 | Hercules: The Legendary Journeys | Sci-Fi, Fantasy and Horror | 111 | 0 | 111 | 0 | 100% |
+| High Rollers | Classic TV | 37 | 0 | 37 | 0 | 100% |
+| Highway to Heaven | Classic TV | 113 | 0 | 113 | 0 | 100% |
 | Hill Street Blues | Classic TV | 146 | 113 | 33 | 0 | 100% |
 | Home Movies | Adult Swim | 52 | 48 | 4 | 0 | 100% |
+| Hookers at the Point | Late Night | 2 | 0 | 2 | 0 | 100% |
 | Hotel Erotica | Late Night | 26 | 23 | 3 | 0 | 100% |
+| Hour of Power | Classic TV | 3 | 0 | 3 | 0 | 100% |
 | I, Claudius | Classic TV | 13 | 9 | 4 | 0 | 100% |
 | I'm Alan Partridge | British and Beyond | 12 | 0 | 12 | 0 | 100% |
 | Jam | British and Beyond | 6 | 6 | 0 | 0 | 100% |
@@ -37,6 +49,8 @@
 | Kenny vs. Spenny | British and Beyond | 85 | 0 | 85 | 0 | 100% |
 | Knowing Me, Knowing You with Alan Partridge | British and Beyond | 6 | 0 | 6 | 0 | 100% |
 | Korgoth of Barbaria | Adult Swim | 1 | 1 | 0 | 0 | 100% |
+| Laser Fart | Internet Comedy | 7 | 0 | 7 | 0 | 100% |
+| Later with Bob Costas | Classic TV | 9 | 0 | 9 | 0 | 100% |
 | Lucy, the Daughter of the Devil | Adult Swim | 11 | 8 | 3 | 0 | 100% |
 | Max Headroom | Classic TV | 14 | 13 | 1 | 0 | 100% |
 | Michael & Michael Have Issues | Sketch and Comedy | 7 | 6 | 1 | 0 | 100% |
@@ -45,39 +59,77 @@
 | Monkey Dust | British and Beyond | 18 | 18 | 0 | 0 | 100% |
 | Nathan Barley | British and Beyond | 6 | 6 | 0 | 0 | 100% |
 | Nathan for You | 2000s and Later Sitcoms | 31 | 30 | 1 | 0 | 100% |
+| National Geographic Specials | Documentary & Geographic | 6 | 0 | 6 | 0 | 100% |
+| Password | Classic TV | 995 | 0 | 995 | 0 | 100% |
 | Perfect Hair Forever | Adult Swim | 9 | 7 | 2 | 0 | 100% |
 | Petticoat Junction | Classic TV | 222 | 0 | 221 | 1 | 100% |
 | Planet Earth II | Documentary & Geographic | 6 | 0 | 6 | 0 | 100% |
 | Police Squad! | Classic TV | 6 | 3 | 3 | 0 | 100% |
 | Pornucopia | Late Night | 6 | 5 | 1 | 0 | 100% |
 | Punky Brewster | Classic TV | 88 | 63 | 25 | 0 | 100% |
+| Queen for a Day | Classic TV | 10 | 0 | 10 | 0 | 100% |
 | Real Sex | Late Night | 26 | 3 | 23 | 0 | 100% |
 | Robin of Sherwood | Classic TV | 26 | 26 | 0 | 0 | 100% |
+| Sally Jessy Raphael | Classic TV | 8 | 0 | 8 | 0 | 100% |
 | Saved by the Bell | 90s Sitcoms | 86 | 74 | 12 | 0 | 100% |
+| Sex Bytes | Late Night | 13 | 0 | 13 | 0 | 100% |
+| Sexcetera | Late Night | 2 | 0 | 2 | 0 | 100% |
 | Six Feet Under | Drama | 63 | 51 | 12 | 0 | 100% |
 | Snuff Box | British and Beyond | 6 | 0 | 6 | 0 | 100% |
 | Space: 1999 | Classic TV | 48 | 37 | 11 | 0 | 100% |
 | Spaced | British and Beyond | 14 | 14 | 0 | 0 | 100% |
 | Stroker and Hoop | Adult Swim | 13 | 8 | 5 | 0 | 100% |
+| Texaco Star Theatre | Classic TV | 19 | 0 | 19 | 0 | 100% |
+| The 'Bu | Internet Comedy | 8 | 0 | 8 | 0 | 100% |
+| The $10,000 Pyramid | Classic TV | 11 | 0 | 11 | 0 | 100% |
+| The $64,000 Question | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
+| The David Frost Show | Classic TV | 2 | 0 | 2 | 0 | 100% |
+| The David Susskind Show | Classic TV | 3 | 0 | 3 | 0 | 100% |
+| The Dennis Miller Show | Classic TV | 6 | 0 | 6 | 0 | 100% |
+| The Dick Cavett Show | Classic TV | 274 | 0 | 274 | 0 | 100% |
 | The Dresden Files | Sci-Fi, Fantasy and Horror | 12 | 7 | 5 | 0 | 100% |
+| The Garry Moore Show | Classic TV | 5 | 0 | 5 | 0 | 100% |
+| The Jackie Gleason Show | Classic TV | 281 | 0 | 281 | 0 | 100% |
+| The Jenny Jones Show | Classic TV | 6 | 0 | 6 | 0 | 100% |
+| The Joe Pyne Show | Classic TV | 7 | 0 | 7 | 0 | 100% |
 | The Joker's Wild | Classic TV | 1 | 1 | 0 | 0 | 100% |
+| The Lawrence Welk Show | Classic TV | 5 | 0 | 5 | 0 | 100% |
 | The Life of Mammals | Documentary & Geographic | 10 | 9 | 1 | 0 | 100% |
+| The Merv Griffin Show | Classic TV | 4 | 0 | 4 | 0 | 100% |
+| The Mike Wallace Interview | Classic TV | 7 | 0 | 7 | 0 | 100% |
+| The Montel Williams Show | Classic TV | 9 | 0 | 9 | 0 | 100% |
+| The Nat King Cole Show | Classic TV | 11 | 0 | 11 | 0 | 100% |
+| The Newlywed Game | Classic TV | 8 | 0 | 8 | 0 | 100% |
+| The Outer Limits (1963) | Classic TV | 85 | 0 | 85 | 0 | 100% |
 | The Paradise | British and Beyond | 16 | 15 | 1 | 0 | 100% |
+| The Pat Sajak Show | Classic TV | 5 | 0 | 5 | 0 | 100% |
+| The Phil Donahue Show | Classic TV | 19 | 0 | 19 | 0 | 100% |
 | The Prisoner | Classic TV | 6 | 6 | 0 | 0 | 100% |
 | The Richard Pryor Show | Classic TV | 4 | 4 | 0 | 0 | 100% |
+| The Rockford Files | Classic TV | 137 | 0 | 137 | 0 | 100% |
+| The Steve Allen Show | Classic TV | 15 | 0 | 15 | 0 | 100% |
 | The Trials of Life | Documentary & Geographic | 12 | 0 | 12 | 0 | 100% |
+| The Twilight Zone (1985) | Classic TV | 412 | 0 | 412 | 0 | 100% |
 | The Undersea World of Jacques Cousteau | Documentary & Geographic | 36 | 26 | 10 | 0 | 100% |
 | The Young Ones | Classic TV | 12 | 0 | 12 | 0 | 100% |
+| Thinking XXX | Late Night | 44 | 0 | 44 | 0 | 100% |
+| Tic-Tac-Dough | Classic TV | 10 | 0 | 10 | 0 | 100% |
 | Tigtone | Adult Swim | 20 | 13 | 7 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 24 | 6 | 0 | 100% |
+| Tomorrow with Tom Snyder | Classic TV | 8 | 0 | 8 | 0 | 100% |
+| USA Up All Night | Late Night | 42 | 0 | 42 | 0 | 100% |
 | Victory at Sea | Documentary & Geographic | 26 | 0 | 26 | 0 | 100% |
 | Vietnam: A Television History | Documentary & Geographic | 11 | 0 | 11 | 0 | 100% |
 | Wagon Train | Classic TV | 284 | 251 | 33 | 0 | 100% |
 | Walking with Dinosaurs | Documentary & Geographic | 6 | 1 | 5 | 0 | 100% |
+| Welcome to Eltingville | Adult Swim | 6 | 0 | 6 | 0 | 100% |
 | What's Happening!! | Classic TV | 65 | 53 | 12 | 0 | 100% |
+| Wild Discovery | Documentary & Geographic | 207 | 0 | 207 | 0 | 100% |
 | Workaholics | 2000s and Later Sitcoms | 86 | 70 | 16 | 0 | 100% |
+| X-Men: The Animated Series | Animated | 329 | 0 | 329 | 0 | 100% |
 | Xavier: Renegade Angel | Adult Swim | 20 | 20 | 0 | 0 | 100% |
+| Yacht Rock | Internet Comedy | 32 | 0 | 32 | 0 | 100% |
 | Amen | Classic TV | 110 | 86 | 23 | 1 | 99% |
 | Cagney & Lacey | Classic TV | 125 | 95 | 29 | 1 | 99% |
 | Eight Is Enough | Classic TV | 112 | 80 | 31 | 1 | 99% |
@@ -528,7 +580,6 @@
 | Ideal | British and Beyond | 52 | 0 | 0 | 52 | 0% |
 | In Search of... | Documentary & Geographic | 152 | 0 | 0 | 152 | 0% |
 | In the Beginning | Drama | 2 | 0 | 0 | 2 | 0% |
-| Independent Lens | Documentary & Geographic | 546 | 0 | 0 | 546 | 0% |
 | Into the West | Drama | 6 | 0 | 0 | 6 | 0% |
 | It's Garry Shandling's Show | Classic TV | 72 | 0 | 0 | 72 | 0% |
 | Jamestown | British and Beyond | 24 | 0 | 0 | 24 | 0% |
@@ -574,7 +625,6 @@
 | Manhattan | Drama | 23 | 0 | 0 | 23 | 0% |
 | Maniac | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | Marion and Geoff | British and Beyond | 16 | 0 | 0 | 16 | 0% |
-| Mark Twain | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
 | Martin | 90s Sitcoms | 132 | 0 | 0 | 132 | 0% |
 | Mary & George | British and Beyond | 7 | 0 | 0 | 7 | 0% |
 | Mary Shelley's Frankenhole | Adult Swim | 19 | 0 | 0 | 19 | 0% |
@@ -624,7 +674,6 @@
 | Peter the Great | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | Players | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | Portlandia | Sketch and Comedy | 77 | 0 | 0 | 77 | 0% |
-| POV | Documentary & Geographic | 568 | 0 | 0 | 568 | 0% |
 | Pride and Prejudice | British and Beyond | 6 | 0 | 0 | 6 | 0% |
 | Prohibition | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Psychoville | British and Beyond | 13 | 0 | 0 | 13 | 0% |
@@ -818,4 +867,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): X-Men: The Animated Series, Welcome to Eltingville, Babylon 5, National Geographic Specials, Wild Discovery, Hardcore History, Ken Burns: Lewis & Clark, Unforgivable Blackness, G-String Divas, Shock Video, Hookers at the Point, Pimps Up, Ho's Down, Thinking XXX, Sex Bytes, Talk Sex with Sue Johanson, Sexcetera, USA Up All Night, The Outer Limits (1963), The Lawrence Welk Show, The Rockford Files, The Twilight Zone (1985), Battlestar Galactica (1978), Doctor Who (Classic), Highway to Heaven, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Dick Cavett Show, The Merv Griffin Show, Tomorrow with Tom Snyder, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, Later with Bob Costas, The Pat Sajak Show, The Dennis Miller Show, Password, The Newlywed Game, The $10,000 Pyramid, Queen for a Day, Tic-Tac-Dough, The $64,000 Question, High Rollers, Classic Concentration, Texaco Star Theatre, The Jackie Gleason Show, The David Susskind Show, The Phil Donahue Show, The Mike Wallace Interview, Art Linkletter's House Party, The Steve Allen Show, The Garry Moore Show, Don Kirshner's Rock Concert, The Nat King Cole Show, Sally Jessy Raphael, The Jenny Jones Show, The Montel Williams Show, Donahue, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Billy Graham Crusades, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Alan Burke Show, The Les Crane Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
