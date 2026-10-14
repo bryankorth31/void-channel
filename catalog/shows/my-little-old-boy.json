@@ -1,0 +1,69 @@
+{
+  "show": "My Little Old Boy",
+  "slug": "my-little-old-boy",
+  "type": "Reality & Talk",
+  "network": "KR",
+  "matchedAt": "2026-10-14T12:10:18.678Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "My Little Old Boy",
+    "runtime": null,
+    "premiered": null,
+    "network": "KR"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my.-little.-old.-boy.-e-305",
+            "itemTitle": "My. Little. Old. Boy. E 305",
+            "file": "My.Little.Old.Boy.E305.ia.mp4",
+            "name": "My.Little.Old.Boy",
+            "url": "https://archive.org/download/my.-little.-old.-boy.-e-305/My.Little.Old.Boy.E305.ia.mp4",
+            "seconds": 6126,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 600,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "my.-little.-old.-boy.-e-305",
+            "itemTitle": "My. Little. Old. Boy. E 305",
+            "file": "My.Little.Old.Boy.E305.mp4",
+            "name": "My.Little.Old.Boy.E305",
+            "url": "https://archive.org/download/my.-little.-old.-boy.-e-305/My.Little.Old.Boy.E305.mp4",
+            "seconds": 6126,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1392,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

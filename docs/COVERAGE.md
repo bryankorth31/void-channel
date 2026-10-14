@@ -1,13 +1,15 @@
 # Coverage
 
-927 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+936 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
 | @midnight with Chris Hardwick | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | After Midnight | Reality & Talk | 70 | 0 | 70 | 0 | 100% |
+| Amazing Saturday | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
 | America's Got Talent | Reality & Talk | 80 | 0 | 80 | 0 | 100% |
 | American Idol | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
+| Anderson Cooper 360° | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | Andromeda | Sci-Fi, Fantasy and Horror | 110 | 89 | 21 | 0 | 100% |
 | Ask a Ninja | Internet Comedy | 9 | 0 | 9 | 0 | 100% |
 | Babylon 5 | Sci-Fi, Fantasy and Horror | 166 | 0 | 166 | 0 | 100% |
@@ -29,6 +31,7 @@
 | Charlie the Unicorn | Internet Comedy | 13 | 0 | 13 | 0 | 100% |
 | Classic Concentration | Classic TV | 825 | 0 | 825 | 0 | 100% |
 | Coach | 90s Sitcoms | 200 | 155 | 44 | 1 | 100% |
+| Collision | Reality & Talk | 156 | 0 | 156 | 0 | 100% |
 | Comedians in Cars Getting Coffee | Internet Comedy | 6 | 0 | 6 | 0 | 100% |
 | Conan | Reality & Talk | 1270 | 0 | 1270 | 0 | 100% |
 | Concentration | Classic TV | 251 | 0 | 251 | 0 | 100% |
@@ -89,14 +92,18 @@
 | Late Night with Seth Meyers | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | Late Show with David Letterman | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
 | Later with Bob Costas | Classic TV | 6 | 0 | 6 | 0 | 100% |
+| Law of the Jungle | Reality & Talk | 32 | 0 | 32 | 0 | 100% |
 | Loose Women | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
 | Lucy, the Daughter of the Devil | Adult Swim | 11 | 8 | 3 | 0 | 100% |
 | Make Some Noise | Internet Comedy | 79 | 0 | 79 | 0 | 100% |
+| Markus Lanz | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
 | Max Headroom | Classic TV | 14 | 13 | 1 | 0 | 100% |
+| MDR um 4 | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | Michael & Michael Have Issues | Sketch and Comedy | 7 | 6 | 1 | 0 | 100% |
 | Minoriteam | Adult Swim | 20 | 19 | 1 | 0 | 100% |
 | Mission Hill | Adult Swim | 13 | 13 | 0 | 0 | 100% |
 | Monkey Dust | British and Beyond | 18 | 18 | 0 | 0 | 100% |
+| My Little Old Boy | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
 | Nathan Barley | British and Beyond | 6 | 6 | 0 | 0 | 100% |
 | Nathan for You | 2000s and Later Sitcoms | 31 | 30 | 1 | 0 | 100% |
 | Nostalgia Critic | Internet Comedy | 167 | 0 | 167 | 0 | 100% |
@@ -147,6 +154,7 @@
 | The Kapil Sharma Show | Reality & Talk | 11 | 0 | 11 | 0 | 100% |
 | The Late Show with Stephen Colbert | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | The Life of Mammals | Documentary & Geographic | 10 | 9 | 1 | 0 | 100% |
+| The Manager | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
 | The Merv Griffin Show | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Mike Wallace Interview | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | The Montel Williams Show | Classic TV | 8 | 0 | 8 | 0 | 100% |
@@ -185,6 +193,7 @@
 | What's Happening!! | Classic TV | 65 | 53 | 12 | 0 | 100% |
 | Who Wants to Be a Millionaire? | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | Wild Discovery | Documentary & Geographic | 206 | 0 | 206 | 0 | 100% |
+| Wonderland | Reality & Talk | 60 | 0 | 60 | 0 | 100% |
 | Workaholics | 2000s and Later Sitcoms | 86 | 70 | 16 | 0 | 100% |
 | WWE Friday Night SmackDown | Reality & Talk | 83 | 0 | 83 | 0 | 100% |
 | WWE Main Event | Reality & Talk | 185 | 0 | 185 | 0 | 100% |
@@ -932,4 +941,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Breaking News, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, Clarkson's Farm, Porque el Amor Manda, Vecinos, Raw, Dinastía Casillas, The Heart Is Never Wrong, The Graham Norton Show, The Voice, Falling Angel, Miss XV, Running Man, The Polygamist, Doménica Montero, Melrose Place, The Late Late Show with James Corden, La promesa, Ridiculousness, The Late Late Show with Craig Ferguson, The View, Binnelanders, Ici tout commence, Chicago Hope, Tomorrow Is Ours, The Kelly Clarkson Show, Gute Zeiten, schlechte Zeiten, Men on a Mission, Storm of Love, The Secret Lives of Mormon Wives, WWE Superstars, The Jennifer Hudson Show, The One Show, 2 Days and 1 Night, The Celebrity Traitors, Strawberries with Sugar, How Do You Play?, La resistencia, Goede Tijden, Slechte Tijden, Infinite Challenge, The Tamron Hall Show, Quotidien, Physical 100: Italy, Who's the Murderer, Dreams of Freedom, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, Annoying Orange, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Breaking News, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, Last Week Tonight with John Oliver, La fea más bella, Clarkson's Farm, Porque el Amor Manda, Vecinos, Raw, Dinastía Casillas, The Heart Is Never Wrong, The Graham Norton Show, The Voice, Falling Angel, Miss XV, Running Man, The Polygamist, Doménica Montero, Melrose Place, The Late Late Show with James Corden, La promesa, Ridiculousness, The Late Late Show with Craig Ferguson, The View, Binnelanders, Ici tout commence, Chicago Hope, Tomorrow Is Ours, The Kelly Clarkson Show, Gute Zeiten, schlechte Zeiten, Men on a Mission, Storm of Love, The Secret Lives of Mormon Wives, WWE Superstars, The Jennifer Hudson Show, The One Show, 2 Days and 1 Night, The Celebrity Traitors, Strawberries with Sugar, How Do You Play?, La resistencia, Goede Tijden, Slechte Tijden, Infinite Challenge, The Tamron Hall Show, Quotidien, Physical 100: Italy, Who's the Murderer, Dreams of Freedom, Variety Studio: Actors on Actors, Hello Saturday, Mystery Music Show: King of Mask Singer, Ride the Wind, Weekly Idol, Bares für Rares, You Hee-yeol's Sketchbook, Vivement dimanche, HaHaHaHaHa, Alles was zählt, Volle Kanne, El cor de la ciutat, In All Friendship, Amazing Night, Radio Star, DAS!, Family Affairs, You Quiz on the Block, Nogizaka Under Construction, Trump Card, Natural High, Love Village, Leute heute, Mao Xue Woof, Egoli: Place of Gold, Good Day Live, Barbara Karlich – Talk um 4, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
