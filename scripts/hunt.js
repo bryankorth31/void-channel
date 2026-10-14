@@ -320,7 +320,8 @@ async function main() {
   const PRIORITY = ['Classic TV', 'Documentary & Geographic', 'MTV', 'Adult Swim', 'Animated', '90s Sitcoms', 'Sketch and Comedy', 'British and Beyond',
     'Internet Comedy', 'Late Night', 'Sci-Fi, Fantasy and Horror', 'Drama', '2000s and Later Sitcoms', 'Reality & Talk', 'Streaming Era', 'Anime', 'World TV'];
   const priority = args.includes('--priority');
-  const rank = (s) => { if (first && (s.tags || []).includes(first)) return -1; const i = PRIORITY.indexOf(s.type); return i < 0 ? PRIORITY.length : i; };
+  const firsts = first ? first.split(',').map((t) => t.trim()) : []; // comma list: earlier tags hunt earlier
+  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = PRIORITY.indexOf(s.type); return i < 0 ? PRIORITY.length : i; };
   const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
     && (missing ? notThere.has(s.name) : true)
     && (unplayable ? unplayableCount(s) >= 3 : pass2 ? coverage(s) < 50 : (fresh || filter ? true : !hunted(s))))
