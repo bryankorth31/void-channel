@@ -21,6 +21,20 @@ where they are, on what device, when, what they open, what they play and for how
 search, what fails. Cloudflare's own Web Analytics (free, one toggle) can sit alongside for a second
 opinion on raw traffic.
 
+## The desktop app
+
+B (2026-10-14): "build the HQ as an actual app." `hq-app/` is an Electron shell: it starts
+`scripts/hq.js` inside its own process and shows it in a window titled VOIDtv HQ, with a tray icon
+(Open HQ, Open in browser, Start with Windows, Quit). Closing the window hides it to the tray; jobs it
+started keep running even after Quit. It remembers where the repo is (app config), so a `git pull`
+updates HQ without reinstalling.
+
+- Installed at `%LOCALAPPDATA%ProgramsVOIDtv HQVOIDtv HQ.exe`; Start Menu entry "VOIDtv HQ".
+- Installer: `hq-app/dist/VOIDtv HQ Setup 1.0.0.exe` (not in git). Rebuild with
+  `cd hq-app && npm install && npm run dist`.
+- Only one copy runs at a time; launching it again just brings the window forward.
+- The plain `node scripts/hq.js` and `HQ.cmd` still work and serve the same page.
+
 ## HQ v1, in build order
 
 1. **Overview**: catalog counts (shows live / review / missing, episodes, per row and collection),
