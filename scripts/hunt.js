@@ -323,15 +323,20 @@ async function main() {
   const priority = args.includes('--priority') || args.includes('--balance');
   // --balance: hunt the rows with the FEWEST playing shows first, so the shelves even out (B 2026-10-14)
   let ORDER = PRIORITY;
+  const playing = {}, playingTag = {}; // rows and collections, by shows that play right now
+  let lightness = null;
   if (args.includes('--balance')) {
-    const playing = {};
-    for (const s of LIST.shows) { const g = grid(s); if (g && g.seasons && g.seasons.some((se) => se.episodes.some((e) => e.file && e.file.playable && !e.file.langRisk))) playing[s.type] = (playing[s.type] || 0) + 1; }
+    for (const s of LIST.shows) { const g = grid(s); if (g && g.seasons && g.seasons.some((se) => se.episodes.some((e) => e.file && e.file.playable && !e.file.langRisk))) { playing[s.type] = (playing[s.type] || 0) + 1; for (const t of s.tags || []) playingTag[t] = (playingTag[t] || 0) + 1; } }
     ORDER = [...new Set(LIST.shows.map((s) => s.type))].sort((a, b) => (playing[a] || 0) - (playing[b] || 0) || PRIORITY.indexOf(a) - PRIORITY.indexOf(b));
-    console.log('balance order: ' + ORDER.map((t) => t + ' (' + (playing[t] || 0) + ')').join(', '));
+    // a show is as light as the lightest shelf it sits on: a Christian drama hunts with the Christian collection (4), not with Drama (24)
+    lightness = (s) => Math.min(playing[s.type] || 0, ...(s.tags || []).map((t) => playingTag[t] || 0));
+    console.log('balance order (rows): ' + ORDER.map((t) => t + ' (' + (playing[t] || 0) + ')').join(', '));
+    const tags = [...new Set(LIST.shows.flatMap((s) => s.tags || []))].sort((a, b) => (playingTag[a] || 0) - (playingTag[b] || 0));
+    console.log('collections: ' + tags.map((t) => t + ' (' + (playingTag[t] || 0) + ')').join(', '));
   }
   const firsts = first ? first.split(',').map((t) => t.trim()) : []; // comma list: earlier tags hunt earlier
   // Shows added by a scout (entry.added) queue behind the whole curated list, row order kept.
-  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = ORDER.indexOf(s.type); return (i < 0 ? ORDER.length : i) + (s.added ? 100 : 0); };
+  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = ORDER.indexOf(s.type); const base = lightness ? lightness(s) * 100 + (i < 0 ? ORDER.length : i) : (i < 0 ? ORDER.length : i); return base + (s.added ? 100000 : 0); };
   const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
     && (missing ? notThere.has(s.name) : true)
     && (unplayable ? unplayableCount(s) >= 3 : pass2 ? coverage(s) < 50 : (fresh || filter ? true : !hunted(s))))
