@@ -26,6 +26,7 @@ const CENSUS = fs.existsSync(path.join(__dirname, 'show-probe-results.json'))
 const OUT_DIR = path.join(ROOT, 'catalog', 'candidates');
 const OUT_MD = path.join(ROOT, 'docs', 'HUNT.md');
 const CACHE_DIR = path.join(ROOT, 'catalog', 'cache');
+const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
 
 let PAUSE_MS = 4000;            // between Archive calls
 const BACKOFF_MS = [60000, 180000, 600000];
@@ -247,7 +248,7 @@ async function huntShow(entry) {
   const outFile = path.join(OUT_DIR, slug(show) + '.json');
   const prior = fs.existsSync(outFile) ? JSON.parse(fs.readFileSync(outFile, 'utf8')) : null;
   const narrow = searchWords(show).length <= 1 || (prior && prior.archiveMentions >= 1500);
-  const items = await scrape(show, tv, narrow);
+  const items = await scrape((OVERRIDES[slug(show)] || {}).searchName || show, tv, narrow); // overrides.json may give the plain name to search with
   const scored = items.map((it) => ({ ...it, score: itemScore(it, show, tv, narrow) })).filter((it) => it.score >= 0.3)
     .sort((a, b) => b.score - a.score || (+b.downloads || 0) - (+a.downloads || 0));
   console.log(`   Archive mentions: ${items.length}${narrow ? ' (narrow net)' : ''}; worth opening: ${scored.length}; opening up to ${MAX_ITEMS_TO_OPEN}`);
@@ -319,10 +320,18 @@ async function main() {
   // non-English rows (thinnest) last, so the valuable shelves fill tonight.
   const PRIORITY = ['Classic TV', 'Documentary & Geographic', 'MTV', 'Adult Swim', 'Animated', '90s Sitcoms', 'Sketch and Comedy', 'British and Beyond',
     'Internet Comedy', 'Late Night', 'Sci-Fi, Fantasy and Horror', 'Drama', '2000s and Later Sitcoms', 'Reality & Talk', 'Streaming Era', 'Anime', 'World TV'];
-  const priority = args.includes('--priority');
+  const priority = args.includes('--priority') || args.includes('--balance');
+  // --balance: hunt the rows with the FEWEST playing shows first, so the shelves even out (B 2026-10-14)
+  let ORDER = PRIORITY;
+  if (args.includes('--balance')) {
+    const playing = {};
+    for (const s of LIST.shows) { const g = grid(s); if (g && g.seasons && g.seasons.some((se) => se.episodes.some((e) => e.file && e.file.playable && !e.file.langRisk))) playing[s.type] = (playing[s.type] || 0) + 1; }
+    ORDER = [...new Set(LIST.shows.map((s) => s.type))].sort((a, b) => (playing[a] || 0) - (playing[b] || 0) || PRIORITY.indexOf(a) - PRIORITY.indexOf(b));
+    console.log('balance order: ' + ORDER.map((t) => t + ' (' + (playing[t] || 0) + ')').join(', '));
+  }
   const firsts = first ? first.split(',').map((t) => t.trim()) : []; // comma list: earlier tags hunt earlier
   // Shows added by a scout (entry.added) queue behind the whole curated list, row order kept.
-  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = PRIORITY.indexOf(s.type); return (i < 0 ? PRIORITY.length : i) + (s.added ? 100 : 0); };
+  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = ORDER.indexOf(s.type); return (i < 0 ? ORDER.length : i) + (s.added ? 100 : 0); };
   const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
     && (missing ? notThere.has(s.name) : true)
     && (unplayable ? unplayableCount(s) >= 3 : pass2 ? coverage(s) < 50 : (fresh || filter ? true : !hunted(s))))
