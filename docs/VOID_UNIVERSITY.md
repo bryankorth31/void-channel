@@ -145,6 +145,19 @@ domains to react to (B edits; nothing here is final):
    habit; build your own small automations (a spreadsheet rule, an IFTTT/Shortcuts recipe, a script)
    so the machine works for you instead; know when a mechanism is designed to be opaque.
 
+4. **The whys, and nucleation learning** (B, 2026-10-13: "the whys of things mattering if you
+   know it; the reasons why learning different is important; nucleation learning"). B's term,
+   defined with him: knowledge nucleates. A few well-chosen seeds, planted in different domains,
+   are what later information crystallises around; without seeds, facts stay in solution,
+   supersaturated and inert, and wash out. Knowing *why* a thing matters is itself a seed, and the
+   strongest one. Learning *different* things is not breadth for its own sake; it is laying down
+   nucleation sites so that a connection can form between them (Burke's Connections, Koestler's
+   bisociation, Papert's gears). Outcomes: say why a thing matters before you learn it, and if you
+   can't, learn that first; carry seeds in many domains on purpose; recognise a nucleation moment
+   (when scattered facts suddenly organise) and stop to let it set; tolerate supersaturation (the
+   confusion before structure) without quitting; learn by analogy across domains; teach a thing to
+   crystallise it; notice which of your beliefs never had a seed.
+
 **The rule** (B: "without using the predetermined silos as the walls the media and content needs
 to come from"): the material for an authored course is not fenced by where it came from. A
 university lecture, a 1970s public-television hour, a trade's apprenticeship film, a radio
@@ -246,6 +259,34 @@ public domain). All angles mixed on purpose: scientists, a magician, a schooltea
   design ethicist; T: the attention-economy talks; O: mirrored] for the present tense
 - Practice layer, not voices: IFTTT, Apple Shortcuts, Android Tasker, a spreadsheet, a first
   shell script — and the Archive's emulated machines for taking old software apart
+
+*The whys, and nucleation learning*
+- Jacob Bronowski — mathematician and historian of science [D: a working scientist; T: The Ascent
+  of Man (BBC 1973), Science and Human Values; O: Archive] — the anchor: knowledge as a personal
+  act, the why before the what
+- Richard Feynman — [T: the 1983 BBC "Fun to Imagine" interviews, above all the "why do magnets
+  repel" answer, which is this entry in seven minutes; O: Archive]
+- Alfred North Whitehead — philosopher [T: "The Aims of Education" (1929): the rhythm of romance,
+  precision, generalisation — nucleation described a century early; O: public domain]
+- Seymour Papert — [T: the gears story that opens Mindstorms: a child's seed crystal; O: Archive]
+- Arthur Koestler — writer [T: The Act of Creation: bisociation, the idea forming where two
+  domains touch; O: readings] — why learning different matters, stated as a mechanism
+- Douglas Hofstadter — cognitive scientist [D: Gödel, Escher, Bach; T: "Analogy as the Core of
+  Cognition" lecture; O: mirrored]
+- Mortimer Adler — philosopher and teacher [D: the Great Books program, the Paideia schools; T:
+  How to Read a Book, the 1950s–80s television teaching; O: Archive]
+- John Holt — schoolteacher [D: a classroom career, then the unschooling movement; T: How Children
+  Fail / How Children Learn; O: readings and interviews] — what kills the seed
+- Maria Montessori — physician [D: the method, built from observation; T: The Montessori Method;
+  O: public domain] — prepared environments as nucleation sites
+- Michael Polanyi — chemist and philosopher [D: physical chemistry; T: Personal Knowledge, The
+  Tacit Dimension; O: readings] — "we know more than we can tell": the seed is not always words
+- Barbara Oakley — engineer [D: the most-taken online course ever, Learning How to Learn; T: the
+  course, A Mind for Numbers; O: talks mirrored] — the practice angle: focused and diffuse modes
+- Viktor Frankl — psychiatrist [D: survived the camps and treated others; T: Man's Search for
+  Meaning, the 1972 lecture; O: Archive] — the why that outlasts the what
+- Julian Jaynes — [see entry 1] — the largest seed B ever planted, by his own account
+- Found piece to open the course with: Saul Bass, "Why Man Creates" (1968, 25 minutes; O: Archive)
 
 Deliberately not here: pundits, politicians, anyone whose evidence is an audience rather than a
 result. The hard exclude (politics/government/news) holds in Void University too.
