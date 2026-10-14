@@ -70,7 +70,7 @@ const insShow = db.prepare(`INSERT INTO shows VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,
 const insPerson = db.prepare(`INSERT OR IGNORE INTO people VALUES (?,?,?)`);
 const insSP = db.prepare(`INSERT OR REPLACE INTO show_people VALUES (?,?,?,?,?)`);
 const PEOPLE_DIR = path.join(ROOT, 'catalog', 'people');
-const insEp = db.prepare(`INSERT INTO episodes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
+const insEp = db.prepare(`INSERT OR REPLACE INTO episodes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
 
 let shows = 0, eps = 0;
 db.exec('BEGIN');

@@ -74,7 +74,13 @@ function codecRisk(name, format, playable) {
 
 function loadTv(show) {
   const f = path.join(CACHE_DIR, 'tvmaze-' + slug(show) + '.json');
-  return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
+  const tv = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
+  // Daily shows (The Price Is Right) come from TVmaze with no episode numbers: number them per season by air date.
+  if (tv && tv.episodes && tv.episodes.some((e) => e.number == null)) {
+    const counters = {};
+    for (const e of [...tv.episodes].sort((a, b) => (a.airdate || '').localeCompare(b.airdate || ''))) { if (e.number == null) e.number = (counters[e.season] = (counters[e.season] || 0) + 1) + 10000; }
+  }
+  return tv;
 }
 
 // Does this text name a DIFFERENT show from our list? (right length, wrong show guard)
