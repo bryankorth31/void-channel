@@ -424,6 +424,34 @@ suitability check (level, content, the hard excludes) before it can be assigned,
 the Late Night or mature shelves is reachable from inside it. Household profiles (parent, each
 child) live in the same Mine blob; the sync code moves the household together.
 
+**The School front page: rows, like TV (B, 2026-10-13: "in the same way we present the rows
+that side-scroll with the TV content, present the homeschool media in genre or grade rows, and in
+them the media we have that qualifies").** Same shelf component, same cards, same arrows, same
+▾ details, same filters bar — no new UI, a different list.
+
+- **Rows by grade band** first: Early Years (K–2), Grades 3–5, Middle (6–8), High (9–12). A piece
+  can sit in more than one band (Bronowski's "The Ascent of Man" is Middle and High).
+- **Rows by subject** below: Reading & Literature, Writing & Speaking, Math, Science, Nature &
+  Earth, History & Civics, Geography & World, Arts & Music, Machines & Making, Practical Life,
+  Faith & Philosophy (for families who want it; its own row, never mixed in).
+- **A card is a piece**, not a show: one episode, one lecture, one documentary hour, one book, one
+  program to run. Poster or still, title, a small format badge (watch / read / listen / do) and the
+  level. The ▾ details open the lesson wrap: why it matters first, the standards it serves with
+  codes, the talk-about questions, the parent note, and "part of" (the course or strand it belongs
+  to, if any). Play opens the same player; read opens the reader.
+- **Filters bar**: grade, subject, format, standards framework (Common Core / NGSS / C3 / state),
+  length. **Explore by standard** grid under the rows, the way TV has Explore by Genre: pick a
+  code, see every piece that serves it.
+- **Household rows at the top**: Continue (per child), Our List, and "This week" (what the parent
+  queued), all from Mine.
+- **What qualifies** for a row: passed suitability; level and subject assigned by the model and
+  confirmed by a person; the voice test; and the "best thing we hold for a first meeting" test for
+  anything placed in a K–2 or 3–5 row. A piece without a why-it-matters paragraph is not shown.
+- **Data**: `catalog/school/pieces.json` — one record per piece: source (show + season + episode,
+  course lecture, book id), grades, subjects, standards [{framework, code, text}], why, questions,
+  words, practice, parentNote, reviewedBy, reviewedAt. The site builder turns it into rows exactly
+  as it turns the show list into rows today.
+
 **Order.** VoidTV live → Void University's found courses and the first authored entries → Void
 School, starting with ONE strand end to end (B picks; history/civics or science would use the
 library hardest) done with care before the second strand begins.
