@@ -18,9 +18,9 @@ if (!TOKEN) { console.error('No TMDB_READ_TOKEN'); process.exit(1); }
 const NETWORKS = {
   49: ['HBO', 'Drama'], 67: ['Showtime', 'Drama'], 88: ['FX', 'Drama'], 174: ['AMC', 'Drama'], 30: ['USA Network', 'Drama'], 41: ['TNT', 'Drama'], 77: ['Syfy', 'Sci-Fi, Fantasy and Horror'],
   359: ['Cinemax', 'Late Night'], 318: ['Starz', 'Drama'], 71: ['The CW', 'Drama'], 21: ['The WB', 'Drama'], 1024: ['Prime Video', 'Streaming Era'], 213: ['Netflix', 'Streaming Era'], 453: ['Hulu', 'Streaming Era'], 2739: ['Disney+', 'Streaming Era'], 3186: ['HBO Max', 'Streaming Era'], 2552: ['Apple TV+', 'Streaming Era'], 3353: ['Peacock', 'Streaming Era'], 4330: ['Paramount+', 'Streaming Era'],
-  80: ['Adult Swim', 'Adult Swim'], 56: ['Cartoon Network', 'Animated'], 47: ['Comedy Central', '2000s and Later Sitcoms'], 33: ['MTV', 'MTV'], 43: ['VH1', 'MTV'], 13: ['Nickelodeon', 'Animated'], 44: ['Disney Channel', 'Animated'],
+  80: ['Adult Swim', 'Adult Swim'], 56: ['Cartoon Network', 'Animated'], 47: ['Comedy Central', '2000s and Later Sitcoms'], 33: ['MTV', 'MTV'], 158: ['VH1', 'MTV'], 13: ['Nickelodeon', 'Animated'], 44: ['Disney Channel', 'Animated'],
   6: ['NBC', '2000s and Later Sitcoms'], 16: ['CBS', 'Drama'], 2: ['ABC', 'Drama'], 19: ['FOX', '2000s and Later Sitcoms'], 4: ['BBC One', 'British and Beyond'], 332: ['BBC Two', 'British and Beyond'], 26: ['Channel 4', 'British and Beyond'], 9: ['ITV', 'British and Beyond'], 3: ['BBC Three', 'British and Beyond'], 23: ['CBC', 'British and Beyond'], 1101: ['Comedy Network', 'British and Beyond'],
-  65: ['History', 'Documentary & Geographic'], 64: ['Discovery', 'Documentary & Geographic'], 84: ['TLC', 'Documentary & Geographic'], 43: ['VH1', 'MTV'], 91: ['National Geographic', 'Documentary & Geographic'], 14: ['PBS', 'Documentary & Geographic'], 37: ['Bravo', 'Reality & Talk'], 74: ['Food Network', 'Reality & Talk'], 143: ['Travel Channel', 'Documentary & Geographic'], 384: ['Animal Planet', 'Documentary & Geographic'], 54: ['Spike', 'Reality & Talk'], 32: ['Lifetime', 'Drama'], 384: ['Animal Planet', 'Documentary & Geographic'], 1089: ['Hallmark Channel', 'Drama'],
+  65: ['History', 'Documentary & Geographic'], 64: ['Discovery', 'Documentary & Geographic'], 84: ['TLC', 'Documentary & Geographic'], 43: ['National Geographic', 'Documentary & Geographic'], 14: ['PBS', 'Documentary & Geographic'], 37: ['Bravo', 'Reality & Talk'], 74: ['Food Network', 'Reality & Talk'], 143: ['Travel Channel', 'Documentary & Geographic'], 384: ['Animal Planet', 'Documentary & Geographic'], 54: ['Spike', 'Reality & Talk'], 32: ['Lifetime', 'Drama'], 1089: ['Hallmark Channel', 'Drama'],
 };
 const KIDS_GENRE = 10762;
 const GENRE_NAMES = { 10759: 'Action & Adventure', 16: 'Animation', 35: 'Comedy', 80: 'Crime', 99: 'Documentary', 18: 'Drama', 10751: 'Family', 10762: 'Kids', 9648: 'Mystery', 10763: 'News', 10764: 'Reality', 10765: 'Sci-Fi & Fantasy', 10766: 'Soap', 10767: 'Talk', 10768: 'War & Politics', 37: 'Western' };
@@ -67,7 +67,7 @@ async function main() {
       total = r.total_pages || 1;
       for (const s of r.results || []) {
         if (!s.name || !s.first_air_date) continue;
-        if ((s.genre_ids || []).includes(KIDS_GENRE)) continue; // adult app: no kids shows
+        if ((s.genre_ids || []).includes(KIDS_GENRE) || (s.genre_ids || []).includes(10763)) continue; // adult app: no kids shows; news is a hard exclude
         if (!found[s.id]) { found[s.id] = { ...s, networks: [name], row: rowFor(s, row) }; n++; } else found[s.id].networks.push(name);
       }
       page++;
@@ -97,7 +97,7 @@ async function main() {
 
   if (add) {
     let n = 0;
-    for (const s of missing) { if (!LIST.types.includes(s.row)) continue; LIST.shows.push({ name: s.name, type: s.row, network: s.networks[0], language: s.original_language !== 'en' ? s.original_language : undefined }); have.add(norm(s.name)); n++; }
+    for (const s of missing) { if (!LIST.types.includes(s.row)) continue; LIST.shows.push({ name: s.name, type: s.row, network: s.networks[0], language: s.original_language !== 'en' ? s.original_language : undefined, added: new Date().toISOString().slice(0, 10), source: 'network-sweep' }); have.add(norm(s.name)); n++; }
     fs.writeFileSync(LIST_PATH, JSON.stringify(LIST, null, 1));
     console.log(`added ${n} shows to show-list.json (now ${LIST.shows.length})`);
   }

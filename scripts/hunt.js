@@ -321,7 +321,8 @@ async function main() {
     'Internet Comedy', 'Late Night', 'Sci-Fi, Fantasy and Horror', 'Drama', '2000s and Later Sitcoms', 'Reality & Talk', 'Streaming Era', 'Anime', 'World TV'];
   const priority = args.includes('--priority');
   const firsts = first ? first.split(',').map((t) => t.trim()) : []; // comma list: earlier tags hunt earlier
-  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = PRIORITY.indexOf(s.type); return i < 0 ? PRIORITY.length : i; };
+  // Shows added by a scout (entry.added) queue behind the whole curated list, row order kept.
+  const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = PRIORITY.indexOf(s.type); return (i < 0 ? PRIORITY.length : i) + (s.added ? 100 : 0); };
   const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
     && (missing ? notThere.has(s.name) : true)
     && (unplayable ? unplayableCount(s) >= 3 : pass2 ? coverage(s) < 50 : (fresh || filter ? true : !hunted(s))))
