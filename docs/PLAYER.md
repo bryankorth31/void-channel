@@ -92,3 +92,29 @@ video in JavaScript, and fighting a framework's focus model with a remote. We av
 
 Hard rules kept: nothing transcodes on a server, nothing of ours touches the video bytes except in
 the viewer's own browser, and every file still streams from archive.org.
+
+## What the first day of building found (2026-10-14 evening)
+
+1. **archive.org storage nodes send no CORS header on ranged reads.** The redirect from
+   archive.org/download carries `Access-Control-Allow-Origin`, the storage node's `206` does not, and
+   the `/cors/` endpoint ignores `Range` (it returns the whole file). So no script of ours can read
+   video bytes from the Archive: the Mediabunny remux path is shelved. The `<video>` element itself is
+   unaffected (media loads are not CORS-checked), which is why plain playback works.
+2. **The filenames lie; the Archive's format field does not.** A probe of ten "unplayable" picks
+   (tagged x265, HEVC, AC3, EAC3, DD5.1, FLAC, XviD, 10bit, AV1, and one real MKV) played every one
+   in Edge on Windows with audio decoded. The Archive reports `h.264` for those MP4s. The matcher now
+   takes playability from the format and keeps the name tags only as a risk note (`r` on the episode).
+3. **Chromium plays Matroska natively** (`canPlayType` says "probably" for H.264/AAC in MKV). The page
+   adopts download-only MKV episodes into the season list when the browser says it can try them;
+   Firefox and Safari still see them as download-only.
+4. **The player judges audio at runtime.** If a file plays for a few seconds with no audio bytes
+   decoded (AC-3 in Chrome, for instance), the player says so, offers the download and the next
+   episode, and reports it. Edge, Safari and TV browsers carry the platform decoders.
+
+Still worth doing later for the AC-3/DTS-in-Chrome case: a sequential stream through
+`archive.org/cors/` (no ranges, so no seeking without a restart) fed to Mediabunny with the AC3/DTS
+extensions, as a last resort when the runtime judge finds silence. Small audience, so not now.
+
+Player v1 shipped the same day: own controls over the native video (seek with buffer, ±10/30, speed,
+mute, captions from tracks or a subtitle file the viewer picks, picture-in-picture, fullscreen on our
+wrapper, keyboard: space k j l m c f n 0-9), up-next countdown, failure and silent-audio cards.

@@ -161,7 +161,7 @@ function matchShow(entry) {
         if (process.env.MATCH_DEBUG) console.log(`  [debug] ${f.name.slice(0, 60)} -> ${c.ep.season}x${c.ep.number} conf ${conf.toFixed(2)} (${c.why}; band ${f.band}; names ${namesShow(f.name)}/${itemTitled}; other ${fileNamesOther}/${itemNamesOther})`);
         if (conf < REVIEW) continue;
         const risk = codecRisk(f.name, f.format, f.playable);
-        push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
+        push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
       }
     }
     // Sequence fallback: a DVD/season rip whose files carry no names ("Disc 1 10", "VTS_03_1").
@@ -178,7 +178,7 @@ function matchShow(entry) {
       sorted.forEach((f, i) => {
         if (!eps[i]) return;
         const risk = codecRisk(f.name, f.format, f.playable);
-        push(eps[i], { conf: 0.55, why: `sequence guess: file ${i + 1} of ${sorted.length} in "${String(item.title).slice(0, 40)}"`, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, sizeMB: f.sizeMB });
+        push(eps[i], { conf: 0.55, why: `sequence guess: file ${i + 1} of ${sorted.length} in "${String(item.title).slice(0, 40)}"`, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, sizeMB: f.sizeMB });
       });
     }
   }
@@ -247,7 +247,7 @@ function selfGrid(entry, cand, aliases) {
   for (const { item, vids } of kept) {
     for (const f of vids) {
       const risk = codecRisk(f.name, f.format, f.playable);
-      files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: !risk, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: f.ep, conf: 0.6, why: 'self-listed: no TVmaze entry; order from the files' });
+      files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: f.ep, conf: 0.6, why: 'self-listed: no TVmaze entry; order from the files' });
     }
   }
   if (files.length < 2) return null;
