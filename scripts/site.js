@@ -44,7 +44,7 @@ fs.writeFileSync(path.join(OUT, '_redirects'), '/show/* /index.html 200\n/person
 const fnSrc = path.join(ROOT, 'functions');
 if (fs.existsSync(fnSrc)) { fs.mkdirSync(path.join(OUT, 'functions'), { recursive: true }); for (const f of fs.readdirSync(fnSrc)) fs.copyFileSync(path.join(fnSrc, f), path.join(OUT, 'functions', f)); }
 const brandSrc = path.join(ROOT, 'assets', 'brand');
-if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => !path.relative(brandSrc, p).split(path.sep).includes('src') }); // the 2K originals stay out of the site
+if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 
