@@ -168,7 +168,11 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .tv video.idle{width:100%;aspect-ratio:16/9;max-height:70vh;object-fit:cover;display:block;background:#000}
 .ch.on .cn::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:8px;box-shadow:0 0 8px var(--gold)}
 .hist .row{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.hist .row span{flex:1;cursor:pointer}.hist small{color:var(--dim)}.hist .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
-.bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center}
+.bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center;position:relative;z-index:6}
+.dd{position:relative}.dd>button{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:9px 12px 9px 14px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}.dd>button i{font-style:normal;color:var(--dim);font-size:11px}.dd>button small{color:var(--dim);font-size:12px}.dd>button:hover,.dd.open>button{border-color:var(--acc)}.dd.set>button{border-color:var(--gold);color:var(--gold)}.dd.set>button i{color:var(--gold)}
+.dd .panel{position:absolute;top:calc(100% + 6px);left:0;z-index:30;min-width:250px;max-width:min(92vw,360px);max-height:380px;overflow:auto;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 14px 40px rgba(0,0,0,.55);animation:drop .14s ease-out}.dd .opt{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:14px}.dd .opt:hover{background:var(--panel)}.dd .opt.on{color:var(--acc)}.dd .opt.on::after{content:'✓';font-size:12px}.dd .opt small{color:var(--dim);font-size:12px;margin-left:auto}.dd .opt.on small{display:none}
+.bar .clear{background:none;border:1px solid var(--line);color:var(--dim);padding:8px 12px;border-radius:999px;font:inherit;font-size:13px;cursor:pointer}.bar .clear:hover{color:var(--fg);border-color:var(--fg)}
+@media(max-width:600px){.bar{padding:10px 12px;gap:6px}.dd>button{padding:8px 10px 8px 12px;font-size:13px}.dd .panel{position:fixed;left:12px;right:12px;top:auto;bottom:12px;max-width:none;max-height:60vh}}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
 .bar .count{color:var(--dim);margin-left:auto;font-size:13px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 20px 8px}
@@ -233,7 +237,7 @@ footer{color:var(--dim);font-size:12px;padding:20px;border-top:1px solid var(--l
 // ROUTES 'hash' (#slug) or 'path' (/show/slug, needs a host that serves index.html for unknown paths).
 const JS = `
 const BY_SLUG=Object.fromEntries(SHOWS.map(s=>[s.slug,s]));
-const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null,chan:'void',tvOn:false};
+const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null,chan:'void',tvOn:false,menu:null};
 const $=(id)=>document.getElementById(id);
 const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
@@ -288,9 +292,7 @@ function slide(id,dir){const t=$(id);if(!t)return;const step=168;t.scrollBy({lef
 // Re-rendering replaces the whole page, so remember where each shelf was scrolled and put it back (no animation).
 function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach(t=>{pos[t.id]=t.scrollLeft});const y=window.scrollY;fn();document.querySelectorAll('.track').forEach(t=>{if(pos[t.id]){t.style.scrollBehavior='auto';t.scrollLeft=pos[t.id];t.style.scrollBehavior=''}});window.scrollTo(0,y)}
 function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
- const bar='<div class="bar">'+sel('type','All rows',TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t).length]).filter(x=>x[1]))+sel('tag','All collections',counts('tags'))+sel('genre','All genres',counts('genres'))+sel('network','All networks',counts('network').slice(0,60))+sel('decade','All decades',[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,SHOWS.filter(s=>decade(s.year)===d).length]).filter(x=>x[1]))
- +'<select onchange="state.sort=this.value;render()">'+[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']].map(([v,n])=>'<option value="'+v+'"'+(state.sort===v?' selected':'')+'>'+n+'</option>').join('')+'</select>'
- +'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>';
+ const bar=filterBar(list);
  let h='';
  if(any){
   h=bar+'<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
@@ -304,7 +306,6 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
   // 3. genres and filters
   h+='<h2>Find something<small>pick a genre, a network, a row or a collection</small></h2>'+bar;
-  h+=finder();
   // 4. the rows, in all their splendor
   const recent=VIS().sort((a,b)=>(b.matchedAt||'').localeCompare(a.matchedAt||'')).slice(0,30);
   h+=shelf('Recently added',recent,'recent');
@@ -318,6 +319,21 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
 // a few from every row and collection, shuffled with the day as the seed so it reads differently
 // tomorrow but the same for everyone today.
 const SKIP_GENRES=new Set(['Kids','TV Movie','News']);
+const SORTS=[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']];
+function menuToggle(k,ev){if(ev)ev.stopPropagation();state.menu=state.menu===k?null:k;render()}
+function pick(k,v,ev){if(ev)ev.stopPropagation();state[k]=v;state.menu=null;render();if(k!=='sort')window.scrollTo(0,0)}
+document.addEventListener('click',()=>{if(state.menu){state.menu=null;render()}});
+function dd(key,label,opts,current,isSort){const open=state.menu===key;const cur=opts.find(o=>o[0]===current);
+ return '<div class="dd'+(open?' open':'')+(current&&!isSort?' set':'')+'"><button type="button" onclick="menuToggle(\\''+key+'\\',event)">'+(isSort?'<small>Sort</small> ':'')+esc(cur?(cur[2]||cur[0]):label)+'<i>▾</i></button>'
+ +(open?'<div class="panel" onclick="event.stopPropagation()">'+(!isSort?'<div class="opt'+(current?'':' on')+'" onclick="pick(\\''+key+'\\',\\'\\',event)">'+esc(label)+'</div>':'')+opts.map(([v,n,txt])=>'<div class="opt'+(current===v?' on':'')+'" onclick="pick(\\''+key+'\\',\\''+esc(v)+'\\',event)"><span>'+esc(txt||v)+'</span>'+(n!=null?'<small>'+n+'</small>':'')+'</div>').join('')+'</div>':'')+'</div>'}
+function filterBar(list){const series=SHOWS.filter(t=>!t.slug.startsWith('movie-')&&!hidden(t));const tally=(key,src)=>{const m={};for(const t of src){const v=key==='genres'||key==='tags'?(t[key]||[]):[t[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])};
+ const rows=TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t&&!hidden(s)).length]).filter(x=>x[1]);
+ const genres=tally('genres',series).filter(([g])=>!SKIP_GENRES.has(g));
+ const nets=tally('network',series).filter(([,c])=>c>=2).slice(0,40);
+ const decs=[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,series.filter(t=>decade(t.year)===d).length]).filter(x=>x[1]);
+ const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
+ return '<div class="bar">'+dd('type','All rows',rows,state.type)+dd('tag','All collections',tally('tags',series),state.tag)+dd('genre','All genres',genres,state.genre)+dd('network','All networks',nets,state.network)+dd('decade','All decades',decs,state.decade)+dd('sort','Sort',SORTS.map(([v,n])=>[v,null,n]),state.sort,true)
+ +(any?'<button type="button" class="clear" onclick="state.type=state.genre=state.network=state.decade=state.tag=\\'\\';state.q=\\'\\';if($(\\'q\\'))$(\\'q\\').value=\\'\\';render()">Clear ✕</button>':'')+'<span class="count">'+list.length+' shows · '+list.reduce((n,s)=>n+s.eps,0)+' episodes</span></div>'}
 function finder(){const series=VIS().filter(t=>!t.slug.startsWith('movie-'));const tally=(key)=>{const m={};for(const t of series){const v=key==='genres'?(t.genres||[]):[t[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])};
  const pills=(key,list)=>'<span class="pills">'+list.map(([v,c])=>'<span class="chip'+(state[key]===v?' on':'')+'" onclick="state.'+key+'=\\''+esc(v)+'\\';render();window.scrollTo(0,0)">'+esc(v)+(c?'<small>'+c+'</small>':'')+'</span>').join('')+'</span>';
  const genres=tally('genres').filter(([g])=>!SKIP_GENRES.has(g)).slice(0,14);const nets=tally('network').filter(([,c])=>c>=4).slice(0,16);const decs=[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,series.filter(t=>decade(t.year)===d).length]).filter(x=>x[1]);

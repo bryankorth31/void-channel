@@ -91,10 +91,13 @@ function matchShow(entry) {
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
   const ov = OVERRIDES[slug(show)] || {};
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
+  const aliases = (ov.aliases || []).map(norm).filter(Boolean);
   const tv = loadTv(show);
   if (!tv || !tv.episodes.length) return { show, type: entry.type, network: entry.network, noTvmaze: true };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
+  const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
+  const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
   const ordered = [...tv.episodes].sort((a, b) => (a.airdate || '').localeCompare(b.airdate || '') || a.season - b.season || a.number - b.number);
 
@@ -104,6 +107,7 @@ function matchShow(entry) {
     const itemText = `${item.title || ''} ${item.description || ''} ${item.id}`;
     const itemNamesMe = norm(itemText).includes(core) || norm(item.id).includes(core.replace(/ /g, ''));
     const itemNamesOther = namesOtherShow(item.title || '', show);
+    const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
     const unmatched = []; // episode-band files this item could not place by number or title
     for (const f of item.files) {
       if (!(f.band === 'episode' || f.band === 'double')) continue;
@@ -121,7 +125,7 @@ function matchShow(entry) {
       for (const e of tv.episodes) { const s = titleSim(fp, e.name); if (s > bestSim) { bestSim = s; best = e; } }
       // A title match alone must be a real title: one common word ("Water", "Food", "Music") in an
       // upload that does not name the show is how Tweenies ended up under Look Around You.
-      const titleAlone = !f.nameHit && !norm(item.title || '').includes(core);
+      const titleAlone = !namesShow(f.name) && !itemTitled;
       const strongTitle = best && norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2).length >= 2;
       if (best && bestSim >= 0.6 && (!titleAlone || strongTitle)) {
         const existing = candidates.find((c) => c.ep === best);
@@ -133,7 +137,8 @@ function matchShow(entry) {
         let conf = c.base;
         if (f.nameHit) conf += 0.15; else if (itemNamesMe) conf += 0.1;
         conf += f.band === 'episode' ? 0.15 : 0.05;
-        if (fileNamesOther) conf -= 0.6; else if (itemNamesOther && !norm(f.name).includes(core)) conf -= 0.4; // "Star Trek" in the file is not "Star Trek: Enterprise"
+        if (!namesShow(f.name) && !itemTitled) conf -= 0.5; // only the description mentioned us: a spin-off, a same-cast show, a dump
+        if (fileNamesOther) conf -= 0.6; else if (itemNamesOther && !namesShow(f.name)) conf -= 0.4; // "Star Trek" in the file is not "Star Trek: Enterprise"
         else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) conf -= 0.45; // foreign title: words that are neither the show nor an episode
         const foreign = !!(langRisk(f.name) || langRisk(item.title));
         if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
@@ -148,7 +153,7 @@ function matchShow(entry) {
     // If the ITEM names the show, holds 5+ unplaced episode-length files and no other show, offer
     // them in natural order as consecutive episodes of the season the item title suggests
     // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance.
-    const titleNamesMe = norm(item.title || '').includes(core);
+    const titleNamesMe = itemTitled;
     if (titleNamesMe && !itemNamesOther && unmatched.length >= 5) {
       const m = /\b(?:season|series|volume|vol\.?)\s*(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)\b/i.exec(item.title || '');
       const words = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
