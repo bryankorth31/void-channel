@@ -1,6 +1,6 @@
 # Coverage
 
-888 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+886 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@
 | Battlestar Galactica (1978) | Classic TV | 22 | 0 | 22 | 0 | 100% |
 | Bee and PuppyCat | Internet Comedy | 14 | 0 | 14 | 0 | 100% |
 | Benson | Classic TV | 158 | 158 | 0 | 0 | 100% |
-| Best of the Worst | Internet Comedy | 7 | 0 | 7 | 0 | 100% |
+| Best of the Worst | Internet Comedy | 4 | 0 | 4 | 0 | 100% |
 | Between Two Ferns with Zach Galifianakis | Internet Comedy | 21 | 0 | 21 | 0 | 100% |
 | Big Train | British and Beyond | 12 | 12 | 0 | 0 | 100% |
 | Black Books | British and Beyond | 18 | 0 | 18 | 0 | 100% |
@@ -47,8 +47,7 @@
 | Game Changer | Internet Comedy | 130 | 0 | 130 | 0 | 100% |
 | Good Mythical Morning | Internet Comedy | 723 | 0 | 723 | 0 | 100% |
 | Half in the Bag | Internet Comedy | 85 | 0 | 85 | 0 | 100% |
-| Hallmark Hall of Fame | Classic TV | 4 | 0 | 4 | 0 | 100% |
-| Happy Tree Friends | Internet Comedy | 185 | 0 | 185 | 0 | 100% |
+| Happy Tree Friends | Internet Comedy | 181 | 0 | 181 | 0 | 100% |
 | Hazbin Hotel | Internet Comedy | 24 | 0 | 24 | 0 | 100% |
 | Hell on Wheels | Drama | 57 | 49 | 8 | 0 | 100% |
 | Helluva Boss | Internet Comedy | 55 | 0 | 55 | 0 | 100% |
@@ -60,7 +59,7 @@
 | Homestar Runner | Internet Comedy | 808 | 0 | 808 | 0 | 100% |
 | Hookers at the Point | Late Night | 2 | 0 | 2 | 0 | 100% |
 | Hotel Erotica | Late Night | 26 | 23 | 3 | 0 | 100% |
-| House of Cosbys | Internet Comedy | 7 | 0 | 7 | 0 | 100% |
+| House of Cosbys | Internet Comedy | 3 | 0 | 3 | 0 | 100% |
 | I, Claudius | Classic TV | 13 | 9 | 4 | 0 | 100% |
 | I'm Alan Partridge | British and Beyond | 12 | 0 | 12 | 0 | 100% |
 | Internet Historian | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
@@ -111,7 +110,6 @@
 | The Dick Cavett Show | Classic TV | 239 | 0 | 239 | 0 | 100% |
 | The Dresden Files | Sci-Fi, Fantasy and Horror | 12 | 7 | 5 | 0 | 100% |
 | The Garry Moore Show | Classic TV | 2 | 0 | 2 | 0 | 100% |
-| The Guild | Internet Comedy | 4 | 0 | 4 | 0 | 100% |
 | The Jackie Gleason Show | Classic TV | 198 | 0 | 198 | 0 | 100% |
 | The Jenny Jones Show | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Joker's Wild | Classic TV | 1 | 1 | 0 | 0 | 100% |
@@ -139,7 +137,7 @@
 | Tim and Eric Nite Live | Internet Comedy | 12 | 0 | 12 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 24 | 6 | 0 | 100% |
 | Tomorrow with Tom Snyder | Classic TV | 4 | 0 | 4 | 0 | 100% |
-| Troopers | Internet Comedy | 18 | 0 | 18 | 0 | 100% |
+| Troopers | Internet Comedy | 15 | 0 | 15 | 0 | 100% |
 | Um, Actually | Internet Comedy | 58 | 0 | 58 | 0 | 100% |
 | USA Up All Night | Late Night | 6 | 0 | 6 | 0 | 100% |
 | Victory at Sea | Documentary & Geographic | 26 | 0 | 26 | 0 | 100% |
@@ -893,4 +891,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zorro | Classic TV | 10 | 0 | 0 | 10 | 0% |
 
-No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): The 'Bu, Computerman, Chad Vader: Day Shift Manager, RWBY, Strong Bad Email, Eddsworld, asdfmovie, lonelygirl15, Dr. Horrible's Sing-Along Blog, The Guild, Hardly Working, CollegeHumor Originals, Precious Plum, Drunk History, Burning Love, Clark and Michael, Video Game High School, 5 Second Films, On Cinema at the Cinema, The Chris Gethard Show, Mr. Plinkett Reviews, Hot Ones, The Cyanide & Happiness Show, Honest Trailers, Vsauce, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, El Señor de los Cielos, The Kardashians, La hija del Mariachi, Keeping Up with the Kardashians, Dynasty, National Geographic Specials, Hardcore History, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
