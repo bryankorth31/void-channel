@@ -1,0 +1,89 @@
+{
+  "show": "Sunset Beach",
+  "slug": "sunset-beach",
+  "type": "Reality & Talk",
+  "network": "US",
+  "matchedAt": "2026-10-14T11:19:34.994Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Sunset Beach",
+    "runtime": null,
+    "premiered": null,
+    "network": "US"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "SunsetBeach",
+            "itemTitle": "Sunset Beach",
+            "file": "Beach.ogv",
+            "name": "Beach",
+            "url": "https://archive.org/download/SunsetBeach/Beach.ogv",
+            "seconds": 245,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 14,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "SunsetBeach",
+            "itemTitle": "Sunset Beach",
+            "file": "Beach_512kb.mp4",
+            "name": "Beach_512kb",
+            "url": "https://archive.org/download/SunsetBeach/Beach_512kb.mp4",
+            "seconds": 245,
+            "format": "512Kb MPEG4",
+            "playable": true,
+            "sizeMB": 18,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "clip 3 9",
+          "state": "REVIEW",
+          "file": {
+            "item": "sunsetbeachclip391998",
+            "itemTitle": "Sunset Beach clip 3/9/1998",
+            "file": "Sunset Beach clip, 3-9-1998.mp4",
+            "name": "Sunset Beach clip, 3-9-1998",
+            "url": "https://archive.org/download/sunsetbeachclip391998/Sunset%20Beach%20clip%2C%203-9-1998.mp4",
+            "seconds": 351,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 37,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

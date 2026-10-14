@@ -1,0 +1,80 @@
+{
+  "show": "Project Runway",
+  "slug": "project-runway",
+  "type": "Reality & Talk",
+  "network": "US",
+  "matchedAt": "2026-10-14T11:19:34.984Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Project Runway",
+    "runtime": null,
+    "premiered": null,
+    "network": "US"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 13,
+          "name": "runaway 6 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "project-runaway-season-6-episode-13",
+            "itemTitle": "Project Runway Season 6 Episode 13",
+            "file": "Project Runaway Season 6 Episode 13.mp4",
+            "name": "Project Runaway Season 6 Episode 13",
+            "url": "https://archive.org/download/project-runaway-season-6-episode-13/Project%20Runaway%20Season%206%20Episode%2013.mp4",
+            "seconds": 2596,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 159,
+            "ep": {
+              "season": 6,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 11,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "msd",
+          "state": "REVIEW",
+          "file": {
+            "item": "Project.Runway.S11E01",
+            "itemTitle": "Project. Runway. S 11 E 01",
+            "file": "Project.Runway.S11E01.480p.HDTV.x264-mSD.mp4",
+            "name": "Project.Runway.S11E01.480p.HDTV.x264-mSD",
+            "url": "https://archive.org/download/Project.Runway.S11E01/Project.Runway.S11E01.480p.HDTV.x264-mSD.mp4",
+            "seconds": 3782,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 393,
+            "ep": {
+              "season": 11,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

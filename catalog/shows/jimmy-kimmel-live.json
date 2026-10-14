@@ -1,0 +1,69 @@
+{
+  "show": "Jimmy Kimmel Live!",
+  "slug": "jimmy-kimmel-live",
+  "type": "Reality & Talk",
+  "network": "US",
+  "matchedAt": "2026-10-14T11:19:34.965Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Jimmy Kimmel Live!",
+    "runtime": null,
+    "premiered": null,
+    "network": "US"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "Jimmy.Kimmel.Live.s03e104.clips",
+            "itemTitle": "Jimmy Kimmel Live - s03e104 clips - Zero 7 + Sal Orders In",
+            "file": "03. Jimmy Kimmel Live - s03e104 - Zero 7 - Somersault (2004).ia.mp4",
+            "name": "03",
+            "url": "https://archive.org/download/Jimmy.Kimmel.Live.s03e104.clips/03.%20Jimmy%20Kimmel%20Live%20-%20s03e104%20-%20Zero%207%20-%20Somersault%20(2004).ia.mp4",
+            "seconds": 281,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 102,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "Jimmy.Kimmel.Live.s03e104.clips",
+            "itemTitle": "Jimmy Kimmel Live - s03e104 clips - Zero 7 + Sal Orders In",
+            "file": "04. Jimmy Kimmel Live - s03e104 - Zero 7 - Home (2004).ia.mp4",
+            "name": "04",
+            "url": "https://archive.org/download/Jimmy.Kimmel.Live.s03e104.clips/04.%20Jimmy%20Kimmel%20Live%20-%20s03e104%20-%20Zero%207%20-%20Home%20(2004).ia.mp4",
+            "seconds": 289,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 76,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
