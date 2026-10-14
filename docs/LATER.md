@@ -74,3 +74,28 @@ jumps the queue.
 ## Not VoidTV, but B wants them kept
 - **Godot / Althalus game.** Godot 4.7.2 is installed; first project not yet created (needs a folder).
 - **Jaynes and CASH doctrine.** B's reading of consciousness; read the doctrine files when he points at them.
+
+## TV apps (Fire TV, Roku, the rest) — plan agreed in principle 2026-10-14
+
+Order of work, cheapest and widest first:
+
+1. **TV mode on the web** (no install anywhere). A 10-foot layout the site switches to on a TV user
+   agent or `?tv=1`: big focus rings, D-pad/arrow navigation with a focus manager, remote keys
+   (OK, Back, play/pause, FF/RW), no hover, autoplay of the next episode, the Live TV surf with
+   up/down. Testable the same day in the Fire TV Silk browser and any smart TV browser by opening
+   voidtv.net. Everything below reuses it.
+2. **Fire TV app**: an Android TV project that wraps the site in a WebView with the leanback
+   launcher intent, the icon and banner, and the remote wired to the TV mode. Sideload to B's
+   Fire Stick with adb for testing; submit to the Amazon Appstore (free developer account).
+   The same APK serves Google TV / Android TV (Play Console, one-time $25).
+3. **Roku**: no web view on Roku, so a native SceneGraph channel (BrightScript) that reads our
+   catalog JSON (data/index.js and data/shows/*.json) and plays the Archive MP4 URLs in the Video
+   node. Rows, show page, episodes, resume. Sideload in developer mode for testing; publishing
+   needs Roku certification. Roku Direct Publisher (feed-only channels) was retired, so this is
+   the only route.
+4. **Samsung Tizen / LG webOS**: both run HTML5 apps, so TV mode packaged with each vendor's SDK.
+5. **Apple TV**: Swift/TVML, last, if ever.
+
+Honest risk, stated once: Amazon and Roku review content. Archive-hosted copyrighted TV may be
+rejected at certification; sideloading always works, the web TV mode always works. Casting
+(Chromecast/AirPlay from the phone site) is a cheap extra door and needs no store.
