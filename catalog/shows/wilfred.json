@@ -3,7 +3,7 @@
   "slug": "wilfred",
   "type": "2000s and Later Sitcoms",
   "network": "FX",
-  "matchedAt": "2026-10-14T17:19:07.851Z",
+  "matchedAt": "2026-10-14T18:15:16.220Z",
   "tvmaze": {
     "id": 556,
     "name": "Wilfred",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 49,
-    "live": 12,
-    "review": 25,
-    "missing": 12,
-    "pct": 76
+    "live": 0,
+    "review": 36,
+    "missing": 13,
+    "pct": 73
   },
   "seasons": [
     {
@@ -26,141 +26,85 @@
           "number": 1,
           "name": "Happiness",
           "airdate": "2011-06-23",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E01 - There Is A Dog-v2.mp4",
-            "name": "Wilfred - S01E01 - There Is A Dog-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E01%20-%20There%20Is%20A%20Dog-v2.mp4",
-            "seconds": 1503,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E01 - Happiness (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E01 - Happiness (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E01%20-%20Happiness%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1396,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 147
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 137
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E01 - Happiness (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E01 - Happiness (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E01%20-%20Happiness%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1396,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 137
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Trust",
           "airdate": "2011-06-30",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E02 - Dog Day Afterglow-v2.mp4",
-            "name": "Wilfred - S01E02 - Dog Day Afterglow-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E02%20-%20Dog%20Day%20Afterglow-v2.mp4",
-            "seconds": 1425,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E02 - Trust (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E02 - Trust (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E02%20-%20Trust%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1299,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 140
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 127
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E02 - Trust (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E02 - Trust (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E02%20-%20Trust%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1299,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 127
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Fear",
           "airdate": "2011-07-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E03 - Dogs of War-v2.mp4",
-            "name": "Wilfred - S01E03 - Dogs of War-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E03%20-%20Dogs%20of%20War-v2.mp4",
-            "seconds": 1503,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E03 - Fear (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E03 - Fear (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E03%20-%20Fear%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1280,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 148
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 123
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E03 - Fear (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E03 - Fear (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E03%20-%20Fear%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1280,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 123
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Acceptance",
           "airdate": "2011-07-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E04 - Walking the Dog-v2.mp4",
-            "name": "Wilfred - S01E04 - Walking the Dog-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E04%20-%20Walking%20the%20Dog-v2.mp4",
-            "seconds": 1439,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E04 - Acceptance (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E04 - Acceptance (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E04%20-%20Acceptance%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1271,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 141
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 122
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E04 - Acceptance (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E04 - Acceptance (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E04%20-%20Acceptance%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1271,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 122
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -174,36 +118,22 @@
           "number": 6,
           "name": "Conscience",
           "airdate": "2011-07-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E06 - Dog Eat Dog-v2.mp4",
-            "name": "Wilfred - S01E06 - Dog Eat Dog-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E06%20-%20Dog%20Eat%20Dog-v2.mp4",
-            "seconds": 1486,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E06 - Conscience (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E06 - Conscience (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E06%20-%20Conscience%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1279,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 146
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 123
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E06 - Conscience (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E06 - Conscience (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E06%20-%20Conscience%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1279,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 123
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -230,36 +160,22 @@
           "number": 8,
           "name": "Anger",
           "airdate": "2011-08-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S01E08 - This Dog's Life-v2.mp4",
-            "name": "Wilfred - S01E08 - This Dog's Life-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S01E08%20-%20This%20Dog's%20Life-v2.mp4",
-            "seconds": 1410,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E08 - Anger (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E08 - Anger (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E08%20-%20Anger%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1281,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 139
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 124
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 1/Wilfred (US) (2011) - S01E08 - Anger (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 1/Wilfred (US) (2011) - S01E08 - Anger (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%201%2FWilfred%20(US)%20(2011)%20-%20S01E08%20-%20Anger%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1281,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 124
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -362,106 +278,64 @@
           "number": 1,
           "name": "Progress",
           "airdate": "2012-06-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E01 - Kiss Me Kat-v2.mp4",
-            "name": "Wilfred - S02E01 - Kiss Me Kat-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E01%20-%20Kiss%20Me%20Kat-v2.mp4",
-            "seconds": 1491,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E01 - Progress (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E01 - Progress (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E01%20-%20Progress%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1269,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 147
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E01 - Progress (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E01 - Progress (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E01%20-%20Progress%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1269,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Letting Go",
           "airdate": "2012-06-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E02 - Dog Of A Town (Part 1) - v2.mp4",
-            "name": "Wilfred - S02E02 - Dog Of A Town (Part 1) - v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E02%20-%20Dog%20Of%20A%20Town%20(Part%201)%20-%20v2.mp4",
-            "seconds": 1445,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E02 - Letting Go (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E02 - Letting Go (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E02%20-%20Letting%20Go%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1282,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 142
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E02 - Letting Go (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E02 - Letting Go (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E02%20-%20Letting%20Go%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1282,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Dignity",
           "airdate": "2012-07-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E03 - Dog Of A Town (Part 2) - v3.mp4",
-            "name": "Wilfred - S02E03 - Dog Of A Town (Part 2) - v3",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E03%20-%20Dog%20Of%20A%20Town%20(Part%202)%20-%20v3.mp4",
-            "seconds": 1456,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E03 - Dignity (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E03 - Dignity (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E03%20-%20Dignity%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1281,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 145
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 124
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E03 - Dignity (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E03 - Dignity (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E03%20-%20Dignity%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1281,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 124
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -488,106 +362,64 @@
           "number": 5,
           "name": "Now",
           "airdate": "2012-07-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E05 - The Ice Dog Cometh-v2.mp4",
-            "name": "Wilfred - S02E05 - The Ice Dog Cometh-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E05%20-%20The%20Ice%20Dog%20Cometh-v2.mp4",
-            "seconds": 1421,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E05 - Now (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E05 - Now (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E05%20-%20Now%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1281,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 141
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E05 - Now (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E05 - Now (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E05%20-%20Now%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1281,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Control",
           "airdate": "2012-07-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E06 - The Dog Father-v2.mp4",
-            "name": "Wilfred - S02E06 - The Dog Father-v2",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E06%20-%20The%20Dog%20Father-v2.mp4",
-            "seconds": 1480,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E06 - Control (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E06 - Control (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E06%20-%20Control%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1281,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 146
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E06 - Control (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E06 - Control (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E06%20-%20Control%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1281,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Avoidance",
           "airdate": "2012-08-02",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "wilfred-2007-aus-series-HD",
-            "itemTitle": "Wilfred (2007) Australian Series HD (Ai Upscale)",
-            "file": "Wilfred - S02E07 - Dog Star - v3.mp4",
-            "name": "Wilfred - S02E07 - Dog Star - v3",
-            "url": "https://archive.org/download/wilfred-2007-aus-series-HD/Wilfred%20-%20S02E07%20-%20Dog%20Star%20-%20v3.mp4",
-            "seconds": 1482,
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "w-i-l-f-r-e-d",
+            "itemTitle": "Wilfred (2011–2014)",
+            "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E07 - Avoidance (1080p BluRay x265 r00t).mp4",
+            "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E07 - Avoidance (1080p BluRay x265 r00t)",
+            "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E07%20-%20Avoidance%20(1080p%20BluRay%20x265%20r00t).mp4",
+            "seconds": 1283,
             "format": "h.264",
-            "playable": true,
-            "sizeMB": 146
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 125
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "w-i-l-f-r-e-d",
-              "itemTitle": "Wilfred (2011–2014)",
-              "file": "WILFRED/Season 2/Wilfred (US) (2011) - S02E07 - Avoidance (1080p BluRay x265 r00t).mp4",
-              "name": "WILFRED/Season 2/Wilfred (US) (2011) - S02E07 - Avoidance (1080p BluRay x265 r00t)",
-              "url": "https://archive.org/download/w-i-l-f-r-e-d/WILFRED%2FSeason%202%2FWilfred%20(US)%20(2011)%20-%20S02E07%20-%20Avoidance%20(1080p%20BluRay%20x265%20r00t).mp4",
-              "seconds": 1283,
-              "format": "h.264",
-              "playable": false,
-              "codecRisk": "video (x265)",
-              "sizeMB": 125
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -1013,20 +845,8 @@
           "number": 4,
           "name": "Answers",
           "airdate": "2014-07-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Answers\" (0.95)",
-            "item": "bitchute_-_wilfredmulderhotmailcom_2022",
-            "itemTitle": "BitChute - wilfredmulderhotmailcom (2022)",
-            "file": "20221222 - OAH2S8fpktId - The Final Beasts From Sea and Earth. Answers In 2nd Esdras Part 8/20221222 - OAH2S8fpktId - The Final Beasts From Sea and Earth. Answers In 2nd Esdras Part 8.mp4",
-            "name": "20221222 - OAH2S8fpktId - The Final Beasts From Sea and Earth. Answers In 2nd Esdras Part 8/20221222 - OAH2S8fpktId - The Final Beasts From Sea and Earth. Answers In 2nd Esdras Part 8",
-            "url": "https://archive.org/download/bitchute_-_wilfredmulderhotmailcom_2022/20221222%20-%20OAH2S8fpktId%20-%20The%20Final%20Beasts%20From%20Sea%20and%20Earth.%20Answers%20In%202nd%20Esdras%20Part%208%2F20221222%20-%20OAH2S8fpktId%20-%20The%20Final%20Beasts%20From%20Sea%20and%20Earth.%20Answers%20In%202nd%20Esdras%20Part%208.mp4",
-            "seconds": 3806,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 131
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

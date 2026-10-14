@@ -3,7 +3,7 @@
   "slug": "home-improvement",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T17:18:58.972Z",
+  "matchedAt": "2026-10-14T18:15:07.481Z",
   "tvmaze": {
     "id": 544,
     "name": "Home Improvement",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 203,
     "live": 142,
-    "review": 58,
-    "missing": 3,
-    "pct": 99
+    "review": 57,
+    "missing": 4,
+    "pct": 98
   },
   "seasons": [
     {
@@ -4246,35 +4246,9 @@
           "number": 19,
           "name": "Communication Breakdown",
           "airdate": "1997-03-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "home-improvement-tv-series",
-            "itemTitle": "Home Improvement (TV series)",
-            "file": "Home Improvement S06E19 Communication Breakdown.mp4",
-            "name": "Home Improvement S06E19 Communication Breakdown",
-            "url": "https://archive.org/download/home-improvement-tv-series/Home%20Improvement%20S06E19%20Communication%20Breakdown.mp4",
-            "seconds": 1344,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 180
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-improvement-complete-dvd-rip",
-              "itemTitle": "Home Improvement Complete DVD Rip",
-              "file": "Home Improvement 1991 Complete DVDRIP x264/Home Improvement 1991 Season 6 Complete DVDRip x264 [i_c]/Home Improvement S06E19 Communication Breakdown.mp4",
-              "name": "Home Improvement 1991 Complete DVDRIP x264/Home Improvement 1991 Season 6 Complete DVDRip x264 [i_c]/Home Improvement S06E19 Communication Breakdown",
-              "url": "https://archive.org/download/home-improvement-complete-dvd-rip/Home%20Improvement%201991%20Complete%20DVDRIP%20x264%2FHome%20Improvement%201991%20Season%206%20Complete%20DVDRip%20x264%20%5Bi_c%5D%2FHome%20Improvement%20S06E19%20Communication%20Breakdown.mp4",
-              "seconds": 1344,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 132
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 20,

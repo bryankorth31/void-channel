@@ -3,7 +3,7 @@
   "slug": "george-lopez",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T17:19:06.391Z",
+  "matchedAt": "2026-10-14T18:15:14.964Z",
   "tvmaze": {
     "id": 4129,
     "name": "George Lopez",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 120,
     "live": 0,
-    "review": 16,
-    "missing": 104,
-    "pct": 13
+    "review": 17,
+    "missing": 103,
+    "pct": 14
   },
   "seasons": [
     {
@@ -268,8 +268,21 @@
           "number": 2,
           "name": "Dubya, Dad and Dating (2)",
           "airdate": "2003-09-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match | not browser-playable: video (x265)",
+            "item": "gl-fullseries",
+            "itemTitle": "George Lopez",
+            "file": "George Lopez - S03E02 - Dubya, Dad and Dating (2) (1080p x265 EDGE2020).mp4",
+            "name": "George Lopez - S03E02 - Dubya, Dad and Dating (2) (1080p x265 EDGE2020)",
+            "url": "https://archive.org/download/gl-fullseries/George%20Lopez%20-%20S03E02%20-%20Dubya%2C%20Dad%20and%20Dating%20(2)%20(1080p%20x265%20EDGE2020).mp4",
+            "seconds": 1260,
+            "format": "MPEG4",
+            "playable": false,
+            "codecRisk": "video (x265)",
+            "sizeMB": 134
+          },
           "alternates": []
         },
         {

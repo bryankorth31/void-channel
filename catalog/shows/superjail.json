@@ -3,7 +3,7 @@
   "slug": "superjail",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T17:19:13.498Z",
+  "matchedAt": "2026-10-14T18:15:21.851Z",
   "tvmaze": {
     "id": 1959,
     "name": "Superjail!",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 36,
-    "live": 9,
+    "live": 10,
     "review": 0,
-    "missing": 27,
-    "pct": 25
+    "missing": 26,
+    "pct": 28
   },
   "seasons": [
     {
@@ -26,8 +26,20 @@
           "number": 1,
           "name": "Superbar",
           "airdate": "2008-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "superjail-s01",
+            "itemTitle": "Superjail! Season 1",
+            "file": "Superjail.S01E01.1080p.WEB.H264-DiMEPiECE.mp4",
+            "name": "Superjail.S01E01.1080p.WEB.H264-DiMEPiECE",
+            "url": "https://archive.org/download/superjail-s01/Superjail.S01E01.1080p.WEB.H264-DiMEPiECE.mp4",
+            "seconds": 630,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 62
+          },
           "alternates": []
         },
         {

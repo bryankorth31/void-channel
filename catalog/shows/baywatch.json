@@ -3,7 +3,7 @@
   "slug": "baywatch",
   "type": "Drama",
   "network": "Syndicated",
-  "matchedAt": "2026-10-14T17:19:15.559Z",
+  "matchedAt": "2026-10-14T18:15:23.895Z",
   "tvmaze": {
     "id": 1070,
     "name": "Baywatch",
@@ -2742,7 +2742,21 @@
             "playable": true,
             "sizeMB": 1899
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Blindside\" (0.95)",
+              "item": "baywatch_202212",
+              "itemTitle": "Baywatch(The Complete Series)",
+              "file": "070-Blindside(ORIGINAL VERSION).mp4",
+              "name": "070-Blindside(ORIGINAL VERSION)",
+              "url": "https://archive.org/download/baywatch_202212/070-Blindside(ORIGINAL%20VERSION).mp4",
+              "seconds": 2520,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 365
+            }
+          ]
         },
         {
           "number": 4,

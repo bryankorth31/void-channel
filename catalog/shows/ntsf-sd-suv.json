@@ -3,7 +3,7 @@
   "slug": "ntsf-sd-suv",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T17:19:13.637Z",
+  "matchedAt": "2026-10-14T18:15:22.037Z",
   "tvmaze": {
     "id": 588,
     "name": "NTSF:SD:SUV",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 38,
-    "live": 0,
-    "review": 0,
-    "missing": 38,
-    "pct": 0
+    "live": 17,
+    "review": 6,
+    "missing": 15,
+    "pct": 61
   },
   "seasons": [
     {
@@ -74,8 +74,20 @@
           "number": 7,
           "name": "Full Hauser",
           "airdate": "2011-09-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S01E07 Full Hauser.mp4",
+            "name": "S01E07 Full Hauser",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S01E07%20Full%20Hauser.mp4",
+            "seconds": 690,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 484
+          },
           "alternates": []
         },
         {
@@ -90,32 +102,80 @@
           "number": 9,
           "name": "Cause for ConCERN",
           "airdate": "2011-09-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S01E09 Cause for ConCERN.mp4",
+            "name": "S01E09 Cause for ConCERN",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S01E09%20Cause%20for%20ConCERN.mp4",
+            "seconds": 664,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 500
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Piper Doesn't Live Here Anymore",
           "airdate": "2011-09-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S01E10 Piper Doesn't Live Here Anymore.mp4",
+            "name": "S01E10 Piper Doesn't Live Here Anymore",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S01E10%20Piper%20Doesn't%20Live%20Here%20Anymore.mp4",
+            "seconds": 647,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 412
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Twistin' the Night Away",
           "airdate": "2011-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S01E11 Twistin' the Night Away.mp4",
+            "name": "S01E11 Twistin' the Night Away",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S01E11%20Twistin'%20the%20Night%20Away.mp4",
+            "seconds": 664,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 482
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "I Left My Heart in Someone's Cooler",
           "airdate": "2011-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S01E12 I Left My Heart in Someone's Cooler.mp4",
+            "name": "S01E12 I Left My Heart in Someone's Cooler",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S01E12%20I%20Left%20My%20Heart%20in%20Someone's%20Cooler.mp4",
+            "seconds": 674,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 498
+          },
           "alternates": []
         }
       ]
@@ -127,72 +187,180 @@
           "number": 1,
           "name": "16 Hop Street",
           "airdate": "2012-08-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E01 16 Hop Street.mp4",
+            "name": "S02E01 16 Hop Street",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E01%2016%20Hop%20Street.mp4",
+            "seconds": 674,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 487
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Real Bicycle Thief",
           "airdate": "2012-08-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E02 The Real Bicycle Thief.mp4",
+            "name": "S02E02 The Real Bicycle Thief",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E02%20The%20Real%20Bicycle%20Thief.mp4",
+            "seconds": 675,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 423
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Sabbath-tage",
           "airdate": "2012-08-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E03 Sabbath-tage.mp4",
+            "name": "S02E03 Sabbath-tage",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E03%20Sabbath-tage.mp4",
+            "seconds": 674,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 488
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Lights, Camera, Assassination",
           "airdate": "2012-08-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E04 Lights, Camera, Assassination.mp4",
+            "name": "S02E04 Lights, Camera, Assassination",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E04%20Lights%2C%20Camera%2C%20Assassination.mp4",
+            "seconds": 662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 413
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Time Angels",
           "airdate": "2012-09-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E05 Time Angels.mp4",
+            "name": "S02E05 Time Angels",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E05%20Time%20Angels.mp4",
+            "seconds": 648,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 519
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Whack-A-Mole",
           "airdate": "2012-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E06 Whack-A-Mole.mp4",
+            "name": "S02E06 Whack-A-Mole",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E06%20Whack-A-Mole.mp4",
+            "seconds": 673,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 454
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Robot Town",
           "airdate": "2012-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E07 Robot Town.mp4",
+            "name": "S02E07 Robot Town",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E07%20Robot%20Town.mp4",
+            "seconds": 648,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 450
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Comic-Con-Flict",
           "airdate": "2012-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E08 Comic-Con-Flict.mp4",
+            "name": "S02E08 Comic-Con-Flict",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E08%20Comic-Con-Flict.mp4",
+            "seconds": 672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 519
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Return of Dragon Shumway",
           "airdate": "2012-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E09 The Return of Dragon Shumway.mp4",
+            "name": "S02E09 The Return of Dragon Shumway",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E09%20The%20Return%20of%20Dragon%20Shumway.mp4",
+            "seconds": 661,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 441
+          },
           "alternates": []
         },
         {
@@ -215,8 +383,20 @@
           "number": 12,
           "name": "Wasilla Hills Cop",
           "airdate": "2012-11-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E12 Wasilla Hills Cop.mp4",
+            "name": "S02E12 Wasilla Hills Cop",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E12%20Wasilla%20Hills%20Cop.mp4",
+            "seconds": 671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 530
+          },
           "alternates": []
         },
         {
@@ -231,8 +411,20 @@
           "number": 14,
           "name": "Christmas Activity",
           "airdate": "2012-12-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S02E14 Christmas Activity.mp4",
+            "name": "S02E14 Christmas Activity",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S02E14%20Christmas%20Activity.mp4",
+            "seconds": 665,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 704
+          },
           "alternates": []
         }
       ]
@@ -260,24 +452,60 @@
           "number": 3,
           "name": "Extra Terrorist-rial",
           "airdate": "2013-08-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E03 Extra Terrorist-rial.mp4",
+            "name": "S03E03 Extra Terrorist-rial",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E03%20Extra%20Terrorist-rial.mp4",
+            "seconds": 676,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 425
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Burn After Killing",
           "airdate": "2013-08-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E04 Burn After Killing.mp4",
+            "name": "S03E04 Burn After Killing",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E04%20Burn%20After%20Killing.mp4",
+            "seconds": 662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 401
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "TGI Murder",
           "airdate": "2013-08-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E05 TGI Murder.mp4",
+            "name": "S03E05 TGI Murder",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E05%20TGI%20Murder.mp4",
+            "seconds": 677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 403
+          },
           "alternates": []
         },
         {
@@ -292,24 +520,60 @@
           "number": 7,
           "name": "A Hard Drive to Swallow",
           "airdate": "2013-09-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E07 A Hard Drive to Swallow.mp4",
+            "name": "S03E07 A Hard Drive to Swallow",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E07%20A%20Hard%20Drive%20to%20Swallow.mp4",
+            "seconds": 675,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 340
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Unfrozen Agent Man",
           "airdate": "2013-09-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E08 Unfrozen Agent Man.mp4",
+            "name": "S03E08 Unfrozen Agent Man",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E08%20Unfrozen%20Agent%20Man.mp4",
+            "seconds": 673,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 419
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Trading Faces",
           "airdate": "2013-09-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E09 Trading Faces.mp4",
+            "name": "S03E09 Trading Faces",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E09%20Trading%20Faces.mp4",
+            "seconds": 676,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 465
+          },
           "alternates": []
         },
         {
@@ -324,8 +588,20 @@
           "number": 11,
           "name": "How Piper Got Her Groove Initially",
           "airdate": "2013-10-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-03-e-10-u-koed",
+            "itemTitle": "NTSF SD SUV   MOST OF THE SERIES ",
+            "file": "S03E11 How Piper Got Her Groove Initially.mp4",
+            "name": "S03E11 How Piper Got Her Groove Initially",
+            "url": "https://archive.org/download/s-03-e-10-u-koed/S03E11%20How%20Piper%20Got%20Her%20Groove%20Initially.mp4",
+            "seconds": 671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 446
+          },
           "alternates": []
         },
         {

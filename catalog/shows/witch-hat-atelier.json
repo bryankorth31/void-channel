@@ -1,0 +1,70 @@
+{
+  "show": "Witch Hat Atelier",
+  "slug": "witch-hat-atelier",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T18:14:23.800Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Witch Hat Atelier",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "climax",
+          "state": "REVIEW",
+          "file": {
+            "item": "witch-hat-atelier-ep5",
+            "itemTitle": "Witch Hat Atelier Episode 5 Climax Video",
+            "file": "climax.mp4",
+            "name": "climax",
+            "url": "https://archive.org/download/witch-hat-atelier-ep5/climax.mp4",
+            "seconds": 401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 125,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "climax av1",
+          "state": "REVIEW",
+          "file": {
+            "item": "witch-hat-atelier-ep5",
+            "itemTitle": "Witch Hat Atelier Episode 5 Climax Video",
+            "file": "climax_av1.mp4",
+            "name": "climax_av1",
+            "url": "https://archive.org/download/witch-hat-atelier-ep5/climax_av1.mp4",
+            "seconds": 401,
+            "format": "MPEG4",
+            "playable": false,
+            "codecRisk": "video (av1)",
+            "sizeMB": 67,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

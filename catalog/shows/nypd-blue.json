@@ -3,7 +3,7 @@
   "slug": "nypd-blue",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-14T17:19:14.825Z",
+  "matchedAt": "2026-10-14T18:15:23.259Z",
   "tvmaze": {
     "id": 570,
     "name": "NYPD Blue",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 261,
     "live": 38,
-    "review": 184,
-    "missing": 39,
+    "review": 185,
+    "missing": 38,
     "pct": 85
   },
   "seasons": [
@@ -5506,8 +5506,20 @@
           "number": 18,
           "name": "Lenny Scissorhands",
           "airdate": "2005-02-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Lenny Scissorhands\" (1.00)",
+            "item": "001-nypd-blue",
+            "itemTitle": "NYPD Blue(The Complete Series)",
+            "file": "258-Lenny Scissorhands.mp4",
+            "name": "258-Lenny Scissorhands",
+            "url": "https://archive.org/download/001-nypd-blue/258-Lenny%20Scissorhands.mp4",
+            "seconds": 2520,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 603
+          },
           "alternates": []
         },
         {

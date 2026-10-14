@@ -1,418 +1,451 @@
 {
- "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions).",
- "look-around-you": {
-  "excludeItems": [
-   "razzledazzle-molly-in-the-trolley-15th-may-2009"
-  ],
-  "note": "a Box of Broadcasts dump of CBeebies recordings"
- },
- "eastbound-and-down": {
-  "excludeItems": [
-   "chozen.s-01e-12-mesc"
-  ],
-  "note": "Chozen (FX animated) matched by sequence; the item's description mentions Eastbound"
- },
- "star-trek-deep-space-nine": {
-  "aliases": [
-   "DS9",
-   "Deep Space 9",
-   "ST DS9"
-  ]
- },
- "star-trek-the-next-generation": {
-  "aliases": [
-   "TNG",
-   "ST TNG",
-   "Next Generation"
-  ]
- },
- "star-trek-voyager": {
-  "aliases": [
-   "VOY",
-   "ST Voyager",
-   "Voyager"
-  ]
- },
- "star-trek-enterprise": {
-  "aliases": [
-   "ST ENT",
-   "Enterprise"
-  ]
- },
- "star-trek": {
-  "aliases": [
-   "TOS",
-   "Star Trek The Original Series",
-   "Original Series"
-  ]
- },
- "how-i-met-your-mother": {
-  "aliases": [
-   "HIMYM"
-  ]
- },
- "the-kids-in-the-hall": {
-  "aliases": [
-   "KITH",
-   "Kids in the Hall"
-  ]
- },
- "aqua-teen-hunger-force": {
-  "aliases": [
-   "ATHF",
-   "Aqua Teen"
-  ]
- },
- "mystery-science-theater-3000": {
-  "aliases": [
-   "MST3K",
-   "Mystery Science Theater"
-  ]
- },
- "its-always-sunny-in-philadelphia": {
-  "aliases": [
-   "Always Sunny",
-   "IASIP"
-  ]
- },
- "buffy-the-vampire-slayer": {
-  "aliases": [
-   "Buffy",
-   "BTVS"
-  ]
- },
- "the-fresh-prince-of-bel-air": {
-  "aliases": [
-   "Fresh Prince"
-  ]
- },
- "battlestar-galactica": {
-  "aliases": [
-   "BSG"
-  ]
- },
- "the-x-files": {
-  "aliases": [
-   "X Files",
-   "XFiles"
-  ]
- },
- "curb-your-enthusiasm": {
-  "aliases": [
-   "Curb"
-  ]
- },
- "tim-and-eric-awesome-show-great-job": {
-  "aliases": [
-   "Tim and Eric",
-   "Awesome Show"
-  ]
- },
- "space-ghost-coast-to-coast": {
-  "aliases": [
-   "SGC2C",
-   "Space Ghost"
-  ]
- },
- "harvey-birdman-attorney-at-law": {
-  "aliases": [
-   "Harvey Birdman"
-  ]
- },
- "the-venture-bros": {
-  "aliases": [
-   "Venture Bros",
-   "Venture Brothers"
-  ]
- },
- "mr-show-with-bob-and-david": {
-  "aliases": [
-   "Mr Show"
-  ]
- },
- "check-it-out-with-dr-steve-brule": {
-  "aliases": [
-   "Steve Brule",
-   "Check It Out"
-  ]
- },
- "the-eric-andre-show": {
-  "aliases": [
-   "Eric Andre"
-  ]
- },
- "beavis-and-butt-head": {
-  "aliases": [
-   "Beavis"
-  ]
- },
- "the-ren-and-stimpy-show": {
-  "aliases": [
-   "Ren and Stimpy",
-   "Ren Stimpy"
-  ]
- },
- "3rd-rock-from-the-sun": {
-  "aliases": [
-   "3rd Rock",
-   "Third Rock"
-  ]
- },
- "the-simpsons": {
-  "aliases": [
-   "Simpsons"
-  ]
- },
- "king-of-the-hill": {
-  "aliases": [
-   "KOTH"
-  ]
- },
- "that-70s-show": {
-  "aliases": [
-   "That 70s Show",
-   "That Seventies Show"
-  ]
- },
- "the-twilight-zone": {
-  "aliases": [
-   "Twilight Zone"
-  ]
- },
- "arrested-development": {
-  "aliases": [
-   "Arrested Dev"
-  ]
- },
- "sealab-2021": {
-  "aliases": [
-   "Sealab"
-  ]
- },
- "the-brak-show": {
-  "aliases": [
-   "Brak Show"
-  ]
- },
- "12-oz-mouse": {
-  "aliases": [
-   "12oz Mouse",
-   "Twelve oz Mouse"
-  ]
- },
- "xavier-renegade-angel": {
-  "aliases": [
-   "Xavier"
-  ]
- },
- "tom-goes-to-the-mayor": {
-  "aliases": [
-   "Tom Goes to the Mayor"
-  ]
- },
- "the-sopranos": {
-  "aliases": [
-   "Sopranos"
-  ]
- },
- "the-wire": {
-  "aliases": [
-   "The Wire"
-  ]
- },
- "the-office": {
-  "aliases": [
-   "The Office US",
-   "Office US"
-  ]
- },
- "law-and-order": {
-  "aliases": [
-   "Law & Order"
-  ]
- },
- "married-with-children": {
-  "aliases": [
-   "Married with Children",
-   "MWC"
-  ]
- },
- "saved-by-the-bell": {
-  "aliases": [
-   "SBTB"
-  ]
- },
- "walker-texas-ranger": {
-  "aliases": [
-   "Walker"
-  ]
- },
- "the-dick-van-dyke-show": {
-  "aliases": [
-   "Dick Van Dyke"
-  ]
- },
- "the-andy-griffith-show": {
-  "aliases": [
-   "Andy Griffith"
-  ]
- },
- "the-honeymooners": {
-  "aliases": [
-   "Honeymooners"
-  ]
- },
- "i-love-lucy": {
-  "aliases": [
-   "Love Lucy"
-  ]
- },
- "the-jack-benny-program": {
-  "aliases": [
-   "Jack Benny"
-  ]
- },
- "alfred-hitchcock-presents": {
-  "aliases": [
-   "Hitchcock Presents"
-  ]
- },
- "the-outer-limits": {
-  "aliases": [
-   "Outer Limits"
-  ]
- },
- "tales-from-the-crypt": {
-  "aliases": [
-   "Crypt"
-  ]
- },
- "mission-impossible": {
-  "aliases": [
-   "Mission Impossible"
-  ]
- },
- "penn-and-teller-bullshit": {
-  "aliases": [
-   "Penn and Teller",
-   "Bullshit"
-  ]
- },
- "everybody-loves-raymond": {
-  "aliases": [
-   "Raymond",
-   "ELR"
-  ]
- },
- "home-improvement": {
-  "aliases": [
-   "Home Improvement"
-  ]
- },
- "dr-katz-professional-therapist": {
-  "aliases": [
-   "Dr Katz",
-   "Doctor Katz"
-  ]
- },
- "sister-sister": {
-  "aliases": [
-   "Sister Sister"
-  ]
- },
- "boy-meets-world": {
-  "aliases": [
-   "BMW"
-  ]
- },
- "reno-911": {
-  "aliases": [
-   "Reno 911"
-  ]
- },
- "sabrina-the-teenage-witch": {
-  "aliases": [
-   "Sabrina"
-  ]
- },
- "north-and-south-1985": {
-  "tvmazeId": 1157,
-  "tmdbId": 3266,
-  "searchName": "North and South",
-  "aliases": [
-   "North & South"
-  ],
-  "note": "the 1985 ABC miniseries; BBC 2004 holds the plain slug"
- },
- "shogun-1980": {
-  "tvmazeId": 10460,
-  "tmdbId": 13862,
-  "searchName": "Shogun",
-  "aliases": [
-   "Shōgun",
-   "Shogun 1980"
-  ],
-  "note": "the 1980 NBC miniseries; FX 2024 holds the plain slug"
- },
- "password": {
-  "tvmazeId": 2133,
-  "tmdbId": 5018,
-  "note": "the 1961 CBS/ABC original, not the 2022 NBC revival"
- },
- "the-office-uk": {
-  "tvmazeId": 1292,
-  "tmdbId": 2996,
-  "searchName": "The Office",
-  "aliases": [
-   "The Office UK",
-   "Office UK",
-   "The Office BBC"
-  ],
-  "note": "Gervais; US version holds the plain slug"
- },
- "shameless-uk": {
-  "tvmazeId": 746,
-  "tmdbId": 1906,
-  "searchName": "Shameless",
-  "aliases": [
-   "Shameless UK",
-   "Shameless Channel 4"
-  ],
-  "note": "the Channel 4 original"
- },
- "the-newsroom-cbc": {
-  "tvmazeId": 12995,
-  "tmdbId": 1499,
-  "searchName": "The Newsroom",
-  "aliases": [
-   "Newsroom CBC",
-   "Ken Finkleman"
-  ],
-  "note": "Finkleman, 1996; HBO version holds the plain slug"
- },
- "wilfred-au": {
-  "tvmazeId": 4168,
-  "tmdbId": 3297,
-  "searchName": "Wilfred",
-  "aliases": [
-   "Wilfred SBS",
-   "Wilfred Australia"
-  ],
-  "note": "the SBS original"
- },
- "the-borgias-1981": {
-  "tvmazeId": 27078,
-  "tmdbId": 13495,
-  "searchName": "The Borgias",
-  "aliases": [
-   "Borgias BBC",
-   "Borgias 1981"
-  ],
-  "note": "the BBC Two 1981 serial"
- },
- "review-with-myles-barlow": {
-  "tmdbId": 5965,
-  "searchName": "Review with Myles Barlow",
-  "note": "the Australian original of Review"
- }
+  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions).",
+  "look-around-you": {
+    "excludeItems": [
+      "razzledazzle-molly-in-the-trolley-15th-may-2009"
+    ],
+    "note": "a Box of Broadcasts dump of CBeebies recordings"
+  },
+  "eastbound-and-down": {
+    "excludeItems": [
+      "chozen.s-01e-12-mesc"
+    ],
+    "note": "Chozen (FX animated) matched by sequence; the item's description mentions Eastbound"
+  },
+  "star-trek-deep-space-nine": {
+    "aliases": [
+      "DS9",
+      "Deep Space 9",
+      "ST DS9"
+    ]
+  },
+  "star-trek-the-next-generation": {
+    "aliases": [
+      "TNG",
+      "ST TNG",
+      "Next Generation"
+    ]
+  },
+  "star-trek-voyager": {
+    "aliases": [
+      "VOY",
+      "ST Voyager",
+      "Voyager"
+    ]
+  },
+  "star-trek-enterprise": {
+    "aliases": [
+      "ST ENT",
+      "Enterprise"
+    ]
+  },
+  "star-trek": {
+    "aliases": [
+      "TOS",
+      "Star Trek The Original Series",
+      "Original Series"
+    ]
+  },
+  "how-i-met-your-mother": {
+    "aliases": [
+      "HIMYM"
+    ]
+  },
+  "the-kids-in-the-hall": {
+    "aliases": [
+      "KITH",
+      "Kids in the Hall"
+    ]
+  },
+  "aqua-teen-hunger-force": {
+    "aliases": [
+      "ATHF",
+      "Aqua Teen"
+    ]
+  },
+  "mystery-science-theater-3000": {
+    "aliases": [
+      "MST3K",
+      "Mystery Science Theater"
+    ]
+  },
+  "its-always-sunny-in-philadelphia": {
+    "aliases": [
+      "Always Sunny",
+      "IASIP"
+    ],
+    "note": "the Normies group-reaction uploads are reviews, not the episodes (B 2026-10-14)",
+    "excludeItems": [
+      "its-always-sunny-in-philadelphia-1x-2-charlie-wants-an-smasmortion-group-reaction-zvh-m-2sd-mnx-0"
+    ]
+  },
+  "buffy-the-vampire-slayer": {
+    "aliases": [
+      "Buffy",
+      "BTVS"
+    ]
+  },
+  "the-fresh-prince-of-bel-air": {
+    "aliases": [
+      "Fresh Prince"
+    ]
+  },
+  "battlestar-galactica": {
+    "aliases": [
+      "BSG"
+    ]
+  },
+  "the-x-files": {
+    "aliases": [
+      "X Files",
+      "XFiles"
+    ]
+  },
+  "curb-your-enthusiasm": {
+    "aliases": [
+      "Curb"
+    ]
+  },
+  "tim-and-eric-awesome-show-great-job": {
+    "aliases": [
+      "Tim and Eric",
+      "Awesome Show"
+    ]
+  },
+  "space-ghost-coast-to-coast": {
+    "aliases": [
+      "SGC2C",
+      "Space Ghost"
+    ]
+  },
+  "harvey-birdman-attorney-at-law": {
+    "aliases": [
+      "Harvey Birdman"
+    ]
+  },
+  "the-venture-bros": {
+    "aliases": [
+      "Venture Bros",
+      "Venture Brothers"
+    ]
+  },
+  "mr-show-with-bob-and-david": {
+    "aliases": [
+      "Mr Show"
+    ]
+  },
+  "check-it-out-with-dr-steve-brule": {
+    "aliases": [
+      "Steve Brule",
+      "Check It Out"
+    ]
+  },
+  "the-eric-andre-show": {
+    "aliases": [
+      "Eric Andre"
+    ]
+  },
+  "beavis-and-butt-head": {
+    "aliases": [
+      "Beavis"
+    ]
+  },
+  "the-ren-and-stimpy-show": {
+    "aliases": [
+      "Ren and Stimpy",
+      "Ren Stimpy"
+    ]
+  },
+  "3rd-rock-from-the-sun": {
+    "aliases": [
+      "3rd Rock",
+      "Third Rock"
+    ]
+  },
+  "the-simpsons": {
+    "aliases": [
+      "Simpsons"
+    ]
+  },
+  "king-of-the-hill": {
+    "aliases": [
+      "KOTH"
+    ]
+  },
+  "that-70s-show": {
+    "aliases": [
+      "That 70s Show",
+      "That Seventies Show"
+    ]
+  },
+  "the-twilight-zone": {
+    "aliases": [
+      "Twilight Zone"
+    ]
+  },
+  "arrested-development": {
+    "aliases": [
+      "Arrested Dev"
+    ]
+  },
+  "sealab-2021": {
+    "aliases": [
+      "Sealab"
+    ]
+  },
+  "the-brak-show": {
+    "aliases": [
+      "Brak Show"
+    ]
+  },
+  "12-oz-mouse": {
+    "aliases": [
+      "12oz Mouse",
+      "Twelve oz Mouse"
+    ]
+  },
+  "xavier-renegade-angel": {
+    "aliases": [
+      "Xavier"
+    ]
+  },
+  "tom-goes-to-the-mayor": {
+    "aliases": [
+      "Tom Goes to the Mayor"
+    ]
+  },
+  "the-sopranos": {
+    "aliases": [
+      "Sopranos"
+    ]
+  },
+  "the-wire": {
+    "aliases": [
+      "The Wire"
+    ]
+  },
+  "the-office": {
+    "aliases": [
+      "The Office US",
+      "Office US"
+    ]
+  },
+  "law-and-order": {
+    "aliases": [
+      "Law & Order"
+    ]
+  },
+  "married-with-children": {
+    "aliases": [
+      "Married with Children",
+      "MWC"
+    ]
+  },
+  "saved-by-the-bell": {
+    "aliases": [
+      "SBTB"
+    ]
+  },
+  "walker-texas-ranger": {
+    "aliases": [
+      "Walker"
+    ]
+  },
+  "the-dick-van-dyke-show": {
+    "aliases": [
+      "Dick Van Dyke"
+    ]
+  },
+  "the-andy-griffith-show": {
+    "aliases": [
+      "Andy Griffith"
+    ]
+  },
+  "the-honeymooners": {
+    "aliases": [
+      "Honeymooners"
+    ]
+  },
+  "i-love-lucy": {
+    "aliases": [
+      "Love Lucy"
+    ]
+  },
+  "the-jack-benny-program": {
+    "aliases": [
+      "Jack Benny"
+    ]
+  },
+  "alfred-hitchcock-presents": {
+    "aliases": [
+      "Hitchcock Presents"
+    ]
+  },
+  "the-outer-limits": {
+    "aliases": [
+      "Outer Limits"
+    ]
+  },
+  "tales-from-the-crypt": {
+    "aliases": [
+      "Crypt"
+    ]
+  },
+  "mission-impossible": {
+    "aliases": [
+      "Mission Impossible"
+    ]
+  },
+  "penn-and-teller-bullshit": {
+    "aliases": [
+      "Penn and Teller",
+      "Bullshit"
+    ]
+  },
+  "everybody-loves-raymond": {
+    "aliases": [
+      "Raymond",
+      "ELR"
+    ]
+  },
+  "home-improvement": {
+    "aliases": [
+      "Home Improvement"
+    ]
+  },
+  "dr-katz-professional-therapist": {
+    "aliases": [
+      "Dr Katz",
+      "Doctor Katz"
+    ]
+  },
+  "sister-sister": {
+    "aliases": [
+      "Sister Sister"
+    ]
+  },
+  "boy-meets-world": {
+    "aliases": [
+      "BMW"
+    ]
+  },
+  "reno-911": {
+    "aliases": [
+      "Reno 911"
+    ]
+  },
+  "sabrina-the-teenage-witch": {
+    "aliases": [
+      "Sabrina"
+    ]
+  },
+  "north-and-south-1985": {
+    "tvmazeId": 1157,
+    "tmdbId": 3266,
+    "searchName": "North and South",
+    "aliases": [
+      "North & South"
+    ],
+    "note": "the 1985 ABC miniseries; BBC 2004 holds the plain slug"
+  },
+  "shogun-1980": {
+    "tvmazeId": 10460,
+    "tmdbId": 13862,
+    "searchName": "Shogun",
+    "aliases": [
+      "Shōgun",
+      "Shogun 1980"
+    ],
+    "note": "the 1980 NBC miniseries; FX 2024 holds the plain slug"
+  },
+  "password": {
+    "tvmazeId": 2133,
+    "tmdbId": 5018,
+    "note": "the 1961 CBS/ABC original, not the 2022 NBC revival"
+  },
+  "the-office-uk": {
+    "tvmazeId": 1292,
+    "tmdbId": 2996,
+    "searchName": "The Office",
+    "aliases": [
+      "The Office UK",
+      "Office UK",
+      "The Office BBC"
+    ],
+    "note": "Gervais; US version holds the plain slug"
+  },
+  "shameless-uk": {
+    "tvmazeId": 746,
+    "tmdbId": 1906,
+    "searchName": "Shameless",
+    "aliases": [
+      "Shameless UK",
+      "Shameless Channel 4"
+    ],
+    "note": "the Channel 4 original"
+  },
+  "the-newsroom-cbc": {
+    "tvmazeId": 12995,
+    "tmdbId": 1499,
+    "searchName": "The Newsroom",
+    "aliases": [
+      "Newsroom CBC",
+      "Ken Finkleman"
+    ],
+    "note": "Finkleman, 1996; HBO version holds the plain slug"
+  },
+  "wilfred-au": {
+    "tvmazeId": 4168,
+    "tmdbId": 3297,
+    "searchName": "Wilfred",
+    "aliases": [
+      "Wilfred SBS",
+      "Wilfred Australia"
+    ],
+    "note": "the SBS original"
+  },
+  "the-borgias-1981": {
+    "tvmazeId": 27078,
+    "tmdbId": 13495,
+    "searchName": "The Borgias",
+    "aliases": [
+      "Borgias BBC",
+      "Borgias 1981"
+    ],
+    "note": "the BBC Two 1981 serial"
+  },
+  "review-with-myles-barlow": {
+    "tmdbId": 5965,
+    "searchName": "Review with Myles Barlow",
+    "note": "the Australian original of Review"
+  },
+  "wilfred": {
+    "note": "US series (FXX 2011). The 2007 SBS files belong to Wilfred (AU).",
+    "excludeItems": [
+      "wilfred-2007-aus-series-HD",
+      "bitchute_-_wilfredmulderhotmailcom_2022"
+    ]
+  },
+  "fullmetal-alchemist": {
+    "tvmazeId": 4297,
+    "note": "MarkWatchesFMAB is a reaction/review series, not the episodes (B 2026-10-14)",
+    "excludeItems": [
+      "MarkWatchesFMAB"
+    ]
+  },
+  "fullmetal-alchemist-brotherhood": {
+    "tvmazeId": 2071,
+    "note": "MarkWatchesFMAB is a reaction/review series, not the episodes (B 2026-10-14)",
+    "excludeItems": [
+      "MarkWatchesFMAB"
+    ]
+  },
+  "doctor-who-classic": {
+    "tvmazeId": 766,
+    "tmdbId": 121,
+    "note": "the 1963 series: TMDB 121 for art, TVmaze 766 for the episode list (B 2026-10-14: it wore the 2005 art)",
+    "excludeItems": [
+      "doctor-who-saison12-13-flim"
+    ]
+  }
 }
