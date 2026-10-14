@@ -3,7 +3,7 @@
   "slug": "bleak-house",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T03:19:38.882Z",
+  "matchedAt": "2026-10-14T04:14:41.238Z",
   "tvmaze": {
     "id": 58041,
     "name": "Bleak House",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 11,
     "live": 1,
-    "review": 3,
-    "missing": 7,
-    "pct": 36
+    "review": 0,
+    "missing": 10,
+    "pct": 9
   },
   "seasons": [
     {
@@ -26,40 +26,16 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "1959-10-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename",
-            "item": "charles-dickens_202510",
-            "itemTitle": "Charles Dickens Films",
-            "file": "Great Expectations (1989) S01E01       John Rhys Davies, Anthony Calf, Jean Simmons.mp4",
-            "name": "Great Expectations (1989) S01E01       John Rhys Davies, Anthony Calf, Jean Simmons",
-            "url": "https://archive.org/download/charles-dickens_202510/Great%20Expectations%20(1989)%20S01E01%20%20%20%20%20%20%20John%20Rhys%20Davies%2C%20Anthony%20Calf%2C%20Jean%20Simmons.mp4",
-            "seconds": 3104,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 235
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "1959-10-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "charles-dickens_202510",
-            "itemTitle": "Charles Dickens Films",
-            "file": "Great Expectations (1989) S01E02       John Rhys Davies, Anthony Calf, Jean Simmons.mp4",
-            "name": "Great Expectations (1989) S01E02       John Rhys Davies, Anthony Calf, Jean Simmons",
-            "url": "https://archive.org/download/charles-dickens_202510/Great%20Expectations%20(1989)%20S01E02%20%20%20%20%20%20%20John%20Rhys%20Davies%2C%20Anthony%20Calf%2C%20Jean%20Simmons.mp4",
-            "seconds": 1438,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 45
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -90,20 +66,8 @@
           "number": 6,
           "name": "Episode 6",
           "airdate": "1959-11-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename",
-            "item": "charles-dickens_202510",
-            "itemTitle": "Charles Dickens Films",
-            "file": "Great Expectations (1989) S01E06       John Rhys Davies, Anthony Calf, Jean Simmons.mp4",
-            "name": "Great Expectations (1989) S01E06       John Rhys Davies, Anthony Calf, Jean Simmons",
-            "url": "https://archive.org/download/charles-dickens_202510/Great%20Expectations%20(1989)%20S01E06%20%20%20%20%20%20%20John%20Rhys%20Davies%2C%20Anthony%20Calf%2C%20Jean%20Simmons.mp4",
-            "seconds": 3114,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 268
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

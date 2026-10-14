@@ -3,7 +3,7 @@
   "slug": "the-jamie-foxx-show",
   "type": "90s Sitcoms",
   "network": "The WB",
-  "matchedAt": "2026-10-14T03:19:54.330Z",
+  "matchedAt": "2026-10-14T04:14:17.155Z",
   "tvmaze": {
     "id": 12298,
     "name": "The Jamie Foxx Show",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 100,
     "live": 0,
-    "review": 1,
-    "missing": 99,
-    "pct": 1
+    "review": 0,
+    "missing": 100,
+    "pct": 0
   },
   "seasons": [
     {
@@ -207,20 +207,8 @@
           "number": 1,
           "name": "Freezer Burn",
           "airdate": "1997-09-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "russell-simmons-presents-def-poetry-s02e01",
-            "itemTitle": "Russell Simmons presents Def Poetry - S02E01",
-            "file": "Russell Simmons presents Def Poetry - S02E01.mp4",
-            "name": "Russell Simmons presents Def Poetry - S02E01",
-            "url": "https://archive.org/download/russell-simmons-presents-def-poetry-s02e01/Russell%20Simmons%20presents%20Def%20Poetry%20-%20S02E01.mp4",
-            "seconds": 1662,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

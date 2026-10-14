@@ -3,7 +3,7 @@
   "slug": "all-in-the-family",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-14T03:19:32.787Z",
+  "matchedAt": "2026-10-14T04:14:32.952Z",
   "tvmaze": {
     "id": 1784,
     "name": "All in the Family",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 210,
     "live": 0,
-    "review": 5,
-    "missing": 205,
+    "review": 4,
+    "missing": 206,
     "pct": 2
   },
   "seasons": [
@@ -74,20 +74,8 @@
           "number": 4,
           "name": "Archie Gives Blood",
           "airdate": "1971-02-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "704hauser_202404",
-            "itemTitle": "704 Hauser (Season 1)",
-            "file": "S01E04- Triskaidekaphobia.mp4",
-            "name": "S01E04- Triskaidekaphobia",
-            "url": "https://archive.org/download/704hauser_202404/S01E04-%20Triskaidekaphobia.mp4",
-            "seconds": 1369,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 64
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

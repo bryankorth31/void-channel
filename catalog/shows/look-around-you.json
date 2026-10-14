@@ -3,7 +3,7 @@
   "slug": "look-around-you",
   "type": "British and Beyond",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-14T03:19:29.673Z",
+  "matchedAt": "2026-10-14T04:14:29.721Z",
   "tvmaze": {
     "id": 1950,
     "name": "Look Around You",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 14,
     "live": 0,
-    "review": 14,
-    "missing": 0,
-    "pct": 100
+    "review": 3,
+    "missing": 11,
+    "pct": 21
   },
   "seasons": [
     {
@@ -26,61 +26,9 @@
           "number": 1,
           "name": "Maths",
           "airdate": "2002-10-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 1 5th October 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 1 5th October 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%201%205th%20October%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 1300,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 268
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Mister Maker Comes to Town Series 1 Episode 1 13th February 2011 [CBeebies].mp4",
-              "name": "Mister Maker Comes to Town Series 1 Episode 1 13th February 2011 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Mister%20Maker%20Comes%20to%20Town%20Series%201%20Episode%201%2013th%20February%202011%20%5BCBeebies%5D.mp4",
-              "seconds": 1281,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 266
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 2 Episode 1 3rd June 2017 [CBeebies].mp4",
-              "name": "Gigglebiz Series 2 Episode 1 3rd June 2017 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%202%20Episode%201%203rd%20June%202017%20%5BCBeebies%5D.mp4",
-              "seconds": 889,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 1 Episode 1 7th September 2009 [CBeebies].mp4",
-              "name": "Gigglebiz Series 1 Episode 1 7th September 2009 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%201%207th%20September%202009%20%5BCBeebies%5D.mp4",
-              "seconds": 873,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 181
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,
@@ -113,32 +61,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 187
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 1 Episode 2 8th September 2009 [CBeebies].mp4",
-              "name": "Gigglebiz Series 1 Episode 2 8th September 2009 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%202%208th%20September%202009%20%5BCBeebies%5D.mp4",
-              "seconds": 881,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 186
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 2 Episode 2 4th June 2017 [CBeebies].mp4",
-              "name": "Gigglebiz Series 2 Episode 2 4th June 2017 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%202%20Episode%202%204th%20June%202017%20%5BCBeebies%5D.mp4",
-              "seconds": 898,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
             }
           ]
         },
@@ -146,87 +68,24 @@
           "number": 3,
           "name": "Germs",
           "airdate": "2002-10-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 3 Episode 3 16th September 2017 [CBeebies].mp4",
-            "name": "Gigglebiz Series 3 Episode 3 16th September 2017 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%203%20Episode%203%2016th%20September%202017%20%5BCBeebies%5D.mp4",
-            "seconds": 868,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 1 Episode 3 9th September 2009 [CBeebies].mp4",
-              "name": "Gigglebiz Series 1 Episode 3 9th September 2009 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%203%209th%20September%202009%20%5BCBeebies%5D.mp4",
-              "seconds": 863,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 176
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 1 Episode 3 9th March 2011 [CBeebies].mp4",
-              "name": "Gigglebiz Series 1 Episode 3 9th March 2011 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%203%209th%20March%202011%20%5BCBeebies%5D.mp4",
-              "seconds": 1075,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 104
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Ghosts",
           "airdate": "2002-10-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 4 10th September 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 4 10th September 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%204%2010th%20September%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 877,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 179
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Sulphur",
           "airdate": "2002-11-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 5 11th September 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 5 11th September 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%205%2011th%20September%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 894,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -293,69 +152,17 @@
           "number": 7,
           "name": "Iron",
           "airdate": "2002-12-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 7 17th June 2014 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 7 17th June 2014 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%207%2017th%20June%202014%20%5BCBeebies%5D.mp4",
-            "seconds": 860,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 326
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 1 Episode 7 8th May 2010 [CBeebies].mp4",
-              "name": "Gigglebiz Series 1 Episode 7 8th May 2010 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%207%208th%20May%202010%20%5BCBeebies%5D.mp4",
-              "seconds": 973,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 198
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 8,
           "name": "The Brain",
           "airdate": "2002-12-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Tikkabilla Series 1 Episode 8 21st February 2008 [CBeebies on BBC Two.mp4",
-            "name": "Tikkabilla Series 1 Episode 8 21st February 2008 [CBeebies on BBC Two",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Tikkabilla%20Series%201%20Episode%208%2021st%20February%202008%20%5BCBeebies%20on%20BBC%20Two.mp4",
-            "seconds": 917,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 189
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "absolute episode number",
-              "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-              "itemTitle": "Box of Broadcasts (Bob) Stuff",
-              "file": "Gigglebiz Series 1 Episode 8 16th September 2009 [CBeebies].mp4",
-              "name": "Gigglebiz Series 1 Episode 8 16th September 2009 [CBeebies]",
-              "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%208%2016th%20September%202009%20%5BCBeebies%5D.mp4",
-              "seconds": 913,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 185
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -366,60 +173,24 @@
           "number": 1,
           "name": "Music 2000",
           "airdate": "2005-01-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 9 17th September 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 9 17th September 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%209%2017th%20September%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 878,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 181
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Health",
           "airdate": "2005-02-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 10 18th September 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 10 18th September 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%2010%2018th%20September%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 916,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Sport",
           "airdate": "2005-02-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 11 19th October 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 11 19th October 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%2011%2019th%20October%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 1288,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 264
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -486,40 +257,16 @@
           "number": 5,
           "name": "Computers",
           "airdate": "2005-02-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 13 23rd September 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 13 23rd September 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%2013%2023rd%20September%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 1354,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 277
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Live Final",
           "airdate": "2005-03-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "razzledazzle-molly-in-the-trolley-15th-may-2009",
-            "itemTitle": "Box of Broadcasts (Bob) Stuff",
-            "file": "Gigglebiz Series 1 Episode 14 24th September 2009 [CBeebies].mp4",
-            "name": "Gigglebiz Series 1 Episode 14 24th September 2009 [CBeebies]",
-            "url": "https://archive.org/download/razzledazzle-molly-in-the-trolley-15th-may-2009/Gigglebiz%20Series%201%20Episode%2014%2024th%20September%202009%20%5BCBeebies%5D.mp4",
-            "seconds": 1444,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 294
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

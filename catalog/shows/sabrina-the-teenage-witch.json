@@ -3,7 +3,7 @@
   "slug": "sabrina-the-teenage-witch",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T03:19:54.415Z",
+  "matchedAt": "2026-10-14T04:14:17.240Z",
   "tvmaze": {
     "id": 976,
     "name": "Sabrina the Teenage Witch",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 163,
     "live": 4,
-    "review": 19,
-    "missing": 140,
-    "pct": 14
+    "review": 18,
+    "missing": 141,
+    "pct": 13
   },
   "seasons": [
     {
@@ -145,31 +145,17 @@
           "file": {
             "conf": 0.75,
             "why": "S/E in filename",
-            "item": "george-and-leo",
-            "itemTitle": "George & Leo (1997-1998)",
-            "file": "George and Leo 104 Baby Care Class.mp4",
-            "name": "George and Leo 104 Baby Care Class",
-            "url": "https://archive.org/download/george-and-leo/George%20and%20Leo%20104%20Baby%20Care%20Class.mp4",
-            "seconds": 1294,
-            "format": "MPEG4",
+            "item": "townies.-s-01-e-04-the-mcp",
+            "itemTitle": "Townies (1996)",
+            "file": "Townies.S01E04-TheMCP.mp4",
+            "name": "Townies.S01E04-TheMCP",
+            "url": "https://archive.org/download/townies.-s-01-e-04-the-mcp/Townies.S01E04-TheMCP.mp4",
+            "seconds": 1342,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 167
+            "sizeMB": 130
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "townies.-s-01-e-04-the-mcp",
-              "itemTitle": "Townies (1996)",
-              "file": "Townies.S01E04-TheMCP.mp4",
-              "name": "Townies.S01E04-TheMCP",
-              "url": "https://archive.org/download/townies.-s-01-e-04-the-mcp/Townies.S01E04-TheMCP.mp4",
-              "seconds": 1342,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 130
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -1589,20 +1575,8 @@
           "number": 12,
           "name": "Sabrina and the Candidate",
           "airdate": "2002-02-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "mmc-season-6-episode-12-party-day-october-21-1993",
-            "itemTitle": "The All-New Mickey Mouse Club (\"Party Day\" {S6E12} - Where You MMC'd Them First)",
-            "file": "MMC Season 6 Episode 12 (Party Day - October 12, 1993).mp4",
-            "name": "MMC Season 6 Episode 12 (Party Day - October 12, 1993)",
-            "url": "https://archive.org/download/mmc-season-6-episode-12-party-day-october-21-1993/MMC%20Season%206%20Episode%2012%20(Party%20Day%20-%20October%2012%2C%201993).mp4",
-            "seconds": 1953,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 521
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "versailles",
   "type": "British and Beyond",
   "network": "Canal+",
-  "matchedAt": "2026-10-14T03:19:38.792Z",
+  "matchedAt": "2026-10-14T04:14:41.152Z",
   "tvmaze": {
     "id": 3386,
     "name": "Versailles",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 30,
     "live": 0,
-    "review": 1,
-    "missing": 29,
-    "pct": 3
+    "review": 0,
+    "missing": 30,
+    "pct": 0
   },
   "seasons": [
     {
@@ -26,20 +26,8 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2015-11-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "ERTV_Dailymotion_Egalite-et-reconciliation_Alain_Soral",
-            "itemTitle": "ERTV Dailymotion - Egalité et réconciliation - Alain Soral",
-            "file": "L’Axe du rock, ep 01.mp4",
-            "name": "L’Axe du rock, ep 01",
-            "url": "https://archive.org/download/ERTV_Dailymotion_Egalite-et-reconciliation_Alain_Soral/L%E2%80%99Axe%20du%20rock%2C%20ep%2001.mp4",
-            "seconds": 3017,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 166
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

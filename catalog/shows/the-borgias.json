@@ -3,7 +3,7 @@
   "slug": "the-borgias",
   "type": "Drama",
   "network": "Showtime",
-  "matchedAt": "2026-10-14T03:19:38.632Z",
+  "matchedAt": "2026-10-14T04:14:40.980Z",
   "tvmaze": {
     "id": 515,
     "name": "The Borgias",
@@ -29,32 +29,18 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "absolute episode number",
-            "item": "PBS-Count-Of-Monte-Cristo",
-            "itemTitle": "MASTERPIECE: The Count of Monte Cristo",
-            "file": "Episode 1 - The Letter.mp4",
-            "name": "Episode 1 - The Letter",
-            "url": "https://archive.org/download/PBS-Count-Of-Monte-Cristo/Episode%201%20-%20The%20Letter.mp4",
-            "seconds": 2992,
-            "format": "MPEG4",
+            "why": "sequence guess: file 1 of 10 in \"The Borgias (1981) BBC/RAI TV Series\"",
+            "item": "the-borgias-08_202211",
+            "itemTitle": "The Borgias (1981) BBC/RAI TV Series",
+            "file": "The Borgias 01.mp4",
+            "name": "The Borgias 01",
+            "url": "https://archive.org/download/the-borgias-08_202211/The%20Borgias%2001.mp4",
+            "seconds": 3249,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1304
+            "sizeMB": 326
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 10 in \"The Borgias (1981) BBC/RAI TV Series\"",
-              "item": "the-borgias-08_202211",
-              "itemTitle": "The Borgias (1981) BBC/RAI TV Series",
-              "file": "The Borgias 01.mp4",
-              "name": "The Borgias 01",
-              "url": "https://archive.org/download/the-borgias-08_202211/The%20Borgias%2001.mp4",
-              "seconds": 3249,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 326
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,

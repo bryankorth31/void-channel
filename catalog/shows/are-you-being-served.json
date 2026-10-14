@@ -3,7 +3,7 @@
   "slug": "are-you-being-served",
   "type": "Classic TV",
   "network": "BBC One",
-  "matchedAt": "2026-10-14T03:19:35.920Z",
+  "matchedAt": "2026-10-14T04:14:36.266Z",
   "tvmaze": {
     "id": 4529,
     "name": "Are You Being Served?",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 64,
     "live": 0,
-    "review": 5,
-    "missing": 59,
-    "pct": 8
+    "review": 3,
+    "missing": 61,
+    "pct": 5
   },
   "seasons": [
     {
@@ -26,20 +26,8 @@
           "number": 1,
           "name": "Dear Sexy Knickers",
           "airdate": "1973-03-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "s-01-e-00-pilot-episode",
-            "itemTitle": "Come Back Mrs Noah (1977)",
-            "file": "S01E01 In Orbit.mp4",
-            "name": "S01E01 In Orbit",
-            "url": "https://archive.org/download/s-01-e-00-pilot-episode/S01E01%20In%20Orbit.mp4",
-            "seconds": 1796,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 365
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -66,20 +54,8 @@
           "number": 3,
           "name": "Camping In",
           "airdate": "1973-04-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
-            "item": "s-01-e-00-pilot-episode",
-            "itemTitle": "Come Back Mrs Noah (1977)",
-            "file": "S01E03 Who Goes Home.mp4",
-            "name": "S01E03 Who Goes Home",
-            "url": "https://archive.org/download/s-01-e-00-pilot-episode/S01E03%20Who%20Goes%20Home.mp4",
-            "seconds": 1731,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 350
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "george-lopez",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-14T03:19:55.800Z",
+  "matchedAt": "2026-10-14T04:14:18.538Z",
   "tvmaze": {
     "id": 4129,
     "name": "George Lopez",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 120,
     "live": 0,
-    "review": 21,
-    "missing": 99,
-    "pct": 18
+    "review": 19,
+    "missing": 101,
+    "pct": 16
   },
   "seasons": [
     {
@@ -26,42 +26,16 @@
           "number": 1,
           "name": "Prototype",
           "airdate": "2002-03-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename | not browser-playable: video (x265)",
-            "item": "greetingsfromtucson",
-            "itemTitle": "\"Greetings from Tucson\" (Full 2002 WB series) [HEVC.x265]",
-            "file": "01x01 Pilot.x265.mp4",
-            "name": "01x01 Pilot.x265",
-            "url": "https://archive.org/download/greetingsfromtucson/01x01%20Pilot.x265.mp4",
-            "seconds": 1331,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (x265)",
-            "sizeMB": 132
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Curious George",
           "airdate": "2002-04-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "S/E in filename | not browser-playable: video (x265)",
-            "item": "greetingsfromtucson",
-            "itemTitle": "\"Greetings from Tucson\" (Full 2002 WB series) [HEVC.x265]",
-            "file": "01x02 My Two Padres.x265.mp4",
-            "name": "01x02 My Two Padres.x265",
-            "url": "https://archive.org/download/greetingsfromtucson/01x02%20My%20Two%20Padres.x265.mp4",
-            "seconds": 1347,
-            "format": "h.264",
-            "playable": false,
-            "codecRisk": "video (x265)",
-            "sizeMB": 132
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
