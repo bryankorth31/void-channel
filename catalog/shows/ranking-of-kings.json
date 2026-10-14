@@ -1,0 +1,69 @@
+{
+  "show": "Ranking of Kings",
+  "slug": "ranking-of-kings",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T17:19:23.945Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Ranking of Kings",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "turner_video_393808",
+            "itemTitle": "Ranking of Kings",
+            "file": "393808.webm",
+            "name": "393808",
+            "url": "https://archive.org/download/turner_video_393808/393808.webm",
+            "seconds": 111,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 21,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "turner_video_393809",
+            "itemTitle": "Ranking of Kings",
+            "file": "393809.webm",
+            "name": "393809",
+            "url": "https://archive.org/download/turner_video_393809/393809.webm",
+            "seconds": 101,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 22,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

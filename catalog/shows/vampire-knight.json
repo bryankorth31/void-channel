@@ -1,0 +1,69 @@
+{
+  "show": "Vampire Knight",
+  "slug": "vampire-knight",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T17:19:23.948Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Vampire Knight",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "turner_video_5680",
+            "itemTitle": "Vampire Knight",
+            "file": "5680.mp4",
+            "name": "5680",
+            "url": "https://archive.org/download/turner_video_5680/5680.mp4",
+            "seconds": 120,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 31,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "turner_video_5680",
+            "itemTitle": "Vampire Knight",
+            "file": "history/files/5680.mp4.~1~",
+            "name": "history/files/5680.mp4",
+            "url": "https://archive.org/download/turner_video_5680/history%2Ffiles%2F5680.mp4.~1~",
+            "seconds": 120,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 31,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

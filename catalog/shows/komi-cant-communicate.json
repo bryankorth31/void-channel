@@ -1,0 +1,72 @@
+{
+  "show": "Komi Can't Communicate",
+  "slug": "komi-cant-communicate",
+  "type": "Anime",
+  "network": "JP",
+  "matchedAt": "2026-10-14T17:19:23.914Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Komi Can't Communicate",
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "san",
+          "state": "REVIEW",
+          "file": {
+            "item": "komi-cant-communicate-S1-E1",
+            "itemTitle": "Komi Can't Communicate S1 E1",
+            "file": "Komi san S1 E1.mp4",
+            "name": "Komi san S1 E1",
+            "url": "https://archive.org/download/komi-cant-communicate-S1-E1/Komi%20san%20S1%20E1.mp4",
+            "seconds": 1432,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 272,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "komi-cant-communicate-season-2-episode-2",
+            "itemTitle": "Komi Can’t Communicate Season 2",
+            "file": "Komi Can’t Communicate Season 2.mp4",
+            "name": "Komi Can’t Communicate Season 2",
+            "url": "https://archive.org/download/komi-cant-communicate-season-2-episode-2/Komi%20Can%E2%80%99t%20Communicate%20Season%202.mp4",
+            "seconds": 1432,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 86,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
