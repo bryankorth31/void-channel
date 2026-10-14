@@ -114,8 +114,22 @@ function assemble() {
   const bios = {};
   for (const id of Object.keys(people)) { const b = readJson(path.join(BIO_DIR, id + '.json'), null); if (b) bios[id] = b; }
   const types = [...LIST.types, 'TV Movies', 'Specials'];
+  // HOME ORDER (B 2026-10-14: "more aligned with the popular and eras we originally spoke of; I don't
+  // want game shows and talk variety to show before the absurd or animation or sitcoms"). Rows and
+  // collections interleave in one list: the eras and the popular shelves first, documentary and the
+  // door-adjacent shelves last. Anything not named here (a new collection) follows, biggest first.
+  const HOME_ORDER = [
+    ['type', '90s Sitcoms'], ['type', '2000s and Later Sitcoms'], ['type', 'Animated'], ['type', 'Adult Swim'],
+    ['tag', 'Awkward & Absurd'], ['type', 'Drama'], ['type', 'Sci-Fi, Fantasy and Horror'], ['type', 'Streaming Era'],
+    ['type', 'British and Beyond'], ['type', 'TV Movies'], ['type', 'Sketch and Comedy'], ['type', 'Internet Comedy'],
+    ['tag', 'Historical & Period'], ['type', 'MTV'], ['type', 'Anime'], ['tag', 'Black Programming'],
+    ['tag', 'Family & Hallmark'], ['tag', 'Christian'], ['type', 'Documentary & Geographic'], ['tag', 'Nature & Science'],
+    ['tag', 'History'], ['tag', 'Travel & Adventure'], ['tag', 'History Channel Classic'], ['tag', 'Early Discovery'], ['tag', 'Early TLC'],
+    ['type', 'World TV'], ['type', 'Specials'], ['type', 'Reality & Talk'], ['tag', 'Variety & Talk'], ['tag', 'Game Shows'],
+    ['type', 'Classic TV'], ['tag', 'Late Night Classics'], ['type', 'Late Night'],
+  ];
   const channels = buildChannels(shows, types);
-  return { shows, people, links, types, bios, channels };
+  return { shows, people, links, types, bios, channels, homeOrder: HOME_ORDER };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
@@ -410,8 +424,10 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   h+=shelf('Recently added',recent,'recent');
   const top=VIS().filter(s=>s.rating).sort((a,b)=>b.rating-a.rating||b.eps-a.eps).slice(0,30);
   h+=shelf('Top rated',top,'top');
-  for(const [tag] of counts('tags')){const rows=list.filter(s=>(s.tags||[]).includes(tag));if(rows.length)h+=shelf(tag,rows,'tag:'+tag)}
-  for(const t of TYPES){const rows=list.filter(s=>s.type===t);if(rows.length)h+=shelf(t,rows,'type:'+t)}
+  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);if(rows.length)h+=shelf(name,rows,key)};
+  for(const [kind,name] of HOME_ORDER)put(kind,name);
+  for(const [tag] of counts('tags'))put('tag',tag);
+  for(const t of TYPES)put('type',t);
   if(!ME.adult&&SHOWS.some(isAdult))h+='<section class="doorcard"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><div><b>Late Night</b><p>The after-dark shelf. Adults only, behind its own door.</p></div><button class="btn gold" onclick="adultGate(()=>{state.type=\\'Late Night\\';render();window.scrollTo(0,0)})">Enter 18+</button></section>';
   else if(ME.adult)h+='<p class="leave">Late Night is open on this browser. <span onclick="leaveAdult()">Close the door</span></p>';
  }
@@ -543,7 +559,7 @@ go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types, bios = {}, channels = [] } = data;
+  const { shows, people, links, types, bios = {}, channels = [], homeOrder = [] } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
@@ -572,6 +588,7 @@ ${indexScript}
 <script>
 const SITE=${JSON.stringify(SITE_NAME)};const DONATE=${JSON.stringify(DONATE_URL)};const MODE=${JSON.stringify(mode)};const ROUTES=${JSON.stringify(routes)};const BASE=${JSON.stringify(base)};
 const TYPES=${JSON.stringify(types)};
+const HOME_ORDER=${JSON.stringify(homeOrder)};
 ${inline}
 ${JS}
 </script></body></html>`;

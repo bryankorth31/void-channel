@@ -42,6 +42,21 @@ hunts are still running, so "play" only goes up.
 | Classic TV | the door, added for B's dad: 50s–80s US network TV + classic British | 275 | 120 |
 | TV Movies / Specials | "tv films": made-for-TV movies and specials 1990+ from a 13,588-title TMDB reference list, hunted by vote count | 2,747 in this pass | ~520 |
 
+## Home page order (rows and collections interleaved)
+
+B (2026-10-14): "more aligned with the popular and eras we originally spoke of; I don't want game shows
+and talk variety to show before the absurd or animation or sitcoms." One list (HOME_ORDER in
+scripts/lib/app.js) now sets the shelf order after Recently added and Top rated:
+
+90s Sitcoms, 2000s and Later Sitcoms, Animated, Adult Swim, Awkward & Absurd, Drama, Sci-Fi/Fantasy/Horror,
+Streaming Era, British and Beyond, TV Movies, Sketch and Comedy, Internet Comedy, Historical & Period, MTV,
+Anime, Black Programming, Family & Hallmark, Christian, Documentary & Geographic, Nature & Science, History,
+Travel & Adventure, History Channel Classic, Early Discovery, Early TLC, World TV, Specials, Reality & Talk,
+Variety & Talk, Game Shows, Classic TV, Late Night Classics, Late Night.
+
+A collection not named there follows the list, biggest first. Previously every collection came before
+every row, sorted by size, which is what put Variety & Talk and Game Shows ahead of the sitcoms.
+
 ## Collections (cross-row shelves)
 
 | Collection | B's words / origin | On list | Play |
