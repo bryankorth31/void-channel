@@ -1,0 +1,620 @@
+{
+ "show": "Legion",
+ "slug": "legion",
+ "tmdbId": 67195,
+ "cast": [
+  {
+   "id": 221018,
+   "name": "Dan Stevens",
+   "photo": "https://image.tmdb.org/t/p/w185/fFsgginZKH527o38ZfdDxuzx7Ew.jpg",
+   "character": "David Haller / Legion",
+   "episodes": 27
+  },
+  {
+   "id": 1365769,
+   "name": "Rachel Keller",
+   "photo": "https://image.tmdb.org/t/p/w185/7WPsuYzygjtLbbG97GQksQNi1eG.jpg",
+   "character": "Sydney ‘Syd’ Barrett",
+   "episodes": 27
+  },
+  {
+   "id": 119592,
+   "name": "Aubrey Plaza",
+   "photo": "https://image.tmdb.org/t/p/w185/ejtGfjOAvUHBdVc3xTIV1HtJBi9.jpg",
+   "character": "Lenny Busker",
+   "episodes": 27
+  },
+  {
+   "id": 1349102,
+   "name": "Jeremie Harris",
+   "photo": "https://image.tmdb.org/t/p/w185/ch08czz0JbGFm346bDpoladXwsG.jpg",
+   "character": "Ptonomy Wallace",
+   "episodes": 27
+  },
+  {
+   "id": 1654001,
+   "name": "Amber Midthunder",
+   "photo": "https://image.tmdb.org/t/p/w185/f8VWGyaIS38NkDIzQ2hapXKt0N5.jpg",
+   "character": "Kerry Loudermilk",
+   "episodes": 27
+  },
+  {
+   "id": 58549,
+   "name": "Bill Irwin",
+   "photo": "https://image.tmdb.org/t/p/w185/bAV5qsljgiHQkn3QluB5clVYC13.jpg",
+   "character": "Cary Loudermilk",
+   "episodes": 27
+  },
+  {
+   "id": 184581,
+   "name": "Hamish Linklater",
+   "photo": "https://image.tmdb.org/t/p/w185/ksTXQnWuKvmcVcbmHrvGaDof0P2.jpg",
+   "character": "Clark Debussy",
+   "episodes": 22
+  },
+  {
+   "id": 5376,
+   "name": "Jean Smart",
+   "photo": "https://image.tmdb.org/t/p/w185/gOvEAOtrtedfgS7oQvPgHuJV4F8.jpg",
+   "character": "Melanie Bird",
+   "episodes": 20
+  },
+  {
+   "id": 103330,
+   "name": "Navid Negahban",
+   "photo": "https://image.tmdb.org/t/p/w185/pWi5tINf4mDvTYbNKZDJPODYKra.jpg",
+   "character": "Amahl Farouk / Shadow King",
+   "episodes": 19
+  },
+  {
+   "id": 1848567,
+   "name": "Luke Roessler",
+   "photo": "https://image.tmdb.org/t/p/w185/adDpsZfRtPOPJNZMHmPQ3kj2SyZ.jpg",
+   "character": "David / David Haller (6-8 Years)",
+   "episodes": 11
+  },
+  {
+   "id": 221944,
+   "name": "Katie Aselton",
+   "photo": "https://image.tmdb.org/t/p/w185/84sto9pOvYMOMPYmHsYhIzM1qT5.jpg",
+   "character": "Amy Haller",
+   "episodes": 9
+  },
+  {
+   "id": 37698,
+   "name": "Mackenzie Gray",
+   "photo": "https://image.tmdb.org/t/p/w185/yGU7RTVvI9fR9BpCt5TePYOpx7W.jpg",
+   "character": "The Eye",
+   "episodes": 8
+  },
+  {
+   "id": 1746165,
+   "name": "Lauren Tsai",
+   "photo": "https://image.tmdb.org/t/p/w185/8jjXzpZ3f8BsMv4XXvH84XJfg8D.jpg",
+   "character": "Jia-Yi / Switch",
+   "episodes": 8
+  },
+  {
+   "id": 1839324,
+   "name": "Quinton Boisclair",
+   "photo": "https://image.tmdb.org/t/p/w185/oIlUYbyH97aiJPgOO7FI1sKK7zz.jpg",
+   "character": "Devil with the Yellow Eyes",
+   "episodes": 8
+  },
+  {
+   "id": 3709116,
+   "name": "Lexa Gluck",
+   "photo": "https://image.tmdb.org/t/p/w185/qZ0hmDyW1SCNv61EPc62rAUY4Kw.jpg",
+   "character": "Vermillion #3",
+   "episodes": 8
+  },
+  {
+   "id": 96365,
+   "name": "Ellie Araiza",
+   "photo": "https://image.tmdb.org/t/p/w185/2X8iYhiOPrwOK51L9bm2GXm43iB.jpg",
+   "character": "Philly",
+   "episodes": 5
+  },
+  {
+   "id": 1164341,
+   "name": "Devyn Dalton",
+   "photo": "https://image.tmdb.org/t/p/w185/rYkYdtv2grwzDX4RFCIK3zzP4gD.jpg",
+   "character": "Angry Boy",
+   "episodes": 5
+  },
+  {
+   "id": 1142724,
+   "name": "Stephanie Corneliussen",
+   "photo": "https://image.tmdb.org/t/p/w185/1GHECMoMmSkKiYkzRp0VsYxh6kJ.jpg",
+   "character": "Gabrielle",
+   "episodes": 4
+  },
+  {
+   "id": 55936,
+   "name": "Jemaine Clement",
+   "photo": "https://image.tmdb.org/t/p/w185/6eiNbeurpHb2fxIeT0RrJ0wRI25.jpg",
+   "character": "Oliver Bird",
+   "episodes": 4
+  },
+  {
+   "id": 216442,
+   "name": "Brad Mann",
+   "photo": "https://image.tmdb.org/t/p/w185/xcs2hOfzAlSuqnjgQpIcChOWZol.jpg",
+   "character": "Rudy",
+   "episodes": 4
+  },
+  {
+   "id": 3720128,
+   "name": "Nathan Hurd",
+   "photo": null,
+   "character": "The Monk",
+   "episodes": 4
+  },
+  {
+   "id": 2941461,
+   "name": "Scarlett DeMeo",
+   "photo": "https://image.tmdb.org/t/p/w185/mkklBzfS3ZT9LkN9fnjvDTORQK4.jpg",
+   "character": "Cynthia / Manson Girl #1",
+   "episodes": 4
+  },
+  {
+   "id": 205258,
+   "name": "Harry Lloyd",
+   "photo": "https://image.tmdb.org/t/p/w185/qZSf6OzRpDaZdOCX6pynSRp6jVV.jpg",
+   "character": "Charles Xavier / Professor X",
+   "episodes": 3
+  },
+  {
+   "id": 42317,
+   "name": "Scott Lawrence",
+   "photo": "https://image.tmdb.org/t/p/w185/8lwnmlHN6QPK75NwfufsIFZZhmB.jpg",
+   "character": "Dr. Poole",
+   "episodes": 3
+  }
+ ],
+ "crew": [
+  {
+   "id": 202816,
+   "name": "Noah Hawley",
+   "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg",
+   "jobs": [
+    "Creator",
+    "Director",
+    "Executive Producer",
+    "Writer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 25939,
+   "name": "Jim Chory",
+   "photo": null,
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 113672,
+   "name": "Alan Fine",
+   "photo": null,
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 17310,
+   "name": "Jeph Loeb",
+   "photo": "https://image.tmdb.org/t/p/w185/zbU9aOrxMtXVSUAHlY5d6cQW2EE.jpg",
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 7200,
+   "name": "Lauren Shuler Donner",
+   "photo": "https://image.tmdb.org/t/p/w185/a0oY5BiS6ubJv3Mxh83XH8S4fH7.jpg",
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 11092,
+   "name": "Simon Kinberg",
+   "photo": "https://image.tmdb.org/t/p/w185/uEGvyKEVEotzWNeU0g2bN6b6s9q.jpg",
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 7624,
+   "name": "Stan Lee",
+   "photo": "https://image.tmdb.org/t/p/w185/kKeyWoFtTqOPsbmwylNHmuB3En9.jpg",
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 27
+  },
+  {
+   "id": 9032,
+   "name": "Bryan Singer",
+   "photo": "https://image.tmdb.org/t/p/w185/ts06thbCv9Ug2mNpcbcrmLGRL4Q.jpg",
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 19
+  },
+  {
+   "id": 1710710,
+   "name": "Nathaniel Halpern",
+   "photo": "https://image.tmdb.org/t/p/w185/e1eygTOmsRZdxUnlDPaULC4gK0H.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 13
+  },
+  {
+   "id": 1992618,
+   "name": "Olivia Dufault",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 5
+  },
+  {
+   "id": 1227939,
+   "name": "Steve Blackman",
+   "photo": "https://image.tmdb.org/t/p/w185/ui2tZkndNgit4Gsb4nRPzKyjPZx.jpg",
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 4
+  },
+  {
+   "id": 1482,
+   "name": "John Cameron",
+   "photo": "https://image.tmdb.org/t/p/w185/uv1fsKsOxRGC8n1YL7fBGn4mkRP.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 1461490,
+   "name": "Tim Mielants",
+   "photo": "https://image.tmdb.org/t/p/w185/xCJc9SIcRRumlSQ8AEgWVI4Snpa.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 1223187,
+   "name": "Michael Uppendahl",
+   "photo": "https://image.tmdb.org/t/p/w185/eUPgJlBiib0JbNwXQ9OCwJcP3Y7.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 82226,
+   "name": "Charlie McDowell",
+   "photo": "https://image.tmdb.org/t/p/w185/9U60QatWpzNahV18u8TzDExzzdY.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 963861,
+   "name": "Dana Gonzales",
+   "photo": "https://image.tmdb.org/t/p/w185/iuOOySMCHUdmfnfqMNx2oDxdKtV.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  }
+ ],
+ "fetchedAt": "2026-10-14T08:05:56.531Z",
+ "episodes": {
+  "3x1": {
+   "d": [
+    {
+     "id": 7,
+     "name": "Andrew Stanton",
+     "photo": "https://image.tmdb.org/t/p/w185/fo6ePCWEVB0L1sccrvB99Iaoqcg.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 202816,
+     "name": "Noah Hawley",
+     "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg"
+    },
+    {
+     "id": 1710710,
+     "name": "Nathaniel Halpern",
+     "photo": "https://image.tmdb.org/t/p/w185/e1eygTOmsRZdxUnlDPaULC4gK0H.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 2595115,
+     "name": "Margaux Brooke",
+     "photo": "https://image.tmdb.org/t/p/w185/leLl5l6KnjMdg5O48FhDfB7GquI.jpg",
+     "as": "Eloise"
+    },
+    {
+     "id": 39213,
+     "name": "Keir O'Donnell",
+     "photo": "https://image.tmdb.org/t/p/w185/1GYWx3q4QNXIIBdwirZPiSHFFfJ.jpg",
+     "as": "Daniel"
+    },
+    {
+     "id": 2941461,
+     "name": "Scarlett DeMeo",
+     "photo": "https://image.tmdb.org/t/p/w185/mkklBzfS3ZT9LkN9fnjvDTORQK4.jpg",
+     "as": "Manson Girl #1"
+    }
+   ]
+  },
+  "3x2": {
+   "d": [
+    {
+     "id": 1932178,
+     "name": "Carlos López Estrada",
+     "photo": "https://image.tmdb.org/t/p/w185/hmmicxProrj8sXYu5obBu5QNsNR.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 202816,
+     "name": "Noah Hawley",
+     "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg"
+    },
+    {
+     "id": 1992618,
+     "name": "Olivia Dufault",
+     "photo": null
+    },
+    {
+     "id": 1992564,
+     "name": "Kate Thulin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 2941461,
+     "name": "Scarlett DeMeo",
+     "photo": "https://image.tmdb.org/t/p/w185/mkklBzfS3ZT9LkN9fnjvDTORQK4.jpg",
+     "as": "Manson Girl #1"
+    }
+   ]
+  },
+  "3x3": {
+   "d": [
+    {
+     "id": 1482,
+     "name": "John Cameron",
+     "photo": "https://image.tmdb.org/t/p/w185/uv1fsKsOxRGC8n1YL7fBGn4mkRP.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1710710,
+     "name": "Nathaniel Halpern",
+     "photo": "https://image.tmdb.org/t/p/w185/e1eygTOmsRZdxUnlDPaULC4gK0H.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1848567,
+     "name": "Luke Roessler",
+     "photo": "https://image.tmdb.org/t/p/w185/adDpsZfRtPOPJNZMHmPQ3kj2SyZ.jpg",
+     "as": "David Haller (6-8 Years)"
+    },
+    {
+     "id": 1142724,
+     "name": "Stephanie Corneliussen",
+     "photo": "https://image.tmdb.org/t/p/w185/1GHECMoMmSkKiYkzRp0VsYxh6kJ.jpg",
+     "as": "Gabrielle"
+    },
+    {
+     "id": 205258,
+     "name": "Harry Lloyd",
+     "photo": "https://image.tmdb.org/t/p/w185/qZSf6OzRpDaZdOCX6pynSRp6jVV.jpg",
+     "as": "Charles Xavier / Professor X"
+    }
+   ]
+  },
+  "3x4": {
+   "d": [
+    {
+     "id": 1383612,
+     "name": "Daniel Kwan",
+     "photo": "https://image.tmdb.org/t/p/w185/rVAZLUZhuKCmdzhCsSiOf8j64IA.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1992618,
+     "name": "Olivia Dufault",
+     "photo": null
+    },
+    {
+     "id": 1715432,
+     "name": "Charles Yu",
+     "photo": "https://image.tmdb.org/t/p/w185/vFddKun6TVxVclnvVlbvSFYxls2.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1142724,
+     "name": "Stephanie Corneliussen",
+     "photo": "https://image.tmdb.org/t/p/w185/1GHECMoMmSkKiYkzRp0VsYxh6kJ.jpg",
+     "as": "Gabrielle"
+    }
+   ]
+  },
+  "3x5": {
+   "d": [
+    {
+     "id": 1706480,
+     "name": "Arkasha Stevenson",
+     "photo": "https://image.tmdb.org/t/p/w185/a6wsFI0sdD4n9wALBIryOLuGsPj.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1992618,
+     "name": "Olivia Dufault",
+     "photo": null
+    },
+    {
+     "id": 2347594,
+     "name": "Ben H. Winters",
+     "photo": "https://image.tmdb.org/t/p/w185/7pBijhGrFjrZev1LesqKQ4a9TcK.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 2941461,
+     "name": "Scarlett DeMeo",
+     "photo": "https://image.tmdb.org/t/p/w185/mkklBzfS3ZT9LkN9fnjvDTORQK4.jpg",
+     "as": "Cynthia"
+    }
+   ]
+  },
+  "3x6": {
+   "d": [
+    {
+     "id": 1482,
+     "name": "John Cameron",
+     "photo": "https://image.tmdb.org/t/p/w185/uv1fsKsOxRGC8n1YL7fBGn4mkRP.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 202816,
+     "name": "Noah Hawley",
+     "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 5376,
+     "name": "Jean Smart",
+     "photo": "https://image.tmdb.org/t/p/w185/gOvEAOtrtedfgS7oQvPgHuJV4F8.jpg",
+     "as": "Melanie Bird"
+    },
+    {
+     "id": 111683,
+     "name": "Jason Mantzoukas",
+     "photo": "https://image.tmdb.org/t/p/w185/sCG3UAdoxCy39gMd9ILlAFJbApS.jpg",
+     "as": "Jerome / Wolf"
+    },
+    {
+     "id": 2595114,
+     "name": "Sophie Mackenzie Nack",
+     "photo": "https://image.tmdb.org/t/p/w185/qR2IaQDDdgpEvtjG1r49grAQbTs.jpg",
+     "as": "Sweetie"
+    },
+    {
+     "id": 55936,
+     "name": "Jemaine Clement",
+     "photo": "https://image.tmdb.org/t/p/w185/6eiNbeurpHb2fxIeT0RrJ0wRI25.jpg",
+     "as": "Oliver Bird"
+    },
+    {
+     "id": 2941461,
+     "name": "Scarlett DeMeo",
+     "photo": "https://image.tmdb.org/t/p/w185/mkklBzfS3ZT9LkN9fnjvDTORQK4.jpg",
+     "as": "Cynthia"
+    }
+   ]
+  },
+  "3x7": {
+   "d": [
+    {
+     "id": 963861,
+     "name": "Dana Gonzales",
+     "photo": "https://image.tmdb.org/t/p/w185/iuOOySMCHUdmfnfqMNx2oDxdKtV.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 202816,
+     "name": "Noah Hawley",
+     "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg"
+    },
+    {
+     "id": 1992618,
+     "name": "Olivia Dufault",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1142724,
+     "name": "Stephanie Corneliussen",
+     "photo": "https://image.tmdb.org/t/p/w185/1GHECMoMmSkKiYkzRp0VsYxh6kJ.jpg",
+     "as": "Gabrielle"
+    },
+    {
+     "id": 205258,
+     "name": "Harry Lloyd",
+     "photo": "https://image.tmdb.org/t/p/w185/qZSf6OzRpDaZdOCX6pynSRp6jVV.jpg",
+     "as": "Charles Xavier / Professor X"
+    }
+   ]
+  },
+  "3x8": {
+   "d": [
+    {
+     "id": 202816,
+     "name": "Noah Hawley",
+     "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg"
+    },
+    {
+     "id": 1482,
+     "name": "John Cameron",
+     "photo": "https://image.tmdb.org/t/p/w185/uv1fsKsOxRGC8n1YL7fBGn4mkRP.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 202816,
+     "name": "Noah Hawley",
+     "photo": "https://image.tmdb.org/t/p/w185/pxVP1lywEBA9y8x5Xe3kM7m4ai3.jpg"
+    },
+    {
+     "id": 1992618,
+     "name": "Olivia Dufault",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1142724,
+     "name": "Stephanie Corneliussen",
+     "photo": "https://image.tmdb.org/t/p/w185/1GHECMoMmSkKiYkzRp0VsYxh6kJ.jpg",
+     "as": "Gabrielle"
+    },
+    {
+     "id": 205258,
+     "name": "Harry Lloyd",
+     "photo": "https://image.tmdb.org/t/p/w185/qZSf6OzRpDaZdOCX6pynSRp6jVV.jpg",
+     "as": "Charles Xavier / Professor X"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-14T08:05:57.139Z"
+}
