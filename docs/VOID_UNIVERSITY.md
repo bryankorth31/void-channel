@@ -376,19 +376,25 @@ Yes. It is the same machine with a different list, plus one generated layer. Wha
 - *X-Ray*: the subject graph connects a lesson to its voices, to the next lesson, to the
   documentary that shows it, to the machine you can run.
 
-**No grading. (B, 2026-10-13: "I'm not interested in grading or anything on that side of
-things.")** No tests, answer keys, scores, standards codes, transcripts-for-the-state or
-accreditation talk. Void School is a place to learn well, not a place to be measured. What a family
-keeps is what Mine already keeps: what we watched, what we read, where we stopped, what we
-liked — a memory, not a report card.
+**Standards matter; grading and accrediting are not ours. (B, 2026-10-13: "I see standards and
+that stuff as important. I won't be grading or accrediting. We will show what we have and what and
+how it fits the standards of xyz.")** So: every lesson is mapped to the published standards it
+serves (Common Core, NGSS, the C3 framework for social studies, and state codes — all public), and
+Void School shows a family *what we have and how it fits*: pick your state or framework, see which
+standards our lessons cover, with which pieces, and where the gaps are. What we do not do is score
+a child, issue grades, or claim accreditation. What a family keeps is what Mine already keeps —
+what we watched, what we read, where we stopped — alongside the standards those lessons served, so
+a parent can show their own record against their own state's list if they choose to.
 
 **The generated layer (the "simple model", builder side, static output)**
-For each lesson the model writes the wrap the library cannot supply, and only that: a
-why-it-matters paragraph in plain words (entry 4 made mandatory — the seed goes in first); three
-questions worth talking about at the table afterwards, open ones, with no key; the words a child
-will meet for the first time; one thing to make, try, visit or look for this week; and a note to the
-parent — what to listen for, what children usually get tangled in, where the piece is wrong or
-dated and what to say about that. Grounded on the actual material (transcript + reading), never on
+For each lesson the model writes the wrap the library cannot supply: a why-it-matters paragraph
+in plain words (entry 4 made mandatory — the seed goes in first); the standards the lesson serves,
+with the exact code and the sentence of the standard it meets, checked against the material rather
+than asserted; three questions worth talking about at the table afterwards, open ones; study
+material — the words a child will meet for the first time, a one-page summary, practice items where
+the open curriculum has them (never scored by us); one thing to make, try, visit or look for this
+week; and a note to the parent — what to listen for, what children usually get tangled in, where
+the piece is wrong or dated and what to say about that. Grounded on the actual material (transcript + reading), never on
 the model's memory. B reviews by sampling; a flag on any lesson sends it back. Cost: pennies a
 lesson.
 
@@ -399,7 +405,9 @@ standard for a Void School lesson is higher than for a VoidTV row, and the throu
 - the voice test applied strictly (did it, teaches it well) and a third test added — *is this the
   best thing we hold for a child meeting the idea for the first time?* — so one superb Bronowski
   hour beats five adequate ones;
-- the whole lesson readable by a parent in two minutes before pressing play;
+- the whole lesson readable by a parent in two minutes before pressing play, standards included;
+- a standards view that is honest: coverage shown as it is, gaps shown as gaps, never a lesson
+  stretched to claim a code it does not really meet;
 - sequence that respects nucleation: the why, then the story, then the mechanism, then the
   practice; and the next lesson chosen so the seed just planted has something to grow on;
 - a strand is finished when it is finished, not when a quota is met. One strand done with care
