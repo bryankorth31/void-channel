@@ -119,7 +119,11 @@ function matchShow(entry) {
       // 2. Title similarity (best episode by name)
       let best = null, bestSim = 0;
       for (const e of tv.episodes) { const s = titleSim(fp, e.name); if (s > bestSim) { bestSim = s; best = e; } }
-      if (best && bestSim >= 0.6) {
+      // A title match alone must be a real title: one common word ("Water", "Food", "Music") in an
+      // upload that does not name the show is how Tweenies ended up under Look Around You.
+      const titleAlone = !f.nameHit && !norm(item.title || '').includes(core);
+      const strongTitle = best && norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2).length >= 2;
+      if (best && bestSim >= 0.6 && (!titleAlone || strongTitle)) {
         const existing = candidates.find((c) => c.ep === best);
         if (existing) { existing.base += bestSim >= 0.8 ? 0.3 : 0.15; existing.why += ' + title match'; }
         else candidates.push({ ep: best, base: bestSim >= 0.8 ? 0.5 : 0.3, why: `title ~ "${best.name}" (${bestSim.toFixed(2)})` });
