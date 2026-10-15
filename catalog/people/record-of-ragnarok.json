@@ -210,5 +210,680 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-13T18:38:19.043Z"
+ "fetchedAt": "2026-10-13T18:38:19.043Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 1848755,
+     "name": "Yasutaka Yamamoto",
+     "photo": "https://image.tmdb.org/t/p/w185/w7UxMABrQXFDvCg9dluQxvtHJUF.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1089471,
+     "name": "Kazuyuki Fudeyasu",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 144773,
+     "name": "Show Hayami",
+     "photo": "https://image.tmdb.org/t/p/w185/HU9LZJdb4H8coHiSaHiUprcFm1.jpg",
+     "as": "Odin (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 90567,
+     "name": "Tomokazu Seki",
+     "photo": "https://image.tmdb.org/t/p/w185/jGQC9KkfNMh2wBgizw81GLX2KN2.jpg",
+     "as": "Lü Bu (voice)"
+    },
+    {
+     "id": 1991242,
+     "name": "Daiki Hamano",
+     "photo": "https://image.tmdb.org/t/p/w185/bykeH3Rhmx9PPFegYNi6s310cNa.jpg",
+     "as": "Chen Gong (voice)"
+    },
+    {
+     "id": 2887841,
+     "name": "Satoru Ito",
+     "photo": "https://image.tmdb.org/t/p/w185/eeJLPK2U4eV86TO19wOe5O6F5eW.jpg",
+     "as": "Forseti (voice)"
+    },
+    {
+     "id": 2877405,
+     "name": "Akihiro Tajima",
+     "photo": "https://image.tmdb.org/t/p/w185/1z3o2q5JjQBDsRgRYCcKlCJo4tQ.jpg",
+     "as": "Guan Yu (voice)"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 144773,
+     "name": "Show Hayami",
+     "photo": "https://image.tmdb.org/t/p/w185/HU9LZJdb4H8coHiSaHiUprcFm1.jpg",
+     "as": "Odin (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 90567,
+     "name": "Tomokazu Seki",
+     "photo": "https://image.tmdb.org/t/p/w185/jGQC9KkfNMh2wBgizw81GLX2KN2.jpg",
+     "as": "Lü Bu (voice)"
+    },
+    {
+     "id": 1991242,
+     "name": "Daiki Hamano",
+     "photo": "https://image.tmdb.org/t/p/w185/bykeH3Rhmx9PPFegYNi6s310cNa.jpg",
+     "as": "Chen Gong (voice)"
+    },
+    {
+     "id": 2887841,
+     "name": "Satoru Ito",
+     "photo": "https://image.tmdb.org/t/p/w185/eeJLPK2U4eV86TO19wOe5O6F5eW.jpg",
+     "as": "Forseti (voice)"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 90567,
+     "name": "Tomokazu Seki",
+     "photo": "https://image.tmdb.org/t/p/w185/jGQC9KkfNMh2wBgizw81GLX2KN2.jpg",
+     "as": "Lü Bu (voice)"
+    },
+    {
+     "id": 1991242,
+     "name": "Daiki Hamano",
+     "photo": "https://image.tmdb.org/t/p/w185/bykeH3Rhmx9PPFegYNi6s310cNa.jpg",
+     "as": "Chen Gong (voice)"
+    },
+    {
+     "id": 2887841,
+     "name": "Satoru Ito",
+     "photo": "https://image.tmdb.org/t/p/w185/eeJLPK2U4eV86TO19wOe5O6F5eW.jpg",
+     "as": "Forseti (voice)"
+    },
+    {
+     "id": 2877405,
+     "name": "Akihiro Tajima",
+     "photo": "https://image.tmdb.org/t/p/w185/1z3o2q5JjQBDsRgRYCcKlCJo4tQ.jpg",
+     "as": "Guan Yu (voice)"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 90567,
+     "name": "Tomokazu Seki",
+     "photo": "https://image.tmdb.org/t/p/w185/jGQC9KkfNMh2wBgizw81GLX2KN2.jpg",
+     "as": "Lü Bu (voice)"
+    },
+    {
+     "id": 1991242,
+     "name": "Daiki Hamano",
+     "photo": "https://image.tmdb.org/t/p/w185/bykeH3Rhmx9PPFegYNi6s310cNa.jpg",
+     "as": "Chen Gong (voice)"
+    },
+    {
+     "id": 2887841,
+     "name": "Satoru Ito",
+     "photo": "https://image.tmdb.org/t/p/w185/eeJLPK2U4eV86TO19wOe5O6F5eW.jpg",
+     "as": "Forseti (voice)"
+    },
+    {
+     "id": 2877405,
+     "name": "Akihiro Tajima",
+     "photo": "https://image.tmdb.org/t/p/w185/1z3o2q5JjQBDsRgRYCcKlCJo4tQ.jpg",
+     "as": "Guan Yu (voice)"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 1388751,
+     "name": "Soma Saito",
+     "photo": "https://image.tmdb.org/t/p/w185/8W8Y02Jmjivw0kk5PDih9dqiyd9.jpg",
+     "as": "Adam (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 1991242,
+     "name": "Daiki Hamano",
+     "photo": "https://image.tmdb.org/t/p/w185/bykeH3Rhmx9PPFegYNi6s310cNa.jpg",
+     "as": "Chen Gong (voice)"
+    },
+    {
+     "id": 2887841,
+     "name": "Satoru Ito",
+     "photo": "https://image.tmdb.org/t/p/w185/eeJLPK2U4eV86TO19wOe5O6F5eW.jpg",
+     "as": "Forseti (voice)"
+    },
+    {
+     "id": 2877405,
+     "name": "Akihiro Tajima",
+     "photo": "https://image.tmdb.org/t/p/w185/1z3o2q5JjQBDsRgRYCcKlCJo4tQ.jpg",
+     "as": "Guan Yu (voice)"
+    },
+    {
+     "id": 122726,
+     "name": "Hikaru Midorikawa",
+     "photo": "https://image.tmdb.org/t/p/w185/pvzfUDE9UruEhRBrONVFk83o6Zh.jpg",
+     "as": "Thor (voice)"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 1388751,
+     "name": "Soma Saito",
+     "photo": "https://image.tmdb.org/t/p/w185/8W8Y02Jmjivw0kk5PDih9dqiyd9.jpg",
+     "as": "Adam (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 550663,
+     "name": "Koji Ishii",
+     "photo": "https://image.tmdb.org/t/p/w185/ao882dlS1ERrar6iq0qedBVBAhH.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 2799229,
+     "name": "Yukihiro Nozuyama",
+     "photo": "https://image.tmdb.org/t/p/w185/t3bTqgwBEiMxBZz0WPSNiADHB8s.jpg",
+     "as": "Heimdall (voice)"
+    },
+    {
+     "id": 186341,
+     "name": "Miyuki Sawashiro",
+     "photo": "https://image.tmdb.org/t/p/w185/11mGqwpmu8CoEy1YJgabj2g7MIv.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 2124779,
+     "name": "Chiko Mizumori",
+     "photo": "https://image.tmdb.org/t/p/w185/oCRhPYsWxwWt7OlKO1FdrvPJsb9.jpg",
+     "as": "Woman (voice)"
+    },
+    {
+     "id": 3265600,
+     "name": "Kazuki Souya",
+     "photo": "https://image.tmdb.org/t/p/w185/9lWXRcZmNhYkhP2ilORcb1PFixG.jpg",
+     "as": "Michelangelo (voice)"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 1388751,
+     "name": "Soma Saito",
+     "photo": "https://image.tmdb.org/t/p/w185/8W8Y02Jmjivw0kk5PDih9dqiyd9.jpg",
+     "as": "Adam (voice)"
+    },
+    {
+     "id": 144773,
+     "name": "Show Hayami",
+     "photo": "https://image.tmdb.org/t/p/w185/HU9LZJdb4H8coHiSaHiUprcFm1.jpg",
+     "as": "Odin (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 550663,
+     "name": "Koji Ishii",
+     "photo": "https://image.tmdb.org/t/p/w185/ao882dlS1ERrar6iq0qedBVBAhH.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 122726,
+     "name": "Hikaru Midorikawa",
+     "photo": "https://image.tmdb.org/t/p/w185/pvzfUDE9UruEhRBrONVFk83o6Zh.jpg",
+     "as": "Thor (voice)"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 1388751,
+     "name": "Soma Saito",
+     "photo": "https://image.tmdb.org/t/p/w185/8W8Y02Jmjivw0kk5PDih9dqiyd9.jpg",
+     "as": "Adam (voice)"
+    },
+    {
+     "id": 552339,
+     "name": "Kazuhiro Yamaji",
+     "photo": "https://image.tmdb.org/t/p/w185/fgGTdhTiWViGmjl2kABHWzLIpZ0.jpg",
+     "as": "Kojiro Sasaki (voice)"
+    },
+    {
+     "id": 1154452,
+     "name": "Tatsuhisa Suzuki",
+     "photo": "https://image.tmdb.org/t/p/w185/foytL2OreKzQcTNftz2qMgClKKg.jpg",
+     "as": "Shiva (voice)"
+    },
+    {
+     "id": 89883,
+     "name": "Rie Tanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/wBWsjzwpFovyHDv027zU0oZyWHd.jpg",
+     "as": "Aphrodite (voice)"
+    },
+    {
+     "id": 2845549,
+     "name": "Taisuke Nakano",
+     "photo": "https://image.tmdb.org/t/p/w185/zBNyZKcQzNO59Z66LK9e2AKSLWl.jpg",
+     "as": "Huginn (voice)"
+    },
+    {
+     "id": 1691564,
+     "name": "Tomohiro Yamaguchi",
+     "photo": "https://image.tmdb.org/t/p/w185/vj0zpzYm2wMuBR9pYfSs06HN6T5.jpg",
+     "as": "Muninn (voice)"
+    },
+    {
+     "id": 550663,
+     "name": "Koji Ishii",
+     "photo": "https://image.tmdb.org/t/p/w185/ao882dlS1ERrar6iq0qedBVBAhH.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 2799229,
+     "name": "Yukihiro Nozuyama",
+     "photo": "https://image.tmdb.org/t/p/w185/t3bTqgwBEiMxBZz0WPSNiADHB8s.jpg",
+     "as": "Heimdall (voice)"
+    }
+   ]
+  },
+  "1x9": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 552339,
+     "name": "Kazuhiro Yamaji",
+     "photo": "https://image.tmdb.org/t/p/w185/fgGTdhTiWViGmjl2kABHWzLIpZ0.jpg",
+     "as": "Kojiro Sasaki (voice)"
+    },
+    {
+     "id": 9705,
+     "name": "Takahiro Sakurai",
+     "photo": "https://image.tmdb.org/t/p/w185/8s8owcKmpRAuhzEGjSdRpztthUg.jpg",
+     "as": "Poseidon (voice)"
+    },
+    {
+     "id": 2769009,
+     "name": "Naoko Komatsu",
+     "photo": "https://image.tmdb.org/t/p/w185/miVudeHfBYVBkDVqCjTanQiSgnY.jpg",
+     "as": "Woman (voice)"
+    },
+    {
+     "id": 550663,
+     "name": "Koji Ishii",
+     "photo": "https://image.tmdb.org/t/p/w185/ao882dlS1ERrar6iq0qedBVBAhH.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 2799229,
+     "name": "Yukihiro Nozuyama",
+     "photo": "https://image.tmdb.org/t/p/w185/t3bTqgwBEiMxBZz0WPSNiADHB8s.jpg",
+     "as": "Heimdall (voice)"
+    },
+    {
+     "id": 186341,
+     "name": "Miyuki Sawashiro",
+     "photo": "https://image.tmdb.org/t/p/w185/11mGqwpmu8CoEy1YJgabj2g7MIv.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 4017194,
+     "name": "Mizuki Hayashi",
+     "photo": "https://image.tmdb.org/t/p/w185/v5nI3gAEV9vcsrwXYRWqHT3qKaQ.jpg",
+     "as": "(voice)"
+    },
+    {
+     "id": 2158087,
+     "name": "Hinata Tadokoro",
+     "photo": "https://image.tmdb.org/t/p/w185/sLgk7ah48Iu491ZFFFzI0uKcsPL.jpg",
+     "as": "Ares (voice)"
+    }
+   ]
+  },
+  "1x10": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 112278,
+     "name": "Wataru Takagi",
+     "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+     "as": "Zeus (voice)"
+    },
+    {
+     "id": 9721,
+     "name": "Junichi Suwabe",
+     "photo": "https://image.tmdb.org/t/p/w185/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
+     "as": "Hermes (voice)"
+    },
+    {
+     "id": 552339,
+     "name": "Kazuhiro Yamaji",
+     "photo": "https://image.tmdb.org/t/p/w185/fgGTdhTiWViGmjl2kABHWzLIpZ0.jpg",
+     "as": "Kojiro Sasaki (voice)"
+    },
+    {
+     "id": 9705,
+     "name": "Takahiro Sakurai",
+     "photo": "https://image.tmdb.org/t/p/w185/8s8owcKmpRAuhzEGjSdRpztthUg.jpg",
+     "as": "Poseidon (voice)"
+    },
+    {
+     "id": 2769009,
+     "name": "Naoko Komatsu",
+     "photo": "https://image.tmdb.org/t/p/w185/miVudeHfBYVBkDVqCjTanQiSgnY.jpg",
+     "as": "Woman (voice)"
+    },
+    {
+     "id": 550663,
+     "name": "Koji Ishii",
+     "photo": "https://image.tmdb.org/t/p/w185/ao882dlS1ERrar6iq0qedBVBAhH.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 2799229,
+     "name": "Yukihiro Nozuyama",
+     "photo": "https://image.tmdb.org/t/p/w185/t3bTqgwBEiMxBZz0WPSNiADHB8s.jpg",
+     "as": "Heimdall (voice)"
+    },
+    {
+     "id": 186341,
+     "name": "Miyuki Sawashiro",
+     "photo": "https://image.tmdb.org/t/p/w185/11mGqwpmu8CoEy1YJgabj2g7MIv.jpg",
+     "as": "Narrator (voice)"
+    },
+    {
+     "id": 4017194,
+     "name": "Mizuki Hayashi",
+     "photo": "https://image.tmdb.org/t/p/w185/v5nI3gAEV9vcsrwXYRWqHT3qKaQ.jpg",
+     "as": "(voice)"
+    },
+    {
+     "id": 2158087,
+     "name": "Hinata Tadokoro",
+     "photo": "https://image.tmdb.org/t/p/w185/sLgk7ah48Iu491ZFFFzI0uKcsPL.jpg",
+     "as": "Ares (voice)"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-15T07:34:51.894Z"
 }

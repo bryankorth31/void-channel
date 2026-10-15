@@ -1,6 +1,6 @@
 # Coverage
 
-1601 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1702 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -79,6 +79,7 @@
 | G-String Divas | Late Night | 17 | 0 | 17 | 0 | 100% |
 | Generation War | World TV | 5 | 0 | 5 | 0 | 100% |
 | Golden Time | Anime | 24 | 0 | 24 | 0 | 100% |
+| Gravity Falls | Streaming Era | 40 | 40 | 0 | 0 | 100% |
 | Great Chefs | Documentary & Geographic | 2 | 0 | 2 | 0 | 100% |
 | Great Teacher Onizuka | Anime | 43 | 0 | 43 | 0 | 100% |
 | Gurren Lagann | Anime | 62 | 0 | 62 | 0 | 100% |
@@ -140,6 +141,7 @@
 | Neon Genesis Evangelion | Anime | 26 | 2 | 24 | 0 | 100% |
 | Oh My Venus | World TV | 16 | 0 | 16 | 0 | 100% |
 | Ouran High School Host Club | Anime | 26 | 0 | 26 | 0 | 100% |
+| Over the Garden Wall | Streaming Era | 10 | 10 | 0 | 0 | 100% |
 | Parasyte -the maxim- | Anime | 27 | 0 | 27 | 0 | 100% |
 | Password | Classic TV | 995 | 0 | 995 | 0 | 100% |
 | Perfect Hair Forever | Adult Swim | 9 | 9 | 0 | 0 | 100% |
@@ -190,6 +192,7 @@
 | The Brak Show | Adult Swim | 28 | 28 | 0 | 0 | 100% |
 | The Cat and the Dragon | Anime | 12 | 0 | 12 | 0 | 100% |
 | The Clone | Reality & Talk | 5 | 0 | 5 | 0 | 100% |
+| The Day of the Jackal | Streaming Era | 10 | 10 | 0 | 0 | 100% |
 | The Dick Cavett Show | Classic TV | 239 | 0 | 239 | 0 | 100% |
 | The Dresden Files | Sci-Fi, Fantasy and Horror | 12 | 12 | 0 | 0 | 100% |
 | The Familiar of Zero | Anime | 28 | 0 | 28 | 0 | 100% |
@@ -280,6 +283,7 @@
 | Peep Show | British and Beyond | 54 | 53 | 0 | 1 | 98% |
 | Sliders | Sci-Fi, Fantasy and Horror | 87 | 82 | 3 | 2 | 98% |
 | The Twilight Zone | Classic TV | 156 | 111 | 42 | 3 | 98% |
+| Trollhunters: Tales of Arcadia | Streaming Era | 52 | 51 | 0 | 1 | 98% |
 | Bill Nye the Science Guy | Documentary & Geographic | 100 | 80 | 17 | 3 | 97% |
 | Harvey Birdman, Attorney at Law | Adult Swim | 39 | 38 | 0 | 1 | 97% |
 | Soap | Classic TV | 90 | 87 | 0 | 3 | 97% |
@@ -293,6 +297,7 @@
 | La que se avecina | World TV | 202 | 194 | 0 | 8 | 96% |
 | Malcolm in the Middle | 2000s and Later Sitcoms | 151 | 0 | 145 | 6 | 96% |
 | Mystery Science Theater 3000 | Sci-Fi, Fantasy and Horror | 213 | 151 | 54 | 8 | 96% |
+| Orange Is the New Black | Streaming Era | 91 | 87 | 0 | 4 | 96% |
 | Quincy, M.E. | Classic TV | 148 | 142 | 0 | 6 | 96% |
 | The A-Team | Classic TV | 98 | 94 | 0 | 4 | 96% |
 | The King of Queens | 2000s and Later Sitcoms | 207 | 197 | 2 | 8 | 96% |
@@ -315,7 +320,9 @@
 | Gilligan's Island | Classic TV | 98 | 1 | 90 | 7 | 93% |
 | Human Giant | MTV | 14 | 13 | 0 | 1 | 93% |
 | Love Alarm | World TV | 14 | 13 | 0 | 1 | 93% |
+| Regular Show | Streaming Era | 246 | 184 | 44 | 18 | 93% |
 | 3 South | MTV | 13 | 12 | 0 | 1 | 92% |
+| Bates Motel | Streaming Era | 50 | 32 | 14 | 4 | 92% |
 | Dead at 21 | MTV | 13 | 11 | 1 | 1 | 92% |
 | Mission: Impossible | Classic TV | 171 | 137 | 21 | 13 | 92% |
 | The Erotic Traveler | Late Night | 13 | 12 | 0 | 1 | 92% |
@@ -381,6 +388,7 @@
 | Teach You a Lesson | World TV | 10 | 7 | 0 | 3 | 70% |
 | The Day the Universe Changed | Documentary & Geographic | 10 | 7 | 0 | 3 | 70% |
 | The Ramparts of Ice | Anime | 20 | 14 | 0 | 6 | 70% |
+| Castlevania | Streaming Era | 32 | 22 | 0 | 10 | 69% |
 | Crash Landing on You | World TV | 16 | 0 | 11 | 5 | 69% |
 | Alice in Borderland | World TV | 22 | 15 | 0 | 7 | 68% |
 | Apollo Gauntlet | Adult Swim | 6 | 0 | 4 | 2 | 67% |
@@ -422,6 +430,7 @@
 | The Tom Green Show | MTV | 26 | 9 | 5 | 12 | 54% |
 | Ancient Aliens | Streaming Era | 292 | 72 | 83 | 137 | 53% |
 | Avatar: The Last Airbender | Animated | 15 | 0 | 8 | 7 | 53% |
+| Mr. Robot | Streaming Era | 45 | 20 | 4 | 21 | 53% |
 | Hell's Paradise | Anime | 25 | 13 | 0 | 12 | 52% |
 | Invader Zim | Animated | 46 | 7 | 17 | 22 | 52% |
 | Solo Leveling | Anime | 25 | 0 | 13 | 12 | 52% |
@@ -429,10 +438,12 @@
 | Junkyard Wars | Documentary & Geographic | 105 | 1 | 53 | 51 | 51% |
 | Zoids: Chaotic Century | Anime | 67 | 34 | 0 | 33 | 51% |
 | Campfire Cooking in Another World with My Absurd Skill | Anime | 24 | 0 | 12 | 12 | 50% |
+| Fallout | Streaming Era | 16 | 0 | 8 | 8 | 50% |
 | Ghost in the Shell: Stand Alone Complex | Anime | 52 | 0 | 26 | 26 | 50% |
 | Himouto! Umaru-chan | Anime | 24 | 12 | 0 | 12 | 50% |
 | It's Okay to Not Be Okay | World TV | 16 | 0 | 8 | 8 | 50% |
 | Kill la Kill | Anime | 24 | 0 | 12 | 12 | 50% |
+| ONE PIECE | Streaming Era | 16 | 8 | 0 | 8 | 50% |
 | Our Last Crusade or the Rise of a New World | Anime | 24 | 0 | 12 | 12 | 50% |
 | Rascal Does Not Dream of Bunny Girl Senpai | Anime | 26 | 9 | 4 | 13 | 50% |
 | Reincarnated as a Sword | Anime | 24 | 12 | 0 | 12 | 50% |
@@ -440,6 +451,7 @@
 | Shangri-La Frontier | Anime | 50 | 0 | 25 | 25 | 50% |
 | Skeleton Knight in Another World | Anime | 24 | 12 | 0 | 12 | 50% |
 | The Morton Downey Jr. Show | Classic TV | 2 | 0 | 1 | 1 | 50% |
+| The Night Manager | Streaming Era | 12 | 6 | 0 | 6 | 50% |
 | The Six Wives of Henry VIII | Classic TV | 4 | 0 | 2 | 2 | 50% |
 | Wolf Hall | British and Beyond | 12 | 6 | 0 | 6 | 50% |
 | Wonders of the Universe | Documentary & Geographic | 4 | 0 | 2 | 2 | 50% |
@@ -479,6 +491,7 @@
 | Code Blue | Documentary & Geographic | 32 | 0 | 11 | 21 | 34% |
 | Full House | 90s Sitcoms | 192 | 65 | 1 | 126 | 34% |
 | Control Z | World TV | 24 | 8 | 0 | 16 | 33% |
+| Cosmos | Streaming Era | 39 | 1 | 12 | 26 | 33% |
 | Cosmos: A Personal Voyage | Documentary & Geographic | 39 | 13 | 0 | 26 | 33% |
 | Sister, Sister | 90s Sitcoms | 119 | 22 | 17 | 80 | 33% |
 | Sound! Euphonium | Anime | 39 | 2 | 11 | 26 | 33% |
@@ -515,6 +528,7 @@
 | King the Land | World TV | 16 | 0 | 4 | 12 | 25% |
 | Delocated | Adult Swim | 30 | 6 | 1 | 23 | 23% |
 | Joe Pera Talks with You | Adult Swim | 31 | 0 | 7 | 24 | 23% |
+| S.W.A.T. | Streaming Era | 163 | 0 | 38 | 125 | 23% |
 | Classroom of the Elite | Anime | 54 | 0 | 12 | 42 | 22% |
 | King of the Hill | Animated | 279 | 60 | 0 | 219 | 22% |
 | Liquid Television | MTV | 27 | 0 | 6 | 21 | 22% |
@@ -532,13 +546,16 @@
 | Mucize Doktor | World TV | 64 | 0 | 13 | 51 | 20% |
 | Raw | Reality & Talk | 30 | 0 | 6 | 24 | 20% |
 | Space Ghost Coast to Coast | Adult Swim | 112 | 0 | 22 | 90 | 20% |
+| The Amazing World of Gumball | Streaming Era | 240 | 0 | 49 | 191 | 20% |
 | Unsolved Mysteries | Drama | 30 | 1 | 5 | 24 | 20% |
+| Adventure Time | Streaming Era | 278 | 52 | 0 | 226 | 19% |
 | Girlfriends | 2000s and Later Sitcoms | 172 | 32 | 0 | 140 | 19% |
 | Head of the Class | Classic TV | 114 | 0 | 22 | 92 | 19% |
 | Johnny Bravo | Animated | 181 | 0 | 34 | 147 | 19% |
 | MADtv | Sketch and Comedy | 327 | 61 | 0 | 266 | 19% |
 | Batman | Classic TV | 120 | 12 | 9 | 99 | 18% |
 | Black Clover | Anime | 177 | 0 | 30 | 147 | 17% |
+| How to Get Away with Murder | Streaming Era | 90 | 0 | 15 | 75 | 17% |
 | Kaiju No. 8 | Anime | 24 | 0 | 4 | 20 | 17% |
 | Peaky Blinders | Streaming Era | 36 | 6 | 0 | 30 | 17% |
 | Steins;Gate 0 | Anime | 23 | 0 | 4 | 19 | 17% |
@@ -580,6 +597,7 @@
 | Bleak House | British and Beyond | 11 | 1 | 0 | 10 | 9% |
 | Mysteries of the Bible | Documentary & Geographic | 45 | 0 | 4 | 41 | 9% |
 | NOVA | Documentary & Geographic | 1014 | 2 | 90 | 922 | 9% |
+| The Blacklist | Streaming Era | 218 | 0 | 19 | 199 | 9% |
 | The Seven Deadly Sins | Anime | 96 | 1 | 8 | 87 | 9% |
 | Akashic Records of Bastard Magic Instructor | Anime | 12 | 0 | 1 | 11 | 8% |
 | America's Got Talent | Reality & Talk | 501 | 41 | 0 | 460 | 8% |
@@ -588,11 +606,13 @@
 | Press Your Luck | Classic TV | 72 | 2 | 4 | 66 | 8% |
 | Pulling | British and Beyond | 12 | 1 | 0 | 11 | 8% |
 | Robot Chicken | Adult Swim | 218 | 0 | 17 | 201 | 8% |
+| Suits | Streaming Era | 134 | 11 | 0 | 123 | 8% |
 | The Americans | Drama | 75 | 0 | 6 | 69 | 8% |
 | Through the Wormhole | Documentary & Geographic | 62 | 5 | 0 | 57 | 8% |
 | Witch Hat Atelier | Anime | 13 | 0 | 1 | 12 | 8% |
 | Ancient Discoveries | Documentary & Geographic | 42 | 0 | 3 | 39 | 7% |
 | Below Deck | Reality & Talk | 188 | 13 | 0 | 175 | 7% |
+| Chicago Med | Streaming Era | 223 | 15 | 0 | 208 | 7% |
 | ER | Drama | 331 | 0 | 23 | 308 | 7% |
 | Happy Days | Classic TV | 255 | 15 | 2 | 238 | 7% |
 | Salad Fingers | Internet Comedy | 14 | 0 | 1 | 13 | 7% |
@@ -608,6 +628,7 @@
 | Jake and Amir | Internet Comedy | 681 | 0 | 31 | 650 | 5% |
 | Moral Orel | Adult Swim | 43 | 1 | 1 | 41 | 5% |
 | Riverboat | Reality & Talk | 44 | 2 | 0 | 42 | 5% |
+| Scorpion | Streaming Era | 93 | 0 | 5 | 88 | 5% |
 | Secrets of the Dead | Documentary & Geographic | 128 | 3 | 3 | 122 | 5% |
 | Starsky & Hutch | Classic TV | 92 | 0 | 5 | 87 | 5% |
 | Step by Step | 90s Sitcoms | 160 | 1 | 7 | 152 | 5% |
@@ -644,6 +665,7 @@
 | Make Some Noise | Internet Comedy | 78 | 1 | 1 | 76 | 3% |
 | Matlock | Classic TV | 35 | 0 | 1 | 34 | 3% |
 | Rawhide | Classic TV | 218 | 0 | 7 | 211 | 3% |
+| Reacher | Streaming Era | 32 | 1 | 0 | 31 | 3% |
 | Red Shoe Diaries | Late Night | 66 | 1 | 1 | 64 | 3% |
 | Roswell | Sci-Fi, Fantasy and Horror | 61 | 2 | 0 | 59 | 3% |
 | Spartacus | Drama | 33 | 1 | 0 | 32 | 3% |
@@ -660,6 +682,7 @@
 | Co-Ed Confidential | Late Night | 52 | 0 | 1 | 51 | 2% |
 | Destination Truth | Documentary & Geographic | 55 | 1 | 0 | 54 | 2% |
 | Just Shoot Me | 90s Sitcoms | 148 | 3 | 0 | 145 | 2% |
+| Love, Death & Robots | Streaming Era | 45 | 0 | 1 | 44 | 2% |
 | NewsRadio | 90s Sitcoms | 97 | 0 | 2 | 95 | 2% |
 | Rugrats | Animated | 166 | 1 | 3 | 162 | 2% |
 | Sabrina the Teenage Witch | 90s Sitcoms | 163 | 3 | 1 | 159 | 2% |
@@ -710,6 +733,7 @@
 | Seinfeld | 90s Sitcoms | 180 | 0 | 1 | 179 | 1% |
 | Smosh | Internet Comedy | 1077 | 0 | 6 | 1071 | 1% |
 | Stargate SG-1 | Sci-Fi, Fantasy and Horror | 213 | 2 | 0 | 211 | 1% |
+| Steven Universe | Streaming Era | 154 | 0 | 1 | 153 | 1% |
 | That Time I Got Reincarnated as a Slime | Anime | 96 | 1 | 0 | 95 | 1% |
 | The Dukes of Hazzard | Classic TV | 147 | 1 | 1 | 145 | 1% |
 | The Facts of Life | Classic TV | 200 | 0 | 1 | 199 | 1% |
@@ -734,20 +758,25 @@
 | 16 and Pregnant | MTV | 70 | 0 | 0 | 70 | 0% |
 | 1883 | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | 1923 | Streaming Era | 15 | 0 | 0 | 15 | 0% |
+| 2 Broke Girls | Streaming Era | 138 | 0 | 0 | 138 | 0% |
 | 2 Days and 1 Night | Reality & Talk | 918 | 0 | 0 | 918 | 0% |
 | 25 Words or Less | Reality & Talk | 1204 | 0 | 0 | 1204 | 0% |
 | 3rd Rock from the Sun | 90s Sitcoms | 139 | 0 | 0 | 139 | 0% |
 | 7de Laan | Reality & Talk | 198 | 0 | 0 | 198 | 0% |
 | 7th Heaven | Drama | 243 | 0 | 0 | 243 | 0% |
+| 9-1-1 | Streaming Era | 146 | 0 | 0 | 146 | 0% |
+| 9-1-1: Lone Star | Streaming Era | 72 | 0 | 0 | 72 | 0% |
 | A Certain Dark Item | Anime | 12 | 0 | 0 | 12 | 0% |
 | A Certain Magical Index | Anime | 74 | 0 | 0 | 74 | 0% |
 | A Cook's Tour | Documentary & Geographic | 35 | 0 | 0 | 35 | 0% |
+| A Knight of the Seven Kingdoms | Streaming Era | 6 | 0 | 0 | 6 | 0% |
 | A Returner's Magic Should Be Special | Anime | 24 | 0 | 0 | 24 | 0% |
 | A Tale of the Secret Saint | Anime | 13 | 0 | 0 | 13 | 0% |
 | A Wild Last Boss Appeared! | Anime | 24 | 0 | 0 | 24 | 0% |
 | A.D. The Bible Continues | Streaming Era | 12 | 0 | 0 | 12 | 0% |
 | Ace of the Diamond | Anime | 202 | 0 | 0 | 202 | 0% |
 | Africa | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
+| Ahsoka | Streaming Era | 9 | 0 | 0 | 9 | 0% |
 | Akame ga Kill! | Anime | 24 | 0 | 0 | 24 | 0% |
 | Alchemy of Souls | World TV | 30 | 0 | 0 | 30 | 0% |
 | All in the Family | Classic TV | 210 | 0 | 0 | 210 | 0% |
@@ -761,6 +790,7 @@
 | American Idol | Reality & Talk | 730 | 0 | 0 | 730 | 0% |
 | American Pickers | Documentary & Geographic | 418 | 0 | 0 | 418 | 0% |
 | Anderson Cooper 360° | Reality & Talk | 2143 | 0 | 0 | 2143 | 0% |
+| Andor | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | Angel | Sci-Fi, Fantasy and Horror | 110 | 0 | 0 | 110 | 0% |
 | Annoying Orange | Internet Comedy | 843 | 0 | 0 | 843 | 0% |
 | Anohana: The Flower We Saw That Day | Anime | 11 | 0 | 0 | 11 | 0% |
@@ -817,6 +847,7 @@
 | Black Sails | Drama | 38 | 0 | 0 | 38 | 0% |
 | Bleach | Anime | 366 | 0 | 0 | 366 | 0% |
 | BLEND-S | Anime | 12 | 0 | 0 | 12 | 0% |
+| Blindspot | Streaming Era | 100 | 0 | 0 | 100 | 0% |
 | Blockbusters | Classic TV | 1513 | 1 | 0 | 1512 | 0% |
 | Blood+ | Anime | 12 | 0 | 0 | 12 | 0% |
 | Bloodhounds | World TV | 15 | 0 | 0 | 15 | 0% |
@@ -861,9 +892,12 @@
 | Chernobyl | Streaming Era | 5 | 0 | 0 | 5 | 0% |
 | Chewing Gum | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Chibi Maruko-chan | Anime | 1587 | 0 | 0 | 1587 | 0% |
+| Chicago Fire | Streaming Era | 299 | 0 | 0 | 299 | 0% |
 | Chicago Hope | Reality & Talk | 141 | 0 | 0 | 141 | 0% |
+| Chicago P.D. | Streaming Era | 268 | 0 | 0 | 268 | 0% |
 | Chihayafuru | Anime | 74 | 0 | 0 | 74 | 0% |
 | Children's Hospital | Adult Swim | 85 | 0 | 0 | 85 | 0% |
+| Chilling Adventures of Sabrina | Streaming Era | 36 | 0 | 0 | 36 | 0% |
 | Chobits | Anime | 24 | 0 | 0 | 24 | 0% |
 | Civil War Journal | Documentary & Geographic | 46 | 0 | 0 | 46 | 0% |
 | Civilisation | Documentary & Geographic | 13 | 0 | 0 | 13 | 0% |
@@ -899,12 +933,16 @@
 | Date A Live | Anime | 58 | 0 | 0 | 58 | 0% |
 | Date My Mom | MTV | 8 | 0 | 0 | 8 | 0% |
 | Dave | 2000s and Later Sitcoms | 30 | 0 | 0 | 30 | 0% |
+| DC's Legends of Tomorrow | Streaming Era | 110 | 0 | 0 | 110 | 0% |
 | De brutas nada | World TV | 20 | 0 | 0 | 20 | 0% |
 | Deadliest Catch | Documentary & Geographic | 385 | 0 | 0 | 385 | 0% |
 | Deadly Tag | Reality & Talk | 10 | 0 | 0 | 10 | 0% |
 | Deadwood | Drama | 36 | 0 | 0 | 36 | 0% |
 | Decker | Internet Comedy | 47 | 0 | 0 | 47 | 0% |
 | Deep Sea Detectives | Documentary & Geographic | 68 | 0 | 0 | 68 | 0% |
+| Def Comedy Jam | Late Night | 102 | 0 | 0 | 102 | 0% |
+| Def Poetry Jam | Late Night | 44 | 0 | 0 | 44 | 0% |
+| Defending Jacob | Streaming Era | 8 | 0 | 0 | 8 | 0% |
 | Delicious in Dungeon | Anime | 24 | 0 | 0 | 24 | 0% |
 | Departures | Documentary & Geographic | 42 | 0 | 0 | 42 | 0% |
 | Detroiters | 2000s and Later Sitcoms | 20 | 0 | 0 | 20 | 0% |
@@ -938,6 +976,7 @@
 | Egoli: Place of Gold | Reality & Talk | 2 | 0 | 0 | 2 | 0% |
 | El cor de la ciutat | Reality & Talk | 502 | 0 | 0 | 502 | 0% |
 | El marginal | World TV | 43 | 0 | 0 | 43 | 0% |
+| Elementary | Streaming Era | 154 | 0 | 0 | 154 | 0% |
 | Empire | Reality & Talk | 102 | 0 | 0 | 102 | 0% |
 | Enlightened | Drama | 18 | 0 | 0 | 18 | 0% |
 | Entourage | 2000s and Later Sitcoms | 96 | 0 | 0 | 96 | 0% |
@@ -966,11 +1005,13 @@
 | Flight of the Conchords | 2000s and Later Sitcoms | 22 | 0 | 0 | 22 | 0% |
 | Flower of Evil | World TV | 16 | 0 | 0 | 16 | 0% |
 | Fonejacker | British and Beyond | 12 | 0 | 0 | 12 | 0% |
+| Foundation | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | Frasier | 90s Sitcoms | 264 | 0 | 0 | 264 | 0% |
 | Free! | Anime | 37 | 0 | 0 | 37 | 0% |
 | Friday Night Dinner | British and Beyond | 37 | 0 | 0 | 37 | 0% |
 | Frieren: Beyond Journey's End | Anime | 38 | 0 | 0 | 38 | 0% |
 | Frisky Dingo | Adult Swim | 25 | 0 | 0 | 25 | 0% |
+| FROM | Streaming Era | 40 | 0 | 0 | 40 | 0% |
 | From Far Away | Anime | 12 | 0 | 0 | 12 | 0% |
 | Frontier | British and Beyond | 18 | 0 | 0 | 18 | 0% |
 | Full Clearing Another World Under a Goddess with Zero Believers | Anime | 12 | 0 | 0 | 12 | 0% |
@@ -998,20 +1039,27 @@
 | Good Eats | Documentary & Geographic | 264 | 0 | 0 | 264 | 0% |
 | Good Mythical Morning | Internet Comedy | 2754 | 0 | 0 | 2754 | 0% |
 | Gossip Girl | Drama | 121 | 0 | 0 | 121 | 0% |
+| Gotham | Streaming Era | 100 | 0 | 0 | 100 | 0% |
 | Grand Blue Dreaming | Anime | 36 | 0 | 0 | 36 | 0% |
 | Great Castles of Europe | Documentary & Geographic | 26 | 0 | 0 | 26 | 0% |
 | Great News | 2000s and Later Sitcoms | 23 | 0 | 0 | 23 | 0% |
 | Greenleaf | Streaming Era | 60 | 0 | 0 | 60 | 0% |
+| Grimm | Streaming Era | 123 | 0 | 0 | 123 | 0% |
 | Guardian: The Lonely and Great God | World TV | 16 | 0 | 0 | 16 | 0% |
 | Gunpowder | British and Beyond | 3 | 0 | 0 | 3 | 0% |
 | Gunsmoke | Classic TV | 635 | 0 | 0 | 635 | 0% |
 | Gute Zeiten, schlechte Zeiten | Reality & Talk | 1169 | 0 | 0 | 1169 | 0% |
+| Halo | Streaming Era | 17 | 0 | 0 | 17 | 0% |
+| Hannibal | Streaming Era | 39 | 0 | 0 | 39 | 0% |
 | Happiness | World TV | 12 | 0 | 0 | 12 | 0% |
+| Harley Quinn | Streaming Era | 56 | 0 | 0 | 56 | 0% |
 | Harlots | British and Beyond | 24 | 0 | 0 | 24 | 0% |
 | Hart to Hart | Classic TV | 110 | 0 | 0 | 110 | 0% |
 | Hasta que la plata nos separe | World TV | 163 | 0 | 0 | 163 | 0% |
 | Hatfields & McCoys | Drama | 3 | 0 | 0 | 3 | 0% |
+| Hawaii Five-0 | Streaming Era | 240 | 0 | 0 | 240 | 0% |
 | Healer | World TV | 20 | 0 | 0 | 20 | 0% |
+| Heartstopper | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | Hee Haw | Classic TV | 405 | 0 | 1 | 404 | 0% |
 | Helen of Troy | Drama | 2 | 0 | 0 | 2 | 0% |
 | Hello Saturday | Reality & Talk | 71 | 0 | 0 | 71 | 0% |
@@ -1027,6 +1075,7 @@
 | Horimiya | Anime | 13 | 0 | 0 | 13 | 0% |
 | Hot Ones | Internet Comedy | 420 | 0 | 0 | 420 | 0% |
 | Hot Streets | Adult Swim | 20 | 0 | 0 | 20 | 0% |
+| House of Cards | Streaming Era | 73 | 0 | 0 | 73 | 0% |
 | House of the Dragon | Streaming Era | 26 | 0 | 0 | 26 | 0% |
 | How I Met Your Mother | 2000s and Later Sitcoms | 208 | 0 | 1 | 207 | 0% |
 | How It's Made | Documentary & Geographic | 416 | 0 | 0 | 416 | 0% |
@@ -1054,6 +1103,7 @@
 | Investigating History | Documentary & Geographic | 20 | 0 | 0 | 20 | 0% |
 | Iron Chef | Documentary & Geographic | 250 | 0 | 0 | 250 | 0% |
 | Iron Chef America | Documentary & Geographic | 231 | 0 | 0 | 231 | 0% |
+| IT: Welcome to Derry | Streaming Era | 8 | 0 | 0 | 8 | 0% |
 | It's Always Sunny in Philadelphia | 2000s and Later Sitcoms | 187 | 0 | 0 | 187 | 0% |
 | It's Garry Shandling's Show | Classic TV | 72 | 0 | 0 | 72 | 0% |
 | Itaewon Class | World TV | 16 | 0 | 0 | 16 | 0% |
@@ -1098,6 +1148,7 @@
 | Law & Order | Drama | 548 | 0 | 1 | 547 | 0% |
 | Law of the Jungle | Reality & Talk | 408 | 0 | 1 | 407 | 0% |
 | Lazor Wulf | Adult Swim | 20 | 0 | 0 | 20 | 0% |
+| Legacies | Streaming Era | 68 | 0 | 0 | 68 | 0% |
 | Legit | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Let's Make a Deal | Classic TV | 1686 | 0 | 0 | 1686 | 0% |
 | Life | Documentary & Geographic | 32 | 0 | 0 | 32 | 0% |
@@ -1105,6 +1156,7 @@
 | Life on Earth | Documentary & Geographic | 13 | 0 | 0 | 13 | 0% |
 | Life on Top | Late Night | 26 | 0 | 0 | 26 | 0% |
 | Lingerie | Late Night | 31 | 0 | 0 | 31 | 0% |
+| Lioness | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | Little Dorrit | British and Beyond | 14 | 0 | 0 | 14 | 0% |
 | Little House on the Prairie | Classic TV | 8 | 0 | 0 | 8 | 0% |
 | Lodge 49 | Drama | 20 | 0 | 0 | 20 | 0% |
@@ -1121,6 +1173,7 @@
 | Louis Theroux's Weird Weekends | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Love Is in the Air | World TV | 24 | 0 | 0 | 24 | 0% |
 | Love Village | Reality & Talk | 56 | 0 | 0 | 56 | 0% |
+| Love, Victor | Streaming Era | 28 | 0 | 0 | 28 | 0% |
 | Loveline | Late Night | 7 | 0 | 0 | 7 | 0% |
 | Lovesick | British and Beyond | 22 | 0 | 0 | 22 | 0% |
 | Lucifer | Streaming Era | 93 | 0 | 0 | 93 | 0% |
@@ -1141,8 +1194,11 @@
 | Man, Moment, Machine | Documentary & Geographic | 27 | 0 | 0 | 27 | 0% |
 | Manhattan | Drama | 23 | 0 | 0 | 23 | 0% |
 | Maniac | Streaming Era | 10 | 0 | 0 | 10 | 0% |
+| Mare of Easttown | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | Marion and Geoff | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Martin | 90s Sitcoms | 132 | 0 | 0 | 132 | 0% |
+| Marvel's Daredevil | Streaming Era | 39 | 0 | 0 | 39 | 0% |
+| Marvel's The Punisher | Streaming Era | 26 | 0 | 0 | 26 | 0% |
 | Mary & George | British and Beyond | 7 | 0 | 0 | 7 | 0% |
 | Mary Shelley's Frankenhole | Adult Swim | 19 | 0 | 0 | 19 | 0% |
 | Masada | Classic TV | 4 | 0 | 0 | 4 | 0% |
@@ -1158,6 +1214,7 @@
 | Merlin | British and Beyond | 65 | 0 | 0 | 65 | 0% |
 | Metalocalypse | Adult Swim | 62 | 0 | 0 | 62 | 0% |
 | Middlemarch | British and Beyond | 6 | 0 | 0 | 6 | 0% |
+| MINDHUNTER | Streaming Era | 19 | 0 | 0 | 19 | 0% |
 | Miss Kobayashi's Dragon Maid | Anime | 25 | 0 | 0 | 25 | 0% |
 | Mo | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | Mob Psycho 100 | Anime | 37 | 0 | 0 | 37 | 0% |
@@ -1192,12 +1249,15 @@
 | Name That Tune | Classic TV | 75 | 0 | 0 | 75 | 0% |
 | NANA | Anime | 47 | 0 | 0 | 47 | 0% |
 | Napoleon | Drama | 4 | 0 | 0 | 4 | 0% |
+| Narcos | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | Naruto | Anime | 220 | 0 | 1 | 219 | 0% |
 | National Geographic Explorer | Documentary & Geographic | 245 | 0 | 0 | 245 | 0% |
 | Natsume's Book of Friends | Anime | 86 | 0 | 0 | 86 | 0% |
 | Nature | Documentary & Geographic | 695 | 0 | 2 | 693 | 0% |
 | Nature's Great Events | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
 | Neon Joe, Werewolf Hunter | Adult Swim | 10 | 0 | 0 | 10 | 0% |
+| Never Have I Ever | Streaming Era | 40 | 0 | 0 | 40 | 0% |
+| New Girl | Streaming Era | 146 | 0 | 0 | 146 | 0% |
 | Newlyweds: Nick and Jessica | MTV | 40 | 0 | 0 | 40 | 0% |
 | Newsreaders | Adult Swim | 24 | 0 | 0 | 24 | 0% |
 | Newton's Apple | Documentary & Geographic | 195 | 0 | 0 | 195 | 0% |
@@ -1214,27 +1274,34 @@
 | Noblesse | Anime | 13 | 0 | 0 | 13 | 0% |
 | Nogizaka Under Construction | Reality & Talk | 529 | 0 | 0 | 529 | 0% |
 | Noragami | Anime | 25 | 0 | 0 | 25 | 0% |
+| Normal People | Streaming Era | 12 | 0 | 0 | 12 | 0% |
 | North & South | British and Beyond | 15 | 0 | 0 | 15 | 0% |
 | Nosotros los Guapos | World TV | 70 | 0 | 0 | 70 | 0% |
 | Nova scienceNOW | Documentary & Geographic | 36 | 0 | 0 | 36 | 0% |
 | Now That I Can Control Reality With A Mouse Cursor, I'm Gonna Click Away On The Girls! | Anime | 3 | 0 | 0 | 3 | 0% |
 | On Cinema | Adult Swim | 163 | 0 | 0 | 163 | 0% |
 | On the Inside | Documentary & Geographic | 16 | 0 | 0 | 16 | 0% |
+| Once Upon a Time | Streaming Era | 156 | 0 | 0 | 156 | 0% |
 | One Tree Hill | Drama | 187 | 0 | 0 | 187 | 0% |
 | One-Punch Man | Anime | 36 | 0 | 0 | 36 | 0% |
+| Only Murders in the Building | Streaming Era | 60 | 0 | 0 | 60 | 0% |
 | ORESUKI Are you the only one who loves me? | Anime | 12 | 0 | 0 | 12 | 0% |
 | Our Planet | Documentary & Geographic | 12 | 0 | 0 | 12 | 0% |
+| Outer Banks | Streaming Era | 50 | 0 | 0 | 50 | 0% |
 | Outlander | Streaming Era | 101 | 0 | 0 | 101 | 0% |
 | Overflow | Anime | 8 | 0 | 0 | 8 | 0% |
 | Overgeared | Anime | 12 | 0 | 0 | 12 | 0% |
 | Overlord | Anime | 52 | 0 | 0 | 52 | 0% |
 | Oz | Drama | 56 | 0 | 0 | 56 | 0% |
+| Ozark | Streaming Era | 44 | 0 | 0 | 44 | 0% |
 | Parental Control | MTV | 278 | 0 | 0 | 278 | 0% |
 | Party Down | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Patriot | Streaming Era | 18 | 0 | 0 | 18 | 0% |
 | Pawn Stars | Documentary & Geographic | 686 | 0 | 0 | 686 | 0% |
+| Peacemaker | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | Penny Dreadful | Sci-Fi, Fantasy and Horror | 27 | 0 | 0 | 27 | 0% |
 | People Just Do Nothing | British and Beyond | 27 | 0 | 0 | 27 | 0% |
+| Person of Interest | Streaming Era | 103 | 0 | 0 | 103 | 0% |
 | Person to Person | Classic TV | 23 | 0 | 0 | 23 | 0% |
 | Peter the Great | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | Physical 100: Italy | Reality & Talk | 8 | 0 | 0 | 8 | 0% |
@@ -1243,6 +1310,7 @@
 | Players | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | Plunderer | Anime | 24 | 0 | 0 | 24 | 0% |
 | Portlandia | Sketch and Comedy | 77 | 0 | 0 | 77 | 0% |
+| Primal | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | Prohibition | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Project Runway | Reality & Talk | 303 | 1 | 0 | 302 | 0% |
 | Promised Land | Drama | 69 | 0 | 0 | 69 | 0% |
@@ -1298,9 +1366,11 @@
 | Scarlet Heart: Ryeo | World TV | 20 | 0 | 0 | 20 | 0% |
 | Scientific American Frontiers | Documentary & Geographic | 96 | 0 | 0 | 96 | 0% |
 | Scrabble | Classic TV | 38 | 0 | 0 | 38 | 0% |
+| SEAL Team | Streaming Era | 114 | 0 | 0 | 114 | 0% |
 | Search Party | 2000s and Later Sitcoms | 50 | 0 | 0 | 50 | 0% |
 | Secrets of Forensic Science | Documentary & Geographic | 29 | 0 | 0 | 29 | 0% |
 | Secrets of World War II | Documentary & Geographic | 26 | 0 | 0 | 26 | 0% |
+| See | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | Sex and the City | 90s Sitcoms | 94 | 0 | 0 | 94 | 0% |
 | Sex Education | Streaming Era | 32 | 0 | 0 | 32 | 0% |
 | Sexual Healing | Late Night | 9 | 0 | 0 | 9 | 0% |
@@ -1312,6 +1382,7 @@
 | Shōgun | Streaming Era | 6 | 0 | 0 | 6 | 0% |
 | Show! Music Core | Reality & Talk | 335 | 0 | 0 | 335 | 0% |
 | Silicon Valley | 2000s and Later Sitcoms | 53 | 0 | 0 | 53 | 0% |
+| Silo | Streaming Era | 31 | 0 | 0 | 31 | 0% |
 | Silver Spoons | Classic TV | 116 | 0 | 0 | 116 | 0% |
 | Simon & Simon | Classic TV | 156 | 0 | 0 | 156 | 0% |
 | Singled Out | MTV | 20 | 0 | 0 | 20 | 0% |
@@ -1333,16 +1404,22 @@
 | Spy | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Squidbillies | Adult Swim | 133 | 0 | 0 | 133 | 0% |
 | Star Trek | Classic TV | 79 | 0 | 0 | 79 | 0% |
+| Star vs. the Forces of Evil | Streaming Era | 134 | 0 | 0 | 134 | 0% |
+| Star Wars: The Bad Batch | Streaming Era | 47 | 0 | 0 | 47 | 0% |
 | Start-Up | World TV | 16 | 0 | 0 | 16 | 0% |
 | Stath Lets Flats | British and Beyond | 18 | 0 | 0 | 18 | 0% |
+| Station 19 | Streaming Era | 105 | 0 | 0 | 105 | 0% |
 | Stella | Sketch and Comedy | 58 | 0 | 0 | 58 | 0% |
 | Storage Wars | Documentary & Geographic | 368 | 0 | 0 | 368 | 0% |
 | Strangers with Candy | 90s Sitcoms | 30 | 0 | 0 | 30 | 0% |
 | Strong Girl Bong-soon | World TV | 16 | 0 | 0 | 16 | 0% |
+| Succession | Streaming Era | 39 | 0 | 0 | 39 | 0% |
 | Suikoden: The Anime | Anime | 2 | 0 | 0 | 2 | 0% |
 | Sunset Beach | Reality & Talk | 755 | 0 | 0 | 755 | 0% |
 | Super Password | Classic TV | 1147 | 0 | 0 | 1147 | 0% |
 | Super Psychic Policeman Chojo | Anime | 12 | 0 | 0 | 12 | 0% |
+| Supergirl | Streaming Era | 126 | 0 | 0 | 126 | 0% |
+| Superman & Lois | Streaming Era | 53 | 0 | 0 | 53 | 0% |
 | Survivor | Reality & Talk | 739 | 0 | 0 | 739 | 0% |
 | Survivorman | Documentary & Geographic | 51 | 0 | 0 | 51 | 0% |
 | Swarm | Streaming Era | 7 | 0 | 0 | 7 | 0% |
@@ -1352,7 +1429,9 @@
 | TANK CHAIR | Anime | 12 | 0 | 0 | 12 | 0% |
 | Taxi | Classic TV | 114 | 0 | 0 | 114 | 0% |
 | Taxicab Confessions | Late Night | 14 | 0 | 0 | 14 | 0% |
+| Ted Lasso | Streaming Era | 44 | 0 | 0 | 44 | 0% |
 | Teen Mom | MTV | 92 | 0 | 0 | 92 | 0% |
+| Teen Wolf | Streaming Era | 100 | 0 | 0 | 100 | 0% |
 | Teenage Euthanasia | Adult Swim | 17 | 0 | 0 | 17 | 0% |
 | Terra X | Documentary & Geographic | 221 | 0 | 0 | 221 | 0% |
 | TETSURYO! Meet with Tetsudou Musume | Anime | 2 | 0 | 0 | 2 | 0% |
@@ -1364,6 +1443,7 @@
 | The Andy Williams Show | Classic TV | 105 | 0 | 0 | 105 | 0% |
 | The Arena | Reality & Talk | 13 | 0 | 0 | 13 | 0% |
 | The Arsenio Hall Show | Classic TV | 158 | 0 | 0 | 158 | 0% |
+| The Bear | Streaming Era | 46 | 0 | 0 | 46 | 0% |
 | The Big Bang Theory | 2000s and Later Sitcoms | 279 | 0 | 0 | 279 | 0% |
 | The Big House | Documentary & Geographic | 19 | 0 | 0 | 19 | 0% |
 | The Big Valley | Classic TV | 112 | 0 | 0 | 112 | 0% |
@@ -1404,6 +1484,7 @@
 | The Elusive Samurai | Anime | 24 | 0 | 0 | 24 | 0% |
 | The Eminence in Shadow | Anime | 32 | 0 | 0 | 32 | 0% |
 | The Eric Andre Show | Adult Swim | 60 | 0 | 0 | 60 | 0% |
+| The Expanse | Streaming Era | 62 | 0 | 0 | 62 | 0% |
 | The Fast Show | British and Beyond | 26 | 0 | 0 | 26 | 0% |
 | The FBI Files | Documentary & Geographic | 118 | 0 | 0 | 118 | 0% |
 | The Flash | Sci-Fi, Fantasy and Horror | 184 | 0 | 0 | 184 | 0% |
@@ -1416,6 +1497,8 @@
 | The Great | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | The Greatest Ever | Documentary & Geographic | 10 | 0 | 0 | 10 | 0% |
 | The Guild | Internet Comedy | 70 | 0 | 0 | 70 | 0% |
+| The Handmaid's Tale | Streaming Era | 66 | 0 | 0 | 66 | 0% |
+| The Haunting of Hill House | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | The Head | MTV | 18 | 0 | 0 | 18 | 0% |
 | The Hills | MTV | 102 | 0 | 0 | 102 | 0% |
 | The Iceblade Sorcerer Shall Rule the World | Anime | 24 | 0 | 0 | 24 | 0% |
@@ -1433,6 +1516,7 @@
 | The L Word | Drama | 71 | 0 | 0 | 71 | 0% |
 | The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life | Anime | 12 | 0 | 0 | 12 | 0% |
 | The Last Czars | Streaming Era | 6 | 0 | 0 | 6 | 0% |
+| The Last Dance | Streaming Era | 10 | 0 | 0 | 10 | 0% |
 | The Last Kingdom | Streaming Era | 46 | 0 | 0 | 46 | 0% |
 | The Last of Us | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | The Late Late Show with Craig Ferguson | Reality & Talk | 2119 | 0 | 0 | 2119 | 0% |
@@ -1441,6 +1525,8 @@
 | The Late Show with Stephen Colbert | Reality & Talk | 1807 | 0 | 0 | 1807 | 0% |
 | The League of Gentlemen | British and Beyond | 21 | 0 | 0 | 21 | 0% |
 | The Leftovers | Drama | 28 | 0 | 0 | 28 | 0% |
+| The Legend of Korra | Streaming Era | 52 | 0 | 0 | 52 | 0% |
+| The Lord of the Rings: The Rings of Power | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | The Mandalorian | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | The Maury Povich Show | Classic TV | 973 | 0 | 0 | 973 | 0% |
 | The Men Who Built America | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
@@ -1457,12 +1543,16 @@
 | The Office | 2000s and Later Sitcoms | 202 | 0 | 0 | 202 | 0% |
 | The One Show | Reality & Talk | 4268 | 0 | 0 | 4268 | 0% |
 | The Oprah Winfrey Show | Classic TV | 25 | 0 | 0 | 25 | 0% |
+| The Originals | Streaming Era | 92 | 0 | 0 | 92 | 0% |
 | The Other Two | 2000s and Later Sitcoms | 30 | 0 | 0 | 30 | 0% |
+| The Owl House | Streaming Era | 43 | 0 | 0 | 43 | 0% |
 | The Pacific | Drama | 10 | 0 | 0 | 10 | 0% |
+| The Penguin | Streaming Era | 8 | 0 | 0 | 8 | 0% |
 | The Perry Como Show | Classic TV | 14 | 0 | 0 | 14 | 0% |
 | The Pillars of the Earth | Drama | 8 | 0 | 0 | 8 | 0% |
 | The Polygamist | Reality & Talk | 22 | 0 | 0 | 22 | 0% |
 | The Price Is Right | Classic TV | 7169 | 0 | 0 | 7169 | 0% |
+| The Queen's Gambit | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | The Quintessential Quintuplets | Anime | 24 | 0 | 0 | 24 | 0% |
 | The Rachel Maddow Show | Reality & Talk | 3379 | 0 | 0 | 3379 | 0% |
 | The Real West | Documentary & Geographic | 65 | 0 | 0 | 65 | 0% |
@@ -1470,8 +1560,10 @@
 | The Red Skelton Show | Classic TV | 478 | 0 | 0 | 478 | 0% |
 | The Rehearsal | 2000s and Later Sitcoms | 12 | 0 | 0 | 12 | 0% |
 | The Ren & Stimpy Show | Animated | 26 | 0 | 0 | 26 | 0% |
+| The Resident | Streaming Era | 107 | 0 | 0 | 107 | 0% |
 | The Ricki Lake Show | Classic TV | 2 | 0 | 0 | 2 | 0% |
 | The Righteous Gemstones | 2000s and Later Sitcoms | 36 | 0 | 0 | 36 | 0% |
+| The Rookie | Streaming Era | 145 | 0 | 0 | 145 | 0% |
 | The Sarah Silverman Program | 2000s and Later Sitcoms | 32 | 0 | 0 | 32 | 0% |
 | The Secret Lives of Mormon Wives | Reality & Talk | 43 | 0 | 0 | 43 | 0% |
 | The Serpent Queen | Drama | 16 | 0 | 0 | 16 | 0% |
@@ -1483,6 +1575,8 @@
 | The Sopranos | Drama | 86 | 0 | 0 | 86 | 0% |
 | The Spanish Princess | Drama | 16 | 0 | 0 | 16 | 0% |
 | The State | MTV | 24 | 0 | 0 | 24 | 0% |
+| The Strain | Streaming Era | 46 | 0 | 0 | 46 | 0% |
+| The Terminal List | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | The Terror | Drama | 26 | 0 | 0 | 26 | 0% |
 | The Thorn Birds | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | The Tonight Show Starring Jimmy Fallon | Reality & Talk | 2359 | 0 | 0 | 2359 | 0% |
@@ -1498,6 +1592,7 @@
 | The Voice | Reality & Talk | 703 | 0 | 0 | 703 | 0% |
 | The War | Documentary & Geographic | 7 | 0 | 0 | 7 | 0% |
 | The Way of the Househusband | Anime | 15 | 0 | 0 | 15 | 0% |
+| The White Lotus | Streaming Era | 21 | 0 | 0 | 21 | 0% |
 | The White Princess | Drama | 8 | 0 | 0 | 8 | 0% |
 | The White Queen | British and Beyond | 10 | 0 | 0 | 10 | 0% |
 | The Wire | Drama | 60 | 0 | 0 | 60 | 0% |
@@ -1508,6 +1603,7 @@
 | The World's Strongest Witch | Anime | 3 | 0 | 0 | 3 | 0% |
 | The Young Indiana Jones Chronicles | Drama | 28 | 0 | 0 | 28 | 0% |
 | Thirtysomething | Classic TV | 85 | 0 | 0 | 85 | 0% |
+| This Is Us | Streaming Era | 106 | 0 | 0 | 106 | 0% |
 | This Is Your Life | Classic TV | 497 | 0 | 0 | 497 | 0% |
 | This Time with Alan Partridge | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Those About to Die | Streaming Era | 10 | 0 | 0 | 10 | 0% |
@@ -1538,6 +1634,7 @@
 | Truth or Consequences | Classic TV | 1 | 0 | 0 | 1 | 0% |
 | TSUKIMICHI -Moonlit Fantasy- | Anime | 37 | 0 | 0 | 37 | 0% |
 | Tuca & Bertie | Animated | 30 | 0 | 0 | 30 | 0% |
+| Tulsa King | Streaming Era | 39 | 0 | 0 | 39 | 0% |
 | Turn: Washington's Spies | Drama | 40 | 0 | 0 | 40 | 0% |
 | Twenty-One | Classic TV | 16 | 0 | 0 | 16 | 0% |
 | Two and a Half Men | 2000s and Later Sitcoms | 262 | 0 | 0 | 262 | 0% |
@@ -1594,13 +1691,17 @@
 | Wonders of the Solar System | Documentary & Geographic | 5 | 0 | 0 | 5 | 0% |
 | World Without End | Drama | 8 | 0 | 0 | 8 | 0% |
 | WWE Superstars | Reality & Talk | 23 | 0 | 0 | 23 | 0% |
+| Yellowstone | Streaming Era | 53 | 0 | 0 | 53 | 0% |
 | Yes Minister | Classic TV | 21 | 0 | 0 | 21 | 0% |
 | Yo! MTV Raps | MTV | 8 | 0 | 0 | 8 | 0% |
 | YOLO: Crystal Fantasy | Adult Swim | 24 | 0 | 0 | 24 | 0% |
 | Yona of the Dawn | Anime | 24 | 0 | 0 | 24 | 0% |
+| You | Streaming Era | 50 | 0 | 0 | 50 | 0% |
 | You and I Are Polar Opposites | Anime | 25 | 0 | 0 | 25 | 0% |
 | You Quiz on the Block | Reality & Talk | 218 | 0 | 0 | 218 | 0% |
 | You're the Worst | 2000s and Later Sitcoms | 62 | 0 | 0 | 62 | 0% |
+| Young Justice | Streaming Era | 98 | 0 | 0 | 98 | 0% |
+| Your Honor | Streaming Era | 20 | 0 | 0 | 20 | 0% |
 | Your Show of Shows | Classic TV | 150 | 0 | 0 | 150 | 0% |
 | Yu Yu Hakusho | Anime | 5 | 0 | 0 | 5 | 0% |
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
