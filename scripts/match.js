@@ -234,7 +234,10 @@ function matchShow(entry) {
   const placed = live + review;
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
   if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
-    const cand2 = { ...cand, items: cand.items.map((it) => ({ ...it, files: it.files.filter((f) => { const d = fileDate(f.name) || fileDate(it.title || ''); return !(d && firstYear && +d.slice(0, 4) < firstYear); }) })) };
+    // Extras, bonus discs and promo reels are not episodes; nor are clips a fraction of the show's runtime when the runtime is known.
+    const EXTRAS = /\b(extras?|bonus|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|promos?|trailers?|interviews?|outtakes?|making of|commentary)\b/i;
+    const minSec = tv.runtime >= 15 ? tv.runtime * 60 * 0.4 : 0;
+    const cand2 = { ...cand, items: cand.items.filter((it) => !EXTRAS.test(it.title || '') && !EXTRAS.test(it.id || '')).map((it) => ({ ...it, files: it.files.filter((f) => { if (f.seconds && f.seconds < minSec) return false; if (EXTRAS.test(f.name || '')) return false; const d = fileDate(f.name) || fileDate(it.title || ''); return !(d && firstYear && +d.slice(0, 4) < firstYear); }) })) };
     const sg = selfGrid(entry, cand2, aliases);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
     if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; writeRetry(path.join(OUT_DIR, sg.slug + '.json'), JSON.stringify(sg, null, 2)); return sg; }
@@ -260,12 +263,12 @@ function selfGrid(entry, cand, aliases) {
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
-  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies)/i;
+  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)/i;
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));
     const named = names(item.title || '') || idn.includes(core.replace(/ /g, ''));
-    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !/(podcast|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies)/i.test(f.name));
+    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !/(podcast|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)/i.test(f.name));
     const distinct = new Set(vids.map((f) => norm(f.name).replace(/(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)/g, '').trim())).size; // format variants count once
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
     const net = norm(entry.network || '').replace(/ /g, '');
