@@ -1,6 +1,6 @@
 # Coverage
 
-1719 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1728 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -529,6 +529,7 @@
 | Zero Punctuation | Internet Comedy | 1240 | 0 | 721 | 519 | 58% |
 | Cranford | British and Beyond | 7 | 4 | 0 | 3 | 57% |
 | Tale of the Nine Tailed | World TV | 28 | 0 | 16 | 12 | 57% |
+| Eve | 2000s and Later Sitcoms | 16 | 0 | 9 | 7 | 56% |
 | Legion | Sci-Fi, Fantasy and Horror | 27 | 0 | 15 | 12 | 56% |
 | Powerpuff Girls Z | Anime | 52 | 0 | 29 | 23 | 56% |
 | The Mary Tyler Moore Show | Classic TV | 168 | 48 | 46 | 74 | 56% |
@@ -682,6 +683,7 @@
 | Attack on Titan | Anime | 89 | 0 | 10 | 79 | 11% |
 | Cartoon Planet | Adult Swim | 146 | 0 | 16 | 130 | 11% |
 | The Hollywood Squares | Classic TV | 1077 | 72 | 49 | 956 | 11% |
+| Cuts | 2000s and Later Sitcoms | 31 | 0 | 3 | 28 | 10% |
 | Fraggle Rock | Classic TV | 96 | 8 | 2 | 86 | 10% |
 | Laverne & Shirley | Classic TV | 178 | 17 | 0 | 161 | 10% |
 | Playboy After Dark | Classic TV | 52 | 5 | 0 | 47 | 10% |
@@ -732,6 +734,7 @@
 | Miami Vice | Classic TV | 110 | 2 | 2 | 106 | 4% |
 | PEN15 | Streaming Era | 24 | 1 | 0 | 23 | 4% |
 | Rick and Morty | Adult Swim | 91 | 2 | 2 | 87 | 4% |
+| Signed, Sealed, Delivered | Streaming Era | 24 | 0 | 1 | 23 | 4% |
 | Solid Gold | Classic TV | 342 | 8 | 4 | 330 | 4% |
 | Star Wars: The Bad Batch | Streaming Era | 47 | 2 | 0 | 45 | 4% |
 | Stewart Lee's Comedy Vehicle | British and Beyond | 24 | 1 | 0 | 23 | 4% |
@@ -851,6 +854,7 @@
 | Akame ga Kill! | Anime | 24 | 0 | 0 | 24 | 0% |
 | Alchemy of Souls | World TV | 30 | 0 | 0 | 30 | 0% |
 | All in the Family | Classic TV | 210 | 0 | 0 | 210 | 0% |
+| All of Us | 2000s and Later Sitcoms | 88 | 0 | 0 | 88 | 0% |
 | Amazing Medical Stories | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
 | Amazing Saturday | Reality & Talk | 441 | 0 | 0 | 441 | 0% |
 | America Undercover | Late Night | 79 | 0 | 0 | 79 | 0% |
@@ -1095,6 +1099,7 @@
 | Gomer Pyle, U.S.M.C. | Classic TV | 150 | 0 | 0 | 150 | 0% |
 | Good Day Live | Reality & Talk | 136 | 0 | 0 | 136 | 0% |
 | Good Eats | Documentary & Geographic | 264 | 0 | 0 | 264 | 0% |
+| Good Witch | Streaming Era | 68 | 0 | 0 | 68 | 0% |
 | Gossip Girl | Drama | 121 | 0 | 0 | 121 | 0% |
 | Gotham | Streaming Era | 100 | 0 | 0 | 100 | 0% |
 | Grand Blue Dreaming | Anime | 36 | 0 | 0 | 36 | 0% |
@@ -1106,6 +1111,7 @@
 | Gunpowder | British and Beyond | 3 | 0 | 0 | 3 | 0% |
 | Gunsmoke | Classic TV | 635 | 0 | 0 | 635 | 0% |
 | Gute Zeiten, schlechte Zeiten | Reality & Talk | 1169 | 0 | 0 | 1169 | 0% |
+| Half & Half | 2000s and Later Sitcoms | 92 | 0 | 0 | 92 | 0% |
 | Halo | Streaming Era | 17 | 0 | 0 | 17 | 0% |
 | Hannibal | Streaming Era | 39 | 0 | 0 | 39 | 0% |
 | Happiness | World TV | 12 | 0 | 0 | 12 | 0% |
@@ -1324,6 +1330,7 @@
 | On Cinema | Adult Swim | 163 | 0 | 0 | 163 | 0% |
 | On the Inside | Documentary & Geographic | 16 | 0 | 0 | 16 | 0% |
 | Once Upon a Time | Streaming Era | 156 | 0 | 0 | 156 | 0% |
+| One on One | 2000s and Later Sitcoms | 113 | 0 | 0 | 113 | 0% |
 | One Tree Hill | Drama | 187 | 0 | 0 | 187 | 0% |
 | One-Punch Man | Anime | 36 | 0 | 0 | 36 | 0% |
 | Only Murders in the Building | Streaming Era | 60 | 0 | 0 | 60 | 0% |
@@ -1364,6 +1371,7 @@
 | Ramy | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | Ready, Steady, Cook | Reality & Talk | 7 | 0 | 0 | 7 | 0% |
 | Real Girl | Anime | 24 | 0 | 0 | 24 | 0% |
+| Real Husbands of Hollywood | 2000s and Later Sitcoms | 58 | 0 | 0 | 58 | 0% |
 | Really Big Things | Documentary & Geographic | 20 | 0 | 0 | 20 | 0% |
 | Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship! | Anime | 12 | 0 | 0 | 12 | 0% |
 | REBORN! | Anime | 23 | 0 | 0 | 23 | 0% |
@@ -1519,6 +1527,7 @@
 | The Forsyte Saga | British and Beyond | 13 | 0 | 0 | 13 | 0% |
 | The French Revolution | Documentary & Geographic | 2 | 0 | 0 | 2 | 0% |
 | The Fresh Prince of Bel-Air | 90s Sitcoms | 148 | 0 | 0 | 148 | 0% |
+| The Game | 2000s and Later Sitcoms | 8 | 0 | 0 | 8 | 0% |
 | The Gilded Age | Drama | 26 | 0 | 0 | 26 | 0% |
 | The Golden Girls | Classic TV | 180 | 0 | 0 | 180 | 0% |
 | The Gong Show | Classic TV | 20 | 0 | 0 | 20 | 0% |
