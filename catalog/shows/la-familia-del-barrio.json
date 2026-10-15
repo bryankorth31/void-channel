@@ -1,0 +1,49 @@
+{
+  "show": "La Familia del Barrio",
+  "slug": "la-familia-del-barrio",
+  "type": "World TV",
+  "network": "MX",
+  "matchedAt": "2026-10-15T01:19:17.314Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "La Familia del Barrio",
+    "runtime": null,
+    "premiered": null,
+    "network": "MX"
+  },
+  "coverage": {
+    "total": 1,
+    "live": 0,
+    "review": 1,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "la-familia-del-barrio_202607",
+            "itemTitle": "La Familia Del Barrio",
+            "file": "La Familia del Barrio.mp4",
+            "name": "La Familia del Barrio",
+            "url": "https://archive.org/download/la-familia-del-barrio_202607/La%20Familia%20del%20Barrio.mp4",
+            "seconds": 4687,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 795,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

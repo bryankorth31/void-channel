@@ -1,0 +1,69 @@
+{
+  "show": "El marginal",
+  "slug": "el-marginal",
+  "type": "World TV",
+  "network": "AR",
+  "matchedAt": "2026-10-15T01:19:17.317Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "El marginal",
+    "runtime": null,
+    "premiered": null,
+    "network": "AR"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "el-marginal-3x-01",
+            "itemTitle": "El Marginal 3- 01",
+            "file": "El Marginal 3×01.mp4",
+            "name": "El Marginal 3×01",
+            "url": "https://archive.org/download/el-marginal-3x-01/El%20Marginal%203%C3%9701.mp4",
+            "seconds": 3909,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 495,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "el-marginal-t-5-c-1",
+            "itemTitle": "El Marginal T 5 C 1",
+            "file": "El Marginal T5 C1.mp4",
+            "name": "El Marginal T5 C1",
+            "url": "https://archive.org/download/el-marginal-t-5-c-1/El%20Marginal%20T5%20C1.mp4",
+            "seconds": 2964,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "show": "Flower of Evil",
+  "slug": "flower-of-evil",
+  "type": "World TV",
+  "network": "KR",
+  "matchedAt": "2026-10-15T01:19:17.307Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Flower of Evil",
+    "runtime": null,
+    "premiered": null,
+    "network": "KR"
+  },
+  "coverage": {
+    "total": 1,
+    "live": 0,
+    "review": 1,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "of evil1 merged",
+          "state": "REVIEW",
+          "file": {
+            "item": "flower-of-evil-1-merged_20220724",
+            "itemTitle": "Flower Of Evil 1 Merged",
+            "file": "Flower Of Evil1__Merged.mp4",
+            "name": "Flower Of Evil1__Merged",
+            "url": "https://archive.org/download/flower-of-evil-1-merged_20220724/Flower%20Of%20Evil1__Merged.mp4",
+            "seconds": 2391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 261,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

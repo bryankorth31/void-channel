@@ -1,0 +1,69 @@
+{
+  "show": "Queen of Tears",
+  "slug": "queen-of-tears",
+  "type": "World TV",
+  "network": "KR",
+  "matchedAt": "2026-10-15T01:19:17.312Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Queen of Tears",
+    "runtime": null,
+    "premiered": null,
+    "network": "KR"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "nunadrama of e07",
+          "state": "REVIEW",
+          "file": {
+            "item": "nunadrama-queen-of-tears-e-07.360p",
+            "itemTitle": "Queen Of Tears E 07",
+            "file": "[nunadrama]_Queen_of_Tears_E07.360p.ia.mp4",
+            "name": "[nunadrama]_Queen_of_Tears_E07",
+            "url": "https://archive.org/download/nunadrama-queen-of-tears-e-07.360p/%5Bnunadrama%5D_Queen_of_Tears_E07.360p.ia.mp4",
+            "seconds": 5015,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 186,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "nunadrama of e07",
+          "state": "REVIEW",
+          "file": {
+            "item": "nunadrama-queen-of-tears-e-07.360p",
+            "itemTitle": "Queen Of Tears E 07",
+            "file": "[nunadrama]_Queen_of_Tears_E07.360p.mp4",
+            "name": "[nunadrama]_Queen_of_Tears_E07.360p",
+            "url": "https://archive.org/download/nunadrama-queen-of-tears-e-07.360p/%5Bnunadrama%5D_Queen_of_Tears_E07.360p.mp4",
+            "seconds": 5015,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 186,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

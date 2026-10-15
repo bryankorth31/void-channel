@@ -1,0 +1,69 @@
+{
+  "show": "Lupin",
+  "slug": "lupin",
+  "type": "World TV",
+  "network": "FR",
+  "matchedAt": "2026-10-15T01:19:17.276Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Lupin",
+    "runtime": null,
+    "premiered": null,
+    "network": "FR"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the third hemingway papers premiere",
+          "state": "REVIEW",
+          "file": {
+            "item": "lupin-hemingway-papers-vhsrip",
+            "itemTitle": "[VHS RIP, Premiere] Lupin The Third: Hemingway Papers (W/ Commercials)",
+            "file": "[VHS RIP] Lupin The Third - Hemingway Papers (PREMIERE).mp4",
+            "name": "[VHS RIP] Lupin The Third - Hemingway Papers (PREMIERE)",
+            "url": "https://archive.org/download/lupin-hemingway-papers-vhsrip/%5BVHS%20RIP%5D%20Lupin%20The%20Third%20-%20Hemingway%20Papers%20(PREMIERE).mp4",
+            "seconds": 6561,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2189,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "lupin-inuyasha-tape-february-2003-adult-swim",
+            "itemTitle": "Adult Swim WOC VHS Recording (February 4-6, 2003)",
+            "file": "2026-04-12 10-10-46(1).mp4",
+            "name": "2026-04-12 10-10-46(1)",
+            "url": "https://archive.org/download/lupin-inuyasha-tape-february-2003-adult-swim/2026-04-12%2010-10-46(1).mp4",
+            "seconds": 10705,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 4104,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
