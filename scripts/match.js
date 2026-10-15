@@ -88,6 +88,7 @@ function loadTv(show) {
 
 // Does this text name a DIFFERENT show from our list? (right length, wrong show guard)
 const OTHER_SHOWS = LIST.shows.map((s) => ({ name: s.name, core: norm(s.name).replace(/^the /, '') })).filter((s) => s.core.split(' ').length >= 2 || s.core.length >= 6);
+function otherShowCores(text, show) { const t = norm(text), me = norm(show).replace(/^the /, ''); return OTHER_SHOWS.filter((o) => o.core !== me && !me.includes(o.core) && !o.core.includes(me) && t.includes(o.core)).map((o) => o.core); }
 function namesOtherShow(text, show) {
   const t = norm(text), me = norm(show).replace(/^the /, '');
   return OTHER_SHOWS.some((o) => o.core !== me && !me.includes(o.core) && !o.core.includes(me) && t.includes(o.core));
@@ -121,6 +122,7 @@ function matchShow(entry) {
     const unmatched = []; // episode-band files this item could not place by number or title
     for (const f of item.files) {
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
+      if (!tv.runtime && (f.band === 'half-hour' || f.band === 'hour' || f.band === 'short')) f.band = 'episode';
       if (tv.runtime && f.seconds && !(f.band === 'episode' || f.band === 'double')) { const m = f.seconds / 60, rt = tv.runtime; f.band = m < 4 ? 'clip' : (m >= rt * 0.7 && m <= rt * 1.35) ? 'episode' : (m >= rt * 1.7 && m <= rt * 2.5) ? 'double' : m > rt * 4 ? 'block' : 'odd'; }
       if (!(f.band === 'episode' || f.band === 'double')) continue;
       const fileNamesOther = namesOtherShow(f.name, show);
@@ -152,7 +154,9 @@ function matchShow(entry) {
         if (!namesShow(f.name) && !itemTitled) conf -= 0.5; // only the description mentioned us: a spin-off, a same-cast show, a dump
         // Reaction and review channels upload "S01E01 - Title - Group Reaction": the right name, the wrong video (B caught Sunny and FMA, 2026-10-14).
         if (REACT.test(f.name) || REACT.test(item.title || '')) conf -= 0.7;
-        if (fileNamesOther) conf -= 0.6; else if (itemNamesOther && !namesShow(f.name)) conf -= 0.4; // "Star Trek" in the file is not "Star Trek: Enterprise"
+        // An episode title that happens to be another show's name ("Blind Date", "Succession") is not a foreign file when the file also names our show.
+        const fileOther = fileNamesOther && !(namesShow(f.name) && otherShowCores(f.name, show).every((core) => norm(c.ep.name).includes(core)));
+        if (fileOther) conf -= 0.6; else if (itemNamesOther && !namesShow(f.name)) conf -= 0.4; // "Star Trek" in the file is not "Star Trek: Enterprise"
         else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) conf -= 0.45; // foreign title: words that are neither the show nor an episode
         const foreign = !!(langRisk(f.name) || langRisk(item.title));
         if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
@@ -279,10 +283,14 @@ function writeCoverage(rows) {
 }
 
 function main() {
-  const filter = (process.argv[2] || '').toLowerCase();
-  const partial = !!filter;
+  const argv = process.argv.slice(2);
+  const slugAt = argv.indexOf('--slug');
+  const slugFilter = slugAt >= 0 ? argv[slugAt + 1] : null; // HQ passes the exact slug; a name substring would sweep in every title containing it
+  const filter = slugFilter ? '' : (argv.find((a) => !a.startsWith('--')) || '').toLowerCase();
+  const partial = !!(filter || slugFilter);
   const rows = [];
   for (const entry of LIST.shows) {
+    if (slugFilter && slug(entry.name) !== slugFilter) continue;
     if (filter && !entry.name.toLowerCase().includes(filter)) continue;
     const r = matchShow(entry);
     if (!r) continue;

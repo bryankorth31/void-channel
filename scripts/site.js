@@ -48,7 +48,9 @@ for (const s of data.shows) {
 // www and the old Pages address fold into the bare domain once voidtv.net is attached (host-level rules are inert until then).
 const HOST = ORIGIN.replace(/^https?:\/\//, '');
 const hostRules = HOST === 'voidtv.net' ? 'https://www.voidtv.net/* https://voidtv.net/:splat 301\n' : '';
-fs.writeFileSync(path.join(OUT, '_redirects'), hostRules + '/show/* /index.html 200\n/person/* /index.html 200\n/tv /index.html 200\n/tv/* /index.html 200\n/me /index.html 200\n/about /index.html 200\n/cash /index.html 200\n');
+// Only the host rule. Pages serves index.html for unknown paths on its own (no 404.html ships), and a /show/* 200 rule
+// would shadow the prerendered /show/<slug>/index.html pages that carry the share-card meta.
+fs.writeFileSync(path.join(OUT, '_redirects'), hostRules);
 // Pages Functions live beside the output: the password gate (functions/_middleware.js) only runs
 // when the SITE_PASSWORD variable is set on the Pages project.
 const fnSrc = path.join(ROOT, 'functions');

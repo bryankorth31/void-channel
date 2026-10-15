@@ -12,7 +12,7 @@ const LOG = path.join(ROOT, 'catalog', 'cache', 'publish.log');
 const log = (m) => { const line = `${new Date().toISOString()} ${m}`; console.log(line); try { fs.mkdirSync(path.dirname(LOG), { recursive: true }); fs.appendFileSync(LOG, line + '\n'); } catch (_) {} };
 
 try {
-  run('git add -A catalog docs');
+  run('git add -A catalog docs scripts/show-list.json'); // the list is edited by HQ and read by the site build
   const changed = run('git diff --cached --name-only').split('\n').filter(Boolean);
   if (!changed.length) { log('nothing new'); process.exit(0); }
   const { assemble } = require('./lib/app');

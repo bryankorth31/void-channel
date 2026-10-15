@@ -19,6 +19,8 @@ button{background:#5fd4ff;border:0;color:#07080c;padding:12px 18px;border-radius
 </style></head><body><form method="post"><p>before AI slop, there was human creativity</p>
 <input type="password" name="p" placeholder="password" autofocus><button>enter</button>${wrong ? '<div class="w">not it</div>' : ''}</form></body></html>`;
 
+// After the password: back to the page they asked for, never to //evil.example/… (a protocol-relative open redirect).
+const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\/+/, '/'); return (/^\/[^\\]*$/.test(p) ? p : '/') + x.search; };
 export async function onRequest({ request, env, next }) {
   const secret = env.SITE_PASSWORD;
   if (!secret) return next();
@@ -31,7 +33,7 @@ export async function onRequest({ request, env, next }) {
     if (form && form.get('p') === secret) {
       const host = new URL(request.url).hostname;
       const domain = /(^|\.)voidtv\.net$/.test(host) ? '; Domain=voidtv.net' : ''; // one password for www and the bare domain
-      return new Response(null, { status: 303, headers: { Location: new URL(request.url).pathname || '/', 'Set-Cookie': `${COOKIE}=${want}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax${domain}` } });
+      return new Response(null, { status: 303, headers: { Location: safePath(request.url), 'Set-Cookie': `${COOKIE}=${want}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax${domain}` } });
     }
     return new Response(PAGE(true), { status: 401, headers: { 'content-type': 'text/html; charset=utf-8' } });
   }

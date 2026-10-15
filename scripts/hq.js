@@ -29,7 +29,7 @@ const FILES = {
 };
 const readJson = (p, fb) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fb; } };
 const writeJson = (p, v) => { const tmp = p + '.tmp'; fs.writeFileSync(tmp, JSON.stringify(v, null, 2) + '\n'); fs.renameSync(tmp, p); };
-const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const slugify = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-'); // identical to match.js slug(): apostrophes vanish, & becomes and
 const tail = (p, lines) => { try { return fs.readFileSync(p, 'utf8').trim().split('\n').slice(-lines).join('\n'); } catch (e) { return ''; } };
 
 // ---- catalog views ----------------------------------------------------------------------------
@@ -127,7 +127,9 @@ const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
 function startJob(name, args) {
   if (!SCRIPTS.has(name)) throw new Error('unknown script ' + name);
-  args = (args || []).map(String).filter((a) => /^[\w .,'&:()+\-"]*$/.test(a)).slice(0, 20);
+  args = (args || []).map(String).slice(0, 20);
+  const bad = args.find((a) => !/^[\w .,'&:()+\-"!?\/\u00C0-\u024F]*$/.test(a));
+  if (bad) throw new Error('argument not allowed: ' + bad); // never silently drop an argument: a dropped show name turns a one-show job into a full run
   fs.mkdirSync(CACHE, { recursive: true });
   const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
   const log = path.join(CACHE, `hq-${name}-${id}.log`);
@@ -207,6 +209,13 @@ const body = (req) => new Promise((ok, no) => { let d = ''; req.on('data', (c) =
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://x');
   const p = url.pathname;
+  // Local only: a web page in the owner's browser must not be able to drive HQ (publish, taskkill, overrides).
+  const host = req.headers.host || '', origin = req.headers.origin || '';
+  const local = (h) => /^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$/.test(h);
+  if (!local(host)) return send(res, 403, { error: 'HQ answers localhost only' });
+  if (origin && !local(origin.replace(/^https?:\/\//, ''))) return send(res, 403, { error: 'cross-origin request refused' });
+  if (req.method === 'POST' && p !== '/api/probe' && !/application\/json/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'JSON only' });
+  const SLUG_OK = /^[a-z0-9][a-z0-9-]*$/;
   try {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html')), MIME['.html']);
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
@@ -214,13 +223,14 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/shows') return send(res, 200, { types: readJson(FILES.list, { types: [] }).types, rows: showRows() });
     if (p.startsWith('/api/show/')) {
       const slug = decodeURIComponent(p.slice(10));
+      if (!SLUG_OK.test(slug)) return send(res, 400, { error: 'bad slug' });
       const LIST = readJson(FILES.list, { shows: [] });
       const entry = LIST.shows.find((s) => slugify(s.name) === slug) || null;
       const grid = readJson(path.join(FILES.shows, slug + '.json'), null);
       const cand = readJson(path.join(FILES.candidates, slug + '.json'), null);
       return send(res, 200, { entry, grid, overrides: readJson(FILES.overrides, {})[slug] || {}, art: readJson(FILES.art, {})[slug] || null, candidates: cand ? { items: (cand.items || []).length, files: (cand.items || []).reduce((n, it) => n + (it.files || []).length, 0), at: cand.at || cand.huntedAt || null } : null });
     }
-    if (p.startsWith('/api/override/') && req.method === 'POST') { const slug = decodeURIComponent(p.slice(14)); const b = await body(req); const ov = patchOverride(slug, b); let job = null; if (b.rematch !== false) { const name = (readJson(FILES.list, { shows: [] }).shows.find((s) => slugify(s.name) === slug) || {}).name; if (name) job = startJob('match', [name]); } return send(res, 200, { overrides: ov, job }); }
+    if (p.startsWith('/api/override/') && req.method === 'POST') { const slug = decodeURIComponent(p.slice(14)); if (!SLUG_OK.test(slug)) return send(res, 400, { error: 'bad slug' }); const b = await body(req); const ov = patchOverride(slug, b); let job = null; if (b.rematch !== false) job = startJob('match', ['--slug', slug]); return send(res, 200, { overrides: ov, job }); }
     if (p === '/api/list' && req.method === 'POST') return send(res, 200, patchList(await body(req)));
     if (p === '/api/lookup') return send(res, 200, await lookup(url.searchParams.get('q') || ''));
     if (p === '/api/order' && req.method === 'GET') { const rows = showRows(); const tags = [...new Set(rows.flatMap((r) => r.tags))].sort(); return send(res, 200, { ...homeOrder(), types: [...readJson(FILES.list, { types: [] }).types, 'TV Movies', 'Specials'], tags }); }
@@ -231,6 +241,12 @@ const server = http.createServer(async (req, res) => {
     if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (j) stopJob(j.pid); return send(res, 200, { ok: true }); }
     if (p === '/api/processes/stop' && req.method === 'POST') { const b = await body(req); stopJob(b.pid); return send(res, 200, { ok: true }); }
     if (p === '/api/log') { const name = (url.searchParams.get('name') || '').replace(/[^\w.-]/g, ''); return send(res, 200, { log: tail(path.join(CACHE, name), +url.searchParams.get('tail') || 100) }); }
+    if (p === '/api/probe') { // playback probes from a test page on this PC (cross-origin from the local site server)
+      res.setHeader('access-control-allow-origin', '*'); res.setHeader('access-control-allow-headers', 'content-type');
+      if (req.method === 'OPTIONS') { res.writeHead(204); return res.end(); }
+      if (req.method === 'POST') { const b = await body(req); fs.mkdirSync(CACHE, { recursive: true }); fs.appendFileSync(path.join(CACHE, 'probe.jsonl'), JSON.stringify({ at: new Date().toISOString(), ...b }) + '\n'); return send(res, 200, { ok: true }); }
+      return send(res, 200, { lines: tail(path.join(CACHE, 'probe.jsonl'), 50).split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean) });
+    }
     if (p.startsWith('/api/analytics/')) { const name = p.slice(15); if (!cfa.configured()) return send(res, 200, { unconfigured: true, rows: [] }); return send(res, 200, { rows: await cfa.report(name, url.searchParams.get('days') || 7) }); }
     return send(res, 404, { error: 'not found' });
   } catch (e) { return send(res, 500, { error: e.message }); }

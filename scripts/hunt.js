@@ -81,10 +81,11 @@ async function getJson(url, cacheKey) {
 async function tvmaze(show) {
   const key = 'tvmaze-' + slug(show);
   const cf = path.join(CACHE_DIR, key + '.json');
-  if (fs.existsSync(cf)) return JSON.parse(fs.readFileSync(cf, 'utf8'));
+  const ov = OVERRIDES[slug(show)] || {}; // was referenced below without being declared: every uncached lookup threw and returned null
+  if (fs.existsSync(cf)) { const cached = JSON.parse(fs.readFileSync(cf, 'utf8')); if (!ov.tvmazeId || cached.id === ov.tvmazeId) return cached; }
   try {
     // Punctuation confuses TVmaze's search ("NTSF:SD:SUV::" finds nothing; "NTSF SD SUV" does).
-    const r = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(show.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()), { signal: AbortSignal.timeout(20000) });
+    const r = await fetch(ov.tvmazeId ? 'https://api.tvmaze.com/shows/' + ov.tvmazeId : 'https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(show.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()), { signal: AbortSignal.timeout(20000) });
     if (!r.ok) return null;
     const s = await r.json();
     if (!ov.tvmazeId) { const a = norm(show).replace(/(.*?)/g, '').trim(), b = norm(s.name); const bag = (t) => new Set(t.split(' ').filter((w) => w.length > 2)); const A = bag(a), B = bag(b); let hit = 0; for (const w of A) if (B.has(w)) hit++; const sim = A.size ? hit / A.size : 0; if (!b.includes(a) && !a.includes(b) && sim < 0.6) { console.log(`   TVmaze offered "${s.name}" for "${show}": not the same show, treating as no match`); return null; } }
@@ -98,7 +99,7 @@ async function tvmaze(show) {
     };
     fs.mkdirSync(CACHE_DIR, { recursive: true }); fs.writeFileSync(cf, JSON.stringify(out));
     return out;
-  } catch (e) { return null; }
+  } catch (e) { console.log('   TVmaze error: ' + e.message); return null; }
 }
 // Lead actors and characters: the discriminators that rescue a common-word title ("Oz", "Rome").
 async function tvmazeCast(id) {
@@ -310,7 +311,8 @@ async function main() {
   const fresh = args.includes('--fresh');
   const pass2 = args.includes('--pass2'); // re-hunt shows under 50% coverage with the narrow net + deeper opening
   const unplayable = args.includes('--unplayable'); // re-hunt shows whose picks will not play in a browser (mkv / AC3 / x265)
-  const valued = new Set(['--budget', '--open', '--pause', '--type', '--tag', '--first']);
+  const slugF = opt('--slug');
+  const valued = new Set(['--budget', '--open', '--pause', '--type', '--tag', '--first', '--slug']);
   const filter = (args.find((a, i) => !a.startsWith('--') && !valued.has(args[i - 1])) || '').toLowerCase();
   const notThere = new Set(CENSUS.filter((r) => r.verdict === 'NOT THERE').map((r) => r.show));
   const hunted = (s) => fs.existsSync(path.join(OUT_DIR, slug(s.name) + '.json'));
@@ -338,7 +340,7 @@ async function main() {
   const firsts = first ? first.split(',').map((t) => t.trim()) : []; // comma list: earlier tags hunt earlier
   // Shows added by a scout (entry.added) queue behind the whole curated list, row order kept.
   const rank = (s) => { const fi = firsts.findIndex((t) => (s.tags || []).includes(t)); if (fi >= 0) return fi - firsts.length; const i = ORDER.indexOf(s.type); const base = lightness ? lightness(s) * 100 + (i < 0 ? ORDER.length : i) : (i < 0 ? ORDER.length : i); return base + (s.added ? 100000 : 0); };
-  const jobs = LIST.shows.filter((s) => (filter ? s.name.toLowerCase().includes(filter) : true) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
+  const jobs = LIST.shows.filter((s) => (slugF ? slug(s.name) === slugF : (filter ? s.name.toLowerCase().includes(filter) : true)) && (type ? s.type === type : true) && (tag ? (s.tags || []).includes(tag) : true)
     && (missing ? notThere.has(s.name) : true)
     && (unplayable ? unplayableCount(s) >= 3 : pass2 ? coverage(s) < 50 : (fresh || filter ? true : !hunted(s))))
     .sort((a, b) => (unplayable ? unplayableCount(b) - unplayableCount(a) : priority ? rank(a) - rank(b) : 0));
