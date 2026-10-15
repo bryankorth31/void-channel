@@ -15,7 +15,7 @@ const PORT = +(process.argv[process.argv.indexOf('--port') + 1] || 0) || 8780;
 // Jobs run under plain node. Inside the desktop app process.execPath is the app itself, so find node.
 function nodeBin() {
   if (!process.versions.electron) return { bin: process.execPath, env: process.env };
-  try { const w = execSync('where node', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().split(/\r?\n/).find((l) => /node\.exe$/i.test(l.trim())); if (w) return { bin: w.trim(), env: process.env }; } catch (e) { /* fall through */ }
+  try { const w = execSync('where node', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().split(/\r?\n/).find((l) => /node\.exe$/i.test(l.trim())); if (w) return { bin: w.trim(), env: process.env }; } catch (e) { /* fall through */ }
   return { bin: process.execPath, env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' } };
 }
 const CACHE = path.join(ROOT, 'catalog', 'cache');
@@ -29,7 +29,7 @@ const FILES = {
 };
 const readJson = (p, fb) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fb; } };
 const writeJson = (p, v) => { const tmp = p + '.tmp'; fs.writeFileSync(tmp, JSON.stringify(v, null, 2) + '\n'); fs.renameSync(tmp, p); };
-const slugify = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-'); // identical to match.js slug(): apostrophes vanish, & becomes and
+const slugify = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); // identical to match.js slug(): apostrophes vanish, & becomes and
 const tail = (p, lines) => { try { return fs.readFileSync(p, 'utf8').trim().split('\n').slice(-lines).join('\n'); } catch (e) { return ''; } };
 
 // ---- catalog views ----------------------------------------------------------------------------
@@ -98,14 +98,14 @@ function overview() {
 
 function gitState() {
   try {
-    const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    const run = (c) => execSync(c, { cwd: ROOT, windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
     return { head: run('git log -1 "--format=%h %s"'), dirty: run('git status --porcelain -- catalog docs scripts/show-list.json').split('\n').filter(Boolean).length, ahead: run('git rev-list --count origin/master..master') };
   } catch (e) { return { head: '?', dirty: 0, ahead: '?' }; }
 }
 
 function scheduledTasks() {
   try {
-    const out = execSync('schtasks /Query /FO CSV /V /TN "VoidTV Publish" & schtasks /Query /FO CSV /V /TN "VoidTV Nightly"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    const out = execSync('schtasks /Query /FO CSV /V /TN "VoidTV Publish" & schtasks /Query /FO CSV /V /TN "VoidTV Nightly"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
     const lines = out.split('\n').filter((l) => l.startsWith('"') && !l.startsWith('"HostName"'));
     return lines.map((l) => { const c = l.split('","').map((x) => x.replace(/^"|"\r?$/g, '')); return { name: c[1].replace(/^\\/, ''), next: c[2], status: c[3], last: c[5], result: c[6] }; });
   } catch (e) { return []; }
@@ -113,7 +113,7 @@ function scheduledTasks() {
 
 function nodeProcesses() {
   try {
-    const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object ProcessId,CreationDate,CommandLine | ConvertTo-Json -Compress"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object ProcessId,CreationDate,CommandLine | ConvertTo-Json -Compress"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
     let arr = out ? JSON.parse(out) : [];
     if (!Array.isArray(arr)) arr = [arr];
     return arr.filter((p) => /scripts[\\/](hunt|hunt-movies|match|art|people|db|publish|scout|networks|nightly|site|candidates|tvmovies)\.js/.test(p.CommandLine || ''))
@@ -143,7 +143,7 @@ function startJob(name, args) {
   return job;
 }
 const jobList = () => JOBS.map((j) => ({ ...j, running: j.done ? false : alive(j.pid), tail: tail(j.log, 3) }));
-function stopJob(pid) { try { execSync(`taskkill /PID ${+pid} /T /F`, { stdio: 'ignore' }); } catch (e) { /* gone */ } }
+function stopJob(pid) { try { execSync(`taskkill /PID ${+pid} /T /F`, { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone */ } }
 
 // ---- overrides --------------------------------------------------------------------------------
 function patchOverride(slug, body) {
@@ -165,7 +165,10 @@ function patchList(body) {
   for (const s of body.add || []) {
     const name = String(s.name || '').trim(); if (!name) continue;
     if (have.has(slugify(name))) { skipped.push(name); continue; }
-    const e = { name, type: LIST.types.includes(s.type) ? s.type : LIST.types[0], network: String(s.network || '').trim() || undefined };
+    const typeOf = (t) => LIST.types.find((x) => x.toLowerCase() === String(t || '').trim().toLowerCase());
+    const type = typeOf(s.type) || typeOf(body.defaultType);
+    if (!type) { skipped.push(name + ' (unknown row: ' + (s.type || body.defaultType || '?') + ')'); continue; }
+    const e = { name, type, network: String(s.network || '').trim() || undefined };
     const tags = [].concat(s.tags || []).map((t) => String(t).trim()).filter(Boolean); if (tags.length) e.tags = tags;
     if (s.tvmazeId || s.tmdbId) { const OV = readJson(FILES.overrides, {}); OV[slugify(name)] = { ...(OV[slugify(name)] || {}), ...(s.tvmazeId ? { tvmazeId: +s.tvmazeId } : {}), ...(s.tmdbId ? { tmdbId: +s.tmdbId } : {}) }; writeJson(FILES.overrides, OV); }
     LIST.shows.push(e); have.add(slugify(name)); added.push(name);
@@ -258,7 +261,7 @@ function start(opts = {}) {
     server.once('error', no);
     server.listen(port, '127.0.0.1', () => {
       console.log(`VOIDtv HQ at http://localhost:${port}  (Ctrl+C to stop)`);
-      if (opts.open || process.argv.includes('--open')) { try { execSync(`start http://localhost:${port}`, { stdio: 'ignore', shell: true }); } catch (e) { /* fine */ } }
+      if (opts.open || process.argv.includes('--open')) { try { execSync(`start http://localhost:${port}`, { windowsHide: true, stdio: 'ignore', shell: true }); } catch (e) { /* fine */ } }
       ok({ port, server });
     });
   });

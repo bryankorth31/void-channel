@@ -43,7 +43,7 @@ function norm(s) {
   return String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '')
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
-function slug(s) { return norm(s).replace(/ /g, '-'); }
+function slug(s) { return norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); }
 function searchWords(show) {
   return show.toLowerCase().replace(/&/g, ' and ').replace(/’/g, "'")
     .split(/[^a-z0-9']+/).map((w) => w.replace(/^'+|'+$/g, '')).filter(Boolean)
@@ -349,10 +349,11 @@ async function main() {
     if (calls >= budget) { console.log('\nBudget spent; stopping. Re-run to continue (cached calls are free).'); break; }
     try { await huntShow(j); } catch (e) { console.log(`   !! ${j.name}: ${e.message}`); }
     if (refresh) {
-      try { for (const s of ['match.js', 'db.js', 'preview.js']) execFileSync(process.execPath, [path.join(__dirname, s)], { stdio: 'ignore' }); }
+      try { execFileSync(process.execPath, [path.join(__dirname, 'match.js'), '--slug', slug(j.name)], { stdio: 'ignore', windowsHide: true }); } // one show, not the whole catalog, after every hunt
       catch (e) { console.log('   (refresh failed: ' + e.message.slice(0, 80) + ')'); }
     }
   }
+  if (refresh) { try { for (const s of ['db.js', 'preview.js']) execFileSync(process.execPath, [path.join(__dirname, s)], { stdio: 'ignore', windowsHide: true }); } catch (e) { console.log('   (db/preview failed: ' + e.message.slice(0, 80) + ')'); } }
   writeSummary();
   console.log(`\nDone. ${calls} Archive calls. Summary in docs/HUNT.md, details in catalog/candidates/.`);
 }

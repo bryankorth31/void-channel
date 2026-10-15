@@ -53,7 +53,7 @@ function createTray() {
     { label: 'Open HQ', click: () => { win.show(); win.focus(); } },
     { label: 'Open in browser', click: () => shell.openExternal(`http://localhost:${PORT}/`) },
     { type: 'separator' },
-    { label: 'Start with Windows', type: 'checkbox', checked: app.getLoginItemSettings().openAtLogin, click: (m) => app.setLoginItemSettings({ openAtLogin: m.checked, args: ['--hidden'] }) },
+    { label: 'Start with Windows', type: 'checkbox', enabled: app.isPackaged, checked: app.getLoginItemSettings({ args: ['--hidden'] }).openAtLogin, click: (m) => { app.setLoginItemSettings({ openAtLogin: m.checked, args: ['--hidden'] }); tray.setContextMenu(menu()); } },
     { type: 'separator' },
     { label: 'Quit HQ (jobs keep running)', click: () => { app.quitting = true; app.quit(); } },
   ]);

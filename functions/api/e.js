@@ -18,7 +18,12 @@ function agent(ua) {
   return { device, browser, os };
 }
 
+const TYPES = new Set(['view', 'play', 'tick', 'end', 'error', 'tune', 'tvplay', 'search', 'act', 'report']);
 export async function onRequestPost({ request, env }) {
+  const len = +(request.headers.get('content-length') || 0);
+  if (!len || len > 16384) return new Response(null, { status: 413 }); // a batch is a few hundred bytes; never buffer a flood
+  const sfs = request.headers.get('sec-fetch-site');
+  if (sfs && !['same-origin', 'same-site', 'none'].includes(sfs)) return new Response(null, { status: 403 });
   let events;
   try { events = await request.json(); } catch (e) { return new Response(null, { status: 400 }); }
   if (!Array.isArray(events)) events = [events];
@@ -27,7 +32,7 @@ export async function onRequestPost({ request, env }) {
   const cf = request.cf || {};
   const { device, browser, os } = agent(request.headers.get('user-agent') || '');
   for (const e of events.slice(0, 25)) {
-    if (!e || typeof e !== 'object' || !e.t) continue;
+    if (!e || typeof e !== 'object' || !TYPES.has(e.t)) continue;
     const sid = str(e.sid, 32) || 'anon';
     ds.writeDataPoint({
       indexes: [sid],

@@ -19,7 +19,7 @@ const log = (m) => { const line = `${new Date().toISOString()} ${m}`; console.lo
 // Another hunt (the long foreground ones B runs) must not be doubled: two Archive jobs is the ceiling.
 function huntsRunning() {
   try {
-    const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object -ExpandProperty CommandLine"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object -ExpandProperty CommandLine"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
     return (out.match(/hunt(-movies)?\.js/g) || []).length;
   } catch (_) { return 0; }
 }
@@ -27,7 +27,7 @@ function huntsRunning() {
 function step(name, args, minutes) {
   const t0 = Date.now();
   log(`-- ${name}: node ${args.join(' ')}`);
-  const r = spawnSync(process.execPath, args.map((a) => a.startsWith('scripts/') ? path.join(ROOT, a) : a), { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'], timeout: minutes * 60 * 1000, maxBuffer: 64 * 1024 * 1024 });
+  const r = spawnSync(process.execPath, args.map((a) => a.startsWith('scripts/') ? path.join(ROOT, a) : a), { cwd: ROOT, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'], timeout: minutes * 60 * 1000, maxBuffer: 64 * 1024 * 1024 });
   const tail = (r.stdout || '').toString().trim().split('\n').slice(-3).join(' | ');
   const err = (r.stderr || '').toString().trim().split('\n').slice(-2).join(' | ');
   log(`   ${name} ${r.status === 0 ? 'ok' : 'FAILED (' + (r.error ? r.error.message : 'exit ' + r.status) + ')'} in ${Math.round((Date.now() - t0) / 60000)} min${tail ? ' :: ' + tail : ''}${err && r.status !== 0 ? ' :: ' + err : ''}`);

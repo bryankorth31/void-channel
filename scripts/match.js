@@ -24,7 +24,7 @@ function norm(s) {
   return String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '')
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
-function slug(s) { return norm(s).replace(/ /g, '-'); }
+function slug(s) { return norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); }
 const STOP = new Set(['the', 'a', 'an', 'and', 'of', 'to', 'in', 'on', 'at', 'for', 'with', 'is', 'it', 'part']);
 const QUALITY_RE = /\b(\d{3,4}p|x26[45]|h ?26[45]|hevc|aac|ac3|dvdrip|webrip|web dl|hdtv|bluray|bdrip|xvid|divx|mp4|mkv|avi|proper|repack|internal|uncut|uncensored|dual audio|multi|eng|english|sub(bed|s)?|dub(bed)?|fine cut|rough cut|complete|season|episode|ep|disc|dvd|vhs|rip|hq|lq|remaster(ed)?)\b/g;
 
@@ -95,16 +95,18 @@ function namesOtherShow(text, show) {
 }
 
 const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
+// Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
+function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
 function matchShow(entry) {
   const show = entry.name;
   const cf = path.join(CAND_DIR, slug(show) + '.json');
   if (!fs.existsSync(cf)) return null;
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
-  const ov = OVERRIDES[slug(show)] || {};
+  const ov = readOverrides()[slug(show)] || {};
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
   const aliases = (ov.aliases || []).map(norm).filter(Boolean);
   const tv = loadTv(show);
-  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, ((OVERRIDES[slug(show)] || {}).aliases || []).map(norm).filter(Boolean)); if (sg) return sg; try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return { show, type: entry.type, network: entry.network, noTvmaze: true }; }
+  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, ((readOverrides()[slug(show)] || {}).aliases || []).map(norm).filter(Boolean)); if (sg) return sg; try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
@@ -173,7 +175,7 @@ function matchShow(entry) {
     // them in natural order as consecutive episodes of the season the item title suggests
     // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance.
     const titleNamesMe = itemTitled;
-    if (titleNamesMe && !itemNamesOther && unmatched.length >= 5) {
+    if (titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
       const m = /\b(?:season|series|volume|vol\.?)\s*(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)\b/i.exec(item.title || '');
       const words = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
       const season = m ? (words[m[1].toLowerCase()] || +m[1]) : 1;
@@ -209,7 +211,7 @@ function matchShow(entry) {
   }
   const total = tv.episodes.length;
   const out = {
-    show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(),
+    show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), addedAt: firstAdded(slug(show), live + review > 0),
     tvmaze: { id: tv.id, name: tv.name, runtime: tv.runtime, premiered: tv.premiered, network: tv.network },
     coverage: { total, live, review, missing: total - live - review, pct: Math.round(((live + review) / total) * 100) },
     seasons,
@@ -282,6 +284,8 @@ function writeCoverage(rows) {
   fs.writeFileSync(OUT_MD, lines.join('\n') + '\n');
 }
 
+// The date a show first had a playable file; matchedAt is overwritten on every run, so Recently added needs this.
+function firstAdded(sl, hasNow) { try { const old = JSON.parse(fs.readFileSync(path.join(OUT_DIR, sl + '.json'), 'utf8')); if (old.addedAt) return old.addedAt; if (old.seasons && old.seasons.some((se) => se.episodes.some((e) => e.file))) return old.matchedAt; } catch (e) { /* new */ } return hasNow ? new Date().toISOString() : undefined; }
 function main() {
   const argv = process.argv.slice(2);
   const slugAt = argv.indexOf('--slug');
@@ -292,7 +296,8 @@ function main() {
   for (const entry of LIST.shows) {
     if (slugFilter && slug(entry.name) !== slugFilter) continue;
     if (filter && !entry.name.toLowerCase().includes(filter)) continue;
-    const r = matchShow(entry);
+    let r;
+    try { r = matchShow(entry); } catch (e) { console.log(`${entry.name}: FAILED ${e.message}`); continue; } // one bad file must not abort the run
     if (!r) continue;
     rows.push(r);
     if (r.noTvmaze) console.log(`${entry.name}: no TVmaze episode list`);

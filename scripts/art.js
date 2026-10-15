@@ -19,7 +19,7 @@ const TOKEN = (process.env.TMDB_READ_TOKEN || (env.match(/^TMDB_READ_TOKEN=(.+)$
 if (!TOKEN) { console.error('No TMDB_READ_TOKEN in backend/.env'); process.exit(1); }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const slug = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-');
+const slug = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show');
 
 async function tmdb(p, params = {}) {
   const url = 'https://api.themoviedb.org/3' + p + '?' + new URLSearchParams(params);
@@ -82,15 +82,16 @@ async function main() {
   const fresh = args.includes('--fresh');
   const filter = (args.find((a) => !a.startsWith('--')) || '').toLowerCase();
   const art = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {};
+  const SLUG_ONLY = (() => { const i = process.argv.indexOf('--slug'); return i >= 0 ? process.argv[i + 1] : null; })();
   let done = 0, miss = 0;
   for (const entry of LIST.shows) {
     const s = slug(entry.name);
-    if (filter && !entry.name.toLowerCase().includes(filter)) continue;
-    if (!filter && !fresh && art[s]) continue;
-    if (filter || fresh) { try { fs.unlinkSync(path.join(CACHE_DIR, 'tmdb-' + s + '.json')); } catch (e) {} }
+    if (SLUG_ONLY ? s !== SLUG_ONLY : (filter && !entry.name.toLowerCase().includes(filter))) continue;
+    if (!filter && !SLUG_ONLY && !fresh && art[s]) continue;
+    if (filter || SLUG_ONLY || fresh) { try { fs.unlinkSync(path.join(CACHE_DIR, 'tmdb-' + s + '.json')); } catch (e) {} }
     try {
       const a = await lookup(entry);
-      if (a) { art[s] = a; done++; console.log(`${entry.name}  ->  ${a.title} (${a.year}) ${a.poster ? 'poster' : 'no poster'}, ${a.genres.join('/') || 'no genres'}`); }
+      if (a) { art[s] = a; done++; if (done % 25 === 0) fs.writeFileSync(OUT, JSON.stringify(art, null, 1)); /* flush so the nightly time cap keeps what was fetched */ console.log(`${entry.name}  ->  ${a.title} (${a.year}) ${a.poster ? 'poster' : 'no poster'}, ${a.genres.join('/') || 'no genres'}`); }
       else { miss++; console.log(`${entry.name}  ->  no TMDB match`); }
     } catch (e) { miss++; console.log(`${entry.name}  ->  ${e.message}`); }
   }

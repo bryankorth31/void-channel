@@ -61,7 +61,7 @@ CREATE VIEW review_queue AS
   FROM episodes e JOIN shows s ON s.slug = e.show_slug WHERE e.state = 'REVIEW' ORDER BY s.name, e.season, e.number;
 `);
 
-const slugOf = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-');
+const slugOf = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show');
 const ART_FILE = path.join(ROOT, 'catalog', 'art.json');
 const ART = fs.existsSync(ART_FILE) ? JSON.parse(fs.readFileSync(ART_FILE, 'utf8')) : {};
 const tagsOf = (entry) => (entry.tags && entry.tags.length ? entry.tags.join(', ') : null);

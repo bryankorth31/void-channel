@@ -32,11 +32,11 @@ const BACKOFF_MS = [60000, 180000, 600000];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let calls = 0;
 const norm = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-const slug = (s) => norm(s).replace(/ /g, '-');
+const slug = (s) => norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show');
 
 function huntsRunning() {
   try {
-    const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object -ExpandProperty CommandLine"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object -ExpandProperty CommandLine"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
     return (out.match(/hunt(-movies)?\.js|scout\.js/g) || []).length - 1; // minus this process
   } catch (_) { return 0; }
 }

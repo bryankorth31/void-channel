@@ -39,7 +39,7 @@ const PLAYABLE = new Set(['MPEG4', 'h.264', 'h.264 IA', 'WebM', 'Ogg Video', '51
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let calls = 0, budget = 2000;
 const norm = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-const slug = (s) => norm(s).replace(/ /g, '-');
+const slug = (s) => norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show');
 const STOP = new Set(['the', 'a', 'an', 'and', 'of', 'to', 'in', 'on', 'at', 'for', 'with', 'is', 'it']);
 const QUALITY_RE = /\b(\d{3,4}p|x26[45]|h ?26[45]|hevc|aac|ac3|dvdrip|webrip|web dl|hdtv|bluray|bdrip|xvid|divx|mp4|mkv|avi|proper|repack|uncut|full movie|movie|film|tv movie|complete|remaster(ed)?|hd|sd|vhs|dvd|rip|eng|english|subs?)\b/g;
 

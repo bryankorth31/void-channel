@@ -31,7 +31,7 @@ const bi = args.indexOf('--bios');
 const BIOS = bi >= 0 ? (+args[bi + 1] || 3000) : 0;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const slug = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-');
+const slug = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show');
 const CREW_JOBS = new Set(['Creator', 'Writer', 'Director', 'Executive Producer', 'Showrunner', 'Developed By', 'Original Music Composer', 'Teleplay', 'Story']);
 const EP_JOBS = { Director: 'd', Writer: 'w', Teleplay: 'w', Story: 'w' };
 const person = (c) => ({ id: c.id, name: c.name, photo: c.profile_path ? IMG + c.profile_path : null });

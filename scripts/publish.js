@@ -7,7 +7,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
-const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'] }).toString().trim();
+const run = (c) => execSync(c, { cwd: ROOT, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] }).toString().trim();
 const LOG = path.join(ROOT, 'catalog', 'cache', 'publish.log');
 const log = (m) => { const line = `${new Date().toISOString()} ${m}`; console.log(line); try { fs.mkdirSync(path.dirname(LOG), { recursive: true }); fs.appendFileSync(LOG, line + '\n'); } catch (_) {} };
 

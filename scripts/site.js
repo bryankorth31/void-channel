@@ -59,6 +59,9 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
+// Which paths run through Pages Functions. Gate on: everything but the brand assets. Build with --open once the
+// password comes off, and only the analytics intake runs as a function (static files are served directly).
+fs.writeFileSync(path.join(OUT, '_routes.json'), JSON.stringify(args.includes('--open') ? { version: 1, include: ['/api/*'], exclude: [] } : { version: 1, include: ['/*'], exclude: ['/assets/*'] }));
 // Web app manifest: phones and TVs can add VOIDtv to the home screen and open it full-screen.
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify({ name: 'VOIDtv', short_name: 'VOIDtv', description: 'TV shows from the Internet Archive, 1990 to now. Before AI slop, there was human creativity.', start_url: '/', display: 'standalone', background_color: '#07080c', theme_color: '#07080c', icons: [{ src: '/assets/brand/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/assets/brand/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }] }));
 
