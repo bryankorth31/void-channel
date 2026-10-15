@@ -7,6 +7,7 @@
 //   site/_redirects                 unknown paths -> index.html (the app routes /show/<slug>)
 // Usage: node scripts/site.js [--base https://voidtv.net]
 const fs = require('fs');
+const readJsonSafe = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return null; } };
 const path = require('path');
 const { assemble, page, showFile, indexEntry, SITE_NAME } = require('./lib/app');
 
@@ -65,7 +66,9 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 { let sha = process.env.CF_PAGES_COMMIT_SHA || ''; if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = 'unknown'; } } fs.writeFileSync(path.join(OUT, 'version.txt'), sha + ' ' + new Date().toISOString() + '\n'); }
 // Which paths run through Pages Functions. Gate on: everything but the brand assets. Build with --open once the
 // password comes off, and only the analytics intake runs as a function (static files are served directly).
-fs.writeFileSync(path.join(OUT, '_routes.json'), JSON.stringify(args.includes('--open') ? { version: 1, include: ['/api/*'], exclude: [] } : { version: 1, include: ['/*'], exclude: ['/assets/*'] }));
+fs.writeFileSync(path.join(OUT, '_routes.json'), JSON.stringify(args.includes('--open') ? { version: 1, include: ['/api/*', '/q/*'], exclude: [] } : { version: 1, include: ['/*'], exclude: ['/assets/*'] }));
+// QR and short codes: /q/<code> reads this map at the edge
+{ const qr = readJsonSafe(path.join(PROFILE.catalogDir, 'qr.json')); const pub = {}; for (const [k, v] of Object.entries(qr || {})) if (!k.startsWith('_') && v && v.url) pub[k] = { url: v.url, label: v.label || '' }; fs.writeFileSync(path.join(OUT, 'qr.json'), JSON.stringify(pub)); }
 // Web app manifest: phones and TVs can add VOIDtv to the home screen and open it full-screen.
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify({ name: 'VOIDtv', short_name: 'VOIDtv', description: 'TV shows from the Internet Archive, 1990 to now. Before AI slop, there was human creativity.', start_url: '/', display: 'standalone', background_color: '#07080c', theme_color: '#07080c', icons: [{ src: '/assets/brand/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/assets/brand/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }] }));
 

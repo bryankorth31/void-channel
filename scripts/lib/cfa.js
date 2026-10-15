@@ -50,6 +50,8 @@ const REPORTS = {
   referrers: (d) => `SELECT blob11 AS host, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob11 != '' GROUP BY host ORDER BY n DESC LIMIT 100`,
   tv: (d) => `SELECT blob2 AS channel, blob1 AS type, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 IN ('tune', 'tvplay') GROUP BY channel, type ORDER BY n DESC LIMIT 200`,
   acts: (d) => `SELECT blob2 AS slug, blob14 AS act, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'act' GROUP BY slug, act ORDER BY n DESC LIMIT 500`,
+  qr: (d) => `SELECT blob2 AS code, blob14 AS label, blob5 AS country, blob8 AS device, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'qr' GROUP BY code, label, country, device ORDER BY n DESC LIMIT 500`,
+  qrdaily: (d) => `SELECT toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, blob2 AS code, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'qr' GROUP BY day, code ORDER BY day`,
   timezones: (d) => `SELECT blob16 AS tz, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'view' GROUP BY tz ORDER BY n DESC LIMIT 60`,
 };
 

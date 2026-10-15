@@ -30,7 +30,7 @@ export async function onRequest({ request, env, next }) {
   const secret = env.SITE_PASSWORD;
   if (!secret) return next();
   const pathname = new URL(request.url).pathname;
-  if (pathname.startsWith('/assets/brand/') || pathname === '/version.txt') return next(); // the gate page's own background and icons
+  if (pathname.startsWith('/assets/brand/') || pathname === '/version.txt' || pathname === '/qr.json' || pathname.startsWith('/q/')) return next(); // scans from a shirt must land somewhere even while the gate is on // the gate page's own background and icons
   const want = await token(secret, env.GATE_KEY);
   const cookies = request.headers.get('cookie') || '';
   if (cookies.split(';').some((c) => c.trim() === `${COOKIE}=${want}`)) return next();

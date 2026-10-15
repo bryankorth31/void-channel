@@ -25,6 +25,7 @@ const FILES = {
   list: PROFILE.listFile,
   overrides: path.join(PROFILE.catalogDir, 'overrides.json'),
   order: path.join(PROFILE.catalogDir, 'home-order.json'),
+  qr: path.join(PROFILE.catalogDir, 'qr.json'),
   art: path.join(PROFILE.catalogDir, 'art.json'),
   shows: path.join(PROFILE.catalogDir, 'shows'),
   candidates: path.join(PROFILE.catalogDir, 'candidates'),
@@ -247,6 +248,8 @@ const server = http.createServer(async (req, res) => {
     if (p.startsWith('/api/override/') && req.method === 'POST') { const slug = decodeURIComponent(p.slice(14)); if (!SLUG_OK.test(slug)) return send(res, 400, { error: 'bad slug' }); const b = await body(req); const ov = patchOverride(slug, b); let job = null; if (b.rematch !== false) job = startJob('match', ['--slug', slug]); return send(res, 200, { overrides: ov, job }); }
     if (p === '/api/list' && req.method === 'POST') return send(res, 200, patchList(await body(req)));
     if (p === '/api/lookup') return send(res, 200, await lookup(url.searchParams.get('q') || ''));
+    if (p === '/api/qr' && req.method === 'GET') return send(res, 200, { codes: readJson(FILES.qr, {}), base: PROFILE.domain + '/q/' });
+    if (p === '/api/qr' && req.method === 'POST') { const b = await body(req); const all = readJson(FILES.qr, {}); const code = String(b.code || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40); if (!code) throw new Error('code needed: letters, digits, dashes'); if (b.remove) { delete all[code]; } else { if (!/^https?:\/\//.test(String(b.url || ''))) throw new Error('target must start with http(s)://'); all[code] = { url: String(b.url).slice(0, 500), label: String(b.label || '').slice(0, 120), created: (all[code] && all[code].created) || new Date().toISOString().slice(0, 10) }; } writeJson(FILES.qr, all); return send(res, 200, { codes: all }); }
     if (p === '/api/order' && req.method === 'GET') { const rows = showRows(); const tags = [...new Set(rows.flatMap((r) => r.tags))].sort(); return send(res, 200, { ...homeOrder(), types: [...readJson(FILES.list, { types: [] }).types, 'TV Movies', 'Specials'], tags }); }
     if (p === '/api/order' && req.method === 'POST') { const b = await body(req); if (!Array.isArray(b.order)) throw new Error('order must be an array'); writeJson(FILES.order, b.order.filter((x) => Array.isArray(x) && x.length === 2)); return send(res, 200, { ok: true }); }
     if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses() });
