@@ -1,6 +1,6 @@
 # Coverage
 
-1866 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1903 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -122,6 +122,7 @@
 | Great Chefs | Documentary & Geographic | 2 | 0 | 2 | 0 | 100% |
 | Great Teacher Onizuka | Anime | 43 | 0 | 43 | 0 | 100% |
 | Green Acres | Classic TV | 106 | 0 | 106 | 0 | 100% |
+| Gundam Wing | Animated | 49 | 0 | 49 | 0 | 100% |
 | Gurren Lagann | Anime | 62 | 0 | 62 | 0 | 100% |
 | Gushing Over Magical Girls | Anime | 13 | 0 | 13 | 0 | 100% |
 | Half in the Bag | Internet Comedy | 84 | 0 | 84 | 0 | 100% |
@@ -204,6 +205,7 @@
 | Neon Genesis Evangelion | Anime | 140 | 0 | 140 | 0 | 100% |
 | Oh My Venus | World TV | 16 | 0 | 16 | 0 | 100% |
 | Ouran High School Host Club | Anime | 26 | 0 | 26 | 0 | 100% |
+| Outlaw Star | Animated | 132 | 0 | 132 | 0 | 100% |
 | Over the Garden Wall | Streaming Era | 10 | 10 | 0 | 0 | 100% |
 | Parasyte -the maxim- | Anime | 27 | 0 | 27 | 0 | 100% |
 | Password | Classic TV | 995 | 0 | 995 | 0 | 100% |
@@ -232,6 +234,7 @@
 | Review | 2000s and Later Sitcoms | 148 | 0 | 148 | 0 | 100% |
 | Road Rovers | Animated | 13 | 13 | 0 | 0 | 100% |
 | Robin of Sherwood | Classic TV | 26 | 26 | 0 | 0 | 100% |
+| Ronin Warriors | Animated | 39 | 0 | 39 | 0 | 100% |
 | Sally Jessy Raphael | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | Samurai Champloo | Anime | 26 | 26 | 0 | 0 | 100% |
 | Samurai Jack | Animated | 80 | 0 | 80 | 0 | 100% |
@@ -362,6 +365,7 @@
 | Vietnam: A Television History | Documentary & Geographic | 11 | 0 | 11 | 0 | 100% |
 | Violet Evergarden | Anime | 13 | 0 | 13 | 0 | 100% |
 | Viva La Bam | MTV | 161 | 0 | 161 | 0 | 100% |
+| Voltron: The Third Dimension | Animated | 26 | 24 | 2 | 0 | 100% |
 | Wagon Train | Classic TV | 284 | 283 | 1 | 0 | 100% |
 | Walking with Dinosaurs | Documentary & Geographic | 6 | 6 | 0 | 0 | 100% |
 | Watch What Happens Live with Andy Cohen | Reality & Talk | 7 | 0 | 7 | 0 | 100% |
@@ -419,7 +423,10 @@
 | The A-Team | Classic TV | 98 | 94 | 0 | 4 | 96% |
 | The King of Queens | 2000s and Later Sitcoms | 207 | 197 | 2 | 8 | 96% |
 | The Twilight Zone | Classic TV | 156 | 111 | 39 | 6 | 96% |
+| Trigun | Animated | 26 | 0 | 25 | 1 | 96% |
+| Yu-Gi-Oh! | Animated | 27 | 0 | 26 | 1 | 96% |
 | An Idiot Abroad | Documentary & Geographic | 19 | 16 | 2 | 1 | 95% |
+| Chuck | Drama | 91 | 0 | 86 | 5 | 95% |
 | Knight Rider | Classic TV | 84 | 58 | 22 | 4 | 95% |
 | SCTV | Classic TV | 78 | 74 | 0 | 4 | 95% |
 | The Crocodile Hunter | Documentary & Geographic | 64 | 52 | 9 | 3 | 95% |
@@ -484,6 +491,7 @@
 | Murphy Brown | Classic TV | 260 | 0 | 212 | 48 | 82% |
 | Reba | 2000s and Later Sitcoms | 125 | 103 | 0 | 22 | 82% |
 | Pinky and the Brain | Animated | 95 | 69 | 8 | 18 | 81% |
+| Tenchi Muyo! | Animated | 26 | 0 | 21 | 5 | 81% |
 | Earth: Final Conflict | Sci-Fi, Fantasy and Horror | 110 | 87 | 1 | 22 | 80% |
 | Pee-wee's Playhouse | Classic TV | 45 | 0 | 36 | 9 | 80% |
 | Square Pegs | Classic TV | 20 | 5 | 11 | 4 | 80% |
@@ -710,6 +718,7 @@
 | Inazuma Eleven | Anime | 251 | 0 | 36 | 215 | 14% |
 | The Beverly Hillbillies | Classic TV | 274 | 0 | 37 | 237 | 14% |
 | Dirty Laundry | Internet Comedy | 55 | 7 | 0 | 48 | 13% |
+| Dragon Ball Z | Animated | 291 | 0 | 39 | 252 | 13% |
 | Hell Girl | Anime | 90 | 0 | 12 | 78 | 13% |
 | Hello Ladies | 2000s and Later Sitcoms | 8 | 1 | 0 | 7 | 13% |
 | Cowboy Bebop | Anime | 26 | 0 | 3 | 23 | 12% |
@@ -719,6 +728,7 @@
 | A Love So Beautiful | World TV | 18 | 0 | 2 | 16 | 11% |
 | Attack on Titan | Anime | 89 | 0 | 10 | 79 | 11% |
 | Cartoon Planet | Adult Swim | 146 | 0 | 16 | 130 | 11% |
+| Teenage Mutant Ninja Turtles | Animated | 191 | 5 | 16 | 170 | 11% |
 | The Hollywood Squares | Classic TV | 1077 | 72 | 49 | 956 | 11% |
 | Cuts | 2000s and Later Sitcoms | 31 | 0 | 3 | 28 | 10% |
 | Fraggle Rock | Classic TV | 96 | 8 | 2 | 86 | 10% |
@@ -843,6 +853,7 @@
 | Fantasy Island | Classic TV | 154 | 2 | 0 | 152 | 1% |
 | Friends | 90s Sitcoms | 236 | 1 | 1 | 234 | 1% |
 | Frontline | British and Beyond | 854 | 0 | 9 | 845 | 1% |
+| Ghost Whisperer | Sci-Fi, Fantasy and Horror | 107 | 1 | 0 | 106 | 1% |
 | Globe Trekker | Documentary & Geographic | 177 | 0 | 1 | 176 | 1% |
 | Heti Hetes | Reality & Talk | 673 | 5 | 0 | 668 | 1% |
 | Hometime | Documentary & Geographic | 280 | 0 | 2 | 278 | 1% |
@@ -965,9 +976,11 @@
 | Berserk | Anime | 25 | 0 | 0 | 25 | 0% |
 | Best of the Worst | Internet Comedy | 6 | 0 | 0 | 6 | 0% |
 | Better Call Saul | Streaming Era | 63 | 0 | 0 | 63 | 0% |
+| Beverly Hills, 90210 | Drama | 293 | 0 | 0 | 293 | 0% |
 | Bewitched | Classic TV | 254 | 0 | 0 | 254 | 0% |
 | Beyond Tomorrow | Documentary & Geographic | 51 | 0 | 0 | 51 | 0% |
 | Big Brother | Reality & Talk | 1006 | 0 | 0 | 1006 | 0% |
+| Big O | Animated | 26 | 0 | 0 | 26 | 0% |
 | Billions | Drama | 84 | 0 | 0 | 84 | 0% |
 | Biography | Documentary & Geographic | 616 | 0 | 0 | 616 | 0% |
 | Birdgirl | Adult Swim | 12 | 0 | 0 | 12 | 0% |
@@ -987,6 +1000,7 @@
 | Boardwalk Empire | Drama | 56 | 0 | 0 | 56 | 0% |
 | Bob's Burgers | Animated | 313 | 0 | 0 | 313 | 0% |
 | BOCCHI THE ROCK! | Anime | 12 | 0 | 0 | 12 | 0% |
+| Bones | Drama | 246 | 1 | 0 | 245 | 0% |
 | Bonkers | Animated | 63 | 0 | 0 | 63 | 0% |
 | Bored to Death | 2000s and Later Sitcoms | 24 | 0 | 0 | 24 | 0% |
 | Borgen | World TV | 30 | 0 | 0 | 30 | 0% |
@@ -998,6 +1012,7 @@
 | Britannia | British and Beyond | 27 | 0 | 0 | 27 | 0% |
 | Broad City | 2000s and Later Sitcoms | 50 | 0 | 0 | 50 | 0% |
 | Brooklyn Nine-Nine | 2000s and Later Sitcoms | 153 | 0 | 0 | 153 | 0% |
+| Burn Notice | Drama | 111 | 0 | 0 | 111 | 0% |
 | Burning Love | Internet Comedy | 21 | 0 | 0 | 21 | 0% |
 | Caesar's Hour | Classic TV | 13 | 0 | 0 | 13 | 0% |
 | Californication | 2000s and Later Sitcoms | 84 | 0 | 0 | 84 | 0% |
@@ -1008,6 +1023,7 @@
 | Carnival Row | Streaming Era | 18 | 0 | 0 | 18 | 0% |
 | Carnivale | Sci-Fi, Fantasy and Horror | 24 | 0 | 0 | 24 | 0% |
 | Case Closed | Anime | 2 | 0 | 0 | 2 | 0% |
+| Castle | Drama | 173 | 0 | 0 | 173 | 0% |
 | Catastrophe | British and Beyond | 24 | 0 | 0 | 24 | 0% |
 | CatDog | Animated | 131 | 0 | 0 | 131 | 0% |
 | Catfish: The TV Show | MTV | 245 | 0 | 0 | 245 | 0% |
@@ -1058,6 +1074,9 @@
 | Corporate | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Cosmos: A Spacetime Odyssey | Documentary & Geographic | 39 | 0 | 0 | 39 | 0% |
 | Crazy Ex-Girlfriend | 2000s and Later Sitcoms | 62 | 0 | 0 | 62 | 0% |
+| Criminal Minds | Drama | 364 | 0 | 0 | 364 | 0% |
+| CSI: Miami | Drama | 232 | 0 | 0 | 232 | 0% |
+| CSI: NY | Drama | 197 | 0 | 0 | 197 | 0% |
 | Cuckoo | British and Beyond | 32 | 0 | 0 | 32 | 0% |
 | Cumbia Ninja | World TV | 21 | 0 | 0 | 21 | 0% |
 | Cutting Edge | Documentary & Geographic | 104 | 0 | 0 | 104 | 0% |
@@ -1147,9 +1166,11 @@
 | Fonejacker | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Foundation | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | Frasier | 90s Sitcoms | 264 | 0 | 0 | 264 | 0% |
+| Freaks and Geeks | Drama | 18 | 0 | 0 | 18 | 0% |
 | Free! | Anime | 37 | 0 | 0 | 37 | 0% |
 | Friday Night Dinner | British and Beyond | 37 | 0 | 0 | 37 | 0% |
 | Frieren: Beyond Journey's End | Anime | 38 | 0 | 0 | 38 | 0% |
+| Fringe | Sci-Fi, Fantasy and Horror | 100 | 0 | 0 | 100 | 0% |
 | Frisky Dingo | Adult Swim | 25 | 0 | 0 | 25 | 0% |
 | FROM | Streaming Era | 40 | 0 | 0 | 40 | 0% |
 | From Far Away | Anime | 12 | 0 | 0 | 12 | 0% |
@@ -1183,6 +1204,7 @@
 | Great Castles of Europe | Documentary & Geographic | 26 | 0 | 0 | 26 | 0% |
 | Great News | 2000s and Later Sitcoms | 23 | 0 | 0 | 23 | 0% |
 | Greenleaf | Streaming Era | 60 | 0 | 0 | 60 | 0% |
+| Grey's Anatomy | Drama | 470 | 0 | 0 | 470 | 0% |
 | Grimm | Streaming Era | 123 | 0 | 0 | 123 | 0% |
 | Guardian: The Lonely and Great God | World TV | 16 | 0 | 0 | 16 | 0% |
 | Gunpowder | British and Beyond | 3 | 0 | 0 | 3 | 0% |
@@ -1206,6 +1228,7 @@
 | Helen of Troy | Drama | 2 | 0 | 0 | 2 | 0% |
 | Hello Saturday | Reality & Talk | 71 | 0 | 0 | 71 | 0% |
 | Hello, I Am a Witch and My Crush Wants Me to Make a Love Potion! | Anime | 12 | 0 | 0 | 12 | 0% |
+| Heroes | Sci-Fi, Fantasy and Horror | 78 | 0 | 0 | 78 | 0% |
 | Hi Bye, Mama! | World TV | 16 | 0 | 0 | 16 | 0% |
 | Hoarders | Documentary & Geographic | 166 | 0 | 0 | 166 | 0% |
 | Hogan's Heroes | Classic TV | 168 | 0 | 0 | 168 | 0% |
@@ -1217,6 +1240,7 @@
 | Horimiya | Anime | 13 | 0 | 0 | 13 | 0% |
 | Hot Ones | Internet Comedy | 420 | 0 | 0 | 420 | 0% |
 | Hot Streets | Adult Swim | 20 | 0 | 0 | 20 | 0% |
+| House | Drama | 176 | 0 | 0 | 176 | 0% |
 | House of Cards | Streaming Era | 73 | 0 | 0 | 73 | 0% |
 | House of the Dragon | Streaming Era | 26 | 0 | 0 | 26 | 0% |
 | How I Met Your Mother | 2000s and Later Sitcoms | 208 | 0 | 1 | 207 | 0% |
@@ -1295,6 +1319,7 @@
 | Late Night with Seth Meyers | Reality & Talk | 1841 | 0 | 0 | 1841 | 0% |
 | Late Show with David Letterman | Reality & Talk | 4262 | 0 | 0 | 4262 | 0% |
 | Law & Order | Drama | 548 | 0 | 1 | 547 | 0% |
+| Law & Order: Special Victims Unit | Drama | 601 | 1 | 0 | 600 | 0% |
 | Law of the Jungle | Reality & Talk | 408 | 0 | 1 | 407 | 0% |
 | Lazor Wulf | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | Legacies | Streaming Era | 68 | 0 | 0 | 68 | 0% |
@@ -1308,6 +1333,7 @@
 | Little Dorrit | British and Beyond | 14 | 0 | 0 | 14 | 0% |
 | Little House on the Prairie | Classic TV | 8 | 0 | 0 | 8 | 0% |
 | Lodge 49 | Drama | 20 | 0 | 0 | 20 | 0% |
+| Lois & Clark: The New Adventures of Superman | Sci-Fi, Fantasy and Horror | 87 | 0 | 0 | 87 | 0% |
 | Loiter Squad | Adult Swim | 31 | 0 | 0 | 31 | 0% |
 | Loki | Streaming Era | 12 | 0 | 0 | 12 | 0% |
 | Lonely Planet | Documentary & Geographic | 24 | 0 | 0 | 24 | 0% |
@@ -1358,6 +1384,7 @@
 | Maverick | Classic TV | 124 | 0 | 0 | 124 | 0% |
 | Me and the Boys | 90s Sitcoms | 19 | 0 | 0 | 19 | 0% |
 | Medici: Masters of Florence | Streaming Era | 24 | 0 | 0 | 24 | 0% |
+| Medium | Drama | 130 | 0 | 0 | 130 | 0% |
 | Meet the Browns | 2000s and Later Sitcoms | 140 | 0 | 0 | 140 | 0% |
 | Mega Builders | Documentary & Geographic | 34 | 0 | 0 | 34 | 0% |
 | Mega Movers | Documentary & Geographic | 35 | 0 | 0 | 35 | 0% |
@@ -1375,6 +1402,7 @@
 | Modern Family | 2000s and Later Sitcoms | 250 | 0 | 0 | 250 | 0% |
 | Modern Marvels | Documentary & Geographic | 730 | 0 | 2 | 728 | 0% |
 | Momma Named Me Sheriff | Adult Swim | 19 | 0 | 0 | 19 | 0% |
+| Monk | Drama | 124 | 0 | 0 | 124 | 0% |
 | Monster Garage | Documentary & Geographic | 88 | 0 | 0 | 88 | 0% |
 | Moriarty the Patriot | Anime | 24 | 0 | 0 | 24 | 0% |
 | Mouse | World TV | 20 | 0 | 0 | 20 | 0% |
@@ -1404,6 +1432,8 @@
 | National Geographic Explorer | Documentary & Geographic | 245 | 0 | 0 | 245 | 0% |
 | Natsume's Book of Friends | Anime | 86 | 0 | 0 | 86 | 0% |
 | Nature's Great Events | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
+| NCIS | Drama | 513 | 0 | 0 | 513 | 0% |
+| NCIS: Los Angeles | Drama | 323 | 0 | 0 | 323 | 0% |
 | Neon Joe, Werewolf Hunter | Adult Swim | 10 | 0 | 0 | 10 | 0% |
 | Never Have I Ever | Streaming Era | 40 | 0 | 0 | 40 | 0% |
 | New Girl | Streaming Era | 146 | 0 | 0 | 146 | 0% |
@@ -1464,9 +1494,11 @@
 | POV | Documentary & Geographic | 568 | 0 | 0 | 568 | 0% |
 | Power | Streaming Era | 63 | 0 | 0 | 63 | 0% |
 | Primal | Streaming Era | 30 | 0 | 0 | 30 | 0% |
+| Prison Break | Drama | 88 | 0 | 0 | 88 | 0% |
 | Prohibition | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Project Runway | Reality & Talk | 303 | 1 | 0 | 302 | 0% |
 | Promised Land | Drama | 69 | 0 | 0 | 69 | 0% |
+| Psych | Drama | 119 | 0 | 0 | 119 | 0% |
 | Psychoville | British and Beyond | 13 | 0 | 0 | 13 | 0% |
 | PSYREN | Anime | 12 | 0 | 0 | 12 | 0% |
 | Punk'd | MTV | 76 | 0 | 0 | 76 | 0% |
@@ -1515,6 +1547,7 @@
 | Rurouni Kenshin | Anime | 48 | 0 | 0 | 48 | 0% |
 | Russian Doll | Streaming Era | 15 | 0 | 0 | 15 | 0% |
 | RWBY | Internet Comedy | 116 | 0 | 0 | 116 | 0% |
+| Sailor Moon | Animated | 200 | 0 | 0 | 200 | 0% |
 | Sailor Moon Crystal | Anime | 43 | 0 | 0 | 43 | 0% |
 | SAKAMOTO DAYS | Anime | 22 | 0 | 0 | 22 | 0% |
 | Sale of the Century | Classic TV | 411 | 0 | 0 | 411 | 0% |
@@ -1659,6 +1692,7 @@
 | The Gilded Age | Drama | 26 | 0 | 0 | 26 | 0% |
 | The Golden Girls | Classic TV | 180 | 0 | 0 | 180 | 0% |
 | The Gong Show | Classic TV | 20 | 0 | 0 | 20 | 0% |
+| The Good Wife | Drama | 156 | 0 | 0 | 156 | 0% |
 | The Graham Norton Show | Reality & Talk | 522 | 1 | 0 | 521 | 0% |
 | The Great | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | The Greatest Ever | Documentary & Geographic | 10 | 0 | 0 | 10 | 0% |
@@ -1697,6 +1731,7 @@
 | The Mandalorian | Streaming Era | 24 | 0 | 0 | 24 | 0% |
 | The Maury Povich Show | Classic TV | 973 | 0 | 0 | 973 | 0% |
 | The Men Who Built America | Documentary & Geographic | 4 | 0 | 0 | 4 | 0% |
+| The Mentalist | Drama | 151 | 0 | 0 | 151 | 0% |
 | The Middle | 2000s and Later Sitcoms | 215 | 0 | 0 | 215 | 0% |
 | The Midnight Special | Classic TV | 350 | 0 | 1 | 349 | 0% |
 | The Mike Douglas Show | Classic TV | 671 | 0 | 0 | 671 | 0% |
@@ -1757,6 +1792,7 @@
 | The Voice | Reality & Talk | 703 | 0 | 0 | 703 | 0% |
 | The War | Documentary & Geographic | 7 | 0 | 0 | 7 | 0% |
 | The Way of the Househusband | Anime | 15 | 0 | 0 | 15 | 0% |
+| The West Wing | Drama | 154 | 0 | 0 | 154 | 0% |
 | The White Lotus | Streaming Era | 21 | 0 | 0 | 21 | 0% |
 | The White Princess | Drama | 8 | 0 | 0 | 8 | 0% |
 | The White Queen | British and Beyond | 10 | 0 | 0 | 10 | 0% |
@@ -1843,6 +1879,7 @@
 | Wheel of Fortune | Classic TV | 8392 | 0 | 0 | 8392 | 0% |
 | When the Phone Rings | World TV | 12 | 0 | 0 | 12 | 0% |
 | While You Were Out | Documentary & Geographic | 215 | 0 | 0 | 215 | 0% |
+| White Collar | Drama | 81 | 0 | 0 | 81 | 0% |
 | Who Wants to Be a Millionaire? | Reality & Talk | 1502 | 1 | 1 | 1500 | 0% |
 | Who's the Boss? | Classic TV | 196 | 0 | 0 | 196 | 0% |
 | Who's the Murderer | Reality & Talk | 143 | 0 | 0 | 143 | 0% |
@@ -1871,4 +1908,4 @@
 | Zane's Sex Chronicles | Late Night | 25 | 0 | 0 | 25 | 0% |
 | Zoey 101 | 2000s and Later Sitcoms | 62 | 0 | 0 | 62 | 0% |
 
-No TVmaze match (needs a manual episode list): Say What? Karaoke, The 'Bu, Computerman, Strong Bad Email, asdfmovie, lonelygirl15, Hardly Working, CollegeHumor Originals, Precious Plum, 5 Second Films, On Cinema at the Cinema, Mr. Plinkett Reviews, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, Naruto Shippūden, Demon Slayer: Kimetsu no Yaiba, Pokémon, TONIKAWA: Over the Moon for You, Haikyu!!, ERASED, Food Wars! Shokugeki no Soma, MASHLE: MAGIC AND MUSCLES, Saint Seiya: The Lost Canvas, Kuroko's Basketball, The Ancient Magus' Bride, BNA, My First Girlfriend Is a Gal, Puella Magi Madoka Magica, My Love Story!!, My Little Monster, From Me to You: Kimi ni Todoke, Twin Star Exorcists, Magical Sempai, WATAMOTE ~No Matter How I Look at It, It's You Guys Fault I'm Not Popular!~, Kiss Him, Not Me, Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway, We Never Learn: BOKUBEN, Our Love Has Always Been 10 Centimeters Apart., Magi, ODDTAXI, Hybrid x Heart Magias Academy Ataraxia, Ascendance of a Bookworm, Tougen Anki, Jimihen!! Jimiko o Kae Chau Jun Isei Kouyuu, Secret Mission - Undercover Agents Never Back Down!, Crazy Over His Fingers: Just the Two of Us in a Salon After Closing, Saiyuki, Sweet Punishment: I'm the Guard's Personal Pet, Even the Student Council Has Its Holes!, Ruriiro Princess, 40 y 20, W, Atrévete a Soñar, The Magnificent Century, Maxton Hall – The World Between Us, Tear Along the Dotted Line, No One Will Miss Us, Dejémonos de Vargas, MATARIFE, A Woman Scorned, This World Can't Tear Me Down, Physics or Chemistry, One Hundred Years of Solitude, El Señor de los Cielos, La fea más bella, Porque el Amor Manda, Dinastía Casillas, The Heart Is Never Wrong, Falling Angel, Miss XV, Doménica Montero, Binnelanders, Tomorrow Is Ours, Men on a Mission, Storm of Love, Strawberries with Sugar, How Do You Play?, The Tamron Hall Show, Dreams of Freedom, Mystery Music Show: King of Mask Singer, Ride the Wind, Bares für Rares, You Hee-yeol's Sketchbook, Vivement dimanche, HaHaHaHaHa, Alles was zählt, Volle Kanne, In All Friendship, Amazing Night, DAS!, Trump Card, Natural High, Leute heute, Mao Xue Woof, Barbara Karlich – Talk um 4, CentoVetrine, Abendschau, Dee Girls Talk, The Fierce Wife, Lecture Room, Wedding Ring, Comedy Battle, Siyaset Meydanı, Lenßen & Partner, 凤凰大视野, Bonsoir bonsoir!, Köln 50667, Kavyanjali, Star Road, Mein Nachmittag, National Geographic Specials, Hardcore History, Ken Burns: Lewis & Clark, Unforgivable Blackness, Investigative Reports, Michael Palin: Pole to Pole, Samantha Brown's Passport to Europe, The French Chef, Wild Kingdom, Understanding, Furniture to Go, The New Detectives, Secrets of the Ancient World, Robotica, Great Books, The Learning Channel: Ancient Mysteries, Maternity Ward, Adventures in Scale Modeling, Ultimate Guide, Science Frontiers, Legends of the Isles, A Dating Story, Movie Magic, Discovery Sunday, Ultimate Guide: Sharks, Junkyard Mega-Wars, Unsolved Mysteries of the Bible, Lost Treasures of the Ancient World, Discover Magazine, Super Structures, Animal Planet: Emergency Vets, Wrath of God, Suicide Missions, Dangerous Missions, Great Blunders in History, Battlefield Detectives, Movies in Time, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, Teen Summit, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
+No TVmaze match (needs a manual episode list): Say What? Karaoke, 24, CSI: Crime Scene Investigation, The 'Bu, Computerman, Strong Bad Email, asdfmovie, lonelygirl15, Hardly Working, CollegeHumor Originals, Precious Plum, 5 Second Films, On Cinema at the Cinema, Mr. Plinkett Reviews, Awesome Show Web Shorts, Cinemassacre: Angry Video Game Nerd, Jontron, Naruto Shippūden, Demon Slayer: Kimetsu no Yaiba, Pokémon, TONIKAWA: Over the Moon for You, Haikyu!!, ERASED, Food Wars! Shokugeki no Soma, MASHLE: MAGIC AND MUSCLES, Saint Seiya: The Lost Canvas, Kuroko's Basketball, The Ancient Magus' Bride, BNA, My First Girlfriend Is a Gal, Puella Magi Madoka Magica, My Love Story!!, My Little Monster, From Me to You: Kimi ni Todoke, Twin Star Exorcists, Magical Sempai, WATAMOTE ~No Matter How I Look at It, It's You Guys Fault I'm Not Popular!~, Kiss Him, Not Me, Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway, We Never Learn: BOKUBEN, Our Love Has Always Been 10 Centimeters Apart., Magi, ODDTAXI, Hybrid x Heart Magias Academy Ataraxia, Ascendance of a Bookworm, Tougen Anki, Jimihen!! Jimiko o Kae Chau Jun Isei Kouyuu, Secret Mission - Undercover Agents Never Back Down!, Crazy Over His Fingers: Just the Two of Us in a Salon After Closing, Saiyuki, Sweet Punishment: I'm the Guard's Personal Pet, Even the Student Council Has Its Holes!, Ruriiro Princess, 40 y 20, W, Atrévete a Soñar, The Magnificent Century, Maxton Hall – The World Between Us, Tear Along the Dotted Line, No One Will Miss Us, Dejémonos de Vargas, MATARIFE, A Woman Scorned, This World Can't Tear Me Down, Physics or Chemistry, One Hundred Years of Solitude, El Señor de los Cielos, La fea más bella, Porque el Amor Manda, Dinastía Casillas, The Heart Is Never Wrong, Falling Angel, Miss XV, Doménica Montero, Binnelanders, Tomorrow Is Ours, Men on a Mission, Storm of Love, Strawberries with Sugar, How Do You Play?, The Tamron Hall Show, Dreams of Freedom, Mystery Music Show: King of Mask Singer, Ride the Wind, Bares für Rares, You Hee-yeol's Sketchbook, Vivement dimanche, HaHaHaHaHa, Alles was zählt, Volle Kanne, In All Friendship, Amazing Night, DAS!, Trump Card, Natural High, Leute heute, Mao Xue Woof, Barbara Karlich – Talk um 4, CentoVetrine, Abendschau, Dee Girls Talk, The Fierce Wife, Lecture Room, Wedding Ring, Comedy Battle, Siyaset Meydanı, Lenßen & Partner, 凤凰大视野, Bonsoir bonsoir!, Köln 50667, Kavyanjali, Star Road, Mein Nachmittag, National Geographic Specials, Hardcore History, Ken Burns: Lewis & Clark, Unforgivable Blackness, Investigative Reports, Michael Palin: Pole to Pole, Samantha Brown's Passport to Europe, The French Chef, Wild Kingdom, Understanding, Furniture to Go, The New Detectives, Secrets of the Ancient World, Robotica, Great Books, The Learning Channel: Ancient Mysteries, Maternity Ward, Adventures in Scale Modeling, Ultimate Guide, Science Frontiers, Legends of the Isles, A Dating Story, Movie Magic, Discovery Sunday, Ultimate Guide: Sharks, Junkyard Mega-Wars, Unsolved Mysteries of the Bible, Lost Treasures of the Ancient World, Discover Magazine, Super Structures, Animal Planet: Emergency Vets, Wrath of God, Suicide Missions, Dangerous Missions, Great Blunders in History, Battlefield Detectives, Movies in Time, Shock Video, Pimps Up, Ho's Down, Talk Sex with Sue Johanson, Sexcetera, Teen Summit, The Lawrence Welk Show, Billy Graham Crusades, Hour of Power, Hallmark Hall of Fame, The Jack Paar Tonight Show, The Tonight Show Starring Steve Allen, The Joe Pyne Show, The Alan Burke Show, The Les Crane Show, The David Frost Show, The Pat Sajak Show, The Dennis Miller Show, The Newlywed Game, The $64,000 Question, The David Susskind Show, Art Linkletter's House Party, Don Kirshner's Rock Concert, Wally George's Hot Seat, Les Misérables, Mr. Show with Bob and David
