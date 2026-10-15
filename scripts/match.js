@@ -24,6 +24,14 @@ function norm(s) {
   return String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '')
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
+// A date in a file name ("2008.08.08", "2011-03-10", "03.10.2011") is the surest key a talk or daily show offers.
+function fileDate(t) {
+  let m = /(?:^|\D)((?:19|20)\d{2})[.\-_ ](\d{1,2})[.\-_ ](\d{1,2})(?:\D|$)/.exec(t || '');
+  if (m) return m[1] + '-' + m[2].padStart(2, '0') + '-' + m[3].padStart(2, '0');
+  m = /(?:^|\D)(\d{1,2})[.\-_ ](\d{1,2})[.\-_ ]((?:19|20)\d{2})(?:\D|$)/.exec(t || '');
+  if (m) return m[3] + '-' + m[1].padStart(2, '0') + '-' + m[2].padStart(2, '0');
+  return null;
+}
 function slug(s) { return norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); }
 const STOP = new Set(['the', 'a', 'an', 'and', 'of', 'to', 'in', 'on', 'at', 'for', 'with', 'is', 'it', 'part']);
 const QUALITY_RE = /\b(\d{3,4}p|x26[45]|h ?26[45]|hevc|aac|ac3|dvdrip|webrip|web dl|hdtv|bluray|bdrip|xvid|divx|mp4|mkv|avi|proper|repack|internal|uncut|uncensored|dual audio|multi|eng|english|sub(bed|s)?|dub(bed)?|fine cut|rough cut|complete|season|episode|ep|disc|dvd|vhs|rip|hq|lq|remaster(ed)?)\b/g;
@@ -112,6 +120,9 @@ function matchShow(entry) {
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
   const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
+  const byDate = new Map(tv.episodes.filter((e) => e.airdate).map((e) => [e.airdate, e]));
+  const firstYear = tv.premiered ? +tv.premiered.slice(0, 4) : 0;
+  let dateRejected = 0;
   const ordered = [...tv.episodes].sort((a, b) => (a.airdate || '').localeCompare(b.airdate || '') || a.season - b.season || a.number - b.number);
 
   const assignments = new Map(); // key -> [{conf, file, item, reasons}]
@@ -130,6 +141,11 @@ function matchShow(entry) {
       const fileNamesOther = namesOtherShow(f.name, show);
       const fp = titlePart(f.name, showWords);
       let candidates = [];
+      // 0. A date in the name: an exact airdate places the file; a date from before the show existed means it is another show's file (Late Night with Conan O'Brien under Conan).
+      const fd = fileDate(f.name) || fileDate(item.title || '');
+      let dateHit = false;
+      if (fd && byDate.has(fd)) { candidates.push({ ep: byDate.get(fd), base: 0.75, why: 'airdate in filename' }); dateHit = true; }
+      else if (fd && firstYear && +fd.slice(0, 4) < firstYear) { dateRejected++; continue; }
       // 1. S/E in the filename
       if (f.ep && f.ep.season != null && byKey.has(`${f.ep.season}x${f.ep.episode}`)) {
         candidates.push({ ep: byKey.get(`${f.ep.season}x${f.ep.episode}`), base: 0.6, why: 'S/E in filename' });
@@ -143,7 +159,7 @@ function matchShow(entry) {
       // upload that does not name the show is how Tweenies ended up under Look Around You.
       const titleAlone = !namesShow(f.name) && !itemTitled;
       const strongTitle = best && norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2).length >= 2;
-      if (best && bestSim >= 0.6 && (!titleAlone || strongTitle)) {
+      if (!dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle)) {
         const existing = candidates.find((c) => c.ep === best);
         if (existing) { existing.base += bestSim >= 0.8 ? 0.3 : 0.15; existing.why += ' + title match'; }
         else candidates.push({ ep: best, base: bestSim >= 0.8 ? 0.5 : 0.3, why: `title ~ "${best.name}" (${bestSim.toFixed(2)})` });
@@ -208,6 +224,16 @@ function matchShow(entry) {
       return { number: e.number, name: e.name, airdate: e.airdate, state, file: pick, alternates: opts.slice(1, 4) };
     });
     seasons.push({ season: s, episodes: eps });
+  }
+  // When the TVmaze list and the uploads do not speak the same language (web series on DVD, toon collections),
+  // self-listing places far more files and says so. Not when the files were turned away for being too old: those belong elsewhere.
+  const placed = live + review;
+  const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
+  if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
+    const cand2 = { ...cand, items: cand.items.map((it) => ({ ...it, files: it.files.filter((f) => { const d = fileDate(f.name) || fileDate(it.title || ''); return !(d && firstYear && +d.slice(0, 4) < firstYear); }) })) };
+    const sg = selfGrid(entry, cand2, aliases);
+    const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
+    if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; writeRetry(path.join(OUT_DIR, sg.slug + '.json'), JSON.stringify(sg, null, 2)); return sg; }
   }
   const total = tv.episodes.length;
   const out = {
