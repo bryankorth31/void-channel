@@ -1,6 +1,6 @@
 # Coverage
 
-1770 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1774 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -821,8 +821,10 @@
 | 1923 | Streaming Era | 15 | 0 | 0 | 15 | 0% |
 | 2 Broke Girls | Streaming Era | 138 | 0 | 0 | 138 | 0% |
 | 2 Days and 1 Night | Reality & Talk | 918 | 0 | 0 | 918 | 0% |
+| 20/20 | Documentary & Geographic | 756 | 0 | 0 | 756 | 0% |
 | 25 Words or Less | Reality & Talk | 1204 | 0 | 0 | 1204 | 0% |
 | 3rd Rock from the Sun | 90s Sitcoms | 139 | 0 | 0 | 139 | 0% |
+| 48 Hours | Documentary & Geographic | 1018 | 0 | 4 | 1014 | 0% |
 | 60 Minutes | Documentary & Geographic | 770 | 0 | 0 | 770 | 0% |
 | 7de Laan | Reality & Talk | 198 | 0 | 0 | 198 | 0% |
 | 7th Heaven | Drama | 243 | 0 | 0 | 243 | 0% |
@@ -998,6 +1000,7 @@
 | DARLING in the FRANXX | Anime | 24 | 0 | 0 | 24 | 0% |
 | Date A Live | Anime | 58 | 0 | 0 | 58 | 0% |
 | Date My Mom | MTV | 8 | 0 | 0 | 8 | 0% |
+| Dateline NBC | Documentary & Geographic | 1021 | 0 | 0 | 1021 | 0% |
 | Dave | 2000s and Later Sitcoms | 30 | 0 | 0 | 30 | 0% |
 | DC's Legends of Tomorrow | Streaming Era | 110 | 0 | 0 | 110 | 0% |
 | De brutas nada | World TV | 20 | 0 | 0 | 20 | 0% |
@@ -1332,6 +1335,7 @@
 | Nia Liston: The Merciless Maiden | Anime | 3 | 0 | 0 | 3 | 0% |
 | NieR:Automata Ver1.1a | Anime | 24 | 0 | 0 | 24 | 0% |
 | Night Calls | Late Night | 25 | 0 | 0 | 25 | 0% |
+| Nightline | Documentary & Geographic | 963 | 0 | 0 | 963 | 0% |
 | Nighty Night | British and Beyond | 12 | 0 | 0 | 12 | 0% |
 | Nip/Tuck | Drama | 100 | 0 | 0 | 100 | 0% |
 | Nirvanna the Band the Show | British and Beyond | 16 | 0 | 0 | 16 | 0% |

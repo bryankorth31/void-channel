@@ -3,7 +3,8 @@
   "slug": "48-hours",
   "type": "Documentary & Geographic",
   "network": "CBS",
-  "matchedAt": "2026-10-14T07:28:44.133Z",
+  "matchedAt": "2026-10-15T15:16:58.400Z",
+  "addedAt": "2026-10-14T07:28:44.133Z",
   "tvmaze": {
     "id": 4408,
     "name": "48 Hours",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 1018,
     "live": 0,
-    "review": 3,
-    "missing": 1015,
+    "review": 4,
+    "missing": 1014,
     "pct": 0
   },
   "seasons": [
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Hospital",
           "airdate": "1988-01-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hospital\" (1.00)",
+            "item": "48-hours-behind-the-soaps-1989",
+            "itemTitle": "48 Hours - Dan Rather",
+            "file": "48 Hours - Hospital - 1988.mp4",
+            "name": "48 Hours - Hospital - 1988",
+            "url": "https://archive.org/download/48-hours-behind-the-soaps-1989/48%20Hours%20-%20Hospital%20-%201988.mp4",
+            "seconds": 2817,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1456
+          },
           "alternates": []
         },
         {
@@ -8345,7 +8358,7 @@
       "episodes": [
         {
           "number": 1,
-          "name": "TBA",
+          "name": "The Corn Rake Witness",
           "airdate": "2026-10-17",
           "state": "MISSING",
           "file": null,
