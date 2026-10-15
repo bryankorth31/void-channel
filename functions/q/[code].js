@@ -26,3 +26,5 @@ export async function onRequestGet({ request, env, params }) {
   if (!u.searchParams.has('via')) u.searchParams.set('via', code || 'unknown');
   return new Response(null, { status: 302, headers: { Location: u.toString(), 'cache-control': 'no-store' } });
 }
+
+export const onRequestHead = onRequestGet;
