@@ -1,0 +1,75 @@
+{
+  "show": "Founding Brothers",
+  "slug": "founding-brothers",
+  "type": "Documentary & Geographic",
+  "network": "History",
+  "matchedAt": "2026-10-15T07:17:35.441Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Founding Brothers",
+    "runtime": null,
+    "premiered": null,
+    "network": "History"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "1 a more perfect union",
+          "state": "REVIEW",
+          "file": {
+            "item": "founding-brothers",
+            "itemTitle": "Founding Brothers",
+            "file": "Founding Brothers Episode 1 A More Perfect Union.mp4",
+            "name": "Founding Brothers Episode 1 A More Perfect Union",
+            "url": "https://archive.org/download/founding-brothers/Founding%20Brothers%20Episode%201%20A%20More%20Perfect%20Union.mp4",
+            "seconds": 5523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1927,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "2 evolution of a revolution",
+          "state": "REVIEW",
+          "file": {
+            "item": "founding-brothers",
+            "itemTitle": "Founding Brothers",
+            "file": "Founding Brothers Episode 2 Evolution Of A Revolution.mp4",
+            "name": "Founding Brothers Episode 2 Evolution Of A Revolution",
+            "url": "https://archive.org/download/founding-brothers/Founding%20Brothers%20Episode%202%20Evolution%20Of%20A%20Revolution.mp4",
+            "seconds": 5473,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1910,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
