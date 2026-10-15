@@ -3,18 +3,19 @@
   "slug": "assassination-classroom",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T12:08:15.866Z",
+  "matchedAt": "2026-10-15T12:56:00.131Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 4907,
+    "id": null,
     "name": "Assassination Classroom",
-    "runtime": 25,
-    "premiered": "2013-10-06",
-    "network": "Fuji TV"
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
   },
   "coverage": {
-    "total": 47,
-    "live": 47,
-    "review": 0,
+    "total": 148,
+    "live": 0,
+    "review": 148,
     "missing": 0,
     "pct": 100
   },
@@ -24,12 +25,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Assassination Time",
-          "airdate": "2015-01-10",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E01 [v2].mp4",
@@ -38,18 +36,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Baseball Time",
-          "airdate": "2015-01-17",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E02 [v2].mp4",
@@ -58,18 +59,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Karma Time",
-          "airdate": "2015-01-31",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E03 [v2].mp4",
@@ -78,18 +82,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Grown-Up Time",
-          "airdate": "2015-02-07",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E04 [v2].mp4",
@@ -98,18 +105,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Assembly Time",
-          "airdate": "2015-02-14",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E05 [v2].mp4",
@@ -118,18 +128,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Test Time",
-          "airdate": "2015-02-21",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E06 [v2].mp4",
@@ -138,18 +151,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "School Trip Time - First Period",
-          "airdate": "2015-02-28",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E07 [v2].mp4",
@@ -158,18 +174,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "School Trip Time - Second Period",
-          "airdate": "2015-03-07",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E08 [v2].mp4",
@@ -178,18 +197,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Transfer Student Time",
-          "airdate": "2015-03-14",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E09 [v2].mp4",
@@ -198,18 +220,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "LR Time",
-          "airdate": "2015-03-21",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E10 [v2].mp4",
@@ -218,18 +243,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Transfer Student Time - Second Period",
-          "airdate": "2015-03-28",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E11 [v2].mp4",
@@ -238,18 +266,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Ball Game Tournament Time",
-          "airdate": "2015-04-11",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E12 [v2].mp4",
@@ -258,18 +289,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Talent Time",
-          "airdate": "2015-04-18",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E13 [v2].mp4",
@@ -278,18 +312,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "Vision Time",
-          "airdate": "2015-04-25",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E14 [v2].mp4",
@@ -298,18 +335,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 1,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "End-of-Term Time",
-          "airdate": "2015-05-02",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E15 [v2].mp4",
@@ -318,18 +358,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "School's Out - First Term",
-          "airdate": "2015-05-09",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E16 [v2].mp4",
@@ -338,18 +381,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "Island Time",
-          "airdate": "2015-05-16",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E17 [v2].mp4",
@@ -358,18 +404,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "Go Time",
-          "airdate": "2015-05-23",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E18 [v2].mp4",
@@ -378,18 +427,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "Pandemonium Time",
-          "airdate": "2015-05-30",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E19 [v2].mp4",
@@ -398,18 +450,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "Karma Time - Second Period",
-          "airdate": "2015-06-06",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E20 [v2].mp4",
@@ -418,18 +473,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140
+            "sizeMB": 140,
+            "ep": {
+              "season": 1,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "XX Time",
-          "airdate": "2015-06-13",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E21 [v2].mp4",
@@ -438,18 +496,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 1,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "Nagisa Time",
-          "airdate": "2015-06-20",
-          "state": "LIVE",
+          "name": "jysze v2",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S01/[JySzE] Assassination Classroom - S01E22 [v2].mp4",
@@ -458,7 +519,2033 @@
             "seconds": 1387,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137
+            "sizeMB": 137,
+            "ep": {
+              "season": 1,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "1assassinationtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "1AssassinationTime1.mp4",
+            "name": "1AssassinationTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/1AssassinationTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "2baseballtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "2BaseballTime1.mp4",
+            "name": "2BaseballTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/2BaseballTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "3karmatime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "3KarmaTime1.mp4",
+            "name": "3KarmaTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/3KarmaTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "4grownuptime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "4GrownUpTime1.mp4",
+            "name": "4GrownUpTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/4GrownUpTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "5assemblytime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "5AssemblyTime1.mp4",
+            "name": "5AssemblyTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/5AssemblyTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "6testtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "6TestTime1.mp4",
+            "name": "6TestTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/6TestTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "7schooltriptime1stperiod1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "7SchoolTripTime1stPeriod1.mp4",
+            "name": "7SchoolTripTime1stPeriod1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/7SchoolTripTime1stPeriod1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "8schooltriptime2ndperiod1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "8SchoolTripTime2ndPeriod1.mp4",
+            "name": "8SchoolTripTime2ndPeriod1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/8SchoolTripTime2ndPeriod1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "9transferstudenttime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "9TransferStudentTime1.mp4",
+            "name": "9TransferStudentTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/9TransferStudentTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "10lrtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "10LRTime1.mp4",
+            "name": "10LRTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/10LRTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "11transferstudenttime2ndperiod1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "11TransferStudentTime2ndPeriod1.mp4",
+            "name": "11TransferStudentTime2ndPeriod1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/11TransferStudentTime2ndPeriod1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "12ballgametournamenttime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "12BallGameTournamentTime1.mp4",
+            "name": "12BallGameTournamentTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/12BallGameTournamentTime1.mp4",
+            "seconds": 1417,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "13talenttime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "13TalentTime1.mp4",
+            "name": "13TalentTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/13TalentTime1.mp4",
+            "seconds": 1418,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "14visiontime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "14VisionTime1.mp4",
+            "name": "14VisionTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/14VisionTime1.mp4",
+            "seconds": 1388,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "15endoftermtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "15EndofTermTime1.mp4",
+            "name": "15EndofTermTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/15EndofTermTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "16schoolsout1stterm1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "16SchoolsOut1stTerm1.mp4",
+            "name": "16SchoolsOut1stTerm1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/16SchoolsOut1stTerm1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "17islandtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "17IslandTime1.mp4",
+            "name": "17IslandTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/17IslandTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "18actiontime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "18ActionTime1.mp4",
+            "name": "18ActionTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/18ActionTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "19pandemoniumtime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "19PandemoniumTime1.mp4",
+            "name": "19PandemoniumTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/19PandemoniumTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "20karmatime2ndperiod1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "20KarmaTime2ndPeriod1.mp4",
+            "name": "20KarmaTime2ndPeriod1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/20KarmaTime2ndPeriod1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "21takaokatime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "21TakaokaTime1.mp4",
+            "name": "21TakaokaTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/21TakaokaTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "22nagisatime1",
+          "state": "REVIEW",
+          "file": {
+            "item": "assassinationclassroomseason1",
+            "itemTitle": "Assassination Classroom Season 1 (ENGLISH DUB)",
+            "file": "22NagisaTime1.mp4",
+            "name": "22NagisaTime1",
+            "url": "https://archive.org/download/assassinationclassroomseason1/22NagisaTime1.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Episode 45",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "Episode 46",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "Episode 47",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "Episode 48",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00017.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00017",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00017.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "Episode 49",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00018.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00018",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00018.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "Episode 50",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00019.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00019",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00019.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "Episode 51",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00020.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00020",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00020.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "Episode 52",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00021.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D1/BDMV/STREAM/00021",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D1%2FBDMV%2FSTREAM%2F00021.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "Episode 53",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "Episode 54",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "Episode 55",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "Episode 56",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00028.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00028",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00028.mp4",
+            "seconds": 99,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "Episode 57",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00029.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00029",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00029.mp4",
+            "seconds": 101,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "Episode 58",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00031.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00031",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00031.mp4",
+            "seconds": 109,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "Episode 59",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00036.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00036",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00036.mp4",
+            "seconds": 596,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 59,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "Episode 60",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00037.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00037",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00037.mp4",
+            "seconds": 1223,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 119,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "Episode 61",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00038.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00038",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00038.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "Episode 62",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00039.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00039",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00039.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "Episode 63",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00041.mp4",
+            "name": "ASSASSINATION_CLASSROOM_BD/AC_S1_P1_D2/BDMV/STREAM/00041",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_BD%2FAC_S1_P1_D2%2FBDMV%2FSTREAM%2F00041.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "Episode 64",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "Episode 65",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 66,
+          "name": "Episode 66",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1383,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 67,
+          "name": "Episode 67",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00017.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00017",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00017.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "Episode 68",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00018.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00018",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00018.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "Episode 69",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00019.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00019",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00019.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "Episode 70",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00020.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00020",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00020.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "Episode 71",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00021.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D1/BDMV/STREAM/00021",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D1%2FBDMV%2FSTREAM%2F00021.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 72,
+          "name": "Episode 72",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00006.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00006",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00006.mp4",
+            "seconds": 90,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 73,
+          "name": "Episode 73",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 74,
+          "name": "Episode 74",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "Episode 75",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 76,
+          "name": "Episode 76",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00026.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00026",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00026.mp4",
+            "seconds": 111,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 77,
+          "name": "Episode 77",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00029.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00029",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00029.mp4",
+            "seconds": 112,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 78,
+          "name": "Episode 78",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00036.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00036",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00036.mp4",
+            "seconds": 678,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 66,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 79,
+          "name": "Episode 79",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00037.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00037",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00037.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 80,
+          "name": "Episode 80",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00038.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00038",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00038.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 81,
+          "name": "Episode 81",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-1-collectors-edition_202301",
+            "itemTitle": "[BDMV][USA] Assassination Classroom Season 1 Collector's Edition",
+            "file": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00039.mp4",
+            "name": "ASSASSINATION_CLASSROOM_P2_BD/Assassination_Classroom_P2_D2/BDMV/STREAM/00039",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-1-collectors-edition_202301/ASSASSINATION_CLASSROOM_P2_BD%2FAssassination_Classroom_P2_D2%2FBDMV%2FSTREAM%2F00039.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 82,
+          "name": "Episode 82",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00006.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00006",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00006.mp4",
+            "seconds": 109,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 83,
+          "name": "Episode 83",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 84,
+          "name": "Episode 84",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 85,
+          "name": "Episode 85",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 86,
+          "name": "Episode 86",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00017.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00017",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00017.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 87,
+          "name": "Episode 87",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00018.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00018",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00018.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 88,
+          "name": "Episode 88",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00019.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00019",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00019.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 89,
+          "name": "Episode 89",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00020.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00020",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00020.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 90,
+          "name": "Episode 90",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00021.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00021",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00021.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 91,
+          "name": "Episode 91",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00022.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D1/BDMV/STREAM/00022",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D1%2FBDMV%2FSTREAM%2F00022.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 92,
+          "name": "Episode 92",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00006.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00006",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00006.mp4",
+            "seconds": 120,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 93,
+          "name": "Episode 93",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 94,
+          "name": "Episode 94",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 95,
+          "name": "Episode 95",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 96,
+          "name": "Episode 96",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00017.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00017",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00017.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 97,
+          "name": "Episode 97",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00028.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00028",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00028.mp4",
+            "seconds": 116,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 98,
+          "name": "Episode 98",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00031.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00031",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00031.mp4",
+            "seconds": 103,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 99,
+          "name": "Episode 99",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00036.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00036",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00036.mp4",
+            "seconds": 366,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 36,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 100,
+          "name": "Episode 100",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00037.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00037",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00037.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 101,
+          "name": "Episode 101",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00038.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00038",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00038.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 102,
+          "name": "Episode 102",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00039.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00039",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00039.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 103,
+          "name": "Episode 103",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00040.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P1/AC_S2_P1_D2/BDMV/STREAM/00040",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P1%2FAC_S2_P1_D2%2FBDMV%2FSTREAM%2F00040.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 104,
+          "name": "Episode 104",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 105,
+          "name": "Episode 105",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 106,
+          "name": "Episode 106",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 107,
+          "name": "Episode 107",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00017.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00017",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00017.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 108,
+          "name": "Episode 108",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00018.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00018",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00018.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 109,
+          "name": "Episode 109",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00019.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00019",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00019.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 110,
+          "name": "Episode 110",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00020.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00020",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00020.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 111,
+          "name": "Episode 111",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00021.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00021",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00021.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 112,
+          "name": "Episode 112",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00022.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D3/BDMV/STREAM/00022",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D3%2FBDMV%2FSTREAM%2F00022.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 113,
+          "name": "Episode 113",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00014.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00014",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00014.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 114,
+          "name": "Episode 114",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00015.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00015",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00015.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 115,
+          "name": "Episode 115",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00016.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00016",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00016.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 116,
+          "name": "Episode 116",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00026.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00026",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00026.mp4",
+            "seconds": 96,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 117,
+          "name": "Episode 117",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00028.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00028",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00028.mp4",
+            "seconds": 132,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 118,
+          "name": "Episode 118",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00031.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00031",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00031.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 8,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 119,
+          "name": "Episode 119",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00037.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00037",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00037.mp4",
+            "seconds": 426,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 41,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 120,
+          "name": "Episode 120",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00038.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00038",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00038.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 121,
+          "name": "Episode 121",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00039.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00039",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00039.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 122,
+          "name": "Episode 122",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00040.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00040",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00040.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 123,
+          "name": "Episode 123",
+          "state": "REVIEW",
+          "file": {
+            "item": "bdmv-usa-assassination-classroom-season-2_202301",
+            "itemTitle": "[ BDMV][ USA] Assassination Classroom Season 2",
+            "file": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00041.mp4",
+            "name": "ASSASSINATION_CLASSROOM_S2_P2_BD/AC_S2_D4/BDMV/STREAM/00041",
+            "url": "https://archive.org/download/bdmv-usa-assassination-classroom-season-2_202301/ASSASSINATION_CLASSROOM_S2_P2_BD%2FAC_S2_D4%2FBDMV%2FSTREAM%2F00041.mp4",
+            "seconds": 92,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }
@@ -469,12 +2556,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Time for the Summer Festival",
-          "airdate": "2016-01-08",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E01.mp4",
@@ -483,18 +2567,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Kaede Time",
-          "airdate": "2016-01-15",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E02.mp4",
@@ -503,18 +2590,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Itona Horibe Time",
-          "airdate": "2016-01-22",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E03.mp4",
@@ -523,18 +2613,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Spinning Time",
-          "airdate": "2016-01-29",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E04.mp4",
@@ -543,18 +2636,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Leader Time",
-          "airdate": "2016-02-05",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E05.mp4",
@@ -563,18 +2659,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Before & After Time",
-          "airdate": "2016-02-12",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E06.mp4",
@@ -583,18 +2682,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Reaper Time, Part 1",
-          "airdate": "2016-02-19",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E07.mp4",
@@ -603,18 +2705,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Reaper Time, Part 2",
-          "airdate": "2016-02-26",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E08.mp4",
@@ -623,18 +2728,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Round Two Time",
-          "airdate": "2016-03-04",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E09.mp4",
@@ -643,18 +2751,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "School Festival Time",
-          "airdate": "2016-03-11",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E10.mp4",
@@ -663,18 +2774,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "End-of-Term Time/2nd Period",
-          "airdate": "2016-03-17",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E11.mp4",
@@ -683,18 +2797,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Think Outside the Box Time",
-          "airdate": "2016-03-24",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E12.mp4",
@@ -703,18 +2820,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Let Live Time",
-          "airdate": "2016-03-31",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E13.mp4",
@@ -723,18 +2843,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "Secret Identity Time",
-          "airdate": "2016-04-07",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E14.mp4",
@@ -743,18 +2866,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "Confession Time",
-          "airdate": "2016-04-21",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E15.mp4",
@@ -763,18 +2889,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "Past Time",
-          "airdate": "2016-04-28",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E16.mp4",
@@ -783,18 +2912,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "Discord Time",
-          "airdate": "2016-05-05",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E17.mp4",
@@ -803,18 +2935,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "Outcome Time",
-          "airdate": "2016-05-12",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E18.mp4",
@@ -823,18 +2958,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "Outer Space Time",
-          "airdate": "2016-05-19",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E19.mp4",
@@ -843,18 +2981,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 2,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "Valentine Time",
-          "airdate": "2016-05-26",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E20.mp4",
@@ -863,18 +3004,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "Trust Time",
-          "airdate": "2016-06-02",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E21.mp4",
@@ -883,18 +3027,21 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "Happy Birthday Time",
-          "airdate": "2016-06-09",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E22.mp4",
@@ -903,18 +3050,21 @@
             "seconds": 1398,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 23,
-          "name": "Final Boss Time",
-          "airdate": "2016-06-16",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E23.mp4",
@@ -923,18 +3073,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 23
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "Graduation Time",
-          "airdate": "2016-06-23",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E24.mp4",
@@ -943,18 +3096,21 @@
             "seconds": 1397,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 139,
+            "ep": {
+              "season": 2,
+              "episode": 24
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 25,
-          "name": "Future Time",
-          "airdate": "2016-06-30",
-          "state": "LIVE",
+          "name": "jysze",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "jy-sz-e-assassination-classroom-ansatsu-kyoushitsu-s-01-s-02-jpbd-complete-x-264",
             "itemTitle": "[JySzE] Assassination Classroom (Ansatsu Kyoushitsu) [S01-S02] [JPBD] [Complete] [x264]",
             "file": "S02/[JySzE] Assassination Classroom - S02E25.mp4",
@@ -963,11 +3119,22 @@
             "seconds": 1387,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 138,
+            "ep": {
+              "season": 2,
+              "episode": 25
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 4907,
+    "name": "Assassination Classroom",
+    "placed": 47
+  }
 }

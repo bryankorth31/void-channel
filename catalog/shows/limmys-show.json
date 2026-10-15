@@ -3,20 +3,21 @@
   "slug": "limmys-show",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-15T12:07:58.644Z",
+  "matchedAt": "2026-10-15T12:55:42.209Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 13842,
+    "id": null,
     "name": "Limmy's Show",
-    "runtime": 30,
-    "premiered": "2009-02-18",
-    "network": "BBC Two Scotland"
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC Two"
   },
   "coverage": {
-    "total": 18,
+    "total": 69,
     "live": 0,
-    "review": 12,
-    "missing": 6,
-    "pct": 67
+    "review": 69,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,12 +25,507 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "airdate": "2010-01-11",
+          "name": "pilot girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 26 in \"Limmy's Show - Series 1 & 2 [PAL DVD ISO\"",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/limmys.show.s00e01.pilot.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/limmys.show.s00e01.pilot.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Flimmys.show.s00e01.pilot.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1745,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": {
+              "season": 0,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e02.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e02.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e02.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1739,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e03.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e03.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e03.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1731,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e04.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e04.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e04.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1754,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e05.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e05.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e05.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1735,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e06.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/limmys.show.s01e06.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2Flimmys.show.s01e06.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1734,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": {
+              "season": 1,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "pilot directors commentary y2fpjs9o9o0",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "dcdc/Limmy's Show - Pilot Episode - Director's Commentary [Y2FpJS9O9O0].webm",
+            "name": "dcdc/Limmy's Show - Pilot Episode - Director's Commentary [Y2FpJS9O9O0]",
+            "url": "https://archive.org/download/limmysshow_240p/dcdc%2FLimmy's%20Show%20-%20Pilot%20Episode%20-%20Director's%20Commentary%20%5BY2FpJS9O9O0%5D.webm",
+            "seconds": 1744,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 63,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "homemade dee dee mirror girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.dee.dee.mirror.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.dee.dee.mirror.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Fhomemade.dee.dee.mirror.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 210,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 21,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "homemade jacqueline mccaffertys big brother audition tape girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.jacqueline.mccaffertys.big.brother.audition.tape.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.jacqueline.mccaffertys.big.brother.audition.tape.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Fhomemade.jacqueline.mccaffertys.big.brother.audition.tape.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 24,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "homemade jacqueline taxi girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.jacqueline.taxi.576p DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.jacqueline.taxi.576p DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Fhomemade.jacqueline.taxi.576p%20DVDRIP_GIRLDONG.mp4",
+            "seconds": 221,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 21,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "homemade john paul botanics girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.john.paul.botanics.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.john.paul.botanics.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Fhomemade.john.paul.botanics.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 167,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "homemade wake up girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.wake.up.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.wake.up.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Fhomemade.wake.up.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 122,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 12,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "homemade yes or no girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.yes.or.no.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 1/Extras/homemade.yes.or.no.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%201%2FExtras%2Fhomemade.yes.or.no.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 182,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 18,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "goodies a trip to the moon girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/goodies.a.trip.to.the.moon.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/goodies.a.trip.to.the.moon.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2FExtras%2Fgoodies.a.trip.to.the.moon.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 151,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 15,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "goodies behind the scenes girldong",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/goodies.behind.the.scenes.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/goodies.behind.the.scenes.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2FExtras%2Fgoodies.behind.the.scenes.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 776,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 78,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "xmas special",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-xmas-special",
+            "itemTitle": "Limmy's Show Christmas Special",
+            "file": "Limmy's Show Xmas Special.mp4",
+            "name": "Limmy's Show Xmas Special",
+            "url": "https://archive.org/download/limmys-show-xmas-special/Limmy's%20Show%20Xmas%20Special.mp4",
+            "seconds": 1754,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 105,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "series 3 01 1 b01p085w original",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-series-3",
+            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
+            "file": "Limmys_Show_Series_3_-_01._Episode_1_b01p085w_original.mp4",
+            "name": "Limmys_Show_Series_3_-_01._Episode_1_b01p085w_original",
+            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_01._Episode_1_b01p085w_original.mp4",
+            "seconds": 1724,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1090,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "series 3 02 2 b01p2xmz original",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-series-3",
+            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
+            "file": "Limmys_Show_Series_3_-_02._Episode_2_b01p2xmz_original.mp4",
+            "name": "Limmys_Show_Series_3_-_02._Episode_2_b01p2xmz_original",
+            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_02._Episode_2_b01p2xmz_original.mp4",
+            "seconds": 1736,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "series 3 03 3 b01p65q7 original",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-series-3",
+            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
+            "file": "Limmys_Show_Series_3_-_03._Episode_3_b01p65q7_original.mp4",
+            "name": "Limmys_Show_Series_3_-_03._Episode_3_b01p65q7_original",
+            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_03._Episode_3_b01p65q7_original.mp4",
+            "seconds": 1730,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1118,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "series 3 04 4 b01pbp0g original",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-series-3",
+            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
+            "file": "Limmys_Show_Series_3_-_04._Episode_4_b01pbp0g_original.mp4",
+            "name": "Limmys_Show_Series_3_-_04._Episode_4_b01pbp0g_original",
+            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_04._Episode_4_b01pbp0g_original.mp4",
+            "seconds": 1728,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1109,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "series 3 05 5 b01pfth9 original",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-series-3",
+            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
+            "file": "Limmys_Show_Series_3_-_05._Episode_5_b01pfth9_original.mp4",
+            "name": "Limmys_Show_Series_3_-_05._Episode_5_b01pfth9_original",
+            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_05._Episode_5_b01pfth9_original.mp4",
+            "seconds": 1731,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1088,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "series 3 06 6 b01phyhg original",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmys-show-series-3",
+            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
+            "file": "Limmys_Show_Series_3_-_06._Episode_6_b01phyhg_original.mp4",
+            "name": "Limmys_Show_Series_3_-_06._Episode_6_b01phyhg_original",
+            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_06._Episode_6_b01phyhg_original.mp4",
+            "seconds": 1731,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1113,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "series 1 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 1.mp4",
+            "name": "Series 1 Disc 1",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%201.mp4",
+            "seconds": 5203,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 541,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "series 1 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 2.mp4",
+            "name": "Series 1 Disc 2",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%202.mp4",
+            "seconds": 5223,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 543,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "series 1 13",
+          "state": "REVIEW",
+          "file": {
             "item": "limmysshow",
             "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
             "file": "Series 1 Disc 13.mp4",
@@ -38,18 +534,18 @@
             "seconds": 1734,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 2,
-          "name": "Episode 2",
-          "airdate": "2010-01-18",
+          "number": 26,
+          "name": "series 1 14",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 26 in \"Limmy's Show - Series 1 & 2 [PAL DVD ISO\"",
             "item": "limmysshow",
             "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
             "file": "Series 1 Disc 14.mp4",
@@ -58,18 +554,18 @@
             "seconds": 1731,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Episode 3",
-          "airdate": "2010-01-25",
+          "number": 27,
+          "name": "series 1 15",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 26 in \"Limmy's Show - Series 1 & 2 [PAL DVD ISO\"",
             "item": "limmysshow",
             "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
             "file": "Series 1 Disc 15.mp4",
@@ -78,18 +574,18 @@
             "seconds": 1739,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Episode 4",
-          "airdate": "2010-02-01",
+          "number": 28,
+          "name": "series 1 16",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 26 in \"Limmy's Show - Series 1 & 2 [PAL DVD ISO\"",
             "item": "limmysshow",
             "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
             "file": "Series 1 Disc 16.mp4",
@@ -98,18 +594,18 @@
             "seconds": 1745,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Episode 5",
-          "airdate": "2010-02-08",
+          "number": 29,
+          "name": "series 1 17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 26 in \"Limmy's Show - Series 1 & 2 [PAL DVD ISO\"",
             "item": "limmysshow",
             "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
             "file": "Series 1 Disc 17.mp4",
@@ -118,18 +614,18 @@
             "seconds": 1745,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Episode 6",
-          "airdate": "2010-02-15",
+          "number": 30,
+          "name": "series 1 18",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 26 in \"Limmy's Show - Series 1 & 2 [PAL DVD ISO\"",
             "item": "limmysshow",
             "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
             "file": "Series 1 Disc 18.mp4",
@@ -138,7 +634,670 @@
             "seconds": 1734,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "series 1 19",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 19.mp4",
+            "name": "Series 1 Disc 19",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2019.mp4",
+            "seconds": 1737,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "series 1 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 23.mp4",
+            "name": "Series 1 Disc 23",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2023.mp4",
+            "seconds": 1754,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "series 1 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 24.mp4",
+            "name": "Series 1 Disc 24",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2024.mp4",
+            "seconds": 1734,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "series 1 25",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 25.mp4",
+            "name": "Series 1 Disc 25",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2025.mp4",
+            "seconds": 1735,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "series 1 26",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 26.mp4",
+            "name": "Series 1 Disc 26",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2026.mp4",
+            "seconds": 1204,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 125,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "series 1 27",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 27.mp4",
+            "name": "Series 1 Disc 27",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2027.mp4",
+            "seconds": 210,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 22,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "series 1 28",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 28.mp4",
+            "name": "Series 1 Disc 28",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2028.mp4",
+            "seconds": 221,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 23,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "series 1 29",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 29.mp4",
+            "name": "Series 1 Disc 29",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%2029.mp4",
+            "seconds": 243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 25,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 110.mp4",
+            "name": "Series 1 Disc 110",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20110.mp4",
+            "seconds": 1727,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 210.mp4",
+            "name": "Series 1 Disc 210",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20210.mp4",
+            "seconds": 167,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 17,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 211.mp4",
+            "name": "Series 1 Disc 211",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20211.mp4",
+            "seconds": 122,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 212.mp4",
+            "name": "Series 1 Disc 212",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20212.mp4",
+            "seconds": 182,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 19,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 214.mp4",
+            "name": "Series 1 Disc 214",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20214.mp4",
+            "seconds": 1756,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 183,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 215.mp4",
+            "name": "Series 1 Disc 215",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20215.mp4",
+            "seconds": 1735,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 1 Disc 216.mp4",
+            "name": "Series 1 Disc 216",
+            "url": "https://archive.org/download/limmysshow/Series%201%20Disc%20216.mp4",
+            "seconds": 1732,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "series 2 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 1.mp4",
+            "name": "Series 2 Disc 1",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%201.mp4",
+            "seconds": 5223,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 544,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "series 2 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 2.mp4",
+            "name": "Series 2 Disc 2",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%202.mp4",
+            "seconds": 5221,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 543,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "series 2 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 13.mp4",
+            "name": "Series 2 Disc 13",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2013.mp4",
+            "seconds": 1740,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "series 2 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 14.mp4",
+            "name": "Series 2 Disc 14",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2014.mp4",
+            "seconds": 1735,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "series 2 15",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 15.mp4",
+            "name": "Series 2 Disc 15",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2015.mp4",
+            "seconds": 1748,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "series 2 16",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 16.mp4",
+            "name": "Series 2 Disc 16",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2016.mp4",
+            "seconds": 1740,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "series 2 17",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 17.mp4",
+            "name": "Series 2 Disc 17",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2017.mp4",
+            "seconds": 1740,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "series 2 18",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 18.mp4",
+            "name": "Series 2 Disc 18",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2018.mp4",
+            "seconds": 1748,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "series 2 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 23.mp4",
+            "name": "Series 2 Disc 23",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2023.mp4",
+            "seconds": 1744,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "series 2 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 24.mp4",
+            "name": "Series 2 Disc 24",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2024.mp4",
+            "seconds": 1743,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "series 2 25",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 25.mp4",
+            "name": "Series 2 Disc 25",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2025.mp4",
+            "seconds": 1734,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "series 2 26",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 26.mp4",
+            "name": "Series 2 Disc 26",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2026.mp4",
+            "seconds": 1744,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "series 2 27",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 27.mp4",
+            "name": "Series 2 Disc 27",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2027.mp4",
+            "seconds": 1743,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "series 2 28",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 28.mp4",
+            "name": "Series 2 Disc 28",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2028.mp4",
+            "seconds": 1734,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "series 2 29",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 29.mp4",
+            "name": "Series 2 Disc 29",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%2029.mp4",
+            "seconds": 776,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 81,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "series 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow",
+            "itemTitle": "Limmy's Show - Series 1 & 2 [PAL DVD ISO]",
+            "file": "Series 2 Disc 210.mp4",
+            "name": "Series 2 Disc 210",
+            "url": "https://archive.org/download/limmysshow/Series%202%20Disc%20210.mp4",
+            "seconds": 151,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "pilot gvfcrhimoti",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmy's Show - Pilot [gvfCRhimOTI].webm",
+            "name": "showshow/Limmy's Show - Pilot [gvfCRhimOTI]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmy's%20Show%20-%20Pilot%20%5BgvfCRhimOTI%5D.webm",
+            "seconds": 1743,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 59,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "christmas special azxvvxk1 hi",
+          "state": "REVIEW",
+          "file": {
+            "item": "limmysshow_240p",
+            "itemTitle": "Limmy's Show Series 1,2 and 3 + Director's Commentary at 240p",
+            "file": "showshow/Limmys Show - Christmas Special 2013 [aZXVvxK1-hI].webm",
+            "name": "showshow/Limmys Show - Christmas Special 2013 [aZXVvxK1-hI]",
+            "url": "https://archive.org/download/limmysshow_240p/showshow%2FLimmys%20Show%20-%20Christmas%20Special%202013%20%5BaZXVvxK1-hI%5D.webm",
+            "seconds": 1754,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 62,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }
@@ -149,178 +1308,148 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "airdate": "2011-02-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Episode 2",
-          "airdate": "2011-02-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Episode 3",
-          "airdate": "2011-03-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Episode 4",
-          "airdate": "2011-03-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Episode 5",
-          "airdate": "2011-03-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Episode 6",
-          "airdate": "2011-03-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Episode 1",
-          "airdate": "2012-11-12",
+          "name": "pip commentary for girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 6 in \"Limmy's Show - Series 3 [720p Web-DL]\"",
-            "item": "limmys-show-series-3",
-            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
-            "file": "Limmys_Show_Series_3_-_01._Episode_1_b01p085w_original.mp4",
-            "name": "Limmys_Show_Series_3_-_01._Episode_1_b01p085w_original",
-            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_01._Episode_1_b01p085w_original.mp4",
-            "seconds": 1724,
-            "format": "MPEG4",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/pip.commentary.for.s02e01.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/pip.commentary.for.s02e01.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2FExtras%2Fpip.commentary.for.s02e01.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1740,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1090
+            "sizeMB": 176,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "airdate": "2012-11-19",
+          "name": "pip commentary for girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 6 in \"Limmy's Show - Series 3 [720p Web-DL]\"",
-            "item": "limmys-show-series-3",
-            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
-            "file": "Limmys_Show_Series_3_-_02._Episode_2_b01p2xmz_original.mp4",
-            "name": "Limmys_Show_Series_3_-_02._Episode_2_b01p2xmz_original",
-            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_02._Episode_2_b01p2xmz_original.mp4",
-            "seconds": 1736,
-            "format": "MPEG4",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/pip.commentary.for.s02e02.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/Extras/pip.commentary.for.s02e02.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2FExtras%2Fpip.commentary.for.s02e02.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1740,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1123
+            "sizeMB": 177,
+            "ep": {
+              "season": 2,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "airdate": "2012-11-26",
+          "name": "girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 6 in \"Limmy's Show - Series 3 [720p Web-DL]\"",
-            "item": "limmys-show-series-3",
-            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
-            "file": "Limmys_Show_Series_3_-_03._Episode_3_b01p65q7_original.mp4",
-            "name": "Limmys_Show_Series_3_-_03._Episode_3_b01p65q7_original",
-            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_03._Episode_3_b01p65q7_original.mp4",
-            "seconds": 1730,
-            "format": "MPEG4",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e03.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e03.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e03.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1748,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1118
+            "sizeMB": 176,
+            "ep": {
+              "season": 2,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "airdate": "2012-12-03",
+          "name": "girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 6 in \"Limmy's Show - Series 3 [720p Web-DL]\"",
-            "item": "limmys-show-series-3",
-            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
-            "file": "Limmys_Show_Series_3_-_04._Episode_4_b01pbp0g_original.mp4",
-            "name": "Limmys_Show_Series_3_-_04._Episode_4_b01pbp0g_original",
-            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_04._Episode_4_b01pbp0g_original.mp4",
-            "seconds": 1728,
-            "format": "MPEG4",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e04.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e04.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e04.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1744,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1109
+            "sizeMB": 176,
+            "ep": {
+              "season": 2,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "airdate": "2012-12-10",
+          "name": "girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 6 in \"Limmy's Show - Series 3 [720p Web-DL]\"",
-            "item": "limmys-show-series-3",
-            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
-            "file": "Limmys_Show_Series_3_-_05._Episode_5_b01pfth9_original.mp4",
-            "name": "Limmys_Show_Series_3_-_05._Episode_5_b01pfth9_original",
-            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_05._Episode_5_b01pfth9_original.mp4",
-            "seconds": 1731,
-            "format": "MPEG4",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e05.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e05.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e05.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1743,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1088
+            "sizeMB": 175,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "airdate": "2012-12-17",
+          "name": "girldong",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 6 in \"Limmy's Show - Series 3 [720p Web-DL]\"",
-            "item": "limmys-show-series-3",
-            "itemTitle": "Limmy's Show - Series 3 [720p Web-DL]",
-            "file": "Limmys_Show_Series_3_-_06._Episode_6_b01phyhg_original.mp4",
-            "name": "Limmys_Show_Series_3_-_06._Episode_6_b01phyhg_original",
-            "url": "https://archive.org/download/limmys-show-series-3/Limmys_Show_Series_3_-_06._Episode_6_b01phyhg_original.mp4",
-            "seconds": 1731,
-            "format": "MPEG4",
+            "item": "limmys.show.576p",
+            "itemTitle": "Limmy's Show Series 1+2 576p DVDRIP",
+            "file": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e06.576p.DVDRIP_GIRLDONG.mp4",
+            "name": "Limmy's Show Series 1+2 576p DVDRIP [GIRLDONG]/Season 2/limmys.show.s02e06.576p.DVDRIP_GIRLDONG",
+            "url": "https://archive.org/download/limmys.show.576p/Limmy's%20Show%20Series%201%2B2%20576p%20DVDRIP%20%5BGIRLDONG%5D%2FSeason%202%2Flimmys.show.s02e06.576p.DVDRIP_GIRLDONG.mp4",
+            "seconds": 1734,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1113
+            "sizeMB": 176,
+            "ep": {
+              "season": 2,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 13842,
+    "name": "Limmy's Show",
+    "placed": 12
+  }
 }

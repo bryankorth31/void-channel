@@ -3,7 +3,8 @@
   "slug": "the-bernie-mac-show",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-15T12:07:37.208Z",
+  "matchedAt": "2026-10-15T12:55:19.130Z",
+  "addedAt": "2026-10-15T12:07:37.208Z",
   "tvmaze": {
     "id": 6836,
     "name": "The Bernie Mac Show",
@@ -148,19 +149,32 @@
           "airdate": "2001-12-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "bernie-mac-season-1",
-            "itemTitle": "The Bernie Mac Show: Season 1",
-            "file": "The.Bernie.Mac.Show.S01E07.Saving.Bernie.Mac.640p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
-            "name": "The.Bernie.Mac.Show.S01E07.Saving.Bernie.Mac.640p.TUBI.WEB-DL.AAC2.0.H.264",
-            "url": "https://archive.org/download/bernie-mac-season-1/The.Bernie.Mac.Show.S01E07.Saving.Bernie.Mac.640p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
-            "seconds": 1335,
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "The_Bernie_Mac_Show_FOX_WOC_Incomplete_2001-12-19",
+            "itemTitle": " The Bernie Mac Show FOX WOC Incomplete 2001 12 19",
+            "file": "The_Bernie_Mac_Show_FOX_WOC_Incomplete_2001-12-19.mp4",
+            "name": "The_Bernie_Mac_Show_FOX_WOC_Incomplete_2001-12-19",
+            "url": "https://archive.org/download/The_Bernie_Mac_Show_FOX_WOC_Incomplete_2001-12-19/The_Bernie_Mac_Show_FOX_WOC_Incomplete_2001-12-19.mp4",
+            "seconds": 2006,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 130
+            "sizeMB": 209
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bernie-mac-season-1",
+              "itemTitle": "The Bernie Mac Show: Season 1",
+              "file": "The.Bernie.Mac.Show.S01E07.Saving.Bernie.Mac.640p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+              "name": "The.Bernie.Mac.Show.S01E07.Saving.Bernie.Mac.640p.TUBI.WEB-DL.AAC2.0.H.264",
+              "url": "https://archive.org/download/bernie-mac-season-1/The.Bernie.Mac.Show.S01E07.Saving.Bernie.Mac.640p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+              "seconds": 1335,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"A Christmas Story\" (0.95)",

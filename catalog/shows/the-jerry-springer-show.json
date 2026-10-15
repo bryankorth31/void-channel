@@ -3,1316 +3,1405 @@
   "slug": "the-jerry-springer-show",
   "type": "Classic TV",
   "network": "Syndicated",
-  "matchedAt": "2026-10-15T12:09:12.407Z",
+  "matchedAt": "2026-10-15T12:56:01.230Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 6061,
+    "id": null,
     "name": "The Jerry Springer Show",
-    "runtime": 60,
-    "premiered": "1991-09-01",
-    "network": "Syndication"
+    "runtime": null,
+    "premiered": null,
+    "network": "Syndicated"
   },
   "coverage": {
-    "total": 346,
+    "total": 79,
     "live": 0,
-    "review": 2,
-    "missing": 344,
-    "pct": 1
+    "review": 79,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
       "season": 1,
       "episodes": [
         {
-          "number": 1,
-          "name": "Pilot",
-          "airdate": "1991-09-01",
-          "state": "MISSING",
-          "file": null,
+          "number": 3,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E03 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E03 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E03%20-%20TBA.mp4",
+            "seconds": 2369,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 831,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E05 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E05 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E05%20-%20TBA.mp4",
+            "seconds": 2607,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 784,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E06 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E06 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E06%20-%20TBA.mp4",
+            "seconds": 2578,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 748,
+            "ep": {
+              "season": 1,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E07 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E07 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E07%20-%20TBA.mp4",
+            "seconds": 2502,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 952,
+            "ep": {
+              "season": 1,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "the wild and outrageous volume 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Specials/The Jerry Springer Show - S00E08 - Wild & Outrageous - Volume 1.mp4",
+            "name": "Specials/The Jerry Springer Show - S00E08 - Wild & Outrageous - Volume 1",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Specials%2FThe%20Jerry%20Springer%20Show%20-%20S00E08%20-%20Wild%20%26%20Outrageous%20-%20Volume%201.mp4",
+            "seconds": 3222,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 318,
+            "ep": {
+              "season": 0,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "the wild and outrageous volume 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Specials/The Jerry Springer Show - S00E09 - Wild & Outrageous - Volume 2.mp4",
+            "name": "Specials/The Jerry Springer Show - S00E09 - Wild & Outrageous - Volume 2",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Specials%2FThe%20Jerry%20Springer%20Show%20-%20S00E09%20-%20Wild%20%26%20Outrageous%20-%20Volume%202.mp4",
+            "seconds": 3348,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 336,
+            "ep": {
+              "season": 0,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E10 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E10 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E10%20-%20TBA.mp4",
+            "seconds": 2603,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 727,
+            "ep": {
+              "season": 1,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "the wild and outrageous volume 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Specials/The Jerry Springer Show - S00E11 - Wild & Outrageous - Volume 4.mp4",
+            "name": "Specials/The Jerry Springer Show - S00E11 - Wild & Outrageous - Volume 4",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Specials%2FThe%20Jerry%20Springer%20Show%20-%20S00E11%20-%20Wild%20%26%20Outrageous%20-%20Volume%204.mp4",
+            "seconds": 3422,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 338,
+            "ep": {
+              "season": 0,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "the wild and outrageous volume 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Specials/The Jerry Springer Show - S00E12 - Wild & Outrageous - Volume 5.mp4",
+            "name": "Specials/The Jerry Springer Show - S00E12 - Wild & Outrageous - Volume 5",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Specials%2FThe%20Jerry%20Springer%20Show%20-%20S00E12%20-%20Wild%20%26%20Outrageous%20-%20Volume%205.mp4",
+            "seconds": 3428,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 346,
+            "ep": {
+              "season": 0,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E13 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E13 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E13%20-%20TBA.mp4",
+            "seconds": 2146,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 686,
+            "ep": {
+              "season": 1,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E15 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E15 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E15%20-%20TBA.mp4",
+            "seconds": 2575,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 922,
+            "ep": {
+              "season": 1,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E16 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E16 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E16%20-%20TBA.mp4",
+            "seconds": 2564,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 896,
+            "ep": {
+              "season": 1,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E17 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E17 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E17%20-%20TBA.mp4",
+            "seconds": 2577,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 806,
+            "ep": {
+              "season": 1,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E19 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E19 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E19%20-%20TBA.mp4",
+            "seconds": 2579,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 787,
+            "ep": {
+              "season": 1,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E20 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E20 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E20%20-%20TBA.mp4",
+            "seconds": 2590,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 884,
+            "ep": {
+              "season": 1,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E21 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E21 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E21%20-%20TBA.mp4",
+            "seconds": 2606,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 802,
+            "ep": {
+              "season": 1,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the tba",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 01/The Jerry Springer Show - S01E22 - TBA.mp4",
+            "name": "Season 01/The Jerry Springer Show - S01E22 - TBA",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2001%2FThe%20Jerry%20Springer%20Show%20-%20S01E22%20-%20TBA.mp4",
+            "seconds": 2574,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 778,
+            "ep": {
+              "season": 1,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "diaper bob",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Diaper Bob.mp4",
+            "name": "Diaper Bob",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Diaper%20Bob.mp4",
+            "seconds": 2433,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 754,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "dumped on",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Dumped…On Springer!.mp4",
+            "name": "Dumped…On Springer!",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Dumped%E2%80%A6On%20Springer!.mp4",
+            "seconds": 2403,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 739,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "get your own man",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Get Your Own Man!.mp4",
+            "name": "Get Your Own Man!",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Get%20Your%20Own%20Man!.mp4",
+            "seconds": 2457,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 758,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "guess what im cheating",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Guess What？ I'm Cheating.mp4",
+            "name": "Guess What？ I'm Cheating",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Guess%20What%EF%BC%9F%20I'm%20Cheating.mp4",
+            "seconds": 2426,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 752,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "holiday hell with my feuding family",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Holiday Hell With My Feuding Family.mp4",
+            "name": "Holiday Hell With My Feuding Family",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Holiday%20Hell%20With%20My%20Feuding%20Family.mp4",
+            "seconds": 2489,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 769,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "honey this is my real job",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Honey… This Is My Real Job!.mp4",
+            "name": "Honey… This Is My Real Job!",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Honey%E2%80%A6%20This%20Is%20My%20Real%20Job!.mp4",
+            "seconds": 2429,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 748,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "hot love affairs",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Hot Love Affairs.mp4",
+            "name": "Hot Love Affairs",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Hot%20Love%20Affairs.mp4",
+            "seconds": 2344,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 723,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "i never let you go",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I Never Let You Go.mp4",
+            "name": "I Never Let You Go",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I%20Never%20Let%20You%20Go.mp4",
+            "seconds": 2417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 746,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "i regret you",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I Regret You.mp4",
+            "name": "I Regret You",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I%20Regret%20You.mp4",
+            "seconds": 2303,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 710,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "i slept with your lover",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I Slept With Your Lover!.mp4",
+            "name": "I Slept With Your Lover!",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I%20Slept%20With%20Your%20Lover!.mp4",
+            "seconds": 2434,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 751,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "im here to divorce you",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I'm Here To Divorce You!.mp4",
+            "name": "I'm Here To Divorce You!",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I'm%20Here%20To%20Divorce%20You!.mp4",
+            "seconds": 2459,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 760,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "im hiding a sexy secret",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I'm Hiding A Sexy Secret.mp4",
+            "name": "I'm Hiding A Sexy Secret",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I'm%20Hiding%20A%20Sexy%20Secret.mp4",
+            "seconds": 2395,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 734,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "im leaving my wife for a tranny",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I'm Leaving My Wife For a Tranny.mp4",
+            "name": "I'm Leaving My Wife For a Tranny",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I'm%20Leaving%20My%20Wife%20For%20a%20Tranny.mp4",
+            "seconds": 2311,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 714,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "im your pimp not your boyfriend",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "I'm Your Pimp, Not Your Boyfriend.mp4",
+            "name": "I'm Your Pimp, Not Your Boyfriend",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/I'm%20Your%20Pimp%2C%20Not%20Your%20Boyfriend.mp4",
+            "seconds": 2302,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 710,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "jaw dropping wedding",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Jaw Dropping Wedding.mp4",
+            "name": "Jaw Dropping Wedding",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Jaw%20Dropping%20Wedding.mp4",
+            "seconds": 2325,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 712,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "love against the odds",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Love Against The Odds.mp4",
+            "name": "Love Against The Odds",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Love%20Against%20The%20Odds.mp4",
+            "seconds": 2325,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 716,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "marriage disasters",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "Marriage Disasters.mp4",
+            "name": "Marriage Disasters",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/Marriage%20Disasters.mp4",
+            "seconds": 2413,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 747,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "my wife left me for my father",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes-pt-2",
+            "itemTitle": "The Jerry Springer Show (Various Episodes) - Part 2",
+            "file": "My Wife Left Me For My Father.mp4",
+            "name": "My Wife Left Me For My Father",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes-pt-2/My%20Wife%20Left%20Me%20For%20My%20Father.mp4",
+            "seconds": 2405,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 741,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "the april 7",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-april-7-1997",
+            "itemTitle": "The Jerry Springer Show (April 7, 1997)",
+            "file": "The Jerry Springer Show (April 7, 1997).m4v",
+            "name": "The Jerry Springer Show (April 7, 1997)",
+            "url": "https://archive.org/download/the-jerry-springer-show-april-7-1997/The%20Jerry%20Springer%20Show%20(April%207%2C%201997).m4v",
+            "seconds": 2588,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 360,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "the february 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-february-6-1998",
+            "itemTitle": "The Jerry Springer Show (February 6, 1998)",
+            "file": "The Jerry Springer Show (February 6, 1998).m4v",
+            "name": "The Jerry Springer Show (February 6, 1998)",
+            "url": "https://archive.org/download/the-jerry-springer-show-february-6-1998/The%20Jerry%20Springer%20Show%20(February%206%2C%201998).m4v",
+            "seconds": 2526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 444,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "the january 15",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-january-15-1999",
+            "itemTitle": "The Jerry Springer Show (January 15, 1999)",
+            "file": "The Jerry Springer Show (January 15, 1999).m4v",
+            "name": "The Jerry Springer Show (January 15, 1999)",
+            "url": "https://archive.org/download/the-jerry-springer-show-january-15-1999/The%20Jerry%20Springer%20Show%20(January%2015%2C%201999).m4v",
+            "seconds": 2549,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 759,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "the october 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-october-23-1995",
+            "itemTitle": "The Jerry Springer Show (October 23, 1995)",
+            "file": "The Jerry Springer Show (October 23, 1995).m4v",
+            "name": "The Jerry Springer Show (October 23, 1995)",
+            "url": "https://archive.org/download/the-jerry-springer-show-october-23-1995/The%20Jerry%20Springer%20Show%20(October%2023%2C%201995).m4v",
+            "seconds": 2610,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 485,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "the april 23 most",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-april-23-1997-most",
+            "itemTitle": "The Jerry Springer Show- April 23, 1997 (most)",
+            "file": "The Jerry Springer Show- April 23, 1997 (most).m4v",
+            "name": "The Jerry Springer Show- April 23, 1997 (most)",
+            "url": "https://archive.org/download/the-jerry-springer-show-april-23-1997-most/The%20Jerry%20Springer%20Show-%20April%2023%2C%201997%20(most).m4v",
+            "seconds": 2119,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 327,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "the august 23 most",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-august-23-1996-most",
+            "itemTitle": "The Jerry Springer Show- August 23, 1996 (most)",
+            "file": "The Jerry Springer Show- August 23, 1996 (most).m4v",
+            "name": "The Jerry Springer Show- August 23, 1996 (most)",
+            "url": "https://archive.org/download/the-jerry-springer-show-august-23-1996-most/The%20Jerry%20Springer%20Show-%20August%2023%2C%201996%20(most).m4v",
+            "seconds": 2421,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 345,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     },
     {
-      "season": 25,
+      "season": 2,
       "episodes": [
         {
-          "number": 1,
-          "name": "25th Season Spectacular",
-          "airdate": "2015-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 2,
-          "name": "Marriage Meltdowns",
-          "airdate": "2015-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Sorry Sis, Your Man Is Fair Game",
-          "airdate": "2015-09-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Birthday T.H.O.T.S.",
-          "airdate": "2015-09-24",
-          "state": "MISSING",
-          "file": null,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 02/The Jerry Springer Show - S02E02 -.mp4",
+            "name": "Season 02/The Jerry Springer Show - S02E02 -",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2002%2FThe%20Jerry%20Springer%20Show%20-%20S02E02%20-.mp4",
+            "seconds": 2576,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 755,
+            "ep": {
+              "season": 2,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "My Transsexual Cousin Wants My Man",
-          "airdate": "2015-09-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Lesbian Stepsister Hook-Up",
-          "airdate": "2015-11-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Big Girls Bring It!",
-          "airdate": "2015-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Boyfriends Bounce Around",
-          "airdate": "2015-09-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Ruthless Rejections",
-          "airdate": "2015-10-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Suspicious Packages",
-          "airdate": "2015-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Under Cover Exes",
-          "airdate": "2015-10-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Spontaneous Sex Mistakes",
-          "airdate": "2015-10-06",
-          "state": "MISSING",
-          "file": null,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 02/The Jerry Springer Show - S02E05 -.mp4",
+            "name": "Season 02/The Jerry Springer Show - S02E05 -",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2002%2FThe%20Jerry%20Springer%20Show%20-%20S02E05%20-.mp4",
+            "seconds": 2546,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1055,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Babymamas Hit the Bricks",
-          "airdate": "2015-10-07",
-          "state": "MISSING",
-          "file": null,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 02/The Jerry Springer Show - S02E13 -.mp4",
+            "name": "Season 02/The Jerry Springer Show - S02E13 -",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2002%2FThe%20Jerry%20Springer%20Show%20-%20S02E13%20-.mp4",
+            "seconds": 2609,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 625,
+            "ep": {
+              "season": 2,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Sham Marriage",
-          "airdate": "2015-10-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Super Sabotaged",
-          "airdate": "2015-10-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Viral Nightmares",
-          "airdate": "2015-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Big Fat Lies",
-          "airdate": "2015-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Springer's Internet Sensations",
-          "airdate": "2015-10-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Roped Into Sex",
-          "airdate": "2015-10-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Crazy Cousin Crushes",
-          "airdate": "2015-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Sex on a Break",
-          "airdate": "2015-10-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
         {
           "number": 22,
-          "name": "Sisters Throw Shade",
-          "airdate": "2015-10-23",
-          "state": "MISSING",
-          "file": null,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 04/The Jerry Springer Show S04E22.mp4",
+            "name": "Season 04/The Jerry Springer Show S04E22",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2004%2FThe%20Jerry%20Springer%20Show%20S04E22.mp4",
+            "seconds": 2246,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 420,
+            "ep": {
+              "season": 4,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
         {
-          "number": 23,
-          "name": "I Sexed Your Ex",
-          "airdate": "2015-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Hotties Hit Hard",
-          "airdate": "2015-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Smash and Dash",
-          "airdate": "2015-10-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "Ratchet Rejections",
-          "airdate": "2015-10-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "Nightmare on Springer Street",
-          "airdate": "2015-10-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "Selfish Singles Get Slapped!",
-          "airdate": "2015-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "Sisters Step Up to Throwdown",
-          "airdate": "2015-11-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "Sorry Not Sorry",
-          "airdate": "2015-11-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "Mistresses Smoked Out",
-          "airdate": "2015-11-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "The Stripper Life",
-          "airdate": "2015-11-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "My Virgin Sister Wants My Man",
-          "airdate": "2015-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "Hottie High-School Hook-Ups",
-          "airdate": "2015-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "LoveWins",
-          "airdate": "2015-11-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "Savage Splits",
-          "airdate": "2015-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "Transsexual Sex Confessions",
-          "airdate": "2015-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "Clingy Coeds",
-          "airdate": "2015-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "Bad Blood BFF's",
-          "airdate": "2015-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "Cousins Turnt Up",
-          "airdate": "2015-11-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "I Love Bad Boys",
-          "airdate": "2015-11-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "Springer's Tailgate Party",
-          "airdate": "2015-11-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "Fights on Fleek",
-          "airdate": "2015-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "Shocking Sexcapades",
-          "airdate": "2015-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "Twerksgiving",
-          "airdate": "2015-11-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "Relationship Fails",
-          "airdate": "2015-12-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 47,
-          "name": "Love Punked",
-          "airdate": "2015-12-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "Porn Star Auditions",
-          "airdate": "2015-12-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "Stalkers Pop-Up",
-          "airdate": "2015-12-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "Holiday Hook-up Regrets",
-          "airdate": "2015-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "Bisexual Shocker",
-          "airdate": "2015-12-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "Hexes on Exes",
-          "airdate": "2015-12-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "Lip-Locked Lesbians",
-          "airdate": "2015-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "Love Burns Out",
-          "airdate": "2016-01-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 3,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 07/The Jerry Springer Show - S07E03.mp4",
+            "name": "Season 07/The Jerry Springer Show - S07E03",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2007%2FThe%20Jerry%20Springer%20Show%20-%20S07E03.mp4",
+            "seconds": 2640,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1120,
+            "ep": {
+              "season": 7,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 55,
-          "name": "Throwback Throwdowns",
-          "airdate": "2016-01-07",
-          "state": "MISSING",
-          "file": null,
+          "name": "the cheaters come clean nosey aac2 0 h",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 07/The Jerry Springer Show S07E55 - Cheaters.Come.Clean.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "name": "Season 07/The Jerry Springer Show S07E55 - Cheaters.Come.Clean.WEBRip.Nosey.AAC2.0.H",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2007%2FThe%20Jerry%20Springer%20Show%20S07E55%20-%20Cheaters.Come.Clean.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "seconds": 2405,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 450,
+            "ep": {
+              "season": 7,
+              "episode": 55
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 56,
-          "name": "Past Guest Takedowns",
-          "airdate": "2016-01-11",
-          "state": "MISSING",
-          "file": null,
+          "name": "the stripper wars nosey aac2 0 h",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 07/The Jerry Springer Show S07E56 - Stripper.Wars.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "name": "Season 07/The Jerry Springer Show S07E56 - Stripper.Wars.WEBRip.Nosey.AAC2.0.H",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2007%2FThe%20Jerry%20Springer%20Show%20S07E56%20-%20Stripper.Wars.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "seconds": 2413,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 450,
+            "ep": {
+              "season": 7,
+              "episode": 56
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 13,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 08/The Jerry Springer Show - S08E13.mp4",
+            "name": "Season 08/The Jerry Springer Show - S08E13",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2008%2FThe%20Jerry%20Springer%20Show%20-%20S08E13.mp4",
+            "seconds": 2548,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 987,
+            "ep": {
+              "season": 8,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 57,
-          "name": "Scheming Sisters",
-          "airdate": "2016-01-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 14,
+          "name": "the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 08/The Jerry Springer Show - S08E14.mp4",
+            "name": "Season 08/The Jerry Springer Show - S08E14",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2008%2FThe%20Jerry%20Springer%20Show%20-%20S08E14.mp4",
+            "seconds": 2532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 850,
+            "ep": {
+              "season": 8,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 10,
+      "episodes": [
+        {
+          "number": 33,
+          "name": "the secret sex lives nosey aac2 0 h",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 10/The Jerry Springer Show S10E33 - Secret.Sex.Lives.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "name": "Season 10/The Jerry Springer Show S10E33 - Secret.Sex.Lives.WEBRip.Nosey.AAC2.0.H",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2010%2FThe%20Jerry%20Springer%20Show%20S10E33%20-%20Secret.Sex.Lives.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "seconds": 2405,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 447,
+            "ep": {
+              "season": 10,
+              "episode": 33
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 12,
+      "episodes": [
+        {
+          "number": 44,
+          "name": "the dirty deeds nosey aac2 0 h",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 12/The Jerry Springer Show S12E44 - Dirty.Deeds.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "name": "Season 12/The Jerry Springer Show S12E44 - Dirty.Deeds.WEBRip.Nosey.AAC2.0.H",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2012%2FThe%20Jerry%20Springer%20Show%20S12E44%20-%20Dirty.Deeds.WEBRip.Nosey.AAC2.0.H.264-TrumpSux.ia.mp4",
+            "seconds": 2375,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 443,
+            "ep": {
+              "season": 12,
+              "episode": 44
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 17,
+      "episodes": [
+        {
+          "number": 25,
+          "name": "the unknown",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 17/The Jerry Springer Show - S17E25 - Unknown.mp4",
+            "name": "Season 17/The Jerry Springer Show - S17E25 - Unknown",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2017%2FThe%20Jerry%20Springer%20Show%20-%20S17E25%20-%20Unknown.mp4",
+            "seconds": 2590,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 792,
+            "ep": {
+              "season": 17,
+              "episode": 25
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 22,
+      "episodes": [
+        {
+          "number": 24,
+          "name": "the strip tease",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 22/The Jerry Springer Show - S22E24 - Strip Tease.mp4",
+            "name": "Season 22/The Jerry Springer Show - S22E24 - Strip Tease",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2022%2FThe%20Jerry%20Springer%20Show%20-%20S22E24%20-%20Strip%20Tease.mp4",
+            "seconds": 2356,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 730,
+            "ep": {
+              "season": 22,
+              "episode": 24
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 58,
-          "name": "I'm Gay... Sometimes",
-          "airdate": "2016-01-15",
-          "state": "MISSING",
-          "file": null,
+          "number": 26,
+          "name": "the twin brother betrayal",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 22/The Jerry Springer Show - S22E26 - Twin Brother Betrayal.mp4",
+            "name": "Season 22/The Jerry Springer Show - S22E26 - Twin Brother Betrayal",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2022%2FThe%20Jerry%20Springer%20Show%20-%20S22E26%20-%20Twin%20Brother%20Betrayal.mp4",
+            "seconds": 2541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 757,
+            "ep": {
+              "season": 22,
+              "episode": 26
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 59,
-          "name": "Surprise... I'm a Transsexual Stripper",
-          "airdate": "2016-01-18",
-          "state": "MISSING",
-          "file": null,
+          "number": 27,
+          "name": "the swearin screamin and swingin",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 22/The Jerry Springer Show - S22E27 - Swearin ', Screamin ' and Swingin '.mp4",
+            "name": "Season 22/The Jerry Springer Show - S22E27 - Swearin ', Screamin ' and Swingin '",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2022%2FThe%20Jerry%20Springer%20Show%20-%20S22E27%20-%20Swearin%20'%2C%20Screamin%20'%20and%20Swingin%20'.mp4",
+            "seconds": 2580,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 828,
+            "ep": {
+              "season": 22,
+              "episode": 27
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "High and Goodbye",
-          "airdate": "2016-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "Caught!",
-          "airdate": "2016-01-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Bad Boy Brawls",
-          "airdate": "2016-01-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Girlfriends Flip Out",
-          "airdate": "2016-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "Lesbian Cousins Kiss",
-          "airdate": "2016-01-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "Surprise Wedding Guests",
-          "airdate": "2016-01-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "Booty in My...",
-          "airdate": "2016-01-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 67,
-          "name": "Fired Up Strippers",
-          "airdate": "2016-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 68,
-          "name": "Brawling Blood Lines",
-          "airdate": "2016-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 69,
-          "name": "Bye, Felicia",
-          "airdate": "2016-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 70,
-          "name": "Countdown to a Breakup",
-          "airdate": "2016-02-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 71,
-          "name": "Viewers Get Vicious",
-          "airdate": "2016-02-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 72,
-          "name": "Side Chick Pride",
-          "airdate": "2016-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 73,
-          "name": "Red Hot Strippers",
-          "airdate": "2016-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 74,
-          "name": "Beads & Boas... Springer Mardi Gras",
-          "airdate": "2016-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 75,
-          "name": "First Time Sexperience",
-          "airdate": "2016-02-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 76,
-          "name": "Baby Moms Go Ballistic",
-          "airdate": "2016-02-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 77,
-          "name": "I Won't Be Chained Down",
-          "airdate": "2016-02-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 78,
-          "name": "Cray Cray Secrets",
-          "airdate": "2016-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 79,
-          "name": "Threesomes and Touchdowns",
-          "airdate": "2016-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 80,
-          "name": "Betrayed By My Parrot",
-          "airdate": "2016-02-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 81,
-          "name": "About Last Night...",
-          "airdate": "2016-02-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "Frozen Lovers...Let It Go",
-          "airdate": "2016-02-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 83,
-          "name": "Meme Girls",
-          "airdate": "2016-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 84,
-          "name": "Good, Good Turns Bad, Bad",
-          "airdate": "2016-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 85,
-          "name": "BBW Blizzard!",
-          "airdate": "2016-02-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 86,
-          "name": "Jail Break Beatdown",
-          "airdate": "2016-02-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "Bad Decisions with a Transsexual",
-          "airdate": "2016-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 88,
-          "name": "Sex Is My Thing",
-          "airdate": "2016-02-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 89,
-          "name": "Bros vs. Babes",
-          "airdate": "2016-03-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 90,
-          "name": "Sex Bet Goes Bust",
-          "airdate": "2016-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 91,
-          "name": "Sexing My Transsexual Sister's Boyfriend",
-          "airdate": "2016-03-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 92,
-          "name": "Lesbian Spring Break!",
-          "airdate": "2016-03-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 93,
-          "name": "You Cheated...Literally",
-          "airdate": "2016-03-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 94,
-          "name": "Springer's Chapel of Love",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 95,
-          "name": "Relationships in the Gutter",
-          "airdate": "2016-04-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 23,
+      "episodes": [
         {
           "number": 96,
-          "name": "Virginal Vixens",
-          "airdate": "2016-04-04",
-          "state": "MISSING",
-          "file": null,
+          "name": "the stripper all stars",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 23/The Jerry Springer Show - S23E96 - Stripper All-Stars.mp4",
+            "name": "Season 23/The Jerry Springer Show - S23E96 - Stripper All-Stars",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2023%2FThe%20Jerry%20Springer%20Show%20-%20S23E96%20-%20Stripper%20All-Stars.mp4",
+            "seconds": 2506,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 845,
+            "ep": {
+              "season": 23,
+              "episode": 96
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 97,
-          "name": "Eye Spy a Cheater",
-          "airdate": "2016-04-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "the be my brother not my lover",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 23/The Jerry Springer Show - S23E97 - Be My Brother, Not My Lover.mp4",
+            "name": "Season 23/The Jerry Springer Show - S23E97 - Be My Brother, Not My Lover",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2023%2FThe%20Jerry%20Springer%20Show%20-%20S23E97%20-%20Be%20My%20Brother%2C%20Not%20My%20Lover.mp4",
+            "seconds": 2576,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 755,
+            "ep": {
+              "season": 23,
+              "episode": 97
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 24,
+      "episodes": [
+        {
+          "number": 28,
+          "name": "the i cheated with three strippers",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 24/The Jerry Springer Show - S24E28 - I Cheated With Three Strippers.mp4",
+            "name": "Season 24/The Jerry Springer Show - S24E28 - I Cheated With Three Strippers",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2024%2FThe%20Jerry%20Springer%20Show%20-%20S24E28%20-%20I%20Cheated%20With%20Three%20Strippers.mp4",
+            "seconds": 2596,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 847,
+            "ep": {
+              "season": 24,
+              "episode": 28
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "the i slept with men",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 24/The Jerry Springer Show - S24E30 - I Slept With 120 Men ... and Yours.ia.mp4",
+            "name": "Season 24/The Jerry Springer Show - S24E30 - I Slept With 120 Men ..",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2024%2FThe%20Jerry%20Springer%20Show%20-%20S24E30%20-%20I%20Slept%20With%20120%20Men%20...%20and%20Yours.ia.mp4",
+            "seconds": 2575,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 861,
+            "ep": {
+              "season": 24,
+              "episode": 30
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 98,
-          "name": "Have Your Cake and Beat It!",
-          "airdate": "2016-04-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 99,
-          "name": "Hand Delivered Secrets",
-          "airdate": "2016-04-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 100,
-          "name": "Online Hook-ups IRL",
-          "airdate": "2016-04-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 101,
-          "name": "Take My Lesbian V-Card",
-          "airdate": "2016-04-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 102,
-          "name": "Dudes Double Down",
-          "airdate": "2016-04-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 103,
-          "name": "Unhappily Ever After",
-          "airdate": "2016-04-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 104,
-          "name": "Never Wife a T.H.O.T.",
-          "airdate": "2016-04-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 105,
-          "name": "Stripper Pole Shakedown",
-          "airdate": "2016-04-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 106,
-          "name": "Bad Girls Beatdown",
-          "airdate": "2016-04-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 107,
-          "name": "Snatched-Up Baby Daddies",
-          "airdate": "2016-04-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 108,
-          "name": "Amateur Porn Stars Slapped",
-          "airdate": "2016-04-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 109,
-          "name": "You Just Got Duuuumped!",
-          "airdate": "2016-04-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 110,
-          "name": "Springer and Chill",
-          "airdate": "2016-04-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 111,
-          "name": "Naked Peek-a-Boo",
-          "airdate": "2016-04-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 112,
-          "name": "Besties Have Beef",
-          "airdate": "2016-04-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 113,
-          "name": "\"L\" Bombs Dropped",
-          "airdate": "2016-04-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 114,
-          "name": "Cyber Smackdown",
-          "airdate": "2016-04-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 115,
-          "name": "Porn Fantasties & Fights",
-          "airdate": "2016-04-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 116,
-          "name": "Too Late to Say Sorry?",
-          "airdate": "2016-05-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 117,
-          "name": "Control Your Crazy",
-          "airdate": "2016-05-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 118,
-          "name": "2nd Thought T.H.O.T.S.",
-          "airdate": "2016-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 119,
-          "name": "Threesome with Two Sisters #2",
-          "airdate": "2016-05-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 120,
-          "name": "Droppin' Beats Down",
-          "airdate": "2016-05-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 121,
-          "name": "Spring Fling Face Offs",
-          "airdate": "2016-05-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 122,
-          "name": "Two Girls One Night",
-          "airdate": "2016-05-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 123,
-          "name": "Ding, Ding, Ding!",
-          "airdate": "2016-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 124,
-          "name": "Officially Over!",
-          "airdate": "2016-05-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 125,
-          "name": "Ain't No Friends @ the Strip Club",
-          "airdate": "2016-05-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 126,
-          "name": "Busted Up Bae's",
-          "airdate": "2016-05-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 127,
-          "name": "Main Chick Status: Denied",
-          "airdate": "2016-05-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 128,
-          "name": "Can I Be Blunt?... I'm Cheating",
-          "airdate": "2016-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 129,
-          "name": "Girls Whipped!",
-          "airdate": "2016-05-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 130,
-          "name": "Guys Scared Straight",
-          "airdate": "2016-05-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 131,
-          "name": "Jilted While in Jail",
-          "airdate": "2016-05-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 132,
-          "name": "Blindsided by a Secret",
-          "airdate": "2016-05-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 133,
-          "name": "Friend Zoned!",
-          "airdate": "2016-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 134,
-          "name": "Unsatisfying Sex",
-          "airdate": "2016-05-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 135,
-          "name": "Baby... Forgive Me",
-          "airdate": "2016-05-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 136,
-          "name": "Special Delivery: Betrayals",
-          "airdate": "2016-06-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 137,
-          "name": "Fight Invite",
-          "airdate": "2016-06-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 138,
-          "name": "Get the Picture: We're Done",
-          "airdate": "2016-06-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 139,
-          "name": "Bad Boys Blindsided",
-          "airdate": "2016-06-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 140,
-          "name": "Three-Timing Stripper",
-          "airdate": "2016-07-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 141,
-          "name": "I'm Your #1 Fan",
-          "airdate": "2016-07-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 142,
-          "name": "Girlfriends Split",
-          "airdate": "2016-07-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 143,
-          "name": "I Cheated 40 Times",
-          "airdate": "2016-07-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 144,
-          "name": "Personal Trainer Taps In",
-          "airdate": "2016-07-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 145,
-          "name": "T.H.O.T.-Licious",
-          "airdate": "2016-07-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 146,
-          "name": "Boyfriends Break the Rules",
-          "airdate": "2016-07-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 147,
-          "name": "Girls Wig Out",
-          "airdate": "2016-07-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 148,
-          "name": "Dad, Stop Dating My Friends",
-          "airdate": "2016-07-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 149,
-          "name": "Miso Horny",
-          "airdate": "2016-07-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 150,
-          "name": "Lesbians Over Easy",
-          "airdate": "2016-07-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 151,
-          "name": "Cuddling Gets Complicated",
-          "airdate": "2016-07-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 152,
-          "name": "Sex With Twins!",
-          "airdate": "2016-07-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 153,
-          "name": "Tweaked Off Girlfriends",
-          "airdate": "2016-07-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 154,
-          "name": "The Serious Side of Springer",
-          "airdate": "2016-07-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 155,
-          "name": "Hot Lesbian Action",
-          "airdate": "2016-07-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 156,
-          "name": "Girlfriends Mowed Over",
-          "airdate": "2016-07-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 157,
-          "name": "Honey, I'm Gay",
-          "airdate": "2016-07-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 158,
-          "name": "Dry Spell Drama",
-          "airdate": "2016-07-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 159,
-          "name": "Hipster Heartbreaks",
-          "airdate": "2016-07-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 160,
-          "name": "Bro, I Need to Tell You This",
-          "airdate": "2016-07-29",
-          "state": "MISSING",
-          "file": null,
+          "name": "the snowed in sex",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 24/The Jerry Springer Show - S24E98 - Snowed In Sex.mp4",
+            "name": "Season 24/The Jerry Springer Show - S24E98 - Snowed In Sex",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2024%2FThe%20Jerry%20Springer%20Show%20-%20S24E98%20-%20Snowed%20In%20Sex.mp4",
+            "seconds": 2532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 850,
+            "ep": {
+              "season": 24,
+              "episode": 98
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
@@ -1321,125 +1410,10 @@
       "season": 26,
       "episodes": [
         {
-          "number": 1,
-          "name": "Sister Slapdown",
-          "airdate": "2016-09-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "My Mama Dont Like You",
-          "airdate": "2016-09-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Counterfeit Friends",
-          "airdate": "2016-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Back Off My $ Bag",
-          "airdate": "2016-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "I Faked My Pregnancy ... Sorry",
-          "airdate": "2016-09-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Pregnant by the Same Teen Dad",
-          "airdate": "2016-09-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Bestie Breakups",
-          "airdate": "2016-09-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Redneck Rumble",
-          "airdate": "2016-09-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Lurking Liars",
-          "airdate": "2016-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Fresh Meat at the Strip Club",
-          "airdate": "2016-09-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Im Marrying My Daughters Ex",
-          "airdate": "2016-10-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Nice Girls Get Naughty",
-          "airdate": "2016-10-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Hoping for a Homerun",
-          "airdate": "2016-10-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Creepers Crushed",
-          "airdate": "2016-10-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 15,
-          "name": "Wifey vs. Jump Off",
-          "airdate": "2016-10-07",
+          "name": "the wifey vs jump off",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
             "item": "the-jerry-springer-show-various-episodes",
             "itemTitle": "The Jerry Springer Show (Various Episodes)",
             "file": "Season 26/The Jerry Springer Show - S26E15 - Wifey vs. Jump Off.mp4",
@@ -1448,956 +1422,60 @@
             "seconds": 2575,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 922
+            "sizeMB": 922,
+            "ep": {
+              "season": 26,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "T.H.O.T.-ing Is Life",
-          "airdate": "2016-10-10",
+          "name": "the t h o t",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
             "item": "the-jerry-springer-show-various-episodes",
             "itemTitle": "The Jerry Springer Show (Various Episodes)",
-            "file": "Season 26/The Jerry Springer Show - S26E16 - T.H.O.T.-ing Is Life.mp4",
-            "name": "Season 26/The Jerry Springer Show - S26E16 - T.H.O.T.-ing Is Life",
-            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2026%2FThe%20Jerry%20Springer%20Show%20-%20S26E16%20-%20T.H.O.T.-ing%20Is%20Life.mp4",
+            "file": "Season 26/The Jerry Springer Show - S26E16 - T.H.O.T.-ing Is Life.ia.mp4",
+            "name": "Season 26/The Jerry Springer Show - S26E16 - T.H.O.T",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2026%2FThe%20Jerry%20Springer%20Show%20-%20S26E16%20-%20T.H.O.T.-ing%20Is%20Life.ia.mp4",
             "seconds": 2598,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 1054
+            "sizeMB": 1054,
+            "ep": {
+              "season": 26,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "Baby Daddies Fumble",
-          "airdate": "2016-10-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Crushed on Springer",
-          "airdate": "2016-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "\"You Left Me for a Hooker!\"",
-          "airdate": "2016-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Strippers Bare It All!",
-          "airdate": "2016-10-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "You Are Not My Gay BFF!",
-          "airdate": "2016-10-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Girlfriends Swiped Left",
-          "airdate": "2016-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Baby Daddies Dip Out",
-          "airdate": "2016-10-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "T.H.O.T. You Were a Girl",
-          "airdate": "2016-10-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Flipped Out Females",
-          "airdate": "2016-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "Mississippi Mayhem",
-          "airdate": "2016-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "Squad Girls Attack",
-          "airdate": "2016-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "Raging House Party!!!",
-          "airdate": "2016-10-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "Great Pumpkin Smash Down",
-          "airdate": "2016-10-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "Baby Mama Bombshells",
-          "airdate": "2016-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "Gay Sex with Your Dad",
-          "airdate": "2016-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "Throwin' Lemon Shade",
-          "airdate": "2016-11-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "Thirsty at the Club",
-          "airdate": "2016-11-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "Ballot Box Babes",
-          "airdate": "2016-11-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "Sex with My Cousin",
-          "airdate": "2016-11-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "Sticky Situations",
-          "airdate": "2016-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "Homeboys Hit Below the Belt",
-          "airdate": "2016-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "Nasty Women Get It Done",
-          "airdate": "2016-11-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "Menage a Transexual",
-          "airdate": "2016-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "Best Friend or Worst Enemy",
-          "airdate": "2016-11-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "Girls Get Nailed",
-          "airdate": "2016-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "Mama Says Kick You Out",
-          "airdate": "2016-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "Strippers Get Down",
-          "airdate": "2016-11-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "Fighting Families Get Stuffed",
-          "airdate": "2016-11-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "Run Up Again",
-          "airdate": "2016-11-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "Man Up!",
-          "airdate": "2016-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 47,
-          "name": "Sex, Dreams and Nightmares",
-          "airdate": "2016-12-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "Wi-Fi Hookups",
-          "airdate": "2016-12-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "OMG Secrets",
-          "airdate": "2016-12-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "Catfished by You and Your Brother",
-          "airdate": "2016-12-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "Hooked Up With Your Stepdad",
-          "airdate": "2016-12-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "You Had Sex With My Mom",
-          "airdate": "2016-12-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "I Hate My Sister",
-          "airdate": "2016-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "Revenge Sex With My Uncle",
-          "airdate": "2016-12-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 55,
-          "name": "Fist-Fight Flashbacks",
-          "airdate": "2016-12-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "Savage Stepsister!",
-          "airdate": "2017-01-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 57,
-          "name": "Heartless Hacking Hos",
-          "airdate": "2017-01-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "Gay Crush on My Best Friend",
-          "airdate": "2017-01-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 59,
-          "name": "Droppin' Truth Bombs",
-          "airdate": "2017-01-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "Dudes in the Doghouse",
-          "airdate": "2017-01-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "Dude, Try a Transsexual",
-          "airdate": "2017-01-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Nice Guys Need Not Apply",
-          "airdate": "2017-01-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Sleep-Around Sisters",
-          "airdate": "2017-01-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "Big Bang Out",
-          "airdate": "2017-01-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "I Now Pronounce You... Over!",
-          "airdate": "2017-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "Stale Sex",
-          "airdate": "2017-01-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 67,
-          "name": "Jerry's Cure for the Cold",
-          "airdate": "2017-01-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 68,
-          "name": "Best Frenemies",
-          "airdate": "2017-01-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 69,
-          "name": "Baby Mama vs. Side Chick",
-          "airdate": "2017-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 70,
-          "name": "Wifeys Disrespected",
-          "airdate": "2017-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 71,
-          "name": "Tiny Twerk Off",
-          "airdate": "2017-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 72,
-          "name": "I Had Sex with My Brother",
-          "airdate": "2017-02-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 73,
-          "name": "Ice Cold-Cocked",
-          "airdate": "2017-02-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 74,
-          "name": "From Zero to Beatdown",
-          "airdate": "2017-02-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 75,
-          "name": "Booty from the Backpage",
-          "airdate": "2017-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 76,
-          "name": "Extra! Extra! Hos All About It!",
-          "airdate": "2017-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 77,
-          "name": "Savage Viewers Confront Past Guests",
-          "airdate": "2017-02-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 78,
-          "name": "Bye Bye Baby Mama!",
-          "airdate": "2017-02-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 79,
-          "name": "Vicious V-Day",
-          "airdate": "2017-02-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 80,
-          "name": "Guests Get Lit",
-          "airdate": "2017-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 81,
-          "name": "Blunt Break-Ups",
-          "airdate": "2017-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "Strippers Milkin' It",
-          "airdate": "2017-02-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 83,
-          "name": "Sex with Your Twin Sister",
-          "airdate": "2017-02-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 84,
-          "name": "Face Fightin' Time",
-          "airdate": "2017-02-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 85,
-          "name": "A Little Side Chick Action",
-          "airdate": "2017-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 86,
-          "name": "Torn Between Two Genders",
-          "airdate": "2017-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "Bisexual Twerkaholic Strippers",
-          "airdate": "2017-02-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 116,
-          "name": "Stepbrother Sex Goes Viral",
-          "airdate": "2017-05-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 117,
-          "name": "Lesbian Pregnancy Scare",
-          "airdate": "2017-05-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 118,
-          "name": "Panty Free Zone",
-          "airdate": "2017-05-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 119,
-          "name": "Spiteful Sex",
-          "airdate": "2017-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 120,
-          "name": "Worst. Threesome. Ever.",
-          "airdate": "2017-05-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 121,
-          "name": "Catfish & Release",
-          "airdate": "2017-05-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 122,
-          "name": "Premeditated Sex",
-          "airdate": "2017-05-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 123,
-          "name": "Killer Confessions",
-          "airdate": "2017-05-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 124,
-          "name": "Little People, Big Problems",
-          "airdate": "2017-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 125,
-          "name": "Happy Trampy Mother's Day",
-          "airdate": "2017-05-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 126,
-          "name": "Bromance Breakups",
-          "airdate": "2017-05-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 127,
-          "name": "Fruit Punched!",
-          "airdate": "2017-05-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 128,
-          "name": "Thou Shalt Not Cheat",
-          "airdate": "2017-05-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 129,
-          "name": "I'm Not Gay Anymore",
-          "airdate": "2017-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 130,
-          "name": "Cheating Like a Boss",
-          "airdate": "2017-05-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 131,
-          "name": "Hot-Tempered Sisters",
-          "airdate": "2017-05-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 132,
-          "name": "Sex with 200 People",
-          "airdate": "2017-05-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 133,
-          "name": "Vendettas Settled Today...",
-          "airdate": "2017-05-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 134,
-          "name": "Out and Proud",
-          "airdate": "2017-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 135,
-          "name": "Sex Is Best with 3!",
-          "airdate": "2017-05-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 136,
-          "name": "Lesbian Card Expired",
-          "airdate": "2017-06-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 137,
-          "name": "Lipstick Tricks",
-          "airdate": "2017-06-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 138,
-          "name": "Strange Sexperiment!",
-          "airdate": "2017-06-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 139,
-          "name": "Big Brother to the Rescue",
-          "airdate": "2017-06-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 140,
-          "name": "Not Over It!",
-          "airdate": "2017-06-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 141,
-          "name": "You Repulse Me",
-          "airdate": "2017-07-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 142,
-          "name": "Hot Girls Fighting",
-          "airdate": "2017-07-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 143,
-          "name": "Alternative Facts",
-          "airdate": "2017-07-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 144,
-          "name": "Lesbian Strippers Share Their Cookies",
-          "airdate": "2017-07-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 145,
-          "name": "Hush, Hush, Hook-Ups",
-          "airdate": "2017-07-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 146,
-          "name": "If the Camper's a Rockin'...",
-          "airdate": "2017-07-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 147,
-          "name": "69 Lies",
-          "airdate": "2017-07-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 148,
-          "name": "I Do... or I Don't",
-          "airdate": "2017-07-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 149,
-          "name": "Seducing My Transsexual Sister's Man",
-          "airdate": "2017-07-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 150,
-          "name": "Whipped Into a Frenzy",
-          "airdate": "2017-07-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 151,
-          "name": "Cheaters Dumped a Latte",
-          "airdate": "2017-07-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 152,
-          "name": "Washed Up Baby Daddies",
-          "airdate": "2017-07-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 153,
-          "name": "Panty Proof",
-          "airdate": "2017-07-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 154,
-          "name": "Throuple Trouble",
-          "airdate": "2017-07-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 155,
-          "name": "Birthday Beatdown",
-          "airdate": "2017-07-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 156,
-          "name": "Sausage Smackdowns",
-          "airdate": "2017-07-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 157,
-          "name": "Fights Get Ugly",
-          "airdate": "2017-07-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 158,
-          "name": "Chillin' with Strippers",
-          "airdate": "2017-07-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 159,
-          "name": "Delicious Revenge",
-          "airdate": "2017-07-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 160,
-          "name": "Flirty Face-Offs",
-          "airdate": "2017-07-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 98,
+          "name": "the bds in the hot seat",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 26/The Jerry Springer Show - S26E98 - BDs in the hot seat.mp4",
+            "name": "Season 26/The Jerry Springer Show - S26E98 - BDs in the hot seat",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2026%2FThe%20Jerry%20Springer%20Show%20-%20S26E98%20-%20BDs%20in%20the%20hot%20seat.mp4",
+            "seconds": 2548,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 987,
+            "ep": {
+              "season": 26,
+              "episode": 98
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
@@ -2407,429 +1485,361 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Sex With a Pregnant Stripper",
-          "airdate": "2017-09-18",
-          "state": "MISSING",
-          "file": null,
+          "name": "the sex with a pregnant stripper 1080i dd5 1 mpeg2 trollhd",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 27/The Jerry Springer Show S27E01 Sex With a Pregnant Stripper 1080i HDTV DD5.1 MPEG2-TrollHD.mp4",
+            "name": "Season 27/The Jerry Springer Show S27E01 Sex With a Pregnant Stripper 1080i HDTV DD5.1 MPEG2-TrollHD",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2027%2FThe%20Jerry%20Springer%20Show%20S27E01%20Sex%20With%20a%20Pregnant%20Stripper%201080i%20HDTV%20DD5.1%20MPEG2-TrollHD.mp4",
+            "seconds": 2138,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (DD5 1)",
+            "sizeMB": 210,
+            "ep": {
+              "season": 27,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 28,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the backstabbing lovers the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E01 Backstabbing Lovers! 💔 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E01 Backstabbing Lovers! 💔 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E01%20Backstabbing%20Lovers!%20%F0%9F%92%94%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2434,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": {
+              "season": 28,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 38,
-          "name": "College Coeds Cry",
-          "airdate": "2017-11-08",
-          "state": "MISSING",
-          "file": null,
+          "number": 2,
+          "name": "the bisexual betrayals the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E02 Bisexual Betrayals 🏳️‍🌈 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E02 Bisexual Betrayals 🏳️‍🌈 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E02%20Bisexual%20Betrayals%20%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%F0%9F%8C%88%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2444,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": {
+              "season": 28,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 39,
-          "name": "No Love",
-          "airdate": "2017-11-09",
-          "state": "MISSING",
-          "file": null,
+          "number": 3,
+          "name": "the bitter betrayals the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E03 Bitter Betrayals 😢 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E03 Bitter Betrayals 😢 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E03%20Bitter%20Betrayals%20%F0%9F%98%A2%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2403,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 154,
+            "ep": {
+              "season": 28,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 40,
-          "name": "Sexxxy Strippers",
-          "airdate": "2017-11-10",
-          "state": "MISSING",
-          "file": null,
+          "number": 4,
+          "name": "the cheaters confess on tape the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E04 Cheaters Confess on Tape 📼 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E04 Cheaters Confess on Tape 📼 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E04%20Cheaters%20Confess%20on%20Tape%20%F0%9F%93%BC%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": {
+              "season": 28,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 41,
-          "name": "Take a Knee",
-          "airdate": "2017-11-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 5,
+          "name": "the cheaters confronted the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E05 Cheaters CONFRONTED! 🤭 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E05 Cheaters CONFRONTED! 🤭 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E05%20Cheaters%20CONFRONTED!%20%F0%9F%A4%AD%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2435,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 153,
+            "ep": {
+              "season": 28,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 42,
-          "name": "Taco Tuesday Throwdown",
-          "airdate": "2017-11-14",
-          "state": "MISSING",
-          "file": null,
+          "number": 6,
+          "name": "the cold feet hot tempers the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E06 Cold Feet, HOT Tempers 🔥 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E06 Cold Feet, HOT Tempers 🔥 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E06%20Cold%20Feet%2C%20HOT%20Tempers%20%F0%9F%94%A5%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2334,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 151,
+            "ep": {
+              "season": 28,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 43,
-          "name": "I Trapped My Daughter's Man",
-          "airdate": "2017-11-15",
-          "state": "MISSING",
-          "file": null,
+          "number": 7,
+          "name": "the crushing confessions the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E07 Crushing Confessions! 😪 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E07 Crushing Confessions! 😪 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E07%20Crushing%20Confessions!%20%F0%9F%98%AA%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2462,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145,
+            "ep": {
+              "season": 28,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 44,
-          "name": "Pillows & Fights",
-          "airdate": "2017-11-16",
-          "state": "MISSING",
-          "file": null,
+          "number": 8,
+          "name": "the ex lovers return the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E08 Ex-lovers Return! 👩‍❤️‍👩 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E08 Ex-lovers Return! 👩‍❤️‍👩 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E08%20Ex-lovers%20Return!%20%F0%9F%91%A9%E2%80%8D%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%91%A9%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2420,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 155,
+            "ep": {
+              "season": 28,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 45,
-          "name": "Girls Pick Bad Apples",
-          "airdate": "2017-11-17",
-          "state": "MISSING",
-          "file": null,
+          "number": 9,
+          "name": "the fiesty women face off the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E09 Fiesty Women Face Off! _ The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E09 Fiesty Women Face Off! _ The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E09%20Fiesty%20Women%20Face%20Off!%20_%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2434,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 151,
+            "ep": {
+              "season": 28,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 46,
-          "name": "Scattered, Smothered & Covered",
-          "airdate": "2017-11-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 10,
+          "name": "the homewreckers move in the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E010 Homewreckers Move In 🤬 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E010 Homewreckers Move In 🤬 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E010%20Homewreckers%20Move%20In%20%F0%9F%A4%AC%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": {
+              "season": 28,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 47,
-          "name": "Online Feuds IRL",
-          "airdate": "2017-11-21",
-          "state": "MISSING",
-          "file": null,
+          "number": 11,
+          "name": "the ill do anything to get her back the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E011 I'll Do Anything to Get Her Back 🥵 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E011 I'll Do Anything to Get Her Back 🥵 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E011%20I'll%20Do%20Anything%20to%20Get%20Her%20Back%20%F0%9F%A5%B5%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2445,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 160,
+            "ep": {
+              "season": 28,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 48,
-          "name": "Be My Baby Donor",
-          "airdate": "2017-11-22",
-          "state": "MISSING",
-          "file": null,
+          "number": 12,
+          "name": "the im sleeping with your grandpa the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E012 I'm Sleeping With Your Grandpa! _ The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E012 I'm Sleeping With Your Grandpa! _ The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E012%20I'm%20Sleeping%20With%20Your%20Grandpa!%20_%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": {
+              "season": 28,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 49,
-          "name": "Strippers Sleigh",
-          "airdate": "2017-12-26",
-          "state": "MISSING",
-          "file": null,
+          "number": 13,
+          "name": "the its over the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E013 It's Over! 👙 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E013 It's Over! 👙 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E013%20It's%20Over!%20%F0%9F%91%99%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2446,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": 28,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 50,
-          "name": "I Hate Liars & Thieves",
-          "airdate": "2017-12-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "Bisexual Baby Maker",
-          "airdate": "2017-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "Birthday Surprises Backfire",
-          "airdate": "2017-12-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "Babymamas Bumped",
-          "airdate": "2018-01-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "Tinder Love ... And Cheating",
-          "airdate": "2018-01-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 55,
-          "name": "Baby Fever Gone Cold",
-          "airdate": "2018-01-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "Pay up or Put Out",
-          "airdate": "2018-01-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 57,
-          "name": "Guests See Stars",
-          "airdate": "2018-01-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "Jerry Can't Help You Now",
-          "airdate": "2018-01-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 59,
-          "name": "He's Not Worth Your Tears",
-          "airdate": "2018-01-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "We Can Share Him",
-          "airdate": "2018-01-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "Ride or Dies Dumped",
-          "airdate": "2018-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Slept With My Girlfriend's Brother",
-          "airdate": "2018-01-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Mess With the Bull ...",
-          "airdate": "2018-01-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "Bisexual Buzzkills",
-          "airdate": "2018-01-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "Maybe We Should Try a Threesome",
-          "airdate": "2018-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "Bitter Backstabbers",
-          "airdate": "2018-01-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 67,
-          "name": "Below the Belt Secrets",
-          "airdate": "2018-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 68,
-          "name": "In Love With a Liar",
-          "airdate": "2018-01-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 69,
-          "name": "Watch Your Mouth and Your Man",
-          "airdate": "2018-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 70,
-          "name": "Mission: Destroy Her",
-          "airdate": "2018-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 71,
-          "name": "Sugar, Spice & Slapped So Nice",
-          "airdate": "2018-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 72,
-          "name": "Babymamas Seeing Red",
-          "airdate": "2018-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 73,
-          "name": "Baby Daddy Evicted by a New Man",
-          "airdate": "2018-02-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 74,
-          "name": "Chillin' With Strippers",
-          "airdate": "2018-02-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 75,
-          "name": "I'm Coming Out ... Fighting!",
-          "airdate": "2018-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 76,
-          "name": "Big Little Lies",
-          "airdate": "2018-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 77,
-          "name": "I Literally Hate You!",
-          "airdate": "2018-02-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 78,
-          "name": "My Baby Daddy Has 12 Other Kids",
-          "airdate": "2018-02-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 79,
-          "name": "V-Day Kiss... Off",
-          "airdate": "2018-02-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 80,
-          "name": "Co-Workers Clash",
-          "airdate": "2018-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 81,
-          "name": "Stripper Takedown",
-          "airdate": "2018-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "Life Sentence: Cheating",
-          "airdate": "2018-02-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 83,
-          "name": "Rap & Dance Battles",
-          "airdate": "2018-02-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 84,
-          "name": "Faceblocked",
-          "airdate": "2018-02-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 85,
-          "name": "Men Get Grilled",
-          "airdate": "2018-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 86,
-          "name": "Springer Hotel Hook-Ups",
-          "airdate": "2018-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "Halftime Hook-Ups With Your Wife",
-          "airdate": "2018-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 88,
-          "name": "He's the Nacho Man",
-          "airdate": "2018-02-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 89,
-          "name": "It's a Situationship",
-          "airdate": "2018-02-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 14,
+          "name": "the scandalous confessions the full 30fps 128kbit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-jerry-springer-show-various-episodes",
+            "itemTitle": "The Jerry Springer Show (Various Episodes)",
+            "file": "Season 28/The Jerry Springer Show S28E014 Scandalous Confessions 🤫 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) .mp4",
+            "name": "Season 28/The Jerry Springer Show S28E014 Scandalous Confessions 🤫 The Jerry Springer Show Full Episode (480p_30fps_H264-128kbit_AAC) ",
+            "url": "https://archive.org/download/the-jerry-springer-show-various-episodes/Season%2028%2FThe%20Jerry%20Springer%20Show%20S28E014%20Scandalous%20Confessions%20%F0%9F%A4%AB%20The%20Jerry%20Springer%20Show%20Full%20Episode%20(480p_30fps_H264-128kbit_AAC)%20.mp4",
+            "seconds": 2399,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 165,
+            "ep": {
+              "season": 28,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 6061,
+    "name": "The Jerry Springer Show",
+    "placed": 2
+  }
 }

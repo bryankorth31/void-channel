@@ -3,20 +3,21 @@
   "slug": "quantum-leap",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:07:52.258Z",
+  "matchedAt": "2026-10-15T12:55:35.384Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 59958,
+    "id": null,
     "name": "Quantum Leap",
-    "runtime": 60,
-    "premiered": "2022-09-19",
+    "runtime": null,
+    "premiered": null,
     "network": "NBC"
   },
   "coverage": {
-    "total": 31,
-    "live": 4,
-    "review": 0,
-    "missing": 27,
-    "pct": 13
+    "total": 28,
+    "live": 0,
+    "review": 28,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,306 +25,636 @@
       "episodes": [
         {
           "number": 1,
-          "name": "July 13th, 1985",
-          "airdate": "2022-09-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason1",
+            "itemTitle": "Quantum Leap Season 1",
+            "file": "Episode 1.mp4",
+            "name": "Episode 1",
+            "url": "https://archive.org/download/QLSeason1/Episode%201.mp4",
+            "seconds": 5562,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2586,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Atlantis",
-          "airdate": "2022-09-26",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 2.mp4",
+            "name": "Episode 2",
+            "url": "https://archive.org/download/QLSeason2/Episode%202.mp4",
+            "seconds": 2879,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2592,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Somebody Up There Likes Ben",
-          "airdate": "2022-10-03",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 3.mp4",
+            "name": "Episode 3",
+            "url": "https://archive.org/download/QLSeason4/Episode%203.mp4",
+            "seconds": 2765,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3333,
+            "ep": {
+              "season": null,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "A Decent Proposal",
-          "airdate": "2022-10-10",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason5",
+            "itemTitle": "Quantum Leap Season 5",
+            "file": "Episode 4.mp4",
+            "name": "Episode 4",
+            "url": "https://archive.org/download/QLSeason5/Episode%204.mp4",
+            "seconds": 2810,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2660,
+            "ep": {
+              "season": null,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Salvation or Bust",
-          "airdate": "2022-10-17",
-          "state": "LIVE",
+          "name": "Episode 5",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
-            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
-            "file": "Quantum Leap S01E05 How the Tess Was Won August 5,1956, Aired On NBC On April 14,1989,.mp4",
-            "name": "Quantum Leap S01E05 How the Tess Was Won August 5,1956, Aired On NBC On April 14,1989,",
-            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%20S01E05%20How%20the%20Tess%20Was%20Won%20August%205%2C1956%2C%20Aired%20On%20NBC%20On%20April%2014%2C1989%2C.mp4",
-            "seconds": 2910,
+            "item": "qlseason-3",
+            "itemTitle": "Quantum Leap Season 3",
+            "file": "Episode 5.mp4",
+            "name": "Episode 5",
+            "url": "https://archive.org/download/qlseason-3/Episode%205.mp4",
+            "seconds": 2817,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 189
+            "sizeMB": 2554,
+            "ep": {
+              "season": null,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "What a Disaster!",
-          "airdate": "2022-10-24",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason5",
+            "itemTitle": "Quantum Leap Season 5",
+            "file": "Episode 6.mp4",
+            "name": "Episode 6",
+            "url": "https://archive.org/download/QLSeason5/Episode%206.mp4",
+            "seconds": 2810,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3260,
+            "ep": {
+              "season": null,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "O Ye of Little Faith",
-          "airdate": "2022-10-31",
-          "state": "LIVE",
+          "name": "Episode 7",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
-            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
-            "file": "Quantum Leap S01E07 The Color of Truth August 8,1955, Aired On NBC On May 3,1989.mp4",
-            "name": "Quantum Leap S01E07 The Color of Truth August 8,1955, Aired On NBC On May 3,1989",
-            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%20S01E07%20The%20Color%20of%20Truth%20August%208%2C1955%2C%20Aired%20On%20NBC%20On%20May%203%2C1989.mp4",
-            "seconds": 2896,
+            "item": "QLSeason5",
+            "itemTitle": "Quantum Leap Season 5",
+            "file": "Episode 7.mp4",
+            "name": "Episode 7",
+            "url": "https://archive.org/download/QLSeason5/Episode%207.mp4",
+            "seconds": 2780,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 200
+            "sizeMB": 2720,
+            "ep": {
+              "season": null,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Stand by Ben",
-          "airdate": "2022-11-07",
-          "state": "LIVE",
+          "name": "Episode 8",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
-            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
-            "file": "Quantum Leap S01E08 Camikazi Kid June 6,1961, Aired On NBC On May 10,1989,.mp4",
-            "name": "Quantum Leap S01E08 Camikazi Kid June 6,1961, Aired On NBC On May 10,1989,",
-            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%20S01E08%20Camikazi%20Kid%20June%206%2C1961%2C%20Aired%20On%20NBC%20On%20May%2010%2C1989%2C.mp4",
-            "seconds": 2884,
+            "item": "QLSeason1",
+            "itemTitle": "Quantum Leap Season 1",
+            "file": "Episode 8.mp4",
+            "name": "Episode 8",
+            "url": "https://archive.org/download/QLSeason1/Episode%208.mp4",
+            "seconds": 2843,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 184
+            "sizeMB": 2487,
+            "ep": {
+              "season": null,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Fellow Travelers",
-          "airdate": "2023-01-02",
-          "state": "LIVE",
+          "name": "Episode 9",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
-            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
-            "file": "Quantum Leap S01E09 Play It Again, Seymour April 14,1953, Aired On NBC On May 17,1989,.mp4",
-            "name": "Quantum Leap S01E09 Play It Again, Seymour April 14,1953, Aired On NBC On May 17,1989,",
-            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%20S01E09%20Play%20It%20Again%2C%20Seymour%20April%2014%2C1953%2C%20Aired%20On%20NBC%20On%20May%2017%2C1989%2C.mp4",
-            "seconds": 2874,
+            "item": "qlseason-3",
+            "itemTitle": "Quantum Leap Season 3",
+            "file": "Episode 9.mp4",
+            "name": "Episode 9",
+            "url": "https://archive.org/download/qlseason-3/Episode%209.mp4",
+            "seconds": 2785,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 174
+            "sizeMB": 2209,
+            "ep": {
+              "season": null,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Paging Dr. Song",
-          "airdate": "2023-01-09",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 10.mp4",
+            "name": "Episode 10",
+            "url": "https://archive.org/download/QLSeason2/Episode%2010.mp4",
+            "seconds": 2880,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3243,
+            "ep": {
+              "season": null,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Leap. Die. Repeat.",
-          "airdate": "2023-01-30",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 11.mp4",
+            "name": "Episode 11",
+            "url": "https://archive.org/download/QLSeason4/Episode%2011.mp4",
+            "seconds": 2821,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2796,
+            "ep": {
+              "season": null,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Let Them Play",
-          "airdate": "2023-02-06",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 12.mp4",
+            "name": "Episode 12",
+            "url": "https://archive.org/download/QLSeason4/Episode%2012.mp4",
+            "seconds": 2825,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2338,
+            "ep": {
+              "season": null,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Family Style",
-          "airdate": "2023-02-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 13.mp4",
+            "name": "Episode 13",
+            "url": "https://archive.org/download/QLSeason2/Episode%2013.mp4",
+            "seconds": 2866,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2148,
+            "ep": {
+              "season": null,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "S.O.S.",
-          "airdate": "2023-03-06",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 14.mp4",
+            "name": "Episode 14",
+            "url": "https://archive.org/download/QLSeason2/Episode%2014.mp4",
+            "seconds": 2885,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2559,
+            "ep": {
+              "season": null,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "Ben Song for the Defense",
-          "airdate": "2023-03-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 15",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 15.mp4",
+            "name": "Episode 15",
+            "url": "https://archive.org/download/QLSeason2/Episode%2015.mp4",
+            "seconds": 2876,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1883,
+            "ep": {
+              "season": null,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "Ben, Interrupted",
-          "airdate": "2023-03-20",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 16",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 16.mp4",
+            "name": "Episode 16",
+            "url": "https://archive.org/download/QLSeason4/Episode%2016.mp4",
+            "seconds": 2823,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2660,
+            "ep": {
+              "season": null,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "The Friendly Skies",
-          "airdate": "2023-03-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 17",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 17.mp4",
+            "name": "Episode 17",
+            "url": "https://archive.org/download/QLSeason2/Episode%2017.mp4",
+            "seconds": 2886,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2737,
+            "ep": {
+              "season": null,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "Judgment Day",
-          "airdate": "2023-04-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "This Took Too Long!",
-          "airdate": "2023-10-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Ben & Teller",
-          "airdate": "2023-10-11",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 18",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 18.mp4",
+            "name": "Episode 18",
+            "url": "https://archive.org/download/QLSeason4/Episode%2018.mp4",
+            "seconds": 2796,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2805,
+            "ep": {
+              "season": null,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Closure Encounters",
-          "airdate": "2023-10-18",
-          "state": "MISSING",
-          "file": null,
+          "number": 19,
+          "name": "Episode 19",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 19.mp4",
+            "name": "Episode 19",
+            "url": "https://archive.org/download/QLSeason4/Episode%2019.mp4",
+            "seconds": 2845,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2301,
+            "ep": {
+              "season": null,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "The Lonely Hearts Club",
-          "airdate": "2023-10-25",
-          "state": "MISSING",
-          "file": null,
+          "number": 20,
+          "name": "Episode 20",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason4",
+            "itemTitle": "Quantum Leap Season 4",
+            "file": "Episode 20.mp4",
+            "name": "Episode 20",
+            "url": "https://archive.org/download/QLSeason4/Episode%2020.mp4",
+            "seconds": 2825,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2389,
+            "ep": {
+              "season": null,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "One Night in Koreatown",
-          "airdate": "2023-11-01",
-          "state": "MISSING",
-          "file": null,
+          "number": 21,
+          "name": "Episode 21",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 21.mp4",
+            "name": "Episode 21",
+            "url": "https://archive.org/download/QLSeason2/Episode%2021.mp4",
+            "seconds": 2850,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2471,
+            "ep": {
+              "season": null,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Secret History",
-          "airdate": "2023-11-15",
-          "state": "MISSING",
-          "file": null,
+          "number": 22,
+          "name": "Episode 22",
+          "state": "REVIEW",
+          "file": {
+            "item": "QLSeason2",
+            "itemTitle": "Quantum Leap Season 2",
+            "file": "Episode 22.mp4",
+            "name": "Episode 22",
+            "url": "https://archive.org/download/QLSeason2/Episode%2022.mp4",
+            "seconds": 2889,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2620,
+            "ep": {
+              "season": null,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "A Kind of Magic",
-          "airdate": "2023-12-06",
-          "state": "MISSING",
-          "file": null,
+          "number": 23,
+          "name": "nbc classics 01 original show intro",
+          "state": "REVIEW",
+          "file": {
+            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
+            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
+            "file": "NBC Classics Quantum Leap  1989 Season 01 Original Show Intro .mp4",
+            "name": "NBC Classics Quantum Leap  1989 Season 01 Original Show Intro ",
+            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/NBC%20Classics%20Quantum%20Leap%20%201989%20Season%2001%20Original%20Show%20Intro%20.mp4",
+            "seconds": 91,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 8,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "Nomads",
-          "airdate": "2023-12-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 24,
+          "name": "01 nbc trailer",
+          "state": "REVIEW",
+          "file": {
+            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
+            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
+            "file": "Quantum Leap 1989 Season 01 NBC Trailer.mp4",
+            "name": "Quantum Leap 1989 Season 01 NBC Trailer",
+            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%201989%20Season%2001%20NBC%20Trailer.mp4",
+            "seconds": 97,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 7,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "Off the Cuff",
-          "airdate": "2024-01-30",
-          "state": "MISSING",
-          "file": null,
+          "number": 25,
+          "name": "s01e01e02 genesis part 01 02 september 13 the series aired on nbc march 26",
+          "state": "REVIEW",
+          "file": {
+            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
+            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
+            "file": "Quantum Leap S01E01E02 Genesis Part 01-02 September 13, 1956,The Series Aired On NBC March 26, 1989,.mp4",
+            "name": "Quantum Leap S01E01E02 Genesis Part 01-02 September 13, 1956,The Series Aired On NBC March 26, 1989,",
+            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%20S01E01E02%20Genesis%20Part%2001-02%20September%2013%2C%201956%2CThe%20Series%20Aired%20On%20NBC%20March%2026%2C%201989%2C.mp4",
+            "seconds": 5776,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 377,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "The Family Treasure",
-          "airdate": "2024-02-06",
-          "state": "MISSING",
-          "file": null,
+          "number": 26,
+          "name": "01 aired on nbc on march 26 to may 17 trailer 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "quantum-leap-tv-series-1989-1993-tv-pg-season-01",
+            "itemTitle": "Quantum Leap TV Series 1989–1993  TV-PG Season 01",
+            "file": "Quantum Leap Season 01 Aired On NBC On March 26, 1989, To May 17, 1989,Trailer 1.mp4",
+            "name": "Quantum Leap Season 01 Aired On NBC On March 26, 1989, To May 17, 1989,Trailer 1",
+            "url": "https://archive.org/download/quantum-leap-tv-series-1989-1993-tv-pg-season-01/Quantum%20Leap%20Season%2001%20Aired%20On%20NBC%20On%20March%2026%2C%201989%2C%20To%20May%2017%2C%201989%2CTrailer%201.mp4",
+            "seconds": 150,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "The Outsider",
-          "airdate": "2024-02-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 27,
+          "name": "Episode 27",
+          "state": "REVIEW",
+          "file": {
+            "item": "yt-5s.com-the-quantum-leap-vs-sliders-podcast-1080p",
+            "itemTitle": "The Quantum Leap vs. Sliders Podcast",
+            "file": "yt5s.com-The Quantum Leap vs Sliders Podcast-(1080p).ia.mp4",
+            "name": "yt5s",
+            "url": "https://archive.org/download/yt-5s.com-the-quantum-leap-vs-sliders-podcast-1080p/yt5s.com-The%20Quantum%20Leap%20vs%20Sliders%20Podcast-(1080p).ia.mp4",
+            "seconds": 4890,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 197,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "As the World Burns",
-          "airdate": "2024-02-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Against Time",
-          "airdate": "2024-02-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 28,
+          "name": "yt5s com the vs sliders podcast",
+          "state": "REVIEW",
+          "file": {
+            "item": "yt-5s.com-the-quantum-leap-vs-sliders-podcast-1080p",
+            "itemTitle": "The Quantum Leap vs. Sliders Podcast",
+            "file": "yt5s.com-The Quantum Leap vs Sliders Podcast-(1080p).mp4",
+            "name": "yt5s.com-The Quantum Leap vs Sliders Podcast-(1080p)",
+            "url": "https://archive.org/download/yt-5s.com-the-quantum-leap-vs-sliders-podcast-1080p/yt5s.com-The%20Quantum%20Leap%20vs%20Sliders%20Podcast-(1080p).mp4",
+            "seconds": 4890,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 197,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 59958,
+    "name": "Quantum Leap",
+    "placed": 4
+  }
 }

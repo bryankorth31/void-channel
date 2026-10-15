@@ -3,7 +3,8 @@
   "slug": "sabrina-the-teenage-witch",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-15T12:07:34.738Z",
+  "matchedAt": "2026-10-15T12:55:16.500Z",
+  "addedAt": "2026-10-15T12:07:34.738Z",
   "tvmaze": {
     "id": 976,
     "name": "Sabrina the Teenage Witch",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 163,
-    "live": 3,
-    "review": 1,
+    "live": 4,
+    "review": 0,
     "missing": 159,
     "pct": 2
   },
@@ -677,10 +678,10 @@
           "number": 1,
           "name": "No Place Like Home",
           "airdate": "1999-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"No Place Like Home\" (0.95)",
+            "conf": 1,
+            "why": "airdate in filename",
             "item": "Britney_and_Melissas_Total_Male_Makeover_MTV_1999-09-24",
             "itemTitle": "Britney Spears' & Melissa Joan Hart's Total Male Makeover (1999) WOC",
             "file": "Sabrina the Teenage Witch 1999-09-24 No Place Like Home - WFAA -WOC.mp4",

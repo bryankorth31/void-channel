@@ -3,7 +3,8 @@
   "slug": "weekly-idol",
   "type": "Reality & Talk",
   "network": "KR",
-  "matchedAt": "2026-10-15T12:08:31.554Z",
+  "matchedAt": "2026-10-15T12:56:16.312Z",
+  "addedAt": "2026-10-15T12:08:31.554Z",
   "tvmaze": {
     "id": 16043,
     "name": "Weekly Idol",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 707,
-    "live": 2,
+    "live": 4,
     "review": 1,
-    "missing": 704,
-    "pct": 0
+    "missing": 702,
+    "pct": 1
   },
   "seasons": [
     {
@@ -1714,16 +1715,40 @@
           "number": 212,
           "name": "Episode 212 with Girls' Generation",
           "airdate": "2015-08-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "Soshi-Subs",
+            "itemTitle": "Soshi Subs Full Collection",
+            "file": "Talk Shows/MBCevery1/[Soshi Subs][2015.08.19] MBC every1 Weekly Idol Ep 212 - SNSD.mp4",
+            "name": "Talk Shows/MBCevery1/[Soshi Subs][2015.08.19] MBC every1 Weekly Idol Ep 212 - SNSD",
+            "url": "https://archive.org/download/Soshi-Subs/Talk%20Shows%2FMBCevery1%2F%5BSoshi%20Subs%5D%5B2015.08.19%5D%20MBC%20every1%20Weekly%20Idol%20Ep%20212%20-%20SNSD.mp4",
+            "seconds": 2949,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 897
+          },
           "alternates": []
         },
         {
           "number": 213,
           "name": "Episode 213 with Girls' Generation",
           "airdate": "2015-08-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "Soshi-Subs",
+            "itemTitle": "Soshi Subs Full Collection",
+            "file": "Talk Shows/MBCevery1/[Soshi Subs][2015.08.26] MBC every1 Weekly Idol Ep 213 - SNSD.mp4",
+            "name": "Talk Shows/MBCevery1/[Soshi Subs][2015.08.26] MBC every1 Weekly Idol Ep 213 - SNSD",
+            "url": "https://archive.org/download/Soshi-Subs/Talk%20Shows%2FMBCevery1%2F%5BSoshi%20Subs%5D%5B2015.08.26%5D%20MBC%20every1%20Weekly%20Idol%20Ep%20213%20-%20SNSD.mp4",
+            "seconds": 3003,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 932
+          },
           "alternates": []
         },
         {

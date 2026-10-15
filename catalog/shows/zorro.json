@@ -3,20 +3,21 @@
   "slug": "zorro",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T12:09:13.455Z",
+  "matchedAt": "2026-10-15T12:56:02.407Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 62616,
+    "id": null,
     "name": "Zorro",
-    "runtime": 48,
-    "premiered": "2024-01-19",
-    "network": "Prime Video"
+    "runtime": null,
+    "premiered": null,
+    "network": "ABC"
   },
   "coverage": {
-    "total": 10,
+    "total": 164,
     "live": 0,
-    "review": 0,
-    "missing": 10,
-    "pct": 0
+    "review": 164,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,85 +25,3418 @@
       "episodes": [
         {
           "number": 1,
-          "name": "El Elegido",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "to catch a fox",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-new-adventures-of-zorro-1997",
+            "itemTitle": "The New Adventures of Zorro (1997)",
+            "file": "S1 E01 To Catch a Fox.mp4",
+            "name": "S1 E01 To Catch a Fox",
+            "url": "https://archive.org/download/the-new-adventures-of-zorro-1997/S1%20E01%20To%20Catch%20a%20Fox.mp4",
+            "seconds": 1372,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 112,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Herencia",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep02 cavalo de outra cor bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep02 - Cavalo de Outra Cor(ByPetry).mp4",
+            "name": "Zorro tp2 ep02 - Cavalo de Outra Cor(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep02%20-%20Cavalo%20de%20Outra%20Cor(ByPetry).mp4",
+            "seconds": 1540,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "La Apuesta",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep03 ataca sozinho bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep03 - Zorro Ataca Sozinho(ByPetry).mp4",
+            "name": "Zorro tp2 ep03 - Zorro Ataca Sozinho(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep03%20-%20Zorro%20Ataca%20Sozinho(ByPetry).mp4",
+            "seconds": 1540,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "La Venganza",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep04 a escolha de ana maria bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep04 - A Escolha de Ana Maria(ByPetry).mp4",
+            "name": "Zorro tp2 ep04 - A Escolha de Ana Maria(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep04%20-%20A%20Escolha%20de%20Ana%20Maria(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "La Ejecución",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep05 encontro ao por do sol bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep05 - Encontro ao Por do Sol(ByPetry).mp4",
+            "name": "Zorro tp2 ep05 - Encontro ao Por do Sol(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep05%20-%20Encontro%20ao%20Por%20do%20Sol(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Juego de Máscaras",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep06 a nova ordem bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep06 - A Nova Ordem(ByPetry).mp4",
+            "name": "Zorro tp2 ep06 - A Nova Ordem(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep06%20-%20A%20Nova%20Ordem(ByPetry).mp4",
+            "seconds": 1540,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "El Mito",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep07 olho por olho bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep07 - Olho Por Olho(ByPetry).mp4",
+            "name": "Zorro tp2 ep07 - Olho Por Olho(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep07%20-%20Olho%20Por%20Olho(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "La Boda",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep08 a bandeira da paz bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep08 - A Bandeira da Paz(ByPetry).mp4",
+            "name": "Zorro tp2 ep08 - A Bandeira da Paz(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep08%20-%20A%20Bandeira%20da%20Paz(ByPetry).mp4",
+            "seconds": 1538,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Desenmascarados",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep09 emboscada bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep09 - Emboscada(ByPetry).mp4",
+            "name": "Zorro tp2 ep09 - Emboscada(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep09%20-%20Emboscada(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Baile de Máscaras para Tres Funerales",
-          "airdate": "2024-01-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "tp2 ep10 o brincalh o bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep10 - O Brincalhão(ByPetry).mp4",
+            "name": "Zorro tp2 ep10 - O Brincalhão(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep10%20-%20O%20Brincalh%C3%A3o(ByPetry).mp4",
+            "seconds": 1481,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": {
+              "season": null,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "tp2 ep11 flecha flamejante bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep11 - Flecha Flamejante(ByPetry).mp4",
+            "name": "Zorro tp2 ep11 - Flecha Flamejante(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep11%20-%20Flecha%20Flamejante(ByPetry).mp4",
+            "seconds": 1516,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 146,
+            "ep": {
+              "season": null,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "tp2 ep12 aceita um duelo bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep12 - Zorro Aceita um Duelo(ByPetry).mp4",
+            "name": "Zorro tp2 ep12 - Zorro Aceita um Duelo(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep12%20-%20Zorro%20Aceita%20um%20Duelo(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "tp2 ep13 anistia para bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep13 - Anistia Para Zorro(ByPetry).mp4",
+            "name": "Zorro tp2 ep13 - Anistia Para Zorro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep13%20-%20Anistia%20Para%20Zorro(ByPetry).mp4",
+            "seconds": 1558,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": {
+              "season": null,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "tp2 ep14 os fugitivos bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep14 - Os Fugitivos(ByPetry).mp4",
+            "name": "Zorro tp2 ep14 - Os Fugitivos(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep14%20-%20Os%20Fugitivos(ByPetry).mp4",
+            "seconds": 1558,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": {
+              "season": null,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "tp2 ep15 a caixa de ferro bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep15 - A Caixa de Ferro(ByPetry).mp4",
+            "name": "Zorro tp2 ep15 - A Caixa de Ferro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep15%20-%20A%20Caixa%20de%20Ferro(ByPetry).mp4",
+            "seconds": 1541,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "tp2 ep16 um homem alegre bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep16 - Um Homem Alegre(ByPetry).mp4",
+            "name": "Zorro tp2 ep16 - Um Homem Alegre(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep16%20-%20Um%20Homem%20Alegre(ByPetry).mp4",
+            "seconds": 1526,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "tp2 ep17 o sumi o de tornado bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep17 - O Sumiço de Tornado(ByPetry).mp4",
+            "name": "Zorro tp2 ep17 - O Sumiço de Tornado(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep17%20-%20O%20Sumi%C3%A7o%20de%20Tornado(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "tp2 ep18 contra o cupido bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep18 - Zorro Contra o Cupido(ByPetry).mp4",
+            "name": "Zorro tp2 ep18 - Zorro Contra o Cupido(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep18%20-%20Zorro%20Contra%20o%20Cupido(ByPetry).mp4",
+            "seconds": 1524,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "tp2 ep19 a lenda do bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep19 - A Lenda do Zorro(ByPetry).mp4",
+            "name": "Zorro tp2 ep19 - A Lenda do Zorro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep19%20-%20A%20Lenda%20do%20Zorro(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "tp2 ep20 chamas da vingan a bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep20 - Chamas da Vingança(ByPetry).mp4",
+            "name": "Zorro tp2 ep20 - Chamas da Vingança(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep20%20-%20Chamas%20da%20Vingan%C3%A7a(ByPetry).mp4",
+            "seconds": 1545,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "tp2 ep21 o pai desaparecido bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep21 - O Pai Desaparecido(ByPetry).mp4",
+            "name": "Zorro tp2 ep21 - O Pai Desaparecido(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep21%20-%20O%20Pai%20Desaparecido(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "tp2 ep22 por favor acreditem em mim bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep22 - Por Favor, Acreditem em Mim(ByPetry).mp4",
+            "name": "Zorro tp2 ep22 - Por Favor, Acreditem em Mim(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep22%20-%20Por%20Favor%2C%20Acreditem%20em%20Mim(ByPetry).mp4",
+            "seconds": 1546,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "tp2 ep23 o broche bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep23 - O Broche(ByPetry).mp4",
+            "name": "Zorro tp2 ep23 - O Broche(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep23%20-%20O%20Broche(ByPetry).mp4",
+            "seconds": 1526,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 23
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "tp2 ep24 o homem da montanha bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep24 - O Homem da Montanha(ByPetry).mp4",
+            "name": "Zorro tp2 ep24 - O Homem da Montanha(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep24%20-%20O%20Homem%20da%20Montanha(ByPetry).mp4",
+            "seconds": 1543,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 24
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "tp2 ep25 o sabujo da serra bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep25 - O Sabujo da Serra(ByPetry).mp4",
+            "name": "Zorro tp2 ep25 - O Sabujo da Serra(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep25%20-%20O%20Sabujo%20da%20Serra(ByPetry).mp4",
+            "seconds": 1545,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": null,
+              "episode": 25
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "tp2 ep26 ca ada humana bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep26 - Caçada Humana(ByPetry).mp4",
+            "name": "Zorro tp2 ep26 - Caçada Humana(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep26%20-%20Ca%C3%A7ada%20Humana(ByPetry).mp4",
+            "seconds": 1548,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 26
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "tp2 ep27 o homem da espanha bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep27 - O Homem da Espanha(ByPetry).mp4",
+            "name": "Zorro tp2 ep27 - O Homem da Espanha(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep27%20-%20O%20Homem%20da%20Espanha(ByPetry).mp4",
+            "seconds": 1528,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 27
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "tp2 ep28 um tesouro para o rei bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep28 - Um Tesouro Para o Rei(ByPetry).mp4",
+            "name": "Zorro tp2 ep28 - Um Tesouro Para o Rei(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep28%20-%20Um%20Tesouro%20Para%20o%20Rei(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 28
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "tp2 ep29 expondo o tirano bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep29 - Expondo o Tirano(ByPetry).mp4",
+            "name": "Zorro tp2 ep29 - Expondo o Tirano(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep29%20-%20Expondo%20o%20Tirano(ByPetry).mp4",
+            "seconds": 1528,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 29
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "tp2 ep30 um novo desafio para bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep30 - Um Novo Desafio Para Zorro(ByPetry).mp4",
+            "name": "Zorro tp2 ep30 - Um Novo Desafio Para Zorro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep30%20-%20Um%20Novo%20Desafio%20Para%20Zorro(ByPetry).mp4",
+            "seconds": 1532,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 30
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "tp2 ep31 uma quest o de honra bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep31 - Uma Questão de Honra(ByPetry).mp4",
+            "name": "Zorro tp2 ep31 - Uma Questão de Honra(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep31%20-%20Uma%20Quest%C3%A3o%20de%20Honra(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 31
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "tp2 ep32 quarentena bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep32 - Quarentena(ByPetry).mp4",
+            "name": "Zorro tp2 ep32 - Quarentena(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep32%20-%20Quarentena(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 32
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "tp2 ep33 convite para a morte bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep33 - Convite Para a Morte(ByPetry).mp4",
+            "name": "Zorro tp2 ep33 - Convite Para a Morte(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep33%20-%20Convite%20Para%20a%20Morte(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 33
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "tp2 ep34 o arrependimento do capit o bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep34 - O Arrependimento do Capitão(ByPetry).mp4",
+            "name": "Zorro tp2 ep34 - O Arrependimento do Capitão(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep34%20-%20O%20Arrependimento%20do%20Capit%C3%A3o(ByPetry).mp4",
+            "seconds": 1526,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 34
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "tp2 ep35 vestido para matar bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep35 - Vestido Para Matar(ByPetry).mp4",
+            "name": "Zorro tp2 ep35 - Vestido Para Matar(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep35%20-%20Vestido%20Para%20Matar(ByPetry).mp4",
+            "seconds": 1529,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 35
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "tp2 ep36 vida longa ao governador bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep36 - Vida Longa ao Governador(ByPetry).mp4",
+            "name": "Zorro tp2 ep36 - Vida Longa ao Governador(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep36%20-%20Vida%20Longa%20ao%20Governador(ByPetry).mp4",
+            "seconds": 1525,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 36
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "tp2 ep37 a cartomante bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep37 - A Cartomante(ByPetry).mp4",
+            "name": "Zorro tp2 ep37 - A Cartomante(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep37%20-%20A%20Cartomante(ByPetry).mp4",
+            "seconds": 1548,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": null,
+              "episode": 37
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "tp2 ep38 o garoto chin s bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep38 - O Garoto Chinês(ByPetry).mp4",
+            "name": "Zorro tp2 ep38 - O Garoto Chinês(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep38%20-%20O%20Garoto%20Chin%C3%AAs(ByPetry).mp4",
+            "seconds": 1525,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 38
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "tp2 ep39 bernardo o inocente bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro tp2 ep39 - Bernardo, o Inocente(ByPetry).mp4",
+            "name": "Zorro tp2 ep39 - Bernardo, o Inocente(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro%20tp2%20ep39%20-%20Bernardo%2C%20o%20Inocente(ByPetry).mp4",
+            "seconds": 1525,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": null,
+              "episode": 39
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "guy wiliams tp2ep01 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep01(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep01(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep01(UpByPetry)%20%20.mp4",
+            "seconds": 1454,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "guy wiliams tp2ep02 cavalo de outra cor bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep02 - Cavalo de Outra Cor(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep02 - Cavalo de Outra Cor(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep02%20-%20Cavalo%20de%20Outra%20Cor(ByPetry).mp4",
+            "seconds": 1540,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "guy wiliams tp2ep02 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep02(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep02(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep02(UpByPetry)%20%20.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "guy wiliams tp2ep03 ataca sozinho bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep03 - Zorro Ataca Sozinho(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep03 - Zorro Ataca Sozinho(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep03%20-%20Zorro%20Ataca%20Sozinho(ByPetry).mp4",
+            "seconds": 1540,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "guy wiliams tp2ep03 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep03(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep03(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep03(UpByPetry)%20%20.mp4",
+            "seconds": 1444,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "guy wiliams tp2ep04 a escolha de ana maria bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep04 - A Escolha de Ana Maria(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep04 - A Escolha de Ana Maria(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep04%20-%20A%20Escolha%20de%20Ana%20Maria(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "guy wiliams tp2ep04 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep04(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep04(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep04(UpByPetry)%20%20.mp4",
+            "seconds": 1441,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "guy wiliams tp2ep05 encontro ao por do sol bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep05 - Encontro ao Por do Sol(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep05 - Encontro ao Por do Sol(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep05%20-%20Encontro%20ao%20Por%20do%20Sol(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "guy wiliams tp2ep05 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep05(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep05(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep05(UpByPetry)%20%20.mp4",
+            "seconds": 1423,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "guy wiliams tp2ep06 a nova ordem bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep06 - A Nova Ordem(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep06 - A Nova Ordem(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep06%20-%20A%20Nova%20Ordem(ByPetry).mp4",
+            "seconds": 1540,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "guy wiliams tp2ep06 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep06(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep06(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep06(UpByPetry)%20%20.mp4",
+            "seconds": 1456,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "guy wiliams tp2ep07 olho por olho bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep07 - Olho Por Olho(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep07 - Olho Por Olho(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep07%20-%20Olho%20Por%20Olho(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "guy wiliams tp2ep07 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep07(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep07(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep07(UpByPetry)%20%20.mp4",
+            "seconds": 1454,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "guy wiliams tp2ep08 a bandeira da paz bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep08 - A Bandeira da Paz(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep08 - A Bandeira da Paz(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep08%20-%20A%20Bandeira%20da%20Paz(ByPetry).mp4",
+            "seconds": 1538,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "guy wiliams tp2ep08 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep08(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep08(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep08(UpByPetry)%20%20.mp4",
+            "seconds": 1454,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "guy wiliams tp2ep09 emboscada bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep09 - Emboscada(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep09 - Emboscada(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep09%20-%20Emboscada(ByPetry).mp4",
+            "seconds": 1539,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "guy wiliams tp2ep09 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep09(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep09(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep09(UpByPetry)%20%20.mp4",
+            "seconds": 1437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "guy wiliams tp2ep10 o brincalh o bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep10 - O Brincalhão(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep10 - O Brincalhão(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep10%20-%20O%20Brincalh%C3%A3o(ByPetry).mp4",
+            "seconds": 1481,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "guy wiliams tp2ep10 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep10(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep10(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep10(UpByPetry)%20%20.mp4",
+            "seconds": 1416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "guy wiliams tp2ep11 flecha flamejante bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep11 - Flecha Flamejante(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep11 - Flecha Flamejante(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep11%20-%20Flecha%20Flamejante(ByPetry).mp4",
+            "seconds": 1516,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 146,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "guy wiliams tp2ep11 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep11(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep11(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep11(UpByPetry)%20%20.mp4",
+            "seconds": 1450,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "guy wiliams tp2ep12 aceita um duelo bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep12 - Zorro Aceita um Duelo(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep12 - Zorro Aceita um Duelo(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep12%20-%20Zorro%20Aceita%20um%20Duelo(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "guy wiliams tp2ep12 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep12(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep12(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep12(UpByPetry)%20%20.mp4",
+            "seconds": 1438,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "guy wiliams tp2ep13 anistia para bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep13 - Anistia Para Zorro(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep13 - Anistia Para Zorro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep13%20-%20Anistia%20Para%20Zorro(ByPetry).mp4",
+            "seconds": 1558,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "guy wiliams tp2ep13 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep13(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep13(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep13(UpByPetry)%20%20.mp4",
+            "seconds": 1442,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "guy wiliams tp2ep14 os fugitivos bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep14 - Os Fugitivos(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep14 - Os Fugitivos(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep14%20-%20Os%20Fugitivos(ByPetry).mp4",
+            "seconds": 1558,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 66,
+          "name": "guy wiliams tp2ep14 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep14(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep14(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep14(UpByPetry)%20%20.mp4",
+            "seconds": 1450,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 67,
+          "name": "guy wiliams tp2ep15 a caixa de ferro bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep15 - A Caixa de Ferro(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep15 - A Caixa de Ferro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep15%20-%20A%20Caixa%20de%20Ferro(ByPetry).mp4",
+            "seconds": 1541,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "guy wiliams tp2ep15 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep15(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep15(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep15(UpByPetry).mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "guy wiliams tp2ep16 um homem alegre bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep16 - Um Homem Alegre(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep16 - Um Homem Alegre(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep16%20-%20Um%20Homem%20Alegre(ByPetry).mp4",
+            "seconds": 1526,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "guy wiliams tp2ep16 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep16(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep16(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep16(UpByPetry).mp4",
+            "seconds": 1437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "guy wiliams tp2ep17 o sumi o de tornado bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep17 - O Sumiço de Tornado(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep17 - O Sumiço de Tornado(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep17%20-%20O%20Sumi%C3%A7o%20de%20Tornado(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 72,
+          "name": "guy wiliams tp2ep17 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep17(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep17(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep17(UpByPetry).mp4",
+            "seconds": 1453,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 73,
+          "name": "guy wiliams tp2ep18 contra o cupido bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep18 - Zorro Contra o Cupido(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep18 - Zorro Contra o Cupido(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep18%20-%20Zorro%20Contra%20o%20Cupido(ByPetry).mp4",
+            "seconds": 1524,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 74,
+          "name": "guy wiliams tp2ep18 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep18(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep18(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep18(UpByPetry).mp4",
+            "seconds": 1442,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "guy wiliams tp2ep19 a lenda do bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep19 - A Lenda do Zorro(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep19 - A Lenda do Zorro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep19%20-%20A%20Lenda%20do%20Zorro(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 76,
+          "name": "guy wiliams tp2ep19 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep19(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep19(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep19(UpByPetry).mp4",
+            "seconds": 1457,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 77,
+          "name": "guy wiliams tp2ep20 chamas da vingan a bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep20 - Chamas da Vingança(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep20 - Chamas da Vingança(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep20%20-%20Chamas%20da%20Vingan%C3%A7a(ByPetry).mp4",
+            "seconds": 1545,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 78,
+          "name": "guy wiliams tp2ep20 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep20(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep20(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep20(UpByPetry).mp4",
+            "seconds": 1468,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 79,
+          "name": "guy wiliams tp2ep20 upbypetry marcaadagua",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep20(UpByPetry) marcaadagua.mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep20(UpByPetry) marcaadagua",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep20(UpByPetry)%20marcaadagua.mp4",
+            "seconds": 1468,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 80,
+          "name": "guy wiliams tp2ep21 o pai desaparecido bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep21 - O Pai Desaparecido(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep21 - O Pai Desaparecido(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep21%20-%20O%20Pai%20Desaparecido(ByPetry).mp4",
+            "seconds": 1544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 81,
+          "name": "guy wiliams tp2ep21 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep21(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep21(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep21(UpByPetry).mp4",
+            "seconds": 1456,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 82,
+          "name": "guy wiliams tp2ep22 por favor acreditem em mim bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep22 - Por Favor, Acreditem em Mim(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep22 - Por Favor, Acreditem em Mim(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep22%20-%20Por%20Favor%2C%20Acreditem%20em%20Mim(ByPetry).mp4",
+            "seconds": 1546,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 83,
+          "name": "guy wiliams tp2ep22 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep22(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep22(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep22(UpByPetry).mp4",
+            "seconds": 1455,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 84,
+          "name": "guy wiliams tp2ep23 o broche bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep23 - O Broche(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep23 - O Broche(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep23%20-%20O%20Broche(ByPetry).mp4",
+            "seconds": 1526,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 85,
+          "name": "guy wiliams tp2ep23 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep23(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep23(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep23(UpByPetry)%20%20.mp4",
+            "seconds": 1452,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 86,
+          "name": "guy wiliams tp2ep24 o homem da montanha bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep24 - O Homem da Montanha(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep24 - O Homem da Montanha(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep24%20-%20O%20Homem%20da%20Montanha(ByPetry).mp4",
+            "seconds": 1543,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 87,
+          "name": "guy wiliams tp2ep24 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep24(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep24(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep24(UpByPetry).mp4",
+            "seconds": 1455,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 88,
+          "name": "guy wiliams tp2ep25 o sabujo da serra bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep25 - O Sabujo da Serra(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep25 - O Sabujo da Serra(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep25%20-%20O%20Sabujo%20da%20Serra(ByPetry).mp4",
+            "seconds": 1545,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 89,
+          "name": "guy wiliams tp2ep25 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep25(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep25(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep25(UpByPetry)%20%20.mp4",
+            "seconds": 1457,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 90,
+          "name": "guy wiliams tp2ep26 ca ada humana bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep26 - Caçada Humana(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep26 - Caçada Humana(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep26%20-%20Ca%C3%A7ada%20Humana(ByPetry).mp4",
+            "seconds": 1548,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 91,
+          "name": "guy wiliams tp2ep26 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep26(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep26(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep26(UpByPetry)%20%20.mp4",
+            "seconds": 1459,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 92,
+          "name": "guy wiliams tp2ep27 o homem da espanha bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep27 - O Homem da Espanha(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep27 - O Homem da Espanha(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep27%20-%20O%20Homem%20da%20Espanha(ByPetry).mp4",
+            "seconds": 1528,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 93,
+          "name": "guy wiliams tp2ep27 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep27(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep27(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep27(UpByPetry)%20%20.mp4",
+            "seconds": 1438,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 94,
+          "name": "guy wiliams tp2ep28 um tesouro para o rei bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep28 - Um Tesouro Para o Rei(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep28 - Um Tesouro Para o Rei(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep28%20-%20Um%20Tesouro%20Para%20o%20Rei(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 95,
+          "name": "guy wiliams tp2ep28 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep28(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep28(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep28(UpByPetry)%20%20.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 96,
+          "name": "guy wiliams tp2ep29 expondo o tirano bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep29 - Expondo o Tirano(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep29 - Expondo o Tirano(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep29%20-%20Expondo%20o%20Tirano(ByPetry).mp4",
+            "seconds": 1528,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 97,
+          "name": "guy wiliams tp2ep29 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep29(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep29(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep29(UpByPetry)%20%20.mp4",
+            "seconds": 1438,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 98,
+          "name": "guy wiliams tp2ep30 um novo desafio para bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep30 - Um Novo Desafio Para Zorro(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep30 - Um Novo Desafio Para Zorro(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep30%20-%20Um%20Novo%20Desafio%20Para%20Zorro(ByPetry).mp4",
+            "seconds": 1532,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 99,
+          "name": "guy wiliams tp2ep30 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep30(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep30(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep30(UpByPetry)%20%20.mp4",
+            "seconds": 1437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 100,
+          "name": "guy wiliams tp2ep31 uma quest o de honra bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep31 - Uma Questão de Honra(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep31 - Uma Questão de Honra(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep31%20-%20Uma%20Quest%C3%A3o%20de%20Honra(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 101,
+          "name": "guy wiliams tp2ep31 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep31(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep31(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep31(UpByPetry)%20%20.mp4",
+            "seconds": 1437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 102,
+          "name": "guy wiliams tp2ep32 quarentena bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep32 - Quarentena(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep32 - Quarentena(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep32%20-%20Quarentena(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 103,
+          "name": "guy wiliams tp2ep32 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep32(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep32(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep32(UpByPetry)%20%20.mp4",
+            "seconds": 1437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 104,
+          "name": "guy wiliams tp2ep33 convite para a morte bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep33 - Convite Para a Morte(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep33 - Convite Para a Morte(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep33%20-%20Convite%20Para%20a%20Morte(ByPetry).mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 105,
+          "name": "guy wiliams tp2ep33 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep33(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep33(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep33(UpByPetry)%20%20.mp4",
+            "seconds": 1438,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 106,
+          "name": "guy wiliams tp2ep34 o arrependimento do capit o bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep34 - O Arrependimento do Capitão(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep34 - O Arrependimento do Capitão(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep34%20-%20O%20Arrependimento%20do%20Capit%C3%A3o(ByPetry).mp4",
+            "seconds": 1526,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 107,
+          "name": "guy wiliams tp2ep34 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep34(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep34(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep34(UpByPetry)%20%20.mp4",
+            "seconds": 1440,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 108,
+          "name": "guy wiliams tp2ep35 vestido para matar bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep35 - Vestido Para Matar(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep35 - Vestido Para Matar(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep35%20-%20Vestido%20Para%20Matar(ByPetry).mp4",
+            "seconds": 1529,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 109,
+          "name": "guy wiliams tp2ep35 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep35(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep35(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep35(UpByPetry)%20%20.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 110,
+          "name": "guy wiliams tp2ep36 vida longa ao governador bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep36 - Vida Longa ao Governador(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep36 - Vida Longa ao Governador(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep36%20-%20Vida%20Longa%20ao%20Governador(ByPetry).mp4",
+            "seconds": 1525,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 111,
+          "name": "guy wiliams tp2ep36 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep36(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep36(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep36(UpByPetry).mp4",
+            "seconds": 1440,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 112,
+          "name": "guy wiliams tp2ep37 a cartomante bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep37 - A Cartomante(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep37 - A Cartomante(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep37%20-%20A%20Cartomante(ByPetry).mp4",
+            "seconds": 1548,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 113,
+          "name": "guy wiliams tp2ep37 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep37(UpByPetry)  .mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep37(UpByPetry)  ",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep37(UpByPetry)%20%20.mp4",
+            "seconds": 1457,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 114,
+          "name": "guy wiliams tp2ep38 o garoto chin s bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep38 - O Garoto Chinês(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep38 - O Garoto Chinês(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep38%20-%20O%20Garoto%20Chin%C3%AAs(ByPetry).mp4",
+            "seconds": 1525,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 115,
+          "name": "guy wiliams tp2ep38 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep38(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep38(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep38(UpByPetry).mp4",
+            "seconds": 1437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 116,
+          "name": "guy wiliams tp2ep39 bernardo o inocente bypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep39 - Bernardo, o Inocente(ByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep39 - Bernardo, o Inocente(ByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep39%20-%20Bernardo%2C%20o%20Inocente(ByPetry).mp4",
+            "seconds": 1525,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 117,
+          "name": "guy wiliams tp2ep39 upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Wiliams) tp2ep39(UpByPetry).mp4",
+            "name": "Zorro(Guy Wiliams) tp2ep39(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Wiliams)%20tp2ep39(UpByPetry).mp4",
+            "seconds": 1436,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 118,
+          "name": "guy williams tp1ep01 apresentando o sr",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep01 Apresentando o Sr. Zorro(UpByPetry).ia.mp4",
+            "name": "Zorro(Guy Williams) tp1ep01 Apresentando o Sr",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep01%20Apresentando%20o%20Sr.%20Zorro(UpByPetry).ia.mp4",
+            "seconds": 1523,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 249,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 119,
+          "name": "guy williams tp1ep01 apresentando o sr upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep01 Apresentando o Sr. Zorro(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep01 Apresentando o Sr. Zorro(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep01%20Apresentando%20o%20Sr.%20Zorro(UpByPetry).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 249,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 120,
+          "name": "guy williams tp1ep02 a passagem secreta de upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep02 A Passagem Secreta de Zorro(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep02 A Passagem Secreta de Zorro(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep02%20A%20Passagem%20Secreta%20de%20Zorro(UpByPetry).mp4",
+            "seconds": 1517,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 248,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 121,
+          "name": "guy williams tp1ep03 parte para a miss o upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep03 Zorro Parte para a Missão(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep03 Zorro Parte para a Missão(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep03%20Zorro%20Parte%20para%20a%20Miss%C3%A3o(UpByPetry).mp4",
+            "seconds": 1517,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 249,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 122,
+          "name": "guy williams tp1ep04 o fantasma da miss o upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep04 O Fantasma da Missão(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep04 O Fantasma da Missão(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep04%20O%20Fantasma%20da%20Miss%C3%A3o(UpByPetry).mp4",
+            "seconds": 1518,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 249,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 123,
+          "name": "guy williams tp1ep05 o romance do upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep05 O Romance do Zorro(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep05 O Romance do Zorro(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep05%20O%20Romance%20do%20Zorro(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 124,
+          "name": "guy williams tp1ep06 salva um amigo upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep06 Zorro Salva um Amigo(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep06 Zorro Salva um Amigo(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep06%20Zorro%20Salva%20um%20Amigo(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 125,
+          "name": "guy williams tp1ep07 monast rio prepara armadilha upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep07 Monastário Prepara Armadilha(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep07 Monastário Prepara Armadilha(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep07%20Monast%C3%A1rio%20Prepara%20Armadilha(UpByPetry).mp4",
+            "seconds": 1518,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 248,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 126,
+          "name": "guy williams tp1ep08 domina o terror upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep08 Zorro Domina o Terror(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep08 Zorro Domina o Terror(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep08%20Zorro%20Domina%20o%20Terror(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 127,
+          "name": "guy williams tp1ep09 um julgamento justo upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep09 Um Julgamento Justo(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep09 Um Julgamento Justo(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep09%20Um%20Julgamento%20Justo(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 128,
+          "name": "guy williams tp1ep10 miss o secreta de garcia upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep10 Missão Secreta de Garcia(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep10 Missão Secreta de Garcia(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep10%20Miss%C3%A3o%20Secreta%20de%20Garcia(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 129,
+          "name": "guy williams tp1ep11 problema em dobro para upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep11 Problema em Dobro para Zorro(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep11 Problema em Dobro para Zorro(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep11%20Problema%20em%20Dobro%20para%20Zorro(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 130,
+          "name": "guy williams tp1ep12 espadachim vivo mais sortudo upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep12 Espadachim Vivo Mais Sortudo(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep12 Espadachim Vivo Mais Sortudo(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep12%20Espadachim%20Vivo%20Mais%20Sortudo(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 131,
+          "name": "guy williams tp1ep13 o emiss rio do rei upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep13 O Emissário do Rei(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep13 O Emissário do Rei(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep13%20O%20Emiss%C3%A1rio%20do%20Rei(UpByPetry).mp4",
+            "seconds": 1492,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 132,
+          "name": "guy williams tp1ep14 sem sombra de d vida upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep14 Sem Sombra de Dúvida(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep14 Sem Sombra de Dúvida(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep14%20Sem%20Sombra%20de%20D%C3%BAvida(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 133,
+          "name": "guy williams tp1ep15 garcia o acusado upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep15 Garcia, o Acusado(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep15 Garcia, o Acusado(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep15%20Garcia%2C%20o%20Acusado(UpByPetry).mp4",
+            "seconds": 1518,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 248,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 134,
+          "name": "guy williams tp1ep16 escravos do guia upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep16 Escravos do Águia(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep16 Escravos do Águia(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep16%20Escravos%20do%20%C3%81guia(UpByPetry).mp4",
+            "seconds": 1492,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 135,
+          "name": "guy williams tp1ep17 a doce face do perigo upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep17 A Doce Face do Perigo(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep17 A Doce Face do Perigo(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep17%20A%20Doce%20Face%20do%20Perigo(UpByPetry).mp4",
+            "seconds": 1505,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 136,
+          "name": "guy williams tp1ep18 enfrenta seu pai upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep18 Zorro Enfrenta seu Pai(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep18 Zorro Enfrenta seu Pai(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep18%20Zorro%20Enfrenta%20seu%20Pai(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 137,
+          "name": "guy williams tp1ep19 morte nas cartas upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep19 Morte nas Cartas(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep19 Morte nas Cartas(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep19%20Morte%20nas%20Cartas(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 138,
+          "name": "guy williams tp1ep20 o agente do guia upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep20 O Agente do Águia(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep20 O Agente do Águia(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep20%20O%20Agente%20do%20%C3%81guia(UpByPetry).mp4",
+            "seconds": 1506,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 139,
+          "name": "guy williams tp1ep21 a captura de tornado upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep21 A Captura de Tornado(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep21 A Captura de Tornado(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep21%20A%20Captura%20de%20Tornado(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 140,
+          "name": "guy williams tp1ep22 desmascarando o upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep22 Desmascarando o Zorro(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep22 Desmascarando o Zorro(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep22%20Desmascarando%20o%20Zorro(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 141,
+          "name": "guy williams tp1ep23 o segredo da serra upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep23 O Segredo da Serra(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep23 O Segredo da Serra(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep23%20O%20Segredo%20da%20Serra(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 142,
+          "name": "guy williams tp1ep24 o novo comandante upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep24 O Novo Comandante(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep24 O Novo Comandante(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep24%20O%20Novo%20Comandante(UpByPetry).mp4",
+            "seconds": 1518,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 248,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 143,
+          "name": "guy williams tp1ep25 a raposa e o coiote upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep25 A Raposa e o Coiote(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep25 A Raposa e o Coiote(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep25%20A%20Raposa%20e%20o%20Coiote(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 144,
+          "name": "guy williams tp1ep26 adeus sr",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep26 Adeus, Sr. Magistrado!(UpByPetry).ia.mp4",
+            "name": "Zorro(Guy Williams) tp1ep26 Adeus, Sr",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep26%20Adeus%2C%20Sr.%20Magistrado!(UpByPetry).ia.mp4",
+            "seconds": 1470,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 241,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 145,
+          "name": "guy williams tp1ep26 adeus sr magistrado upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep26 Adeus, Sr. Magistrado!(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep26 Adeus, Sr. Magistrado!(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep26%20Adeus%2C%20Sr.%20Magistrado!(UpByPetry).mp4",
+            "seconds": 1470,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 146,
+          "name": "guy williams tp1ep27 o filhote da guia upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep27 O Filhote da Águia(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep27 O Filhote da Águia(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep27%20O%20Filhote%20da%20%C3%81guia(UpByPetry).mp4",
+            "seconds": 1506,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 147,
+          "name": "guy williams tp1ep28 substituto upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep28 Zorro Substituto(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep28 Zorro Substituto(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep28%20Zorro%20Substituto(UpByPetry).mp4",
+            "seconds": 1492,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 148,
+          "name": "guy williams tp1ep29 a escolha de quintana upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep29 A Escolha de Quintana(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep29 A Escolha de Quintana(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep29%20A%20Escolha%20de%20Quintana(UpByPetry).mp4",
+            "seconds": 1491,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 149,
+          "name": "guy williams tp1ep30 acende o estopim upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep30 Zorro Acende o Estopim(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep30 Zorro Acende o Estopim(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep30%20Zorro%20Acende%20o%20Estopim(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 248,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 150,
+          "name": "guy williams tp1ep31 o homem com o chicote upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep31 O Homem com o Chicote(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep31 O Homem com o Chicote(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep31%20O%20Homem%20com%20o%20Chicote(UpByPetry).mp4",
+            "seconds": 1493,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 151,
+          "name": "guy williams tp1ep32 a cruz dos andes upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep32 A Cruz dos Andes(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep32 A Cruz dos Andes(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep32%20A%20Cruz%20dos%20Andes(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 152,
+          "name": "guy williams tp1ep33 as boleadeiras fatais upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep33 As Boleadeiras Fatais(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep33 As Boleadeiras Fatais(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep33%20As%20Boleadeiras%20Fatais(UpByPetry).mp4",
+            "seconds": 1481,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 319,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 153,
+          "name": "guy williams tp1ep34 o po o da morte upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep34 O Poço da Morte(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep34 O Poço da Morte(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep34%20O%20Po%C3%A7o%20da%20Morte(UpByPetry).mp4",
+            "seconds": 1481,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 243,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 154,
+          "name": "guy williams tp1ep35 apertando o cerco upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep35 Apertando o Cerco(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep35 Apertando o Cerco(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep35%20Apertando%20o%20Cerco(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 155,
+          "name": "guy williams tp1ep36 o arrependimento do sargento upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep36 O Arrependimento do Sargento(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep36 O Arrependimento do Sargento(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep36%20O%20Arrependimento%20do%20Sargento(UpByPetry).mp4",
+            "seconds": 1493,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 156,
+          "name": "guy williams tp1ep37 a guia deixa o ninho upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep37 A Águia Deixa o Ninho(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep37 A Águia Deixa o Ninho(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep37%20A%20%C3%81guia%20Deixa%20o%20Ninho(UpByPetry).mp4",
+            "seconds": 1506,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 157,
+          "name": "guy williams tp1ep38 enfrenta a morte upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep38 Zorro Enfrenta a Morte(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep38 Zorro Enfrenta a Morte(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep38%20Zorro%20Enfrenta%20a%20Morte(UpByPetry).mp4",
+            "seconds": 1507,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 158,
+          "name": "guy williams tp1ep39 dia de decis o upbypetry",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp1ep39 Dia de Decisão(UpByPetry).mp4",
+            "name": "Zorro(Guy Williams) tp1ep39 Dia de Decisão(UpByPetry)",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp1ep39%20Dia%20de%20Decis%C3%A3o(UpByPetry).mp4",
+            "seconds": 1508,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 159,
+          "name": "guy williams tp3ep01 o bandido upbypetry legenda",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp3ep01 O Bandido(UpByPetry)Legenda.mp4",
+            "name": "Zorro(Guy Williams) tp3ep01 O Bandido(UpByPetry)Legenda",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp3ep01%20O%20Bandido(UpByPetry)Legenda.mp4",
+            "seconds": 3080,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 476,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 160,
+          "name": "guy williams tp3ep02 adeus cuchillo upbypetry legenda",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp3ep02 Adeus Cuchillo(UpByPetry)Legenda.mp4",
+            "name": "Zorro(Guy Williams) tp3ep02 Adeus Cuchillo(UpByPetry)Legenda",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp3ep02%20Adeus%20Cuchillo(UpByPetry)Legenda.mp4",
+            "seconds": 2943,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 467,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 161,
+          "name": "guy williams tp3ep03 o casamento adiado upbypetry legenda",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp3ep03 O Casamento Adiado(UpByPetry)Legenda.mp4",
+            "name": "Zorro(Guy Williams) tp3ep03 O Casamento Adiado(UpByPetry)Legenda",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp3ep03%20O%20Casamento%20Adiado(UpByPetry)Legenda.mp4",
+            "seconds": 2943,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 455,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 162,
+          "name": "guy williams tp3ep04 velho conhecido upbypetry legenda",
+          "state": "REVIEW",
+          "file": {
+            "item": "zorro-guy-wiliams-tp-2ep-39-up-by-petry",
+            "itemTitle": "Zorro (Guy Wiliams) Tp 1 2 e 3 (Up By Petry)",
+            "file": "Zorro(Guy Williams) tp3ep04 Velho Conhecido(UpByPetry)Legenda.mp4",
+            "name": "Zorro(Guy Williams) tp3ep04 Velho Conhecido(UpByPetry)Legenda",
+            "url": "https://archive.org/download/zorro-guy-wiliams-tp-2ep-39-up-by-petry/Zorro(Guy%20Williams)%20tp3ep04%20Velho%20Conhecido(UpByPetry)Legenda.mp4",
+            "seconds": 2947,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 637,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the samurai and the sorcerer",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-new-adventures-of-zorro-1997",
+            "itemTitle": "The New Adventures of Zorro (1997)",
+            "file": "S2 E01 The Samurai And The Sorcerer.mp4",
+            "name": "S2 E01 The Samurai And The Sorcerer",
+            "url": "https://archive.org/download/the-new-adventures-of-zorro-1997/S2%20E01%20The%20Samurai%20And%20The%20Sorcerer.mp4",
+            "seconds": 1391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 633,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "the case of the masked marauder",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-new-adventures-of-zorro-1997",
+            "itemTitle": "The New Adventures of Zorro (1997)",
+            "file": "S2 E04 The Case of The Masked Marauder.mp4",
+            "name": "S2 E04 The Case of The Masked Marauder",
+            "url": "https://archive.org/download/the-new-adventures-of-zorro-1997/S2%20E04%20The%20Case%20of%20The%20Masked%20Marauder.mp4",
+            "seconds": 1391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 326,
+            "ep": {
+              "season": 2,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 62616,
+    "name": "Zorro",
+    "placed": 0
+  }
 }

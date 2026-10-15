@@ -3,7 +3,8 @@
   "slug": "star-wars-the-bad-batch",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-15T12:07:57.314Z",
+  "matchedAt": "2026-10-15T12:55:40.773Z",
+  "addedAt": "2026-10-15T12:53:11.656Z",
   "tvmaze": {
     "id": 49190,
     "name": "Star Wars: The Bad Batch",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 47,
-    "live": 0,
+    "live": 2,
     "review": 0,
-    "missing": 47,
-    "pct": 0
+    "missing": 45,
+    "pct": 4
   },
   "seasons": [
     {
@@ -34,16 +35,40 @@
           "number": 2,
           "name": "Cut and Run",
           "airdate": "2021-05-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "roosterteeth-43630",
+            "itemTitle": "Star Wars The Bad Batch Episode 2",
+            "file": "2021-05-07_Star_Wars_The_Bad_Batch_Episode_2_[43630].mp4",
+            "name": "2021-05-07_Star_Wars_The_Bad_Batch_Episode_2_[43630]",
+            "url": "https://archive.org/download/roosterteeth-43630/2021-05-07_Star_Wars_The_Bad_Batch_Episode_2_%5B43630%5D.mp4",
+            "seconds": 1871,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 983
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Replacements",
           "airdate": "2021-05-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "roosterteeth-43720",
+            "itemTitle": "Star Wars The Bad Batch Episode 3",
+            "file": "2021-05-14_Star_Wars_The_Bad_Batch_Episode_3_[43720].mp4",
+            "name": "2021-05-14_Star_Wars_The_Bad_Batch_Episode_3_[43720]",
+            "url": "https://archive.org/download/roosterteeth-43720/2021-05-14_Star_Wars_The_Bad_Batch_Episode_3_%5B43720%5D.mp4",
+            "seconds": 1401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 736
+          },
           "alternates": []
         },
         {

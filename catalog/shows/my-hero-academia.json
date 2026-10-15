@@ -3,20 +3,21 @@
   "slug": "my-hero-academia",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T12:08:14.482Z",
+  "matchedAt": "2026-10-15T12:55:58.653Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 13615,
+    "id": null,
     "name": "My Hero Academia",
-    "runtime": 25,
-    "premiered": "2016-04-03",
-    "network": "MBS"
+    "runtime": null,
+    "premiered": null,
+    "network": "JP"
   },
   "coverage": {
-    "total": 170,
+    "total": 47,
     "live": 0,
-    "review": 0,
-    "missing": 170,
-    "pct": 0
+    "review": 47,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,106 +25,925 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Izuku Midoriya: Origin",
-          "airdate": "2016-04-03",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "My hero episode 1 season 1 - dub.mp4",
+            "name": "My hero episode 1 season 1 - dub",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/My%20hero%20episode%201%20season%201%20-%20dub.mp4",
+            "seconds": 1472,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "What It Takes to Be a Hero",
-          "airdate": "2016-04-10",
-          "state": "MISSING",
-          "file": null,
+          "name": "1thatstheideaochaco2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "1ThatsTheIdeaOchaco2.mp4",
+            "name": "1ThatsTheIdeaOchaco2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/1ThatsTheIdeaOchaco2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Roaring Muscles",
-          "airdate": "2016-04-17",
-          "state": "MISSING",
-          "file": null,
+          "name": "2roaringsportsfestival2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "2RoaringSportsFestival2.mp4",
+            "name": "2RoaringSportsFestival2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/2RoaringSportsFestival2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Start Line",
-          "airdate": "2016-04-24",
-          "state": "MISSING",
-          "file": null,
+          "name": "3intheirownquirkyways2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "3InTheirOwnQuirkyWays2.mp4",
+            "name": "3InTheirOwnQuirkyWays2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/3InTheirOwnQuirkyWays2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "What I Can Do for Now",
-          "airdate": "2016-05-01",
-          "state": "MISSING",
-          "file": null,
+          "name": "4strategystrategystrategy2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "4StrategyStrategyStrategy2.mp4",
+            "name": "4StrategyStrategyStrategy2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/4StrategyStrategyStrategy2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Rage, You Damn Nerd",
-          "airdate": "2016-05-08",
-          "state": "MISSING",
-          "file": null,
+          "name": "5cavalrybattlefinale2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "5CavalryBattleFinale2.mp4",
+            "name": "5CavalryBattleFinale2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/5CavalryBattleFinale2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Deku vs. Kacchan",
-          "airdate": "2016-05-15",
-          "state": "MISSING",
-          "file": null,
+          "name": "6theboybornwitheverything2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "6TheBoyBornWithEverything2.mp4",
+            "name": "6TheBoyBornWithEverything2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/6TheBoyBornWithEverything2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Bakugo's Start Line",
-          "airdate": "2016-05-22",
-          "state": "MISSING",
-          "file": null,
+          "name": "7victoryordefeat2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "7VictoryorDefeat2.mp4",
+            "name": "7VictoryorDefeat2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/7VictoryorDefeat2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Yeah, Just Do Your Best, lida!",
-          "airdate": "2016-05-29",
-          "state": "MISSING",
-          "file": null,
+          "name": "8battleonchallengers",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "8BattleOnChallengers!.mp4",
+            "name": "8BattleOnChallengers!",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/8BattleOnChallengers!.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Encounter with the Unknown",
-          "airdate": "2016-06-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "9bakugovsuraraka2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "9BakugoVSUraraka2.mp4",
+            "name": "9BakugoVSUraraka2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/9BakugoVSUraraka2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Game Over",
-          "airdate": "2016-06-12",
-          "state": "MISSING",
-          "file": null,
+          "name": "10shototodorokiorigin2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "10ShotoTodorokiOrigin2.mp4",
+            "name": "10ShotoTodorokiOrigin2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/10ShotoTodorokiOrigin2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "All Might",
-          "airdate": "2016-06-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "11fightoniida",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "11FightOnIida.mp4",
+            "name": "11FightOnIida",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/11FightOnIida.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "In Each of Our Hearts",
-          "airdate": "2016-06-26",
-          "state": "MISSING",
-          "file": null,
+          "name": "12todorokivsbakugo2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "12TodorokiVSBakugo2.mp4",
+            "name": "12TodorokiVSBakugo2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/12TodorokiVSBakugo2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "13timetopicksomenames2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "13TimetoPickSomeNames2.mp4",
+            "name": "13TimetoPickSomeNames2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/13TimetoPickSomeNames2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "14bizarre grantorinoappears2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "14Bizarre!GranTorinoAppears2.mp4",
+            "name": "14Bizarre!GranTorinoAppears2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/14Bizarre!GranTorinoAppears2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "15midoriyaandshigaraki2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "15MidoriyaandShigaraki2.mp4",
+            "name": "15MidoriyaandShigaraki2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/15MidoriyaandShigaraki2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "16herokillerstainvsuastudents2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "16HeroKillerStainVSUAStudents2.mp4",
+            "name": "16HeroKillerStainVSUAStudents2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/16HeroKillerStainVSUAStudents2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "17climax2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "17Climax2.mp4",
+            "name": "17Climax2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/17Climax2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "18theaftermathofherokillerstain2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "18TheAftermathofHeroKillerStain2.mp4",
+            "name": "18TheAftermathofHeroKillerStain2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/18TheAftermathofHeroKillerStain2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "19everyonesinternships2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "19EveryonesInternships2.mp4",
+            "name": "19EveryonesInternships2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/19EveryonesInternships2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "20listenup atalefromthepast2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "20ListenUp!!ATalefromthePast2.mp4",
+            "name": "20ListenUp!!ATalefromthePast2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/20ListenUp!!ATalefromthePast2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "21gearupforfinalexams2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "21GearUpforFinalExams2.mp4",
+            "name": "21GearUpforFinalExams2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/21GearUpforFinalExams2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "22yaoyorozurising2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "22YaoyorozuRising2.mp4",
+            "name": "22YaoyorozuRising2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/22YaoyorozuRising2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "23strippingthevarnish2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "23StrippingtheVarnish2.mp4",
+            "name": "23StrippingtheVarnish2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/23StrippingtheVarnish2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "24katsukibakugoorigin2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "24KatsukiBakugoOrigin2.mp4",
+            "name": "24KatsukiBakugoOrigin2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/24KatsukiBakugoOrigin2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "25encounter2",
+          "state": "REVIEW",
+          "file": {
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "25Encounter2.mp4",
+            "name": "25Encounter2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/25Encounter2.mp4",
+            "seconds": 1409,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_160_720p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_160_720p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_160_720p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 186,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_161_720p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_161_720p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_161_720p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_162_720p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_162_720p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_162_720p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_163_360p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_163_360p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_163_360p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 59,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_164_1080p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_164_1080p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_164_1080p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 311,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_165_1080p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_165_1080p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_165_1080p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 307,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_166_1080p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_166_1080p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_166_1080p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 285,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "animepahe boku no yameii",
+          "state": "REVIEW",
+          "file": {
+            "item": "anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii",
+            "itemTitle": "My Hero Academia (SEASON 8) Eng Dub",
+            "file": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_167_1080p_Yameii.mp4",
+            "name": "AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_167_1080p_Yameii",
+            "url": "https://archive.org/download/anime-pahe-boku-no-hero-academia-eng-dub-160-720p-yameii/AnimePahe_Boku_no_Hero_Academia_Eng_Dub_-_167_1080p_Yameii.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 310,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "2 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 2 _season1.mp4",
+            "name": "my hero_episode 2 _season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%202%20_season1.mp4",
+            "seconds": 1471,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 125,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Episode 36",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "My hero_episode 3_season 1.mp4",
+            "name": "My hero_episode 3_season 1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/My%20hero_episode%203_season%201.mp4",
+            "seconds": 1471,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "4 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 4 _season1.mp4",
+            "name": "my hero_episode 4 _season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%204%20_season1.mp4",
+            "seconds": 1472,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Episode 38",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 5_season 1.mp4",
+            "name": "my hero_episode 5_season 1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%205_season%201.mp4",
+            "seconds": 1471,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 99,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "6 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 6_season1.mp4",
+            "name": "my hero_episode 6_season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%206_season1.mp4",
+            "seconds": 1471,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "7 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 7 _season1.mp4",
+            "name": "my hero_episode 7 _season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%207%20_season1.mp4",
+            "seconds": 1457,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "8 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 8_season1.mp4",
+            "name": "my hero_episode 8_season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%208_season1.mp4",
+            "seconds": 1456,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 117,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Episode 42",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "My hero_episode 9_season 1.mp4",
+            "name": "My hero_episode 9_season 1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/My%20hero_episode%209_season%201.mp4",
+            "seconds": 1456,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 109,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "11 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 11 _season1.mp4",
+            "name": "my hero_episode 11 _season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%2011%20_season1.mp4",
+            "seconds": 1456,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "12 season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "my hero_episode 12 _season1.mp4",
+            "name": "my hero_episode 12 _season1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/my%20hero_episode%2012%20_season1.mp4",
+            "seconds": 1457,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Episode 45",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "My hero_episode 13_season 1.mp4",
+            "name": "My hero_episode 13_season 1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/My%20hero_episode%2013_season%201.mp4",
+            "seconds": 1457,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "episode10 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-episode-1-season-1-dub",
+            "itemTitle": "My Hero Academia season 1 (dub)",
+            "file": "My hero_episode10_season 1.mp4",
+            "name": "My hero_episode10_season 1",
+            "url": "https://archive.org/download/my-hero-episode-1-season-1-dub/My%20hero_episode10_season%201.mp4",
+            "seconds": 1457,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
@@ -132,1292 +952,34 @@
       "season": 2,
       "episodes": [
         {
-          "number": 1,
-          "name": "That's the Idea, Ochako",
-          "airdate": "2017-04-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Roaring Sports Festival",
-          "airdate": "2017-04-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "In Their Own Quirky Ways",
-          "airdate": "2017-04-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Strategy, Strategy, Strategy",
-          "airdate": "2017-04-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 5,
-          "name": "Cavalry Battle Finale",
-          "airdate": "2017-04-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "The Boy Born with Everything",
-          "airdate": "2017-05-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Victory or Defeat",
-          "airdate": "2017-05-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Battle On, Challengers!",
-          "airdate": "2017-05-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Bakugo vs. Uraraka",
-          "airdate": "2017-05-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Shoto Todoroki: Origin",
-          "airdate": "2017-06-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Fight On, Iida",
-          "airdate": "2017-06-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Todoroki vs. Bakugo",
-          "airdate": "2017-06-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Time to Pick Some Names",
-          "airdate": "2017-06-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Bizarre! Gran Torino Appears",
-          "airdate": "2017-07-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Midoriya and Shigaraki",
-          "airdate": "2017-07-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Hero Killer: Stain vs U.A. Students",
-          "airdate": "2017-07-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Climax",
-          "airdate": "2017-07-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "The Aftermath of Hero Killer: Stain",
-          "airdate": "2017-08-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Everyone's Internships",
-          "airdate": "2017-08-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Listen Up!! A Tale from the Past",
-          "airdate": "2017-08-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Gear Up for Final Exams",
-          "airdate": "2017-09-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Yaoyorozu: Rising",
-          "airdate": "2017-09-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Stripping the Varnish",
-          "airdate": "2017-09-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Katsuki Bakugo: Origin",
-          "airdate": "2017-09-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Encounter",
-          "airdate": "2017-09-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Game Start",
-          "airdate": "2018-04-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Wild, Wild Pussycats",
-          "airdate": "2018-04-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Kota",
-          "airdate": "2018-04-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "My Hero",
-          "airdate": "2018-04-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Drive It Home, Iron Fist!!!",
-          "airdate": "2018-05-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Roaring Upheaval",
-          "airdate": "2018-05-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "What a Twist!",
-          "airdate": "2018-05-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "From Iida to Midoriya",
-          "airdate": "2018-05-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "All for One",
-          "airdate": "2018-06-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Symbol of Peace",
-          "airdate": "2018-06-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "One for All",
-          "airdate": "2018-06-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "End of the Beginning, Beginning of the End",
-          "airdate": "2018-06-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Moving Into Dorms",
-          "airdate": "2018-06-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Create Those Ultimate Moves",
-          "airdate": "2018-07-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "The Test",
-          "airdate": "2018-07-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Shiketsu High Lurking",
-          "airdate": "2018-07-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Class 1-A",
-          "airdate": "2018-08-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "RUSH!",
-          "airdate": "2018-08-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Rescue Exercises",
-          "airdate": "2018-08-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Save the World with Love!",
-          "airdate": "2018-08-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "What's the Big Idea?",
-          "airdate": "2018-09-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "A Talk About Your Quirk",
-          "airdate": "2018-09-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Deku vs. Kacchan, Part 2",
-          "airdate": "2018-09-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "A Season for Encounters",
-          "airdate": "2018-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Unrivaled",
-          "airdate": "2018-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Scoop on U.A. Class 1-A",
-          "airdate": "2019-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Overhaul",
-          "airdate": "2019-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Boy Meets...",
-          "airdate": "2019-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Fighting Fate",
-          "airdate": "2019-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Let's Go, Gutsy Red Riot",
-          "airdate": "2019-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "An Unpleasant Talk",
-          "airdate": "2019-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "GO!!",
-          "airdate": "2019-11-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Suneater of the Big Three",
-          "airdate": "2019-12-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Red Riot",
-          "airdate": "2019-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Temp Squad",
-          "airdate": "2019-12-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Lemillion",
-          "airdate": "2019-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Unforeseen Hope",
-          "airdate": "2020-01-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Infinite 100%",
-          "airdate": "2020-01-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Bright Future",
-          "airdate": "2020-01-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Smoldering Flames",
-          "airdate": "2020-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Win Those Kids' Hearts",
-          "airdate": "2020-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Relief for License Trainees",
-          "airdate": "2020-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "School Festival",
-          "airdate": "2020-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Prepping for the School Festival Is the Funnest Part",
-          "airdate": "2020-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Golden Tips Imperial",
-          "airdate": "2020-02-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Deku vs. Gentle Criminal",
-          "airdate": "2020-03-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "School Festival Start!!",
-          "airdate": "2020-03-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Let It Flow! School Festival!",
-          "airdate": "2020-03-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Japanese Hero Billboard Chart",
-          "airdate": "2020-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "His Start",
-          "airdate": "2020-04-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 5,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "All Hands on Deck! Class 1-A",
-          "airdate": "2021-03-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Vestiges",
-          "airdate": "2021-04-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Clash! Class A vs. Class B!",
-          "airdate": "2021-04-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Make It Happen, Shinso!",
-          "airdate": "2021-04-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Operation New Improv Moves",
-          "airdate": "2021-04-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Foresight",
-          "airdate": "2021-05-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Match 3",
-          "airdate": "2021-05-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Match 3 Conclusion",
-          "airdate": "2021-05-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Early Bird!",
-          "airdate": "2021-05-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "That Which Is Inherited",
-          "airdate": "2021-05-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Our Brawl",
-          "airdate": "2021-06-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "The New Power and All For One",
-          "airdate": "2021-06-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Have a Merry Christmas!",
-          "airdate": "2021-06-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Off to Endeavor's Agency!",
-          "airdate": "2021-06-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "One Thing at a Time",
-          "airdate": "2021-07-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Long Time No See, Selkie",
-          "airdate": "2021-07-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "The Hellish Todoroki Family",
-          "airdate": "2021-07-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "The Unforgiven",
-          "airdate": "2021-07-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "More of a Hero Than Anyone",
-          "airdate": "2021-08-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "My Villain Academia",
-          "airdate": "2021-08-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Revival Party",
-          "airdate": "2021-08-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Sad Man's Parade",
-          "airdate": "2021-09-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Tenko Shimura: Origin",
-          "airdate": "2021-09-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Tomura Shigaraki: Origin",
-          "airdate": "2021-09-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "The High, Deep Blue Sky",
-          "airdate": "2021-09-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 6,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "A Quiet Beginning",
-          "airdate": "2022-10-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Mirko, the No. 5 Hero",
-          "airdate": "2022-10-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "One's Justice",
-          "airdate": "2022-10-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Inheritance",
-          "airdate": "2022-10-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "The Thrill of Destruction",
-          "airdate": "2022-10-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Encounter, Part 2",
-          "airdate": "2022-11-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Disaster Walker",
-          "airdate": "2022-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "League of Villains vs. U.A. Students",
-          "airdate": "2022-11-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Katsuki Bakugo: Rising",
-          "airdate": "2022-11-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "The Ones Within Us",
-          "airdate": "2022-12-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Dabi's Dance",
-          "airdate": "2022-12-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Threads of Hope",
-          "airdate": "2022-12-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Final Performance",
-          "airdate": "2022-12-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Hellish Hell",
-          "airdate": "2023-01-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Tartarus",
-          "airdate": "2023-01-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "The Hellish Todoroki Family, Part 2",
-          "airdate": "2023-01-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "The Wrong Way to Put Out a Fire",
-          "airdate": "2023-01-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Izuku Midoriya and Tomura Shigaraki",
-          "airdate": "2023-02-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Full Power!!",
-          "airdate": "2023-02-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Hired Gun",
-          "airdate": "2023-02-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "The Lovely Lady Nagant",
-          "airdate": "2023-02-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Friend",
-          "airdate": "2023-03-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Deku vs. Class A",
-          "airdate": "2023-03-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "A Young Woman's Declaration",
-          "airdate": "2023-03-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "No Man Is An Island",
-          "airdate": "2023-03-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 7,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "In the Nick of Time! A Big-Time Maverick from the West!",
-          "airdate": "2024-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Specter",
-          "airdate": "2024-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Villain",
-          "airdate": "2024-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "The Story of How We All Became Heroes",
-          "airdate": "2024-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Let You Down",
-          "airdate": "2024-06-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Division",
-          "airdate": "2024-06-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Inflation",
-          "airdate": "2024-06-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Two Flashfires",
-          "airdate": "2024-06-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Extras",
-          "airdate": "2024-06-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Wounded Hero, Burning Bright and True!!",
-          "airdate": "2024-07-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Light Fades To Rain",
-          "airdate": "2024-07-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Those Who Defend, Those Who Violate",
-          "airdate": "2024-08-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "A Chain of Events, Across the Ages",
-          "airdate": "2024-08-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Together with Shoji",
-          "airdate": "2024-08-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Butterfly Effect",
-          "airdate": "2024-08-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "The Chain Thus Far",
-          "airdate": "2024-09-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Hopes",
-          "airdate": "2024-09-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "It's a Small World",
-          "airdate": "2024-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "I Am Here",
-          "airdate": "2024-09-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "A Girl's Ego",
-          "airdate": "2024-10-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Battle Without a Quirk",
-          "airdate": "2024-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 8,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Toshinori Yagi: Rising Origin",
-          "airdate": "2025-10-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The End of an Era, and the Beginning",
-          "airdate": "2025-10-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Final Boss",
-          "airdate": "2025-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Quirk: Explosion!!",
-          "airdate": "2025-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "History's Greatest Villain",
-          "airdate": "2025-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Wrench It Open, Izuku Midoriya!",
-          "airdate": "2025-11-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "From Aizawa",
-          "airdate": "2025-11-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Izuku Midoriya: Rising",
-          "airdate": "2025-11-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Epilogue / The Hellish Todoroki Family: Final",
-          "airdate": "2025-11-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "The Girl Who Loves Smiles",
-          "airdate": "2025-12-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "My Hero Academia",
-          "airdate": "2025-12-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "vigilantes 2 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "my-hero-academia-vigilantes-season-2-episode-5-english-sub",
+            "itemTitle": "My Hero Academia Vigilantes Season 2 Episode 5 English Sub",
+            "file": "My Hero Academia Vigilantes Season 2 Episode 5 English Sub.mp4",
+            "name": "My Hero Academia Vigilantes Season 2 Episode 5 English Sub",
+            "url": "https://archive.org/download/my-hero-academia-vigilantes-season-2-episode-5-english-sub/My%20Hero%20Academia%20Vigilantes%20Season%202%20Episode%205%20English%20Sub.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 263,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 13615,
+    "name": "My Hero Academia",
+    "placed": 0
+  }
 }

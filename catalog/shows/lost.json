@@ -3,7 +3,8 @@
   "slug": "lost",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-15T12:07:46.266Z",
+  "matchedAt": "2026-10-15T12:55:28.975Z",
+  "addedAt": "2026-10-15T12:07:46.266Z",
   "tvmaze": {
     "id": 123,
     "name": "Lost",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 121,
-    "live": 0,
+    "live": 1,
     "review": 5,
-    "missing": 116,
-    "pct": 4
+    "missing": 115,
+    "pct": 5
   },
   "seasons": [
     {
@@ -371,8 +372,20 @@
           "number": 11,
           "name": "The Hunting Party",
           "airdate": "2006-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "dvd-6546-lost-2006-01-18",
+            "itemTitle": "‌DVD-6546 - Lost - January 18, 2006",
+            "file": "dvd-6546-lost-2006-01-18.mp4",
+            "name": "dvd-6546-lost-2006-01-18",
+            "url": "https://archive.org/download/dvd-6546-lost-2006-01-18/dvd-6546-lost-2006-01-18.mp4",
+            "seconds": 3678,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 357
+          },
           "alternates": []
         },
         {

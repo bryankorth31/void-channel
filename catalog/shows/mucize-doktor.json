@@ -3,7 +3,8 @@
   "slug": "mucize-doktor",
   "type": "World TV",
   "network": "TR",
-  "matchedAt": "2026-10-15T12:08:22.744Z",
+  "matchedAt": "2026-10-15T12:56:07.282Z",
+  "addedAt": "2026-10-15T12:08:22.744Z",
   "tvmaze": {
     "id": 43557,
     "name": "Mucize Doktor",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 64,
-    "live": 0,
+    "live": 1,
     "review": 13,
-    "missing": 51,
-    "pct": 20
+    "missing": 50,
+    "pct": 22
   },
   "seasons": [
     {
@@ -248,46 +249,19 @@
           "airdate": "2019-11-28",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"12. Bölüm\" (0.95)",
-            "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
-            "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
-            "file": "Mucize Doktor Dizisi 40. Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
-            "name": "Mucize Doktor Dizisi 40. Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
-            "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Mucize%20Doktor%20Dizisi%2040.%20B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
-            "seconds": 8094,
-            "format": "h.264",
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 12 in \"Mucize Doktor\"",
+            "item": "MD_Ep58",
+            "itemTitle": "Mucize Doktor",
+            "file": "Mucize_Ep61.mp4",
+            "name": "Mucize_Ep61",
+            "url": "https://archive.org/download/MD_Ep58/Mucize_Ep61.mp4",
+            "seconds": 7410,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 818
+            "sizeMB": 3226
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"12. Bölüm\" (0.95)",
-              "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
-              "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
-              "file": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
-              "name": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
-              "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Bir%20Zamanlar%20%C3%87ukurova%20-%2075.B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
-              "seconds": 8327,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 830
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 12 in \"Mucize Doktor\"",
-              "item": "MD_Ep58",
-              "itemTitle": "Mucize Doktor",
-              "file": "Mucize_Ep61.mp4",
-              "name": "Mucize_Ep61",
-              "url": "https://archive.org/download/MD_Ep58/Mucize_Ep61.mp4",
-              "seconds": 7410,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 3226
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
@@ -409,9 +383,35 @@
           "number": 26,
           "name": "26. Bölüm",
           "airdate": "2020-03-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
+            "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
+            "file": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
+            "name": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
+            "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Bir%20Zamanlar%20%C3%87ukurova%20-%2075.B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
+            "seconds": 8327,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 830
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
+              "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
+              "file": "Mucize Doktor Dizisi 40. Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
+              "name": "Mucize Doktor Dizisi 40. Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
+              "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Mucize%20Doktor%20Dizisi%2040.%20B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
+              "seconds": 8094,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 818
+            }
+          ]
         },
         {
           "number": 27,

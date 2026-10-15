@@ -3,7 +3,8 @@
   "slug": "who-wants-to-be-a-millionaire",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-15T12:08:29.179Z",
+  "matchedAt": "2026-10-15T12:56:14.884Z",
+  "addedAt": "2026-10-15T12:08:29.179Z",
   "tvmaze": {
     "id": 2129,
     "name": "Who Wants to Be a Millionaire",
@@ -13,9 +14,9 @@
   },
   "coverage": {
     "total": 1502,
-    "live": 0,
+    "live": 1,
     "review": 1,
-    "missing": 1501,
+    "missing": 1500,
     "pct": 0
   },
   "seasons": [
@@ -7489,8 +7490,20 @@
           "number": 3,
           "name": "Episode 3",
           "airdate": "2009-08-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "who-wants-to-be-a-millionaire-10th-anniversary-august-11-2009-episode-3",
+            "itemTitle": "Who Wants To Be A Millionaire? 10th Anniversary (August 11, 2009) Episode 3",
+            "file": "Episode 3 (2009-08-11).mp4",
+            "name": "Episode 3 (2009-08-11)",
+            "url": "https://archive.org/download/who-wants-to-be-a-millionaire-10th-anniversary-august-11-2009-episode-3/Episode%203%20(2009-08-11).mp4",
+            "seconds": 2576,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2375
+          },
           "alternates": []
         },
         {

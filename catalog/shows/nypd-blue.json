@@ -3,7 +3,8 @@
   "slug": "nypd-blue",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-15T12:07:47.097Z",
+  "matchedAt": "2026-10-15T12:55:29.830Z",
+  "addedAt": "2026-10-15T12:07:47.097Z",
   "tvmaze": {
     "id": 570,
     "name": "NYPD Blue",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 261,
-    "live": 41,
-    "review": 182,
+    "live": 42,
+    "review": 181,
     "missing": 38,
     "pct": 85
   },
@@ -2403,21 +2404,35 @@
           "number": 2,
           "name": "All's Wells That Ends Well",
           "airdate": "1997-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"All's Wells That Ends Well\" (1.00)",
-            "item": "001-nypd-blue",
-            "itemTitle": "NYPD Blue(The Complete Series)",
-            "file": "090-All's Wells That Ends Well.mp4",
-            "name": "090-All's Wells That Ends Well",
-            "url": "https://archive.org/download/001-nypd-blue/090-All's%20Wells%20That%20Ends%20Well.mp4",
-            "seconds": 2656,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "NYPD_Blue_ABC_WOC_1997-10-07",
+            "itemTitle": " NYPD Blue ABC WOC 1997 10 07",
+            "file": "NYPD_Blue_ABC_WOC_1997-10-07.mp4",
+            "name": "NYPD_Blue_ABC_WOC_1997-10-07",
+            "url": "https://archive.org/download/NYPD_Blue_ABC_WOC_1997-10-07/NYPD_Blue_ABC_WOC_1997-10-07.mp4",
+            "seconds": 3547,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 715
+            "sizeMB": 370
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"All's Wells That Ends Well\" (1.00)",
+              "item": "001-nypd-blue",
+              "itemTitle": "NYPD Blue(The Complete Series)",
+              "file": "090-All's Wells That Ends Well.mp4",
+              "name": "090-All's Wells That Ends Well",
+              "url": "https://archive.org/download/001-nypd-blue/090-All's%20Wells%20That%20Ends%20Well.mp4",
+              "seconds": 2656,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 715
+            }
+          ]
         },
         {
           "number": 3,

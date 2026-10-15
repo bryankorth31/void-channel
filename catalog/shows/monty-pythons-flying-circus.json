@@ -3,20 +3,21 @@
   "slug": "monty-pythons-flying-circus",
   "type": "Classic TV",
   "network": "BBC",
-  "matchedAt": "2026-10-15T12:09:00.881Z",
+  "matchedAt": "2026-10-15T12:55:49.091Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 694,
+    "id": null,
     "name": "Monty Python's Flying Circus",
-    "runtime": 30,
-    "premiered": "1969-10-05",
-    "network": "BBC One"
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC"
   },
   "coverage": {
-    "total": 45,
+    "total": 75,
     "live": 0,
-    "review": 13,
-    "missing": 32,
-    "pct": 29
+    "review": 75,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,12 +25,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Whither Canada?",
-          "airdate": "1969-10-05",
+          "name": "python 1",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_1.mp4",
@@ -38,32 +36,218 @@
             "seconds": 1980,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 191
+            "sizeMB": 191,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_1.mp4",
-              "name": "PYTHON_1",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_1.mp4",
-              "seconds": 1980,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 191
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
-          "name": "Sex and Violence",
-          "airdate": "1969-10-12",
+          "name": "python 02",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_02.mp4",
+            "name": "PYTHON_02",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_02.mp4",
+            "seconds": 5406,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 524,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "python 04",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_04.mp4",
+            "name": "PYTHON_04",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_04.mp4",
+            "seconds": 7447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 718,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "python 05",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_05.mp4",
+            "name": "PYTHON_05",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_05.mp4",
+            "seconds": 5550,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 536,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "python 06",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_06.mp4",
+            "name": "PYTHON_06",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_06.mp4",
+            "seconds": 5419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 523,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "python 07",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_07.mp4",
+            "name": "PYTHON_07",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_07.mp4",
+            "seconds": 5249,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 505,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "python 08",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_08.mp4",
+            "name": "PYTHON_08",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_08.mp4",
+            "seconds": 7201,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 694,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "python 09",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_09.mp4",
+            "name": "PYTHON_09",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_09.mp4",
+            "seconds": 5351,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 516,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "python 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_10.mp4",
+            "name": "PYTHON_10",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_10.mp4",
+            "seconds": 3535,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 342,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "python 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_11.mp4",
+            "name": "PYTHON_11",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_11.mp4",
+            "seconds": 5545,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 533,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "python 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_12.mp4",
+            "name": "PYTHON_12",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_12.mp4",
+            "seconds": 6759,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 652,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "python 13",
+          "state": "REVIEW",
+          "file": {
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_13.mp4",
@@ -72,32 +256,38 @@
             "seconds": 1977,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 191
+            "sizeMB": 191,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_13.mp4",
-              "name": "PYTHON_13",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_13.mp4",
-              "seconds": 1977,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 191
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 3,
-          "name": "How to Recognise Different Types of Trees from Quite a Long Way Away",
-          "airdate": "1969-10-19",
+          "number": 13,
+          "name": "python 14",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_14.mp4",
+            "name": "PYTHON_14",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_14.mp4",
+            "seconds": 5112,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 495,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "python 15",
+          "state": "REVIEW",
+          "file": {
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_15.mp4",
@@ -106,32 +296,38 @@
             "seconds": 1854,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_15.mp4",
-              "name": "PYTHON_15",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_15.mp4",
-              "seconds": 1854,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 180
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 4,
-          "name": "Owl-Stretching Time",
-          "airdate": "1969-10-26",
+          "number": 15,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_021.mp4",
+            "name": "PYTHON_021",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_021.mp4",
+            "seconds": 250,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 25,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_023.mp4",
@@ -140,32 +336,18 @@
             "seconds": 1901,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 183
+            "sizeMB": 183,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_023.mp4",
-              "name": "PYTHON_023",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_023.mp4",
-              "seconds": 1901,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 183
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 5,
-          "name": "Man's Crisis of Identity in the Latter Half of the Twentieth Century",
-          "airdate": "1969-11-16",
+          "number": 17,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_024.mp4",
@@ -174,32 +356,18 @@
             "seconds": 1805,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 175
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_024.mp4",
-              "name": "PYTHON_024",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_024.mp4",
-              "seconds": 1805,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 175
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 6,
-          "name": "It's the Arts",
-          "airdate": "1969-11-23",
+          "number": 18,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_025.mp4",
@@ -208,32 +376,58 @@
             "seconds": 1842,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 179
+            "sizeMB": 179,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_025.mp4",
-              "name": "PYTHON_025",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_025.mp4",
-              "seconds": 1842,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 179
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 7,
-          "name": "You're No Fun Anymore",
-          "airdate": "1969-11-30",
+          "number": 19,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_031.mp4",
+            "name": "PYTHON_031",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_031.mp4",
+            "seconds": 112,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_041.mp4",
+            "name": "PYTHON_041",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_041.mp4",
+            "seconds": 141,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_044.mp4",
@@ -242,32 +436,18 @@
             "seconds": 1983,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 191
+            "sizeMB": 191,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_044.mp4",
-              "name": "PYTHON_044",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_044.mp4",
-              "seconds": 1983,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 191
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 8,
-          "name": "Full Frontal Nudity",
-          "airdate": "1969-12-07",
+          "number": 22,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_045.mp4",
@@ -276,32 +456,18 @@
             "seconds": 1921,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 184
+            "sizeMB": 184,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_045.mp4",
-              "name": "PYTHON_045",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_045.mp4",
-              "seconds": 1921,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 184
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 9,
-          "name": "The Ant, an Introduction",
-          "airdate": "1969-12-14",
+          "number": 23,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_046.mp4",
@@ -310,32 +476,18 @@
             "seconds": 1957,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 188
+            "sizeMB": 188,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_046.mp4",
-              "name": "PYTHON_046",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_046.mp4",
-              "seconds": 1957,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 188
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 10,
-          "name": "Untitled",
-          "airdate": "1969-12-21",
+          "number": 24,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_047.mp4",
@@ -344,32 +496,38 @@
             "seconds": 1829,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 176
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_047.mp4",
-              "name": "PYTHON_047",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_047.mp4",
-              "seconds": 1829,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 176
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 11,
-          "name": "The Royal Philharmonic Orchestra Goes to the Bathroom",
-          "airdate": "1969-12-28",
+          "number": 25,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 11 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_051.mp4",
+            "name": "PYTHON_051",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_051.mp4",
+            "seconds": 330,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 31,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_053.mp4",
@@ -378,32 +536,18 @@
             "seconds": 1883,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 182
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_053.mp4",
-              "name": "PYTHON_053",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_053.mp4",
-              "seconds": 1883,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 182
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 12,
-          "name": "The Naked Ant",
-          "airdate": "1970-01-04",
+          "number": 27,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_054.mp4",
@@ -412,32 +556,18 @@
             "seconds": 1887,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_054.mp4",
-              "name": "PYTHON_054",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_054.mp4",
-              "seconds": 1887,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 181
-            }
-          ]
+          "alternates": []
         },
         {
-          "number": 13,
-          "name": "Intermission",
-          "airdate": "1970-01-11",
+          "number": 28,
+          "name": "python",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 13 of 42 in \"Monty Python's Flying Circus (DVD box se\"",
             "item": "python-04_20260621",
             "itemTitle": "Monty Python's Flying Circus (DVD box set)",
             "file": "PYTHON_055.mp4",
@@ -446,296 +576,959 @@
             "seconds": 1953,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 188
+            "sizeMB": 188,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 42 in \"Monty Python's Flying Circus\"",
-              "item": "python-04_20260626",
-              "itemTitle": "Monty Python's Flying Circus",
-              "file": "PYTHON_055.mp4",
-              "name": "PYTHON_055",
-              "url": "https://archive.org/download/python-04_20260626/PYTHON_055.mp4",
-              "seconds": 1953,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 188
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Dinsdale",
-          "airdate": "1970-09-15",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         },
         {
-          "number": 2,
-          "name": "The Spanish Inquisition",
-          "airdate": "1970-09-22",
-          "state": "MISSING",
-          "file": null,
+          "number": 29,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_061.mp4",
+            "name": "PYTHON_061",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_061.mp4",
+            "seconds": 460,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 43,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Déjà Vu",
-          "airdate": "1970-09-29",
-          "state": "MISSING",
-          "file": null,
+          "number": 30,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_064.mp4",
+            "name": "PYTHON_064",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_064.mp4",
+            "seconds": 1872,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "The Buzz Aldrin Show",
-          "airdate": "1970-10-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 31,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_065.mp4",
+            "name": "PYTHON_065",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_065.mp4",
+            "seconds": 1943,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 186,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Live from the Grill-o-mat",
-          "airdate": "1970-10-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 32,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_066.mp4",
+            "name": "PYTHON_066",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_066.mp4",
+            "seconds": 1937,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 186,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "It's a Living",
-          "airdate": "1970-11-03",
-          "state": "MISSING",
-          "file": null,
+          "number": 33,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_071.mp4",
+            "name": "PYTHON_071",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_071.mp4",
+            "seconds": 334,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 31,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "The Attila the Hun Show",
-          "airdate": "1970-11-11",
-          "state": "MISSING",
-          "file": null,
+          "number": 34,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_073.mp4",
+            "name": "PYTHON_073",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_073.mp4",
+            "seconds": 1796,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "Archaeology Today",
-          "airdate": "1970-11-17",
-          "state": "MISSING",
-          "file": null,
+          "number": 35,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_074.mp4",
+            "name": "PYTHON_074",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_074.mp4",
+            "seconds": 1914,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 184,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "How to Recognize Different Parts of the Body",
-          "airdate": "1970-11-24",
-          "state": "MISSING",
-          "file": null,
+          "number": 36,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_075.mp4",
+            "name": "PYTHON_075",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_075.mp4",
+            "seconds": 1951,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 187,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "Scott of the Antarctic",
-          "airdate": "1970-12-01",
-          "state": "MISSING",
-          "file": null,
+          "number": 37,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_081.mp4",
+            "name": "PYTHON_081",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_081.mp4",
+            "seconds": 242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 22,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "How Not to Be Seen",
-          "airdate": "1970-12-08",
-          "state": "MISSING",
-          "file": null,
+          "number": 38,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_084.mp4",
+            "name": "PYTHON_084",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_084.mp4",
+            "seconds": 1856,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "Spam",
-          "airdate": "1970-12-15",
-          "state": "MISSING",
-          "file": null,
+          "number": 39,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_085.mp4",
+            "name": "PYTHON_085",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_085.mp4",
+            "seconds": 1817,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "Royal Episode Thirteen",
-          "airdate": "1970-12-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Whicker's World",
-          "airdate": "1972-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Mr. & Mrs. Brian Norris' Ford Popular",
-          "airdate": "1972-10-26",
-          "state": "MISSING",
-          "file": null,
+          "number": 40,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_086.mp4",
+            "name": "PYTHON_086",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_086.mp4",
+            "seconds": 1893,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "The Money Programme",
-          "airdate": "1972-11-02",
-          "state": "MISSING",
-          "file": null,
+          "number": 41,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_087.mp4",
+            "name": "PYTHON_087",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_087.mp4",
+            "seconds": 1879,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Blood, Devastation, Death, War and Horror",
-          "airdate": "1972-11-09",
-          "state": "MISSING",
-          "file": null,
+          "number": 42,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_091.mp4",
+            "name": "PYTHON_091",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_091.mp4",
+            "seconds": 242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 24,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "The All-England Summarize Proust Competition",
-          "airdate": "1972-11-16",
-          "state": "MISSING",
-          "file": null,
+          "number": 43,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_093.mp4",
+            "name": "PYTHON_093",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_093.mp4",
+            "seconds": 1916,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 184,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "The War Against Pornography",
-          "airdate": "1972-11-23",
-          "state": "MISSING",
-          "file": null,
+          "number": 44,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_094.mp4",
+            "name": "PYTHON_094",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_094.mp4",
+            "seconds": 1820,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "Salad Days",
-          "airdate": "1972-11-30",
-          "state": "MISSING",
-          "file": null,
+          "number": 45,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_095.mp4",
+            "name": "PYTHON_095",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_095.mp4",
+            "seconds": 1885,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "The Cycling Tour",
-          "airdate": "1972-12-07",
-          "state": "MISSING",
-          "file": null,
+          "number": 46,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_101.mp4",
+            "name": "PYTHON_101",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_101.mp4",
+            "seconds": 275,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 27,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "The Nude Organist",
-          "airdate": "1972-12-14",
-          "state": "MISSING",
-          "file": null,
+          "number": 47,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_104.mp4",
+            "name": "PYTHON_104",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_104.mp4",
+            "seconds": 1865,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "E. Henry Thripshaw's Disease",
-          "airdate": "1972-12-21",
-          "state": "MISSING",
-          "file": null,
+          "number": 48,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_105.mp4",
+            "name": "PYTHON_105",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_105.mp4",
+            "seconds": 1905,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 184,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "Dennis Moore",
-          "airdate": "1973-01-04",
-          "state": "MISSING",
-          "file": null,
+          "number": 49,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_106.mp4",
+            "name": "PYTHON_106",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_106.mp4",
+            "seconds": 1852,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 179,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "A Book at Bedtime",
-          "airdate": "1973-01-11",
-          "state": "MISSING",
-          "file": null,
+          "number": 50,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_111.mp4",
+            "name": "PYTHON_111",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_111.mp4",
+            "seconds": 278,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 26,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "Grandstand",
-          "airdate": "1973-01-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Golden Age of Ballooning",
-          "airdate": "1974-10-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Michael Ellis",
-          "airdate": "1974-11-07",
-          "state": "MISSING",
-          "file": null,
+          "number": 51,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_113.mp4",
+            "name": "PYTHON_113",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_113.mp4",
+            "seconds": 1791,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Light Entertainment War",
-          "airdate": "1974-11-14",
-          "state": "MISSING",
-          "file": null,
+          "number": 52,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_114.mp4",
+            "name": "PYTHON_114",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_114.mp4",
+            "seconds": 2022,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 193,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Hamlet",
-          "airdate": "1974-11-21",
-          "state": "MISSING",
-          "file": null,
+          "number": 53,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_115.mp4",
+            "name": "PYTHON_115",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_115.mp4",
+            "seconds": 1914,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 184,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Mr. Neutron",
-          "airdate": "1974-11-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 54,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_121.mp4",
+            "name": "PYTHON_121",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_121.mp4",
+            "seconds": 482,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 48,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Party Political Broadcast",
-          "airdate": "1974-12-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 55,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_124.mp4",
+            "name": "PYTHON_124",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_124.mp4",
+            "seconds": 1819,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_125.mp4",
+            "name": "PYTHON_125",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_125.mp4",
+            "seconds": 2033,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 197,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_126.mp4",
+            "name": "PYTHON_126",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_126.mp4",
+            "seconds": 1646,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_127.mp4",
+            "name": "PYTHON_127",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_127.mp4",
+            "seconds": 1744,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 168,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_131.mp4",
+            "name": "PYTHON_131",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_131.mp4",
+            "seconds": 255,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 24,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_133.mp4",
+            "name": "PYTHON_133",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_133.mp4",
+            "seconds": 1849,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_134.mp4",
+            "name": "PYTHON_134",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_134.mp4",
+            "seconds": 1798,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_136.mp4",
+            "name": "PYTHON_136",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_136.mp4",
+            "seconds": 1730,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 167,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_141.mp4",
+            "name": "PYTHON_141",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_141.mp4",
+            "seconds": 293,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 28,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_144.mp4",
+            "name": "PYTHON_144",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_144.mp4",
+            "seconds": 1713,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 166,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_145.mp4",
+            "name": "PYTHON_145",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_145.mp4",
+            "seconds": 1806,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 66,
+          "name": "python",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_146.mp4",
+            "name": "PYTHON_146",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_146.mp4",
+            "seconds": 1845,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 67,
+          "name": "python live a",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_A.mp4",
+            "name": "PYTHON_LIVE_A",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_A.mp4",
+            "seconds": 8219,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 821,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "python live a2",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_A2.mp4",
+            "name": "PYTHON_LIVE_A2",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_A2.mp4",
+            "seconds": 4691,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 463,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "python live a3",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_A3.mp4",
+            "name": "PYTHON_LIVE_A3",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_A3.mp4",
+            "seconds": 3547,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 358,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "python live a4",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_A4.mp4",
+            "name": "PYTHON_LIVE_A4",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_A4.mp4",
+            "seconds": 307,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 30,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "python live b",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_B.mp4",
+            "name": "PYTHON_LIVE_B",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_B.mp4",
+            "seconds": 7008,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 688,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 72,
+          "name": "python live b2",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_B2.mp4",
+            "name": "PYTHON_LIVE_B2",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_B2.mp4",
+            "seconds": 4475,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 434,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 73,
+          "name": "python live b3",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_B3.mp4",
+            "name": "PYTHON_LIVE_B3",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_B3.mp4",
+            "seconds": 2802,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 281,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 74,
+          "name": "python live b4",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_B4.mp4",
+            "name": "PYTHON_LIVE_B4",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_B4.mp4",
+            "seconds": 173,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 17,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "python live b5",
+          "state": "REVIEW",
+          "file": {
+            "item": "python-04_20260621",
+            "itemTitle": "Monty Python's Flying Circus (DVD box set)",
+            "file": "PYTHON_LIVE_B5.mp4",
+            "name": "PYTHON_LIVE_B5",
+            "url": "https://archive.org/download/python-04_20260621/PYTHON_LIVE_B5.mp4",
+            "seconds": 281,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 28,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 694,
+    "name": "Monty Python's Flying Circus",
+    "placed": 13
+  }
 }

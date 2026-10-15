@@ -3,7 +3,8 @@
   "slug": "andor",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-15T12:07:56.583Z",
+  "matchedAt": "2026-10-15T12:55:40.007Z",
+  "addedAt": "2026-10-15T12:53:10.895Z",
   "tvmaze": {
     "id": 52341,
     "name": "Andor",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 24,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 24,
-    "pct": 0
+    "missing": 23,
+    "pct": 4
   },
   "seasons": [
     {
@@ -50,8 +51,20 @@
           "number": 4,
           "name": "Aldhani",
           "airdate": "2022-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "roosterteeth-49434",
+            "itemTitle": "SPOILER TALK! Star Wars Andor Episode 4 ",
+            "file": "2022-09-28_SPOILER_TALK_Star_Wars_Andor_Episode_4_[49434].mp4",
+            "name": "2022-09-28_SPOILER_TALK_Star_Wars_Andor_Episode_4_[49434]",
+            "url": "https://archive.org/download/roosterteeth-49434/2022-09-28_SPOILER_TALK_Star_Wars_Andor_Episode_4_%5B49434%5D.mp4",
+            "seconds": 3308,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1739
+          },
           "alternates": []
         },
         {

@@ -3,20 +3,21 @@
   "slug": "just-shoot-me",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:07:33.599Z",
+  "matchedAt": "2026-10-15T12:55:15.297Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 2039,
-    "name": "Just Shoot Me!",
-    "runtime": 30,
-    "premiered": "1997-03-04",
+    "id": null,
+    "name": "Just Shoot Me",
+    "runtime": null,
+    "premiered": null,
     "network": "NBC"
   },
   "coverage": {
-    "total": 148,
-    "live": 3,
-    "review": 0,
-    "missing": 145,
-    "pct": 2
+    "total": 99,
+    "live": 0,
+    "review": 99,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,12 +25,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Back Issues",
-          "airdate": "1997-03-04",
-          "state": "LIVE",
+          "name": "gld",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "just-shoot-me-s-01-e-01-720p-hdtv-gld",
             "itemTitle": "Just Shoot Me S 01 E 01 720p HDTV [ Gld]",
             "file": "Just Shoot Me-S01E01-720p-HDTV-[Gld].mp4",
@@ -38,18 +36,21 @@
             "seconds": 1365,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 110
+            "sizeMB": 110,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "The Devil and Maya Gallo",
-          "airdate": "1997-03-05",
-          "state": "LIVE",
+          "name": "gld",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "just-shoot-me-s-01-e-02-hdtv-gld",
             "itemTitle": "Just Shoot Me S 01 E 02 HDTV [ Gld]",
             "file": "Just Shoot Me-S01E02-HDTV-[Gld].mp4",
@@ -58,18 +59,21 @@
             "seconds": 1354,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 68
+            "sizeMB": 68,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Secretary's Day",
-          "airdate": "1997-03-12",
-          "state": "LIVE",
+          "name": "gld",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "just-shoot-me-s-01-e-03-hdtv-gld",
             "itemTitle": "Just Shoot Me S 01 E 03 HDTV [ Gld]",
             "file": "Just Shoot Me-S01E03-HDTV-[Gld].mp4",
@@ -78,1201 +82,1942 @@
             "seconds": 1356,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 101
+            "sizeMB": 101,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Nina's Birthday",
-          "airdate": "1997-03-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "1e01 back issues",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "1E01 - Back Issues.mp4",
+            "name": "1E01 - Back Issues",
+            "url": "https://archive.org/download/3-e-21/1E01%20-%20Back%20Issues.mp4",
+            "seconds": 1353,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "In Your Dreams",
-          "airdate": "1997-03-25",
-          "state": "MISSING",
-          "file": null,
+          "name": "1e02 the devil and maya gallo",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "1E02 - The Devil and Maya Gallo.mp4",
+            "name": "1E02 - The Devil and Maya Gallo",
+            "url": "https://archive.org/download/3-e-21/1E02%20-%20The%20Devil%20and%20Maya%20Gallo.mp4",
+            "seconds": 1354,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Lemon Wacky Hello",
-          "airdate": "1997-03-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Experiment",
-          "airdate": "1997-09-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Assistant",
-          "airdate": "1997-09-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Old Boyfriends",
-          "airdate": "1997-10-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "La Cage",
-          "airdate": "1997-11-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "King Lear Jet",
-          "airdate": "1997-11-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "My Dinner with Woody",
-          "airdate": "1997-11-18",
-          "state": "MISSING",
-          "file": null,
+          "name": "1e03 secretarys day",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "1E03 - Secretary's Day.mp4",
+            "name": "1E03 - Secretary's Day",
+            "url": "https://archive.org/download/3-e-21/1E03%20-%20Secretary's%20Day.mp4",
+            "seconds": 1356,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Twice Burned",
-          "airdate": "1997-11-25",
-          "state": "MISSING",
-          "file": null,
+          "name": "1e04 ninas birthday",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "1E04 - Nina's Birthday.mp4",
+            "name": "1E04 - Nina's Birthday",
+            "url": "https://archive.org/download/3-e-21/1E04%20-%20Nina's%20Birthday.mp4",
+            "seconds": 1355,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Sweet Charity",
-          "airdate": "1997-12-09",
-          "state": "MISSING",
-          "file": null,
+          "name": "1e05 in your dreams",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "1E05 - In Your Dreams.mp4",
+            "name": "1E05 - In Your Dreams",
+            "url": "https://archive.org/download/3-e-21/1E05%20-%20In%20Your%20Dreams.mp4",
+            "seconds": 1356,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Jesus, It's Christmas",
-          "airdate": "1997-12-16",
-          "state": "MISSING",
-          "file": null,
+          "name": "1e06 lemon wacky hello",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "1E06 - Lemon Wacky Hello.mp4",
+            "name": "1E06 - Lemon Wacky Hello",
+            "url": "https://archive.org/download/3-e-21/1E06%20-%20Lemon%20Wacky%20Hello.mp4",
+            "seconds": 1355,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Elliott the Geek",
-          "airdate": "1998-01-06",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e01 the experiment",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E01 - The Experiment.mp4",
+            "name": "2E01 - The Experiment",
+            "url": "https://archive.org/download/3-e-21/2E01%20-%20The%20Experiment.mp4",
+            "seconds": 1334,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Sewer!",
-          "airdate": "1998-01-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e02 the assistant",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E02 - The Assistant.mp4",
+            "name": "2E02 - The Assistant",
+            "url": "https://archive.org/download/3-e-21/2E02%20-%20The%20Assistant.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "In the Company of Maya",
-          "airdate": "1998-01-20",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e03 old boyfriends",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E03 - Old Boyfriends.mp4",
+            "name": "2E03 - Old Boyfriends",
+            "url": "https://archive.org/download/3-e-21/2E03%20-%20Old%20Boyfriends.mp4",
+            "seconds": 1334,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Pass the Salt",
-          "airdate": "1998-01-29",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e04 la cage",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E04 - La Cage.mp4",
+            "name": "2E04 - La Cage",
+            "url": "https://archive.org/download/3-e-21/2E04%20-%20La%20Cage.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "The Walk",
-          "airdate": "1998-02-03",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e05 king lear jet",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E05 - King Lear Jet.mp4",
+            "name": "2E05 - King Lear Jet",
+            "url": "https://archive.org/download/3-e-21/2E05%20-%20King%20Lear%20Jet.mp4",
+            "seconds": 1319,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "Nina in the Cantina",
-          "airdate": "1998-02-24",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e06 my dinner with woody",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E06 - My Dinner with Woody.mp4",
+            "name": "2E06 - My Dinner with Woody",
+            "url": "https://archive.org/download/3-e-21/2E06%20-%20My%20Dinner%20with%20Woody.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "College or Collagen",
-          "airdate": "1998-02-26",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e07 twice burned",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E07 - Twice Burned.mp4",
+            "name": "2E07 - Twice Burned",
+            "url": "https://archive.org/download/3-e-21/2E07%20-%20Twice%20Burned.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "Nina's Bikini",
-          "airdate": "1998-03-03",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e08 sweet charity",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E08 - Sweet Charity.mp4",
+            "name": "2E08 - Sweet Charity",
+            "url": "https://archive.org/download/3-e-21/2E08%20-%20Sweet%20Charity.mp4",
+            "seconds": 1334,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "The Kiss",
-          "airdate": "1998-03-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e09 jesus its christmas",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E09 - Jesus, It's Christmas.mp4",
+            "name": "2E09 - Jesus, It's Christmas",
+            "url": "https://archive.org/download/3-e-21/2E09%20-%20Jesus%2C%20It's%20Christmas.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "Bravefinch",
-          "airdate": "1998-03-26",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e10 elliott the geek",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E10 - Elliott the Geek.mp4",
+            "name": "2E10 - Elliott the Geek",
+            "url": "https://archive.org/download/3-e-21/2E10%20-%20Elliott%20the%20Geek.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "Jack's Old Partner",
-          "airdate": "1998-04-09",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e11 sewer",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E11 - Sewer!.mp4",
+            "name": "2E11 - Sewer!",
+            "url": "https://archive.org/download/3-e-21/2E11%20-%20Sewer!.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "Amblushed",
-          "airdate": "1998-04-16",
-          "state": "MISSING",
-          "file": null,
+          "name": "2e12 in the company of maya",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E12 - In the Company of Maya.mp4",
+            "name": "2E12 - In the Company of Maya",
+            "url": "https://archive.org/download/3-e-21/2E12%20-%20In%20the%20Company%20of%20Maya.mp4",
+            "seconds": 1338,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "The Emperor",
-          "airdate": "1998-04-23",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 22",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E13.mp4",
+            "name": "2E13",
+            "url": "https://archive.org/download/3-e-21/2E13.mp4",
+            "seconds": 1337,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 23,
-          "name": "Rescue Me",
-          "airdate": "1998-04-30",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E14.mp4",
+            "name": "2E14",
+            "url": "https://archive.org/download/3-e-21/2E14.mp4",
+            "seconds": 1337,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "Eve of Destruction",
-          "airdate": "1998-05-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E15.mp4",
+            "name": "2E15",
+            "url": "https://archive.org/download/3-e-21/2E15.mp4",
+            "seconds": 1337,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 25,
-          "name": "War and Sleaze",
-          "airdate": "1998-05-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "What the Teddy Bear Saw",
-          "airdate": "1998-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Steamed",
-          "airdate": "1998-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Mask",
-          "airdate": "1998-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Funny Girl",
-          "airdate": "1998-11-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Two Girls for Every Boy",
-          "airdate": "1998-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "The Withholder",
-          "airdate": "1998-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Puppetmaster",
-          "airdate": "1998-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "The List",
-          "airdate": "1998-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "How Nina Got Her Groove Back",
-          "airdate": "1998-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "How the Finch Stole Christmas",
-          "airdate": "1998-12-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Slow Donnie",
-          "airdate": "1999-01-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "A Spy in the House of Me",
-          "airdate": "1999-01-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Lies & Dolls",
-          "airdate": "1999-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Nina Sees Red (1)",
-          "airdate": "1999-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Nina Sees Red (2)",
-          "airdate": "1999-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Hostess to Murder",
-          "airdate": "1999-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Toy Story",
-          "airdate": "1999-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Miss Pretty",
-          "airdate": "1999-03-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Maya's Nude Photos",
-          "airdate": "1999-04-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "And the Femmy Goes To...",
-          "airdate": "1999-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Softball",
-          "airdate": "1999-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Shaking Private Trainer",
-          "airdate": "1999-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Nina's Choice",
-          "airdate": "1999-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "The Odd Couple (1)",
-          "airdate": "1999-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "The Odd Couple (2)",
-          "airdate": "1999-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "A Divorce to Remember",
-          "airdate": "1999-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "When Nina Met Elliott",
-          "airdate": "1999-09-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Blackmail Photographer",
-          "airdate": "1999-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Finch Gets Dick",
-          "airdate": "1999-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Jack Vents",
-          "airdate": "1999-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Hello Goodbye",
-          "airdate": "1999-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "An Axe to Grind",
-          "airdate": "1999-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "First Date",
-          "airdate": "1999-11-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Love is in the Air",
-          "airdate": "1999-11-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Jack Gets Tough",
-          "airdate": "1999-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Prescription for Love",
-          "airdate": "2000-01-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "When Nina Met Elliott's Mother",
-          "airdate": "2000-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Dial 'N' for Murder",
-          "airdate": "2000-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Paradise by the Dashboard Light (1)",
-          "airdate": "2000-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Tea & Secrecy (2)",
-          "airdate": "2000-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "The Pirate of Love",
-          "airdate": "2000-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "With Thee I Swing",
-          "airdate": "2000-02-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Blackjack",
-          "airdate": "2000-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Blinded by the Right",
-          "airdate": "2000-04-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Hot Nights in Paris",
-          "airdate": "2000-04-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "When Nina Met Her Parents",
-          "airdate": "2000-04-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Finch on Ice",
-          "airdate": "2000-05-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "A&E Biography: Nina Van Horn",
-          "airdate": "2000-05-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Fast Times at Finchmont High",
-          "airdate": "2000-05-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 5,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Hit the Road, Jack",
-          "airdate": "2000-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "A Night at the Plaza",
-          "airdate": "2000-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Mum's the Word",
-          "airdate": "2000-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Donnie Returns",
-          "airdate": "2000-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Choosing to Be Super",
-          "airdate": "2000-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Brandi, You're a Fine Girl",
-          "airdate": "2000-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The First Thanksgiving",
-          "airdate": "2000-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Slamming Jack",
-          "airdate": "2000-12-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Dog Day Afternoon",
-          "airdate": "2000-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Finch and the Fighter",
-          "airdate": "2001-01-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "The Gift Piggy",
-          "airdate": "2001-01-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "The Proposal (1)",
-          "airdate": "2001-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "The Proposal (2)",
-          "airdate": "2001-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "The Auction",
-          "airdate": "2001-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Mayas and Tigers and Deans, Oh My",
-          "airdate": "2001-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Sid & Nina",
-          "airdate": "2001-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Where's Poppa?",
-          "airdate": "2001-03-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Erlene and Boo",
-          "airdate": "2001-03-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Fanny Finch",
-          "airdate": "2001-04-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Sugar Momma",
-          "airdate": "2001-04-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Maya Stops Thinking",
-          "airdate": "2001-05-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "At Long Last Allie (1)",
-          "airdate": "2001-05-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 6,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Finch in the Dogg House (2)",
-          "airdate": "2001-09-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Two Faces of Finch (1)",
-          "airdate": "2001-10-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Two Faces of Finch (2)",
-          "airdate": "2001-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Bye Bye Binnie",
-          "airdate": "2001-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Maya Judging Amy",
-          "airdate": "2001-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Finch Chasing Amy",
-          "airdate": "2001-11-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The Impossible Dream",
-          "airdate": "2001-11-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "The Haves and the Have-Mores",
-          "airdate": "2001-12-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Christmas? Christmas!",
-          "airdate": "2001-12-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Nina Van Mom",
-          "airdate": "2002-01-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Nina Van Grandma",
-          "airdate": "2002-01-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Liotta? Liotta!",
-          "airdate": "2002-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "About a Boy",
-          "airdate": "2002-02-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Friends and Neighbors",
-          "airdate": "2002-02-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Blind Ambition",
-          "airdate": "2002-03-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "A Beautiful Mind",
-          "airdate": "2002-03-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Educating Finch",
-          "airdate": "2002-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "The Book of Jack",
-          "airdate": "2002-04-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Blush Gets Some Therapy",
-          "airdate": "2002-04-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "The Burning House",
-          "airdate": "2002-04-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "The Bad Grandma",
-          "airdate": "2002-04-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "The Boys in the Band",
-          "airdate": "2002-05-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 7,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Guess Who's Coming to Blush",
-          "airdate": "2002-10-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Mr. Jealousy",
-          "airdate": "2002-10-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Nina and the Rocker",
-          "airdate": "2002-10-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Halloween? Halloween!",
-          "airdate": "2002-10-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Da Sister Who Loved DiMauro",
-          "airdate": "2002-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "That Burning Passion",
-          "airdate": "2002-11-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The Write Stuff",
-          "airdate": "2002-12-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "It's Raining Babies",
-          "airdate": "2003-01-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Watch Your Backdraft",
-          "airdate": "2003-01-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Pictures of Lily",
-          "airdate": "2003-04-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "The Comedy Stylings of Rivers & Red",
-          "airdate": "2003-04-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "The Talented Mr. Finch",
-          "airdate": "2003-07-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "There's Something About Allison",
-          "airdate": "2003-07-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Rivals in Romance",
-          "airdate": "2003-07-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "A Simple Kiss of Fate",
-          "airdate": "2003-07-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Donnie Redeemed",
-          "airdate": "2003-08-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "My Fair Finchy",
-          "airdate": "2003-08-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Son of a Preacher Man",
-          "airdate": "2003-08-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "The Last Temptation of Elliott",
-          "airdate": "2003-08-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "For the Last Time, I Do",
-          "airdate": "2003-08-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Future Issues",
-          "airdate": "2003-08-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Evaluate This!",
-          "airdate": "2003-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "The Goodbye Girl",
-          "airdate": "2003-11-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Strange Bedfellows",
-          "airdate": "2003-11-26",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 25",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E16.mp4",
+            "name": "2E16",
+            "url": "https://archive.org/download/3-e-21/2E16.mp4",
+            "seconds": 1316,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Episode 26",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E17.mp4",
+            "name": "2E17",
+            "url": "https://archive.org/download/3-e-21/2E17.mp4",
+            "seconds": 1337,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Episode 27",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E18.mp4",
+            "name": "2E18",
+            "url": "https://archive.org/download/3-e-21/2E18.mp4",
+            "seconds": 1319,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Episode 28",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E19.mp4",
+            "name": "2E19",
+            "url": "https://archive.org/download/3-e-21/2E19.mp4",
+            "seconds": 1317,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Episode 29",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E20.mp4",
+            "name": "2E20",
+            "url": "https://archive.org/download/3-e-21/2E20.mp4",
+            "seconds": 1317,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Episode 30",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E21.mp4",
+            "name": "2E21",
+            "url": "https://archive.org/download/3-e-21/2E21.mp4",
+            "seconds": 1314,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Episode 31",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E22.mp4",
+            "name": "2E22",
+            "url": "https://archive.org/download/3-e-21/2E22.mp4",
+            "seconds": 1317,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Episode 32",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E23.mp4",
+            "name": "2E23",
+            "url": "https://archive.org/download/3-e-21/2E23.mp4",
+            "seconds": 1314,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Episode 33",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E24.mp4",
+            "name": "2E24",
+            "url": "https://archive.org/download/3-e-21/2E24.mp4",
+            "seconds": 1337,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Episode 34",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "2E25.mp4",
+            "name": "2E25",
+            "url": "https://archive.org/download/3-e-21/2E25.mp4",
+            "seconds": 1316,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Episode 35",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3e01.mp4",
+            "name": "3e01",
+            "url": "https://archive.org/download/3-e-21/3e01.mp4",
+            "seconds": 1312,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Episode 36",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E02.mp4",
+            "name": "3E02",
+            "url": "https://archive.org/download/3-e-21/3E02.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Episode 37",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E03.mp4",
+            "name": "3E03",
+            "url": "https://archive.org/download/3-e-21/3E03.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Episode 38",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E04.mp4",
+            "name": "3E04",
+            "url": "https://archive.org/download/3-e-21/3E04.mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 126,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Episode 39",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E05.mp4",
+            "name": "3E05",
+            "url": "https://archive.org/download/3-e-21/3E05.mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Episode 40",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E06.mp4",
+            "name": "3E06",
+            "url": "https://archive.org/download/3-e-21/3E06.mp4",
+            "seconds": 1330,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "Episode 41",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E07.mp4",
+            "name": "3E07",
+            "url": "https://archive.org/download/3-e-21/3E07.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Episode 42",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E08.mp4",
+            "name": "3E08",
+            "url": "https://archive.org/download/3-e-21/3E08.mp4",
+            "seconds": 1332,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "Episode 43",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E09.mp4",
+            "name": "3E09",
+            "url": "https://archive.org/download/3-e-21/3E09.mp4",
+            "seconds": 1331,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "Episode 44",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E10.mp4",
+            "name": "3E10",
+            "url": "https://archive.org/download/3-e-21/3E10.mp4",
+            "seconds": 1326,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Episode 45",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E11.mp4",
+            "name": "3E11",
+            "url": "https://archive.org/download/3-e-21/3E11.mp4",
+            "seconds": 1335,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "Episode 46",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E12.mp4",
+            "name": "3E12",
+            "url": "https://archive.org/download/3-e-21/3E12.mp4",
+            "seconds": 1321,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "Episode 47",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E13.mp4",
+            "name": "3E13",
+            "url": "https://archive.org/download/3-e-21/3E13.mp4",
+            "seconds": 1331,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "Episode 48",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E14.mp4",
+            "name": "3E14",
+            "url": "https://archive.org/download/3-e-21/3E14.mp4",
+            "seconds": 1332,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "Episode 49",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E15.mp4",
+            "name": "3E15",
+            "url": "https://archive.org/download/3-e-21/3E15.mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 126,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "Episode 50",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E16.mp4",
+            "name": "3E16",
+            "url": "https://archive.org/download/3-e-21/3E16.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "Episode 51",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "3E17.mp4",
+            "name": "3E17",
+            "url": "https://archive.org/download/3-e-21/3E17.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "Episode 52",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E01.mp4",
+            "name": "4E01",
+            "url": "https://archive.org/download/3-e-21/4E01.mp4",
+            "seconds": 1267,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 124,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "Episode 53",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E02.mp4",
+            "name": "4E02",
+            "url": "https://archive.org/download/3-e-21/4E02.mp4",
+            "seconds": 1257,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "Episode 54",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E03.mp4",
+            "name": "4E03",
+            "url": "https://archive.org/download/3-e-21/4E03.mp4",
+            "seconds": 1257,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "Episode 55",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E04.mp4",
+            "name": "4E04",
+            "url": "https://archive.org/download/3-e-21/4E04.mp4",
+            "seconds": 1251,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "Episode 56",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E05.mp4",
+            "name": "4E05",
+            "url": "https://archive.org/download/3-e-21/4E05.mp4",
+            "seconds": 1256,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 124,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "Episode 57",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E06.mp4",
+            "name": "4E06",
+            "url": "https://archive.org/download/3-e-21/4E06.mp4",
+            "seconds": 1255,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "Episode 58",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E07.mp4",
+            "name": "4E07",
+            "url": "https://archive.org/download/3-e-21/4E07.mp4",
+            "seconds": 1250,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "Episode 59",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E08.mp4",
+            "name": "4E08",
+            "url": "https://archive.org/download/3-e-21/4E08.mp4",
+            "seconds": 1176,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 115,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "Episode 60",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E09.mp4",
+            "name": "4E09",
+            "url": "https://archive.org/download/3-e-21/4E09.mp4",
+            "seconds": 1257,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "Episode 61",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E10.mp4",
+            "name": "4E10",
+            "url": "https://archive.org/download/3-e-21/4E10.mp4",
+            "seconds": 1253,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 124,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "Episode 62",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E11.mp4",
+            "name": "4E11",
+            "url": "https://archive.org/download/3-e-21/4E11.mp4",
+            "seconds": 1222,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 120,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "Episode 63",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E12.mp4",
+            "name": "4E12",
+            "url": "https://archive.org/download/3-e-21/4E12.mp4",
+            "seconds": 1257,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "Episode 64",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E13.mp4",
+            "name": "4E13",
+            "url": "https://archive.org/download/3-e-21/4E13.mp4",
+            "seconds": 1252,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "Episode 65",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E14.mp4",
+            "name": "4E14",
+            "url": "https://archive.org/download/3-e-21/4E14.mp4",
+            "seconds": 1257,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 66,
+          "name": "Episode 66",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E15.mp4",
+            "name": "4E15",
+            "url": "https://archive.org/download/3-e-21/4E15.mp4",
+            "seconds": 1242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 67,
+          "name": "Episode 67",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E16.mp4",
+            "name": "4E16",
+            "url": "https://archive.org/download/3-e-21/4E16.mp4",
+            "seconds": 1228,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 120,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "Episode 68",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E17.mp4",
+            "name": "4E17",
+            "url": "https://archive.org/download/3-e-21/4E17.mp4",
+            "seconds": 1254,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "Episode 69",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E18.mp4",
+            "name": "4E18",
+            "url": "https://archive.org/download/3-e-21/4E18.mp4",
+            "seconds": 1257,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "Episode 70",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E19.mp4",
+            "name": "4E19",
+            "url": "https://archive.org/download/3-e-21/4E19.mp4",
+            "seconds": 1253,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "Episode 71",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E20.mp4",
+            "name": "4E20",
+            "url": "https://archive.org/download/3-e-21/4E20.mp4",
+            "seconds": 1242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 72,
+          "name": "Episode 72",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E21.mp4",
+            "name": "4E21",
+            "url": "https://archive.org/download/3-e-21/4E21.mp4",
+            "seconds": 1259,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 73,
+          "name": "Episode 73",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E22.mp4",
+            "name": "4E22",
+            "url": "https://archive.org/download/3-e-21/4E22.mp4",
+            "seconds": 1256,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 74,
+          "name": "Episode 74",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E23.mp4",
+            "name": "4E23",
+            "url": "https://archive.org/download/3-e-21/4E23.mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "Episode 75",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "4E24.mp4",
+            "name": "4E24",
+            "url": "https://archive.org/download/3-e-21/4E24.mp4",
+            "seconds": 1254,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 76,
+          "name": "Episode 76",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E01.mp4",
+            "name": "5E01",
+            "url": "https://archive.org/download/3-e-21/5E01.mp4",
+            "seconds": 1214,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 119,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 77,
+          "name": "Episode 77",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E02.mp4",
+            "name": "5E02",
+            "url": "https://archive.org/download/3-e-21/5E02.mp4",
+            "seconds": 1244,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 121,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 78,
+          "name": "Episode 78",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E03.mp4",
+            "name": "5E03",
+            "url": "https://archive.org/download/3-e-21/5E03.mp4",
+            "seconds": 1243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 79,
+          "name": "Episode 79",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E04.mp4",
+            "name": "5E04",
+            "url": "https://archive.org/download/3-e-21/5E04.mp4",
+            "seconds": 1243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 80,
+          "name": "Episode 80",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E05.mp4",
+            "name": "5E05",
+            "url": "https://archive.org/download/3-e-21/5E05.mp4",
+            "seconds": 1242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 81,
+          "name": "Episode 81",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E06.mp4",
+            "name": "5E06",
+            "url": "https://archive.org/download/3-e-21/5E06.mp4",
+            "seconds": 1214,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 118,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 82,
+          "name": "Episode 82",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E07.mp4",
+            "name": "5E07",
+            "url": "https://archive.org/download/3-e-21/5E07.mp4",
+            "seconds": 1231,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 120,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 83,
+          "name": "Episode 83",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E08.mp4",
+            "name": "5E08",
+            "url": "https://archive.org/download/3-e-21/5E08.mp4",
+            "seconds": 1243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 84,
+          "name": "Episode 84",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E09.mp4",
+            "name": "5E09",
+            "url": "https://archive.org/download/3-e-21/5E09.mp4",
+            "seconds": 1243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 85,
+          "name": "Episode 85",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E10.mp4",
+            "name": "5E10",
+            "url": "https://archive.org/download/3-e-21/5E10.mp4",
+            "seconds": 1243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 86,
+          "name": "Episode 86",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E11.mp4",
+            "name": "5E11",
+            "url": "https://archive.org/download/3-e-21/5E11.mp4",
+            "seconds": 1242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 87,
+          "name": "Episode 87",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E12.mp4",
+            "name": "5E12",
+            "url": "https://archive.org/download/3-e-21/5E12.mp4",
+            "seconds": 1244,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 88,
+          "name": "Episode 88",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E13.mp4",
+            "name": "5E13",
+            "url": "https://archive.org/download/3-e-21/5E13.mp4",
+            "seconds": 1242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 121,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 89,
+          "name": "Episode 89",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E14.mp4",
+            "name": "5E14",
+            "url": "https://archive.org/download/3-e-21/5E14.mp4",
+            "seconds": 1223,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 120,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 90,
+          "name": "Episode 90",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E15.mp4",
+            "name": "5E15",
+            "url": "https://archive.org/download/3-e-21/5E15.mp4",
+            "seconds": 1224,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 120,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 91,
+          "name": "Episode 91",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E16.mp4",
+            "name": "5E16",
+            "url": "https://archive.org/download/3-e-21/5E16.mp4",
+            "seconds": 1425,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 92,
+          "name": "Episode 92",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E17.mp4",
+            "name": "5E17",
+            "url": "https://archive.org/download/3-e-21/5E17.mp4",
+            "seconds": 1242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 121,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 93,
+          "name": "Episode 93",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E18.mp4",
+            "name": "5E18",
+            "url": "https://archive.org/download/3-e-21/5E18.mp4",
+            "seconds": 1243,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 94,
+          "name": "Episode 94",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E19.mp4",
+            "name": "5E19",
+            "url": "https://archive.org/download/3-e-21/5E19.mp4",
+            "seconds": 1221,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 119,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 95,
+          "name": "Episode 95",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E20.mp4",
+            "name": "5E20",
+            "url": "https://archive.org/download/3-e-21/5E20.mp4",
+            "seconds": 1232,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 120,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 96,
+          "name": "Episode 96",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E21.mp4",
+            "name": "5E21",
+            "url": "https://archive.org/download/3-e-21/5E21.mp4",
+            "seconds": 1241,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 122,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 97,
+          "name": "Episode 97",
+          "state": "REVIEW",
+          "file": {
+            "item": "3-e-21",
+            "itemTitle": "Just shoot me TV series season 1 to 7 Full episodes",
+            "file": "5E22.mp4",
+            "name": "5E22",
+            "url": "https://archive.org/download/3-e-21/5E22.mp4",
+            "seconds": 1238,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 121,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 98,
+          "name": "wrc 20010914 003000",
+          "state": "REVIEW",
+          "file": {
+            "item": "WRC_20010914_003000_Just_Shoot_Me",
+            "itemTitle": "Just Shoot Me : WRC : September 13, 2001 8:30pm-9:00pm EDT",
+            "file": "WRC_20010914_003000_Just_Shoot_Me.mp4",
+            "name": "WRC_20010914_003000_Just_Shoot_Me",
+            "url": "https://archive.org/download/WRC_20010914_003000_Just_Shoot_Me/WRC_20010914_003000_Just_Shoot_Me.mp4",
+            "seconds": 1802,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 99,
+          "name": "wrc 20010919 003000",
+          "state": "REVIEW",
+          "file": {
+            "item": "WRC_20010919_003000_Just_Shoot_Me",
+            "itemTitle": "Just Shoot Me : WRC : September 18, 2001 8:30pm-9:00pm EDT",
+            "file": "WRC_20010919_003000_Just_Shoot_Me.mp4",
+            "name": "WRC_20010919_003000_Just_Shoot_Me",
+            "url": "https://archive.org/download/WRC_20010919_003000_Just_Shoot_Me/WRC_20010919_003000_Just_Shoot_Me.mp4",
+            "seconds": 1800,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 2039,
+    "name": "Just Shoot Me!",
+    "placed": 3
+  }
 }

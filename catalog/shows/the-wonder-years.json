@@ -3,20 +3,21 @@
   "slug": "the-wonder-years",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-15T12:07:34.512Z",
+  "matchedAt": "2026-10-15T12:55:16.257Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 55351,
+    "id": null,
     "name": "The Wonder Years",
-    "runtime": 30,
-    "premiered": "2021-09-22",
+    "runtime": null,
+    "premiered": null,
     "network": "ABC"
   },
   "coverage": {
-    "total": 32,
-    "live": 13,
-    "review": 17,
-    "missing": 2,
-    "pct": 94
+    "total": 115,
+    "live": 0,
+    "review": 115,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,12 +25,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Pilot",
-          "airdate": "2021-09-22",
-          "state": "LIVE",
+          "name": "the pilot",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S01E01 - Pilot.mp4",
@@ -38,58 +36,21 @@
             "seconds": 1481,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 223
+            "sizeMB": 223,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S01E01 - Pilot.mp4",
-              "name": "The Wonder Years S01E01 - Pilot",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S01E01%20-%20Pilot.mp4",
-              "seconds": 1481,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 223
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E12 - Fate.mp4",
-              "name": "The Wonder Years S02E12 - Fate",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E12%20-%20Fate.mp4",
-              "seconds": 1370,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 244
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E12 - Fate.mp4",
-              "name": "The Wonder Years S02E12 - Fate",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E12%20-%20Fate.mp4",
-              "seconds": 1370,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 244
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
-          "name": "Green Eyed Monster",
-          "airdate": "2021-09-29",
-          "state": "LIVE",
+          "name": "the swingers",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S01E02 - Swingers.mp4",
@@ -98,118 +59,44 @@
             "seconds": 1406,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 162
+            "sizeMB": 162,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S01E02 - Swingers.mp4",
-              "name": "The Wonder Years S01E02 - Swingers",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S01E02%20-%20Swingers.mp4",
-              "seconds": 1406,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 162
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E13 - Birthday Boy.mp4",
-              "name": "The Wonder Years S02E13 - Birthday Boy",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E13%20-%20Birthday%20Boy.mp4",
-              "seconds": 1392,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 222
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E13 - Birthday Boy.mp4",
-              "name": "The Wonder Years S02E13 - Birthday Boy",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E13%20-%20Birthday%20Boy.mp4",
-              "seconds": 1392,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 222
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
-          "name": "The Club",
-          "airdate": "2021-10-06",
+          "name": "the my fathers office",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Club\" (0.95)",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E16 - The Glee Club.mp4",
-            "name": "The Wonder Years S03E16 - The Glee Club",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E16%20-%20The%20Glee%20Club.mp4",
-            "seconds": 1366,
+            "file": "The Wonder Years S01E03 - My Father's Office.mp4",
+            "name": "The Wonder Years S01E03 - My Father's Office",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S01E03%20-%20My%20Father's%20Office.mp4",
+            "seconds": 1432,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 173
+            "sizeMB": 146,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Club\" (0.95)",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E16 - The Glee Club.mp4",
-              "name": "The Wonder Years S03E16 - The Glee Club",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E16%20-%20The%20Glee%20Club.mp4",
-              "seconds": 1366,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 173
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E14 - Brightwing.mp4",
-              "name": "The Wonder Years S02E14 - Brightwing",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E14%20-%20Brightwing.mp4",
-              "seconds": 1347,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 174
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E14 - Brightwing.mp4",
-              "name": "The Wonder Years S02E14 - Brightwing",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E14%20-%20Brightwing.mp4",
-              "seconds": 1347,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 174
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
-          "name": "The Workplace",
-          "airdate": "2021-10-13",
-          "state": "LIVE",
+          "name": "the angel",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S01E04 - Angel.mp4",
@@ -218,58 +105,21 @@
             "seconds": 1421,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 159
+            "sizeMB": 159,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S01E04 - Angel.mp4",
-              "name": "The Wonder Years S01E04 - Angel",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S01E04%20-%20Angel.mp4",
-              "seconds": 1421,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 159
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E15 - Square Dance.mp4",
-              "name": "The Wonder Years S02E15 - Square Dance",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E15%20-%20Square%20Dance.mp4",
-              "seconds": 1332,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 194
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E15 - Square Dance.mp4",
-              "name": "The Wonder Years S02E15 - Square Dance",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E15%20-%20Square%20Dance.mp4",
-              "seconds": 1332,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 194
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
-          "name": "The Lock In",
-          "airdate": "2021-10-20",
-          "state": "LIVE",
+          "name": "the the phone call",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S01E05 - The Phone Call.mp4",
@@ -278,58 +128,21 @@
             "seconds": 1431,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 149
+            "sizeMB": 149,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S01E05 - The Phone Call.mp4",
-              "name": "The Wonder Years S01E05 - The Phone Call",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S01E05%20-%20The%20Phone%20Call.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 149
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E16 - Whose Woods Are These.mp4",
-              "name": "The Wonder Years S02E16 - Whose Woods Are These",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E16%20-%20Whose%20Woods%20Are%20These.mp4",
-              "seconds": 1388,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E16 - Whose Woods Are These.mp4",
-              "name": "The Wonder Years S02E16 - Whose Woods Are These",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E16%20-%20Whose%20Woods%20Are%20These.mp4",
-              "seconds": 1388,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
-          "name": "Be Prepared",
-          "airdate": "2021-10-27",
-          "state": "LIVE",
+          "name": "the dance with me",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S01E06 - Dance with Me.mp4",
@@ -338,671 +151,15 @@
             "seconds": 1426,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 150
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S01E06 - Dance with Me.mp4",
-              "name": "The Wonder Years S01E06 - Dance with Me",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S01E06%20-%20Dance%20with%20Me.mp4",
-              "seconds": 1426,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 150
+            "sizeMB": 150,
+            "ep": {
+              "season": 1,
+              "episode": 6
             },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E17 - How I'm Spending My Summer Vacation.mp4",
-              "name": "The Wonder Years S02E17 - How I'm Spending My Summer Vacation",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E17%20-%20How%20I'm%20Spending%20My%20Summer%20Vacation.mp4",
-              "seconds": 1396,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 225
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E17 - How I'm Spending My Summer Vacation.mp4",
-              "name": "The Wonder Years S02E17 - How I'm Spending My Summer Vacation",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E17%20-%20How%20I'm%20Spending%20My%20Summer%20Vacation.mp4",
-              "seconds": 1396,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 225
-            }
-          ]
-        },
-        {
-          "number": 7,
-          "name": "Independence Day",
-          "airdate": "2021-11-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Independence Day\" (0.95)",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S06E22 - Independence Day.mp4",
-            "name": "The Wonder Years S06E22 - Independence Day",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E22%20-%20Independence%20Day.mp4",
-            "seconds": 1515,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Independence Day\" (0.95)",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S06E22 - Independence Day.mp4",
-              "name": "The Wonder Years S06E22 - Independence Day",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S06E22%20-%20Independence%20Day.mp4",
-              "seconds": 1515,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 178
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E01 - Summer Song.mp4",
-              "name": "The Wonder Years S03E01 - Summer Song",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E01%20-%20Summer%20Song.mp4",
-              "seconds": 1402,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 195
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E01 - Summer Song.mp4",
-              "name": "The Wonder Years S03E01 - Summer Song",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E01%20-%20Summer%20Song.mp4",
-              "seconds": 1402,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 195
-            }
-          ]
-        },
-        {
-          "number": 8,
-          "name": "Science Fair",
-          "airdate": "2021-11-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E02 - Math Class.mp4",
-            "name": "The Wonder Years S03E02 - Math Class",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E02%20-%20Math%20Class.mp4",
-            "seconds": 1387,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 190
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E02 - Math Class.mp4",
-              "name": "The Wonder Years S03E02 - Math Class",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E02%20-%20Math%20Class.mp4",
-              "seconds": 1387,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 190
-            }
-          ]
-        },
-        {
-          "number": 9,
-          "name": "Home for Christmas",
-          "airdate": "2021-12-01",
-          "state": "REVIEW",
-          "file": {
             "conf": 0.6,
-            "why": "title ~ \"Home for Christmas\" (0.62)",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S02E03 - Christmas.mp4",
-            "name": "The Wonder Years S02E03 - Christmas",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E03%20-%20Christmas.mp4",
-            "seconds": 1375,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 161
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Home for Christmas\" (0.62)",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E03 - Christmas.mp4",
-              "name": "The Wonder Years S02E03 - Christmas",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E03%20-%20Christmas.mp4",
-              "seconds": 1375,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 161
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E03 - Wayne on Wheels.mp4",
-              "name": "The Wonder Years S03E03 - Wayne on Wheels",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E03%20-%20Wayne%20on%20Wheels.mp4",
-              "seconds": 1366,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 165
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E03 - Wayne on Wheels.mp4",
-              "name": "The Wonder Years S03E03 - Wayne on Wheels",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E03%20-%20Wayne%20on%20Wheels.mp4",
-              "seconds": 1366,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 165
-            }
-          ]
-        },
-        {
-          "number": 10,
-          "name": "Lads and Ladies and Us",
-          "airdate": "2022-01-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E04 - Mom Wars.mp4",
-            "name": "The Wonder Years S03E04 - Mom Wars",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E04%20-%20Mom%20Wars.mp4",
-            "seconds": 1365,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 205
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E04 - Mom Wars.mp4",
-              "name": "The Wonder Years S03E04 - Mom Wars",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E04%20-%20Mom%20Wars.mp4",
-              "seconds": 1365,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
-            }
-          ]
-        },
-        {
-          "number": 11,
-          "name": "Brad Mitzvah",
-          "airdate": "2022-01-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 11 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E08 - The Pimple.mp4",
-            "name": "The Wonder Years S03E08 - The Pimple",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E08%20-%20The%20Pimple.mp4",
-            "seconds": 1376,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 171
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E08 - The Pimple.mp4",
-              "name": "The Wonder Years S03E08 - The Pimple",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E08%20-%20The%20Pimple.mp4",
-              "seconds": 1376,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 171
-            }
-          ]
-        },
-        {
-          "number": 12,
-          "name": "I'm With the Band",
-          "airdate": "2022-01-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E09 - Math Class Squared.mp4",
-            "name": "The Wonder Years S03E09 - Math Class Squared",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E09%20-%20Math%20Class%20Squared.mp4",
-            "seconds": 1395,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 176
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E09 - Math Class Squared.mp4",
-              "name": "The Wonder Years S03E09 - Math Class Squared",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E09%20-%20Math%20Class%20Squared.mp4",
-              "seconds": 1395,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 176
-            }
-          ]
-        },
-        {
-          "number": 13,
-          "name": "The Valentine's Day Dance",
-          "airdate": "2022-02-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"The Valentine's Day Dance\" (0.64)",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E14 - The St. Valentine's Day Massacre.mp4",
-            "name": "The Wonder Years S03E14 - The St. Valentine's Day Massacre",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E14%20-%20The%20St.%20Valentine's%20Day%20Massacre.mp4",
-            "seconds": 1387,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 191
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"The Valentine's Day Dance\" (0.64)",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E14 - The St. Valentine's Day Massacre.mp4",
-              "name": "The Wonder Years S03E14 - The St. Valentine's Day Massacre",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E14%20-%20The%20St.%20Valentine's%20Day%20Massacre.mp4",
-              "seconds": 1387,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 191
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E10 - Rock 'n Roll.mp4",
-              "name": "The Wonder Years S03E10 - Rock 'n Roll",
-              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E10%20-%20Rock%20'n%20Roll.mp4",
-              "seconds": 1360,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 170
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E10 - Rock 'n Roll.mp4",
-              "name": "The Wonder Years S03E10 - Rock 'n Roll",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E10%20-%20Rock%20'n%20Roll.mp4",
-              "seconds": 1360,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 170
-            }
-          ]
-        },
-        {
-          "number": 14,
-          "name": "Country Dean",
-          "airdate": "2022-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 14 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E11 - Don't You Know Anything About Women.mp4",
-            "name": "The Wonder Years S03E11 - Don't You Know Anything About Women",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E11%20-%20Don't%20You%20Know%20Anything%20About%20Women.mp4",
-            "seconds": 1371,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 196
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E11 - Don't You Know Anything About Women.mp4",
-              "name": "The Wonder Years S03E11 - Don't You Know Anything About Women",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E11%20-%20Don't%20You%20Know%20Anything%20About%20Women.mp4",
-              "seconds": 1371,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 196
-            }
-          ]
-        },
-        {
-          "number": 15,
-          "name": "Black Teacher",
-          "airdate": "2022-03-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 15 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E15 - The Tree House.mp4",
-            "name": "The Wonder Years S03E15 - The Tree House",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E15%20-%20The%20Tree%20House.mp4",
-            "seconds": 1385,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 213
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 15 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E15 - The Tree House.mp4",
-              "name": "The Wonder Years S03E15 - The Tree House",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E15%20-%20The%20Tree%20House.mp4",
-              "seconds": 1385,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 213
-            }
-          ]
-        },
-        {
-          "number": 16,
-          "name": "The Sleepover",
-          "airdate": "2022-03-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 16 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E17 - Night Out.mp4",
-            "name": "The Wonder Years S03E17 - Night Out",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E17%20-%20Night%20Out.mp4",
-            "seconds": 1394,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 163
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E17 - Night Out.mp4",
-              "name": "The Wonder Years S03E17 - Night Out",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E17%20-%20Night%20Out.mp4",
-              "seconds": 1394,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 163
-            }
-          ]
-        },
-        {
-          "number": 17,
-          "name": "Jobs and Hangouts",
-          "airdate": "2022-03-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 17 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E18 - Faith.mp4",
-            "name": "The Wonder Years S03E18 - Faith",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E18%20-%20Faith.mp4",
-            "seconds": 1392,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 163
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 17 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E18 - Faith.mp4",
-              "name": "The Wonder Years S03E18 - Faith",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E18%20-%20Faith.mp4",
-              "seconds": 1392,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 163
-            }
-          ]
-        },
-        {
-          "number": 18,
-          "name": "Goose Grease",
-          "airdate": "2022-04-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 18 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E19 - The Unnatural.mp4",
-            "name": "The Wonder Years S03E19 - The Unnatural",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E19%20-%20The%20Unnatural.mp4",
-            "seconds": 1361,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 227
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 18 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E19 - The Unnatural.mp4",
-              "name": "The Wonder Years S03E19 - The Unnatural",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E19%20-%20The%20Unnatural.mp4",
-              "seconds": 1361,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 227
-            }
-          ]
-        },
-        {
-          "number": 19,
-          "name": "Love & War",
-          "airdate": "2022-04-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 19 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E20 - Goodbye.mp4",
-            "name": "The Wonder Years S03E20 - Goodbye",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E20%20-%20Goodbye.mp4",
-            "seconds": 1411,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 209
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 19 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E20 - Goodbye.mp4",
-              "name": "The Wonder Years S03E20 - Goodbye",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E20%20-%20Goodbye.mp4",
-              "seconds": 1411,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 209
-            }
-          ]
-        },
-        {
-          "number": 20,
-          "name": "Bill's New Gig",
-          "airdate": "2022-04-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 20 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E21 - Cocoa and Sympathy.mp4",
-            "name": "The Wonder Years S03E21 - Cocoa and Sympathy",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E21%20-%20Cocoa%20and%20Sympathy.mp4",
-            "seconds": 1390,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 187
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 20 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E21 - Cocoa and Sympathy.mp4",
-              "name": "The Wonder Years S03E21 - Cocoa and Sympathy",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E21%20-%20Cocoa%20and%20Sympathy.mp4",
-              "seconds": 1390,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 187
-            }
-          ]
-        },
-        {
-          "number": 21,
-          "name": "Where No Dean Has Been Before",
-          "airdate": "2022-05-11",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 21 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E22 - Daddy's Little Girl.mp4",
-            "name": "The Wonder Years S03E22 - Daddy's Little Girl",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E22%20-%20Daddy's%20Little%20Girl.mp4",
-            "seconds": 1396,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 188
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 21 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S03E22 - Daddy's Little Girl.mp4",
-              "name": "The Wonder Years S03E22 - Daddy's Little Girl",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E22%20-%20Daddy's%20Little%20Girl.mp4",
-              "seconds": 1396,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 188
-            }
-          ]
-        },
-        {
-          "number": 22,
-          "name": "Love, Dean",
-          "airdate": "2022-05-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 22 of 78 in \"The Wonder Years: The Complete Series\"",
-            "item": "the-wonder-years-complete-series",
-            "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S04E02 - Ninth Grade Man.mp4",
-            "name": "The Wonder Years S04E02 - Ninth Grade Man",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E02%20-%20Ninth%20Grade%20Man.mp4",
-            "seconds": 1395,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 195
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 22 of 78 in \"The Wonder Years: The Complete Series\"",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S04E02 - Ninth Grade Man.mp4",
-              "name": "The Wonder Years S04E02 - Ninth Grade Man",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S04E02%20-%20Ninth%20Grade%20Man.mp4",
-              "seconds": 1395,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 195
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -1011,20 +168,32 @@
       "episodes": [
         {
           "number": 1,
-          "name": "One Small Step",
-          "airdate": "2023-06-14",
-          "state": "MISSING",
-          "file": null,
+          "name": "the heart of darkness",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E01 - Heart of Darkness.mp4",
+            "name": "The Wonder Years S02E01 - Heart of Darkness",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E01%20-%20Heart%20of%20Darkness.mp4",
+            "seconds": 1414,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Forbidden Fruit",
-          "airdate": "2023-06-14",
-          "state": "LIVE",
+          "name": "the our miss white",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E02 - Our Miss White.mp4",
@@ -1033,32 +202,21 @@
             "seconds": 1436,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166
+            "sizeMB": 166,
+            "ep": {
+              "season": 2,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E02 - Our Miss White.mp4",
-              "name": "The Wonder Years S02E02 - Our Miss White",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E02%20-%20Our%20Miss%20White.mp4",
-              "seconds": 1436,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 166
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
-          "name": "Football Team",
-          "airdate": "2023-06-21",
-          "state": "LIVE",
+          "name": "the christmas",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E03 - Christmas.mp4",
@@ -1067,32 +225,21 @@
             "seconds": 1375,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 161
+            "sizeMB": 161,
+            "ep": {
+              "season": 2,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E03 - Christmas.mp4",
-              "name": "The Wonder Years S02E03 - Christmas",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E03%20-%20Christmas.mp4",
-              "seconds": 1375,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 161
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
-          "name": "Blockbusting",
-          "airdate": "2023-06-28",
-          "state": "LIVE",
+          "name": "the steady as she goes",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E04 - Steady as She Goes.mp4",
@@ -1101,40 +248,44 @@
             "seconds": 1432,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 213
+            "sizeMB": 213,
+            "ep": {
+              "season": 2,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E04 - Steady as She Goes.mp4",
-              "name": "The Wonder Years S02E04 - Steady as She Goes",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E04%20-%20Steady%20as%20She%20Goes.mp4",
-              "seconds": 1432,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 213
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
-          "name": "Takeover Spirit",
-          "airdate": "2023-07-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "the just between me and you and kirk and paul and carla and becky",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E05 - Just Between Me and You and Kirk and Paul and Carla and Becky.mp4",
+            "name": "The Wonder Years S02E05 - Just Between Me and You and Kirk and Paul and Carla and Becky",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E05%20-%20Just%20Between%20Me%20and%20You%20and%20Kirk%20and%20Paul%20and%20Carla%20and%20Becky.mp4",
+            "seconds": 1418,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 191,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Bill's New Friend",
-          "airdate": "2023-07-26",
-          "state": "LIVE",
+          "name": "the pottery will get you nowhere",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E06 - Pottery Will Get You Nowhere.mp4",
@@ -1143,32 +294,21 @@
             "seconds": 1368,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 185
+            "sizeMB": 185,
+            "ep": {
+              "season": 2,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E06 - Pottery Will Get You Nowhere.mp4",
-              "name": "The Wonder Years S02E06 - Pottery Will Get You Nowhere",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E06%20-%20Pottery%20Will%20Get%20You%20Nowhere.mp4",
-              "seconds": 1368,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 185
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
-          "name": "A Star Is Born",
-          "airdate": "2023-08-02",
-          "state": "LIVE",
+          "name": "the coda",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E07 - Coda.mp4",
@@ -1177,32 +317,21 @@
             "seconds": 1401,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 213
+            "sizeMB": 213,
+            "ep": {
+              "season": 2,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E07 - Coda.mp4",
-              "name": "The Wonder Years S02E07 - Coda",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E07%20-%20Coda.mp4",
-              "seconds": 1401,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 213
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
-          "name": "Like a Boss",
-          "airdate": "2023-08-09",
-          "state": "LIVE",
+          "name": "the hiroshima mon frere",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E08 - Hiroshima, Mon Frere.mp4",
@@ -1211,32 +340,21 @@
             "seconds": 1401,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 180,
+            "ep": {
+              "season": 2,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E08 - Hiroshima, Mon Frere.mp4",
-              "name": "The Wonder Years S02E08 - Hiroshima, Mon Frere",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E08%20-%20Hiroshima%2C%20Mon%20Frere.mp4",
-              "seconds": 1401,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 180
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
-          "name": "Happy Birthday, Clisby",
-          "airdate": "2023-08-16",
-          "state": "LIVE",
+          "name": "the loosiers",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E09 - Loosiers.mp4",
@@ -1245,32 +363,21 @@
             "seconds": 1387,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 219
+            "sizeMB": 219,
+            "ep": {
+              "season": 2,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E09 - Loosiers.mp4",
-              "name": "The Wonder Years S02E09 - Loosiers",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E09%20-%20Loosiers.mp4",
-              "seconds": 1387,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 219
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
-          "name": "The Happiest Place on Earth",
-          "airdate": "2023-08-16",
-          "state": "LIVE",
+          "name": "the walk out",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
             "file": "The Wonder Years S02E10 - Walk Out.mp4",
@@ -1279,25 +386,2319 @@
             "seconds": 1394,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 181,
+            "ep": {
+              "season": 2,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-wonder-years-complete-series_202512",
-              "itemTitle": "The Wonder Years: The Complete Series",
-              "file": "The Wonder Years S02E10 - Walk Out.mp4",
-              "name": "The Wonder Years S02E10 - Walk Out",
-              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S02E10%20-%20Walk%20Out.mp4",
-              "seconds": 1394,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 181
-            }
-          ]
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "the nemesis",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E11 - Nemesis.mp4",
+            "name": "The Wonder Years S02E11 - Nemesis",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E11%20-%20Nemesis.mp4",
+            "seconds": 1400,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 238,
+            "ep": {
+              "season": 2,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "the fate",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E12 - Fate.mp4",
+            "name": "The Wonder Years S02E12 - Fate",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E12%20-%20Fate.mp4",
+            "seconds": 1370,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244,
+            "ep": {
+              "season": 2,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the birthday boy",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E13 - Birthday Boy.mp4",
+            "name": "The Wonder Years S02E13 - Birthday Boy",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E13%20-%20Birthday%20Boy.mp4",
+            "seconds": 1392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 222,
+            "ep": {
+              "season": 2,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "the brightwing",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E14 - Brightwing.mp4",
+            "name": "The Wonder Years S02E14 - Brightwing",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E14%20-%20Brightwing.mp4",
+            "seconds": 1347,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": {
+              "season": 2,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "the square dance",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E15 - Square Dance.mp4",
+            "name": "The Wonder Years S02E15 - Square Dance",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E15%20-%20Square%20Dance.mp4",
+            "seconds": 1332,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 194,
+            "ep": {
+              "season": 2,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "the whose woods are these",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E16 - Whose Woods Are These.mp4",
+            "name": "The Wonder Years S02E16 - Whose Woods Are These",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E16%20-%20Whose%20Woods%20Are%20These.mp4",
+            "seconds": 1388,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 205,
+            "ep": {
+              "season": 2,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "the how im spending my summer vacation",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S02E17 - How I'm Spending My Summer Vacation.mp4",
+            "name": "The Wonder Years S02E17 - How I'm Spending My Summer Vacation",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S02E17%20-%20How%20I'm%20Spending%20My%20Summer%20Vacation.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 225,
+            "ep": {
+              "season": 2,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the summer song",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E01 - Summer Song.mp4",
+            "name": "The Wonder Years S03E01 - Summer Song",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E01%20-%20Summer%20Song.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 195,
+            "ep": {
+              "season": 3,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "the math class",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E02 - Math Class.mp4",
+            "name": "The Wonder Years S03E02 - Math Class",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E02%20-%20Math%20Class.mp4",
+            "seconds": 1387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190,
+            "ep": {
+              "season": 3,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "the wayne on wheels",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E03 - Wayne on Wheels.mp4",
+            "name": "The Wonder Years S03E03 - Wayne on Wheels",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E03%20-%20Wayne%20on%20Wheels.mp4",
+            "seconds": 1366,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 165,
+            "ep": {
+              "season": 3,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "the mom wars",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E04 - Mom Wars.mp4",
+            "name": "The Wonder Years S03E04 - Mom Wars",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E04%20-%20Mom%20Wars.mp4",
+            "seconds": 1365,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 205,
+            "ep": {
+              "season": 3,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "the on the spot",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E05 - On The Spot.mp4",
+            "name": "The Wonder Years S03E05 - On The Spot",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E05%20-%20On%20The%20Spot.mp4",
+            "seconds": 1388,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": {
+              "season": 3,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "the odd man out",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E06 - Odd Man Out.mp4",
+            "name": "The Wonder Years S03E06 - Odd Man Out",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E06%20-%20Odd%20Man%20Out.mp4",
+            "seconds": 1391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 217,
+            "ep": {
+              "season": 3,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "the the family car",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E07 - The Family Car.mp4",
+            "name": "The Wonder Years S03E07 - The Family Car",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E07%20-%20The%20Family%20Car.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 184,
+            "ep": {
+              "season": 3,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "the the pimple",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E08 - The Pimple.mp4",
+            "name": "The Wonder Years S03E08 - The Pimple",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E08%20-%20The%20Pimple.mp4",
+            "seconds": 1376,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": {
+              "season": 3,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "the math class squared",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E09 - Math Class Squared.mp4",
+            "name": "The Wonder Years S03E09 - Math Class Squared",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E09%20-%20Math%20Class%20Squared.mp4",
+            "seconds": 1395,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": {
+              "season": 3,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "the rock n roll",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E10 - Rock 'n Roll.mp4",
+            "name": "The Wonder Years S03E10 - Rock 'n Roll",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E10%20-%20Rock%20'n%20Roll.mp4",
+            "seconds": 1360,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170,
+            "ep": {
+              "season": 3,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "the dont you know anything about women",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E11 - Don't You Know Anything About Women.mp4",
+            "name": "The Wonder Years S03E11 - Don't You Know Anything About Women",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E11%20-%20Don't%20You%20Know%20Anything%20About%20Women.mp4",
+            "seconds": 1371,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 196,
+            "ep": {
+              "season": 3,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "the the powers that be",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E12 - The Powers That Be.mp4",
+            "name": "The Wonder Years S03E12 - The Powers That Be",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E12%20-%20The%20Powers%20That%20Be.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": {
+              "season": 3,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the she my friend and i",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E13 - She, My Friend and I.mp4",
+            "name": "The Wonder Years S03E13 - She, My Friend and I",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E13%20-%20She%2C%20My%20Friend%20and%20I.mp4",
+            "seconds": 1374,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 187,
+            "ep": {
+              "season": 3,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "the the st valentines day massacre",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E14 - The St. Valentine's Day Massacre.mp4",
+            "name": "The Wonder Years S03E14 - The St. Valentine's Day Massacre",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E14%20-%20The%20St.%20Valentine's%20Day%20Massacre.mp4",
+            "seconds": 1387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 191,
+            "ep": {
+              "season": 3,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "the the tree house",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E15 - The Tree House.mp4",
+            "name": "The Wonder Years S03E15 - The Tree House",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E15%20-%20The%20Tree%20House.mp4",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 213,
+            "ep": {
+              "season": 3,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "the the glee club",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E16 - The Glee Club.mp4",
+            "name": "The Wonder Years S03E16 - The Glee Club",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E16%20-%20The%20Glee%20Club.mp4",
+            "seconds": 1366,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": {
+              "season": 3,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "the night out",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E17 - Night Out.mp4",
+            "name": "The Wonder Years S03E17 - Night Out",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E17%20-%20Night%20Out.mp4",
+            "seconds": 1394,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 163,
+            "ep": {
+              "season": 3,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "the faith",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E18 - Faith.mp4",
+            "name": "The Wonder Years S03E18 - Faith",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E18%20-%20Faith.mp4",
+            "seconds": 1392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 163,
+            "ep": {
+              "season": 3,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "the the unnatural",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E19 - The Unnatural.mp4",
+            "name": "The Wonder Years S03E19 - The Unnatural",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E19%20-%20The%20Unnatural.mp4",
+            "seconds": 1361,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227,
+            "ep": {
+              "season": 3,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "the goodbye",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E20 - Goodbye.mp4",
+            "name": "The Wonder Years S03E20 - Goodbye",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E20%20-%20Goodbye.mp4",
+            "seconds": 1411,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 209,
+            "ep": {
+              "season": 3,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "the cocoa and sympathy",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E21 - Cocoa and Sympathy.mp4",
+            "name": "The Wonder Years S03E21 - Cocoa and Sympathy",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E21%20-%20Cocoa%20and%20Sympathy.mp4",
+            "seconds": 1390,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 187,
+            "ep": {
+              "season": 3,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the daddys little girl",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E22 - Daddy's Little Girl.mp4",
+            "name": "The Wonder Years S03E22 - Daddy's Little Girl",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E22%20-%20Daddy's%20Little%20Girl.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 188,
+            "ep": {
+              "season": 3,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "the moving",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S03E23 - Moving.mp4",
+            "name": "The Wonder Years S03E23 - Moving",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E23%20-%20Moving.mp4",
+            "seconds": 1381,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": {
+              "season": 3,
+              "episode": 23
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the growing up",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E01 - Growing Up.mp4",
+            "name": "The Wonder Years S04E01 - Growing Up",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E01%20-%20Growing%20Up.mp4",
+            "seconds": 1391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 217,
+            "ep": {
+              "season": 4,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "the ninth grade man",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E02 - Ninth Grade Man.mp4",
+            "name": "The Wonder Years S04E02 - Ninth Grade Man",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E02%20-%20Ninth%20Grade%20Man.mp4",
+            "seconds": 1395,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 195,
+            "ep": {
+              "season": 4,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "the the journey",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E03 - The Journey.mp4",
+            "name": "The Wonder Years S04E03 - The Journey",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E03%20-%20The%20Journey.mp4",
+            "seconds": 1397,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": {
+              "season": 4,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "the the cost of living",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E04 - The Cost of Living.mp4",
+            "name": "The Wonder Years S04E04 - The Cost of Living",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E04%20-%20The%20Cost%20of%20Living.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 207,
+            "ep": {
+              "season": 4,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "the its a mad mad madeline world",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E05 - It's A Mad, Mad, Madeline World.mp4",
+            "name": "The Wonder Years S04E05 - It's A Mad, Mad, Madeline World",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E05%20-%20It's%20A%20Mad%2C%20Mad%2C%20Madeline%20World.mp4",
+            "seconds": 1380,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 179,
+            "ep": {
+              "season": 4,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "the little debbie",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E06 - Little Debbie.mp4",
+            "name": "The Wonder Years S04E06 - Little Debbie",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E06%20-%20Little%20Debbie.mp4",
+            "seconds": 1393,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 203,
+            "ep": {
+              "season": 4,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "the the ties that bind",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E07 - The Ties That Bind.mp4",
+            "name": "The Wonder Years S04E07 - The Ties That Bind",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E07%20-%20The%20Ties%20That%20Bind.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": {
+              "season": 4,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "the the sixth man",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E08 - The Sixth Man.mp4",
+            "name": "The Wonder Years S04E08 - The Sixth Man",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E08%20-%20The%20Sixth%20Man.mp4",
+            "seconds": 1368,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": {
+              "season": 4,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "the a very cutlip christmas",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E09 - A Very Cutlip Christmas.mp4",
+            "name": "The Wonder Years S04E09 - A Very Cutlip Christmas",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E09%20-%20A%20Very%20Cutlip%20Christmas.mp4",
+            "seconds": 1387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 197,
+            "ep": {
+              "season": 4,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "the the candidate",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E10 - The Candidate.mp4",
+            "name": "The Wonder Years S04E10 - The Candidate",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E10%20-%20The%20Candidate.mp4",
+            "seconds": 1357,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 198,
+            "ep": {
+              "season": 4,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "the heartbreak",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E11 - Heartbreak.mp4",
+            "name": "The Wonder Years S04E11 - Heartbreak",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E11%20-%20Heartbreak.mp4",
+            "seconds": 1356,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 155,
+            "ep": {
+              "season": 4,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "the denial",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E12 - Denial.mp4",
+            "name": "The Wonder Years S04E12 - Denial",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E12%20-%20Denial.mp4",
+            "seconds": 1383,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": {
+              "season": 4,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the whos aunt rose",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E13 - Who's Aunt Rose.mp4",
+            "name": "The Wonder Years S04E13 - Who's Aunt Rose",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E13%20-%20Who's%20Aunt%20Rose.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 157,
+            "ep": {
+              "season": 4,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "the courage",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E14 - Courage.mp4",
+            "name": "The Wonder Years S04E14 - Courage",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E14%20-%20Courage.mp4",
+            "seconds": 1363,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": 4,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "the buster",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E15 - Buster.mp4",
+            "name": "The Wonder Years S04E15 - Buster",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E15%20-%20Buster.mp4",
+            "seconds": 1373,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 4,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "the road trip",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E16 - Road Trip.mp4",
+            "name": "The Wonder Years S04E16 - Road Trip",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E16%20-%20Road%20Trip.mp4",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": {
+              "season": 4,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "the when worlds collide",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E17 - When Worlds Collide.mp4",
+            "name": "The Wonder Years S04E17 - When Worlds Collide",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E17%20-%20When%20Worlds%20Collide.mp4",
+            "seconds": 1383,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 203,
+            "ep": {
+              "season": 4,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "the separate rooms",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E18 - Separate Rooms.mp4",
+            "name": "The Wonder Years S04E18 - Separate Rooms",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E18%20-%20Separate%20Rooms.mp4",
+            "seconds": 1378,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170,
+            "ep": {
+              "season": 4,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "the the yearbook",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E19 - The Yearbook.mp4",
+            "name": "The Wonder Years S04E19 - The Yearbook",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E19%20-%20The%20Yearbook.mp4",
+            "seconds": 1376,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 183,
+            "ep": {
+              "season": 4,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "the the accident",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E20 - The Accident.mp4",
+            "name": "The Wonder Years S04E20 - The Accident",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E20%20-%20The%20Accident.mp4",
+            "seconds": 1384,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": {
+              "season": 4,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "the the house that jack built",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E21 - The House That Jack Built.mp4",
+            "name": "The Wonder Years S04E21 - The House That Jack Built",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E21%20-%20The%20House%20That%20Jack%20Built.mp4",
+            "seconds": 1368,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": {
+              "season": 4,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the graduation",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E22 - Graduation.mp4",
+            "name": "The Wonder Years S04E22 - Graduation",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E22%20-%20Graduation.mp4",
+            "seconds": 1415,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190,
+            "ep": {
+              "season": 4,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "the the",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S04E23 - The Wonder Years.mp4",
+            "name": "The Wonder Years S04E23 - The Wonder Years",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S04E23%20-%20The%20Wonder%20Years.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180,
+            "ep": {
+              "season": 4,
+              "episode": 23
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the the lake",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E01 - The Lake.mp4",
+            "name": "The Wonder Years S05E01 - The Lake",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E01%20-%20The%20Lake.mp4",
+            "seconds": 1390,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 163,
+            "ep": {
+              "season": 5,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "the day one",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E02 - Day One.mp4",
+            "name": "The Wonder Years S05E02 - Day One",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E02%20-%20Day%20One.mp4",
+            "seconds": 1381,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 189,
+            "ep": {
+              "season": 5,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "the the hardware store",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E03 - The Hardware Store.mp4",
+            "name": "The Wonder Years S05E03 - The Hardware Store",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E03%20-%20The%20Hardware%20Store.mp4",
+            "seconds": 1378,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 197,
+            "ep": {
+              "season": 5,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "the frank and denise",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E04 - Frank and Denise.mp4",
+            "name": "The Wonder Years S05E04 - Frank and Denise",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E04%20-%20Frank%20and%20Denise.mp4",
+            "seconds": 1392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 169,
+            "ep": {
+              "season": 5,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "the full moon rising",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E05 - Full Moon Rising.mp4",
+            "name": "The Wonder Years S05E05 - Full Moon Rising",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E05%20-%20Full%20Moon%20Rising.mp4",
+            "seconds": 1369,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": {
+              "season": 5,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "the triangle",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E06 - Triangle.mp4",
+            "name": "The Wonder Years S05E06 - Triangle",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E06%20-%20Triangle.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128,
+            "ep": {
+              "season": 5,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "the soccer",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E07 - Soccer.mp4",
+            "name": "The Wonder Years S05E07 - Soccer",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E07%20-%20Soccer.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 196,
+            "ep": {
+              "season": 5,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "the dinner out",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E08 - Dinner Out.mp4",
+            "name": "The Wonder Years S05E08 - Dinner Out",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E08%20-%20Dinner%20Out.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": {
+              "season": 5,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "the christmas party",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E09 - Christmas Party.mp4",
+            "name": "The Wonder Years S05E09 - Christmas Party",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E09%20-%20Christmas%20Party.mp4",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 165,
+            "ep": {
+              "season": 5,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "the pfeiffers choice",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E10 - Pfeiffer's Choice.mp4",
+            "name": "The Wonder Years S05E10 - Pfeiffer's Choice",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E10%20-%20Pfeiffer's%20Choice.mp4",
+            "seconds": 1389,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 167,
+            "ep": {
+              "season": 5,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "the road test",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E11 - Road Test.mp4",
+            "name": "The Wonder Years S05E11 - Road Test",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E11%20-%20Road%20Test.mp4",
+            "seconds": 1368,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 5,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "the grandpas car",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E12 - Grandpa's Car.mp4",
+            "name": "The Wonder Years S05E12 - Grandpa's Car",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E12%20-%20Grandpa's%20Car.mp4",
+            "seconds": 1384,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": {
+              "season": 5,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the kodachrome",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E13 - Kodachrome.mp4",
+            "name": "The Wonder Years S05E13 - Kodachrome",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E13%20-%20Kodachrome.mp4",
+            "seconds": 1380,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170,
+            "ep": {
+              "season": 5,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "the private butthead",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E14 - Private Butthead.mp4",
+            "name": "The Wonder Years S05E14 - Private Butthead",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E14%20-%20Private%20Butthead.mp4",
+            "seconds": 1429,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 186,
+            "ep": {
+              "season": 5,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "the of mastodons and men",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E15 - Of Mastodons and Men.mp4",
+            "name": "The Wonder Years S05E15 - Of Mastodons and Men",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E15%20-%20Of%20Mastodons%20and%20Men.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": {
+              "season": 5,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "the double double date",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E16 - Double Double Date.mp4",
+            "name": "The Wonder Years S05E16 - Double Double Date",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E16%20-%20Double%20Double%20Date.mp4",
+            "seconds": 1389,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": {
+              "season": 5,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "the hero",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E17 - Hero.mp4",
+            "name": "The Wonder Years S05E17 - Hero",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E17%20-%20Hero.mp4",
+            "seconds": 1408,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 187,
+            "ep": {
+              "season": 5,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "the lunch stories",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E18 - Lunch Stories.mp4",
+            "name": "The Wonder Years S05E18 - Lunch Stories",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E18%20-%20Lunch%20Stories.mp4",
+            "seconds": 1392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 189,
+            "ep": {
+              "season": 5,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "the carnal knowledge",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E19 - Carnal Knowledge.mp4",
+            "name": "The Wonder Years S05E19 - Carnal Knowledge",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E19%20-%20Carnal%20Knowledge.mp4",
+            "seconds": 1382,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 160,
+            "ep": {
+              "season": 5,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "the the lost weekend",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E20 - The Lost Weekend.mp4",
+            "name": "The Wonder Years S05E20 - The Lost Weekend",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E20%20-%20The%20Lost%20Weekend.mp4",
+            "seconds": 1392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": {
+              "season": 5,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "the stormy weather",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E21 - Stormy Weather.mp4",
+            "name": "The Wonder Years S05E21 - Stormy Weather",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E21%20-%20Stormy%20Weather.mp4",
+            "seconds": 1414,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": {
+              "season": 5,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the the wedding",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E22 - The Wedding.mp4",
+            "name": "The Wonder Years S05E22 - The Wedding",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E22%20-%20The%20Wedding.mp4",
+            "seconds": 1392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 184,
+            "ep": {
+              "season": 5,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "the back to the lake",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E23 - Back to The Lake.mp4",
+            "name": "The Wonder Years S05E23 - Back to The Lake",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E23%20-%20Back%20to%20The%20Lake.mp4",
+            "seconds": 1406,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 165,
+            "ep": {
+              "season": 5,
+              "episode": 23
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "the broken hearts and burgers",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S05E24 - Broken Hearts and Burgers.mp4",
+            "name": "The Wonder Years S05E24 - Broken Hearts and Burgers",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S05E24%20-%20Broken%20Hearts%20and%20Burgers.mp4",
+            "seconds": 1326,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 157,
+            "ep": {
+              "season": 5,
+              "episode": 24
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the homecoming",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E01 - Homecoming.mp4",
+            "name": "The Wonder Years S06E01 - Homecoming",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E01%20-%20Homecoming.mp4",
+            "seconds": 1422,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152,
+            "ep": {
+              "season": 6,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "the fishing",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E02 - Fishing.mp4",
+            "name": "The Wonder Years S06E02 - Fishing",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E02%20-%20Fishing.mp4",
+            "seconds": 1400,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 193,
+            "ep": {
+              "season": 6,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "the scenes from a wedding",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E03 - Scenes from A Wedding.mp4",
+            "name": "The Wonder Years S06E03 - Scenes from A Wedding",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E03%20-%20Scenes%20from%20A%20Wedding.mp4",
+            "seconds": 1407,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 153,
+            "ep": {
+              "season": 6,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "the sex and economics",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E04 - Sex and Economics.mp4",
+            "name": "The Wonder Years S06E04 - Sex and Economics",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E04%20-%20Sex%20and%20Economics.mp4",
+            "seconds": 1401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": {
+              "season": 6,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "the politics as usual",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E05 - Politics as Usual.mp4",
+            "name": "The Wonder Years S06E05 - Politics as Usual",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E05%20-%20Politics%20as%20Usual.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": {
+              "season": 6,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "the white lies",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E06 - White Lies.mp4",
+            "name": "The Wonder Years S06E06 - White Lies",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E06%20-%20White%20Lies.mp4",
+            "seconds": 1400,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 162,
+            "ep": {
+              "season": 6,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "the wayne and bonnie",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E07 - Wayne and Bonnie.mp4",
+            "name": "The Wonder Years S06E07 - Wayne and Bonnie",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E07%20-%20Wayne%20and%20Bonnie.mp4",
+            "seconds": 1433,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 166,
+            "ep": {
+              "season": 6,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "the kevin delivers",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E08 - Kevin Delivers.mp4",
+            "name": "The Wonder Years S06E08 - Kevin Delivers",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E08%20-%20Kevin%20Delivers.mp4",
+            "seconds": 1401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": {
+              "season": 6,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "the the test",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E09 - The Test.mp4",
+            "name": "The Wonder Years S06E09 - The Test",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E09%20-%20The%20Test.mp4",
+            "seconds": 1409,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 238,
+            "ep": {
+              "season": 6,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "the let nothing you dismay",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E10 - Let Nothing You Dismay.mp4",
+            "name": "The Wonder Years S06E10 - Let Nothing You Dismay",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E10%20-%20Let%20Nothing%20You%20Dismay.mp4",
+            "seconds": 1399,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": {
+              "season": 6,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "the new",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E11 - New Years.mp4",
+            "name": "The Wonder Years S06E11 - New Years",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E11%20-%20New%20Years.mp4",
+            "seconds": 1382,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 169,
+            "ep": {
+              "season": 6,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "the alice in autoland",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E12 - Alice in Autoland.mp4",
+            "name": "The Wonder Years S06E12 - Alice in Autoland",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E12%20-%20Alice%20in%20Autoland.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 159,
+            "ep": {
+              "season": 6,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the ladies and gentlemen the rolling stones",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E13 - Ladies and Gentlemen... The Rolling Stones.mp4",
+            "name": "The Wonder Years S06E13 - Ladies and Gentlemen... The Rolling Stones",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E13%20-%20Ladies%20and%20Gentlemen...%20The%20Rolling%20Stones.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": 6,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "the unpacking",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E14 - Unpacking.mp4",
+            "name": "The Wonder Years S06E14 - Unpacking",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E14%20-%20Unpacking.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170,
+            "ep": {
+              "season": 6,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "the hulk arnold",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E15 - Hulk Arnold.mp4",
+            "name": "The Wonder Years S06E15 - Hulk Arnold",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E15%20-%20Hulk%20Arnold.mp4",
+            "seconds": 1368,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 185,
+            "ep": {
+              "season": 6,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "the nose",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E16 - Nose.mp4",
+            "name": "The Wonder Years S06E16 - Nose",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E16%20-%20Nose.mp4",
+            "seconds": 1383,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": {
+              "season": 6,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "the eclipse",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E17 - Eclipse.mp4",
+            "name": "The Wonder Years S06E17 - Eclipse",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E17%20-%20Eclipse.mp4",
+            "seconds": 1399,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190,
+            "ep": {
+              "season": 6,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "the poker",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E18 - Poker.mp4",
+            "name": "The Wonder Years S06E18 - Poker",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E18%20-%20Poker.mp4",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 6,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "the the little women",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E19 - The Little Women.mp4",
+            "name": "The Wonder Years S06E19 - The Little Women",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E19%20-%20The%20Little%20Women.mp4",
+            "seconds": 1389,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 164,
+            "ep": {
+              "season": 6,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "the reunion",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E20 - Reunion.mp4",
+            "name": "The Wonder Years S06E20 - Reunion",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E20%20-%20Reunion.mp4",
+            "seconds": 1409,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 156,
+            "ep": {
+              "season": 6,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "the summer",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E21 - Summer.mp4",
+            "name": "The Wonder Years S06E21 - Summer",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E21%20-%20Summer.mp4",
+            "seconds": 1367,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 162,
+            "ep": {
+              "season": 6,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the independence day",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-wonder-years-complete-series",
+            "itemTitle": "The Wonder Years: The Complete Series",
+            "file": "The Wonder Years S06E22 - Independence Day.mp4",
+            "name": "The Wonder Years S06E22 - Independence Day",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S06E22%20-%20Independence%20Day.mp4",
+            "seconds": 1515,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": {
+              "season": 6,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 55351,
+    "name": "The Wonder Years",
+    "placed": 30
+  }
 }

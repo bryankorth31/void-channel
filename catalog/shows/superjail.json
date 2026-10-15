@@ -3,20 +3,21 @@
   "slug": "superjail",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T12:07:44.699Z",
+  "matchedAt": "2026-10-15T12:55:27.252Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 1959,
+    "id": null,
     "name": "Superjail!",
-    "runtime": 15,
-    "premiered": "2007-05-13",
+    "runtime": null,
+    "premiered": null,
     "network": "Adult Swim"
   },
   "coverage": {
-    "total": 36,
-    "live": 10,
-    "review": 0,
-    "missing": 26,
-    "pct": 28
+    "total": 61,
+    "live": 0,
+    "review": 61,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,12 +25,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Superbar",
-          "airdate": "2008-09-28",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E01.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -38,18 +36,21 @@
             "seconds": 630,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 62
+            "sizeMB": 62,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Combaticus",
-          "airdate": "2008-10-05",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E02.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -58,18 +59,21 @@
             "seconds": 670,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 66
+            "sizeMB": 66,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Ladies Night",
-          "airdate": "2008-10-12",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E03.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -78,18 +82,21 @@
             "seconds": 653,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 64
+            "sizeMB": 64,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Cold-Blooded",
-          "airdate": "2008-10-19",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E04.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -98,18 +105,21 @@
             "seconds": 691,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 67,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Don't Be a Negaton",
-          "airdate": "2008-10-26",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E05.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -118,18 +128,21 @@
             "seconds": 657,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 64
+            "sizeMB": 64,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Terrorarium",
-          "airdate": "2008-11-02",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E06.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -138,18 +151,21 @@
             "seconds": 672,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 66
+            "sizeMB": 66,
+            "ep": {
+              "season": 1,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Mr. Grumpy-Pants",
-          "airdate": "2008-11-09",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E07.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -158,18 +174,21 @@
             "seconds": 680,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 67,
+            "ep": {
+              "season": 1,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Dream Machine",
-          "airdate": "2008-11-23",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E08.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -178,18 +197,21 @@
             "seconds": 694,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 67,
+            "ep": {
+              "season": 1,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Time-Police 1",
-          "airdate": "2008-11-30",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E09.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -198,18 +220,21 @@
             "seconds": 659,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 64
+            "sizeMB": 64,
+            "ep": {
+              "season": 1,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Time-Police 2",
-          "airdate": "2008-12-07",
-          "state": "LIVE",
+          "name": "web dimepiece",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "superjail-s01",
             "itemTitle": "Superjail! Season 1",
             "file": "Superjail.S01E10.1080p.WEB.H264-DiMEPiECE.mp4",
@@ -218,234 +243,1045 @@
             "seconds": 705,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 70
+            "sizeMB": 70,
+            "ep": {
+              "season": 1,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Episode 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 2.mp4",
+            "name": "SUPERJAIL SEASON 2",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%202.mp4",
+            "seconds": 8564,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 838,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Episode 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 3.mp4",
+            "name": "SUPERJAIL SEASON 3",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%203.mp4",
+            "seconds": 6626,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 661,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Episode 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 21.mp4",
+            "name": "SUPERJAIL SEASON 21",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2021.mp4",
+            "seconds": 6627,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 659,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Episode 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 22.mp4",
+            "name": "SUPERJAIL SEASON 22",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2022.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Episode 15",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 23.mp4",
+            "name": "SUPERJAIL SEASON 23",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2023.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Episode 16",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 24.mp4",
+            "name": "SUPERJAIL SEASON 24",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2024.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Episode 17",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 25.mp4",
+            "name": "SUPERJAIL SEASON 25",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2025.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Episode 18",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 26.mp4",
+            "name": "SUPERJAIL SEASON 26",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2026.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Episode 19",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 27.mp4",
+            "name": "SUPERJAIL SEASON 27",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2027.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Episode 20",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 28.mp4",
+            "name": "SUPERJAIL SEASON 28",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2028.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Episode 21",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 29.mp4",
+            "name": "SUPERJAIL SEASON 29",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%2029.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Episode 22",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 32.mp4",
+            "name": "SUPERJAIL SEASON 32",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2032.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Episode 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 33.mp4",
+            "name": "SUPERJAIL SEASON 33",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2033.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Episode 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 34.mp4",
+            "name": "SUPERJAIL SEASON 34",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2034.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Episode 25",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 35.mp4",
+            "name": "SUPERJAIL SEASON 35",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2035.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Episode 26",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 36.mp4",
+            "name": "SUPERJAIL SEASON 36",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2036.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 66,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Episode 27",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 37.mp4",
+            "name": "SUPERJAIL SEASON 37",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2037.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Episode 28",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 38.mp4",
+            "name": "SUPERJAIL SEASON 38",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2038.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Episode 29",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 39.mp4",
+            "name": "SUPERJAIL SEASON 39",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%2039.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Episode 30",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 210.mp4",
+            "name": "SUPERJAIL SEASON 210",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20210.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Episode 31",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 211.mp4",
+            "name": "SUPERJAIL SEASON 211",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20211.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Episode 32",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 213.mp4",
+            "name": "SUPERJAIL SEASON 213",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20213.mp4",
+            "seconds": 666,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Episode 33",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 214.mp4",
+            "name": "SUPERJAIL SEASON 214",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20214.mp4",
+            "seconds": 404,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 39,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Episode 34",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 215.mp4",
+            "name": "SUPERJAIL SEASON 215",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20215.mp4",
+            "seconds": 252,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 24,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Episode 35",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 216.mp4",
+            "name": "SUPERJAIL SEASON 216",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20216.mp4",
+            "seconds": 509,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 51,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Episode 36",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 217.mp4",
+            "name": "SUPERJAIL SEASON 217",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20217.mp4",
+            "seconds": 2480,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 241,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Episode 37",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 218.mp4",
+            "name": "SUPERJAIL SEASON 218",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20218.mp4",
+            "seconds": 171,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Episode 38",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 220.mp4",
+            "name": "SUPERJAIL SEASON 220",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20220.mp4",
+            "seconds": 664,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 61,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Episode 39",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 221.mp4",
+            "name": "SUPERJAIL SEASON 221",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20221.mp4",
+            "seconds": 667,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 62,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Episode 40",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 222.mp4",
+            "name": "SUPERJAIL SEASON 222",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20222.mp4",
+            "seconds": 674,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "Episode 41",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 223.mp4",
+            "name": "SUPERJAIL SEASON 223",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20223.mp4",
+            "seconds": 725,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 68,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Episode 42",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 224.mp4",
+            "name": "SUPERJAIL SEASON 224",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20224.mp4",
+            "seconds": 669,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 63,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "Episode 43",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 225.mp4",
+            "name": "SUPERJAIL SEASON 225",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20225.mp4",
+            "seconds": 688,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "Episode 44",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-two-dvd",
+            "itemTitle": "Superjail! Season Two (DVD ISO)",
+            "file": "SUPERJAIL SEASON 226.mp4",
+            "name": "SUPERJAIL SEASON 226",
+            "url": "https://archive.org/download/superjail-season-two-dvd/SUPERJAIL%20SEASON%20226.mp4",
+            "seconds": 4084,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 395,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Episode 45",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 310.mp4",
+            "name": "SUPERJAIL SEASON 310",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20310.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "Episode 46",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 311.mp4",
+            "name": "SUPERJAIL SEASON 311",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20311.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "Episode 47",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 312.mp4",
+            "name": "SUPERJAIL SEASON 312",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20312.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 59,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "Episode 48",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 313.mp4",
+            "name": "SUPERJAIL SEASON 313",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20313.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 62,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "Episode 49",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 314.mp4",
+            "name": "SUPERJAIL SEASON 314",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20314.mp4",
+            "seconds": 663,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "Episode 50",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 315.mp4",
+            "name": "SUPERJAIL SEASON 315",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20315.mp4",
+            "seconds": 662,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "Episode 51",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-three-dvd",
+            "itemTitle": "Superjail! Season Three (DVD ISO)",
+            "file": "SUPERJAIL SEASON 316.mp4",
+            "name": "SUPERJAIL SEASON 316",
+            "url": "https://archive.org/download/superjail-season-three-dvd/SUPERJAIL%20SEASON%20316.mp4",
+            "seconds": 324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 32,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "season1",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season1.mp4",
+            "name": "Superjail Season1",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season1.mp4",
+            "seconds": 6422,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 640,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "season14",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season14.mp4",
+            "name": "Superjail Season14",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season14.mp4",
+            "seconds": 702,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 71,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "season15",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season15.mp4",
+            "name": "Superjail Season15",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season15.mp4",
+            "seconds": 188,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 18,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "season16",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season16.mp4",
+            "name": "Superjail Season16",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season16.mp4",
+            "seconds": 697,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "season17",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season17.mp4",
+            "name": "Superjail Season17",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season17.mp4",
+            "seconds": 652,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 57,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "season18",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season18.mp4",
+            "name": "Superjail Season18",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season18.mp4",
+            "seconds": 669,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 59,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "season19",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season19.mp4",
+            "name": "Superjail Season19",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season19.mp4",
+            "seconds": 900,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 85,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "season112",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season112.mp4",
+            "name": "Superjail Season112",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season112.mp4",
+            "seconds": 106,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "season117",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-season-one-dvd",
+            "itemTitle": "Superjail Season One (DVD ISO)",
+            "file": "Superjail Season117.mp4",
+            "name": "Superjail Season117",
+            "url": "https://archive.org/download/superjail-season-one-dvd/Superjail%20Season117.mp4",
+            "seconds": 6422,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 640,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "web dimepiece",
+          "state": "REVIEW",
+          "file": {
+            "item": "superjail-s01",
+            "itemTitle": "Superjail! Season 1",
+            "file": "Superjail.S01E00.1080p.WEB.H264-DiMEPiECE.mp4",
+            "name": "Superjail.S01E00.1080p.WEB.H264-DiMEPiECE",
+            "url": "https://archive.org/download/superjail-s01/Superjail.S01E00.1080p.WEB.H264-DiMEPiECE.mp4",
+            "seconds": 700,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 71,
+            "ep": {
+              "season": 1,
+              "episode": 0
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }
       ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Best Friends Forever",
-          "airdate": "2011-04-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Mayhem Donor",
-          "airdate": "2011-04-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Lord Stingray Crash Party",
-          "airdate": "2011-04-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Hotchick",
-          "airdate": "2011-04-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Gay Wedding",
-          "airdate": "2011-05-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Ghosts",
-          "airdate": "2011-05-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Jailbot 2.0",
-          "airdate": "2011-05-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "The Budding of the Wurbuxx",
-          "airdate": "2011-05-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Superjail Grand Prix",
-          "airdate": "2011-06-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Vacation",
-          "airdate": "2011-06-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Stringstress",
-          "airdate": "2012-10-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Superfail",
-          "airdate": "2012-10-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Uh-Oh Magic",
-          "airdate": "2012-10-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Stickydischarge",
-          "airdate": "2012-10-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Specialneeds",
-          "airdate": "2012-10-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Troubles with Triples",
-          "airdate": "2012-11-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Nightshift",
-          "airdate": "2012-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Oedipusmess",
-          "airdate": "2012-11-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Planet Radio",
-          "airdate": "2012-12-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Burnstoolie Burn",
-          "airdate": "2012-12-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Superhell!",
-          "airdate": "2014-06-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Last Pack",
-          "airdate": "2014-06-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Jean & Paul & Beefy & Alice",
-          "airdate": "2014-06-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "The Superjail Inquisitor",
-          "airdate": "2014-07-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Superstorm!",
-          "airdate": "2014-07-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "The Superjail Six",
-          "airdate": "2014-07-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 1959,
+    "name": "Superjail!",
+    "placed": 10
+  }
 }

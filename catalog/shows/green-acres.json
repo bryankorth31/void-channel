@@ -3,20 +3,21 @@
   "slug": "green-acres",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T12:08:50.162Z",
+  "matchedAt": "2026-10-15T12:55:38.510Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 2124,
+    "id": null,
     "name": "Green Acres",
-    "runtime": 30,
-    "premiered": "1965-09-15",
+    "runtime": null,
+    "premiered": null,
     "network": "CBS"
   },
   "coverage": {
-    "total": 170,
-    "live": 3,
-    "review": 3,
-    "missing": 164,
-    "pct": 4
+    "total": 106,
+    "live": 0,
+    "review": 106,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,760 +25,2322 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Oliver Buys a Farm",
-          "airdate": "1965-09-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Lisa's First Day on the Farm",
-          "airdate": "1965-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Decorator",
-          "airdate": "1965-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "The Best Laid Plans",
-          "airdate": "1965-10-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "My Husband, the Rooster Renter",
-          "airdate": "1965-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Furniture, Furniture, Who's Got the Furniture?",
-          "airdate": "1965-10-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Neighborliness",
-          "airdate": "1965-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Lisa, the Helpmate",
-          "airdate": "1965-11-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "You Can't Plug in a 2 with a 6",
-          "airdate": "1965-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Don't Call Us, We'll Call You",
-          "airdate": "1965-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Parity Begins at Home",
-          "airdate": "1965-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Lisa Has a Calf",
-          "airdate": "1965-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "The Wedding Anniversary",
-          "airdate": "1965-12-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "What Happened in Scranton?",
-          "airdate": "1965-12-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "How to Enlarge a Bedroom",
-          "airdate": "1965-12-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Give Me Land, Lots of Land",
-          "airdate": "1966-01-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "I Didn't Raise My Husband to Be a Fireman",
-          "airdate": "1966-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Lisa Bakes a Cake",
-          "airdate": "1966-01-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Sprained Ankle, Country Style",
-          "airdate": "1966-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "The Price of Apples",
-          "airdate": "1966-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "What's in a Name?",
-          "airdate": "1966-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "The Day of Decision",
-          "airdate": "1966-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "A Pig in a Poke",
-          "airdate": "1966-03-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "The Deputy",
-          "airdate": "1966-03-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Double Drick",
-          "airdate": "1966-03-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "The Ballad of Molly Turgis",
-          "airdate": "1966-04-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "Never Look a Gift Tractor in the Mouth",
-          "airdate": "1966-04-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "Send a Boy to College",
-          "airdate": "1966-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "Horse? What Horse?",
-          "airdate": "1966-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "The Rains Came",
-          "airdate": "1966-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "Culture",
-          "airdate": "1966-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "Uncle Ollie",
-          "airdate": "1966-06-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Wings Over Hooterville",
-          "airdate": "1966-09-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Water, Water Everywhere",
-          "airdate": "1966-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "I Didn't Raise My Pig to Be a Soldier",
-          "airdate": "1966-09-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "How to See South America By Bus",
-          "airdate": "1966-10-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "The Ugly Duckling",
-          "airdate": "1966-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "One of Our Assemblymen is Missing",
-          "airdate": "1966-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The Good Old Days",
-          "airdate": "1966-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Eb Discovers the Birds and the Bees",
-          "airdate": "1966-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "The Hooterville Image",
-          "airdate": "1966-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "You Ought to Be in Pictures",
-          "airdate": "1966-11-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "A Home Isn't Built in a Day",
-          "airdate": "1966-11-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "A Square is Not Round",
-          "airdate": "1966-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "An Old Fashioned Christmas",
-          "airdate": "1966-12-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Never Trust a Little Old Lady",
-          "airdate": "1966-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "School Days",
-          "airdate": "1967-01-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "His Honor",
-          "airdate": "1967-01-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "It's So Peaceful in the Country",
-          "airdate": "1967-01-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Exodus to Bleedwell",
-          "airdate": "1967-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "It's Human to Be Humane",
-          "airdate": "1967-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Never Take Your Wife to a Convention",
-          "airdate": "1967-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "The Computer Age",
-          "airdate": "1967-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Never Start Talking Unless Your Voice Comes Out",
-          "airdate": "1967-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "The Beverly Hillbillies",
-          "airdate": "1967-03-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Lisa's Vegetable Garden",
-          "airdate": "1967-03-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "The Saucer Season",
-          "airdate": "1967-03-15",
+          "name": "oliver buys a farm",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"The Saucer Season\" (0.67)",
             "item": "GreenAcresCompleteSeries",
             "itemTitle": "Green Acres Complete Series",
-            "file": "Green Acres Season 2/Green Acres - 057 - The Saucer Season - (TV Rip).mp4",
-            "name": "Green Acres Season 2/Green Acres - 057 - The Saucer Season - (TV Rip)",
-            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20057%20-%20The%20Saucer%20Season%20-%20(TV%20Rip).mp4",
-            "seconds": 1290,
+            "file": "Green Acres Season 1/Green Acres - 001 - Oliver Buys A Farm.mp4",
+            "name": "Green Acres Season 1/Green Acres - 001 - Oliver Buys A Farm",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20001%20-%20Oliver%20Buys%20A%20Farm.mp4",
+            "seconds": 1520,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 134
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "lisas first day on the farm",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 002 - Lisa's First Day on the Farm.mp4",
+            "name": "Green Acres Season 1/Green Acres - 002 - Lisa's First Day on the Farm",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20002%20-%20Lisa's%20First%20Day%20on%20the%20Farm.mp4",
+            "seconds": 1538,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 160,
+            "ep": {
+              "season": 0,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "the decorator",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 003 - The Decorator.mp4",
+            "name": "Green Acres Season 1/Green Acres - 003 - The Decorator",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20003%20-%20The%20Decorator.mp4",
+            "seconds": 1612,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 167,
+            "ep": {
+              "season": 0,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "the best laid plans tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 004 - The Best Laid Plans - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 004 - The Best Laid Plans - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20004%20-%20The%20Best%20Laid%20Plans%20-%20(TV%20Rip).mp4",
+            "seconds": 1295,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "my husband the rooster renter",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 005 - My Husband, The Rooster Renter.mp4",
+            "name": "Green Acres Season 1/Green Acres - 005 - My Husband, The Rooster Renter",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20005%20-%20My%20Husband%2C%20The%20Rooster%20Renter.mp4",
+            "seconds": 1534,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 160,
+            "ep": {
+              "season": 0,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "furniture furniture whos got the furniture",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 006 - Furniture, Furniture, Who's Got the Furniture.mp4",
+            "name": "Green Acres Season 1/Green Acres - 006 - Furniture, Furniture, Who's Got the Furniture",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20006%20-%20Furniture%2C%20Furniture%2C%20Who's%20Got%20the%20Furniture.mp4",
+            "seconds": 1524,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 159,
+            "ep": {
+              "season": 0,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "neighborliness tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 007 - Neighborliness - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 007 - Neighborliness - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20007%20-%20Neighborliness%20-%20(TV%20Rip).mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "lisa the helpmate tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 008 - Lisa, The Helpmate - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 008 - Lisa, The Helpmate - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20008%20-%20Lisa%2C%20The%20Helpmate%20-%20(TV%20Rip).mp4",
+            "seconds": 1304,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "you cant plug in a 2 with a 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 009 - You Can't Plug In A 2 with a 6.mp4",
+            "name": "Green Acres Season 1/Green Acres - 009 - You Can't Plug In A 2 with a 6",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20009%20-%20You%20Can't%20Plug%20In%20A%202%20with%20a%206.mp4",
+            "seconds": 1524,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 159,
+            "ep": {
+              "season": 0,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "dont call us well call you",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 010 - Don't Call Us, We'll Call You.mp4",
+            "name": "Green Acres Season 1/Green Acres - 010 - Don't Call Us, We'll Call You",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20010%20-%20Don't%20Call%20Us%2C%20We'll%20Call%20You.mp4",
+            "seconds": 1508,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157,
+            "ep": {
+              "season": 0,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "economy flight to washington tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 111 - Economy Flight To Washington - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 111 - Economy Flight To Washington - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20111%20-%20Economy%20Flight%20To%20Washington%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 1,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "lisa has a calf",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 012 - Lisa Has a Calf.mp4",
+            "name": "Green Acres Season 1/Green Acres - 012 - Lisa Has a Calf",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20012%20-%20Lisa%20Has%20a%20Calf.mp4",
+            "seconds": 1518,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "the wedding anniversary tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 013 - The Wedding Anniversary - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 013 - The Wedding Anniversary - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20013%20-%20The%20Wedding%20Anniversary%20-%20(TV%20Rip).mp4",
+            "seconds": 1289,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "what happened in scranton tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 014 - What Happened In Scranton - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 014 - What Happened In Scranton - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20014%20-%20What%20Happened%20In%20Scranton%20-%20(TV%20Rip).mp4",
+            "seconds": 1296,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "how to enlarge a bedroom",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 015 - How to Enlarge a Bedroom.mp4",
+            "name": "Green Acres Season 1/Green Acres - 015 - How to Enlarge a Bedroom",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20015%20-%20How%20to%20Enlarge%20a%20Bedroom.mp4",
+            "seconds": 1517,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 15
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "give me land lots of land",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 016 - Give Me Land, Lots Of Land.mp4",
+            "name": "Green Acres Season 1/Green Acres - 016 - Give Me Land, Lots Of Land",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20016%20-%20Give%20Me%20Land%2C%20Lots%20Of%20Land.mp4",
+            "seconds": 1283,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 16
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "i didnt raise my husband to be a fireman",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 017 - I Didn't Raise My Husband to Be a Fireman.mp4",
+            "name": "Green Acres Season 1/Green Acres - 017 - I Didn't Raise My Husband to Be a Fireman",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20017%20-%20I%20Didn't%20Raise%20My%20Husband%20to%20Be%20a%20Fireman.mp4",
+            "seconds": 1520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 17
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "lisa bakes a cake tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 018 - Lisa Bakes A Cake - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 018 - Lisa Bakes A Cake - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20018%20-%20Lisa%20Bakes%20A%20Cake%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 18
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "sprained ankle country style tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 019 - Sprained Ankle Country Style - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 019 - Sprained Ankle Country Style - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20019%20-%20Sprained%20Ankle%20Country%20Style%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "the price of apples",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 020 - The Price of Apples.mp4",
+            "name": "Green Acres Season 1/Green Acres - 020 - The Price of Apples",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20020%20-%20The%20Price%20of%20Apples.mp4",
+            "seconds": 1518,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 20
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "you and your shrunken head tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 5/Green Acres Season 5/Green Acres - 121 - You And Your Shrunken Head - (TV Rip).mp4",
+            "name": "Green Acres Season 5/Green Acres Season 5/Green Acres - 121 - You And Your Shrunken Head - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%205%2FGreen%20Acres%20Season%205%2FGreen%20Acres%20-%20121%20-%20You%20And%20Your%20Shrunken%20Head%20-%20(TV%20Rip).mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 1,
+              "episode": 21
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the day of decision tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 022 - The Day Of Decision - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 022 - The Day Of Decision - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20022%20-%20The%20Day%20Of%20Decision%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "a pig in a poke",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 023 - A Pig In a Poke.mp4",
+            "name": "Green Acres Season 1/Green Acres - 023 - A Pig In a Poke",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20023%20-%20A%20Pig%20In%20a%20Poke.mp4",
+            "seconds": 1518,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 23
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "the ballard of molly turgess tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 024 - The Ballard Of Molly Turgess - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 024 - The Ballard Of Molly Turgess - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20024%20-%20The%20Ballard%20Of%20Molly%20Turgess%20-%20(TV%20Rip).mp4",
+            "seconds": 1304,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 24
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "beauty is skin deep tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 5/Green Acres Season 5/Green Acres - 125 - Beauty Is Skin Deep - (TV Rip).mp4",
+            "name": "Green Acres Season 5/Green Acres Season 5/Green Acres - 125 - Beauty Is Skin Deep - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%205%2FGreen%20Acres%20Season%205%2FGreen%20Acres%20-%20125%20-%20Beauty%20Is%20Skin%20Deep%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 25
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 26,
-          "name": "Getting Even with Haney",
-          "airdate": "1967-03-22",
-          "state": "MISSING",
-          "file": null,
+          "name": "double drick tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 026 - Double Drick - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 026 - Double Drick - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20026%20-%20Double%20Drick%20-%20(TV%20Rip).mp4",
+            "seconds": 1297,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 26
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 27,
-          "name": "Kimball Gets Fired",
-          "airdate": "1967-03-29",
-          "state": "MISSING",
-          "file": null,
+          "name": "four of spades tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 5/Green Acres Season 5/Green Acres - 127 - Four Of Spades - (TV Rip).mp4",
+            "name": "Green Acres Season 5/Green Acres Season 5/Green Acres - 127 - Four Of Spades - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%205%2FGreen%20Acres%20Season%205%2FGreen%20Acres%20-%20127%20-%20Four%20Of%20Spades%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 1,
+              "episode": 27
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 28,
-          "name": "The Vulgar Ring Story",
-          "airdate": "1967-04-12",
-          "state": "MISSING",
-          "file": null,
+          "name": "never look a gift tractor in the mouth",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 028 - Never Look A Gift Tractor In The Mouth.mp4",
+            "name": "Green Acres Season 1/Green Acres - 028 - Never Look A Gift Tractor In The Mouth",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20028%20-%20Never%20Look%20A%20Gift%20Tractor%20In%20The%20Mouth.mp4",
+            "seconds": 1516,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 28
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 29,
-          "name": "Who's Lisa?",
-          "airdate": "1967-04-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "horse what horse",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 029 - Horse - What Horse.mp4",
+            "name": "Green Acres Season 1/Green Acres - 029 - Horse - What Horse",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20029%20-%20Horse%20-%20What%20Horse.mp4",
+            "seconds": 1512,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157,
+            "ep": {
+              "season": 0,
+              "episode": 29
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 30,
-          "name": "Music to Milk By",
-          "airdate": "1967-04-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Man for the Job",
-          "airdate": "1967-09-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Lisa's Jam Session",
-          "airdate": "1967-09-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "culture",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 030 - Culture.mp4",
+            "name": "Green Acres Season 1/Green Acres - 030 - Culture",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20030%20-%20Culture.mp4",
+            "seconds": 1520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 158,
+            "ep": {
+              "season": 0,
+              "episode": 30
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Love Comes to Arnold Ziffel",
-          "airdate": "1967-09-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 31,
+          "name": "the rain came tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 031 - The Rain Came - (TV Rip).mp4",
+            "name": "Green Acres Season 1/Green Acres - 031 - The Rain Came - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20031%20-%20The%20Rain%20Came%20-%20(TV%20Rip).mp4",
+            "seconds": 1325,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": {
+              "season": 0,
+              "episode": 31
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Oliver vs. the Phone Company",
-          "airdate": "1967-09-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 32,
+          "name": "uncle ollie",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 1/Green Acres - 032 - Uncle Ollie.mp4",
+            "name": "Green Acres Season 1/Green Acres - 032 - Uncle Ollie",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%201%2FGreen%20Acres%20-%20032%20-%20Uncle%20Ollie.mp4",
+            "seconds": 1527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 159,
+            "ep": {
+              "season": 0,
+              "episode": 32
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Oliver Takes Over the Phone Company",
-          "airdate": "1967-10-04",
-          "state": "MISSING",
-          "file": null,
+          "number": 33,
+          "name": "ralphs nuptials tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 5/Green Acres Season 5/Green Acres - 133 - Ralph's Nuptials - (TV Rip).mp4",
+            "name": "Green Acres Season 5/Green Acres Season 5/Green Acres - 133 - Ralph's Nuptials - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%205%2FGreen%20Acres%20Season%205%2FGreen%20Acres%20-%20133%20-%20Ralph's%20Nuptials%20-%20(TV%20Rip).mp4",
+            "seconds": 1295,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 33
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "A Kind Word for the President",
-          "airdate": "1967-10-11",
-          "state": "MISSING",
-          "file": null,
+          "number": 34,
+          "name": "the ugly duckling tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 034 - The Ugly Duckling - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 034 - The Ugly Duckling - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20034%20-%20The%20Ugly%20Duckling%20-%20(TV%20Rip).mp4",
+            "seconds": 1293,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 34
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "Don't Count Your Tomatoes Before They're Picked",
-          "airdate": "1967-10-18",
-          "state": "MISSING",
-          "file": null,
+          "number": 35,
+          "name": "water water everywhere tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 035 - Water, Water Everywhere - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 035 - Water, Water Everywhere - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20035%20-%20Water%2C%20Water%20Everywhere%20-%20(TV%20Rip).mp4",
+            "seconds": 1292,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 35
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "Eb Elopes",
-          "airdate": "1967-10-25",
-          "state": "MISSING",
-          "file": null,
+          "number": 36,
+          "name": "how to see south america by bus tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 036 - How To See South America By Bus - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 036 - How To See South America By Bus - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20036%20-%20How%20To%20See%20South%20America%20By%20Bus%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 36
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "The Thing",
-          "airdate": "1967-11-01",
-          "state": "MISSING",
-          "file": null,
+          "number": 37,
+          "name": "i didnt raise my pig to be a soldier tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 037 - I Didn't Raise My Pig To Be A Soldier - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 037 - I Didn't Raise My Pig To Be A Soldier - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20037%20-%20I%20Didn't%20Raise%20My%20Pig%20To%20Be%20A%20Soldier%20-%20(TV%20Rip).mp4",
+            "seconds": 1295,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 37
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "Das Lumpen",
-          "airdate": "1967-11-08",
-          "state": "MISSING",
-          "file": null,
+          "number": 38,
+          "name": "one of our assemblymen is missing tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 038 - One Of Our Assemblymen Is Missing - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 038 - One Of Our Assemblymen Is Missing - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20038%20-%20One%20Of%20Our%20Assemblymen%20Is%20Missing%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 38
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "Won't You Come Home, Arnold Ziffel?",
-          "airdate": "1967-11-15",
-          "state": "MISSING",
-          "file": null,
+          "number": 39,
+          "name": "the good old days tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 039 - The Good Old Days - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 039 - The Good Old Days - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20039%20-%20The%20Good%20Old%20Days%20-%20(TV%20Rip).mp4",
+            "seconds": 1298,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 39
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "Jealousy, English Style",
-          "airdate": "1967-11-22",
-          "state": "MISSING",
-          "file": null,
+          "number": 40,
+          "name": "eb discovers the birds and the bees tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 040 - Eb Discovers The Birds & The Bees - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 040 - Eb Discovers The Birds & The Bees - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20040%20-%20Eb%20Discovers%20The%20Birds%20%26%20The%20Bees%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 40
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "Haney's New Image",
-          "airdate": "1967-11-29",
-          "state": "MISSING",
-          "file": null,
+          "number": 41,
+          "name": "the hooterville image tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 041 - The Hooterville Image - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 041 - The Hooterville Image - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20041%20-%20The%20Hooterville%20Image%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 41
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "Alf and Ralph Break Up",
-          "airdate": "1967-12-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 42,
+          "name": "you ought to be in pictures tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 042 - You Ought To Be In Pictures - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 042 - You Ought To Be In Pictures - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20042%20-%20You%20Ought%20To%20Be%20In%20Pictures%20-%20(TV%20Rip).mp4",
+            "seconds": 1298,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 42
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "No Trespassing",
-          "airdate": "1967-12-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 43,
+          "name": "a home isnt built in a day tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 043 - A Home Isn't Built In A Day - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 043 - A Home Isn't Built In A Day - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20043%20-%20A%20Home%20Isn't%20Built%20In%20A%20Day%20-%20(TV%20Rip).mp4",
+            "seconds": 1297,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 43
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "Eb Returns",
-          "airdate": "1967-12-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 44,
+          "name": "a square is not a round tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 044 - A Square Is Not A Round - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 044 - A Square Is Not A Round - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20044%20-%20A%20Square%20Is%20Not%20A%20Round%20-%20(TV%20Rip).mp4",
+            "seconds": 1305,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 44
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "Not Guilty",
-          "airdate": "1968-01-03",
-          "state": "MISSING",
-          "file": null,
+          "number": 45,
+          "name": "its so peaceful in the country tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 045 - It's So Peaceful In The Country - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 045 - It's So Peaceful In The Country - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20045%20-%20It's%20So%20Peaceful%20In%20The%20Country%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 45
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "Home is Where You Run Away From",
-          "airdate": "1968-01-10",
-          "state": "MISSING",
-          "file": null,
+          "number": 46,
+          "name": "an old fashion christmas tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 046 - An Old Fashion Christmas - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 046 - An Old Fashion Christmas - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20046%20-%20An%20Old%20Fashion%20Christmas%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 46
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "How to Succeed in Television Without Really Trying",
-          "airdate": "1968-01-24",
-          "state": "MISSING",
-          "file": null,
+          "number": 47,
+          "name": "his honor tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 047 - His Honor - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 047 - His Honor - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20047%20-%20His%20Honor%20-%20(TV%20Rip).mp4",
+            "seconds": 1298,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 47
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "Arnold Ziffel, Boy Hero",
-          "airdate": "1968-01-31",
-          "state": "MISSING",
-          "file": null,
+          "number": 48,
+          "name": "never trust a little old lady tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 048 - Never Trust A Little Old Lady - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 048 - Never Trust A Little Old Lady - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20048%20-%20Never%20Trust%20A%20Little%20Old%20Lady%20-%20(TV%20Rip).mp4",
+            "seconds": 1304,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 48
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "Flight to Nowhere",
-          "airdate": "1968-02-07",
-          "state": "MISSING",
-          "file": null,
+          "number": 49,
+          "name": "school days tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 049 - School Days - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 049 - School Days - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20049%20-%20School%20Days%20-%20(TV%20Rip).mp4",
+            "seconds": 1294,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 49
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "My Mother the Countess",
-          "airdate": "1968-02-14",
-          "state": "MISSING",
-          "file": null,
+          "number": 50,
+          "name": "oliver goes broke tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 150 - Oliver Goes Broke - (TV Rip).mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 150 - Oliver Goes Broke - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20150%20-%20Oliver%20Goes%20Broke%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 1,
+              "episode": 50
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "The Spring Festival",
-          "airdate": "1968-02-21",
-          "state": "MISSING",
-          "file": null,
+          "number": 51,
+          "name": "apple picking time tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 151 - Apple Picking Time - (TV Rip).mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 151 - Apple Picking Time - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20151%20-%20Apple%20Picking%20Time%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 1,
+              "episode": 51
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "Our Son, the Barber",
-          "airdate": "1968-02-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 52,
+          "name": "never take your wife to a convention tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 052 - Never Take Your Wife To A Convention - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 052 - Never Take Your Wife To A Convention - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20052%20-%20Never%20Take%20Your%20Wife%20To%20A%20Convention%20-%20(TV%20Rip).mp4",
+            "seconds": 1293,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 52
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 25,
-          "name": "Oliver's Jaded Past",
-          "airdate": "1968-03-06",
-          "state": "MISSING",
-          "file": null,
+          "number": 53,
+          "name": "never start talking unless your voice comes out tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 053 - Never Start Talking Unless Your Voice Comes Out - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 053 - Never Start Talking Unless Your Voice Comes Out - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20053%20-%20Never%20Start%20Talking%20Unless%20Your%20Voice%20Comes%20Out%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 53
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "The Hungarian Curse",
-          "airdate": "1968-03-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 54,
+          "name": "the computer age tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 054 - The Computer Age - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 054 - The Computer Age - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20054%20-%20The%20Computer%20Age%20-%20(TV%20Rip).mp4",
+            "seconds": 1305,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 54
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 27,
-          "name": "The Rutabaga Story",
-          "airdate": "1968-03-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 55,
+          "name": "the beverly hillbillies tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 055 - The Beverly Hillbillies - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 055 - The Beverly Hillbillies - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20055%20-%20The%20Beverly%20Hillbillies%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 55
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 28,
-          "name": "Instant Family",
-          "airdate": "1968-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 56,
+          "name": "the great mayoralty campaign tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 156 - The Great Mayoralty Campaign - (TV Rip).mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 156 - The Great Mayoralty Campaign - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20156%20-%20The%20Great%20Mayoralty%20Campaign%20-%20(TV%20Rip).mp4",
+            "seconds": 1291,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 56
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 29,
-          "name": "A Star Named Arnold is Born (1)",
-          "airdate": "1968-04-03",
-          "state": "MISSING",
-          "file": null,
+          "number": 57,
+          "name": "charlie homer and natasha tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 157 - Charlie, Homer, & Natasha - (TV Rip) .mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 157 - Charlie, Homer, & Natasha - (TV Rip) ",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20157%20-%20Charlie%2C%20Homer%2C%20%26%20Natasha%20-%20(TV%20Rip)%20.mp4",
+            "seconds": 1290,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 57
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 30,
-          "name": "A Star Named Arnold is Born (2)",
-          "airdate": "1968-04-10",
-          "state": "MISSING",
-          "file": null,
+          "number": 58,
+          "name": "the vugar ring tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 058 - The Vugar Ring - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 058 - The Vugar Ring - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20058%20-%20The%20Vugar%20Ring%20-%20(TV%20Rip).mp4",
+            "seconds": 1304,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 58
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "getting even with mr haney tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 059 - Getting Even With Mr. Haney - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 059 - Getting Even With Mr. Haney - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20059%20-%20Getting%20Even%20With%20Mr.%20Haney%20-%20(TV%20Rip).mp4",
+            "seconds": 1305,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 59
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "kimble gets fired tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 060 - Kimble Get's Fired - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 060 - Kimble Get's Fired - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20060%20-%20Kimble%20Get's%20Fired%20-%20(TV%20Rip).mp4",
+            "seconds": 1297,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 60
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "whos lisa tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 2/Green Acres - 061 - Who's Lisa - (TV Rip).mp4",
+            "name": "Green Acres Season 2/Green Acres - 061 - Who's Lisa - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%202%2FGreen%20Acres%20-%20061%20-%20Who's%20Lisa%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 61
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "the carpenters ball tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 162 - The Carpenter's Ball - (TV Rip) .mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 162 - The Carpenter's Ball - (TV Rip) ",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20162%20-%20The%20Carpenter's%20Ball%20-%20(TV%20Rip)%20.mp4",
+            "seconds": 1299,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 1,
+              "episode": 62
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "music to milk by tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 063 - Music To Milk By - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 063 - Music To Milk By - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20063%20-%20Music%20To%20Milk%20By%20-%20(TV%20Rip).mp4",
+            "seconds": 1305,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 63
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "the man for the job tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 064 - The Man For The Job - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 064 - The Man For The Job - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20064%20-%20The%20Man%20For%20The%20Job%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 64
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "love comes to arnold ziffel tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 065 - Love Comes To Arnold Ziffel - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 065 - Love Comes To Arnold Ziffel - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20065%20-%20Love%20Comes%20To%20Arnold%20Ziffel%20-%20(TV%20Rip).mp4",
+            "seconds": 1297,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 65
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 66,
+          "name": "the spot remover tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 166 - The Spot Remover - (TV Rip).mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 166 - The Spot Remover - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20166%20-%20The%20Spot%20Remover%20-%20(TV%20Rip).mp4",
+            "seconds": 1299,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 66
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 67,
+          "name": "oliver vs the phone company tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 067 - Oliver vs The Phone Company - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 067 - Oliver vs The Phone Company - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20067%20-%20Oliver%20vs%20The%20Phone%20Company%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 67
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "oliver takes over the phone company",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 068 - Oliver Takes Over the Phone Company.mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 068 - Oliver Takes Over the Phone Company",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20068%20-%20Oliver%20Takes%20Over%20the%20Phone%20Company.mp4",
+            "seconds": 1317,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": {
+              "season": 0,
+              "episode": 68
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "dont count your tomatoes before theyre picked ct",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 069 - Don't Count Your Tomatoes Before They're Picked - (CT).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 069 - Don't Count Your Tomatoes Before They're Picked - (CT)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20069%20-%20Don't%20Count%20Your%20Tomatoes%20Before%20They're%20Picked%20-%20(CT).mp4",
+            "seconds": 1315,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": {
+              "season": 0,
+              "episode": 69
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "ex secretary tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 6/Green Acres Season 6/Green Acres - 170 - Ex Secretary - (TV Rip).mp4",
+            "name": "Green Acres Season 6/Green Acres Season 6/Green Acres - 170 - Ex Secretary - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%206%2FGreen%20Acres%20Season%206%2FGreen%20Acres%20-%20170%20-%20Ex%20Secretary%20-%20(TV%20Rip).mp4",
+            "seconds": 1295,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 70
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "not guilty tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 071 - Not Guilty - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 071 - Not Guilty - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20071%20-%20Not%20Guilty%20-%20(TV%20Rip).mp4",
+            "seconds": 1296,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 71
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 72,
+          "name": "eb elopes tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 072 - Eb Elopes - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 072 - Eb Elopes - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20072%20-%20Eb%20Elopes%20-%20(TV%20Rip).mp4",
+            "seconds": 1286,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 72
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 73,
+          "name": "the thing tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 073 - The Thing - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 073 - The Thing - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20073%20-%20The%20Thing%20-%20(TV%20Rip).mp4",
+            "seconds": 1295,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 73
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 74,
+          "name": "das lumpen tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 074 - Das Lumpen - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 074 - Das Lumpen - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20074%20-%20Das%20Lumpen%20-%20(TV%20Rip).mp4",
+            "seconds": 1299,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 74
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "wont you come home arnold ziffel tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 075 - Won't You Come Home, Arnold Ziffel - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 075 - Won't You Come Home, Arnold Ziffel - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20075%20-%20Won't%20You%20Come%20Home%2C%20Arnold%20Ziffel%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 75
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 76,
+          "name": "jealousy style tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 076 - Jealousy, English Style - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 076 - Jealousy, English Style - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20076%20-%20Jealousy%2C%20English%20Style%20-%20(TV%20Rip).mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 76
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 77,
+          "name": "haneys new image tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 077 - Haney's New Image - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 077 - Haney's New Image - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20077%20-%20Haney's%20New%20Image%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 77
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 78,
+          "name": "no trespassing tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 078 - No Trespassing - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 078 - No Trespassing - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20078%20-%20No%20Trespassing%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 78
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 79,
+          "name": "alf and ralph break up tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 079 - Alf & Ralph Break Up - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 079 - Alf & Ralph Break Up - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20079%20-%20Alf%20%26%20Ralph%20Break%20Up%20-%20(TV%20Rip).mp4",
+            "seconds": 1299,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 79
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 80,
+          "name": "eb returns tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 080 - Eb Returns - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 080 - Eb Returns - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20080%20-%20Eb%20Returns%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 80
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 81,
+          "name": "home is where you run away from tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 081 - Home Is Where You Run Away From - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 081 - Home Is Where You Run Away From - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20081%20-%20Home%20Is%20Where%20You%20Run%20Away%20From%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 81
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 82,
+          "name": "flight to nowhere tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 082 - Flight To Nowhere - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 082 - Flight To Nowhere - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20082%20-%20Flight%20To%20Nowhere%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 82
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 83,
+          "name": "how to succeed in telvision without trying tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 083 - How To Succeed In Telvision Without Trying - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 083 - How To Succeed In Telvision Without Trying - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20083%20-%20How%20To%20Succeed%20In%20Telvision%20Without%20Trying%20-%20(TV%20Rip).mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 83
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 84,
+          "name": "arnold boy hero tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 084 - Arnold, Boy Hero - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 084 - Arnold, Boy Hero - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20084%20-%20Arnold%2C%20Boy%20Hero%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 84
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 85,
+          "name": "spring festival tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 085 - Spring Festival - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 085 - Spring Festival - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20085%20-%20Spring%20Festival%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 85
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 86,
+          "name": "our son the barber ct",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 086 - Our Son, The Barber - (CT).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 086 - Our Son, The Barber - (CT)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20086%20-%20Our%20Son%2C%20The%20Barber%20-%20(CT).mp4",
+            "seconds": 1313,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": {
+              "season": 0,
+              "episode": 86
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 87,
+          "name": "olivers jaded past tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 087 - Oliver's Jaded Past - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 087 - Oliver's Jaded Past - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20087%20-%20Oliver's%20Jaded%20Past%20-%20(TV%20Rip).mp4",
+            "seconds": 1298,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 87
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 88,
+          "name": "the hungarian curse tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 088 - The Hungarian Curse - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 088 - The Hungarian Curse - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20088%20-%20The%20Hungarian%20Curse%20-%20(TV%20Rip).mp4",
+            "seconds": 1287,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 88
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 89,
+          "name": "the rutabaga story tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 089 - The Rutabaga Story - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 089 - The Rutabaga Story - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20089%20-%20The%20Rutabaga%20Story%20-%20(TV%20Rip).mp4",
+            "seconds": 1299,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 89
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 90,
+          "name": "instant family tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 090 - Instant Family - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 090 - Instant Family - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20090%20-%20Instant%20Family%20-%20(TV%20Rip).mp4",
+            "seconds": 1293,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 90
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 91,
+          "name": "a star named arnold is born pt1 tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 091 - A Star Named Arnold Is Born (pt1) - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 091 - A Star Named Arnold Is Born (pt1) - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20091%20-%20A%20Star%20Named%20Arnold%20Is%20Born%20(pt1)%20-%20(TV%20Rip).mp4",
+            "seconds": 1296,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 91
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 92,
+          "name": "a star named arnold is born pt2 tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 3/Green Acres Season 3/Green Acres - 092 - A Star Named Arnold Is Born (pt2) - (TV Rip).mp4",
+            "name": "Green Acres Season 3/Green Acres Season 3/Green Acres - 092 - A Star Named Arnold Is Born (pt2) - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%203%2FGreen%20Acres%20Season%203%2FGreen%20Acres%20-%20092%20-%20A%20Star%20Named%20Arnold%20Is%20Born%20(pt2)%20-%20(TV%20Rip).mp4",
+            "seconds": 1297,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 92
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 93,
+          "name": "guess whos not coming to lulu tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 093 - Guess Who's Not Coming To Lulu - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 093 - Guess Who's Not Coming To Lulu - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20093%20-%20Guess%20Who's%20Not%20Coming%20To%20Lulu%20-%20(TV%20Rip).mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 93
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 94,
+          "name": "the rummage sale tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 094 - The Rummage Sale - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 094 - The Rummage Sale - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20094%20-%20The%20Rummage%20Sale%20-%20(TV%20Rip).mp4",
+            "seconds": 1287,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 94
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 95,
+          "name": "hail to the fire chief tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 095 - Hail To The Fire Chief - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 095 - Hail To The Fire Chief - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20095%20-%20Hail%20To%20The%20Fire%20Chief%20-%20(TV%20Rip).mp4",
+            "seconds": 1300,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 95
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 96,
+          "name": "ebs romance tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 096 - Eb's Romance - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 096 - Eb's Romance - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20096%20-%20Eb's%20Romance%20-%20(TV%20Rip).mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": {
+              "season": 0,
+              "episode": 96
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 97,
+          "name": "the candidate tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 097 - The Candidate - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 097 - The Candidate - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20097%20-%20The%20Candidate%20-%20(TV%20Rip).mp4",
+            "seconds": 1287,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 97
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 98,
+          "name": "handy lessions tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 098 - Handy Lessions - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 098 - Handy Lessions - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20098%20-%20Handy%20Lessions%20-%20(TV%20Rip).mp4",
+            "seconds": 1296,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 0,
+              "episode": 98
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 99,
+          "name": "a husband for eleanor tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 099 - A Husband For Eleanor - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 099 - A Husband For Eleanor - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20099%20-%20A%20Husband%20For%20Eleanor%20-%20(TV%20Rip).mp4",
+            "seconds": 1286,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": {
+              "season": 0,
+              "episode": 99
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 100,
+          "name": "we are there nickelodeon reunion special 11 5 89",
+          "state": "REVIEW",
+          "file": {
+            "item": "green-acres-we-are-there",
+            "itemTitle": "Green Acres We Are There (1989)",
+            "file": "Green Acres - We Are There Nickelodeon Reunion Special 11-5-89.mp4",
+            "name": "Green Acres - We Are There Nickelodeon Reunion Special 11-5-89",
+            "url": "https://archive.org/download/green-acres-we-are-there/Green%20Acres%20-%20We%20Are%20There%20Nickelodeon%20Reunion%20Special%2011-5-89.mp4",
+            "seconds": 1368,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 200,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 101,
+          "name": "old mail day tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "GreenAcresCompleteSeries",
+            "itemTitle": "Green Acres Complete Series",
+            "file": "Green Acres Season 4/Green Acres Season 4/Green Acres - 100 - Old Mail Day - (TV Rip).mp4",
+            "name": "Green Acres Season 4/Green Acres Season 4/Green Acres - 100 - Old Mail Day - (TV Rip)",
+            "url": "https://archive.org/download/GreenAcresCompleteSeries/Green%20Acres%20Season%204%2FGreen%20Acres%20Season%204%2FGreen%20Acres%20-%20100%20-%20Old%20Mail%20Day%20-%20(TV%20Rip).mp4",
+            "seconds": 1298,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": {
+              "season": 1,
+              "episode": 0
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
@@ -787,12 +2350,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Guess Who's Not Going to the Luau?",
-          "airdate": "1968-09-25",
-          "state": "LIVE",
+          "name": "guess whos not going to the luau",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "s-4-e-01-guess-whos-not-going-to-the-luau",
             "itemTitle": "Green Acres S4E01 Guess Who’s Not Going to the Luau?",
             "file": "S4E01 Guess Who’s Not Going to the Luau.mp4",
@@ -801,178 +2361,21 @@
             "seconds": 1530,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 148
+            "sizeMB": 148,
+            "ep": {
+              "season": 4,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 2,
-          "name": "The Rummage Sale",
-          "airdate": "1968-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Hail to the Fire Chief",
-          "airdate": "1968-10-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Eb's Romance",
-          "airdate": "1968-10-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "The Candidate",
-          "airdate": "1968-10-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Handy Lessons",
-          "airdate": "1968-11-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "A Husband for Eleanor",
-          "airdate": "1968-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Old Mail Day",
-          "airdate": "1968-11-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "The Agricultural Student",
-          "airdate": "1968-11-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "How Hooterville Was Floundered",
-          "airdate": "1968-12-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "The Blue Feather",
-          "airdate": "1968-12-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "How to Get from Hooterville to Pixley Without Moving",
-          "airdate": "1968-12-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "The Birthday Gift",
-          "airdate": "1969-01-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Everywhere a Chick Chick",
-          "airdate": "1969-01-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "The Marital Vacation",
-          "airdate": "1969-01-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "A Prize in Every Package",
-          "airdate": "1969-01-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Law Partners",
-          "airdate": "1969-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "A Day in the Life of Oliver Wendell Holmes",
-          "airdate": "1969-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Economy Flight to Washington",
-          "airdate": "1969-02-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Retreat from Washington",
-          "airdate": "1969-02-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "A Hunting We Won't Go",
-          "airdate": "1969-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 22,
-          "name": "Oh, Promise Me",
-          "airdate": "1969-03-05",
+          "name": "oh promise me",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
             "item": "s-4-e-22-oh-promise-me_202510",
             "itemTitle": "Green Acres S4E22 Oh, Promise Me",
             "file": "S4E22 Oh, Promise Me.mp4",
@@ -981,40 +2384,14 @@
             "seconds": 1522,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 147
+            "sizeMB": 147,
+            "ep": {
+              "season": 4,
+              "episode": 22
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Eb Uses His Ingenuity",
-          "airdate": "1969-03-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "The Old Trunk",
-          "airdate": "1969-03-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "The Milk Maker",
-          "airdate": "1969-03-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "The Reincarnation of Eb",
-          "airdate": "1969-04-02",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         }
       ]
@@ -1023,117 +2400,10 @@
       "season": 5,
       "episodes": [
         {
-          "number": 1,
-          "name": "Lisa's Mudder Comes for a Visit",
-          "airdate": "1969-09-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Everybody Tries to Love a Countess",
-          "airdate": "1969-10-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Where There's a Will",
-          "airdate": "1969-10-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "A Tale of a Tail",
-          "airdate": "1969-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "You and Your Big Shrunken Head",
-          "airdate": "1969-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "The Road",
-          "airdate": "1969-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Four of Spades",
-          "airdate": "1969-11-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "The Youth Center",
-          "airdate": "1969-11-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "The Special Delivery Letter",
-          "airdate": "1969-11-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Oliver's Schoolgirl Crush",
-          "airdate": "1969-11-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Ralph's Nuptials",
-          "airdate": "1969-12-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Oliver and the Cornstalk",
-          "airdate": "1969-12-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Beauty is Skin Deep",
-          "airdate": "1969-12-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 14,
-          "name": "The Wish-Book",
-          "airdate": "1970-01-03",
-          "state": "LIVE",
+          "name": "the wish book",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "s-5-e-14-the-wish-book",
             "itemTitle": "Green Acres S5E14 The Wish Book",
             "file": "S5E14 The Wish-Book.mp4",
@@ -1142,50 +2412,21 @@
             "seconds": 1531,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 149
+            "sizeMB": 149,
+            "ep": {
+              "season": 5,
+              "episode": 14
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "Rest and Relaxation",
-          "airdate": "1970-01-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Trapped",
-          "airdate": "1970-01-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Bundle of Joy",
-          "airdate": "1970-01-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "The Ex-Con",
-          "airdate": "1970-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 19,
-          "name": "The Cow Killer",
-          "airdate": "1970-02-07",
-          "state": "LIVE",
+          "name": "the cow killer",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "s-5-e-19-the-cow-killer_202510",
             "itemTitle": "Green Acres S5E19 The Cow Killer",
             "file": "S5E19 The Cow Killer.mp4",
@@ -1194,64 +2435,14 @@
             "seconds": 1531,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 149
+            "sizeMB": 149,
+            "ep": {
+              "season": 5,
+              "episode": 19
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "The Confrontation",
-          "airdate": "1970-02-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "The Case of the Hooterville Refund Fraud",
-          "airdate": "1970-02-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "The Picnic",
-          "airdate": "1970-03-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "The Beeping Rock",
-          "airdate": "1970-03-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Uncle Fedor",
-          "airdate": "1970-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "The Wealthy Landowner",
-          "airdate": "1970-04-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "Happy Birthday",
-          "airdate": "1970-04-11",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         }
       ]
@@ -1260,37 +2451,10 @@
       "season": 6,
       "episodes": [
         {
-          "number": 1,
-          "name": "The City Kids",
-          "airdate": "1970-09-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Coming-Out Party",
-          "airdate": "1970-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Jealousy",
-          "airdate": "1970-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
           "number": 4,
-          "name": "A Royal Love Story",
-          "airdate": "1970-10-06",
+          "name": "a royal love story",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
             "item": "s-6-e-04-a-royal-love-story",
             "itemTitle": "Green Acres S6E04 A Royal Love Story",
             "file": "S6E04 A Royal Love Story.mp4",
@@ -1299,187 +2463,22 @@
             "seconds": 1533,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 148
+            "sizeMB": 148,
+            "ep": {
+              "season": 6,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Oliver Goes Broke",
-          "airdate": "1970-10-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "The Great Mayoralty Campaign",
-          "airdate": "1970-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Eb's Double Trouble",
-          "airdate": "1970-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Apple-Picking Time",
-          "airdate": "1970-11-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Enterprising Eb",
-          "airdate": "1970-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Oliver's Double",
-          "airdate": "1970-12-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "The High Cost of Loving",
-          "airdate": "1970-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "The Liberation Movement",
-          "airdate": "1970-12-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Charlie, Homer and Natasha",
-          "airdate": "1970-12-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "The Engagement Ring",
-          "airdate": "1970-12-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "The Free Paint Job",
-          "airdate": "1971-01-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Son of Drobny",
-          "airdate": "1971-01-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "The Wedding Deal",
-          "airdate": "1971-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Star Witness",
-          "airdate": "1971-01-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "The Spot Remover",
-          "airdate": "1971-02-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "King Oliver I",
-          "airdate": "1971-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "A Girl for Drobny",
-          "airdate": "1971-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "The Carpenter's Ball",
-          "airdate": "1971-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "The Hole in the Porch",
-          "airdate": "1971-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Lisa the Psychologist",
-          "airdate": "1971-03-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Hawaiian Honeymoon",
-          "airdate": "1971-03-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "The Ex-Secretary",
-          "airdate": "1971-04-27",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 2124,
+    "name": "Green Acres",
+    "placed": 6
+  }
 }

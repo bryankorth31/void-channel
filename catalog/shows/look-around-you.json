@@ -3,20 +3,21 @@
   "slug": "look-around-you",
   "type": "British and Beyond",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T12:07:58.376Z",
+  "matchedAt": "2026-10-15T12:55:41.919Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 1950,
+    "id": null,
     "name": "Look Around You",
-    "runtime": 19,
-    "premiered": "2002-10-10",
-    "network": "BBC Two"
+    "runtime": null,
+    "premiered": null,
+    "network": "Adult Swim"
   },
   "coverage": {
-    "total": 14,
+    "total": 21,
     "live": 0,
-    "review": 0,
-    "missing": 14,
-    "pct": 0
+    "review": 21,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,122 +25,430 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Maths",
-          "airdate": "2002-10-10",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 1.mp4",
+            "name": "Look Around You Series 1",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%201.mp4",
+            "seconds": 1312,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Water",
-          "airdate": "2002-10-17",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 2.mp4",
+            "name": "Look Around You Series 2",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%202.mp4",
+            "seconds": 10228,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 1018,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Germs",
-          "airdate": "2002-10-24",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 11.mp4",
+            "name": "Look Around You Series 11",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2011.mp4",
+            "seconds": 527,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 53,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Ghosts",
-          "airdate": "2002-10-31",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 14.mp4",
+            "name": "Look Around You Series 14",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2014.mp4",
+            "seconds": 198,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 20,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Sulphur",
-          "airdate": "2002-11-07",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 23.mp4",
+            "name": "Look Around You Series 23",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2023.mp4",
+            "seconds": 1765,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Music",
-          "airdate": "2002-11-21",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 24.mp4",
+            "name": "Look Around You Series 24",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2024.mp4",
+            "seconds": 1678,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 165,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Iron",
-          "airdate": "2002-12-04",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 25",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 25.mp4",
+            "name": "Look Around You Series 25",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2025.mp4",
+            "seconds": 1656,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 165,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "The Brain",
-          "airdate": "2002-12-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Music 2000",
-          "airdate": "2005-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Health",
-          "airdate": "2005-02-07",
-          "state": "MISSING",
-          "file": null,
+          "name": "series 26",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 26.mp4",
+            "name": "Look Around You Series 26",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2026.mp4",
+            "seconds": 1673,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 166,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Sport",
-          "airdate": "2005-02-14",
-          "state": "MISSING",
-          "file": null,
+          "number": 9,
+          "name": "series 27",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 27.mp4",
+            "name": "Look Around You Series 27",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2027.mp4",
+            "seconds": 1682,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 166,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Food",
-          "airdate": "2005-02-21",
-          "state": "MISSING",
-          "file": null,
+          "number": 10,
+          "name": "series 28",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 28.mp4",
+            "name": "Look Around You Series 28",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%2028.mp4",
+            "seconds": 1780,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Computers",
-          "airdate": "2005-02-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 11,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 115.mp4",
+            "name": "Look Around You Series 115",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20115.mp4",
+            "seconds": 154,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Live Final",
-          "airdate": "2005-03-07",
-          "state": "MISSING",
-          "file": null,
+          "number": 12,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 117.mp4",
+            "name": "Look Around You Series 117",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20117.mp4",
+            "seconds": 552,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 57,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 118.mp4",
+            "name": "Look Around You Series 118",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20118.mp4",
+            "seconds": 519,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 53,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 119.mp4",
+            "name": "Look Around You Series 119",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20119.mp4",
+            "seconds": 543,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 56,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 120.mp4",
+            "name": "Look Around You Series 120",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20120.mp4",
+            "seconds": 559,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 57,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 121.mp4",
+            "name": "Look Around You Series 121",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20121.mp4",
+            "seconds": 558,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 56,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 122.mp4",
+            "name": "Look Around You Series 122",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20122.mp4",
+            "seconds": 541,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 56,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 123.mp4",
+            "name": "Look Around You Series 123",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20123.mp4",
+            "seconds": 563,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 58,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 211.mp4",
+            "name": "Look Around You Series 211",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20211.mp4",
+            "seconds": 190,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 18,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 212.mp4",
+            "name": "Look Around You Series 212",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20212.mp4",
+            "seconds": 660,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 33,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "series",
+          "state": "REVIEW",
+          "file": {
+            "item": "lookaroundyou",
+            "itemTitle": "Look Around You Series 1 & 2 [PAL DVD ISO]",
+            "file": "Look Around You Series 213.mp4",
+            "name": "Look Around You Series 213",
+            "url": "https://archive.org/download/lookaroundyou/Look%20Around%20You%20Series%20213.mp4",
+            "seconds": 268,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 27,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 1950,
+    "name": "Look Around You",
+    "placed": 0
+  }
 }

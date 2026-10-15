@@ -3,7 +3,8 @@
   "slug": "hee-haw",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T12:08:53.695Z",
+  "matchedAt": "2026-10-15T12:55:41.577Z",
+  "addedAt": "2026-10-15T12:08:53.695Z",
   "tvmaze": {
     "id": 30980,
     "name": "Hee Haw",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 405,
-    "live": 0,
-    "review": 1,
+    "live": 1,
+    "review": 0,
     "missing": 404,
     "pct": 0
   },
@@ -966,10 +967,10 @@
           "number": 13,
           "name": "Jeanne Pruett / Joe Stampley",
           "airdate": "1973-12-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Jeanne Pruett / Joe Stampley\" (0.95)",
+            "conf": 1,
+            "why": "airdate in filename",
             "item": "hee-haw-12-8-1973-jeanne-pruett-joe-stampley",
             "itemTitle": "Hee Haw 12-8-1973 Jeanne Pruett/Joe Stampley",
             "file": "Hee Haw 12-8-1973 Jeanne Pruett-Joe Stampley.mp4",

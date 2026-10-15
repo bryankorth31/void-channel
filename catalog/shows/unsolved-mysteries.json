@@ -3,20 +3,21 @@
   "slug": "unsolved-mysteries",
   "type": "Drama",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:07:46.152Z",
+  "matchedAt": "2026-10-15T12:55:28.857Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 40484,
+    "id": null,
     "name": "Unsolved Mysteries",
-    "runtime": 46,
-    "premiered": "2020-07-01",
-    "network": "Netflix"
+    "runtime": null,
+    "premiered": null,
+    "network": "NBC"
   },
   "coverage": {
-    "total": 30,
-    "live": 1,
-    "review": 5,
-    "missing": 24,
-    "pct": 20
+    "total": 75,
+    "live": 0,
+    "review": 75,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,52 +25,55 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Mystery on the Rooftop",
-          "airdate": "2020-07-01",
+          "name": "with dennis farina 1 1",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 38 in \"don't look at me - Unsolved Mysteries Ic\"",
-            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
-            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
-            "file": "Part 01 [-buA5o4Yrsk].webm",
-            "name": "Part 01 [-buA5o4Yrsk]",
-            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2001%20%5B-buA5o4Yrsk%5D.webm",
-            "seconds": 2245,
-            "format": "WebM",
+            "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+            "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+            "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 1.mp4",
+            "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 1",
+            "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%201.mp4",
+            "seconds": 2568,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 372
+            "sizeMB": 206,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "13 Minutes",
-          "airdate": "2020-07-01",
+          "name": "with dennis farina 1 2",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 38 in \"don't look at me - Unsolved Mysteries Ic\"",
-            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
-            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
-            "file": "Part 02 [ldS_6y6osVk].webm",
-            "name": "Part 02 [ldS_6y6osVk]",
-            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2002%20%5BldS_6y6osVk%5D.webm",
-            "seconds": 2619,
-            "format": "WebM",
+            "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+            "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+            "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 2.mp4",
+            "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 2",
+            "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%202.mp4",
+            "seconds": 2571,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 305
+            "sizeMB": 203,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "House of Terror",
-          "airdate": "2020-07-01",
-          "state": "LIVE",
+          "name": "halloween",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
             "item": "s-01-e-03-unsolved-mysteries-halloween",
             "itemTitle": "Unsolved Mysteries S01E03 - Halloween Special - 1988",
             "file": "S01E03 - Unsolved Mysteries (Halloween).mp4",
@@ -78,32 +82,244 @@
             "seconds": 2853,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 276
+            "sizeMB": 276,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 38 in \"don't look at me - Unsolved Mysteries Ic\"",
-              "item": "dont-look-at-me-unsolved-mysteries-iceberg",
-              "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
-              "file": "Part 04 [3sM27uUZ-wU].webm",
-              "name": "Part 04 [3sM27uUZ-wU]",
-              "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2004%20%5B3sM27uUZ-wU%5D.webm",
-              "seconds": 2503,
-              "format": "WebM",
-              "playable": true,
-              "sizeMB": 486
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
-          "name": "No Ride Home",
-          "airdate": "2020-07-01",
+          "name": "with dennis farina 1 4",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 38 in \"don't look at me - Unsolved Mysteries Ic\"",
+            "item": "unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1",
+            "itemTitle": "Unsolved Mysteries With Dennis Farina Season 1 Episode 1",
+            "file": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 4.mp4",
+            "name": "Unsolved Mysteries with Dennis Farina - Season 1 Episode 4",
+            "url": "https://archive.org/download/unsolved-myBySidimaDstories-with-dennis-farina-season-1-episode-1/Unsolved%20Mysteries%20with%20Dennis%20Farina%20-%20Season%201%20Episode%204.mp4",
+            "seconds": 2571,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 200,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "ab3c72d0b0584c8c8f7f05de84990d7d",
+            "itemTitle": "Unsolved.Mysteries.S01E03.SDTV.Halloween",
+            "file": "ab3c72d0b0584c8c8f7f05de84990d7d.mp4",
+            "name": "ab3c72d0b0584c8c8f7f05de84990d7d",
+            "url": "https://archive.org/download/ab3c72d0b0584c8c8f7f05de84990d7d/ab3c72d0b0584c8c8f7f05de84990d7d.mp4",
+            "seconds": 2853,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "capturea",
+          "state": "REVIEW",
+          "file": {
+            "item": "capture-a-2981",
+            "itemTitle": "Unsolved Mysteries (2/3/1993)",
+            "file": "CaptureA_2981.mp4",
+            "name": "CaptureA_2981",
+            "url": "https://archive.org/download/capture-a-2981/CaptureA_2981.mp4",
+            "seconds": 3490,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 335,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "dm2dfl1fjps",
+          "state": "REVIEW",
+          "file": {
+            "item": "youtube-dM2DFl1FJps",
+            "itemTitle": "Unsolved Mysteries with Robert Stack - Season 7, Episode 21 - Full Episode",
+            "file": "dM2DFl1FJps.webm",
+            "name": "dM2DFl1FJps",
+            "url": "https://archive.org/download/youtube-dM2DFl1FJps/dM2DFl1FJps.webm",
+            "seconds": 2738,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 107,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "fv590ons j4",
+          "state": "REVIEW",
+          "file": {
+            "item": "youtube-fv590ONs_J4",
+            "itemTitle": "Unsolved Mysteries with Robert Stack - Season 2, Episode 1 - Full Episodes",
+            "file": "fv590ONs_J4.webm",
+            "name": "fv590ONs_J4",
+            "url": "https://archive.org/download/youtube-fv590ONs_J4/fv590ONs_J4.webm",
+            "seconds": 2629,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 118,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "part 01 bua5o4yrsk",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 01 [-buA5o4Yrsk].webm",
+            "name": "Part 01 [-buA5o4Yrsk]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2001%20%5B-buA5o4Yrsk%5D.webm",
+            "seconds": 2245,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 372,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "part 02 lds 6y6osvk",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 02 [ldS_6y6osVk].webm",
+            "name": "Part 02 [ldS_6y6osVk]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2002%20%5BldS_6y6osVk%5D.webm",
+            "seconds": 2619,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 305,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "part 03 nkettvgumxe",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 03 [nKEttVgumxE].webm",
+            "name": "Part 03 [nKEttVgumxE]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2003%20%5BnKEttVgumxE%5D.webm",
+            "seconds": 1585,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 227,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "part 04 3sm27uuz wu",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 04 [3sM27uUZ-wU].webm",
+            "name": "Part 04 [3sM27uUZ-wU]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2004%20%5B3sM27uUZ-wU%5D.webm",
+            "seconds": 2503,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 486,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "part 05 the bottom of layer 1 5x5mnepkseo",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 05 - The BOTTOM of Layer 1 [5X5MnEpkseo].webm",
+            "name": "Part 05 - The BOTTOM of Layer 1 [5X5MnEpkseo]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2005%20-%20The%20BOTTOM%20of%20Layer%201%20%5B5X5MnEpkseo%5D.webm",
+            "seconds": 3630,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 719,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "part 06 the surface of layer 2 iwyhpgrt1k4",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 06 - The SURFACE of Layer 2 [iwYhPgrT1K4].webm",
+            "name": "Part 06 - The SURFACE of Layer 2 [iwYhPgrT1K4]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2006%20-%20The%20SURFACE%20of%20Layer%202%20%5BiwYhPgrT1K4%5D.webm",
+            "seconds": 2808,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 663,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "part 07 vw04gudepem",
+          "state": "REVIEW",
+          "file": {
             "item": "dont-look-at-me-unsolved-mysteries-iceberg",
             "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
             "file": "Part 07 [VW04GudePeM].webm",
@@ -112,18 +328,18 @@
             "seconds": 3668,
             "format": "WebM",
             "playable": true,
-            "sizeMB": 859
+            "sizeMB": 859,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Berkshire's UFO",
-          "airdate": "2020-07-01",
+          "number": 16,
+          "name": "part 08 lqo23xdvrjy",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 38 in \"don't look at me - Unsolved Mysteries Ic\"",
             "item": "dont-look-at-me-unsolved-mysteries-iceberg",
             "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
             "file": "Part 08 [lQO23XdVRJY].webm",
@@ -132,18 +348,18 @@
             "seconds": 2163,
             "format": "WebM",
             "playable": true,
-            "sizeMB": 376
+            "sizeMB": 376,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Missing Witness",
-          "airdate": "2020-07-01",
+          "number": 17,
+          "name": "part 09 tus7ict96uo",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 38 in \"don't look at me - Unsolved Mysteries Ic\"",
             "item": "dont-look-at-me-unsolved-mysteries-iceberg",
             "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
             "file": "Part 09 [TuS7ICT96Uo].webm",
@@ -152,223 +368,1179 @@
             "seconds": 2380,
             "format": "WebM",
             "playable": true,
-            "sizeMB": 465
+            "sizeMB": 465,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "part 10 byjdbwkv5lw",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 10 [byjDBWKV5lw].webm",
+            "name": "Part 10 [byjDBWKV5lw]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2010%20%5BbyjDBWKV5lw%5D.webm",
+            "seconds": 1823,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 275,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "part 11 fci fk8bqu",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 11 [_Fci-Fk8BqU].webm",
+            "name": "Part 11 [_Fci-Fk8BqU]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2011%20%5B_Fci-Fk8BqU%5D.webm",
+            "seconds": 3735,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 360,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "part 12 v0xjiq sqys",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 12 [v0xjiQ-SQys].webm",
+            "name": "Part 12 [v0xjiQ-SQys]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2012%20%5Bv0xjiQ-SQys%5D.webm",
+            "seconds": 3574,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 504,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "part 13 re1 j4b8v7m",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 13 [re1-J4b8v7M].webm",
+            "name": "Part 13 [re1-J4b8v7M]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2013%20%5Bre1-J4b8v7M%5D.webm",
+            "seconds": 1829,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 190,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "part 14 r5mcsu7gq5e",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 14 [r5MCSU7GQ5E].webm",
+            "name": "Part 14 [r5MCSU7GQ5E]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2014%20%5Br5MCSU7GQ5E%5D.webm",
+            "seconds": 1950,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 166,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "part 15 ndwdpoo 1og",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 15 [ndWdpoO_1Og].webm",
+            "name": "Part 15 [ndWdpoO_1Og]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2015%20%5BndWdpoO_1Og%5D.webm",
+            "seconds": 3642,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 420,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "part 16 jaop6jac9o",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 16 [_JAoP6jaC9o].webm",
+            "name": "Part 16 [_JAoP6jaC9o]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2016%20%5B_JAoP6jaC9o%5D.webm",
+            "seconds": 3211,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 312,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "part 17 hkzd4tig0dq",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 17 [hkzd4TiG0dQ].webm",
+            "name": "Part 17 [hkzd4TiG0dQ]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2017%20%5Bhkzd4TiG0dQ%5D.webm",
+            "seconds": 4063,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 412,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "part 18 zv75a4dbc7m",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 18 [ZV75A4DbC7M].webm",
+            "name": "Part 18 [ZV75A4DbC7M]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2018%20%5BZV75A4DbC7M%5D.webm",
+            "seconds": 3166,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 468,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "part 19 qkjrgayrt9u",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 19 [QKJrGaYrT9U].webm",
+            "name": "Part 19 [QKJrGaYrT9U]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2019%20%5BQKJrGaYrT9U%5D.webm",
+            "seconds": 3100,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 296,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "part 20 mkshvviho80",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 20 [MKsHvVihO80].webm",
+            "name": "Part 20 [MKsHvVihO80]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2020%20%5BMKsHvVihO80%5D.webm",
+            "seconds": 1508,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "part 21 lcl9yqf3th4",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 21 [lcL9yqF3th4].webm",
+            "name": "Part 21 [lcL9yqF3th4]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2021%20%5BlcL9yqF3th4%5D.webm",
+            "seconds": 2850,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 234,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "part 22 djxi50gdudy",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 22 [djxI50gDUdY].webm",
+            "name": "Part 22 [djxI50gDUdY]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2022%20%5BdjxI50gDUdY%5D.webm",
+            "seconds": 3317,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 304,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "part 23 91fb5ap1y9o",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 23 [91fB5aP1Y9o].webm",
+            "name": "Part 23 [91fB5aP1Y9o]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2023%20%5B91fB5aP1Y9o%5D.webm",
+            "seconds": 2288,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 185,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "part 24 u0clnpgiybs",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 24 [U0CLnPgiybs].webm",
+            "name": "Part 24 [U0CLnPgiybs]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2024%20%5BU0CLnPgiybs%5D.webm",
+            "seconds": 2764,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 225,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "part 25 a0bja6zlcas",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 25 [a0BJa6ZLcAs].webm",
+            "name": "Part 25 [a0BJa6ZLcAs]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2025%20%5Ba0BJa6ZLcAs%5D.webm",
+            "seconds": 2544,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 187,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "part 26 d5sjfd26hp0",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 26 [d5SJFD26Hp0].webm",
+            "name": "Part 26 [d5SJFD26Hp0]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2026%20%5Bd5SJFD26Hp0%5D.webm",
+            "seconds": 2933,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 224,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "part 27 hjwd 279qic",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 27 [hJWd_279QIc].webm",
+            "name": "Part 27 [hJWd_279QIc]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2027%20%5BhJWd_279QIc%5D.webm",
+            "seconds": 2536,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 182,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "part 28 gcpdoqejfmq",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 28 [GCpdoqEjfmQ].webm",
+            "name": "Part 28 [GCpdoqEjfmQ]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2028%20%5BGCpdoqEjfmQ%5D.webm",
+            "seconds": 1445,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 131,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "part 29 w0w dwslwkg",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 29 [W0W_dwslWKg].webm",
+            "name": "Part 29 [W0W_dwslWKg]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2029%20%5BW0W_dwslWKg%5D.webm",
+            "seconds": 3792,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 228,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "part 30 farjdgrdds",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 30 [-FARjdGRDds].webm",
+            "name": "Part 30 [-FARjdGRDds]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2030%20%5B-FARjdGRDds%5D.webm",
+            "seconds": 2686,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 232,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "part 31 8vmx22d1kbq",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 31 [8VMX22D1KbQ].webm",
+            "name": "Part 31 [8VMX22D1KbQ]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2031%20%5B8VMX22D1KbQ%5D.webm",
+            "seconds": 3406,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 309,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "part 32 ob4dfzdl8a4",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 32 [oB4dFzDL8a4].webm",
+            "name": "Part 32 [oB4dFzDL8a4]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2032%20%5BoB4dFzDL8a4%5D.webm",
+            "seconds": 2764,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 203,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "part 33 0qr5qdtgfo8",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 33 [0qR5QdtgFo8].webm",
+            "name": "Part 33 [0qR5QdtgFo8]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2033%20%5B0qR5QdtgFo8%5D.webm",
+            "seconds": 3342,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 221,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "part 34 rqodsgv ksu",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 34 [RqOdsgv_KsU].webm",
+            "name": "Part 34 [RqOdsgv_KsU]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2034%20%5BRqOdsgv_KsU%5D.webm",
+            "seconds": 2891,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 300,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "part 35 a mpzncfu9y",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 35 [a_MPZNcFU9Y].webm",
+            "name": "Part 35 [a_MPZNcFU9Y]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2035%20%5Ba_MPZNcFU9Y%5D.webm",
+            "seconds": 3675,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 420,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "part 36 kwq5oyjw5dm",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 36 [kwQ5OyJW5DM].webm",
+            "name": "Part 36 [kwQ5OyJW5DM]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2036%20%5BkwQ5OyJW5DM%5D.webm",
+            "seconds": 3546,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 447,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "part 37 s3fjydwsouk",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 37 [S3fjydwSOUk].webm",
+            "name": "Part 37 [S3fjydwSOUk]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2037%20%5BS3fjydwSOUk%5D.webm",
+            "seconds": 3214,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 297,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "part 38 florida friends stay safe rnwijp3a100",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 38 ＊florida friends stay safe＊ [RNWIjp3A100].webm",
+            "name": "Part 38 ＊florida friends stay safe＊ [RNWIjp3A100]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2038%20%EF%BC%8Aflorida%20friends%20stay%20safe%EF%BC%8A%20%5BRNWIjp3A100%5D.webm",
+            "seconds": 3624,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 363,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "part 39 yaxhrvejmwo",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 39 [yAxhRvEJmWo].webm",
+            "name": "Part 39 [yAxhRvEJmWo]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2039%20%5ByAxhRvEJmWo%5D.webm",
+            "seconds": 2955,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 269,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "part 40 h2kw5 jjbe4",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 40 [H2kW5-JJBE4].webm",
+            "name": "Part 40 [H2kW5-JJBE4]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2040%20%5BH2kW5-JJBE4%5D.webm",
+            "seconds": 3729,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 434,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "part 41 gwlvngouvr8",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 41 [GwlVNGouvR8].webm",
+            "name": "Part 41 [GwlVNGouvR8]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2041%20%5BGwlVNGouvR8%5D.webm",
+            "seconds": 3816,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 367,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "part 42 z vsxt2 71s",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 42 [z_VSXt2_71s].webm",
+            "name": "Part 42 [z_VSXt2_71s]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2042%20%5Bz_VSXt2_71s%5D.webm",
+            "seconds": 2914,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 256,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "part 43 48uapolkrfo",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 43 [48uAPoLkRfo].webm",
+            "name": "Part 43 [48uAPoLkRfo]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2043%20%5B48uAPoLkRfo%5D.webm",
+            "seconds": 3315,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 273,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "part 44 pphpxsd0hbo",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 44 [PphpXSd0Hbo].webm",
+            "name": "Part 44 [PphpXSd0Hbo]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2044%20%5BPphpXSd0Hbo%5D.webm",
+            "seconds": 3052,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 235,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "part 45 bpgoyohqutk",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 45 [BPGoYOhQUTk].webm",
+            "name": "Part 45 [BPGoYOhQUTk]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2045%20%5BBPGoYOhQUTk%5D.webm",
+            "seconds": 2485,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 224,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "part 46 73iffbzpgzk",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 46 [73IFFBZPgzk].mp4",
+            "name": "Part 46 [73IFFBZPgzk]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2046%20%5B73IFFBZPgzk%5D.mp4",
+            "seconds": 2583,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 428,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "part 47 dk0nlhpt6ai",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 47 [DK0nlhPt6aI].webm",
+            "name": "Part 47 [DK0nlhPt6aI]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2047%20%5BDK0nlhPt6aI%5D.webm",
+            "seconds": 2577,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 279,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "part 48 pfjejctonlw",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 48 [PFjEjctONLw].webm",
+            "name": "Part 48 [PFjEjctONLw]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2048%20%5BPFjEjctONLw%5D.webm",
+            "seconds": 3489,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 292,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "part 49 qan1mjhl0bu",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 49 [Qan1MJHl0bU].webm",
+            "name": "Part 49 [Qan1MJHl0bU]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2049%20%5BQan1MJHl0bU%5D.webm",
+            "seconds": 2382,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 178,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "part 50 ply5o2e27sc",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 50 [pLY5O2e27Sc].webm",
+            "name": "Part 50 [pLY5O2e27Sc]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2050%20%5BpLY5O2e27Sc%5D.webm",
+            "seconds": 2846,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 235,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "part 51 p6wxubetwsc",
+          "state": "REVIEW",
+          "file": {
+            "item": "dont-look-at-me-unsolved-mysteries-iceberg",
+            "itemTitle": "don't look at me - Unsolved Mysteries Iceberg",
+            "file": "Part 51 [p6wxuBeTwsc].webm",
+            "name": "Part 51 [p6wxuBeTwsc]",
+            "url": "https://archive.org/download/dont-look-at-me-unsolved-mysteries-iceberg/Part%2051%20%5Bp6wxuBeTwsc%5D.webm",
+            "seconds": 2607,
+            "format": "WebM",
+            "playable": true,
+            "sizeMB": 192,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "unsolv 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "EthelNationandGeorgiaTann",
+            "itemTitle": "Unsolved Mysteries Commentary Ethel Nation and Georgia Tann",
+            "file": "UNSOLV~1.MP4",
+            "name": "UNSOLV~1",
+            "url": "https://archive.org/download/EthelNationandGeorgiaTann/UNSOLV~1.MP4",
+            "seconds": 3644,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1025,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "commentary kari lynn nixon",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-kari-lynn-nixon",
+            "itemTitle": "Unsolved Mysteries Commentary Kari Lynn Nixon",
+            "file": "Unsolved Mysteries Commentary ''Kari Lynn Nixon''.mp4",
+            "name": "Unsolved Mysteries Commentary ''Kari Lynn Nixon''",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-kari-lynn-nixon/Unsolved%20Mysteries%20Commentary%20''Kari%20Lynn%20Nixon''.mp4",
+            "seconds": 5009,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1274,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "commentary undelivered wwii letters",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-undelivered-wwii-letters",
+            "itemTitle": "Unsolved Mysteries Commentary Undelivered WWII Letters",
+            "file": "Unsolved Mysteries Commentary ''Undelivered WWII Letters''.mp4",
+            "name": "Unsolved Mysteries Commentary ''Undelivered WWII Letters''",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-undelivered-wwii-letters/Unsolved%20Mysteries%20Commentary%20''Undelivered%20WWII%20Letters''.mp4",
+            "seconds": 4156,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2028,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "commentary adam hecht",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-adam-hecht",
+            "itemTitle": "Unsolved Mysteries Commentary Adam Hecht",
+            "file": "Unsolved Mysteries Commentary Adam Hecht.mp4",
+            "name": "Unsolved Mysteries Commentary Adam Hecht",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-adam-hecht/Unsolved%20Mysteries%20Commentary%20Adam%20Hecht.mp4",
+            "seconds": 2464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 417,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "commentary afrodisiacs",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-afrodisiacs",
+            "itemTitle": "Unsolved Mysteries Commentary Afrodisiacs",
+            "file": "Unsolved Mysteries Commentary Afrodisiacs.mp4",
+            "name": "Unsolved Mysteries Commentary Afrodisiacs",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-afrodisiacs/Unsolved%20Mysteries%20Commentary%20Afrodisiacs.mp4",
+            "seconds": 1934,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 98,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "commentary black hope curse",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-black-hope-curse",
+            "itemTitle": "Unsolved Mysteries Commentary Black Hope Curse",
+            "file": "Unsolved Mysteries Commentary Black Hope Curse.mp4",
+            "name": "Unsolved Mysteries Commentary Black Hope Curse",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-black-hope-curse/Unsolved%20Mysteries%20Commentary%20Black%20Hope%20Curse.mp4",
+            "seconds": 3248,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 308,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 66,
+          "name": "commentary blind river rest stop",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-blind-river-rest-stop",
+            "itemTitle": "Unsolved Mysteries Commentary Blind River Rest Stop",
+            "file": "Unsolved Mysteries Commentary Blind River Rest Stop.mp4",
+            "name": "Unsolved Mysteries Commentary Blind River Rest Stop",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-blind-river-rest-stop/Unsolved%20Mysteries%20Commentary%20Blind%20River%20Rest%20Stop.mp4",
+            "seconds": 1467,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 343,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 67,
+          "name": "commentary brook baker",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-brook-baker",
+            "itemTitle": "Unsolved Mysteries Commentary Brook Baker",
+            "file": "Unsolved Mysteries Commentary Brook Baker.mp4",
+            "name": "Unsolved Mysteries Commentary Brook Baker",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-brook-baker/Unsolved%20Mysteries%20Commentary%20Brook%20Baker.mp4",
+            "seconds": 1939,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 115,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "commentary c w",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-c.-w.-roddy",
+            "itemTitle": "Unsolved Mysteries Commentary C. W. Roddy",
+            "file": "Unsolved Mysteries Commentary C.W. Roddy.ia.mp4",
+            "name": "Unsolved Mysteries Commentary C.W",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-c.-w.-roddy/Unsolved%20Mysteries%20Commentary%20C.W.%20Roddy.ia.mp4",
+            "seconds": 1985,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 501,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "commentary c w roddy",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-c.-w.-roddy",
+            "itemTitle": "Unsolved Mysteries Commentary C. W. Roddy",
+            "file": "Unsolved Mysteries Commentary C.W. Roddy.mp4",
+            "name": "Unsolved Mysteries Commentary C.W. Roddy",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-c.-w.-roddy/Unsolved%20Mysteries%20Commentary%20C.W.%20Roddy.mp4",
+            "seconds": 1985,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 501,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "commentary chaim weiss",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-chaim-weiss",
+            "itemTitle": "Unsolved Mysteries Commentary Chaim Weiss",
+            "file": "Unsolved Mysteries Commentary Chaim Weiss.mp4",
+            "name": "Unsolved Mysteries Commentary Chaim Weiss",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-chaim-weiss/Unsolved%20Mysteries%20Commentary%20Chaim%20Weiss.mp4",
+            "seconds": 2275,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 331,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "commentary christi nichols",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-christi-nichols",
+            "itemTitle": "Unsolved Mysteries Commentary Christi Nichols",
+            "file": "Unsolved Mysteries Commentary Christi Nichols.mp4",
+            "name": "Unsolved Mysteries Commentary Christi Nichols",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-christi-nichols/Unsolved%20Mysteries%20Commentary%20Christi%20Nichols.mp4",
+            "seconds": 2666,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 432,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 72,
+          "name": "commentary chucky mcgivern",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-chucky-mc-givern",
+            "itemTitle": "Unsolved Mysteries Commentary Chucky McGivern",
+            "file": "Unsolved Mysteries Commentary Chucky McGivern.mp4",
+            "name": "Unsolved Mysteries Commentary Chucky McGivern",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-chucky-mc-givern/Unsolved%20Mysteries%20Commentary%20Chucky%20McGivern.mp4",
+            "seconds": 2118,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 916,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 73,
+          "name": "commentary chupacabras",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-chupacabras",
+            "itemTitle": "Unsolved Mysteries Commentary Chupacabras",
+            "file": "Unsolved Mysteries Commentary Chupacabras.mp4",
+            "name": "Unsolved Mysteries Commentary Chupacabras",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-chupacabras/Unsolved%20Mysteries%20Commentary%20Chupacabras.mp4",
+            "seconds": 2211,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 132,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 74,
+          "name": "commentary covewood lodge ghost",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-covewood-lodge-ghost",
+            "itemTitle": "Unsolved Mysteries Commentary Covewood Lodge Ghost",
+            "file": "Unsolved Mysteries Commentary Covewood Lodge Ghost.mp4",
+            "name": "Unsolved Mysteries Commentary Covewood Lodge Ghost",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-covewood-lodge-ghost/Unsolved%20Mysteries%20Commentary%20Covewood%20Lodge%20Ghost.mp4",
+            "seconds": 3873,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1161,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "commentary epes bandits",
+          "state": "REVIEW",
+          "file": {
+            "item": "unsolved-mysteries-commentary-epes-bandits",
+            "itemTitle": "Unsolved Mysteries Commentary Epes Bandits",
+            "file": "Unsolved Mysteries Commentary Epes Bandits.mp4",
+            "name": "Unsolved Mysteries Commentary Epes Bandits",
+            "url": "https://archive.org/download/unsolved-mysteries-commentary-epes-bandits/Unsolved%20Mysteries%20Commentary%20Epes%20Bandits.mp4",
+            "seconds": 2386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1315,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }
       ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Washington Insider Murder",
-          "airdate": "2020-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "A Death in Oslo",
-          "airdate": "2020-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Death Row Fugitive",
-          "airdate": "2020-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Tsunami Spirits",
-          "airdate": "2020-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Lady in the Lake",
-          "airdate": "2020-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Stolen Kids",
-          "airdate": "2020-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Mystery at Mile Marker 45",
-          "airdate": "2022-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Something in the Sky",
-          "airdate": "2022-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Body in Bags",
-          "airdate": "2022-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Death in a Vegas Motel",
-          "airdate": "2022-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Paranormal Rangers",
-          "airdate": "2022-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "What Happened to Josh?",
-          "airdate": "2022-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Body in the Bay",
-          "airdate": "2022-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "The Ghost in Apartment 14",
-          "airdate": "2022-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Abducted by a Parent",
-          "airdate": "2022-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Who Was Jack the Ripper?",
-          "airdate": "2024-07-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Body in the Basement",
-          "airdate": "2024-07-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Severed Head",
-          "airdate": "2024-07-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Murder, Center Stage",
-          "airdate": "2024-07-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "The Mothman Revisited",
-          "airdate": "2024-07-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 5,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Park Bench Murders",
-          "airdate": "2024-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "My Paranormal Partner",
-          "airdate": "2024-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Mysterious Mutilations",
-          "airdate": "2024-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "The Roswell UFO Incident",
-          "airdate": "2024-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 40484,
+    "name": "Unsolved Mysteries",
+    "placed": 6
+  }
 }

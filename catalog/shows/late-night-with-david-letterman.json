@@ -3,7 +3,8 @@
   "slug": "late-night-with-david-letterman",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:09:06.162Z",
+  "matchedAt": "2026-10-15T12:55:54.437Z",
+  "addedAt": "2026-10-15T12:54:22.386Z",
   "tvmaze": {
     "id": 16341,
     "name": "Late Night with David Letterman",
@@ -13,9 +14,9 @@
   },
   "coverage": {
     "total": 1001,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 1001,
+    "missing": 1000,
     "pct": 0
   },
   "seasons": [
@@ -3310,8 +3311,20 @@
           "number": 111,
           "name": "Show #1196",
           "airdate": "1989-09-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-david-letterman-1989-09-13",
+            "itemTitle": "Late Night With David Letterman September 13, 1989 and re-aired October 16, 1990",
+            "file": "Late Night with David Letterman 1989-09-13.mp4",
+            "name": "Late Night with David Letterman 1989-09-13",
+            "url": "https://archive.org/download/late-night-with-david-letterman-1989-09-13/Late%20Night%20with%20David%20Letterman%201989-09-13.mp4",
+            "seconds": 3682,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 359
+          },
           "alternates": []
         },
         {

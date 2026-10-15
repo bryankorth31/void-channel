@@ -3,7 +3,8 @@
   "slug": "the-steve-harvey-show",
   "type": "90s Sitcoms",
   "network": "The WB",
-  "matchedAt": "2026-10-15T12:07:34.636Z",
+  "matchedAt": "2026-10-15T12:55:16.397Z",
+  "addedAt": "2026-10-15T12:55:16.397Z",
   "tvmaze": {
     "id": 12299,
     "name": "The Steve Harvey Show",
@@ -752,8 +753,8 @@
           "airdate": "2000-10-15",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "airdate in filename",
             "item": "2000.10.15-wpix-steve-harvey-show-s05e02-joy-stevens-u",
             "itemTitle": "WPIX - Steve Harvey Show S05E02 - Joy Stevens - October 15th, 2000",
             "file": "2000.10.15 - WPIX - Steve Harvey Show S05E02 - Joy Stevens [U].mp4",
@@ -764,7 +765,21 @@
             "playable": true,
             "sizeMB": 195
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "2000.10.15-wpix-steve-harvey-show-s05e02-joy-stevens-u",
+              "itemTitle": "WPIX - Steve Harvey Show S05E02 - Joy Stevens - October 15th, 2000",
+              "file": "2000.10.15 - WPIX - Steve Harvey Show S05E02 - Joy Stevens [U].mp4",
+              "name": "2000.10.15 - WPIX - Steve Harvey Show S05E02 - Joy Stevens [U]",
+              "url": "https://archive.org/download/2000.10.15-wpix-steve-harvey-show-s05e02-joy-stevens-u/2000.10.15%20-%20WPIX%20-%20Steve%20Harvey%20Show%20S05E02%20-%20Joy%20Stevens%20%5BU%5D.mp4",
+              "seconds": 1942,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 195
+            }
+          ]
         },
         {
           "number": 3,

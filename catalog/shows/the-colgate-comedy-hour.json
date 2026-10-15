@@ -3,7 +3,8 @@
   "slug": "the-colgate-comedy-hour",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:09:12.049Z",
+  "matchedAt": "2026-10-15T12:56:00.806Z",
+  "addedAt": "2026-10-15T12:54:30.998Z",
   "tvmaze": {
     "id": 23503,
     "name": "The Colgate Comedy Hour",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 102,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 102,
-    "pct": 0
+    "missing": 101,
+    "pct": 1
   },
   "seasons": [
     {
@@ -609,9 +610,35 @@
           "number": 1,
           "name": "Martin & Lewis",
           "airdate": "1953-10-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "TheColgateComedyHour1041953",
+            "itemTitle": "The Colgate Comedy Hour (10/4/1953)",
+            "file": "Colgate_Comedy_Hour_10_04_1953.mp4",
+            "name": "Colgate_Comedy_Hour_10_04_1953",
+            "url": "https://archive.org/download/TheColgateComedyHour1041953/Colgate_Comedy_Hour_10_04_1953.mp4",
+            "seconds": 3159,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 407
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "TheColgateComedyHour1041953",
+              "itemTitle": "The Colgate Comedy Hour (10/4/1953)",
+              "file": "Colgate_Comedy_Hour_10_04_1953_512kb.mp4",
+              "name": "Colgate_Comedy_Hour_10_04_1953_512kb",
+              "url": "https://archive.org/download/TheColgateComedyHour1041953/Colgate_Comedy_Hour_10_04_1953_512kb.mp4",
+              "seconds": 3159,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 254
+            }
+          ]
         },
         {
           "number": 2,

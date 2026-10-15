@@ -3,7 +3,8 @@
   "slug": "american-idol",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-15T12:08:26.786Z",
+  "matchedAt": "2026-10-15T12:56:09.485Z",
+  "addedAt": "2026-10-15T12:53:40.135Z",
   "tvmaze": {
     "id": 288,
     "name": "American Idol",
@@ -13,9 +14,9 @@
   },
   "coverage": {
     "total": 730,
-    "live": 0,
+    "live": 3,
     "review": 0,
-    "missing": 730,
+    "missing": 727,
     "pct": 0
   },
   "seasons": [
@@ -1302,8 +1303,20 @@
           "number": 8,
           "name": "Hollywood Round #1",
           "airdate": "2006-02-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "dvd-6804-american-idol-2006-02-08",
+            "itemTitle": "DVD-6804 - American Idol - February 8, 2006",
+            "file": "dvd-6804-american-idol-2006-02-08.mp4",
+            "name": "dvd-6804-american-idol-2006-02-08",
+            "url": "https://archive.org/download/dvd-6804-american-idol-2006-02-08/dvd-6804-american-idol-2006-02-08.mp4",
+            "seconds": 7571,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 750
+          },
           "alternates": []
         },
         {
@@ -1326,8 +1339,20 @@
           "number": 11,
           "name": "Performance Show Females #1 (top 12)",
           "airdate": "2006-02-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "airdate in filename",
+            "item": "dvd-6805-american-idol-2006-02-21",
+            "itemTitle": "DVD-6805 - American Idol - February 21, 2006",
+            "file": "dvd-6805-american-idol-2006-02-21.mp4",
+            "name": "dvd-6805-american-idol-2006-02-21",
+            "url": "https://archive.org/download/dvd-6805-american-idol-2006-02-21/dvd-6805-american-idol-2006-02-21.mp4",
+            "seconds": 14524,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 1435
+          },
           "alternates": []
         },
         {
@@ -1366,8 +1391,20 @@
           "number": 16,
           "name": "And Then There Were 16",
           "airdate": "2006-03-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "airdate in filename",
+            "item": "dvd-6905-american-idol-2006-03-02",
+            "itemTitle": "DVD-6905 - American Idol - March 2, 2006",
+            "file": "dvd-6905-american-idol-2006-03-02.mp4",
+            "name": "dvd-6905-american-idol-2006-03-02",
+            "url": "https://archive.org/download/dvd-6905-american-idol-2006-03-02/dvd-6905-american-idol-2006-03-02.mp4",
+            "seconds": 14647,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 1451
+          },
           "alternates": []
         },
         {

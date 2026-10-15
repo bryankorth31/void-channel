@@ -3,20 +3,21 @@
   "slug": "the-incredible-hulk",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T12:08:57.460Z",
+  "matchedAt": "2026-10-15T12:55:45.439Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 2151,
+    "id": null,
     "name": "The Incredible Hulk",
-    "runtime": 60,
-    "premiered": "1977-11-04",
+    "runtime": null,
+    "premiered": null,
     "network": "CBS"
   },
   "coverage": {
-    "total": 82,
+    "total": 22,
     "live": 0,
-    "review": 0,
-    "missing": 82,
-    "pct": 0
+    "review": 22,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,98 +25,321 @@
       "episodes": [
         {
           "number": 1,
-          "name": "The Incredible Hulk",
-          "airdate": "1977-11-04",
-          "state": "MISSING",
-          "file": null,
+          "name": "01 tomb of the unknown",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 01 Tomb of the Unknown Hulk.mp4",
+            "name": "Hulk 1982 Episode 01 Tomb of the Unknown Hulk",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2001%20Tomb%20of%20the%20Unknown%20Hulk.mp4",
+            "seconds": 1416,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 654,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Death in the Family",
-          "airdate": "1977-11-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "02 prisoner of the monster",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 02 Prisoner of the Monster.mp4",
+            "name": "Hulk 1982 Episode 02 Prisoner of the Monster",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2002%20Prisoner%20of%20the%20Monster.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 653,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Final Round",
-          "airdate": "1978-03-10",
-          "state": "MISSING",
-          "file": null,
+          "name": "03 origin of the",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 03 Origin of the Hulk.mp4",
+            "name": "Hulk 1982 Episode 03 Origin of the Hulk",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2003%20Origin%20of%20the%20Hulk.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 655,
+            "ep": {
+              "season": null,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "The Beast Within",
-          "airdate": "1978-03-17",
-          "state": "MISSING",
-          "file": null,
+          "name": "04 when monsters meet",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 04 When Monsters Meet.mp4",
+            "name": "Hulk 1982 Episode 04 When Monsters Meet",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2004%20When%20Monsters%20Meet.mp4",
+            "seconds": 1410,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 652,
+            "ep": {
+              "season": null,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Of Guilt, Models and Murder",
-          "airdate": "1978-03-24",
-          "state": "MISSING",
-          "file": null,
+          "name": "05 the cyclops project",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 05 The Cyclops Project.mp4",
+            "name": "Hulk 1982 Episode 05 The Cyclops Project",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2005%20The%20Cyclops%20Project.mp4",
+            "seconds": 1412,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 653,
+            "ep": {
+              "season": null,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Terror in Times Square",
-          "airdate": "1978-03-31",
-          "state": "MISSING",
-          "file": null,
+          "name": "06 bruce banner unmasked",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 06 Bruce Banner Unmasked.mp4",
+            "name": "Hulk 1982 Episode 06 Bruce Banner Unmasked",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2006%20Bruce%20Banner%20Unmasked.mp4",
+            "seconds": 1416,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 654,
+            "ep": {
+              "season": null,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "747",
-          "airdate": "1978-04-07",
-          "state": "MISSING",
-          "file": null,
+          "name": "07 the creature and the cavegirl",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 07 The Creature and the Cavegirl.mp4",
+            "name": "Hulk 1982 Episode 07 The Creature and the Cavegirl",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2007%20The%20Creature%20and%20the%20Cavegirl.mp4",
+            "seconds": 1416,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 654,
+            "ep": {
+              "season": null,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "The Hulk Breaks Las Vegas",
-          "airdate": "1978-04-21",
-          "state": "MISSING",
-          "file": null,
+          "name": "08 it lives it grows it destroys",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 08 It Lives! It Grows! It Destroys!.mp4",
+            "name": "Hulk 1982 Episode 08 It Lives! It Grows! It Destroys!",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2008%20It%20Lives!%20It%20Grows!%20It%20Destroys!.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 649,
+            "ep": {
+              "season": null,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Never Give a Trucker an Even Break",
-          "airdate": "1978-04-28",
-          "state": "MISSING",
-          "file": null,
+          "name": "09 the shrinking",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 09 The Incredible Shrinking Hulk.mp4",
+            "name": "Hulk 1982 Episode 09 The Incredible Shrinking Hulk",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2009%20The%20Incredible%20Shrinking%20Hulk.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 655,
+            "ep": {
+              "season": null,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Life and Death",
-          "airdate": "1978-05-12",
-          "state": "MISSING",
-          "file": null,
+          "name": "10 punks on wheels",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 10 Punks on Wheels.mp4",
+            "name": "Hulk 1982 Episode 10 Punks on Wheels",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2010%20Punks%20on%20Wheels.mp4",
+            "seconds": 1407,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 650,
+            "ep": {
+              "season": null,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Earthquakes Happen",
-          "airdate": "1978-05-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "11 enter she",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 11 Enter She-Hulk.mp4",
+            "name": "Hulk 1982 Episode 11 Enter She-Hulk",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2011%20Enter%20She-Hulk.mp4",
+            "seconds": 1416,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 652,
+            "ep": {
+              "season": null,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "The Waterfront Story",
-          "airdate": "1978-05-31",
-          "state": "MISSING",
-          "file": null,
+          "name": "12 the boy who saw tomorrow",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 12 The Boy Who Saw Tomorrow.mp4",
+            "name": "Hulk 1982 Episode 12 The Boy Who Saw Tomorrow",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2012%20The%20Boy%20Who%20Saw%20Tomorrow.mp4",
+            "seconds": 1410,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 649,
+            "ep": {
+              "season": null,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "13 the destroys bruce banner",
+          "state": "REVIEW",
+          "file": {
+            "item": "incredible-hulk-1982-cartoon-series",
+            "itemTitle": "The Incredible Hulk 1982 Cartoon Series",
+            "file": "Hulk 1982 Episode 13 The Hulk Destroys Bruce Banner.mp4",
+            "name": "Hulk 1982 Episode 13 The Hulk Destroys Bruce Banner",
+            "url": "https://archive.org/download/incredible-hulk-1982-cartoon-series/Hulk%201982%20Episode%2013%20The%20Hulk%20Destroys%20Bruce%20Banner.mp4",
+            "seconds": 1424,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 656,
+            "ep": {
+              "season": null,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "bliptv 20131013 031322 agonybooth theincrediblehulkreturnswiththorthefollowingspecialpres467",
+          "state": "REVIEW",
+          "file": {
+            "item": "bliptv-20131013-031322-Agonybooth-TheIncredibleHulkReturnsWithThorTheFollowingSpecialPres467",
+            "itemTitle": "The Incredible Hulk Returns (with Thor!) The Following Special Presentation #3",
+            "file": "bliptv-20131013-031322-Agonybooth-TheIncredibleHulkReturnsWithThorTheFollowingSpecialPres467.mp4",
+            "name": "bliptv-20131013-031322-Agonybooth-TheIncredibleHulkReturnsWithThorTheFollowingSpecialPres467",
+            "url": "https://archive.org/download/bliptv-20131013-031322-Agonybooth-TheIncredibleHulkReturnsWithThorTheFollowingSpecialPres467/bliptv-20131013-031322-Agonybooth-TheIncredibleHulkReturnsWithThorTheFollowingSpecialPres467.mp4",
+            "seconds": 1091,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 113,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
@@ -125,580 +349,202 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Married",
-          "airdate": "1978-09-22",
-          "state": "MISSING",
-          "file": null,
+          "name": "the of a different color",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x01 - Hulk of a Different Color.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x01 - Hulk of a Different Color",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x01%20-%20Hulk%20of%20a%20Different%20Color.mkv",
+            "seconds": 1335,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 407,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "The Antowuk Horror",
-          "airdate": "1978-09-29",
-          "state": "MISSING",
-          "file": null,
+          "name": "the down memory lane",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x02 - Down Memory Lane.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x02 - Down Memory Lane",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x02%20-%20Down%20Memory%20Lane.mkv",
+            "seconds": 1339,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 364,
+            "ep": {
+              "season": 2,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Ricky",
-          "airdate": "1978-10-06",
-          "state": "MISSING",
-          "file": null,
+          "name": "the mind over anti matter",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x03 - Mind Over Anti-Matter.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x03 - Mind Over Anti-Matter",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x03%20-%20Mind%20Over%20Anti-Matter.mkv",
+            "seconds": 1338,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 404,
+            "ep": {
+              "season": 2,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Rainbow's End",
-          "airdate": "1978-10-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "the they call me mr fixit",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x04 - They Call Me Mr. Fixit.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x04 - They Call Me Mr. Fixit",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x04%20-%20They%20Call%20Me%20Mr.%20Fixit.mkv",
+            "seconds": 1330,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 362,
+            "ep": {
+              "season": 2,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "A Child in Need",
-          "airdate": "1978-10-20",
-          "state": "MISSING",
-          "file": null,
+          "name": "the fashion warriors",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x05 - Fashion Warriors.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x05 - Fashion Warriors",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x05%20-%20Fashion%20Warriors.mkv",
+            "seconds": 1359,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 387,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Another Path",
-          "airdate": "1978-10-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "the hollywood rocks",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x06 - Hollywood Rocks.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x06 - Hollywood Rocks",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x06%20-%20Hollywood%20Rocks.mkv",
+            "seconds": 1329,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 356,
+            "ep": {
+              "season": 2,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Alice in Disco Land",
-          "airdate": "1978-11-03",
-          "state": "MISSING",
-          "file": null,
+          "name": "the the lost village",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x07 - The Lost Village.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x07 - The Lost Village",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x07%20-%20The%20Lost%20Village.mkv",
+            "seconds": 1329,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 413,
+            "ep": {
+              "season": 2,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Killer Instinct",
-          "airdate": "1978-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Stop the Presses",
-          "airdate": "1978-11-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Escape from Los Santos",
-          "airdate": "1978-12-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Wildfire",
-          "airdate": "1979-01-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "A Solitary Place",
-          "airdate": "1979-01-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Like a Brother",
-          "airdate": "1979-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "The Haunted",
-          "airdate": "1979-02-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Mystery Man (1)",
-          "airdate": "1979-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Mystery Man (2)",
-          "airdate": "1979-03-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "The Disciple",
-          "airdate": "1979-03-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "No Escape",
-          "airdate": "1979-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Kindred Spirits",
-          "airdate": "1979-04-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "The Confession",
-          "airdate": "1979-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "The Quiet Room",
-          "airdate": "1979-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Vendetta Road",
-          "airdate": "1979-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Metamorphosis",
-          "airdate": "1979-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Blind Rage",
-          "airdate": "1979-09-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Brain Child",
-          "airdate": "1979-10-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "The Slam",
-          "airdate": "1979-10-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "My Favorite Magician",
-          "airdate": "1979-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Jake",
-          "airdate": "1979-11-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Behind the Wheel",
-          "airdate": "1979-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Homecoming",
-          "airdate": "1979-11-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "The Snare",
-          "airdate": "1979-12-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Babalao",
-          "airdate": "1979-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Captive Night",
-          "airdate": "1979-12-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Broken Image",
-          "airdate": "1980-01-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Proof Positive",
-          "airdate": "1980-01-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Sideshow",
-          "airdate": "1980-01-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Long Run Home",
-          "airdate": "1980-02-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Falling Angels",
-          "airdate": "1980-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "The Lottery",
-          "airdate": "1980-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "The Psychic",
-          "airdate": "1980-02-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "A Rock and a Hard Place",
-          "airdate": "1980-02-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Deathmask",
-          "airdate": "1980-03-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Equinox",
-          "airdate": "1980-03-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Nine Hours",
-          "airdate": "1980-04-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "On the Line",
-          "airdate": "1980-04-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Prometheus (1)",
-          "airdate": "1980-11-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Prometheus (2)",
-          "airdate": "1980-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Free Fall",
-          "airdate": "1980-11-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Dark Side",
-          "airdate": "1980-12-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Deep Shock",
-          "airdate": "1980-12-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Bring Me the Head of the Hulk",
-          "airdate": "1981-01-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Fast Lane",
-          "airdate": "1981-01-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Goodbye Eddie Cain",
-          "airdate": "1981-01-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "King of the Beach",
-          "airdate": "1981-02-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Wax Museum",
-          "airdate": "1981-02-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "East Winds",
-          "airdate": "1981-02-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "The First (1)",
-          "airdate": "1981-03-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "The First (2)",
-          "airdate": "1981-03-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "The Harder They Fall",
-          "airdate": "1981-03-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Interview with the Hulk",
-          "airdate": "1981-04-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Half Nelson",
-          "airdate": "1981-04-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Danny",
-          "airdate": "1981-05-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Patterns",
-          "airdate": "1981-05-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 5,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Phenom",
-          "airdate": "1981-10-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Two Godmothers",
-          "airdate": "1981-10-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Veteran",
-          "airdate": "1981-10-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Sanctuary",
-          "airdate": "1981-11-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Triangle",
-          "airdate": "1981-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Slaves",
-          "airdate": "1982-05-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "A Minor Problem",
-          "airdate": "1982-05-12",
-          "state": "MISSING",
-          "file": null,
+          "name": "the mission",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-incredible-hulk_202507",
+            "itemTitle": "The Incredible Hulk (1996) 1080p",
+            "file": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x08 - Mission Incredible.mkv",
+            "name": "The Incredible Hulk (1996)/The Incredible Hulk (1996) - 2x08 - Mission Incredible",
+            "url": "https://archive.org/download/the-incredible-hulk_202507/The%20Incredible%20Hulk%20(1996)%2FThe%20Incredible%20Hulk%20(1996)%20-%202x08%20-%20Mission%20Incredible.mkv",
+            "seconds": 1329,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 413,
+            "ep": {
+              "season": 2,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 2151,
+    "name": "The Incredible Hulk",
+    "placed": 0
+  }
 }

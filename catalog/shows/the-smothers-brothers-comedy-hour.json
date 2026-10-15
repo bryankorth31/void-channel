@@ -3,7 +3,8 @@
   "slug": "the-smothers-brothers-comedy-hour",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T12:09:11.083Z",
+  "matchedAt": "2026-10-15T12:55:59.777Z",
+  "addedAt": "2026-10-15T12:09:11.083Z",
   "tvmaze": {
     "id": 21694,
     "name": "The Smothers Brothers Comedy Hour",
@@ -389,8 +390,8 @@
           "airdate": "1968-02-25",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
+            "conf": 0.7,
+            "why": "airdate in filename",
             "item": "smothers-brothers-comedy-hour-s-2-e-24-1968-02-25-leigh-french-rowan-and-martin-pete-seeger",
             "itemTitle": "Smothers Brothers Comedy Hour S2E24",
             "file": "Smothers Brothers Comedy Hour S2E24 1968-02-25 - Leigh French - Rowan and Martin - Pete Seeger.mp4",
@@ -402,7 +403,22 @@
             "langRisk": true,
             "sizeMB": 446
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "smothers-brothers-comedy-hour-s-2-e-24-1968-02-25-leigh-french-rowan-and-martin-pete-seeger",
+              "itemTitle": "Smothers Brothers Comedy Hour S2E24",
+              "file": "Smothers Brothers Comedy Hour S2E24 1968-02-25 - Leigh French - Rowan and Martin - Pete Seeger.mp4",
+              "name": "Smothers Brothers Comedy Hour S2E24 1968-02-25 - Leigh French - Rowan and Martin - Pete Seeger",
+              "url": "https://archive.org/download/smothers-brothers-comedy-hour-s-2-e-24-1968-02-25-leigh-french-rowan-and-martin-pete-seeger/Smothers%20Brothers%20Comedy%20Hour%20S2E24%201968-02-25%20-%20Leigh%20French%20-%20Rowan%20and%20Martin%20-%20Pete%20Seeger.mp4",
+              "seconds": 3458,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 446
+            }
+          ]
         },
         {
           "number": 25,

@@ -3,7 +3,8 @@
   "slug": "angel",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-15T12:07:54.187Z",
+  "matchedAt": "2026-10-15T12:55:37.421Z",
+  "addedAt": "2026-10-15T12:55:37.420Z",
   "tvmaze": {
     "id": 428,
     "name": "Angel",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 110,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 110,
-    "pct": 0
+    "missing": 109,
+    "pct": 1
   },
   "seasons": [
     {
@@ -396,8 +397,20 @@
           "number": 2,
           "name": "That Vision Thing",
           "airdate": "2001-10-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "craig-kilborn-2001-partial-collection",
+            "itemTitle": "The Late Late Show with Craig Kilborn - Partial 2001 episodes",
+            "file": "Craig Kilborn 2001.10.01 Alyson Hannigan, Robert Urich, The Angel [OakleyTapes_1825_NewsEnt].mp4",
+            "name": "Craig Kilborn 2001.10.01 Alyson Hannigan, Robert Urich, The Angel [OakleyTapes_1825_NewsEnt]",
+            "url": "https://archive.org/download/craig-kilborn-2001-partial-collection/Craig%20Kilborn%202001.10.01%20Alyson%20Hannigan%2C%20Robert%20Urich%2C%20The%20Angel%20%5BOakleyTapes_1825_NewsEnt%5D.mp4",
+            "seconds": 3527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1918
+          },
           "alternates": []
         },
         {

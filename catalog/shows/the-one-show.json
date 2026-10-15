@@ -3,7 +3,8 @@
   "slug": "the-one-show",
   "type": "Reality & Talk",
   "network": "GB",
-  "matchedAt": "2026-10-15T12:08:29.346Z",
+  "matchedAt": "2026-10-15T12:56:14.998Z",
+  "addedAt": "2026-10-15T12:53:45.748Z",
   "tvmaze": {
     "id": 3425,
     "name": "The One Show",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 4268,
     "live": 0,
-    "review": 0,
-    "missing": 4268,
+    "review": 1,
+    "missing": 4267,
     "pct": 0
   },
   "seasons": [
@@ -24144,8 +24145,20 @@
           "number": 120,
           "name": "29/06/2020",
           "airdate": "2020-06-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.5,
+            "why": "airdate in filename",
+            "item": "2020-06-29-the-zone-165",
+            "itemTitle": "The Zone 165",
+            "file": "2249-1-2020-06-29-TheZone-165.mp4",
+            "name": "2249-1-2020-06-29-TheZone-165",
+            "url": "https://archive.org/download/2020-06-29-the-zone-165/2249-1-2020-06-29-TheZone-165.mp4",
+            "seconds": 1819,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 189
+          },
           "alternates": []
         },
         {

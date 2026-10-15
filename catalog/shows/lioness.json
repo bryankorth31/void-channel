@@ -3,20 +3,21 @@
   "slug": "lioness",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-15T12:07:56.916Z",
+  "matchedAt": "2026-10-15T12:55:40.357Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 50415,
+    "id": null,
     "name": "Lioness",
-    "runtime": 49,
-    "premiered": "2023-07-23",
-    "network": "Paramount+"
+    "runtime": null,
+    "premiered": null,
+    "network": "US"
   },
   "coverage": {
-    "total": 24,
+    "total": 43,
     "live": 0,
-    "review": 0,
-    "missing": 24,
-    "pct": 0
+    "review": 43,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,207 +25,870 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Sacrificial Soldiers",
-          "airdate": "2023-07-23",
-          "state": "MISSING",
-          "file": null,
+          "name": "opening to the little mermaid",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "Opening to The Little Mermaid 1998 VHS.mp4",
+            "name": "Opening to The Little Mermaid 1998 VHS",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/Opening%20to%20The%20Little%20Mermaid%201998%20VHS.mp4",
+            "seconds": 662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "The Beating",
-          "airdate": "2023-07-23",
-          "state": "MISSING",
-          "file": null,
+          "name": "opening to the little mermaid ii return to the sea",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "Opening to The Little Mermaid II Return to the Sea 2000 VHS.mp4",
+            "name": "Opening to The Little Mermaid II Return to the Sea 2000 VHS",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/Opening%20to%20The%20Little%20Mermaid%20II%20Return%20to%20the%20Sea%202000%20VHS.mp4",
+            "seconds": 430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 306,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Bruise Like a Fist",
-          "airdate": "2023-07-30",
-          "state": "MISSING",
-          "file": null,
+          "name": "the little mer 2 return to the sea part 01 opening down to the sea",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 01 - Opening_Down to the Sea.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 01 - Opening_Down to the Sea",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2001%20-%20Opening_Down%20to%20the%20Sea.mp4",
+            "seconds": 242,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 24,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "The Choice of Failure",
-          "airdate": "2023-08-06",
-          "state": "MISSING",
-          "file": null,
+          "name": "the little mer 2 return to the sea part 02 a magic locket vitani",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 02 - A Magic Locket_Vitani.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 02 - A Magic Locket_Vitani",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2002%20-%20A%20Magic%20Locket_Vitani.mp4",
+            "seconds": 181,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Truth Is the Shrewdest Lie",
-          "airdate": "2023-08-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "the little mer 2 return to the sea part 03 fearing vitani losing the locket",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 03 - Fearing Vitani_Losing the Locket.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 03 - Fearing Vitani_Losing the Locket",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2003%20-%20Fearing%20Vitani_Losing%20the%20Locket.mp4",
+            "seconds": 108,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 6,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "The Lie Is the Truth",
-          "airdate": "2023-08-20",
-          "state": "MISSING",
-          "file": null,
+          "name": "the little mer 2 return to the sea part 04 twelve years later",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 04 - Twelve Years Later.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 04 - Twelve Years Later",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2004%20-%20Twelve%20Years%20Later.mp4",
+            "seconds": 226,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 17,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Wish the Fight Away",
-          "airdate": "2023-08-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "the little mer 2 return to the sea part 05 vitani and fidgets confrontation",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 05 - Vitani and Fidget's Confrontation.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 05 - Vitani and Fidget's Confrontation",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2005%20-%20Vitani%20and%20Fidget's%20Confrontation.mp4",
+            "seconds": 162,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Gone Is the Illusion of Order",
-          "airdate": "2023-09-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Beware the Old Soldier",
-          "airdate": "2024-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "I Love My Country",
-          "airdate": "2024-10-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "the little mer 2 return to the sea part 07 anxious moments",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 07 - Anxious Moments.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 07 - Anxious Moments",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2007%20-%20Anxious%20Moments.mp4",
+            "seconds": 211,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 14,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Along Came a Spider",
-          "airdate": "2024-11-03",
-          "state": "MISSING",
-          "file": null,
+          "number": 9,
+          "name": "the little mer 2 return to the sea part 08 a not so perfect party",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 08 - A Not-So-Perfect Party.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 08 - A Not-So-Perfect Party",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2008%20-%20A%20Not-So-Perfect%20Party.mp4",
+            "seconds": 174,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Five Hundred Children",
-          "airdate": "2024-11-10",
-          "state": "MISSING",
-          "file": null,
+          "number": 10,
+          "name": "the little mer 2 return to the sea part 09 a peek into the past",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 09 - A Peek into the Past.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 09 - A Peek into the Past",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2009%20-%20A%20Peek%20into%20the%20Past.mp4",
+            "seconds": 119,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 6,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Shatter the Moon",
-          "airdate": "2024-11-17",
-          "state": "MISSING",
-          "file": null,
+          "number": 11,
+          "name": "the little mer 2 return to the sea part 12 kiara meets vitani",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 12 - Kiara Meets Vitani.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 12 - Kiara Meets Vitani",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2012%20-%20Kiara%20Meets%20Vitani.mp4",
+            "seconds": 268,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 17,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "2831",
-          "airdate": "2024-11-24",
-          "state": "MISSING",
-          "file": null,
+          "number": 12,
+          "name": "the little mer 2 return to the sea part 13 for a moment vitanis diabolical deception",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 13 - For a Moment_Vitani's Diabolical Deception.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 13 - For a Moment_Vitani's Diabolical Deception",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2013%20-%20For%20a%20Moment_Vitani's%20Diabolical%20Deception.mp4",
+            "seconds": 277,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 24,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "The Devil Has Aces",
-          "airdate": "2024-12-01",
-          "state": "MISSING",
-          "file": null,
+          "number": 13,
+          "name": "the little mer 2 return to the sea part 14 meet tigger and pooh",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 14 - Meet Tigger and Pooh.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 14 - Meet Tigger and Pooh",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2014%20-%20Meet%20Tigger%20and%20Pooh.mp4",
+            "seconds": 420,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 47,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "The Compass Points Home",
-          "airdate": "2024-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Spider and the Fly",
-          "airdate": "2026-08-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "No Sorrow Like the Survivor",
-          "airdate": "2026-08-09",
-          "state": "MISSING",
-          "file": null,
+          "number": 14,
+          "name": "the little mer 2 return to the sea part 15 old friends",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 15 - Old Friends.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 15 - Old Friends",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2015%20-%20Old%20Friends.mp4",
+            "seconds": 121,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "The Bear Is Infected",
-          "airdate": "2026-08-16",
-          "state": "MISSING",
-          "file": null,
+          "number": 15,
+          "name": "the little mer 2 return to the sea part 16 taking the trident",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 16 - Taking the Trident.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 16 - Taking the Trident",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2016%20-%20Taking%20the%20Trident.mp4",
+            "seconds": 225,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 19,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Murder Hornets",
-          "airdate": "2026-08-23",
-          "state": "MISSING",
-          "file": null,
+          "number": 16,
+          "name": "the little mer 2 return to the sea part 17 kiaras big mistake",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 17 - Kiara's Big Mistake.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 17 - Kiara's Big Mistake",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2017%20-%20Kiara's%20Big%20Mistake.mp4",
+            "seconds": 316,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 28,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "The Idiot Army",
-          "airdate": "2026-08-30",
-          "state": "MISSING",
-          "file": null,
+          "number": 17,
+          "name": "the little mer 2 return to the sea part 18 showdown with the mighty vitani part 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 18 - Showdown with the Mighty Vitani (Part 1).mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 18 - Showdown with the Mighty Vitani (Part 1)",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2018%20-%20Showdown%20with%20the%20Mighty%20Vitani%20(Part%201).mp4",
+            "seconds": 416,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 35,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Sugar Land",
-          "airdate": "2026-09-06",
-          "state": "MISSING",
-          "file": null,
+          "number": 18,
+          "name": "the little mer 2 return to the sea part 19 showdown with the mighty vitani part 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 19 - Showdown with the Mighty Vitani (Part 2).mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 19 - Showdown with the Mighty Vitani (Part 2)",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2019%20-%20Showdown%20with%20the%20Mighty%20Vitani%20(Part%202).mp4",
+            "seconds": 213,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "Kiss the Girls",
-          "airdate": "2026-09-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 19,
+          "name": "the little mer 2 return to the sea part 20 a most precious gift here on the land and sea",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 20 - A Most Precious Gift_Here on the Land and Sea.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 20 - A Most Precious Gift_Here on the Land and Sea",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2020%20-%20A%20Most%20Precious%20Gift_Here%20on%20the%20Land%20and%20Sea.mp4",
+            "seconds": 190,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 19,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "The Unravelling",
-          "airdate": "2026-09-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 20,
+          "name": "the little mer 2 return to the sea part 21 end credits part of your world",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 21 - End Credits (Part of Your World).mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 21 - End Credits (Part of Your World)",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2021%20-%20End%20Credits%20(Part%20of%20Your%20World).mp4",
+            "seconds": 379,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 34,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "the little mer 2 return to the sea part 22",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs",
+            "itemTitle": "The Little Mer-Lioness 2: Retutn to the Sea (2000 VHS)",
+            "file": "The Little Mer-Lioness 2 Return to the Sea part 22.mp4",
+            "name": "The Little Mer-Lioness 2 Return to the Sea part 22",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-ii-return-to-the-sea-2000-vhs/The%20Little%20Mer-Lioness%202%20Return%20to%20the%20Sea%20part%2022.mp4",
+            "seconds": 248,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 243,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "the little mer part 01 fathoms below main titles",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 01 - Fathoms Below_Main Titles.mp4",
+            "name": "The Little Mer-Lioness part 01 - Fathoms Below_Main Titles",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2001%20-%20Fathoms%20Below_Main%20Titles.mp4",
+            "seconds": 257,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 71,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "the little mer part 02 king juliens concert daughters of mufasa",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 02 - King Julien's Concert (Daughters of Mufasa).mp4",
+            "name": "The Little Mer-Lioness part 02 - King Julien's Concert (Daughters of Mufasa)",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2002%20-%20King%20Julien's%20Concert%20(Daughters%20of%20Mufasa).mp4",
+            "seconds": 121,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 6,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "the little mer part 03 nala at the sunken ship",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 03 - Nala at the Sunken Ship.mp4",
+            "name": "The Little Mer-Lioness part 03 - Nala at the Sunken Ship",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2003%20-%20Nala%20at%20the%20Sunken%20Ship.mp4",
+            "seconds": 183,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "the little mer part 04 nala meets zazu",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 04 - Nala Meets Zazu.mp4",
+            "name": "The Little Mer-Lioness part 04 - Nala Meets Zazu",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2004%20-%20Nala%20Meets%20Zazu.mp4",
+            "seconds": 106,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 4,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "the little mer part 05 zira watches nala",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 05 - Zira Watches Nala.mp4",
+            "name": "The Little Mer-Lioness part 05 - Zira Watches Nala",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2005%20-%20Zira%20Watches%20Nala.mp4",
+            "seconds": 208,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "the little mer part 06 part of your world",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 06 - Part of Your World.mp4",
+            "name": "The Little Mer-Lioness part 06 - Part of Your World",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2006%20-%20Part%20of%20Your%20World.mp4",
+            "seconds": 230,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "the little mer part 07 to the surface",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 07 - To the Surface.mp4",
+            "name": "The Little Mer-Lioness part 07 - To the Surface",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2007%20-%20To%20the%20Surface.mp4",
+            "seconds": 193,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 10,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "the little mer part 08 the storm",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 08 - The Storm.mp4",
+            "name": "The Little Mer-Lioness part 08 - The Storm",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2008%20-%20The%20Storm.mp4",
+            "seconds": 154,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "the little mer part 09 simba is saved part of your world reprise",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 09 - Simba is Saved_Part of Your World (Reprise).mp4",
+            "name": "The Little Mer-Lioness part 09 - Simba is Saved_Part of Your World (Reprise)",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2009%20-%20Simba%20is%20Saved_Part%20of%20Your%20World%20(Reprise).mp4",
+            "seconds": 239,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "the little mer part 10 under the sea",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 10 - Under the Sea.mp4",
+            "name": "The Little Mer-Lioness part 10 - Under the Sea",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2010%20-%20Under%20the%20Sea.mp4",
+            "seconds": 213,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "the little mer part 11 nalas hidden treasure",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 11 - Nala's Hidden Treasure.mp4",
+            "name": "The Little Mer-Lioness part 11 - Nala's Hidden Treasure",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2011%20-%20Nala's%20Hidden%20Treasure.mp4",
+            "seconds": 343,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "the little mer part 12 ziras lair poor unfortunate souls",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 12 - Zira's Lair Poor Unfortunate Souls.mp4",
+            "name": "The Little Mer-Lioness part 12 - Zira's Lair Poor Unfortunate Souls",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2012%20-%20Zira's%20Lair%20Poor%20Unfortunate%20Souls.mp4",
+            "seconds": 415,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 19,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "the little mer part 13 in simbas kingdom",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 13 - In Simba's Kingdom.mp4",
+            "name": "The Little Mer-Lioness part 13 - In Simba's Kingdom",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2013%20-%20In%20Simba's%20Kingdom.mp4",
+            "seconds": 298,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 15,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "the little mer part 14 dinner in the castle les poissons",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 14 - Dinner in the Castle Les Poissons.mp4",
+            "name": "The Little Mer-Lioness part 14 - Dinner in the Castle Les Poissons",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2014%20-%20Dinner%20in%20the%20Castle%20Les%20Poissons.mp4",
+            "seconds": 344,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 16,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "the little mer part 15 a tour of the kingdom",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 15 - A Tour of the Kingdom.mp4",
+            "name": "The Little Mer-Lioness part 15 - A Tour of the Kingdom",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2015%20-%20A%20Tour%20of%20the%20Kingdom.mp4",
+            "seconds": 169,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "the little mer part 16 kiss the girl",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 16 - Kiss the Girl.mp4",
+            "name": "The Little Mer-Lioness part 16 - Kiss the Girl",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2016%20-%20Kiss%20the%20Girl.mp4",
+            "seconds": 222,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 12,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "the little mer part 17 zira takes charge",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 17 - Zira Takes Charge.mp4",
+            "name": "The Little Mer-Lioness part 17 - Zira Takes Charge",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2017%20-%20Zira%20Takes%20Charge.mp4",
+            "seconds": 201,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "the little mer part 18 the wedding ship",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 18 - The Wedding Ship.mp4",
+            "name": "The Little Mer-Lioness part 18 - The Wedding Ship",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2018%20-%20The%20Wedding%20Ship.mp4",
+            "seconds": 259,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "the little mer part 19 the sun sets",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 19 - The Sun Sets.mp4",
+            "name": "The Little Mer-Lioness part 19 - The Sun Sets",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2019%20-%20The%20Sun%20Sets.mp4",
+            "seconds": 174,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "the little mer part 20 ziras wrath",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 20 - Zira's Wrath.mp4",
+            "name": "The Little Mer-Lioness part 20 - Zira's Wrath",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2020%20-%20Zira's%20Wrath.mp4",
+            "seconds": 151,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 8,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "the little mer part 21 a happy ending",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 21 - A Happy Ending.mp4",
+            "name": "The Little Mer-Lioness part 21 - A Happy Ending",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2021%20-%20A%20Happy%20Ending.mp4",
+            "seconds": 172,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "the little mer part 22 end credits",
+          "state": "REVIEW",
+          "file": {
+            "item": "opening-to-the-little-mermaid-1998-vhs_202507",
+            "itemTitle": "The Little Mer-Lioness (1998 VHS)",
+            "file": "The Little Mer-Lioness part 22 - End Credits.mp4",
+            "name": "The Little Mer-Lioness part 22 - End Credits",
+            "url": "https://archive.org/download/opening-to-the-little-mermaid-1998-vhs_202507/The%20Little%20Mer-Lioness%20part%2022%20-%20End%20Credits.mp4",
+            "seconds": 316,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 17,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 50415,
+    "name": "Lioness",
+    "placed": 0
+  }
 }

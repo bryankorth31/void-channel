@@ -3,7 +3,8 @@
   "slug": "you-bet-your-life",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:09:08.704Z",
+  "matchedAt": "2026-10-15T12:55:57.176Z",
+  "addedAt": "2026-10-15T12:09:08.704Z",
   "tvmaze": {
     "id": 2197,
     "name": "You Bet Your Life",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 174,
-    "live": 0,
-    "review": 2,
+    "live": 2,
+    "review": 0,
     "missing": 172,
     "pct": 1
   },
@@ -74,20 +75,8 @@
           "number": 7,
           "name": "Face",
           "airdate": "1950-11-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Face\" (0.95)",
-            "item": "youBetYourLife1955-SecretWordFace",
-            "itemTitle": "'You Bet Your Life' (1955) - Secret Word: Face",
-            "file": "You_Bet_Your_Life_Face_02_24_1955.mp4",
-            "name": "You_Bet_Your_Life_Face_02_24_1955",
-            "url": "https://archive.org/download/youBetYourLife1955-SecretWordFace/You_Bet_Your_Life_Face_02_24_1955.mp4",
-            "seconds": 1761,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 250
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -466,8 +455,20 @@
           "number": 24,
           "name": "Face",
           "airdate": "1955-02-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "youBetYourLife1955-SecretWordFace",
+            "itemTitle": "'You Bet Your Life' (1955) - Secret Word: Face",
+            "file": "You_Bet_Your_Life_Face_02_24_1955.mp4",
+            "name": "You_Bet_Your_Life_Face_02_24_1955",
+            "url": "https://archive.org/download/youBetYourLife1955-SecretWordFace/You_Bet_Your_Life_Face_02_24_1955.mp4",
+            "seconds": 1761,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 250
+          },
           "alternates": []
         },
         {
@@ -559,10 +560,10 @@
           "number": 8,
           "name": "Book",
           "airdate": "1955-11-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Book\" (0.95)",
+            "conf": 1,
+            "why": "airdate in filename",
             "item": "youBetYourLife1955-SecretWordBook",
             "itemTitle": "'You Bet Your Life' (1955) - Secret Word: Book",
             "file": "You_Bet_Your_Life_Book_11_17_1955.mp4",

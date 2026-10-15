@@ -3,7 +3,8 @@
   "slug": "concentration",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T12:09:08.658Z",
+  "matchedAt": "2026-10-15T12:55:57.118Z",
+  "addedAt": "2026-10-15T12:09:08.658Z",
   "tvmaze": {
     "id": 7025,
     "name": "Concentration",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 251,
-    "live": 0,
-    "review": 251,
+    "live": 2,
+    "review": 249,
     "missing": 0,
     "pct": 100
   },
@@ -29,16 +30,16 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 1 of 14 in \"Concentration\"",
+            "why": "sequence guess: file 1 of 10 in \"Concentration\"",
             "item": "concentration1958-bmp",
             "itemTitle": "Concentration",
-            "file": "S01E01_Concentration_1958_10_15.mp4",
-            "name": "S01E01_Concentration_1958_10_15",
-            "url": "https://archive.org/download/concentration1958-bmp/S01E01_Concentration_1958_10_15.mp4",
-            "seconds": 1771,
-            "format": "h.264",
+            "file": "S01E03_Concentration_1963_09_11.ia.mp4",
+            "name": "S01E03_Concentration_1963_09_11",
+            "url": "https://archive.org/download/concentration1958-bmp/S01E03_Concentration_1963_09_11.ia.mp4",
+            "seconds": 1723,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 171
+            "sizeMB": 741
           },
           "alternates": [
             {
@@ -76,16 +77,16 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 14 in \"Concentration\"",
+            "why": "sequence guess: file 2 of 10 in \"Concentration\"",
             "item": "concentration1958-bmp",
             "itemTitle": "Concentration",
-            "file": "S01E02_Concentration_1959_02_09.ia.mp4",
-            "name": "S01E02_Concentration_1959_02_09",
-            "url": "https://archive.org/download/concentration1958-bmp/S01E02_Concentration_1959_02_09.ia.mp4",
-            "seconds": 1632,
-            "format": "h.264 IA",
+            "file": "S01E05_Concentration_1963_09_13.mp4",
+            "name": "S01E05_Concentration_1963_09_13",
+            "url": "https://archive.org/download/concentration1958-bmp/S01E05_Concentration_1963_09_13.mp4",
+            "seconds": 1727,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 180
+            "sizeMB": 168
           },
           "alternates": [
             {
@@ -123,30 +124,30 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 3 of 14 in \"Concentration\"",
-            "item": "concentration1958-bmp",
-            "itemTitle": "Concentration",
-            "file": "S01E03_Concentration_1963_09_11.ia.mp4",
-            "name": "S01E03_Concentration_1963_09_11",
-            "url": "https://archive.org/download/concentration1958-bmp/S01E03_Concentration_1963_09_11.ia.mp4",
-            "seconds": 1723,
-            "format": "h.264 IA",
+            "why": "sequence guess: file 3 of 688 in \"Classic Concentration\"",
+            "item": "classicconcentration-bmp",
+            "itemTitle": "Classic Concentration",
+            "file": "S01E003_Classic_Concentration_1987-05-07_0003.mp4",
+            "name": "S01E003_Classic_Concentration_1987-05-07_0003",
+            "url": "https://archive.org/download/classicconcentration-bmp/S01E003_Classic_Concentration_1987-05-07_0003.mp4",
+            "seconds": 1269,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 741
+            "sizeMB": 166
           },
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 3 of 688 in \"Classic Concentration\"",
-              "item": "classicconcentration-bmp",
-              "itemTitle": "Classic Concentration",
-              "file": "S01E003_Classic_Concentration_1987-05-07_0003.mp4",
-              "name": "S01E003_Classic_Concentration_1987-05-07_0003",
-              "url": "https://archive.org/download/classicconcentration-bmp/S01E003_Classic_Concentration_1987-05-07_0003.mp4",
-              "seconds": 1269,
+              "why": "sequence guess: file 3 of 10 in \"Concentration\"",
+              "item": "concentration1958-bmp",
+              "itemTitle": "Concentration",
+              "file": "S01E08_Concentration_1968_12_24.mp4",
+              "name": "S01E08_Concentration_1968_12_24",
+              "url": "https://archive.org/download/concentration1958-bmp/S01E08_Concentration_1968_12_24.mp4",
+              "seconds": 1625,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 166
+              "sizeMB": 163
             },
             {
               "conf": 0.55,
@@ -197,16 +198,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 4 of 14 in \"Concentration\"",
+              "why": "sequence guess: file 4 of 10 in \"Concentration\"",
               "item": "concentration1958-bmp",
               "itemTitle": "Concentration",
-              "file": "S01E05_Concentration_1963_09_13.mp4",
-              "name": "S01E05_Concentration_1963_09_13",
-              "url": "https://archive.org/download/concentration1958-bmp/S01E05_Concentration_1963_09_13.mp4",
-              "seconds": 1727,
+              "file": "S01E10_Concentration_1969_12_24.mp4",
+              "name": "S01E10_Concentration_1969_12_24",
+              "url": "https://archive.org/download/concentration1958-bmp/S01E10_Concentration_1969_12_24.mp4",
+              "seconds": 1720,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 168
+              "sizeMB": 172
             }
           ]
         },
@@ -244,16 +245,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 5 of 14 in \"Concentration\"",
+              "why": "sequence guess: file 5 of 10 in \"Concentration\"",
               "item": "concentration1958-bmp",
               "itemTitle": "Concentration",
-              "file": "S01E08_Concentration_1968_12_24.mp4",
-              "name": "S01E08_Concentration_1968_12_24",
-              "url": "https://archive.org/download/concentration1958-bmp/S01E08_Concentration_1968_12_24.mp4",
-              "seconds": 1625,
+              "file": "S01E12_Concentration_1973_03_23.mp4",
+              "name": "S01E12_Concentration_1973_03_23",
+              "url": "https://archive.org/download/concentration1958-bmp/S01E12_Concentration_1973_03_23.mp4",
+              "seconds": 1308,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 163
+              "sizeMB": 127
             }
           ]
         },
@@ -264,18 +265,31 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 6 of 198 in \"Concentration (1973)\"",
-            "item": "concentration1973-bmp",
-            "itemTitle": "Concentration (1973)",
-            "file": "S04E004_Concentration_1976_974.mp4",
-            "name": "S04E004_Concentration_1976_974",
-            "url": "https://archive.org/download/concentration1973-bmp/S04E004_Concentration_1976_974.mp4",
-            "seconds": 1327,
+            "why": "sequence guess: file 6 of 10 in \"Concentration\"",
+            "item": "concentration1958-bmp",
+            "itemTitle": "Concentration",
+            "file": "S06E018_Concentration_1963_09_11_1318.mp4",
+            "name": "S06E018_Concentration_1963_09_11_1318",
+            "url": "https://archive.org/download/concentration1958-bmp/S06E018_Concentration_1963_09_11_1318.mp4",
+            "seconds": 1723,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 718
+            "sizeMB": 741
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 198 in \"Concentration (1973)\"",
+              "item": "concentration1973-bmp",
+              "itemTitle": "Concentration (1973)",
+              "file": "S04E004_Concentration_1976_974.mp4",
+              "name": "S04E004_Concentration_1976_974",
+              "url": "https://archive.org/download/concentration1973-bmp/S04E004_Concentration_1976_974.mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 718
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 6 of 688 in \"Classic Concentration\"",
@@ -288,19 +302,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 179
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 14 in \"Concentration\"",
-              "item": "concentration1958-bmp",
-              "itemTitle": "Concentration",
-              "file": "S01E10_Concentration_1969_12_24.mp4",
-              "name": "S01E10_Concentration_1969_12_24",
-              "url": "https://archive.org/download/concentration1958-bmp/S01E10_Concentration_1969_12_24.mp4",
-              "seconds": 1720,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 172
             }
           ]
         },
@@ -325,6 +326,19 @@
           "alternates": [
             {
               "conf": 0.55,
+              "why": "sequence guess: file 7 of 10 in \"Concentration\"",
+              "item": "concentration1958-bmp",
+              "itemTitle": "Concentration",
+              "file": "S06E020_Concentration_1963_09_13_1320.m4v",
+              "name": "S06E020_Concentration_1963_09_13_1320",
+              "url": "https://archive.org/download/concentration1958-bmp/S06E020_Concentration_1963_09_13_1320.m4v",
+              "seconds": 1727,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 372
+            },
+            {
+              "conf": 0.55,
               "why": "sequence guess: file 7 of 688 in \"Classic Concentration\"",
               "item": "classicconcentration-bmp",
               "itemTitle": "Classic Concentration",
@@ -332,19 +346,6 @@
               "name": "S01E007_Classic_Concentration_1987-05-13_0007",
               "url": "https://archive.org/download/classicconcentration-bmp/S01E007_Classic_Concentration_1987-05-13_0007.mp4",
               "seconds": 1261,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 127
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 14 in \"Concentration\"",
-              "item": "concentration1958-bmp",
-              "itemTitle": "Concentration",
-              "file": "S01E12_Concentration_1973_03_23.mp4",
-              "name": "S01E12_Concentration_1973_03_23",
-              "url": "https://archive.org/download/concentration1958-bmp/S01E12_Concentration_1973_03_23.mp4",
-              "seconds": 1308,
               "format": "h.264",
               "playable": true,
               "sizeMB": 127
@@ -358,30 +359,30 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 8 of 198 in \"Concentration (1973)\"",
-            "item": "concentration1973-bmp",
-            "itemTitle": "Concentration (1973)",
-            "file": "S04E006_Concentration_1976_981.mp4",
-            "name": "S04E006_Concentration_1976_981",
-            "url": "https://archive.org/download/concentration1973-bmp/S04E006_Concentration_1976_981.mp4",
-            "seconds": 1313,
+            "why": "sequence guess: file 8 of 10 in \"Concentration\"",
+            "item": "concentration1958-bmp",
+            "itemTitle": "Concentration",
+            "file": "S11E087_Concentration_1968_12_24_2697.m4v",
+            "name": "S11E087_Concentration_1968_12_24_2697",
+            "url": "https://archive.org/download/concentration1958-bmp/S11E087_Concentration_1968_12_24_2697.m4v",
+            "seconds": 1625,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 711
+            "sizeMB": 1015
           },
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 14 in \"Concentration\"",
-              "item": "concentration1958-bmp",
-              "itemTitle": "Concentration",
-              "file": "S01E038_Concentration_1958_10_15_0038.m4v",
-              "name": "S01E038_Concentration_1958_10_15_0038",
-              "url": "https://archive.org/download/concentration1958-bmp/S01E038_Concentration_1958_10_15_0038.m4v",
-              "seconds": 1771,
+              "why": "sequence guess: file 8 of 198 in \"Concentration (1973)\"",
+              "item": "concentration1973-bmp",
+              "itemTitle": "Concentration (1973)",
+              "file": "S04E006_Concentration_1976_981.mp4",
+              "name": "S04E006_Concentration_1976_981",
+              "url": "https://archive.org/download/concentration1973-bmp/S04E006_Concentration_1976_981.mp4",
+              "seconds": 1313,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 406
+              "sizeMB": 711
             },
             {
               "conf": 0.55,
@@ -405,30 +406,30 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 9 of 198 in \"Concentration (1973)\"",
-            "item": "concentration1973-bmp",
-            "itemTitle": "Concentration (1973)",
-            "file": "S04E007_Concentration_1976_982.mp4",
-            "name": "S04E007_Concentration_1976_982",
-            "url": "https://archive.org/download/concentration1973-bmp/S04E007_Concentration_1976_982.mp4",
-            "seconds": 1307,
+            "why": "sequence guess: file 9 of 10 in \"Concentration\"",
+            "item": "concentration1958-bmp",
+            "itemTitle": "Concentration",
+            "file": "S12E088_Concentration_1969_12_24_2958.m4v",
+            "name": "S12E088_Concentration_1969_12_24_2958",
+            "url": "https://archive.org/download/concentration1958-bmp/S12E088_Concentration_1969_12_24_2958.m4v",
+            "seconds": 1720,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 708
+            "sizeMB": 1077
           },
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 9 of 14 in \"Concentration\"",
-              "item": "concentration1958-bmp",
-              "itemTitle": "Concentration",
-              "file": "S01E121_Concentration_1959_02_09_0121_INC.mp4",
-              "name": "S01E121_Concentration_1959_02_09_0121_INC",
-              "url": "https://archive.org/download/concentration1958-bmp/S01E121_Concentration_1959_02_09_0121_INC.mp4",
-              "seconds": 1632,
+              "why": "sequence guess: file 9 of 198 in \"Concentration (1973)\"",
+              "item": "concentration1973-bmp",
+              "itemTitle": "Concentration (1973)",
+              "file": "S04E007_Concentration_1976_982.mp4",
+              "name": "S04E007_Concentration_1976_982",
+              "url": "https://archive.org/download/concentration1973-bmp/S04E007_Concentration_1976_982.mp4",
+              "seconds": 1307,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 180
+              "sizeMB": 708
             },
             {
               "conf": 0.55,
@@ -452,30 +453,30 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 10 of 14 in \"Concentration\"",
-            "item": "concentration1958-bmp",
-            "itemTitle": "Concentration",
-            "file": "S06E018_Concentration_1963_09_11_1318.mp4",
-            "name": "S06E018_Concentration_1963_09_11_1318",
-            "url": "https://archive.org/download/concentration1958-bmp/S06E018_Concentration_1963_09_11_1318.mp4",
-            "seconds": 1723,
+            "why": "sequence guess: file 10 of 198 in \"Concentration (1973)\"",
+            "item": "concentration1973-bmp",
+            "itemTitle": "Concentration (1973)",
+            "file": "S04E008_Concentration_1976_983.mp4",
+            "name": "S04E008_Concentration_1976_983",
+            "url": "https://archive.org/download/concentration1973-bmp/S04E008_Concentration_1976_983.mp4",
+            "seconds": 1322,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 741
+            "sizeMB": 715
           },
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 10 of 198 in \"Concentration (1973)\"",
-              "item": "concentration1973-bmp",
-              "itemTitle": "Concentration (1973)",
-              "file": "S04E008_Concentration_1976_983.mp4",
-              "name": "S04E008_Concentration_1976_983",
-              "url": "https://archive.org/download/concentration1973-bmp/S04E008_Concentration_1976_983.mp4",
-              "seconds": 1322,
+              "why": "sequence guess: file 10 of 10 in \"Concentration\"",
+              "item": "concentration1958-bmp",
+              "itemTitle": "Concentration",
+              "file": "S15E120_Concentration_1973_03_23_3770.m4v",
+              "name": "S15E120_Concentration_1973_03_23_3770",
+              "url": "https://archive.org/download/concentration1958-bmp/S15E120_Concentration_1973_03_23_3770.m4v",
+              "seconds": 1308,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 715
+              "sizeMB": 362
             },
             {
               "conf": 0.55,
@@ -513,19 +514,6 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 11 of 14 in \"Concentration\"",
-              "item": "concentration1958-bmp",
-              "itemTitle": "Concentration",
-              "file": "S06E020_Concentration_1963_09_13_1320.m4v",
-              "name": "S06E020_Concentration_1963_09_13_1320",
-              "url": "https://archive.org/download/concentration1958-bmp/S06E020_Concentration_1963_09_13_1320.m4v",
-              "seconds": 1727,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 372
-            },
-            {
-              "conf": 0.55,
               "why": "sequence guess: file 11 of 688 in \"Classic Concentration\"",
               "item": "classicconcentration-bmp",
               "itemTitle": "Classic Concentration",
@@ -546,31 +534,18 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 12 of 14 in \"Concentration\"",
-            "item": "concentration1958-bmp",
-            "itemTitle": "Concentration",
-            "file": "S11E087_Concentration_1968_12_24_2697.m4v",
-            "name": "S11E087_Concentration_1968_12_24_2697",
-            "url": "https://archive.org/download/concentration1958-bmp/S11E087_Concentration_1968_12_24_2697.m4v",
-            "seconds": 1625,
+            "why": "sequence guess: file 12 of 198 in \"Concentration (1973)\"",
+            "item": "concentration1973-bmp",
+            "itemTitle": "Concentration (1973)",
+            "file": "S04E010_Concentration_1976_985.mp4",
+            "name": "S04E010_Concentration_1976_985",
+            "url": "https://archive.org/download/concentration1973-bmp/S04E010_Concentration_1976_985.mp4",
+            "seconds": 1294,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1015
+            "sizeMB": 700
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 198 in \"Concentration (1973)\"",
-              "item": "concentration1973-bmp",
-              "itemTitle": "Concentration (1973)",
-              "file": "S04E010_Concentration_1976_985.mp4",
-              "name": "S04E010_Concentration_1976_985",
-              "url": "https://archive.org/download/concentration1973-bmp/S04E010_Concentration_1976_985.mp4",
-              "seconds": 1294,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 700
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 12 of 688 in \"Classic Concentration\"",
@@ -593,31 +568,18 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 13 of 14 in \"Concentration\"",
-            "item": "concentration1958-bmp",
-            "itemTitle": "Concentration",
-            "file": "S12E088_Concentration_1969_12_24_2958.m4v",
-            "name": "S12E088_Concentration_1969_12_24_2958",
-            "url": "https://archive.org/download/concentration1958-bmp/S12E088_Concentration_1969_12_24_2958.m4v",
-            "seconds": 1720,
+            "why": "sequence guess: file 13 of 198 in \"Concentration (1973)\"",
+            "item": "concentration1973-bmp",
+            "itemTitle": "Concentration (1973)",
+            "file": "S04E011_Concentration_1976_991.mp4",
+            "name": "S04E011_Concentration_1976_991",
+            "url": "https://archive.org/download/concentration1973-bmp/S04E011_Concentration_1976_991.mp4",
+            "seconds": 1307,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1077
+            "sizeMB": 707
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 198 in \"Concentration (1973)\"",
-              "item": "concentration1973-bmp",
-              "itemTitle": "Concentration (1973)",
-              "file": "S04E011_Concentration_1976_991.mp4",
-              "name": "S04E011_Concentration_1976_991",
-              "url": "https://archive.org/download/concentration1973-bmp/S04E011_Concentration_1976_991.mp4",
-              "seconds": 1307,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 707
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 13 of 688 in \"Classic Concentration\"",
@@ -652,19 +614,6 @@
             "sizeMB": 716
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 14 in \"Concentration\"",
-              "item": "concentration1958-bmp",
-              "itemTitle": "Concentration",
-              "file": "S15E120_Concentration_1973_03_23_3770.m4v",
-              "name": "S15E120_Concentration_1973_03_23_3770",
-              "url": "https://archive.org/download/concentration1958-bmp/S15E120_Concentration_1973_03_23_3770.m4v",
-              "seconds": 1308,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 362
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 14 of 688 in \"Classic Concentration\"",
@@ -1466,21 +1415,47 @@
           "number": 38,
           "name": "Wednesday October 15, 1958",
           "airdate": "1958-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 38 of 688 in \"Classic Concentration\"",
-            "item": "classicconcentration-bmp",
-            "itemTitle": "Classic Concentration",
-            "file": "S01E044_Classic_Concentration_1987-07-03_0044.mp4",
-            "name": "S01E044_Classic_Concentration_1987-07-03_0044",
-            "url": "https://archive.org/download/classicconcentration-bmp/S01E044_Classic_Concentration_1987-07-03_0044.mp4",
-            "seconds": 1302,
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "concentration1958-bmp",
+            "itemTitle": "Concentration",
+            "file": "S01E038_Concentration_1958_10_15_0038.m4v",
+            "name": "S01E038_Concentration_1958_10_15_0038",
+            "url": "https://archive.org/download/concentration1958-bmp/S01E038_Concentration_1958_10_15_0038.m4v",
+            "seconds": 1771,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 915
+            "sizeMB": 406
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "concentration1958-bmp",
+              "itemTitle": "Concentration",
+              "file": "S01E01_Concentration_1958_10_15.mp4",
+              "name": "S01E01_Concentration_1958_10_15",
+              "url": "https://archive.org/download/concentration1958-bmp/S01E01_Concentration_1958_10_15.mp4",
+              "seconds": 1771,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 38 of 688 in \"Classic Concentration\"",
+              "item": "classicconcentration-bmp",
+              "itemTitle": "Classic Concentration",
+              "file": "S01E044_Classic_Concentration_1987-07-03_0044.mp4",
+              "name": "S01E044_Classic_Concentration_1987-07-03_0044",
+              "url": "https://archive.org/download/classicconcentration-bmp/S01E044_Classic_Concentration_1987-07-03_0044.mp4",
+              "seconds": 1302,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 915
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 38 of 198 in \"Concentration (1973)\"",
@@ -4424,21 +4399,47 @@
           "number": 125,
           "name": "Monday February 9, 1959",
           "airdate": "1959-02-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 125 of 198 in \"Concentration (1973)\"",
-            "item": "concentration1973-bmp",
-            "itemTitle": "Concentration (1973)",
-            "file": "S04E131_Concentration_1976_1231.mp4",
-            "name": "S04E131_Concentration_1976_1231",
-            "url": "https://archive.org/download/concentration1973-bmp/S04E131_Concentration_1976_1231.mp4",
-            "seconds": 1297,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "concentration1958-bmp",
+            "itemTitle": "Concentration",
+            "file": "S01E02_Concentration_1959_02_09.ia.mp4",
+            "name": "S01E02_Concentration_1959_02_09",
+            "url": "https://archive.org/download/concentration1958-bmp/S01E02_Concentration_1959_02_09.ia.mp4",
+            "seconds": 1632,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 178
+            "sizeMB": 180
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "concentration1958-bmp",
+              "itemTitle": "Concentration",
+              "file": "S01E121_Concentration_1959_02_09_0121_INC.mp4",
+              "name": "S01E121_Concentration_1959_02_09_0121_INC",
+              "url": "https://archive.org/download/concentration1958-bmp/S01E121_Concentration_1959_02_09_0121_INC.mp4",
+              "seconds": 1632,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 180
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 125 of 198 in \"Concentration (1973)\"",
+              "item": "concentration1973-bmp",
+              "itemTitle": "Concentration (1973)",
+              "file": "S04E131_Concentration_1976_1231.mp4",
+              "name": "S04E131_Concentration_1976_1231",
+              "url": "https://archive.org/download/concentration1973-bmp/S04E131_Concentration_1976_1231.mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 178
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 125 of 688 in \"Classic Concentration\"",

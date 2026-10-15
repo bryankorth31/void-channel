@@ -3,7 +3,8 @@
   "slug": "the-ellen-degeneres-show",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-15T12:08:26.904Z",
+  "matchedAt": "2026-10-15T12:56:09.602Z",
+  "addedAt": "2026-10-15T12:53:40.255Z",
   "tvmaze": {
     "id": 2142,
     "name": "The Ellen DeGeneres Show",
@@ -13,9 +14,9 @@
   },
   "coverage": {
     "total": 3279,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 3279,
+    "missing": 3278,
     "pct": 0
   },
   "seasons": [
@@ -3545,8 +3546,20 @@
           "number": 27,
           "name": "Queen Latifah, Bonnie Raitt",
           "airdate": "2006-02-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "dvd-6713-the-ellen-degeneres-show-2006-02-08",
+            "itemTitle": "DVD-6713 - The Ellen Degeneres Show - February 8, 2006",
+            "file": "dvd-6713-the-ellen-degeneres-show-2006-02-08.mp4",
+            "name": "dvd-6713-the-ellen-degeneres-show-2006-02-08",
+            "url": "https://archive.org/download/dvd-6713-the-ellen-degeneres-show-2006-02-08/dvd-6713-the-ellen-degeneres-show-2006-02-08.mp4",
+            "seconds": 3722,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 368
+          },
           "alternates": []
         },
         {

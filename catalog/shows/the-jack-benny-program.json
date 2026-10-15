@@ -3,7 +3,8 @@
   "slug": "the-jack-benny-program",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T12:08:43.558Z",
+  "matchedAt": "2026-10-15T12:55:36.354Z",
+  "addedAt": "2026-10-15T12:08:43.558Z",
   "tvmaze": {
     "id": 21690,
     "name": "The Jack Benny Program",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 260,
-    "live": 1,
-    "review": 11,
+    "live": 2,
+    "review": 10,
     "missing": 248,
     "pct": 5
   },
@@ -297,10 +298,10 @@
           "number": 7,
           "name": "Liberace Show",
           "airdate": "1954-01-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Liberace Show\" (0.67)",
+            "conf": 1,
+            "why": "airdate in filename",
             "item": "TheJackBennyProgram-01171954",
             "itemTitle": "The Jack Benny program - 01/17/1954",
             "file": "Jack_Benny_Liberace_1_17_1954.mp4",
@@ -311,7 +312,21 @@
             "playable": true,
             "sizeMB": 174
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "TheJackBennyProgram-01171954",
+              "itemTitle": "The Jack Benny program - 01/17/1954",
+              "file": "Jack_Benny_Liberace_1_17_1954_512kb.mp4",
+              "name": "Jack_Benny_Liberace_1_17_1954_512kb",
+              "url": "https://archive.org/download/TheJackBennyProgram-01171954/Jack_Benny_Liberace_1_17_1954_512kb.mp4",
+              "seconds": 1770,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 8,

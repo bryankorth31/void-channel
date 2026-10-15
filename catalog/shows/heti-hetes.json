@@ -3,7 +3,8 @@
   "slug": "heti-hetes",
   "type": "Reality & Talk",
   "network": "HU",
-  "matchedAt": "2026-10-15T12:08:31.734Z",
+  "matchedAt": "2026-10-15T12:56:16.494Z",
+  "addedAt": "2026-10-15T12:53:47.286Z",
   "tvmaze": {
     "id": 23169,
     "name": "Heti Hetes",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 673,
-    "live": 0,
+    "live": 5,
     "review": 0,
-    "missing": 673,
-    "pct": 0
+    "missing": 668,
+    "pct": 1
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "1999-09-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "indavideo-HETI_HETES_S01E01",
+            "itemTitle": "(első) Heti Hetes, 1999. szeptember 10.",
+            "file": "Heti_Hetes_1999-09-10.mp4",
+            "name": "Heti_Hetes_1999-09-10",
+            "url": "https://archive.org/download/indavideo-HETI_HETES_S01E01/Heti_Hetes_1999-09-10.mp4",
+            "seconds": 2988,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 335
+          },
           "alternates": []
         },
         {
@@ -42,8 +55,20 @@
           "number": 3,
           "name": "Episode 3",
           "airdate": "1999-09-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "indavideo-HETI_HETES_S01E03",
+            "itemTitle": "Heti Hetes, 1999. szeptember 24.",
+            "file": "Heti_Hetes_1999-09-24.mp4",
+            "name": "Heti_Hetes_1999-09-24",
+            "url": "https://archive.org/download/indavideo-HETI_HETES_S01E03/Heti_Hetes_1999-09-24.mp4",
+            "seconds": 2750,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 308
+          },
           "alternates": []
         },
         {
@@ -367,8 +392,20 @@
           "number": 8,
           "name": "Episode 8",
           "airdate": "2000-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "HH_2x08_2000-10-21",
+            "itemTitle": "Heti Hetes 2x08 - A Havas-kormány",
+            "file": "HH_2x08_2000-10-21_DM_v2.mp4",
+            "name": "HH_2x08_2000-10-21_DM_v2",
+            "url": "https://archive.org/download/HH_2x08_2000-10-21/HH_2x08_2000-10-21_DM_v2.mp4",
+            "seconds": 3373,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 482
+          },
           "alternates": []
         },
         {
@@ -1217,8 +1254,20 @@
           "number": 30,
           "name": "Episode 30",
           "airdate": "2003-03-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "HH_4x29_2003-03-13",
+            "itemTitle": "Heti Hetes 4x29 - A 150. adás / Bajor születésnapja",
+            "file": "HH_4x29_2003-03-13_150_DM.mp4",
+            "name": "HH_4x29_2003-03-13_150_DM",
+            "url": "https://archive.org/download/HH_4x29_2003-03-13/HH_4x29_2003-03-13_150_DM.mp4",
+            "seconds": 3646,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 525
+          },
           "alternates": []
         },
         {
@@ -1622,8 +1671,20 @@
           "number": 37,
           "name": "Episode 37",
           "airdate": "2004-05-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "HH_5x37_2004-05-13",
+            "itemTitle": "Heti Hetes 5x37 - A 200. adás",
+            "file": "HH_5x37_2004-05-13_DM_v2.mp4",
+            "name": "HH_5x37_2004-05-13_DM_v2",
+            "url": "https://archive.org/download/HH_5x37_2004-05-13/HH_5x37_2004-05-13_DM_v2.mp4",
+            "seconds": 3530,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 500
+          },
           "alternates": []
         },
         {

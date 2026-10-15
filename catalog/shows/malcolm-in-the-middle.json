@@ -3,7 +3,8 @@
   "slug": "malcolm-in-the-middle",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-15T12:07:35.983Z",
+  "matchedAt": "2026-10-15T12:55:17.866Z",
+  "addedAt": "2026-10-15T12:07:35.983Z",
   "tvmaze": {
     "id": 568,
     "name": "Malcolm in the Middle",
@@ -13,8 +14,8 @@
   },
   "coverage": {
     "total": 151,
-    "live": 0,
-    "review": 145,
+    "live": 1,
+    "review": 144,
     "missing": 6,
     "pct": 96
   },
@@ -3060,21 +3061,35 @@
           "number": 10,
           "name": "Malcolm's Money",
           "airdate": "2006-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "malcolm-in-the-middle-complete-series-2000-2006",
-            "itemTitle": "Malcolm in the Middle (The Complete Series) [2000 - 2006]",
-            "file": "Malcolm in the Middle (The Complete Series) [2000 - 2006]/Season 7/S07E10 - Malcolm's Money.mp4",
-            "name": "Malcolm in the Middle (The Complete Series) [2000 - 2006]/Season 7/S07E10 - Malcolm's Money",
-            "url": "https://archive.org/download/malcolm-in-the-middle-complete-series-2000-2006/Malcolm%20in%20the%20Middle%20(The%20Complete%20Series)%20%5B2000%20-%202006%5D%2FSeason%207%2FS07E10%20-%20Malcolm's%20Money.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "dvd-6696-malcolm-in-the-middle-2006-01-06",
+            "itemTitle": "DVD-6696 - Malcolm in the Middle - January 6, 2006",
+            "file": "dvd-6696-malcolm-in-the-middle-2006-01-06.mp4",
+            "name": "dvd-6696-malcolm-in-the-middle-2006-01-06",
+            "url": "https://archive.org/download/dvd-6696-malcolm-in-the-middle-2006-01-06/dvd-6696-malcolm-in-the-middle-2006-01-06.mp4",
+            "seconds": 1982,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 812
+            "sizeMB": 191
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "malcolm-in-the-middle-complete-series-2000-2006",
+              "itemTitle": "Malcolm in the Middle (The Complete Series) [2000 - 2006]",
+              "file": "Malcolm in the Middle (The Complete Series) [2000 - 2006]/Season 7/S07E10 - Malcolm's Money.mp4",
+              "name": "Malcolm in the Middle (The Complete Series) [2000 - 2006]/Season 7/S07E10 - Malcolm's Money",
+              "url": "https://archive.org/download/malcolm-in-the-middle-complete-series-2000-2006/Malcolm%20in%20the%20Middle%20(The%20Complete%20Series)%20%5B2000%20-%202006%5D%2FSeason%207%2FS07E10%20-%20Malcolm's%20Money.mp4",
+              "seconds": 1315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 812
+            }
+          ]
         },
         {
           "number": 11,
