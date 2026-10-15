@@ -39,3 +39,7 @@ assets/brand/sheets/
 # HQ desktop app build output and deps
 hq-app/node_modules/
 hq-app/dist/
+
+# per-profile runtime caches
+profiles/*/catalog/cache/
+profiles/*/site/
