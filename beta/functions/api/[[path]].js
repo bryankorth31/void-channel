@@ -78,14 +78,19 @@ export async function onRequest({ request, env, params }) {
       device: { ua: str(request.headers.get('user-agent'), 300), screen: str(body.screen, 40), tz: str(body.tz, 60), lang: str(body.lang, 20), country: str(cf.country, 4) },
     };
     await env.DB.put(`r:${ts}-${id}`, JSON.stringify(r), { metadata: summary(r) });
+    // Per-tester index so "Your reports" is a few cheap reads, not a KV list (free tier: 1,000 lists a day).
+    const mine = (await env.DB.get('m:' + t.code, 'json')) || [];
+    mine.unshift(`r:${ts}-${id}`);
+    await env.DB.put('m:' + t.code, JSON.stringify(mine.slice(0, 100)));
     return json({ ok: true, id });
   }
 
   if (route === 'mine' && method === 'GET') {
     const t = await tester(env, url.searchParams.get('t'));
     if (!t) return json({ error: 'invite not found' }, 404);
-    const mine = (await allReports(env)).filter((r) => r.tester === t.code).slice(0, 100);
-    return json({ reports: mine.map(({ key, tester: _t, ...r }) => r) });
+    const keys = (await env.DB.get('m:' + t.code, 'json')) || [];
+    const full = await Promise.all(keys.slice(0, 50).map((k) => env.DB.get(k, 'json')));
+    return json({ reports: full.filter(Boolean).map(summary).map(({ tester: _t, ...r }) => r) });
   }
 
   if (route.startsWith('shot/') && method === 'GET') {

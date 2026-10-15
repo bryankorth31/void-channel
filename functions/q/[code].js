@@ -13,7 +13,9 @@ export async function onRequestGet({ request, env, params }) {
   const device = /iPad|Tablet/i.test(ua) ? 'tablet' : /Mobi|iPhone|Android.*Mobile/i.test(ua) ? 'phone' : 'desktop';
   const browser = /Edg\//.test(ua) ? 'edge' : /Firefox\//.test(ua) ? 'firefox' : /CriOS|Chrome\//.test(ua) ? 'chrome' : /Safari\//.test(ua) ? 'safari' : 'other';
   const cf = request.cf || {};
-  if (env.VOIDTV_EVENTS) {
+  // Link checkers and chat-app preview bots fetch the link without a person behind it: forward them, never count them.
+  const bot = request.method !== 'GET' || /bot|crawl|spider|preview|facebookexternalhit|whatsapp|telegram|discord|slack|skype|curl|wget|python|node-fetch|headless/i.test(ua);
+  if (env.VOIDTV_EVENTS && !bot) {
     try {
       env.VOIDTV_EVENTS.writeDataPoint({
         indexes: ['qr'],
