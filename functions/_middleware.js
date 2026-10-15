@@ -29,7 +29,8 @@ const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\
 export async function onRequest({ request, env, next }) {
   const secret = env.SITE_PASSWORD;
   if (!secret) return next();
-  if (new URL(request.url).pathname.startsWith('/assets/brand/')) return next(); // the gate page's own background and icons
+  const pathname = new URL(request.url).pathname;
+  if (pathname.startsWith('/assets/brand/') || pathname === '/version.txt') return next(); // the gate page's own background and icons
   const want = await token(secret, env.GATE_KEY);
   const cookies = request.headers.get('cookie') || '';
   if (cookies.split(';').some((c) => c.trim() === `${COOKIE}=${want}`)) return next();

@@ -126,7 +126,7 @@ function nodeProcesses() {
 const JOBS_FILE = path.join(CACHE, 'hq-jobs.json');
 const JOBS = (() => { try { return JSON.parse(fs.readFileSync(JOBS_FILE, 'utf8')).slice(0, 60); } catch (e) { return []; } })(); // survive an HQ restart
 const saveJobs = () => { try { fs.mkdirSync(CACHE, { recursive: true }); fs.writeFileSync(JOBS_FILE, JSON.stringify(JOBS.slice(0, 60))); } catch (e) { /* best effort */ } };
-const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe']);
+const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze']);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
 function startJob(name, args) {
   if (!SCRIPTS.has(name)) throw new Error('unknown script ' + name);
@@ -230,6 +230,8 @@ const server = http.createServer(async (req, res) => {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html')), MIME['.html']);
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
     if (p === '/api/overview') return send(res, 200, overview());
+    if (p === '/api/health') return send(res, 200, readJson(path.join(CACHE, 'health.json'), { level: 'none', checks: [] }));
+    if (p === '/api/tasks/recreate' && req.method === 'POST') { const nb = nodeBin(); const node = nb.bin; const q = (x) => '\\"' + x + '\\"'; const made = []; for (const [name, sched, script] of [['VoidTV Publish', '/SC HOURLY /MO 2 /ST 00:20', 'publish.js'], ['VoidTV Nightly', '/SC DAILY /ST 03:30', 'nightly.js']]) { try { execSync(`schtasks /Create /F /TN "${name}" ${sched} /TR "${q(node)} ${q(path.join(ROOT, 'scripts', script))}"`, { stdio: ['ignore', 'pipe', 'pipe'] }); made.push(name); } catch (e) { return send(res, 500, { error: name + ': ' + (e.stderr ? e.stderr.toString() : e.message).slice(0, 200), made }); } } return send(res, 200, { made }); }
     if (p === '/api/shows') return send(res, 200, { types: readJson(FILES.list, { types: [] }).types, rows: showRows() });
     if (p.startsWith('/api/show/')) {
       const slug = decodeURIComponent(p.slice(10));

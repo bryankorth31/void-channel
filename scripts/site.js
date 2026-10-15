@@ -60,6 +60,8 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
+// Which commit this build came from: the doctor compares it with HEAD on the PC to catch a stalled Cloudflare build.
+{ let sha = process.env.CF_PAGES_COMMIT_SHA || ''; if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = 'unknown'; } } fs.writeFileSync(path.join(OUT, 'version.txt'), sha + ' ' + new Date().toISOString() + '\n'); }
 // Which paths run through Pages Functions. Gate on: everything but the brand assets. Build with --open once the
 // password comes off, and only the analytics intake runs as a function (static files are served directly).
 fs.writeFileSync(path.join(OUT, '_routes.json'), JSON.stringify(args.includes('--open') ? { version: 1, include: ['/api/*'], exclude: [] } : { version: 1, include: ['/*'], exclude: ['/assets/*'] }));

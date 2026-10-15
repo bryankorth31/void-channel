@@ -104,6 +104,8 @@ function namesOtherShow(text, show) {
 
 const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
 // Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
+const DEAD_FILE = path.join(ROOT, 'catalog', 'dead-files.json');
+function readDead() { try { return JSON.parse(fs.readFileSync(DEAD_FILE, 'utf8')); } catch (e) { return {}; } } // linkcheck.js retires files the Archive no longer serves
 function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
 function matchShow(entry) {
   const show = entry.name;
@@ -119,6 +121,7 @@ function matchShow(entry) {
   const core = norm(show).replace(/^the /, '');
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
   const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
+  const DEAD = readDead();
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
   const byDate = new Map(tv.episodes.filter((e) => e.airdate).map((e) => [e.airdate, e]));
   const firstYear = tv.premiered ? +tv.premiered.slice(0, 4) : 0;
@@ -213,7 +216,7 @@ function matchShow(entry) {
       // B's decisions from HQ (catalog/overrides.json): rejectFiles never show again; acceptFiles win the
       // episode outright at full confidence (he watched it play), even when the codec judge was unsure.
       const fkey = (p) => p.item + '|' + p.name;
-      const rejected = new Set(ov.rejectFiles || []), accepted = new Set(ov.acceptFiles || []);
+      const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]), accepted = new Set(ov.acceptFiles || []);
       let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !rejected.has(fkey(o))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
       const acc = opts.find((o) => accepted.has(fkey(o)));
       if (acc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; opts = [acc, ...opts.filter((o) => o !== acc)]; }

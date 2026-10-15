@@ -45,6 +45,8 @@ else {
 step('networks', ['scripts/networks.js'], 30); // TMDB network sweeps -> docs/NETWORKS.md (no Archive calls)
 step('art', ['scripts/art.js'], 30);
 step('people', ['scripts/people.js', '--episodes', '--bios', '4000'], 120);
+step('linkcheck', ['scripts/linkcheck.js', '--sample', '150'], 15); // link rot: retire files the Archive dropped
 step('db', ['scripts/db.js'], 20);
 step('publish', ['scripts/publish.js'], 20);
+step('doctor', ['scripts/doctor.js'], 10); // the lights HQ shows; red exits 1 and is logged here
 log('==== nightly done');
