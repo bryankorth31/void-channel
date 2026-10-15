@@ -1,11 +1,12 @@
 # Coverage
 
-1795 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1821 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
 | @midnight with Chris Hardwick | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | 120 Minutes | MTV | 2 | 0 | 2 | 0 | 100% |
+| 2 Stupid Dogs | Animated | 39 | 3 | 36 | 0 | 100% |
 | 86 EIGHTY-SIX | Anime | 26 | 0 | 26 | 0 | 100% |
 | 9-1-1 | Streaming Era | 20 | 0 | 20 | 0 | 100% |
 | A Korean Odyssey | World TV | 20 | 0 | 20 | 0 | 100% |
@@ -56,6 +57,7 @@
 | Crocodile Hunter Diaries | Documentary & Geographic | 43 | 43 | 0 | 0 | 100% |
 | Cyberpunk: Edgerunners | Anime | 10 | 10 | 0 | 0 | 100% |
 | Dan Da Dan | Anime | 3 | 0 | 3 | 0 | 100% |
+| Darkwing Duck | Animated | 91 | 90 | 1 | 0 | 100% |
 | Davey and Goliath | Classic TV | 66 | 60 | 6 | 0 | 100% |
 | Death Note | Anime | 37 | 37 | 0 | 0 | 100% |
 | Die Harald Schmidt Show | Reality & Talk | 687 | 0 | 687 | 0 | 100% |
@@ -69,6 +71,7 @@
 | Dragon Ball DAIMA | Anime | 20 | 20 | 0 | 0 | 100% |
 | Drawn Together | Animated | 36 | 35 | 1 | 0 | 100% |
 | Dynasties | Documentary & Geographic | 9 | 4 | 5 | 0 | 100% |
+| Ed, Edd n Eddy | Animated | 133 | 0 | 133 | 0 | 100% |
 | Eight Is Enough | Classic TV | 112 | 110 | 2 | 0 | 100% |
 | El hormiguero | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
 | Elfen Lied | Anime | 13 | 0 | 13 | 0 | 100% |
@@ -209,6 +212,7 @@
 | Robin of Sherwood | Classic TV | 26 | 26 | 0 | 0 | 100% |
 | Sally Jessy Raphael | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | Samurai Champloo | Anime | 26 | 26 | 0 | 0 | 100% |
+| Samurai Jack | Animated | 80 | 0 | 80 | 0 | 100% |
 | Sanditon | British and Beyond | 20 | 0 | 20 | 0 | 100% |
 | Saved by the Bell | 90s Sitcoms | 86 | 84 | 2 | 0 | 100% |
 | Scared Straight! | Documentary & Geographic | 144 | 0 | 144 | 0 | 100% |
@@ -226,6 +230,7 @@
 | Sound! Euphonium | Anime | 68 | 0 | 68 | 0 | 100% |
 | Space: 1999 | Classic TV | 48 | 48 | 0 | 0 | 100% |
 | Spaced | British and Beyond | 14 | 14 | 0 | 0 | 100% |
+| Spider-Man: The Animated Series | Animated | 65 | 0 | 65 | 0 | 100% |
 | Spider-Man: The New Animated Series | MTV | 48 | 0 | 48 | 0 | 100% |
 | SpongeBob SquarePants | Animated | 567 | 0 | 567 | 0 | 100% |
 | Stairway to Heaven | World TV | 20 | 0 | 20 | 0 | 100% |
@@ -239,6 +244,7 @@
 | Superjail! | Adult Swim | 56 | 0 | 56 | 0 | 100% |
 | Takopi's Original Sin | Anime | 6 | 0 | 6 | 0 | 100% |
 | Tales of the Unexplained | Documentary & Geographic | 4 | 0 | 4 | 0 | 100% |
+| TaleSpin | Animated | 65 | 0 | 65 | 0 | 100% |
 | Texaco Star Theatre | Classic TV | 17 | 0 | 17 | 0 | 100% |
 | The $10,000 Pyramid | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | The Andy Milonakis Show | MTV | 34 | 0 | 34 | 0 | 100% |
@@ -442,15 +448,19 @@
 | Inside No. 9 | Streaming Era | 54 | 0 | 46 | 8 | 85% |
 | NYPD Blue | Drama | 261 | 42 | 181 | 38 | 85% |
 | Spy Groove | MTV | 13 | 11 | 0 | 2 | 85% |
+| The Powerpuff Girls | Animated | 78 | 0 | 66 | 12 | 85% |
 | Sharpe | British and Beyond | 18 | 0 | 15 | 3 | 83% |
+| Gargoyles | Animated | 78 | 0 | 64 | 14 | 82% |
 | Important Things with Demetri Martin | Sketch and Comedy | 17 | 14 | 0 | 3 | 82% |
 | Murphy Brown | Classic TV | 260 | 0 | 212 | 48 | 82% |
 | Reba | 2000s and Later Sitcoms | 125 | 103 | 0 | 22 | 82% |
+| Pinky and the Brain | Animated | 95 | 69 | 8 | 18 | 81% |
 | Earth: Final Conflict | Sci-Fi, Fantasy and Horror | 110 | 87 | 1 | 22 | 80% |
 | Pee-wee's Playhouse | Classic TV | 45 | 0 | 36 | 9 | 80% |
 | Square Pegs | Classic TV | 20 | 5 | 11 | 4 | 80% |
 | The Bible | Streaming Era | 10 | 0 | 8 | 2 | 80% |
 | 227 | Classic TV | 116 | 92 | 0 | 24 | 79% |
+| The New Batman Adventures | Animated | 24 | 0 | 19 | 5 | 79% |
 | Xena: Warrior Princess | Sci-Fi, Fantasy and Horror | 134 | 0 | 106 | 28 | 79% |
 | Buck Rogers in the 25th Century | Classic TV | 37 | 26 | 3 | 8 | 78% |
 | Troopers | Internet Comedy | 9 | 0 | 7 | 2 | 78% |
@@ -496,6 +506,7 @@
 | Wonder Showzen | MTV | 16 | 0 | 10 | 6 | 63% |
 | Baby Blues | Adult Swim | 13 | 8 | 0 | 5 | 62% |
 | BTS In the SOOP | Reality & Talk | 13 | 0 | 8 | 5 | 62% |
+| Jackie Chan Adventures | Animated | 95 | 14 | 45 | 36 | 62% |
 | Lexx | Sci-Fi, Fantasy and Horror | 61 | 0 | 38 | 23 | 62% |
 | Rome: Rise and Fall of an Empire | Documentary & Geographic | 13 | 0 | 8 | 5 | 62% |
 | 12 oz. Mouse | Adult Swim | 31 | 0 | 19 | 12 | 61% |
@@ -521,6 +532,7 @@
 | Hell's Paradise | Anime | 25 | 13 | 0 | 12 | 52% |
 | Invader Zim | Animated | 46 | 7 | 17 | 22 | 52% |
 | Solo Leveling | Anime | 25 | 0 | 13 | 12 | 52% |
+| Static Shock | Animated | 52 | 0 | 27 | 25 | 52% |
 | The Promised Neverland | Anime | 23 | 0 | 12 | 11 | 52% |
 | Junkyard Wars | Documentary & Geographic | 105 | 1 | 53 | 51 | 51% |
 | Zoids: Chaotic Century | Anime | 67 | 34 | 0 | 33 | 51% |
@@ -542,7 +554,9 @@
 | Boys Over Flowers | World TV | 25 | 0 | 12 | 13 | 48% |
 | Fridays | Classic TV | 58 | 21 | 7 | 30 | 48% |
 | Hana-Kimi | Anime | 25 | 0 | 12 | 13 | 48% |
+| Cow and Chicken | Animated | 103 | 26 | 22 | 55 | 47% |
 | The Avengers | Classic TV | 161 | 50 | 25 | 86 | 47% |
+| Freakazoid! | Animated | 46 | 18 | 3 | 25 | 46% |
 | Baseball | Documentary & Geographic | 11 | 0 | 5 | 6 | 45% |
 | Highlander: The Series | Sci-Fi, Fantasy and Horror | 40 | 0 | 18 | 22 | 45% |
 | The Jellies! | Adult Swim | 20 | 8 | 1 | 11 | 45% |
@@ -552,6 +566,7 @@
 | The Dick Van Dyke Show | Classic TV | 158 | 68 | 0 | 90 | 43% |
 | Alya Sometimes Hides Her Feelings in Russian | Anime | 12 | 5 | 0 | 7 | 42% |
 | I Became a Legend After My 10 Year-Long Last Stand | Anime | 12 | 0 | 5 | 7 | 42% |
+| Justice League | Animated | 52 | 0 | 22 | 30 | 42% |
 | Poldark | British and Beyond | 43 | 18 | 0 | 25 | 42% |
 | Shameless | Drama | 134 | 56 | 0 | 78 | 42% |
 | The Judy Garland Show | Classic TV | 26 | 9 | 2 | 15 | 42% |
@@ -634,6 +649,8 @@
 | Johnny Bravo | Animated | 181 | 0 | 34 | 147 | 19% |
 | MADtv | Sketch and Comedy | 327 | 61 | 0 | 266 | 19% |
 | Batman | Classic TV | 120 | 12 | 9 | 99 | 18% |
+| Phineas and Ferb | Animated | 262 | 3 | 44 | 215 | 18% |
+| Taz-Mania | Animated | 121 | 0 | 22 | 99 | 18% |
 | Black Clover | Anime | 177 | 0 | 30 | 147 | 17% |
 | How to Get Away with Murder | Streaming Era | 90 | 0 | 15 | 75 | 17% |
 | Kaiju No. 8 | Anime | 24 | 0 | 4 | 20 | 17% |
@@ -644,9 +661,11 @@
 | CHiPs | Classic TV | 139 | 22 | 0 | 117 | 16% |
 | Mushoku Tensei: Jobless Reincarnation | Anime | 61 | 0 | 10 | 51 | 16% |
 | George Lopez | 2000s and Later Sitcoms | 120 | 18 | 0 | 102 | 15% |
+| Goof Troop | Animated | 13 | 1 | 1 | 11 | 15% |
 | Key & Peele | Sketch and Comedy | 53 | 8 | 0 | 45 | 15% |
 | Living Single | 90s Sitcoms | 118 | 15 | 3 | 100 | 15% |
 | Nostalgia Critic | Internet Comedy | 549 | 0 | 83 | 466 | 15% |
+| Superman: The Animated Series | Animated | 54 | 0 | 8 | 46 | 15% |
 | The Honeymooners | Classic TV | 225 | 32 | 2 | 191 | 15% |
 | Undergrads | MTV | 13 | 0 | 2 | 11 | 15% |
 | Decoding the Past | Documentary & Geographic | 80 | 4 | 7 | 69 | 14% |
@@ -895,6 +914,7 @@
 | Barbarians Rising | Drama | 4 | 0 | 0 | 4 | 0% |
 | Barry | 2000s and Later Sitcoms | 32 | 0 | 0 | 32 | 0% |
 | Baskets | 2000s and Later Sitcoms | 40 | 0 | 0 | 40 | 0% |
+| Batman Beyond | Animated | 52 | 0 | 0 | 52 | 0% |
 | Battlestar Galactica | Sci-Fi, Fantasy and Horror | 73 | 0 | 0 | 73 | 0% |
 | BEASTARS | Anime | 48 | 0 | 0 | 48 | 0% |
 | Beat the Clock | Classic TV | 27 | 0 | 0 | 27 | 0% |
@@ -929,6 +949,7 @@
 | Boardwalk Empire | Drama | 56 | 0 | 0 | 56 | 0% |
 | Bob's Burgers | Animated | 313 | 0 | 0 | 313 | 0% |
 | BOCCHI THE ROCK! | Anime | 12 | 0 | 0 | 12 | 0% |
+| Bonkers | Animated | 63 | 0 | 0 | 63 | 0% |
 | Bored to Death | 2000s and Later Sitcoms | 24 | 0 | 0 | 24 | 0% |
 | Borgen | World TV | 30 | 0 | 0 | 30 | 0% |
 | Borgia | British and Beyond | 38 | 0 | 0 | 38 | 0% |
@@ -971,6 +992,7 @@
 | Chihayafuru | Anime | 74 | 0 | 0 | 74 | 0% |
 | Children's Hospital | Adult Swim | 85 | 0 | 0 | 85 | 0% |
 | Chilling Adventures of Sabrina | Streaming Era | 36 | 0 | 0 | 36 | 0% |
+| Chip 'n Dale: Rescue Rangers | Animated | 65 | 0 | 0 | 65 | 0% |
 | Chobits | Anime | 24 | 0 | 0 | 24 | 0% |
 | City Confidential | Documentary & Geographic | 160 | 0 | 0 | 160 | 0% |
 | Civil War Journal | Documentary & Geographic | 46 | 0 | 0 | 46 | 0% |
@@ -1166,6 +1188,7 @@
 | Hunter Hunted | Documentary & Geographic | 22 | 0 | 0 | 22 | 0% |
 | Hyouka | Anime | 22 | 0 | 0 | 22 | 0% |
 | I Am Not a Robot | World TV | 12 | 0 | 0 | 12 | 0% |
+| I Am Weasel | Animated | 79 | 0 | 0 | 79 | 0% |
 | I Got a Cheat Skill in Another World and Became Unrivaled in the Real World, Too | Anime | 13 | 0 | 0 | 13 | 0% |
 | I Love Lucy | Classic TV | 180 | 0 | 0 | 180 | 0% |
 | I Think You Should Leave with Tim Robinson | Streaming Era | 18 | 0 | 0 | 18 | 0% |
@@ -1209,6 +1232,7 @@
 | JUJUTSU KAISEN | Anime | 59 | 0 | 0 | 59 | 0% |
 | Juliantina | World TV | 19 | 0 | 0 | 19 | 0% |
 | Julius Caesar | Drama | 2 | 0 | 0 | 2 | 0% |
+| Justice League Unlimited | Animated | 39 | 0 | 0 | 39 | 0% |
 | Justified | Drama | 78 | 0 | 0 | 78 | 0% |
 | Kaguya-sama: Love Is War | Anime | 37 | 0 | 0 | 37 | 0% |
 | Kakegurui | Anime | 15 | 0 | 0 | 15 | 0% |
@@ -1497,6 +1521,7 @@
 | South Side | 2000s and Later Sitcoms | 28 | 0 | 0 | 28 | 0% |
 | Sparks | 90s Sitcoms | 40 | 0 | 0 | 40 | 0% |
 | Sparks of Tomorrow | Anime | 13 | 0 | 0 | 13 | 0% |
+| Spawn | Animated | 530 | 0 | 0 | 530 | 0% |
 | Spider-Man | Animated | 65 | 0 | 0 | 65 | 0% |
 | Split Second | Classic TV | 165 | 0 | 0 | 165 | 0% |
 | Spy | British and Beyond | 16 | 0 | 0 | 16 | 0% |
@@ -1708,6 +1733,7 @@
 | Tim and Eric Awesome Show, Great Job! | Adult Swim | 50 | 0 | 0 | 50 | 0% |
 | Time Machine | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Time Team | Documentary & Geographic | 221 | 0 | 0 | 221 | 0% |
+| Tiny Toon Adventures | Animated | 98 | 0 | 0 | 98 | 0% |
 | To Tell the Truth | Classic TV | 86 | 0 | 0 | 86 | 0% |
 | To Your Eternity | Anime | 62 | 0 | 0 | 62 | 0% |
 | Toast of London | British and Beyond | 18 | 0 | 0 | 18 | 0% |
