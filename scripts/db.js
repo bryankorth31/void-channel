@@ -9,8 +9,9 @@ const path = require('path');
 const { DatabaseSync } = require('node:sqlite');
 
 const ROOT = path.join(__dirname, '..');
-const SHOWS_DIR = path.join(ROOT, 'catalog', 'shows');
-const OUT = path.join(ROOT, 'catalog', 'voidtv.db');
+const PROFILE = require('./lib/profile');
+const SHOWS_DIR = path.join(PROFILE.catalogDir, 'shows');
+const OUT = path.join(PROFILE.catalogDir, 'voidtv.db');
 const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
 
 for (const ext of ['', '-wal', '-shm']) { try { fs.unlinkSync(OUT + ext); } catch (e) {} }
@@ -62,14 +63,14 @@ CREATE VIEW review_queue AS
 `);
 
 const slugOf = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show');
-const ART_FILE = path.join(ROOT, 'catalog', 'art.json');
+const ART_FILE = path.join(PROFILE.catalogDir, 'art.json');
 const ART = fs.existsSync(ART_FILE) ? JSON.parse(fs.readFileSync(ART_FILE, 'utf8')) : {};
 const tagsOf = (entry) => (entry.tags && entry.tags.length ? entry.tags.join(', ') : null);
 const artCols = (slug, entry) => { const a = ART[slug] || {}; return [a.tmdbId || null, a.poster || null, a.backdrop || null, a.overview || null, a.genres ? a.genres.join(', ') : null, a.rating || null, tagsOf(entry || {})]; };
 const insShow = db.prepare(`INSERT INTO shows VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
 const insPerson = db.prepare(`INSERT OR IGNORE INTO people VALUES (?,?,?)`);
 const insSP = db.prepare(`INSERT OR REPLACE INTO show_people VALUES (?,?,?,?,?)`);
-const PEOPLE_DIR = path.join(ROOT, 'catalog', 'people');
+const PEOPLE_DIR = path.join(PROFILE.catalogDir, 'people');
 const insEp = db.prepare(`INSERT OR REPLACE INTO episodes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
 
 let shows = 0, eps = 0;
@@ -100,7 +101,7 @@ for (const entry of LIST.shows) {
   }
 }
 // TV movies and specials from catalog/movies/*.json (written by hunt-movies.js).
-const MOV_DIR = path.join(ROOT, 'catalog', 'movies');
+const MOV_DIR = path.join(PROFILE.catalogDir, 'movies');
 const insMov = db.prepare(`INSERT OR REPLACE INTO movies VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
 let movies = 0;
 if (fs.existsSync(MOV_DIR)) {

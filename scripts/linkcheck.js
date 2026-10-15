@@ -6,9 +6,10 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
-const SHOWS = path.join(ROOT, 'catalog', 'shows');
-const DEAD = path.join(ROOT, 'catalog', 'dead-files.json');
-const OUT = path.join(ROOT, 'catalog', 'cache', 'linkcheck.json');
+const PROFILE = require('./lib/profile');
+const SHOWS = path.join(PROFILE.catalogDir, 'shows');
+const DEAD = path.join(PROFILE.catalogDir, 'dead-files.json');
+const OUT = path.join(PROFILE.catalogDir, 'cache', 'linkcheck.json');
 const args = process.argv.slice(2);
 const SAMPLE = +(args[args.indexOf('--sample') + 1]) || 150;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

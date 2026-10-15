@@ -9,9 +9,10 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
+const PROFILE = require('./lib/profile');
 const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
-const CACHE_DIR = path.join(ROOT, 'catalog', 'cache');
-const OUT = path.join(ROOT, 'catalog', 'art.json');
+const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
+const OUT = path.join(PROFILE.catalogDir, 'art.json');
 const IMG = 'https://image.tmdb.org/t/p/';
 
 const env = fs.existsSync(path.join(ROOT, 'backend', '.env')) ? fs.readFileSync(path.join(ROOT, 'backend', '.env'), 'utf8') : '';
@@ -38,7 +39,7 @@ function tvmazeYear(show) {
   try { return parseInt(JSON.parse(fs.readFileSync(f, 'utf8')).premiered.slice(0, 4), 10) || null; } catch (e) { return null; }
 }
 
-const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
+const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 async function lookup(entry) {
   const show = entry.name;
   const year = tvmazeYear(show);

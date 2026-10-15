@@ -5,7 +5,8 @@ const path = require('path');
 const { assemble, page } = require('./lib/app');
 
 const ROOT = path.join(__dirname, '..');
-const OUT = path.join(ROOT, 'catalog', 'preview.html');
+const PROFILE = require('./lib/profile');
+const OUT = path.join(PROFILE.catalogDir, 'preview.html');
 const data = assemble();
 fs.writeFileSync(OUT, page({ data, mode: 'embed', routes: 'hash' }));
 console.log(`${data.shows.length} shows, ${data.shows.reduce((n, s) => n + s.eps, 0)} playable episodes -> ${path.relative(ROOT, OUT)}`);

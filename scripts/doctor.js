@@ -8,8 +8,10 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
-const CACHE = path.join(ROOT, 'catalog', 'cache');
+const PROFILE = require('./lib/profile');
+const CACHE = path.join(PROFILE.catalogDir, 'cache');
 const QUICK = process.argv.includes('--quick');
+const { taskNames } = require('./lib/tasks');
 const checks = [];
 const add = (id, level, msg, fix) => checks.push({ id, level, msg, fix: fix || undefined }); // level: green | yellow | red
 const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
@@ -38,7 +40,7 @@ async function main() {
   else add('nightly', 'green', 'last pass ' + Math.round(hours(lastDone.slice(0, 24))) + ' h ago, all steps ok');
 
   // 3. scheduled tasks
-  for (const name of ['VoidTV Publish', 'VoidTV Nightly']) {
+  for (const name of taskNames()) {
     try {
       const out = run(`schtasks /Query /FO CSV /V /TN "${name}"`);
       const row = out.split('\n').find((l) => l.startsWith('"') && !l.startsWith('"HostName"'));
@@ -58,14 +60,14 @@ async function main() {
   } catch (e) { add('jobs', 'yellow', 'could not list processes'); }
 
   // 5. catalog integrity (cheap: parse every grid, look for reserved names and empty essentials)
-  const showsDir = path.join(ROOT, 'catalog', 'shows');
+  const showsDir = path.join(PROFILE.catalogDir, 'shows');
   let bad = 0, n = 0, reserved = 0;
   for (const f of fs.existsSync(showsDir) ? fs.readdirSync(showsDir) : []) {
     if (!f.endsWith('.json')) continue; n++;
     if (/^(con|prn|aux|nul|com[1-9]|lpt[1-9])\.json$/i.test(f)) reserved++;
     try { const g = JSON.parse(fs.readFileSync(path.join(showsDir, f), 'utf8')); if (!g.slug || !Array.isArray(g.seasons)) bad++; } catch (e) { bad++; }
   }
-  const list = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'show-list.json'), 'utf8')); } catch (e) { return null; } })();
+  const list = (() => { try { return JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8')); } catch (e) { return null; } })();
   if (!list || !list.shows || list.shows.length < 100) add('catalog', 'red', 'scripts/show-list.json is missing or tiny', 'Restore it from git: git checkout -- scripts/show-list.json');
   else if (bad || reserved) add('catalog', 'red', `${bad} unreadable grid(s), ${reserved} reserved-name file(s) of ${n}`, 'Delete or re-match the bad grids (HQ > Shows > Re-match now). A reserved-name file needs the \\\\?\\ path to delete.');
   else add('catalog', 'green', `${n} grids readable, list has ${list.shows.length} shows`);
@@ -90,7 +92,7 @@ async function main() {
     if (tok) await ping('tmdb', 'https://api.themoviedb.org/3/configuration', { headers: { Authorization: 'Bearer ' + tok.trim() } }, null, 'TMDB token rejected or TMDB down; art fetches will fail.');
     else add('tmdb', 'yellow', 'no TMDB_READ_TOKEN in backend/.env', 'Art and people lookups need it.');
     let head = ''; try { head = run('git rev-parse --short HEAD'); } catch (e) { /* no git */ }
-    await ping('live', 'https://voidtv.net/version.txt', {}, async (r) => { if (!r.ok) return false; const v = (await r.text()).trim(); if (head && !v.startsWith(head)) { add('live:version', 'yellow', `voidtv.net serves ${v.slice(0, 12)}, this PC is at ${head}`, 'Cloudflare has not built the latest push yet, or the build failed: dash.cloudflare.com > voidtvsite > Deployments.'); } return true; }, 'voidtv.net did not answer; check Cloudflare Pages.');
+    await ping('live', PROFILE.domain + '/version.txt', {}, async (r) => { if (!r.ok) return false; const v = (await r.text()).trim(); if (head && !v.startsWith(head)) { add('live:version', 'yellow', `voidtv.net serves ${v.slice(0, 12)}, this PC is at ${head}`, 'Cloudflare has not built the latest push yet, or the build failed: dash.cloudflare.com > voidtvsite > Deployments.'); } return true; }, PROFILE.domain + ' did not answer; check Cloudflare Pages.');
     const cfa = (env.match(/^CF_ANALYTICS_TOKEN=(.+)$/m) || [])[1];
     add('analytics', cfa ? 'green' : 'yellow', cfa ? 'analytics token present' : 'analytics not connected (no CF_ANALYTICS_TOKEN)', cfa ? undefined : 'HQ > Reports explains the two Cloudflare steps.');
   }

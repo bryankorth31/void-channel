@@ -11,10 +11,11 @@ const path = require('path');
 const { assemble, page, showFile, indexEntry, SITE_NAME } = require('./lib/app');
 
 const ROOT = path.join(__dirname, '..');
-const OUT = path.join(ROOT, 'site');
+const PROFILE = require('./lib/profile');
+const OUT = PROFILE.siteDir;
 const args = process.argv.slice(2);
 const bi = args.indexOf('--base');
-const ORIGIN = bi >= 0 ? args[bi + 1].replace(/\/$/, '') : 'https://voidtv.net';
+const ORIGIN = bi >= 0 ? args[bi + 1].replace(/\/$/, '') : PROFILE.domain;
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });

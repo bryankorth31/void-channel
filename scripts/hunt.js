@@ -20,13 +20,14 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
+const PROFILE = require('./lib/profile');
 const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
 const CENSUS = fs.existsSync(path.join(__dirname, 'show-probe-results.json'))
   ? JSON.parse(fs.readFileSync(path.join(__dirname, 'show-probe-results.json'), 'utf8')).results : [];
-const OUT_DIR = path.join(ROOT, 'catalog', 'candidates');
+const OUT_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const OUT_MD = path.join(ROOT, 'docs', 'HUNT.md');
-const CACHE_DIR = path.join(ROOT, 'catalog', 'cache');
-const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
+const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
+const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 
 let PAUSE_MS = 4000;            // between Archive calls
 const BACKOFF_MS = [60000, 180000, 600000];
@@ -143,7 +144,7 @@ async function scrapeQuery(q, key) {
 // the network. Both nets are cast when narrow is on; results merge by identifier.
 async function scrape(show, tv, narrow) {
   const words = searchWords(show);
-  const wide = `(${words.join(' AND ')}) AND mediatype:movies`;
+  const wide = `(${words.join(' AND ')}) AND mediatype:${PROFILE.mediatype}`;
   const wideItems = await scrapeQuery(wide, `scrape-${slug(show)}`);
   if (!narrow) return wideItems;
   const core = norm(show).replace(/^the /, '');
@@ -151,8 +152,8 @@ async function scrape(show, tv, narrow) {
   const items = [];
   const seen = new Set();
   const add = (list) => { for (const it of list) if (!seen.has(it.identifier)) { seen.add(it.identifier); items.push(it); } };
-  add(await scrapeQuery(`title:(${words.join(' AND ')}) AND mediatype:movies`, `scrape-title-${slug(show)}`));
-  if (disc.length) add(await scrapeQuery(`(${words.join(' AND ')}) AND (${disc.join(' OR ')}) AND mediatype:movies`, `scrape-cast-${slug(show)}`));
+  add(await scrapeQuery(`title:(${words.join(' AND ')}) AND mediatype:${PROFILE.mediatype}`, `scrape-title-${slug(show)}`));
+  if (disc.length) add(await scrapeQuery(`(${words.join(' AND ')}) AND (${disc.join(' OR ')}) AND mediatype:${PROFILE.mediatype}`, `scrape-cast-${slug(show)}`));
   // Flooded wide results carry little signal; keep only the ones whose title or id has the name.
   add(wideItems.filter((it) => norm(it.title).includes(core) || norm(it.identifier).includes(core.replace(/ /g, ''))));
   return items;
@@ -246,7 +247,7 @@ async function openItem(id, show, tv) {
 async function huntShow(entry) {
   const show = entry.name;
   console.log(`\n== ${show} (${entry.type} / ${entry.network})`);
-  const tv = await ensureCast(await tvmaze(show), show);
+  const tv = PROFILE.reference === 'tvmaze' ? await ensureCast(await tvmaze(show), show) : null; // reference 'none': list the show from its own files
   console.log(tv ? `   TVmaze: ${tv.name}, ${tv.runtime} min, ${tv.episodes.length} episodes, from ${tv.premiered}` : '   TVmaze: no match');
   // Prior candidates (if any) are kept and merged; their mention count decides the narrow net.
   const outFile = path.join(OUT_DIR, slug(show) + '.json');
@@ -319,7 +320,7 @@ async function main() {
   const filter = (args.find((a, i) => !a.startsWith('--') && !valued.has(args[i - 1])) || '').toLowerCase();
   const notThere = new Set(CENSUS.filter((r) => r.verdict === 'NOT THERE').map((r) => r.show));
   const hunted = (s) => fs.existsSync(path.join(OUT_DIR, slug(s.name) + '.json'));
-  const grid = (s) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'shows', slug(s.name) + '.json'), 'utf8')); } catch (e) { return null; } };
+  const grid = (s) => { try { return JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'shows', slug(s.name) + '.json'), 'utf8')); } catch (e) { return null; } };
   const coverage = (s) => { const g = grid(s); return g && g.coverage ? g.coverage.pct : 0; };
   const unplayableCount = (s) => { const g = grid(s); return g && g.seasons ? g.seasons.reduce((n, se) => n + se.episodes.filter((e) => e.file && !e.file.playable).length, 0) : 0; };
   // --priority: hunt the rows most likely to be rich on the Archive first; streaming-era and

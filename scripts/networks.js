@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
+const PROFILE = require('./lib/profile');
 const LIST_PATH = path.join(__dirname, 'show-list.json');
 const LIST = JSON.parse(fs.readFileSync(LIST_PATH, 'utf8'));
 const env = fs.existsSync(path.join(ROOT, 'backend', '.env')) ? fs.readFileSync(path.join(ROOT, 'backend', '.env'), 'utf8') : '';
@@ -83,7 +84,7 @@ async function main() {
   const byNet = {};
   for (const s of missing) (byNet[s.networks[0]] = byNet[s.networks[0]] || []).push(s);
 
-  fs.writeFileSync(path.join(ROOT, 'catalog', 'network-sweep.json'), JSON.stringify({ sweptAt: new Date().toISOString(), networks: perNet, missing: missing.map((s) => ({ tmdbId: s.id, name: s.name, year: s.first_air_date.slice(0, 4), network: s.networks[0], row: s.row, genres: (s.genre_ids || []).map((g) => GENRE_NAMES[g] || g), votes: s.vote_count, rating: s.vote_average, language: s.original_language, overview: s.overview })) }, null, 1));
+  fs.writeFileSync(path.join(PROFILE.catalogDir, 'network-sweep.json'), JSON.stringify({ sweptAt: new Date().toISOString(), networks: perNet, missing: missing.map((s) => ({ tmdbId: s.id, name: s.name, year: s.first_air_date.slice(0, 4), network: s.networks[0], row: s.row, genres: (s.genre_ids || []).map((g) => GENRE_NAMES[g] || g), votes: s.vote_count, rating: s.vote_average, language: s.original_language, overview: s.overview })) }, null, 1));
   const md = [`# Network sweeps — ${Object.keys(found).length} series on ${Object.keys(NETWORKS).length} networks (TMDB, 1990+, no kids); ${missing.length} not on the list yet`, '', `Swept ${new Date().toISOString().slice(0, 16)}. Run \`node scripts/networks.js --add\` to add them all, or copy names into show-list.json.`, '',
     '## Genres among the missing (candidate categories)', '', ...Object.entries(genreTally).sort((a, b) => b[1] - a[1]).map(([g, n]) => `- ${g}: ${n}`), ''];
   for (const [net, list] of Object.entries(byNet).sort((a, b) => b[1].length - a[1].length)) {

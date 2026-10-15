@@ -7,8 +7,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
+const PROFILE = require('./lib/profile');
 const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
-const OUT = path.join(ROOT, 'catalog', 'candidates-tv.json');
+const OUT = path.join(PROFILE.catalogDir, 'candidates-tv.json');
 const OUT_MD = path.join(ROOT, 'docs', 'CANDIDATES.md');
 const env = fs.existsSync(path.join(ROOT, 'backend', '.env')) ? fs.readFileSync(path.join(ROOT, 'backend', '.env'), 'utf8') : '';
 const TOKEN = (process.env.TMDB_READ_TOKEN || (env.match(/^TMDB_READ_TOKEN=(.+)$/m) || [])[1] || '').trim();

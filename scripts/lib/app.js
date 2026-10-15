@@ -5,7 +5,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..');
-const SITE_NAME = 'VOIDtv';
+const PROFILE = require('./profile');
+const SITE_NAME = PROFILE.siteName;
 const DONATE_URL = 'https://square.link/u/dJioBmlW';
 const CREDIT = `<a href="/about" onclick="go('about');return false">About VOIDtv</a> · A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3) that works on ways for people to have good things that fit a busy life and a stretched budget. Free to use, no set amount, never required; <a href="${DONATE_URL}" target="_blank" rel="noopener">give back to CASH</a> if the work is worth supporting.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
 
@@ -50,15 +51,15 @@ function buildChannels(shows, types) {
 }
 
 function assemble() {
-  const LIST = readJson(path.join(ROOT, 'scripts', 'show-list.json'), { types: [], shows: [] });
-  const ART = readJson(path.join(ROOT, 'catalog', 'art.json'), {});
-  const GRAPH = readJson(path.join(ROOT, 'catalog', 'graph.json'), { people: {}, showLinks: {} });
-  const SHOWS_DIR = path.join(ROOT, 'catalog', 'shows');
-  const PEOPLE_DIR = path.join(ROOT, 'catalog', 'people');
-  const BIO_DIR = path.join(ROOT, 'catalog', 'people-bios');
-  const MOV_DIR = path.join(ROOT, 'catalog', 'movies');
-  const TVM = readJson(path.join(ROOT, 'catalog', 'tvmovies-list.json'), { items: [] });
-  const OV = readJson(path.join(ROOT, 'catalog', 'overrides.json'), {}); // B's edits layer (HQ writes it): hidden shows stay off the site
+  const LIST = readJson(PROFILE.listFile, { types: [], shows: [] });
+  const ART = readJson(path.join(PROFILE.catalogDir, 'art.json'), {});
+  const GRAPH = readJson(path.join(PROFILE.catalogDir, 'graph.json'), { people: {}, showLinks: {} });
+  const SHOWS_DIR = path.join(PROFILE.catalogDir, 'shows');
+  const PEOPLE_DIR = path.join(PROFILE.catalogDir, 'people');
+  const BIO_DIR = path.join(PROFILE.catalogDir, 'people-bios');
+  const MOV_DIR = path.join(PROFILE.catalogDir, 'movies');
+  const TVM = readJson(path.join(PROFILE.catalogDir, 'tvmovies-list.json'), { items: [] });
+  const OV = readJson(path.join(PROFILE.catalogDir, 'overrides.json'), {}); // B's edits layer (HQ writes it): hidden shows stay off the site
   const TVM_BY_ID = Object.fromEntries(TVM.items.map((m) => [m.tmdbId, m]));
   const byName = Object.fromEntries(LIST.shows.map((s) => [s.name, s]));
 
@@ -132,7 +133,7 @@ function assemble() {
   ];
   const channels = buildChannels(shows, types);
   // HQ can rewrite the order into catalog/home-order.json; the list above is the fallback.
-  const fileOrder = readJson(path.join(ROOT, 'catalog', 'home-order.json'), null);
+  const fileOrder = readJson(path.join(PROFILE.catalogDir, 'home-order.json'), null);
   const known = new Set([...types.map((t) => 'type:' + t), ...shows.flatMap((s) => (s.tags || []).map((t) => 'tag:' + t))]);
   const cleanOrder = Array.isArray(fileOrder) ? fileOrder.filter((e) => Array.isArray(e) && (e[0] === 'type' || e[0] === 'tag') && typeof e[1] === 'string' && known.has(e[0] + ':' + e[1])) : [];
   const homeOrder = cleanOrder.length ? cleanOrder : HOME_ORDER;
@@ -513,7 +514,7 @@ function heroRender(first){const pool=heroPool();const t=pool[state.heroI];const
  const front=a.classList.contains('on')?a:(b.classList.contains('on')?b:null);const back=front===a?b:a;
  if(first&&!front){a.src=hb(t);a.classList.add('on')}else{back.src=hb(t);back.onload=()=>{back.classList.add('on');if(front)front.classList.remove('on')}}
  const kick=(t.tags&&t.tags[0])||t.type;const ov=t.overview.length>260?t.overview.slice(0,260).replace(/\\s+\\S*$/,'')+'…':t.overview;
- copy.style.opacity=0;if(!first)blip(document.querySelector('.hero-home'));setTimeout(()=>{copy.innerHTML='<p class="tag">before AI slop, there was human creativity</p><small class="kicker">'+esc(kick)+(t.network?' · '+esc(t.network):'')+(t.year?' · '+t.year:'')+'</small><h1>'+esc(t.show)+'</h1><p class="ov">'+esc(ov)+'</p><div class="meta">'+[(t.genres||[]).slice(0,3).join(' · '),t.rating?'★ '+t.rating:'',t.eps+' episode'+(t.eps===1?'':'s')].filter(Boolean).join('  ·  ')+'</div><div class="acts"><button class="btn gold" onclick="watch(\\''+t.slug+'\\')"><i class="ico play"></i>Play</button><button class="btn ghost" onclick="go(\\''+t.slug+'\\')">About this show</button><button class="btn ghost" onclick="go(\\'tv\\')"><i class="ico tv"></i>Live TV</button></div>';copy.style.opacity=1;const c=$('herocount');if(c)c.textContent=(state.heroI+1)+' / '+pool.length},first?0:220)}
+ copy.style.opacity=0;if(!first)blip(document.querySelector('.hero-home'));setTimeout(()=>{copy.innerHTML='<p class="tag">${PROFILE.tagline}</p><small class="kicker">'+esc(kick)+(t.network?' · '+esc(t.network):'')+(t.year?' · '+t.year:'')+'</small><h1>'+esc(t.show)+'</h1><p class="ov">'+esc(ov)+'</p><div class="meta">'+[(t.genres||[]).slice(0,3).join(' · '),t.rating?'★ '+t.rating:'',t.eps+' episode'+(t.eps===1?'':'s')].filter(Boolean).join('  ·  ')+'</div><div class="acts"><button class="btn gold" onclick="watch(\\''+t.slug+'\\')"><i class="ico play"></i>Play</button><button class="btn ghost" onclick="go(\\''+t.slug+'\\')">About this show</button><button class="btn ghost" onclick="go(\\'tv\\')"><i class="ico tv"></i>Live TV</button></div>';copy.style.opacity=1;const c=$('herocount');if(c)c.textContent=(state.heroI+1)+' / '+pool.length},first?0:220)}
 async function watch(slug){await go(slug);const s=state.show;if(s&&s.seasons){const r=resume(s);play(r.se,r.e)}}
 function vpMarkup(autoplay,ep){return '<div class="vp paused" id="vp" tabindex="0"><video id="v" playsinline preload="metadata" '+(autoplay?'autoplay':'')+' src="'+ep.url+'"></video><div class="vp-center"><button class="vp-big" data-a="toggle" aria-label="Play"><i class="ico play lg"></i></button></div><div class="vp-msg"></div><div class="vp-next"></div><div class="vp-ui"><div class="vp-seek"><div class="vp-buf"></div><div class="vp-played"></div><input type="range" min="0" max="1000" value="0" step="1" aria-label="Seek"></div><div class="vp-row"><button data-a="toggle" class="vp-play" aria-label="Play"><i class="ico play"></i></button><button data-a="back" aria-label="Back 10 seconds"><i class="ico prev sm"></i>10</button><button data-a="fwd" aria-label="Forward 30 seconds">30<i class="ico next sm"></i></button><span class="vp-time">0:00 / 0:00</span><span class="vp-sp"></span><button data-a="cc" class="vp-cc" title="Captions (C). With no captions in the file, pick a subtitle file.">CC</button><button data-a="speed" class="vp-speed" title="Speed">1×</button><button data-a="mute" class="vp-mute" title="Mute (M)">Mute</button><input type="range" class="vp-vol" min="0" max="100" step="1" value="100" aria-label="Volume" title="Volume (↑ ↓)"><button data-a="pip" title="Picture in picture">PiP</button><a class="vp-dlink" href="'+ep.url+'" target="_blank" rel="noopener" download title="Download this episode (the original file from the Archive)"><i class="ico arrow-down sm"></i>DL</a><button data-a="next" title="Next episode (N)">Next <i class="ico next sm"></i></button><button data-a="fs" title="Fullscreen (F)"><i class="ico fullscreen"></i></button></div></div></div>'}
 function vpFlash(vp,side,text){const f=document.createElement('div');f.className='vp-flash '+side;f.textContent=text;vp.appendChild(f);setTimeout(()=>f.remove(),750)}
@@ -599,7 +600,7 @@ function cashPage(){$('main').innerHTML='<div class="about"><button class="back"
  +'<div class="acts" style="margin:14px 0 20px"><a class="btn gold" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a><button class="btn" onclick="go(\\'about\\')">About VOIDtv</button></div>'
  +'<h2>Where to find CASH</h2><p><a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org</a> has the programs, the events and the people. Questions, ideas or a hand to lend: reach out there.</p></div>'}
 function aboutPage(){$('main').innerHTML='<div class="about"><button class="back" onclick="go(\\'\\')"><i class="ico back"></i> Browse</button>'
- +'<div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/icon-192.png" alt=""><div><h1>About VOIDtv</h1><div class="g">before AI slop, there was human creativity</div></div></div>'
+ +'<div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/icon-192.png" alt=""><div><h1>About VOIDtv</h1><div class="g">${PROFILE.tagline}</div></div></div>'
  +'<h2>What this is</h2><p>VOIDtv is a better way to find and watch the television that already lives on the <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a>: shows from 1990 to now, the classics behind their own door, TV movies and specials, every episode in order, every one of them playable, with the people and connections that tie them together. We host nothing. Every video plays from archive.org; what we add is the catalog, the order, the player and the care.</p>'
  +'<h2>Who makes it</h2><p>VOIDtv is a project of <a href="https://cashvalues.org" target="_blank" rel="noopener">CASH, the Church of American Strength &amp; Hope</a>, a 501(c)(3). CASH works on ways for people to have good things that fit a busy life and a budget stretched to the max. VOIDtv is free and stays free: no paywall, no ads, no accounts required. If the work is worth something to you, <a href="'+DONATE+'" target="_blank" rel="noopener">give back and be part of it</a>. No set amount, never required.</p>'
  +'<h2>Rights</h2><p>The files belong to the Internet Archive and its uploaders. If you hold rights to something listed here, the Archive has a <a href="https://archive.org/about/terms.php" target="_blank" rel="noopener">takedown process</a> for the files themselves; tell us too, through <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org</a>, and we will pull the listing.</p>'

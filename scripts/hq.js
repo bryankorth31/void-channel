@@ -11,21 +11,23 @@ const { spawn, execSync } = require('child_process');
 const cfa = require('./lib/cfa');
 
 const ROOT = path.join(__dirname, '..');
-const PORT = +(process.argv[process.argv.indexOf('--port') + 1] || 0) || 8780;
+const PROFILE = require('./lib/profile');
+const PORT = +(process.argv[process.argv.indexOf('--port') + 1] || 0) || PROFILE.port;
+const { createTasks } = require('./lib/tasks');
 // Jobs run under plain node. Inside the desktop app process.execPath is the app itself, so find node.
 function nodeBin() {
   if (!process.versions.electron) return { bin: process.execPath, env: process.env };
   try { const w = execSync('where node', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().split(/\r?\n/).find((l) => /node\.exe$/i.test(l.trim())); if (w) return { bin: w.trim(), env: process.env }; } catch (e) { /* fall through */ }
   return { bin: process.execPath, env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' } };
 }
-const CACHE = path.join(ROOT, 'catalog', 'cache');
+const CACHE = path.join(PROFILE.catalogDir, 'cache');
 const FILES = {
-  list: path.join(ROOT, 'scripts', 'show-list.json'),
-  overrides: path.join(ROOT, 'catalog', 'overrides.json'),
-  order: path.join(ROOT, 'catalog', 'home-order.json'),
-  art: path.join(ROOT, 'catalog', 'art.json'),
-  shows: path.join(ROOT, 'catalog', 'shows'),
-  candidates: path.join(ROOT, 'catalog', 'candidates'),
+  list: PROFILE.listFile,
+  overrides: path.join(PROFILE.catalogDir, 'overrides.json'),
+  order: path.join(PROFILE.catalogDir, 'home-order.json'),
+  art: path.join(PROFILE.catalogDir, 'art.json'),
+  shows: path.join(PROFILE.catalogDir, 'shows'),
+  candidates: path.join(PROFILE.catalogDir, 'candidates'),
 };
 const readJson = (p, fb) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fb; } };
 const writeJson = (p, v) => { const tmp = p + '.tmp'; fs.writeFileSync(tmp, JSON.stringify(v, null, 2) + '\n'); fs.renameSync(tmp, p); };
@@ -92,7 +94,7 @@ function overview() {
     totals: tot, byType: by('type'), byTag: by('tags'),
     jobs: jobList(), processes: nodeProcesses(),
     publishLog: tail(path.join(CACHE, 'publish.log'), 4), nightlyLog: tail(path.join(CACHE, 'nightly.log'), 8),
-    tasks: scheduledTasks(), git: gitState(), analytics: cfa.configured(),
+    tasks: scheduledTasks(), git: gitState(), analytics: cfa.configured(), profile: PROFILE.name, siteName: PROFILE.siteName,
   };
 }
 
@@ -106,7 +108,7 @@ function gitState() {
 function scheduledTasks() {
   try {
     const one = (n) => { try { return execSync('schtasks /Query /FO CSV /V /TN "' + n + '"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString(); } catch (e) { return ''; } };
-    const out = one('VoidTV Publish') + '\n' + one('VoidTV Nightly'); if (false) execSync('', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    const out = one(PROFILE.taskPrefix + ' Publish') + '\n' + one(PROFILE.taskPrefix + ' Nightly'); if (false) execSync('', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
     const lines = out.split('\n').filter((l) => l.startsWith('"') && !l.startsWith('"HostName"'));
     return lines.map((l) => { const c = l.split('","').map((x) => x.replace(/^"|"\r?$/g, '')); return { name: c[1].replace(/^\\/, ''), next: c[2], status: c[3], last: c[5], result: c[6] }; });
   } catch (e) { return []; }
@@ -231,7 +233,7 @@ const server = http.createServer(async (req, res) => {
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
     if (p === '/api/overview') return send(res, 200, overview());
     if (p === '/api/health') return send(res, 200, readJson(path.join(CACHE, 'health.json'), { level: 'none', checks: [] }));
-    if (p === '/api/tasks/recreate' && req.method === 'POST') { const nb = nodeBin(); const node = nb.bin; const q = (x) => '\\"' + x + '\\"'; const made = []; for (const [name, sched, script] of [['VoidTV Publish', '/SC HOURLY /MO 2 /ST 00:20', 'publish.js'], ['VoidTV Nightly', '/SC DAILY /ST 03:30', 'nightly.js']]) { try { execSync(`schtasks /Create /F /TN "${name}" ${sched} /TR "${q(node)} ${q(path.join(ROOT, 'scripts', script))}"`, { stdio: ['ignore', 'pipe', 'pipe'] }); made.push(name); } catch (e) { return send(res, 500, { error: name + ': ' + (e.stderr ? e.stderr.toString() : e.message).slice(0, 200), made }); } } return send(res, 200, { made }); }
+    if (p === '/api/tasks/recreate' && req.method === 'POST') { try { return send(res, 200, { made: createTasks(nodeBin().bin) }); } catch (e) { return send(res, 500, { error: (e.stderr ? e.stderr.toString() : e.message).slice(0, 200) }); } }
     if (p === '/api/shows') return send(res, 200, { types: readJson(FILES.list, { types: [] }).types, rows: showRows() });
     if (p.startsWith('/api/show/')) {
       const slug = decodeURIComponent(p.slice(10));

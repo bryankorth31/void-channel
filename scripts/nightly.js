@@ -13,7 +13,8 @@ const fs = require('fs');
 const { spawnSync, execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
-const LOG = path.join(ROOT, 'catalog', 'cache', 'nightly.log');
+const PROFILE = require('./lib/profile');
+const LOG = path.join(PROFILE.catalogDir, 'cache', 'nightly.log');
 const log = (m) => { const line = `${new Date().toISOString()} ${m}`; console.log(line); try { fs.mkdirSync(path.dirname(LOG), { recursive: true }); fs.appendFileSync(LOG, line + '\n'); } catch (_) {} };
 
 // Another hunt (the long foreground ones B runs) must not be doubled: two Archive jobs is the ceiling.

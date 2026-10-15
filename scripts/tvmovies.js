@@ -9,8 +9,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CACHE_DIR = path.join(ROOT, 'catalog', 'cache', 'tmdb-discover');
-const OUT = path.join(ROOT, 'catalog', 'tvmovies-list.json');
+const PROFILE = require('./lib/profile');
+const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache', 'tmdb-discover');
+const OUT = path.join(PROFILE.catalogDir, 'tvmovies-list.json');
 const env = fs.existsSync(path.join(ROOT, 'backend', '.env')) ? fs.readFileSync(path.join(ROOT, 'backend', '.env'), 'utf8') : '';
 const TOKEN = (process.env.TMDB_READ_TOKEN || (env.match(/^TMDB_READ_TOKEN=(.+)$/m) || [])[1] || '').trim();
 if (!TOKEN) { console.error('No TMDB_READ_TOKEN in backend/.env'); process.exit(1); }

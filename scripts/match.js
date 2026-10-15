@@ -12,10 +12,11 @@ const writeRetry = (file, text) => { for (let a = 0; ; a++) { try { fs.writeFile
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
+const PROFILE = require('./lib/profile');
 const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
-const CAND_DIR = path.join(ROOT, 'catalog', 'candidates');
-const CACHE_DIR = path.join(ROOT, 'catalog', 'cache');
-const OUT_DIR = path.join(ROOT, 'catalog', 'shows');
+const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
+const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
+const OUT_DIR = path.join(PROFILE.catalogDir, 'shows');
 const OUT_MD = path.join(ROOT, 'docs', 'COVERAGE.md');
 const LIVE = 0.85, REVIEW = 0.5;
 const REACT = /\b(reaction|reacts?|reacting|review|recap|commentary|breakdown|watch ?along|first time watching|normies|mark watches|group reaction|walkthrough|playthrough|gameplay|let'?s play|longplay|speedrun)\b/i;
@@ -102,11 +103,11 @@ function namesOtherShow(text, show) {
   return OTHER_SHOWS.some((o) => o.core !== me && !me.includes(o.core) && !o.core.includes(me) && t.includes(o.core));
 }
 
-const OVERRIDES = fs.existsSync(path.join(ROOT, 'catalog', 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')) : {};
+const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 // Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
-const DEAD_FILE = path.join(ROOT, 'catalog', 'dead-files.json');
+const DEAD_FILE = path.join(PROFILE.catalogDir, 'dead-files.json');
 function readDead() { try { return JSON.parse(fs.readFileSync(DEAD_FILE, 'utf8')); } catch (e) { return {}; } } // linkcheck.js retires files the Archive no longer serves
-function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
+function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
 function matchShow(entry) {
   const show = entry.name;
   const cf = path.join(CAND_DIR, slug(show) + '.json');

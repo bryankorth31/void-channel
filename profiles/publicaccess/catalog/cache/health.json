@@ -1,0 +1,58 @@
+{
+ "at": "2026-10-15T14:50:27.041Z",
+ "level": "red",
+ "checks": [
+  {
+   "id": "publish",
+   "level": "yellow",
+   "msg": "no publish has run yet"
+  },
+  {
+   "id": "nightly",
+   "level": "yellow",
+   "msg": "no nightly pass recorded yet"
+  },
+  {
+   "id": "task:VoidTV Publish",
+   "level": "green",
+   "msg": "VoidTV Publish next 10/15/2026 11:20:00 AM"
+  },
+  {
+   "id": "task:VoidTV Nightly",
+   "level": "green",
+   "msg": "VoidTV Nightly next 10/16/2026 3:30:00 AM"
+  },
+  {
+   "id": "jobs",
+   "level": "green",
+   "msg": "2 Archive-facing job(s) running (ceiling 2)"
+  },
+  {
+   "id": "catalog",
+   "level": "red",
+   "msg": "scripts/show-list.json is missing or tiny",
+   "fix": "Restore it from git: git checkout -- scripts/show-list.json"
+  },
+  {
+   "id": "build",
+   "level": "red",
+   "msg": "the site would ship with only 0 titles",
+   "fix": "Something emptied the catalog; check git status in catalog/."
+  },
+  {
+   "id": "links",
+   "level": "yellow",
+   "msg": "no link check has run yet"
+  },
+  {
+   "id": "cache",
+   "level": "green",
+   "msg": "0 files, 0.0 GB"
+  },
+  {
+   "id": "repo",
+   "level": "green",
+   "msg": ".git 0.4 GB, 2283 unpublished catalog files"
+  }
+ ]
+}

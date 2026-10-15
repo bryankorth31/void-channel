@@ -6,9 +6,10 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
-const CACHE = path.join(ROOT, 'catalog', 'cache');
-const LIST = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'show-list.json'), 'utf8'));
-const OVERRIDES = JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8'));
+const PROFILE = require('./lib/profile');
+const CACHE = path.join(PROFILE.catalogDir, 'cache');
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
+const OVERRIDES = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8'));
 const norm = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 const slug = (s) => norm(s).replace(/ /g, '-');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -17,8 +18,8 @@ const bySlug = new Map(LIST.shows.map((s) => [slug(s.name), s]));
 let slugs;
 const arg = process.argv[2];
 if (arg && fs.existsSync(arg)) slugs = JSON.parse(fs.readFileSync(arg, 'utf8'));
-else slugs = fs.readdirSync(path.join(ROOT, 'catalog', 'candidates')).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5))
-  .filter((s) => { try { return !JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'candidates', s + '.json'), 'utf8')).tvmaze && !fs.existsSync(path.join(CACHE, 'tvmaze-' + s + '.json')); } catch (e) { return false; } });
+else slugs = fs.readdirSync(path.join(PROFILE.catalogDir, 'candidates')).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5))
+  .filter((s) => { try { return !JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'candidates', s + '.json'), 'utf8')).tvmaze && !fs.existsSync(path.join(CACHE, 'tvmaze-' + s + '.json')); } catch (e) { return false; } });
 
 async function get(url) { const r = await fetch(url, { signal: AbortSignal.timeout(20000) }); if (r.status === 429) { await sleep(5000); return get(url); } if (!r.ok) return null; return r.json(); }
 async function cast(id) {

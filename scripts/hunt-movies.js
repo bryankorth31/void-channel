@@ -12,10 +12,11 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const LIST = JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'tvmovies-list.json'), 'utf8')).items;
-const OUT_DIR = path.join(ROOT, 'catalog', 'movies');
+const PROFILE = require('./lib/profile');
+const LIST = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'tvmovies-list.json'), 'utf8')).items;
+const OUT_DIR = path.join(PROFILE.catalogDir, 'movies');
 const OUT_MD = path.join(ROOT, 'docs', 'MOVIES.md');
-const CACHE_DIR = path.join(ROOT, 'catalog', 'cache');
+const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 
 let PAUSE_MS = 3000;
 const BACKOFF_MS = [60000, 180000, 600000];
