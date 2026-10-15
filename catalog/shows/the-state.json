@@ -3,21 +3,21 @@
   "slug": "the-state",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-15T13:19:09.510Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T15:07:54.563Z",
+  "addedAt": "2026-10-15T15:07:54.562Z",
   "tvmaze": {
-    "id": null,
+    "id": 6249,
     "name": "The State",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "1994-01-21",
     "network": "MTV"
   },
   "coverage": {
-    "total": 44,
+    "total": 24,
     "live": 0,
-    "review": 44,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 24,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,890 +25,207 @@
       "episodes": [
         {
           "number": 1,
-          "name": "catchphrases",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Interviews/Catchphrases.mp4",
-            "name": "Interviews/Catchphrases",
-            "url": "https://archive.org/download/the-state-bonus-features/Interviews%2FCatchphrases.mp4",
-            "seconds": 491,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 83,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 1",
+          "airdate": "1994-01-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "origins",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Interviews/Origins.mp4",
-            "name": "Interviews/Origins",
-            "url": "https://archive.org/download/the-state-bonus-features/Interviews%2FOrigins.mp4",
-            "seconds": 517,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 86,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 2",
+          "airdate": "1994-01-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "process",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Interviews/Process.mp4",
-            "name": "Interviews/Process",
-            "url": "https://archive.org/download/the-state-bonus-features/Interviews%2FProcess.mp4",
-            "seconds": 383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 72,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 3",
+          "airdate": "1994-02-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "roles",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Interviews/Roles.mp4",
-            "name": "Interviews/Roles",
-            "url": "https://archive.org/download/the-state-bonus-features/Interviews%2FRoles.mp4",
-            "seconds": 280,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 50,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 4",
+          "airdate": "1994-02-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "set tour",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Interviews/Set Tour.mp4",
-            "name": "Interviews/Set Tour",
-            "url": "https://archive.org/download/the-state-bonus-features/Interviews%2FSet%20Tour.mp4",
-            "seconds": 207,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 5",
+          "airdate": "1994-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "airdate": "1994-07-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "airdate": "1994-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "airdate": "1994-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Episode 4",
+          "airdate": "1994-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "1994-08-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "bologna foot otto bimini tv watching can i play ii people really live this way",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Outtakes/Bologna Foot - Otto Bimini - TV Watching - Can I Play II - People Really Live This Way.mp4",
-            "name": "Outtakes/Bologna Foot - Otto Bimini - TV Watching - Can I Play II - People Really Live This Way",
-            "url": "https://archive.org/download/the-state-bonus-features/Outtakes%2FBologna%20Foot%20-%20Otto%20Bimini%20-%20TV%20Watching%20-%20Can%20I%20Play%20II%20-%20People%20Really%20Live%20This%20Way.mp4",
-            "seconds": 426,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 70,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 6",
+          "airdate": "1994-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "airdate": "1994-12-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "airdate": "1995-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "airdate": "1995-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Episode 4",
+          "airdate": "1995-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "1995-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "1995-02-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "dream boy",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Outtakes/Dream Boy.mp4",
-            "name": "Outtakes/Dream Boy",
-            "url": "https://archive.org/download/the-state-bonus-features/Outtakes%2FDream%20Boy.mp4",
-            "seconds": 182,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 43,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 7",
+          "airdate": "1995-08-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "free your mind missy von kimmelman",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Outtakes/Free Your Mind - Missy Von Kimmelman.mp4",
-            "name": "Outtakes/Free Your Mind - Missy Von Kimmelman",
-            "url": "https://archive.org/download/the-state-bonus-features/Outtakes%2FFree%20Your%20Mind%20-%20Missy%20Von%20Kimmelman.mp4",
-            "seconds": 137,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 8",
+          "airdate": "1995-08-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "in the bathroom",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Outtakes/In the Bathroom.mp4",
-            "name": "Outtakes/In the Bathroom",
-            "url": "https://archive.org/download/the-state-bonus-features/Outtakes%2FIn%20the%20Bathroom.mp4",
-            "seconds": 213,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 51,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 9",
+          "airdate": "1995-07-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "previously on the bloopers",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Outtakes/Previously on the State - Bloopers.mp4",
-            "name": "Outtakes/Previously on the State - Bloopers",
-            "url": "https://archive.org/download/the-state-bonus-features/Outtakes%2FPreviously%20on%20the%20State%20-%20Bloopers.mp4",
-            "seconds": 162,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 32,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 10",
+          "airdate": "1995-07-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "roughing it",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Outtakes/Roughing It.mp4",
-            "name": "Outtakes/Roughing It",
-            "url": "https://archive.org/download/the-state-bonus-features/Outtakes%2FRoughing%20It.mp4",
-            "seconds": 104,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 11",
+          "airdate": "1995-07-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "pilot",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Pilot episode.mp4",
-            "name": "Pilot episode",
-            "url": "https://archive.org/download/the-state-bonus-features/Pilot%20episode.mp4",
-            "seconds": 1018,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 257,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 12",
+          "airdate": "1995-08-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "promos",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Promos.mp4",
-            "name": "Promos",
-            "url": "https://archive.org/download/the-state-bonus-features/Promos.mp4",
-            "seconds": 756,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "mtv christmas party video",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Special Appearances/MTV Christmas Party Video.mp4",
-            "name": "Special Appearances/MTV Christmas Party Video",
-            "url": "https://archive.org/download/the-state-bonus-features/Special%20Appearances%2FMTV%20Christmas%20Party%20Video.mp4",
-            "seconds": 230,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 66,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "mtvs shut up and laugh panama city",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Special Appearances/MTV's Shut Up & Laugh, Panama City 1996.mp4",
-            "name": "Special Appearances/MTV's Shut Up & Laugh, Panama City 1996",
-            "url": "https://archive.org/download/the-state-bonus-features/Special%20Appearances%2FMTV's%20Shut%20Up%20%26%20Laugh%2C%20Panama%20City%201996.mp4",
-            "seconds": 269,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 44,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "spring break safety tips",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Special Appearances/Spring Break Safety Tips.mp4",
-            "name": "Special Appearances/Spring Break Safety Tips",
-            "url": "https://archive.org/download/the-state-bonus-features/Special%20Appearances%2FSpring%20Break%20Safety%20Tips.mp4",
-            "seconds": 402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 75,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "the jon stewart show",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Special Appearances/The Jon Stewart Show.mp4",
-            "name": "Special Appearances/The Jon Stewart Show",
-            "url": "https://archive.org/download/the-state-bonus-features/Special%20Appearances%2FThe%20Jon%20Stewart%20Show.mp4",
-            "seconds": 329,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 77,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "the goes to the prom",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "The State Goes to the Prom.mp4",
-            "name": "The State Goes to the Prom",
-            "url": "https://archive.org/download/the-state-bonus-features/The%20State%20Goes%20to%20the%20Prom.mp4",
-            "seconds": 451,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 90,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "carters lineage",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Pilot Season/Carter's Lineage.mp4",
-            "name": "Unaired Sketches/Pilot Season/Carter's Lineage",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FPilot%20Season%2FCarter's%20Lineage.mp4",
-            "seconds": 120,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "spoons",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Pilot Season/Spoons.mp4",
-            "name": "Unaired Sketches/Pilot Season/Spoons",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FPilot%20Season%2FSpoons.mp4",
-            "seconds": 221,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 56,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "coach gunner",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 1/Coach Gunner.mp4",
-            "name": "Unaired Sketches/Season 1/Coach Gunner",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%201%2FCoach%20Gunner.mp4",
-            "seconds": 155,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "crazy grandma night",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 1/Crazy Grandma Night.mp4",
-            "name": "Unaired Sketches/Season 1/Crazy Grandma Night",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%201%2FCrazy%20Grandma%20Night.mp4",
-            "seconds": 186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "deputy cow benny",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 1/Deputy Cow Benny.mp4",
-            "name": "Unaired Sketches/Season 1/Deputy Cow Benny",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%201%2FDeputy%20Cow%20Benny.mp4",
-            "seconds": 119,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "shot in the head",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 1/Shot in the Head.mp4",
-            "name": "Unaired Sketches/Season 1/Shot in the Head",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%201%2FShot%20in%20the%20Head.mp4",
-            "seconds": 223,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 40,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "super 8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 1/Super 8.mp4",
-            "name": "Unaired Sketches/Season 1/Super 8",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%201%2FSuper%208.mp4",
-            "seconds": 133,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "fashion magazine",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 2/Fashion Magazine.mp4",
-            "name": "Unaired Sketches/Season 2/Fashion Magazine",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%202%2FFashion%20Magazine.mp4",
-            "seconds": 159,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 22,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "first date",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 2/First Date.mp4",
-            "name": "Unaired Sketches/Season 2/First Date",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%202%2FFirst%20Date.mp4",
-            "seconds": 115,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 22,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "muskrats",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 2/Muskrats.mp4",
-            "name": "Unaired Sketches/Season 2/Muskrats",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%202%2FMuskrats.mp4",
-            "seconds": 277,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 74,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "swamp thing",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 2/Swamp Thing.mp4",
-            "name": "Unaired Sketches/Season 2/Swamp Thing",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%202%2FSwamp%20Thing.mp4",
-            "seconds": 229,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 46,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "tall",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 2/Tall State.mp4",
-            "name": "Unaired Sketches/Season 2/Tall State",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%202%2FTall%20State.mp4",
-            "seconds": 147,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 28,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "tea and sympathy",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 2/Tea & Sympathy.mp4",
-            "name": "Unaired Sketches/Season 2/Tea & Sympathy",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%202%2FTea%20%26%20Sympathy.mp4",
-            "seconds": 188,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 25,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "brendan",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Brendan.mp4",
-            "name": "Unaired Sketches/Season 3/Brendan",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FBrendan.mp4",
-            "seconds": 218,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 30,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "cock skit",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Cock Skit.mp4",
-            "name": "Unaired Sketches/Season 3/Cock Skit",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FCock%20Skit.mp4",
-            "seconds": 114,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 20,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "crazy geese",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Crazy Geese.mp4",
-            "name": "Unaired Sketches/Season 3/Crazy Geese",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FCrazy%20Geese.mp4",
-            "seconds": 114,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "disco lady",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Disco Lady.mp4",
-            "name": "Unaired Sketches/Season 3/Disco Lady",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FDisco%20Lady.mp4",
-            "seconds": 263,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 42,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "drag dad",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Drag Dad.mp4",
-            "name": "Unaired Sketches/Season 3/Drag Dad",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FDrag%20Dad.mp4",
-            "seconds": 226,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 36,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "golf balls",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Golf Balls.mp4",
-            "name": "Unaired Sketches/Season 3/Golf Balls",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FGolf%20Balls.mp4",
-            "seconds": 120,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "gunter brothers",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Gunter Brothers.mp4",
-            "name": "Unaired Sketches/Season 3/Gunter Brothers",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FGunter%20Brothers.mp4",
-            "seconds": 187,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 27,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "ice station",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Ice Station.mp4",
-            "name": "Unaired Sketches/Season 3/Ice Station",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FIce%20Station.mp4",
-            "seconds": 300,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 50,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "pig schmooze",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Pig Schmooze.mp4",
-            "name": "Unaired Sketches/Season 3/Pig Schmooze",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FPig%20Schmooze.mp4",
-            "seconds": 171,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 25,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "porno sex lover",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Porno Sex Lover.mp4",
-            "name": "Unaired Sketches/Season 3/Porno Sex Lover",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FPorno%20Sex%20Lover.mp4",
-            "seconds": 211,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 38,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "estate",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/State Estate.mp4",
-            "name": "Unaired Sketches/Season 3/State Estate",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FState%20Estate.mp4",
-            "seconds": 128,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "tar baby",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Tar Baby.mp4",
-            "name": "Unaired Sketches/Season 3/Tar Baby",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FTar%20Baby.mp4",
-            "seconds": 129,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 30,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "zogs kegger",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-state-bonus-features",
-            "itemTitle": "The State - Bonus Features",
-            "file": "Unaired Sketches/Season 3/Zog's Kegger.mp4",
-            "name": "Unaired Sketches/Season 3/Zog's Kegger",
-            "url": "https://archive.org/download/the-state-bonus-features/Unaired%20Sketches%2FSeason%203%2FZog's%20Kegger.mp4",
-            "seconds": 128,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 13",
+          "airdate": "1995-08-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 6249,
-    "name": "The State",
-    "placed": 0
-  }
+  ]
 }

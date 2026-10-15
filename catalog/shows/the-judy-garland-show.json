@@ -3,21 +3,21 @@
   "slug": "the-judy-garland-show",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T13:17:45.172Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T15:09:16.939Z",
+  "addedAt": "2026-10-15T15:09:16.939Z",
   "tvmaze": {
-    "id": null,
+    "id": 14905,
     "name": "The Judy Garland Show",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 60,
+    "premiered": "1963-09-29",
     "network": "CBS"
   },
   "coverage": {
-    "total": 36,
-    "live": 0,
-    "review": 36,
-    "missing": 0,
-    "pct": 100
+    "total": 26,
+    "live": 9,
+    "review": 2,
+    "missing": 15,
+    "pct": 42
   },
   "seasons": [
     {
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "03 the",
+          "name": "The Judy Garland Show #7",
+          "airdate": "1963-09-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "03 - The Judy Garland Show (1963) S01E01, S01E03.mp4",
@@ -36,21 +39,18 @@
             "seconds": 7470,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 742,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 742
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "04 the",
+          "name": "The Judy Garland Show #9",
+          "airdate": "1963-10-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "04 - The Judy Garland Show (1963) S01E02, S01E04.mp4",
@@ -59,21 +59,34 @@
             "seconds": 6516,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 645,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 645
           },
           "alternates": []
         },
         {
+          "number": 3,
+          "name": "The Judy Garland Show #4",
+          "airdate": "1963-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Judy Garland Show #8",
+          "airdate": "1963-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 5,
-          "name": "05 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #6",
+          "airdate": "1963-10-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "05 - The Judy Garland Show (1963) S01E05, S01E06.mp4",
@@ -82,44 +95,48 @@
             "seconds": 3133,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 311,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 311
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "05 - The Judy Garland Show (1963) S01E05, S01E061.mp4",
+              "name": "05 - The Judy Garland Show (1963) S01E05, S01E061",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/05%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E05%2C%20S01E061.mp4",
+              "seconds": 3019,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 299
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "name": "The Judy Garland Show #12",
+          "airdate": "1963-11-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "12 the striesand and merman",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "12 - The Judy Garland Show (1963) S01E07, S01E09 - Striesand & Merman.mp4",
-            "name": "12 - The Judy Garland Show (1963) S01E07, S01E09 - Striesand & Merman",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/12%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E07%2C%20S01E09%20-%20Striesand%20%26%20Merman.mp4",
-            "seconds": 3203,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 320,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Judy Garland Show #2",
+          "airdate": "1963-11-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "10 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #3",
+          "airdate": "1963-11-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "10 - The Judy Garland Show (1963) S01E08, S01E19.mp4",
@@ -128,21 +145,40 @@
             "seconds": 3194,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 317,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 317
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "10 - The Judy Garland Show (1963) S01E08, S01E192.mp4",
+              "name": "10 - The Judy Garland Show (1963) S01E08, S01E192",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/10%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E08%2C%20S01E192.mp4",
+              "seconds": 3145,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 311
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "The Judy Garland Show #13",
+          "airdate": "1963-12-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "06 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #1",
+          "airdate": "1963-12-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "06 - The Judy Garland Show (1963) S01E10, S01E12.mp4",
@@ -151,44 +187,48 @@
             "seconds": 3584,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 359,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 359
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "06 - The Judy Garland Show (1963) S01E10, S01E122.mp4",
+              "name": "06 - The Judy Garland Show (1963) S01E10, S01E122",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/06%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E10%2C%20S01E122.mp4",
+              "seconds": 3158,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 312
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "14 the the kennedy",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "14 - The Judy Garland Show (1963) S01E11, S01E20 - The Kennedy Show.mp4",
-            "name": "14 - The Judy Garland Show (1963) S01E11, S01E20 - The Kennedy Show",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/14%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E11%2C%20S01E20%20-%20The%20Kennedy%20Show.mp4",
-            "seconds": 3258,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 325,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Judy Garland Show #5",
+          "airdate": "1963-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Judy Garland Show #15 aka The Christmas Show",
+          "airdate": "1963-12-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "07a the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #14",
+          "airdate": "1963-12-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "07a  - The Judy Garland Show (1963) S01E13, S01E16 PROPER.mp4",
@@ -197,21 +237,32 @@
             "seconds": 3278,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 325,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 325
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "07a  - The Judy Garland Show (1963) S01E13, S01E16 PROPER2.mp4",
+              "name": "07a  - The Judy Garland Show (1963) S01E13, S01E16 PROPER2",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/07a%20%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E13%2C%20S01E16%20PROPER2.mp4",
+              "seconds": 3163,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 314
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "13 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #11",
+          "airdate": "1964-01-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "13 - The Judy Garland Show (1963) S01E14, S01E23.mp4",
@@ -220,21 +271,32 @@
             "seconds": 3189,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 317,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 317
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "13 - The Judy Garland Show (1963) S01E14, S01E232.mp4",
+              "name": "13 - The Judy Garland Show (1963) S01E14, S01E232",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/13%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E14%2C%20S01E232.mp4",
+              "seconds": 3160,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 316
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "09 the the christmas",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #16",
+          "airdate": "1964-01-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "09 - The Judy Garland Show (1963) S01E15 - The Christmas Show.mp4",
@@ -243,21 +305,26 @@
             "seconds": 3175,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 313,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 313
           },
           "alternates": []
         },
         {
+          "number": 16,
+          "name": "The Judy Garland Show #17",
+          "airdate": "1964-01-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 17,
-          "name": "08 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #18",
+          "airdate": "1964-01-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "08 - The Judy Garland Show (1963) S01E17, S01E182.mp4",
@@ -266,21 +333,56 @@
             "seconds": 3203,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 319,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 319
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "08 - The Judy Garland Show (1963) S01E17, S01E18.mp4",
+              "name": "08 - The Judy Garland Show (1963) S01E17, S01E18",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/08%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E17%2C%20S01E18.mp4",
+              "seconds": 3217,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 318
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "name": "The Judy Garland Show #19",
+          "airdate": "1964-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Judy Garland Show #20",
+          "airdate": "1964-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Judy Garland Show #21",
+          "airdate": "1964-02-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
-          "name": "02 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #22",
+          "airdate": "1964-02-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "02 - The Judy Garland Show (1963) S01E21, S01E22.mp4",
@@ -289,21 +391,48 @@
             "seconds": 3299,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 327,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 327
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "02 - The Judy Garland Show (1963) S01E21, S01E221.mp4",
+              "name": "02 - The Judy Garland Show (1963) S01E21, S01E221",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/02%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E21%2C%20S01E221.mp4",
+              "seconds": 3212,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 319
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "name": "The Judy Garland Show #10",
+          "airdate": "1964-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Judy Garland Show #23",
+          "airdate": "1964-03-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 24,
-          "name": "11 the",
-          "state": "REVIEW",
+          "name": "The Judy Garland Show #24",
+          "airdate": "1964-03-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-judy-garland-show-1963-Full",
             "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
             "file": "11 - The Judy Garland Show (1963) S01E24, S01E25.mp4",
@@ -312,506 +441,54 @@
             "seconds": 3719,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 369,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 369
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "11 - The Judy Garland Show (1963) S01E24, S01E252.mp4",
+              "name": "11 - The Judy Garland Show (1963) S01E24, S01E252",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/11%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E24%2C%20S01E252.mp4",
+              "seconds": 3184,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 315
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-judy-garland-show-1963-Full",
+              "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
+              "file": "11 - The Judy Garland Show (1963) S01E24, S01E254.mp4",
+              "name": "11 - The Judy Garland Show (1963) S01E24, S01E254",
+              "url": "https://archive.org/download/the-judy-garland-show-1963-Full/11%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E24%2C%20S01E254.mp4",
+              "seconds": 3105,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 308
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "name": "The Judy Garland Show #25",
+          "airdate": "1964-03-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 26,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E26.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E26",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E26.mp4",
-            "seconds": 1104,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 109,
-            "ep": {
-              "season": 1,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 263,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E263.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E263",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E263.mp4",
-            "seconds": 340,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 33,
-            "ep": {
-              "season": 1,
-              "episode": 263
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 264,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E264.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E264",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E264.mp4",
-            "seconds": 382,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 38,
-            "ep": {
-              "season": 1,
-              "episode": 264
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 265,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E265.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E265",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E265.mp4",
-            "seconds": 447,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 45,
-            "ep": {
-              "season": 1,
-              "episode": 265
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 266,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E266.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E266",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E266.mp4",
-            "seconds": 183,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": {
-              "season": 1,
-              "episode": 266
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 267,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E267.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E267",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E267.mp4",
-            "seconds": 175,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": {
-              "season": 1,
-              "episode": 267
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 268,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E268.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E268",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E268.mp4",
-            "seconds": 288,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 24,
-            "ep": {
-              "season": 1,
-              "episode": 268
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 269,
-          "name": "15 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "15 - The Judy Garland Show (1963) S01E269.mp4",
-            "name": "15 - The Judy Garland Show (1963) S01E269",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/15%20-%20The%20Judy%20Garland%20Show%20(1963)%20S01E269.mp4",
-            "seconds": 712,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 69,
-            "ep": {
-              "season": 1,
-              "episode": 269
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 270,
-          "name": "01 just feaure length clipshow solos",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "01 - Just Judy - Feaure-Length Clipshow - Solos.mp4",
-            "name": "01 - Just Judy - Feaure-Length Clipshow - Solos",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/01%20-%20Just%20Judy%20-%20Feaure-Length%20Clipshow%20-%20Solos.mp4",
-            "seconds": 5066,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 504,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 271,
-          "name": "01 just feaure length clipshow solos2",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "01 - Just Judy - Feaure-Length Clipshow - Solos2.mp4",
-            "name": "01 - Just Judy - Feaure-Length Clipshow - Solos2",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/01%20-%20Just%20Judy%20-%20Feaure-Length%20Clipshow%20-%20Solos2.mp4",
-            "seconds": 528,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 51,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 272,
-          "name": "01 just feaure lenth clipshow solos",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "01 - Just Judy - Feaure-Lenth Clipshow - Solos.mp4",
-            "name": "01 - Just Judy - Feaure-Lenth Clipshow - Solos",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/01%20-%20Just%20Judy%20-%20Feaure-Lenth%20Clipshow%20-%20Solos.mp4",
-            "seconds": 5066,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 504,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 273,
-          "name": "01 just feaure lenth clipshow solos2",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "01 - Just Judy - Feaure-Lenth Clipshow - Solos2.mp4",
-            "name": "01 - Just Judy - Feaure-Lenth Clipshow - Solos2",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/01%20-%20Just%20Judy%20-%20Feaure-Lenth%20Clipshow%20-%20Solos2.mp4",
-            "seconds": 528,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 51,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 274,
-          "name": "16 legends feature length clipshow with guests",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "16 - Legends - Feature-Length Clipshow - with Guests.mp4",
-            "name": "16 - Legends - Feature-Length Clipshow - with Guests",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/16%20-%20Legends%20-%20Feature-Length%20Clipshow%20-%20with%20Guests.mp4",
-            "seconds": 4264,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 422,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 275,
-          "name": "16 legends feature length clipshow with guests3",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "16 - Legends - Feature-Length Clipshow - with Guests3.mp4",
-            "name": "16 - Legends - Feature-Length Clipshow - with Guests3",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/16%20-%20Legends%20-%20Feature-Length%20Clipshow%20-%20with%20Guests3.mp4",
-            "seconds": 131,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 276,
-          "name": "16 legends feature length clipshow with guests4",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "16 - Legends - Feature-Length Clipshow - with Guests4.mp4",
-            "name": "16 - Legends - Feature-Length Clipshow - with Guests4",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/16%20-%20Legends%20-%20Feature-Length%20Clipshow%20-%20with%20Guests4.mp4",
-            "seconds": 3229,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 324,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 277,
-          "name": "16 legends feature length clipshow with guests5",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "16 - Legends - Feature-Length Clipshow - with Guests5.mp4",
-            "name": "16 - Legends - Feature-Length Clipshow - with Guests5",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/16%20-%20Legends%20-%20Feature-Length%20Clipshow%20-%20with%20Guests5.mp4",
-            "seconds": 378,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 37,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 278,
-          "name": "16 legends feature length clipshow with guests6",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "16 - Legends - Feature-Length Clipshow - with Guests6.mp4",
-            "name": "16 - Legends - Feature-Length Clipshow - with Guests6",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/16%20-%20Legends%20-%20Feature-Length%20Clipshow%20-%20with%20Guests6.mp4",
-            "seconds": 688,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 67,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 279,
-          "name": "17 songs for america short clipshow solos",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "17 - Songs for America - Short Clipshow - Solos.mp4",
-            "name": "17 - Songs for America - Short Clipshow - Solos",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/17%20-%20Songs%20for%20America%20-%20Short%20Clipshow%20-%20Solos.mp4",
-            "seconds": 944,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 92,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 280,
-          "name": "18 once in a lifetime with frank sinatra and dean martin",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "18 - Once In a Lifetime (1962) Judy with Frank Sinatra & Dean Martin.mp4",
-            "name": "18 - Once In a Lifetime (1962) Judy with Frank Sinatra & Dean Martin",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/18%20-%20Once%20In%20a%20Lifetime%20(1962)%20Judy%20with%20Frank%20Sinatra%20%26%20Dean%20Martin.mp4",
-            "seconds": 3062,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 301,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 281,
-          "name": "19 robert goulet and phil silvers special",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "19 - Judy, Robert Goulet & Phil Silvers Special.mp4",
-            "name": "19 - Judy, Robert Goulet & Phil Silvers Special",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/19%20-%20Judy%2C%20Robert%20Goulet%20%26%20Phil%20Silvers%20Special.mp4",
-            "seconds": 3085,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 302,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 282,
-          "name": "19 robert goulet and phil silvers special2",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "19 - Judy, Robert Goulet & Phil Silvers Special2.mp4",
-            "name": "19 - Judy, Robert Goulet & Phil Silvers Special2",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/19%20-%20Judy%2C%20Robert%20Goulet%20%26%20Phil%20Silvers%20Special2.mp4",
-            "seconds": 1612,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 166,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 283,
-          "name": "20 and liza in concert at london palladium",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-judy-garland-show-1963-Full",
-            "itemTitle": "The Judy Garland Show (1963) [Remastered & Complete]",
-            "file": "20 - Judy & Liza in Concert at London Palladium (1964).mp4",
-            "name": "20 - Judy & Liza in Concert at London Palladium (1964)",
-            "url": "https://archive.org/download/the-judy-garland-show-1963-Full/20%20-%20Judy%20%26%20Liza%20in%20Concert%20at%20London%20Palladium%20(1964).mp4",
-            "seconds": 3250,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 315,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 284,
-          "name": "nov 3",
-          "state": "REVIEW",
-          "file": {
-            "item": "garland-show-nov-3-1963",
-            "itemTitle": "The Judy Garland Show, Episode 12",
-            "file": "Garland_Show_Nov_3_1963 .mp4",
-            "name": "Garland_Show_Nov_3_1963 ",
-            "url": "https://archive.org/download/garland-show-nov-3-1963/Garland_Show_Nov_3_1963%20.mp4",
-            "seconds": 469,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 31,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Judy Garland Show #26",
+          "airdate": "1964-03-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 14905,
-    "name": "The Judy Garland Show",
-    "placed": 11
-  }
+  ]
 }

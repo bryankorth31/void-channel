@@ -3,21 +3,21 @@
   "slug": "fargo",
   "type": "Drama",
   "network": "FX",
-  "matchedAt": "2026-10-15T13:19:12.671Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T15:07:57.739Z",
+  "addedAt": "2026-10-15T15:07:57.739Z",
   "tvmaze": {
-    "id": null,
+    "id": 32,
     "name": "Fargo",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 60,
+    "premiered": "2014-04-15",
     "network": "FX"
   },
   "coverage": {
-    "total": 80,
+    "total": 51,
     "live": 0,
-    "review": 80,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 51,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,1700 +25,433 @@
       "episodes": [
         {
           "number": 1,
-          "name": "madonna celebration tour like a prayer fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "101.Madonna-Celebration Tour-Like A Prayer (Fan Fun File).mp4",
-            "name": "101.Madonna-Celebration Tour-Like A Prayer (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/101.Madonna-Celebration%20Tour-Like%20A%20Prayer%20(Fan%20Fun%20File).mp4",
-            "seconds": 108,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 11,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Crocodile's Dilemma",
+          "airdate": "2014-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Rooster Prince",
+          "airdate": "2014-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A Muddy Road",
+          "airdate": "2014-04-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "madonna celebration tour erotica fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "104.Madonna-Celebration Tour-Erotica (Fan Fun File).mp4",
-            "name": "104.Madonna-Celebration Tour-Erotica (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/104.Madonna-Celebration%20Tour-Erotica%20(Fan%20Fun%20File).mp4",
-            "seconds": 150,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Eating the Blame",
+          "airdate": "2014-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Six Ungraspables",
+          "airdate": "2014-05-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "madonna celebration tour erotica fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "106.Madonna-Celebration Tour-Erotica (Fan Fun File).mp4",
-            "name": "106.Madonna-Celebration Tour-Erotica (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/106.Madonna-Celebration%20Tour-Erotica%20(Fan%20Fun%20File).mp4",
-            "seconds": 175,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 18,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Buridan's Ass",
+          "airdate": "2014-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Who Shaves the Barber?",
+          "airdate": "2014-05-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Heap",
+          "airdate": "2014-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "A Fox, a Rabbit, and a Cabbage",
+          "airdate": "2014-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Morton's Fork",
+          "airdate": "2014-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Waiting for Dutch",
+          "airdate": "2015-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Before the Law",
+          "airdate": "2015-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Myth of Sisyphus",
+          "airdate": "2015-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Fear and Trembling",
+          "airdate": "2015-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Gift of the Magi",
+          "airdate": "2015-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Rhinoceros",
+          "airdate": "2015-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Did You Do This? No, You Did It!",
+          "airdate": "2015-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Loplop",
+          "airdate": "2015-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Castle",
+          "airdate": "2015-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Palindrome",
+          "airdate": "2015-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Law of Vacant Places",
+          "airdate": "2017-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Principle of Restricted Choice",
+          "airdate": "2017-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Law of Non-Contradiction",
+          "airdate": "2017-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Narrow Escape Problem",
+          "airdate": "2017-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The House of Special Purpose",
+          "airdate": "2017-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Lord of No Mercy",
+          "airdate": "2017-05-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Law of Inevitability",
+          "airdate": "2017-05-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Who Rules the Land of Denial?",
+          "airdate": "2017-06-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Aporia",
+          "airdate": "2017-06-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Somebody to Love",
+          "airdate": "2017-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Welcome to the Alternate Economy",
+          "airdate": "2020-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Land of Taking and Killing",
+          "airdate": "2020-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Raddoppiarlo",
+          "airdate": "2020-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Pretend War",
+          "airdate": "2020-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Birthplace of Civilization",
+          "airdate": "2020-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Camp Elegance",
+          "airdate": "2020-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Lay Away",
+          "airdate": "2020-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Nadir",
+          "airdate": "2020-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "East/West",
+          "airdate": "2020-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Happy",
+          "airdate": "2020-11-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "madonna celebration tour hung up fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "111.Madonna-Celebration Tour-Hung Up (Fan Fun File).mp4",
-            "name": "111.Madonna-Celebration Tour-Hung Up (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/111.Madonna-Celebration%20Tour-Hung%20Up%20(Fan%20Fun%20File).mp4",
-            "seconds": 181,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Storia Americana",
+          "airdate": "2020-11-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "madonna celebration tour bad girl fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "112.Madonna-Celebration Tour-Bad Girl (Fan Fun File).mp4",
-            "name": "112.Madonna-Celebration Tour-Bad Girl (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/112.Madonna-Celebration%20Tour-Bad%20Girl%20(Fan%20Fun%20File).mp4",
-            "seconds": 169,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "madonna celebration tour bad girl fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "114.Madonna-Celebration Tour-Bad Girl (Fan Fun File).mp4",
-            "name": "114.Madonna-Celebration Tour-Bad Girl (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/114.Madonna-Celebration%20Tour-Bad%20Girl%20(Fan%20Fun%20File).mp4",
-            "seconds": 93,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 10,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "madonna celebration tour vogue fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "116.Madonna-Celebration Tour-Vogue (Fan Fun File).mp4",
-            "name": "116.Madonna-Celebration Tour-Vogue (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/116.Madonna-Celebration%20Tour-Vogue%20(Fan%20Fun%20File).mp4",
-            "seconds": 117,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 12,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "madonna celebration tour vogue fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "117.Madonna-Celebration Tour-Vogue (Fan Fun File).mp4",
-            "name": "117.Madonna-Celebration Tour-Vogue (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/117.Madonna-Celebration%20Tour-Vogue%20(Fan%20Fun%20File).mp4",
-            "seconds": 141,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "madonna celebration tour speech express yourself fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "136.Madonna-Celebration Tour-Speech,Express Yourself (Fan Fun File).mp4",
-            "name": "136.Madonna-Celebration Tour-Speech,Express Yourself (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/136.Madonna-Celebration%20Tour-Speech%2CExpress%20Yourself%20(Fan%20Fun%20File).mp4",
-            "seconds": 296,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 30,
-            "ep": {
-              "season": 1,
-              "episode": 36
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "madonna celebration tour express yourself fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "138.Madonna-Celebration Tour-Express Yourself (Fan Fun File).mp4",
-            "name": "138.Madonna-Celebration Tour-Express Yourself (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/138.Madonna-Celebration%20Tour-Express%20Yourself%20(Fan%20Fun%20File).mp4",
-            "seconds": 100,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 10,
-            "ep": {
-              "season": 1,
-              "episode": 38
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "madonna celebration tour bedtime story fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "142.Madonna-Celebration Tour-Bedtime Story (Fan Fun File).mp4",
-            "name": "142.Madonna-Celebration Tour-Bedtime Story (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/142.Madonna-Celebration%20Tour-Bedtime%20Story%20(Fan%20Fun%20File).mp4",
-            "seconds": 96,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 10,
-            "ep": {
-              "season": 1,
-              "episode": 42
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "madonna celebration tour ray of light fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "146.Madonna-Celebration Tour-Ray of Light (Fan Fun File).mp4",
-            "name": "146.Madonna-Celebration Tour-Ray of Light (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/146.Madonna-Celebration%20Tour-Ray%20of%20Light%20(Fan%20Fun%20File).mp4",
-            "seconds": 99,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 10,
-            "ep": {
-              "season": 1,
-              "episode": 46
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "madonna celebration tour take a bow fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "151.Madonna-Celebration Tour-Take A Bow (Fan Fun File).mp4",
-            "name": "151.Madonna-Celebration Tour-Take A Bow (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/151.Madonna-Celebration%20Tour-Take%20A%20Bow%20(Fan%20Fun%20File).mp4",
-            "seconds": 123,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": {
-              "season": 1,
-              "episode": 51
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "madonna celebration tour celebration and ending of show fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "156.Madonna-Celebration Tour-Celebration and ending of show (Fan Fun File).mp4",
-            "name": "156.Madonna-Celebration Tour-Celebration and ending of show (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/156.Madonna-Celebration%20Tour-Celebration%20and%20ending%20of%20show%20(Fan%20Fun%20File).mp4",
-            "seconds": 138,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": {
-              "season": 1,
-              "episode": 56
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Episode 62",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "162.17.Madonna MDNA Tour.ia.mp4",
-            "name": "162.17",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/162.17.Madonna%20MDNA%20Tour.ia.mp4",
-            "seconds": 255,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 34,
-            "ep": {
-              "season": 1,
-              "episode": 62
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Episode 63",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "163.22.Madonna-Rebel Heart Tour.ia.mp4",
-            "name": "163.22",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/163.22.Madonna-Rebel%20Heart%20Tour.ia.mp4",
-            "seconds": 161,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 18,
-            "ep": {
-              "season": 1,
-              "episode": 63
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "madonna celebration tour vancouver show",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "164.Madonna-Celebration Tour Vancouver Show.mp4",
-            "name": "164.Madonna-Celebration Tour Vancouver Show",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/164.Madonna-Celebration%20Tour%20Vancouver%20Show.mp4",
-            "seconds": 3886,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1043,
-            "ep": {
-              "season": 1,
-              "episode": 64
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "attending madonna celebration tour photos tickets prep",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "165.Attending Madonna Celebration Tour Photos Tickets Prep.mp4",
-            "name": "165.Attending Madonna Celebration Tour Photos Tickets Prep",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/165.Attending%20Madonna%20Celebration%20Tour%20Photos%20Tickets%20Prep.mp4",
-            "seconds": 234,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": {
-              "season": 1,
-              "episode": 65
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "madonna express yourself blond ambition tour new jersey",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "166.Madonna  Express Yourself Blond Ambition Tour  New Jersey.mp4",
-            "name": "166.Madonna  Express Yourself Blond Ambition Tour  New Jersey",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/166.Madonna%20%20Express%20Yourself%20Blond%20Ambition%20Tour%20%20New%20Jersey.mp4",
-            "seconds": 321,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 86,
-            "ep": {
-              "season": 1,
-              "episode": 66
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 67,
-          "name": "madonna express yourself live in japan",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "167.Madonna-Express yourself (Live in Japan 1990).mp4",
-            "name": "167.Madonna-Express yourself (Live in Japan 1990)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/167.Madonna-Express%20yourself%20(Live%20in%20Japan%201990).mp4",
-            "seconds": 323,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 62,
-            "ep": {
-              "season": 1,
-              "episode": 67
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 68,
-          "name": "madonna how high for hockey",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "168.MADONNA-HOW HIGH FOR HOCKEY.mp4",
-            "name": "168.MADONNA-HOW HIGH FOR HOCKEY",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/168.MADONNA-HOW%20HIGH%20FOR%20HOCKEY.mp4",
-            "seconds": 280,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 68
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 69,
-          "name": "roman josi madonna how high till year global celebration final",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "169.Roman Josi-Madonna-How High Till Year 2080 Global Celebration FINAL AVI.mp4",
-            "name": "169.Roman Josi-Madonna-How High Till Year 2080 Global Celebration FINAL AVI",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/169.Roman%20Josi-Madonna-How%20High%20Till%20Year%202080%20Global%20Celebration%20FINAL%20AVI.mp4",
-            "seconds": 280,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": {
-              "season": 1,
-              "episode": 69
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 70,
-          "name": "madonna express yourself truth or dare",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "170.Madonna  EXPRESS YOURSELF  Truth Or Dare.mp4",
-            "name": "170.Madonna  EXPRESS YOURSELF  Truth Or Dare",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/170.Madonna%20%20EXPRESS%20YOURSELF%20%20Truth%20Or%20Dare.mp4",
-            "seconds": 299,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 158,
-            "ep": {
-              "season": 1,
-              "episode": 70
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 71,
-          "name": "madonna express yourself blond ambition japan",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "171.Madonna Express Yourself Blond Ambition Japan.mp4",
-            "name": "171.Madonna Express Yourself Blond Ambition Japan",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/171.Madonna%20Express%20Yourself%20Blond%20Ambition%20Japan.mp4",
-            "seconds": 481,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 87,
-            "ep": {
-              "season": 1,
-              "episode": 71
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 72,
-          "name": "madonna bedtime story live at the brit awards",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "172.Madonna - Bedtime Story Live at the Brit Awards 1995.mp4",
-            "name": "172.Madonna - Bedtime Story Live at the Brit Awards 1995",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/172.Madonna%20-%20Bedtime%20Story%20Live%20at%20the%20Brit%20Awards%201995.mp4",
-            "seconds": 300,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 27,
-            "ep": {
-              "season": 1,
-              "episode": 72
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 73,
-          "name": "madonna secret rebel heart tour vancouver",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "173.Madonna-Secret- Rebel Heart Tour -Vancouver.mp4",
-            "name": "173.Madonna-Secret- Rebel Heart Tour -Vancouver",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/173.Madonna-Secret-%20Rebel%20Heart%20Tour%20-Vancouver.mp4",
-            "seconds": 214,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 61,
-            "ep": {
-              "season": 1,
-              "episode": 73
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 74,
-          "name": "madonna white heat music video",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "174.Madonna - White Heat (Music Video).mp4",
-            "name": "174.Madonna - White Heat (Music Video)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/174.Madonna%20-%20White%20Heat%20(Music%20Video).mp4",
-            "seconds": 279,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 48,
-            "ep": {
-              "season": 1,
-              "episode": 74
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 75,
-          "name": "madonna white heat whos that girl tour",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "175.Madonna - White Heat [Who's That Girl Tour].mp4",
-            "name": "175.Madonna - White Heat [Who's That Girl Tour]",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/175.Madonna%20-%20White%20Heat%20%5BWho's%20That%20Girl%20Tour%5D.mp4",
-            "seconds": 323,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": {
-              "season": 1,
-              "episode": 75
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 76,
-          "name": "madonna blond ambition tour nice france mtv broadcast file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "176.Madonna  Blond Ambition Tour 1990 Nice France  MTV BROADCAST FILE.mp4",
-            "name": "176.Madonna  Blond Ambition Tour 1990 Nice France  MTV BROADCAST FILE",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/176.Madonna%20%20Blond%20Ambition%20Tour%201990%20Nice%20France%20%20MTV%20BROADCAST%20FILE.mp4",
-            "seconds": 6780,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1173,
-            "ep": {
-              "season": 1,
-              "episode": 76
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 77,
-          "name": "7 madonna celebration tour take a bow upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "7.Madonna-Celebration Tour-Take A Bow (Upclose).MP4",
-            "name": "7.Madonna-Celebration Tour-Take A Bow (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/7.Madonna-Celebration%20Tour-Take%20A%20Bow%20(Upclose).MP4",
-            "seconds": 165,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 78,
-          "name": "8 madonna celebration tour nothing really matters upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "8.Madonna-Celebration Tour-Nothing Really Matters (Upclose).MP4",
-            "name": "8.Madonna-Celebration Tour-Nothing Really Matters (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/8.Madonna-Celebration%20Tour-Nothing%20Really%20Matters%20(Upclose).MP4",
-            "seconds": 126,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 28,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 79,
-          "name": "16 madonna celebration tour express yourself upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "16.Madonna-Celebration Tour-Express Yourself (Upclose).MP4",
-            "name": "16.Madonna-Celebration Tour-Express Yourself (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/16.Madonna-Celebration%20Tour-Express%20Yourself%20(Upclose).MP4",
-            "seconds": 597,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 98,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 80,
-          "name": "19 madonna celebration tour vogue upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "19.Madonna-Celebration Tour-Vogue (Upclose).MP4",
-            "name": "19.Madonna-Celebration Tour-Vogue (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/19.Madonna-Celebration%20Tour-Vogue%20(Upclose).MP4",
-            "seconds": 121,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 39,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 81,
-          "name": "20 madonna celebration tour vogue upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "20.Madonna-Celebration Tour-Vogue (Upclose).mp4",
-            "name": "20.Madonna-Celebration Tour-Vogue (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/20.Madonna-Celebration%20Tour-Vogue%20(Upclose).mp4",
-            "seconds": 91,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 9,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "23 madonna celebration tour vogue upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "23.Madonna-Celebration Tour-Vogue (Upclose).MP4",
-            "name": "23.Madonna-Celebration Tour-Vogue (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/23.Madonna-Celebration%20Tour-Vogue%20(Upclose).MP4",
-            "seconds": 256,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 84,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 83,
-          "name": "24 madonna celebration tour vogue upclose",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "24.Madonna-Celebration Tour-Vogue (Upclose).mp4",
-            "name": "24.Madonna-Celebration Tour-Vogue (Upclose)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/24.Madonna-Celebration%20Tour-Vogue%20(Upclose).mp4",
-            "seconds": 129,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 84,
-          "name": "27 madonna the celebration tour vancouver bc canada 2 21",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "27.Madonna-The Celebration Tour Vancouver BC CANADA 2_21_2024.mp4",
-            "name": "27.Madonna-The Celebration Tour Vancouver BC CANADA 2_21_2024",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/27.Madonna-The%20Celebration%20Tour%20Vancouver%20BC%20CANADA%202_21_2024.mp4",
-            "seconds": 4097,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1051,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 85,
-          "name": "28 madonna the celebration tour new york 1 22 24",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "28.Madonna-The Celebration Tour-New York 1_22_24.mp4",
-            "name": "28.Madonna-The Celebration Tour-New York 1_22_24",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/28.Madonna-The%20Celebration%20Tour-New%20York%201_22_24.mp4",
-            "seconds": 5716,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1306,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 86,
-          "name": "29 madonna the celebration tour ppg paints arena pittsburgh 2 5 24",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "29.Madonna-The Celebration Tour-PPG Paints Arena Pittsburgh 2_5_24.mp4",
-            "name": "29.Madonna-The Celebration Tour-PPG Paints Arena Pittsburgh 2_5_24",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/29.Madonna-The%20Celebration%20Tour-PPG%20Paints%20Arena%20Pittsburgh%202_5_24.mp4",
-            "seconds": 6757,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1512,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "30 madonna the celebration tour wells center philadelphia 1 25 24",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "30.Madonna-The Celebration Tour-Wells Fargo Center Philadelphia 1_25_24.mp4",
-            "name": "30.Madonna-The Celebration Tour-Wells Fargo Center Philadelphia 1_25_24",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/30.Madonna-The%20Celebration%20Tour-Wells%20Fargo%20Center%20Philadelphia%201_25_24.mp4",
-            "seconds": 7085,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1642,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 88,
-          "name": "33 madonna celebration tour erotica yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "33.Madonna-Celebration Tour-Erotica (YVR Memory).MP4",
-            "name": "33.Madonna-Celebration Tour-Erotica (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/33.Madonna-Celebration%20Tour-Erotica%20(YVR%20Memory).MP4",
-            "seconds": 121,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 89,
-          "name": "34 madonna celebration tour holiday yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "34.Madonna-Celebration Tour-Holiday (YVR Memory).MP4",
-            "name": "34.Madonna-Celebration Tour-Holiday (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/34.Madonna-Celebration%20Tour-Holiday%20(YVR%20Memory).MP4",
-            "seconds": 90,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 59,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 90,
-          "name": "37 madonna celebration tour open your heart yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "37.Madonna-Celebration Tour-Open Your Heart (YVR Memory).MP4",
-            "name": "37.Madonna-Celebration Tour-Open Your Heart (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/37.Madonna-Celebration%20Tour-Open%20Your%20Heart%20(YVR%20Memory).MP4",
-            "seconds": 90,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 31,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 91,
-          "name": "38 madonna celebration tour like a prayer yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "38.Madonna-Celebration Tour-Like A Prayer (YVR Memory).MP4",
-            "name": "38.Madonna-Celebration Tour-Like A Prayer (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/38.Madonna-Celebration%20Tour-Like%20A%20Prayer%20(YVR%20Memory).MP4",
-            "seconds": 90,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 92,
-          "name": "42 madonna celebration tour luv bitch im madonna yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "42.Madonna-Celebration Tour-LUV,Bitch Im Madonna(YVR Memory).MP4",
-            "name": "42.Madonna-Celebration Tour-LUV,Bitch Im Madonna(YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/42.Madonna-Celebration%20Tour-LUV%2CBitch%20Im%20Madonna(YVR%20Memory).MP4",
-            "seconds": 90,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 44,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 93,
-          "name": "44 madonna celebration tour take a bow yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "44.Madonna-Celebration Tour-Take A Bow (YVR Memory).MP4",
-            "name": "44.Madonna-Celebration Tour-Take A Bow (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/44.Madonna-Celebration%20Tour-Take%20A%20Bow%20(YVR%20Memory).MP4",
-            "seconds": 211,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 41,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 94,
-          "name": "45 madonna celebration tour into the groove yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "45.Madonna-Celebration Tour-Into The Groove (YVR Memory).MP4",
-            "name": "45.Madonna-Celebration Tour-Into The Groove (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/45.Madonna-Celebration%20Tour-Into%20The%20Groove%20(YVR%20Memory).MP4",
-            "seconds": 157,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 49,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 95,
-          "name": "49 madonna celebration tour take a bow yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "49.Madonna-Celebration Tour-Take A Bow (YVR Memory).MP4",
-            "name": "49.Madonna-Celebration Tour-Take A Bow (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/49.Madonna-Celebration%20Tour-Take%20A%20Bow%20(YVR%20Memory).MP4",
-            "seconds": 211,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 41,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 96,
-          "name": "50 madonna celebration tour ray of light yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "50.Madonna-Celebration Tour-Ray Of Light (YVR Memory).MP4",
-            "name": "50.Madonna-Celebration Tour-Ray Of Light (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/50.Madonna-Celebration%20Tour-Ray%20Of%20Light%20(YVR%20Memory).MP4",
-            "seconds": 131,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 41,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 97,
-          "name": "52 madonna celebration tour vogue yvr memory",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "52.Madonna-Celebration Tour-Vogue (YVR Memory).mp4",
-            "name": "52.Madonna-Celebration Tour-Vogue (YVR Memory)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/52.Madonna-Celebration%20Tour-Vogue%20(YVR%20Memory).mp4",
-            "seconds": 114,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 11,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 98,
-          "name": "53 madonna celebration tour mtv clip montage bedtime story ray of light rain",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "53.Madonna-Celebration Tour-MTV Clip,Montage,Bedtime Story Ray of Light Rain.MP4",
-            "name": "53.Madonna-Celebration Tour-MTV Clip,Montage,Bedtime Story Ray of Light Rain",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/53.Madonna-Celebration%20Tour-MTV%20Clip%2CMontage%2CBedtime%20Story%20Ray%20of%20Light%20Rain.MP4",
-            "seconds": 949,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 242,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 99,
-          "name": "54 madonna celebration tour bedtime story super hd",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "54.Madonna-Celebration Tour-Bedtime Story (Super HD).mp4",
-            "name": "54.Madonna-Celebration Tour-Bedtime Story (Super HD)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/54.Madonna-Celebration%20Tour-Bedtime%20Story%20(Super%20HD).mp4",
-            "seconds": 172,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 100,
-          "name": "56 madonna celebration tour la isla bonita tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "56.Madonna-Celebration Tour-La Isla Bonita (TikTok Fan Tribute).MP4",
-            "name": "56.Madonna-Celebration Tour-La Isla Bonita (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/56.Madonna-Celebration%20Tour-La%20Isla%20Bonita%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 111,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 101,
-          "name": "57 madonna celebration tour dont tell me tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "57.Madonna-Celebration Tour-Dont Tell Me (TikTok Fan Tribute).MP4",
-            "name": "57.Madonna-Celebration Tour-Dont Tell Me (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/57.Madonna-Celebration%20Tour-Dont%20Tell%20Me%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 161,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 31,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 102,
-          "name": "58 madonna celebration tour die another day tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "58.Madonna-Celebration Tour-Die Another Day (TikTok Fan Tribute).MP4",
-            "name": "58.Madonna-Celebration Tour-Die Another Day (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/58.Madonna-Celebration%20Tour-Die%20Another%20Day%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 98,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 103,
-          "name": "59 madonna celebration tour luv bitch im madonna celebration tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "59.Madonna-Celebration Tour-LUV,Bitch Im Madonna,Celebration (TikTok Fan Tribute).MP4",
-            "name": "59.Madonna-Celebration Tour-LUV,Bitch Im Madonna,Celebration (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/59.Madonna-Celebration%20Tour-LUV%2CBitch%20Im%20Madonna%2CCelebration%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 368,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 104,
-          "name": "60 madonna celebration tour take a bow tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "60.Madonna-Celebration Tour-Take A Bow (TikTok Fan Tribute).MP4",
-            "name": "60.Madonna-Celebration Tour-Take A Bow (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/60.Madonna-Celebration%20Tour-Take%20A%20Bow%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 597,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 97,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 105,
-          "name": "61 madonna celebration tour ray of light tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "61.Madonna-Celebration Tour-Ray Of Light (TikTok Fan Tribute).MP4",
-            "name": "61.Madonna-Celebration Tour-Ray Of Light (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/61.Madonna-Celebration%20Tour-Ray%20Of%20Light%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 505,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 106,
-          "name": "62 madonna celebration tour bedtime story tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "62.Madonna-Celebration Tour-Bedtime Story (TikTok Fan Tribute).MP4",
-            "name": "62.Madonna-Celebration Tour-Bedtime Story (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/62.Madonna-Celebration%20Tour-Bedtime%20Story%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 285,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 44,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 107,
-          "name": "63 madonna celebration tour express yourself tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "63.Madonna-Celebration Tour-Express Yourself (TikTok Fan Tribute).MP4",
-            "name": "63.Madonna-Celebration Tour-Express Yourself (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/63.Madonna-Celebration%20Tour-Express%20Yourself%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 597,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 98,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 108,
-          "name": "64 madonna celebration tour crazy for you tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "64.Madonna-Celebration Tour-Crazy For You (TikTok Fan Tribute).MP4",
-            "name": "64.Madonna-Celebration Tour-Crazy For You (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/64.Madonna-Celebration%20Tour-Crazy%20For%20You%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 133,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 21,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 109,
-          "name": "66 madonna celebration tour vogue tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "66.Madonna-Celebration Tour-Vogue (TikTok Fan Tribute).MP4",
-            "name": "66.Madonna-Celebration Tour-Vogue (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/66.Madonna-Celebration%20Tour-Vogue%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 592,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 110,
-          "name": "67 madonna celebration tour bad girl tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "67.Madonna-Celebration Tour-Bad Girl (TikTok Fan Tribute).MP4",
-            "name": "67.Madonna-Celebration Tour-Bad Girl (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/67.Madonna-Celebration%20Tour-Bad%20Girl%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 431,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 53,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 111,
-          "name": "68 madonna celebration tour hung up tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "68.Madonna-Celebration Tour-Hung Up (TikTok Fan Tribute).MP4",
-            "name": "68.Madonna-Celebration Tour-Hung Up (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/68.Madonna-Celebration%20Tour-Hung%20Up%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 316,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 72,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 112,
-          "name": "69 madonna celebration tour papa dont preach justify tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "69.Madonna-Celebration Tour-Papa Dont Preach Justify (TikTok Fan Tribute).MP4",
-            "name": "69.Madonna-Celebration Tour-Papa Dont Preach Justify (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/69.Madonna-Celebration%20Tour-Papa%20Dont%20Preach%20Justify%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 433,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 76,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 113,
-          "name": "70 madonna celebration tour erotica tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "70.Madonna-Celebration Tour-Erotica (TikTok Fan Tribute).MP4",
-            "name": "70.Madonna-Celebration Tour-Erotica (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/70.Madonna-Celebration%20Tour-Erotica%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 506,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 86,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 114,
-          "name": "71 madonna celebration tour like a prayer tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "71.Madonna-Celebration Tour-Like A Prayer (TikTok Fan Tribute).MP4",
-            "name": "71.Madonna-Celebration Tour-Like A Prayer (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/71.Madonna-Celebration%20Tour-Like%20A%20Prayer%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 279,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 61,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 115,
-          "name": "72 madonna celebration tour nothing really matters tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "72.Madonna-Celebration Tour-Nothing Really Matters (TikTok Fan Tribute).MP4",
-            "name": "72.Madonna-Celebration Tour-Nothing Really Matters (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/72.Madonna-Celebration%20Tour-Nothing%20Really%20Matters%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 189,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 46,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 116,
-          "name": "73 madonna celebration tour open your heart tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "73.Madonna-Celebration Tour-Open Your Heart (TikTok Fan Tribute).MP4",
-            "name": "73.Madonna-Celebration Tour-Open Your Heart (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/73.Madonna-Celebration%20Tour-Open%20Your%20Heart%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 460,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 89,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 117,
-          "name": "74 madonna celebration tour live to tell tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "74.Madonna-Celebration Tour-Live To Tell (TikTok Fan Tribute).MP4",
-            "name": "74.Madonna-Celebration Tour-Live To Tell (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/74.Madonna-Celebration%20Tour-Live%20To%20Tell%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 522,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 67,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
         {
-          "number": 118,
-          "name": "75 madonna celebration tour holiday tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "75.Madonna-Celebration Tour-Holiday (TikTok Fan Tribute).MP4",
-            "name": "75.Madonna-Celebration Tour-Holiday (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/75.Madonna-Celebration%20Tour-Holiday%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 218,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 80,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 1,
+          "name": "The Tragedy of the Commons",
+          "airdate": "2023-11-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 119,
-          "name": "76 madonna celebration tour everybody tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "76.Madonna-Celebration Tour-Everybody (TikTok Fan Tribute).MP4",
-            "name": "76.Madonna-Celebration Tour-Everybody (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/76.Madonna-Celebration%20Tour-Everybody%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 143,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 48,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Trials and Tribulations",
+          "airdate": "2023-11-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 120,
-          "name": "78 madonna celebration tour into the groove tiktok fan tribute",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "78.Madonna-Celebration Tour-Into The Groove (TikTok Fan Tribute).MP4",
-            "name": "78.Madonna-Celebration Tour-Into The Groove (TikTok Fan Tribute)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/78.Madonna-Celebration%20Tour-Into%20The%20Groove%20(TikTok%20Fan%20Tribute).MP4",
-            "seconds": 385,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 98,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "The Paradox of Intermediate Transactions",
+          "airdate": "2023-11-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 121,
-          "name": "87 madonna celebration tour into the groove fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "87.Madonna-Celebration Tour-Into The Groove (Fan Fun File).mp4",
-            "name": "87.Madonna-Celebration Tour-Into The Groove (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/87.Madonna-Celebration%20Tour-Into%20The%20Groove%20(Fan%20Fun%20File).mp4",
-            "seconds": 106,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 11,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "Insolubilia",
+          "airdate": "2023-12-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 122,
-          "name": "92 madonna celebration tour open your heart fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "92.Madonna-Celebration Tour-Open Your Heart (Fan Fun File).mp4",
-            "name": "92.Madonna-Celebration Tour-Open Your Heart (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/92.Madonna-Celebration%20Tour-Open%20Your%20Heart%20(Fan%20Fun%20File).mp4",
-            "seconds": 151,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "The Tiger",
+          "airdate": "2023-12-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 123,
-          "name": "madonna celebration tour live to tell fan fun file",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "100.Madonna-Celebration Tour-Live To Tell (Fan Fun File).mp4",
-            "name": "100.Madonna-Celebration Tour-Live To Tell (Fan Fun File)",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/100.Madonna-Celebration%20Tour-Live%20To%20Tell%20(Fan%20Fun%20File).mp4",
-            "seconds": 345,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 36,
-            "ep": {
-              "season": 1,
-              "episode": 0
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "The Tender Trap",
+          "airdate": "2023-12-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 124,
-          "name": "Episode 124",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "165.Attending Madonna Celebration Tour Photos Tickets Prep.ia.mp4",
-            "name": "165",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/165.Attending%20Madonna%20Celebration%20Tour%20Photos%20Tickets%20Prep.ia.mp4",
-            "seconds": 234,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 7,
+          "name": "Linda",
+          "airdate": "2023-12-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 125,
-          "name": "Episode 125",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "166.Madonna  Express Yourself Blond Ambition Tour  New Jersey.ia.mp4",
-            "name": "166",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/166.Madonna%20%20Express%20Yourself%20Blond%20Ambition%20Tour%20%20New%20Jersey.ia.mp4",
-            "seconds": 321,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 86,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 8,
+          "name": "Blanket",
+          "airdate": "2024-01-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 126,
-          "name": "Episode 126",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "170.Madonna  EXPRESS YOURSELF  Truth Or Dare.ia.mp4",
-            "name": "170",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/170.Madonna%20%20EXPRESS%20YOURSELF%20%20Truth%20Or%20Dare.ia.mp4",
-            "seconds": 299,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 158,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 9,
+          "name": "The Useless Hand",
+          "airdate": "2024-01-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 127,
-          "name": "Episode 127",
-          "state": "REVIEW",
-          "file": {
-            "item": "30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24",
-            "itemTitle": "30. Madonna The Celebration Tour Wells Fargo Center Philadelphia 1 25 24",
-            "file": "171.Madonna Express Yourself Blond Ambition Japan.ia.mp4",
-            "name": "171",
-            "url": "https://archive.org/download/30.-madonna-the-celebration-tour-wells-fargo-center-philadelphia-1-25-24/171.Madonna%20Express%20Yourself%20Blond%20Ambition%20Japan.ia.mp4",
-            "seconds": 481,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 87,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 10,
+          "name": "Bisquik",
+          "airdate": "2024-01-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 32,
-    "name": "Fargo",
-    "placed": 0
-  }
+  ]
 }
