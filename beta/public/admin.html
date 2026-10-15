@@ -1,0 +1,179 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VOIDtv Beta Admin</title><meta name="robots" content="noindex"><meta name="theme-color" content="#07080c">
+<link rel="icon" href="/icon-192.png">
+<style>
+@font-face{font-family:Unbounded;font-weight:200 900;font-display:swap;src:url(/unbounded-latin.woff2) format('woff2')}
+:root{--bg:#07080c;--card:#10121a;--line:rgba(255,255,255,.09);--ink:#e8e8ee;--dim:#9aa0b4;--cyan:#5fd4ff;--gold:#f2a93b;--red:#ff6b6b;--green:#5fe0a0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:16px 16px 40px}
+.wrap{max-width:980px;margin:0 auto}
+header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.wm{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:22px}.wm span{color:var(--cyan);font-weight:500}
+.chip{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--bg);background:var(--gold);padding:3px 8px;border-radius:999px}
+nav{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+nav button,.btn{border:1px solid var(--line);background:#161925;color:var(--ink);border-radius:9px;padding:8px 12px;font:600 14px system-ui,sans-serif;cursor:pointer}
+nav button[aria-current=true]{border-color:var(--cyan);color:var(--cyan)}
+.btn.p{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}.btn.d{color:var(--red)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+input,textarea,select{background:#0b0d13;border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:9px 10px;font:15px system-ui,sans-serif}
+textarea{width:100%;min-height:90px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rep{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px;background:#0d0f16}
+.rep .top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--dim)}
+.rep .txt{margin:6px 0 0;white-space:pre-wrap}
+.rep.open{border-color:var(--cyan)}
+.t{font-weight:700;color:var(--ink)}
+.st{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:#22263a}
+.st.new{background:#3a1d1d;color:var(--red)}.st.seen{background:#12303a;color:var(--cyan)}.st.fixing{background:#3a2e12;color:var(--gold)}.st.fixed{background:#123a2a;color:var(--green)}
+.more{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.more img{max-width:100%;max-height:520px;border-radius:8px;border:1px solid var(--line);display:block;margin:8px 0}
+.kv{font-size:13px;color:var(--dim)}.kv a{color:var(--cyan);word-break:break-all}
+.dim{color:var(--dim);font-size:13px}
+table{width:100%;border-collapse:collapse}td,th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;vertical-align:top}
+.invite{white-space:pre-wrap;background:#0b0d13;border:1px solid var(--line);border-radius:9px;padding:10px;font-size:14px;margin:8px 0}
+[hidden]{display:none!important}
+</style></head><body><div class="wrap">
+<header><div class="wm">VOID<span>tv</span></div><div class="chip">beta admin</div>
+  <nav id="nav" hidden><button data-v="reports" aria-current="true">Reports</button><button data-v="testers">Testers</button><button data-v="note">Note</button><button id="out">Lock</button></nav></header>
+
+<section id="login" class="card" hidden>
+  <p>Enter the admin key. It is in <b>backend/.env</b> on your PC as <b>BETA_ADMIN_KEY</b>, or open this page with <b>BETA-ADMIN.cmd</b>. This browser remembers it.</p>
+  <div class="row"><input id="key" type="password" placeholder="admin key" style="flex:1;min-width:220px"><button class="btn p" id="go">Unlock</button></div>
+  <div class="dim" id="lmsg"></div>
+</section>
+
+<section id="v-reports" hidden>
+  <div class="card row">
+    <select id="fs"><option value="open">Open (new, seen, working)</option><option value="new">New only</option><option value="fixed">Fixed</option><option value="all">All</option></select>
+    <select id="ft"><option value="">Every kind</option><option value="broken">Something broke</option><option value="wontplay">Won't play</option><option value="wrong">Wrong show or info</option><option value="looks">Looks off</option><option value="idea">Idea</option><option value="love">Love this</option></select>
+    <select id="fw"><option value="">Every tester</option></select>
+    <button class="btn" id="reload">Refresh</button><span class="dim" id="count"></span>
+  </div>
+  <div id="reports"></div>
+</section>
+
+<section id="v-testers" hidden>
+  <div class="card">
+    <div class="row"><input id="tname" placeholder="Tester's name" style="flex:1;min-width:200px"><button class="btn p" id="tadd">Create invite</button></div>
+    <div id="newinv" hidden>
+      <p class="dim" style="margin:12px 0 0">Send this to them. Give them the VOIDtv password separately, by text or in person.</p>
+      <div class="invite" id="invtext"></div>
+      <div class="row"><button class="btn p" id="invcopy">Copy message</button><button class="btn" id="invshare" hidden>Share…</button><button class="btn" id="linkcopy">Copy link only</button></div>
+    </div>
+  </div>
+  <div class="card"><table><thead><tr><th>Name</th><th>Reports</th><th>Since</th><th></th></tr></thead><tbody id="tlist"></tbody></table></div>
+</section>
+
+<section id="v-note" hidden><div class="card">
+  <p class="dim" style="margin-top:0">Shown at the top of every tester's app, under "What to try right now". Leave empty to hide it.</p>
+  <textarea id="note" placeholder="e.g. This week: try the TV channels and the new player on your phone."></textarea>
+  <div class="row" style="margin-top:8px"><button class="btn p" id="nsave">Save note</button><span class="dim" id="nmsg"></span></div>
+</div></section>
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var LS = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: function (k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} } };
+  var m = location.hash.match(/k=([^&]+)/); if (m) { LS.set('vb:admin', decodeURIComponent(m[1])); history.replaceState(null, '', '/admin'); }
+  var KEY = LS.get('vb:admin') || '';
+  var TL = { broken: 'Something broke', wontplay: "Won't play", wrong: 'Wrong show or info', looks: 'Looks off', idea: 'Idea', love: 'Love this' };
+  var STATUS = [['new', 'New'], ['seen', 'Seen'], ['fixing', 'Working on it'], ['fixed', 'Fixed'], ['wontfix', 'Not changing']];
+  var REPORTS = [], TESTERS = [], OPEN = null;
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function api(path, body) {
+    return fetch('/api/admin/' + path, { method: body ? 'POST' : 'GET', headers: { 'x-admin': KEY, 'content-type': 'application/json' }, body: body ? JSON.stringify(body) : undefined })
+      .then(function (r) { return r.json().then(function (j) { if (r.status === 401) { lock(); throw new Error('locked'); } if (!r.ok) throw new Error(j.error || 'failed'); return j; }); });
+  }
+  function lock() { KEY = ''; LS.set('vb:admin', null); $('nav').hidden = true; ['reports', 'testers', 'note'].forEach(function (v) { $('v-' + v).hidden = true; }); $('login').hidden = false; }
+  function show(v) { ['reports', 'testers', 'note'].forEach(function (x) { $('v-' + x).hidden = x !== v; }); [].forEach.call($('nav').querySelectorAll('[data-v]'), function (b) { b.setAttribute('aria-current', b.dataset.v === v ? 'true' : 'false'); }); if (v === 'reports') loadReports(); if (v === 'testers') loadTesters(); if (v === 'note') api('note').then(function (j) { $('note').value = j.note; }); }
+  function unlock() { api('check').then(function () { $('login').hidden = true; $('nav').hidden = false; loadTesters().then(function () { show('reports'); }); }).catch(function (e) { $('lmsg').textContent = e.message === 'locked' ? 'That key did not work.' : e.message; }); }
+  $('go').onclick = function () { KEY = $('key').value.trim(); LS.set('vb:admin', KEY); unlock(); };
+  $('key').onkeydown = function (e) { if (e.key === 'Enter') $('go').click(); };
+  $('out').onclick = lock;
+  $('nav').addEventListener('click', function (e) { var b = e.target.closest('[data-v]'); if (b) show(b.dataset.v); });
+
+  function inviteLink(code) { return location.origin + '/?t=' + code; }
+  function inviteText(name, code) {
+    return 'Hi ' + name + ', you are invited to test VOIDtv, free classic TV from the Internet Archive.\n\n' +
+      '1. Watch here: https://voidtv.net (I will send you the password separately)\n' +
+      '2. Your beta app: ' + inviteLink(code) + '\n   Open it once and add it to your home screen. Tap it whenever something breaks, looks wrong, or you love something. You will see my replies there.\n\nThank you!';
+  }
+  function loadTesters() {
+    return api('testers').then(function (j) {
+      TESTERS = j.testers;
+      var counts = {}; REPORTS.forEach(function (r) { counts[r.tester] = (counts[r.tester] || 0) + 1; });
+      $('tlist').innerHTML = TESTERS.length ? TESTERS.map(function (t) {
+        return '<tr><td><b>' + esc(t.name) + '</b>' + (t.active === false ? ' <span class="dim">(paused)</span>' : '') + '</td><td>' + (counts[t.code] || 0) + '</td><td class="dim">' + esc((t.created || '').slice(0, 10)) + '</td><td class="row">' +
+          '<button class="btn" data-copy="' + esc(t.code) + '">Copy invite</button><button class="btn" data-pause="' + esc(t.code) + '" data-active="' + (t.active === false ? '1' : '0') + '">' + (t.active === false ? 'Resume' : 'Pause') + '</button><button class="btn d" data-rm="' + esc(t.code) + '">Remove</button></td></tr>';
+      }).join('') : '<tr><td colspan="4" class="dim">No testers yet. Add one above.</td></tr>';
+      var sel = $('fw'), cur = sel.value; sel.innerHTML = '<option value="">Every tester</option>' + TESTERS.map(function (t) { return '<option value="' + esc(t.code) + '">' + esc(t.name) + '</option>'; }).join(''); sel.value = cur;
+    });
+  }
+  function copy(text, btn) { (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () { var o = btn.textContent; btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = o; }, 1400); }).catch(function () { prompt('Copy this:', text); }); }
+  $('tlist').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.copy) { var t = TESTERS.find(function (x) { return x.code === b.dataset.copy; }); copy(inviteText(t.name, t.code), b); }
+    if (b.dataset.pause) api('testers', { code: b.dataset.pause, active: b.dataset.active === '1' }).then(loadTesters);
+    if (b.dataset.rm && confirm('Remove this tester? Their invite stops working. Their reports stay.')) api('testers', { remove: b.dataset.rm }).then(loadTesters);
+  });
+  var LAST = null;
+  $('tadd').onclick = function () {
+    var name = $('tname').value.trim(); if (!name) { $('tname').focus(); return; }
+    api('testers', { name: name }).then(function (j) { LAST = j; $('tname').value = ''; $('invtext').textContent = inviteText(j.name, j.code); $('newinv').hidden = false; $('invshare').hidden = !navigator.share; loadTesters(); });
+  };
+  $('tname').onkeydown = function (e) { if (e.key === 'Enter') $('tadd').click(); };
+  $('invcopy').onclick = function () { copy($('invtext').textContent, this); };
+  $('linkcopy').onclick = function () { if (LAST) copy(inviteLink(LAST.code), this); };
+  $('invshare').onclick = function () { navigator.share({ text: $('invtext').textContent }).catch(function () {}); };
+
+  function loadReports() { return api('reports').then(function (j) { REPORTS = j.reports; draw(); }); }
+  function draw() {
+    var fs = $('fs').value, ft = $('ft').value, fw = $('fw').value;
+    var list = REPORTS.filter(function (r) {
+      if (fs === 'open' && !/^(new|seen|fixing)$/.test(r.status)) return false;
+      if (fs === 'new' && r.status !== 'new') return false;
+      if (fs === 'fixed' && r.status !== 'fixed') return false;
+      if (ft && r.type !== ft) return false; if (fw && r.tester !== fw) return false; return true;
+    });
+    $('count').textContent = list.length + ' shown, ' + REPORTS.filter(function (r) { return r.status === 'new'; }).length + ' new';
+    $('reports').innerHTML = list.length ? list.map(function (r) {
+      return '<div class="rep" data-key="' + esc(r.key) + '"><div class="top"><span class="st ' + esc(r.status) + '">' + esc(r.status) + '</span><span class="t">' + esc(TL[r.type] || r.type) + '</span><span>' + esc(r.name) + '</span><span>' + new Date(r.ts).toLocaleString() + '</span>' + (r.shot ? '<span>📷</span>' : '') + (r.reply ? '<span>replied</span>' : '') + '</div>' +
+        (r.show ? '<div class="txt"><b>' + esc(r.show) + '</b></div>' : '') + '<div class="txt">' + esc(r.text) + '</div><div class="more" hidden></div></div>';
+    }).join('') : '<div class="card dim">Nothing here.</div>';
+  }
+  ['fs', 'ft', 'fw'].forEach(function (id) { $(id).onchange = draw; });
+  $('reload').onclick = loadReports;
+  $('reports').addEventListener('click', function (e) {
+    var card = e.target.closest('.rep'); if (!card) return;
+    var more = card.querySelector('.more');
+    if (e.target.closest('.more')) return;
+    if (!more.hidden) { more.hidden = true; card.classList.remove('open'); return; }
+    card.classList.add('open'); more.hidden = false; more.innerHTML = '<span class="dim">Loading…</span>';
+    api('report?key=' + encodeURIComponent(card.dataset.key)).then(function (r) {
+      if (r.status === 'new') { r.status = 'seen'; api('report', { key: card.dataset.key, status: 'seen' }).then(function () { var s = REPORTS.find(function (x) { return x.key === card.dataset.key; }); if (s) s.status = 'seen'; card.querySelector('.st').className = 'st seen'; card.querySelector('.st').textContent = 'seen'; }); }
+      var d = r.device || {};
+      more.innerHTML = '<div class="txt">' + esc(r.text) + '</div>' +
+        (r.link ? '<div class="kv">Page: <a href="' + esc(/^https?:\/\//.test(r.link) ? r.link : '#') + '" target="_blank" rel="noopener">' + esc(r.link) + '</a></div>' : '') +
+        '<div class="kv">Device: ' + esc(d.ua) + '<br>Screen ' + esc(d.screen) + ' · ' + esc(d.tz) + ' · ' + esc(d.lang) + ' · ' + esc(d.country) + '</div>' +
+        (r.shot ? '<img alt="screenshot" data-shot="' + esc(r.id) + '">' : '') +
+        '<div class="row" style="margin-top:10px">' + STATUS.map(function (s) { return '<button class="btn' + (r.status === s[0] ? ' p' : '') + '" data-st="' + s[0] + '">' + s[1] + '</button>'; }).join('') + '</div>' +
+        '<textarea placeholder="Reply the tester will see in their app" style="margin-top:10px">' + esc(r.reply) + '</textarea>' +
+        '<div class="row" style="margin-top:8px"><button class="btn p" data-save="1">Save reply</button><button class="btn d" data-del="1">Delete report</button><span class="dim" data-msg></span></div>';
+      var img = more.querySelector('img[data-shot]');
+      if (img) fetch('/api/shot/' + r.id, { headers: { 'x-admin': KEY } }).then(function (x) { return x.blob(); }).then(function (b) { img.src = URL.createObjectURL(b); });
+    }).catch(function (err) { more.textContent = err.message; });
+  });
+  $('reports').addEventListener('click', function (e) {
+    var b = e.target.closest('.more button'); if (!b) return;
+    var card = b.closest('.rep'), key = card.dataset.key, msg = card.querySelector('[data-msg]');
+    var s = REPORTS.find(function (x) { return x.key === key; });
+    if (b.dataset.st) api('report', { key: key, status: b.dataset.st }).then(function () { if (s) s.status = b.dataset.st; [].forEach.call(card.querySelectorAll('[data-st]'), function (x) { x.classList.toggle('p', x === b); }); card.querySelector('.st').className = 'st ' + b.dataset.st; card.querySelector('.st').textContent = b.dataset.st; });
+    if (b.dataset.save) api('report', { key: key, reply: card.querySelector('textarea').value }).then(function () { msg.textContent = 'Saved. They will see it next time they open the app.'; if (s) s.reply = card.querySelector('textarea').value; });
+    if (b.dataset.del && confirm('Delete this report for good?')) api('report', { key: key, delete: true }).then(function () { REPORTS = REPORTS.filter(function (x) { return x.key !== key; }); draw(); });
+  });
+  $('nsave').onclick = function () { api('note', { note: $('note').value }).then(function () { $('nmsg').textContent = 'Saved.'; setTimeout(function () { $('nmsg').textContent = ''; }, 1500); }); };
+
+  if (KEY) unlock(); else $('login').hidden = false;
+})();
+</script></body></html>

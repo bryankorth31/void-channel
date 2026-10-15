@@ -1,0 +1,8 @@
+# VOIDtv Beta: tester reporting app. Its own Cloudflare Pages project and KV store; it never touches VOIDtv.
+name = "voidtv-beta"
+pages_build_output_dir = "public"
+compatibility_date = "2026-09-01"
+
+[[kv_namespaces]]
+binding = "DB"
+id = "8d8c5c4c6e6d4b489019be878f26d70c"
