@@ -1187,7 +1187,7 @@ app.get("/api/item/:identifier", async (req, res) => {
     if (process.env.SPINE_URL && !item.fallback && item.videoUrl) {
       fetch(`${process.env.SPINE_URL}/catalog/ingest`, {
         method: "POST",
-        headers: { "content-type": "application/json", "x-spine-key": process.env.SPINE_ADMIN_KEY || "void-spine-dev" },
+        headers: { "content-type": "application/json", "x-spine-key": process.env.SPINE_ADMIN_KEY || (() => { throw new Error("SPINE_ADMIN_KEY is not set"); })() },
         body: JSON.stringify({ item: {
           id: item.id, title: item.title, description: item.description, year: item.year,
           creator: item.creator, downloads: item.downloads, runtime: item.duration, subjects: item.subjects,

@@ -165,7 +165,7 @@ function matchShow(entry) {
         if (!f.playable) conf -= 0.1;
         conf = Math.max(0, Math.min(1, conf));
         if (process.env.MATCH_DEBUG) console.log(`  [debug] ${f.name.slice(0, 60)} -> ${c.ep.season}x${c.ep.number} conf ${conf.toFixed(2)} (${c.why}; band ${f.band}; names ${namesShow(f.name)}/${itemTitled}; other ${fileNamesOther}/${itemNamesOther})`);
-        if (conf < REVIEW) continue;
+        if (conf < REVIEW && !(ov.acceptFiles || []).includes(item.id + '|' + f.name)) continue; // an accepted file is kept whatever the judges say
         const risk = codecRisk(f.name, f.format, f.playable);
         push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
       }
@@ -226,11 +226,11 @@ function matchShow(entry) {
 // order as season 1. Everything is REVIEW: honest about where the order came from.
 function selfGrid(entry, cand, aliases) {
   const show = entry.name;
-  const core = norm(show).replace(/^the /, '').replace(/(.*?)/g, '').trim();
+  const core = norm(show).replace(/^the /, '').replace(/\(.*?\)/g, '').trim();
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
-  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies)/i;
+  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies)/i;
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));

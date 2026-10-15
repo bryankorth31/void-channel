@@ -11,7 +11,8 @@ const crypto = require("crypto");
 const { supabase, requireAuth } = require("./supabase");
 
 const router = express.Router();
-const GATE_SECRET = process.env.MATURE_GATE_SECRET || "void-mature-gate-dev";
+const GATE_SECRET = process.env.MATURE_GATE_SECRET;
+if (!GATE_SECRET) throw new Error("MATURE_GATE_SECRET is not set (the legacy backend is retired; no fallback secret)");
 const GATE_TTL_MS = 4 * 60 * 60 * 1000;
 
 function hashPin(pin, salt) {

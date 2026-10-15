@@ -43,7 +43,8 @@ function createWindow() {
     autoHideMenuBar: true, webPreferences: { contextIsolation: true, sandbox: true },
   });
   win.loadURL(`http://127.0.0.1:${PORT}/`);
-  win.webContents.setWindowOpenHandler(({ url }) => { shell.openExternal(url); return { action: 'deny' }; });
+  win.webContents.setWindowOpenHandler(({ url }) => { if (/^https?:\/\//i.test(url)) shell.openExternal(url); return { action: 'deny' }; });
+  win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith(`http://127.0.0.1:${PORT}/`)) { e.preventDefault(); if (/^https?:\/\//i.test(url)) shell.openExternal(url); } });
   win.on('close', (e) => { if (!app.quitting) { e.preventDefault(); win.hide(); } });
 }
 

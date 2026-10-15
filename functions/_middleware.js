@@ -3,7 +3,12 @@
 // The right password sets a cookie for 30 days. Remove the variable to open the site.
 const COOKIE = 'voidtv_gate';
 
-async function token(secret) {
+async function token(secret, key) {
+  if (key) { // a GATE_KEY variable on the Pages project makes the cookie an HMAC that can be rotated without changing the password
+    const k = await crypto.subtle.importKey('raw', new TextEncoder().encode(key), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+    const sig = await crypto.subtle.sign('HMAC', k, new TextEncoder().encode('voidtv:' + secret));
+    return [...new Uint8Array(sig)].slice(0, 16).map((b) => b.toString(16).padStart(2, '0')).join('');
+  }
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('voidtv:' + secret));
   return [...new Uint8Array(buf)].slice(0, 16).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
@@ -25,7 +30,7 @@ export async function onRequest({ request, env, next }) {
   const secret = env.SITE_PASSWORD;
   if (!secret) return next();
   if (new URL(request.url).pathname.startsWith('/assets/brand/')) return next(); // the gate page's own background and icons
-  const want = await token(secret);
+  const want = await token(secret, env.GATE_KEY);
   const cookies = request.headers.get('cookie') || '';
   if (cookies.split(';').some((c) => c.trim() === `${COOKIE}=${want}`)) return next();
   if (request.method === 'POST') {

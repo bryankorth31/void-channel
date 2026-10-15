@@ -105,7 +105,8 @@ function gitState() {
 
 function scheduledTasks() {
   try {
-    const out = execSync('schtasks /Query /FO CSV /V /TN "VoidTV Publish" & schtasks /Query /FO CSV /V /TN "VoidTV Nightly"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    const one = (n) => { try { return execSync('schtasks /Query /FO CSV /V /TN "' + n + '"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString(); } catch (e) { return ''; } };
+    const out = one('VoidTV Publish') + '\n' + one('VoidTV Nightly'); if (false) execSync('', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
     const lines = out.split('\n').filter((l) => l.startsWith('"') && !l.startsWith('"HostName"'));
     return lines.map((l) => { const c = l.split('","').map((x) => x.replace(/^"|"\r?$/g, '')); return { name: c[1].replace(/^\\/, ''), next: c[2], status: c[3], last: c[5], result: c[6] }; });
   } catch (e) { return []; }
@@ -117,12 +118,14 @@ function nodeProcesses() {
     let arr = out ? JSON.parse(out) : [];
     if (!Array.isArray(arr)) arr = [arr];
     return arr.filter((p) => /scripts[\\/](hunt|hunt-movies|match|art|people|db|publish|scout|networks|nightly|site|candidates|tvmovies)\.js/.test(p.CommandLine || ''))
-      .map((p) => ({ pid: p.ProcessId, cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: p.CreationDate }));
+      .map((p) => ({ pid: p.ProcessId, cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
   } catch (e) { return []; }
 }
 
 // ---- jobs -------------------------------------------------------------------------------------
-const JOBS = [];
+const JOBS_FILE = path.join(CACHE, 'hq-jobs.json');
+const JOBS = (() => { try { return JSON.parse(fs.readFileSync(JOBS_FILE, 'utf8')).slice(0, 60); } catch (e) { return []; } })(); // survive an HQ restart
+const saveJobs = () => { try { fs.mkdirSync(CACHE, { recursive: true }); fs.writeFileSync(JOBS_FILE, JSON.stringify(JOBS.slice(0, 60))); } catch (e) { /* best effort */ } };
 const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe']);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
 function startJob(name, args) {
@@ -138,19 +141,23 @@ function startJob(name, args) {
   const child = spawn(nb.bin, [path.join(ROOT, 'scripts', name + '.js'), ...args], { cwd: ROOT, env: nb.env, detached: true, stdio: ['ignore', fd, fd], windowsHide: true });
   child.unref();
   const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), log, done: null, code: null };
-  child.on('exit', (code) => { job.done = new Date().toISOString(); job.code = code; });
-  JOBS.unshift(job);
+  child.on('exit', (code) => { job.done = new Date().toISOString(); job.code = code; saveJobs(); });
+  JOBS.unshift(job); saveJobs();
   return job;
 }
-const jobList = () => JOBS.map((j) => ({ ...j, running: j.done ? false : alive(j.pid), tail: tail(j.log, 3) }));
+const jobList = () => JOBS.map((j) => { const running = j.done ? false : alive(j.pid); if (!running && !j.done) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; saveJobs(); } return { ...j, running, tail: tail(j.log, 3) }; });
 function stopJob(pid) { try { execSync(`taskkill /PID ${+pid} /T /F`, { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone */ } }
 
 // ---- overrides --------------------------------------------------------------------------------
 function patchOverride(slug, body) {
   const OV = readJson(FILES.overrides, {});
   const ov = OV[slug] || {};
-  for (const [k, v] of Object.entries(body.set || {})) { if (v === null || v === '' || v === false) delete ov[k]; else ov[k] = v; }
-  for (const [k, vals] of Object.entries(body.push || {})) { const cur = new Set(ov[k] || []); for (const v of [].concat(vals)) cur.add(v); ov[k] = [...cur]; }
+  for (const [k, v] of Object.entries(body.set || {})) {
+    if (v === null || v === '' || v === false || (typeof v === 'number' && !Number.isFinite(v))) { delete ov[k]; continue; }
+    if (k === 'tvmazeId' || k === 'tmdbId') { const n = parseInt((String(v).match(/\d+/) || [])[0], 10); if (n > 0) ov[k] = n; else delete ov[k]; continue; } // a pasted URL still yields the id
+    ov[k] = v;
+  }
+  for (const [k, vals] of Object.entries(body.push || {})) { const cur = new Set(Array.isArray(ov[k]) ? ov[k] : []); for (const v of [].concat(vals)) cur.add(v); ov[k] = [...cur]; }
   for (const [k, vals] of Object.entries(body.pull || {})) { if (!ov[k]) continue; const rm = new Set([].concat(vals)); ov[k] = ov[k].filter((v) => !rm.has(v)); if (!ov[k].length) delete ov[k]; }
   if (Object.keys(ov).length) OV[slug] = ov; else delete OV[slug];
   writeJson(FILES.overrides, OV);

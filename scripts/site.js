@@ -19,6 +19,7 @@ const ORIGIN = bi >= 0 ? args[bi + 1].replace(/\/$/, '') : 'https://voidtv.net';
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });
 const data = assemble();
+if (data.shows.length < 100) { console.error('SITE WOULD SHIP WITH ' + data.shows.length + ' SHOWS: show-list.json or the catalog did not load; refusing to build'); process.exit(1); }
 
 for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s, data)));
 fs.writeFileSync(path.join(OUT, 'data', 'index.js'), 'const SHOWS=' + JSON.stringify(data.shows.map(indexEntry)) + ';');

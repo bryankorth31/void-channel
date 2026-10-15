@@ -53,9 +53,11 @@ function searchWords(show) {
 }
 
 // ---- polite fetch with cache -------------------------------------------------------------
+let REFETCH = false;
 async function getJson(url, cacheKey) {
   const cf = cacheKey && path.join(CACHE_DIR, cacheKey + '.json');
-  if (cf && fs.existsSync(cf)) return JSON.parse(fs.readFileSync(cf, 'utf8'));
+  // --refetch ignores scrape pages older than 14 days, so a re-hunt can see what the Archive has gained since
+  if (cf && fs.existsSync(cf) && !(REFETCH && /^scrape-/.test(cacheKey) && Date.now() - fs.statSync(cf).mtimeMs > 14 * 864e5)) return JSON.parse(fs.readFileSync(cf, 'utf8'));
   if (calls >= budget) throw new Error('budget exhausted');
   for (let attempt = 0; ; attempt++) {
     calls++;
@@ -88,7 +90,7 @@ async function tvmaze(show) {
     const r = await fetch(ov.tvmazeId ? 'https://api.tvmaze.com/shows/' + ov.tvmazeId : 'https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(show.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()), { signal: AbortSignal.timeout(20000) });
     if (!r.ok) return null;
     const s = await r.json();
-    if (!ov.tvmazeId) { const a = norm(show).replace(/(.*?)/g, '').trim(), b = norm(s.name); const bag = (t) => new Set(t.split(' ').filter((w) => w.length > 2)); const A = bag(a), B = bag(b); let hit = 0; for (const w of A) if (B.has(w)) hit++; const sim = A.size ? hit / A.size : 0; if (!b.includes(a) && !a.includes(b) && sim < 0.6) { console.log(`   TVmaze offered "${s.name}" for "${show}": not the same show, treating as no match`); return null; } }
+    if (!ov.tvmazeId) { const a = norm(show).replace(/\(.*?\)/g, '').trim(), b = norm(s.name); const bag = (t) => new Set(t.split(' ').filter((w) => w.length > 2)); const A = bag(a), B = bag(b); let hit = 0; for (const w of A) if (B.has(w)) hit++; const sim = A.size ? hit / A.size : 0; if (!b.includes(a) && !a.includes(b) && sim < 0.6) { console.log(`   TVmaze offered "${s.name}" for "${show}": not the same show, treating as no match`); return null; } }
     const er = await fetch(`https://api.tvmaze.com/shows/${s.id}/episodes`, { signal: AbortSignal.timeout(20000) });
     const eps = er.ok ? await er.json() : [];
     const out = {
@@ -308,6 +310,7 @@ async function main() {
   const first = opt('--first'); // with --priority: shows carrying this tag go before every row
   const missing = args.includes('--missing');
   const refresh = args.includes('--refresh');
+  REFETCH = args.includes('--refetch');
   const fresh = args.includes('--fresh');
   const pass2 = args.includes('--pass2'); // re-hunt shows under 50% coverage with the narrow net + deeper opening
   const unplayable = args.includes('--unplayable'); // re-hunt shows whose picks will not play in a browser (mkv / AC3 / x265)

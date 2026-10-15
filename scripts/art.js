@@ -45,7 +45,8 @@ async function lookup(entry) {
   const cf = path.join(CACHE_DIR, 'tmdb-' + slug(show) + '.json');
   const ov = OVERRIDES[slug(show)] || {};
   let detail;
-  if (fs.existsSync(cf)) detail = JSON.parse(fs.readFileSync(cf, 'utf8'));
+  if (fs.existsSync(cf)) { detail = JSON.parse(fs.readFileSync(cf, 'utf8')); if (ov.tmdbId && detail && detail.id !== ov.tmdbId) detail = null; } // an id set in HQ beats a stale cache
+  if (detail) { /* cached */ }
   else if (ov.tmdbId) { // a fixed id from overrides.json wins (name collisions)
     detail = await tmdb('/tv/' + ov.tmdbId);
     fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -87,7 +88,8 @@ async function main() {
   for (const entry of LIST.shows) {
     const s = slug(entry.name);
     if (SLUG_ONLY ? s !== SLUG_ONLY : (filter && !entry.name.toLowerCase().includes(filter))) continue;
-    if (!filter && !SLUG_ONLY && !fresh && art[s]) continue;
+    const ovId = (OVERRIDES[s] || {}).tmdbId;
+    if (!filter && !SLUG_ONLY && !fresh && art[s] && !(ovId && art[s].tmdbId !== ovId)) continue;
     if (filter || SLUG_ONLY || fresh) { try { fs.unlinkSync(path.join(CACHE_DIR, 'tmdb-' + s + '.json')); } catch (e) {} }
     try {
       const a = await lookup(entry);
