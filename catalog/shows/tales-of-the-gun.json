@@ -3,7 +3,7 @@
   "slug": "tales-of-the-gun",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-15T01:19:21.263Z",
+  "matchedAt": "2026-10-15T03:18:22.967Z",
   "tvmaze": {
     "id": 80849,
     "name": "Tales of the Gun",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 52,
     "live": 0,
-    "review": 26,
-    "missing": 26,
-    "pct": 50
+    "review": 34,
+    "missing": 18,
+    "pct": 65
   },
   "seasons": [
     {
@@ -34,17 +34,69 @@
           "number": 2,
           "name": "Bullets and Ammo",
           "airdate": "1998-01-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bullets and Ammo\" (0.95)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 02 - Bullets and Ammo.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 02 - Bullets and Ammo",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2002%20-%20Bullets%20and%20Ammo.mp4",
+            "seconds": 2756,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bullets and Ammo\" (0.95)",
+              "item": "tales-of-the-gun-06-guns-of-remington",
+              "itemTitle": "Tales Of The Gun 01/05",
+              "file": "Tales of the Gun - 02 - Bullets and Ammo.mp4",
+              "name": "Tales of the Gun - 02 - Bullets and Ammo",
+              "url": "https://archive.org/download/tales-of-the-gun-06-guns-of-remington/Tales%20of%20the%20Gun%20-%2002%20-%20Bullets%20and%20Ammo.mp4",
+              "seconds": 2756,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 277
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Duelling pistols",
           "airdate": "1998-01-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Duelling pistols\" (0.95)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 03 - Duelling Pistols.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 03 - Duelling Pistols",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2003%20-%20Duelling%20Pistols.mp4",
+            "seconds": 2755,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Duelling pistols\" (0.95)",
+              "item": "tales-of-the-gun-06-guns-of-remington",
+              "itemTitle": "Tales Of The Gun 01/05",
+              "file": "Tales of the Gun - 03 - Duelling Pistols.mp4",
+              "name": "Tales of the Gun - 03 - Duelling Pistols",
+              "url": "https://archive.org/download/tales-of-the-gun-06-guns-of-remington/Tales%20of%20the%20Gun%20-%2003%20-%20Duelling%20Pistols.mp4",
+              "seconds": 2755,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
         },
         {
           "number": 4,
@@ -377,24 +429,60 @@
           "number": 16,
           "name": "Rapid Firepower",
           "airdate": "1998-01-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Rapid Firepower\" (0.95)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 16 - Rapid Firepower.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 16 - Rapid Firepower",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2016%20-%20Rapid%20Firepower.mp4",
+            "seconds": 2756,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 279
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Guns of the Civil War",
           "airdate": "1998-01-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Guns of the Civil War\" (0.95)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 17 - Guns of the Civil War.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 17 - Guns of the Civil War",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2017%20-%20Guns%20of%20the%20Civil%20War.mp4",
+            "seconds": 2746,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Guns of the Revolution",
           "airdate": "1998-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Guns of the Revolution\" (0.95)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 18 - Guns of the Revolution.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 18 - Guns of the Revolution",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2018%20-%20Guns%20of%20the%20Revolution.mp4",
+            "seconds": 2757,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 275
+          },
           "alternates": []
         },
         {
@@ -683,9 +771,35 @@
           "number": 30,
           "name": "Super Guns of TGoday and Tomorrow",
           "airdate": "1998-01-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Super Guns of TGoday and Tomorrow\" (0.88)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 30 - Super Guns of Today and Tomorrow.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 30 - Super Guns of Today and Tomorrow",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2030%20-%20Super%20Guns%20of%20Today%20and%20Tomorrow.mp4",
+            "seconds": 2752,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Super Guns of TGoday and Tomorrow\" (0.88)",
+              "item": "tales-of-the-gun-0305",
+              "itemTitle": "Tales Of The Gun 03/05",
+              "file": "Tales of the Gun - 30 - Super Guns of Today and Tomorrow.mp4",
+              "name": "Tales of the Gun - 30 - Super Guns of Today and Tomorrow",
+              "url": "https://archive.org/download/tales-of-the-gun-0305/Tales%20of%20the%20Gun%20-%2030%20-%20Super%20Guns%20of%20Today%20and%20Tomorrow.mp4",
+              "seconds": 2752,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
         },
         {
           "number": 31,
@@ -738,17 +852,69 @@
           "number": 32,
           "name": "Automatic Pistols",
           "airdate": "1998-02-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Automatic Pistols\" (0.95)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 32 - Automatic Pistols.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 32 - Automatic Pistols",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2032%20-%20Automatic%20Pistols.mp4",
+            "seconds": 2756,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 278
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Automatic Pistols\" (0.95)",
+              "item": "tales-of-the-gun-0405",
+              "itemTitle": "Tales Of The Gun 04/05",
+              "file": "Tales of the Gun - 32 - Automatic Pistols.mp4",
+              "name": "Tales of the Gun - 32 - Automatic Pistols",
+              "url": "https://archive.org/download/tales-of-the-gun-0405/Tales%20of%20the%20Gun%20-%2032%20-%20Automatic%20Pistols.mp4",
+              "seconds": 2756,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 277
+            }
+          ]
         },
         {
           "number": 33,
           "name": "Sharpshooters and Long Range Guns",
           "airdate": "1998-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Sharpshooters and Long Range Guns\" (0.79)",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 33 - Sharpshooters and Long Range.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 33 - Sharpshooters and Long Range",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2033%20-%20Sharpshooters%20and%20Long%20Range.mp4",
+            "seconds": 2757,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 277
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Sharpshooters and Long Range Guns\" (0.79)",
+              "item": "tales-of-the-gun-0405",
+              "itemTitle": "Tales Of The Gun 04/05",
+              "file": "Tales of the Gun - 33 - Sharpshooters and Long Range.mp4",
+              "name": "Tales of the Gun - 33 - Sharpshooters and Long Range",
+              "url": "https://archive.org/download/tales-of-the-gun-0405/Tales%20of%20the%20Gun%20-%2033%20-%20Sharpshooters%20and%20Long%20Range.mp4",
+              "seconds": 2757,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 277
+            }
+          ]
         },
         {
           "number": 34,

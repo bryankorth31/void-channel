@@ -3,21 +3,20 @@
   "slug": "tim-and-eric-nite-live",
   "type": "Internet Comedy",
   "network": "Web",
-  "matchedAt": "2026-10-15T01:19:17.003Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:57.922Z",
   "tvmaze": {
-    "id": null,
+    "id": 30979,
     "name": "Tim and Eric Nite Live",
-    "runtime": null,
-    "premiered": null,
-    "network": "Web"
+    "runtime": 20,
+    "premiered": "2007-11-06",
+    "network": "Super Deluxe"
   },
   "coverage": {
     "total": 12,
     "live": 0,
-    "review": 12,
-    "missing": 0,
-    "pct": 100
+    "review": 8,
+    "missing": 4,
+    "pct": 67
   },
   "seasons": [
     {
@@ -25,78 +24,36 @@
       "episodes": [
         {
           "number": 1,
-          "name": "and 1 composite",
-          "state": "REVIEW",
-          "file": {
-            "item": "tim-and-eric-nite-live-episode-1-composite",
-            "itemTitle": "Tim And Eric Nite Live - Episode 1 (Composite)",
-            "file": "Tim and Eric Nite Live - Episode 1 (Composite).mp4",
-            "name": "Tim and Eric Nite Live - Episode 1 (Composite)",
-            "url": "https://archive.org/download/tim-and-eric-nite-live-episode-1-composite/Tim%20and%20Eric%20Nite%20Live%20-%20Episode%201%20(Composite).mp4",
-            "seconds": 1941,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 190,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Delicious Pizza",
+          "airdate": "2007-11-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "and 2 part 1 of 4",
-          "state": "REVIEW",
-          "file": {
-            "item": "nitelivetande",
-            "itemTitle": "Tim And Eric Nite Live",
-            "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 2 - Part 1 of 4.mp4",
-            "name": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 2 - Part 1 of 4",
-            "url": "https://archive.org/download/nitelivetande/Tim%20and%20Eric%20Nite%20Live%2FTim%20and%20Eric%20Nite%20Live%20-%20Episode%202%20-%20Part%201%20of%204.mp4",
-            "seconds": 398,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 20,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Quall-ity Episode",
+          "airdate": "2007-11-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "and 3",
-          "state": "REVIEW",
-          "file": {
-            "item": "nitelivetande",
-            "itemTitle": "Tim And Eric Nite Live",
-            "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 3.mp4",
-            "name": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 3",
-            "url": "https://archive.org/download/nitelivetande/Tim%20and%20Eric%20Nite%20Live%2FTim%20and%20Eric%20Nite%20Live%20-%20Episode%203.mp4",
-            "seconds": 1801,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 95,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Flipz",
+          "airdate": "2007-11-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "and 4",
+          "name": "Cyber Monday",
+          "airdate": "2007-11-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 4.mp4",
@@ -105,21 +62,18 @@
             "seconds": 1512,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 77,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 77
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "and 5",
+          "name": "Husks of Ginger",
+          "airdate": "2007-12-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 5.mp4",
@@ -128,21 +82,18 @@
             "seconds": 1445,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 72,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 72
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "and 6",
+          "name": "Christmas Special Thingy",
+          "airdate": "2007-12-11",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 6.mp4",
@@ -151,21 +102,18 @@
             "seconds": 1534,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 95,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 95
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "and 7",
+          "name": "Tim and Eric HD",
+          "airdate": "2008-01-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 7.mp4",
@@ -174,21 +122,18 @@
             "seconds": 1263,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 58,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 58
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "and 8",
+          "name": "Super Duper Tuesday",
+          "airdate": "2008-02-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 8.mp4",
@@ -197,21 +142,18 @@
             "seconds": 1074,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 61,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 61
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "and 9",
+          "name": "Dunder the Covers",
+          "airdate": "2008-02-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 9.mp4",
@@ -220,21 +162,18 @@
             "seconds": 1094,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 63,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 63
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "and 10",
+          "name": "Chocolate Episode",
+          "airdate": "2008-02-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 10.mp4",
@@ -243,44 +182,26 @@
             "seconds": 1359,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 67,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 67
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "and 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "nitelivetande",
-            "itemTitle": "Tim And Eric Nite Live",
-            "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 11.mp4",
-            "name": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 11",
-            "url": "https://archive.org/download/nitelivetande/Tim%20and%20Eric%20Nite%20Live%2FTim%20and%20Eric%20Nite%20Live%20-%20Episode%2011.mp4",
-            "seconds": 484,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 22,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Eric's Gone",
+          "airdate": "2008-02-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "and 12",
+          "name": "Return of the Eric",
+          "airdate": "2008-03-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "nitelivetande",
             "itemTitle": "Tim And Eric Nite Live",
             "file": "Tim and Eric Nite Live/Tim and Eric Nite Live - Episode 12.mp4",
@@ -289,13 +210,7 @@
             "seconds": 1254,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 71,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 71
           },
           "alternates": []
         }

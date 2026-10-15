@@ -3,7 +3,7 @@
   "slug": "knight-rider",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:28.675Z",
+  "matchedAt": "2026-10-15T03:18:36.601Z",
   "tvmaze": {
     "id": 825,
     "name": "Knight Rider",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 84,
-    "live": 55,
-    "review": 15,
-    "missing": 14,
-    "pct": 83
+    "live": 58,
+    "review": 22,
+    "missing": 4,
+    "pct": 95
   },
   "seasons": [
     {
@@ -26,9 +26,35 @@
           "number": 1,
           "name": "Knight of the Phoenix",
           "airdate": "1982-09-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S01E01 Knight Of The Phoenix Part 01.mp4",
+            "name": "Knight Rider S01E01 Knight Of The Phoenix Part 01",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S01E01%20Knight%20Of%20The%20Phoenix%20Part%2001.mp4",
+            "seconds": 2600,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 139
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Knight of the Phoenix\" (0.67)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S01E02 Knight Of The Phoenix Part 02.mp4",
+              "name": "Knight Rider S01E02 Knight Of The Phoenix Part 02",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S01E02%20Knight%20Of%20The%20Phoenix%20Part%2002.mp4",
+              "seconds": 2601,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 2,
@@ -456,6 +482,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 270
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Inside Out\" (1.00)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S01E10 Inside Out.mp4",
+              "name": "Knight Rider S01E10 Inside Out",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S01E10%20Inside%20Out.mp4",
+              "seconds": 2925,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 280
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Inside Out\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 1x10 Inside Out.mp4",
+              "name": "Knight Rider 1x10 Inside Out",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%201x10%20Inside%20Out.mp4",
+              "seconds": 2894,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
             }
           ]
         },
@@ -705,6 +757,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 274
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Give Me Liberty... or Give Me Death\" (1.00)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S01E15 Give Me Liberty...or Give Me Death.mp4",
+              "name": "Knight Rider S01E15 Give Me Liberty...or Give Me Death",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S01E15%20Give%20Me%20Liberty...or%20Give%20Me%20Death.mp4",
+              "seconds": 2930,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 281
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Give Me Liberty... or Give Me Death\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 1x15 Give Me Liberty Or Give Me Death.mp4",
+              "name": "Knight Rider 1x15 Give Me Liberty Or Give Me Death",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%201x15%20Give%20Me%20Liberty%20Or%20Give%20Me%20Death.mp4",
+              "seconds": 2899,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
             }
           ]
         },
@@ -712,9 +790,35 @@
           "number": 15,
           "name": "The Topaz Connection",
           "airdate": "1983-01-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Topaz Connection\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S01E16 The Topaz Connection.mp4",
+            "name": "Knight Rider S01E16 The Topaz Connection",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S01E16%20The%20Topaz%20Connection.mp4",
+            "seconds": 2932,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 281
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Topaz Connection\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 1x16 The Topaz Connection.mp4",
+              "name": "Knight Rider 1x16 The Topaz Connection",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%201x16%20The%20Topaz%20Connection.mp4",
+              "seconds": 2901,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            }
+          ]
         },
         {
           "number": 16,
@@ -1041,9 +1145,35 @@
           "number": 2,
           "name": "Brother's Keeper",
           "airdate": "1983-10-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Brother's Keeper\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S02E03 Brother's Keeper.mp4",
+            "name": "Knight Rider S02E03 Brother's Keeper",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E03%20Brother's%20Keeper.mp4",
+            "seconds": 2919,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Brother's Keeper\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x03 Brother's Keeper.mp4",
+              "name": "Knight Rider 2x03 Brother's Keeper",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x03%20Brother's%20Keeper.mp4",
+              "seconds": 2888,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
         },
         {
           "number": 3,
@@ -1171,6 +1301,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 274
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Return to Cadiz\" (1.00)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S02E06 Return to Cadiz.mp4",
+              "name": "Knight Rider S02E06 Return to Cadiz",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E06%20Return%20to%20Cadiz.mp4",
+              "seconds": 2918,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 279
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Return to Cadiz\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x06 Return To Cadiz.mp4",
+              "name": "Knight Rider 2x06 Return To Cadiz",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x06%20Return%20To%20Cadiz.mp4",
+              "seconds": 2858,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 271
             }
           ]
         },
@@ -1295,6 +1451,32 @@
               "file": "Knight Rider 2x08 Custom KITT.mp4",
               "name": "Knight Rider 2x08 Custom KITT",
               "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x08%20Custom%20KITT.mp4",
+              "seconds": 2889,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Soul Survivor\" (1.00)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S02E09 Soul Survivor.mp4",
+              "name": "Knight Rider S02E09 Soul Survivor",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E09%20Soul%20Survivor.mp4",
+              "seconds": 2919,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 280
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Soul Survivor\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x09 Soul Survivor.mp4",
+              "name": "Knight Rider 2x09 Soul Survivor",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x09%20Soul%20Survivor.mp4",
               "seconds": 2889,
               "format": "h.264",
               "playable": true,
@@ -1487,6 +1669,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 266
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"A Knight in Shining Armor\" (0.76)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S02E13 A Knight in Shining Armor.mp4",
+              "name": "Knight Rider S02E13 A Knight in Shining Armor",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E13%20A%20Knight%20in%20Shining%20Armor.mp4",
+              "seconds": 2919,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 280
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"A Knight in Shining Armor\" (0.76)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x13 A Knight In Shining Armor.mp4",
+              "name": "Knight Rider 2x13 A Knight In Shining Armor",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x13%20A%20Knight%20In%20Shining%20Armor.mp4",
+              "seconds": 2889,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
             }
           ]
         },
@@ -1494,33 +1702,137 @@
           "number": 13,
           "name": "Diamonds Aren't A Girl's Best Friend",
           "airdate": "1984-01-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Diamonds Aren't A Girl's Best Friend\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S02E14 Diamonds Aren't a Girl's Best Friend.mp4",
+            "name": "Knight Rider S02E14 Diamonds Aren't a Girl's Best Friend",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E14%20Diamonds%20Aren't%20a%20Girl's%20Best%20Friend.mp4",
+            "seconds": 2918,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 280
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Diamonds Aren't A Girl's Best Friend\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x14 Diamonds Aren't A Girl's Best Friend.mp4",
+              "name": "Knight Rider 2x14 Diamonds Aren't A Girl's Best Friend",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x14%20Diamonds%20Aren't%20A%20Girl's%20Best%20Friend.mp4",
+              "seconds": 2888,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            }
+          ]
         },
         {
           "number": 14,
           "name": "White-Line Warriors",
           "airdate": "1984-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"White-Line Warriors\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S02E15 White-Line Warriors.mp4",
+            "name": "Knight Rider S02E15 White-Line Warriors",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E15%20White-Line%20Warriors.mp4",
+            "seconds": 2916,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 280
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"White-Line Warriors\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x15 White Line Warriors.mp4",
+              "name": "Knight Rider 2x15 White Line Warriors",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x15%20White%20Line%20Warriors.mp4",
+              "seconds": 2886,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Race For Life",
           "airdate": "1984-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Race For Life\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S02E16 Race for Life.mp4",
+            "name": "Knight Rider S02E16 Race for Life",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E16%20Race%20for%20Life.mp4",
+            "seconds": 2919,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 280
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Race For Life\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x16 Race For Life.mp4",
+              "name": "Knight Rider 2x16 Race For Life",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x16%20Race%20For%20Life.mp4",
+              "seconds": 2889,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Speed Demons",
           "airdate": "1984-02-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Speed Demons\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S02E17 Speed Demons.mp4",
+            "name": "Knight Rider S02E17 Speed Demons",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S02E17%20Speed%20Demons.mp4",
+            "seconds": 2917,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Speed Demons\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 2x17 Speed Demons.mp4",
+              "name": "Knight Rider 2x17 Speed Demons",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%202x17%20Speed%20Demons.mp4",
+              "seconds": 2886,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
         },
         {
           "number": 17,
@@ -1675,9 +1987,48 @@
           "number": 1,
           "name": "Knight of the Drones",
           "airdate": "1984-09-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "knight-rider-1982-classic-collection-all-4-seasons",
+            "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+            "file": "Knight Rider 3x01 Knight Of The Drones 1.mp4",
+            "name": "Knight Rider 3x01 Knight Of The Drones 1",
+            "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%203x01%20Knight%20Of%20The%20Drones%201.mp4",
+            "seconds": 3432,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 328
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S03E01 Knight Of The Drones (Part 1).mp4",
+              "name": "Knight Rider S03E01 Knight Of The Drones (Part 1)",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S03E01%20Knight%20Of%20The%20Drones%20(Part%201).mp4",
+              "seconds": 2711,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Knight of the Drones\" (0.65)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S03E02 Knight Of The Drones (Part 2).mp4",
+              "name": "Knight Rider S03E02 Knight Of The Drones (Part 2)",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S03E02%20Knight%20Of%20The%20Drones%20(Part%202).mp4",
+              "seconds": 2878,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
         },
         {
           "number": 2,
@@ -2138,6 +2489,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 274
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knight of the Chameleon\" (0.81)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S03E11 Knight of the Chameleon.mp4",
+              "name": "Knight Rider S03E11 Knight of the Chameleon",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S03E11%20Knight%20of%20the%20Chameleon.mp4",
+              "seconds": 2906,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 279
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knight of the Chameleon\" (0.81)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 3x11 Knight Of the Chameleon.mp4",
+              "name": "Knight Rider 3x11 Knight Of the Chameleon",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%203x11%20Knight%20Of%20the%20Chameleon.mp4",
+              "seconds": 2876,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 273
             }
           ]
         },
@@ -2386,6 +2763,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 273
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knightlines\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 3x16 Knightlines.mp4",
+              "name": "Knight Rider 3x16 Knightlines",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%203x16%20Knightlines.mp4",
+              "seconds": 2878,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
             }
           ]
         },
@@ -2634,6 +3024,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 273
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Knight Strike\" (0.63)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S03E21 Knight Strike.mp4",
+              "name": "Knight Rider S03E21 Knight Strike",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S03E21%20Knight%20Strike.mp4",
+              "seconds": 2908,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 279
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Knight Strike\" (0.63)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 3x21 Knight Strike.mp4",
+              "name": "Knight Rider 3x21 Knight Strike",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%203x21%20Knight%20Strike.mp4",
+              "seconds": 2878,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
             }
           ]
         },
@@ -2641,9 +3057,35 @@
           "number": 21,
           "name": "Circus Knights",
           "airdate": "1985-05-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Circus Knights\" (1.00)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S03E22 Circus Knights.mp4",
+            "name": "Knight Rider S03E22 Circus Knights",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S03E22%20Circus%20Knights.mp4",
+            "seconds": 2912,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Circus Knights\" (1.00)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 3x22 Circus Knights.mp4",
+              "name": "Knight Rider 3x22 Circus Knights",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%203x22%20Circus%20Knights.mp4",
+              "seconds": 2882,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
         }
       ]
     },
@@ -2654,9 +3096,9 @@
           "number": 1,
           "name": "Knight of the Juggernaut",
           "airdate": "1985-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "knight-rider-1982-classic-collection-all-4-seasons",
             "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
@@ -2668,7 +3110,21 @@
             "playable": true,
             "sizeMB": 277
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knight of the Juggernaut\" (0.80)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 4x02 Knight Of The Juggernaut 2.mp4",
+              "name": "Knight Rider 4x02 Knight Of The Juggernaut 2",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%204x02%20Knight%20Of%20The%20Juggernaut%202.mp4",
+              "seconds": 2886,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            }
+          ]
         },
         {
           "number": 2,
@@ -3017,6 +3473,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 274
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Knight Behind Bars\" (0.75)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S04E10 Knight Behind Bars.mp4",
+              "name": "Knight Rider S04E10 Knight Behind Bars",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S04E10%20Knight%20Behind%20Bars.mp4",
+              "seconds": 2903,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 279
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Knight Behind Bars\" (0.75)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 4x10 Knight Behind Bars.mp4",
+              "name": "Knight Rider 4x10 Knight Behind Bars",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%204x10%20Knight%20Behind%20Bars.mp4",
+              "seconds": 2873,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
             }
           ]
         },
@@ -3313,6 +3795,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 275
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Redemption of a Champion\" (1.00)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S04E16 Redemption of a Champion.mp4",
+              "name": "Knight Rider S04E16 Redemption of a Champion",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S04E16%20Redemption%20of%20a%20Champion.mp4",
+              "seconds": 2910,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 280
             }
           ]
         },
@@ -3320,9 +3815,35 @@
           "number": 16,
           "name": "Knight of a Thousand Devils",
           "airdate": "1986-02-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Knight of a Thousand Devils\" (0.84)",
+            "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+            "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+            "file": "Knight Rider S04E17 Knight of a Thousand Devils.mp4",
+            "name": "Knight Rider S04E17 Knight of a Thousand Devils",
+            "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S04E17%20Knight%20of%20a%20Thousand%20Devils.mp4",
+            "seconds": 2908,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knight of a Thousand Devils\" (0.84)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 4x17 Knight Of A Thousand Devils.mp4",
+              "name": "Knight Rider 4x17 Knight Of A Thousand Devils",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%204x17%20Knight%20Of%20A%20Thousand%20Devils.mp4",
+              "seconds": 2878,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
         },
         {
           "number": 17,
@@ -3506,6 +4027,32 @@
               "name": "Knight Rider 4x20 Fright Knight",
               "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%204x20%20Fright%20Knight.mp4",
               "seconds": 2880,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knight of the Rising Sun\" (0.81)",
+              "item": "knight-rider-tv-series-1982-1986-complete-series-tv-pg",
+              "itemTitle": "Knight Rider TV Series 1982–1986 Complete Series TV-PG",
+              "file": "Knight Rider S04E21 Knight of the Rising Sun.mp4",
+              "name": "Knight Rider S04E21 Knight of the Rising Sun",
+              "url": "https://archive.org/download/knight-rider-tv-series-1982-1986-complete-series-tv-pg/Knight%20Rider%20S04E21%20Knight%20of%20the%20Rising%20Sun.mp4",
+              "seconds": 2908,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 280
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Knight of the Rising Sun\" (0.81)",
+              "item": "knight-rider-1982-classic-collection-all-4-seasons",
+              "itemTitle": "Knight Rider Classic 1982 Collection - All 4 Seasons",
+              "file": "Knight Rider 4x21 Knight Of The Rising Sun.mp4",
+              "name": "Knight Rider 4x21 Knight Of The Rising Sun",
+              "url": "https://archive.org/download/knight-rider-1982-classic-collection-all-4-seasons/Knight%20Rider%204x21%20Knight%20Of%20The%20Rising%20Sun.mp4",
+              "seconds": 2878,
               "format": "h.264",
               "playable": true,
               "sizeMB": 275

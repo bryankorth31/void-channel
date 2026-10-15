@@ -3,21 +3,20 @@
   "slug": "tokyo-revengers",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.062Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:03.090Z",
   "tvmaze": {
-    "id": null,
+    "id": 53689,
     "name": "Tokyo Revengers",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2021-04-10",
+    "network": "MBS"
   },
   "coverage": {
-    "total": 50,
-    "live": 0,
-    "review": 50,
-    "missing": 0,
-    "pct": 100
+    "total": 63,
+    "live": 48,
+    "review": 0,
+    "missing": 15,
+    "pct": 76
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "renacer",
-          "state": "REVIEW",
+          "name": "Reborn",
+          "airdate": "2021-04-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x01 - Renacer.mp4",
@@ -36,21 +38,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "resistir",
-          "state": "REVIEW",
+          "name": "Resist",
+          "airdate": "2021-04-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x02 - Resistir.mp4",
@@ -59,21 +58,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "determinaci n",
-          "state": "REVIEW",
+          "name": "Resolve",
+          "airdate": "2021-04-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x03 - Determinación.mp4",
@@ -82,21 +78,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "regreso",
-          "state": "REVIEW",
+          "name": "Return",
+          "airdate": "2021-05-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x04 - Regreso.mp4",
@@ -105,21 +98,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "liberar",
-          "state": "REVIEW",
+          "name": "Releap",
+          "airdate": "2021-05-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x05 - Liberar.mp4",
@@ -128,21 +118,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "arrepentirse",
-          "state": "REVIEW",
+          "name": "Regret",
+          "airdate": "2021-05-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x06 - Arrepentirse.mp4",
@@ -151,21 +138,32 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Regret\" (0.67)",
+              "item": "51.tokyo-revengers-105009",
+              "itemTitle": "51.Tokyo Revengers - 105009",
+              "file": "Tokyo Revengers - 1x04 - Regreso.mp4",
+              "name": "Tokyo Revengers - 1x04 - Regreso",
+              "url": "https://archive.org/download/51.tokyo-revengers-105009/Tokyo%20Revengers%20-%201x04%20-%20Regreso.mp4",
+              "seconds": 1422,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 165
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "revivir",
-          "state": "REVIEW",
+          "name": "Revive",
+          "airdate": "2021-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x07 - Revivir.mp4",
@@ -174,21 +172,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "reemplazo",
-          "state": "REVIEW",
+          "name": "Rechange",
+          "airdate": "2021-05-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x08 - Reemplazo.mp4",
@@ -197,21 +192,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "revoluci n",
-          "state": "REVIEW",
+          "name": "Revolt",
+          "airdate": "2021-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x09 - Revolución.mp4",
@@ -220,21 +212,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "resurgir",
-          "state": "REVIEW",
+          "name": "Rerise",
+          "airdate": "2021-06-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x10 - Resurgir.mp4",
@@ -243,21 +232,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "respeto",
-          "state": "REVIEW",
+          "name": "Respect",
+          "airdate": "2021-06-19",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x11 - Respeto.mp4",
@@ -266,21 +252,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "venganza",
-          "state": "REVIEW",
+          "name": "Revenge",
+          "airdate": "2021-06-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x12 - Venganza.mp4",
@@ -289,21 +272,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "cabos sueltos",
-          "state": "REVIEW",
+          "name": "Odds and Ends",
+          "airdate": "2021-07-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x13 - Cabos Sueltos.mp4",
@@ -312,21 +292,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "separaci n",
-          "state": "REVIEW",
+          "name": "Break up",
+          "airdate": "2021-07-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x14 - Separación.mp4",
@@ -335,44 +312,26 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "sin dolor no hay victoria",
-          "state": "REVIEW",
-          "file": {
-            "item": "51.tokyo-revengers-105009",
-            "itemTitle": "51.Tokyo Revengers - 105009",
-            "file": "Tokyo Revengers - 1x15 - Sin dolor no hay victoria.mp4",
-            "name": "Tokyo Revengers - 1x15 - Sin dolor no hay victoria",
-            "url": "https://archive.org/download/51.tokyo-revengers-105009/Tokyo%20Revengers%20-%201x15%20-%20Sin%20dolor%20no%20hay%20victoria.mp4",
-            "seconds": 1422,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "No Pain, no gain",
+          "airdate": "2021-07-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
-          "name": "hab a una vez",
-          "state": "REVIEW",
+          "name": "Once upon a time",
+          "airdate": "2021-07-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x16 - Había una vez.mp4",
@@ -381,21 +340,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "de ninguna manera",
-          "state": "REVIEW",
+          "name": "No way",
+          "airdate": "2021-07-31",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x17 - De ninguna manera.mp4",
@@ -404,21 +360,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "abran fuego",
-          "state": "REVIEW",
+          "name": "Open Fire",
+          "airdate": "2021-08-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x18 - Abran fuego.mp4",
@@ -427,21 +380,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "mirar para atr s",
-          "state": "REVIEW",
+          "name": "Turn around",
+          "airdate": "2021-08-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x19 - Mirar para atrás.mp4",
@@ -450,21 +400,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "vivo o muerto",
-          "state": "REVIEW",
+          "name": "Dead or Alive",
+          "airdate": "2021-08-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x20 - Vivo o muerto.mp4",
@@ -473,21 +420,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 191,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 191
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "uno solo",
-          "state": "REVIEW",
+          "name": "One and only",
+          "airdate": "2021-08-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x21 - Uno solo.mp4",
@@ -496,21 +440,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "uno para todos",
-          "state": "REVIEW",
+          "name": "One for all",
+          "airdate": "2021-09-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x22 - Uno para todos.mp4",
@@ -519,21 +460,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 141
           },
           "alternates": []
         },
         {
           "number": 23,
-          "name": "fin de la guerra",
-          "state": "REVIEW",
+          "name": "End of war",
+          "airdate": "2021-09-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x23 - Fin de la guerra.mp4",
@@ -542,21 +480,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "beb llor n",
-          "state": "REVIEW",
+          "name": "A Cry baby",
+          "airdate": "2021-09-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x24 - Bebé llorón.mp4",
@@ -565,21 +500,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 120,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 120
           },
           "alternates": []
         },
         {
           "number": 25,
-          "name": "es lo que es",
-          "state": "REVIEW",
+          "name": "It Is What It Is",
+          "airdate": "2023-01-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x25 - Es lo que es.mp4",
@@ -588,21 +520,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 111,
-            "ep": {
-              "season": 1,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 111
           },
           "alternates": []
         },
         {
           "number": 26,
-          "name": "debo irme",
-          "state": "REVIEW",
+          "name": "Gotta Go",
+          "airdate": "2023-01-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x26 - Debo irme.mp4",
@@ -611,21 +540,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 151,
-            "ep": {
-              "season": 1,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 151
           },
           "alternates": []
         },
         {
           "number": 27,
-          "name": "mantente solo",
-          "state": "REVIEW",
+          "name": "Stand Alone",
+          "airdate": "2023-01-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x27 - Mantente solo.mp4",
@@ -634,21 +560,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 27
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
           "alternates": []
         },
         {
           "number": 28,
-          "name": "lazos familiares",
-          "state": "REVIEW",
+          "name": "Family Bonds",
+          "airdate": "2023-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x28 - Lazos familiares.mp4",
@@ -657,21 +580,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 126,
-            "ep": {
-              "season": 1,
-              "episode": 28
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 126
           },
           "alternates": []
         },
         {
           "number": 29,
-          "name": "nochebuena",
-          "state": "REVIEW",
+          "name": "Christmas Eve",
+          "airdate": "2023-02-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x29 - Nochebuena.mp4",
@@ -680,21 +600,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 29
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
           "alternates": []
         },
         {
           "number": 30,
-          "name": "levanta la moral",
-          "state": "REVIEW",
+          "name": "Whip Up Morale",
+          "airdate": "2023-02-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x30 - Levanta la moral.mp4",
@@ -703,21 +620,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 146,
-            "ep": {
-              "season": 1,
-              "episode": 30
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 146
           },
           "alternates": []
         },
         {
           "number": 31,
-          "name": "rivalidad entre hermanos",
-          "state": "REVIEW",
+          "name": "Sibling Rivalry",
+          "airdate": "2023-02-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x31 - Rivalidad entre hermanos.mp4",
@@ -726,21 +640,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 147,
-            "ep": {
-              "season": 1,
-              "episode": 31
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 147
           },
           "alternates": []
         },
         {
           "number": 32,
-          "name": "luchemos juntos",
-          "state": "REVIEW",
+          "name": "Strive Together",
+          "airdate": "2023-02-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x32 - Luchemos juntos.mp4",
@@ -749,21 +660,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152,
-            "ep": {
-              "season": 1,
-              "episode": 32
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 152
           },
           "alternates": []
         },
         {
           "number": 33,
-          "name": "el amanecer de una nueva era",
-          "state": "REVIEW",
+          "name": "Dawning of a New Era",
+          "airdate": "2023-03-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x33 - El amanecer de una nueva era.mp4",
@@ -772,21 +680,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 33
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
           "alternates": []
         },
         {
           "number": 34,
-          "name": "la luz de mi vida",
-          "state": "REVIEW",
+          "name": "The Light of My Life",
+          "airdate": "2023-03-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x34 - La luz de mi vida.mp4",
@@ -795,21 +700,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 1,
-              "episode": 34
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 149
           },
           "alternates": []
         },
         {
           "number": 35,
-          "name": "de vuelta a casa",
-          "state": "REVIEW",
+          "name": "On My Way Home",
+          "airdate": "2023-03-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x35 - De vuelta a casa.mp4",
@@ -818,21 +720,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133,
-            "ep": {
-              "season": 1,
-              "episode": 35
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 133
           },
           "alternates": []
         },
         {
           "number": 36,
-          "name": "ultimo pedido",
-          "state": "REVIEW",
+          "name": "Last Order",
+          "airdate": "2023-03-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x36 - Ultimo pedido.mp4",
@@ -841,21 +740,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 146,
-            "ep": {
-              "season": 1,
-              "episode": 36
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 146
           },
           "alternates": []
         },
         {
           "number": 37,
-          "name": "cuando llueve diluvia",
-          "state": "REVIEW",
+          "name": "When It Rains, It Pours",
+          "airdate": "2023-04-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x37 - Cuando llueve, diluvia.mp4",
@@ -864,44 +760,26 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 156,
-            "ep": {
-              "season": 1,
-              "episode": 37
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 156
           },
           "alternates": []
         },
         {
           "number": 38,
-          "name": "el d a m s largo",
-          "state": "REVIEW",
-          "file": {
-            "item": "51.tokyo-revengers-105009",
-            "itemTitle": "51.Tokyo Revengers - 105009",
-            "file": "Tokyo Revengers - 1x38 - El día más largo.mp4",
-            "name": "Tokyo Revengers - 1x38 - El día más largo",
-            "url": "https://archive.org/download/51.tokyo-revengers-105009/Tokyo%20Revengers%20-%201x38%20-%20El%20d%C3%ADa%20m%C3%A1s%20largo.mp4",
-            "seconds": 1422,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": {
-              "season": 1,
-              "episode": 38
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Longest Day",
+          "airdate": "2023-10-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 39,
-          "name": "enemigo mortal",
-          "state": "REVIEW",
+          "name": "Mortal Enemy",
+          "airdate": "2023-10-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x39 - Enemigo mortal.mp4",
@@ -910,21 +788,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 102,
-            "ep": {
-              "season": 1,
-              "episode": 39
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 102
           },
           "alternates": []
         },
         {
           "number": 40,
-          "name": "se acab la paciencia",
-          "state": "REVIEW",
+          "name": "Run Out of Patience",
+          "airdate": "2023-10-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x40 - Se acabó la paciencia.mp4",
@@ -933,21 +808,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 102,
-            "ep": {
-              "season": 1,
-              "episode": 40
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 102
           },
           "alternates": []
         },
         {
           "number": 41,
-          "name": "vuelve a la vida",
-          "state": "REVIEW",
+          "name": "Come Back to Life",
+          "airdate": "2023-10-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x41 - Vuelve a la vida.mp4",
@@ -956,21 +828,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 101,
-            "ep": {
-              "season": 1,
-              "episode": 41
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 101
           },
           "alternates": []
         },
         {
           "number": 42,
-          "name": "una mala corazonada",
-          "state": "REVIEW",
+          "name": "A Bad Hunch",
+          "airdate": "2023-10-31",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x42 - Una mala corazonada.mp4",
@@ -979,21 +848,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 42
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 43,
-          "name": "revuelta",
-          "state": "REVIEW",
+          "name": "Rise Against",
+          "airdate": "2023-11-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x43 - Revuelta.mp4",
@@ -1002,21 +868,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 104,
-            "ep": {
-              "season": 1,
-              "episode": 43
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 104
           },
           "alternates": []
         },
         {
           "number": 44,
-          "name": "invertir la tendencia",
-          "state": "REVIEW",
+          "name": "Turn the Tide",
+          "airdate": "2023-11-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x44 - Invertir la tendencia.mp4",
@@ -1025,21 +888,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 129,
-            "ep": {
-              "season": 1,
-              "episode": 44
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 129
           },
           "alternates": []
         },
         {
           "number": 45,
-          "name": "lo s en mi cabeza",
-          "state": "REVIEW",
+          "name": "I Know in My Head",
+          "airdate": "2023-11-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x45 - Lo sé en mi cabeza.mp4",
@@ -1048,21 +908,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 113,
-            "ep": {
-              "season": 1,
-              "episode": 45
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 113
           },
           "alternates": []
         },
         {
           "number": 46,
-          "name": "el ogro azul",
-          "state": "REVIEW",
+          "name": "The Blue Ogre",
+          "airdate": "2023-11-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x46 - El ogro azul.mp4",
@@ -1071,21 +928,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 132,
-            "ep": {
-              "season": 1,
-              "episode": 46
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 132
           },
           "alternates": []
         },
         {
           "number": 47,
-          "name": "coraz n valiente",
-          "state": "REVIEW",
+          "name": "Brave Heart",
+          "airdate": "2023-12-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x47 - Corazón valiente.mp4",
@@ -1094,21 +948,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 125,
-            "ep": {
-              "season": 1,
-              "episode": 47
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 48,
-          "name": "no queda nada",
-          "state": "REVIEW",
+          "name": "Nothing is left",
+          "airdate": "2023-12-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x48 - No queda nada.mp4",
@@ -1117,21 +968,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 1,
-              "episode": 48
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 141
           },
           "alternates": []
         },
         {
           "number": 49,
-          "name": "episodio 49",
-          "state": "REVIEW",
+          "name": "Paradise Lost",
+          "airdate": "2023-12-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x49 - Episodio 49.mp4",
@@ -1140,21 +988,18 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 134,
-            "ep": {
-              "season": 1,
-              "episode": 49
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 134
           },
           "alternates": []
         },
         {
           "number": 50,
-          "name": "episodio 50",
-          "state": "REVIEW",
+          "name": "Meet his fate",
+          "airdate": "2023-12-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "51.tokyo-revengers-105009",
             "itemTitle": "51.Tokyo Revengers - 105009",
             "file": "Tokyo Revengers - 1x50 - Episodio 50.mp4",
@@ -1163,14 +1008,112 @@
             "seconds": 1422,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 147,
-            "ep": {
-              "season": 1,
-              "episode": 50
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 147
           },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "Break Up",
+          "airdate": "2026-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "Be left behind the times",
+          "airdate": "2026-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "Episode 53",
+          "airdate": "2026-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "Episode 54",
+          "airdate": "2026-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "Episode 55",
+          "airdate": "2026-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "Episode 56",
+          "airdate": "2026-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "Episode 57",
+          "airdate": "2026-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "Episode 58",
+          "airdate": "2026-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "Episode 59",
+          "airdate": "2026-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "Episode 60",
+          "airdate": "2026-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "Episode 61",
+          "airdate": "2026-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "Episode 62",
+          "airdate": "2026-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "Episode 63",
+          "airdate": "2026-12-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

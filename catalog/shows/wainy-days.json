@@ -3,21 +3,20 @@
   "slug": "wainy-days",
   "type": "Internet Comedy",
   "network": "Web",
-  "matchedAt": "2026-10-15T01:19:16.921Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:46.025Z",
   "tvmaze": {
-    "id": null,
+    "id": 37973,
     "name": "Wainy Days",
-    "runtime": null,
-    "premiered": null,
-    "network": "Web"
+    "runtime": 5,
+    "premiered": "2007-07-30",
+    "network": "YouTube"
   },
   "coverage": {
-    "total": 44,
-    "live": 0,
-    "review": 44,
-    "missing": 0,
-    "pct": 100
+    "total": 39,
+    "live": 28,
+    "review": 9,
+    "missing": 2,
+    "pct": 95
   },
   "seasons": [
     {
@@ -25,32 +24,20 @@
       "episodes": [
         {
           "number": 1,
-          "name": "shelly",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "01x01 - Shelly.mp4",
-            "name": "01x01 - Shelly",
-            "url": "https://archive.org/download/wainy-days_202408/01x01%20-%20Shelly.mp4",
-            "seconds": 196,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 33,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Shelly",
+          "airdate": "2007-07-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "the date",
-          "state": "REVIEW",
+          "name": "The Date",
+          "airdate": "2007-08-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x02 - The Date.mp4",
@@ -59,44 +46,26 @@
             "seconds": 258,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 28,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 28
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "my turn",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "01x03 - My Turn.mp4",
-            "name": "01x03 - My Turn",
-            "url": "https://archive.org/download/wainy-days_202408/01x03%20-%20My%20Turn.mp4",
-            "seconds": 193,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 39,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "My Turn",
+          "airdate": "2007-08-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "cyrano dbluetooth",
-          "state": "REVIEW",
+          "name": "Cyrano d'Bluetooth",
+          "airdate": "2007-08-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x04 - Cyrano d'Bluetooth.mp4",
@@ -105,21 +74,18 @@
             "seconds": 260,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 28,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 28
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "walking tour",
-          "state": "REVIEW",
+          "name": "Walking Tour",
+          "airdate": "2007-08-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x05 - Walking Tour.mp4",
@@ -128,21 +94,18 @@
             "seconds": 263,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 69,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 69
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "a womans touch",
-          "state": "REVIEW",
+          "name": "A Woman's Touch",
+          "airdate": "2007-09-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x06 - A Woman's Touch.mp4",
@@ -151,21 +114,18 @@
             "seconds": 277,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 42,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 42
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "the bank",
-          "state": "REVIEW",
+          "name": "The Bank",
+          "airdate": "2007-09-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x07 - The Bank.mp4",
@@ -174,21 +134,18 @@
             "seconds": 252,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 34,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 34
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "plugged",
-          "state": "REVIEW",
+          "name": "Plugged",
+          "airdate": "2007-09-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x08 - Plugged.mp4",
@@ -197,21 +154,18 @@
             "seconds": 287,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 48,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 48
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "dorvid",
-          "state": "REVIEW",
+          "name": "Dorvid Days",
+          "airdate": "2007-09-24",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x09 - Dorvid Days.mp4",
@@ -220,21 +174,18 @@
             "seconds": 268,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 42,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 42
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the future",
-          "state": "REVIEW",
+          "name": "The Future",
+          "airdate": "2007-10-01",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "01x10 - The Future.mp4",
@@ -243,113 +194,7 @@
             "seconds": 285,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 56,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "bonus elysium",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "Bonus - Elysium.mp4",
-            "name": "Bonus - Elysium",
-            "url": "https://archive.org/download/wainy-days_202408/Bonus%20-%20Elysium.mp4",
-            "seconds": 535,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 185,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "bonus garfunkel and oates david wain is sexy",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "Bonus - Garfunkel & Oates - David Wain Is Sexy.mp4",
-            "name": "Bonus - Garfunkel & Oates - David Wain Is Sexy",
-            "url": "https://archive.org/download/wainy-days_202408/Bonus%20-%20Garfunkel%20%26%20Oates%20-%20David%20Wain%20Is%20Sexy.mp4",
-            "seconds": 186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 70,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "bonus makeout megamix",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "Bonus - Makeout MegaMix.mp4",
-            "name": "Bonus - Makeout MegaMix",
-            "url": "https://archive.org/download/wainy-days_202408/Bonus%20-%20Makeout%20MegaMix.mp4",
-            "seconds": 223,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 37,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "bonus 4 trailer",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "Bonus - Season 4 Trailer.mp4",
-            "name": "Bonus - Season 4 Trailer",
-            "url": "https://archive.org/download/wainy-days_202408/Bonus%20-%20Season%204%20Trailer.mp4",
-            "seconds": 112,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 27,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "bonus streamy awards red carpet david wain",
-          "state": "REVIEW",
-          "file": {
-            "item": "wainy-days_202408",
-            "itemTitle": "Wainy Days",
-            "file": "Bonus - Streamy Awards - Red Carpet, David Wain.mp4",
-            "name": "Bonus - Streamy Awards - Red Carpet, David Wain",
-            "url": "https://archive.org/download/wainy-days_202408/Bonus%20-%20Streamy%20Awards%20-%20Red%20Carpet%2C%20David%20Wain.mp4",
-            "seconds": 106,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 30,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 56
           },
           "alternates": []
         }
@@ -360,9 +205,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "zandy",
-          "state": "REVIEW",
+          "name": "Zandy",
+          "airdate": "2007-11-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x01 - Zandy.mp4",
@@ -371,21 +219,18 @@
             "seconds": 328,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 32,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 32
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "happy endings",
+          "name": "Happy Endings",
+          "airdate": "2007-11-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x02 - Happy Endings.mp4",
@@ -394,21 +239,18 @@
             "seconds": 292,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 20,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 20
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "nights",
-          "state": "REVIEW",
+          "name": "Wainy Nights",
+          "airdate": "2007-11-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x03 - Wainy Nights.mp4",
@@ -417,21 +259,18 @@
             "seconds": 375,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 45,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 45
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the pact",
-          "state": "REVIEW",
+          "name": "The Pact",
+          "airdate": "2007-12-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x04 - The Pact.mp4",
@@ -440,21 +279,18 @@
             "seconds": 367,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 38,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 38
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "tough guy",
-          "state": "REVIEW",
+          "name": "Tough Guy",
+          "airdate": "2007-12-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x05 - Tough Guy.mp4",
@@ -463,21 +299,18 @@
             "seconds": 280,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 37,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 37
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "the pickup",
-          "state": "REVIEW",
+          "name": "The Pickup",
+          "airdate": "2007-12-31",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x06 - The Pickup.mp4",
@@ -486,21 +319,18 @@
             "seconds": 307,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 60,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 60
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "jonah and the manilow",
-          "state": "REVIEW",
+          "name": "Jonah and the Manilow",
+          "airdate": "2008-01-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x07 - Jonah and the Manilow.mp4",
@@ -509,21 +339,18 @@
             "seconds": 329,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 24,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 24
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the sublet",
-          "state": "REVIEW",
+          "name": "Sublet",
+          "airdate": "2008-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x08 - The Sublet.mp4",
@@ -532,21 +359,18 @@
             "seconds": 361,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 27,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 27
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "carol",
-          "state": "REVIEW",
+          "name": "Carol",
+          "airdate": "2008-02-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x09 - Carol.mp4",
@@ -555,21 +379,18 @@
             "seconds": 366,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 28,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 28
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "molly",
-          "state": "REVIEW",
+          "name": "Molly",
+          "airdate": "2008-02-11",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "02x10 - Molly.mp4",
@@ -578,13 +399,7 @@
             "seconds": 346,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 26,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 26
           },
           "alternates": []
         }
@@ -595,9 +410,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "nan and lucy",
-          "state": "REVIEW",
+          "name": "Nan and Lucy",
+          "airdate": "2008-06-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "03x01 - Nan and Lucy.mp4",
@@ -606,21 +424,18 @@
             "seconds": 331,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 28,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 28
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "rebecca",
+          "name": "Rebecca",
+          "airdate": "2008-06-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "03x02 - Rebecca.mp4",
@@ -629,21 +444,18 @@
             "seconds": 375,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 32,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 32
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "water cooler",
-          "state": "REVIEW",
+          "name": "Water Cooler",
+          "airdate": "2008-07-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "03x03 - Water Cooler.mp4",
@@ -652,21 +464,18 @@
             "seconds": 260,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 22,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 22
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the waindow",
-          "state": "REVIEW",
+          "name": "The Waindow",
+          "airdate": "2008-07-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "03x04 - The Waindow.mp4",
@@ -675,21 +484,18 @@
             "seconds": 321,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 27,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 27
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "angel",
-          "state": "REVIEW",
+          "name": "Angel",
+          "airdate": "2008-08-11",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "03x05 - Angel.mp4",
@@ -698,21 +504,18 @@
             "seconds": 340,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 27,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 27
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "shelly two",
-          "state": "REVIEW",
+          "name": "Shelly Two",
+          "airdate": "2008-08-25",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "03x06 - Shelly Two.mp4",
@@ -721,13 +524,7 @@
             "seconds": 353,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 30,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 30
           },
           "alternates": []
         }
@@ -738,9 +535,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "jill",
-          "state": "REVIEW",
+          "name": "Jill",
+          "airdate": "2009-05-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "04x01 - Jill.mp4",
@@ -749,21 +549,18 @@
             "seconds": 304,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 27,
-            "ep": {
-              "season": 4,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 27
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "dance club",
-          "state": "REVIEW",
+          "name": "Dance Club",
+          "airdate": "2009-05-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "04x02 - Dance Club.mp4",
@@ -772,21 +569,18 @@
             "seconds": 255,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 21,
-            "ep": {
-              "season": 4,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 21
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "animator",
-          "state": "REVIEW",
+          "name": "Animator",
+          "airdate": "2009-06-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "04x03 - Animator.mp4",
@@ -795,21 +589,18 @@
             "seconds": 278,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 25,
-            "ep": {
-              "season": 4,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 25
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "rochelle part 1",
-          "state": "REVIEW",
+          "name": "Rochelle - Part 1",
+          "airdate": "2009-06-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "04x04 - Rochelle Part 1.mp4",
@@ -818,21 +609,18 @@
             "seconds": 287,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 35,
-            "ep": {
-              "season": 4,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 35
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "rochelle part 2",
-          "state": "REVIEW",
+          "name": "Rochelle - Part 2",
+          "airdate": "2009-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "04x05 - Rochelle Part 2.mp4",
@@ -841,21 +629,18 @@
             "seconds": 314,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 37,
-            "ep": {
-              "season": 4,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 37
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "donna",
-          "state": "REVIEW",
+          "name": "Donna",
+          "airdate": "2010-06-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "04x06 - Donna.mp4",
@@ -864,13 +649,7 @@
             "seconds": 381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 90,
-            "ep": {
-              "season": 4,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 90
           },
           "alternates": []
         }
@@ -881,9 +660,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "kelly and arielle part 1",
+          "name": "Kelly and Arielle - Part 1",
+          "airdate": "2011-12-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x01 - Kelly and Arielle Part 1.mp4",
@@ -892,21 +674,18 @@
             "seconds": 277,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 17,
-            "ep": {
-              "season": 5,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 17
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "kelly and arielle part 2",
+          "name": "Kelly and Arielle - Part 2",
+          "airdate": "2011-12-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x02 - Kelly and Arielle Part 2.mp4",
@@ -915,21 +694,18 @@
             "seconds": 352,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 24,
-            "ep": {
-              "season": 5,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 24
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "kelly and arielle part 3",
+          "name": "Kelly and Arielle - Part 3",
+          "airdate": "2011-12-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x03 - Kelly and Arielle Part 3.mp4",
@@ -938,21 +714,18 @@
             "seconds": 273,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 19,
-            "ep": {
-              "season": 5,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 19
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "kelly and arielle part 4",
+          "name": "Kelly and Arielle - Part 4",
+          "airdate": "2011-12-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x04 - Kelly and Arielle Part 4.mp4",
@@ -961,21 +734,18 @@
             "seconds": 286,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 23,
-            "ep": {
-              "season": 5,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 23
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "kelly and arielle part 5",
+          "name": "Kelly and Arielle - Part 5",
+          "airdate": "2011-12-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x05 - Kelly and Arielle Part 5.mp4",
@@ -984,21 +754,18 @@
             "seconds": 250,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 18,
-            "ep": {
-              "season": 5,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 18
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "kelly and arielle part 6",
+          "name": "Kelly and Arielle - Part 6",
+          "airdate": "2012-01-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x06 - Kelly and Arielle Part 6.mp4",
@@ -1007,21 +774,18 @@
             "seconds": 291,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 15,
-            "ep": {
-              "season": 5,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 15
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "kelly and arielle part 7",
+          "name": "Kelly and Arielle - Part 7",
+          "airdate": "2012-01-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
             "item": "wainy-days_202408",
             "itemTitle": "Wainy Days",
             "file": "05x07 - Kelly and Arielle Part 7.mp4",
@@ -1030,13 +794,7 @@
             "seconds": 367,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 24,
-            "ep": {
-              "season": 5,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 24
           },
           "alternates": []
         }

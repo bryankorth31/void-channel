@@ -3,7 +3,7 @@
   "slug": "nature",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-15T01:19:19.309Z",
+  "matchedAt": "2026-10-15T03:18:20.186Z",
   "tvmaze": {
     "id": 3330,
     "name": "Nature",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 695,
     "live": 0,
-    "review": 1,
-    "missing": 694,
+    "review": 2,
+    "missing": 693,
     "pct": 0
   },
   "seasons": [
@@ -2164,8 +2164,20 @@
           "number": 9,
           "name": "Extraordinary Dogs",
           "airdate": "1997-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Extraordinary Dogs\" (1.00)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "Nature - Extraordinary Dogs (1997).mp4",
+            "name": "Nature - Extraordinary Dogs (1997)",
+            "url": "https://archive.org/download/pbsnovadocs/Nature%20-%20Extraordinary%20Dogs%20(1997).mp4",
+            "seconds": 3236,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 339
+          },
           "alternates": []
         },
         {

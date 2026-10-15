@@ -3,7 +3,7 @@
   "slug": "the-boondocks",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:07.238Z",
+  "matchedAt": "2026-10-15T03:17:31.161Z",
   "tvmaze": {
     "id": 912,
     "name": "The Boondocks",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 55,
-    "live": 38,
-    "review": 11,
+    "live": 49,
+    "review": 0,
     "missing": 6,
     "pct": 89
   },
@@ -710,36 +710,23 @@
           "number": 15,
           "name": "The Passion of Reverend Ruckus",
           "airdate": "2006-03-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 1/The Boondocks - S01E15 - The Passion of Reverend Ruckus.mp4",
-            "name": "Season 1/The Boondocks - S01E15 - The Passion of Reverend Ruckus",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%201%2FThe%20Boondocks%20-%20S01E15%20-%20The%20Passion%20of%20Reverend%20Ruckus.mp4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S1_D3/S1 E15 The Boondocks The Passion of Reverend Ruckus.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S1_D3/S1 E15 The Boondocks The Passion of Reverend Ruckus",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S1_D3%2FS1%20E15%20The%20Boondocks%20The%20Passion%20of%20Reverend%20Ruckus.mp4",
             "seconds": 1341,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 242
+            "sizeMB": 132
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S1_D3/S1 E15 The Boondocks The Passion of Reverend Ruckus.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S1_D3/S1 E15 The Boondocks The Passion of Reverend Ruckus",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S1_D3%2FS1%20E15%20The%20Boondocks%20The%20Passion%20of%20Reverend%20Ruckus.mp4",
-              "seconds": 1341,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 132
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-complete",
               "itemTitle": "The Boondocks (Complete Series)",
@@ -752,7 +739,7 @@
               "sizeMB": 131
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -763,6 +750,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 130
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 1/The Boondocks - S01E15 - The Passion of Reverend Ruckus.mp4",
+              "name": "Season 1/The Boondocks - S01E15 - The Passion of Reverend Ruckus",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%201%2FThe%20Boondocks%20-%20S01E15%20-%20The%20Passion%20of%20Reverend%20Ruckus.mp4",
+              "seconds": 1341,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 242
             }
           ]
         }
@@ -893,15 +893,15 @@
           "number": 6,
           "name": "Attack of the Killer Kung-Fu Wolf Bitch",
           "airdate": "2007-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 2/The Boondocks - S02E06 - Attack of the Killer Kung-Fu Wolf Bitch.mp4",
-            "name": "Season 2/The Boondocks - S02E06 - Attack of the Killer Kung-Fu Wolf Bitch",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%202%2FThe%20Boondocks%20-%20S02E06%20-%20Attack%20of%20the%20Killer%20Kung-Fu%20Wolf%20Bitch.mp4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S2_D2/S2 E6 The Boondocks Attack of the Killer Kung-Fu Wolf Bitch.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S2_D2/S2 E6 The Boondocks Attack of the Killer Kung-Fu Wolf Bitch",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S2_D2%2FS2%20E6%20The%20Boondocks%20Attack%20of%20the%20Killer%20Kung-Fu%20Wolf%20Bitch.mp4",
             "seconds": 1287,
             "format": "h.264",
             "playable": true,
@@ -911,11 +911,11 @@
             {
               "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S2_D2/S2 E6 The Boondocks Attack of the Killer Kung-Fu Wolf Bitch.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S2_D2/S2 E6 The Boondocks Attack of the Killer Kung-Fu Wolf Bitch",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S2_D2%2FS2%20E6%20The%20Boondocks%20Attack%20of%20the%20Killer%20Kung-Fu%20Wolf%20Bitch.mp4",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 2/The Boondocks - S02E06 - Attack of the Killer Kung-Fu Wolf Bitch.mp4",
+              "name": "Season 2/The Boondocks - S02E06 - Attack of the Killer Kung-Fu Wolf Bitch",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%202%2FThe%20Boondocks%20-%20S02E06%20-%20Attack%20of%20the%20Killer%20Kung-Fu%20Wolf%20Bitch.mp4",
               "seconds": 1287,
               "format": "h.264",
               "playable": true,
@@ -994,21 +994,34 @@
           "number": 9,
           "name": "Invasion of the Katrinians",
           "airdate": "2007-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 2/The Boondocks - S02E09 - Invasion of the Katrinians.mp4",
-            "name": "Season 2/The Boondocks - S02E09 - Invasion of the Katrinians",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%202%2FThe%20Boondocks%20-%20S02E09%20-%20Invasion%20of%20the%20Katrinians.mp4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S2_D2/S2 E9 The Boondocks Invasion of the Katrinians.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S2_D2/S2 E9 The Boondocks Invasion of the Katrinians",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S2_D2%2FS2%20E9%20The%20Boondocks%20Invasion%20of%20the%20Katrinians.mp4",
             "seconds": 1287,
             "format": "h.264",
             "playable": true,
             "sizeMB": 126
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 2/The Boondocks - S02E09 - Invasion of the Katrinians.mp4",
+              "name": "Season 2/The Boondocks - S02E09 - Invasion of the Katrinians",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%202%2FThe%20Boondocks%20-%20S02E09%20-%20Invasion%20of%20the%20Katrinians.mp4",
+              "seconds": 1287,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            },
             {
               "conf": 0.6,
               "why": "S/E in filename + title match",
@@ -1021,19 +1034,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 126
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S2_D2/S2 E9 The Boondocks Invasion of the Katrinians.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S2_D2/S2 E9 The Boondocks Invasion of the Katrinians",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S2_D2%2FS2%20E9%20The%20Boondocks%20Invasion%20of%20the%20Katrinians.mp4",
-              "seconds": 1287,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 126
             }
           ]
         },
@@ -1041,9 +1041,9 @@
           "number": 10,
           "name": "Home Alone",
           "airdate": "2007-12-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-boondocks-uncensored-dvd",
             "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -1189,9 +1189,9 @@
           "number": 14,
           "name": "The Hunger Strike",
           "airdate": "2008-03-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-boondocks-uncensored-dvd",
             "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -1209,15 +1209,15 @@
           "number": 15,
           "name": "The Uncle Ruckus Reality Show",
           "airdate": "2008-03-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 2/The Boondocks - S02E15 - The Uncle Ruckus Reality Show.mp4",
-            "name": "Season 2/The Boondocks - S02E15 - The Uncle Ruckus Reality Show",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%202%2FThe%20Boondocks%20-%20S02E15%20-%20The%20Uncle%20Ruckus%20Reality%20Show.mp4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S2_D3/S2 E15 The Boondocks The Uncle Ruckus Reality Show.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S2_D3/S2 E15 The Boondocks The Uncle Ruckus Reality Show",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S2_D3%2FS2%20E15%20The%20Boondocks%20The%20Uncle%20Ruckus%20Reality%20Show.mp4",
             "seconds": 1299,
             "format": "h.264",
             "playable": true,
@@ -1225,20 +1225,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S2_D3/S2 E15 The Boondocks The Uncle Ruckus Reality Show.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S2_D3/S2 E15 The Boondocks The Uncle Ruckus Reality Show",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S2_D3%2FS2%20E15%20The%20Boondocks%20The%20Uncle%20Ruckus%20Reality%20Show.mp4",
-              "seconds": 1299,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 127
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -1249,6 +1236,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 126
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 2/The Boondocks - S02E15 - The Uncle Ruckus Reality Show.mp4",
+              "name": "Season 2/The Boondocks - S02E15 - The Uncle Ruckus Reality Show",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%202%2FThe%20Boondocks%20-%20S02E15%20-%20The%20Uncle%20Ruckus%20Reality%20Show.mp4",
+              "seconds": 1299,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
             }
           ]
         }
@@ -1261,9 +1261,9 @@
           "number": 1,
           "name": "It's a Black President, Huey Freeman",
           "airdate": "2010-05-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-boondocks_202410",
             "itemTitle": "The Boondocks The Complete series and Pilot",
@@ -1277,20 +1277,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks-complete",
-              "itemTitle": "The Boondocks (Complete Series)",
-              "file": "Season 3/The Boondocks - S03E01 - It's a Black President, Huey Freeman.mp4",
-              "name": "Season 3/The Boondocks - S03E01 - It's a Black President, Huey Freeman",
-              "url": "https://archive.org/download/the-boondocks-complete/Season%203%2FThe%20Boondocks%20-%20S03E01%20-%20It's%20a%20Black%20President%2C%20Huey%20Freeman.mp4",
-              "seconds": 1353,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 132
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-complete",
               "itemTitle": "The Boondocks (Complete Series)",
@@ -1303,7 +1290,7 @@
               "sizeMB": 132
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -1314,6 +1301,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 3/The Boondocks - S03E01 - It's a Black President, Huey Freeman.mp4",
+              "name": "Season 3/The Boondocks - S03E01 - It's a Black President, Huey Freeman",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%203%2FThe%20Boondocks%20-%20S03E01%20-%20It's%20a%20Black%20President%2C%20Huey%20Freeman.mp4",
+              "seconds": 1353,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 132
             }
           ]
         },
@@ -1637,36 +1637,23 @@
           "number": 9,
           "name": "A Date with the Booty Warrior",
           "airdate": "2010-06-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 3/The Boondocks - S03E09 - A Date With the Booty Warrior.mp4",
-            "name": "Season 3/The Boondocks - S03E09 - A Date With the Booty Warrior",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%203%2FThe%20Boondocks%20-%20S03E09%20-%20A%20Date%20With%20the%20Booty%20Warrior.mp4",
-            "seconds": 1351,
-            "format": "MPEG4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S3_D2/S3 E9 The Boondocks A Date with the Booty Warrior.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S3_D2/S3 E9 The Boondocks A Date with the Booty Warrior",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S3_D2%2FS3%20E9%20The%20Boondocks%20A%20Date%20with%20the%20Booty%20Warrior.mp4",
+            "seconds": 1358,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 237
+            "sizeMB": 135
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S3_D2/S3 E9 The Boondocks A Date with the Booty Warrior.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S3_D2/S3 E9 The Boondocks A Date with the Booty Warrior",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S3_D2%2FS3%20E9%20The%20Boondocks%20A%20Date%20with%20the%20Booty%20Warrior.mp4",
-              "seconds": 1358,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -1677,6 +1664,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 133
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 3/The Boondocks - S03E09 - A Date With the Booty Warrior.mp4",
+              "name": "Season 3/The Boondocks - S03E09 - A Date With the Booty Warrior",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%203%2FThe%20Boondocks%20-%20S03E09%20-%20A%20Date%20With%20the%20Booty%20Warrior.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 237
             }
           ]
         },
@@ -1812,9 +1812,9 @@
           "number": 13,
           "name": "The Fried Chicken Flu",
           "airdate": "2010-08-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-boondocks_202410",
             "itemTitle": "The Boondocks The Complete series and Pilot",
@@ -1828,7 +1828,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -1992,36 +1992,23 @@
           "number": 2,
           "name": "Good Times",
           "airdate": "2014-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 4/The Boondocks - S04E02 - Good Times.mp4",
-            "name": "Season 4/The Boondocks - S04E02 - Good Times",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%204%2FThe%20Boondocks%20-%20S04E02%20-%20Good%20Times.mp4",
-            "seconds": 1350,
-            "format": "MPEG4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S4_D1/S4 E2 The Boondocks Good Times.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S4_D1/S4 E2 The Boondocks Good Times",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S4_D1%2FS4%20E2%20The%20Boondocks%20Good%20Times.mp4",
+            "seconds": 1359,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 206
+            "sizeMB": 134
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S4_D1/S4 E2 The Boondocks Good Times.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S4_D1/S4 E2 The Boondocks Good Times",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S4_D1%2FS4%20E2%20The%20Boondocks%20Good%20Times.mp4",
-              "seconds": 1359,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 134
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -2032,6 +2019,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 132
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 4/The Boondocks - S04E02 - Good Times.mp4",
+              "name": "Season 4/The Boondocks - S04E02 - Good Times",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%204%2FThe%20Boondocks%20-%20S04E02%20-%20Good%20Times.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 206
             }
           ]
         },
@@ -2133,36 +2133,23 @@
           "number": 5,
           "name": "Freedom Ride or Die",
           "airdate": "2014-05-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-boondocks-complete",
-            "itemTitle": "The Boondocks (Complete Series)",
-            "file": "Season 4/The Boondocks - S04E05 - Freedom Ride or Die.mp4",
-            "name": "Season 4/The Boondocks - S04E05 - Freedom Ride or Die",
-            "url": "https://archive.org/download/the-boondocks-complete/Season%204%2FThe%20Boondocks%20-%20S04E05%20-%20Freedom%20Ride%20or%20Die.mp4",
-            "seconds": 1352,
-            "format": "MPEG4",
+            "item": "the-boondocks_202410",
+            "itemTitle": "The Boondocks The Complete series and Pilot",
+            "file": "The Boondocks show/BOONDOCKS_S4_D1/S4 E5 The Boondocks Freedom Ride or Die.mp4",
+            "name": "The Boondocks show/BOONDOCKS_S4_D1/S4 E5 The Boondocks Freedom Ride or Die",
+            "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S4_D1%2FS4%20E5%20The%20Boondocks%20Freedom%20Ride%20or%20Die.mp4",
+            "seconds": 1361,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1119
+            "sizeMB": 135
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-boondocks_202410",
-              "itemTitle": "The Boondocks The Complete series and Pilot",
-              "file": "The Boondocks show/BOONDOCKS_S4_D1/S4 E5 The Boondocks Freedom Ride or Die.mp4",
-              "name": "The Boondocks show/BOONDOCKS_S4_D1/S4 E5 The Boondocks Freedom Ride or Die",
-              "url": "https://archive.org/download/the-boondocks_202410/The%20Boondocks%20show%2FBOONDOCKS_S4_D1%2FS4%20E5%20The%20Boondocks%20Freedom%20Ride%20or%20Die.mp4",
-              "seconds": 1361,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 135
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-boondocks-uncensored-dvd",
               "itemTitle": "The Boondocks [Uncensored] (DVD)",
@@ -2173,6 +2160,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 134
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-boondocks-complete",
+              "itemTitle": "The Boondocks (Complete Series)",
+              "file": "Season 4/The Boondocks - S04E05 - Freedom Ride or Die.mp4",
+              "name": "Season 4/The Boondocks - S04E05 - Freedom Ride or Die",
+              "url": "https://archive.org/download/the-boondocks-complete/Season%204%2FThe%20Boondocks%20-%20S04E05%20-%20Freedom%20Ride%20or%20Die.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1119
             }
           ]
         },

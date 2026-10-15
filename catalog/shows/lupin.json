@@ -3,21 +3,20 @@
   "slug": "lupin",
   "type": "World TV",
   "network": "FR",
-  "matchedAt": "2026-10-15T01:19:17.276Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.543Z",
   "tvmaze": {
-    "id": null,
+    "id": 50701,
     "name": "Lupin",
-    "runtime": null,
-    "premiered": null,
-    "network": "FR"
+    "runtime": 46,
+    "premiered": "2021-01-08",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 2,
+    "total": 18,
     "live": 0,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 18,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,42 +24,161 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the third hemingway papers premiere",
-          "state": "REVIEW",
-          "file": {
-            "item": "lupin-hemingway-papers-vhsrip",
-            "itemTitle": "[VHS RIP, Premiere] Lupin The Third: Hemingway Papers (W/ Commercials)",
-            "file": "[VHS RIP] Lupin The Third - Hemingway Papers (PREMIERE).mp4",
-            "name": "[VHS RIP] Lupin The Third - Hemingway Papers (PREMIERE)",
-            "url": "https://archive.org/download/lupin-hemingway-papers-vhsrip/%5BVHS%20RIP%5D%20Lupin%20The%20Third%20-%20Hemingway%20Papers%20(PREMIERE).mp4",
-            "seconds": 6561,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2189,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Chapitre 1",
+          "airdate": "2021-01-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "lupin-inuyasha-tape-february-2003-adult-swim",
-            "itemTitle": "Adult Swim WOC VHS Recording (February 4-6, 2003)",
-            "file": "2026-04-12 10-10-46(1).mp4",
-            "name": "2026-04-12 10-10-46(1)",
-            "url": "https://archive.org/download/lupin-inuyasha-tape-february-2003-adult-swim/2026-04-12%2010-10-46(1).mp4",
-            "seconds": 10705,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 4104,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Chapitre 2",
+          "airdate": "2021-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Chapitre 3",
+          "airdate": "2021-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Chapitre 4",
+          "airdate": "2021-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Chapitre 5",
+          "airdate": "2021-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Chapitre 6",
+          "airdate": "2021-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Chapitre 7",
+          "airdate": "2021-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Chapitre 8",
+          "airdate": "2021-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Chapitre 9",
+          "airdate": "2021-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Chapitre 10",
+          "airdate": "2021-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Chapitre 1",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Chapitre 2",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Chapitre 3",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Chapitre 4",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Chapitre 5",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Chapitre 6",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Chapitre 7",
+          "airdate": "2023-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Chapitre 1",
+          "airdate": "2026-10-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

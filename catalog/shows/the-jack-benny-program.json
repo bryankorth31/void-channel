@@ -3,7 +3,7 @@
   "slug": "the-jack-benny-program",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:22.137Z",
+  "matchedAt": "2026-10-15T03:18:26.503Z",
   "tvmaze": {
     "id": 21690,
     "name": "The Jack Benny Program",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 260,
     "live": 1,
-    "review": 10,
-    "missing": 249,
-    "pct": 4
+    "review": 11,
+    "missing": 248,
+    "pct": 5
   },
   "seasons": [
     {
@@ -949,8 +949,20 @@
           "number": 10,
           "name": "Honeymooners Show",
           "airdate": "1958-01-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Honeymooners Show\" (0.95)",
+            "item": "JackBennyProgramTVSHOWJacksMaxwellIsStolen",
+            "itemTitle": "The Jack Benny Program",
+            "file": "Jack Benny Program TV SHOW -Honeymooners Show.MP4",
+            "name": "Jack Benny Program TV SHOW -Honeymooners Show",
+            "url": "https://archive.org/download/JackBennyProgramTVSHOWJacksMaxwellIsStolen/Jack%20Benny%20Program%20TV%20SHOW%20-Honeymooners%20Show.MP4",
+            "seconds": 1432,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 87
+          },
           "alternates": []
         },
         {

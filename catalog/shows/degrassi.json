@@ -3,21 +3,20 @@
   "slug": "degrassi",
   "type": "Reality & Talk",
   "network": "CA",
-  "matchedAt": "2026-10-15T01:19:17.411Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:15.251Z",
   "tvmaze": {
-    "id": null,
+    "id": 3628,
     "name": "Degrassi",
-    "runtime": null,
-    "premiered": null,
-    "network": "CA"
+    "runtime": 30,
+    "premiered": "2001-10-14",
+    "network": "MTV"
   },
   "coverage": {
-    "total": 95,
-    "live": 0,
-    "review": 95,
-    "missing": 0,
-    "pct": 100
+    "total": 385,
+    "live": 47,
+    "review": 5,
+    "missing": 333,
+    "pct": 14
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "jr high kiss me steph",
-          "state": "REVIEW",
+          "name": "Mother and Child Reunion: Part 1",
+          "airdate": "2001-10-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E01 - Kiss Me Steph.mp4",
@@ -36,44 +38,26 @@
             "seconds": 1672,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "jr high the big dance",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-jr-high-season-01_202208",
-            "itemTitle": "Degrassi Junior High Season 1",
-            "file": "Degrassi Jr High S01E02 - The Big Dance.mp4",
-            "name": "Degrassi Jr High S01E02 - The Big Dance",
-            "url": "https://archive.org/download/degrassi-jr-high-season-01_202208/Degrassi%20Jr%20High%20S01E02%20-%20The%20Big%20Dance.mp4",
-            "seconds": 1669,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 161,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Mother and Child Reunion: Part 2",
+          "airdate": "2001-10-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "jr high the experiment",
-          "state": "REVIEW",
+          "name": "Family Politics",
+          "airdate": "2001-11-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E03 - The Experiment.mp4",
@@ -82,21 +66,18 @@
             "seconds": 1672,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "jr high the cover up",
-          "state": "REVIEW",
+          "name": "Eye of the Beholder",
+          "airdate": "2001-11-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E04 - The Cover Up.mp4",
@@ -105,21 +86,18 @@
             "seconds": 1669,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "jr high the great race",
-          "state": "REVIEW",
+          "name": "Parents' Day",
+          "airdate": "2001-11-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E05 - The Great Race.mp4",
@@ -128,21 +106,18 @@
             "seconds": 1667,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 161,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 161
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "jr high rumor has it",
-          "state": "REVIEW",
+          "name": "The Mating Game",
+          "airdate": "2001-11-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E06 - Rumor Has It.mp4",
@@ -151,44 +126,26 @@
             "seconds": 1666,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "jr high the best laid plans",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-jr-high-season-01_202208",
-            "itemTitle": "Degrassi Junior High Season 1",
-            "file": "Degrassi Jr High S01E07 - The Best Laid Plans.mp4",
-            "name": "Degrassi Jr High S01E07 - The Best Laid Plans",
-            "url": "https://archive.org/download/degrassi-jr-high-season-01_202208/Degrassi%20Jr%20High%20S01E07%20-%20The%20Best%20Laid%20Plans.mp4",
-            "seconds": 1673,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Basketball Diaries",
+          "airdate": "2001-12-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "jr high nothing to fear",
-          "state": "REVIEW",
+          "name": "Secrets & Lies",
+          "airdate": "2001-12-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E08 - Nothing To Fear.mp4",
@@ -197,21 +154,18 @@
             "seconds": 1676,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "jr high what a night",
-          "state": "REVIEW",
+          "name": "Coming of Age",
+          "airdate": "2001-12-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E09 - What A Night.mp4",
@@ -220,21 +174,18 @@
             "seconds": 1676,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "jr high smokescreen",
-          "state": "REVIEW",
+          "name": "Rumours and Reputations",
+          "airdate": "2002-01-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E10 - Smokescreen.mp4",
@@ -243,21 +194,18 @@
             "seconds": 1667,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 161,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 161
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "jr high its late",
-          "state": "REVIEW",
+          "name": "Friday Night",
+          "airdate": "2002-01-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E11 - It's Late.mp4",
@@ -266,21 +214,18 @@
             "seconds": 1665,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 164,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "jr high parents night",
-          "state": "REVIEW",
+          "name": "Wannabe",
+          "airdate": "2002-02-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-season-01_202208",
             "itemTitle": "Degrassi Junior High Season 1",
             "file": "Degrassi Jr High S01E12 - Parents' Night.mp4",
@@ -289,557 +234,32 @@
             "seconds": 1661,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 161,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 161
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "jr high revolution",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-jr-high-season-01_202208",
-            "itemTitle": "Degrassi Junior High Season 1",
-            "file": "Degrassi Jr High S01E13 - Revolution.mp4",
-            "name": "Degrassi Jr High S01E13 - Revolution",
-            "url": "https://archive.org/download/degrassi-jr-high-season-01_202208/Degrassi%20Jr%20High%20S01E13%20-%20Revolution.mp4",
-            "seconds": 1677,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Cabaret",
+          "airdate": "2002-02-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
-          "name": "kids of street e01 ida makes a movie",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E01 - Ida Makes a Movie.mp4",
-            "name": "Kids of Degrassi Street E01 - Ida Makes a Movie",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E01%20-%20Ida%20Makes%20a%20Movie.mp4",
-            "seconds": 1308,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Under Pressure",
+          "airdate": "2002-02-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
-          "name": "kids of street e02 cookie goes to the hospital",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E02 - Cookie Goes to the Hospital.mp4",
-            "name": "Kids of Degrassi Street E02 - Cookie Goes to the Hospital",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E02%20-%20Cookie%20Goes%20to%20the%20Hospital.mp4",
-            "seconds": 1512,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 146,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "kids of street e03 irene moves in",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E03 - Irene Moves In.mp4",
-            "name": "Kids of Degrassi Street E03 - Irene Moves In",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E03%20-%20Irene%20Moves%20In.mp4",
-            "seconds": 1547,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 150,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "kids of street e04 noel buys a suit",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E04 - Noel Buys a Suit.mp4",
-            "name": "Kids of Degrassi Street E04 - Noel Buys a Suit",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E04%20-%20Noel%20Buys%20a%20Suit.mp4",
-            "seconds": 1570,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "kids of street e05 lisa makes the headlines",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E05 - Lisa Makes the Headlines.mp4",
-            "name": "Kids of Degrassi Street E05 - Lisa Makes the Headlines",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E05%20-%20Lisa%20Makes%20the%20Headlines.mp4",
-            "seconds": 1557,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 150,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "kids of street e06 sophie minds the store",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E06 - Sophie Minds the Store.mp4",
-            "name": "Kids of Degrassi Street E06 - Sophie Minds the Store",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E06%20-%20Sophie%20Minds%20the%20Store.mp4",
-            "seconds": 1607,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "kids of street e07 casey draws the line",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E07 - Casey Draws the Line.mp4",
-            "name": "Kids of Degrassi Street E07 - Casey Draws the Line",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E07%20-%20Casey%20Draws%20the%20Line.mp4",
-            "seconds": 1589,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 154,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "kids of street e08 pete takes a chance",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E08 - Pete Takes a Chance.mp4",
-            "name": "Kids of Degrassi Street E08 - Pete Takes a Chance",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E08%20-%20Pete%20Takes%20a%20Chance.mp4",
-            "seconds": 1620,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "kids of street e09 chuck makes a choice",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E09 - Chuck Makes a Choice.mp4",
-            "name": "Kids of Degrassi Street E09 - Chuck Makes a Choice",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E09%20-%20Chuck%20Makes%20a%20Choice.mp4",
-            "seconds": 1595,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 154,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "kids of street e10 billy breaks the chain",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E10 - Billy Breaks the Chain.mp4",
-            "name": "Kids of Degrassi Street E10 - Billy Breaks the Chain",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E10%20-%20Billy%20Breaks%20the%20Chain.mp4",
-            "seconds": 1612,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "kids of street e11 catherine finds her balance",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E11 - Catherine Finds Her Balance.mp4",
-            "name": "Kids of Degrassi Street E11 - Catherine Finds Her Balance",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E11%20-%20Catherine%20Finds%20Her%20Balance.mp4",
-            "seconds": 1614,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "kids of street e12 benjamin walks the dog",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E12 - Benjamin Walks the Dog.mp4",
-            "name": "Kids of Degrassi Street E12 - Benjamin Walks the Dog",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E12%20-%20Benjamin%20Walks%20the%20Dog.mp4",
-            "seconds": 1582,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "kids of street e13 liz sits the schlegels",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E13 - Liz Sits the Schlegels.mp4",
-            "name": "Kids of Degrassi Street E13 - Liz Sits the Schlegels",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E13%20-%20Liz%20Sits%20the%20Schlegels.mp4",
-            "seconds": 1616,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "kids of street e14 the canards move out",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E14 - The Canards Move Out.mp4",
-            "name": "Kids of Degrassi Street E14 - The Canards Move Out",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E14%20-%20The%20Canards%20Move%20Out.mp4",
-            "seconds": 1616,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "kids of street e15 martin meets the pirate",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E15 - Martin Meets the Pirate.mp4",
-            "name": "Kids of Degrassi Street E15 - Martin Meets the Pirate",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E15%20-%20Martin%20Meets%20the%20Pirate.mp4",
-            "seconds": 1614,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "kids of street e16 connie goes to court",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E16 - Connie Goes to Court.mp4",
-            "name": "Kids of Degrassi Street E16 - Connie Goes to Court",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E16%20-%20Connie%20Goes%20to%20Court.mp4",
-            "seconds": 1622,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 158,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "kids of street e17 griff makes a date",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E17 - Griff Makes a Date.mp4",
-            "name": "Kids of Degrassi Street E17 - Griff Makes a Date",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E17%20-%20Griff%20Makes%20a%20Date.mp4",
-            "seconds": 1613,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "kids of street e18 samantha gets a visitor",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E18 - Samantha Gets a Visitor.mp4",
-            "name": "Kids of Degrassi Street E18 - Samantha Gets a Visitor",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E18%20-%20Samantha%20Gets%20a%20Visitor.mp4",
-            "seconds": 1624,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "kids of street e19 rachel runs for office",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E19 - Rachel Runs for Office.mp4",
-            "name": "Kids of Degrassi Street E19 - Rachel Runs for Office",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E19%20-%20Rachel%20Runs%20for%20Office.mp4",
-            "seconds": 1613,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "kids of street e20 jeffrey finds a friend",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E20 - Jeffrey Finds a Friend.mp4",
-            "name": "Kids of Degrassi Street E20 - Jeffrey Finds a Friend",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E20%20-%20Jeffrey%20Finds%20a%20Friend.mp4",
-            "seconds": 1608,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "kids of street e21 connie makes a catch",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E21 - Connie Makes a Catch.mp4",
-            "name": "Kids of Degrassi Street E21 - Connie Makes a Catch",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E21%20-%20Connie%20Makes%20a%20Catch.mp4",
-            "seconds": 1614,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "kids of street e22 karen keeps her word",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E22 - Karen Keeps Her Word.mp4",
-            "name": "Kids of Degrassi Street E22 - Karen Keeps Her Word",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E22%20-%20Karen%20Keeps%20Her%20Word.mp4",
-            "seconds": 1611,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "kids of street e23 ryan runs for help",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E23 - Ryan Runs for Help.mp4",
-            "name": "Kids of Degrassi Street E23 - Ryan Runs for Help",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E23%20-%20Ryan%20Runs%20for%20Help.mp4",
-            "seconds": 1613,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "kids of street e24 martin hears the music",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E24 - Martin Hears the Music.mp4",
-            "name": "Kids of Degrassi Street E24 - Martin Hears the Music",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E24%20-%20Martin%20Hears%20the%20Music.mp4",
-            "seconds": 1611,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "kids of street e25 lisa gets the picture",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E25 - Lisa Gets the Picture.mp4",
-            "name": "Kids of Degrassi Street E25 - Lisa Gets the Picture",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E25%20-%20Lisa%20Gets%20the%20Picture.mp4",
-            "seconds": 1612,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "kids of street e26 griff gets a hand",
-          "state": "REVIEW",
-          "file": {
-            "item": "kids-of-degrassi-street-complete",
-            "itemTitle": "Kids Of Degrassi Street Complete",
-            "file": "Kids of Degrassi Street E26 - Griff Gets a Hand.mp4",
-            "name": "Kids of Degrassi Street E26 - Griff Gets a Hand",
-            "url": "https://archive.org/download/kids-of-degrassi-street-complete/Kids%20of%20Degrassi%20Street%20E26%20-%20Griff%20Gets%20a%20Hand.mp4",
-            "seconds": 1615,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Jagged Little Pill",
+          "airdate": "2002-03-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -849,9 +269,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "jr high eggbert",
-          "state": "REVIEW",
+          "name": "When Doves Cry: Part 1",
+          "airdate": "2002-09-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Jr High S02E01 - Eggbert.m4v",
@@ -860,21 +283,18 @@
             "seconds": 1606,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 246,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 246
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "jr high a helping hand",
-          "state": "REVIEW",
+          "name": "When Doves Cry: Part 2",
+          "airdate": "2002-09-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Jr High S02E02 - A Helping Hand.m4v",
@@ -883,67 +303,34 @@
             "seconds": 1604,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 262,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 262
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "jr high great expectations",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-jr-high-s-02",
-            "itemTitle": "Degrassi Junior High Season 2",
-            "file": "Degrassi Jr High S02E03 - Great Expectations.m4v",
-            "name": "Degrassi Jr High S02E03 - Great Expectations",
-            "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Jr%20High%20S02E03%20-%20Great%20Expectations.m4v",
-            "seconds": 1598,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 279,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Girls Just Wanna Have Fun",
+          "airdate": "2002-10-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "jr high dinner and a show",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-jr-high-s-02",
-            "itemTitle": "Degrassi Junior High Season 2",
-            "file": "Degrassi Jr High S02E04 - Dinner And A Show.m4v",
-            "name": "Degrassi Jr High S02E04 - Dinner And A Show",
-            "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Jr%20High%20S02E04%20-%20Dinner%20And%20A%20Show.m4v",
-            "seconds": 1601,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 244,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Karma Chameleon",
+          "airdate": "2002-10-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "jr high stage fright",
-          "state": "REVIEW",
+          "name": "Weird Science",
+          "airdate": "2002-10-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Jr High S02E05 - Stage Fright.m4v",
@@ -952,21 +339,33 @@
             "seconds": 1601,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 261,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 261
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "degrassi-jr-high-s-02",
+              "itemTitle": "Degrassi Junior High Season 2",
+              "file": "Degrassi Jr High S02E05 - Stagefright.mkv",
+              "name": "Degrassi Jr High S02E05 - Stagefright",
+              "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Jr%20High%20S02E05%20-%20Stagefright.mkv",
+              "seconds": 1601,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 296
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "jr high fight",
-          "state": "REVIEW",
+          "name": "Drive",
+          "airdate": "2002-10-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Jr High S02E06 - Fight.m4v",
@@ -975,21 +374,18 @@
             "seconds": 1590,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 256,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 256
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "jr high bottled up",
-          "state": "REVIEW",
+          "name": "Shout: Part 1",
+          "airdate": "2002-11-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Jr High S02E07 - Bottled Up.m4v",
@@ -998,21 +394,18 @@
             "seconds": 1602,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 230,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 230
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "jr high sealed with a kiss",
-          "state": "REVIEW",
+          "name": "Shout: Part 2",
+          "airdate": "2002-11-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Jr High S02E08 - Sealed With A Kiss.m4v",
@@ -1021,21 +414,33 @@
             "seconds": 1600,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 249,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 249
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "degrassi-jr-high-s-02",
+              "itemTitle": "Degrassi Junior High Season 2",
+              "file": "Degrassi Jr High S02E08 - Sealed with a Kiss.mkv",
+              "name": "Degrassi Jr High S02E08 - Sealed with a Kiss",
+              "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Jr%20High%20S02E08%20-%20Sealed%20with%20a%20Kiss.mkv",
+              "seconds": 1600,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 281
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "junior high dog days",
-          "state": "REVIEW",
+          "name": "Mirror in the Bathroom",
+          "airdate": "2002-11-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Junior High S02E09 - Dog Days.m4v",
@@ -1044,21 +449,18 @@
             "seconds": 1602,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 242,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 242
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "junior high censored",
-          "state": "REVIEW",
+          "name": "Take My Breath Away",
+          "airdate": "2002-11-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Junior High S02E10 - Censored.m4v",
@@ -1067,44 +469,26 @@
             "seconds": 1600,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 231,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 231
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "junior high trust me",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-jr-high-s-02",
-            "itemTitle": "Degrassi Junior High Season 2",
-            "file": "Degrassi Junior High S02E11 - Trust Me.m4v",
-            "name": "Degrassi Junior High S02E11 - Trust Me",
-            "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Junior%20High%20S02E11%20-%20Trust%20Me.m4v",
-            "seconds": 1610,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 235,
-            "ep": {
-              "season": 2,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Don't Believe the Hype",
+          "airdate": "2002-12-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "junior high hes back",
-          "state": "REVIEW",
+          "name": "Careless Whisper",
+          "airdate": "2003-01-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Junior High S02E12 - ...He's Back.m4v",
@@ -1113,21 +497,18 @@
             "seconds": 1609,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 236,
-            "ep": {
-              "season": 2,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 236
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "junior high pass tense",
-          "state": "REVIEW",
+          "name": "White Wedding: Part 1",
+          "airdate": "2003-01-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-jr-high-s-02",
             "itemTitle": "Degrassi Junior High Season 2",
             "file": "Degrassi Junior High S02E13 - Pass Tense.m4v",
@@ -1136,14 +517,80 @@
             "seconds": 1611,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 263,
-            "ep": {
-              "season": 2,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 263
           },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "White Wedding: Part 2",
+          "airdate": "2003-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Hot for Teacher",
+          "airdate": "2003-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Message in a Bottle",
+          "airdate": "2003-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Dressed in Black",
+          "airdate": "2003-01-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Relax",
+          "airdate": "2003-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Fight for Your Right",
+          "airdate": "2003-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "How Soon is Now?",
+          "airdate": "2003-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Tears Are Not Enough: Part 1",
+          "airdate": "2003-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Tears Are Not Enough: Part 2",
+          "airdate": "2003-02-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1153,9 +600,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "junior high cant live with em part 1",
-          "state": "REVIEW",
+          "name": "Father Figure: Part 1",
+          "airdate": "2003-09-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E01 - Can't Live With Em (Part 1).mp4",
@@ -1164,21 +614,18 @@
             "seconds": 1618,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "junior high cant live with em part 2",
-          "state": "REVIEW",
+          "name": "Father Figure: Part 2",
+          "airdate": "2003-09-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E02 - Can't Live With Em (Part 2).mp4",
@@ -1187,21 +634,18 @@
             "seconds": 1618,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "junior high a big girl now",
-          "state": "REVIEW",
+          "name": "U Got the Look",
+          "airdate": "2003-10-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E03 - A Big Girl Now.mp4",
@@ -1210,44 +654,26 @@
             "seconds": 1599,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "junior high seasons greetings",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E04 - Season's Greetings.mp4",
-            "name": "Degrassi Junior High S03E04 - Season's Greetings",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E04%20-%20Season's%20Greetings.mp4",
-            "seconds": 1615,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Pride: Part 1",
+          "airdate": "2003-10-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "junior high loves me loves me not",
-          "state": "REVIEW",
+          "name": "Pride: Part 2",
+          "airdate": "2003-10-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E05 - Loves Me, Loves Me Not.mp4",
@@ -1256,21 +682,18 @@
             "seconds": 1599,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "junior high he aint heavy",
-          "state": "REVIEW",
+          "name": "Gangsta Gangsta",
+          "airdate": "2003-10-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E06 - He Ain't Heavy.mp4",
@@ -1279,67 +702,34 @@
             "seconds": 1613,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 156,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 156
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "junior high the whole truth",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E07 - The Whole Truth.mp4",
-            "name": "Degrassi Junior High S03E07 - The Whole Truth",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E07%20-%20The%20Whole%20Truth.mp4",
-            "seconds": 1616,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Should I Stay or Should I Go?",
+          "airdate": "2003-10-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "junior high star crossed",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E08 - Star-Crossed.mp4",
-            "name": "Degrassi Junior High S03E08 - Star-Crossed",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E08%20-%20Star-Crossed.mp4",
-            "seconds": 1617,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": {
-              "season": 3,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Whisper to a Scream",
+          "airdate": "2003-11-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "junior high food for thought",
-          "state": "REVIEW",
+          "name": "Against All Odds",
+          "airdate": "2003-11-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E09 - Food For Thought.mp4",
@@ -1348,21 +738,18 @@
             "seconds": 1618,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "junior high twenty bucks",
-          "state": "REVIEW",
+          "name": "Never Gonna Give You Up",
+          "airdate": "2003-11-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E10 - Twenty Bucks.mp4",
@@ -1371,67 +758,34 @@
             "seconds": 1618,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "junior high taking off part 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E11 - Taking Off (Part 1).mp4",
-            "name": "Degrassi Junior High S03E11 - Taking Off (Part 1)",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E11%20-%20Taking%20Off%20(Part%201).mp4",
-            "seconds": 1618,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": {
-              "season": 3,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "This Charming Man",
+          "airdate": "2003-12-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "junior high taking off part 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E12 - Taking Off (Part 2).mp4",
-            "name": "Degrassi Junior High S03E12 - Taking Off (Part 2)",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E12%20-%20Taking%20Off%20(Part%202).mp4",
-            "seconds": 1618,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Holiday: Part 1",
+          "airdate": "2003-12-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "junior high making whoopee",
-          "state": "REVIEW",
+          "name": "Holiday: Part 2",
+          "airdate": "2003-12-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E13 - Making Whoopee.mp4",
@@ -1440,21 +794,18 @@
             "seconds": 1617,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "junior high black and white",
-          "state": "REVIEW",
+          "name": "Accidents Will Happen: Part 1",
+          "airdate": "2004-01-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E14 - Black and White.mp4",
@@ -1463,21 +814,18 @@
             "seconds": 1618,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "junior high pa arty",
-          "state": "REVIEW",
+          "name": "Accidents Will Happen: Part 2",
+          "airdate": "2004-02-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E15 - Pa-arty!.mp4",
@@ -1486,21 +834,18 @@
             "seconds": 1618,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 166,
-            "ep": {
-              "season": 3,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 166
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "junior high bye bye junior high",
-          "state": "REVIEW",
+          "name": "Take on Me",
+          "airdate": "2004-02-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-junior-high-season-03",
             "itemTitle": "Degrassi Junior High Season 3",
             "file": "Degrassi Junior High S03E16 - Bye-Bye Junior High.mp4",
@@ -1509,14 +854,56 @@
             "seconds": 1619,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": {
-              "season": 3,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Don't Dream It's Over",
+          "airdate": "2004-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Rock & Roll High School",
+          "airdate": "2004-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "It's Raining Men",
+          "airdate": "2004-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "I Want Candy",
+          "airdate": "2004-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Our House",
+          "airdate": "2004-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Power of Love",
+          "airdate": "2004-04-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1526,9 +913,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "high a new start part 1",
-          "state": "REVIEW",
+          "name": "Ghost in the Machine: Part 1",
+          "airdate": "2004-09-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E01 - A New Start (Part 1).mp4",
@@ -1537,21 +927,18 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "high a new start part 2",
-          "state": "REVIEW",
+          "name": "Ghost in the Machine: Part 2",
+          "airdate": "2004-09-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E02 - A New Start (Part 2).mp4",
@@ -1560,21 +947,18 @@
             "seconds": 1574,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 152,
-            "ep": {
-              "season": 4,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 152
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "high breaking up is hard to do",
-          "state": "REVIEW",
+          "name": "King of Pain",
+          "airdate": "2004-09-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E03 - Breaking Up Is Hard to Do.mp4",
@@ -1583,44 +967,26 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "high dream on",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-04",
-            "itemTitle": "Degrassi High Season 4",
-            "file": "Degrassi High S04E04 - Dream On.mp4",
-            "name": "Degrassi High S04E04 - Dream On",
-            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E04%20-%20Dream%20On.mp4",
-            "seconds": 1602,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Mercy Street",
+          "airdate": "2004-09-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "high everybody wants something",
-          "state": "REVIEW",
+          "name": "Anywhere I Lay My Head",
+          "airdate": "2004-09-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E05 - Everybody Wants Something.mp4",
@@ -1629,21 +995,18 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "high nobodys perfect",
-          "state": "REVIEW",
+          "name": "Islands in the Stream",
+          "airdate": "2004-09-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E06 - Nobody's Perfect.mp4",
@@ -1652,44 +1015,26 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "high just friends",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-04",
-            "itemTitle": "Degrassi High Season 4",
-            "file": "Degrassi High S04E07 - Just Friends.mp4",
-            "name": "Degrassi High S04E07 - Just Friends",
-            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E07%20-%20Just%20Friends.mp4",
-            "seconds": 1601,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Time Stands Still: Part 1",
+          "airdate": "2004-10-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "high little white lies",
-          "state": "REVIEW",
+          "name": "Time Stands Still: Part 2",
+          "airdate": "2004-10-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E08 - Little White Lies.mp4",
@@ -1698,21 +1043,18 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "high sixteen part 1",
-          "state": "REVIEW",
+          "name": "Back in Black",
+          "airdate": "2004-10-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E09 - Sixteen (Part 1).mp4",
@@ -1721,21 +1063,18 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "high sixteen part 2",
-          "state": "REVIEW",
+          "name": "Neutron Dance",
+          "airdate": "2004-10-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E10 - Sixteen (Part 2).mp4",
@@ -1744,67 +1083,34 @@
             "seconds": 1602,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "high all in a good cause",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-04",
-            "itemTitle": "Degrassi High Season 4",
-            "file": "Degrassi High S04E11 - All in a Good Cause.mp4",
-            "name": "Degrassi High S04E11 - All in a Good Cause",
-            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E11%20-%20All%20in%20a%20Good%20Cause.mp4",
-            "seconds": 1603,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Voices Carry: Part 1",
+          "airdate": "2004-11-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "high natural attraction",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-04",
-            "itemTitle": "Degrassi High Season 4",
-            "file": "Degrassi High S04E12 - Natural Attraction.mp4",
-            "name": "Degrassi High S04E12 - Natural Attraction",
-            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E12%20-%20Natural%20Attraction.mp4",
-            "seconds": 1599,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Voices Carry: Part 2",
+          "airdate": "2004-11-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "high testing 1 2 3",
-          "state": "REVIEW",
+          "name": "Bark at the Moon",
+          "airdate": "2004-11-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E13 - Testing 1...2...3....mp4",
@@ -1813,21 +1119,18 @@
             "seconds": 1596,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 154,
-            "ep": {
-              "season": 4,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 154
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "high it creeps",
-          "state": "REVIEW",
+          "name": "Secret: Part 1",
+          "airdate": "2004-11-30",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E14 - It Creeps!.mp4",
@@ -1836,21 +1139,18 @@
             "seconds": 1601,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "high stressed out",
-          "state": "REVIEW",
+          "name": "Secret: Part 2",
+          "airdate": "2004-12-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-04",
             "itemTitle": "Degrassi High Season 4",
             "file": "Degrassi High S04E15 - Stressed Out.mp4",
@@ -1859,14 +1159,64 @@
             "seconds": 1601,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 155,
-            "ep": {
-              "season": 4,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 155
           },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Eye of the Tiger",
+          "airdate": "2004-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Queen of Hearts",
+          "airdate": "2005-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Modern Love",
+          "airdate": "2005-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Moonlight Desires",
+          "airdate": "2005-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "West End Girls",
+          "airdate": "2005-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Goin' Down the Road: Part 1",
+          "airdate": "2005-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Goin' Down the Road: Part 2",
+          "airdate": "2005-02-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1876,55 +1226,28 @@
       "episodes": [
         {
           "number": 1,
-          "name": "high bad blood part 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-05",
-            "itemTitle": "Degrassi High Season 5",
-            "file": "Degrassi High S05e01 - Bad Blood (Part 1).m4v",
-            "name": "Degrassi High S05e01 - Bad Blood (Part 1)",
-            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e01%20-%20Bad%20Blood%20(Part%201).m4v",
-            "seconds": 1677,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 257,
-            "ep": {
-              "season": 5,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Venus: Part 1",
+          "airdate": "2005-09-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "high bad blood part 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-05",
-            "itemTitle": "Degrassi High Season 5",
-            "file": "Degrassi High S05e02 - Bad Blood (Part 2).m4v",
-            "name": "Degrassi High S05e02 - Bad Blood (Part 2)",
-            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e02%20-%20Bad%20Blood%20(Part%202).m4v",
-            "seconds": 1677,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 242,
-            "ep": {
-              "season": 5,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Venus: Part 2",
+          "airdate": "2005-09-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "high loyalties",
-          "state": "REVIEW",
+          "name": "Death of a Disco Dancer",
+          "airdate": "2005-10-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-05",
             "itemTitle": "Degrassi High Season 5",
             "file": "Degrassi High S05e03 - Loyalties.m4v",
@@ -1933,21 +1256,32 @@
             "seconds": 1601,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 265,
-            "ep": {
-              "season": 5,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 265
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E03 - Loyalties.mp4",
+              "name": "Degrassi High S05E03 - Loyalties",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E03%20-%20Loyalties.mp4",
+              "seconds": 1601,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "high a tangled web",
-          "state": "REVIEW",
+          "name": "Foolin'",
+          "airdate": "2005-10-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-05",
             "itemTitle": "Degrassi High Season 5",
             "file": "Degrassi High S05e04 - A Tangled Web.m4v",
@@ -1956,21 +1290,32 @@
             "seconds": 1602,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 256,
-            "ep": {
-              "season": 5,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 256
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E04 - A Tangled Web.mp4",
+              "name": "Degrassi High S05E04 - A Tangled Web",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E04%20-%20A%20Tangled%20Web.mp4",
+              "seconds": 1602,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "high body politics",
-          "state": "REVIEW",
+          "name": "Weddings, Parties, Anything",
+          "airdate": "2005-10-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-05",
             "itemTitle": "Degrassi High Season 5",
             "file": "Degrassi High S05e05 - Body Politics.m4v",
@@ -1979,21 +1324,32 @@
             "seconds": 1600,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 272,
-            "ep": {
-              "season": 5,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 272
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E05 - Body Politics.mp4",
+              "name": "Degrassi High S05E05 - Body Politics",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E05%20-%20Body%20Politics.mp4",
+              "seconds": 1600,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "high crossed wires",
-          "state": "REVIEW",
+          "name": "I Still Haven't Found What I'm Looking For",
+          "airdate": "2005-10-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-05",
             "itemTitle": "Degrassi High Season 5",
             "file": "Degrassi High S05e06 - Crossed Wires.m4v",
@@ -2002,90 +1358,56 @@
             "seconds": 1592,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 261,
-            "ep": {
-              "season": 5,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 261
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E06 - Crossed Wires.mp4",
+              "name": "Degrassi High S05E06 - Crossed Wires",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E06%20-%20Crossed%20Wires.mp4",
+              "seconds": 1592,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 154
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "high the all nighter",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-05",
-            "itemTitle": "Degrassi High Season 5",
-            "file": "Degrassi High S05e07 - The All Nighter.m4v",
-            "name": "Degrassi High S05e07 - The All Nighter",
-            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e07%20-%20The%20All%20Nighter.m4v",
-            "seconds": 1601,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 254,
-            "ep": {
-              "season": 5,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Turned Out: Part 1",
+          "airdate": "2005-10-31",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "high home sweet home",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-05",
-            "itemTitle": "Degrassi High Season 5",
-            "file": "Degrassi High S05e08 - Home Sweet Home.m4v",
-            "name": "Degrassi High S05e08 - Home Sweet Home",
-            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e08%20-%20Home%20Sweet%20Home.m4v",
-            "seconds": 1601,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 253,
-            "ep": {
-              "season": 5,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Turned Out: Part 2",
+          "airdate": "2005-11-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "high extracurricular activities",
-          "state": "REVIEW",
-          "file": {
-            "item": "degrassi-high-s-05",
-            "itemTitle": "Degrassi High Season 5",
-            "file": "Degrassi High S05e09 - Extracurricular Activities.m4v",
-            "name": "Degrassi High S05e09 - Extracurricular Activities",
-            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e09%20-%20Extracurricular%20Activities.m4v",
-            "seconds": 1602,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 251,
-            "ep": {
-              "season": 5,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Tell It to My Heart",
+          "airdate": "2005-11-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "high e11 showtime part 1 and 2",
+          "name": "Redemption Song",
+          "airdate": "2005-11-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-05",
             "itemTitle": "Degrassi High Season 5",
             "file": "Degrassi High S05e10 E11 - Showtime (Part 1 And 2).m4v",
@@ -2094,21 +1416,40 @@
             "seconds": 3139,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 449,
-            "ep": {
-              "season": 5,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 449
           },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E10 E11 - Showtime (Part 1 and 2).mp4",
+              "name": "Degrassi High S05E10 E11 - Showtime (Part 1 and 2)",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E10%20E11%20-%20Showtime%20(Part%201%20and%202).mp4",
+              "seconds": 3139,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 306
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "The Lexicon of Love: Part 1",
+          "airdate": "2005-11-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "high threes a crowd",
-          "state": "REVIEW",
+          "name": "The Lexicon of Love: Part 2",
+          "airdate": "2005-12-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "degrassi-high-s-05",
             "itemTitle": "Degrassi High Season 5",
             "file": "Degrassi High S05e12 - Three's A Crowd.m4v",
@@ -2117,37 +1458,2518 @@
             "seconds": 1600,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 254,
-            "ep": {
-              "season": 5,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 254
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E12 - Three's a Crowd.mp4",
+              "name": "Degrassi High S05E12 - Three's a Crowd",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E12%20-%20Three's%20a%20Crowd.mp4",
+              "seconds": 1600,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "name": "Together Forever",
+          "airdate": "2005-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "I Against I",
+          "airdate": "2006-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Our Lips Are Sealed: Part 1",
+          "airdate": "2006-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Our Lips Are Sealed: Part 2",
+          "airdate": "2006-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Total Eclipse of the Heart",
+          "airdate": "2006-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "High Fidelity: Part 1",
+          "airdate": "2006-03-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
+            "item": "degrassi-junior-high-season-03",
+            "itemTitle": "Degrassi Junior High Season 3",
+            "file": "Degrassi Junior High S03E01 - Can't Live With Em (Part 1).mp4",
+            "name": "Degrassi Junior High S03E01 - Can't Live With Em (Part 1)",
+            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E01%20-%20Can't%20Live%20With%20Em%20(Part%201).mp4",
+            "seconds": 1618,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
+              "item": "degrassi-high-s-04",
+              "itemTitle": "Degrassi High Season 4",
+              "file": "Degrassi High S04E01 - A New Start (Part 1).mp4",
+              "name": "Degrassi High S04E01 - A New Start (Part 1)",
+              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E01%20-%20A%20New%20Start%20(Part%201).mp4",
+              "seconds": 1602,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
+              "item": "degrassi-high-s-04",
+              "itemTitle": "Degrassi High Season 4",
+              "file": "Degrassi High S04E09 - Sixteen (Part 1).mp4",
+              "name": "Degrassi High S04E09 - Sixteen (Part 1)",
+              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E09%20-%20Sixteen%20(Part%201).mp4",
+              "seconds": 1602,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
+              "item": "degrassi-high-s-04",
+              "itemTitle": "Degrassi High Season 4",
+              "file": "Degrassi High S04E13 - Testing 1...2...3....mp4",
+              "name": "Degrassi High S04E13 - Testing 1...2...3...",
+              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E13%20-%20Testing%201...2...3....mp4",
+              "seconds": 1596,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 154
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "name": "High Fidelity: Part 2",
+          "airdate": "2006-03-20",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"High Fidelity: Part 2\" (0.63)",
+            "item": "degrassi-junior-high-season-03",
+            "itemTitle": "Degrassi Junior High Season 3",
+            "file": "Degrassi Junior High S03E02 - Can't Live With Em (Part 2).mp4",
+            "name": "Degrassi Junior High S03E02 - Can't Live With Em (Part 2)",
+            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E02%20-%20Can't%20Live%20With%20Em%20(Part%202).mp4",
+            "seconds": 1618,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"High Fidelity: Part 2\" (0.63)",
+              "item": "degrassi-high-s-04",
+              "itemTitle": "Degrassi High Season 4",
+              "file": "Degrassi High S04E10 - Sixteen (Part 2).mp4",
+              "name": "Degrassi High S04E10 - Sixteen (Part 2)",
+              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E10%20-%20Sixteen%20(Part%202).mp4",
+              "seconds": 1602,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"High Fidelity: Part 2\" (0.63)",
+              "item": "degrassi-high-s-04",
+              "itemTitle": "Degrassi High Season 4",
+              "file": "Degrassi High S04E02 - A New Start (Part 2).mp4",
+              "name": "Degrassi High S04E02 - A New Start (Part 2)",
+              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E02%20-%20A%20New%20Start%20(Part%202).mp4",
+              "seconds": 1574,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Here Comes Your Man: Part 1",
+          "airdate": "2006-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Here Comes Your Man: Part 2",
+          "airdate": "2006-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "True Colours",
+          "airdate": "2006-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Can't Hardly Wait",
+          "airdate": "2006-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Eyes Without a Face: Part 1",
+          "airdate": "2006-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Eyes Without a Face: Part 2",
+          "airdate": "2006-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Working for the Weekend",
+          "airdate": "2006-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Crazy Little Thing Called Love",
+          "airdate": "2006-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "What's It Feel Like to Be a Ghost?: Part 1",
+          "airdate": "2007-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "What's It Feel Like to Be a Ghost?: Part 2",
+          "airdate": "2007-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Rock This Town",
+          "airdate": "2007-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Bitterest Pill",
+          "airdate": "2007-01-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "high one last dance",
+          "name": "If You Leave",
+          "airdate": "2007-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Free Fallin': Part 1",
+          "airdate": "2007-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Free Fallin': Part 2",
+          "airdate": "2007-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Love My Way",
+          "airdate": "2007-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Sunglasses at Night",
+          "airdate": "2007-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Don't You Want Me?: Part 1",
+          "airdate": "2007-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Don't You Want Me?: Part 2",
+          "airdate": "2007-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Standing in the Dark: Part 1",
+          "airdate": "2007-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Standing in the Dark: Part 2",
+          "airdate": "2007-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Love is a Battlefield",
+          "airdate": "2007-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "It's Tricky",
+          "airdate": "2007-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Death or Glory: Part 1",
+          "airdate": "2007-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Death or Glory: Part 2",
+          "airdate": "2007-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "We Got the Beat",
+          "airdate": "2007-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Jessie's Girl",
+          "airdate": "2008-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Hungry Eyes",
+          "airdate": "2008-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Pass the Dutchie",
+          "airdate": "2008-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Owner of a Lonely Heart",
+          "airdate": "2008-02-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Live to Tell",
+          "airdate": "2008-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Bust a Move: Part 1",
+          "airdate": "2008-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Bust a Move: Part 2",
+          "airdate": "2008-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Got My Mind Set on You",
+          "airdate": "2008-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Sweet Child o' Mine",
+          "airdate": "2008-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Another Brick in the Wall",
+          "airdate": "2008-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Talking in Your Sleep",
+          "airdate": "2008-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Broken Wings",
+          "airdate": "2008-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Ladies' Night",
+          "airdate": "2008-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Everything She Wants",
+          "airdate": "2008-06-02",
           "state": "REVIEW",
           "file": {
-            "item": "degrassi-high-s-05",
-            "itemTitle": "Degrassi High Season 5",
-            "file": "Degrassi High S05e13 - One Last Dance.m4v",
-            "name": "Degrassi High S05e13 - One Last Dance",
-            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e13%20-%20One%20Last%20Dance.m4v",
-            "seconds": 1602,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 265,
-            "ep": {
-              "season": 5,
-              "episode": 13
-            },
             "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "why": "title ~ \"Everything She Wants\" (0.62)",
+            "item": "degrassi-high-s-04",
+            "itemTitle": "Degrassi High Season 4",
+            "file": "Degrassi High S04E05 - Everybody Wants Something.mp4",
+            "name": "Degrassi High S04E05 - Everybody Wants Something",
+            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E05%20-%20Everybody%20Wants%20Something.mp4",
+            "seconds": 1602,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 155
           },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Don't Stop Believin'",
+          "airdate": "2008-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "If This is It",
+          "airdate": "2008-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "We Built This City",
+          "airdate": "2008-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Uptown Girl: Part 1",
+          "airdate": "2008-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Uptown Girl: Part 2",
+          "airdate": "2008-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Fight the Power",
+          "airdate": "2008-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Didn't We Almost Have It All",
+          "airdate": "2008-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Man with Two Hearts",
+          "airdate": "2008-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "With or Without You",
+          "airdate": "2008-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Money for Nothing",
+          "airdate": "2008-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Lost in Love: Part 1",
+          "airdate": "2008-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Lost in Love: Part 2",
+          "airdate": "2009-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Bad Medicine",
+          "airdate": "2009-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Causing a Commotion",
+          "airdate": "2009-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Heat of the Moment",
+          "airdate": "2009-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Jane Says: Part 1",
+          "airdate": "2009-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Jane Says: Part 2",
+          "airdate": "2009-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Touch of Grey",
+          "airdate": "2009-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Heart of Glass",
+          "airdate": "2009-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Up Where We Belong",
+          "airdate": "2009-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Danger Zone",
+          "airdate": "2009-04-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Paradise City: Part 1",
+          "airdate": "2009-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Paradise City: Part 2",
+          "airdate": "2009-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Paradise City: Part 3",
+          "airdate": "2009-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Paradise City: Part 4",
+          "airdate": "2009-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 9,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Just Can't Get Enough: Part 1",
+          "airdate": "2009-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Just Can't Get Enough: Part 2",
+          "airdate": "2009-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Close to Me",
+          "airdate": "2009-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Wanna Be Startin' Somethin'",
+          "airdate": "2009-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Shoot to Thrill",
+          "airdate": "2009-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "You Be Illin'",
+          "airdate": "2009-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Beat It: Part 1",
+          "airdate": "2009-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Beat It: Part 2",
+          "airdate": "2009-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Waiting for a Girl Like You",
+          "airdate": "2009-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Somebody",
+          "airdate": "2009-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Heart Like Mine: Part 1",
+          "airdate": "2009-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Heart Like Mine: Part 2",
+          "airdate": "2009-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Holiday Road",
+          "airdate": "2009-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Start Me Up",
+          "airdate": "2009-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Why Can't This Be Love?: Part 1",
+          "airdate": "2010-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Why Can't This Be Love?: Part 2",
+          "airdate": "2010-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Innocent When You Dream",
+          "airdate": "2010-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "In Your Eyes",
+          "airdate": "2010-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Keep on Loving You",
+          "airdate": "2010-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Rest of My Life: Part 1",
+          "airdate": "2010-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Rest of My Life: Part 2",
+          "airdate": "2010-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Rest of My Life: Part 3",
+          "airdate": "2010-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Rest of My Life: Part 4",
+          "airdate": "2010-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 10,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "What a Girl Wants: Part 1",
+          "airdate": "2010-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "What a Girl Wants: Part 2",
+          "airdate": "2010-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Breakaway: Part 1",
+          "airdate": "2010-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Breakaway: Part 2",
+          "airdate": "2010-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "99 Problems: Part 1",
+          "airdate": "2010-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "99 Problems: Part 2",
+          "airdate": "2010-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Better Off Alone: Part 1",
+          "airdate": "2010-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Better Off Alone: Part 2",
+          "airdate": "2010-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "I Just Don't Know What to Do with Myself: Part 1",
+          "airdate": "2010-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "I Just Don't Know What to Do with Myself: Part 2",
+          "airdate": "2010-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Try Honesty: Part 1",
+          "airdate": "2010-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Try Honesty: Part 2",
+          "airdate": "2010-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "You Don't Know My Name: Part 1",
+          "airdate": "2010-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "You Don't Know My Name: Part 2",
+          "airdate": "2010-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "My Body is a Cage: Part 1",
+          "airdate": "2010-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "My Body is a Cage: Part 2",
+          "airdate": "2010-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Tears Dry on Their Own: Part 1",
+          "airdate": "2010-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Tears Dry on Their Own: Part 2",
+          "airdate": "2010-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Still Fighting It: Part 1",
+          "airdate": "2010-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Still Fighting It: Part 2",
+          "airdate": "2010-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Purple Pills: Part 1",
+          "airdate": "2010-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Purple Pills: Part 2",
+          "airdate": "2010-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "All Falls Down: Part 1",
+          "airdate": "2010-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "All Falls Down: Part 2",
+          "airdate": "2010-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Don't Let Me Get Me: Part 1",
+          "airdate": "2010-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Don't Let Me Get Me: Part 2",
+          "airdate": "2010-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Love Lockdown: Part 1",
+          "airdate": "2010-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Love Lockdown: Part 2",
+          "airdate": "2010-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Umbrella: Part 1",
+          "airdate": "2010-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Umbrella: Part 2",
+          "airdate": "2010-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Halo: Part 1",
+          "airdate": "2010-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Halo: Part 2",
+          "airdate": "2010-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "When Love Takes Over: Part 1",
+          "airdate": "2011-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "When Love Takes Over: Part 2",
+          "airdate": "2011-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "The Way We Get By: Part 1",
+          "airdate": "2011-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "The Way We Get By: Part 2",
+          "airdate": "2011-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Jesus, Etc.: Part 1",
+          "airdate": "2011-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Jesus, Etc.: Part 2",
+          "airdate": "2011-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Hide and Seek: Part 1",
+          "airdate": "2011-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Hide and Seek: Part 2",
+          "airdate": "2011-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "Chasing Pavements: Part 1",
+          "airdate": "2011-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Chasing Pavements: Part 2",
+          "airdate": "2011-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "Drop the World: Part 1",
+          "airdate": "2011-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "Drop the World: Part 2",
+          "airdate": "2011-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 11,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Boom Boom Pow: Part 1",
+          "airdate": "2011-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Boom Boom Pow: Part 2",
+          "airdate": "2011-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Love Game",
+          "airdate": "2011-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "What's My Age Again?",
+          "airdate": "2011-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Idioteque",
+          "airdate": "2011-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Cry Me a River: Part 1",
+          "airdate": "2011-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Cry Me a River: Part 2",
+          "airdate": "2011-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Dirt Off Your Shoulder: Part 1",
+          "airdate": "2011-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Dirt Off Your Shoulder: Part 2",
+          "airdate": "2011-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Paper Planes: Part 1",
+          "airdate": "2011-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Paper Planes: Part 2",
+          "airdate": "2011-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Should've Said No: Part 1",
+          "airdate": "2011-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Should've Said No: Part 2",
+          "airdate": "2011-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "U Don't Know: Part 1",
+          "airdate": "2011-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "U Don't Know: Part 2",
+          "airdate": "2011-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Lose Yourself: Part 1",
+          "airdate": "2011-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Lose Yourself: Part 2",
+          "airdate": "2011-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Mr. Brightside: Part 1",
+          "airdate": "2011-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Mr. Brightside: Part 2",
+          "airdate": "2011-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Extraordinary Machine: Part 1",
+          "airdate": "2011-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Extraordinary Machine: Part 2",
+          "airdate": "2011-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Drop It Like It's Hot: Part 1",
+          "airdate": "2011-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Drop It Like It's Hot: Part 2",
+          "airdate": "2011-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Don't Panic: Part 1",
+          "airdate": "2011-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Don't Panic: Part 2",
+          "airdate": "2011-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Take a Bow: Part 1",
+          "airdate": "2011-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Take a Bow: Part 2",
+          "airdate": "2011-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Dead & Gone: Part 1",
+          "airdate": "2011-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Dead & Gone: Part 2",
+          "airdate": "2011-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Nowhere to Run: Part 1",
+          "airdate": "2011-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Nowhere to Run: Part 2",
+          "airdate": "2011-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Underneath It All: Part 1",
+          "airdate": "2012-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Underneath It All: Part 2",
+          "airdate": "2012-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Can't Tell Me Nothing: Part 1",
+          "airdate": "2012-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Can't Tell Me Nothing: Part 2",
+          "airdate": "2012-03-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Not Ready to Make Nice: Part 1",
+          "airdate": "2012-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Not Ready to Make Nice: Part 2",
+          "airdate": "2012-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Need You Now: Part 1",
+          "airdate": "2012-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Need You Now: Part 2",
+          "airdate": "2012-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Smash Into You: Part 1",
+          "airdate": "2012-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "Smash Into You: Part 2",
+          "airdate": "2012-04-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Hollaback Girl: Part 1",
+          "airdate": "2012-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "Hollaback Girl: Part 2",
+          "airdate": "2012-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "In the Cold, Cold Night: Part 1",
+          "airdate": "2012-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "In the Cold, Cold Night: Part 2",
+          "airdate": "2012-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 12,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Come as You Are: Part 1",
+          "airdate": "2012-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Come as You Are: Part 2",
+          "airdate": "2012-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Walking on Broken Glass: Part 1",
+          "airdate": "2012-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Walking on Broken Glass: Part 2",
+          "airdate": "2012-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Got Your Money: Part 1",
+          "airdate": "2012-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Got Your Money: Part 2",
+          "airdate": "2012-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Say It Ain't So: Part 1",
+          "airdate": "2012-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Say It Ain't So: Part 2",
+          "airdate": "2012-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Closer to Free: Part 1",
+          "airdate": "2012-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Closer to Free: Part 2",
+          "airdate": "2012-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Waterfalls: Part 1",
+          "airdate": "2012-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Waterfalls: Part 2",
+          "airdate": "2012-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Rusty Cage: Part 1",
+          "airdate": "2012-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Rusty Cage: Part 2",
+          "airdate": "2012-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Never Ever: Part 1",
+          "airdate": "2012-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Never Ever: Part 2",
+          "airdate": "2012-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Sabotage: Part 1",
+          "airdate": "2012-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Sabotage: Part 2",
+          "airdate": "2012-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Scream: Part 1",
+          "airdate": "2012-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Scream: Part 2",
+          "airdate": "2012-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Building a Mystery: Part 1",
+          "airdate": "2012-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Building a Mystery: Part 2",
+          "airdate": "2012-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Doll Parts: Part 1",
+          "airdate": "2012-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Doll Parts: Part 2",
+          "airdate": "2012-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "I Want It That Way: Part 1",
+          "airdate": "2012-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "I Want It That Way: Part 2",
+          "airdate": "2012-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Tonight, Tonight: Part 1",
+          "airdate": "2012-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Tonight, Tonight: Part 2",
+          "airdate": "2012-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Viva Las Vegas: Part 1",
+          "airdate": "2012-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Viva Las Vegas: Part 2",
+          "airdate": "2012-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Bitter Sweet Symphony: Part 1",
+          "airdate": "2013-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Bitter Sweet Symphony: Part 2",
+          "airdate": "2013-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Ray of Light: Part 1",
+          "airdate": "2013-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Ray of Light: Part 2",
+          "airdate": "2013-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Karma Police: Part 1",
+          "airdate": "2013-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Karma Police: Part 2",
+          "airdate": "2013-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Zombie: Part 1",
+          "airdate": "2013-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Zombie: Part 2",
+          "airdate": "2013-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "It's the End of the World as We Know It: Part 1",
+          "airdate": "2013-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "It's the End of the World as We Know It: Part 2",
+          "airdate": "2013-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 13,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Summertime: Part 1",
+          "airdate": "2013-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Summertime: Part 2",
+          "airdate": "2013-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "All I Wanna Do",
+          "airdate": "2013-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "My Own Worst Enemy",
+          "airdate": "2013-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "About a Girl",
+          "airdate": "2013-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Cannonball",
+          "airdate": "2013-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Honey",
+          "airdate": "2013-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Young Forever",
+          "airdate": "2013-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "This is How We Do It",
+          "airdate": "2013-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "You Got Me",
+          "airdate": "2013-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "You Oughta Know",
+          "airdate": "2013-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Everything You've Done Wrong",
+          "airdate": "2013-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Who Do You Think You Are",
+          "airdate": "2013-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Barely Breathing",
+          "airdate": "2013-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Black or White",
+          "airdate": "2013-11-14",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Black or White\" (0.63)",
+            "item": "degrassi-junior-high-season-03",
+            "itemTitle": "Degrassi Junior High Season 3",
+            "file": "Degrassi Junior High S03E14 - Black and White.mp4",
+            "name": "Degrassi Junior High S03E14 - Black and White",
+            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E14%20-%20Black%20and%20White.mp4",
+            "seconds": 1618,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Spiderwebs",
+          "airdate": "2013-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The World I Know",
+          "airdate": "2013-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Better Man",
+          "airdate": "2014-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Dig Me Out",
+          "airdate": "2014-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Power to the People",
+          "airdate": "2014-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "No Surprises",
+          "airdate": "2014-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Basket Case",
+          "airdate": "2014-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Unbelievable: Part 1",
+          "airdate": "2014-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Unbelievable: Part 2",
+          "airdate": "2014-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "What It's Like",
+          "airdate": "2014-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Close to Me",
+          "airdate": "2014-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Army of Me",
+          "airdate": "2014-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Everything is Everything",
+          "airdate": "2014-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Sparks Will Fly: Part 1",
+          "airdate": "2014-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Sparks Will Fly: Part 2",
+          "airdate": "2014-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "You Are Not Alone",
+          "airdate": "2014-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Enjoy the Silence",
+          "airdate": "2014-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "How Bizarre",
+          "airdate": "2014-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "My Hero",
+          "airdate": "2014-06-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Hypnotize",
+          "airdate": "2014-07-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Out of My Head",
+          "airdate": "2014-07-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Believe: Part 1",
+          "airdate": "2014-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Believe: Part 2",
+          "airdate": "2014-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Thunderstruck: Part 1",
+          "airdate": "2014-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Thunderstruck: Part 2",
+          "airdate": "2014-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 14,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Smells Like Teen Spirit",
+          "airdate": "2014-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Wise Up",
+          "airdate": "2014-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "If You Could Only See",
+          "airdate": "2014-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Can't Stop This Thing We Started",
+          "airdate": "2014-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "There's Your Trouble",
+          "airdate": "2014-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "(You Drive Me) Crazy",
+          "airdate": "2014-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "I'll Be Missing You",
+          "airdate": "2014-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Hush",
+          "airdate": "2014-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Something's Got to Give",
+          "airdate": "2014-12-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Hero vs. Villain",
+          "airdate": "2014-12-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Firestarter: Part 1",
+          "airdate": "2015-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Firestarter: Part 2",
+          "airdate": "2015-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Watch Out Now",
+          "airdate": "2015-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Ready or Not",
+          "airdate": "2015-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Wishlist",
+          "airdate": "2015-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Walking in My Shoes",
+          "airdate": "2015-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Get It Together",
+          "airdate": "2015-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Give Me One Reason",
+          "airdate": "2015-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "I Wanna Be Adored",
+          "airdate": "2015-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Teen Age Riot",
+          "airdate": "2015-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Kids Aren't Alright: Part 1",
+          "airdate": "2015-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Kids Aren't Alright: Part 2",
+          "airdate": "2015-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Finally: Part 1",
+          "airdate": "2015-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Finally: Part 2",
+          "airdate": "2015-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Summer Girls: Part 1",
+          "airdate": "2015-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Summer Girls: Part 2",
+          "airdate": "2015-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Summer Girls: Part 3",
+          "airdate": "2015-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Summer Girls: Part 4",
+          "airdate": "2015-08-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

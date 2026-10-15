@@ -3,7 +3,7 @@
   "slug": "sctv",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:31.867Z",
+  "matchedAt": "2026-10-15T03:18:41.254Z",
   "tvmaze": {
     "id": 5762,
     "name": "SCTV",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 78,
-    "live": 58,
-    "review": 13,
-    "missing": 7,
-    "pct": 91
+    "live": 74,
+    "review": 0,
+    "missing": 4,
+    "pct": 95
   },
   "seasons": [
     {
@@ -26,33 +26,33 @@
           "number": 1,
           "name": "Backstage",
           "airdate": "1976-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "S01E01 - SCTV Network 90 - #79  _One On The Town_.m4v",
-            "name": "S01E01 - SCTV Network 90 - #79  _One On The Town_",
-            "url": "https://archive.org/download/sctv-stuff/S01E01%20-%20SCTV%20Network%2090%20-%20%2379%20%20_One%20On%20The%20Town_.m4v",
-            "seconds": 3978,
-            "format": "MPEG4",
+            "file": "SCTV - S01E01 Backstage.mp4",
+            "name": "SCTV - S01E01 Backstage",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E01%20Backstage.mp4",
+            "seconds": 1427,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 829
+            "sizeMB": 139
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.8,
+              "why": "S/E in filename",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "SCTV - S01E01 Backstage.mp4",
-              "name": "SCTV - S01E01 Backstage",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E01%20Backstage.mp4",
-              "seconds": 1427,
-              "format": "h.264",
+              "file": "S01E01 - SCTV Network 90 - #79  _One On The Town_.m4v",
+              "name": "S01E01 - SCTV Network 90 - #79  _One On The Town_",
+              "url": "https://archive.org/download/sctv-stuff/S01E01%20-%20SCTV%20Network%2090%20-%20%2379%20%20_One%20On%20The%20Town_.m4v",
+              "seconds": 3978,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 139
+              "sizeMB": 829
             }
           ]
         },
@@ -60,21 +60,35 @@
           "number": 2,
           "name": "Murder at SCTV",
           "airdate": "1976-10-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_.m4v",
-            "name": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_",
-            "url": "https://archive.org/download/sctv-stuff/S01E02%20-%20SCTV%20Network%2090%20-%20%2380%20%20_Polynesiantown_.m4v",
-            "seconds": 3986,
-            "format": "MPEG4",
+            "file": "SCTV - S01E02 Murder at SCTV.mp4",
+            "name": "SCTV - S01E02 Murder at SCTV",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E02%20Murder%20at%20SCTV.mp4",
+            "seconds": 1431,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 831
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "sctv-stuff",
+              "itemTitle": "SCTV collection",
+              "file": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_.m4v",
+              "name": "S01E02 - SCTV Network 90 - #80  _Polynesiantown_",
+              "url": "https://archive.org/download/sctv-stuff/S01E02%20-%20SCTV%20Network%2090%20-%20%2380%20%20_Polynesiantown_.m4v",
+              "seconds": 3986,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 831
+            }
+          ]
         },
         {
           "number": 3,
@@ -258,19 +272,32 @@
           "airdate": "1977-03-24",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV Channel - S01E09 - Just For Fun Black Like Vic.mp4",
-            "name": "SCTV Channel - S01E09 - Just For Fun Black Like Vic",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E09%20-%20Just%20For%20Fun%20Black%20Like%20Vic.mp4",
-            "seconds": 2260,
+            "file": "SCTV - S01E09 Philosophy Street.mp4",
+            "name": "SCTV - S01E09 Philosophy Street",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E09%20Philosophy%20Street.mp4",
+            "seconds": 1424,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 219
+            "sizeMB": 139
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "sctv-stuff",
+              "itemTitle": "SCTV collection",
+              "file": "SCTV Channel - S01E09 - Just For Fun Black Like Vic.mp4",
+              "name": "SCTV Channel - S01E09 - Just For Fun Black Like Vic",
+              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E09%20-%20Just%20For%20Fun%20Black%20Like%20Vic.mp4",
+              "seconds": 2260,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 219
+            },
             {
               "conf": 0.8,
               "why": "S/E in filename",
@@ -283,19 +310,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 822
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "sctv-stuff",
-              "itemTitle": "SCTV collection",
-              "file": "SCTV - S01E09 Philosophy Street.mp4",
-              "name": "SCTV - S01E09 Philosophy Street",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E09%20Philosophy%20Street.mp4",
-              "seconds": 1424,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
             }
           ]
         },
@@ -323,9 +337,9 @@
           "number": 11,
           "name": "Broads Behind Bars",
           "airdate": "1977-04-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -379,31 +393,31 @@
           "airdate": "1977-05-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond.mp4",
-            "name": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond",
-            "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E13%20-%202009%20Jupiter%20and%20Beyond.mp4",
-            "seconds": 2195,
-            "format": "h.264",
+            "file": "SCTV - S01E13 Ben-Hur.mp4",
+            "name": "SCTV - S01E13 Ben-Hur",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E13%20Ben-Hur.mp4",
+            "seconds": 1425,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 211
+            "sizeMB": 244
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "SCTV - S01E13 Ben-Hur.mp4",
-              "name": "SCTV - S01E13 Ben-Hur",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E13%20Ben-Hur.mp4",
-              "seconds": 1425,
-              "format": "MPEG4",
+              "file": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond.mp4",
+              "name": "SCTV Channel - S01E13 - 2009 Jupiter and Beyond",
+              "url": "https://archive.org/download/sctv-stuff/SCTV%20Channel%20-%20S01E13%20-%202009%20Jupiter%20and%20Beyond.mp4",
+              "seconds": 2195,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 244
+              "sizeMB": 211
             }
           ]
         },
@@ -431,9 +445,9 @@
           "number": 15,
           "name": "Leave It to Beaver",
           "airdate": "1977-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -627,9 +641,9 @@
           "number": 22,
           "name": "World at War",
           "airdate": "1977-11-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -667,9 +681,9 @@
           "number": 24,
           "name": "Officer Friendly",
           "airdate": "1977-11-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -687,8 +701,20 @@
           "number": 25,
           "name": "The Man Who Would Be King of the Popes",
           "airdate": "1977-12-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "sctv-stuff",
+            "itemTitle": "SCTV collection",
+            "file": "SCTV - S01E25 King Of The Popes.mp4",
+            "name": "SCTV - S01E25 King Of The Popes",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S01E25%20King%20Of%20The%20Popes.mp4",
+            "seconds": 1421,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244
+          },
           "alternates": []
         },
         {
@@ -822,33 +848,33 @@
           "number": 4,
           "name": "SCTV Solid Gold Telethon",
           "airdate": "1978-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "S02E04 - SCTV Network 90 - #91  _Walter Cronkite's Brain_.m4v",
-            "name": "S02E04 - SCTV Network 90 - #91  _Walter Cronkite's Brain_",
-            "url": "https://archive.org/download/sctv-stuff/S02E04%20-%20SCTV%20Network%2090%20-%20%2391%20%20_Walter%20Cronkite's%20Brain_.m4v",
-            "seconds": 3932,
+            "file": "SCTV - S02E04 Solid Gold Telethon.mp4",
+            "name": "SCTV - S02E04 Solid Gold Telethon",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S02E04%20Solid%20Gold%20Telethon.mp4",
+            "seconds": 1352,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 831
+            "sizeMB": 198
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.8,
+              "why": "S/E in filename",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "SCTV - S02E04 Solid Gold Telethon.mp4",
-              "name": "SCTV - S02E04 Solid Gold Telethon",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S02E04%20Solid%20Gold%20Telethon.mp4",
-              "seconds": 1352,
+              "file": "S02E04 - SCTV Network 90 - #91  _Walter Cronkite's Brain_.m4v",
+              "name": "S02E04 - SCTV Network 90 - #91  _Walter Cronkite's Brain_",
+              "url": "https://archive.org/download/sctv-stuff/S02E04%20-%20SCTV%20Network%2090%20-%20%2391%20%20_Walter%20Cronkite's%20Brain_.m4v",
+              "seconds": 3932,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 198
+              "sizeMB": 831
             }
           ]
         },
@@ -856,33 +882,33 @@
           "number": 5,
           "name": "Writer's Strike",
           "airdate": "1978-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
-            "file": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_.m4v",
-            "name": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_",
-            "url": "https://archive.org/download/sctv-stuff/S02E05%20-%20SCTV%20Network%2090%20-%20%2392%20%20_Doorway%20To%20Hell_.m4v",
-            "seconds": 3944,
+            "file": "SCTV - S02E05 Writer Strike.mp4",
+            "name": "SCTV - S02E05 Writer Strike",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S02E05%20Writer%20Strike.mp4",
+            "seconds": 1345,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 833
+            "sizeMB": 199
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.8,
+              "why": "S/E in filename",
               "item": "sctv-stuff",
               "itemTitle": "SCTV collection",
-              "file": "SCTV - S02E05 Writer Strike.mp4",
-              "name": "SCTV - S02E05 Writer Strike",
-              "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20S02E05%20Writer%20Strike.mp4",
-              "seconds": 1345,
+              "file": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_.m4v",
+              "name": "S02E05 - SCTV Network 90 - #92  _Doorway To Hell_",
+              "url": "https://archive.org/download/sctv-stuff/S02E05%20-%20SCTV%20Network%2090%20-%20%2392%20%20_Doorway%20To%20Hell_.m4v",
+              "seconds": 3944,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 199
+              "sizeMB": 833
             }
           ]
         },
@@ -1072,9 +1098,9 @@
           "number": 13,
           "name": "Bad Acting in Hollywood",
           "airdate": "1978-12-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -1092,9 +1118,9 @@
           "number": 14,
           "name": "Alfred Hitchcock Presents",
           "airdate": "1978-12-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -1186,9 +1212,9 @@
           "number": 18,
           "name": "Fantasy Island",
           "airdate": "1979-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -1266,9 +1292,9 @@
           "number": 22,
           "name": "Consumer Action Line",
           "airdate": "1979-02-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",
@@ -1693,8 +1719,20 @@
           "number": 14,
           "name": "Hollywood Salutes Its Extras",
           "airdate": "1980-12-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "sctv-stuff",
+            "itemTitle": "SCTV collection",
+            "file": "SCTV - s03e14 - Hollywood Salutes the Extras [RedF].mp4",
+            "name": "SCTV - s03e14 - Hollywood Salutes the Extras [RedF]",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20s03e14%20-%20Hollywood%20Salutes%20the%20Extras%20%5BRedF%5D.mp4",
+            "seconds": 1350,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {
@@ -1721,8 +1759,20 @@
           "number": 16,
           "name": "1984: Big Brother",
           "airdate": "1981-01-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "sctv-stuff",
+            "itemTitle": "SCTV collection",
+            "file": "SCTV - s03e16 - Big Brother [RedF].mp4",
+            "name": "SCTV - s03e16 - Big Brother [RedF]",
+            "url": "https://archive.org/download/sctv-stuff/SCTV%20-%20s03e16%20-%20Big%20Brother%20%5BRedF%5D.mp4",
+            "seconds": 1345,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         },
         {
@@ -1789,9 +1839,9 @@
           "number": 20,
           "name": "Cookery Crock, Cartoon Coroner",
           "airdate": "1981-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "sctv-stuff",
             "itemTitle": "SCTV collection",

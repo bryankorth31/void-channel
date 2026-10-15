@@ -3,7 +3,7 @@
   "slug": "the-trials-of-life",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:19.468Z",
+  "matchedAt": "2026-10-15T03:18:20.343Z",
   "tvmaze": {
     "id": 13069,
     "name": "The Trials of Life: A Natural History of Behaviour",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 12,
-    "live": 8,
-    "review": 4,
+    "live": 12,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -47,9 +47,9 @@
           "number": 2,
           "name": "Growing Up",
           "airdate": "1990-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-trials-of-life-1990",
             "itemTitle": "The Trials Of Life: A Natural History of Behaviour (1990)",
@@ -166,9 +166,9 @@
           "number": 7,
           "name": "Living Together",
           "airdate": "1990-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-trials-of-life-1990",
             "itemTitle": "The Trials Of Life: A Natural History of Behaviour (1990)",
@@ -208,9 +208,9 @@
           "number": 9,
           "name": "Friends and Rivals",
           "airdate": "1990-11-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-trials-of-life-1990",
             "itemTitle": "The Trials Of Life: A Natural History of Behaviour (1990)",
@@ -223,15 +223,42 @@
             "codecRisk": "video (x265)",
             "sizeMB": 292
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Friends and Rivals\" (0.95)",
+              "item": "vintage-vhs-the-trials-of-life-friends--rivals-hosted-by-david-attenborough",
+              "itemTitle": "[Vintage VHS] The Trials of Life: Friends & Rivals, Hosted by David Attenborough",
+              "file": "the_trials_of_life_friends_and_rivals_01.mp4",
+              "name": "the_trials_of_life_friends_and_rivals_01",
+              "url": "https://archive.org/download/vintage-vhs-the-trials-of-life-friends--rivals-hosted-by-david-attenborough/the_trials_of_life_friends_and_rivals_01.mp4",
+              "seconds": 2856,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 5413
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Friends and Rivals\" (0.95)",
+              "item": "friends-and-rivals-the-trials-of-life",
+              "itemTitle": "Friends And Rivals The Trials Of Life",
+              "file": "Friends and Rivals The Trials of Life.mp4",
+              "name": "Friends and Rivals The Trials of Life",
+              "url": "https://archive.org/download/friends-and-rivals-the-trials-of-life/Friends%20and%20Rivals%20The%20Trials%20of%20Life.mp4",
+              "seconds": 3669,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1470
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Talking to Strangers",
           "airdate": "1990-12-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-trials-of-life-1990",
             "itemTitle": "The Trials Of Life: A Natural History of Behaviour (1990)",

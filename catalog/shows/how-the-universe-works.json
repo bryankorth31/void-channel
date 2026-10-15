@@ -3,7 +3,7 @@
   "slug": "how-the-universe-works",
   "type": "Documentary & Geographic",
   "network": "Science",
-  "matchedAt": "2026-10-15T01:19:19.803Z",
+  "matchedAt": "2026-10-15T03:18:20.872Z",
   "tvmaze": {
     "id": 2481,
     "name": "How the Universe Works",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 92,
-    "live": 5,
+    "live": 10,
     "review": 9,
-    "missing": 78,
-    "pct": 15
+    "missing": 73,
+    "pct": 21
   },
   "seasons": [
     {
@@ -28,19 +28,34 @@
           "airdate": "2010-04-25",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "how-the-universe-works-session-4-episode-7.-forces-of-mass-construction",
-            "itemTitle": "How The Universe Works , Session 4 , Episode 7. Forces Of Mass Construction",
-            "file": "‫How The Universe Works  session - 4 ep1 Earth Venus_s Evil Twin.MP4",
-            "name": "‫How The Universe Works  session - 4 ep1 Earth Venus_s Evil Twin",
-            "url": "https://archive.org/download/how-the-universe-works-session-4-episode-7.-forces-of-mass-construction/%E2%80%ABHow%20The%20Universe%20Works%20%20session%20-%204%20ep1%20Earth%20Venus_s%20Evil%20Twin.MP4",
-            "seconds": 2582,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Big Bang\" (0.95)",
+            "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
+            "itemTitle": "How the Universe Works Season 7",
+            "file": "How.the.Universe.Works.S07E06.Did.the.Big.Bang.Really.Happen.720p.HEVC.x265-MeGusta.mp4",
+            "name": "How.the.Universe.Works.S07E06.Did.the.Big.Bang.Really.Happen.720p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta/How.the.Universe.Works.S07E06.Did.the.Big.Bang.Really.Happen.720p.HEVC.x265-MeGusta.mp4",
+            "seconds": 2549,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 348
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 255
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "how-the-universe-works-session-4-episode-7.-forces-of-mass-construction",
+              "itemTitle": "How The Universe Works , Session 4 , Episode 7. Forces Of Mass Construction",
+              "file": "‫How The Universe Works  session - 4 ep1 Earth Venus_s Evil Twin.MP4",
+              "name": "‫How The Universe Works  session - 4 ep1 Earth Venus_s Evil Twin",
+              "url": "https://archive.org/download/how-the-universe-works-session-4-episode-7.-forces-of-mass-construction/%E2%80%ABHow%20The%20Universe%20Works%20%20session%20-%204%20ep1%20Earth%20Venus_s%20Evil%20Twin.MP4",
+              "seconds": 2582,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 348
+            }
+          ]
         },
         {
           "number": 2,
@@ -293,16 +308,40 @@
           "number": 3,
           "name": "Monster Black Hole",
           "airdate": "2015-07-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Monster Black Hole\" (0.95)",
+            "item": "how-the-universe-works-session-4-episode-7.-forces-of-mass-construction",
+            "itemTitle": "How The Universe Works , Session 4 , Episode 7. Forces Of Mass Construction",
+            "file": "‫How The Universe Works  Session-4 EP2 Monster Black Hole.MP4",
+            "name": "‫How The Universe Works  Session-4 EP2 Monster Black Hole",
+            "url": "https://archive.org/download/how-the-universe-works-session-4-episode-7.-forces-of-mass-construction/%E2%80%ABHow%20The%20Universe%20Works%20%20Session-4%20EP2%20Monster%20Black%20Hole.MP4",
+            "seconds": 2582,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 394
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Edge of the Solar System",
           "airdate": "2015-08-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Edge of the Solar System\" (0.95)",
+            "item": "how-the-universe-works-session-4-episode-7.-forces-of-mass-construction",
+            "itemTitle": "How The Universe Works , Session 4 , Episode 7. Forces Of Mass Construction",
+            "file": "How The Universe Works , Session-4 ep3 Edge of the Solar System.MP4",
+            "name": "How The Universe Works , Session-4 ep3 Edge of the Solar System",
+            "url": "https://archive.org/download/how-the-universe-works-session-4-episode-7.-forces-of-mass-construction/How%20The%20Universe%20Works%20%2C%20Session-4%20ep3%20Edge%20of%20the%20Solar%20System.MP4",
+            "seconds": 2581,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 289
+          },
           "alternates": []
         },
         {
@@ -329,8 +368,20 @@
           "number": 6,
           "name": "Secret History of the Moon",
           "airdate": "2015-08-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secret History of the Moon\" (0.95)",
+            "item": "how-the-universe-works-session-4-episode-7.-forces-of-mass-construction",
+            "itemTitle": "How The Universe Works , Session 4 , Episode 7. Forces Of Mass Construction",
+            "file": "How The Universe Works , Session-4 , Episode-5 Secret History of the Moon.MP4",
+            "name": "How The Universe Works , Session-4 , Episode-5 Secret History of the Moon",
+            "url": "https://archive.org/download/how-the-universe-works-session-4-episode-7.-forces-of-mass-construction/How%20The%20Universe%20Works%20%2C%20Session-4%20%2C%20Episode-5%20Secret%20History%20of%20the%20Moon.MP4",
+            "seconds": 2636,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 351
+          },
           "alternates": []
         },
         {
@@ -545,17 +596,30 @@
           "number": 2,
           "name": "When Supernovas Strike",
           "airdate": "2019-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
+            "itemTitle": "How the Universe Works Season 7",
+            "file": "How.the.Universe.Works.S07E02.When.Supernovas.Strike.720p.HEVC.x265-MeGusta.mp4",
+            "name": "How.the.Universe.Works.S07E02.When.Supernovas.Strike.720p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta/How.the.Universe.Works.S07E02.When.Supernovas.Strike.720p.HEVC.x265-MeGusta.mp4",
+            "seconds": 2549,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 257
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Interstellar Mysteries",
           "airdate": "2019-01-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
             "itemTitle": "How the Universe Works Season 7",
@@ -595,9 +659,9 @@
           "number": 5,
           "name": "Secret World of Nebulas",
           "airdate": "2019-02-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
             "itemTitle": "How the Universe Works Season 7",
@@ -616,8 +680,21 @@
           "number": 6,
           "name": "Did the Big Bang Really Happen?",
           "airdate": "2019-02-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
+            "itemTitle": "How the Universe Works Season 7",
+            "file": "How.the.Universe.Works.S07E06.Did.the.Big.Bang.Really.Happen.720p.HEVC.x265-MeGusta.mp4",
+            "name": "How.the.Universe.Works.S07E06.Did.the.Big.Bang.Really.Happen.720p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta/How.the.Universe.Works.S07E06.Did.the.Big.Bang.Really.Happen.720p.HEVC.x265-MeGusta.mp4",
+            "seconds": 2549,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 255
+          },
           "alternates": []
         },
         {
@@ -687,9 +764,9 @@
           "number": 10,
           "name": "Cassini's Final Secrets",
           "airdate": "2019-03-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
             "itemTitle": "How the Universe Works Season 7",

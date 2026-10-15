@@ -3,7 +3,7 @@
   "slug": "walking-with-dinosaurs",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:19.534Z",
+  "matchedAt": "2026-10-15T03:18:20.419Z",
   "tvmaze": {
     "id": 77692,
     "name": "Walking with Dinosaurs",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 6,
-    "live": 4,
-    "review": 2,
+    "live": 6,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -148,22 +148,49 @@
           "number": 3,
           "name": "Band of Brothers",
           "airdate": "2025-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "walking-with-dinosaurs-2025-tv-series",
-            "itemTitle": "Walking with Dinosaurs (2025 TV series)",
-            "file": "Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta.mp4",
-            "name": "Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta",
-            "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta.mp4",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "walking-with-dinosaurs-ep-1-the-orphan",
+            "itemTitle": "Walking With Dinosaurs Ep 1 The Orphan",
+            "file": "Walking with Dinosaurs Ep 3 Band of Brothers.mp4",
+            "name": "Walking with Dinosaurs Ep 3 Band of Brothers",
+            "url": "https://archive.org/download/walking-with-dinosaurs-ep-1-the-orphan/Walking%20with%20Dinosaurs%20Ep%203%20Band%20of%20Brothers.mp4",
             "seconds": 2900,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "video (AV1)",
-            "sizeMB": 291
+            "sizeMB": 774
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "walking-with-dinosaurs-2025-tv-series",
+              "itemTitle": "Walking with Dinosaurs (2025 TV series)",
+              "file": "Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta.mp4",
+              "name": "Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025-tv-series/Walking.With.Dinosaurs.2025.S01E03.Band.of.Brothers.1080p.AV1.10bit-MeGusta.mp4",
+              "seconds": 2900,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (AV1)",
+              "sizeMB": 291
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Band of Brothers\" (0.95)",
+              "item": "walking-with-dinosaurs-2025",
+              "itemTitle": "Walking With Dinosaurs 2025",
+              "file": "Walking_With_Dinosaurs_Series_1_-_03._Band_of_Brothers_m002csp6_original.mp4",
+              "name": "Walking_With_Dinosaurs_Series_1_-_03._Band_of_Brothers_m002csp6_original",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking_With_Dinosaurs_Series_1_-_03._Band_of_Brothers_m002csp6_original.mp4",
+              "seconds": 2900,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1830
+            }
+          ]
         },
         {
           "number": 4,
@@ -291,9 +318,9 @@
           "number": 6,
           "name": "Island of Giants",
           "airdate": "2025-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "walking-with-dinosaurs-2025-tv-series",
             "itemTitle": "Walking with Dinosaurs (2025 TV series)",
@@ -306,7 +333,34 @@
             "codecRisk": "video (HEVC)",
             "sizeMB": 291
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Island of Giants\" (0.95)",
+              "item": "walking-with-dinosaurs-2025",
+              "itemTitle": "Walking With Dinosaurs 2025",
+              "file": "Walking_With_Dinosaurs_Series_1_-_06._Island_of_Giants_m002csp8_original.mp4",
+              "name": "Walking_With_Dinosaurs_Series_1_-_06._Island_of_Giants_m002csp8_original",
+              "url": "https://archive.org/download/walking-with-dinosaurs-2025/Walking_With_Dinosaurs_Series_1_-_06._Island_of_Giants_m002csp8_original.mp4",
+              "seconds": 2880,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1792
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Island of Giants\" (0.95)",
+              "item": "walking-with-dinosaurs-ep-1-the-orphan",
+              "itemTitle": "Walking With Dinosaurs Ep 1 The Orphan",
+              "file": "Walking with Dinosaurs Ep-6 Island of Giants.mp4",
+              "name": "Walking with Dinosaurs Ep-6 Island of Giants",
+              "url": "https://archive.org/download/walking-with-dinosaurs-ep-1-the-orphan/Walking%20with%20Dinosaurs%20Ep-6%20Island%20of%20Giants.mp4",
+              "seconds": 2877,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1683
+            }
+          ]
         }
       ]
     }

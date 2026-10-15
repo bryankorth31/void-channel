@@ -3,7 +3,7 @@
   "slug": "ugly-americans",
   "type": "Animated",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-15T01:19:05.346Z",
+  "matchedAt": "2026-10-15T03:17:28.881Z",
   "tvmaze": {
     "id": 4323,
     "name": "Ugly Americans",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 31,
-    "live": 29,
+    "live": 30,
     "review": 0,
-    "missing": 2,
-    "pct": 94
+    "missing": 1,
+    "pct": 97
   },
   "seasons": [
     {
@@ -246,8 +246,20 @@
           "number": 12,
           "name": "Trolling for Terror",
           "airdate": "2010-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "02x-03-llevame-al-infierno",
+            "itemTitle": "Ugly Americans(esp/eng)(sub esp)",
+            "file": "Ugly Americans/T1/01x12 - El Troll del Terror.mp4",
+            "name": "Ugly Americans/T1/01x12 - El Troll del Terror",
+            "url": "https://archive.org/download/02x-03-llevame-al-infierno/Ugly%20Americans%2FT1%2F01x12%20-%20El%20Troll%20del%20Terror.mp4",
+            "seconds": 1305,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "off-the-air",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:07.801Z",
+  "matchedAt": "2026-10-15T03:17:31.776Z",
   "tvmaze": {
     "id": 3971,
     "name": "Off the Air",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 55,
-    "live": 0,
-    "review": 21,
-    "missing": 34,
-    "pct": 38
+    "live": 1,
+    "review": 23,
+    "missing": 31,
+    "pct": 44
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Animals",
           "airdate": "2011-01-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "off-the-air-101-animals-460p.x-264.vorbis-2.0-449",
             "itemTitle": "Off The Air Animals (Original Version)",
@@ -40,7 +40,34 @@
             "playable": true,
             "sizeMB": 93
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Animals\" (0.95)",
+              "item": "animals-off-the-air-adult-swim-1080p",
+              "itemTitle": "Animals - Off The Air - Adult Swim - 1080p",
+              "file": "Animals  Off the Air  Adult Swim_1080p.mp4",
+              "name": "Animals  Off the Air  Adult Swim_1080p",
+              "url": "https://archive.org/download/animals-off-the-air-adult-swim-1080p/Animals%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+              "seconds": 656,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 262
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Animals\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Animals.mp4",
+              "name": "Off the Air/Animals",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FAnimals.mp4",
+              "seconds": 656,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 218
+            }
+          ]
         },
         {
           "number": 2,
@@ -187,9 +214,35 @@
           "number": 1,
           "name": "Falling",
           "airdate": "2012-08-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Falling\" (0.95)",
+            "item": "falling-off-the-air-adult-swim-1080p",
+            "itemTitle": "Falling - Off The Air - Adult Swim - 1080p",
+            "file": "Falling  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Falling  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/falling-off-the-air-adult-swim-1080p/Falling%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 640,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Falling\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Falling.mp4",
+              "name": "Off the Air/Falling",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FFalling.mp4",
+              "seconds": 640,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
+            }
+          ]
         },
         {
           "number": 2,
@@ -310,9 +363,35 @@
           "number": 1,
           "name": "Nature",
           "airdate": "2013-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Nature\" (0.95)",
+            "item": "nature-off-the-air-adult-swim-1080p",
+            "itemTitle": "Nature - Off The Air - Adult Swim - 1080p",
+            "file": "Nature  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Nature  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/nature-off-the-air-adult-swim-1080p/Nature%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Nature\" (1.00)",
+              "item": "off-the-air",
+              "itemTitle": "Off the Air",
+              "file": "Off the Air/Nature.mp4",
+              "name": "Off the Air/Nature",
+              "url": "https://archive.org/download/off-the-air/Off%20the%20Air%2FNature.mp4",
+              "seconds": 671,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 183
+            }
+          ]
         },
         {
           "number": 2,
@@ -785,8 +864,20 @@
           "number": 4,
           "name": "Winter",
           "airdate": "2019-01-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Winter\" (0.95)",
+            "item": "winter-off-the-air-adult-swim-1080p",
+            "itemTitle": "Winter - Off The Air - Adult Swim - 1080p",
+            "file": "Winter  Off the Air  Adult Swim_1080p.mp4",
+            "name": "Winter  Off the Air  Adult Swim_1080p",
+            "url": "https://archive.org/download/winter-off-the-air-adult-swim-1080p/Winter%20%20Off%20the%20Air%20%20Adult%20Swim_1080p.mp4",
+            "seconds": 681,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
           "alternates": []
         }
       ]

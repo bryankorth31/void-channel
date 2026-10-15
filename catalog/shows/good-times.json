@@ -3,7 +3,7 @@
   "slug": "good-times",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:26.443Z",
+  "matchedAt": "2026-10-15T03:18:32.976Z",
   "tvmaze": {
     "id": 1472,
     "name": "Good Times",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 133,
-    "live": 2,
-    "review": 2,
+    "live": 3,
+    "review": 1,
     "missing": 129,
     "pct": 3
   },
@@ -46,9 +46,9 @@
           "number": 2,
           "name": "Black Jesus",
           "airdate": "1974-02-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "GoodTimesS01E02BlackJesus",
             "itemTitle": "Good Times - S01E02 - Black Jesus",

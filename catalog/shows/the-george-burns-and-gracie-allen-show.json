@@ -3,7 +3,7 @@
   "slug": "the-george-burns-and-gracie-allen-show",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:42.723Z",
+  "matchedAt": "2026-10-15T03:18:55.557Z",
   "tvmaze": {
     "id": 21693,
     "name": "The George Burns and Gracie Allen Show",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 291,
     "live": 0,
-    "review": 2,
-    "missing": 289,
+    "review": 3,
+    "missing": 288,
     "pct": 1
   },
   "seasons": [
@@ -1114,8 +1114,20 @@
           "number": 1,
           "name": "George Invites Critics to Watch First Show of Season",
           "airdate": "1954-10-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"George Invites Critics to Watch First Show of Season\" (0.74)",
+            "item": "georgeburnsandgracieallen_202307",
+            "itemTitle": "The George Burns and Gracie Allen Show",
+            "file": "The George Burns and Gracie Allen Show/Season 5/01 George Invites Critics to Watch First Show of Season.mp4",
+            "name": "The George Burns and Gracie Allen Show/Season 5/01 George Invites Critics to Watch First Show of Season",
+            "url": "https://archive.org/download/georgeburnsandgracieallen_202307/The%20George%20Burns%20and%20Gracie%20Allen%20Show%2FSeason%205%2F01%20George%20Invites%20Critics%20to%20Watch%20First%20Show%20of%20Season.mp4",
+            "seconds": 1492,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
           "alternates": []
         },
         {

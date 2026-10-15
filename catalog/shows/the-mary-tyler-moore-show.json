@@ -3,7 +3,7 @@
   "slug": "the-mary-tyler-moore-show",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:27.381Z",
+  "matchedAt": "2026-10-15T03:18:34.349Z",
   "tvmaze": {
     "id": 4050,
     "name": "The Mary Tyler Moore Show",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 168,
-    "live": 38,
-    "review": 55,
-    "missing": 75,
-    "pct": 55
+    "live": 48,
+    "review": 46,
+    "missing": 74,
+    "pct": 56
   },
   "seasons": [
     {
@@ -46,9 +46,9 @@
           "number": 2,
           "name": "Today I Am a Ma'am",
           "airdate": "1970-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-01",
             "itemTitle": "The Mary Tyler Moore Show - Season 1",
@@ -86,9 +86,9 @@
           "number": 4,
           "name": "Divorce Isn't Everything",
           "airdate": "1970-10-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-01",
             "itemTitle": "The Mary Tyler Moore Show - Season 1",
@@ -166,9 +166,9 @@
           "number": 8,
           "name": "The Snow Must Go On",
           "airdate": "1970-11-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-01",
             "itemTitle": "The Mary Tyler Moore Show - Season 1",
@@ -206,9 +206,9 @@
           "number": 10,
           "name": "Assistant Wanted, Female",
           "airdate": "1970-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-01",
             "itemTitle": "The Mary Tyler Moore Show - Season 1",
@@ -486,8 +486,20 @@
           "number": 24,
           "name": "The 45-Year-Old Man",
           "airdate": "1971-03-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-mary-tyler-moore-show-s-01",
+            "itemTitle": "The Mary Tyler Moore Show - Season 1",
+            "file": "The Mary Tyler Moore Show S01E24 - The Forty-Five-Year-Old Man.mp4",
+            "name": "The Mary Tyler Moore Show S01E24 - The Forty-Five-Year-Old Man",
+            "url": "https://archive.org/download/the-mary-tyler-moore-show-s-01/The%20Mary%20Tyler%20Moore%20Show%20S01E24%20-%20The%20Forty-Five-Year-Old%20Man.mp4",
+            "seconds": 1510,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 186
+          },
           "alternates": []
         }
       ]
@@ -533,9 +545,9 @@
           "number": 2,
           "name": "I Am Curious Cooper",
           "airdate": "1971-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-02",
             "itemTitle": "The Mary Tyler Moore Show - Season 2",
@@ -727,9 +739,9 @@
           "number": 11,
           "name": "The Six-and-a-Half-Year Itch",
           "airdate": "1971-11-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-02",
             "itemTitle": "The Mary Tyler Moore Show - Season 2",
@@ -874,9 +886,9 @@
           "number": 17,
           "name": "The Slaughter Affair",
           "airdate": "1972-01-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-02",
             "itemTitle": "The Mary Tyler Moore Show - Season 2",
@@ -914,9 +926,9 @@
           "number": 19,
           "name": "More Than Neighbors",
           "airdate": "1972-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-02",
             "itemTitle": "The Mary Tyler Moore Show - Season 2",
@@ -994,9 +1006,9 @@
           "number": 23,
           "name": "Some of My Best Friends Are Rhoda",
           "airdate": "1972-02-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-mary-tyler-moore-show-s-02",
             "itemTitle": "The Mary Tyler Moore Show - Season 2",

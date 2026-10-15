@@ -3,21 +3,20 @@
   "slug": "hellsing-ultimate",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.125Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:04.586Z",
   "tvmaze": {
-    "id": null,
+    "id": 26,
     "name": "Hellsing Ultimate",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 50,
+    "premiered": "2006-02-10",
+    "network": "TBS"
   },
   "coverage": {
-    "total": 13,
-    "live": 0,
-    "review": 13,
-    "missing": 0,
-    "pct": 100
+    "total": 10,
+    "live": 1,
+    "review": 8,
+    "missing": 1,
+    "pct": 90
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "Hellsing I",
+          "airdate": "2006-02-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep1] Hellsing Ultimate - Hellsing I.mp4",
@@ -36,21 +38,18 @@
             "seconds": 3021,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 501,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 501
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
+          "name": "Hellsing II",
+          "airdate": "2006-08-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep2] Hellsing Ultimate - Hellsing II.mp4",
@@ -59,21 +58,18 @@
             "seconds": 2566,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 492,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 492
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "ep3 iii",
+          "name": "Hellsing III",
+          "airdate": "2007-04-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep3] Hellsing Ultimate - Hellsing III.mp4",
@@ -82,21 +78,18 @@
             "seconds": 2805,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 517,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 517
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
+          "name": "Hellsing IV",
+          "airdate": "2008-02-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep4] Hellsing Ultimate - Hellsing IV.mp4",
@@ -105,21 +98,18 @@
             "seconds": 3378,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 669,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 669
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
+          "name": "Hellsing V",
+          "airdate": "2008-11-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep5] Hellsing Ultimate - Hellsing V.mp4",
@@ -128,21 +118,18 @@
             "seconds": 2657,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 509,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 509
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
+          "name": "Hellsing VI",
+          "airdate": "2009-07-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep6] Hellsing Ultimate - Hellsing VI.mp4",
@@ -151,21 +138,18 @@
             "seconds": 2537,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 590,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 590
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "ep7 vii",
+          "name": "Hellsing VII",
+          "airdate": "2009-12-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep7] Hellsing Ultimate - Hellsing VII.mp4",
@@ -174,21 +158,18 @@
             "seconds": 2706,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 675,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 675
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "ep8 viii",
+          "name": "Hellsing VIII",
+          "airdate": "2011-07-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep8] Hellsing Ultimate - Hellsing VIII.mp4",
@@ -197,21 +178,18 @@
             "seconds": 2933,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 771,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 771
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "ep9 helssing ix",
-          "state": "REVIEW",
+          "name": "Hellsing IX",
+          "airdate": "2012-02-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "absolute episode number + title match",
             "item": "ep-10-hellsing-ultimate-hellsing-x",
             "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
             "file": "[.Ep9] Hellsing Ultimate - Helssing IX.mp4",
@@ -220,97 +198,16 @@
             "seconds": 2688,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 682,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 682
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "ep-10-hellsing-ultimate-hellsing-x",
-            "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
-            "file": "[.Ep10] Hellsing Ultimate - Hellsing X.mp4",
-            "name": "[.Ep10] Hellsing Ultimate - Hellsing X",
-            "url": "https://archive.org/download/ep-10-hellsing-ultimate-hellsing-x/%5B.Ep10%5D%20Hellsing%20Ultimate%20-%20Hellsing%20X.mp4",
-            "seconds": 4068,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 961,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "ep-10-hellsing-ultimate-hellsing-x",
-            "itemTitle": "Hellsing Ultimate Original Series ( ENG* AUDIO WITH ENG* SUBTITLES )",
-            "file": "[.Ep10] Hellsing Ultimate - Hellsing X.ia.mp4",
-            "name": "[",
-            "url": "https://archive.org/download/ep-10-hellsing-ultimate-hellsing-x/%5B.Ep10%5D%20Hellsing%20Ultimate%20-%20Hellsing%20X.ia.mp4",
-            "seconds": 4068,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 688,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "abridged episodes 1 3 team four star tfs",
-          "state": "REVIEW",
-          "file": {
-            "item": "hellsing-ultimate-abridged-episodes-1-3-team-four-star-tfs",
-            "itemTitle": "Hellsing Ultimate Abridged Episodes 1 3 Team Four Star ( TFS)",
-            "file": "Hellsing Ultimate Abridged Episodes 1-3 - Team Four Star (TFS).mp4",
-            "name": "Hellsing Ultimate Abridged Episodes 1-3 - Team Four Star (TFS)",
-            "url": "https://archive.org/download/hellsing-ultimate-abridged-episodes-1-3-team-four-star-tfs/Hellsing%20Ultimate%20Abridged%20Episodes%201-3%20-%20Team%20Four%20Star%20(TFS).mp4",
-            "seconds": 2483,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 78,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "abridged episodes 13 team four star tfs",
-          "state": "REVIEW",
-          "file": {
-            "item": "hellsing-ultimate-abridged-episodes-13-team-four-star-tfs",
-            "itemTitle": "Hellsing Ultimate Abridged Episodes 1, 2, & 3 Team Four Star TFS",
-            "file": "Hellsing Ultimate Abridged Episodes 13  Team Four Star TFS.mp4",
-            "name": "Hellsing Ultimate Abridged Episodes 13  Team Four Star TFS",
-            "url": "https://archive.org/download/hellsing-ultimate-abridged-episodes-13-team-four-star-tfs/Hellsing%20Ultimate%20Abridged%20Episodes%2013%20%20Team%20Four%20Star%20TFS.mp4",
-            "seconds": 2483,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 102,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Hellsing X",
+          "airdate": "2012-12-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

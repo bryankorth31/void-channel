@@ -3,7 +3,7 @@
   "slug": "the-twilight-zone",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:22.603Z",
+  "matchedAt": "2026-10-15T03:18:27.062Z",
   "tvmaze": {
     "id": 787,
     "name": "The Twilight Zone",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 156,
-    "live": 106,
-    "review": 45,
-    "missing": 5,
-    "pct": 97
+    "live": 111,
+    "review": 42,
+    "missing": 3,
+    "pct": 98
   },
   "seasons": [
     {
@@ -719,18 +719,33 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 22 of 33 in \"The Twilight Zone ☆ La Quatrième Dimensi\"",
-            "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
-            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
-            "file": "S8E43 - Et La Lumiere Fut (Sunrise).mp4",
-            "name": "S8E43 - Et La Lumiere Fut (Sunrise)",
-            "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S8E43%20-%20Et%20La%20Lumiere%20Fut%20(Sunrise).mp4",
-            "seconds": 1326,
+            "why": "S/E in filename",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S1E22 - Les Monstres de Mapple Street.mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S1E22 - Les Monstres de Mapple Street",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S1E22%20-%20Les%20Monstres%20de%20Mapple%20Street.mp4",
+            "seconds": 1505,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166
+            "langRisk": true,
+            "sizeMB": 255
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 33 in \"The Twilight Zone ☆ La Quatrième Dimensi\"",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S8E43 - Et La Lumiere Fut (Sunrise).mp4",
+              "name": "S8E43 - Et La Lumiere Fut (Sunrise)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S8E43%20-%20Et%20La%20Lumiere%20Fut%20(Sunrise).mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 166
+            }
+          ]
         },
         {
           "number": 23,
@@ -1079,21 +1094,36 @@
           "number": 32,
           "name": "A Passage for Trumpet",
           "airdate": "1960-05-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 32 of 33 in \"The Twilight Zone ☆ La Quatrième Dimensi\"",
-            "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
-            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
-            "file": "S9E18 - Miniville (A Small Town) - VOstFR.mp4",
-            "name": "S9E18 - Miniville (A Small Town) - VOstFR",
-            "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S9E18%20-%20Miniville%20(A%20Small%20Town)%20-%20VOstFR.mp4",
-            "seconds": 2014,
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S1E32 - Coup de Trompette (A Passage For Trumpet).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S1E32 - Coup de Trompette (A Passage For Trumpet)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S1E32%20-%20Coup%20de%20Trompette%20(A%20Passage%20For%20Trumpet).mp4",
+            "seconds": 1507,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 277
+            "langRisk": true,
+            "sizeMB": 190
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 32 of 33 in \"The Twilight Zone ☆ La Quatrième Dimensi\"",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S9E18 - Miniville (A Small Town) - VOstFR.mp4",
+              "name": "S9E18 - Miniville (A Small Town) - VOstFR",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S9E18%20-%20Miniville%20(A%20Small%20Town)%20-%20VOstFR.mp4",
+              "seconds": 2014,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 277
+            }
+          ]
         },
         {
           "number": 33,
@@ -1565,7 +1595,22 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S2E11 - La Nuit Noël  (Night of the Meek).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S2E11 - La Nuit Noël  (Night of the Meek)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S2E11%20-%20La%20Nuit%20No%C3%ABl%20%20(Night%20of%20the%20Meek).mp4",
+              "seconds": 1482,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 234
+            }
+          ]
         },
         {
           "number": 12,
@@ -1690,7 +1735,22 @@
             "playable": true,
             "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S2E15 - Les Envahisseurs (The Invaders).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S2E15 - Les Envahisseurs (The Invaders)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S2E15%20-%20Les%20Envahisseurs%20(The%20Invaders).mp4",
+              "seconds": 1502,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 178
+            }
+          ]
         },
         {
           "number": 16,
@@ -1780,7 +1840,22 @@
             "playable": true,
             "sizeMB": 153
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S2E18 - L'Odyssée du Vol 33 (The Odyssey of Flight 33) VOstFR.mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S2E18 - L'Odyssée du Vol 33 (The Odyssey of Flight 33) VOstFR",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S2E18%20-%20L'Odyss%C3%A9e%20du%20Vol%2033%20(The%20Odyssey%20of%20Flight%2033)%20VOstFR.mp4",
+              "seconds": 1504,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 159
+            }
+          ]
         },
         {
           "number": 19,
@@ -2435,7 +2510,22 @@
             "playable": true,
             "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E08 - C'Est Une Belle Vie (It's a Good Life).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E08 - C'Est Une Belle Vie (It's a Good Life)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E08%20-%20C'Est%20Une%20Belle%20Vie%20(It's%20a%20Good%20Life).mp4",
+              "seconds": 1489,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 191
+            }
+          ]
         },
         {
           "number": 9,
@@ -2580,7 +2670,22 @@
             "playable": true,
             "sizeMB": 147
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E13 - Il Était Une Fois (Once Upon a Time).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E13 - Il Était Une Fois (Once Upon a Time)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E13%20-%20Il%20%C3%89tait%20Une%20Fois%20(Once%20Upon%20a%20Time).mp4",
+              "seconds": 1496,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 192
+            }
+          ]
         },
         {
           "number": 14,
@@ -2670,7 +2775,22 @@
             "playable": true,
             "sizeMB": 147
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E16 - Rien A Craindre (Nothing In The Dark).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E16 - Rien A Craindre (Nothing In The Dark)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E16%20-%20Rien%20A%20Craindre%20(Nothing%20In%20The%20Dark).mp4",
+              "seconds": 1491,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 221
+            }
+          ]
         },
         {
           "number": 17,
@@ -2955,7 +3075,22 @@
             "playable": true,
             "sizeMB": 155
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E25 - Le Fugitif (The Fugitive).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E25 - Le Fugitif (The Fugitive)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E25%20-%20Le%20Fugitif%20(The%20Fugitive).mp4",
+              "seconds": 1489,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 239
+            }
+          ]
         },
         {
           "number": 26,
@@ -3010,7 +3145,22 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E27 - Personne Inconnue (Person or Persons Unknown).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E27 - Personne Inconnue (Person or Persons Unknown)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E27%20-%20Personne%20Inconnue%20(Person%20or%20Persons%20Unknown).mp4",
+              "seconds": 1403,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 243
+            }
+          ]
         },
         {
           "number": 28,
@@ -3792,22 +3942,37 @@
           "number": 5,
           "name": "The Last Night of a Jockey",
           "airdate": "1963-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
-            "why": "S/E in filename",
-            "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
-            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
-            "file": "S5E05 - Rencontre du 5° Type (Chameleon).mp4",
-            "name": "S5E05 - Rencontre du 5° Type (Chameleon)",
-            "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E05%20-%20Rencontre%20du%205%C2%B0%20Type%20(Chameleon).mp4",
-            "seconds": 1270,
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E05 - La Derniere Nuit d'un Jockey (The last night of a jockey).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E05 - La Derniere Nuit d'un Jockey (The last night of a jockey)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E05%20-%20La%20Derniere%20Nuit%20d'un%20Jockey%20(The%20last%20night%20of%20a%20jockey).mp4",
+            "seconds": 1445,
             "format": "MPEG4",
             "playable": true,
             "langRisk": true,
-            "sizeMB": 207
+            "sizeMB": 216
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E05 - Rencontre du 5° Type (Chameleon).mp4",
+              "name": "S5E05 - Rencontre du 5° Type (Chameleon)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E05%20-%20Rencontre%20du%205%C2%B0%20Type%20(Chameleon).mp4",
+              "seconds": 1270,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 207
+            }
+          ]
         },
         {
           "number": 6,
@@ -4111,8 +4276,21 @@
           "number": 20,
           "name": "From Agnes - With Love",
           "airdate": "1964-02-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E20 - Très Affectueusement, Agnès (From Agnes - With Love).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E20 - Très Affectueusement, Agnès (From Agnes - With Love)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E20%20-%20Tr%C3%A8s%20Affectueusement%2C%20Agn%C3%A8s%20(From%20Agnes%20-%20With%20Love).mp4",
+            "seconds": 1280,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 180
+          },
           "alternates": []
         },
         {
@@ -4155,8 +4333,21 @@
           "number": 22,
           "name": "An Occurrence at Owl Creek Bridge",
           "airdate": "1964-02-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E22 - La Riviere Du Hibou (An Occurrence at Owl Creek Bridge).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E22 - La Riviere Du Hibou (An Occurrence at Owl Creek Bridge)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E22%20-%20La%20Riviere%20Du%20Hibou%20(An%20Occurrence%20at%20Owl%20Creek%20Bridge).mp4",
+            "seconds": 1542,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 249
+          },
           "alternates": []
         },
         {
@@ -4262,22 +4453,37 @@
           "number": 27,
           "name": "Sounds and Silences",
           "airdate": "1964-04-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
-            "why": "S/E in filename",
-            "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
-            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
-            "file": "S5E27 - Le Parcours de Ma Vie (One life, furnished in early poverty).mp4",
-            "name": "S5E27 - Le Parcours de Ma Vie (One life, furnished in early poverty)",
-            "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E27%20-%20Le%20Parcours%20de%20Ma%20Vie%20(One%20life%2C%20furnished%20in%20early%20poverty).mp4",
-            "seconds": 1701,
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E27 - Chut (Sounds and silences).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E27 - Chut (Sounds and silences)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E27%20-%20Chut%20(Sounds%20and%20silences).mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
             "langRisk": true,
-            "sizeMB": 226
+            "sizeMB": 161
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E27 - Le Parcours de Ma Vie (One life, furnished in early poverty).mp4",
+              "name": "S5E27 - Le Parcours de Ma Vie (One life, furnished in early poverty)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E27%20-%20Le%20Parcours%20de%20Ma%20Vie%20(One%20life%2C%20furnished%20in%20early%20poverty).mp4",
+              "seconds": 1701,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 226
+            }
+          ]
         },
         {
           "number": 28,

@@ -3,21 +3,20 @@
   "slug": "zoids-chaotic-century",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.180Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:06.707Z",
   "tvmaze": {
-    "id": null,
+    "id": 18488,
     "name": "Zoids: Chaotic Century",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "1999-09-04",
+    "network": "MBS"
   },
   "coverage": {
-    "total": 140,
-    "live": 0,
-    "review": 140,
-    "missing": 0,
-    "pct": 100
+    "total": 67,
+    "live": 34,
+    "review": 0,
+    "missing": 33,
+    "pct": 51
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "The Boy from Planet Zi",
+          "airdate": "1999-09-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e01.mp4",
@@ -36,21 +38,45 @@
             "seconds": 1333,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 462,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 462
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e35.mp4",
+              "name": "Zoids Chaotic Century - S01e35",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e35.mp4",
+              "seconds": 1335,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 435
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 01.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 01",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2001.mp4",
+              "seconds": 1333,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "The Mysterious Fiona",
+          "airdate": "1999-09-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e02.mp4",
@@ -59,21 +85,45 @@
             "seconds": 1283,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e36.mp4",
+              "name": "Zoids Chaotic Century - S01e36",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e36.mp4",
+              "seconds": 1290,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 438
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 02.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 02",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2002.mp4",
+              "seconds": 1283,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 114
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "Memory",
+          "airdate": "1999-09-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e03.mp4",
@@ -82,21 +132,45 @@
             "seconds": 1346,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 572,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 572
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e37.mp4",
+              "name": "Zoids Chaotic Century - S01e37",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e37.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 359
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 03.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 03",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2003.mp4",
+              "seconds": 1346,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "The Protectors",
+          "airdate": "1999-09-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e04.mp4",
@@ -105,21 +179,45 @@
             "seconds": 1347,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 475,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 475
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e38.mp4",
+              "name": "Zoids Chaotic Century - S01e38",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e38.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 474
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 04.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 04",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2004.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 122
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "Sleeper Trap",
+          "airdate": "1999-10-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e05.mp4",
@@ -128,21 +226,45 @@
             "seconds": 1343,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 379,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 379
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e39.mp4",
+              "name": "Zoids Chaotic Century - S01e39",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e39.mp4",
+              "seconds": 1330,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 438
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 05.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 05",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2005.mp4",
+              "seconds": 1343,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "Jump Zeke!",
+          "airdate": "1999-10-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e06.mp4",
@@ -151,21 +273,45 @@
             "seconds": 1305,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 320,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 320
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e40.mp4",
+              "name": "Zoids Chaotic Century - S01e40",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e40.mp4",
+              "seconds": 1285,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 354
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 06.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 06",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2006.mp4",
+              "seconds": 1305,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "The Battle of Red River",
+          "airdate": "1999-10-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e07.mp4",
@@ -174,21 +320,45 @@
             "seconds": 1334,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 374,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 374
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e41.mp4",
+              "name": "Zoids Chaotic Century - S01e41",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e41.mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 377
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 07.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 07",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2007.mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 106
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "The Road to the Republic",
+          "airdate": "1999-10-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e08.mp4",
@@ -197,21 +367,45 @@
             "seconds": 1293,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 425,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 425
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e42.mp4",
+              "name": "Zoids Chaotic Century - S01e42",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e42.mp4",
+              "seconds": 1357,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 363
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 08.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 08",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2008.mp4",
+              "seconds": 1293,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "The Valley of the Monster",
+          "airdate": "1999-10-30",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e09.mp4",
@@ -220,21 +414,45 @@
             "seconds": 1296,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 437,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 437
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e43.mp4",
+              "name": "Zoids Chaotic Century - S01e43",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e43.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 427
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 09.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 09",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2009.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
+          "name": "The Mountain of Dreams",
+          "airdate": "1999-11-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e10.mp4",
@@ -243,21 +461,45 @@
             "seconds": 1340,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 463,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 463
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e44.mp4",
+              "name": "Zoids Chaotic Century - S01e44",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e44.mp4",
+              "seconds": 1308,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 399
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 10.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 10",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2010.mp4",
+              "seconds": 1340,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
+          "name": "The Fog at Mt. Iselina",
+          "airdate": "1999-11-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e11.mp4",
@@ -266,21 +508,45 @@
             "seconds": 1334,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 346,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 346
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e45.mp4",
+              "name": "Zoids Chaotic Century - S01e45",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e45.mp4",
+              "seconds": 1282,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 292
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 11.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 11",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2011.mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
+          "name": "The Black Organoid",
+          "airdate": "1999-11-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e12.mp4",
@@ -289,21 +555,45 @@
             "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 406,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 406
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e46.mp4",
+              "name": "Zoids Chaotic Century - S01e46",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e46.mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 373
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 12.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 12",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2012.mp4",
+              "seconds": 1337,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 118
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "Episode 13",
-          "state": "REVIEW",
+          "name": "The Battle of Chronos",
+          "airdate": "1999-11-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e13.mp4",
@@ -312,21 +602,45 @@
             "seconds": 1343,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 378,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 378
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e47.mp4",
+              "name": "Zoids Chaotic Century - S01e47",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e47.mp4",
+              "seconds": 1336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 343
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 13.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 13",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2013.mp4",
+              "seconds": 1343,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "Episode 14",
-          "state": "REVIEW",
+          "name": "Wake Up! Zeke",
+          "airdate": "1999-12-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e14.mp4",
@@ -335,21 +649,45 @@
             "seconds": 1344,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 395,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 395
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e48.mp4",
+              "name": "Zoids Chaotic Century - S01e48",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e48.mp4",
+              "seconds": 1391,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 406
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 14.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 14",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2014.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 111
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "Episode 15",
-          "state": "REVIEW",
+          "name": "Deploy the ZG!",
+          "airdate": "1999-12-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e15.mp4",
@@ -358,21 +696,45 @@
             "seconds": 1347,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 378,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 378
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e49.mp4",
+              "name": "Zoids Chaotic Century - S01e49",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e49.mp4",
+              "seconds": 1381,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 354
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 15.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 15",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2015.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
           "number": 16,
-          "name": "Episode 16",
-          "state": "REVIEW",
+          "name": "New Helic City",
+          "airdate": "1999-12-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e16.mp4",
@@ -381,21 +743,45 @@
             "seconds": 1339,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 397,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 397
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e50.mp4",
+              "name": "Zoids Chaotic Century - S01e50",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e50.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 378
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 16.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 16",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2016.mp4",
+              "seconds": 1339,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
           "number": 17,
-          "name": "Episode 17",
-          "state": "REVIEW",
+          "name": "The Longest Night of the Republic",
+          "airdate": "1999-12-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e17.mp4",
@@ -404,21 +790,45 @@
             "seconds": 1345,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 389,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 389
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e51.mp4",
+              "name": "Zoids Chaotic Century - S01e51",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e51.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 339
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 17.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 17",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2017.mp4",
+              "seconds": 1345,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 118
+            }
+          ]
         },
         {
           "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
+          "name": "The Defense of the City",
+          "airdate": "2000-01-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e18.mp4",
@@ -427,21 +837,45 @@
             "seconds": 1346,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 407,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 407
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e52.mp4",
+              "name": "Zoids Chaotic Century - S01e52",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e52.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 453
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 18.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 18",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2018.mp4",
+              "seconds": 1346,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
           "number": 19,
-          "name": "Episode 19",
-          "state": "REVIEW",
+          "name": "Prozan's Conspiracy",
+          "airdate": "2000-01-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e19.mp4",
@@ -450,21 +884,45 @@
             "seconds": 1315,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e53.mp4",
+              "name": "Zoids Chaotic Century - S01e53",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e53.mp4",
+              "seconds": 1303,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 405
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 19.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 19",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2019.mp4",
+              "seconds": 1315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 116
+            }
+          ]
         },
         {
           "number": 20,
-          "name": "Episode 20",
-          "state": "REVIEW",
+          "name": "The Resurrection Monster",
+          "airdate": "2000-01-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e20.mp4",
@@ -473,21 +931,45 @@
             "seconds": 1327,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 407,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 407
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e54.mp4",
+              "name": "Zoids Chaotic Century - S01e54",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e54.mp4",
+              "seconds": 1330,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 449
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 20.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 20",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2020.mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 115
+            }
+          ]
         },
         {
           "number": 21,
-          "name": "Episode 21",
-          "state": "REVIEW",
+          "name": "The Charged Particle Gun",
+          "airdate": "2000-01-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e21.mp4",
@@ -496,21 +978,45 @@
             "seconds": 1347,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 441,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 441
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 21 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e55.mp4",
+              "name": "Zoids Chaotic Century - S01e55",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e55.mp4",
+              "seconds": 1321,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 378
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 21 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 21.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 21",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2021.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
           "number": 22,
-          "name": "Episode 22",
-          "state": "REVIEW",
+          "name": "Farewell to a Friend",
+          "airdate": "2000-02-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e22.mp4",
@@ -519,21 +1025,45 @@
             "seconds": 1326,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 388,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 388
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e56.mp4",
+              "name": "Zoids Chaotic Century - S01e56",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e56.mp4",
+              "seconds": 1385,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 341
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 22.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 22",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2022.mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
           "number": 23,
-          "name": "Episode 23",
-          "state": "REVIEW",
+          "name": "The Imperial Ring",
+          "airdate": "2000-02-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e23.mp4",
@@ -542,21 +1072,45 @@
             "seconds": 1246,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 299,
-            "ep": {
-              "season": 1,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 299
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 23 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e57.mp4",
+              "name": "Zoids Chaotic Century - S01e57",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e57.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 359
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 23 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 23.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 23",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2023.mp4",
+              "seconds": 1246,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 102
+            }
+          ]
         },
         {
           "number": 24,
-          "name": "Episode 24",
-          "state": "REVIEW",
+          "name": "A Voice from Afar",
+          "airdate": "2000-02-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e24.mp4",
@@ -565,21 +1119,45 @@
             "seconds": 1372,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 404,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 404
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 24 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e58.mp4",
+              "name": "Zoids Chaotic Century - S01e58",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e58.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 364
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 24 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 24.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 24",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2024.mp4",
+              "seconds": 1372,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 25,
-          "name": "Episode 25",
-          "state": "REVIEW",
+          "name": "The New Liger",
+          "airdate": "2000-02-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e25.mp4",
@@ -588,21 +1166,45 @@
             "seconds": 1307,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 382,
-            "ep": {
-              "season": 1,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 382
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 25 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e59.mp4",
+              "name": "Zoids Chaotic Century - S01e59",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e59.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 381
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 25 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 25.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 25",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2025.mp4",
+              "seconds": 1307,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
           "number": 26,
-          "name": "Episode 26",
-          "state": "REVIEW",
+          "name": "Memories of Zi",
+          "airdate": "2000-03-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e26.mp4",
@@ -611,21 +1213,45 @@
             "seconds": 1336,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 421,
-            "ep": {
-              "season": 1,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 421
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 26 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e60.mp4",
+              "name": "Zoids Chaotic Century - S01e60",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e60.mp4",
+              "seconds": 1332,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 385
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 26 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 26.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 26",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2026.mp4",
+              "seconds": 1336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 27,
-          "name": "Episode 27",
-          "state": "REVIEW",
+          "name": "The Saviour",
+          "airdate": "2000-03-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e27.mp4",
@@ -634,21 +1260,45 @@
             "seconds": 1304,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 430,
-            "ep": {
-              "season": 1,
-              "episode": 27
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 430
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 27 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e61.mp4",
+              "name": "Zoids Chaotic Century - S01e61",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e61.mp4",
+              "seconds": 1341,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 382
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 27 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 27.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 27",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2027.mp4",
+              "seconds": 1304,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
           "number": 28,
-          "name": "Episode 28",
-          "state": "REVIEW",
+          "name": "Run, Wolf!",
+          "airdate": "2000-03-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e28.mp4",
@@ -657,21 +1307,45 @@
             "seconds": 1294,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 428,
-            "ep": {
-              "season": 1,
-              "episode": 28
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 428
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 28 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e62.mp4",
+              "name": "Zoids Chaotic Century - S01e62",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e62.mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 378
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 28 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 28.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 28",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2028.mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 29,
-          "name": "Episode 29",
-          "state": "REVIEW",
+          "name": "Heroes of the Sky",
+          "airdate": "2000-03-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e29.mp4",
@@ -680,21 +1354,45 @@
             "seconds": 1303,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 397,
-            "ep": {
-              "season": 1,
-              "episode": 29
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 397
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 29 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e63.mp4",
+              "name": "Zoids Chaotic Century - S01e63",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e63.mp4",
+              "seconds": 1364,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 380
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 29 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 29.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 29",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2029.mp4",
+              "seconds": 1303,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
           "number": 30,
-          "name": "Episode 30",
-          "state": "REVIEW",
+          "name": "Moonbay's Waltz",
+          "airdate": "2000-04-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e30.mp4",
@@ -703,21 +1401,45 @@
             "seconds": 1346,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 417,
-            "ep": {
-              "season": 1,
-              "episode": 30
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 417
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 30 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e64.mp4",
+              "name": "Zoids Chaotic Century - S01e64",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e64.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 464
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 30 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 30.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 30",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2030.mp4",
+              "seconds": 1346,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 118
+            }
+          ]
         },
         {
           "number": 31,
-          "name": "Episode 31",
-          "state": "REVIEW",
+          "name": "The Three Guards",
+          "airdate": "2000-04-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e31.mp4",
@@ -726,21 +1448,45 @@
             "seconds": 1339,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 426,
-            "ep": {
-              "season": 1,
-              "episode": 31
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 426
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 31 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e65.mp4",
+              "name": "Zoids Chaotic Century - S01e65",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e65.mp4",
+              "seconds": 1355,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 373
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 31 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 31.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 31",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2031.mp4",
+              "seconds": 1339,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 120
+            }
+          ]
         },
         {
           "number": 32,
-          "name": "Episode 32",
-          "state": "REVIEW",
+          "name": "The Doom Machine",
+          "airdate": "2000-04-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e32.mp4",
@@ -749,21 +1495,45 @@
             "seconds": 1347,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 383,
-            "ep": {
-              "season": 1,
-              "episode": 32
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 383
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 32 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e66.mp4",
+              "name": "Zoids Chaotic Century - S01e66",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e66.mp4",
+              "seconds": 1362,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 487
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 32 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 32.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 32",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2032.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 115
+            }
+          ]
         },
         {
           "number": 33,
-          "name": "Episode 33",
-          "state": "REVIEW",
+          "name": "The Battle for Survival",
+          "airdate": "2000-04-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e33.mp4",
@@ -772,21 +1542,45 @@
             "seconds": 1341,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 513,
-            "ep": {
-              "season": 1,
-              "episode": 33
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 513
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 33 of 33 in \"Zoids Chaotic Century (HD)\"",
+              "item": "zoids-chaotic-century-s-01e-03",
+              "itemTitle": "Zoids Chaotic Century (HD)",
+              "file": "Zoids Chaotic Century - S01e67.mp4",
+              "name": "Zoids Chaotic Century - S01e67",
+              "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e67.mp4",
+              "seconds": 1426,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 510
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 33 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 33.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 33",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2033.mp4",
+              "seconds": 1341,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 34,
-          "name": "Episode 34",
-          "state": "REVIEW",
+          "name": "The Capital Ablaze",
+          "airdate": "2000-04-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "zoids-chaotic-century-s-01e-03",
             "itemTitle": "Zoids Chaotic Century (HD)",
             "file": "Zoids Chaotic Century - S01e34.mp4",
@@ -795,2233 +1589,291 @@
             "seconds": 1344,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 476,
-            "ep": {
-              "season": 1,
-              "episode": 34
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 476
           },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "Episode 35",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e35.mp4",
-            "name": "Zoids Chaotic Century - S01e35",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e35.mp4",
-            "seconds": 1335,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 435,
-            "ep": {
-              "season": 1,
-              "episode": 35
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "Episode 36",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e36.mp4",
-            "name": "Zoids Chaotic Century - S01e36",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e36.mp4",
-            "seconds": 1290,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 438,
-            "ep": {
-              "season": 1,
-              "episode": 36
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "Episode 37",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e37.mp4",
-            "name": "Zoids Chaotic Century - S01e37",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e37.mp4",
-            "seconds": 1325,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 359,
-            "ep": {
-              "season": 1,
-              "episode": 37
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "Episode 38",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e38.mp4",
-            "name": "Zoids Chaotic Century - S01e38",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e38.mp4",
-            "seconds": 1344,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 474,
-            "ep": {
-              "season": 1,
-              "episode": 38
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "Episode 39",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e39.mp4",
-            "name": "Zoids Chaotic Century - S01e39",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e39.mp4",
-            "seconds": 1330,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 438,
-            "ep": {
-              "season": 1,
-              "episode": 39
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "Episode 40",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e40.mp4",
-            "name": "Zoids Chaotic Century - S01e40",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e40.mp4",
-            "seconds": 1285,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 354,
-            "ep": {
-              "season": 1,
-              "episode": 40
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "Episode 41",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e41.mp4",
-            "name": "Zoids Chaotic Century - S01e41",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e41.mp4",
-            "seconds": 1295,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 377,
-            "ep": {
-              "season": 1,
-              "episode": 41
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "Episode 42",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e42.mp4",
-            "name": "Zoids Chaotic Century - S01e42",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e42.mp4",
-            "seconds": 1357,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 363,
-            "ep": {
-              "season": 1,
-              "episode": 42
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "Episode 43",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e43.mp4",
-            "name": "Zoids Chaotic Century - S01e43",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e43.mp4",
-            "seconds": 1360,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 427,
-            "ep": {
-              "season": 1,
-              "episode": 43
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "Episode 44",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e44.mp4",
-            "name": "Zoids Chaotic Century - S01e44",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e44.mp4",
-            "seconds": 1308,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 399,
-            "ep": {
-              "season": 1,
-              "episode": 44
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "Episode 45",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e45.mp4",
-            "name": "Zoids Chaotic Century - S01e45",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e45.mp4",
-            "seconds": 1282,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 292,
-            "ep": {
-              "season": 1,
-              "episode": 45
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "Episode 46",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e46.mp4",
-            "name": "Zoids Chaotic Century - S01e46",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e46.mp4",
-            "seconds": 1334,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 373,
-            "ep": {
-              "season": 1,
-              "episode": 46
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 47,
-          "name": "Episode 47",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e47.mp4",
-            "name": "Zoids Chaotic Century - S01e47",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e47.mp4",
-            "seconds": 1336,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 343,
-            "ep": {
-              "season": 1,
-              "episode": 47
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "Episode 48",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e48.mp4",
-            "name": "Zoids Chaotic Century - S01e48",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e48.mp4",
-            "seconds": 1391,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 406,
-            "ep": {
-              "season": 1,
-              "episode": 48
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "Episode 49",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e49.mp4",
-            "name": "Zoids Chaotic Century - S01e49",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e49.mp4",
-            "seconds": 1381,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 354,
-            "ep": {
-              "season": 1,
-              "episode": 49
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "Episode 50",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e50.mp4",
-            "name": "Zoids Chaotic Century - S01e50",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e50.mp4",
-            "seconds": 1348,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 378,
-            "ep": {
-              "season": 1,
-              "episode": 50
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "Episode 51",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e51.mp4",
-            "name": "Zoids Chaotic Century - S01e51",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e51.mp4",
-            "seconds": 1369,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 339,
-            "ep": {
-              "season": 1,
-              "episode": 51
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "Episode 52",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e52.mp4",
-            "name": "Zoids Chaotic Century - S01e52",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e52.mp4",
-            "seconds": 1325,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 453,
-            "ep": {
-              "season": 1,
-              "episode": 52
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "Episode 53",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e53.mp4",
-            "name": "Zoids Chaotic Century - S01e53",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e53.mp4",
-            "seconds": 1303,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 405,
-            "ep": {
-              "season": 1,
-              "episode": 53
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "Episode 54",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e54.mp4",
-            "name": "Zoids Chaotic Century - S01e54",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e54.mp4",
-            "seconds": 1330,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 449,
-            "ep": {
-              "season": 1,
-              "episode": 54
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 55,
-          "name": "Episode 55",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e55.mp4",
-            "name": "Zoids Chaotic Century - S01e55",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e55.mp4",
-            "seconds": 1321,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 378,
-            "ep": {
-              "season": 1,
-              "episode": 55
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "Episode 56",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e56.mp4",
-            "name": "Zoids Chaotic Century - S01e56",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e56.mp4",
-            "seconds": 1385,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 341,
-            "ep": {
-              "season": 1,
-              "episode": 56
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 57,
-          "name": "Episode 57",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e57.mp4",
-            "name": "Zoids Chaotic Century - S01e57",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e57.mp4",
-            "seconds": 1348,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 359,
-            "ep": {
-              "season": 1,
-              "episode": 57
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "Episode 58",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e58.mp4",
-            "name": "Zoids Chaotic Century - S01e58",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e58.mp4",
-            "seconds": 1365,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 364,
-            "ep": {
-              "season": 1,
-              "episode": 58
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 59,
-          "name": "Episode 59",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e59.mp4",
-            "name": "Zoids Chaotic Century - S01e59",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e59.mp4",
-            "seconds": 1354,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 381,
-            "ep": {
-              "season": 1,
-              "episode": 59
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "Episode 60",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e60.mp4",
-            "name": "Zoids Chaotic Century - S01e60",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e60.mp4",
-            "seconds": 1332,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 385,
-            "ep": {
-              "season": 1,
-              "episode": 60
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "Episode 61",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e61.mp4",
-            "name": "Zoids Chaotic Century - S01e61",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e61.mp4",
-            "seconds": 1341,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 382,
-            "ep": {
-              "season": 1,
-              "episode": 61
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Episode 62",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e62.mp4",
-            "name": "Zoids Chaotic Century - S01e62",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e62.mp4",
-            "seconds": 1356,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 378,
-            "ep": {
-              "season": 1,
-              "episode": 62
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Episode 63",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e63.mp4",
-            "name": "Zoids Chaotic Century - S01e63",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e63.mp4",
-            "seconds": 1364,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 380,
-            "ep": {
-              "season": 1,
-              "episode": 63
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "Episode 64",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e64.mp4",
-            "name": "Zoids Chaotic Century - S01e64",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e64.mp4",
-            "seconds": 1366,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 464,
-            "ep": {
-              "season": 1,
-              "episode": 64
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "Episode 65",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e65.mp4",
-            "name": "Zoids Chaotic Century - S01e65",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e65.mp4",
-            "seconds": 1355,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 373,
-            "ep": {
-              "season": 1,
-              "episode": 65
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "Episode 66",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e66.mp4",
-            "name": "Zoids Chaotic Century - S01e66",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e66.mp4",
-            "seconds": 1362,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 487,
-            "ep": {
-              "season": 1,
-              "episode": 66
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 67,
-          "name": "Episode 67",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century-s-01e-03",
-            "itemTitle": "Zoids Chaotic Century (HD)",
-            "file": "Zoids Chaotic Century - S01e67.mp4",
-            "name": "Zoids Chaotic Century - S01e67",
-            "url": "https://archive.org/download/zoids-chaotic-century-s-01e-03/Zoids%20Chaotic%20Century%20-%20S01e67.mp4",
-            "seconds": 1426,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 510,
-            "ep": {
-              "season": 1,
-              "episode": 67
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 68,
-          "name": "Episode 68",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 01.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 01",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2001.mp4",
-            "seconds": 1333,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 129,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 69,
-          "name": "Episode 69",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 02.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 02",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2002.mp4",
-            "seconds": 1283,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 114,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 70,
-          "name": "Episode 70",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 03.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 03",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2003.mp4",
-            "seconds": 1346,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 138,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 71,
-          "name": "Episode 71",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 04.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 04",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2004.mp4",
-            "seconds": 1347,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 72,
-          "name": "Episode 72",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 05.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 05",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2005.mp4",
-            "seconds": 1343,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 73,
-          "name": "Episode 73",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 06.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 06",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2006.mp4",
-            "seconds": 1305,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 103,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 74,
-          "name": "Episode 74",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 07.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 07",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2007.mp4",
-            "seconds": 1334,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 106,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 75,
-          "name": "Episode 75",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 08.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 08",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2008.mp4",
-            "seconds": 1293,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 76,
-          "name": "Episode 76",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 09.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 09",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2009.mp4",
-            "seconds": 1296,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 77,
-          "name": "Episode 77",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 10.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 10",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2010.mp4",
-            "seconds": 1340,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 78,
-          "name": "Episode 78",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 11.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 11",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2011.mp4",
-            "seconds": 1334,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 103,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 79,
-          "name": "Episode 79",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 12.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 12",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2012.mp4",
-            "seconds": 1337,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 80,
-          "name": "Episode 80",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 13.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 13",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2013.mp4",
-            "seconds": 1343,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 81,
-          "name": "Episode 81",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 14.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 14",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2014.mp4",
-            "seconds": 1344,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 111,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "Episode 82",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 15.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 15",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2015.mp4",
-            "seconds": 1347,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 83,
-          "name": "Episode 83",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 16.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 16",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2016.mp4",
-            "seconds": 1339,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 84,
-          "name": "Episode 84",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 17.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 17",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2017.mp4",
-            "seconds": 1345,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 85,
-          "name": "Episode 85",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 18.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 18",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2018.mp4",
-            "seconds": 1346,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 86,
-          "name": "Episode 86",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 19.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 19",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2019.mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 116,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "Episode 87",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 20.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 20",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2020.mp4",
-            "seconds": 1327,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 115,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 88,
-          "name": "Episode 88",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 21.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 21",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2021.mp4",
-            "seconds": 1347,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 89,
-          "name": "Episode 89",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 22.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 22",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2022.mp4",
-            "seconds": 1326,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 90,
-          "name": "Episode 90",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 23.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 23",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2023.mp4",
-            "seconds": 1246,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 102,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 91,
-          "name": "Episode 91",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 24.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 24",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2024.mp4",
-            "seconds": 1372,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 92,
-          "name": "Episode 92",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 25.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 25",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2025.mp4",
-            "seconds": 1307,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 93,
-          "name": "Episode 93",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 26.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 26",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2026.mp4",
-            "seconds": 1336,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 94,
-          "name": "Episode 94",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 27.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 27",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2027.mp4",
-            "seconds": 1304,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 95,
-          "name": "Episode 95",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 28.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 28",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2028.mp4",
-            "seconds": 1294,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 129,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 96,
-          "name": "Episode 96",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 29.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 29",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2029.mp4",
-            "seconds": 1303,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 97,
-          "name": "Episode 97",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 30.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 30",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2030.mp4",
-            "seconds": 1346,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 98,
-          "name": "Episode 98",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 31.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 31",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2031.mp4",
-            "seconds": 1339,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 120,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 99,
-          "name": "Episode 99",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 32.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 32",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2032.mp4",
-            "seconds": 1347,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 115,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 100,
-          "name": "Episode 100",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 33.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 33",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2033.mp4",
-            "seconds": 1341,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 101,
-          "name": "Episode 101",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 34.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 34",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2034.mp4",
-            "seconds": 1344,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 146,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 102,
-          "name": "Episode 102",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 35.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 35",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2035.mp4",
-            "seconds": 1335,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 103,
-          "name": "Episode 103",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 36.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 36",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2036.mp4",
-            "seconds": 1290,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 104,
-          "name": "Episode 104",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 37.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 37",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2037.mp4",
-            "seconds": 1325,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 107,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 105,
-          "name": "Episode 105",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 38.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 38",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2038.mp4",
-            "seconds": 1344,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 34 of 67 in \"Zoids Chaotic Century\"",
+              "item": "zoids-chaotic-century",
+              "itemTitle": "Zoids Chaotic Century",
+              "file": "Zoids Chaotic Century/Zoids Chaotic Century - 34.mp4",
+              "name": "Zoids Chaotic Century/Zoids Chaotic Century - 34",
+              "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2034.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
         {
-          "number": 106,
-          "name": "Episode 106",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 39.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 39",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2039.mp4",
-            "seconds": 1330,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 130,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 107,
-          "name": "Episode 107",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 40.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 40",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2040.mp4",
-            "seconds": 1285,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 1,
+          "name": "The Secret Mission",
+          "airdate": "2000-05-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 108,
-          "name": "Episode 108",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 41.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 41",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2041.mp4",
-            "seconds": 1295,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 109,
-          "name": "Episode 109",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 42.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 42",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2042.mp4",
-            "seconds": 1357,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "The Sniper",
+          "airdate": "2000-05-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 110,
-          "name": "Episode 110",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 43.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 43",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2043.mp4",
-            "seconds": 1360,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 115,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "The Blue Devil",
+          "airdate": "2000-05-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 111,
-          "name": "Episode 111",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 44.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 44",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2044.mp4",
-            "seconds": 1308,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "The Steel Bison",
+          "airdate": "2000-05-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 112,
-          "name": "Episode 112",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 45.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 45",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2045.mp4",
-            "seconds": 1282,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 100,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "The Invisible enemy",
+          "airdate": "2000-06-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 113,
-          "name": "Episode 113",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 46.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 46",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2046.mp4",
-            "seconds": 1334,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "The Zoid Hunters",
+          "airdate": "2000-06-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 114,
-          "name": "Episode 114",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 47.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 47",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2047.mp4",
-            "seconds": 1336,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 7,
+          "name": "The Devil's Maze",
+          "airdate": "2000-06-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 115,
-          "name": "Episode 115",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 48.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 48",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2048.mp4",
-            "seconds": 1391,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 8,
+          "name": "Raven",
+          "airdate": "2000-06-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 116,
-          "name": "Episode 116",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 49.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 49",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2049.mp4",
-            "seconds": 1381,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 112,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 9,
+          "name": "The Emperor's Holiday",
+          "airdate": "2000-07-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 117,
-          "name": "Episode 117",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 50.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 50",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2050.mp4",
-            "seconds": 1348,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 109,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 10,
+          "name": "Assault of the Mega-Monster",
+          "airdate": "2000-07-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 118,
-          "name": "Episode 118",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 51.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 51",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2051.mp4",
-            "seconds": 1369,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 103,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 11,
+          "name": "The Wings of Darkness",
+          "airdate": "2000-07-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 119,
-          "name": "Episode 119",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 52.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 52",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2052.mp4",
-            "seconds": 1325,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 12,
+          "name": "Devil of the Sea",
+          "airdate": "2000-10-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 120,
-          "name": "Episode 120",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 53.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 53",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2053.mp4",
-            "seconds": 1303,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 13,
+          "name": "A Monster Awakens",
+          "airdate": "2000-07-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 121,
-          "name": "Episode 121",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 54.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 54",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2054.mp4",
-            "seconds": 1330,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 132,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 14,
+          "name": "The Black Lightning",
+          "airdate": "2000-08-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 122,
-          "name": "Episode 122",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 55.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 55",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2055.mp4",
-            "seconds": 1321,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 15,
+          "name": "The Distant Stars",
+          "airdate": "2000-08-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 123,
-          "name": "Episode 123",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 56.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 56",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2056.mp4",
-            "seconds": 1385,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 107,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 16,
+          "name": "Attack of the Geno Breaker",
+          "airdate": "2000-08-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 124,
-          "name": "Episode 124",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 57.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 57",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2057.mp4",
-            "seconds": 1348,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 112,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 17,
+          "name": "The Boy from the Ruins",
+          "airdate": "2000-08-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 125,
-          "name": "Episode 125",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 58.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 58",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2058.mp4",
-            "seconds": 1365,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 110,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 18,
+          "name": "Van's New Power",
+          "airdate": "2000-09-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 126,
-          "name": "Episode 126",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 59.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 59",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2059.mp4",
-            "seconds": 1354,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 19,
+          "name": "Phantom",
+          "airdate": "2000-09-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 127,
-          "name": "Episode 127",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 60.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 60",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2060.mp4",
-            "seconds": 1332,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 114,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 20,
+          "name": "G-File",
+          "airdate": "2000-09-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 128,
-          "name": "Episode 128",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 61.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 61",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2061.mp4",
-            "seconds": 1341,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 21,
+          "name": "Supersonic Battle",
+          "airdate": "2000-09-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 129,
-          "name": "Episode 129",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 62.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 62",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2062.mp4",
-            "seconds": 1356,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 111,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 22,
+          "name": "Cerberus",
+          "airdate": "2000-10-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 130,
-          "name": "Episode 130",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 63.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 63",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2063.mp4",
-            "seconds": 1364,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 116,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 23,
+          "name": "The Nightmare",
+          "airdate": "2000-10-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 131,
-          "name": "Episode 131",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 64.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 64",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2064.mp4",
-            "seconds": 1366,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 24,
+          "name": "Attack of the Winged Dragons",
+          "airdate": "2000-10-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 132,
-          "name": "Episode 132",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 65.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 65",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2065.mp4",
-            "seconds": 1355,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 25,
+          "name": "The Capital Collapses",
+          "airdate": "2000-10-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 133,
-          "name": "Episode 133",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 66.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 66",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2066.mp4",
-            "seconds": 1362,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 134,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 26,
+          "name": "The Giant Fortress",
+          "airdate": "2000-11-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 134,
-          "name": "Episode 134",
-          "state": "REVIEW",
-          "file": {
-            "item": "zoids-chaotic-century",
-            "itemTitle": "Zoids Chaotic Century",
-            "file": "Zoids Chaotic Century/Zoids Chaotic Century - 67.mp4",
-            "name": "Zoids Chaotic Century/Zoids Chaotic Century - 67",
-            "url": "https://archive.org/download/zoids-chaotic-century/Zoids%20Chaotic%20Century%2FZoids%20Chaotic%20Century%20-%2067.mp4",
-            "seconds": 1426,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 27,
+          "name": "The Great Sea Battle",
+          "airdate": "2000-11-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 135,
-          "name": "Episode 135",
-          "state": "REVIEW",
-          "file": {
-            "item": "Zoids_Chaotic_Century_Ep_1",
-            "itemTitle": "Zoids_Chaotic_Century_Ep_1",
-            "file": "zoids_chaotic_century_ep1.mp4",
-            "name": "zoids_chaotic_century_ep1",
-            "url": "https://archive.org/download/Zoids_Chaotic_Century_Ep_1/zoids_chaotic_century_ep1.mp4",
-            "seconds": 1358,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 28,
+          "name": "The Gravity Cannon",
+          "airdate": "2000-11-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 136,
-          "name": "Episode 136",
-          "state": "REVIEW",
-          "file": {
-            "item": "Zoids_Chaotic_Century_Ep_2",
-            "itemTitle": "Zoids_Chaotic_Century_Ep_2",
-            "file": "zoids_chaotic_century_ep2.mp4",
-            "name": "zoids_chaotic_century_ep2",
-            "url": "https://archive.org/download/Zoids_Chaotic_Century_Ep_2/zoids_chaotic_century_ep2.mp4",
-            "seconds": 1307,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 134,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 29,
+          "name": "The Final Battle",
+          "airdate": "2000-11-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 137,
-          "name": "Episode 137",
-          "state": "REVIEW",
-          "file": {
-            "item": "Zoids_Chaotic_Century_Ep_3",
-            "itemTitle": "Zoids_Chaotic_Century_Ep_3",
-            "file": "zoids_chaotic_century_ep3.mp4",
-            "name": "zoids_chaotic_century_ep3",
-            "url": "https://archive.org/download/Zoids_Chaotic_Century_Ep_3/zoids_chaotic_century_ep3.mp4",
-            "seconds": 1223,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 30,
+          "name": "The Ancient Memory",
+          "airdate": "2000-12-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 138,
-          "name": "Episode 138",
-          "state": "REVIEW",
-          "file": {
-            "item": "Zoids_Chaotic_Century_Ep_4",
-            "itemTitle": "Zoids_Chaotic_Century_Ep_4",
-            "file": "zoids_chaotic_century_ep4.mp4",
-            "name": "zoids_chaotic_century_ep4",
-            "url": "https://archive.org/download/Zoids_Chaotic_Century_Ep_4/zoids_chaotic_century_ep4.mp4",
-            "seconds": 1291,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 31,
+          "name": "The Zoid Eve",
+          "airdate": "2000-12-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 139,
-          "name": "Episode 139",
-          "state": "REVIEW",
-          "file": {
-            "item": "Zoids_Chaotic_Century_Ep_5",
-            "itemTitle": "Zoids_Chaotic_Century_Ep_5",
-            "file": "zoids_chaotic_century_ep5.mp4",
-            "name": "zoids_chaotic_century_ep5",
-            "url": "https://archive.org/download/Zoids_Chaotic_Century_Ep_5/zoids_chaotic_century_ep5.mp4",
-            "seconds": 1278,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 32,
+          "name": "The Moment of Annihilation",
+          "airdate": "2000-12-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 140,
-          "name": "Episode 140",
-          "state": "REVIEW",
-          "file": {
-            "item": "Zoids_Chaotic_Century_ep_7",
-            "itemTitle": "Zoids_Chaotic_Century_ep_7",
-            "file": "zoids_chaotic_century_ep7.mp4",
-            "name": "zoids_chaotic_century_ep7",
-            "url": "https://archive.org/download/Zoids_Chaotic_Century_ep_7/zoids_chaotic_century_ep7.mp4",
-            "seconds": 1280,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 33,
+          "name": "Return to Another Tomorrow",
+          "airdate": "2000-12-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

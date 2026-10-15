@@ -3,21 +3,20 @@
   "slug": "when-life-gives-you-tangerines",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.309Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:11.126Z",
   "tvmaze": {
-    "id": null,
+    "id": 74399,
     "name": "When Life Gives You Tangerines",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 62,
+    "premiered": "2025-03-07",
+    "network": "Netflix"
   },
   "coverage": {
     "total": 16,
-    "live": 0,
-    "review": 16,
-    "missing": 0,
-    "pct": 100
+    "live": 15,
+    "review": 0,
+    "missing": 1,
+    "pct": 94
   },
   "seasons": [
     {
@@ -25,101 +24,230 @@
       "episodes": [
         {
           "number": 1,
-          "name": "nf mkvdrama",
-          "state": "REVIEW",
+          "name": "Spring in a Heartbeat",
+          "airdate": "2025-03-07",
+          "state": "LIVE",
           "file": {
-            "item": "when.-life.-gives.-you.-tangerines.-s-01e-01.-nf.-x-264.540-p-mkvdrama.-org",
-            "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 01",
-            "file": "When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
-            "name": "When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P[Mkvdrama",
-            "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-01.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
-            "seconds": 3454,
-            "format": "h.264 IA",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
+            "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
+            "file": "When.Life.Gives.You.Tangerines.S01E01.Spring.in.a.Heartbeat.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
+            "name": "When.Life.Gives.You.Tangerines.S01E01.Spring.in.a.Heartbeat.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO",
+            "url": "https://archive.org/download/when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264/When.Life.Gives.You.Tangerines.S01E01.Spring.in.a.Heartbeat.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
+            "seconds": 3453,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 426,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "codecRisk": "audio (DDP5)",
+            "sizeMB": 338
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-01.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 01",
+              "file": "When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P[Mkvdrama",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-01.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+              "seconds": 3454,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 426
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-01.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 01",
+              "file": "When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P[Mkvdrama.Org].mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P[Mkvdrama.Org]",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-01.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e01.Nf.X264.540P%5BMkvdrama.Org%5D.mp4",
+              "seconds": 3454,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 426
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when-life-gives-you-tangerines-s-01-e-01-by-shubham",
+              "itemTitle": "When Life Gives You Tangerines S 01 E 01 By Shubham",
+              "file": "When Life Gives You Tangerines S01E01 by shubham.mp4",
+              "name": "When Life Gives You Tangerines S01E01 by shubham",
+              "url": "https://archive.org/download/when-life-gives-you-tangerines-s-01-e-01-by-shubham/When%20Life%20Gives%20You%20Tangerines%20S01E01%20by%20shubham.mp4",
+              "seconds": 3453,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 334
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "nf mkvdrama",
-          "state": "REVIEW",
+          "name": "Sassy First Love",
+          "airdate": "2025-03-07",
+          "state": "LIVE",
           "file": {
-            "item": "when.-life.-gives.-you.-tangerines.-s-01e-02.-nf.-x-264.540-p-mkvdrama.-org",
-            "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 02",
-            "file": "When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
-            "name": "When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P[Mkvdrama",
-            "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-02.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
+            "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
+            "file": "When.Life.Gives.You.Tangerines.S01E02.Sassy.First.Love.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
+            "name": "When.Life.Gives.You.Tangerines.S01E02.Sassy.First.Love.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO",
+            "url": "https://archive.org/download/when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264/When.Life.Gives.You.Tangerines.S01E02.Sassy.First.Love.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
             "seconds": 3245,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 360,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "codecRisk": "audio (DDP5)",
+            "sizeMB": 311
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-02.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 02",
+              "file": "When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P[Mkvdrama",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-02.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+              "seconds": 3245,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 360
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-02.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 02",
+              "file": "When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P[Mkvdrama.Org].mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P[Mkvdrama.Org]",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-02.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e02.Nf.X264.540P%5BMkvdrama.Org%5D.mp4",
+              "seconds": 3245,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 360
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when-life-gives-you-tangerines-s-01-e-02-by-shubham",
+              "itemTitle": "When Life Gives You Tangerines S 01 E 02 By Shubham",
+              "file": "When Life Gives You Tangerines S01E02 by Shubham.mp4",
+              "name": "When Life Gives You Tangerines S01E02 by Shubham",
+              "url": "https://archive.org/download/when-life-gives-you-tangerines-s-01-e-02-by-shubham/When%20Life%20Gives%20You%20Tangerines%20S01E02%20by%20Shubham.mp4",
+              "seconds": 3245,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 311
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "nf mkvdrama",
-          "state": "REVIEW",
+          "name": "Yesterday Was Your Spring",
+          "airdate": "2025-03-07",
+          "state": "LIVE",
           "file": {
-            "item": "when.-life.-gives.-you.-tangerines.-s-01e-03.-nf.-x-264.540-p-mkvdrama.-org",
-            "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 03. Nf. X 264.540 P[ Mkvdrama. Org]",
-            "file": "When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
-            "name": "When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P[Mkvdrama",
-            "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-03.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
+            "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
+            "file": "When.Life.Gives.You.Tangerines.S01E03.Yesterday.Was.Your.Spring.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
+            "name": "When.Life.Gives.You.Tangerines.S01E03.Yesterday.Was.Your.Spring.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO",
+            "url": "https://archive.org/download/when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264/When.Life.Gives.You.Tangerines.S01E03.Yesterday.Was.Your.Spring.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
             "seconds": 3794,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "codecRisk": "audio (DDP5)",
+            "sizeMB": 367
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-03.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 03. Nf. X 264.540 P[ Mkvdrama. Org]",
+              "file": "When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P[Mkvdrama",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-03.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+              "seconds": 3794,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 414
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-03.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 03. Nf. X 264.540 P[ Mkvdrama. Org]",
+              "file": "When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P[Mkvdrama.Org].mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P[Mkvdrama.Org]",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-03.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e03.Nf.X264.540P%5BMkvdrama.Org%5D.mp4",
+              "seconds": 3794,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 414
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "nf mkvdrama",
-          "state": "REVIEW",
+          "name": "The Blazing Summer Sunshine",
+          "airdate": "2025-03-07",
+          "state": "LIVE",
           "file": {
-            "item": "when.-life.-gives.-you.-tangerines.-s-01e-04.-nf.-x-264.540-p-mkvdrama.-org",
-            "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 04.",
-            "file": "When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
-            "name": "When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P[Mkvdrama",
-            "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-04.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
+            "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
+            "file": "When.Life.Gives.You.Tangerines.S01E04.The.Blazing.Summer.Sunshine.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
+            "name": "When.Life.Gives.You.Tangerines.S01E04.The.Blazing.Summer.Sunshine.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO",
+            "url": "https://archive.org/download/when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264/When.Life.Gives.You.Tangerines.S01E04.The.Blazing.Summer.Sunshine.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
             "seconds": 3578,
-            "format": "h.264 IA",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 426,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "codecRisk": "audio (DDP5)",
+            "sizeMB": 347
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-04.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 04.",
+              "file": "When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P[Mkvdrama.Org].ia.mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P[Mkvdrama",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-04.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P%5BMkvdrama.Org%5D.ia.mp4",
+              "seconds": 3578,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 426
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "when.-life.-gives.-you.-tangerines.-s-01e-04.-nf.-x-264.540-p-mkvdrama.-org",
+              "itemTitle": "When. Life. Gives. You. Tangerines. S 01e 04.",
+              "file": "When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P[Mkvdrama.Org].mp4",
+              "name": "When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P[Mkvdrama.Org]",
+              "url": "https://archive.org/download/when.-life.-gives.-you.-tangerines.-s-01e-04.-nf.-x-264.540-p-mkvdrama.-org/When.Life.Gives.You.Tangerines.S01e04.Nf.X264.540P%5BMkvdrama.Org%5D.mp4",
+              "seconds": 3578,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 426
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "a midsummer nights full nets nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "A Midsummer Night's Full Nets",
+          "airdate": "2025-03-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E05.A.Midsummer.Nights.Full.Nets.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -129,21 +257,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 362,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 362
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "goes on and on nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "Life Goes On and On",
+          "airdate": "2025-03-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E06.Life.Goes.On.and.On.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -153,21 +278,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 335,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 335
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "a fruitful fall nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "A Fruitful Fall",
+          "airdate": "2025-03-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E07.A.Fruitful.Fall.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -177,21 +299,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 371,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 371
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the moon wanes yet the young heart remains nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "The Moon Wanes, Yet the Young Heart Remains",
+          "airdate": "2025-03-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E08.The.Moon.Wanes.Yet.the.Young.Heart.Remains.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -201,21 +320,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 364,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 364
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "the wind goes whoosh my heart goes boo hoo nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "The Wind Goes Whoosh, My Heart Goes Boo-Hoo",
+          "airdate": "2025-03-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E09.The.Wind.Goes.Whoosh.My.Heart.Goes.Boo-Hoo.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -225,21 +341,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 281,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 281
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the storm sweeps my heart the love rocks my heart nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "The Storm Sweeps My Heart, the Love Rocks My Heart",
+          "airdate": "2025-03-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E10.The.Storm.Sweeps.My.Heart.the.Love.Rocks.My.Heart.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -249,21 +362,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 330,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 330
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "my love by my side nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "My Love by My Side",
+          "airdate": "2025-03-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E11.My.Love.by.My.Side.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -273,21 +383,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 368,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 368
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "a glistening winter nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "A Glistening Winter",
+          "airdate": "2025-03-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E12.A.Glistening.Winter.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -297,21 +404,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 341,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 341
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "such an uneven love nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "Such an Uneven Love",
+          "airdate": "2025-03-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E13.Such.an.Uneven.Love.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -321,21 +425,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 359,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 359
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "spread your wings and fly nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "Spread Your Wings and Fly",
+          "airdate": "2025-03-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E14.Spread.Your.Wings.and.Fly.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -345,21 +446,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 378,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 378
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "a spring every day nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
+          "name": "A Spring Every Day",
+          "airdate": "2025-03-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
             "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
             "file": "When.Life.Gives.You.Tangerines.S01E15.A.Spring.Every.Day.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
@@ -369,38 +467,16 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (DDP5)",
-            "sizeMB": 403,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 403
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "heres to all youve been through nf ddp5 1 atmos h hbo",
-          "state": "REVIEW",
-          "file": {
-            "item": "when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264",
-            "itemTitle": "When Life Gives You Tangerines (Khi cuộc đời cho bạn quả quýt) (2025) S01 NF WEB-DL DDP5 1 Atmos H264",
-            "file": "When.Life.Gives.You.Tangerines.S01E16.Heres.to.All.Youve.Been.Through.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
-            "name": "When.Life.Gives.You.Tangerines.S01E16.Heres.to.All.Youve.Been.Through.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO",
-            "url": "https://archive.org/download/when-life-gives-you-tangerines-s01-1080p-2160p-nf-web-dl-ddp5-1-atmos-h264/When.Life.Gives.You.Tangerines.S01E16.Heres.to.All.Youve.Been.Through.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-HBO.mp4",
-            "seconds": 5134,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "audio (DDP5)",
-            "sizeMB": 500,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Here’s to All You’ve Been Through",
+          "airdate": "2025-03-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

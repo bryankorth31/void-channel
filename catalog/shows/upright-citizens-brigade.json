@@ -3,7 +3,7 @@
   "slug": "upright-citizens-brigade",
   "type": "Sketch and Comedy",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-15T01:19:44.234Z",
+  "matchedAt": "2026-10-15T03:18:57.597Z",
   "tvmaze": {
     "id": 6250,
     "name": "Upright Citizens Brigade",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 30,
-    "live": 6,
-    "review": 14,
+    "live": 7,
+    "review": 13,
     "missing": 10,
     "pct": 67
   },
@@ -356,33 +356,33 @@
           "number": 3,
           "name": "Hospital",
           "airdate": "2000-01-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-tv-series-1998-2000",
-            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
-            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital.mp4",
-            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital",
-            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20303%20%2B%20Hospital.mp4",
-            "seconds": 1335,
+            "item": "upright-citizens-brigade-303-hospital",
+            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 3 - \"Hospital\"",
+            "file": "Upright Citizens Brigade 303 - Hospital.mp4",
+            "name": "Upright Citizens Brigade 303 - Hospital",
+            "url": "https://archive.org/download/upright-citizens-brigade-303-hospital/Upright%20Citizens%20Brigade%20303%20-%20Hospital.mp4",
+            "seconds": 1316,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 131
+            "sizeMB": 128
           },
           "alternates": [
             {
               "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "upright-citizens-brigade-303-hospital",
-              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 3 - \"Hospital\"",
-              "file": "Upright Citizens Brigade 303 - Hospital.mp4",
-              "name": "Upright Citizens Brigade 303 - Hospital",
-              "url": "https://archive.org/download/upright-citizens-brigade-303-hospital/Upright%20Citizens%20Brigade%20303%20-%20Hospital.mp4",
-              "seconds": 1316,
+              "item": "upright-citizens-brigade-tv-series-1998-2000",
+              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital.mp4",
+              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital",
+              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20303%20%2B%20Hospital.mp4",
+              "seconds": 1335,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 128
+              "sizeMB": 131
             }
           ]
         },

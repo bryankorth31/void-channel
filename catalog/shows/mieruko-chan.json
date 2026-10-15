@@ -3,19 +3,18 @@
   "slug": "mieruko-chan",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.176Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:06.608Z",
   "tvmaze": {
-    "id": null,
+    "id": 57762,
     "name": "Mieruko-chan",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2021-10-03",
+    "network": "AT-X"
   },
   "coverage": {
-    "total": 25,
-    "live": 0,
-    "review": 25,
+    "total": 12,
+    "live": 12,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "Can You See Them?",
+          "airdate": "2021-10-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E01.mp4",
@@ -36,21 +38,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-01.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-01",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-01.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "She Totally Sees Them",
+          "airdate": "2021-10-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E02.mp4",
@@ -59,21 +72,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 175,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 175
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-02.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-02",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-02.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "She Still Sees Them",
+          "airdate": "2021-10-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E03.mp4",
@@ -82,21 +106,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 173,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 173
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-03.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-03",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-03.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "Yep, She Sees Them",
+          "airdate": "2021-10-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E04.mp4",
@@ -105,21 +140,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-04.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-04",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-04.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "I See Them, Too",
+          "airdate": "2021-10-31",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E05.mp4",
@@ -128,21 +174,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 142,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-05.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-05",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-05.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "She Sees Real Crazy Ones",
+          "airdate": "2021-11-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E06.mp4",
@@ -151,21 +208,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 196,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 196
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-06.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-06",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-06.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "Did You See That?",
+          "airdate": "2021-11-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E07.mp4",
@@ -174,21 +242,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 160,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 160
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-07.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-07",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-07.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "The Things She Sees",
+          "airdate": "2021-11-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E08.mp4",
@@ -197,21 +276,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 159,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 159
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-08.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-08",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-08.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "Things She's Seen Before",
+          "airdate": "2021-11-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E09.mp4",
@@ -220,21 +310,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 150,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-09.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-09",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-09.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
+          "name": "Don't Look",
+          "airdate": "2021-12-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E10.mp4",
@@ -243,21 +344,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 153,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 153
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-10.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-10",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-10.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
+          "name": "She Looks",
+          "airdate": "2021-12-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E11.mp4",
@@ -266,21 +378,32 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 144
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-11.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-11",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-11.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
+          "name": "Mieruko-chan: The Girl Who Sees",
+          "airdate": "2021-12-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mieruko_chan",
             "itemTitle": "Mieruko-chan (ENG SUB) (2021)",
             "file": "S01E12.mp4",
@@ -289,275 +412,23 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "locura anime mch4an 01",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-01.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-01",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-01.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "locura anime mch4an 02",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-02.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-02",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-02.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 135,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "locura anime mch4an 03",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-03.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-03",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-03.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 138,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "locura anime mch4an 04",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-04.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-04",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-04.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 138,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "locura anime mch4an 05",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-05.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-05",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-05.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "locura anime mch4an 06",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-06.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-06",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-06.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 135,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "locura anime mch4an 07",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-07.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-07",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-07.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "locura anime mch4an 08",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-08.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-08",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-08.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "locura anime mch4an 09",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-09.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-09",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-09.mp4",
-            "seconds": 1430,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "locura anime mch4an 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-10.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-10",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-10.mp4",
-            "seconds": 1430,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "locura anime mch4an 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-11.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-11",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-11.mp4",
-            "seconds": 1430,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "locura anime mch4an 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan",
-            "itemTitle": "Mieruko chan",
-            "file": "Mieruko chan/(Locura Anime) MCh4an-12.mp4",
-            "name": "Mieruko chan/(Locura Anime) MCh4an-12",
-            "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-12.mp4",
-            "seconds": 1450,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "06 lektor pl",
-          "state": "REVIEW",
-          "file": {
-            "item": "mieruko-chan-06-lektor-pl",
-            "itemTitle": "Mieruko Chan 06 Lektor Pl",
-            "file": "Mieruko-chan - 06 Lektor Pl.mp4",
-            "name": "Mieruko-chan - 06 Lektor Pl",
-            "url": "https://archive.org/download/mieruko-chan-06-lektor-pl/Mieruko-chan%20-%2006%20Lektor%20Pl.mp4",
-            "seconds": 1441,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 535,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"Mieruko chan\"",
+              "item": "mieruko-chan",
+              "itemTitle": "Mieruko chan",
+              "file": "Mieruko chan/(Locura Anime) MCh4an-12.mp4",
+              "name": "Mieruko chan/(Locura Anime) MCh4an-12",
+              "url": "https://archive.org/download/mieruko-chan/Mieruko%20chan%2F(Locura%20Anime)%20MCh4an-12.mp4",
+              "seconds": 1450,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         }
       ]
     }

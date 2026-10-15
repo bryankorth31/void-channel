@@ -3,7 +3,7 @@
   "slug": "planet-earth-ii",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:19.404Z",
+  "matchedAt": "2026-10-15T03:18:20.269Z",
   "tvmaze": {
     "id": 22036,
     "name": "Planet Earth II",
@@ -28,19 +28,33 @@
           "airdate": "2016-11-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 5 in \"Planet Earth III (2023–2024) — BBC Natur\"",
-            "item": "planet-earth-III",
-            "itemTitle": "Planet Earth III (2023–2024) — BBC Natural History Documentary Series",
-            "file": "(1) Coasts.mp4",
-            "name": "(1) Coasts",
-            "url": "https://archive.org/download/planet-earth-III/(1)%20Coasts.mp4",
-            "seconds": 3654,
+            "conf": 0.8,
+            "why": "title ~ \"Islands\" (0.95)",
+            "item": "planet_earth_2_bbc",
+            "itemTitle": "Planet Earth II BBC ★ Nature Series with Subtitles and MKV",
+            "file": "planet_earth_ii_01_islands.mp4",
+            "name": "planet_earth_ii_01_islands",
+            "url": "https://archive.org/download/planet_earth_2_bbc/planet_earth_ii_01_islands.mp4",
+            "seconds": 3666,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 3201
+            "sizeMB": 904
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 5 in \"Planet Earth III (2023–2024) — BBC Natur\"",
+              "item": "planet-earth-III",
+              "itemTitle": "Planet Earth III (2023–2024) — BBC Natural History Documentary Series",
+              "file": "(1) Coasts.mp4",
+              "name": "(1) Coasts",
+              "url": "https://archive.org/download/planet-earth-III/(1)%20Coasts.mp4",
+              "seconds": 3654,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3201
+            }
+          ]
         },
         {
           "number": 2,
@@ -48,19 +62,33 @@
           "airdate": "2016-11-13",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"Planet Earth III (2023–2024) — BBC Natur\"",
-            "item": "planet-earth-III",
-            "itemTitle": "Planet Earth III (2023–2024) — BBC Natural History Documentary Series",
-            "file": "(2) Ocean.mp4",
-            "name": "(2) Ocean",
-            "url": "https://archive.org/download/planet-earth-III/(2)%20Ocean.mp4",
-            "seconds": 3617,
+            "conf": 0.8,
+            "why": "title ~ \"Mountains\" (0.95)",
+            "item": "planet_earth_2_bbc",
+            "itemTitle": "Planet Earth II BBC ★ Nature Series with Subtitles and MKV",
+            "file": "planet_earth_ii_02_mountains.mp4",
+            "name": "planet_earth_ii_02_mountains",
+            "url": "https://archive.org/download/planet_earth_2_bbc/planet_earth_ii_02_mountains.mp4",
+            "seconds": 3645,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 3240
+            "sizeMB": 790
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 5 in \"Planet Earth III (2023–2024) — BBC Natur\"",
+              "item": "planet-earth-III",
+              "itemTitle": "Planet Earth III (2023–2024) — BBC Natural History Documentary Series",
+              "file": "(2) Ocean.mp4",
+              "name": "(2) Ocean",
+              "url": "https://archive.org/download/planet-earth-III/(2)%20Ocean.mp4",
+              "seconds": 3617,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3240
+            }
+          ]
         },
         {
           "number": 3,

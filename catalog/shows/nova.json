@@ -3,7 +3,7 @@
   "slug": "nova",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-15T01:19:18.574Z",
+  "matchedAt": "2026-10-15T03:18:19.418Z",
   "tvmaze": {
     "id": 3321,
     "name": "NOVA",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 1014,
     "live": 2,
-    "review": 55,
-    "missing": 957,
-    "pct": 6
+    "review": 90,
+    "missing": 922,
+    "pct": 9
   },
   "seasons": [
     {
@@ -1853,8 +1853,20 @@
           "number": 2,
           "name": "Antarctica: Earth's Last Frontier",
           "airdate": "1984-01-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Antarctica: Earth's Last Frontier\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Antarctica, Earth's Last Frontier.mp4",
+            "name": "PBS Nova - Antarctica, Earth's Last Frontier",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Antarctica%2C%20Earth's%20Last%20Frontier.mp4",
+            "seconds": 3415,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 332
+          },
           "alternates": []
         },
         {
@@ -2558,8 +2570,20 @@
           "number": 21,
           "name": "Secrets of the Lost Red Paint People",
           "airdate": "1987-12-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Lost Red Paint People\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of the Lost Red Paint People.mp4",
+            "name": "PBS Nova - Secrets of the Lost Red Paint People",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20the%20Lost%20Red%20Paint%20People.mp4",
+            "seconds": 3319,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 322
+          },
           "alternates": []
         }
       ]
@@ -2736,8 +2760,20 @@
           "number": 10,
           "name": "The All-American Bear",
           "airdate": "1988-12-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The All-American Bear\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - The All-American Bear.mp4",
+            "name": "PBS Nova - The All-American Bear",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20The%20All-American%20Bear.mp4",
+            "seconds": 3353,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 340
+          },
           "alternates": []
         },
         {
@@ -4170,8 +4206,20 @@
           "number": 16,
           "name": "Secrets of Lost Empires (4): Colosseum",
           "airdate": "1997-02-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of Lost Empires (4): Colosseum\" (0.90)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of Lost Empires - Colosseum.mp4",
+            "name": "PBS Nova - Secrets of Lost Empires - Colosseum",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20Lost%20Empires%20-%20Colosseum.mp4",
+            "seconds": 3162,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 318
+          },
           "alternates": []
         },
         {
@@ -4379,8 +4427,20 @@
           "number": 15,
           "name": "Everest - The Death Zone",
           "airdate": "1998-02-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Everest - The Death Zone\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Everest - The Death Zone.mp4",
+            "name": "PBS Nova - Everest - The Death Zone",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Everest%20-%20The%20Death%20Zone.mp4",
+            "seconds": 3406,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 337
+          },
           "alternates": []
         },
         {
@@ -4424,9 +4484,36 @@
           "number": 1,
           "name": "Lost at Sea: The Search for Longitude",
           "airdate": "1998-10-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Lost at Sea: The Search for Longitude\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Lost at Sea - The Search for Longitude (1998).ia.mp4",
+            "name": "PBS Nova - Lost at Sea - The Search for Longitude (1998)",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Lost%20at%20Sea%20-%20The%20Search%20for%20Longitude%20(1998).ia.mp4",
+            "seconds": 3207,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 346
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Lost at Sea: The Search for Longitude\" (0.95)",
+              "item": "LostatSeaTheSearchforLongitude",
+              "itemTitle": "Lost at Sea : The Search for Longitude",
+              "file": "NOVA.S25E11.Lost.at.Sea.The.Search.For.Longitude.1998.DVDRip.DD2.0.x264-astro.mp4",
+              "name": "NOVA.S25E11.Lost.at.Sea.The.Search.For.Longitude.1998.DVDRip.DD2.0.x264-astro",
+              "url": "https://archive.org/download/LostatSeaTheSearchforLongitude/NOVA.S25E11.Lost.at.Sea.The.Search.For.Longitude.1998.DVDRip.DD2.0.x264-astro.mp4",
+              "seconds": 3263,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD2 0)",
+              "sizeMB": 341
+            }
+          ]
         },
         {
           "number": 2,
@@ -4695,8 +4782,20 @@
           "number": 10,
           "name": "Secrets of Lost Empires: Medieval Siege",
           "airdate": "2000-02-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of Lost Empires: Medieval Siege\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of Lost Empires - Medieval Siege.mp4",
+            "name": "PBS Nova - Secrets of Lost Empires - Medieval Siege",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20Lost%20Empires%20-%20Medieval%20Siege.mp4",
+            "seconds": 3270,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 322
+          },
           "alternates": []
         },
         {
@@ -4727,8 +4826,20 @@
           "number": 14,
           "name": "Secrets of Lost Empires: Easter Island",
           "airdate": "2000-02-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of Lost Empires: Easter Island\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of Lost Empires - Easter Island.mp4",
+            "name": "PBS Nova - Secrets of Lost Empires - Easter Island",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20Lost%20Empires%20-%20Easter%20Island.mp4",
+            "seconds": 3256,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 320
+          },
           "alternates": []
         },
         {
@@ -4743,8 +4854,20 @@
           "number": 16,
           "name": "Secrets of Lost Empires: Roman Bath",
           "airdate": "2000-02-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of Lost Empires: Roman Bath\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of Lost Empires - Roman Bath.mp4",
+            "name": "PBS Nova - Secrets of Lost Empires - Roman Bath",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20Lost%20Empires%20-%20Roman%20Bath.mp4",
+            "seconds": 3181,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 316
+          },
           "alternates": []
         },
         {
@@ -4759,8 +4882,20 @@
           "number": 18,
           "name": "Secrets of Lost Empires: China Bridge",
           "airdate": "2000-02-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of Lost Empires: China Bridge\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of Lost Empires - China Bridge.mp4",
+            "name": "PBS Nova - Secrets of Lost Empires - China Bridge",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20Lost%20Empires%20-%20China%20Bridge.mp4",
+            "seconds": 3255,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 319
+          },
           "alternates": []
         },
         {
@@ -4876,8 +5011,20 @@
           "number": 11,
           "name": "Lost King of the Maya",
           "airdate": "2001-02-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Lost King of the Maya\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Lost King of the Maya.mp4",
+            "name": "PBS Nova - Lost King of the Maya",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Lost%20King%20of%20the%20Maya.mp4",
+            "seconds": 3242,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 324
+          },
           "alternates": []
         },
         {
@@ -4985,8 +5132,20 @@
           "number": 7,
           "name": "Life's Greatest Miracle",
           "airdate": "2001-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Life's Greatest Miracle\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Life's Greatest Miracle.mp4",
+            "name": "PBS Nova - Life's Greatest Miracle",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Life's%20Greatest%20Miracle.mp4",
+            "seconds": 3237,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 321
+          },
           "alternates": []
         },
         {
@@ -5049,8 +5208,20 @@
           "number": 15,
           "name": "Shackleton's Voyage of Endurance",
           "airdate": "2002-03-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Shackleton's Voyage of Endurance\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Shackleton's Voyage of Endurance.mp4",
+            "name": "PBS Nova - Shackleton's Voyage of Endurance",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Shackleton's%20Voyage%20of%20Endurance.mp4",
+            "seconds": 6719,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 702
+          },
           "alternates": []
         },
         {
@@ -5214,8 +5385,20 @@
           "number": 10,
           "name": "Ancient Creature of the Deep",
           "airdate": "2003-01-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ancient Creature of the Deep\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Ancient Creature of the Deep.mp4",
+            "name": "PBS Nova - Ancient Creature of the Deep",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Ancient%20Creature%20of%20the%20Deep.mp4",
+            "seconds": 3284,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 331
+          },
           "alternates": []
         },
         {
@@ -5230,8 +5413,20 @@
           "number": 12,
           "name": "Mountain of Ice",
           "airdate": "2003-02-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Mountain of Ice\" (0.79)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Mountains of Ice.mp4",
+            "name": "PBS Nova - Mountains of Ice",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Mountains%20of%20Ice.mp4",
+            "seconds": 3238,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 318
+          },
           "alternates": []
         },
         {
@@ -5341,8 +5536,20 @@
           "number": 6,
           "name": "Wright Brothers' Flying Machine",
           "airdate": "2003-11-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Wright Brothers' Flying Machine\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Wright Brothers' Flying Machine (2003).ia.mp4",
+            "name": "PBS Nova - Wright Brothers' Flying Machine (2003)",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Wright%20Brothers'%20Flying%20Machine%20(2003).ia.mp4",
+            "seconds": 3179,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 456
+          },
           "alternates": []
         },
         {
@@ -5721,8 +5928,20 @@
           "number": 13,
           "name": "Arctic Passage: Prisoners of the Ice",
           "airdate": "2006-02-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Arctic Passage: Prisoners of the Ice\" (0.96)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Arctic Passage, Prisoners of the Ice.mp4",
+            "name": "PBS Nova - Arctic Passage, Prisoners of the Ice",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Arctic%20Passage%2C%20Prisoners%20of%20the%20Ice.mp4",
+            "seconds": 3178,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 318
+          },
           "alternates": []
         },
         {
@@ -5883,8 +6102,20 @@
           "number": 1,
           "name": "Secrets of the Samurai Sword",
           "airdate": "2007-10-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Samurai Sword\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of the Samurai Sword.mp4",
+            "name": "PBS Nova - Secrets of the Samurai Sword",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20the%20Samurai%20Sword.mp4",
+            "seconds": 3219,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 320
+          },
           "alternates": []
         },
         {
@@ -5939,8 +6170,20 @@
           "number": 8,
           "name": "Absolute Zero: The Conquest of Cold (1)",
           "airdate": "2008-01-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Absolute Zero: The Conquest of Cold (1)\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Absolute Zero - Part 1 of 2 - The Conquest of Cold.mp4",
+            "name": "PBS Nova - Absolute Zero - Part 1 of 2 - The Conquest of Cold",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Absolute%20Zero%20-%20Part%201%20of%202%20-%20The%20Conquest%20of%20Cold.mp4",
+            "seconds": 3168,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 316
+          },
           "alternates": []
         },
         {
@@ -5981,8 +6224,20 @@
           "number": 10,
           "name": "Secrets of the Parthenon",
           "airdate": "2008-01-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Parthenon\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of The Parthenon.mp4",
+            "name": "PBS Nova - Secrets of The Parthenon",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20The%20Parthenon.mp4",
+            "seconds": 3168,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 315
+          },
           "alternates": []
         },
         {
@@ -6392,8 +6647,20 @@
           "number": 1,
           "name": "Building the Great Cathedrals",
           "airdate": "2010-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Building the Great Cathedrals\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Building the Great Cathedrals.mp4",
+            "name": "PBS Nova - Building the Great Cathedrals",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Building%20the%20Great%20Cathedrals.mp4",
+            "seconds": 3236,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 321
+          },
           "alternates": []
         },
         {
@@ -6621,8 +6888,20 @@
           "number": 12,
           "name": "Mystery of a Masterpiece",
           "airdate": "2012-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mystery of a Masterpiece\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Mystery of a Masterpiece.mp4",
+            "name": "PBS Nova - Mystery of a Masterpiece",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Mystery%20of%20a%20Masterpiece.mp4",
+            "seconds": 3322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 324
+          },
           "alternates": []
         },
         {
@@ -6690,9 +6969,35 @@
           "number": 1,
           "name": "Secrets of the Viking Sword",
           "airdate": "2012-10-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Viking Sword\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S39 EP13 Secrets Of The Viking Sword.mp4",
+            "name": "NOVA/NOVA S39 EP13 Secrets Of The Viking Sword",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S39%20EP13%20Secrets%20Of%20The%20Viking%20Sword.mp4",
+            "seconds": 3173,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1004
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Secrets of the Viking Sword\" (0.95)",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "PBS Nova - Secrets of the Viking Sword.mp4",
+              "name": "PBS Nova - Secrets of the Viking Sword",
+              "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20the%20Viking%20Sword.mp4",
+              "seconds": 3250,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 326
+            }
+          ]
         },
         {
           "number": 2,
@@ -7498,16 +7803,40 @@
           "number": 9,
           "name": "Inside Einstein's Mind",
           "airdate": "2015-11-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Inside Einstein's Mind\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S42 EP23 Inside Einstein's Mind.mp4",
+            "name": "NOVA/NOVA S42 EP23 Inside Einstein's Mind",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S42%20EP23%20Inside%20Einstein's%20Mind.mp4",
+            "seconds": 3188,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2612
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Secret Tunnel Warfare",
           "airdate": "2016-01-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secret Tunnel Warfare\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secret Tunnel Warfare.mp4",
+            "name": "PBS Nova - Secret Tunnel Warfare",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secret%20Tunnel%20Warfare.mp4",
+            "seconds": 3191,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 321
+          },
           "alternates": []
         },
         {
@@ -7538,8 +7867,20 @@
           "number": 14,
           "name": "Creatures of Light",
           "airdate": "2016-02-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Creatures of Light\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Creatures of Light.mp4",
+            "name": "PBS Nova - Creatures of Light",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Creatures%20of%20Light.mp4",
+            "seconds": 3236,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 323
+          },
           "alternates": []
         },
         {
@@ -7615,8 +7956,20 @@
           "number": 1,
           "name": "15 Years of Terror",
           "airdate": "2016-09-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"15 Years of Terror\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S43 EP16 15 Years Of Terror.mp4",
+            "name": "NOVA/NOVA S43 EP16 15 Years Of Terror",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S43%20EP16%2015%20Years%20Of%20Terror.mp4",
+            "seconds": 3271,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1034
+          },
           "alternates": []
         },
         {
@@ -7735,8 +8088,20 @@
           "number": 8,
           "name": "Secrets of the Sky Tombs",
           "airdate": "2017-01-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Sky Tombs\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP1 Secrets of the Sky Tombs.mp4",
+            "name": "NOVA/NOVA S44 EP1 Secrets of the Sky Tombs",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP1%20Secrets%20of%20the%20Sky%20Tombs.mp4",
+            "seconds": 3213,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1016
+          },
           "alternates": []
         },
         {
@@ -7906,24 +8271,74 @@
           "number": 20,
           "name": "Secrets of the Shining Knight",
           "airdate": "2017-10-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Shining Knight\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP13 Secrets Of The Shining Knight.mp4",
+            "name": "NOVA/NOVA S44 EP13 Secrets Of The Shining Knight",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP13%20Secrets%20Of%20The%20Shining%20Knight.mp4",
+            "seconds": 3213,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1246
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Secrets of the Shining Knight\" (0.95)",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "PBS Nova - Secrets of the Shining Knight.mp4",
+              "name": "PBS Nova - Secrets of the Shining Knight",
+              "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20the%20Shining%20Knight.mp4",
+              "seconds": 3166,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 323
+            }
+          ]
         },
         {
           "number": 21,
           "name": "Ghosts of Stonehenge",
           "airdate": "2017-10-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ghosts of Stonehenge\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP14 Ghosts Of Stonehenge.mp4",
+            "name": "NOVA/NOVA S44 EP14 Ghosts Of Stonehenge",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP14%20Ghosts%20Of%20Stonehenge.mp4",
+            "seconds": 3216,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1247
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Secrets of the Forbidden City",
           "airdate": "2017-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of the Forbidden City\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP15 Secrets Of The Forbidden City.mp4",
+            "name": "NOVA/NOVA S44 EP15 Secrets Of The Forbidden City",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP15%20Secrets%20Of%20The%20Forbidden%20City.mp4",
+            "seconds": 3213,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1246
+          },
           "alternates": []
         },
         {
@@ -8032,8 +8447,20 @@
           "number": 28,
           "name": "Day the Dinosaurs Died",
           "airdate": "2017-12-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Day the Dinosaurs Died\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP21 Day The Dinosaurs Died.mp4",
+            "name": "NOVA/NOVA S44 EP21 Day The Dinosaurs Died",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP21%20Day%20The%20Dinosaurs%20Died.mp4",
+            "seconds": 3210,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1244
+          },
           "alternates": []
         }
       ]
@@ -8045,16 +8472,40 @@
           "number": 1,
           "name": "Black Hole Apocalypse",
           "airdate": "2018-01-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Black Hole Apocalypse\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S45 EP1 Black Hole Apocalypse.mp4",
+            "name": "NOVA/NOVA S45 EP1 Black Hole Apocalypse",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S45%20EP1%20Black%20Hole%20Apocalypse.mp4",
+            "seconds": 6766,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2623
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Impossible Flight",
           "airdate": "2018-01-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"The Impossible Flight\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S45 EP__ The Impossible Flight.mp4",
+            "name": "NOVA/NOVA S45 EP__ The Impossible Flight",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S45%20EP__%20The%20Impossible%20Flight.mp4",
+            "seconds": 6778,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2628
+          },
           "alternates": []
         },
         {
@@ -8165,8 +8616,20 @@
           "number": 16,
           "name": "World's Fastest Animal",
           "airdate": "2018-11-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"World's Fastest Animal\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - World's Fastest Animal.mp4",
+            "name": "PBS Nova - World's Fastest Animal",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20World's%20Fastest%20Animal.mp4",
+            "seconds": 3156,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 318
+          },
           "alternates": []
         },
         {

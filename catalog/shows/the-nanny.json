@@ -3,7 +3,7 @@
   "slug": "the-nanny",
   "type": "90s Sitcoms",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:59.501Z",
+  "matchedAt": "2026-10-15T03:19:59.383Z",
   "tvmaze": {
     "id": 1119,
     "name": "The Nanny",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 146,
     "live": 1,
-    "review": 112,
-    "missing": 33,
-    "pct": 77
+    "review": 136,
+    "missing": 9,
+    "pct": 94
   },
   "seasons": [
     {
@@ -259,8 +259,20 @@
           "number": 9,
           "name": "Personal Business",
           "airdate": "1993-12-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Personal Business\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1993.12.29_S01E09_Personal-Business_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1993.12.29_S01E09_Personal-Business_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1993.12.29_S01E09_Personal-Business_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143
+          },
           "alternates": []
         },
         {
@@ -283,25 +295,75 @@
           "number": 12,
           "name": "The Show Must Go On",
           "airdate": "1994-01-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Show Must Go On\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.01.26_S01E12_The-Show-Must-Go-On_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.01.26_S01E12_The-Show-Must-Go-On_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.01.26_S01E12_The-Show-Must-Go-On_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1362,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Maggie the Model",
           "airdate": "1994-02-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Maggie the Model\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.02.02_S01E13_Maggie-the-Model_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.02.02_S01E13_Maggie-the-Model_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.02.02_S01E13_Maggie-the-Model_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1423,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "The Family Plumbing",
           "airdate": "1994-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Family Plumbing\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.02.09_S01E14_The-Family-Plumbing_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.02.09_S01E14_The-Family-Plumbing_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.02.09_S01E14_The-Family-Plumbing_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1402,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Family Plumbing\" (0.64)",
+              "item": "nanny-911-s-01-e-13-the-king-family",
+              "itemTitle": "Nanny 911- S01 E13 The King Family",
+              "file": "Nanny 911- S01 E13 The King Family.mp4",
+              "name": "Nanny 911- S01 E13 The King Family",
+              "url": "https://archive.org/download/nanny-911-s-01-e-13-the-king-family/Nanny%20911-%20S01%20E13%20The%20King%20Family.mp4",
+              "seconds": 2397,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 549
+            }
+          ]
         },
         {
           "number": 15,
@@ -327,8 +389,20 @@
           "number": 16,
           "name": "Schlepped Away",
           "airdate": "1994-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Schlepped Away\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.03.09_S01E16_Schlepped-Away_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.03.09_S01E16_Schlepped-Away_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.03.09_S01E16_Schlepped-Away_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1356,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
@@ -415,8 +489,20 @@
           "number": 21,
           "name": "Frannie's Choice",
           "airdate": "1994-04-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Frannie's Choice\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.04.20_S01E21_Frannies-Choice_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.04.20_S01E21_Frannies-Choice_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.04.20_S01E21_Frannies-Choice_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1414,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141
+          },
           "alternates": []
         },
         {
@@ -468,8 +554,20 @@
           "number": 2,
           "name": "The Playwright",
           "airdate": "1994-09-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Playwright\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.09.19_S02E02_The-Playwright_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.09.19_S02E02_The-Playwright_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.09.19_S02E02_The-Playwright_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1426,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 144
+          },
           "alternates": []
         },
         {
@@ -664,16 +762,40 @@
           "number": 13,
           "name": "The Strike",
           "airdate": "1994-11-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Strike\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.11.28_S02E13_The-Strike_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.11.28_S02E13_The-Strike_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.11.28_S02E13_The-Strike_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1417,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 144
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "I've Got a Secret",
           "airdate": "1994-12-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"I've Got a Secret\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1994.12.12_S02E14_Ive-Got-a-Secret_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1994.12.12_S02E14_Ive-Got-a-Secret_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1994.12.12_S02E14_Ive-Got-a-Secret_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1421,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 144
+          },
           "alternates": []
         },
         {
@@ -760,8 +882,20 @@
           "number": 19,
           "name": "A Fine Friendship",
           "airdate": "1995-02-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Fine Friendship\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1995.02.06_S02E19_A-Fine-Friendship_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1995.02.06_S02E19_A-Fine-Friendship_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1995.02.06_S02E19_A-Fine-Friendship_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1388,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141
+          },
           "alternates": []
         },
         {
@@ -848,8 +982,20 @@
           "number": 24,
           "name": "Strange Bedfellows",
           "airdate": "1995-05-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Strange Bedfellows\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1995.05.08_S02E24_Strange-Bedfellows_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1995.05.08_S02E24_Strange-Bedfellows_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1995.05.08_S02E24_Strange-Bedfellows_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1369,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139
+          },
           "alternates": []
         },
         {
@@ -961,8 +1107,20 @@
           "number": 4,
           "name": "A Fine Family Feud",
           "airdate": "1995-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Fine Family Feud\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1995.10.02_S03E04_A-Fine-Family-Feud_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1995.10.02_S03E04_A-Fine-Family-Feud_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1995.10.02_S03E04_A-Fine-Family-Feud_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1398,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142
+          },
           "alternates": []
         },
         {
@@ -1169,8 +1327,20 @@
           "number": 15,
           "name": "Fashion Show",
           "airdate": "1996-01-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Fashion Show\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1996.01.08_S03E15_Fashion-Show_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1996.01.08_S03E15_Fashion-Show_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1996.01.08_S03E15_Fashion-Show_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138
+          },
           "alternates": []
         },
         {
@@ -1562,8 +1732,20 @@
           "number": 8,
           "name": "An Affair to Dismember",
           "airdate": "1996-11-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"An Affair to Dismember\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1996.11.13_S04E08_An-Affair-to-Dismember_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1996.11.13_S04E08_An-Affair-to-Dismember_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1996.11.13_S04E08_An-Affair-to-Dismember_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1356,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
@@ -1838,8 +2020,20 @@
           "number": 23,
           "name": "You Bette Your Life",
           "airdate": "1997-04-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"You Bette Your Life\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1997.04.30_S04E23_You-Bette-Your-Life_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1997.04.30_S04E23_You-Bette-Your-Life_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1997.04.30_S04E23_You-Bette-Your-Life_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134
+          },
           "alternates": []
         },
         {
@@ -1971,8 +2165,20 @@
           "number": 4,
           "name": "Fransom",
           "airdate": "1997-10-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Fransom\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1997.10.22_S05E04_Fransom_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1997.10.22_S05E04_Fransom_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1997.10.22_S05E04_Fransom_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         },
         {
@@ -2079,8 +2285,20 @@
           "number": 10,
           "name": "From Flushing with Love",
           "airdate": "1997-12-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"From Flushing with Love\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1997.12.17_S05E10_From-Flushing-with-Love_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1997.12.17_S05E10_From-Flushing-with-Love_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1997.12.17_S05E10_From-Flushing-with-Love_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1313,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         },
         {
@@ -2227,8 +2445,20 @@
           "number": 18,
           "name": "The Reunion Show",
           "airdate": "1998-03-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Reunion Show\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1998.03.25_S05E18_The-Reunion-Show_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1998.03.25_S05E18_The-Reunion-Show_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1998.03.25_S05E18_The-Reunion-Show_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1362,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
@@ -2356,8 +2586,20 @@
           "number": 3,
           "name": "Once a Secretary, Always a Secretary",
           "airdate": "1998-10-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Once a Secretary, Always a Secretary\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1998.10.14_S06E03_Once-a-Secretary-Always-a-Secretary_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1998.10.14_S06E03_Once-a-Secretary-Always-a-Secretary_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1998.10.14_S06E03_Once-a-Secretary-Always-a-Secretary_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1291,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129
+          },
           "alternates": []
         },
         {
@@ -2384,8 +2626,20 @@
           "number": 5,
           "name": "Maggie's Boyfriend",
           "airdate": "1998-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Maggie's Boyfriend\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1998.10.28_S06E05_Maggies-Boyfriend_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1998.10.28_S06E05_Maggies-Boyfriend_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1998.10.28_S06E05_Maggies-Boyfriend_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1330,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
@@ -2432,8 +2686,20 @@
           "number": 8,
           "name": "Making Whoopi",
           "airdate": "1998-11-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Making Whoopi\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1998.11.18_S06E08_Making-Whoopi_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1998.11.18_S06E08_Making-Whoopi_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1998.11.18_S06E08_Making-Whoopi_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1352,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
@@ -2480,8 +2746,20 @@
           "number": 11,
           "name": "The In-Law Who Came Forever",
           "airdate": "1999-01-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The In-Law Who Came Forever\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1999.01.06_S06E11_The-In-Law-Who-Came-Forever_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1999.01.06_S06E11_The-In-Law-Who-Came-Forever_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1999.01.06_S06E11_The-In-Law-Who-Came-Forever_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1311,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         },
         {
@@ -2564,8 +2842,20 @@
           "number": 17,
           "name": "Ma'ternal Affairs",
           "airdate": "1999-06-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ma'ternal Affairs\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1999.06.02_S06E17_Maternal-Affairs_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1999.06.02_S06E17_Maternal-Affairs_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1999.06.02_S06E17_Maternal-Affairs_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1351,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
@@ -2632,8 +2922,20 @@
           "number": 21,
           "name": "Maggie's Wedding",
           "airdate": "1999-06-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Maggie's Wedding\" (0.95)",
+            "item": "the-nanny-complete-series_20260128",
+            "itemTitle": "The Nanny Complete Series",
+            "file": "The-Nanny_1999.06.23_S06E21_Maggies-Wedding_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1999.06.23_S06E21_Maggies-Wedding_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1999.06.23_S06E21_Maggies-Wedding_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1357,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {

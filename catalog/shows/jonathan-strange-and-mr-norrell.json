@@ -3,7 +3,7 @@
   "slug": "jonathan-strange-and-mr-norrell",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:43.853Z",
+  "matchedAt": "2026-10-15T03:18:57.056Z",
   "tvmaze": {
     "id": 2327,
     "name": "Jonathan Strange & Mr. Norrell",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 7,
-    "live": 6,
+    "live": 7,
     "review": 0,
-    "missing": 1,
-    "pct": 86
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -26,9 +26,35 @@
           "number": 1,
           "name": "The Friends of English Magic",
           "airdate": "2015-05-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "jonge-mr-ns-01-e-0er-than",
+            "itemTitle": "Jonathan Strange & Mr Norrell  (Repost No Subtitles)",
+            "file": "Jonathan Strange & Mr Norrell S01E01 Chapter One The Friends of English Magic.mp4",
+            "name": "Jonathan Strange & Mr Norrell S01E01 Chapter One The Friends of English Magic",
+            "url": "https://archive.org/download/jonge-mr-ns-01-e-0er-than/Jonathan%20Strange%20%26%20Mr%20Norrell%20S01E01%20Chapter%20One%20The%20Friends%20of%20English%20Magic.mp4",
+            "seconds": 3544,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 351
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "20251103_20251103_1032",
+              "itemTitle": "Jonathan Strange & Mr Norrell",
+              "file": "Jonathan Strange & Mr Norrell S01E01 Chapter One The Friends of English Magic.mp4",
+              "name": "Jonathan Strange & Mr Norrell S01E01 Chapter One The Friends of English Magic",
+              "url": "https://archive.org/download/20251103_20251103_1032/Jonathan%20Strange%20%26%20Mr%20Norrell%20S01E01%20Chapter%20One%20The%20Friends%20of%20English%20Magic.mp4",
+              "seconds": 3514,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 175
+            }
+          ]
         },
         {
           "number": 2,

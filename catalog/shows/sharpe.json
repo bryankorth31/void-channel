@@ -3,7 +3,7 @@
   "slug": "sharpe",
   "type": "British and Beyond",
   "network": "ITV",
-  "matchedAt": "2026-10-15T01:19:43.710Z",
+  "matchedAt": "2026-10-15T03:18:56.898Z",
   "tvmaze": {
     "id": 8126,
     "name": "Sharpe",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 18,
     "live": 0,
-    "review": 9,
-    "missing": 9,
-    "pct": 50
+    "review": 15,
+    "missing": 3,
+    "pct": 83
   },
   "seasons": [
     {
@@ -85,8 +85,20 @@
           "number": 1,
           "name": "Sharpe's Company",
           "airdate": "1994-05-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sharpe's Company\" (1.00)",
+            "item": "nge_20251028",
+            "itemTitle": "(D) Sharpe (1993) (TV Anthology)",
+            "file": "Sharpe S01E03 - Sharpe's Company.mp4",
+            "name": "Sharpe S01E03 - Sharpe's Company",
+            "url": "https://archive.org/download/nge_20251028/Sharpe%20S01E03%20-%20Sharpe's%20Company.mp4",
+            "seconds": 6125,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1218
+          },
           "alternates": []
         },
         {
@@ -113,8 +125,20 @@
           "number": 3,
           "name": "Sharpe's Honour",
           "airdate": "1994-06-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sharpe's Honour\" (1.00)",
+            "item": "nge_20251028",
+            "itemTitle": "(D) Sharpe (1993) (TV Anthology)",
+            "file": "Sharpe S01E05 - Sharpe's Honour.mp4",
+            "name": "Sharpe S01E05 - Sharpe's Honour",
+            "url": "https://archive.org/download/nge_20251028/Sharpe%20S01E05%20-%20Sharpe's%20Honour.mp4",
+            "seconds": 6101,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 654
+          },
           "alternates": []
         }
       ]
@@ -191,9 +215,35 @@
           "number": 1,
           "name": "Sharpe's Regiment",
           "airdate": "1996-05-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sharpe's Regiment\" (0.95)",
+            "item": "sharpes-regiment-1996-sean-bean-full-movie-hd",
+            "itemTitle": "Sharpe's Regiment (1996)",
+            "file": "Sharpe's Regiment 1996 Sean Bean Full Movie HD.mp4",
+            "name": "Sharpe's Regiment 1996 Sean Bean Full Movie HD",
+            "url": "https://archive.org/download/sharpes-regiment-1996-sean-bean-full-movie-hd/Sharpe's%20Regiment%201996%20Sean%20Bean%20Full%20Movie%20HD.mp4",
+            "seconds": 6111,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2845
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Sharpe's Regiment\" (1.00)",
+              "item": "nge_20251028",
+              "itemTitle": "(D) Sharpe (1993) (TV Anthology)",
+              "file": "Sharpe S01E09 - Sharpe's Regiment.mp4",
+              "name": "Sharpe S01E09 - Sharpe's Regiment",
+              "url": "https://archive.org/download/nge_20251028/Sharpe%20S01E09%20-%20Sharpe's%20Regiment.mp4",
+              "seconds": 6111,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1560
+            }
+          ]
         },
         {
           "number": 2,
@@ -244,16 +294,40 @@
           "number": 1,
           "name": "Sharpe's Revenge",
           "airdate": "1997-05-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sharpe's Revenge\" (1.00)",
+            "item": "nge_20251028",
+            "itemTitle": "(D) Sharpe (1993) (TV Anthology)",
+            "file": "Sharpe S01E12 - Sharpe's Revenge.mp4",
+            "name": "Sharpe S01E12 - Sharpe's Revenge",
+            "url": "https://archive.org/download/nge_20251028/Sharpe%20S01E12%20-%20Sharpe's%20Revenge.mp4",
+            "seconds": 6108,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1275
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Sharpe's Justice",
           "airdate": "1997-05-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sharpe's Justice\" (1.00)",
+            "item": "nge_20251028",
+            "itemTitle": "(D) Sharpe (1993) (TV Anthology)",
+            "file": "Sharpe S01E13 - Sharpe's Justice.mp4",
+            "name": "Sharpe S01E13 - Sharpe's Justice",
+            "url": "https://archive.org/download/nge_20251028/Sharpe%20S01E13%20-%20Sharpe's%20Justice.mp4",
+            "seconds": 6092,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1204
+          },
           "alternates": []
         },
         {
@@ -285,8 +359,20 @@
           "number": 1,
           "name": "Bernard Cornwell's Sharpe's Challenge",
           "airdate": "2006-04-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Bernard Cornwell's Sharpe's Challenge\" (0.65)",
+            "item": "nge_20251028",
+            "itemTitle": "(D) Sharpe (1993) (TV Anthology)",
+            "file": "Sharpe S01E15-16 - Sharpe's Challenge.mp4",
+            "name": "Sharpe S01E15-16 - Sharpe's Challenge",
+            "url": "https://archive.org/download/nge_20251028/Sharpe%20S01E15-16%20-%20Sharpe's%20Challenge.mp4",
+            "seconds": 6347,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2307
+          },
           "alternates": []
         },
         {

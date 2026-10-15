@@ -3,7 +3,7 @@
   "slug": "the-wonder-years",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:20:02.047Z",
+  "matchedAt": "2026-10-15T03:20:02.804Z",
   "tvmaze": {
     "id": 55351,
     "name": "The Wonder Years",
@@ -644,19 +644,45 @@
           "airdate": "2022-02-02",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 13 of 78 in \"The Wonder Years: The Complete Series\"",
+            "conf": 0.6,
+            "why": "title ~ \"The Valentine's Day Dance\" (0.64)",
             "item": "the-wonder-years-complete-series",
             "itemTitle": "The Wonder Years: The Complete Series",
-            "file": "The Wonder Years S03E10 - Rock 'n Roll.mp4",
-            "name": "The Wonder Years S03E10 - Rock 'n Roll",
-            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E10%20-%20Rock%20'n%20Roll.mp4",
-            "seconds": 1360,
+            "file": "The Wonder Years S03E14 - The St. Valentine's Day Massacre.mp4",
+            "name": "The Wonder Years S03E14 - The St. Valentine's Day Massacre",
+            "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E14%20-%20The%20St.%20Valentine's%20Day%20Massacre.mp4",
+            "seconds": 1387,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 170
+            "sizeMB": 191
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Valentine's Day Dance\" (0.64)",
+              "item": "the-wonder-years-complete-series_202512",
+              "itemTitle": "The Wonder Years: The Complete Series",
+              "file": "The Wonder Years S03E14 - The St. Valentine's Day Massacre.mp4",
+              "name": "The Wonder Years S03E14 - The St. Valentine's Day Massacre",
+              "url": "https://archive.org/download/the-wonder-years-complete-series_202512/The%20Wonder%20Years%20S03E14%20-%20The%20St.%20Valentine's%20Day%20Massacre.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 191
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 78 in \"The Wonder Years: The Complete Series\"",
+              "item": "the-wonder-years-complete-series",
+              "itemTitle": "The Wonder Years: The Complete Series",
+              "file": "The Wonder Years S03E10 - Rock 'n Roll.mp4",
+              "name": "The Wonder Years S03E10 - Rock 'n Roll",
+              "url": "https://archive.org/download/the-wonder-years-complete-series/The%20Wonder%20Years%20S03E10%20-%20Rock%20'n%20Roll.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 170
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 13 of 78 in \"The Wonder Years: The Complete Series\"",

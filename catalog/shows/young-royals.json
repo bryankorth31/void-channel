@@ -3,21 +3,20 @@
   "slug": "young-royals",
   "type": "World TV",
   "network": "SE",
-  "matchedAt": "2026-10-15T01:19:17.286Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.696Z",
   "tvmaze": {
-    "id": null,
+    "id": 53957,
     "name": "Young Royals",
-    "runtime": null,
-    "premiered": null,
-    "network": "SE"
+    "runtime": 47,
+    "premiered": "2021-07-01",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 8,
-    "live": 0,
-    "review": 8,
-    "missing": 0,
-    "pct": 100
+    "total": 18,
+    "live": 6,
+    "review": 0,
+    "missing": 12,
+    "pct": 33
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "Avsnitt 1",
+          "airdate": "2021-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "young-royals-s1-e1",
             "itemTitle": "Young Royals s01e01",
             "file": "Young Royals S01e01 Episode 1.mp4",
@@ -36,21 +38,18 @@
             "seconds": 2579,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 261,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 261
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "Avsnitt 2",
+          "airdate": "2021-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "young-royals-s1-e2",
             "itemTitle": "Young Royals s01e02",
             "file": "Young Royals S01e02 Episode 2 1080P.mp4",
@@ -59,21 +58,18 @@
             "seconds": 3013,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 280,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 280
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "Avsnitt 3",
+          "airdate": "2021-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "young-royals-s1-e3",
             "itemTitle": "Young Royals s01e03",
             "file": "Young Royals S01e03 Episode 3 h.o.a.ia.mp4",
@@ -82,21 +78,32 @@
             "seconds": 2429,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 219,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 219
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "young-royals-s1-e3",
+              "itemTitle": "Young Royals s01e03",
+              "file": "Young Royals S01e03 Episode 3 h.o.a.mp4",
+              "name": "Young Royals S01e03 Episode 3 h.o.a",
+              "url": "https://archive.org/download/young-royals-s1-e3/Young%20Royals%20S01e03%20Episode%203%20h.o.a.mp4",
+              "seconds": 2429,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 219
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "Avsnitt 4",
+          "airdate": "2021-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "young-royals-s1-e4",
             "itemTitle": "Young Royals s01e04",
             "file": "Young Royals S01e04 Episode 4 1080P.mp4",
@@ -105,21 +112,18 @@
             "seconds": 2823,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 235,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 235
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "Avsnitt 5",
+          "airdate": "2021-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "young-royals-s1-e5",
             "itemTitle": "Young Royals s01e05",
             "file": "Young Royals S01e05 Episode 5 1080P.mp4",
@@ -128,21 +132,18 @@
             "seconds": 2767,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 241,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 241
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "6 f final",
-          "state": "REVIEW",
+          "name": "Avsnitt 6",
+          "airdate": "2021-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "young-royals-s1-e6",
             "itemTitle": "Young Royals s01e06",
             "file": "Young Royals S01e06 Episode 6 F_final..S.ia.mp4",
@@ -151,54 +152,128 @@
             "seconds": 2587,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 210,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 210
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "young-royals-s1-e6",
+              "itemTitle": "Young Royals s01e06",
+              "file": "Young Royals S01e06 Episode 6 F_final..S.mp4",
+              "name": "Young Royals S01e06 Episode 6 F_final..S",
+              "url": "https://archive.org/download/young-royals-s1-e6/Young%20Royals%20S01e06%20Episode%206%20F_final..S.mp4",
+              "seconds": 2587,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 210
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Avsnitt 1",
+          "airdate": "2022-11-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "forever web edith",
-          "state": "REVIEW",
-          "file": {
-            "item": "young.-royals.-forever.-2024.1080p.-web.h-264-edith",
-            "itemTitle": "Young. Royals. Forever. 2024.1080p. WEB.h 264 EDITH",
-            "file": "Young.Royals.Forever.2024.1080p.WEB.h264-EDITH.mp4",
-            "name": "Young.Royals.Forever.2024.1080p.WEB.h264-EDITH",
-            "url": "https://archive.org/download/young.-royals.-forever.-2024.1080p.-web.h-264-edith/Young.Royals.Forever.2024.1080p.WEB.h264-EDITH.mp4",
-            "seconds": 3288,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 319,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Avsnitt 2",
+          "airdate": "2022-11-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "youngroyals1x01",
-          "state": "REVIEW",
-          "file": {
-            "item": "young-royals-1x-01",
-            "itemTitle": "Young Royals 1x01",
-            "file": "YoungRoyals1x01.mp4",
-            "name": "YoungRoyals1x01",
-            "url": "https://archive.org/download/young-royals-1x-01/YoungRoyals1x01.mp4",
-            "seconds": 2579,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1052,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Avsnitt 3",
+          "airdate": "2022-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Avsnitt 4",
+          "airdate": "2022-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Avsnitt 5",
+          "airdate": "2022-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Avsnitt 6",
+          "airdate": "2022-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Avsnitt 1",
+          "airdate": "2024-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Avsnitt 2",
+          "airdate": "2024-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Avsnitt 3",
+          "airdate": "2024-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Avsnitt 4",
+          "airdate": "2024-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Avsnitt 5",
+          "airdate": "2024-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Avsnitt 6",
+          "airdate": "2024-03-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

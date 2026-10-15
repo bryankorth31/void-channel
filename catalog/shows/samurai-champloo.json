@@ -3,19 +3,18 @@
   "slug": "samurai-champloo",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.117Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:04.066Z",
   "tvmaze": {
-    "id": null,
+    "id": 4924,
     "name": "Samurai Champloo",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2004-05-20",
+    "network": "Fuji TV"
   },
   "coverage": {
-    "total": 27,
-    "live": 0,
-    "review": 27,
+    "total": 26,
+    "live": 26,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "01 tempestuous temperments",
-          "state": "REVIEW",
+          "name": "Tempestuous Temperaments",
+          "airdate": "2004-05-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "samurai-champloo-episode-01-tempestuous-temperments",
             "itemTitle": "Samurai Champloo Episode 01 Tempestuous Temperments",
             "file": "Samurai Champloo Episode 01 Tempestuous Temperments.mp4",
@@ -36,21 +38,60 @@
             "seconds": 1347,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 247,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 247
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "samurai-champloo-complete-2004",
+              "itemTitle": "Samurai Champloo - Complete Series",
+              "file": "Samurai Champloo - S01E01 - Tempestuous Temperaments.mp4",
+              "name": "Samurai Champloo - S01E01 - Tempestuous Temperaments",
+              "url": "https://archive.org/download/samurai-champloo-complete-2004/Samurai%20Champloo%20-%20S01E01%20-%20Tempestuous%20Temperaments.mp4",
+              "seconds": 1401,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 01 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 01 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2001%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1401,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 140
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "samurai-champloo-complete-2004",
+              "itemTitle": "Samurai Champloo - Complete Series",
+              "file": "history/files/Samurai Champloo - S01E01 - Tempestuous Temperaments.mkv.~1~",
+              "name": "history/files/Samurai Champloo - S01E01 - Tempestuous Temperaments.mkv",
+              "url": "https://archive.org/download/samurai-champloo-complete-2004/history%2Ffiles%2FSamurai%20Champloo%20-%20S01E01%20-%20Tempestuous%20Temperaments.mkv.~1~",
+              "seconds": 1405,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 466
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "02 redeye reprisal",
-          "state": "REVIEW",
+          "name": "Redeye Reprisal",
+          "airdate": "2004-06-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "samurai-champloo-episode-02-redeye-reprisal",
             "itemTitle": "Samurai Champloo Episode 02 Redeye Reprisal",
             "file": "Samurai Champloo Episode 02 Redeye Reprisal.mp4",
@@ -59,21 +100,60 @@
             "seconds": 1387,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 255,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 255
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "samurai-champloo-complete-2004",
+              "itemTitle": "Samurai Champloo - Complete Series",
+              "file": "Samurai Champloo - S01E02 - Redeye Reprisal.mp4",
+              "name": "Samurai Champloo - S01E02 - Redeye Reprisal",
+              "url": "https://archive.org/download/samurai-champloo-complete-2004/Samurai%20Champloo%20-%20S01E02%20-%20Redeye%20Reprisal.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 02 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 02 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2002%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 142
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "samurai-champloo-complete-2004",
+              "itemTitle": "Samurai Champloo - Complete Series",
+              "file": "history/files/Samurai Champloo - S01E02 - Redeye Reprisal.mkv.~1~",
+              "name": "history/files/Samurai Champloo - S01E02 - Redeye Reprisal.mkv",
+              "url": "https://archive.org/download/samurai-champloo-complete-2004/history%2Ffiles%2FSamurai%20Champloo%20-%20S01E02%20-%20Redeye%20Reprisal.mkv.~1~",
+              "seconds": 1406,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 453
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "03 hellhounds for hire part 1",
-          "state": "REVIEW",
+          "name": "Hellhounds for Hire (Part 1)",
+          "airdate": "2004-06-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "samurai-champloo-episode-03-hellhounds-for-hire-part-1",
             "itemTitle": "Samurai Champloo Episode 03 Hellhounds For Hire (Part 1)",
             "file": "Samurai Champloo Episode 03 Hellhounds for Hire (Part 1).mp4",
@@ -82,21 +162,46 @@
             "seconds": 1388,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 200,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 200
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "samurai-champloo-complete-2004",
+              "itemTitle": "Samurai Champloo - Complete Series",
+              "file": "Samurai Champloo - S01E03 - Hellhounds For Hire (1).mp4",
+              "name": "Samurai Champloo - S01E03 - Hellhounds For Hire (1)",
+              "url": "https://archive.org/download/samurai-champloo-complete-2004/Samurai%20Champloo%20-%20S01E03%20-%20Hellhounds%20For%20Hire%20(1).mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 03 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 03 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2003%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "hellhounds for hire 2",
-          "state": "REVIEW",
+          "name": "Hellhounds for Hire (Part 2)",
+          "airdate": "2004-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E04 - Hellhounds For Hire (2).mp4",
@@ -105,21 +210,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 04 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 04 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2004%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "artistic anarchy",
-          "state": "REVIEW",
+          "name": "Artistic Anarchy",
+          "airdate": "2004-06-24",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E05 - Artistic Anarchy.mp4",
@@ -128,21 +245,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 05 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 05 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2005%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "stranger searching",
-          "state": "REVIEW",
+          "name": "Stranger Searching",
+          "airdate": "2004-07-01",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E06 - Stranger Searching.mp4",
@@ -151,21 +280,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 06 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 06 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2006%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "a risky racket",
-          "state": "REVIEW",
+          "name": "A Risky Racket",
+          "airdate": "2004-07-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E07 - A Risky Racket.mp4",
@@ -174,21 +315,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 07 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 07 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2007%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "the art of altercation",
-          "state": "REVIEW",
+          "name": "The Art of Altercation",
+          "airdate": "2004-07-15",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E08 - The Art Of Altercation.mp4",
@@ -197,21 +350,33 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 08 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 08 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2008%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "beatbox bandits",
-          "state": "REVIEW",
+          "name": "Beatbox Bandits",
+          "airdate": "2004-07-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E09 - Beatbox Bandits.mp4",
@@ -220,21 +385,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 09 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 09 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2009%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "lethal lunacy",
-          "state": "REVIEW",
+          "name": "Lethal Lunacy",
+          "airdate": "2004-07-29",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E10 - Lethal Lunacy.mp4",
@@ -243,21 +420,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 10 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 10 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2010%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "gamblers and gallantry",
-          "state": "REVIEW",
+          "name": "Gamblers and Gallantry",
+          "airdate": "2004-08-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E11 - Gamblers And Gallantry.mp4",
@@ -266,21 +455,33 @@
             "seconds": 1401,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 11 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 11 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2011%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1401,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "the disorder diaries",
-          "state": "REVIEW",
+          "name": "The Disorder Diaries",
+          "airdate": "2004-08-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E12 - The Disorder Diaries.mp4",
@@ -289,21 +490,33 @@
             "seconds": 1401,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 12 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 12 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2012%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1401,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "misguided miscreants 1",
-          "state": "REVIEW",
+          "name": "Misguided Miscreants (Part 1)",
+          "airdate": "2004-08-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E13 - Misguided Miscreants (1).mp4",
@@ -312,21 +525,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 13 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 13 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2013%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "misguided miscreants 2",
-          "state": "REVIEW",
+          "name": "Misguided Miscreants (Part 2)",
+          "airdate": "2004-09-02",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E14 - Misguided Miscreants (2).mp4",
@@ -335,21 +560,33 @@
             "seconds": 1401,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 14 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 14 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2014%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1401,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "bogus booty",
-          "state": "REVIEW",
+          "name": "Bogus Booty",
+          "airdate": "2004-09-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E15 - Bogus Booty.mp4",
@@ -358,21 +595,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 15 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 15 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2015%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 16,
-          "name": "lullabies of the lost 1",
-          "state": "REVIEW",
+          "name": "Lullabies of the Lost (Part 1)",
+          "airdate": "2004-09-16",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E16 - Lullabies Of The Lost (1).mp4",
@@ -381,21 +630,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 16 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 16 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2016%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 17,
-          "name": "lullabies of the lost 2",
-          "state": "REVIEW",
+          "name": "Lullabies of the Lost (Part 2)",
+          "airdate": "2004-09-23",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E17 - Lullabies Of The Lost (2).mp4",
@@ -404,21 +665,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 17 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 17 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2017%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 18,
-          "name": "war of the words",
-          "state": "REVIEW",
+          "name": "War of the Words",
+          "airdate": "2005-01-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E18 - War Of The Words.mp4",
@@ -427,21 +700,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 18 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 18 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2018%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 19,
-          "name": "unholy union",
-          "state": "REVIEW",
+          "name": "Unholy Union",
+          "airdate": "2005-01-29",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E19 - Unholy Union.mp4",
@@ -450,21 +735,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 19 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 19 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2019%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 20,
-          "name": "elegy of entrapment 1",
-          "state": "REVIEW",
+          "name": "Elegy of Entrapment (Part 1)",
+          "airdate": "2005-02-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E20 - Elegy Of Entrapment (1).mp4",
@@ -473,21 +770,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 20 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 20 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2020%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 21,
-          "name": "elegy of entrapment 2",
-          "state": "REVIEW",
+          "name": "Elegy of Entrapment (Part 2)",
+          "airdate": "2005-02-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E21 - Elegy Of Entrapment (2).mp4",
@@ -496,44 +805,81 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 21 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 21 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 21 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2021%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 22,
-          "name": "cosmic collisions",
-          "state": "REVIEW",
+          "name": "Cosmic Collisions",
+          "airdate": "2005-02-19",
+          "state": "LIVE",
           "file": {
-            "item": "samurai-champloo-complete-2004",
-            "itemTitle": "Samurai Champloo - Complete Series",
-            "file": "Samurai Champloo - S01E22 - Cosmic Collisions.mp4",
-            "name": "Samurai Champloo - S01E22 - Cosmic Collisions",
-            "url": "https://archive.org/download/samurai-champloo-complete-2004/Samurai%20Champloo%20-%20S01E22%20-%20Cosmic%20Collisions.mp4",
-            "seconds": 1405,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "adult-swim-feb-8-2006-samurai-champloo-ep-22-cosmic-collisions",
+            "itemTitle": "Adult Swim Feb 8 2006 Samurai Champloo Ep 22 Cosmic Collisions",
+            "file": "Adult Swim Feb 8 2006 Samurai Champloo Ep 22 Cosmic Collisions.mp4",
+            "name": "Adult Swim Feb 8 2006 Samurai Champloo Ep 22 Cosmic Collisions",
+            "url": "https://archive.org/download/adult-swim-feb-8-2006-samurai-champloo-ep-22-cosmic-collisions/Adult%20Swim%20Feb%208%202006%20Samurai%20Champloo%20Ep%2022%20Cosmic%20Collisions.mp4",
+            "seconds": 1311,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "samurai-champloo-complete-2004",
+              "itemTitle": "Samurai Champloo - Complete Series",
+              "file": "Samurai Champloo - S01E22 - Cosmic Collisions.mp4",
+              "name": "Samurai Champloo - S01E22 - Cosmic Collisions",
+              "url": "https://archive.org/download/samurai-champloo-complete-2004/Samurai%20Champloo%20-%20S01E22%20-%20Cosmic%20Collisions.mp4",
+              "seconds": 1405,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 22 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 22 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2022%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1405,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 23,
-          "name": "baseball blues",
-          "state": "REVIEW",
+          "name": "Baseball Blues",
+          "airdate": "2005-02-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E23 - Baseball Blues.mp4",
@@ -542,21 +888,33 @@
             "seconds": 1405,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 23 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 23 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 23 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2023%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1405,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 24,
-          "name": "evanescent encounter 1",
-          "state": "REVIEW",
+          "name": "Evanescent Encounter (Part 1)",
+          "airdate": "2005-03-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E24 - Evanescent Encounter (1).mp4",
@@ -565,21 +923,33 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 24 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 24 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 24 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2024%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 25,
-          "name": "evanescent encounter 2",
-          "state": "REVIEW",
+          "name": "Evanescent Encounter (Part 2)",
+          "airdate": "2005-03-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E25 - Evanescent Encounter (2).mp4",
@@ -588,21 +958,33 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 25 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 25 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 25 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2025%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 26,
-          "name": "evanescent encounter 3",
-          "state": "REVIEW",
+          "name": "Evanescent Encounter (Part 3)",
+          "airdate": "2005-03-19",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "samurai-champloo-complete-2004",
             "itemTitle": "Samurai Champloo - Complete Series",
             "file": "Samurai Champloo - S01E26 - Evanescent Encounter (3).mp4",
@@ -611,35 +993,24 @@
             "seconds": 1410,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "Episode 27",
-          "state": "REVIEW",
-          "file": {
-            "item": "samurai-champloo-episode-02-1080p",
-            "itemTitle": "Samurai Champloo Episode 02 1080p",
-            "file": "Samurai-Champloo-Episode-02-1080p.mp4",
-            "name": "Samurai-Champloo-Episode-02-1080p",
-            "url": "https://archive.org/download/samurai-champloo-episode-02-1080p/Samurai-Champloo-Episode-02-1080p.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 26 of 26 in \"Samurai Champloo - Dual Audio - 1080p\"",
+              "item": "hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio",
+              "itemTitle": "Samurai Champloo - Dual Audio - 1080p",
+              "file": "[hydes] Samurai Champloo 26 [BDRip 1920x1080 HEVC FLAC][Dual-Audio].mp4",
+              "name": "[hydes] Samurai Champloo 26 [BDRip 1920x1080 HEVC FLAC][Dual-Audio]",
+              "url": "https://archive.org/download/hydes-samurai-champloo-01-bdrip-1920x-1080-hevc-flac-dual-audio/%5Bhydes%5D%20Samurai%20Champloo%2026%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D%5BDual-Audio%5D.mp4",
+              "seconds": 1410,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (FLAC)",
+              "sizeMB": 141
+            }
+          ]
         }
       ]
     }

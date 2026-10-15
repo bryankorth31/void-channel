@@ -3,7 +3,7 @@
   "slug": "hey-arnold",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-15T01:19:03.382Z",
+  "matchedAt": "2026-10-15T03:17:26.539Z",
   "tvmaze": {
     "id": 6482,
     "name": "Hey Arnold!",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 100,
     "live": 0,
-    "review": 13,
-    "missing": 87,
-    "pct": 13
+    "review": 14,
+    "missing": 86,
+    "pct": 14
   },
   "seasons": [
     {
@@ -548,8 +548,20 @@
           "number": 8,
           "name": "Sid's Revenge / Roller Coaster",
           "airdate": "1998-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sid's Revenge / Roller Coaster\" (1.00)",
+            "item": "ka-blam-wont-crack-or-peel-nogglevision_202602",
+            "itemTitle": "My Collection of Classic Nickelodeon",
+            "file": "Hey Arnold! Sid's Revenge Roller Coaster.mp4",
+            "name": "Hey Arnold! Sid's Revenge Roller Coaster",
+            "url": "https://archive.org/download/ka-blam-wont-crack-or-peel-nogglevision_202602/Hey%20Arnold!%20Sid's%20Revenge%20Roller%20Coaster.mp4",
+            "seconds": 1398,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {

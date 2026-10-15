@@ -3,7 +3,7 @@
   "slug": "blakes-7",
   "type": "Classic TV",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:35.177Z",
+  "matchedAt": "2026-10-15T03:18:45.589Z",
   "tvmaze": {
     "id": 6152,
     "name": "Blake's 7",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 52,
-    "live": 10,
-    "review": 8,
-    "missing": 34,
-    "pct": 35
+    "live": 13,
+    "review": 6,
+    "missing": 33,
+    "pct": 37
   },
   "seasons": [
     {
@@ -195,8 +195,20 @@
           "number": 1,
           "name": "Redemption",
           "airdate": "1979-01-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Redemption\" (0.95)",
+            "item": "blakes-7-omnibus-04-duel",
+            "itemTitle": "Blake's 7 [Fanedit] Series A",
+            "file": "Blake's 7 - Omnibus 05 - Redemption.mp4",
+            "name": "Blake's 7 - Omnibus 05 - Redemption",
+            "url": "https://archive.org/download/blakes-7-omnibus-04-duel/Blake's%207%20-%20Omnibus%2005%20-%20Redemption.mp4",
+            "seconds": 6870,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2632
+          },
           "alternates": []
         },
         {
@@ -304,9 +316,9 @@
           "number": 1,
           "name": "Aftermath",
           "airdate": "1980-01-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "blakes-7-3x-01-aftermath",
             "itemTitle": "Blakes 7 3x 01 Aftermath",
@@ -424,9 +436,9 @@
           "number": 7,
           "name": "Children of Auron",
           "airdate": "1980-02-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "blakes-7-3x-01-aftermath",
             "itemTitle": "Blakes 7 3x 01 Aftermath",
@@ -444,9 +456,9 @@
           "number": 8,
           "name": "Rumours of Death",
           "airdate": "1980-02-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "blakes-7-3x-01-aftermath",
             "itemTitle": "Blakes 7 3x 01 Aftermath",

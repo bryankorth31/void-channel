@@ -3,31 +3,129 @@
   "slug": "steins-gate-0",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.190Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:07.044Z",
   "tvmaze": {
-    "id": null,
+    "id": 35268,
     "name": "Steins;Gate 0",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2018-04-11",
+    "network": "Tokyo MX"
   },
   "coverage": {
-    "total": 8,
+    "total": 23,
     "live": 0,
-    "review": 8,
-    "missing": 0,
-    "pct": 100
+    "review": 4,
+    "missing": 19,
+    "pct": 17
   },
   "seasons": [
     {
       "season": 1,
       "episodes": [
         {
+          "number": 1,
+          "name": "Missing Link of the Annihilator -Absolute Zero-",
+          "airdate": "2018-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Epigraph of the Closed Curve -Closed Epigraph-",
+          "airdate": "2018-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Protocol of the Two-sided Gospel -X-Day Protocol-",
+          "airdate": "2018-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Solitude of the Mournful Flow -A Stray Sheep-",
+          "airdate": "2018-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Solitude of the Astigmatism -Entangled Sheep-",
+          "airdate": "2018-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Eclipse of Orbital Ordering -The Orbital Eclipse-",
+          "airdate": "2018-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Eclipse of Vibronic Transition -Vibronic Transition-",
+          "airdate": "2018-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Dual of Antinomy -Antinomic Dual-",
+          "airdate": "2018-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Pandora of Eternal Return -Pandora's Box-",
+          "airdate": "2018-06-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Pandora of Provable Existence -Forbidden Cubicle-",
+          "airdate": "2018-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Pandora of Forgotten Existence -Sealed Reliquary-",
+          "airdate": "2018-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Mother Goose of Mutual Recursion -Recursive Mother Goose-",
+          "airdate": "2018-06-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 13,
-          "name": "Episode 13",
+          "name": "Mother Goose of Diffractive Recitativo -Diffraction Mother Goose-",
+          "airdate": "2018-07-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "steins-gate-0-episode-13",
             "itemTitle": "Steins; Gate 0 Episode 13",
             "file": "Steins;Gate 0 Episode 13.mp4",
@@ -36,21 +134,18 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 180,
-            "ep": {
-              "season": null,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 180
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "Episode 14",
+          "name": "Recognition of the Elastic Limit -Presage or Recognize-",
+          "airdate": "2018-07-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "steins-gate-0-episode-14",
             "itemTitle": "Steins; Gate 0 Episode 14",
             "file": "Steins;Gate 0 Episode 14.mp4",
@@ -59,21 +154,18 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166,
-            "ep": {
-              "season": null,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 166
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "Episode 15",
+          "name": "Recognition of the Asymptotic Line -Recognize Asymptote-",
+          "airdate": "2018-07-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "steins-gate-0-episode-15",
             "itemTitle": "Steins; Gate 0 Episode 15",
             "file": "Steins;Gate 0 Episode 15.mp4",
@@ -82,21 +174,18 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 172,
-            "ep": {
-              "season": null,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 172
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "Episode 16",
+          "name": "Altair of the Point at Infinity -Vega and Altair-",
+          "airdate": "2018-08-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "steins-gate-0-episode-16",
             "itemTitle": "Steins; Gate 0 Episode 16",
             "file": "Steins;Gate 0 Episode 16.mp4",
@@ -105,94 +194,64 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166,
-            "ep": {
-              "season": null,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 166
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "sucks pt",
-          "state": "REVIEW",
-          "file": {
-            "item": "steins-gate-0-sucks-pt.-1-ruining-my-favorite-characters",
-            "itemTitle": "Steins; Gate 0 Sucks, Pt. 1 Ruining My Favorite Characters",
-            "file": "Steins;Gate 0 Sucks, Pt. 1_ Ruining My Favorite Characters.ia.mp4",
-            "name": "Steins;Gate 0 Sucks, Pt",
-            "url": "https://archive.org/download/steins-gate-0-sucks-pt.-1-ruining-my-favorite-characters/Steins%3BGate%200%20Sucks%2C%20Pt.%201_%20Ruining%20My%20Favorite%20Characters.ia.mp4",
-            "seconds": 1259,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 71,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Altair of the Hyperbolic Plane -Beltrami Pseudosphere-",
+          "airdate": "2018-08-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
-          "name": "sucks pt 1 ruining my favorite characters",
-          "state": "REVIEW",
-          "file": {
-            "item": "steins-gate-0-sucks-pt.-1-ruining-my-favorite-characters",
-            "itemTitle": "Steins; Gate 0 Sucks, Pt. 1 Ruining My Favorite Characters",
-            "file": "Steins;Gate 0 Sucks, Pt. 1_ Ruining My Favorite Characters.mp4",
-            "name": "Steins;Gate 0 Sucks, Pt. 1_ Ruining My Favorite Characters",
-            "url": "https://archive.org/download/steins-gate-0-sucks-pt.-1-ruining-my-favorite-characters/Steins%3BGate%200%20Sucks%2C%20Pt.%201_%20Ruining%20My%20Favorite%20Characters.mp4",
-            "seconds": 1259,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 71,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Altair of Translational Symmetry -Translational Symmetry-",
+          "airdate": "2018-08-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
-          "name": "sucks pt 2 badly written fanfiction",
-          "state": "REVIEW",
-          "file": {
-            "item": "steins-gate-0-sucks-pt.-2-badly-written-fanfiction",
-            "itemTitle": "Steins; Gate 0 Sucks, Pt. 2 Badly Written Fanfiction",
-            "file": "Steins;Gate 0 Sucks, Pt. 2_ Badly-Written Fanfiction.mp4",
-            "name": "Steins;Gate 0 Sucks, Pt. 2_ Badly-Written Fanfiction",
-            "url": "https://archive.org/download/steins-gate-0-sucks-pt.-2-badly-written-fanfiction/Steins%3BGate%200%20Sucks%2C%20Pt.%202_%20Badly-Written%20Fanfiction.mp4",
-            "seconds": 1171,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 71,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Altair of the Cyclic Coordinate -Time-leap Machine-",
+          "airdate": "2018-08-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
-          "name": "sucks pt 3 ugly dumb and bad",
-          "state": "REVIEW",
-          "file": {
-            "item": "steins-gate-0-sucks-pt.-3-ugly-dumb-bad",
-            "itemTitle": "Steins; Gate 0 Sucks, Pt. 3 Ugly, Dumb & Bad",
-            "file": "Steins;Gate 0 Sucks, Pt. 3_ Ugly, Dumb & Bad.mp4",
-            "name": "Steins;Gate 0 Sucks, Pt. 3_ Ugly, Dumb & Bad",
-            "url": "https://archive.org/download/steins-gate-0-sucks-pt.-3-ugly-dumb-bad/Steins%3BGate%200%20Sucks%2C%20Pt.%203_%20Ugly%2C%20Dumb%20%26%20Bad.mp4",
-            "seconds": 1247,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 83,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Rinascimento of the Unwavering Promise - Promised Rinascimento-",
+          "airdate": "2018-09-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Rinascimento of Image Formation -Return of Phoenix-",
+          "airdate": "2018-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Rinascimento of Projection -Project Amadeus-",
+          "airdate": "2018-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Arclight of the Point at Infinity -Arc-light of the Sky-",
+          "airdate": "2018-09-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

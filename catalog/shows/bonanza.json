@@ -3,7 +3,7 @@
   "slug": "bonanza",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:25.095Z",
+  "matchedAt": "2026-10-15T03:18:31.034Z",
   "tvmaze": {
     "id": 4378,
     "name": "Bonanza",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 431,
     "live": 0,
-    "review": 7,
-    "missing": 424,
+    "review": 8,
+    "missing": 423,
     "pct": 2
   },
   "seasons": [
@@ -236,9 +236,35 @@
           "number": 24,
           "name": "The Stranger",
           "airdate": "1960-02-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Stranger\" (1.00)",
+            "item": "Bonanza-TheStranger",
+            "itemTitle": "Bonanza - The Stranger",
+            "file": "Bonanza_-_The_Stranger_S01-E24.mp4",
+            "name": "Bonanza_-_The_Stranger_S01-E24",
+            "url": "https://archive.org/download/Bonanza-TheStranger/Bonanza_-_The_Stranger_S01-E24.mp4",
+            "seconds": 2964,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 289
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Stranger\" (0.95)",
+              "item": "Bonanza-TheStranger",
+              "itemTitle": "Bonanza - The Stranger",
+              "file": "Bonanza_-_The_Stranger_S01-E24_512kb.mp4",
+              "name": "Bonanza_-_The_Stranger_S01-E24_512kb",
+              "url": "https://archive.org/download/Bonanza-TheStranger/Bonanza_-_The_Stranger_S01-E24_512kb.mp4",
+              "seconds": 2964,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 215
+            }
+          ]
         },
         {
           "number": 25,

@@ -3,21 +3,20 @@
   "slug": "hometime",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-15T01:19:21.447Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:25.194Z",
   "tvmaze": {
-    "id": null,
+    "id": 10219,
     "name": "Hometime",
-    "runtime": null,
-    "premiered": null,
-    "network": "TLC"
+    "runtime": 30,
+    "premiered": "1986-11-01",
+    "network": "PBS"
   },
   "coverage": {
-    "total": 8,
+    "total": 280,
     "live": 0,
-    "review": 8,
-    "missing": 0,
-    "pct": 100
+    "review": 2,
+    "missing": 278,
+    "pct": 1
   },
   "seasons": [
     {
@@ -25,9 +24,60 @@
       "episodes": [
         {
           "number": 1,
-          "name": "bathrooms video publishing inc",
+          "name": "Exterior Painting",
+          "airdate": "1986-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Roofing",
+          "airdate": "1986-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Siding",
+          "airdate": "1986-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Windows and Doors",
+          "airdate": "1986-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Drywall",
+          "airdate": "1986-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Fences and Gates",
+          "airdate": "1986-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Bathrooms",
+          "airdate": "1986-12-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Bathrooms\" (0.95)",
             "item": "HometimeBathroomsHometimeVideoPublishingInc.1996",
             "itemTitle": "Hometime - Bathrooms",
             "file": "Hometime - Bathrooms (Hometime Video Publishing, Inc.)(1996).mp4",
@@ -36,38 +86,26 @@
             "seconds": 3810,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 397,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 397
           },
           "alternates": []
         },
         {
-          "number": 2,
-          "name": "contracting a home vol 1 video publishing inc",
-          "state": "REVIEW",
-          "file": {
-            "item": "HometimeContractingAHomeVol1-1994",
-            "itemTitle": "Hometime - Contracting a Home Vol. 1",
-            "file": "Hometime - Contracting a Home Vol. 1 (Hometime Video Publishing, Inc.)(1994).mp4",
-            "name": "Hometime - Contracting a Home Vol. 1 (Hometime Video Publishing, Inc.)(1994)",
-            "url": "https://archive.org/download/HometimeContractingAHomeVol1-1994/Hometime%20-%20Contracting%20a%20Home%20Vol.%201%20(Hometime%20Video%20Publishing%2C%20Inc.)(1994).mp4",
-            "seconds": 5651,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 589,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 8,
+          "name": "Plumbing",
+          "airdate": "1986-12-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "decks video publishing inc",
+          "number": 9,
+          "name": "Decks",
+          "airdate": "1986-12-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Decks\" (0.95)",
             "item": "HometimeDecks1989",
             "itemTitle": "Hometime - Decks",
             "file": "Hometime - Decks (Hometime Video Publishing, Inc.)(1989).mp4",
@@ -76,111 +114,2261 @@
             "seconds": 4403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 458,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 458
           },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Electrical",
+          "airdate": "1987-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Framing",
+          "airdate": "1987-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Kitchens",
+          "airdate": "1987-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Weatherization and Insulation",
+          "airdate": "1987-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Log Cabin - Log Shell",
+          "airdate": "1992-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Log Cabin - Roof and Chinking",
+          "airdate": "1992-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Log Cabin - Fireplace",
+          "airdate": "1992-01-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "patios and walkways video publishing inc",
-          "state": "REVIEW",
-          "file": {
-            "item": "HometimePatiosAndWalkways1987",
-            "itemTitle": "Hometime - Patios and Walkways",
-            "file": "Hometime - Patios & Walkways (Hometime Video Publishing, Inc.)(1987).mp4",
-            "name": "Hometime - Patios & Walkways (Hometime Video Publishing, Inc.)(1987)",
-            "url": "https://archive.org/download/HometimePatiosAndWalkways1987/Hometime%20-%20Patios%20%26%20Walkways%20(Hometime%20Video%20Publishing%2C%20Inc.)(1987).mp4",
-            "seconds": 3978,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 414,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Log Cabin - Cabinets",
+          "airdate": "1992-02-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "three porch video publishing inc",
-          "state": "REVIEW",
-          "file": {
-            "item": "HometimeThreeSeasonPorch1989",
-            "itemTitle": "Hometime - Three Season Porch",
-            "file": "Hometime - Three Season Porch (Hometime Video Publishing, Inc.)(1989).mp4",
-            "name": "Hometime - Three Season Porch (Hometime Video Publishing, Inc.)(1989)",
-            "url": "https://archive.org/download/HometimeThreeSeasonPorch1989/Hometime%20-%20Three%20Season%20Porch%20(Hometime%20Video%20Publishing%2C%20Inc.)(1989).mp4",
-            "seconds": 4878,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 513,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Log Cabin - Finishing Touches",
+          "airdate": "1992-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Log Cabin Update",
+          "airdate": "1992-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Habitat for Humanity",
+          "airdate": "1992-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Farewell to JoAnne",
+          "airdate": "1992-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Garage: Framing",
+          "airdate": "1992-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Garage: Roofing",
+          "airdate": "1992-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Garage: Siding",
+          "airdate": "1992-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Roofing: Composition Shingles",
+          "airdate": "1992-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Roofing: Alternatives",
+          "airdate": "1992-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Weatherization & Insulation",
+          "airdate": "1992-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Building a New Home: Framing",
+          "airdate": "1992-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Building a New Home: Roofing Windows, and Siding",
+          "airdate": "1992-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Building a New Home: Mechanical Systems",
+          "airdate": "1992-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Building a New Home: Insulation & Exterior Elements",
+          "airdate": "1992-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Building a New Home: Drywall & Cabinets",
+          "airdate": "1992-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Building a New Home: Ceramic Tile & Countertops",
+          "airdate": "1992-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Building a New Home: Countertops & Landscape",
+          "airdate": "1992-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Building a New Home: Trim-Outs & Finishing Touches",
+          "airdate": "1992-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Managing Home Construction: Excavation",
+          "airdate": "1994-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Managing Home Construction: The Shell",
+          "airdate": "1994-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Managing Home Construction: Mechanicals",
+          "airdate": "1994-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Managing Home Construction: Construction Coordination",
+          "airdate": "1994-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Managing Home Construction: Veneer Plaster",
+          "airdate": "1994-11-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "special edition building a new home tape 1 video publishing inc",
-          "state": "REVIEW",
-          "file": {
-            "item": "HometimeSpecialEditionBuildingANewHomeHometimeVideoPublishingInc.1994",
-            "itemTitle": "Hometime Special Edition - Building a New Home",
-            "file": "Hometime Special Edition - Building a New Home Tape 1 (Hometime Video Publishing, Inc.)(1994).mp4",
-            "name": "Hometime Special Edition - Building a New Home Tape 1 (Hometime Video Publishing, Inc.)(1994)",
-            "url": "https://archive.org/download/HometimeSpecialEditionBuildingANewHomeHometimeVideoPublishingInc.1994/Hometime%20Special%20Edition%20-%20Building%20a%20New%20Home%20Tape%201%20(Hometime%20Video%20Publishing%2C%20Inc.)(1994).mp4",
-            "seconds": 6970,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 727,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Managing Home Construction: Kitchen & Baths",
+          "airdate": "1994-11-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "special edition building a new home tape 2 video publishing inc",
-          "state": "REVIEW",
-          "file": {
-            "item": "HometimeSpecialEditionBuildingANewHomeHometimeVideoPublishingInc.1994",
-            "itemTitle": "Hometime Special Edition - Building a New Home",
-            "file": "Hometime Special Edition - Building a New Home Tape 2 (Hometime Video Publishing, Inc.)(1994).mp4",
-            "name": "Hometime Special Edition - Building a New Home Tape 2 (Hometime Video Publishing, Inc.)(1994)",
-            "url": "https://archive.org/download/HometimeSpecialEditionBuildingANewHomeHometimeVideoPublishingInc.1994/Hometime%20Special%20Edition%20-%20Building%20a%20New%20Home%20Tape%202%20(Hometime%20Video%20Publishing%2C%20Inc.)(1994).mp4",
-            "seconds": 4480,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 468,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Managing Home Construction: Interior & Exterior Finishes",
+          "airdate": "1994-12-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "hometimehow tovideoguidefinishingabasementconstruction and finishing",
-          "state": "REVIEW",
-          "file": {
-            "item": "SmokeshometimehowtovideoguidefinishingabasementconstructionfinishingVHSTape",
-            "itemTitle": "Hometime How To Video Guide: Finishing a Basement Construction & Finishing (1998; Hometime Video Publishing)",
-            "file": "HometimeHow-ToVideoGuideFinishingaBasementConstruction&Finishing.mp4",
-            "name": "HometimeHow-ToVideoGuideFinishingaBasementConstruction&Finishing",
-            "url": "https://archive.org/download/SmokeshometimehowtovideoguidefinishingabasementconstructionfinishingVHSTape/HometimeHow-ToVideoGuideFinishingaBasementConstruction%26Finishing.mp4",
-            "seconds": 4233,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 442,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Managing Home Construction: Wrapping Up",
+          "airdate": "1994-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 9,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Prairie House Remodel I",
+          "airdate": "1995-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Prairie House Remodel II",
+          "airdate": "1995-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Prairie House Remodel III",
+          "airdate": "1995-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Prairie House Remodel IV",
+          "airdate": "1995-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Prairie House Remodel V",
+          "airdate": "1995-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Prairie House Remodel VI",
+          "airdate": "1995-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Prairie House Remodel VII",
+          "airdate": "1995-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Prairie House Remodel VIII",
+          "airdate": "1995-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Prairie House Remodel IX",
+          "airdate": "1995-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 11,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "American Four-Square: Plans",
+          "airdate": "1997-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "American Four-Square: Foundation",
+          "airdate": "1997-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "American Four-Square: Windows",
+          "airdate": "1997-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "American Four-Square: Insulation and Heating",
+          "airdate": "1997-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "American Four-Square: Drywall",
+          "airdate": "1997-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "American Four-Square: Flooring",
+          "airdate": "1997-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "American Four-Square: Millwork",
+          "airdate": "1997-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "American Four-Square: Custom Cabinets",
+          "airdate": "1997-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "American Four-Square: Paint and Wllcovering",
+          "airdate": "1997-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "American Four-Square: Trim-Outs",
+          "airdate": "1997-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "American Four-Square: Final Walk Through",
+          "airdate": "1997-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 12,
+      "episodes": [
+        {
+          "number": 7,
+          "name": "Arts and Crafts Bungalow: Starting Up",
+          "airdate": "1998-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Arts and Crafts Bungalow: Foundation and Framing",
+          "airdate": "1998-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Arts and Crafts Bungalow: Roofing and Windows",
+          "airdate": "1998-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Arts and Crafts Bungalow: Rough-ins",
+          "airdate": "1998-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Arts and Crafts Bungalow: Insulation and Drywall",
+          "airdate": "1998-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Arts and Crafts Bungalow: Millwork",
+          "airdate": "1998-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Arts and Crafts Bungalow: Trim-Out and Move-In",
+          "airdate": "1998-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 13,
+      "episodes": [
+        {
+          "number": 3,
+          "name": "Lodge Style Log Cabin: Log Shell",
+          "airdate": "1999-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Lodge Style Log Cabin: Roofing",
+          "airdate": "1999-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Lodge Style Log Cabin: Exterior Work",
+          "airdate": "1999-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Lodge Style Log Cabin: Buttoning Up",
+          "airdate": "1999-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Lodge Style Log Cabin: Starting Interior",
+          "airdate": "1999-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Lodge Style Log Cabin: Mechanicals",
+          "airdate": "1999-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Lodge Style Log Cabin: Carpentry",
+          "airdate": "1999-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Lodge Style Log Cabin: Interior Progress",
+          "airdate": "1999-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Lodge Style Log Cabin: Trim-Outs",
+          "airdate": "1999-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Lodge Style Log Cabin: Finishing",
+          "airdate": "1999-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Lodge Style Log Cabin: Features",
+          "airdate": "1999-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Lodge Style Log Cabin: Decorative Plaster",
+          "airdate": "1999-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Lodge Style Log Cabin: Exterior Wrap-Up",
+          "airdate": "1999-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Lodge Style Log Cabin: Interior Wrap-Up",
+          "airdate": "1999-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Lodge Style Log Cabin: Final Tour",
+          "airdate": "1999-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 14,
+      "episodes": [
+        {
+          "number": 28,
+          "name": "Decorating Brick House:Furnishings",
+          "airdate": "2000-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Decorating Brick House: Walls and Floors",
+          "airdate": "2000-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 15,
+      "episodes": [
+        {
+          "number": 5,
+          "name": "1923 Kitchen Revival: 1of4",
+          "airdate": "2000-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "1923 Kitchen Revival: 2of4",
+          "airdate": "2000-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "1923 Kitchen Revival: 3of4",
+          "airdate": "2000-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "1923 Kitchen Revival: 4of4",
+          "airdate": "2000-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Three-Car Garage: Slab and Framing",
+          "airdate": "2000-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Three-Car Garage: Roof and Sidings",
+          "airdate": "2000-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Three-Car Garage: Special Features",
+          "airdate": "2000-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 16,
+      "episodes": [
+        {
+          "number": 14,
+          "name": "Autumn Woods House: Foundation and Cap",
+          "airdate": "2001-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Autumn Woods House: Framing and Roof",
+          "airdate": "2001-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Autumn Woods House: Rough-ins",
+          "airdate": "2001-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Autumn Woods House: Weatherization and Drywall",
+          "airdate": "2001-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Autumn Woods House: Exterior Wrap",
+          "airdate": "2001-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Autumn Woods House: Landscaping",
+          "airdate": "2001-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Autumn Woods House: Planing",
+          "airdate": "2001-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Autumn Woods House: Floors, Stone, and Ceramic Tile",
+          "airdate": "2001-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Autumn Woods House: Doors and Cabinets",
+          "airdate": "2001-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Autumn Woods House: Kitchen",
+          "airdate": "2001-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Autumn Woods House: Wine Cellar",
+          "airdate": "2001-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Autumn Woods House: Home Theater",
+          "airdate": "2001-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Autumn Woods House: Contruction Wrap",
+          "airdate": "2001-12-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Autumn Woods Completion: Decorating",
+          "airdate": "2001-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Autumn Woods Completion: Furnishing",
+          "airdate": "2002-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 23,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Digging Out the Yard",
+          "airdate": "2009-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Urban Terraces",
+          "airdate": "2009-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Caretaker's Home",
+          "airdate": "2009-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Entrance Plaza",
+          "airdate": "2009-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Betsy-Tacy Home: Decoration",
+          "airdate": "2009-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Eat-In-Kitchen: Demolition",
+          "airdate": "2009-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Eat-In-Kitchen: Cabinets",
+          "airdate": "2009-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Eat-In-Kitchen: Wrap Up",
+          "airdate": "2009-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Sculpture Studio: Framing",
+          "airdate": "2009-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Sculpture Studio: Finishing",
+          "airdate": "2009-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Great Room Hardwood Floor",
+          "airdate": "2009-09-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Travertine Floor",
+          "airdate": "2009-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Seven-Year Plan",
+          "airdate": "2009-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Kitchen Facelift",
+          "airdate": "2009-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Great Room Update",
+          "airdate": "2009-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Linoleum Flooring",
+          "airdate": "2009-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Cabin Kitchen Upgrade",
+          "airdate": "2009-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Vacation Home Laundry Room",
+          "airdate": "2009-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Historic Summer Home -- Structural Upgrades",
+          "airdate": "2009-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Historic Summer Home -- Kitchen",
+          "airdate": "2009-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Barrel Vault Basement",
+          "airdate": "2009-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Party Kitchen",
+          "airdate": "2009-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Arched Wood Panels",
+          "airdate": "2009-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Attic Trusses",
+          "airdate": "2009-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Standalone Garage",
+          "airdate": "2009-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Yoga Studio",
+          "airdate": "2009-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 24,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Sculpture Studio Extension - Floor",
+          "airdate": "2010-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Sculpture Studio Extension - Walls",
+          "airdate": "2010-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Sculpture Studio Extension - Wrap Up",
+          "airdate": "2010-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Stone Cottage – Cul-De-Sac Prep",
+          "airdate": "2010-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Stone Cottage – Concrete & Foam",
+          "airdate": "2010-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Stone Cottage – Instant House",
+          "airdate": "2010-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Stone Cottage – Roofscape",
+          "airdate": "2010-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Stone Cottage – Windows",
+          "airdate": "2010-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Stone Cottage – Concrete Floors",
+          "airdate": "2010-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Stone Cottage – Inner Workings",
+          "airdate": "2010-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Stone Cottage – Insulation",
+          "airdate": "2010-04-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Stone Cottage – Geothermal",
+          "airdate": "2010-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "His and Her Garage",
+          "airdate": "2010-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Stone Cottage -- Interior Walls",
+          "airdate": "2010-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Stone Cottage -- Vaulted Ceilings",
+          "airdate": "2010-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Stone Cottage -- Millwork",
+          "airdate": "2010-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Stone Cottage -- Exterior Doors",
+          "airdate": "2010-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Stone Cottage -- Tile",
+          "airdate": "2010-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Stone Cottage -- Driveway",
+          "airdate": "2010-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Stone Cottage -- Interior Doors",
+          "airdate": "2010-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Stone Cottage -- Laundry Room",
+          "airdate": "2010-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Stone Cottage -- Office",
+          "airdate": "2010-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Stone Cottage -- Countertops",
+          "airdate": "2010-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Stone Cottage -- Fixtures and Appliances",
+          "airdate": "2010-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Stone Cottage -- Retractable Screens",
+          "airdate": "2011-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Stone Cottage -- Sod and Stone",
+          "airdate": "2011-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 25,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Stone Cottage -- Finishing the Trim",
+          "airdate": "2011-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Stone Cottage -- Porch Railing",
+          "airdate": "2011-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Stone Cottage -- Lighting",
+          "airdate": "2011-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Stone Cottage -- Kitchen & Baths",
+          "airdate": "2011-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Recycled Fence",
+          "airdate": "2011-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Granite Bar Top",
+          "airdate": "2011-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Porch and Rail",
+          "airdate": "2011-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Circular Beds",
+          "airdate": "2011-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Stone Cottage -- Lower Level",
+          "airdate": "2011-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Stone Cottage -- Storage",
+          "airdate": "2011-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Stone Cottage -- Carpet",
+          "airdate": "2011-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Stone Cottage -- Electronics",
+          "airdate": "2011-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Closet Organizers",
+          "airdate": "2011-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Wine Cellar",
+          "airdate": "2011-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Side Porch",
+          "airdate": "2011-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Workshop",
+          "airdate": "2011-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Home Theater",
+          "airdate": "2011-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Outdoor Kitchen Island",
+          "airdate": "2011-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Built-in Grill",
+          "airdate": "2011-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Mailbox & Flower Box",
+          "airdate": "2011-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Cottage Style Expressions",
+          "airdate": "2011-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Microscapes 1",
+          "airdate": "2011-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Microscapes 2",
+          "airdate": "2011-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Exterior Harmony: Windows",
+          "airdate": "2012-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Exterior Harmony: Roofing",
+          "airdate": "2012-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Exterior Harmony: Siding",
+          "airdate": "2012-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 26,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Exterior Harmony: Doors and Stone",
+          "airdate": "2012-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Exterior Harmony: Driveway and Walkway",
+          "airdate": "2012-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Kitchen and Mud Room Remodel 1",
+          "airdate": "2012-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Kitchen and Mud Room Remodel 2",
+          "airdate": "2012-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Kitchen and Mud Room Remodel 3",
+          "airdate": "2012-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Kitchen and Mud Room Remodel 4",
+          "airdate": "2012-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Kitchen and Mud Room Remodel 5",
+          "airdate": "2012-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Kitchen and Mud Room Remodel 6",
+          "airdate": "2012-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Kitchen and Mud Room Remodel 7",
+          "airdate": "2012-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Front Entry Curb Appeal",
+          "airdate": "2012-04-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Screen Porch Highlights",
+          "airdate": "2012-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Homes for a Home Show",
+          "airdate": "2012-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quartz Kitchen Remodel",
+          "airdate": "2012-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Exterior Harmony: Landscape Wrap",
+          "airdate": "2012-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "North Woods Trees",
+          "airdate": "2012-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Timber Shed Wall Framing",
+          "airdate": "2012-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Timber Shed Roof Framing",
+          "airdate": "2012-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Stamped Concrete Patio Demo",
+          "airdate": "2012-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Stamped Concrete Patio Re-Poured",
+          "airdate": "2012-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Built-In Gas Grill",
+          "airdate": "2012-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Island Kitchen 2.0: Cabinets",
+          "airdate": "2012-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Island Kitchen 2.0: Countertops",
+          "airdate": "2012-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Island Kitchen 2.0: Appliances",
+          "airdate": "2012-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Timber Shed Doors",
+          "airdate": "2012-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Timber Shed Roof and Stone",
+          "airdate": "2012-12-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Timber Shed Finishing Touches",
+          "airdate": "2012-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 27,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Log Cabin Systems 1",
+          "airdate": "2013-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Log Cabin Systems 2",
+          "airdate": "2013-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Creekside Home Preview",
+          "airdate": "2013-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Creekside Home Foundation",
+          "airdate": "2013-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Creekside Home Framing",
+          "airdate": "2013-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Creekside Home Dormers",
+          "airdate": "2013-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Creekside Home Roofing",
+          "airdate": "2013-04-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Creekside Home Stone",
+          "airdate": "2013-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Creekside Home Trusses",
+          "airdate": "2013-06-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Creekside Home Timbers",
+          "airdate": "2013-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Creekside Home Windows",
+          "airdate": "2013-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Creekside Home Siding",
+          "airdate": "2013-06-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Creekside Home Drainage",
+          "airdate": "2013-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Creekside Home Concrete",
+          "airdate": "2013-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Creekside Home Dried In",
+          "airdate": "2013-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Creekside Home Garage",
+          "airdate": "2013-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Energy-Smart Sunroom",
+          "airdate": "2013-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Creekside Home Mechanicals",
+          "airdate": "2013-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Creekside Home Exteriors",
+          "airdate": "2013-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Creekside Home Surfaces",
+          "airdate": "2013-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Creekside Home Yardscapes",
+          "airdate": "2013-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Creekside Home Interiors",
+          "airdate": "2013-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Creekside Home Cabinets",
+          "airdate": "2014-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Creekside Home Fixtures",
+          "airdate": "2014-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Creekside Home Kitchen and Baths",
+          "airdate": "2014-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Creekside Home Furnishings",
+          "airdate": "2014-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 28,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Creekside Home Heat",
+          "airdate": "2014-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Creekside Home Garage Doors",
+          "airdate": "2014-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Creekside Home Light and Glass",
+          "airdate": "2014-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Ranch Addition Framing",
+          "airdate": "2014-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Ranch Addition Roof and Siding",
+          "airdate": "2014-04-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Ranch Addition Floors",
+          "airdate": "2014-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Ranch Addition Kitchen",
+          "airdate": "2014-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Ranch Addition Landscape",
+          "airdate": "2014-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Creekside Home Drywall",
+          "airdate": "2014-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Creekside Home Spaces",
+          "airdate": "2014-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Creekside Home Floors",
+          "airdate": "2014-05-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Creekside Home Brackets",
+          "airdate": "2014-05-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Creekside Home Bracket Install",
+          "airdate": "2014-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Creekside Home Stone Floor",
+          "airdate": "2014-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Creekside Home Millwork",
+          "airdate": "2014-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Creekside Home Garage Floor Coating",
+          "airdate": "2014-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Creekside Home Bathroom Tile",
+          "airdate": "2014-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Creekside Home Central Vac",
+          "airdate": "2014-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Creekside Home Landscape",
+          "airdate": "2014-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Creekside Home Porches",
+          "airdate": "2014-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Creekside Home Great Room",
+          "airdate": "2014-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Creekside Home Lower Level",
+          "airdate": "2015-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Creekside Home Mud Room",
+          "airdate": "2015-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Creekside Home Organizing",
+          "airdate": "2015-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Creekside Home Kitchen",
+          "airdate": "2015-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Creekside Home Design",
+          "airdate": "2015-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 29,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Creekside Home Built-Ins",
+          "airdate": "2015-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Creekside Home Granite",
+          "airdate": "2015-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Creekside Home Connections",
+          "airdate": "2015-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Creekside Home Copper Hood",
+          "airdate": "2015-06-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Creekside Home Master Bath",
+          "airdate": "2015-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Creekside Home Progress",
+          "airdate": "2015-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Clay Tile Roof Tear-Off",
+          "airdate": "2015-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Clay Tile Roof Installation",
+          "airdate": "2015-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Creekside Home Finishes",
+          "airdate": "2015-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Creekside Home Systems",
+          "airdate": "2015-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Creekside Home Winding Up",
+          "airdate": "2015-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Creekside Home Final",
+          "airdate": "2015-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Lower Level",
+          "airdate": "2016-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Home Electronics",
+          "airdate": "2016-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Last Episode",
+          "airdate": "2016-01-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

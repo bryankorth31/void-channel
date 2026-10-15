@@ -3,31 +3,113 @@
   "slug": "after-midnight",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-15T01:19:17.426Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:16.871Z",
   "tvmaze": {
-    "id": null,
+    "id": 72400,
     "name": "After Midnight",
-    "runtime": null,
-    "premiered": null,
-    "network": "US"
+    "runtime": 60,
+    "premiered": "2024-01-16",
+    "network": "CBS"
   },
   "coverage": {
-    "total": 70,
-    "live": 0,
-    "review": 70,
-    "missing": 0,
-    "pct": 100
+    "total": 199,
+    "live": 70,
+    "review": 0,
+    "missing": 129,
+    "pct": 35
   },
   "seasons": [
     {
       "season": 1,
       "episodes": [
         {
+          "number": 1,
+          "name": "Whitney Cummings, Aparna Nancherla, Kurt Braunohler",
+          "airdate": "2024-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Paul F. Tompkins, Sophie Buddle, Carl Tart",
+          "airdate": "2024-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Max Greenfield, James Davis, Robby Hoffman",
+          "airdate": "2024-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Chad Daniels, Kelsey Cook, Milana Vayntrub",
+          "airdate": "2024-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Atsuko Okatsuka, Josh Johnson, Doug Benson",
+          "airdate": "2024-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Guy Branum, Lisa Gilroy, Marcella Arguello",
+          "airdate": "2024-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Natasha Leggero, Moshe Kasher, Jon Daly",
+          "airdate": "2024-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Jerry O'Connell, Arden Myrin, Mary Lynn Rajskub",
+          "airdate": "2024-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Suzi Barrett, Matt Walsh, Vanessa Gonzalez",
+          "airdate": "2024-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Sasheer Zamata, Joyelle Nicole Johnson, John Hodgman",
+          "airdate": "2024-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 11,
-          "name": "thomas lennon kel mitchell melissa villase or",
-          "state": "REVIEW",
+          "name": "Thomas Lennon, Kel Mitchell, Melissa Villaseñor",
+          "airdate": "2024-02-01",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E11 Thomas Lennon; Kel Mitchell; Melissa Villaseñor.mp4",
@@ -36,21 +118,42 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 12,
+          "name": "Bianca Del Rio, Reggie Watts, Wendi McLendon-Covey",
+          "airdate": "2024-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Taylor Ortega, Jon Gabrus, Megan Gailey",
+          "airdate": "2024-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Dusty Slay, London Hughes, Sarah Tiana",
+          "airdate": "2024-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 15,
-          "name": "billy eichner nico santos pete holmes",
-          "state": "REVIEW",
+          "name": "Billy Eichner, Nico Santos, Pete Holmes",
+          "airdate": "2024-02-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E15 Billy Eichner; Nico Santos; Pete Holmes.mp4",
@@ -59,21 +162,66 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
+          "number": 16,
+          "name": "Wayne Brady, Maria Bamford, Kevin Smith",
+          "airdate": "2024-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Riki Lindhome, Rob Huebel, Vinny Thomas",
+          "airdate": "2024-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Lauren Lapkus, Ashley Nicole Black, Irene Tu",
+          "airdate": "2024-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Will Miles, Giulia Rozzi, Brian McElhaney, Nick Kocher, Anna Seregina, Chris Thayer",
+          "airdate": "2024-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Brendan Hunt, Marc Maron, Zainab Johnson",
+          "airdate": "2024-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Caitlin Peluffo, Dulcé Sloan, Jenny Zigrino",
+          "airdate": "2024-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 22,
-          "name": "fortune feimster mae martin tig notaro",
-          "state": "REVIEW",
+          "name": "Fortune Feimster, Mae Martin, Tig Notaro",
+          "airdate": "2024-02-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E22 Fortune Feimster; Mae Martin; Tig Notaro.mp4",
@@ -82,21 +230,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 23,
+          "name": "W. Kamau Bell, Nish Kumar, Anjelah Johnson-Reyes",
+          "airdate": "2024-02-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 24,
-          "name": "rob riggle adam ray mon t x change",
-          "state": "REVIEW",
+          "name": "Rob Riggle, Adam Ray, Monét X Change",
+          "airdate": "2024-03-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E24 Rob Riggle; Adam Ray; Monét X Change.mp4",
@@ -105,21 +258,58 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 25,
+          "name": "Esther Povitsky, Haley Joel Osment, Kurt Braunohler",
+          "airdate": "2024-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Ron Funches, Adam Pally, Blair Socci",
+          "airdate": "2024-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Beth Stelling, Zach Noe Towers, Mo Welch",
+          "airdate": "2024-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Randy Sklar, Jason Sklar",
+          "airdate": "2024-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Flula Borg, Chris Grace, Pink Foxx",
+          "airdate": "2024-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 30,
-          "name": "caroline rhea matt rogers james davis",
-          "state": "REVIEW",
+          "name": "Caroline Rhea, Matt Rogers, James Davis",
+          "airdate": "2024-03-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E30 Caroline Rhea; Matt Rogers; James Davis.mp4",
@@ -128,21 +318,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 1,
-              "episode": 30
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 31,
-          "name": "reggie conquest jordan temple paul f tompkins",
-          "state": "REVIEW",
+          "name": "Reggie Conquest, Jordan Temple, Paul F. Tompkins",
+          "airdate": "2024-03-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E31 Reggie Conquest; Jordan Temple; Paul F. Tompkins.mp4",
@@ -151,21 +338,178 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 1,
-              "episode": 31
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 32,
+          "name": "Chloe Radcliffe, Matt Braunger, Chris Fleming",
+          "airdate": "2024-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Shane Torres, Kyle Kinane, Amy Miller",
+          "airdate": "2024-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Phoebe Robinson, Dewayne Perkins, Guy Branum",
+          "airdate": "2024-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Jourdain Fisher, Arden Myrin, Zach Zimmerman",
+          "airdate": "2024-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Jack Martin, Maggie Winters, Vinny Thomas",
+          "airdate": "2024-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Maria Bamford, Jackie Kashian, Laurie Kilmartin",
+          "airdate": "2024-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Trevor Wallace, London Hughes, Affion Crockett",
+          "airdate": "2024-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Dustin Nickerson, Dulcé Sloan, Amir K",
+          "airdate": "2024-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Loni Love, Jackie Fabulous, Dan Levy",
+          "airdate": "2024-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "Joel Kim Booster, Greta Titelman, Sandy Honig",
+          "airdate": "2024-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Diona Reasonover, Doug Benson, Echo Kellum",
+          "airdate": "2024-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "Hari Kondabolu, Dave Hill, Liz Miele",
+          "airdate": "2024-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "Felipe Esparza, Marcella Arguello, Morgan Murphy",
+          "airdate": "2024-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Patty Guggenheim, Betsy Sodaro, Utkarsh Ambudkar",
+          "airdate": "2024-04-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "Jon Lovett, Josh Sharp, Aaron Jackson",
+          "airdate": "2024-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "Caitlin Reilly, Gillian Jacobs, Pete Holmes",
+          "airdate": "2024-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "Drew Carey, Thomas Lennon, \"Weird Al\" Yankovic",
+          "airdate": "2024-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "Lisa Ann Walter, Michelle Collins, Daniel Franzese",
+          "airdate": "2024-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "Moshe Kasher, Jason Ritter, Chloé Hilliard",
+          "airdate": "2024-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "Chris Redd, Catherine Cohen, Pat Regan",
+          "airdate": "2024-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 52,
-          "name": "mike birbiglia sydnee washington atsuko okatsuka",
-          "state": "REVIEW",
+          "name": "Mike Birbiglia, Sydnee Washington, Atsuko Okatsuka",
+          "airdate": "2024-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E52 Mike Birbiglia; Sydnee Washington; Atsuko Okatsuka..mp4",
@@ -174,21 +518,122 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 1,
-              "episode": 52
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 53,
+          "name": "Hannah Berner, Brandon Kyle Goodman, Heather McMahan",
+          "airdate": "2024-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "Jessica Kirson, Steph Tolev, Eddie Pepitone",
+          "airdate": "2024-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "Johnny Pemberton, Laura Ramoso, Michaela Watkins",
+          "airdate": "2024-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "Bert Kreischer, Katherine Blanford, Rich Eisen",
+          "airdate": "2024-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "Ana Gasteyer, Colton Dunn, Jess McKenna",
+          "airdate": "2024-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "Bassem Youssef, Jay Jurden, Todd Barry",
+          "airdate": "2024-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "BenDeLaCreme, Rory Scovel, Harvey Guillen",
+          "airdate": "2024-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "Jim Rash, Nat Faxon, Stephanie Courtney",
+          "airdate": "2024-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "Andy Richter, Penn Jillette, Aasif Mandvi",
+          "airdate": "2024-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "Marcella Arguello, Thomas Lennon, Sarah Tiana",
+          "airdate": "2024-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "Alex Edelman, Jack McBrayer, Jackie Tohn",
+          "airdate": "2024-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "Timothy Simons, Franchesca Ramsey, John Ross Bowie",
+          "airdate": "2024-06-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "Sasheer Zamata, Joe Lo Truglio, Aparna Nancherla",
+          "airdate": "2024-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 66,
-          "name": "brian simpson kelsey cook blair socci",
-          "state": "REVIEW",
+          "name": "Brian Simpson, Kelsey Cook, Blair Socci",
+          "airdate": "2024-06-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E66 Brian Simpson; Kelsey Cook; Blair Socci.mp4",
@@ -197,21 +642,58 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 66
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 67,
+          "name": "Scott Aukerman, Carl Tart, Mary Elizabeth Ellis",
+          "airdate": "2024-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 68,
+          "name": "Paul F. Tompkins, Morgan Murphy, Guy Branum",
+          "airdate": "2024-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 69,
+          "name": "Kevin Nealon, Jessica Lowe, Dave Holmes",
+          "airdate": "2024-06-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "Jenna Ushkowitz, Kate Micucci, Eliot Glazer",
+          "airdate": "2024-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 71,
+          "name": "Sherry Cola, Solomon Georgio, Debra DiGiovanni",
+          "airdate": "2024-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 72,
-          "name": "terry crews joe manganiello patton oswalt",
-          "state": "REVIEW",
+          "name": "Terry Crews, Joe Manganiello, Patton Oswalt",
+          "airdate": "2024-06-18",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E72 Terry Crews; Joe Manganiello; Patton Oswalt.mp4",
@@ -220,21 +702,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 72
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 73,
+          "name": "James Davis, Ashley Nicole Black, Laurie Kilmartin",
+          "airdate": "2024-06-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 74,
-          "name": "lisa gilroy reid scott kimia behpoornia",
-          "state": "REVIEW",
+          "name": "Lisa Gilroy, Reid Scott, Kimia Behpoornia",
+          "airdate": "2024-06-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E74 Lisa Gilroy; Reid Scott; Kimia Behpoornia.mp4",
@@ -243,21 +730,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 1,
-              "episode": 74
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
           "number": 75,
-          "name": "baron vaughn rhys darby rory scovel",
-          "state": "REVIEW",
+          "name": "Baron Vaughn, Rhys Darby, Rory Scovel",
+          "airdate": "2024-07-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E75 Baron Vaughn; Rhys Darby; Rory Scovel.mp4",
@@ -266,21 +750,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 1,
-              "episode": 75
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
           "number": 76,
-          "name": "colton dunn jason sklar randy sklar",
-          "state": "REVIEW",
+          "name": "Colton Dunn, Jason Sklar, Randy Sklar",
+          "airdate": "2024-07-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E76 Colton Dunn; Jason Sklar; Randy Sklar.mp4",
@@ -289,21 +770,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 1,
-              "episode": 76
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 77,
+          "name": "Chrissy Teigen, Adam Pally, Sandy Honig",
+          "airdate": "2024-07-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 78,
-          "name": "richie moriarty betsy sodaro punam patel",
-          "state": "REVIEW",
+          "name": "Richie Moriarty, Betsy Sodaro, Punam Patel",
+          "airdate": "2024-07-11",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E78 Richie Moriarty; Betsy Sodaro; Punam Patel.mp4",
@@ -312,21 +798,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 78
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 79,
+          "name": "Danny Tamberelli, Lori Beth Denberg, Kel Mitchell",
+          "airdate": "2024-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 80,
-          "name": "kristen schaal flula borg leo gonz lez",
-          "state": "REVIEW",
+          "name": "Kristen Schaal, Flula Borg, Leo González",
+          "airdate": "2024-07-16",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E80 Kristen Schaal; Flula Borg; Leo González.mp4",
@@ -335,21 +826,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 80
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 81,
-          "name": "alaska gillian jacobs chris fleming",
-          "state": "REVIEW",
+          "name": "Alaska 5000, Gillian Jacobs, Chris Fleming",
+          "airdate": "2024-07-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E81 Alaska 5000; Gillian Jacobs; Chris Fleming.mp4",
@@ -358,21 +846,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 1,
-              "episode": 81
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 82,
-          "name": "mandy moore chris sullivan milana vayntrub",
-          "state": "REVIEW",
+          "name": "Mandy Moore, Chris Sullivan, Milana Vayntrub",
+          "airdate": "2024-07-18",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E82 Mandy Moore; Chris Sullivan; Milana Vayntrub.mp4",
@@ -381,21 +866,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 1,
-              "episode": 82
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
+          "number": 83,
+          "name": "Joe Mantegna, Zach Gilford, Laci Mosley",
+          "airdate": "2024-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 84,
-          "name": "anna faris melissa villase or andy richter",
-          "state": "REVIEW",
+          "name": "Anna Faris, Melissa Villaseñor, Andy Richter",
+          "airdate": "2024-07-23",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S01E84 Anna Faris; Melissa Villaseñor; Andy Richter.mp4",
@@ -404,14 +894,24 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 1,
-              "episode": 84
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
+          "alternates": []
+        },
+        {
+          "number": 85,
+          "name": "Dustin Nickerson, Reggie Watts, Irene Tu",
+          "airdate": "2024-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 86,
+          "name": "Pete Holmes, Maria Bamford, Vinny Thomas",
+          "airdate": "2024-07-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -420,10 +920,29 @@
       "season": 2,
       "episodes": [
         {
+          "number": 1,
+          "name": "Thomas Lennon, Kimia Behpoornia, Sandy Honig",
+          "airdate": "2024-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Guy Branum, Kate Micucci, James Davis",
+          "airdate": "2024-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 3,
-          "name": "jordan temple will miles suzi barrett",
-          "state": "REVIEW",
+          "name": "Jordan Temple, Will Miles, Greta Titelman",
+          "airdate": "2024-09-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E03 Jordan Temple; Will Miles; Suzi Barrett.mp4",
@@ -432,21 +951,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "skylar astin wayne brady mary holland",
-          "state": "REVIEW",
+          "name": "Skylar Astin, Wayne Brady, Mary Holland",
+          "airdate": "2024-09-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E04 Skylar Astin; Wayne Brady; Mary Holland.mp4",
@@ -455,21 +971,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "bob the drag queen caitlin reilly rickey thompson",
-          "state": "REVIEW",
+          "name": "Bob the Drag Queen, Caitlin Reilly, Rickey Thompson",
+          "airdate": "2024-09-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E05 Bob the Drag Queen; Caitlin Reilly; Rickey Thompson.mp4",
@@ -478,21 +991,42 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 6,
+          "name": "Aparna Nancherla, Jon Lovett, Zac Oyama",
+          "airdate": "2024-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Kurt Braunohler, Tien Tran, Megan Gailey",
+          "airdate": "2024-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Ayden Mayeri, Paul Feig, Taylor Ortega",
+          "airdate": "2024-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 9,
-          "name": "atsuko okatsuka dylan adler reggie watts",
-          "state": "REVIEW",
+          "name": "Reggie Watts, Atsuko Okatsuka, Dylan Adler",
+          "airdate": "2024-09-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E09 Atsuko Okatsuka; Dylan Adler; Reggie Watts.mp4",
@@ -501,21 +1035,50 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 10,
+          "name": "Jay Pharoah, Taran Killam, Mary Lynn Rajskub",
+          "airdate": "2024-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "James Adomian, Lake Bell, Opey Olagbaju",
+          "airdate": "2024-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Lauren Lapkus, Paul F. Tompkins, Rachel Pegram",
+          "airdate": "2024-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Affion Crockett, Jade Catta-Preta, Moses Storm",
+          "airdate": "2024-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 14,
-          "name": "jess mckenna pete holmes echo kellum",
-          "state": "REVIEW",
+          "name": "Jess McKenna, Pete Holmes, Echo Kellum",
+          "airdate": "2024-09-25",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E14 Jess McKenna; Pete Holmes; Echo Kellum.mp4",
@@ -524,21 +1087,50 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 15,
+          "name": "Raanan Hershberg, Sarah Tiana, Orlando Leyba",
+          "airdate": "2024-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Mitra Jouhari, Anna Seregina, Luke Mones",
+          "airdate": "2024-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Preacher Lawson, Rachel Scanlon, Ian Karmel",
+          "airdate": "2024-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Michelle Collins, Vinny Thomas, Akilah Hughes",
+          "airdate": "2024-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 19,
-          "name": "matt rogers brendan scannell greta titelman",
-          "state": "REVIEW",
+          "name": "Matt Rogers, Brendan Scannell, Greta Titelman",
+          "airdate": "2024-10-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E19 Matt Rogers; Brendan Scannell; Greta Titelman.mp4",
@@ -547,21 +1139,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 2,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
+          "number": 20,
+          "name": "Tawny Newsome, Eugene Cordero, Jerry O'Connell",
+          "airdate": "2024-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 21,
-          "name": "rachel bloom jim rash dylan mulvaney",
-          "state": "REVIEW",
+          "name": "Rachel Bloom, Jim Rash, Dylan Mulvaney",
+          "airdate": "2024-10-15",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E21 Rachel Bloom; Jim Rash; Dylan Mulvaney.mp4",
@@ -570,21 +1167,34 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 22,
+          "name": "Andy Richter, Thomas Lennon, Aparna Nancherla",
+          "airdate": "2024-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Matt Mathews, Guy Branum, Gillian Jacobs",
+          "airdate": "2024-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 24,
-          "name": "nicole byer matteo lane sasheer zamata",
-          "state": "REVIEW",
+          "name": "Nicole Byer, Matteo Lane, Sasheer Zamata",
+          "airdate": "2024-10-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E24 Nicole Byer; Matteo Lane; Sasheer Zamata.mp4",
@@ -593,21 +1203,42 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 25,
+          "name": "Josh Peck, Kurt Braunohler, Taylor Ortega",
+          "airdate": "2024-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Josh Sharp, Suzi Barrett, Danielle Perez",
+          "airdate": "2024-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Colton Dunn, Scott Aukerman, Diona Reasonover",
+          "airdate": "2024-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 28,
-          "name": "nick kocher brian mcelhaney demi adejuyigbe",
-          "state": "REVIEW",
+          "name": "Nick Kocher, Brian McElhaney, Demi Adejuyigbe",
+          "airdate": "2024-10-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E28 Nick Kocher; Brian McElhaney; Demi Adejuyigbe.mp4",
@@ -616,21 +1247,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 28
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 29,
+          "name": "Jay Jurden, Joanne McNally, Affion Crockett",
+          "airdate": "2024-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 30,
-          "name": "emily osment tien tran vinny thomas",
-          "state": "REVIEW",
+          "name": "Emily Osment, Tien Tran, Vinny Thomas",
+          "airdate": "2024-10-30",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E30 Emily Osment; Tien Tran; Vinny Thomas.mp4",
@@ -639,21 +1275,50 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 30
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 31,
+          "name": "Marcella Arguello, Justin Willman, Caroline Rhea",
+          "airdate": "2024-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Rhys Nicholson, Rekha Shankar, Paul F. Tompkins",
+          "airdate": "2024-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Zach Noe Towers, Laura Peek, Guy Branum",
+          "airdate": "2024-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Skyler Higley, Sam Taggart, Nori Reed",
+          "airdate": "2024-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 35,
-          "name": "milana vayntrub jessica lowe jason ritter",
-          "state": "REVIEW",
+          "name": "Milana Vayntrub, Jessica Lowe, Jason Ritter",
+          "airdate": "2024-11-11",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E35 Milana Vayntrub; Jessica Lowe; Jason Ritter.mp4",
@@ -662,21 +1327,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 35
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 36,
-          "name": "langston kerman david gborie megan gailey",
-          "state": "REVIEW",
+          "name": "Langston Kerman, David Gborie, Megan Gailey",
+          "airdate": "2024-11-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E36 Langston Kerman; David Gborie; Megan Gailey.mp4",
@@ -685,21 +1347,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 36
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 37,
+          "name": "Maria Bamford, Murray Hill, Aya Cash",
+          "airdate": "2024-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 38,
-          "name": "mark duplass kate micucci pete holmes",
-          "state": "REVIEW",
+          "name": "Mark Duplass, Kate Micucci, Pete Holmes",
+          "airdate": "2024-11-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E38 Mark Duplass; Kate Micucci; Pete Holmes.mp4",
@@ -708,21 +1375,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 38
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 39,
+          "name": "Celeste Barber, Bob the Drag Queen, Matt Rogers",
+          "airdate": "2024-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 40,
-          "name": "lisa gilroy chris fleming oscar montoya",
-          "state": "REVIEW",
+          "name": "Lisa Gilroy, Chris Fleming, Oscar Montoya",
+          "airdate": "2024-11-19",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E40 Lisa Gilroy; Chris Fleming; Oscar Montoya.mp4",
@@ -731,21 +1403,90 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 40
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 41,
+          "name": "Johnny Pemberton, Nichole Sakura, Matt Braunger",
+          "airdate": "2024-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Anna Seregina, Greta Titelman, Will Miles",
+          "airdate": "2024-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "Kurt Braunohler, Opey Olagbaju, Mamrie Hart",
+          "airdate": "2024-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "Josh Thomas, Brandon Kyle Goodman, Suzi Barrett",
+          "airdate": "2024-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Rachel Scanlon, Taylor Ortega, Jared Goldstein",
+          "airdate": "2024-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "Jordan Temple, Carmen Christopher, Robby Hoffman",
+          "airdate": "2024-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "Michael Urie, Jessica Williams, Luke Tennie",
+          "airdate": "2024-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "Sasheer Zamata, Vinny Thomas, Jeff Hiller",
+          "airdate": "2024-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "Nico Santos, Ben Feldman, Franchesca Ramsey",
+          "airdate": "2024-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 50,
-          "name": "fortune feimster paul scheer ilana glazer",
-          "state": "REVIEW",
+          "name": "Fortune Feimster, Paul Scheer, Ilana Glazer",
+          "airdate": "2024-12-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E50 Fortune Feimster; Paul Scheer; Ilana Glazer.mp4",
@@ -754,21 +1495,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 2,
-              "episode": 50
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
+          "number": 51,
+          "name": "Joel Kim Booster, Pat Regan, Katya Zamolodchikova",
+          "airdate": "2025-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 52,
-          "name": "zach cherry pete holmes corin wells",
-          "state": "REVIEW",
+          "name": "Zach Cherry, Pete Holmes, Corin Wells",
+          "airdate": "2025-01-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E52 Zach Cherry; Pete Holmes; Corin Wells.mp4",
@@ -777,21 +1523,82 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 2,
-              "episode": 52
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
+          "number": 53,
+          "name": "Mary Lynn Rajskub, Patton Oswalt, Brian Posehn",
+          "airdate": "2025-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "Punam Patel, Utkarsh Ambudkar, Betsy Sodaro",
+          "airdate": "2025-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 55,
+          "name": "Thomas Lennon, Paul F. Tompkins, Joe Manganiello",
+          "airdate": "2025-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 56,
+          "name": "Margaret Cho, Dylan Adler, Ian Harvie",
+          "airdate": "2025-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "Kurt Braunohler, Kristen Schaal, Reggie Watts",
+          "airdate": "2025-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "Lukas Gage, Jaboukie Young-White, Caitlin Reilly",
+          "airdate": "2025-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "BenDeLaCreme, Jinkx, Peaches Christ",
+          "airdate": "2025-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "James Davis, Laura Peek, Irene Tu",
+          "airdate": "2025-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 61,
-          "name": "melissa rauch jessica st clair nico santos",
-          "state": "REVIEW",
+          "name": "Melissa Rauch, Jessica St. Clair, Nico Santos",
+          "airdate": "2025-02-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E61 Melissa Rauch; Jessica St. Clair; Nico Santos.mp4",
@@ -800,21 +1607,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 2,
-              "episode": 61
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
+          "number": 62,
+          "name": "John Hodgman, Urzila Carlson, Jean Grae",
+          "airdate": "2025-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 63,
-          "name": "vinny thomas ramona young sherry cola",
-          "state": "REVIEW",
+          "name": "Vinny Thomas, Ramona Young, Sherry Cola",
+          "airdate": "2025-02-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E63 Vinny Thomas; Ramona Young; Sherry Cola.mp4",
@@ -823,21 +1635,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 63
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 64,
+          "name": "Danny Pudi, Jessie Ennis, Ashly Burch",
+          "airdate": "2025-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 65,
-          "name": "josh sharp aaron jackson mon t x change clifton davis karla mosley",
-          "state": "REVIEW",
+          "name": "Josh Sharp, Aaron Jackson, Monét X Change, Clifton Davis, Karla Mosley",
+          "airdate": "2025-02-19",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E65 Josh Sharp; Aaron Jackson; Monét X Change; Clifton Davis; Karla Mosley.mp4",
@@ -846,21 +1663,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 65
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 66,
-          "name": "drew tarver melanie lynskey mary holland morris chestnut",
-          "state": "REVIEW",
+          "name": "Drew Tarver, Melanie Lynskey, Mary Holland, Morris Chestnut",
+          "airdate": "2025-02-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E66 Drew Tarver; Melanie Lynskey; Mary Holland; Morris Chestnut.mp4",
@@ -869,21 +1683,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 66
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 67,
+          "name": "Tichina Arnold, Affion Crockett, Essence Atkins",
+          "airdate": "2025-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 68,
-          "name": "jonah ray kumail nanjiani emily gordon",
-          "state": "REVIEW",
+          "name": "Jonah Ray, Kumail Nanjiani, Emily Gordon",
+          "airdate": "2025-02-25",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E68 Jonah Ray; Kumail Nanjiani; Emily Gordon.mp4",
@@ -892,21 +1711,34 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 68
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 69,
+          "name": "Zach Noe Towers, Rachel Scanlon, Hannah Pilkes",
+          "airdate": "2025-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 70,
+          "name": "Bob the Drag Queen, Drew Afualo, Tefi Pessoa",
+          "airdate": "2025-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 71,
-          "name": "bobby moynihan thomas lennon mary elizabeth ellis",
-          "state": "REVIEW",
+          "name": "Bobby Moynihan, Thomas Lennon, Mary Elizabeth Ellis",
+          "airdate": "2025-03-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E71 Bobby Moynihan; Thomas Lennon; Mary Elizabeth Ellis.mp4",
@@ -915,21 +1747,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 71
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 72,
-          "name": "skylar astin jason ritter riki lindhome phil keoghan",
-          "state": "REVIEW",
+          "name": "Skylar Astin, Jason Ritter, Riki Lindhome, Phil Keoghan",
+          "airdate": "2025-03-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E72 Skylar Astin; Jason Ritter; Riki Lindhome; Phil Keoghan.mp4",
@@ -938,21 +1767,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 72
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 73,
-          "name": "mitra jouhari sandy honig alyssa stonoha",
-          "state": "REVIEW",
+          "name": "Mitra Jouhari, Sandy Honig, Alyssa Stonoha",
+          "airdate": "2025-03-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E73 Mitra Jouhari; Sandy Honig; Alyssa Stonoha.mp4",
@@ -961,21 +1787,42 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 73
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 74,
+          "name": "Dustin Nickerson, Sarah Shahi, Taylor Ortega",
+          "airdate": "2025-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 75,
+          "name": "Andy Richter, Guy Branum, Tien Tran",
+          "airdate": "2025-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 76,
+          "name": "Trixie Mattel, Atsuko Okatsuka, Gillian Jacobs",
+          "airdate": "2025-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 77,
-          "name": "michelle collins brendan scannell kurt braunohler",
-          "state": "REVIEW",
+          "name": "Michelle Collins, Tan France, Jeremiah Brent",
+          "airdate": "2025-03-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E77 Michelle Collins; Brendan Scannell; Kurt Braunohler.mp4",
@@ -984,21 +1831,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 77
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 78,
+          "name": "Asif Ali, Saagar Shaikh, Morgan Murphy",
+          "airdate": "2025-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 79,
-          "name": "jen tullock michael chernus sunita mani",
-          "state": "REVIEW",
+          "name": "Jen Tullock, Michael Chernus, Sunita Mani",
+          "airdate": "2025-03-24",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E79 Jen Tullock; Michael Chernus; Sunita Mani.mp4",
@@ -1007,21 +1859,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 79
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 80,
+          "name": "Mayan Lopez, Jerry O'Connell, Aida Rodriguez",
+          "airdate": "2025-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 81,
-          "name": "anna camp uzo aduba sherry cola",
-          "state": "REVIEW",
+          "name": "Anna Camp, Uzo Aduba, Milana Vayntrub",
+          "airdate": "2025-03-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E81 Anna Camp; Uzo Aduba; Sherry Cola.mp4",
@@ -1030,21 +1887,42 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 412,
-            "ep": {
-              "season": 2,
-              "episode": 81
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 412
           },
           "alternates": []
         },
         {
+          "number": 82,
+          "name": "Maria Bamford, Lisa Gilroy, Bob the Drag Queen",
+          "airdate": "2025-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 83,
+          "name": "Vinny Thomas, Paul F. Tompkins, Aparna Nancherla",
+          "airdate": "2025-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 84,
+          "name": "Sasheer Zamata, Greta Titelman, Jonah Ray",
+          "airdate": "2025-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 85,
-          "name": "bob the drag queen paul f tompkins greta titelman",
-          "state": "REVIEW",
+          "name": "Winner",
+          "airdate": "2025-04-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E85 Bob The Drag Queen; Paul F. Tompkins; Greta Titelman.mp4",
@@ -1053,21 +1931,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 85
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 86,
+          "name": "Karan Soni, Milana Vayntrub, Kate Micucci",
+          "airdate": "2025-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 87,
-          "name": "jon lovett jared goldstein tawny newsome",
-          "state": "REVIEW",
+          "name": "Jon Lovett, Jared Goldstein, Tawny Newsome",
+          "airdate": "2025-04-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E87 Jon Lovett; Jared Goldstein; Tawny Newsome.mp4",
@@ -1076,21 +1959,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 87
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 88,
-          "name": "taran killam tone bell jess mckenna",
-          "state": "REVIEW",
+          "name": "Taran Killam, Tone Bell, Jess McKenna",
+          "airdate": "2025-04-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E88 Taran Killam; Tone Bell; Jess McKenna.mp4",
@@ -1099,21 +1979,26 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 88
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
+          "number": 89,
+          "name": "Esther Povitsky, Randy Sklar, Arden Myrin",
+          "airdate": "2025-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 90,
-          "name": "jason ritter joel kim booster rachel scanlon",
-          "state": "REVIEW",
+          "name": "Jason Ritter, Joel Kim Booster, Rachel Scanlon",
+          "airdate": "2025-04-28",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E90 Jason Ritter; Joel Kim Booster; Rachel Scanlon.mp4",
@@ -1122,21 +2007,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 90
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 91,
-          "name": "tim bagley cassidy freeman andy richter",
-          "state": "REVIEW",
+          "name": "Tim Bagley, Cassidy Freeman, Andy Richter",
+          "airdate": "2025-04-29",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E91 Tim Bagley; Cassidy Freeman; Andy Richter.mp4",
@@ -1145,21 +2027,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 91
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 92,
-          "name": "tim baltz chris fleming lennon parham",
-          "state": "REVIEW",
+          "name": "Tim Baltz, Chris Fleming, Lennon Parham",
+          "airdate": "2025-04-30",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E92 Tim Baltz; Chris Fleming; Lennon Parham.mp4",
@@ -1168,21 +2047,26 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 92
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
+          "number": 93,
+          "name": "David Oyelowo, Bokeem Woodbine, Simone Missick",
+          "airdate": "2025-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 94,
-          "name": "richie moriarty asher grodman sheila carrasco",
-          "state": "REVIEW",
+          "name": "Richie Moriarty, Asher Grodman, Sheila Carrasco",
+          "airdate": "2025-05-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E94 Richie Moriarty; Asher Grodman; Sheila Carrasco.mp4",
@@ -1191,21 +2075,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 94
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 95,
-          "name": "suzi barrett dylan adler will miles carrie preston",
-          "state": "REVIEW",
+          "name": "Suzi Barrett, Dylan Adler, Will Miles, Carrie Preston",
+          "airdate": "2025-05-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E95 Suzi Barrett; Dylan Adler; Will Miles; Carrie Preston.mp4",
@@ -1214,21 +2095,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 95
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 96,
-          "name": "paul feig taylor ortega alex newell anna kendrick",
-          "state": "REVIEW",
+          "name": "Paul Feig, Taylor Ortega, Alex Newell, Anna Kendrick",
+          "airdate": "2025-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E96 Paul Feig; Taylor Ortega; Alex Newell; Anna Kendrick.mp4",
@@ -1237,21 +2115,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 412,
-            "ep": {
-              "season": 2,
-              "episode": 96
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 412
           },
           "alternates": []
         },
         {
           "number": 97,
-          "name": "maria bamford eddie pepitone doug benson",
-          "state": "REVIEW",
+          "name": "Maria Bamford, Eddie Pepitone, Doug Benson",
+          "airdate": "2025-05-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E97 Maria Bamford; Eddie Pepitone; Doug Benson.mp4",
@@ -1260,21 +2135,18 @@
             "seconds": 4169,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 409,
-            "ep": {
-              "season": 2,
-              "episode": 97
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 409
           },
           "alternates": []
         },
         {
           "number": 98,
-          "name": "patton oswalt ed helms sasheer zamata",
-          "state": "REVIEW",
+          "name": "Patton Oswalt, Ed Helms, Sasheer Zamata",
+          "airdate": "2025-05-12",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E98 Patton Oswalt; Ed Helms; Sasheer Zamata.mp4",
@@ -1283,21 +2155,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 98
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 99,
-          "name": "benito skinner mary beth barone holmes",
-          "state": "REVIEW",
+          "name": "Bento Skinner, Mary Beth Barone, Holmes",
+          "airdate": "2025-05-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E99 Benito Skinner; Mary Beth Barone; Holmes.mp4",
@@ -1306,21 +2175,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 99
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 100,
-          "name": "dylan efron bob the drag queen tom sandoval",
-          "state": "REVIEW",
+          "name": "Dylan Efron, Bob the Drag Queen, Tom Sandoval",
+          "airdate": "2025-05-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E100 Dylan Efron; Bob the Drag Queen; Tom Sandoval.mp4",
@@ -1329,21 +2195,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 100
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 101,
-          "name": "jason sklar keyla monterroso mejia brandon kyle goodman",
-          "state": "REVIEW",
+          "name": "Jason Sklar, Keyla Monterroso Mejia, Brandon Kyle Goodman",
+          "airdate": "2025-05-15",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E101 Jason Sklar; Keyla Monterroso Mejia; Brandon Kyle Goodman.mp4",
@@ -1352,21 +2215,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 101
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 102,
-          "name": "owen thiele amita rao malik elassal",
-          "state": "REVIEW",
+          "name": "Owen Thiele, Amita Rao, Malik Elassal",
+          "airdate": "2025-05-19",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E102 Owen Thiele; Amita Rao; Malik Elassal.mp4",
@@ -1375,21 +2235,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 102
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 103,
-          "name": "lisa gilroy jared goldstein sandy honig caitlin reilly",
-          "state": "REVIEW",
+          "name": "Lisa Gilroy, Jared Goldstein, Sandy Honig, Caitlin Reilly",
+          "airdate": "2025-05-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E103 Lisa Gilroy; Jared Goldstein; Sandy Honig; Caitlin Reilly.mp4",
@@ -1398,21 +2255,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 103
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 104,
-          "name": "dustin nickerson thomas lennon morgan murphy",
-          "state": "REVIEW",
+          "name": "Dustin Nickerson, Thomas Lennon, Morgan Murphy",
+          "airdate": "2025-05-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E104 Dustin Nickerson; Thomas Lennon; Morgan Murphy.mp4",
@@ -1421,21 +2275,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 104
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 105,
-          "name": "chris fleming aparna nancherla jason ritter",
-          "state": "REVIEW",
+          "name": "Chris Fleming, Aparna Nancherla, Jason Ritter",
+          "airdate": "2025-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E105 Chris Fleming; Aparna Nancherla; Jason Ritter.mp4",
@@ -1444,21 +2295,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 414,
-            "ep": {
-              "season": 2,
-              "episode": 105
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 414
           },
           "alternates": []
         },
         {
           "number": 106,
-          "name": "atsuko okatsuka franchesca ramsey bianca del rio",
-          "state": "REVIEW",
+          "name": "Atsuko Okatsuka, Franchesca Ramsey, Bianca Del Rio",
+          "airdate": "2025-06-02",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E106 Atsuko Okatsuka; Franchesca Ramsey; Bianca Del Rio.mp4",
@@ -1467,21 +2315,18 @@
             "seconds": 4158,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 407,
-            "ep": {
-              "season": 2,
-              "episode": 106
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 407
           },
           "alternates": []
         },
         {
           "number": 107,
-          "name": "josh sharp jay jurden jess mckenna",
-          "state": "REVIEW",
+          "name": "Josh Sharp, Jay Jurden, Jess McKenna",
+          "airdate": "2025-06-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E107 Josh Sharp; Jay Jurden; Jess McKenna.mp4",
@@ -1490,21 +2335,18 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 107
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 108,
-          "name": "nori reed dave thomason caroline ulwick",
-          "state": "REVIEW",
+          "name": "Nori Reed, Dave Thomason, Caroline Ulwick",
+          "airdate": "2025-06-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E108 Nori Reed; Dave Thomason; Caroline Ulwick.mp4",
@@ -1513,21 +2355,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 108
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 109,
-          "name": "maria bamford zach noe towers laura peek",
-          "state": "REVIEW",
+          "name": "Maria Bamford, Zach Noe Towers, Laura Peek",
+          "airdate": "2025-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E109 Maria Bamford; Zach Noe Towers; Laura Peek.mp4",
@@ -1536,21 +2375,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 412,
-            "ep": {
-              "season": 2,
-              "episode": 109
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 412
           },
           "alternates": []
         },
         {
           "number": 110,
-          "name": "pete holmes kurt braunohler gillian jacobs",
-          "state": "REVIEW",
+          "name": "Pete Holmes, Kurt Braunohler, Gillian Jacobs",
+          "airdate": "2025-06-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E110 Pete Holmes; Kurt Braunohler; Gillian Jacobs.mp4",
@@ -1559,21 +2395,18 @@
             "seconds": 4198,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 110
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 111,
-          "name": "marcella arguello affion crockett milana vayntrub",
-          "state": "REVIEW",
+          "name": "Marcella Arguello, Affion Crockett, Milana Vayntrub",
+          "airdate": "2025-06-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E111 Marcella Arguello; Affion Crockett; Milana Vayntrub.mp4",
@@ -1582,21 +2415,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 111
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         },
         {
           "number": 112,
-          "name": "sasheer zamata tien tran paul f tompkins",
-          "state": "REVIEW",
+          "name": "Sasheer Zamata, Tien Tran, Paul F. Tompkins",
+          "airdate": "2025-06-11",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E112 Sasheer Zamata; Tien Tran; Paul F. Tompkins.mp4",
@@ -1605,21 +2435,32 @@
             "seconds": 4202,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 411,
-            "ep": {
-              "season": 2,
-              "episode": 112
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 411
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Sasheer Zamata, Tien Tran, Paul F. Tompkins\" (0.61)",
+              "item": "after-midnight-s-01",
+              "itemTitle": "After Midnight - Raw Recordings",
+              "file": "After Midnight S02E85 Bob The Drag Queen; Paul F. Tompkins; Greta Titelman.mp4",
+              "name": "After Midnight S02E85 Bob The Drag Queen; Paul F. Tompkins; Greta Titelman",
+              "url": "https://archive.org/download/after-midnight-s-01/After%20Midnight%20S02E85%20Bob%20The%20Drag%20Queen%3B%20Paul%20F.%20Tompkins%3B%20Greta%20Titelman.mp4",
+              "seconds": 4201,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 414
+            }
+          ]
         },
         {
           "number": 113,
-          "name": "Episode 113",
-          "state": "REVIEW",
+          "name": "The Final Tournament Championship",
+          "airdate": "2025-06-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "after-midnight-s-01",
             "itemTitle": "After Midnight - Raw Recordings",
             "file": "After Midnight S02E113 After Midnight.mp4",
@@ -1628,13 +2469,7 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 413,
-            "ep": {
-              "season": 2,
-              "episode": 113
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 413
           },
           "alternates": []
         }

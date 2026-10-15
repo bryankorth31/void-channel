@@ -3,7 +3,7 @@
   "slug": "george-lopez",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:00.914Z",
+  "matchedAt": "2026-10-15T03:17:23.736Z",
   "tvmaze": {
     "id": 4129,
     "name": "George Lopez",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 120,
-    "live": 12,
-    "review": 5,
-    "missing": 103,
-    "pct": 14
+    "live": 18,
+    "review": 0,
+    "missing": 102,
+    "pct": 15
   },
   "seasons": [
     {
@@ -260,17 +260,45 @@
           "number": 1,
           "name": "Dubya, Dad and Dating (1)",
           "airdate": "2003-09-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "gl-fullseries",
+            "itemTitle": "George Lopez",
+            "file": "George Lopez - S03E01 - Dubya, Dad and Dating (1080p x265 EDGE2020).ia.mp4",
+            "name": "George Lopez - S03E01 - Dubya, Dad and Dating (1080p x265 EDGE2020)",
+            "url": "https://archive.org/download/gl-fullseries/George%20Lopez%20-%20S03E01%20-%20Dubya%2C%20Dad%20and%20Dating%20(1080p%20x265%20EDGE2020).ia.mp4",
+            "seconds": 1261,
+            "format": "h.264 IA",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 147
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "gl-fullseries",
+              "itemTitle": "George Lopez",
+              "file": "George Lopez - S03E01 - Dubya, Dad and Dating (480p x265 EDGE2020).mp4",
+              "name": "George Lopez - S03E01 - Dubya, Dad and Dating (480p x265 EDGE2020)",
+              "url": "https://archive.org/download/gl-fullseries/George%20Lopez%20-%20S03E01%20-%20Dubya%2C%20Dad%20and%20Dating%20(480p%20x265%20EDGE2020).mp4",
+              "seconds": 1261,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Dubya, Dad and Dating (2)",
           "airdate": "2003-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",
@@ -289,9 +317,9 @@
           "number": 3,
           "name": "The Cuban Missus Crisis",
           "airdate": "2003-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",
@@ -531,9 +559,9 @@
           "number": 17,
           "name": "Weekend at Benny's",
           "airdate": "2004-02-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",
@@ -602,9 +630,9 @@
           "number": 21,
           "name": "George's House of Cards",
           "airdate": "2004-04-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",
@@ -647,9 +675,9 @@
           "number": 25,
           "name": "Bachelor Party",
           "airdate": "2004-05-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gl-fullseries",
             "itemTitle": "George Lopez",

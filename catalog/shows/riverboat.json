@@ -3,21 +3,20 @@
   "slug": "riverboat",
   "type": "Reality & Talk",
   "network": "DE",
-  "matchedAt": "2026-10-15T01:19:17.464Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:18.163Z",
   "tvmaze": {
-    "id": null,
+    "id": 3876,
     "name": "Riverboat",
-    "runtime": null,
-    "premiered": null,
-    "network": "DE"
+    "runtime": 60,
+    "premiered": "1959-09-13",
+    "network": "NBC"
   },
   "coverage": {
-    "total": 3,
-    "live": 0,
-    "review": 3,
-    "missing": 0,
-    "pct": 100
+    "total": 44,
+    "live": 2,
+    "review": 0,
+    "missing": 42,
+    "pct": 5
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "tv colorized payment in full",
-          "state": "REVIEW",
+          "name": "Payment in Full",
+          "airdate": "1959-09-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "riverboat-tv-1959-colorized-s01e01-payment-in-full",
             "itemTitle": "Riverboat TV 1959 colorized s01e01 Payment in Full",
             "file": "Riverboat TV 1959 colorized s01e01 Payment in Full.mp4",
@@ -36,21 +38,138 @@
             "seconds": 3003,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 359,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 359
           },
           "alternates": []
         },
         {
+          "number": 2,
+          "name": "The Barrier",
+          "airdate": "1959-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "About Roger Mowbray",
+          "airdate": "1959-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Race to Cincinnati",
+          "airdate": "1959-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Unwilling",
+          "airdate": "1959-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Fight Back",
+          "airdate": "1959-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Escape to Memphis",
+          "airdate": "1959-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Witness No Evil",
+          "airdate": "1959-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "A Night at Trapper's Landing",
+          "airdate": "1959-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Faithless",
+          "airdate": "1959-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Boy from Pittsburgh",
+          "airdate": "1959-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Jessie Quinn",
+          "airdate": "1959-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Strange Request",
+          "airdate": "1959-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Guns for Empire",
+          "airdate": "1959-12-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Face of Courage",
+          "airdate": "1959-12-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Tampico Raid",
+          "airdate": "1960-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 17,
-          "name": "tv colorized landlubbers",
-          "state": "REVIEW",
+          "name": "Landlubbers",
+          "airdate": "1960-01-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "riverboat-tv-1960-colorized-s01e17-landlubbers",
             "itemTitle": "Riverboat TV 1960 colorized s01e17 Landlubbers",
             "file": "Riverboat TV 1960 colorized s01e17 Landlubbers.mp4",
@@ -59,34 +178,229 @@
             "seconds": 2937,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 335,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 335
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "wisc riverboats",
-          "state": "REVIEW",
-          "file": {
-            "item": "WiscRiverboats",
-            "itemTitle": "Riverboats of Wisconsin: 1 – \"The Paul L\" (1995)",
-            "file": "Wisc Riverboats.mp4",
-            "name": "Wisc Riverboats",
-            "url": "https://archive.org/download/WiscRiverboats/Wisc%20Riverboats.mp4",
-            "seconds": 1526,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 223,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Blowup",
+          "airdate": "1960-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Forbidden Island",
+          "airdate": "1960-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Salvage Pirates",
+          "airdate": "1960-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Path of the Eagle",
+          "airdate": "1960-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Treasure of Hawk Hill",
+          "airdate": "1960-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Fight at New Canal",
+          "airdate": "1960-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "The Wichita Arrows",
+          "airdate": "1960-02-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Fort Epitaph",
+          "airdate": "1960-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Three Graves",
+          "airdate": "1960-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Hang the Men High",
+          "airdate": "1960-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "The Night of the Faceless Man",
+          "airdate": "1960-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "The Long Trail",
+          "airdate": "1960-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "The Quick Noose",
+          "airdate": "1960-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "The Sellout",
+          "airdate": "1960-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "End of a Dream",
+          "airdate": "1960-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "That Taylor Affair",
+          "airdate": "1960-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Two Faces of Grey Holden",
+          "airdate": "1960-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "River Champion",
+          "airdate": "1960-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "No Bridge on the River",
+          "airdate": "1960-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Trunk Full of Dreams",
+          "airdate": "1960-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Water of Gorgeous Springs",
+          "airdate": "1960-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Devil in Skirts",
+          "airdate": "1960-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Quota",
+          "airdate": "1960-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Chicota Landing",
+          "airdate": "1960-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Duel on the River",
+          "airdate": "1960-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Zigzag",
+          "airdate": "1960-12-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Listen to the Nightingale",
+          "airdate": "1961-01-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

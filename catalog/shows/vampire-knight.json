@@ -3,21 +3,20 @@
   "slug": "vampire-knight",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.185Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:06.781Z",
   "tvmaze": {
-    "id": null,
+    "id": 5646,
     "name": "Vampire Knight",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2008-04-08",
+    "network": "TV Tokyo"
   },
   "coverage": {
-    "total": 2,
+    "total": 26,
     "live": 0,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 26,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,42 +24,215 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "turner_video_5680",
-            "itemTitle": "Vampire Knight",
-            "file": "5680.mp4",
-            "name": "5680",
-            "url": "https://archive.org/download/turner_video_5680/5680.mp4",
-            "seconds": 120,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 31,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Night of Vampires",
+          "airdate": "2008-04-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "turner_video_5680",
-            "itemTitle": "Vampire Knight",
-            "file": "history/files/5680.mp4.~1~",
-            "name": "history/files/5680.mp4",
-            "url": "https://archive.org/download/turner_video_5680/history%2Ffiles%2F5680.mp4.~1~",
-            "seconds": 120,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 31,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Memories of Blood",
+          "airdate": "2008-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Fang of Repentance",
+          "airdate": "2008-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Trigger of Condemnation",
+          "airdate": "2008-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Sabbath Under the Moonlight",
+          "airdate": "2008-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Their Choices",
+          "airdate": "2008-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Scarlet Maze",
+          "airdate": "2008-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Gunshot of Sorrow",
+          "airdate": "2008-05-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Crimson Gaze",
+          "airdate": "2008-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Princess of Darkness",
+          "airdate": "2008-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Consequence of Desire",
+          "airdate": "2008-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Vow of the Pureblood",
+          "airdate": "2008-06-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Crimson Chains",
+          "airdate": "2008-07-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Sinners of Fate",
+          "airdate": "2008-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Eternal Promise",
+          "airdate": "2008-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Lapis Lazuli Portrait",
+          "airdate": "2008-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Devil's Awakening",
+          "airdate": "2008-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Subordinate's Trap",
+          "airdate": "2008-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Fake Lovers",
+          "airdate": "2008-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Kiss of Thorns",
+          "airdate": "2008-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Spiraling Recollections",
+          "airdate": "2008-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Revival of the Mad Emperor",
+          "airdate": "2008-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Prelude to the Battle",
+          "airdate": "2008-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Two Souls",
+          "airdate": "2008-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "World's End",
+          "airdate": "2008-12-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Vampire's Knight",
+          "airdate": "2008-12-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

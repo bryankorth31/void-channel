@@ -3,21 +3,20 @@
   "slug": "mucize-doktor",
   "type": "World TV",
   "network": "TR",
-  "matchedAt": "2026-10-15T01:19:17.288Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.740Z",
   "tvmaze": {
-    "id": null,
+    "id": 43557,
     "name": "Mucize Doktor",
-    "runtime": null,
-    "premiered": null,
-    "network": "TR"
+    "runtime": 120,
+    "premiered": "2019-09-12",
+    "network": "NOW"
   },
   "coverage": {
-    "total": 17,
+    "total": 64,
     "live": 0,
-    "review": 17,
-    "missing": 0,
-    "pct": 100
+    "review": 13,
+    "missing": 51,
+    "pct": 20
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "loans for unemployed vast financial help for unemployed 2",
+          "name": "1. Bölüm",
+          "airdate": "2019-09-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Loans for Unemployed- Vast financial help for unemployed_2.mp4",
@@ -36,18 +38,18 @@
             "seconds": 8069,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 585,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 585
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
+          "name": "2. Bölüm",
+          "airdate": "2019-09-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "MD_Ep62.mp4",
@@ -56,98 +58,18 @@
             "seconds": 7259,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 501,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 501
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
+          "name": "3. Bölüm",
+          "airdate": "2019-09-26",
           "state": "REVIEW",
           "file": {
-            "item": "mucize-doktor-62.-bolum-13.05.2021-1080p-web-dl-aac-h.-264",
-            "itemTitle": "Mucize Doktor 62. Bölüm ( 13.05.2021) 1080p Web DL AAC H. 264",
-            "file": "Mucize Doktor 62.Bölüm  (13.05.2021) 1080p Web-DL AAC H.264.mp4",
-            "name": "Mucize Doktor 62.Bölüm  (13.05.2021) 1080p Web-DL AAC H.264",
-            "url": "https://archive.org/download/mucize-doktor-62.-bolum-13.05.2021-1080p-web-dl-aac-h.-264/Mucize%20Doktor%2062.B%C3%B6l%C3%BCm%20%20(13.05.2021)%201080p%20Web-DL%20AAC%20H.264.mp4",
-            "seconds": 7253,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 734,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
-          "file": {
-            "item": "mucizedoktore02",
-            "itemTitle": "Mucize Doktor E 02",
-            "file": "Mucize_Doktor_E02.mp4",
-            "name": "Mucize_Doktor_E02",
-            "url": "https://archive.org/download/mucizedoktore02/Mucize_Doktor_E02.mp4",
-            "seconds": 7199,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 229,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
-          "file": {
-            "item": "mucizedoktore03",
-            "itemTitle": "Mucize Doktor E 03",
-            "file": "Mucize_Doktor_E03.mp4",
-            "name": "Mucize_Doktor_E03",
-            "url": "https://archive.org/download/mucizedoktore03/Mucize_Doktor_E03.mp4",
-            "seconds": 7618,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 242,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
-          "file": {
-            "item": "mucizedoktore6",
-            "itemTitle": "Mucize Doktor E 6",
-            "file": "Mucize_Doktor_E6.mp4",
-            "name": "Mucize_Doktor_E6",
-            "url": "https://archive.org/download/mucizedoktore6/Mucize_Doktor_E6.mp4",
-            "seconds": 7439,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 236,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep5.mp4",
@@ -156,18 +78,18 @@
             "seconds": 8039,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1113,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1113
           },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "Episode 8",
+          "number": 4,
+          "name": "4. Bölüm",
+          "airdate": "2019-10-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep17.mp4",
@@ -176,18 +98,18 @@
             "seconds": 8284,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1131
           },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "Episode 9",
+          "number": 5,
+          "name": "5. Bölüm",
+          "airdate": "2019-10-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep18.mp4",
@@ -196,18 +118,18 @@
             "seconds": 7942,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1108
           },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "Episode 10",
+          "number": 6,
+          "name": "6. Bölüm",
+          "airdate": "2019-10-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep19.mp4",
@@ -216,18 +138,18 @@
             "seconds": 8499,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1185,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1185
           },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "Episode 11",
+          "number": 7,
+          "name": "7. Bölüm",
+          "airdate": "2019-10-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep20.mp4",
@@ -236,18 +158,18 @@
             "seconds": 7579,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1065,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1065
           },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "Episode 12",
+          "number": 8,
+          "name": "8. Bölüm",
+          "airdate": "2019-10-31",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep23.mp4",
@@ -256,18 +178,18 @@
             "seconds": 7851,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1093,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1093
           },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "Episode 13",
+          "number": 9,
+          "name": "9. Bölüm",
+          "airdate": "2019-11-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep24.mp4",
@@ -276,18 +198,18 @@
             "seconds": 8064,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1125
           },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "Episode 14",
+          "number": 10,
+          "name": "10. Bölüm",
+          "airdate": "2019-11-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep59.mp4",
@@ -296,18 +218,18 @@
             "seconds": 7152,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 3108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3108
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "Episode 15",
+          "number": 11,
+          "name": "11. Bölüm",
+          "airdate": "2019-11-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 12 in \"Mucize Doktor\"",
             "item": "MD_Ep58",
             "itemTitle": "Mucize Doktor",
             "file": "Mucize_Ep60.mp4",
@@ -316,31 +238,195 @@
             "seconds": 7522,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 3270,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3270
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "Episode 16",
+          "number": 12,
+          "name": "12. Bölüm",
+          "airdate": "2019-11-28",
           "state": "REVIEW",
           "file": {
-            "item": "MD_Ep58",
-            "itemTitle": "Mucize Doktor",
-            "file": "Mucize_Ep61.mp4",
-            "name": "Mucize_Ep61",
-            "url": "https://archive.org/download/MD_Ep58/Mucize_Ep61.mp4",
-            "seconds": 7410,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"12. Bölüm\" (0.95)",
+            "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
+            "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
+            "file": "Mucize Doktor Dizisi 40. Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
+            "name": "Mucize Doktor Dizisi 40. Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
+            "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Mucize%20Doktor%20Dizisi%2040.%20B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
+            "seconds": 8094,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 3226,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 818
           },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"12. Bölüm\" (0.95)",
+              "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
+              "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
+              "file": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
+              "name": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
+              "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Bir%20Zamanlar%20%C3%87ukurova%20-%2075.B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
+              "seconds": 8327,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 830
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"Mucize Doktor\"",
+              "item": "MD_Ep58",
+              "itemTitle": "Mucize Doktor",
+              "file": "Mucize_Ep61.mp4",
+              "name": "Mucize_Ep61",
+              "url": "https://archive.org/download/MD_Ep58/Mucize_Ep61.mp4",
+              "seconds": 7410,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3226
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "name": "13. Bölüm",
+          "airdate": "2019-12-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"13. Bölüm\" (0.95)",
+            "item": "mucize-doktor-62.-bolum-13.05.2021-1080p-web-dl-aac-h.-264",
+            "itemTitle": "Mucize Doktor 62. Bölüm ( 13.05.2021) 1080p Web DL AAC H. 264",
+            "file": "Mucize Doktor 62.Bölüm  (13.05.2021) 1080p Web-DL AAC H.264.mp4",
+            "name": "Mucize Doktor 62.Bölüm  (13.05.2021) 1080p Web-DL AAC H.264",
+            "url": "https://archive.org/download/mucize-doktor-62.-bolum-13.05.2021-1080p-web-dl-aac-h.-264/Mucize%20Doktor%2062.B%C3%B6l%C3%BCm%20%20(13.05.2021)%201080p%20Web-DL%20AAC%20H.264.mp4",
+            "seconds": 7253,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 734
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "14. Bölüm",
+          "airdate": "2019-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "15. Bölüm",
+          "airdate": "2019-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "16. Bölüm",
+          "airdate": "2019-12-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "17. Bölüm",
+          "airdate": "2020-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "18. Bölüm",
+          "airdate": "2020-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "19. Bölüm",
+          "airdate": "2020-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "20. Bölüm",
+          "airdate": "2020-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "21. Bölüm",
+          "airdate": "2020-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "22. Bölüm",
+          "airdate": "2020-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "23. Bölüm",
+          "airdate": "2020-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "24. Bölüm",
+          "airdate": "2020-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "25. Bölüm",
+          "airdate": "2020-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "26. Bölüm",
+          "airdate": "2020-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "27. Bölüm",
+          "airdate": "2020-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "28. Bölüm",
+          "airdate": "2020-03-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -349,26 +435,291 @@
       "season": 2,
       "episodes": [
         {
-          "number": 64,
-          "name": "bir zamanlar ukurova 75 b l m 03 12 aac2 0 h yerli dizi i ndir",
-          "state": "REVIEW",
-          "file": {
-            "item": "mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir",
-            "itemTitle": "Mucize Doktor Dizisi 40. Bölüm ( 03.12.2020) 720p WEB DL AAC 2.0 H. 264 Yerli Dizi İndir",
-            "file": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir.mp4",
-            "name": "Bir Zamanlar Çukurova - 75.Bölüm (03.12.2020) 720p WEB-DL AAC2.0 H.264 Yerli Dizi İndir",
-            "url": "https://archive.org/download/mucize-doktor-dizisi-40.-bolum-03.12.2020-720p-web-dl-aac-2.0-h.-264-yerli-dizi-indir/Bir%20Zamanlar%20%C3%87ukurova%20-%2075.B%C3%B6l%C3%BCm%20(03.12.2020)%20720p%20WEB-DL%20AAC2.0%20H.264%20Yerli%20Dizi%20%C4%B0ndir.mp4",
-            "seconds": 8327,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 830,
-            "ep": {
-              "season": 2,
-              "episode": 64
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 1,
+          "name": "29. Bölüm",
+          "airdate": "2020-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "30. Bölüm",
+          "airdate": "2020-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "31. Bölüm",
+          "airdate": "2020-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "32. Bölüm",
+          "airdate": "2020-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "33. Bölüm",
+          "airdate": "2020-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "34. Bölüm",
+          "airdate": "2020-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "35. Bölüm",
+          "airdate": "2020-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "36. Bölüm",
+          "airdate": "2020-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "37. Bölüm",
+          "airdate": "2020-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "38. Bölüm",
+          "airdate": "2020-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "39. Bölüm",
+          "airdate": "2020-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "40. Bölüm",
+          "airdate": "2020-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "41. Bölüm",
+          "airdate": "2020-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "42. Bölüm",
+          "airdate": "2020-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "43. Bölüm",
+          "airdate": "2020-12-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "44. Bölüm",
+          "airdate": "2021-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "45. Bölüm",
+          "airdate": "2021-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "46. Bölüm",
+          "airdate": "2021-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "47. Bölüm",
+          "airdate": "2021-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "48. Bölüm",
+          "airdate": "2021-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "49. Bölüm",
+          "airdate": "2021-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "50. Bölüm",
+          "airdate": "2021-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "51. Bölüm",
+          "airdate": "2021-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "52. Bölüm",
+          "airdate": "2021-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "53. Bölüm",
+          "airdate": "2021-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "54. Bölüm",
+          "airdate": "2021-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "55. Bölüm",
+          "airdate": "2021-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "56. Bölüm",
+          "airdate": "2021-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "57. Bölüm",
+          "airdate": "2021-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "58. Bölüm",
+          "airdate": "2021-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "59. Bölüm",
+          "airdate": "2021-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "60. Bölüm",
+          "airdate": "2021-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "61. Bölüm",
+          "airdate": "2021-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "62. Bölüm",
+          "airdate": "2021-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "63. Bölüm",
+          "airdate": "2021-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "64. Bölüm",
+          "airdate": "2021-05-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

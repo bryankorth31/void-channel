@@ -3,21 +3,20 @@
   "slug": "teach-you-a-lesson",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.291Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.823Z",
   "tvmaze": {
-    "id": null,
+    "id": 83378,
     "name": "Teach You a Lesson",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 64,
+    "premiered": "2026-06-05",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 7,
-    "live": 0,
-    "review": 7,
-    "missing": 0,
-    "pct": 100
+    "total": 10,
+    "live": 7,
+    "review": 0,
+    "missing": 3,
+    "pct": 70
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 1",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv712jq0-5zo3",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E01",
             "file": "Teach.You.a.Lesson.S01E01.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -37,21 +39,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 302,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 302
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 2",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv7131ye-2tim",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E02",
             "file": "Teach.You.a.Lesson.S01E02.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -61,21 +60,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 329,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 329
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 3",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv713ew8-c0hm",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E03",
             "file": "Teach.You.a.Lesson.S01E03.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -85,21 +81,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 418,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 418
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 4",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv71789n-5fhr",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E04",
             "file": "Teach.You.a.Lesson.S01E04.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -109,21 +102,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 396,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 396
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 5",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv718spe-nij",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E05",
             "file": "Teach.You.a.Lesson.S01E05.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -133,21 +123,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 381,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 381
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 6",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv7ip9sl-blun",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E06",
             "file": "Teach.You.a.Lesson.S01E06.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -157,21 +144,18 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 395,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 395
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "a 10bit pahe in",
-          "state": "REVIEW",
+          "name": "Episode 7",
+          "airdate": "2026-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "mm-teach-you-a-lesson-teach-you-a-lesson-s0-mv7iuc5d-625h",
             "itemTitle": "Teach You a Lesson - Teach You a Lesson S01E07",
             "file": "Teach.You.a.Lesson.S01E07.2026.720p.WEB-DL.x265.10Bit-Pahe.in.mp4",
@@ -181,14 +165,32 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 370,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 370
           },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Episode 8",
+          "airdate": "2026-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Episode 9",
+          "airdate": "2026-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Episode 10",
+          "airdate": "2026-06-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

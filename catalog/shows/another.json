@@ -3,21 +3,20 @@
   "slug": "another",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.073Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:03.279Z",
   "tvmaze": {
-    "id": null,
+    "id": 5901,
     "name": "Another",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2012-01-10",
+    "network": "Tokyo MX"
   },
   "coverage": {
-    "total": 7,
+    "total": 12,
     "live": 0,
-    "review": 7,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 12,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,142 +24,98 @@
       "episodes": [
         {
           "number": 1,
-          "name": "beattheclock2",
-          "state": "REVIEW",
-          "file": {
-            "item": "Beat_The_Clock_2",
-            "itemTitle": "Another episode of the 50's Game Show \"Beat The Clock\"",
-            "file": "BeatTheClock2.mp4",
-            "name": "BeatTheClock2",
-            "url": "https://archive.org/download/Beat_The_Clock_2/BeatTheClock2.mp4",
-            "seconds": 1760,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Rough Sketch",
+          "airdate": "2012-01-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "beattheclockmisc2",
-          "state": "REVIEW",
-          "file": {
-            "item": "Beat_The_Clock_2",
-            "itemTitle": "Another episode of the 50's Game Show \"Beat The Clock\"",
-            "file": "BeatTheClockMisc2.mp4",
-            "name": "BeatTheClockMisc2",
-            "url": "https://archive.org/download/Beat_The_Clock_2/BeatTheClockMisc2.mp4",
-            "seconds": 1759,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 182,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Blueprint",
+          "airdate": "2012-01-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "ivegotasecreteaster",
-          "state": "REVIEW",
-          "file": {
-            "item": "Secret_2222222222222",
-            "itemTitle": "Another episode of 'I've Got a Secret' (Classic TV)",
-            "file": "IveGotASecretEaster.mp4",
-            "name": "IveGotASecretEaster",
-            "url": "https://archive.org/download/Secret_2222222222222/IveGotASecretEaster.mp4",
-            "seconds": 1717,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Bone Work",
+          "airdate": "2012-01-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "secret 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "Secret_2222222222222",
-            "itemTitle": "Another episode of 'I've Got a Secret' (Classic TV)",
-            "file": "Secret_2.mp4",
-            "name": "Secret_2",
-            "url": "https://archive.org/download/Secret_2222222222222/Secret_2.mp4",
-            "seconds": 1717,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Put Flesh",
+          "airdate": "2012-01-31",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "thepinkyleeshow no2",
-          "state": "REVIEW",
-          "file": {
-            "item": "Pinky_Lee_Show2",
-            "itemTitle": "Another 1954 episode of 'The Pinky Lee Show' (Classic TV)",
-            "file": "ThePinkyLeeShow-no2.mp4",
-            "name": "ThePinkyLeeShow-no2",
-            "url": "https://archive.org/download/Pinky_Lee_Show2/ThePinkyLeeShow-no2.mp4",
-            "seconds": 1634,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 164,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Build Limbs",
+          "airdate": "2012-02-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "tot chance",
-          "state": "REVIEW",
-          "file": {
-            "item": "TOT_Another_Chance",
-            "itemTitle": "Another Chance",
-            "file": "TOT_Another_Chance.mp4",
-            "name": "TOT_Another_Chance",
-            "url": "https://archive.org/download/TOT_Another_Chance/TOT_Another_Chance.mp4",
-            "seconds": 1692,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 164,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Face to Face",
+          "airdate": "2012-02-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "tot chance 512kb",
-          "state": "REVIEW",
-          "file": {
-            "item": "TOT_Another_Chance",
-            "itemTitle": "Another Chance",
-            "file": "TOT_Another_Chance_512kb.mp4",
-            "name": "TOT_Another_Chance_512kb",
-            "url": "https://archive.org/download/TOT_Another_Chance/TOT_Another_Chance_512kb.mp4",
-            "seconds": 1692,
-            "format": "512Kb MPEG4",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Sphere Joint",
+          "airdate": "2012-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Hair Stand",
+          "airdate": "2012-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Body Paint",
+          "airdate": "2012-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Glass Eye",
+          "airdate": "2012-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Makeup",
+          "airdate": "2012-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Stand by Oneself",
+          "airdate": "2012-03-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

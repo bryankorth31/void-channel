@@ -3,7 +3,7 @@
   "slug": "batman-the-animated-series",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-15T01:19:03.874Z",
+  "matchedAt": "2026-10-15T03:17:27.123Z",
   "tvmaze": {
     "id": 757,
     "name": "Batman: The Animated Series",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 85,
-    "live": 47,
-    "review": 13,
+    "live": 60,
+    "review": 0,
     "missing": 25,
     "pct": 71
   },
@@ -960,9 +960,9 @@
           "number": 23,
           "name": "The Forgotten",
           "airdate": "1992-10-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -995,9 +995,9 @@
           "number": 24,
           "name": "Mad as a Hatter",
           "airdate": "1992-10-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1032,32 +1032,32 @@
           "airdate": "1992-10-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "Batman_The_Animated_Series_1992-1995",
-            "itemTitle": "Batman: The Animated Series (1992–1995)",
-            "file": "Batman; The Animated Series S1E25 - The Clock King.mp4",
-            "name": "Batman; The Animated Series S1E25 - The Clock King",
-            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%3B%20The%20Animated%20Series%20S1E25%20-%20The%20Clock%20King.mp4",
-            "seconds": 1350,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
+            "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
+            "file": "Batman The Animated Series (1992) - S01E25 - The Cape and Cowl Conspiracy (1080p BluRay x265 RCVR).mp4",
+            "name": "Batman The Animated Series (1992) - S01E25 - The Cape and Cowl Conspiracy (1080p BluRay x265 RCVR)",
+            "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E25%20-%20The%20Cape%20and%20Cowl%20Conspiracy%20(1080p%20BluRay%20x265%20RCVR).mp4",
+            "seconds": 1347,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 335
+            "codecRisk": "video (x265)",
+            "sizeMB": 135
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
-              "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
-              "file": "Batman The Animated Series (1992) - S01E25 - The Cape and Cowl Conspiracy (1080p BluRay x265 RCVR).mp4",
-              "name": "Batman The Animated Series (1992) - S01E25 - The Cape and Cowl Conspiracy (1080p BluRay x265 RCVR)",
-              "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E25%20-%20The%20Cape%20and%20Cowl%20Conspiracy%20(1080p%20BluRay%20x265%20RCVR).mp4",
-              "seconds": 1347,
-              "format": "h.264",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "Batman_The_Animated_Series_1992-1995",
+              "itemTitle": "Batman: The Animated Series (1992–1995)",
+              "file": "Batman; The Animated Series S1E25 - The Clock King.mp4",
+              "name": "Batman; The Animated Series S1E25 - The Clock King",
+              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%3B%20The%20Animated%20Series%20S1E25%20-%20The%20Clock%20King.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
               "playable": true,
-              "codecRisk": "video (x265)",
-              "sizeMB": 135
+              "sizeMB": 335
             },
             {
               "conf": 0.55,
@@ -1078,9 +1078,9 @@
           "number": 26,
           "name": "Perchance to Dream",
           "airdate": "1992-10-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1148,9 +1148,9 @@
           "number": 28,
           "name": "Night of the Ninja",
           "airdate": "1992-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1164,6 +1164,19 @@
             "sizeMB": 134
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Night of the Ninja\" (1.00)",
+              "item": "Batman_The_Animated_Series_1992-1995",
+              "itemTitle": "Batman: The Animated Series (1992–1995)",
+              "file": "Batman; The Animated Series S1E36 - Night of the Ninja.mp4",
+              "name": "Batman; The Animated Series S1E36 - Night of the Ninja",
+              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%3B%20The%20Animated%20Series%20S1E36%20-%20Night%20of%20the%20Ninja.mp4",
+              "seconds": 1345,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 268
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 28 of 82 in \"Batman: The Animated Series (1992–1995)\"",
@@ -1183,9 +1196,9 @@
           "number": 29,
           "name": "The Strange Secret of Bruce Wayne",
           "airdate": "1992-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1253,9 +1266,9 @@
           "number": 31,
           "name": "Dreams in Darkness",
           "airdate": "1992-11-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1371,9 +1384,9 @@
           "number": 34,
           "name": "I Am the Night",
           "airdate": "1992-11-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1476,9 +1489,9 @@
           "number": 37,
           "name": "Terror in the Sky",
           "airdate": "1992-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -1665,9 +1678,9 @@
           "number": 42,
           "name": "Joker's Wild",
           "airdate": "1992-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -2138,9 +2151,9 @@
           "number": 54,
           "name": "Blind as a Bat",
           "airdate": "1993-02-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -2256,9 +2269,9 @@
           "number": 57,
           "name": "The Demon's Quest",
           "airdate": "1993-05-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
@@ -2272,6 +2285,20 @@
             "sizeMB": 133
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Demon's Quest\" (0.95)",
+              "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
+              "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
+              "file": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR).mp4",
+              "name": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR)",
+              "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E58%20-%20The%20Demon's%20Quest%20(Part%202)%20(1080p%20BluRay%20x265%20RCVR).mp4",
+              "seconds": 1341,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 133
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 57 of 82 in \"Batman: The Animated Series (1992–1995)\"",
@@ -2291,21 +2318,36 @@
           "number": 58,
           "name": "The Demon's Quest Part II",
           "airdate": "1993-05-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 58 of 82 in \"Batman: The Animated Series (1992–1995)\"",
-            "item": "Batman_The_Animated_Series_1992-1995",
-            "itemTitle": "Batman: The Animated Series (1992–1995)",
-            "file": "Batman The Complete S3D16.mp4",
-            "name": "Batman The Complete S3D16",
-            "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S3D16.mp4",
-            "seconds": 1335,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
+            "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",
+            "file": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR).mp4",
+            "name": "Batman The Animated Series (1992) - S01E58 - The Demon's Quest (Part 2) (1080p BluRay x265 RCVR)",
+            "url": "https://archive.org/download/batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr/Batman%20The%20Animated%20Series%20(1992)%20-%20S01E58%20-%20The%20Demon's%20Quest%20(Part%202)%20(1080p%20BluRay%20x265%20RCVR).mp4",
+            "seconds": 1341,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 135
+            "codecRisk": "video (x265)",
+            "sizeMB": 133
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 58 of 82 in \"Batman: The Animated Series (1992–1995)\"",
+              "item": "Batman_The_Animated_Series_1992-1995",
+              "itemTitle": "Batman: The Animated Series (1992–1995)",
+              "file": "Batman The Complete S3D16.mp4",
+              "name": "Batman The Complete S3D16",
+              "url": "https://archive.org/download/Batman_The_Animated_Series_1992-1995/Batman%20The%20Complete%20S3D16.mp4",
+              "seconds": 1335,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 59,
@@ -2346,9 +2388,9 @@
           "number": 60,
           "name": "Fire from Olympus",
           "airdate": "1993-05-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "batman-the-animated-series-1992-s-01-e-16-eternal-youth-1080p-blu-ray-x-265-rcvr",
             "itemTitle": "Batman The Animated Series ( 1992) S 01 E 16 Eternal Youth ( 1080p Blu Ray X 265 RCVR)",

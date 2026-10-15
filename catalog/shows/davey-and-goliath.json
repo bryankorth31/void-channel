@@ -3,7 +3,7 @@
   "slug": "davey-and-goliath",
   "type": "Classic TV",
   "network": "Syndicated",
-  "matchedAt": "2026-10-15T01:19:35.435Z",
+  "matchedAt": "2026-10-15T03:18:45.960Z",
   "tvmaze": {
     "id": 21976,
     "name": "Davey and Goliath",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 66,
-    "live": 54,
-    "review": 10,
-    "missing": 2,
-    "pct": 97
+    "live": 60,
+    "review": 6,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -94,9 +94,9 @@
           "number": 3,
           "name": "Stranded on an Island",
           "airdate": "1960-09-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Davey-and-Goliath-Season-1",
             "itemTitle": "Davey & Goliath (1961) - Complete Season 1",
@@ -128,9 +128,9 @@
           "number": 4,
           "name": "The Winner",
           "airdate": "1960-09-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Davey-and-Goliath-Season-1",
             "itemTitle": "Davey & Goliath (1961) - Complete Season 1",
@@ -434,9 +434,9 @@
           "number": 13,
           "name": "The Time Machine",
           "airdate": "1960-12-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Davey-and-Goliath-Season-1",
             "itemTitle": "Davey & Goliath (1961) - Complete Season 1",
@@ -575,7 +575,21 @@
             "playable": true,
             "sizeMB": 90
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Bell-Ringer\" (0.95)",
+              "item": "Davey-and-Goliath-Season-2",
+              "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+              "file": "Davey and Goliath - S02E05 -The Bell Ringer-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S02E05 -The Bell Ringer-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E05%20-The%20Bell%20Ringer-Webrip-CW23.mp4",
+              "seconds": 889,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 5,
@@ -615,7 +629,21 @@
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Officer Bob\" (0.95)",
+              "item": "Davey-and-Goliath-Season-2",
+              "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+              "file": "Davey and Goliath - S02E09 -Officer Bob-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S02E09 -Officer Bob-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E09%20-Officer%20Bob-Webrip-CW23.mp4",
+              "seconds": 888,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 7,
@@ -763,7 +791,21 @@
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Runaway\" (0.95)",
+              "item": "Davey-and-Goliath-Season-2",
+              "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+              "file": "Davey and Goliath - S02E08 -The Runaway-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S02E08 -The Runaway-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E08%20-The%20Runaway-Webrip-CW23.mp4",
+              "seconds": 888,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 13,
@@ -924,14 +966,40 @@
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Big Apple\" (0.95)",
+              "item": "Davey-and-Goliath-Season-3",
+              "itemTitle": "Davey And Goliath (1961) - Complete Season 3",
+              "file": "Davey and Goliath - S03E05 -Big Apple-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S03E05 -Big Apple-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-3/Davey%20and%20Goliath%20-%20S03E05%20-Big%20Apple-Webrip-CW23.mp4",
+              "seconds": 885,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 90
+            }
+          ]
         },
         {
           "number": 5,
           "name": "The Bridge",
           "airdate": "1962-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Bridge\" (0.95)",
+            "item": "Davey-and-Goliath-Season-3",
+            "itemTitle": "Davey And Goliath (1961) - Complete Season 3",
+            "file": "Davey and Goliath - S03E06 -The Bridge-Webrip-CW23.mp4",
+            "name": "Davey and Goliath - S03E06 -The Bridge-Webrip-CW23",
+            "url": "https://archive.org/download/Davey-and-Goliath-Season-3/Davey%20and%20Goliath%20-%20S03E06%20-The%20Bridge-Webrip-CW23.mp4",
+            "seconds": 889,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 90
+          },
           "alternates": []
         },
         {
@@ -1173,9 +1241,9 @@
           "number": 1,
           "name": "The Stopped Clock",
           "airdate": "1971-09-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Davey-and-Goliath-Season-4",
             "itemTitle": "Davey and Goliath (1961) - Complete Season 4",
@@ -1233,8 +1301,20 @@
           "number": 4,
           "name": "Finder's Keepeers",
           "airdate": "1971-10-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "Davey-and-Goliath-Season-4",
+            "itemTitle": "Davey and Goliath (1961) - Complete Season 4",
+            "file": "Davey and Goliath - S04E04 -Finders Keepers-Webrip-CW23.mp4",
+            "name": "Davey and Goliath - S04E04 -Finders Keepers-Webrip-CW23",
+            "url": "https://archive.org/download/Davey-and-Goliath-Season-4/Davey%20and%20Goliath%20-%20S04E04%20-Finders%20Keepers-Webrip-CW23.mp4",
+            "seconds": 847,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 86
+          },
           "alternates": []
         },
         {
@@ -1361,9 +1441,9 @@
           "number": 11,
           "name": "The Greatest",
           "airdate": "1972-02-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Davey-and-Goliath-Season-4",
             "itemTitle": "Davey and Goliath (1961) - Complete Season 4",

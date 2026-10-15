@@ -3,7 +3,7 @@
   "slug": "the-bernie-mac-show",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-15T01:19:00.671Z",
+  "matchedAt": "2026-10-15T03:17:23.385Z",
   "tvmaze": {
     "id": 6836,
     "name": "The Bernie Mac Show",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 104,
-    "live": 87,
-    "review": 13,
-    "missing": 4,
-    "pct": 96
+    "live": 100,
+    "review": 1,
+    "missing": 3,
+    "pct": 97
   },
   "seasons": [
     {
@@ -86,8 +86,20 @@
           "number": 4,
           "name": "Bernie Mac, Ladies Man",
           "airdate": "2001-11-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bernie-mac-season-1",
+            "itemTitle": "The Bernie Mac Show: Season 1",
+            "file": "The.Bernie.Mac.Show.S01E04.Bernie.Mac.Ladies.Man.640p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+            "name": "The.Bernie.Mac.Show.S01E04.Bernie.Mac.Ladies.Man.640p.TUBI.WEB-DL.AAC2.0.H.264",
+            "url": "https://archive.org/download/bernie-mac-season-1/The.Bernie.Mac.Show.S01E04.Bernie.Mac.Ladies.Man.640p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+            "seconds": 1335,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         },
         {
@@ -388,9 +400,9 @@
           "number": 19,
           "name": "Secrets and Lies",
           "airdate": "2002-05-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-1",
             "itemTitle": "The Bernie Mac Show: Season 1",
@@ -408,9 +420,9 @@
           "number": 20,
           "name": "Kelly's Heroes",
           "airdate": "2002-05-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-1",
             "itemTitle": "The Bernie Mac Show: Season 1",
@@ -859,9 +871,9 @@
           "number": 14,
           "name": "Leaving Los Angeles",
           "airdate": "2003-03-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-2",
             "itemTitle": "The Bernie Mac Show: Season 2",
@@ -873,7 +885,21 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Leaving Los Angeles\" (0.95)",
+              "item": "the-bernie-mac-show-s02",
+              "itemTitle": "The Bernie Mac-Show Season 2",
+              "file": "the-bernie-mac-show-s02-e14-leaving-los-angeles-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s02-e14-leaving-los-angeles-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s02/the-bernie-mac-show-s02-e14-leaving-los-angeles-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1319,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 15,
@@ -1063,7 +1089,34 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Other Sister\" (0.95)",
+              "item": "bernie-mac-season-2",
+              "itemTitle": "The Bernie Mac Show: Season 2",
+              "file": "The.Bernie.Mac.Show.S02E21.The.Other.Sister.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+              "name": "The.Bernie.Mac.Show.S02E21.The.Other.Sister.720p.TUBI.WEB-DL.AAC2.0.H.264",
+              "url": "https://archive.org/download/bernie-mac-season-2/The.Bernie.Mac.Show.S02E21.The.Other.Sister.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+              "seconds": 1318,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Other Sister\" (0.95)",
+              "item": "the-bernie-mac-show-s02",
+              "itemTitle": "The Bernie Mac-Show Season 2",
+              "file": "the-bernie-mac-show-s02-e20-the-other-sister-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s02-e20-the-other-sister-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s02/the-bernie-mac-show-s02-e20-the-other-sister-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1319,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
+            }
+          ]
         },
         {
           "number": 21,
@@ -1328,9 +1381,9 @@
           "number": 8,
           "name": "Family Reunion",
           "airdate": "2004-02-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-3",
             "itemTitle": "The Bernie Mac Show: Season 3",
@@ -1342,7 +1395,21 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Family Reunion\" (0.95)",
+              "item": "the-bernie-mac-show-s03",
+              "itemTitle": "The Bernie Mac-Show Season 3",
+              "file": "the-bernie-mac-show-s03-e08-family-reunion-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s03-e08-family-reunion-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s03/the-bernie-mac-show-s03-e08-family-reunion-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1319,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
+            }
+          ]
         },
         {
           "number": 9,
@@ -1396,7 +1463,21 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"J-O-R-D-A-N Spells Funny\" (0.95)",
+              "item": "the-bernie-mac-show-s03",
+              "itemTitle": "The Bernie Mac-Show Season 3",
+              "file": "the-bernie-mac-show-s03-e10-j-o-r-d-a-n-spells-funny-480p-nf-web-dl-y2bs.mp4",
+              "name": "the-bernie-mac-show-s03-e10-j-o-r-d-a-n-spells-funny-480p-nf-web-dl-y2bs",
+              "url": "https://archive.org/download/the-bernie-mac-show-s03/the-bernie-mac-show-s03-e10-j-o-r-d-a-n-spells-funny-480p-nf-web-dl-y2bs.mp4",
+              "seconds": 1318,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 11,
@@ -1761,9 +1842,9 @@
           "number": 22,
           "name": "Thanksgiving",
           "airdate": "2004-06-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-3",
             "itemTitle": "The Bernie Mac Show: Season 3",
@@ -1775,7 +1856,21 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Thanksgiving\" (0.95)",
+              "item": "the-bernie-mac-show-s03",
+              "itemTitle": "The Bernie Mac-Show Season 3",
+              "file": "the-bernie-mac-show-s03-e22-thanksgiving-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s03-e22-thanksgiving-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s03/the-bernie-mac-show-s03-e22-thanksgiving-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 60
+            }
+          ]
         }
       ]
     },
@@ -1800,7 +1895,21 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Big Brother\" (0.95)",
+              "item": "the-bernie-mac-show-s04",
+              "itemTitle": "The Bernie Mac Show Season 4",
+              "file": "the-bernie-mac-show-s04-e01-big-brother-480p-nf-web-dl-y2bs.mp4",
+              "name": "the-bernie-mac-show-s04-e01-big-brother-480p-nf-web-dl-y2bs",
+              "url": "https://archive.org/download/the-bernie-mac-show-s04/the-bernie-mac-show-s04-e01-big-brother-480p-nf-web-dl-y2bs.mp4",
+              "seconds": 1317,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 2,
@@ -2036,9 +2145,9 @@
           "number": 10,
           "name": "Manchild in Vanessa Land",
           "airdate": "2005-02-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-4",
             "itemTitle": "The Bernie Mac Show: Season 4",
@@ -2050,7 +2159,21 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Manchild in Vanessa Land\" (0.95)",
+              "item": "the-bernie-mac-show-s04",
+              "itemTitle": "The Bernie Mac Show Season 4",
+              "file": "the-bernie-mac-show-s04-e10-manchild-in-vanessa-land-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s04-e10-manchild-in-vanessa-land-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s04/the-bernie-mac-show-s04-e10-manchild-in-vanessa-land-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1316,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 60
+            }
+          ]
         },
         {
           "number": 11,
@@ -2285,9 +2408,9 @@
           "number": 2,
           "name": "Wrestling with a Sticky Situation",
           "airdate": "2005-09-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -2299,7 +2422,21 @@
             "playable": true,
             "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Wrestling with a Sticky Situation\" (0.95)",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e02-wrestling-with-a-sticky-situation-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e02-wrestling-with-a-sticky-situation-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e02-wrestling-with-a-sticky-situation-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1291,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
+            }
+          ]
         },
         {
           "number": 3,
@@ -2325,9 +2462,9 @@
           "number": 4,
           "name": "The Big Payback",
           "airdate": "2005-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -2365,9 +2502,9 @@
           "number": 6,
           "name": "Night of Terror",
           "airdate": "2005-10-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -2453,9 +2590,9 @@
           "number": 9,
           "name": "Prison Break",
           "airdate": "2005-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -2791,9 +2928,9 @@
           "number": 19,
           "name": "It's Never as Bad as the First Time",
           "airdate": "2006-04-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -2845,9 +2982,9 @@
           "number": 21,
           "name": "Growing Pains",
           "airdate": "2006-04-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "bernie-mac-season-5",
             "itemTitle": "The Bernie Mac Show: Season 5",
@@ -2859,7 +2996,21 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Growing Pains\" (0.95)",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e21-growing-pains-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e21-growing-pains-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e21-growing-pains-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1322,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 60
+            }
+          ]
         },
         {
           "number": 22,

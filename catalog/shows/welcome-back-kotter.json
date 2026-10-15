@@ -3,7 +3,7 @@
   "slug": "welcome-back-kotter",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:26.950Z",
+  "matchedAt": "2026-10-15T03:18:33.639Z",
   "tvmaze": {
     "id": 3743,
     "name": "Welcome Back, Kotter",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 95,
-    "live": 16,
-    "review": 4,
+    "live": 19,
+    "review": 1,
     "missing": 75,
     "pct": 21
   },
@@ -40,7 +40,21 @@
             "playable": true,
             "sizeMB": 400
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Great Debate\" (1.00)",
+              "item": "me-bk-kr-s-02-e-09-o-ms.-c",
+              "itemTitle": "Welcome Back, Kotter (1975) (TV Series)",
+              "file": "Welcome Back Kotter S01E02 The Great Debate.mp4",
+              "name": "Welcome Back Kotter S01E02 The Great Debate",
+              "url": "https://archive.org/download/me-bk-kr-s-02-e-09-o-ms.-c/Welcome%20Back%20Kotter%20S01E02%20The%20Great%20Debate.mp4",
+              "seconds": 1512,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 400
+            }
+          ]
         },
         {
           "number": 2,
@@ -146,9 +160,9 @@
           "number": 7,
           "name": "Classroom Marriage",
           "airdate": "1975-10-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "me-bk-kr-s-02-e-09-o-ms.-c",
             "itemTitle": "Welcome Back, Kotter (1975) (TV Series)",
@@ -166,9 +180,9 @@
           "number": 8,
           "name": "One of Our Sweathogs is Missing",
           "airdate": "1975-10-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "me-bk-kr-s-02-e-09-o-ms.-c",
             "itemTitle": "Welcome Back, Kotter (1975) (TV Series)",
@@ -220,9 +234,9 @@
           "number": 10,
           "name": "The Reunion",
           "airdate": "1975-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "me-bk-kr-s-02-e-09-o-ms.-c",
             "itemTitle": "Welcome Back, Kotter (1975) (TV Series)",

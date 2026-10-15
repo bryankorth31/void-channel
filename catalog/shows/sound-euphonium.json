@@ -3,21 +3,20 @@
   "slug": "sound-euphonium",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.235Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:09.515Z",
   "tvmaze": {
-    "id": null,
+    "id": 15887,
     "name": "Sound! Euphonium",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2015-04-08",
+    "network": "NHK"
   },
   "coverage": {
-    "total": 91,
-    "live": 0,
-    "review": 91,
-    "missing": 0,
-    "pct": 100
+    "total": 39,
+    "live": 2,
+    "review": 11,
+    "missing": 26,
+    "pct": 33
   },
   "seasons": [
     {
@@ -25,193 +24,362 @@
       "episodes": [
         {
           "number": 1,
-          "name": "hibike",
-          "state": "REVIEW",
+          "name": "Welcome to High School",
+          "airdate": "2015-04-08",
+          "state": "LIVE",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E01.mp4",
-            "name": "Hibike! Euphonium S01E01",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E01.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "anime-manga-explosion-s-1-e-1-sound-euphonium-sp",
+            "itemTitle": "ANIME MANGA EXPLOSION   Sound! Euphonium SPECIAL (2026)",
+            "file": "ANIME MANGA EXPLOSION [S1E1] - Sound! Euphonium Sp.mp4",
+            "name": "ANIME MANGA EXPLOSION [S1E1] - Sound! Euphonium Sp",
+            "url": "https://archive.org/download/anime-manga-explosion-s-1-e-1-sound-euphonium-sp/ANIME%20MANGA%20EXPLOSION%20%5BS1E1%5D%20-%20Sound!%20Euphonium%20Sp.mp4",
+            "seconds": 1679,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 403
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep01_Subbed_(74E8C59F).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep01_Subbed_(74E8C59F)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep01_Subbed_(74E8C59F).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.1.v1.1639359503.480p.mp4",
+              "name": "EP.1.v1.1639359503.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.1.v1.1639359503.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 55
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "hibike",
+          "name": "Nice to Meet You, Euphonium",
+          "airdate": "2015-04-15",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E02.mp4",
-            "name": "Hibike! Euphonium S01E02",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E02.mp4",
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+            "item": "Exiled-Destiny-Sound-Euphonium-S01",
+            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep02_Subbed_(03B16EDA).mp4",
+            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep02_Subbed_(03B16EDA)",
+            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep02_Subbed_(03B16EDA).mp4",
             "seconds": 1421,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.2.v1.1639671748.480p.mp4",
+              "name": "EP.2.v1.1639671748.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.2.v1.1639671748.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 52
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "hibike",
+          "name": "The First Ensemble",
+          "airdate": "2015-04-22",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E03.mp4",
-            "name": "Hibike! Euphonium S01E03",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E03.mp4",
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+            "item": "Exiled-Destiny-Sound-Euphonium-S01",
+            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep03_Subbed_(37B6B0B5).mp4",
+            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep03_Subbed_(37B6B0B5)",
+            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep03_Subbed_(37B6B0B5).mp4",
             "seconds": 1421,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.3.v1.1639687561.480p.mp4",
+              "name": "EP.3.v1.1639687561.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.3.v1.1639687561.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 52
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "hibike",
+          "name": "Singing Solfège",
+          "airdate": "2015-04-29",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E04.mp4",
-            "name": "Hibike! Euphonium S01E04",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E04.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 4.mp4",
+            "name": "Sound! Euphonium S2 EP 4",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%204.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 46
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep04_Subbed_(96F38535).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep04_Subbed_(96F38535)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep04_Subbed_(96F38535).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.4.v1.1639771252.480p.mp4",
+              "name": "EP.4.v1.1639771252.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.4.v1.1639771252.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 51
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "hibike",
+          "name": "Festival Time",
+          "airdate": "2015-05-06",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E05.mp4",
-            "name": "Hibike! Euphonium S01E05",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E05.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 5.mp4",
+            "name": "Sound! Euphonium S2 EP 5",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%205.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 56
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep05_Subbed_(4FC66AEC).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep05_Subbed_(4FC66AEC)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep05_Subbed_(4FC66AEC).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.5.v1.1639975031.480p.mp4",
+              "name": "EP.5.v1.1639975031.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.5.v1.1639975031.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "hibike",
+          "name": "Twinkle Twinkle, Little Tuba",
+          "airdate": "2015-05-13",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E06.mp4",
-            "name": "Hibike! Euphonium S01E06",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E06.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 6.mp4",
+            "name": "Sound! Euphonium S2 EP 6",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%206.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 51
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep06_Subbed_(D9145F25).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep06_Subbed_(D9145F25)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep06_Subbed_(D9145F25).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.6.v1.1639968215.480p.mp4",
+              "name": "EP.6.v1.1639968215.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.6.v1.1639968215.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 57
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "hibike",
+          "name": "Crybaby Saxophone",
+          "airdate": "2015-05-20",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E07.mp4",
-            "name": "Hibike! Euphonium S01E07",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E07.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 7.mp4",
+            "name": "Sound! Euphonium S2 EP 7",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%207.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 50
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep07_Subbed_(D185DE38).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep07_Subbed_(D185DE38)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep07_Subbed_(D185DE38).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.7.v1.480p.mp4",
+              "name": "EP.7.v1.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.7.v1.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 46
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "hibike",
+          "name": "Festival Triangle",
+          "airdate": "2015-05-27",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E08.mp4",
-            "name": "Hibike! Euphonium S01E08",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E08.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 8.mp4",
+            "name": "Sound! Euphonium S2 EP 8",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%208.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 44
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep08_Subbed_(E9129AF1).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep08_Subbed_(E9129AF1)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep08_Subbed_(E9129AF1).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "EP.10.v1.1639972629.480p.mp4",
+              "name": "EP.10.v1.1639972629.480p",
+              "url": "https://archive.org/download/sound-euphonium/EP.10.v1.1639972629.480p.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 51
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "please audition dual opus2 0 demihuman",
-          "state": "REVIEW",
+          "name": "Please, Audition",
+          "airdate": "2015-06-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "sound.-euphonium.-s-01-e-09.-repack.-please.-audition.-1080p.-blu-ray.-dual.-opu",
             "itemTitle": "Sound! Euphonium (Season 1) Episode 9 - Please, Audition (Dual Language Dub + Bluray Quality)",
             "file": "Sound.Euphonium.S01E09.REPACK.Please.Audition.1080p.BluRay.DUAL.Opus2.0.x265-DemiHuman.mp4",
@@ -221,1167 +389,198 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 140,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "sound-euphonium-s-2",
+              "itemTitle": "Sound! Euphonium S2",
+              "file": "Sound! Euphonium S2 EP 9.mp4",
+              "name": "Sound! Euphonium S2 EP 9",
+              "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%209.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 41
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep09_Subbed_(F04EAD74).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep09_Subbed_(F04EAD74)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep09_Subbed_(F04EAD74).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "st25_2_hibike-euphonium-episode-9-sd.mp4",
+              "name": "st25_2_hibike-euphonium-episode-9-sd",
+              "url": "https://archive.org/download/sound-euphonium/st25_2_hibike-euphonium-episode-9-sd.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 53
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "hibike",
+          "name": "Straight Trumpet",
+          "airdate": "2015-06-10",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E10.mp4",
-            "name": "Hibike! Euphonium S01E10",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E10.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 10.mp4",
+            "name": "Sound! Euphonium S2 EP 10",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%2010.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 43
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep10_Subbed_(E183CAFC).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep10_Subbed_(E183CAFC)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep10_Subbed_(E183CAFC).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 10 in \"Sound! Euphonium\"",
+              "item": "sound-euphonium",
+              "itemTitle": "Sound! Euphonium",
+              "file": "st25_6_hibike-euphonium-episode-8-sd.mp4",
+              "name": "st25_6_hibike-euphonium-episode-8-sd",
+              "url": "https://archive.org/download/sound-euphonium/st25_6_hibike-euphonium-episode-8-sd.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 47
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "hibike",
+          "name": "Welcome Back, Audition",
+          "airdate": "2015-06-17",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E11.mp4",
-            "name": "Hibike! Euphonium S01E11",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E11.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 11.mp4",
+            "name": "Sound! Euphonium S2 EP 11",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%2011.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 42
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep11_Subbed_(B4F42171).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep11_Subbed_(B4F42171)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep11_Subbed_(B4F42171).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "hibike",
+          "name": "My Euphonium",
+          "airdate": "2015-06-24",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E12.mp4",
-            "name": "Hibike! Euphonium S01E12",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E12.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 12.mp4",
+            "name": "Sound! Euphonium S2 EP 12",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%2012.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 47
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep13_Subbed_(586784BF).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep13_Subbed_(586784BF)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep13_Subbed_(586784BF).mp4",
+              "seconds": 1419,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "hibike",
+          "name": "Goodbye Competition",
+          "airdate": "2015-07-01",
           "state": "REVIEW",
           "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01E13.mp4",
-            "name": "Hibike! Euphonium S01E13",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01E13.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "db hibike kakedasu monaka s01ova",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "[DB]Hibike! Euphonium Kakedasu Monaka S01OVA.mp4",
-            "name": "[DB]Hibike! Euphonium Kakedasu Monaka S01OVA",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/%5BDB%5DHibike!%20Euphonium%20Kakedasu%20Monaka%20S01OVA.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "exiled destiny ep01 74e8c59f",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep01_Subbed_(74E8C59F).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep01_Subbed_(74E8C59F)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep01_Subbed_(74E8C59F).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "exiled destiny ep02 03b16eda",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep02_Subbed_(03B16EDA).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep02_Subbed_(03B16EDA)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep02_Subbed_(03B16EDA).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "exiled destiny ep03 37b6b0b5",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep03_Subbed_(37B6B0B5).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep03_Subbed_(37B6B0B5)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep03_Subbed_(37B6B0B5).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "exiled destiny ep04 96f38535",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep04_Subbed_(96F38535).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep04_Subbed_(96F38535)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep04_Subbed_(96F38535).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "exiled destiny ep05 4fc66aec",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep05_Subbed_(4FC66AEC).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep05_Subbed_(4FC66AEC)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep05_Subbed_(4FC66AEC).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "exiled destiny ep06 d9145f25",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep06_Subbed_(D9145F25).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep06_Subbed_(D9145F25)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep06_Subbed_(D9145F25).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "exiled destiny ep07 d185de38",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep07_Subbed_(D185DE38).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep07_Subbed_(D185DE38)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep07_Subbed_(D185DE38).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "exiled destiny ep08 e9129af1",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep08_Subbed_(E9129AF1).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep08_Subbed_(E9129AF1)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep08_Subbed_(E9129AF1).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "exiled destiny ep09 f04ead74",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep09_Subbed_(F04EAD74).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep09_Subbed_(F04EAD74)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep09_Subbed_(F04EAD74).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "exiled destiny ep10 e183cafc",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep10_Subbed_(E183CAFC).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep10_Subbed_(E183CAFC)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep10_Subbed_(E183CAFC).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "exiled destiny ep11 b4f42171",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep11_Subbed_(B4F42171).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep11_Subbed_(B4F42171)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep11_Subbed_(B4F42171).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "exiled destiny ep12 c793cca7",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep12_Subbed_(C793CCA7).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep12_Subbed_(C793CCA7)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep12_Subbed_(C793CCA7).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "exiled destiny ep13 586784bf",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep13_Subbed_(586784BF).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep13_Subbed_(586784BF)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep13_Subbed_(586784BF).mp4",
-            "seconds": 1419,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "exiled destiny ep14 76fb72ef",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep14_Subbed_(76FB72EF).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep14_Subbed_(76FB72EF)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep14_Subbed_(76FB72EF).mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "exiled destiny extra clean ending 5570f03b",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Clean_Ending_(5570F03B).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Clean_Ending_(5570F03B)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Clean_Ending_(5570F03B).mp4",
-            "seconds": 90,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 8,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "exiled destiny extra clean opening 522dd765",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Clean_Opening_(522DD765).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Clean_Opening_(522DD765)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Clean_Opening_(522DD765).mp4",
-            "seconds": 90,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 8,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "exiled destiny extra ep01 a148ac4e",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep01_Subbed_(A148AC4E).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep01_Subbed_(A148AC4E)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep01_Subbed_(A148AC4E).mp4",
-            "seconds": 126,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 10,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "exiled destiny extra ep02 13080371",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep02_Subbed_(13080371).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep02_Subbed_(13080371)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep02_Subbed_(13080371).mp4",
-            "seconds": 188,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "exiled destiny extra ep03 8854b10f",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep03_Subbed_(8854B10F).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep03_Subbed_(8854B10F)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep03_Subbed_(8854B10F).mp4",
-            "seconds": 157,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "exiled destiny extra ep04 8165d4a3",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep04_Subbed_(8165D4A3).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep04_Subbed_(8165D4A3)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep04_Subbed_(8165D4A3).mp4",
-            "seconds": 194,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "exiled destiny extra ep05 b1c6e4ed",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep05_Subbed_(B1C6E4ED).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep05_Subbed_(B1C6E4ED)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep05_Subbed_(B1C6E4ED).mp4",
-            "seconds": 143,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 12,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "exiled destiny extra ep06 12f9301a",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep06_Subbed_(12F9301A).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep06_Subbed_(12F9301A)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep06_Subbed_(12F9301A).mp4",
-            "seconds": 169,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "exiled destiny extra ep07 ebf93aa0",
-          "state": "REVIEW",
-          "file": {
-            "item": "Exiled-Destiny-Sound-Euphonium-S01",
-            "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
-            "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep07_Subbed_(EBF93AA0).mp4",
-            "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/Extra/[Exiled-Destiny]_Sound!_Euphonium_Extra_Ep07_Subbed_(EBF93AA0)",
-            "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2FExtra%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Extra_Ep07_Subbed_(EBF93AA0).mp4",
-            "seconds": 169,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "Episode 38",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.1.v1.1639359503.480p.mp4",
-            "name": "EP.1.v1.1639359503.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.1.v1.1639359503.480p.mp4",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "sound-euphonium-s-2",
+            "itemTitle": "Sound! Euphonium S2",
+            "file": "Sound! Euphonium S2 EP 13.mp4",
+            "name": "Sound! Euphonium S2 EP 13",
+            "url": "https://archive.org/download/sound-euphonium-s-2/Sound!%20Euphonium%20S2%20EP%2013.mp4",
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 55,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 53
           },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "Episode 39",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.2.v1.1639671748.480p.mp4",
-            "name": "EP.2.v1.1639671748.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.2.v1.1639671748.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 52,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "Episode 40",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.3.v1.1639687561.480p.mp4",
-            "name": "EP.3.v1.1639687561.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.3.v1.1639687561.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 52,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "Episode 41",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.4.v1.1639771252.480p.mp4",
-            "name": "EP.4.v1.1639771252.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.4.v1.1639771252.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 51,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "Episode 42",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.5.v1.1639975031.480p.mp4",
-            "name": "EP.5.v1.1639975031.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.5.v1.1639975031.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 62,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "Episode 43",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.6.v1.1639968215.480p.mp4",
-            "name": "EP.6.v1.1639968215.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.6.v1.1639968215.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 57,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "Episode 44",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.7.v1.480p.mp4",
-            "name": "EP.7.v1.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.7.v1.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 46,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "Episode 45",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "EP.10.v1.1639972629.480p.mp4",
-            "name": "EP.10.v1.1639972629.480p",
-            "url": "https://archive.org/download/sound-euphonium/EP.10.v1.1639972629.480p.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 51,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "hibike ensemble contest hen",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium Ensemble Contest-hen (2023).mp4",
-            "name": "Hibike! Euphonium Ensemble Contest-hen (2023)",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20Ensemble%20Contest-hen%20(2023).mp4",
-            "seconds": 3501,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 341,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 47,
-          "name": "hibike movie 1 kitauji koukou suisougaku bu e youkoso",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium Movie 1 Kitauji Koukou Suisougaku-bu e Youkoso (2016).mp4",
-            "name": "Hibike! Euphonium Movie 1 Kitauji Koukou Suisougaku-bu e Youkoso (2016)",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20Movie%201%20Kitauji%20Koukou%20Suisougaku-bu%20e%20Youkoso%20(2016).mp4",
-            "seconds": 6208,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 617,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "hibike movie 2 todoketai melody",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium Movie 2 Todoketai Melody (2017).mp4",
-            "name": "Hibike! Euphonium Movie 2 Todoketai Melody (2017)",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20Movie%202%20Todoketai%20Melody%20(2017).mp4",
-            "seconds": 6332,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 630,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "hibike movie 3 chikai no finale",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium Movie 3 Chikai no Finale (2019).mp4",
-            "name": "Hibike! Euphonium Movie 3 Chikai no Finale (2019)",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20Movie%203%20Chikai%20no%20Finale%20(2019).mp4",
-            "seconds": 6023,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 601,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "hibike s01sp01",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP01.mp4",
-            "name": "Hibike! Euphonium S01SP01",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP01.mp4",
-            "seconds": 127,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 10,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "hibike s01sp02",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP02.mp4",
-            "name": "Hibike! Euphonium S01SP02",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP02.mp4",
-            "seconds": 189,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "hibike s01sp03",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP03.mp4",
-            "name": "Hibike! Euphonium S01SP03",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP03.mp4",
-            "seconds": 152,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 12,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "hibike s01sp04",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP04.mp4",
-            "name": "Hibike! Euphonium S01SP04",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP04.mp4",
-            "seconds": 195,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "hibike s01sp05",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP05.mp4",
-            "name": "Hibike! Euphonium S01SP05",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP05.mp4",
-            "seconds": 144,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 11,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 55,
-          "name": "hibike s01sp06",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP06.mp4",
-            "name": "Hibike! Euphonium S01SP06",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP06.mp4",
-            "seconds": 170,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "hibike s01sp07",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S01SP07.mp4",
-            "name": "Hibike! Euphonium S01SP07",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S01SP07.mp4",
-            "seconds": 170,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 57,
-          "name": "hibike s02sp01",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP01.mp4",
-            "name": "Hibike! Euphonium S02SP01",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP01.mp4",
-            "seconds": 178,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "hibike s02sp02",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP02.mp4",
-            "name": "Hibike! Euphonium S02SP02",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP02.mp4",
-            "seconds": 192,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 59,
-          "name": "hibike s02sp03",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP03.mp4",
-            "name": "Hibike! Euphonium S02SP03",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP03.mp4",
-            "seconds": 200,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "hibike s02sp04",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP04.mp4",
-            "name": "Hibike! Euphonium S02SP04",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP04.mp4",
-            "seconds": 174,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "hibike s02sp05",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP05.mp4",
-            "name": "Hibike! Euphonium S02SP05",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP05.mp4",
-            "seconds": 163,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "hibike s02sp06",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP06.mp4",
-            "name": "Hibike! Euphonium S02SP06",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP06.mp4",
-            "seconds": 200,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "hibike s02sp07",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02SP07.mp4",
-            "name": "Hibike! Euphonium S02SP07",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02SP07.mp4",
-            "seconds": 193,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "liz to aoi tori",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Liz to Aoi Tori (2018).mp4",
-            "name": "Liz to Aoi Tori (2018)",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Liz%20to%20Aoi%20Tori%20(2018).mp4",
-            "seconds": 5430,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 543,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "st25 2 hibike 9 sd",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "st25_2_hibike-euphonium-episode-9-sd.mp4",
-            "name": "st25_2_hibike-euphonium-episode-9-sd",
-            "url": "https://archive.org/download/sound-euphonium/st25_2_hibike-euphonium-episode-9-sd.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 53,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "st25 6 hibike 8 sd",
-          "state": "REVIEW",
-          "file": {
-            "item": "sound-euphonium",
-            "itemTitle": "Sound! Euphonium",
-            "file": "st25_6_hibike-euphonium-episode-8-sd.mp4",
-            "name": "st25_6_hibike-euphonium-episode-8-sd",
-            "url": "https://archive.org/download/sound-euphonium/st25_6_hibike-euphonium-episode-8-sd.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 47,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 13 in \"[anime] Sound! Euphonium S01 (2015) [480\"",
+              "item": "Exiled-Destiny-Sound-Euphonium-S01",
+              "itemTitle": "[anime] Sound! Euphonium S01 (2015) [480p] [subbed] [Exiled-Destiny]",
+              "file": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep14_Subbed_(76FB72EF).mp4",
+              "name": "E:/[Exiled-Destiny] Sound! Euphonium (Subbed)/[Exiled-Destiny]_Sound!_Euphonium_Ep14_Subbed_(76FB72EF)",
+              "url": "https://archive.org/download/Exiled-Destiny-Sound-Euphonium-S01/E%3A%2F%5BExiled-Destiny%5D%20Sound!%20Euphonium%20(Subbed)%2F%5BExiled-Destiny%5D_Sound!_Euphonium_Ep14_Subbed_(76FB72EF).mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         }
       ]
     },
@@ -1390,301 +589,106 @@
       "episodes": [
         {
           "number": 1,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E01.mp4",
-            "name": "Hibike! Euphonium S02E01",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E01.mp4",
-            "seconds": 2863,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 283,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Midsummer Fanfare",
+          "airdate": "2016-10-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E02.mp4",
-            "name": "Hibike! Euphonium S02E02",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E02.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Hesitation Flute",
+          "airdate": "2016-10-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E03.mp4",
-            "name": "Hibike! Euphonium S02E03",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E03.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Troubled Nocturnes",
+          "airdate": "2016-10-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E04.mp4",
-            "name": "Hibike! Euphonium S02E04",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E04.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Awakening Oboe",
+          "airdate": "2016-10-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E05.mp4",
-            "name": "Hibike! Euphonium S02E05",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E05.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Miraculous Harmony",
+          "airdate": "2016-11-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E06.mp4",
-            "name": "Hibike! Euphonium S02E06",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E06.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Rainy Conductor",
+          "airdate": "2016-11-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E07.mp4",
-            "name": "Hibike! Euphonium S02E07",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E07.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Station Concert",
+          "airdate": "2016-11-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E08.mp4",
-            "name": "Hibike! Euphonium S02E08",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E08.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 139,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Rhapsody in Flu",
+          "airdate": "2016-11-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E09.mp4",
-            "name": "Hibike! Euphonium S02E09",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E09.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Sound! Euphonium",
+          "airdate": "2016-11-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E10.mp4",
-            "name": "Hibike! Euphonium S02E10",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E10.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "After-school Obbligato",
+          "airdate": "2016-12-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E11.mp4",
-            "name": "Hibike! Euphonium S02E11",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E11.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "First Love Trumpet",
+          "airdate": "2016-12-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E12.mp4",
-            "name": "Hibike! Euphonium S02E12",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E12.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": 2,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Last Competition",
+          "airdate": "2016-12-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S02E13.mp4",
-            "name": "Hibike! Euphonium S02E13",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S02E13.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": 2,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Early-Spring Epilogue",
+          "airdate": "2016-12-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1694,278 +698,106 @@
       "episodes": [
         {
           "number": 1,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E01.mp4",
-            "name": "Hibike! Euphonium S03E01",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E01.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "New Euphonium",
+          "airdate": "2024-04-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E02.mp4",
-            "name": "Hibike! Euphonium S03E02",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E02.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Triangle Syncopation",
+          "airdate": "2024-04-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E03.mp4",
-            "name": "Hibike! Euphonium S03E03",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E03.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Blue Prelude",
+          "airdate": "2024-04-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E04.mp4",
-            "name": "Hibike! Euphonium S03E04",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E04.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Etude With You",
+          "airdate": "2024-04-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E05.mp4",
-            "name": "Hibike! Euphonium S03E05",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E05.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Twilight for Two",
+          "airdate": "2024-05-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E06.mp4",
-            "name": "Hibike! Euphonium S03E06",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E06.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Wavering Dissonance",
+          "airdate": "2024-05-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E07.mp4",
-            "name": "Hibike! Euphonium S03E07",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E07.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Summer Fermata",
+          "airdate": "2024-05-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E08.mp4",
-            "name": "Hibike! Euphonium S03E08",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E08.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Melancholy Ostinato",
+          "airdate": "2024-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Dissonant Tuning",
+          "airdate": "2024-06-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E10.mp4",
-            "name": "Hibike! Euphonium S03E10",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E10.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Expressing Arpeggios",
+          "airdate": "2024-06-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E11.mp4",
-            "name": "Hibike! Euphonium S03E11",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E11.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Orchestra to the Future",
+          "airdate": "2024-06-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E12.mp4",
-            "name": "Hibike! Euphonium S03E12",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E12.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": {
-              "season": 3,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Last Soloist",
+          "airdate": "2024-06-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "hibike",
-          "state": "REVIEW",
-          "file": {
-            "item": "hibike-euphonium-reupload-2",
-            "itemTitle": "[Anime] Sound! euphonium season 1 + 2 + 3 + specials + movie mkv",
-            "file": "Hibike! Euphonium S03E13.mp4",
-            "name": "Hibike! Euphonium S03E13",
-            "url": "https://archive.org/download/hibike-euphonium-reupload-2/Hibike!%20Euphonium%20S03E13.mp4",
-            "seconds": 1497,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 150,
-            "ep": {
-              "season": 3,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Connecting Melodies",
+          "airdate": "2024-06-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

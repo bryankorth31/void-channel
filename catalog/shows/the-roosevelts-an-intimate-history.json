@@ -3,7 +3,7 @@
   "slug": "the-roosevelts-an-intimate-history",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-15T01:19:21.011Z",
+  "matchedAt": "2026-10-15T03:18:22.515Z",
   "tvmaze": {
     "id": 19802,
     "name": "The Roosevelts: An Intimate History",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 7,
-    "live": 4,
+    "live": 6,
     "review": 1,
-    "missing": 2,
-    "pct": 71
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -26,8 +26,20 @@
           "number": 1,
           "name": "Get Action (1858-1901)",
           "airdate": "2014-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "absolute episode number + title match",
+            "item": "the-roosevelts-an-intimate-history-episode-1-get-action",
+            "itemTitle": "The Roosevelts: An Intimate History",
+            "file": "The Roosevelts An Intimate History Episode 1 Get Action.mp4",
+            "name": "The Roosevelts An Intimate History Episode 1 Get Action",
+            "url": "https://archive.org/download/the-roosevelts-an-intimate-history-episode-1-get-action/The%20Roosevelts%20An%20Intimate%20History%20Episode%201%20Get%20Action.mp4",
+            "seconds": 6837,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 606
+          },
           "alternates": []
         },
         {
@@ -204,8 +216,20 @@
           "number": 7,
           "name": "A Strong and Active Faith (1944-1952)",
           "airdate": "2014-09-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "absolute episode number + title match",
+            "item": "the-roosevelts-an-intimate-history-episode-1-get-action",
+            "itemTitle": "The Roosevelts: An Intimate History",
+            "file": "The Roosevelts An Intimate History Episode 7 A Strong and Active Faith.mp4",
+            "name": "The Roosevelts An Intimate History Episode 7 A Strong and Active Faith",
+            "url": "https://archive.org/download/the-roosevelts-an-intimate-history-episode-1-get-action/The%20Roosevelts%20An%20Intimate%20History%20Episode%207%20A%20Strong%20and%20Active%20Faith.mp4",
+            "seconds": 6606,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 706
+          },
           "alternates": []
         }
       ]

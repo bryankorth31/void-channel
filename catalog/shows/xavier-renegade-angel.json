@@ -3,7 +3,7 @@
   "slug": "xavier-renegade-angel",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:07.378Z",
+  "matchedAt": "2026-10-15T03:17:31.351Z",
   "tvmaze": {
     "id": 6246,
     "name": "Xavier: Renegade Angel",
@@ -568,19 +568,45 @@
           "airdate": "2008-01-13",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "xavier-renegade-angel-upscaled",
-            "itemTitle": "Xavier Renegade Angel Season 1 - 2 Upscaled",
-            "file": "Xavier Renegade Angel S01E10 [1080p upscaled].mp4",
-            "name": "Xavier Renegade Angel S01E10 [1080p upscaled]",
-            "url": "https://archive.org/download/xavier-renegade-angel-upscaled/Xavier%20Renegade%20Angel%20S01E10%20%5B1080p%20upscaled%5D.mp4",
-            "seconds": 691,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "xavier-renegade-angel-disc-2",
+            "itemTitle": "Xavier: Renegade Angel (DVD Rip)",
+            "file": "Xavier Renegade Angel/Fanmentary/S1E10 - Shakashuri Blowdown (Fanmentary).mp4",
+            "name": "Xavier Renegade Angel/Fanmentary/S1E10 - Shakashuri Blowdown (Fanmentary)",
+            "url": "https://archive.org/download/xavier-renegade-angel-disc-2/Xavier%20Renegade%20Angel%2FFanmentary%2FS1E10%20-%20Shakashuri%20Blowdown%20(Fanmentary).mp4",
+            "seconds": 693,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 155
+            "sizeMB": 130
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "xavier-renegade-angel-season-1",
+              "itemTitle": "Xavier Renegade Angel Season 1",
+              "file": "Xavier - Renegade Angel - S01E10 - Shakashuri Blowdown.mp4",
+              "name": "Xavier - Renegade Angel - S01E10 - Shakashuri Blowdown",
+              "url": "https://archive.org/download/xavier-renegade-angel-season-1/Xavier%20-%20Renegade%20Angel%20-%20S01E10%20-%20Shakashuri%20Blowdown.mp4",
+              "seconds": 691,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 66
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "xavier-renegade-angel-upscaled",
+              "itemTitle": "Xavier Renegade Angel Season 1 - 2 Upscaled",
+              "file": "Xavier Renegade Angel S01E10 [1080p upscaled].mp4",
+              "name": "Xavier Renegade Angel S01E10 [1080p upscaled]",
+              "url": "https://archive.org/download/xavier-renegade-angel-upscaled/Xavier%20Renegade%20Angel%20S01E10%20%5B1080p%20upscaled%5D.mp4",
+              "seconds": 691,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -593,32 +619,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 67
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "xra-s-02-e-04",
-              "itemTitle": "Xavier: Renegade Angel - Full Series (HD)",
-              "file": "XRA S01E10.mp4",
-              "name": "XRA S01E10",
-              "url": "https://archive.org/download/xra-s-02-e-04/XRA%20S01E10.mp4",
-              "seconds": 693,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 227
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "xavier-s-1-e-10",
-              "itemTitle": "Xavier Renegade Angel",
-              "file": "Xavier S1 E10.mp4",
-              "name": "Xavier S1 E10",
-              "url": "https://archive.org/download/xavier-s-1-e-10/Xavier%20S1%20E10.mp4",
-              "seconds": 693,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 80
             }
           ]
         }

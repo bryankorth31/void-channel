@@ -3,19 +3,18 @@
   "slug": "neon-genesis-evangelion",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.048Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.673Z",
   "tvmaze": {
-    "id": null,
+    "id": 1925,
     "name": "Neon Genesis Evangelion",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 24,
+    "premiered": "1995-10-04",
+    "network": "TV Tokyo"
   },
   "coverage": {
-    "total": 143,
-    "live": 0,
-    "review": 143,
+    "total": 26,
+    "live": 2,
+    "review": 24,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "1 00a 1 1920x1080 angel attack",
-          "state": "REVIEW",
+          "name": "Angel Attack",
+          "airdate": "1995-10-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "evangelion-the-full-series",
             "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
             "file": "1.00A Neon Genesis Evangelion - Episode 1 (SUB) 1920x1080 - Angel Attack.mp4",
@@ -36,573 +38,58 @@
             "seconds": 1402,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 642,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 642
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.00B Neon Genesis Evangelion - Episode 1 (DUB) 1920x1080 - Angel Attack.mp4",
+              "name": "1.00B Neon Genesis Evangelion - Episode 1 (DUB) 1920x1080 - Angel Attack",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.00B%20Neon%20Genesis%20Evangelion%20-%20Episode%201%20(DUB)%201920x1080%20-%20Angel%20Attack.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 295
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Angel Attack\" (0.95)",
+              "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+              "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+              "file": "NGE 01 - Angel Attack.mp4",
+              "name": "NGE 01 - Angel Attack",
+              "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2001%20-%20Angel%20Attack.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/1.mp4",
+              "name": "evangelion_adult_swim/1",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F1.mp4",
+              "seconds": 1677,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 345
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "1 10a 2 1920x1080 unfamiliar ceilings",
+          "name": "The Beast",
+          "airdate": "1995-10-11",
           "state": "REVIEW",
           "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.10A Neon Genesis Evangelion - Episode 2 (SUB) 1920x1080 - Unfamiliar Ceilings.mp4",
-            "name": "1.10A Neon Genesis Evangelion - Episode 2 (SUB) 1920x1080 - Unfamiliar Ceilings",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.10A%20Neon%20Genesis%20Evangelion%20-%20Episode%202%20(SUB)%201920x1080%20-%20Unfamiliar%20Ceilings.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 575,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "1 20a 3 1920x1080 the silent phone",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.20A Neon Genesis Evangelion - Episode 3 (SUB) 1920x1080 - The Silent Phone.mp4",
-            "name": "1.20A Neon Genesis Evangelion - Episode 3 (SUB) 1920x1080 - The Silent Phone",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.20A%20Neon%20Genesis%20Evangelion%20-%20Episode%203%20(SUB)%201920x1080%20-%20The%20Silent%20Phone.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 776,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "1 30a 4 1920x1080 rain after running away",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.30A Neon Genesis Evangelion - Episode 4 (SUB) 1920x1080- Rain, After Running Away.mp4",
-            "name": "1.30A Neon Genesis Evangelion - Episode 4 (SUB) 1920x1080- Rain, After Running Away",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.30A%20Neon%20Genesis%20Evangelion%20-%20Episode%204%20(SUB)%201920x1080-%20Rain%2C%20After%20Running%20Away.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 761,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "1 40a 5 1920x1080 rei beyond the heart",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.40A Neon Genesis Evangelion - Episode 5 (SUB) 1920x1080 - Rei, Beyond the Heart.mp4",
-            "name": "1.40A Neon Genesis Evangelion - Episode 5 (SUB) 1920x1080 - Rei, Beyond the Heart",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.40A%20Neon%20Genesis%20Evangelion%20-%20Episode%205%20(SUB)%201920x1080%20-%20Rei%2C%20Beyond%20the%20Heart.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 688,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "1 50a 6 1920x1080 showdown in tokyo 3",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.50A Neon Genesis Evangelion - Episode 6 (SUB) 1920x1080 - Showdown in Tokyo-3.mp4",
-            "name": "1.50A Neon Genesis Evangelion - Episode 6 (SUB) 1920x1080 - Showdown in Tokyo-3",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.50A%20Neon%20Genesis%20Evangelion%20-%20Episode%206%20(SUB)%201920x1080%20-%20Showdown%20in%20Tokyo-3.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 674,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "1 60a 7 1920x1080 the works of man",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.60A Neon Genesis Evangelion - Episode 7 (SUB) 1920x1080 - The Works of Man.mp4",
-            "name": "1.60A Neon Genesis Evangelion - Episode 7 (SUB) 1920x1080 - The Works of Man",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.60A%20Neon%20Genesis%20Evangelion%20-%20Episode%207%20(SUB)%201920x1080%20-%20The%20Works%20of%20Man.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 669,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "1 70a 8 1920x1080 asuka arrives in japan",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.70A Neon Genesis Evangelion - Episode 8 (SUB) 1920x1080 - Asuka Arrives in Japan.mp4",
-            "name": "1.70A Neon Genesis Evangelion - Episode 8 (SUB) 1920x1080 - Asuka Arrives in Japan",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.70A%20Neon%20Genesis%20Evangelion%20-%20Episode%208%20(SUB)%201920x1080%20-%20Asuka%20Arrives%20in%20Japan.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 587,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "1 80a 9 1920x1080 mind matching moment",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.80A Neon Genesis Evangelion - Episode 9 (SUB) 1920x1080- Mind, Matching, Moment.mp4",
-            "name": "1.80A Neon Genesis Evangelion - Episode 9 (SUB) 1920x1080- Mind, Matching, Moment",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.80A%20Neon%20Genesis%20Evangelion%20-%20Episode%209%20(SUB)%201920x1080-%20Mind%2C%20Matching%2C%20Moment.mp4",
-            "seconds": 1401,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 713,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "1 90a 10 1920x1080 the magma diver",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.90A Neon Genesis Evangelion - Episode 10 (SUB) 1920x1080 - The Magma Diver.mp4",
-            "name": "1.90A Neon Genesis Evangelion - Episode 10 (SUB) 1920x1080 - The Magma Diver",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.90A%20Neon%20Genesis%20Evangelion%20-%20Episode%2010%20(SUB)%201920x1080%20-%20The%20Magma%20Diver.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 649,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "2 00a 11 1920x1080 in the still darkness",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.00A Neon Genesis Evangelion - Episode 11 (SUB) 1920x1080 - In the Still Darkness.mp4",
-            "name": "2.00A Neon Genesis Evangelion - Episode 11 (SUB) 1920x1080 - In the Still Darkness",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.00A%20Neon%20Genesis%20Evangelion%20-%20Episode%2011%20(SUB)%201920x1080%20-%20In%20the%20Still%20Darkness.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 668,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "2 10a 12 1920x1080 a miracles worth",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.10A Neon Genesis Evangelion - Episode 12  (SUB) 1920x1080 - A Miracle's Worth.mp4",
-            "name": "2.10A Neon Genesis Evangelion - Episode 12  (SUB) 1920x1080 - A Miracle's Worth",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.10A%20Neon%20Genesis%20Evangelion%20-%20Episode%2012%20%20(SUB)%201920x1080%20-%20A%20Miracle's%20Worth.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 674,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "2 20a 13 1920x1080 angel infiltration",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.20A Neon Genesis Evangelion - Episode 13 (SUB) 1920x1080 - Angel Infiltration.mp4",
-            "name": "2.20A Neon Genesis Evangelion - Episode 13 (SUB) 1920x1080 - Angel Infiltration",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.20A%20Neon%20Genesis%20Evangelion%20-%20Episode%2013%20(SUB)%201920x1080%20-%20Angel%20Infiltration.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 644,
-            "ep": {
-              "season": null,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "2 30a 14 1920x1080 seele the seat of the soul",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.30A Neon Genesis Evangelion - Episode 14 (SUB) 1920x1080 - Seele, the Seat of the Soul.mp4",
-            "name": "2.30A Neon Genesis Evangelion - Episode 14 (SUB) 1920x1080 - Seele, the Seat of the Soul",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.30A%20Neon%20Genesis%20Evangelion%20-%20Episode%2014%20(SUB)%201920x1080%20-%20Seele%2C%20the%20Seat%20of%20the%20Soul.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 657,
-            "ep": {
-              "season": null,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "2 40a 15 1920x1080 lies and silence",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.40A Neon Genesis Evangelion - Episode 15 (SUB) 1920x1080 - Lies and Silence.mp4",
-            "name": "2.40A Neon Genesis Evangelion - Episode 15 (SUB) 1920x1080 - Lies and Silence",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.40A%20Neon%20Genesis%20Evangelion%20-%20Episode%2015%20(SUB)%201920x1080%20-%20Lies%20and%20Silence.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 577,
-            "ep": {
-              "season": null,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "2 50a 16 1920x1080 the sickness unto death and then",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.50A Neon Genesis Evangelion - Episode 16 (SUB) 1920x1080 - The Sickness Unto Death, and then....mp4",
-            "name": "2.50A Neon Genesis Evangelion - Episode 16 (SUB) 1920x1080 - The Sickness Unto Death, and then...",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.50A%20Neon%20Genesis%20Evangelion%20-%20Episode%2016%20(SUB)%201920x1080%20-%20The%20Sickness%20Unto%20Death%2C%20and%20then....mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 732,
-            "ep": {
-              "season": null,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "2 60a 17 1920x1080 the fourth to be qualified",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.60A Neon Genesis Evangelion - Episode 17 (SUB) 1920x1080 - The Fourth to be Qualified.mp4",
-            "name": "2.60A Neon Genesis Evangelion - Episode 17 (SUB) 1920x1080 - The Fourth to be Qualified",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.60A%20Neon%20Genesis%20Evangelion%20-%20Episode%2017%20(SUB)%201920x1080%20-%20The%20Fourth%20to%20be%20Qualified.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 551,
-            "ep": {
-              "season": null,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "2 70a 18 1920x1080 life and death decisions",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.70A Neon Genesis Evangelion - Episode 18 (SUB) 1920x1080 - Life and Death Decisions.mp4",
-            "name": "2.70A Neon Genesis Evangelion - Episode 18 (SUB) 1920x1080 - Life and Death Decisions",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.70A%20Neon%20Genesis%20Evangelion%20-%20Episode%2018%20(SUB)%201920x1080%20-%20Life%20and%20Death%20Decisions.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 751,
-            "ep": {
-              "season": null,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "2 80a 19 1920x1080 a mans battle",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.80A Neon Genesis Evangelion - Episode 19 (SUB) 1920x1080 - A Man's Battle.mp4",
-            "name": "2.80A Neon Genesis Evangelion - Episode 19 (SUB) 1920x1080 - A Man's Battle",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.80A%20Neon%20Genesis%20Evangelion%20-%20Episode%2019%20(SUB)%201920x1080%20-%20A%20Man's%20Battle.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 604,
-            "ep": {
-              "season": null,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "2 90a 20 1920x1080 of the shape of hearts and humans",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.90A Neon Genesis Evangelion - Episode 20 (SUB) 1920x1080 - Of the Shape of Hearts and Humans.mp4",
-            "name": "2.90A Neon Genesis Evangelion - Episode 20 (SUB) 1920x1080 - Of the Shape of Hearts and Humans",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.90A%20Neon%20Genesis%20Evangelion%20-%20Episode%2020%20(SUB)%201920x1080%20-%20Of%20the%20Shape%20of%20Hearts%20and%20Humans.mp4",
-            "seconds": 1402,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 549,
-            "ep": {
-              "season": null,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "3 00a 21 1920x1080 the birth of nerv",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.00A Neon Genesis Evangelion - Episode 21 (SUB) 1920x1080 - The Birth of NERV.mp4",
-            "name": "3.00A Neon Genesis Evangelion - Episode 21 (SUB) 1920x1080 - The Birth of NERV",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.00A%20Neon%20Genesis%20Evangelion%20-%20Episode%2021%20(SUB)%201920x1080%20-%20The%20Birth%20of%20NERV.mp4",
-            "seconds": 1762,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 947,
-            "ep": {
-              "season": null,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "3 10a 22 1920x1080 staying human",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.10A Neon Genesis Evangelion - Episode 22 (SUB) 1920x1080 - Staying Human.mp4",
-            "name": "3.10A Neon Genesis Evangelion - Episode 22 (SUB) 1920x1080 - Staying Human",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.10A%20Neon%20Genesis%20Evangelion%20-%20Episode%2022%20(SUB)%201920x1080%20-%20Staying%20Human.mp4",
-            "seconds": 1725,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 806,
-            "ep": {
-              "season": null,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "3 20a 23 1920x1080 tears",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.20A Neon Genesis Evangelion - Episode 23 (SUB) 1920x1080 - Tears.mp4",
-            "name": "3.20A Neon Genesis Evangelion - Episode 23 (SUB) 1920x1080 - Tears",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.20A%20Neon%20Genesis%20Evangelion%20-%20Episode%2023%20(SUB)%201920x1080%20-%20Tears.mp4",
-            "seconds": 1530,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 682,
-            "ep": {
-              "season": null,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "3 30a 24 1920x1080 the last cometh",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.30A Neon Genesis Evangelion - Episode 24 (SUB) 1920x1080 - The Last Cometh.mp4",
-            "name": "3.30A Neon Genesis Evangelion - Episode 24 (SUB) 1920x1080 - The Last Cometh",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.30A%20Neon%20Genesis%20Evangelion%20-%20Episode%2024%20(SUB)%201920x1080%20-%20The%20Last%20Cometh.mp4",
-            "seconds": 1575,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 669,
-            "ep": {
-              "season": null,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "3 40a 25 1920x1080 the ending world",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.40A Neon Genesis Evangelion - Episode 25 (SUB) 1920x1080 - The Ending World.mp4",
-            "name": "3.40A Neon Genesis Evangelion - Episode 25 (SUB) 1920x1080 - The Ending World",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.40A%20Neon%20Genesis%20Evangelion%20-%20Episode%2025%20(SUB)%201920x1080%20-%20The%20Ending%20World.mp4",
-            "seconds": 1403,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 420,
-            "ep": {
-              "season": null,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "3 50a 26 1920x1080 the beast that shouted love at the heart of the world",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Beast\" (0.95)",
             "item": "evangelion-the-full-series",
             "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
             "file": "3.50A Neon Genesis Evangelion - Episode 26 (SUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World.mp4",
@@ -611,1841 +98,58 @@
             "seconds": 1388,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1152,
-            "ep": {
-              "season": null,
-              "episode": 26
+            "sizeMB": 1152
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Beast\" (0.95)",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.50B Neon Genesis Evangelion - Episode 26 (DUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World.mp4",
+              "name": "3.50B Neon Genesis Evangelion - Episode 26 (DUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.50B%20Neon%20Genesis%20Evangelion%20-%20Episode%2026%20(DUB)%201920x1080%20-%20The%20Beast%20that%20Shouted%20'Love'%20at%20the%20Heart%20of%20the%20World.mp4",
+              "seconds": 1388,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 663
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "Episode 27",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "1.00A Neon Genesis Evangelion - Episode 1 (SUB) 1920x1080 - Angel Attack.ia.mp4",
-            "name": "1",
-            "url": "https://archive.org/download/evangelion-the-full-series/1.00A%20Neon%20Genesis%20Evangelion%20-%20Episode%201%20(SUB)%201920x1080%20-%20Angel%20Attack.ia.mp4",
-            "seconds": 1402,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 642,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "Episode 28",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "2.00A Neon Genesis Evangelion - Episode 11 (SUB) 1920x1080 - In the Still Darkness.ia.mp4",
-            "name": "2",
-            "url": "https://archive.org/download/evangelion-the-full-series/2.00A%20Neon%20Genesis%20Evangelion%20-%20Episode%2011%20(SUB)%201920x1080%20-%20In%20the%20Still%20Darkness.ia.mp4",
-            "seconds": 1402,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 668,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "Episode 29",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.00A Neon Genesis Evangelion - Episode 21 (SUB) 1920x1080 - The Birth of NERV.ia.mp4",
-            "name": "3",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.00A%20Neon%20Genesis%20Evangelion%20-%20Episode%2021%20(SUB)%201920x1080%20-%20The%20Birth%20of%20NERV.ia.mp4",
-            "seconds": 1762,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 947,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "3 60a movie 1 1920x1080 death and rebirth",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.60A Neon Genesis Evangelion Movie 1 (SUB) 1920x1080 - Death & Rebirth.mp4",
-            "name": "3.60A Neon Genesis Evangelion Movie 1 (SUB) 1920x1080 - Death & Rebirth",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.60A%20Neon%20Genesis%20Evangelion%20Movie%201%20(SUB)%201920x1080%20-%20Death%20%26%20Rebirth.mp4",
-            "seconds": 6029,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 3280,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "3 60b movie 1 842x480 death and rebirth",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.60B Neon Genesis Evangelion Movie 1 (DUB) 842x480 - Death & Rebirth.mp4",
-            "name": "3.60B Neon Genesis Evangelion Movie 1 (DUB) 842x480 - Death & Rebirth",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.60B%20Neon%20Genesis%20Evangelion%20Movie%201%20(DUB)%20842x480%20-%20Death%20%26%20Rebirth.mp4",
-            "seconds": 6467,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 627,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "3 65a movie 2 1920x1080 end of",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.65A Neon Genesis Evangelion Movie 2 (SUB) 1920x1080 - End of Evangelion.mp4",
-            "name": "3.65A Neon Genesis Evangelion Movie 2 (SUB) 1920x1080 - End of Evangelion",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.65A%20Neon%20Genesis%20Evangelion%20Movie%202%20(SUB)%201920x1080%20-%20End%20of%20Evangelion.mp4",
-            "seconds": 5207,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2625,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "3 65b movie 2 1920x1080 end of",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.65B Neon Genesis Evangelion Movie 2 (DUB) 1920x1080 - End of Evangelion.mp4",
-            "name": "3.65B Neon Genesis Evangelion Movie 2 (DUB) 1920x1080 - End of Evangelion",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.65B%20Neon%20Genesis%20Evangelion%20Movie%202%20(DUB)%201920x1080%20-%20End%20of%20Evangelion.mp4",
-            "seconds": 5207,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2630,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "Episode 34",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.70A Evangelion 1.11 Movie (SUB) 1920x1080 - You Are (Not) Alone.ia.mp4",
-            "name": "3.70A Evangelion 1",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.70A%20Evangelion%201.11%20Movie%20(SUB)%201920x1080%20-%20You%20Are%20(Not)%20Alone.ia.mp4",
-            "seconds": 6062,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 609,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "3 70a 1 11 movie 1920x1080 you are not alone",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.70A Evangelion 1.11 Movie (SUB) 1920x1080 - You Are (Not) Alone.mp4",
-            "name": "3.70A Evangelion 1.11 Movie (SUB) 1920x1080 - You Are (Not) Alone",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.70A%20Evangelion%201.11%20Movie%20(SUB)%201920x1080%20-%20You%20Are%20(Not)%20Alone.mp4",
-            "seconds": 6062,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 869,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "Episode 36",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.70B Evangelion 1.11 Movie (DUB) 1920x1080 - You Are (Not) Alone.ia.mp4",
-            "name": "3.70B Evangelion 1",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.70B%20Evangelion%201.11%20Movie%20(DUB)%201920x1080%20-%20You%20Are%20(Not)%20Alone.ia.mp4",
-            "seconds": 6059,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 604,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "3 70b 1 11 movie 1920x1080 you are not alone",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.70B Evangelion 1.11 Movie (DUB) 1920x1080 - You Are (Not) Alone.mp4",
-            "name": "3.70B Evangelion 1.11 Movie (DUB) 1920x1080 - You Are (Not) Alone",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.70B%20Evangelion%201.11%20Movie%20(DUB)%201920x1080%20-%20You%20Are%20(Not)%20Alone.mp4",
-            "seconds": 6059,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 748,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "Episode 38",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.80A Evangelion 2.22 Movie (SUB) 1920x1080 - You Can (Not) Advance.ia.mp4",
-            "name": "3.80A Evangelion 2",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.80A%20Evangelion%202.22%20Movie%20(SUB)%201920x1080%20-%20You%20Can%20(Not)%20Advance.ia.mp4",
-            "seconds": 6730,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 672,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "3 80a 2 22 movie 1920x1080 you can not advance",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.80A Evangelion 2.22 Movie (SUB) 1920x1080 - You Can (Not) Advance.mp4",
-            "name": "3.80A Evangelion 2.22 Movie (SUB) 1920x1080 - You Can (Not) Advance",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.80A%20Evangelion%202.22%20Movie%20(SUB)%201920x1080%20-%20You%20Can%20(Not)%20Advance.mp4",
-            "seconds": 6730,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1190,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "Episode 40",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.80B Evangelion 2.22 Movie (DUB) 1920x1080 - You Can (Not) Advance.ia.mp4",
-            "name": "3.80B Evangelion 2",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.80B%20Evangelion%202.22%20Movie%20(DUB)%201920x1080%20-%20You%20Can%20(Not)%20Advance.ia.mp4",
-            "seconds": 6730,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 665,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "3 80b 2 22 movie 1920x1080 you can not advance",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.80B Evangelion 2.22 Movie (DUB) 1920x1080 - You Can (Not) Advance.mp4",
-            "name": "3.80B Evangelion 2.22 Movie (DUB) 1920x1080 - You Can (Not) Advance",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.80B%20Evangelion%202.22%20Movie%20(DUB)%201920x1080%20-%20You%20Can%20(Not)%20Advance.mp4",
-            "seconds": 6730,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1033,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "Episode 42",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.90A Evangelion 3.33 Movie (SUB) 1920x816 - You Can (Not) Redo.ia.mp4",
-            "name": "3.90A Evangelion 3",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.90A%20Evangelion%203.33%20Movie%20(SUB)%201920x816%20-%20You%20Can%20(Not)%20Redo.ia.mp4",
-            "seconds": 5740,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 575,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "3 90a 3 33 movie 1920x816 you can not redo",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.90A Evangelion 3.33 Movie (SUB) 1920x816 - You Can (Not) Redo.mp4",
-            "name": "3.90A Evangelion 3.33 Movie (SUB) 1920x816 - You Can (Not) Redo",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.90A%20Evangelion%203.33%20Movie%20(SUB)%201920x816%20-%20You%20Can%20(Not)%20Redo.mp4",
-            "seconds": 5740,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1043,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "Episode 44",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.90B Evangelion 3.33 Movie (DUB) 1920x816 - You Can (Not) Redo.ia.mp4",
-            "name": "3.90B Evangelion 3",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.90B%20Evangelion%203.33%20Movie%20(DUB)%201920x816%20-%20You%20Can%20(Not)%20Redo.ia.mp4",
-            "seconds": 5739,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 572,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "3 90b 3 33 movie 1920x816 you can not redo",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "3.90B Evangelion 3.33 Movie (DUB) 1920x816 - You Can (Not) Redo.mp4",
-            "name": "3.90B Evangelion 3.33 Movie (DUB) 1920x816 - You Can (Not) Redo",
-            "url": "https://archive.org/download/evangelion-the-full-series/3.90B%20Evangelion%203.33%20Movie%20(DUB)%201920x816%20-%20You%20Can%20(Not)%20Redo.mp4",
-            "seconds": 5739,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 943,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "Episode 46",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.10A Puchi Eva Evangelion@School - Episode 1 (SUB) 712x476 - Going to School.ia.mp4",
-            "name": "4",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.10A%20Puchi%20Eva%20Evangelion%40School%20-%20Episode%201%20(SUB)%20712x476%20-%20Going%20to%20School.ia.mp4",
-            "seconds": 190,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 18,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 47,
-          "name": "Episode 47",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.00A Evangelion 3.0+1.0 Movie (SUB) [4k] 3840x2160 - Thrice Upon a Time.ia.mp4",
-            "name": "4.00A Evangelion 3.0+1",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.00A%20Evangelion%203.0%2B1.0%20Movie%20(SUB)%20%5B4k%5D%203840x2160%20-%20Thrice%20Upon%20a%20Time.ia.mp4",
-            "seconds": 9302,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 929,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "4 00a 3 0 1 0 movie 4k 3840x2160 thrice upon a time",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.00A Evangelion 3.0+1.0 Movie (SUB) [4k] 3840x2160 - Thrice Upon a Time.mp4",
-            "name": "4.00A Evangelion 3.0+1.0 Movie (SUB) [4k] 3840x2160 - Thrice Upon a Time",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.00A%20Evangelion%203.0%2B1.0%20Movie%20(SUB)%20%5B4k%5D%203840x2160%20-%20Thrice%20Upon%20a%20Time.mp4",
-            "seconds": 9302,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 5839,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "Episode 49",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.00B Evangelion 3.0+1.0 Movie (DUB) [4k] 3840x2160 - Thrice Upon a Time.ia.mp4",
-            "name": "4.00B Evangelion 3.0+1",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.00B%20Evangelion%203.0%2B1.0%20Movie%20(DUB)%20%5B4k%5D%203840x2160%20-%20Thrice%20Upon%20a%20Time.ia.mp4",
-            "seconds": 9302,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 934,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "4 00b 3 0 1 0 movie 4k 3840x2160 thrice upon a time",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.00B Evangelion 3.0+1.0 Movie (DUB) [4k] 3840x2160 - Thrice Upon a Time.mp4",
-            "name": "4.00B Evangelion 3.0+1.0 Movie (DUB) [4k] 3840x2160 - Thrice Upon a Time",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.00B%20Evangelion%203.0%2B1.0%20Movie%20(DUB)%20%5B4k%5D%203840x2160%20-%20Thrice%20Upon%20a%20Time.mp4",
-            "seconds": 9302,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 5762,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "Episode 51",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.00C Evangelion 3.0+1.0 Movie (SUB+DUB) [4k] 3840x2160 - Thrice Upon a Time.ia.mp4",
-            "name": "4.00C Evangelion 3.0+1",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.00C%20Evangelion%203.0%2B1.0%20Movie%20(SUB%2BDUB)%20%5B4k%5D%203840x2160%20-%20Thrice%20Upon%20a%20Time.ia.mp4",
-            "seconds": 9302,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 923,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "4 00c 3 0 1 0 movie 4k 3840x2160 thrice upon a time",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.00C Evangelion 3.0+1.0 Movie (SUB+DUB) [4k] 3840x2160 - Thrice Upon a Time.mp4",
-            "name": "4.00C Evangelion 3.0+1.0 Movie (SUB+DUB) [4k] 3840x2160 - Thrice Upon a Time",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.00C%20Evangelion%203.0%2B1.0%20Movie%20(SUB%2BDUB)%20%5B4k%5D%203840x2160%20-%20Thrice%20Upon%20a%20Time.mp4",
-            "seconds": 9302,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 6678,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "4 05a 3 0 1 0 ova 1920x1080 3",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.05A Evangelion 3.0+1.0 (OVA) - (SUB) 1920x1080 - Evangelion 3.0(-46h).ia.mp4",
-            "name": "4.05A Evangelion 3.0+1.0 (OVA) - (SUB) 1920x1080 - Evangelion 3",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.05A%20Evangelion%203.0%2B1.0%20(OVA)%20-%20(SUB)%201920x1080%20-%20Evangelion%203.0(-46h).ia.mp4",
-            "seconds": 643,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 64,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "4 05a 3 0 1 0 ova 1920x1080 3 0 46h",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "4.05A Evangelion 3.0+1.0 (OVA) - (SUB) 1920x1080 - Evangelion 3.0(-46h).mp4",
-            "name": "4.05A Evangelion 3.0+1.0 (OVA) - (SUB) 1920x1080 - Evangelion 3.0(-46h)",
-            "url": "https://archive.org/download/evangelion-the-full-series/4.05A%20Evangelion%203.0%2B1.0%20(OVA)%20-%20(SUB)%201920x1080%20-%20Evangelion%203.0(-46h).mp4",
-            "seconds": 643,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 218,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 55,
-          "name": "Episode 55",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "5.00A Puchi Eva Evangelion@School - Episode 10 (SUB) 712x476 - Gym Time = Finishing Up.ia.mp4",
-            "name": "5",
-            "url": "https://archive.org/download/evangelion-the-full-series/5.00A%20Puchi%20Eva%20Evangelion%40School%20-%20Episode%2010%20(SUB)%20712x476%20-%20Gym%20Time%20%3D%20Finishing%20Up.ia.mp4",
-            "seconds": 195,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "6 55a 30th aniversary",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion-the-full-series",
-            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
-            "file": "6.55A - Evangelion 30th Aniversary.mp4",
-            "name": "6.55A - Evangelion 30th Aniversary",
-            "url": "https://archive.org/download/evangelion-the-full-series/6.55A%20-%20Evangelion%2030th%20Aniversary.mp4",
-            "seconds": 866,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 85,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 57,
-          "name": "Episode 57",
-          "state": "REVIEW",
-          "file": {
-            "item": "23_20220523",
-            "itemTitle": "Neon Genesis Evangelion (I) (Genesis Dynit 2002) [eadmaster]",
-            "file": "22.mp4",
-            "name": "22",
-            "url": "https://archive.org/download/23_20220523/22.mp4",
-            "seconds": 1228,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "Episode 58",
-          "state": "REVIEW",
-          "file": {
-            "item": "23_20220523",
-            "itemTitle": "Neon Genesis Evangelion (I) (Genesis Dynit 2002) [eadmaster]",
-            "file": "23.mp4",
-            "name": "23",
-            "url": "https://archive.org/download/23_20220523/23.mp4",
-            "seconds": 1227,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 59,
-          "name": "Episode 59",
-          "state": "REVIEW",
-          "file": {
-            "item": "23_20220523",
-            "itemTitle": "Neon Genesis Evangelion (I) (Genesis Dynit 2002) [eadmaster]",
-            "file": "24.mp4",
-            "name": "24",
-            "url": "https://archive.org/download/23_20220523/24.mp4",
-            "seconds": 1236,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "Episode 60",
-          "state": "REVIEW",
-          "file": {
-            "item": "23_20220523",
-            "itemTitle": "Neon Genesis Evangelion (I) (Genesis Dynit 2002) [eadmaster]",
-            "file": "25.mp4",
-            "name": "25",
-            "url": "https://archive.org/download/23_20220523/25.mp4",
-            "seconds": 1232,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "Episode 61",
-          "state": "REVIEW",
-          "file": {
-            "item": "23_20220523",
-            "itemTitle": "Neon Genesis Evangelion (I) (Genesis Dynit 2002) [eadmaster]",
-            "file": "26.mp4",
-            "name": "26",
-            "url": "https://archive.org/download/23_20220523/26.mp4",
-            "seconds": 1231,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Episode 62",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/1.mp4",
-            "name": "evangelion_adult_swim/1",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F1.mp4",
-            "seconds": 1677,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 345,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Episode 63",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/5.mp4",
-            "name": "evangelion_adult_swim/5",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F5.mp4",
-            "seconds": 1442,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 203,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 64,
-          "name": "Episode 64",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/6.mp4",
-            "name": "evangelion_adult_swim/6",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F6.mp4",
-            "seconds": 1476,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 201,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 65,
-          "name": "Episode 65",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/7.mp4",
-            "name": "evangelion_adult_swim/7",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F7.mp4",
-            "seconds": 1457,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 239,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 66,
-          "name": "Episode 66",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/8.mp4",
-            "name": "evangelion_adult_swim/8",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F8.mp4",
-            "seconds": 1406,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 240,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 67,
-          "name": "Episode 67",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/9.mp4",
-            "name": "evangelion_adult_swim/9",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F9.mp4",
-            "seconds": 1272,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 216,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 68,
-          "name": "Episode 68",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/10.mp4",
-            "name": "evangelion_adult_swim/10",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F10.mp4",
-            "seconds": 1419,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 230,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 69,
-          "name": "Episode 69",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/11.mp4",
-            "name": "evangelion_adult_swim/11",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F11.mp4",
-            "seconds": 2049,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 348,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 70,
-          "name": "Episode 70",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/12.mp4",
-            "name": "evangelion_adult_swim/12",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F12.mp4",
-            "seconds": 1412,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 202,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 71,
-          "name": "Episode 71",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/13.mp4",
-            "name": "evangelion_adult_swim/13",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F13.mp4",
-            "seconds": 2541,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 349,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 72,
-          "name": "Episode 72",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/15.mp4",
-            "name": "evangelion_adult_swim/15",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F15.mp4",
-            "seconds": 1452,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 239,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 73,
-          "name": "Episode 73",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/16.mp4",
-            "name": "evangelion_adult_swim/16",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F16.mp4",
-            "seconds": 1418,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 203,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 74,
-          "name": "Episode 74",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/17.mp4",
-            "name": "evangelion_adult_swim/17",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F17.mp4",
-            "seconds": 1423,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 195,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 75,
-          "name": "Episode 75",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/18.mp4",
-            "name": "evangelion_adult_swim/18",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F18.mp4",
-            "seconds": 1424,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 245,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 76,
-          "name": "Episode 76",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/19.mp4",
-            "name": "evangelion_adult_swim/19",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F19.mp4",
-            "seconds": 1412,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 259,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 77,
-          "name": "Episode 77",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/20.mp4",
-            "name": "evangelion_adult_swim/20",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F20.mp4",
-            "seconds": 1405,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 241,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 78,
-          "name": "Episode 78",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/21.mp4",
-            "name": "evangelion_adult_swim/21",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F21.mp4",
-            "seconds": 1454,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 263,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 79,
-          "name": "Episode 79",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/22.mp4",
-            "name": "evangelion_adult_swim/22",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F22.mp4",
-            "seconds": 1442,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 231,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 80,
-          "name": "Episode 80",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/23.mp4",
-            "name": "evangelion_adult_swim/23",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F23.mp4",
-            "seconds": 1465,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 209,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 81,
-          "name": "Episode 81",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/24.mp4",
-            "name": "evangelion_adult_swim/24",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F24.mp4",
-            "seconds": 1435,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 211,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "Episode 82",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/25.mp4",
-            "name": "evangelion_adult_swim/25",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F25.mp4",
-            "seconds": 1440,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 180,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 83,
-          "name": "Episode 83",
-          "state": "REVIEW",
-          "file": {
-            "item": "evangelion_adult_swim",
-            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
-            "file": "evangelion_adult_swim/26.mp4",
-            "name": "evangelion_adult_swim/26",
-            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F26.mp4",
-            "seconds": 1451,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 207,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 84,
-          "name": "platinum 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 1.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 1",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%201.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 85,
-          "name": "platinum 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 2.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 2",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%202.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 86,
-          "name": "platinum 3",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 3.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 3",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%203.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "platinum 4",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 4.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 4",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%204.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 88,
-          "name": "platinum 5",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 5.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 5",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%205.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 89,
-          "name": "platinum 6",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 6.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 6",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%206.mp4",
-            "seconds": 1762,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 178,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 90,
-          "name": "platinum 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 11.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 11",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2011.mp4",
-            "seconds": 132,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 91,
-          "name": "platinum 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 12.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 12",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2012.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 92,
-          "name": "platinum 14",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 14.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 14",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2014.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 93,
-          "name": "platinum 15",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 15.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 15",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2015.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 94,
-          "name": "platinum 16",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 16.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 16",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2016.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 95,
-          "name": "platinum 17",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 17.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 17",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2017.mp4",
-            "seconds": 604,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 60,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 96,
-          "name": "platinum 22",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 22.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 22",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2022.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 97,
-          "name": "platinum 24",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 24.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 24",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2024.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 98,
-          "name": "platinum 25",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 25.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 25",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2025.mp4",
-            "seconds": 1401,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 99,
-          "name": "platinum 26",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 26.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 26",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2026.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 100,
-          "name": "platinum 33",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 33.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 33",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2033.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 101,
-          "name": "platinum 34",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 34.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 34",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2034.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 102,
-          "name": "platinum 35",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 35.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 35",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2035.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 103,
-          "name": "platinum 36",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 36.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 36",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2036.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 104,
-          "name": "platinum 42",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 42.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 42",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2042.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 105,
-          "name": "platinum 43",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 43.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 43",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2043.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 106,
-          "name": "platinum 44",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 44.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 44",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2044.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 107,
-          "name": "platinum 45",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 45.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 45",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2045.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 108,
-          "name": "platinum 52",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 52.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 52",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2052.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 109,
-          "name": "platinum 53",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 53.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 53",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2053.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 110,
-          "name": "platinum 54",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 54.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 54",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2054.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 111,
-          "name": "platinum 55",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 55.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 55",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2055.mp4",
-            "seconds": 1402,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 112,
-          "name": "platinum 57",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 57.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 57",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2057.mp4",
-            "seconds": 1388,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 113,
-          "name": "platinum 63",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 63.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 63",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2063.mp4",
-            "seconds": 1725,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 175,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 114,
-          "name": "platinum 64",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 64.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 64",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2064.mp4",
-            "seconds": 1530,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 115,
-          "name": "platinum 65",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-platinum-v2",
-            "itemTitle": "Neon Genesis Evangelion: Platinum Collection v2",
-            "file": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 65.mp4",
-            "name": "Neon Genesis Evangelion Platinum Complete/Neon Genesis Evangelion Platinum Complete DVD 65",
-            "url": "https://archive.org/download/neon-genesis-evangelion-platinum-v2/Neon%20Genesis%20Evangelion%20Platinum%20Complete%2FNeon%20Genesis%20Evangelion%20Platinum%20Complete%20DVD%2065.mp4",
-            "seconds": 1576,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 161,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 116,
-          "name": "nge 01 angel attack",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 01 - Angel Attack.mp4",
-            "name": "NGE 01 - Angel Attack",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2001%20-%20Angel%20Attack.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 117,
-          "name": "nge 02 the beast",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 02 - The Beast.mp4",
-            "name": "NGE 02 - The Beast",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2002%20-%20The%20Beast.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 118,
-          "name": "nge 03 a transfer",
-          "state": "REVIEW",
-          "file": {
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Beast\" (0.95)",
+              "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+              "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+              "file": "NGE 02 - The Beast.mp4",
+              "name": "NGE 02 - The Beast",
+              "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2002%20-%20The%20Beast.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/5.mp4",
+              "name": "evangelion_adult_swim/5",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F5.mp4",
+              "seconds": 1442,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "A Transfer",
+          "airdate": "1995-10-18",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Transfer\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 03 - A Transfer.mp4",
@@ -2454,18 +158,58 @@
             "seconds": 1404,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.20A Neon Genesis Evangelion - Episode 3 (SUB) 1920x1080 - The Silent Phone.mp4",
+              "name": "1.20A Neon Genesis Evangelion - Episode 3 (SUB) 1920x1080 - The Silent Phone",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.20A%20Neon%20Genesis%20Evangelion%20-%20Episode%203%20(SUB)%201920x1080%20-%20The%20Silent%20Phone.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 776
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.20B Neon Genesis Evangelion - Episode 3 (DUB) 1920x1080 - The Silent Phone.mp4",
+              "name": "1.20B Neon Genesis Evangelion - Episode 3 (DUB) 1920x1080 - The Silent Phone",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.20B%20Neon%20Genesis%20Evangelion%20-%20Episode%203%20(DUB)%201920x1080%20-%20The%20Silent%20Phone.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 367
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/6.mp4",
+              "name": "evangelion_adult_swim/6",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F6.mp4",
+              "seconds": 1476,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
+            }
+          ]
         },
         {
-          "number": 119,
-          "name": "nge 04 hedgehogs dilemma",
+          "number": 4,
+          "name": "Hedgehog's Dilemma",
+          "airdate": "1995-10-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Hedgehog's Dilemma\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 04 - Hedgehog's Dilemma.mp4",
@@ -2474,18 +218,58 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.30A Neon Genesis Evangelion - Episode 4 (SUB) 1920x1080- Rain, After Running Away.mp4",
+              "name": "1.30A Neon Genesis Evangelion - Episode 4 (SUB) 1920x1080- Rain, After Running Away",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.30A%20Neon%20Genesis%20Evangelion%20-%20Episode%204%20(SUB)%201920x1080-%20Rain%2C%20After%20Running%20Away.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 761
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.30B Neon Genesis Evangelion - Episode 4 (DUB) 1920x1080- Rain, After Running Away.mp4",
+              "name": "1.30B Neon Genesis Evangelion - Episode 4 (DUB) 1920x1080- Rain, After Running Away",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.30B%20Neon%20Genesis%20Evangelion%20-%20Episode%204%20(DUB)%201920x1080-%20Rain%2C%20After%20Running%20Away.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 369
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/7.mp4",
+              "name": "evangelion_adult_swim/7",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F7.mp4",
+              "seconds": 1457,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            }
+          ]
         },
         {
-          "number": 120,
-          "name": "nge 05 rei i",
+          "number": 5,
+          "name": "Rei I",
+          "airdate": "1995-11-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Rei I\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 05 - Rei I.mp4",
@@ -2494,18 +278,58 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.40A Neon Genesis Evangelion - Episode 5 (SUB) 1920x1080 - Rei, Beyond the Heart.mp4",
+              "name": "1.40A Neon Genesis Evangelion - Episode 5 (SUB) 1920x1080 - Rei, Beyond the Heart",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.40A%20Neon%20Genesis%20Evangelion%20-%20Episode%205%20(SUB)%201920x1080%20-%20Rei%2C%20Beyond%20the%20Heart.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 688
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.40B Neon Genesis Evangelion - Episode 5 (DUB) 1920x1080 - Rei, Beyond the Heart.mp4",
+              "name": "1.40B Neon Genesis Evangelion - Episode 5 (DUB) 1920x1080 - Rei, Beyond the Heart",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.40B%20Neon%20Genesis%20Evangelion%20-%20Episode%205%20(DUB)%201920x1080%20-%20Rei%2C%20Beyond%20the%20Heart.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 333
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/8.mp4",
+              "name": "evangelion_adult_swim/8",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F8.mp4",
+              "seconds": 1406,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 240
+            }
+          ]
         },
         {
-          "number": 121,
-          "name": "nge 06 rei ii",
+          "number": 6,
+          "name": "Rei II",
+          "airdate": "1995-11-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Rei II\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 06 - Rei II.mp4",
@@ -2514,18 +338,58 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.50A Neon Genesis Evangelion - Episode 6 (SUB) 1920x1080 - Showdown in Tokyo-3.mp4",
+              "name": "1.50A Neon Genesis Evangelion - Episode 6 (SUB) 1920x1080 - Showdown in Tokyo-3",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.50A%20Neon%20Genesis%20Evangelion%20-%20Episode%206%20(SUB)%201920x1080%20-%20Showdown%20in%20Tokyo-3.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 674
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.50B Neon Genesis Evangelion - Episode 6 (DUB) 1920x1080 - Showdown in Tokyo-3.mp4",
+              "name": "1.50B Neon Genesis Evangelion - Episode 6 (DUB) 1920x1080 - Showdown in Tokyo-3",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.50B%20Neon%20Genesis%20Evangelion%20-%20Episode%206%20(DUB)%201920x1080%20-%20Showdown%20in%20Tokyo-3.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 300
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/9.mp4",
+              "name": "evangelion_adult_swim/9",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F9.mp4",
+              "seconds": 1272,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 216
+            }
+          ]
         },
         {
-          "number": 122,
-          "name": "nge 07 a human work",
+          "number": 7,
+          "name": "A Human Work",
+          "airdate": "1995-11-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Human Work\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 07 - A Human Work.mp4",
@@ -2534,38 +398,118 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.60A Neon Genesis Evangelion - Episode 7 (SUB) 1920x1080 - The Works of Man.mp4",
+              "name": "1.60A Neon Genesis Evangelion - Episode 7 (SUB) 1920x1080 - The Works of Man",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.60A%20Neon%20Genesis%20Evangelion%20-%20Episode%207%20(SUB)%201920x1080%20-%20The%20Works%20of%20Man.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 669
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.60B Neon Genesis Evangelion - Episode 7 (DUB) 1920x1080 - The Works of Man.mp4",
+              "name": "1.60B Neon Genesis Evangelion - Episode 7 (DUB) 1920x1080 - The Works of Man",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.60B%20Neon%20Genesis%20Evangelion%20-%20Episode%207%20(DUB)%201920x1080%20-%20The%20Works%20of%20Man.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 305
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/10.mp4",
+              "name": "evangelion_adult_swim/10",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F10.mp4",
+              "seconds": 1419,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 230
+            }
+          ]
         },
         {
-          "number": 123,
-          "name": "nge 08 asuka strikes",
+          "number": 8,
+          "name": "Asuka Strikes!",
+          "airdate": "1995-11-22",
           "state": "REVIEW",
           "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 08 - Asuka Strikes!.mp4",
-            "name": "NGE 08 - Asuka Strikes!",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2008%20-%20Asuka%20Strikes!.mp4",
-            "seconds": 1403,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "evangelion-the-full-series",
+            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+            "file": "1.70A Neon Genesis Evangelion - Episode 8 (SUB) 1920x1080 - Asuka Arrives in Japan.mp4",
+            "name": "1.70A Neon Genesis Evangelion - Episode 8 (SUB) 1920x1080 - Asuka Arrives in Japan",
+            "url": "https://archive.org/download/evangelion-the-full-series/1.70A%20Neon%20Genesis%20Evangelion%20-%20Episode%208%20(SUB)%201920x1080%20-%20Asuka%20Arrives%20in%20Japan.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 587
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.70B Neon Genesis Evangelion - Episode 8 (DUB) 1920x1080 - Asuka Arrives in Japan-1.mp4",
+              "name": "1.70B Neon Genesis Evangelion - Episode 8 (DUB) 1920x1080 - Asuka Arrives in Japan-1",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.70B%20Neon%20Genesis%20Evangelion%20-%20Episode%208%20(DUB)%201920x1080%20-%20Asuka%20Arrives%20in%20Japan-1.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 269
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/12.mp4",
+              "name": "evangelion_adult_swim/12",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F12.mp4",
+              "seconds": 1412,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_14_-_Seele,_Throne_of_Souls.mp4",
+              "name": "Neon_Genesis_Evangelion_-_14_-_Seele,_Throne_of_Souls",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_14_-_Seele%2C_Throne_of_Souls.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
-          "number": 124,
-          "name": "nge 09 both of you dance like you want to win",
+          "number": 9,
+          "name": "Both of You, Dance Like You Want to Win!",
+          "airdate": "1995-11-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Both of You, Dance Like You Want to Win!\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 09 - Both of You, Dance Like You Want to Win!.mp4",
@@ -2574,38 +518,118 @@
             "seconds": 1402,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.80A Neon Genesis Evangelion - Episode 9 (SUB) 1920x1080- Mind, Matching, Moment.mp4",
+              "name": "1.80A Neon Genesis Evangelion - Episode 9 (SUB) 1920x1080- Mind, Matching, Moment",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.80A%20Neon%20Genesis%20Evangelion%20-%20Episode%209%20(SUB)%201920x1080-%20Mind%2C%20Matching%2C%20Moment.mp4",
+              "seconds": 1401,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 713
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.80B Neon Genesis Evangelion - Episode 9 (DUB) 1920x1080 - Mind, Matching, Moment.mp4",
+              "name": "1.80B Neon Genesis Evangelion - Episode 9 (DUB) 1920x1080 - Mind, Matching, Moment",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.80B%20Neon%20Genesis%20Evangelion%20-%20Episode%209%20(DUB)%201920x1080%20-%20Mind%2C%20Matching%2C%20Moment.mp4",
+              "seconds": 1401,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 338
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/15.mp4",
+              "name": "evangelion_adult_swim/15",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F15.mp4",
+              "seconds": 1452,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            }
+          ]
         },
         {
-          "number": 125,
-          "name": "nge 10 magma diver",
-          "state": "REVIEW",
+          "number": 10,
+          "name": "Magma Diver",
+          "airdate": "1995-12-06",
+          "state": "LIVE",
           "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 10 - Magma Diver.mp4",
-            "name": "NGE 10 - Magma Diver",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2010%20-%20Magma%20Diver.mp4",
-            "seconds": 1403,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "evangelion-the-full-series",
+            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+            "file": "1.90A Neon Genesis Evangelion - Episode 10 (SUB) 1920x1080 - The Magma Diver.mp4",
+            "name": "1.90A Neon Genesis Evangelion - Episode 10 (SUB) 1920x1080 - The Magma Diver",
+            "url": "https://archive.org/download/evangelion-the-full-series/1.90A%20Neon%20Genesis%20Evangelion%20-%20Episode%2010%20(SUB)%201920x1080%20-%20The%20Magma%20Diver.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 649
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "1.90B Neon Genesis Evangelion - Episode 10 (DUB) 1920x1080 - The Magma Diver.mp4",
+              "name": "1.90B Neon Genesis Evangelion - Episode 10 (DUB) 1920x1080 - The Magma Diver",
+              "url": "https://archive.org/download/evangelion-the-full-series/1.90B%20Neon%20Genesis%20Evangelion%20-%20Episode%2010%20(DUB)%201920x1080%20-%20The%20Magma%20Diver.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 307
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Magma Diver\" (0.95)",
+              "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+              "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+              "file": "NGE 10 - Magma Diver.mp4",
+              "name": "NGE 10 - Magma Diver",
+              "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2010%20-%20Magma%20Diver.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/16.mp4",
+              "name": "evangelion_adult_swim/16",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F16.mp4",
+              "seconds": 1418,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            }
+          ]
         },
         {
-          "number": 126,
-          "name": "nge 11 the day tokyo 3 stood still",
+          "number": 11,
+          "name": "The Day Tokyo-3 Stood Still",
+          "airdate": "1995-12-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Day Tokyo-3 Stood Still\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 11 - The Day Tokyo-3 Stood Still.mp4",
@@ -2614,38 +638,79 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/17.mp4",
+              "name": "evangelion_adult_swim/17",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F17.mp4",
+              "seconds": 1423,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_17_-_The_Fourth_Qualified_Individual.mp4",
+              "name": "Neon_Genesis_Evangelion_-_17_-_The_Fourth_Qualified_Individual",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_17_-_The_Fourth_Qualified_Individual.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
-          "number": 127,
-          "name": "nge 12 she said dont make others suffer for your personal hatred",
+          "number": 12,
+          "name": "She said, \"Don't Make Others Suffer for Your Personal Hatred\"",
+          "airdate": "1995-12-20",
           "state": "REVIEW",
           "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 12 - She said, 'Don't make others suffer for your personal hatred.'.mp4",
-            "name": "NGE 12 - She said, 'Don't make others suffer for your personal hatred.'",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2012%20-%20She%20said%2C%20'Don't%20make%20others%20suffer%20for%20your%20personal%20hatred.'.mp4",
-            "seconds": 1403,
-            "format": "h.264",
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+            "item": "evangelion_adult_swim",
+            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+            "file": "evangelion_adult_swim/18.mp4",
+            "name": "evangelion_adult_swim/18",
+            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F18.mp4",
+            "seconds": 1424,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 245
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_18_-_Selection_of_Life.mp4",
+              "name": "Neon_Genesis_Evangelion_-_18_-_Selection_of_Life",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_18_-_Selection_of_Life.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
-          "number": 128,
-          "name": "nge 13 lilliputian hitcher",
+          "number": 13,
+          "name": "Lilliputian Hitcher",
+          "airdate": "1995-12-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Lilliputian Hitcher\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 13 - Lilliputian Hitcher.mp4",
@@ -2654,138 +719,58 @@
             "seconds": 1403,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.20A Neon Genesis Evangelion - Episode 13 (SUB) 1920x1080 - Angel Infiltration.mp4",
+              "name": "2.20A Neon Genesis Evangelion - Episode 13 (SUB) 1920x1080 - Angel Infiltration",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.20A%20Neon%20Genesis%20Evangelion%20-%20Episode%2013%20(SUB)%201920x1080%20-%20Angel%20Infiltration.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 644
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.20B Neon Genesis Evangelion - Episode 13 (DUB) 1920x1080 - Angel Infiltration.mp4",
+              "name": "2.20B Neon Genesis Evangelion - Episode 13 (DUB) 1920x1080 - Angel Infiltration",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.20B%20Neon%20Genesis%20Evangelion%20-%20Episode%2013%20(DUB)%201920x1080%20-%20Angel%20Infiltration.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 280
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/19.mp4",
+              "name": "evangelion_adult_swim/19",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F19.mp4",
+              "seconds": 1412,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 259
+            }
+          ]
         },
         {
-          "number": 129,
-          "name": "nge 14 weaving a story",
+          "number": 14,
+          "name": "Weaving a Story",
+          "airdate": "1996-01-03",
           "state": "REVIEW",
           "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 14 - Weaving a Story.mp4",
-            "name": "NGE 14 - Weaving a Story",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2014%20-%20Weaving%20a%20Story.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 134,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 130,
-          "name": "nge 15 those women longed for the touch of others lips and thus invited their kisses",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 15 -Those women longed for the touch of others' lips, and thus invited their kisses.mp4",
-            "name": "NGE 15 -Those women longed for the touch of others' lips, and thus invited their kisses",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2015%20-Those%20women%20longed%20for%20the%20touch%20of%20others'%20lips%2C%20and%20thus%20invited%20their%20kisses.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 131,
-          "name": "nge 16 splitting of the breast",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 16 - Splitting of the Breast.mp4",
-            "name": "NGE 16 - Splitting of the Breast",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2016%20-%20Splitting%20of%20the%20Breast.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 132,
-          "name": "nge 17 fourth child",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 17 - Fourth Child.mp4",
-            "name": "NGE 17 - Fourth Child",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2017%20-%20Fourth%20Child.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 133,
-          "name": "nge 18 ambivalence",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 18 - Ambivalence.mp4",
-            "name": "NGE 18 - Ambivalence",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2018%20-%20Ambivalence.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 134,
-          "name": "nge 19 introjection",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE 19 - Introjection.mp4",
-            "name": "NGE 19 - Introjection",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2019%20-%20Introjection.mp4",
-            "seconds": 1403,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 135,
-          "name": "nge 20 weaving a story 2 oral stage",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Weaving a Story\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 20 - Weaving a Story 2 oral stage.mp4",
@@ -2794,18 +779,392 @@
             "seconds": 1404,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 139,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Weaving a Story\" (0.95)",
+              "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+              "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+              "file": "NGE 14 - Weaving a Story.mp4",
+              "name": "NGE 14 - Weaving a Story",
+              "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2014%20-%20Weaving%20a%20Story.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.30A Neon Genesis Evangelion - Episode 14 (SUB) 1920x1080 - Seele, the Seat of the Soul.mp4",
+              "name": "2.30A Neon Genesis Evangelion - Episode 14 (SUB) 1920x1080 - Seele, the Seat of the Soul",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.30A%20Neon%20Genesis%20Evangelion%20-%20Episode%2014%20(SUB)%201920x1080%20-%20Seele%2C%20the%20Seat%20of%20the%20Soul.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 657
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.30B Neon Genesis Evangelion - Episode 14 (DUB) 1920x1080 - Seele, the Seat of the Soul.mp4",
+              "name": "2.30B Neon Genesis Evangelion - Episode 14 (DUB) 1920x1080 - Seele, the Seat of the Soul",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.30B%20Neon%20Genesis%20Evangelion%20-%20Episode%2014%20(DUB)%201920x1080%20-%20Seele%2C%20the%20Seat%20of%20the%20Soul.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 339
+            }
+          ]
         },
         {
-          "number": 136,
-          "name": "nge 21 he was aware that he was still a child",
+          "number": 15,
+          "name": "Those Women Longed for the Touch of Others' Lips, and Thus Invited Their Kisses",
+          "airdate": "1996-01-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "evangelion-the-full-series",
+            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+            "file": "2.40A Neon Genesis Evangelion - Episode 15 (SUB) 1920x1080 - Lies and Silence.mp4",
+            "name": "2.40A Neon Genesis Evangelion - Episode 15 (SUB) 1920x1080 - Lies and Silence",
+            "url": "https://archive.org/download/evangelion-the-full-series/2.40A%20Neon%20Genesis%20Evangelion%20-%20Episode%2015%20(SUB)%201920x1080%20-%20Lies%20and%20Silence.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 577
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.40B Neon Genesis Evangelion - Episode 15 (DUB) 1920x1080 - Lies and Silence.mp4",
+              "name": "2.40B Neon Genesis Evangelion - Episode 15 (DUB) 1920x1080 - Lies and Silence",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.40B%20Neon%20Genesis%20Evangelion%20-%20Episode%2015%20(DUB)%201920x1080%20-%20Lies%20and%20Silence.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/21.mp4",
+              "name": "evangelion_adult_swim/21",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F21.mp4",
+              "seconds": 1454,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 263
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_21_-_Nerv_Is_Born.mp4",
+              "name": "Neon_Genesis_Evangelion_-_21_-_Nerv_Is_Born",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_21_-_Nerv_Is_Born.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "name": "Splitting of the Breast",
+          "airdate": "1996-01-17",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Splitting of the Breast\" (0.95)",
+            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+            "file": "NGE 16 - Splitting of the Breast.mp4",
+            "name": "NGE 16 - Splitting of the Breast",
+            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2016%20-%20Splitting%20of%20the%20Breast.mp4",
+            "seconds": 1403,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.50A Neon Genesis Evangelion - Episode 16 (SUB) 1920x1080 - The Sickness Unto Death, and then....mp4",
+              "name": "2.50A Neon Genesis Evangelion - Episode 16 (SUB) 1920x1080 - The Sickness Unto Death, and then...",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.50A%20Neon%20Genesis%20Evangelion%20-%20Episode%2016%20(SUB)%201920x1080%20-%20The%20Sickness%20Unto%20Death%2C%20and%20then....mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 732
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.50B Neon Genesis Evangelion - Episode 16 (DUB) 1920x1080 - The Sickness Unto Death, and then....mp4",
+              "name": "2.50B Neon Genesis Evangelion - Episode 16 (DUB) 1920x1080 - The Sickness Unto Death, and then...",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.50B%20Neon%20Genesis%20Evangelion%20-%20Episode%2016%20(DUB)%201920x1080%20-%20The%20Sickness%20Unto%20Death%2C%20and%20then....mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 458
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/22.mp4",
+              "name": "evangelion_adult_swim/22",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F22.mp4",
+              "seconds": 1442,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 231
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "name": "Fourth Children",
+          "airdate": "1996-01-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "evangelion-the-full-series",
+            "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+            "file": "2.60A Neon Genesis Evangelion - Episode 17 (SUB) 1920x1080 - The Fourth to be Qualified.mp4",
+            "name": "2.60A Neon Genesis Evangelion - Episode 17 (SUB) 1920x1080 - The Fourth to be Qualified",
+            "url": "https://archive.org/download/evangelion-the-full-series/2.60A%20Neon%20Genesis%20Evangelion%20-%20Episode%2017%20(SUB)%201920x1080%20-%20The%20Fourth%20to%20be%20Qualified.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 551
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.60B Neon Genesis Evangelion - Episode 17 (DUB) 1920x1080 - The Fourth to be Qualified.mp4",
+              "name": "2.60B Neon Genesis Evangelion - Episode 17 (DUB) 1920x1080 - The Fourth to be Qualified",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.60B%20Neon%20Genesis%20Evangelion%20-%20Episode%2017%20(DUB)%201920x1080%20-%20The%20Fourth%20to%20be%20Qualified.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 255
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/23.mp4",
+              "name": "evangelion_adult_swim/23",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F23.mp4",
+              "seconds": 1465,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 209
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Fourth Children\" (0.71)",
+              "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+              "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+              "file": "NGE 17 - Fourth Child.mp4",
+              "name": "NGE 17 - Fourth Child",
+              "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2017%20-%20Fourth%20Child.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "name": "Ambivalence",
+          "airdate": "1996-01-31",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ambivalence\" (0.95)",
+            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+            "file": "NGE 18 - Ambivalence.mp4",
+            "name": "NGE 18 - Ambivalence",
+            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2018%20-%20Ambivalence.mp4",
+            "seconds": 1403,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.70A Neon Genesis Evangelion - Episode 18 (SUB) 1920x1080 - Life and Death Decisions.mp4",
+              "name": "2.70A Neon Genesis Evangelion - Episode 18 (SUB) 1920x1080 - Life and Death Decisions",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.70A%20Neon%20Genesis%20Evangelion%20-%20Episode%2018%20(SUB)%201920x1080%20-%20Life%20and%20Death%20Decisions.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 751
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.70B Neon Genesis Evangelion - Episode 18 (DUB) 1920x1080 - Life and Death Decisions.mp4",
+              "name": "2.70B Neon Genesis Evangelion - Episode 18 (DUB) 1920x1080 - Life and Death Decisions",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.70B%20Neon%20Genesis%20Evangelion%20-%20Episode%2018%20(DUB)%201920x1080%20-%20Life%20and%20Death%20Decisions.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 336
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/24.mp4",
+              "name": "evangelion_adult_swim/24",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F24.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 211
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "name": "Introjection",
+          "airdate": "1996-02-07",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Introjection\" (0.95)",
+            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
+            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
+            "file": "NGE 19 - Introjection.mp4",
+            "name": "NGE 19 - Introjection",
+            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%2019%20-%20Introjection.mp4",
+            "seconds": 1403,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.80A Neon Genesis Evangelion - Episode 19 (SUB) 1920x1080 - A Man's Battle.mp4",
+              "name": "2.80A Neon Genesis Evangelion - Episode 19 (SUB) 1920x1080 - A Man's Battle",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.80A%20Neon%20Genesis%20Evangelion%20-%20Episode%2019%20(SUB)%201920x1080%20-%20A%20Man's%20Battle.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 604
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "2.80B Neon Genesis Evangelion - Episode 19 (DUB) 1920x1080 - A Man's Battle.mp4",
+              "name": "2.80B Neon Genesis Evangelion - Episode 19 (DUB) 1920x1080 - A Man's Battle",
+              "url": "https://archive.org/download/evangelion-the-full-series/2.80B%20Neon%20Genesis%20Evangelion%20-%20Episode%2019%20(DUB)%201920x1080%20-%20A%20Man's%20Battle.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 298
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+              "item": "evangelion_adult_swim",
+              "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+              "file": "evangelion_adult_swim/25.mp4",
+              "name": "evangelion_adult_swim/25",
+              "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F25.mp4",
+              "seconds": 1440,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 180
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "name": "Weaving a Story II: Oral Stage",
+          "airdate": "1996-02-14",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 20 of 20 in \"Neon Genesis Evangelion (Adult Swim airi\"",
+            "item": "evangelion_adult_swim",
+            "itemTitle": "Neon Genesis Evangelion (Adult Swim airings, 2005-06)",
+            "file": "evangelion_adult_swim/26.mp4",
+            "name": "evangelion_adult_swim/26",
+            "url": "https://archive.org/download/evangelion_adult_swim/evangelion_adult_swim%2F26.mp4",
+            "seconds": 1451,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 207
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_23_-_Tears_(DC).mp4",
+              "name": "Neon_Genesis_Evangelion_-_23_-_Tears_(DC)",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_23_-_Tears_(DC).mp4",
+              "seconds": 1530,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "name": "He Was Aware That He Was Still a Child",
+          "airdate": "1996-02-21",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"He Was Aware That He Was Still a Child\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 21' - He was aware that he was still a child.mp4",
@@ -2814,18 +1173,58 @@
             "seconds": 1763,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 175,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 175
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.00A Neon Genesis Evangelion - Episode 21 (SUB) 1920x1080 - The Birth of NERV.mp4",
+              "name": "3.00A Neon Genesis Evangelion - Episode 21 (SUB) 1920x1080 - The Birth of NERV",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.00A%20Neon%20Genesis%20Evangelion%20-%20Episode%2021%20(SUB)%201920x1080%20-%20The%20Birth%20of%20NERV.mp4",
+              "seconds": 1762,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 947
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.00B Neon Genesis Evangelion - Episode 21 (DUB) 1920x1080 - The Birth of NERV.mp4",
+              "name": "3.00B Neon Genesis Evangelion - Episode 21 (DUB) 1920x1080 - The Birth of NERV",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.00B%20Neon%20Genesis%20Evangelion%20-%20Episode%2021%20(DUB)%201920x1080%20-%20The%20Birth%20of%20NERV.mp4",
+              "seconds": 1762,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 522
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 21 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_24_-_The_Final_Messenger.mp4",
+              "name": "Neon_Genesis_Evangelion_-_24_-_The_Final_Messenger",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_24_-_The_Final_Messenger.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
-          "number": 137,
-          "name": "nge 22 dont be",
+          "number": 22,
+          "name": "Don't Be",
+          "airdate": "1996-02-28",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Don't Be\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 22' - Don't Be.mp4",
@@ -2834,18 +1233,58 @@
             "seconds": 1726,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 172,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 172
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.10A Neon Genesis Evangelion - Episode 22 (SUB) 1920x1080 - Staying Human.mp4",
+              "name": "3.10A Neon Genesis Evangelion - Episode 22 (SUB) 1920x1080 - Staying Human",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.10A%20Neon%20Genesis%20Evangelion%20-%20Episode%2022%20(SUB)%201920x1080%20-%20Staying%20Human.mp4",
+              "seconds": 1725,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 806
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.10B Neon Genesis Evangelion - Episode 22 (DUB) 1920x1080 - Staying Human.mp4",
+              "name": "3.10B Neon Genesis Evangelion - Episode 22 (DUB) 1920x1080 - Staying Human",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.10B%20Neon%20Genesis%20Evangelion%20-%20Episode%2022%20(DUB)%201920x1080%20-%20Staying%20Human.mp4",
+              "seconds": 1725,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 369
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_24_-_The_Final_Messenger_(DC).mp4",
+              "name": "Neon_Genesis_Evangelion_-_24_-_The_Final_Messenger_(DC)",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_24_-_The_Final_Messenger_(DC).mp4",
+              "seconds": 1575,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 157
+            }
+          ]
         },
         {
-          "number": 138,
-          "name": "nge 23 rei iii",
+          "number": 23,
+          "name": "Rei III",
+          "airdate": "1996-03-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Rei III\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 23' - Rei III.mp4",
@@ -2854,18 +1293,58 @@
             "seconds": 1531,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 152,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 152
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.20A Neon Genesis Evangelion - Episode 23 (SUB) 1920x1080 - Tears.mp4",
+              "name": "3.20A Neon Genesis Evangelion - Episode 23 (SUB) 1920x1080 - Tears",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.20A%20Neon%20Genesis%20Evangelion%20-%20Episode%2023%20(SUB)%201920x1080%20-%20Tears.mp4",
+              "seconds": 1530,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 682
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.20B Neon Genesis Evangelion - Episode 23 (DUB) 1920x1080 - Tears.mp4",
+              "name": "3.20B Neon Genesis Evangelion - Episode 23 (DUB) 1920x1080 - Tears",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.20B%20Neon%20Genesis%20Evangelion%20-%20Episode%2023%20(DUB)%201920x1080%20-%20Tears.mp4",
+              "seconds": 1530,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 323
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 23 of 23 in \"Neon Genesis Evangelion 1-26 Complete Du\"",
+              "item": "neon-genesis-evangelion-dual-audio",
+              "itemTitle": "Neon Genesis Evangelion 1-26 Complete Dual Audio",
+              "file": "Neon_Genesis_Evangelion_-_25_-_The_World_Ending.mp4",
+              "name": "Neon_Genesis_Evangelion_-_25_-_The_World_Ending",
+              "url": "https://archive.org/download/neon-genesis-evangelion-dual-audio/Neon_Genesis_Evangelion_-_25_-_The_World_Ending.mp4",
+              "seconds": 1403,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
-          "number": 139,
-          "name": "nge 24 the beginning and the end or knockin on heavens door",
+          "number": 24,
+          "name": "The Beginning and the End, or \"Knockin' on Heaven's Door\"",
+          "airdate": "1996-03-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Beginning and the End, or \"Knockin' on Heaven's Door\"\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 24' - The Beginning and the End, or 'Knockin' on Heaven's Door'.mp4",
@@ -2874,18 +1353,45 @@
             "seconds": 1577,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 157
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.30A Neon Genesis Evangelion - Episode 24 (SUB) 1920x1080 - The Last Cometh.mp4",
+              "name": "3.30A Neon Genesis Evangelion - Episode 24 (SUB) 1920x1080 - The Last Cometh",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.30A%20Neon%20Genesis%20Evangelion%20-%20Episode%2024%20(SUB)%201920x1080%20-%20The%20Last%20Cometh.mp4",
+              "seconds": 1575,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 669
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.30B Neon Genesis Evangelion - Episode 24 (DUB) 1920x1080 - The Last Cometh.mp4",
+              "name": "3.30B Neon Genesis Evangelion - Episode 24 (DUB) 1920x1080 - The Last Cometh",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.30B%20Neon%20Genesis%20Evangelion%20-%20Episode%2024%20(DUB)%201920x1080%20-%20The%20Last%20Cometh.mp4",
+              "seconds": 1575,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 325
+            }
+          ]
         },
         {
-          "number": 140,
-          "name": "nge 25 do you love me",
+          "number": 25,
+          "name": "Do You Love Me?",
+          "airdate": "1996-03-20",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Do You Love Me?\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 25 - Do you love me.mp4",
@@ -2894,18 +1400,45 @@
             "seconds": 1404,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.40A Neon Genesis Evangelion - Episode 25 (SUB) 1920x1080 - The Ending World.mp4",
+              "name": "3.40A Neon Genesis Evangelion - Episode 25 (SUB) 1920x1080 - The Ending World",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.40A%20Neon%20Genesis%20Evangelion%20-%20Episode%2025%20(SUB)%201920x1080%20-%20The%20Ending%20World.mp4",
+              "seconds": 1403,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 420
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.40B Neon Genesis Evangelion - Episode 25 (DUB) 1920x1080 - The Ending World.mp4",
+              "name": "3.40B Neon Genesis Evangelion - Episode 25 (DUB) 1920x1080 - The Ending World",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.40B%20Neon%20Genesis%20Evangelion%20-%20Episode%2025%20(DUB)%201920x1080%20-%20The%20Ending%20World.mp4",
+              "seconds": 1403,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 189
+            }
+          ]
         },
         {
-          "number": 141,
-          "name": "nge 26 take care of yourself",
+          "number": 26,
+          "name": "Take Care of Yourself",
+          "airdate": "1996-03-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Take Care of Yourself\" (0.95)",
             "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
             "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
             "file": "NGE 26 - Take care of yourself.mp4",
@@ -2914,52 +1447,36 @@
             "seconds": 1389,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 138,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
-        },
-        {
-          "number": 142,
-          "name": "death true 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE Movies/Evangelion Death (True)2.mp4",
-            "name": "NGE Movies/Evangelion Death (True)2",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%20Movies%2FEvangelion%20Death%20(True)2.mp4",
-            "seconds": 4145,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 417,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 143,
-          "name": "the end of",
-          "state": "REVIEW",
-          "file": {
-            "item": "neon-genesis-evangelion-2021-gkids-bd-remux",
-            "itemTitle": "Neon Genesis Evangelion GKIDS BD REMUX 2021",
-            "file": "NGE Movies/The End of Evangelion.mp4",
-            "name": "NGE Movies/The End of Evangelion",
-            "url": "https://archive.org/download/neon-genesis-evangelion-2021-gkids-bd-remux/NGE%20Movies%2FThe%20End%20of%20Evangelion.mp4",
-            "seconds": 5209,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 522,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.50A Neon Genesis Evangelion - Episode 26 (SUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World.mp4",
+              "name": "3.50A Neon Genesis Evangelion - Episode 26 (SUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.50A%20Neon%20Genesis%20Evangelion%20-%20Episode%2026%20(SUB)%201920x1080%20-%20The%20Beast%20that%20Shouted%20'Love'%20at%20the%20Heart%20of%20the%20World.mp4",
+              "seconds": 1388,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1152
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "evangelion-the-full-series",
+              "itemTitle": "Neon Genesis Evangelion - The Definitive Release",
+              "file": "3.50B Neon Genesis Evangelion - Episode 26 (DUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World.mp4",
+              "name": "3.50B Neon Genesis Evangelion - Episode 26 (DUB) 1920x1080 - The Beast that Shouted 'Love' at the Heart of the World",
+              "url": "https://archive.org/download/evangelion-the-full-series/3.50B%20Neon%20Genesis%20Evangelion%20-%20Episode%2026%20(DUB)%201920x1080%20-%20The%20Beast%20that%20Shouted%20'Love'%20at%20the%20Heart%20of%20the%20World.mp4",
+              "seconds": 1388,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 663
+            }
+          ]
         }
       ]
     }

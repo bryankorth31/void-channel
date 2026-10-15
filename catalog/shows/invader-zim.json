@@ -3,7 +3,7 @@
   "slug": "invader-zim",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-15T01:19:04.243Z",
+  "matchedAt": "2026-10-15T03:17:27.621Z",
   "tvmaze": {
     "id": 409,
     "name": "Invader ZIM",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 46,
-    "live": 5,
-    "review": 18,
-    "missing": 23,
-    "pct": 50
+    "live": 7,
+    "review": 17,
+    "missing": 22,
+    "pct": 52
   },
   "seasons": [
     {
@@ -501,9 +501,9 @@
           "number": 27,
           "name": "Battle of the Planets",
           "airdate": "2002-04-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "invader-zim-s-01-e-27-battle-of-the-planets-1080p-x-265-q-22-joy",
             "itemTitle": "Invader Zim Season 1 1080p Upscale",
@@ -578,9 +578,9 @@
           "number": 32,
           "name": "TAK: The Hideous New Girl",
           "airdate": "2002-05-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "invader-zim-s-01-e-27-battle-of-the-planets-1080p-x-265-q-22-joy",
             "itemTitle": "Invader Zim Season 1 1080p Upscale",
@@ -593,7 +593,34 @@
             "codecRisk": "video (x265)",
             "sizeMB": 146
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"TAK: The Hideous New Girl\" (0.95)",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 20 Tak The Hideous New Girl (Part 1).mp4",
+              "name": "Invader ZIM - EP 20 Tak The Hideous New Girl (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2020%20Tak%20The%20Hideous%20New%20Girl%20(Part%201).mp4",
+              "seconds": 1404,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 237
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"TAK: The Hideous New Girl\" (0.95)",
+              "item": "ytvinvaderzimvideos",
+              "itemTitle": "YTV Invader Zim Videos (YouTube)",
+              "file": "Invader Zim - Tak, the Hideous New Girl - Ep 20.mp4",
+              "name": "Invader Zim - Tak, the Hideous New Girl - Ep 20",
+              "url": "https://archive.org/download/ytvinvaderzimvideos/Invader%20Zim%20-%20Tak%2C%20the%20Hideous%20New%20Girl%20-%20Ep%2020.mp4",
+              "seconds": 1466,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 33,
@@ -682,8 +709,20 @@
           "number": 2,
           "name": "Backseat Drivers from Beyond the Stars",
           "airdate": "2006-06-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Backseat Drivers from Beyond the Stars\" (0.95)",
+            "item": "202103230237-45",
+            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+            "file": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1).mp4",
+            "name": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1)",
+            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2021%20Backseat%20Drivers%20from%20Beyond%20the%20Stars%20(Part%201).mp4",
+            "seconds": 1278,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 201
+          },
           "alternates": []
         },
         {

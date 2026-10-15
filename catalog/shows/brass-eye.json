@@ -3,7 +3,7 @@
   "slug": "brass-eye",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-15T01:19:16.491Z",
+  "matchedAt": "2026-10-15T03:17:44.498Z",
   "tvmaze": {
     "id": 2576,
     "name": "Brass Eye",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 6,
-    "live": 5,
-    "review": 1,
+    "live": 6,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -26,33 +26,33 @@
           "number": 1,
           "name": "Animals",
           "airdate": "1997-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "brass.eye.ep7",
-            "itemTitle": "Brass Eye (1997)",
-            "file": "brass.eye.ep1.mp4",
-            "name": "brass.eye.ep1",
-            "url": "https://archive.org/download/brass.eye.ep7/brass.eye.ep1.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "brass_eye",
+            "itemTitle": "Brass Eye (1997) [Complete Series + Extras]",
+            "file": "Brass.Eye.S01E01.Animals.DVDRip.x264-urMOM.mp4",
+            "name": "Brass.Eye.S01E01.Animals.DVDRip.x264-urMOM",
+            "url": "https://archive.org/download/brass_eye/Brass.Eye.S01E01.Animals.DVDRip.x264-urMOM.mp4",
             "seconds": 1424,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 178
+            "sizeMB": 139
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "brass_eye",
-              "itemTitle": "Brass Eye (1997) [Complete Series + Extras]",
-              "file": "Brass.Eye.S01E01.Animals.DVDRip.x264-urMOM.mp4",
-              "name": "Brass.Eye.S01E01.Animals.DVDRip.x264-urMOM",
-              "url": "https://archive.org/download/brass_eye/Brass.Eye.S01E01.Animals.DVDRip.x264-urMOM.mp4",
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "brass.eye.ep7",
+              "itemTitle": "Brass Eye (1997)",
+              "file": "brass.eye.ep1.mp4",
+              "name": "brass.eye.ep1",
+              "url": "https://archive.org/download/brass.eye.ep7/brass.eye.ep1.mp4",
               "seconds": 1424,
-              "format": "h.264",
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 139
+              "sizeMB": 178
             },
             {
               "conf": 0.6,

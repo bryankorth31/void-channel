@@ -3,7 +3,7 @@
   "slug": "american-experience",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-15T01:19:21.111Z",
+  "matchedAt": "2026-10-15T03:18:22.643Z",
   "tvmaze": {
     "id": 3509,
     "name": "American Experience",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 420,
     "live": 4,
-    "review": 3,
-    "missing": 413,
+    "review": 6,
+    "missing": 410,
     "pct": 2
   },
   "seasons": [
@@ -203,9 +203,35 @@
           "number": 5,
           "name": "Forever Baseball",
           "airdate": "1989-11-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Forever Baseball\" (0.95)",
+            "item": "ForeverBaseball",
+            "itemTitle": "Forever Baseball",
+            "file": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.ia.mp4",
+            "name": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0",
+            "url": "https://archive.org/download/ForeverBaseball/American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.ia.mp4",
+            "seconds": 3498,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 568
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Forever Baseball\" (0.95)",
+              "item": "ForeverBaseball",
+              "itemTitle": "Forever Baseball",
+              "file": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+              "name": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers",
+              "url": "https://archive.org/download/ForeverBaseball/American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+              "seconds": 3498,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 568
+            }
+          ]
         },
         {
           "number": 6,
@@ -277,8 +303,20 @@
           "number": 11,
           "name": "Ida B. Wells: A Passion for Justice",
           "airdate": "1989-12-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ida B. Wells: A Passion for Justice\" (0.95)",
+            "item": "IdaBWellsAPassionforJustice",
+            "itemTitle": "Ida B. Wells : A Passion for Justice",
+            "file": "American.Experience.S02E04.Ida.B.Wells.A.Passion.For.Justice.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "name": "American.Experience.S02E04.Ida.B.Wells.A.Passion.For.Justice.1989.VHSRip.AAC2.0.x264-krokkers",
+            "url": "https://archive.org/download/IdaBWellsAPassionforJustice/American.Experience.S02E04.Ida.B.Wells.A.Passion.For.Justice.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "seconds": 3472,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 806
+          },
           "alternates": []
         },
         {
@@ -1481,8 +1519,20 @@
           "number": 13,
           "name": "Jubilee Singers: Sacrifice and Glory",
           "airdate": "2000-05-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Jubilee Singers: Sacrifice and Glory\" (0.95)",
+            "item": "JubileeSingersSacrificeandGlory",
+            "itemTitle": "Jubilee Singers : Sacrifice and Glory",
+            "file": "American.Experience.S12E08.Jubilee.Singers.Sacrifice.and.Glory.2000.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "name": "American.Experience.S12E08.Jubilee.Singers.Sacrifice.and.Glory.2000.VHSRip.AAC2.0.x264-krokkers",
+            "url": "https://archive.org/download/JubileeSingersSacrificeandGlory/American.Experience.S12E08.Jubilee.Singers.Sacrifice.and.Glory.2000.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "seconds": 3404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 678
+          },
           "alternates": []
         },
         {

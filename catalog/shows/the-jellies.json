@@ -3,7 +3,7 @@
   "slug": "the-jellies",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:44.517Z",
+  "matchedAt": "2026-10-15T03:18:57.933Z",
   "tvmaze": {
     "id": 32842,
     "name": "The Jellies!",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 20,
-    "live": 6,
-    "review": 2,
-    "missing": 12,
-    "pct": 40
+    "live": 8,
+    "review": 1,
+    "missing": 11,
+    "pct": 45
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Gangsta's Paradise",
           "airdate": "2017-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "adult-swim-the-jellies-premiere-02-10-2024",
             "itemTitle": "Adult Swim - The Jellies Premiere (2024.02.10)",
@@ -126,33 +126,33 @@
           "number": 6,
           "name": "Barry's School Reunion",
           "airdate": "2017-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "adult-swim-the-jellies-premiere-02-10-2024",
             "itemTitle": "Adult Swim - The Jellies Premiere (2024.02.10)",
-            "file": "01 - Knights of the Zodiac   S1 E6 The Return of Phoenix.mp4",
-            "name": "01 - Knights of the Zodiac   S1 E6 The Return of Phoenix",
-            "url": "https://archive.org/download/adult-swim-the-jellies-premiere-02-10-2024/01%20-%20Knights%20of%20the%20Zodiac%20%20%20S1%20E6%20The%20Return%20of%20Phoenix.mp4",
-            "seconds": 1922,
+            "file": "09 - The Jellies   S1 E6 Barry's School Reunion.mp4",
+            "name": "09 - The Jellies   S1 E6 Barry's School Reunion",
+            "url": "https://archive.org/download/adult-swim-the-jellies-premiere-02-10-2024/09%20-%20The%20Jellies%20%20%20S1%20E6%20Barry's%20School%20Reunion.mp4",
+            "seconds": 1142,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1012
+            "sizeMB": 567
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.75,
+              "why": "S/E in filename",
               "item": "adult-swim-the-jellies-premiere-02-10-2024",
               "itemTitle": "Adult Swim - The Jellies Premiere (2024.02.10)",
-              "file": "09 - The Jellies   S1 E6 Barry's School Reunion.mp4",
-              "name": "09 - The Jellies   S1 E6 Barry's School Reunion",
-              "url": "https://archive.org/download/adult-swim-the-jellies-premiere-02-10-2024/09%20-%20The%20Jellies%20%20%20S1%20E6%20Barry's%20School%20Reunion.mp4",
-              "seconds": 1142,
+              "file": "01 - Knights of the Zodiac   S1 E6 The Return of Phoenix.mp4",
+              "name": "01 - Knights of the Zodiac   S1 E6 The Return of Phoenix",
+              "url": "https://archive.org/download/adult-swim-the-jellies-premiere-02-10-2024/01%20-%20Knights%20of%20the%20Zodiac%20%20%20S1%20E6%20The%20Return%20of%20Phoenix.mp4",
+              "seconds": 1922,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 567
+              "sizeMB": 1012
             }
           ]
         },
@@ -200,9 +200,35 @@
           "number": 9,
           "name": "Invasion",
           "airdate": "2017-12-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Invasion\" (0.95)",
+            "item": "adult-swim-the-jellies-premiere-02-10-2024",
+            "itemTitle": "Adult Swim - The Jellies Premiere (2024.02.10)",
+            "file": "13 - The Jellies   S1 The Invasion, Part 2.mp4",
+            "name": "13 - The Jellies   S1 The Invasion, Part 2",
+            "url": "https://archive.org/download/adult-swim-the-jellies-premiere-02-10-2024/13%20-%20The%20Jellies%20%20%20S1%20The%20Invasion%2C%20Part%202.mp4",
+            "seconds": 1082,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 580
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Invasion\" (0.95)",
+              "item": "adult-swim-the-jellies-premiere-02-10-2024",
+              "itemTitle": "Adult Swim - The Jellies Premiere (2024.02.10)",
+              "file": "12 - The Jellies   S1 The Invasion, Part 1.mp4",
+              "name": "12 - The Jellies   S1 The Invasion, Part 1",
+              "url": "https://archive.org/download/adult-swim-the-jellies-premiere-02-10-2024/12%20-%20The%20Jellies%20%20%20S1%20The%20Invasion%2C%20Part%201.mp4",
+              "seconds": 1142,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 549
+            }
+          ]
         },
         {
           "number": 10,

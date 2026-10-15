@@ -3,7 +3,7 @@
   "slug": "drawn-together",
   "type": "Animated",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-15T01:19:05.250Z",
+  "matchedAt": "2026-10-15T03:17:28.784Z",
   "tvmaze": {
     "id": 1518,
     "name": "Drawn Together",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 36,
-    "live": 26,
-    "review": 10,
+    "live": 35,
+    "review": 1,
     "missing": 0,
     "pct": 100
   },
@@ -74,9 +74,9 @@
           "number": 2,
           "name": "Clara's Dirty Little Secret",
           "airdate": "2004-11-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -170,9 +170,9 @@
           "number": 4,
           "name": "Requiem for a Reality Show",
           "airdate": "2004-11-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -485,9 +485,9 @@
           "number": 4,
           "name": "Captain Hero's Marriage Pact",
           "airdate": "2005-11-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -533,9 +533,9 @@
           "number": 5,
           "name": "Clum Babies",
           "airdate": "2005-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -548,6 +548,19 @@
             "sizeMB": 128
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Clum Babies\" (0.63)",
+              "item": "04.-unrestrainable-trainable",
+              "itemTitle": "Drawn Together Season 03",
+              "file": "11. Drawn Together Babies.mp4",
+              "name": "11. Drawn Together Babies",
+              "url": "https://archive.org/download/04.-unrestrainable-trainable/11.%20Drawn%20Together%20Babies.mp4",
+              "seconds": 1268,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 126
+            },
             {
               "conf": 0.6,
               "why": "S/E in filename + title match",
@@ -1053,9 +1066,9 @@
           "number": 1,
           "name": "Freaks & Greeks",
           "airdate": "2006-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -1101,9 +1114,9 @@
           "number": 2,
           "name": "Wooldoor Sockbat's Giggle Wiggle Funny Tickle Non-Traditional Progressive Multicultural Roundtable!",
           "airdate": "2006-10-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -1197,9 +1210,9 @@
           "number": 4,
           "name": "Unrestrainable Trainable",
           "airdate": "2006-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -1424,9 +1437,9 @@
           "number": 9,
           "name": "Charlotte's Web of Lies",
           "airdate": "2007-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",
@@ -1520,9 +1533,9 @@
           "number": 11,
           "name": "Drawn Together Babies",
           "airdate": "2007-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "DrawnTogetherComplete",
             "itemTitle": "Drawn Together the Complete Series",

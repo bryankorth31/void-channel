@@ -3,7 +3,7 @@
   "slug": "square-pegs",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:31.644Z",
+  "matchedAt": "2026-10-15T03:18:40.957Z",
   "tvmaze": {
     "id": 12742,
     "name": "Square Pegs",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 20,
     "live": 5,
-    "review": 10,
-    "missing": 5,
-    "pct": 75
+    "review": 11,
+    "missing": 4,
+    "pct": 80
   },
   "seasons": [
     {
@@ -253,8 +253,20 @@
           "number": 10,
           "name": "Hardly Working",
           "airdate": "1982-12-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hardly Working\" (0.95)",
+            "item": "square-pegs-1982-83-sjp",
+            "itemTitle": "Square Pegs (1982–83) Sarah Jessica Parker",
+            "file": "10 Square Pegs - E10 - Hardly Working - dailymotioner Shandon.mp4",
+            "name": "10 Square Pegs - E10 - Hardly Working - dailymotioner Shandon",
+            "url": "https://archive.org/download/square-pegs-1982-83-sjp/10%20Square%20Pegs%20-%20E10%20-%20Hardly%20Working%20-%20dailymotioner%20Shandon.mp4",
+            "seconds": 1487,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 153
+          },
           "alternates": []
         },
         {

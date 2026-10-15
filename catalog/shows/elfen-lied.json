@@ -3,19 +3,18 @@
   "slug": "elfen-lied",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.057Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.983Z",
   "tvmaze": {
-    "id": null,
+    "id": 2061,
     "name": "Elfen Lied",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2004-07-25",
+    "network": "AT-X"
   },
   "coverage": {
-    "total": 43,
+    "total": 13,
     "live": 0,
-    "review": 43,
+    "review": 13,
     "missing": 0,
     "pct": 100
   },
@@ -25,569 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "credits",
+          "name": "A Chance Encounter",
+          "airdate": "2004-07-25",
           "state": "REVIEW",
           "file": {
-            "item": "2.-annihilation-vernichtung",
-            "itemTitle": "Elfen Lied Dub (Full Episodes)",
-            "file": "CREDITS.mp4",
-            "name": "CREDITS",
-            "url": "https://archive.org/download/2.-annihilation-vernichtung/CREDITS.mp4",
-            "seconds": 271,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 11,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 01.mp4",
-            "name": "Elfen Lied - 01",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2001.mp4",
-            "seconds": 1501,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 02.mp4",
-            "name": "Elfen Lied - 02",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2002.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 03.mp4",
-            "name": "Elfen Lied - 03",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2003.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 04.mp4",
-            "name": "Elfen Lied - 04",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2004.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 05.mp4",
-            "name": "Elfen Lied - 05",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2005.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 06.mp4",
-            "name": "Elfen Lied - 06",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2006.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 07.mp4",
-            "name": "Elfen Lied - 07",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2007.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 08.mp4",
-            "name": "Elfen Lied - 08",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2008.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 09.mp4",
-            "name": "Elfen Lied - 09",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2009.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 10.mp4",
-            "name": "Elfen Lied - 10",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2010.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 11.mp4",
-            "name": "Elfen Lied - 11",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2011.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "Episode 13",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 12.mp4",
-            "name": "Elfen Lied - 12",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2012.mp4",
-            "seconds": 1502,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "Episode 14",
-          "state": "REVIEW",
-          "file": {
-            "item": "elfen-lied-CRT",
-            "itemTitle": "Elfen Lied (CRT resolution)",
-            "file": "Elfen Lied - 13.mp4",
-            "name": "Elfen Lied - 13",
-            "url": "https://archive.org/download/elfen-lied-CRT/Elfen%20Lied%20-%2013.mp4",
-            "seconds": 1473,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 146,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Episode 15",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 01 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 01 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2001%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Episode 16",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 02 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 02 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2002%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Episode 17",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 03 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 03 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2003%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 04 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 04 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2004%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Episode 19",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 05 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 05 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2005%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Episode 20",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 06 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 06 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2006%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "Episode 21",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 07 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 07 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2007%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "Episode 22",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 08 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 08 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2008%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "Episode 23",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 09 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 09 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2009%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 153,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "Episode 24",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 10 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 10 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2010%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Episode 25",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 11 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 11 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2011%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "Episode 26",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 12 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 12 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2012%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "Episode 27",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 13 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 13 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2013%20%5BBD%201080p%5D.mp4",
-            "seconds": 1483,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "Episode 28",
-          "state": "REVIEW",
-          "file": {
-            "item": "ElfenLied-LivBs",
-            "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
-            "file": "Elfen Lied [BD 1080p]/Elfen Lied 14 [BD 1080p].mp4",
-            "name": "Elfen Lied [BD 1080p]/Elfen Lied 14 [BD 1080p]",
-            "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2014%20%5BBD%201080p%5D.mp4",
-            "seconds": 1513,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 152,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "1 a chance encounter begegnung",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Chance Encounter\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/1. A Chance Encounter ~ Begegnung.mp4",
@@ -596,18 +38,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 98,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 98
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 01 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 01 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2001%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
-          "number": 30,
-          "name": "2 annihilation vernichtung",
+          "number": 2,
+          "name": "Annihilation",
+          "airdate": "2004-08-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Annihilation\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/2. Annihilation ~ Vernichtung.mp4",
@@ -616,18 +72,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 115,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 02 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 02 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2002%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 153
+            }
+          ]
         },
         {
-          "number": 31,
-          "name": "3 deep feelings im innersten",
+          "number": 3,
+          "name": "Deep Feelings",
+          "airdate": "2004-08-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Deep Feelings\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/3. Deep Feelings ~ Im Innersten.mp4",
@@ -636,18 +106,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 85,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 85
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 03 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 03 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2003%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 32,
-          "name": "4 attack aufeinandertreffen",
+          "number": 4,
+          "name": "Attack",
+          "airdate": "2004-08-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Attack\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/4. Attack ~ Aufeinandertreffen.mp4",
@@ -656,18 +140,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 93
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 04 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 04 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2004%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 33,
-          "name": "5 receipt empfang",
+          "number": 5,
+          "name": "Receipt",
+          "airdate": "2004-08-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Receipt\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/5. Receipt ~ Empfang.mp4",
@@ -676,18 +174,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 86,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 86
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 05 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 05 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2005%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
-          "number": 34,
-          "name": "6 innermost feelings herzensw rme",
+          "number": 6,
+          "name": "Innermost Feelings",
+          "airdate": "2004-08-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Innermost Feelings\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/6. Innermost Feelings ~ Herzenswärme.mp4",
@@ -696,18 +208,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 102,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 102
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 06 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 06 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2006%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 35,
-          "name": "7 confrontation zuf llige begegnung",
+          "number": 7,
+          "name": "Confrontation",
+          "airdate": "2004-09-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Confrontation\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/7. Confrontation ~ Zufällige Begegnung.mp4",
@@ -716,18 +242,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 80,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 80
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 07 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 07 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2007%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 36,
-          "name": "8 the beginning beginn",
+          "number": 8,
+          "name": "The Beginning",
+          "airdate": "2004-09-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Beginning\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/8. The Beginning ~ Beginn.mp4",
@@ -736,18 +276,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 88,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 88
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 08 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 08 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2008%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 37,
-          "name": "9 reminiscence sch ne erinnerung",
+          "number": 9,
+          "name": "Reminiscence",
+          "airdate": "2004-09-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Reminiscence\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/9. Reminiscence ~ Schöne Erinnerung.mp4",
@@ -756,18 +310,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 93
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 09 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 09 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2009%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 153
+            }
+          ]
         },
         {
-          "number": 38,
-          "name": "10 infant s ugling",
+          "number": 10,
+          "name": "Infant",
+          "airdate": "2004-09-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Infant\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/10. Infant ~ Säugling.mp4",
@@ -776,38 +344,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 83,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 83
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 10 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 10 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2010%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 39,
-          "name": "10 5 in the rain or how can a girl have reached such feelings",
+          "number": 11,
+          "name": "Complication",
+          "airdate": "2004-10-03",
           "state": "REVIEW",
           "file": {
-            "item": "2.-annihilation-vernichtung",
-            "itemTitle": "Elfen Lied Dub (Full Episodes)",
-            "file": "Elfen Lied 1-13 all/10.5 In the rain, or, how can a girl have reached such feelings.mp4",
-            "name": "Elfen Lied 1-13 all/10.5 In the rain, or, how can a girl have reached such feelings",
-            "url": "https://archive.org/download/2.-annihilation-vernichtung/Elfen%20Lied%201-13%20all%2F10.5%20In%20the%20rain%2C%20or%2C%20how%20can%20a%20girl%20have%20reached%20such%20feelings.mp4",
-            "seconds": 1513,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 94,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "11 complication vermischung",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Complication\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/11. Complication ~ Vermischung.mp4",
@@ -816,18 +378,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 92,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 92
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 11 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 11 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2011%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
-          "number": 41,
-          "name": "12 quagmire taumeln",
+          "number": 12,
+          "name": "Quagmire",
+          "airdate": "2004-10-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Quagmire\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/12. Quagmire ~ Taumeln.mp4",
@@ -836,18 +412,32 @@
             "seconds": 1513,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 93
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 12 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 12 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2012%20%5BBD%201080p%5D.mp4",
+              "seconds": 1513,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
-          "number": 42,
-          "name": "13 no return erleuchtung",
+          "number": 13,
+          "name": "No Return",
+          "airdate": "2004-10-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"No Return\" (0.95)",
             "item": "2.-annihilation-vernichtung",
             "itemTitle": "Elfen Lied Dub (Full Episodes)",
             "file": "Elfen Lied 1-13 all/13. No Return ~ Erleuchtung.mp4",
@@ -856,32 +446,23 @@
             "seconds": 1482,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 90,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 90
           },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "intro",
-          "state": "REVIEW",
-          "file": {
-            "item": "2.-annihilation-vernichtung",
-            "itemTitle": "Elfen Lied Dub (Full Episodes)",
-            "file": "INTRO.mp4",
-            "name": "INTRO",
-            "url": "https://archive.org/download/2.-annihilation-vernichtung/INTRO.mp4",
-            "seconds": 182,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 3,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 14 in \"Elfen Lied [RAW] (JP, EN, RU)\"",
+              "item": "ElfenLied-LivBs",
+              "itemTitle": "Elfen Lied [RAW] (JP, EN, RU)",
+              "file": "Elfen Lied [BD 1080p]/Elfen Lied 13 [BD 1080p].mp4",
+              "name": "Elfen Lied [BD 1080p]/Elfen Lied 13 [BD 1080p]",
+              "url": "https://archive.org/download/ElfenLied-LivBs/Elfen%20Lied%20%5BBD%201080p%5D%2FElfen%20Lied%2013%20%5BBD%201080p%5D.mp4",
+              "seconds": 1483,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         }
       ]
     }

@@ -3,7 +3,7 @@
   "slug": "saved-by-the-bell",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:20:00.109Z",
+  "matchedAt": "2026-10-15T03:20:00.300Z",
   "tvmaze": {
     "id": 1252,
     "name": "Saved by the Bell",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 86,
-    "live": 74,
-    "review": 12,
+    "live": 84,
+    "review": 2,
     "missing": 0,
     "pct": 100
   },
@@ -208,19 +208,32 @@
           "airdate": "1989-09-09",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "saved-by-the-bell-the-college-years-season-1",
-            "itemTitle": "Saved by The Bell The College Years: The Complete 1st Season",
-            "file": "Saved by The Bell The College Years S01E04 - Rush Week.mp4",
-            "name": "Saved by The Bell The College Years S01E04 - Rush Week",
-            "url": "https://archive.org/download/saved-by-the-bell-the-college-years-season-1/Saved%20by%20The%20Bell%20The%20College%20Years%20S01E04%20-%20Rush%20Week.mp4",
-            "seconds": 1358,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "saved-by-the-bell-complete-series_20251118",
+            "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
+            "file": "Saved by The Bell S01E04 - Fatal Distraction.mp4",
+            "name": "Saved by The Bell S01E04 - Fatal Distraction",
+            "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E04%20-%20Fatal%20Distraction.mp4",
+            "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 344
+            "sizeMB": 199
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "saved-by-the-bell-the-college-years-season-1",
+              "itemTitle": "Saved by The Bell The College Years: The Complete 1st Season",
+              "file": "Saved by The Bell The College Years S01E04 - Rush Week.mp4",
+              "name": "Saved by The Bell The College Years S01E04 - Rush Week",
+              "url": "https://archive.org/download/saved-by-the-bell-the-college-years-season-1/Saved%20by%20The%20Bell%20The%20College%20Years%20S01E04%20-%20Rush%20Week.mp4",
+              "seconds": 1358,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 344
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -246,19 +259,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "saved-by-the-bell-complete-series_20251118",
-              "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
-              "file": "Saved by The Bell S01E04 - Fatal Distraction.mp4",
-              "name": "Saved by The Bell S01E04 - Fatal Distraction",
-              "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E04%20-%20Fatal%20Distraction.mp4",
-              "seconds": 1337,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 199
             }
           ]
         },
@@ -555,19 +555,32 @@
           "airdate": "1989-10-21",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "saved-by-the-bell-the-college-years-season-1",
-            "itemTitle": "Saved by The Bell The College Years: The Complete 1st Season",
-            "file": "Saved by The Bell The College Years S01E10 - Dr. Kelly.mp4",
-            "name": "Saved by The Bell The College Years S01E10 - Dr. Kelly",
-            "url": "https://archive.org/download/saved-by-the-bell-the-college-years-season-1/Saved%20by%20The%20Bell%20The%20College%20Years%20S01E10%20-%20Dr.%20Kelly.mp4",
-            "seconds": 1359,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "saved-by-the-bell-complete-series_20251118",
+            "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
+            "file": "Saved by The Bell S01E10 - Beauty and The Screech.mp4",
+            "name": "Saved by The Bell S01E10 - Beauty and The Screech",
+            "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E10%20-%20Beauty%20and%20The%20Screech.mp4",
+            "seconds": 1370,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 326
+            "sizeMB": 227
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "saved-by-the-bell-the-college-years-season-1",
+              "itemTitle": "Saved by The Bell The College Years: The Complete 1st Season",
+              "file": "Saved by The Bell The College Years S01E10 - Dr. Kelly.mp4",
+              "name": "Saved by The Bell The College Years S01E10 - Dr. Kelly",
+              "url": "https://archive.org/download/saved-by-the-bell-the-college-years-season-1/Saved%20by%20The%20Bell%20The%20College%20Years%20S01E10%20-%20Dr.%20Kelly.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 326
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -593,19 +606,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 134
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "savedbythebell_202507",
-              "itemTitle": "Saved By The Bell complete series",
-              "file": "The College Years/Saved by the Bell - The College Years - 01x10 - Dr. Kelly.mp4",
-              "name": "The College Years/Saved by the Bell - The College Years - 01x10 - Dr. Kelly",
-              "url": "https://archive.org/download/savedbythebell_202507/The%20College%20Years%2FSaved%20by%20the%20Bell%20-%20The%20College%20Years%20-%2001x10%20-%20Dr.%20Kelly.mp4",
-              "seconds": 1322,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -615,19 +615,32 @@
           "airdate": "1989-11-04",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "savedbythebell_202507",
-            "itemTitle": "Saved By The Bell complete series",
-            "file": "Good Morning Miss Bliss/GMMB - Saved by the Bell - 01x11 - Stevie.mp4",
-            "name": "Good Morning Miss Bliss/GMMB - Saved by the Bell - 01x11 - Stevie",
-            "url": "https://archive.org/download/savedbythebell_202507/Good%20Morning%20Miss%20Bliss%2FGMMB%20-%20Saved%20by%20the%20Bell%20-%2001x11%20-%20Stevie.mp4",
-            "seconds": 1336,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "saved-by-the-bell-complete-series_20251118",
+            "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
+            "file": "Saved by The Bell S01E11 - The Friendship Business.mp4",
+            "name": "Saved by The Bell S01E11 - The Friendship Business",
+            "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E11%20-%20The%20Friendship%20Business.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 225
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "savedbythebell_202507",
+              "itemTitle": "Saved By The Bell complete series",
+              "file": "Good Morning Miss Bliss/GMMB - Saved by the Bell - 01x11 - Stevie.mp4",
+              "name": "Good Morning Miss Bliss/GMMB - Saved by the Bell - 01x11 - Stevie",
+              "url": "https://archive.org/download/savedbythebell_202507/Good%20Morning%20Miss%20Bliss%2FGMMB%20-%20Saved%20by%20the%20Bell%20-%2001x11%20-%20Stevie.mp4",
+              "seconds": 1336,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -640,19 +653,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 113
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "saved-by-the-bell-complete-series_20251118",
-              "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
-              "file": "Saved by The Bell S01E11 - The Friendship Business.mp4",
-              "name": "Saved by The Bell S01E11 - The Friendship Business",
-              "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E11%20-%20The%20Friendship%20Business.mp4",
-              "seconds": 1402,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 225
             },
             {
               "conf": 0.55,
@@ -842,19 +842,32 @@
           "airdate": "1989-12-09",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "saved-by-the-bell-the-college-years-season-1",
-            "itemTitle": "Saved by The Bell The College Years: The Complete 1st Season",
-            "file": "Saved by The Bell The College Years S01E15 - The Rave.mp4",
-            "name": "Saved by The Bell The College Years S01E15 - The Rave",
-            "url": "https://archive.org/download/saved-by-the-bell-the-college-years-season-1/Saved%20by%20The%20Bell%20The%20College%20Years%20S01E15%20-%20The%20Rave.mp4",
-            "seconds": 1360,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "saved-by-the-bell-complete-series_20251118",
+            "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
+            "file": "Saved by The Bell S01E15 - King of The Hill.mp4",
+            "name": "Saved by The Bell S01E15 - King of The Hill",
+            "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E15%20-%20King%20of%20The%20Hill.mp4",
+            "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 273
+            "sizeMB": 177
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "saved-by-the-bell-the-college-years-season-1",
+              "itemTitle": "Saved by The Bell The College Years: The Complete 1st Season",
+              "file": "Saved by The Bell The College Years S01E15 - The Rave.mp4",
+              "name": "Saved by The Bell The College Years S01E15 - The Rave",
+              "url": "https://archive.org/download/saved-by-the-bell-the-college-years-season-1/Saved%20by%20The%20Bell%20The%20College%20Years%20S01E15%20-%20The%20Rave.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 273
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -867,19 +880,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 130
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "saved-by-the-bell-complete-series_20251118",
-              "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
-              "file": "Saved by The Bell S01E15 - King of The Hill.mp4",
-              "name": "Saved by The Bell S01E15 - King of The Hill",
-              "url": "https://archive.org/download/saved-by-the-bell-complete-series_20251118/Saved%20by%20The%20Bell%20S01E15%20-%20King%20of%20The%20Hill.mp4",
-              "seconds": 1337,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 177
             },
             {
               "conf": 0.55,
@@ -1119,9 +1119,9 @@
           "number": 4,
           "name": "Driver's Education",
           "airdate": "1990-09-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -1226,9 +1226,9 @@
           "number": 6,
           "name": "Blind Dates",
           "airdate": "1990-10-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -1868,9 +1868,9 @@
           "number": 1,
           "name": "The Last Dance (1)",
           "airdate": "1991-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -1883,6 +1883,19 @@
             "sizeMB": 233
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Last Dance (1)\" (0.63)",
+              "item": "savedbythebell_202507",
+              "itemTitle": "Saved By The Bell complete series",
+              "file": "Good Morning Miss Bliss/GMMB - Saved by the Bell - 01x07 - Save the Last Dance for Me.mp4",
+              "name": "Good Morning Miss Bliss/GMMB - Saved by the Bell - 01x07 - Save the Last Dance for Me",
+              "url": "https://archive.org/download/savedbythebell_202507/Good%20Morning%20Miss%20Bliss%2FGMMB%20-%20Saved%20by%20the%20Bell%20-%2001x07%20-%20Save%20the%20Last%20Dance%20for%20Me.mp4",
+              "seconds": 1337,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 134
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename + title match",
@@ -1936,9 +1949,9 @@
           "number": 3,
           "name": "The Aftermath (2)",
           "airdate": "1991-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -2030,9 +2043,9 @@
           "number": 5,
           "name": "Operation Zack",
           "airdate": "1991-09-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -2132,9 +2145,9 @@
           "number": 8,
           "name": "My Boyfriend's Back",
           "airdate": "1991-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -3093,9 +3106,9 @@
           "number": 4,
           "name": "The New Girl",
           "airdate": "1992-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -3140,9 +3153,9 @@
           "number": 5,
           "name": "The Bayside Triangle",
           "airdate": "1992-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -3610,9 +3623,9 @@
           "number": 15,
           "name": "The Teacher's Strike",
           "airdate": "1992-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",
@@ -3657,9 +3670,9 @@
           "number": 16,
           "name": "Slater's Sister",
           "airdate": "1992-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "saved-by-the-bell-complete-series_20251118",
             "itemTitle": "Saved by The Bell: The Complete Series (1989-1993)",

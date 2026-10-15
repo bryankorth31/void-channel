@@ -3,7 +3,7 @@
   "slug": "godless",
   "type": "Streaming Era",
   "network": "Netflix",
-  "matchedAt": "2026-10-15T01:19:43.424Z",
+  "matchedAt": "2026-10-15T03:18:56.526Z",
   "tvmaze": {
     "id": 13634,
     "name": "Godless",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 7,
-    "live": 5,
-    "review": 1,
+    "live": 6,
+    "review": 0,
     "missing": 1,
     "pct": 86
   },
@@ -288,9 +288,9 @@
           "number": 7,
           "name": "Homecoming",
           "airdate": "2017-11-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "godless_202512",
             "itemTitle": "Godless (2017) Complete series",
@@ -304,7 +304,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "godless_202605",
               "itemTitle": "Godless (2017) Complete",
@@ -317,7 +317,7 @@
               "sizeMB": 614
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "godless.-2017.-1080p",
               "itemTitle": "Godless.2017.Complete.Series.1080p.NF.WEBRip.DD5.1.x264",

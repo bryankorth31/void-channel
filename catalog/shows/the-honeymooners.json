@@ -3,7 +3,7 @@
   "slug": "the-honeymooners",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:22.099Z",
+  "matchedAt": "2026-10-15T03:18:26.463Z",
   "tvmaze": {
     "id": 3825,
     "name": "The Honeymooners",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 225,
     "live": 32,
-    "review": 1,
-    "missing": 192,
+    "review": 2,
+    "missing": 191,
     "pct": 15
   },
   "seasons": [
@@ -2070,8 +2070,20 @@
           "number": 2,
           "name": "Honeymooners sketch on The Jack Benny Program",
           "airdate": "1958-01-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Honeymooners sketch on The Jack Benny Program\" (0.61)",
+            "item": "580126TheJackBennyProgramS08e10HoneymoonersShow",
+            "itemTitle": "58 01 26 The Jack Benny Program S 08e 10 Honeymooners Show",
+            "file": "58-01-26  The Jack Benny Program  s08e10  Honeymooners Show.mp4",
+            "name": "58-01-26  The Jack Benny Program  s08e10  Honeymooners Show",
+            "url": "https://archive.org/download/580126TheJackBennyProgramS08e10HoneymoonersShow/58-01-26%20%20The%20Jack%20Benny%20Program%20%20s08e10%20%20Honeymooners%20Show.mp4",
+            "seconds": 1433,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 93
+          },
           "alternates": []
         },
         {

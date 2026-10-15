@@ -3,7 +3,7 @@
   "slug": "fridays",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:42.863Z",
+  "matchedAt": "2026-10-15T03:18:55.778Z",
   "tvmaze": {
     "id": 64046,
     "name": "Fridays",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 58,
-    "live": 0,
-    "review": 0,
-    "missing": 58,
-    "pct": 0
+    "live": 21,
+    "review": 7,
+    "missing": 30,
+    "pct": 48
   },
   "seasons": [
     {
@@ -26,24 +26,60 @@
           "number": 1,
           "name": "Kenny Loggins",
           "airdate": "1980-04-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E01 Kenny Loggins.mp4",
+            "name": "S01E01 Kenny Loggins",
+            "url": "https://archive.org/download/fridaynightlive/S01E01%20Kenny%20Loggins.mp4",
+            "seconds": 2700,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Boomtown Rats",
           "airdate": "1980-04-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E02 The Boomtown Rats.mp4",
+            "name": "S01E02 The Boomtown Rats",
+            "url": "https://archive.org/download/fridaynightlive/S01E02%20The%20Boomtown%20Rats.mp4",
+            "seconds": 3138,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 211
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Clash",
           "airdate": "1980-04-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E03 The Clash.mp4",
+            "name": "S01E03 The Clash",
+            "url": "https://archive.org/download/fridaynightlive/S01E03%20The%20Clash.mp4",
+            "seconds": 2492,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1072
+          },
           "alternates": []
         },
         {
@@ -58,16 +94,40 @@
           "number": 5,
           "name": "Boz Scaggs",
           "airdate": "1980-05-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E05 Boz Scaggs.mp4",
+            "name": "S01E05 Boz Scaggs",
+            "url": "https://archive.org/download/fridaynightlive/S01E05%20Boz%20Scaggs.mp4",
+            "seconds": 3192,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Devo (1st appearance)",
           "airdate": "1980-05-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E06 Devo.mp4",
+            "name": "S01E06 Devo",
+            "url": "https://archive.org/download/fridaynightlive/S01E06%20Devo.mp4",
+            "seconds": 3130,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 159
+          },
           "alternates": []
         },
         {
@@ -82,24 +142,60 @@
           "number": 8,
           "name": "Tom Petty & the Heartbreakers",
           "airdate": "1980-06-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E08 Tom Petty.mp4",
+            "name": "S01E08 Tom Petty",
+            "url": "https://archive.org/download/fridaynightlive/S01E08%20Tom%20Petty.mp4",
+            "seconds": 2898,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 139
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Beach Boys",
           "airdate": "1980-06-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E09 The Beach Boys.mp4",
+            "name": "S01E09 The Beach Boys",
+            "url": "https://archive.org/download/fridaynightlive/S01E09%20The%20Beach%20Boys.mp4",
+            "seconds": 3120,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Graham Parker",
           "airdate": "1980-06-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E10 Graham Parker.mp4",
+            "name": "S01E10 Graham Parker",
+            "url": "https://archive.org/download/fridaynightlive/S01E10%20Graham%20Parker.mp4",
+            "seconds": 2720,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 156
+          },
           "alternates": []
         },
         {
@@ -114,8 +210,20 @@
           "number": 12,
           "name": "Journey",
           "airdate": "1980-07-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Journey\" (1.00)",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S01E13 Journey.mp4",
+            "name": "S01E13 Journey",
+            "url": "https://archive.org/download/fridaynightlive/S01E13%20Journey.mp4",
+            "seconds": 3060,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 183
+          },
           "alternates": []
         }
       ]
@@ -143,8 +251,20 @@
           "number": 3,
           "name": "The Cars (1st appearance)",
           "airdate": "1980-09-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E03 The Cars.mp4",
+            "name": "S02E03 The Cars",
+            "url": "https://archive.org/download/fridaynightlive/S02E03%20The%20Cars.mp4",
+            "seconds": 2219,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 116
+          },
           "alternates": []
         },
         {
@@ -175,24 +295,60 @@
           "number": 7,
           "name": "Dire Straits",
           "airdate": "1980-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E07 Dire Straits.mp4",
+            "name": "S02E07 Dire Straits",
+            "url": "https://archive.org/download/fridaynightlive/S02E07%20Dire%20Straits.mp4",
+            "seconds": 2791,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Devo (2nd appearance)",
           "airdate": "1980-11-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E08 Devo Again.mp4",
+            "name": "S02E08 Devo Again",
+            "url": "https://archive.org/download/fridaynightlive/S02E08%20Devo%20Again.mp4",
+            "seconds": 1954,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 101
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Busboys",
           "airdate": "1980-11-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E09 The Busboys.mp4",
+            "name": "S02E09 The Busboys",
+            "url": "https://archive.org/download/fridaynightlive/S02E09%20The%20Busboys.mp4",
+            "seconds": 2281,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 113
+          },
           "alternates": []
         },
         {
@@ -207,88 +363,262 @@
           "number": 11,
           "name": "Pat Benatar",
           "airdate": "1980-12-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E11 Pat Benatar.mp4",
+            "name": "S02E11 Pat Benatar",
+            "url": "https://archive.org/download/fridaynightlive/S02E11%20Pat%20Benatar.mp4",
+            "seconds": 2374,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 110
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "fridaynightlive",
+              "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+              "file": "S02E11 Pat Benatar [Alternate Source].mp4",
+              "name": "S02E11 Pat Benatar [Alternate Source]",
+              "url": "https://archive.org/download/fridaynightlive/S02E11%20Pat%20Benatar%20%5BAlternate%20Source%5D.mp4",
+              "seconds": 3587,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Steve Forbert",
           "airdate": "1980-12-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Steve Forbert\" (1.00)",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E13 Steve Forbert.mp4",
+            "name": "S02E13 Steve Forbert",
+            "url": "https://archive.org/download/fridaynightlive/S02E13%20Steve%20Forbert.mp4",
+            "seconds": 2060,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 886
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Rockpile",
           "airdate": "1980-12-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E13 Steve Forbert.mp4",
+            "name": "S02E13 Steve Forbert",
+            "url": "https://archive.org/download/fridaynightlive/S02E13%20Steve%20Forbert.mp4",
+            "seconds": 2060,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 886
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "George Carlin / George Thorogood & the Destroyers",
           "airdate": "1981-01-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"George Carlin / George Thorogood & the Destroyers\" (0.76)",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E15 George Carlin; George Thorogood.mp4",
+            "name": "S02E15 George Carlin; George Thorogood",
+            "url": "https://archive.org/download/fridaynightlive/S02E15%20George%20Carlin%3B%20George%20Thorogood.mp4",
+            "seconds": 2566,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Shelley Winters / The Plasmatics",
           "airdate": "1981-01-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E15 George Carlin; George Thorogood.mp4",
+            "name": "S02E15 George Carlin; George Thorogood",
+            "url": "https://archive.org/download/fridaynightlive/S02E15%20George%20Carlin%3B%20George%20Thorogood.mp4",
+            "seconds": 2566,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Henny Youngman / REO Speedwagon",
           "airdate": "1981-01-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Henny Youngman / REO Speedwagon\" (1.00)",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E17 Henny Youngman; REO Speedwagon.mp4",
+            "name": "S02E17 Henny Youngman; REO Speedwagon",
+            "url": "https://archive.org/download/fridaynightlive/S02E17%20Henny%20Youngman%3B%20REO%20Speedwagon.mp4",
+            "seconds": 3106,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 199
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Valerie Bertinelli / Jim Carroll Band",
           "airdate": "1981-02-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E17 Henny Youngman; REO Speedwagon.mp4",
+            "name": "S02E17 Henny Youngman; REO Speedwagon",
+            "url": "https://archive.org/download/fridaynightlive/S02E17%20Henny%20Youngman%3B%20REO%20Speedwagon.mp4",
+            "seconds": 3106,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 199
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Valerie Bertinelli / Jim Carroll Band\" (0.92)",
+              "item": "fridaynightlive",
+              "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+              "file": "S02E18 Valerie Bertinelli; Jim Carroll.mp4",
+              "name": "S02E18 Valerie Bertinelli; Jim Carroll",
+              "url": "https://archive.org/download/fridaynightlive/S02E18%20Valerie%20Bertinelli%3B%20Jim%20Carroll.mp4",
+              "seconds": 3094,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 215
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Michael McKean & David L. Lander / Kool & The Gang",
           "airdate": "1981-02-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E18 Valerie Bertinelli; Jim Carroll.mp4",
+            "name": "S02E18 Valerie Bertinelli; Jim Carroll",
+            "url": "https://archive.org/download/fridaynightlive/S02E18%20Valerie%20Bertinelli%3B%20Jim%20Carroll.mp4",
+            "seconds": 3094,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 215
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Andy Kaufman / Sir Douglas Quintet",
           "airdate": "1981-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Andy Kaufman / Sir Douglas Quintet\" (0.95)",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E20 Andy Kaufman; The Sir Douglas Quintet.mp4",
+            "name": "S02E20 Andy Kaufman; The Sir Douglas Quintet",
+            "url": "https://archive.org/download/fridaynightlive/S02E20%20Andy%20Kaufman%3B%20The%20Sir%20Douglas%20Quintet.mp4",
+            "seconds": 2330,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1001
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Billy Crystal / Randy Meisner",
           "airdate": "1981-02-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E20 Andy Kaufman; The Sir Douglas Quintet.mp4",
+            "name": "S02E20 Andy Kaufman; The Sir Douglas Quintet",
+            "url": "https://archive.org/download/fridaynightlive/S02E20%20Andy%20Kaufman%3B%20The%20Sir%20Douglas%20Quintet.mp4",
+            "seconds": 2330,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1001
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Billy Crystal / Randy Meisner\" (1.00)",
+              "item": "fridaynightlive",
+              "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+              "file": "S02E21 Billy Crystal; Randy Meisner.mp4",
+              "name": "S02E21 Billy Crystal; Randy Meisner",
+              "url": "https://archive.org/download/fridaynightlive/S02E21%20Billy%20Crystal%3B%20Randy%20Meisner.mp4",
+              "seconds": 2780,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 300
+            }
+          ]
         },
         {
           "number": 21,
           "name": "David Steinberg / Marshal Tucker Band",
           "airdate": "1981-03-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S02E21 Billy Crystal; Randy Meisner.mp4",
+            "name": "S02E21 Billy Crystal; Randy Meisner",
+            "url": "https://archive.org/download/fridaynightlive/S02E21%20Billy%20Crystal%3B%20Randy%20Meisner.mp4",
+            "seconds": 2780,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 300
+          },
           "alternates": []
         },
         {
@@ -356,8 +686,20 @@
           "number": 4,
           "name": "Karen Allen / The Stray Cats",
           "airdate": "1981-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S03E04 Karen Allen; The Stray Cats.mp4",
+            "name": "S03E04 Karen Allen; The Stray Cats",
+            "url": "https://archive.org/download/fridaynightlive/S03E04%20Karen%20Allen%3B%20The%20Stray%20Cats.mp4",
+            "seconds": 2376,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 470
+          },
           "alternates": []
         },
         {
@@ -404,8 +746,20 @@
           "number": 10,
           "name": "Susan Sarandon / The Four Tops",
           "airdate": "1981-12-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S03E10 Susan Sarandon; The Four Tops.mp4",
+            "name": "S03E10 Susan Sarandon; The Four Tops",
+            "url": "https://archive.org/download/fridaynightlive/S03E10%20Susan%20Sarandon%3B%20The%20Four%20Tops.mp4",
+            "seconds": 1866,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
           "alternates": []
         },
         {
@@ -420,16 +774,40 @@
           "number": 12,
           "name": "Valerie Harper / The Cars",
           "airdate": "1982-01-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S03E12 Valerie Harper; The Cars.mp4",
+            "name": "S03E12 Valerie Harper; The Cars",
+            "url": "https://archive.org/download/fridaynightlive/S03E12%20Valerie%20Harper%3B%20The%20Cars.mp4",
+            "seconds": 3175,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Tab Hunter / KISS",
           "airdate": "1982-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "fridaynightlive",
+            "itemTitle": "ABC's Fridays - The ALMOST Complete Series",
+            "file": "S03E13 Tab Hunter; Kiss.mp4",
+            "name": "S03E13 Tab Hunter; Kiss",
+            "url": "https://archive.org/download/fridaynightlive/S03E13%20Tab%20Hunter%3B%20Kiss.mp4",
+            "seconds": 2710,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 543
+          },
           "alternates": []
         },
         {

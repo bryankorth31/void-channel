@@ -3,7 +3,7 @@
   "slug": "st-elsewhere",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:28.418Z",
+  "matchedAt": "2026-10-15T03:18:36.190Z",
   "tvmaze": {
     "id": 4460,
     "name": "St. Elsewhere",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 137,
-    "live": 5,
-    "review": 130,
+    "live": 6,
+    "review": 129,
     "missing": 2,
     "pct": 99
   },
@@ -199,9 +199,9 @@
             "why": "S/E in filename + title match",
             "item": "St.ElsewhereS01",
             "itemTitle": "St. Elsewhere Season 01",
-            "file": "St.Elsewhere.S01E04.Cora.and.Arnie.ia.mp4",
-            "name": "St.Elsewhere.S01E04.Cora.and",
-            "url": "https://archive.org/download/St.ElsewhereS01/St.Elsewhere.S01E04.Cora.and.Arnie.ia.mp4",
+            "file": "St.Elsewhere.S01E04.Cora.and.Arnie.576p.ALL4.WEB-DL.AAC2.0.H.264-QTX_apf2_iris3.ia.mp4",
+            "name": "St.Elsewhere.S01E04.Cora.and.Arnie.576p.ALL4.WEB-DL.AAC2.0.H",
+            "url": "https://archive.org/download/St.ElsewhereS01/St.Elsewhere.S01E04.Cora.and.Arnie.576p.ALL4.WEB-DL.AAC2.0.H.264-QTX_apf2_iris3.ia.mp4",
             "seconds": 2823,
             "format": "h.264 IA",
             "playable": true,
@@ -209,20 +209,20 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "St.ElsewhereS01",
               "itemTitle": "St. Elsewhere Season 01",
-              "file": "St.Elsewhere.S01E04.Cora.and.Arnie.576p.ALL4.WEB-DL.AAC2.0.H.264-QTX_apf2_iris3.ia.mp4",
-              "name": "St.Elsewhere.S01E04.Cora.and.Arnie.576p.ALL4.WEB-DL.AAC2.0.H",
-              "url": "https://archive.org/download/St.ElsewhereS01/St.Elsewhere.S01E04.Cora.and.Arnie.576p.ALL4.WEB-DL.AAC2.0.H.264-QTX_apf2_iris3.ia.mp4",
+              "file": "St.Elsewhere.S01E04.Cora.and.Arnie.ia.mp4",
+              "name": "St.Elsewhere.S01E04.Cora.and",
+              "url": "https://archive.org/download/St.ElsewhereS01/St.Elsewhere.S01E04.Cora.and.Arnie.ia.mp4",
               "seconds": 2823,
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 3090
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "St.ElsewhereS01",
               "itemTitle": "St. Elsewhere Season 01",
@@ -778,9 +778,9 @@
           "number": 9,
           "name": "AIDS & Comfort",
           "airdate": "1983-12-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "1983-st-elsewhere-s-2-e-9-aids-comfort-kron-san-francisco-h-264",
             "itemTitle": "1983 St Elsewhere S2E9 AIDS & Comfort (KRON San Francisco)",
@@ -794,7 +794,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "1983-st-elsewhere-s-2-e-9-aids-comfort-kron-san-francisco-h-264",
               "itemTitle": "1983 St Elsewhere S2E9 AIDS & Comfort (KRON San Francisco)",
@@ -1567,19 +1567,33 @@
           "airdate": "1985-03-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "st.-elsewhere",
-            "itemTitle": "St. Elsewhere (1982–88) medical drama -185 eps",
-            "file": "Season 3 - 24 eps/St. Elsewhere S3e024 Cheers.mp4",
-            "name": "Season 3 - 24 eps/St. Elsewhere S3e024 Cheers",
-            "url": "https://archive.org/download/st.-elsewhere/Season%203%20-%2024%20eps%2FSt.%20Elsewhere%20S3e024%20Cheers.mp4",
-            "seconds": 2723,
-            "format": "MPEG4",
+            "conf": 0.7,
+            "why": "title ~ \"Cheers\" (0.95)",
+            "item": "1984.05.08-v-final-battle-pt.-3-1984.05.10-kron-st.-elsewhere-cheers",
+            "itemTitle": "1984.05.08 - V - Final Battle Pt. 3 - 1984.05.10 - KRON - St. Elsewhere - Cheers S02E22 - Beatles - Met 1983 Centenial",
+            "file": "1984.05.08 - V - Final Battle Pt. 3 - 1984.05.10 - KRON - St. Elsewhere - Cheers S02E22 - Beatles - Met 1983 Centenial.mp4",
+            "name": "1984.05.08 - V - Final Battle Pt. 3 - 1984.05.10 - KRON - St. Elsewhere - Cheers S02E22 - Beatles - Met 1983 Centenial",
+            "url": "https://archive.org/download/1984.05.08-v-final-battle-pt.-3-1984.05.10-kron-st.-elsewhere-cheers/1984.05.08%20-%20V%20-%20Final%20Battle%20Pt.%203%20-%201984.05.10%20-%20KRON%20-%20St.%20Elsewhere%20-%20Cheers%20S02E22%20-%20Beatles%20-%20Met%201983%20Centenial.mp4",
+            "seconds": 7440,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 149
+            "sizeMB": 731
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "st.-elsewhere",
+              "itemTitle": "St. Elsewhere (1982–88) medical drama -185 eps",
+              "file": "Season 3 - 24 eps/St. Elsewhere S3e024 Cheers.mp4",
+              "name": "Season 3 - 24 eps/St. Elsewhere S3e024 Cheers",
+              "url": "https://archive.org/download/st.-elsewhere/Season%203%20-%2024%20eps%2FSt.%20Elsewhere%20S3e024%20Cheers.mp4",
+              "seconds": 2723,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 149
+            }
+          ]
         }
       ]
     },

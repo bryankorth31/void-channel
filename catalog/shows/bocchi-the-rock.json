@@ -3,21 +3,20 @@
   "slug": "bocchi-the-rock",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.205Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:07.399Z",
   "tvmaze": {
-    "id": null,
-    "name": "BOCCHI THE ROCK!",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "id": 64321,
+    "name": "Bocchi the Rock!",
+    "runtime": 25,
+    "premiered": "2022-10-08",
+    "network": "Tokyo MX"
   },
   "coverage": {
-    "total": 2,
+    "total": 12,
     "live": 0,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 12,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,42 +24,98 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "BiliBili-BV19m4y1V7kC_p1-C2V6VB",
-            "itemTitle": "bocchi the ROCK🗿 P1 bocchi the ROCK🗿",
-            "file": "BV19m4y1V7kC_p1.mp4",
-            "name": "BV19m4y1V7kC_p1",
-            "url": "https://archive.org/download/BiliBili-BV19m4y1V7kC_p1-C2V6VB/BV19m4y1V7kC_p1.mp4",
-            "seconds": 92,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Lonely Rolling Bocchi",
+          "airdate": "2022-10-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "mwscjdc6siw",
-          "state": "REVIEW",
-          "file": {
-            "item": "youtube-MWsCjdC6Siw",
-            "itemTitle": "Bocchi The Rock Episode 11 secret OVA: Rabbit Hole Side Concert (Free Streaming)",
-            "file": "MWsCjdC6Siw.webm",
-            "name": "MWsCjdC6Siw",
-            "url": "https://archive.org/download/youtube-MWsCjdC6Siw/MWsCjdC6Siw.webm",
-            "seconds": 101,
-            "format": "WebM",
-            "playable": true,
-            "sizeMB": 63,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "See You Tomorrow",
+          "airdate": "2022-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Be Right There",
+          "airdate": "2022-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Jumping Girl(s)",
+          "airdate": "2022-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Flightless Fish",
+          "airdate": "2022-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Eight Views",
+          "airdate": "2022-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "To Your House",
+          "airdate": "2022-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Bocchi the Rock",
+          "airdate": "2022-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Enoshima Escar",
+          "airdate": "2022-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "After Dark",
+          "airdate": "2022-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Duodecimal Sunset",
+          "airdate": "2022-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Morning Light Falls on You",
+          "airdate": "2022-12-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

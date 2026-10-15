@@ -3,21 +3,20 @@
   "slug": "business-proposal",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.299Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.940Z",
   "tvmaze": {
-    "id": null,
+    "id": 59755,
     "name": "Business Proposal",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 70,
+    "premiered": "2022-02-28",
+    "network": "SBS"
   },
   "coverage": {
-    "total": 5,
-    "live": 0,
-    "review": 5,
-    "missing": 0,
-    "pct": 100
+    "total": 12,
+    "live": 1,
+    "review": 0,
+    "missing": 11,
+    "pct": 8
   },
   "seasons": [
     {
@@ -25,102 +24,124 @@
       "episodes": [
         {
           "number": 1,
-          "name": "businessproposalep05",
-          "state": "REVIEW",
-          "file": {
-            "item": "business-proposal-ep-05",
-            "itemTitle": "Business Proposal EP 05",
-            "file": "BusinessProposalEP05.mp4",
-            "name": "BusinessProposalEP05",
-            "url": "https://archive.org/download/business-proposal-ep-05/BusinessProposalEP05.mp4",
-            "seconds": 3619,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 1",
+          "airdate": "2022-02-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "businessproposalep06",
-          "state": "REVIEW",
-          "file": {
-            "item": "business-proposal-ep-06",
-            "itemTitle": "Business Proposal EP 06",
-            "file": "BusinessProposalEP06.mp4",
-            "name": "BusinessProposalEP06",
-            "url": "https://archive.org/download/business-proposal-ep-06/BusinessProposalEP06.mp4",
-            "seconds": 3633,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1342,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 2",
+          "airdate": "2022-03-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "businessproposalep10",
-          "state": "REVIEW",
-          "file": {
-            "item": "business-proposal-ep-10",
-            "itemTitle": "Business Proposal EP 10",
-            "file": "BusinessProposalEP10.mp4",
-            "name": "BusinessProposalEP10",
-            "url": "https://archive.org/download/business-proposal-ep-10/BusinessProposalEP10.mp4",
-            "seconds": 3616,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1234,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 3",
+          "airdate": "2022-03-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "businessproposalep11",
-          "state": "REVIEW",
-          "file": {
-            "item": "business-proposal-ep-11",
-            "itemTitle": "Business Proposal EP 11",
-            "file": "BusinessProposalEP11.mp4",
-            "name": "BusinessProposalEP11",
-            "url": "https://archive.org/download/business-proposal-ep-11/BusinessProposalEP11.mp4",
-            "seconds": 3629,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1533,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 4",
+          "airdate": "2022-03-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "businessproposalep12",
-          "state": "REVIEW",
+          "name": "Episode 5",
+          "airdate": "2022-03-14",
+          "state": "LIVE",
           "file": {
-            "item": "business-proposal-ep-12",
-            "itemTitle": "Business Proposal EP 12",
-            "file": "BusinessProposalEP12.mp4",
-            "name": "BusinessProposalEP12",
-            "url": "https://archive.org/download/business-proposal-ep-12/BusinessProposalEP12.mp4",
-            "seconds": 3630,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "mkv-drama.-org-business.-proposal.-s-01-e-05.x-264.1080p",
+            "itemTitle": "05 BUSINESS PROPOSAL",
+            "file": "[MkvDrama.Org]Business.Proposal.S01E05.x264.1080p.ia.mp4",
+            "name": "[MkvDrama.Org]Business.Proposal.S01E05.x264",
+            "url": "https://archive.org/download/mkv-drama.-org-business.-proposal.-s-01-e-05.x-264.1080p/%5BMkvDrama.Org%5DBusiness.Proposal.S01E05.x264.1080p.ia.mp4",
+            "seconds": 3670,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 1197,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2237
           },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "mkv-drama.-org-business.-proposal.-s-01-e-05.x-264.1080p",
+              "itemTitle": "05 BUSINESS PROPOSAL",
+              "file": "[MkvDrama.Org]Business.Proposal.S01E05.x264.1080p.mp4",
+              "name": "[MkvDrama.Org]Business.Proposal.S01E05.x264.1080p",
+              "url": "https://archive.org/download/mkv-drama.-org-business.-proposal.-s-01-e-05.x-264.1080p/%5BMkvDrama.Org%5DBusiness.Proposal.S01E05.x264.1080p.mp4",
+              "seconds": 3670,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2237
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "2022-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Episode 7",
+          "airdate": "2022-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Episode 8",
+          "airdate": "2022-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Episode 9",
+          "airdate": "2022-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Episode 10",
+          "airdate": "2022-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Episode 11",
+          "airdate": "2022-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Episode 12",
+          "airdate": "2022-04-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

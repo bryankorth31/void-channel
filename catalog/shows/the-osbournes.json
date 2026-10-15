@@ -3,21 +3,20 @@
   "slug": "the-osbournes",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-15T01:19:07.861Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:32.461Z",
   "tvmaze": {
-    "id": null,
+    "id": 4027,
     "name": "The Osbournes",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "2002-03-05",
     "network": "MTV"
   },
   "coverage": {
-    "total": 103,
+    "total": 51,
     "live": 0,
-    "review": 103,
-    "missing": 0,
-    "pct": 100
+    "review": 45,
+    "missing": 6,
+    "pct": 88
   },
   "seasons": [
     {
@@ -25,240 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "reloaded ws pdtv fqm",
+          "name": "There Goes the Neighborhood",
+          "airdate": "2002-03-05",
           "state": "REVIEW",
           "file": {
-            "item": "osbournes.reloaded.s01e01.ws.pdtv.xvid-fqm",
-            "itemTitle": "Osbournes Reloaded - S01E01 - osbournes.reloaded.s01e01.ws.pdtv.xvid-fqm",
-            "file": "osbournes.reloaded.s01e01.ws.pdtv.xvid-fqm.mp4",
-            "name": "osbournes.reloaded.s01e01.ws.pdtv.xvid-fqm",
-            "url": "https://archive.org/download/osbournes.reloaded.s01e01.ws.pdtv.xvid-fqm/osbournes.reloaded.s01e01.ws.pdtv.xvid-fqm.mp4",
-            "seconds": 1593,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "video (xvid)",
-            "sizeMB": 163,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "the bark at the moon",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E02 - Bark at the Moon.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E02 - Bark at the Moon",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E02%20-%20Bark%20at%20the%20Moon.mp4",
-            "seconds": 1254,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 75,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "the for the record",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E03 - For the Record....mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E03 - For the Record...",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E03%20-%20For%20the%20Record....mp4",
-            "seconds": 1271,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 135,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "the wont you be my neighbor",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E04 - Won't You Be My Neighbor.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E04 - Won't You Be My Neighbor",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E04%20-%20Won't%20You%20Be%20My%20Neighbor.mp4",
-            "seconds": 3580,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 186,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "the tour of duty",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E05 - Tour of Duty.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E05 - Tour of Duty",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E05%20-%20Tour%20of%20Duty.mp4",
-            "seconds": 3687,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 198,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "the trouble in paradise",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E06 - Trouble in Paradise.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E06 - Trouble in Paradise",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E06%20-%20Trouble%20in%20Paradise.mp4",
-            "seconds": 1267,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 75,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "the get stuffed",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E07 - Get Stuffed.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E07 - Get Stuffed",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E07%20-%20Get%20Stuffed.mp4",
-            "seconds": 1258,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 73,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "the no vagrancy",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E08 - No Vagrancy.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E08 - No Vagrancy",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E08%20-%20No%20Vagrancy.mp4",
-            "seconds": 3750,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 212,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "the a very ozzy christmas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E09 - A Very Ozzy Christmas.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E09 - A Very Ozzy Christmas",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E09%20-%20A%20Very%20Ozzy%20Christmas.mp4",
-            "seconds": 1254,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 80,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "the dinner with ozzy",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 1/The Osbournes - S01E10 - Dinner with Ozzy.mp4",
-            "name": "The Osbournes/Season 1/The Osbournes - S01E10 - Dinner with Ozzy",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E10%20-%20Dinner%20with%20Ozzy.mp4",
-            "seconds": 1293,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 73,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "the the there goes the neighborhood",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"There Goes the Neighborhood\" (0.98)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E01_The Osbournes - There Goes the Neighborhood.mp4",
@@ -267,18 +38,32 @@
             "seconds": 1294,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 1/The Osbournes - S01E01 - There Goes the Neighborhood.mp4",
+              "name": "The Osbournes/Season 1/The Osbournes - S01E01 - There Goes the Neighborhood",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E01%20-%20There%20Goes%20the%20Neighborhood.mp4",
+              "seconds": 1263,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            }
+          ]
         },
         {
-          "number": 12,
-          "name": "the bark at the moon",
+          "number": 2,
+          "name": "Bark at the Moon",
+          "airdate": "2002-03-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bark at the Moon\" (0.96)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E02_Bark at the Moon.mp4",
@@ -287,18 +72,18 @@
             "seconds": 1290,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "the for the record",
+          "number": 3,
+          "name": "For the Record",
+          "airdate": "2002-03-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"For the Record\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E03_For the Record.mp4",
@@ -307,18 +92,32 @@
             "seconds": 1291,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 1/The Osbournes - S01E03 - For the Record....mp4",
+              "name": "The Osbournes/Season 1/The Osbournes - S01E03 - For the Record...",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E03%20-%20For%20the%20Record....mp4",
+              "seconds": 1271,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
-          "number": 14,
-          "name": "the wont you be my neighbor",
+          "number": 4,
+          "name": "Won't You Be My Neighbor?",
+          "airdate": "2002-03-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Won't You Be My Neighbor?\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E04_Won't You Be My Neighbor.mp4",
@@ -327,18 +126,18 @@
             "seconds": 1289,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "the tour of duty",
+          "number": 5,
+          "name": "Tour of Duty",
+          "airdate": "2002-04-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Tour of Duty\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E05_Tour of Duty.mp4",
@@ -347,18 +146,18 @@
             "seconds": 1275,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 126,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 126
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "the trouble in paradise",
+          "number": 6,
+          "name": "Trouble in Paradise",
+          "airdate": "2002-04-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Trouble in Paradise\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E06_Trouble in Paradise.mp4",
@@ -367,18 +166,32 @@
             "seconds": 1284,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 126,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 1/The Osbournes - S01E06 - Trouble in Paradise.mp4",
+              "name": "The Osbournes/Season 1/The Osbournes - S01E06 - Trouble in Paradise",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E06%20-%20Trouble%20in%20Paradise.mp4",
+              "seconds": 1267,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 75
+            }
+          ]
         },
         {
-          "number": 17,
-          "name": "the get stuffed",
+          "number": 7,
+          "name": "Get Stuffed",
+          "airdate": "2002-04-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Get Stuffed\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E07_Get Stuffed.mp4",
@@ -387,18 +200,18 @@
             "seconds": 1294,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "the no vagrancy",
+          "number": 8,
+          "name": "No Vagrancy",
+          "airdate": "2002-04-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"No Vagrancy\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E08_No Vagrancy.mp4",
@@ -407,18 +220,18 @@
             "seconds": 1287,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "the a very ozzy christmas",
+          "number": 9,
+          "name": "A Very Ozzy Christmas",
+          "airdate": "2002-04-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Very Ozzy Christmas\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E09_A Very Ozzy Christmas.mp4",
@@ -427,18 +240,18 @@
             "seconds": 1290,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "the dinner with ozzy",
+          "number": 10,
+          "name": "Dinner with Ozzy",
+          "airdate": "2002-05-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Dinner with Ozzy\" (0.95)",
             "item": "the-osbournes-season-1-4-complete-series",
             "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
             "file": "The Osbournes_S01E10_Dinner with Ozzy.mp4",
@@ -447,832 +260,23 @@
             "seconds": 1290,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "the catching up with the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E01_Catching Up with the Osbournes.mp4",
-            "name": "The Osbournes_S02E01_Catching Up with the Osbournes",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E01_Catching%20Up%20with%20the%20Osbournes.mp4",
-            "seconds": 1257,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 126,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "the what goes up",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E02_What Goes Up.mp4",
-            "name": "The Osbournes_S02E02_What Goes Up",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E02_What%20Goes%20Up.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "the must come down",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E03_Must Come Down.mp4",
-            "name": "The Osbournes_S02E03_Must Come Down",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E03_Must%20Come%20Down.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "the the ozz man and the sea",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E04_The Ozz Man and the Sea.mp4",
-            "name": "The Osbournes_S02E04_The Ozz Man and the Sea",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E04_The%20Ozz%20Man%20and%20the%20Sea.mp4",
-            "seconds": 1252,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "the beauty and the bert",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E05_Beauty and The Bert.mp4",
-            "name": "The Osbournes_S02E05_Beauty and The Bert",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E05_Beauty%20and%20The%20Bert.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "the smells like teen spirits",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E06_Smells Like Teen Spirits.mp4",
-            "name": "The Osbournes_S02E06_Smells Like Teen Spirits",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E06_Smells%20Like%20Teen%20Spirits.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "the meow means no",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E07_Meow Means No.mp4",
-            "name": "The Osbournes_S02E07_Meow Means No",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E07_Meow%20Means%20No.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "the its a hard knock life",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E08_It's A Hard Knock LIfe.mp4",
-            "name": "The Osbournes_S02E08_It's A Hard Knock LIfe",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E08_It's%20A%20Hard%20Knock%20LIfe.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "the cleanliness is next to ozzyness",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E09_Cleanliness is Next to Ozzyness.mp4",
-            "name": "The Osbournes_S02E09_Cleanliness is Next to Ozzyness",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E09_Cleanliness%20is%20Next%20to%20Ozzyness.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "the viva ozz vegas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E10_Viva Ozz-Vegas.mp4",
-            "name": "The Osbournes_S02E10_Viva Ozz-Vegas",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E10_Viva%20Ozz-Vegas.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "the my big fat jewish wedding",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E11_My Big Fat Jewish Wedding.mp4",
-            "name": "The Osbournes_S02E11_My Big Fat Jewish Wedding",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E11_My%20Big%20Fat%20Jewish%20Wedding.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "the what a boy wants",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E12_What A Boy Wants.mp4",
-            "name": "The Osbournes_S02E12_What A Boy Wants",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E12_What%20A%20Boy%20Wants.mp4",
-            "seconds": 1260,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "the fleas a crowd",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E13_Fleas A Crowd.mp4",
-            "name": "The Osbournes_S02E13_Fleas A Crowd",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E13_Fleas%20A%20Crowd.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "the run ozzy run",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E14_Run Ozzy Run.mp4",
-            "name": "The Osbournes_S02E14_Run Ozzy Run",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E14_Run%20Ozzy%20Run.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "the fists of fury",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E15_Fists of Fury.mp4",
-            "name": "The Osbournes_S02E15_Fists of Fury",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E15_Fists%20of%20Fury.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "the mama im staying home",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E16_Mama, I'm Staying Home.mp4",
-            "name": "The Osbournes_S02E16_Mama, I'm Staying Home",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E16_Mama%2C%20I'm%20Staying%20Home.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "the tennis racket",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E17_Tennis Racket.mp4",
-            "name": "The Osbournes_S02E17_Tennis Racket",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E17_Tennis%20Racket.mp4",
-            "seconds": 1279,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "the a little ditty about jack and brieann",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E18_A Little Ditty About Jack and Brieann.mp4",
-            "name": "The Osbournes_S02E18_A Little Ditty About Jack and Brieann",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E18_A%20Little%20Ditty%20About%20Jack%20and%20Brieann.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "the angler management",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E19_Angler Management.mp4",
-            "name": "The Osbournes_S02E19_Angler Management",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E19_Angler%20Management.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "the bye bye babies",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E20_Bye Bye Babies.mp4",
-            "name": "The Osbournes_S02E20_Bye Bye Babies",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E20_Bye%20Bye%20Babies.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "the ozz that ends well",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S02E21_Ozz That Ends Well.mp4",
-            "name": "The Osbournes_S02E21_Ozz That Ends Well",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E21_Ozz%20That%20Ends%20Well.mp4",
-            "seconds": 1261,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "the the show must go ozz",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E01_The Show Must Go Ozz.mp4",
-            "name": "The Osbournes_S03E01_The Show Must Go Ozz",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E01_The%20Show%20Must%20Go%20Ozz.mp4",
-            "seconds": 1287,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 126,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "the car jacked",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E02_Car Jacked.mp4",
-            "name": "The Osbournes_S03E02_Car Jacked",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E02_Car%20Jacked.mp4",
-            "seconds": 1456,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 44,
-          "name": "the rebel without an ozz",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E03_Rebel Without An Ozz.mp4",
-            "name": "The Osbournes_S03E03_Rebel Without An Ozz",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E03_Rebel%20Without%20An%20Ozz.mp4",
-            "seconds": 1271,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "the return of the ring",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E04_Return of the Ring.mp4",
-            "name": "The Osbournes_S03E04_Return of the Ring",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E04_Return%20of%20the%20Ring.mp4",
-            "seconds": 1258,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 46,
-          "name": "the the accidental tourist",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E05_The Accidental Tourist.mp4",
-            "name": "The Osbournes_S03E05_The Accidental Tourist",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E05_The%20Accidental%20Tourist.mp4",
-            "seconds": 1259,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 47,
-          "name": "the the patient",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E06_The English Patient.mp4",
-            "name": "The Osbournes_S03E06_The English Patient",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E06_The%20English%20Patient.mp4",
-            "seconds": 1288,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "the scent of a woman",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E07_Scent of a Woman.mp4",
-            "name": "The Osbournes_S03E07_Scent of a Woman",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E07_Scent%20of%20a%20Woman.mp4",
-            "seconds": 1287,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "the pain in the neck",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E08_Pain in the Neck.mp4",
-            "name": "The Osbournes_S03E08_Pain in the Neck",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E08_Pain%20in%20the%20Neck.mp4",
-            "seconds": 1289,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "the ozzy knows best",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E09_Ozzy Knows Best.mp4",
-            "name": "The Osbournes_S03E09_Ozzy Knows Best",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E09_Ozzy%20Knows%20Best.mp4",
-            "seconds": 1243,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "the valentine daze",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S03E10_Valentine Daze.mp4",
-            "name": "The Osbournes_S03E10_Valentine Daze",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E10_Valentine%20Daze.mp4",
-            "seconds": 1289,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "the sleepless in beverly hills",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E01_Sleepless in Beverly Hills.mp4",
-            "name": "The Osbournes_S04E01_Sleepless in Beverly Hills",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E01_Sleepless%20in%20Beverly%20Hills.mp4",
-            "seconds": 1262,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "the have ozz will travel",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E02_Have Ozz Will Travel.mp4",
-            "name": "The Osbournes_S04E02_Have Ozz Will Travel",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E02_Have%20Ozz%20Will%20Travel.mp4",
-            "seconds": 1280,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "the hawaii five ozz",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E03_Hawaii Five Ozz.mp4",
-            "name": "The Osbournes_S04E03_Hawaii Five Ozz",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E03_Hawaii%20Five%20Ozz.mp4",
-            "seconds": 1281,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 126,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 55,
-          "name": "the kelly interupted",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E04_Kelly Interupted.mp4",
-            "name": "The Osbournes_S04E04_Kelly Interupted",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E04_Kelly%20Interupted.mp4",
-            "seconds": 1232,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 56,
-          "name": "the 28 days later",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E05_28 Days Later.mp4",
-            "name": "The Osbournes_S04E05_28 Days Later",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E05_28%20Days%20Later.mp4",
-            "seconds": 1280,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 126,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 57,
-          "name": "the charity case",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E06_Charity Case.mp4",
-            "name": "The Osbournes_S04E06_Charity Case",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E06_Charity%20Case.mp4",
-            "seconds": 1271,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "the number one fan",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E07_Number One Fan.mp4",
-            "name": "The Osbournes_S04E07_Number One Fan",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E07_Number%20One%20Fan.mp4",
-            "seconds": 1266,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 59,
-          "name": "the lost in translation",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E08_Lost in Translation.mp4",
-            "name": "The Osbournes_S04E08_Lost in Translation",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E08_Lost%20in%20Translation.mp4",
-            "seconds": 1290,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "the the show must go off",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E09_The Show Must Go Off.mp4",
-            "name": "The Osbournes_S04E09_The Show Must Go Off",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E09_The%20Show%20Must%20Go%20Off.mp4",
-            "seconds": 1256,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "the a farewell to ozz",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-season-1-4-complete-series",
-            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
-            "file": "The Osbournes_S04E10_A Farewell to Ozz.mp4",
-            "name": "The Osbournes_S04E10_A Farewell to Ozz",
-            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E10_A%20Farewell%20to%20Ozz.mp4",
-            "seconds": 1290,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 1/The Osbournes - S01E10 - Dinner with Ozzy.mp4",
+              "name": "The Osbournes/Season 1/The Osbournes - S01E10 - Dinner with Ozzy",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%201%2FThe%20Osbournes%20-%20S01E10%20-%20Dinner%20with%20Ozzy.mp4",
+              "seconds": 1293,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 73
+            }
+          ]
         }
       ]
     },
@@ -1281,469 +285,484 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the what goes up",
+          "name": "What Goes Up...",
+          "airdate": "2002-11-26",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E01 - What Goes Up....mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E01 - What Goes Up...",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E01%20-%20What%20Goes%20Up....mp4",
-            "seconds": 1244,
+            "conf": 0.8,
+            "why": "title ~ \"What Goes Up...\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E02_What Goes Up.mp4",
+            "name": "The Osbournes_S02E02_What Goes Up",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E02_What%20Goes%20Up.mp4",
+            "seconds": 1261,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "the must come down",
+          "name": "Must Come Down",
+          "airdate": "2002-12-03",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E02 - Must Come Down.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E02 - Must Come Down",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E02%20-%20Must%20Come%20Down.mp4",
-            "seconds": 1256,
+            "conf": 0.8,
+            "why": "title ~ \"Must Come Down\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E03_Must Come Down.mp4",
+            "name": "The Osbournes_S02E03_Must Come Down",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E03_Must%20Come%20Down.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "the the ozz man and the sea",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E03 - The Ozz Man and the Sea.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E03 - The Ozz Man and the Sea",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E03%20-%20The%20Ozz%20Man%20and%20the%20Sea.mp4",
-            "seconds": 1231,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Ozz Man and the Sea",
+          "airdate": "2002-12-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the beauty and the bert",
+          "name": "Beauty and the Bert",
+          "airdate": "2002-12-17",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E04 - Beauty and the Bert.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E04 - Beauty and the Bert",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E04%20-%20Beauty%20and%20the%20Bert.mp4",
-            "seconds": 1233,
+            "conf": 0.8,
+            "why": "title ~ \"Beauty and the Bert\" (1.00)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E05_Beauty and The Bert.mp4",
+            "name": "The Osbournes_S02E05_Beauty and The Bert",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E05_Beauty%20and%20The%20Bert.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "the smells like teen spirits",
+          "name": "Smells Like Teen Spirits",
+          "airdate": "2003-01-07",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E05 - Smells Like Teen Spirits.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E05 - Smells Like Teen Spirits",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E05%20-%20Smells%20Like%20Teen%20Spirits.mp4",
-            "seconds": 1223,
+            "conf": 0.8,
+            "why": "title ~ \"Smells Like Teen Spirits\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E06_Smells Like Teen Spirits.mp4",
+            "name": "The Osbournes_S02E06_Smells Like Teen Spirits",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E06_Smells%20Like%20Teen%20Spirits.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 120,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "the meow means no",
+          "name": "Meow Means No!",
+          "airdate": "2003-01-14",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E06 - Meow Means No!.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E06 - Meow Means No!",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E06%20-%20Meow%20Means%20No!.mp4",
-            "seconds": 1254,
+            "conf": 0.8,
+            "why": "title ~ \"Meow Means No!\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E07_Meow Means No.mp4",
+            "name": "The Osbournes_S02E07_Meow Means No",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E07_Meow%20Means%20No.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "the its a hard knock life",
+          "name": "It's a Hard Knock Life",
+          "airdate": "2003-01-21",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E07 - It's a Hard Knock Life.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E07 - It's a Hard Knock Life",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E07%20-%20It's%20a%20Hard%20Knock%20Life.mp4",
-            "seconds": 1255,
+            "conf": 0.8,
+            "why": "title ~ \"It's a Hard Knock Life\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E08_It's A Hard Knock LIfe.mp4",
+            "name": "The Osbournes_S02E08_It's A Hard Knock LIfe",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E08_It's%20A%20Hard%20Knock%20LIfe.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the cleanliness is next to ozzyness",
+          "name": "Cleanliness is Next to Ozzyness",
+          "airdate": "2003-01-28",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E08 - Cleanliness Is Next to Ozzyness.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E08 - Cleanliness Is Next to Ozzyness",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E08%20-%20Cleanliness%20Is%20Next%20to%20Ozzyness.mp4",
-            "seconds": 1253,
+            "conf": 0.8,
+            "why": "title ~ \"Cleanliness is Next to Ozzyness\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E09_Cleanliness is Next to Ozzyness.mp4",
+            "name": "The Osbournes_S02E09_Cleanliness is Next to Ozzyness",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E09_Cleanliness%20is%20Next%20to%20Ozzyness.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "the viva ozz vegas",
+          "name": "Viva Ozz Vegas",
+          "airdate": "2003-02-04",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E09 - Viva Ozz Vegas.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E09 - Viva Ozz Vegas",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E09%20-%20Viva%20Ozz%20Vegas.mp4",
-            "seconds": 1232,
+            "conf": 0.8,
+            "why": "title ~ \"Viva Ozz Vegas\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E10_Viva Ozz-Vegas.mp4",
+            "name": "The Osbournes_S02E10_Viva Ozz-Vegas",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E10_Viva%20Ozz-Vegas.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the 5",
+          "name": "My Big Fat Jewish Wedding",
+          "airdate": "2003-02-11",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E10.5.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E10.5",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E10.5.mp4",
-            "seconds": 1955,
+            "conf": 0.8,
+            "why": "title ~ \"My Big Fat Jewish Wedding\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E11_My Big Fat Jewish Wedding.mp4",
+            "name": "The Osbournes_S02E11_My Big Fat Jewish Wedding",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E11_My%20Big%20Fat%20Jewish%20Wedding.mp4",
+            "seconds": 1260,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 191,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 2/The Osbournes - S02E10 - My Big Fat Jewish Wedding.mp4",
+              "name": "The Osbournes/Season 2/The Osbournes - S02E10 - My Big Fat Jewish Wedding",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E10%20-%20My%20Big%20Fat%20Jewish%20Wedding.mp4",
+              "seconds": 1262,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "the what a boy wants",
+          "name": "What a Boy Wants",
+          "airdate": "2003-06-10",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E11 - What a Boy Wants.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E11 - What a Boy Wants",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E11%20-%20What%20a%20Boy%20Wants.mp4",
-            "seconds": 1270,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"What a Boy Wants\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E12_What A Boy Wants.mp4",
+            "name": "The Osbournes_S02E12_What A Boy Wants",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E12_What%20A%20Boy%20Wants.mp4",
+            "seconds": 1260,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 132,
-            "ep": {
-              "season": 2,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 2/The Osbournes - S02E11 - What a Boy Wants.mp4",
+              "name": "The Osbournes/Season 2/The Osbournes - S02E11 - What a Boy Wants",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E11%20-%20What%20a%20Boy%20Wants.mp4",
+              "seconds": 1270,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "the fleas a crowd",
+          "name": "Flea's a Crowd",
+          "airdate": "2003-06-17",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E12 - Flea's a Crowd.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E12 - Flea's a Crowd",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E12%20-%20Flea's%20a%20Crowd.mp4",
-            "seconds": 1271,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Flea's a Crowd\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E13_Fleas A Crowd.mp4",
+            "name": "The Osbournes_S02E13_Fleas A Crowd",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E13_Fleas%20A%20Crowd.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 132,
-            "ep": {
-              "season": 2,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 2/The Osbournes - S02E12 - Flea's a Crowd.mp4",
+              "name": "The Osbournes/Season 2/The Osbournes - S02E12 - Flea's a Crowd",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E12%20-%20Flea's%20a%20Crowd.mp4",
+              "seconds": 1271,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "the run ozzy run",
+          "name": "Run Ozzy Run",
+          "airdate": "2003-06-24",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E13 - Run Ozzy Run.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E13 - Run Ozzy Run",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E13%20-%20Run%20Ozzy%20Run.mp4",
-            "seconds": 1266,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Run Ozzy Run\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E14_Run Ozzy Run.mp4",
+            "name": "The Osbournes_S02E14_Run Ozzy Run",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E14_Run%20Ozzy%20Run.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 132,
-            "ep": {
-              "season": 2,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 2/The Osbournes - S02E13 - Run Ozzy Run.mp4",
+              "name": "The Osbournes/Season 2/The Osbournes - S02E13 - Run Ozzy Run",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E13%20-%20Run%20Ozzy%20Run.mp4",
+              "seconds": 1266,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "the fists of fury",
+          "name": "Fists of Fury",
+          "airdate": "2003-07-01",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E14 - Fists of Fury.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E14 - Fists of Fury",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E14%20-%20Fists%20of%20Fury.mp4",
-            "seconds": 1279,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Fists of Fury\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E15_Fists of Fury.mp4",
+            "name": "The Osbournes_S02E15_Fists of Fury",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E15_Fists%20of%20Fury.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 133,
-            "ep": {
-              "season": 2,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 2/The Osbournes - S02E14 - Fists of Fury.mp4",
+              "name": "The Osbournes/Season 2/The Osbournes - S02E14 - Fists of Fury",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E14%20-%20Fists%20of%20Fury.mp4",
+              "seconds": 1279,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "the mama im staying home",
+          "name": "Mama, I'm Staying Home",
+          "airdate": "2003-07-08",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E15 - Mama, I'm Staying Home.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E15 - Mama, I'm Staying Home",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E15%20-%20Mama%2C%20I'm%20Staying%20Home.mp4",
-            "seconds": 1243,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Mama, I'm Staying Home\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E16_Mama, I'm Staying Home.mp4",
+            "name": "The Osbournes_S02E16_Mama, I'm Staying Home",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E16_Mama%2C%20I'm%20Staying%20Home.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 129,
-            "ep": {
-              "season": 2,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "the tennis racket",
+          "name": "Tennis Racket",
+          "airdate": "2003-07-15",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E16 - Tennis Racket.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E16 - Tennis Racket",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E16%20-%20Tennis%20Racket.mp4",
-            "seconds": 1266,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Tennis Racket\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E17_Tennis Racket.mp4",
+            "name": "The Osbournes_S02E17_Tennis Racket",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E17_Tennis%20Racket.mp4",
+            "seconds": 1279,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 132,
-            "ep": {
-              "season": 2,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 2/The Osbournes - S02E16 - Tennis Racket.mp4",
+              "name": "The Osbournes/Season 2/The Osbournes - S02E16 - Tennis Racket",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E16%20-%20Tennis%20Racket.mp4",
+              "seconds": 1266,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 17,
-          "name": "the a little ditty about jack and brieann",
+          "name": "A Little Ditty About Jack and Brieann",
+          "airdate": "2003-07-22",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E17 - A Little Ditty About Jack and Brieann.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E17 - A Little Ditty About Jack and Brieann",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E17%20-%20A%20Little%20Ditty%20About%20Jack%20and%20Brieann.mp4",
-            "seconds": 1173,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"A Little Ditty About Jack and Brieann\" (0.96)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E18_A Little Ditty About Jack and Brieann.mp4",
+            "name": "The Osbournes_S02E18_A Little Ditty About Jack and Brieann",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E18_A%20Little%20Ditty%20About%20Jack%20and%20Brieann.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 2,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "the angler management",
+          "name": "Angler Management",
+          "airdate": "2003-07-29",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E18 - Angler Management.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E18 - Angler Management",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E18%20-%20Angler%20Management.mp4",
-            "seconds": 1226,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Angler Management\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E19_Angler Management.mp4",
+            "name": "The Osbournes_S02E19_Angler Management",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E19_Angler%20Management.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": {
-              "season": 2,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "the bye bye babies",
+          "name": "Bye Bye Babies",
+          "airdate": "2003-08-05",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E19 - Bye Bye Babies.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E19 - Bye Bye Babies",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E19%20-%20Bye%20Bye%20Babies.mp4",
-            "seconds": 1231,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Bye Bye Babies\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E20_Bye Bye Babies.mp4",
+            "name": "The Osbournes_S02E20_Bye Bye Babies",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E20_Bye%20Bye%20Babies.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 128,
-            "ep": {
-              "season": 2,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "the ozz well that ends well",
+          "name": "Ozz Well That Ends Well",
+          "airdate": "2003-08-12",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E20 - Ozz Well That Ends Well.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E20 - Ozz Well That Ends Well",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E20%20-%20Ozz%20Well%20That%20Ends%20Well.mp4",
-            "seconds": 1251,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Ozz Well That Ends Well\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S02E21_Ozz That Ends Well.mp4",
+            "name": "The Osbournes_S02E21_Ozz That Ends Well",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S02E21_Ozz%20That%20Ends%20Well.mp4",
+            "seconds": 1261,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 2,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "the the osbourne family christmas special 1",
+          "name": "The Osbourne Family Christmas Special",
+          "airdate": "2003-12-11",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "the-osbournes-full",
             "itemTitle": "The Osbournes (Full)",
             "file": "The Osbournes/Season 2/The Osbournes - S02E21 - The Osbourne Family Christmas Special (1).mp4",
@@ -1752,36 +771,7 @@
             "seconds": 1321,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133,
-            "ep": {
-              "season": 2,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "the",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 2/The Osbournes - S02E22.mp4",
-            "name": "The Osbournes/Season 2/The Osbournes - S02E22",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%202%2FThe%20Osbournes%20-%20S02E22.mp4",
-            "seconds": 2067,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 158,
-            "ep": {
-              "season": 2,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 133
           },
           "alternates": []
         }
@@ -1792,231 +782,207 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the the show must go oz",
+          "name": "The Show Must Go Oz",
+          "airdate": "2004-01-27",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E01 - The Show Must Go Oz.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E01 - The Show Must Go Oz",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E01%20-%20The%20Show%20Must%20Go%20Oz.mp4",
-            "seconds": 1291,
+            "conf": 0.8,
+            "why": "title ~ \"The Show Must Go Oz\" (0.93)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E01_The Show Must Go Ozz.mp4",
+            "name": "The Osbournes_S03E01_The Show Must Go Ozz",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E01_The%20Show%20Must%20Go%20Ozz.mp4",
+            "seconds": 1287,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 125,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 3/The Osbournes - S03E01 - The Show Must Go Oz.mp4",
+              "name": "The Osbournes/Season 3/The Osbournes - S03E01 - The Show Must Go Oz",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E01%20-%20The%20Show%20Must%20Go%20Oz.mp4",
+              "seconds": 1291,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "the car jacked",
+          "name": "Car Jacked",
+          "airdate": "2004-02-03",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E02 - Car Jacked.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E02 - Car Jacked",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E02%20-%20Car%20Jacked.mp4",
-            "seconds": 1274,
+            "conf": 0.8,
+            "why": "title ~ \"Car Jacked\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E02_Car Jacked.mp4",
+            "name": "The Osbournes_S03E02_Car Jacked",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E02_Car%20Jacked.mp4",
+            "seconds": 1456,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 3/The Osbournes - S03E02 - Car Jacked.mp4",
+              "name": "The Osbournes/Season 3/The Osbournes - S03E02 - Car Jacked",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E02%20-%20Car%20Jacked.mp4",
+              "seconds": 1274,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "the rebel without an ozz",
+          "name": "Rebel Without an Ozz",
+          "airdate": "2004-02-10",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E03 - Rebel Without an Ozz.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E03 - Rebel Without an Ozz",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E03%20-%20Rebel%20Without%20an%20Ozz.mp4",
-            "seconds": 1246,
+            "conf": 0.8,
+            "why": "title ~ \"Rebel Without an Ozz\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E03_Rebel Without An Ozz.mp4",
+            "name": "The Osbournes_S03E03_Rebel Without An Ozz",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E03_Rebel%20Without%20An%20Ozz.mp4",
+            "seconds": 1271,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the return of the ring",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E04 - Return of the Ring.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E04 - Return of the Ring",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E04%20-%20Return%20of%20the%20Ring.mp4",
-            "seconds": 1174,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 114,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Return of the Ring",
+          "airdate": "2004-02-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "the the accidental tourist 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E05 - The Accidental Tourist (1).mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E05 - The Accidental Tourist (1)",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E05%20-%20The%20Accidental%20Tourist%20(1).mp4",
-            "seconds": 1230,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Accidental Tourist (1)",
+          "airdate": "2004-02-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "the the patient 2",
+          "name": "The English Patient (2)",
+          "airdate": "2004-04-06",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E06 - The English Patient (2).mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E06 - The English Patient (2)",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E06%20-%20The%20English%20Patient%20(2).mp4",
+            "conf": 0.6,
+            "why": "title ~ \"The English Patient (2)\" (0.62)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E06_The English Patient.mp4",
+            "name": "The Osbournes_S03E06_The English Patient",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E06_The%20English%20Patient.mp4",
             "seconds": 1288,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 128
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "the scent of a woman",
+          "name": "Scent of a Woman",
+          "airdate": "2004-04-13",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E07 - Scent of a Woman.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E07 - Scent of a Woman",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E07%20-%20Scent%20of%20a%20Woman.mp4",
-            "seconds": 1202,
+            "conf": 0.8,
+            "why": "title ~ \"Scent of a Woman\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E07_Scent of a Woman.mp4",
+            "name": "The Osbournes_S03E07_Scent of a Woman",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E07_Scent%20of%20a%20Woman.mp4",
+            "seconds": 1287,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 119,
-            "ep": {
-              "season": 3,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the pain in the neck",
+          "name": "Pain in the Neck",
+          "airdate": "2004-04-20",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E08 - Pain in the Neck.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E08 - Pain in the Neck",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E08%20-%20Pain%20in%20the%20Neck.mp4",
-            "seconds": 1268,
+            "conf": 0.8,
+            "why": "title ~ \"Pain in the Neck\" (0.96)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E08_Pain in the Neck.mp4",
+            "name": "The Osbournes_S03E08_Pain in the Neck",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E08_Pain%20in%20the%20Neck.mp4",
+            "seconds": 1289,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": {
-              "season": 3,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 3/The Osbournes - S03E08 - Pain in the Neck.mp4",
+              "name": "The Osbournes/Season 3/The Osbournes - S03E08 - Pain in the Neck",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E08%20-%20Pain%20in%20the%20Neck.mp4",
+              "seconds": 1268,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "the ozzy knows best",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E09 - Ozzy Knows Best.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E09 - Ozzy Knows Best",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E09%20-%20Ozzy%20Knows%20Best.mp4",
-            "seconds": 1238,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 3,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Ozzy Knows Best",
+          "airdate": "2004-04-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the valentine daze",
+          "name": "Valentine Daze",
+          "airdate": "2004-05-04",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 3/The Osbournes - S03E10 - Valentine Daze.mp4",
-            "name": "The Osbournes/Season 3/The Osbournes - S03E10 - Valentine Daze",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%203%2FThe%20Osbournes%20-%20S03E10%20-%20Valentine%20Daze.mp4",
-            "seconds": 1258,
+            "conf": 0.8,
+            "why": "title ~ \"Valentine Daze\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S03E10_Valentine Daze.mp4",
+            "name": "The Osbournes_S03E10_Valentine Daze",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S03E10_Valentine%20Daze.mp4",
+            "seconds": 1289,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 126,
-            "ep": {
-              "season": 3,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
           "alternates": []
         }
@@ -2027,233 +993,221 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the sleepless in beverly hills",
+          "name": "Sleepless in Beverly Hills",
+          "airdate": "2005-01-17",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E01 - Sleepless in Beverly Hills.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E01 - Sleepless in Beverly Hills",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E01%20-%20Sleepless%20in%20Beverly%20Hills.mp4",
-            "seconds": 1232,
+            "conf": 0.8,
+            "why": "title ~ \"Sleepless in Beverly Hills\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E01_Sleepless in Beverly Hills.mp4",
+            "name": "The Osbournes_S04E01_Sleepless in Beverly Hills",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E01_Sleepless%20in%20Beverly%20Hills.mp4",
+            "seconds": 1262,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 4,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "the have ozz will travel 1",
+          "name": "Have Ozz Will Travel (1)",
+          "airdate": "2005-01-24",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E02 - Have Ozz Will Travel (1).mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E02 - Have Ozz Will Travel (1)",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E02%20-%20Have%20Ozz%20Will%20Travel%20(1).mp4",
-            "seconds": 1260,
+            "conf": 0.8,
+            "why": "title ~ \"Have Ozz Will Travel (1)\" (0.88)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E02_Have Ozz Will Travel.mp4",
+            "name": "The Osbournes_S04E02_Have Ozz Will Travel",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E02_Have%20Ozz%20Will%20Travel.mp4",
+            "seconds": 1280,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 126,
-            "ep": {
-              "season": 4,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 4/The Osbournes - S04E02 - Have Ozz Will Travel (1).mp4",
+              "name": "The Osbournes/Season 4/The Osbournes - S04E02 - Have Ozz Will Travel (1)",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E02%20-%20Have%20Ozz%20Will%20Travel%20(1).mp4",
+              "seconds": 1260,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "the hawaii five ozz 2",
+          "name": "Hawaii Five Ozz (2)",
+          "airdate": "2005-01-31",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E03 - Hawaii Five Ozz (2).mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E03 - Hawaii Five Ozz (2)",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E03%20-%20Hawaii%20Five%20Ozz%20(2).mp4",
-            "seconds": 1228,
+            "conf": 0.8,
+            "why": "title ~ \"Hawaii Five Ozz (2)\" (0.86)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E03_Hawaii Five Ozz.mp4",
+            "name": "The Osbournes_S04E03_Hawaii Five Ozz",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E03_Hawaii%20Five%20Ozz.mp4",
+            "seconds": 1281,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 4,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 126
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the kelly interrupted",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E04 - Kelly Interrupted.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E04 - Kelly Interrupted",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E04%20-%20Kelly%20Interrupted.mp4",
-            "seconds": 1210,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 4,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Kelly Interrupted",
+          "airdate": "2005-02-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "the 28 days later",
+          "name": "28 Days Later",
+          "airdate": "2005-02-14",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E05 - 28 Days Later.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E05 - 28 Days Later",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E05%20-%2028%20Days%20Later.mp4",
-            "seconds": 1260,
+            "conf": 0.8,
+            "why": "title ~ \"28 Days Later\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E05_28 Days Later.mp4",
+            "name": "The Osbournes_S04E05_28 Days Later",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E05_28%20Days%20Later.mp4",
+            "seconds": 1280,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 126,
-            "ep": {
-              "season": 4,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 4/The Osbournes - S04E05 - 28 Days Later.mp4",
+              "name": "The Osbournes/Season 4/The Osbournes - S04E05 - 28 Days Later",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E05%20-%2028%20Days%20Later.mp4",
+              "seconds": 1260,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "the charity case",
+          "name": "Charity Case",
+          "airdate": "2005-02-21",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E06 - Charity Case.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E06 - Charity Case",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E06%20-%20Charity%20Case.mp4",
-            "seconds": 1215,
+            "conf": 0.8,
+            "why": "title ~ \"Charity Case\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E06_Charity Case.mp4",
+            "name": "The Osbournes_S04E06_Charity Case",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E06_Charity%20Case.mp4",
+            "seconds": 1271,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 4,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "the number one fan",
+          "name": "Number One Fan",
+          "airdate": "2005-02-28",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E07 - Number One Fan.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E07 - Number One Fan",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E07%20-%20Number%20One%20Fan.mp4",
-            "seconds": 1210,
+            "conf": 0.8,
+            "why": "title ~ \"Number One Fan\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E07_Number One Fan.mp4",
+            "name": "The Osbournes_S04E07_Number One Fan",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E07_Number%20One%20Fan.mp4",
+            "seconds": 1266,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 4,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the lozt in translation",
+          "name": "Lozt in Translation",
+          "airdate": "2005-03-07",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E08 - Lozt in Translation.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E08 - Lozt in Translation",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E08%20-%20Lozt%20in%20Translation.mp4",
-            "seconds": 1228,
+            "conf": 0.6,
+            "why": "title ~ \"Lozt in Translation\" (0.79)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E08_Lost in Translation.mp4",
+            "name": "The Osbournes_S04E08_Lost in Translation",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E08_Lost%20in%20Translation.mp4",
+            "seconds": 1290,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 4,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "the the show must go off",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E09 - The Show Must Go Off!.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E09 - The Show Must Go Off!",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E09%20-%20The%20Show%20Must%20Go%20Off!.mp4",
-            "seconds": 1230,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": {
-              "season": 4,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Show Must Go Off!",
+          "airdate": "2005-03-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the a farewell to ozz",
+          "name": "A Farewell to Ozz",
+          "airdate": "2005-03-21",
           "state": "REVIEW",
           "file": {
-            "item": "the-osbournes-full",
-            "itemTitle": "The Osbournes (Full)",
-            "file": "The Osbournes/Season 4/The Osbournes - S04E10 - A Farewell to Ozz.mp4",
-            "name": "The Osbournes/Season 4/The Osbournes - S04E10 - A Farewell to Ozz",
-            "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E10%20-%20A%20Farewell%20to%20Ozz.mp4",
-            "seconds": 1260,
+            "conf": 0.8,
+            "why": "title ~ \"A Farewell to Ozz\" (0.95)",
+            "item": "the-osbournes-season-1-4-complete-series",
+            "itemTitle": "The Osbournes Season 1-4 (Complete Series)",
+            "file": "The Osbournes_S04E10_A Farewell to Ozz.mp4",
+            "name": "The Osbournes_S04E10_A Farewell to Ozz",
+            "url": "https://archive.org/download/the-osbournes-season-1-4-complete-series/The%20Osbournes_S04E10_A%20Farewell%20to%20Ozz.mp4",
+            "seconds": 1290,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": {
-              "season": 4,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "the-osbournes-full",
+              "itemTitle": "The Osbournes (Full)",
+              "file": "The Osbournes/Season 4/The Osbournes - S04E10 - A Farewell to Ozz.mp4",
+              "name": "The Osbournes/Season 4/The Osbournes - S04E10 - A Farewell to Ozz",
+              "url": "https://archive.org/download/the-osbournes-full/The%20Osbournes%2FSeason%204%2FThe%20Osbournes%20-%20S04E10%20-%20A%20Farewell%20to%20Ozz.mp4",
+              "seconds": 1260,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         }
       ]
     }

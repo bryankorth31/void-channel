@@ -3,21 +3,20 @@
   "slug": "flower-of-evil",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.307Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:11.079Z",
   "tvmaze": {
-    "id": null,
+    "id": 46568,
     "name": "Flower of Evil",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 90,
+    "premiered": "2020-07-29",
+    "network": "tvN"
   },
   "coverage": {
-    "total": 1,
+    "total": 16,
     "live": 0,
-    "review": 1,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 16,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,22 +24,130 @@
       "episodes": [
         {
           "number": 1,
-          "name": "of evil1 merged",
-          "state": "REVIEW",
-          "file": {
-            "item": "flower-of-evil-1-merged_20220724",
-            "itemTitle": "Flower Of Evil 1 Merged",
-            "file": "Flower Of Evil1__Merged.mp4",
-            "name": "Flower Of Evil1__Merged",
-            "url": "https://archive.org/download/flower-of-evil-1-merged_20220724/Flower%20Of%20Evil1__Merged.mp4",
-            "seconds": 2391,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 261,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "My Dad Tried to Kill Me",
+          "airdate": "2020-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Missing Thumbnails",
+          "airdate": "2020-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Something is Off",
+          "airdate": "2020-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Real Culprit",
+          "airdate": "2020-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Watch Strap",
+          "airdate": "2020-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Witness",
+          "airdate": "2020-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "I Know You",
+          "airdate": "2020-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Reinvestigation",
+          "airdate": "2020-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "I'll Find the Accomplice",
+          "airdate": "2020-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Hyun Su's Deal",
+          "airdate": "2020-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Can't Leave Without You",
+          "airdate": "2020-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Hyun Su is not a Bad Person",
+          "airdate": "2020-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Invisible Accomplice",
+          "airdate": "2020-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "An Unwelcome Guest",
+          "airdate": "2020-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Detective Cha is Dead",
+          "airdate": "2020-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Another Beginning",
+          "airdate": "2020-09-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

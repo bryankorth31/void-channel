@@ -3,7 +3,7 @@
   "slug": "historys-mysteries",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-15T01:19:21.415Z",
+  "matchedAt": "2026-10-15T03:18:23.190Z",
   "tvmaze": {
     "id": 4549,
     "name": "History's Mysteries",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 38,
     "live": 0,
-    "review": 0,
-    "missing": 38,
-    "pct": 0
+    "review": 1,
+    "missing": 37,
+    "pct": 3
   },
   "seasons": [
     {
@@ -269,9 +269,35 @@
           "number": 15,
           "name": "Frankenstein",
           "airdate": "2004-05-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Frankenstein\" (0.95)",
+            "item": "historys-mysteries-frankenstein-hc-1997",
+            "itemTitle": "History's Mysteries: Frankenstein",
+            "file": "Historys Mysteries Frankenstein HC 1997.mp4",
+            "name": "Historys Mysteries Frankenstein HC 1997",
+            "url": "https://archive.org/download/historys-mysteries-frankenstein-hc-1997/Historys%20Mysteries%20Frankenstein%20HC%201997.mp4",
+            "seconds": 2528,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 249
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Frankenstein\" (0.95)",
+              "item": "historys-mysteries-frankenstein-hc-1997_202602",
+              "itemTitle": "Frankenstein",
+              "file": "Historys Mysteries Frankenstein HC 1997.mp4",
+              "name": "Historys Mysteries Frankenstein HC 1997",
+              "url": "https://archive.org/download/historys-mysteries-frankenstein-hc-1997_202602/Historys%20Mysteries%20Frankenstein%20HC%201997.mp4",
+              "seconds": 2528,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 249
+            }
+          ]
         },
         {
           "number": 16,

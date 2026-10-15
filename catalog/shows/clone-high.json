@@ -3,19 +3,18 @@
   "slug": "clone-high",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-15T01:19:07.843Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:32.174Z",
   "tvmaze": {
-    "id": null,
+    "id": 1643,
     "name": "Clone High",
-    "runtime": null,
-    "premiered": null,
-    "network": "MTV"
+    "runtime": 30,
+    "premiered": "2002-11-02",
+    "network": "Cartoon Network"
   },
   "coverage": {
-    "total": 17,
-    "live": 0,
-    "review": 17,
+    "total": 13,
+    "live": 13,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Escape to Beer Mountain: A Rope of Sand",
+          "airdate": "2002-11-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -37,21 +39,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 96,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 96
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 96
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Episode Two: Election Blu-Galoo",
+          "airdate": "2002-11-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e02.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -61,21 +75,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 103,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 103
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e02.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e02.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e02.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "A.D.D.: The Last 'D' is for Disorder",
+          "airdate": "2002-11-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -85,21 +111,46 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 103,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 103
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 103
+            },
+            {
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 03 - A.D.D. (The Last D is for Disorder)(SD).mp4",
+              "name": "S01 Episode 03 - A.D.D. (The Last D is for Disorder)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2003%20-%20A.D.D.%20(The%20Last%20D%20is%20for%20Disorder)(SD).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Film Fest: Tears of a Clone",
+          "airdate": "2002-11-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e04.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -109,21 +160,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 102,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 102
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e04.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e04.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e04.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 102
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Homecoming: A Shot in D'Arc",
+          "airdate": "2002-11-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e05.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -133,21 +196,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 95,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 95
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e05.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e05.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e05.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1285,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 95
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Sleep of Faith: La Rue D'Awakening",
+          "airdate": "2002-12-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e06.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -157,21 +232,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 104,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 104
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e06.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e06.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e06.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 104
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Plane Crazy: Gate Expectations",
+          "airdate": "2002-12-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -181,21 +268,46 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 113,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 113
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 113
+            },
+            {
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 07 - Plane Crazy (Gate Expectations)(SD).mp4",
+              "name": "S01 Episode 07 - Plane Crazy (Gate Expectations)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2007%20-%20Plane%20Crazy%20(Gate%20Expectations)(SD).mp4",
+              "seconds": 1292,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 64
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "A Room of One's Clone: The Pie of the Storm",
+          "airdate": "2002-12-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e08.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -205,21 +317,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 142,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e08.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e08.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e08.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Raisin the Stakes: A Rock Opera in Three Acts",
+          "airdate": "2003-01-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -229,21 +353,46 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 112,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 112
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 112
+            },
+            {
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 09 - Raisin the Stakes (A Rock Opera in Three Acts)(SD).mp4",
+              "name": "S01 Episode 09 - Raisin the Stakes (A Rock Opera in Three Acts)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2009%20-%20Raisin%20the%20Stakes%20(A%20Rock%20Opera%20in%20Three%20Acts)(SD).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Litter Kills: Litterally",
+          "airdate": "2003-01-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -253,21 +402,46 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 105,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 105
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 105
+            },
+            {
+              "conf": 0.55,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 10 - Litter Kills (Litterally)(SD).mp4",
+              "name": "S01 Episode 10 - Litter Kills (Litterally)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2010%20-%20Litter%20Kills%20(Litterally)(SD).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 60
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Makeover, Makeover, Makeover: The Makeover Episode",
+          "airdate": "2003-01-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e11.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -277,21 +451,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 106,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 106
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e11.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e11.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e11.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 106
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Changes: The Big Prom: The Sex Romp: The Season Finale",
+          "airdate": "2003-03-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e12.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -301,21 +487,33 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 102,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 102
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e12.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e12.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e12.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 102
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "amzn ddp2 0 h",
-          "state": "REVIEW",
+          "name": "Snowflake Day: A Very Special Holiday Episode",
+          "airdate": "2003-04-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
             "itemTitle": "Clone High (2002)",
             "file": "Clone.High.S01e13.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
@@ -325,95 +523,24 @@
             "format": "h.264 IA",
             "playable": true,
             "codecRisk": "audio (Ddp2)",
-            "sizeMB": 112,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 112
           },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "mostly boring behind the scenes footage all clips found",
-          "state": "REVIEW",
-          "file": {
-            "item": "clone-high-season1",
-            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-            "file": "Clone High 'Mostly Boring Behind-the-Scenes Footage' ALL CLIPS FOUND!!!.mp4",
-            "name": "Clone High 'Mostly Boring Behind-the-Scenes Footage' ALL CLIPS FOUND!!!",
-            "url": "https://archive.org/download/clone-high-season1/Clone%20High%20'Mostly%20Boring%20Behind-the-Scenes%20Footage'%20ALL%20CLIPS%20FOUND!!!.mp4",
-            "seconds": 432,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 54,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "s1episode 11 snowflake day a very special holiday sd",
-          "state": "REVIEW",
-          "file": {
-            "item": "clone-high-season1",
-            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-            "file": "S1Episode 11 - Snowflake Day (A Very Special Holiday Episode)(SD).mp4",
-            "name": "S1Episode 11 - Snowflake Day (A Very Special Holiday Episode)(SD)",
-            "url": "https://archive.org/download/clone-high-season1/S1Episode%2011%20-%20Snowflake%20Day%20(A%20Very%20Special%20Holiday%20Episode)(SD).mp4",
-            "seconds": 1295,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 59,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "s1episode 12 makeover makeover makeover the makeover sd",
-          "state": "REVIEW",
-          "file": {
-            "item": "clone-high-season1",
-            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-            "file": "S1Episode 12 - Makeover, Makeover, Makeover (The Makeover Episode)(SD).mp4",
-            "name": "S1Episode 12 - Makeover, Makeover, Makeover (The Makeover Episode)(SD)",
-            "url": "https://archive.org/download/clone-high-season1/S1Episode%2012%20-%20Makeover%2C%20Makeover%2C%20Makeover%20(The%20Makeover%20Episode)(SD).mp4",
-            "seconds": 1294,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 59,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "s1episode 13 changes the big prom the sex romp the finale sd",
-          "state": "REVIEW",
-          "file": {
-            "item": "clone-high-season1",
-            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-            "file": "S1Episode 13 – Changes_The Big Prom_The Sex Romp_The Season Finale(SD).mp4",
-            "name": "S1Episode 13 – Changes_The Big Prom_The Sex Romp_The Season Finale(SD)",
-            "url": "https://archive.org/download/clone-high-season1/S1Episode%2013%20%E2%80%93%20Changes_The%20Big%20Prom_The%20Sex%20Romp_The%20Season%20Finale(SD).mp4",
-            "seconds": 1296,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 59,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e13.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "name": "Clone.High.S01e13.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e13.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 112
+            }
+          ]
         }
       ]
     }

@@ -3,19 +3,18 @@
   "slug": "the-king-eternal-monarch",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.295Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.888Z",
   "tvmaze": {
-    "id": null,
+    "id": 46631,
     "name": "The King: Eternal Monarch",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 70,
+    "premiered": "2020-04-17",
+    "network": "SBS"
   },
   "coverage": {
-    "total": 17,
+    "total": 16,
     "live": 0,
-    "review": 17,
+    "review": 16,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the 01",
+          "name": "Episode 1",
+          "airdate": "2020-04-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 01.mp4",
@@ -36,21 +38,59 @@
             "seconds": 4280,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 455,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 455
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "the-king-eternal-monarch-ep-1-sub_202406",
+              "itemTitle": "The King Eternal Monarch EP 1 SUB",
+              "file": "The King Eternal Monarch EP 1 SUB.mp4",
+              "name": "The King Eternal Monarch EP 1 SUB",
+              "url": "https://archive.org/download/the-king-eternal-monarch-ep-1-sub_202406/The%20King%20Eternal%20Monarch%20EP%201%20SUB.mp4",
+              "seconds": 4281,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 211
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "the-king-eternal-monarch-ep-1-sub",
+              "itemTitle": "The King Eternal Monarch EP 1 SUB",
+              "file": "The King Eternal Monarch EP 1 SUB.mp4",
+              "name": "The King Eternal Monarch EP 1 SUB",
+              "url": "https://archive.org/download/the-king-eternal-monarch-ep-1-sub/The%20King%20Eternal%20Monarch%20EP%201%20SUB.mp4",
+              "seconds": 4281,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 211
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x1.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x1",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x1.mp4",
+              "seconds": 4337,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 431
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "the 02",
+          "name": "Episode 2",
+          "airdate": "2020-04-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 02.mp4",
@@ -59,21 +99,33 @@
             "seconds": 4311,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 375,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 375
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x2.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x2",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x2.mp4",
+              "seconds": 4368,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 433
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "the 03",
+          "name": "Episode 3",
+          "airdate": "2020-04-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 03.mp4",
@@ -82,21 +134,33 @@
             "seconds": 4241,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 380,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 380
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x3.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x3",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x3.mp4",
+              "seconds": 4298,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 424
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "the 04",
+          "name": "Episode 4",
+          "airdate": "2020-04-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 04.mp4",
@@ -105,21 +169,46 @@
             "seconds": 4292,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 360,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 360
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "the-king-eternal-monarch-ep-4-sub_202406",
+              "itemTitle": "The King Eternal Monarch EP 4 SUB",
+              "file": "The King Eternal Monarch EP 4 SUB.mp4",
+              "name": "The King Eternal Monarch EP 4 SUB",
+              "url": "https://archive.org/download/the-king-eternal-monarch-ep-4-sub_202406/The%20King%20Eternal%20Monarch%20EP%204%20SUB.mp4",
+              "seconds": 4291,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 185
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x4.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x4",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x4.mp4",
+              "seconds": 4347,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 431
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "the 05",
+          "name": "Episode 5",
+          "airdate": "2020-05-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 05.mp4",
@@ -128,21 +217,33 @@
             "seconds": 4313,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 357,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 357
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x5.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x5",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x5.mp4",
+              "seconds": 4372,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 432
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "the 06",
+          "name": "Episode 6",
+          "airdate": "2020-05-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 06.mp4",
@@ -151,21 +252,33 @@
             "seconds": 4283,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 357,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 357
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x6.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x6",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x6.mp4",
+              "seconds": 4344,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 432
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "the 07",
+          "name": "Episode 7",
+          "airdate": "2020-05-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 07.mp4",
@@ -174,21 +287,33 @@
             "seconds": 4270,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 333,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 333
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x7.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x7",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x7.mp4",
+              "seconds": 4331,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 430
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "the 08",
+          "name": "Episode 8",
+          "airdate": "2020-05-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 08.mp4",
@@ -197,21 +322,33 @@
             "seconds": 4308,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 343,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 343
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x8.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x8",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x8.mp4",
+              "seconds": 4369,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 435
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "the 09",
+          "name": "Episode 9",
+          "airdate": "2020-05-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 09.mp4",
@@ -220,21 +357,33 @@
             "seconds": 4203,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 325,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 325
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x9.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x9",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x9.mp4",
+              "seconds": 4265,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 425
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "the 10",
+          "name": "Episode 10",
+          "airdate": "2020-05-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 10.mp4",
@@ -243,21 +392,46 @@
             "seconds": 4276,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 339,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 339
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "the-king-eternal-monarch-ep-10-sub_202406",
+              "itemTitle": "The King Eternal Monarch EP 10 SUB",
+              "file": "The King Eternal Monarch EP 10 SUB.mp4",
+              "name": "The King Eternal Monarch EP 10 SUB",
+              "url": "https://archive.org/download/the-king-eternal-monarch-ep-10-sub_202406/The%20King%20Eternal%20Monarch%20EP%2010%20SUB.mp4",
+              "seconds": 4276,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 172
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x10.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x10",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x10.mp4",
+              "seconds": 4338,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 433
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "the 11",
+          "name": "Episode 11",
+          "airdate": "2020-05-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 11.mp4",
@@ -266,21 +440,33 @@
             "seconds": 4259,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 359,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 359
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x11.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x11",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x11.mp4",
+              "seconds": 4321,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 430
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "the 12",
+          "name": "Episode 12",
+          "airdate": "2020-05-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 12.mp4",
@@ -289,21 +475,33 @@
             "seconds": 4251,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 344,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 344
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x12.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x12",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x12.mp4",
+              "seconds": 4313,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 430
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "the 13",
+          "name": "Episode 13",
+          "airdate": "2020-05-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 13.mp4",
@@ -312,21 +510,33 @@
             "seconds": 4305,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 332,
-            "ep": {
-              "season": null,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 332
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x13.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x13",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x13.mp4",
+              "seconds": 4367,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 437
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "the 14",
+          "name": "Episode 14",
+          "airdate": "2020-06-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 14.mp4",
@@ -335,21 +545,33 @@
             "seconds": 4229,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 337,
-            "ep": {
-              "season": null,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 337
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x14.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x14",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x14.mp4",
+              "seconds": 4291,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 429
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "the 15",
+          "name": "Episode 15",
+          "airdate": "2020-06-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 15.mp4",
@@ -358,21 +580,33 @@
             "seconds": 4775,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 336,
-            "ep": {
-              "season": null,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 336
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x15.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x15",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x15.mp4",
+              "seconds": 4837,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 484
+            }
+          ]
         },
         {
           "number": 16,
-          "name": "the 16",
+          "name": "Episode 16",
+          "airdate": "2020-06-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "the-king-eternal-monarch",
             "itemTitle": "The King Eternal Monarch",
             "file": "The King Eternal Monarch Episode 16.mp4",
@@ -381,35 +615,24 @@
             "seconds": 4535,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 407,
-            "ep": {
-              "season": null,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 407
           },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "the 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-king-eternal-monarch-s-01-e-01-episode-1",
-            "itemTitle": "The King Eternal Monarch S 01 E 01 Episode 1",
-            "file": "The King_ Eternal Monarch_S01E01_Episode 1.mp4",
-            "name": "The King_ Eternal Monarch_S01E01_Episode 1",
-            "url": "https://archive.org/download/the-king-eternal-monarch-s-01-e-01-episode-1/The%20King_%20Eternal%20Monarch_S01E01_Episode%201.mp4",
-            "seconds": 4365,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 843,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "o-rei-eterno-the-king-eternal-monarch-1x-1",
+              "itemTitle": "O Rei Eterno (The King Eternal Monarch) Dublado 1080p",
+              "file": "O Rei Eterno (The King Eternal Monarch) 1x16.mp4",
+              "name": "O Rei Eterno (The King Eternal Monarch) 1x16",
+              "url": "https://archive.org/download/o-rei-eterno-the-king-eternal-monarch-1x-1/O%20Rei%20Eterno%20(The%20King%20Eternal%20Monarch)%201x16.mp4",
+              "seconds": 4597,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 458
+            }
+          ]
         }
       ]
     }

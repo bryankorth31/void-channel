@@ -3,21 +3,20 @@
   "slug": "the-jon-stewart-show",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-15T01:19:07.870Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:32.640Z",
   "tvmaze": {
-    "id": null,
+    "id": 74291,
     "name": "The Jon Stewart Show",
     "runtime": null,
-    "premiered": null,
-    "network": "MTV"
+    "premiered": "1993-10-25",
+    "network": "Syndication"
   },
   "coverage": {
-    "total": 77,
+    "total": 210,
     "live": 0,
-    "review": 77,
-    "missing": 0,
-    "pct": 100
+    "review": 25,
+    "missing": 185,
+    "pct": 12
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the aimee mann thats just what you are",
+          "name": "Howard Stern, Gin Blossoms, Howard Stephen Berg",
+          "airdate": "1993-10-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Aimee Mann 'That's Just What You Are' - 1995 [240p].mp4",
@@ -36,18 +38,18 @@
             "seconds": 312,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 30,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 30
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "the bad religion 21st century digital boy fuck amargeddon",
+          "name": "Elisabeth Shue, INXS Michael Hutchence & Tim Farriss, American Gladiators Ice & Hawk",
+          "airdate": "1993-10-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Bad Religion '21st Century Digital Boy', 'Fuck Amargeddon' [360p].mp4",
@@ -56,58 +58,18 @@
             "seconds": 304,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 29
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "the bad religion incomplete june",
+          "name": "William Shatner, David Blaine, Gilbert Gottfried",
+          "airdate": "1993-10-27",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Bad Religion 'Incomplete' - June 1995 [360p].mp4",
-            "name": "The Jon Stewart Show - Bad Religion 'Incomplete' - June 1995 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Bad%20Religion%20'Incomplete'%20-%20June%201995%20%5B360p%5D.mp4",
-            "seconds": 235,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "the bad religion incomplete june",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Bad Religion 'Incomplete' - June 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - Bad Religion 'Incomplete' - June 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Bad%20Religion%20'Incomplete'%20-%20June%201995%20%5B480p%5D.mp4",
-            "seconds": 169,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 16,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "the belly gepetto nov 8",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Belly 'Gepetto' - Nov. 8, 1993 [240p].mp4",
@@ -116,78 +78,18 @@
             "seconds": 261,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 15
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "the belly gepetto nov",
+          "number": 4,
+          "name": "George Foreman",
+          "airdate": "1993-10-29",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Belly 'Gepetto' - Nov. 1993 [240p].mp4",
-            "name": "The Jon Stewart Show - Belly 'Gepetto' - Nov. 1993 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Belly%20'Gepetto'%20-%20Nov.%201993%20%5B240p%5D.mp4",
-            "seconds": 199,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 18,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "the buffalo tom summer song",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Buffalo Tom 'Summer Song' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Buffalo Tom 'Summer Song' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Buffalo%20Tom%20'Summer%20Song'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 238,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 23,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "the compulsion delivery basketcase",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Compulsion 'Delivery [Basketcase]' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Compulsion 'Delivery [Basketcase]' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Compulsion%20'Delivery%20%5BBasketcase%5D'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 180,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 18,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "the crash test dummies mmm mmm mmm mmm",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Crash Test Dummies 'Mmm Mmm Mmm Mmm' - 1993 [480p].mp4",
@@ -196,78 +98,18 @@
             "seconds": 246,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 24,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 24
           },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "the crowded house distant sun",
+          "number": 5,
+          "name": "Tisha Campbell, The Cranberries",
+          "airdate": "1993-11-01",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Crowded House 'Distant Sun' [360p].mp4",
-            "name": "The Jon Stewart Show - Crowded House 'Distant Sun' [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Crowded%20House%20'Distant%20Sun'%20%5B360p%5D.mp4",
-            "seconds": 400,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 38,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "the crowded house distant sun nails in my feet",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Crowded House 'Distant Sun', Nails in My Feet[240p].mp4",
-            "name": "The Jon Stewart Show - Crowded House 'Distant Sun', Nails in My Feet[240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Crowded%20House%20'Distant%20Sun'%2C%20Nails%20in%20My%20Feet%5B240p%5D.mp4",
-            "seconds": 408,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "the danzig cant speak",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Danzig 'Can't Speak' [240p].mp4",
-            "name": "The Jon Stewart Show - Danzig 'Can't Speak' [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Danzig%20'Can't%20Speak'%20%5B240p%5D.mp4",
-            "seconds": 216,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 20,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "the danzig cant speak brand new god",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Danzig 'Can't Speak', ' Brand New God' [480p].mp4",
@@ -276,18 +118,18 @@
             "seconds": 363,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 35
           },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "the danzig mother its coming down",
+          "number": 6,
+          "name": "Denis Leary, Concrete Blonde",
+          "airdate": "1993-11-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Danzig 'Mother', 'It's Coming Down' - 1994 [480p].mp4",
@@ -296,18 +138,18 @@
             "seconds": 356,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 34,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 34
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "the diamanda gal s and john paul jones sk toseme",
+          "number": 7,
+          "name": "John Stamos, Red Johnny and the Round Guy",
+          "airdate": "1993-11-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Diamanda Galás & John Paul Jones 'Skótoseme'  - 1994 [240p].mp4",
@@ -316,98 +158,18 @@
             "seconds": 344,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 33,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 33
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "the digable planets 9th wonder",
+          "number": 8,
+          "name": "John Mellencamp",
+          "airdate": "1993-11-05",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Digable Planets '9th Wonder' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Digable Planets '9th Wonder' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Digable%20Planets%20'9th%20Wonder'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 382,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 36,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "the extreme hip today",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Extreme 'Hip Today' - 1995 [240p].mp4",
-            "name": "The Jon Stewart Show - Extreme 'Hip Today' - 1995 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Extreme%20'Hip%20Today'%20-%201995%20%5B240p%5D.mp4",
-            "seconds": 236,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 23,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "the extreme no respect",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Extreme 'No Respect' - 1995 [240p].mp4",
-            "name": "The Jon Stewart Show - Extreme 'No Respect' - 1995 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Extreme%20'No%20Respect'%20-%201995%20%5B240p%5D.mp4",
-            "seconds": 127,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 12,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "the faith no more digging the grave",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Faith No More 'Digging the Grave' [240p].mp4",
-            "name": "The Jon Stewart Show - Faith No More 'Digging the Grave' [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Faith%20No%20More%20'Digging%20the%20Grave'%20%5B240p%5D.mp4",
-            "seconds": 203,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "the fossil moon",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Fossil 'Moon' [240p].mp4",
@@ -416,18 +178,18 @@
             "seconds": 360,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 19,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 19
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "the g love and special sauce cold beverage babys got sauce",
+          "number": 9,
+          "name": "John Leguizamo, Belly",
+          "airdate": "1993-11-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - G. Love & Special Sauce 'Cold Beverage',  'Baby's Got Sauce' - 1994 [480p].mp4",
@@ -436,38 +198,18 @@
             "seconds": 364,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 35
           },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "the gil scott heron winter in america",
+          "number": 10,
+          "name": "Julia Sweeney, Natalie Merchant",
+          "airdate": "1993-11-09",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Gil Scott-Heron 'Winter In America'- 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Gil Scott-Heron 'Winter In America'- 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Gil%20Scott-Heron%20'Winter%20In%20America'-%201994%20%5B480p%5D.mp4",
-            "seconds": 288,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "the gilby clarke cure me or kill me",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Gilby Clarke 'Cure Me or Kill Me' - 1994 [240p].mp4",
@@ -476,178 +218,18 @@
             "seconds": 294,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 22,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 22
           },
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "the green day welcome to paradise",
+          "number": 11,
+          "name": "David Gail, Marc Maron, Tattoo Mike Wilson",
+          "airdate": "1993-11-10",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Green Day 'Welcome to Paradise' - 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - Green Day 'Welcome to Paradise' - 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Green%20Day%20'Welcome%20to%20Paradise'%20-%201994%20%5B360p%5D.mp4",
-            "seconds": 271,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 27,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "the green day welcome to paradise",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Green Day 'Welcome to Paradise' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Green Day 'Welcome to Paradise' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Green%20Day%20'Welcome%20to%20Paradise'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 206,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 20,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "the guided by voices king and caroline motor away mar 31",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Guided by Voices 'King & Caroline', 'Motor Away' - Mar. 31, 1995 [240p].mp4",
-            "name": "The Jon Stewart Show - Guided by Voices 'King & Caroline', 'Motor Away' - Mar. 31, 1995 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Guided%20by%20Voices%20'King%20%26%20Caroline'%2C%20'Motor%20Away'%20-%20Mar.%2031%2C%201995%20%5B240p%5D.mp4",
-            "seconds": 264,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "the guided by voices my son cool mar 31",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Guided by Voices 'My Son Cool' - Mar. 31, 1995 [240p].mp4",
-            "name": "The Jon Stewart Show - Guided by Voices 'My Son Cool' - Mar. 31, 1995 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Guided%20by%20Voices%20'My%20Son%20Cool'%20-%20Mar.%2031%2C%201995%20%5B240p%5D.mp4",
-            "seconds": 93,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 9,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "the helmet in the meantime",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Helmet 'In The Meantime' - 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - Helmet 'In The Meantime' - 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Helmet%20'In%20The%20Meantime'%20-%201995%20%5B480p%5D.mp4",
-            "seconds": 121,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 11,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "the helmet milquetoast",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Helmet 'Milquetoast' - 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - Helmet 'Milquetoast' - 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Helmet%20'Milquetoast'%20-%201994%20%5B360p%5D.mp4",
-            "seconds": 135,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 13,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "the helmet rollo",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Helmet 'Rollo' - 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - Helmet 'Rollo' - 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Helmet%20'Rollo'%20-%201995%20%5B480p%5D.mp4",
-            "seconds": 151,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "the helmet wilmas rainbow",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Helmet 'Wilma's Rainbow'  - 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - Helmet 'Wilma's Rainbow'  - 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Helmet%20'Wilma's%20Rainbow'%20%20-%201994%20%5B360p%5D.mp4",
-            "seconds": 231,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 22,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "the helmet wilmas rainbow milquetoast",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Helmet 'Wilma's Rainbow', 'Milquetoast' - 1994 [480p].mp4",
@@ -656,58 +238,18 @@
             "seconds": 401,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 38,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 38
           },
           "alternates": []
         },
         {
-          "number": 33,
-          "name": "the inxs the strangest party",
+          "number": 12,
+          "name": "Fran Drescher, Dominic Griffin & Jon Brennan",
+          "airdate": "1993-11-12",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - INXS 'The Strangest Party' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - INXS 'The Strangest Party' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20INXS%20'The%20Strangest%20Party'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 283,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 27,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "the inxs what you need",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - INXS 'What You Need' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - INXS 'What You Need' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20INXS%20'What%20You%20Need'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 228,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 22,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "the johnny cash bird on a wire second",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Johnny Cash 'Bird on a Wire' (Second Episode) - 1993.mp4",
@@ -716,58 +258,18 @@
             "seconds": 272,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 27,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 27
           },
           "alternates": []
         },
         {
-          "number": 36,
-          "name": "the juliana hatfield spin the bottle",
+          "number": 13,
+          "name": "David Cassidy, The Jerky Boys, The Breeders, Montel Williams",
+          "airdate": "1993-11-15",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Juliana Hatfield 'Spin The Bottle'  - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Juliana Hatfield 'Spin The Bottle'  - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Juliana%20Hatfield%20'Spin%20The%20Bottle'%20%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 158,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "the juliana hatfield spin the bottle",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Juliana Hatfield 'Spin The Bottle' [240p].mp4",
-            "name": "The Jon Stewart Show - Juliana Hatfield 'Spin The Bottle' [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Juliana%20Hatfield%20'Spin%20The%20Bottle'%20%5B240p%5D.mp4",
-            "seconds": 148,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 8,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "the kings x dogman",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - King's X 'Dogman' [240p].mp4",
@@ -776,18 +278,18 @@
             "seconds": 263,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 14
           },
           "alternates": []
         },
         {
-          "number": 39,
-          "name": "the marilyn manson lunchbox dope hat",
+          "number": 14,
+          "name": "Sinbad, Inner Circle",
+          "airdate": "1993-11-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Marilyn Manson 'Lunchbox', 'Dope Hat' - 1995 [240p].mp4",
@@ -796,38 +298,18 @@
             "seconds": 465,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 44,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 44
           },
           "alternates": []
         },
         {
-          "number": 40,
-          "name": "the megadeth train of consequences",
+          "number": 15,
+          "name": "Christina Ricci, Run-DMC",
+          "airdate": "1993-11-17",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Megadeth 'Train Of Consequences' 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - Megadeth 'Train Of Consequences' 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Megadeth%20'Train%20Of%20Consequences'%201994%20%5B360p%5D.mp4",
-            "seconds": 208,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 20,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "the melba toast and the hollywood hucksters",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Melba Toast & The Hollywood Hucksters [480p].mp4",
@@ -836,38 +318,18 @@
             "seconds": 365,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 36,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 36
           },
           "alternates": []
         },
         {
-          "number": 42,
-          "name": "the oasis supersonic oct 17",
+          "number": 16,
+          "name": "Bobcat Goldthwait, White Zombie",
+          "airdate": "1993-11-18",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Oasis  'Supersonic' - Oct. 17, 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - Oasis  'Supersonic' - Oct. 17, 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Oasis%20%20'Supersonic'%20-%20Oct.%2017%2C%201994%20%5B360p%5D.mp4",
-            "seconds": 150,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 12,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 43,
-          "name": "the ol dirty bastard brooklyn zoo",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Ol' Dirty Bastard 'Brooklyn Zoo' - 1995 [480p].mp4",
@@ -876,38 +338,18 @@
             "seconds": 312,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 30,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 30
           },
           "alternates": []
         },
         {
-          "number": 44,
-          "name": "the pop will eat itself dick clark introduces them",
+          "number": 17,
+          "name": "Adam Sandler, Heart, Mort Hurst",
+          "airdate": "1993-11-22",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Pop Will Eat Itself (Dick Clark Introduces them) [240p].mp4",
-            "name": "The Jon Stewart Show - Pop Will Eat Itself (Dick Clark Introduces them) [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Pop%20Will%20Eat%20Itself%20(Dick%20Clark%20Introduces%20them)%20%5B240p%5D.mp4",
-            "seconds": 370,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 36,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 45,
-          "name": "the quicksand thorn in my side brown gargantuan jan 6",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 17 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Quicksand 'Thorn In My Side',  ' Brown Gargantuan' - Jan. 6, 1995 [480p].mp4",
@@ -916,18 +358,18 @@
             "seconds": 247,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 24,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 24
           },
           "alternates": []
         },
         {
-          "number": 46,
-          "name": "the redd kross lady in the front row jimmys fantasy",
+          "number": 18,
+          "name": "Paul Provenza, James LeGros, I Mother Earth",
+          "airdate": "1993-11-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 18 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Redd Kross 'Lady In The Front Row', 'Jimmy's Fantasy' - 1994 [480p].mp4",
@@ -936,18 +378,18 @@
             "seconds": 274,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 27,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 27
           },
           "alternates": []
         },
         {
-          "number": 47,
-          "name": "the samiam capsized stepson",
+          "number": 19,
+          "name": "Bill Bellamy, Carolyn Bowman Stebe & and her performing chickens",
+          "airdate": "1993-12-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 19 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Samiam 'Capsized', 'Stepson'- 1994 [240p].mp4",
@@ -956,18 +398,18 @@
             "seconds": 385,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 15
           },
           "alternates": []
         },
         {
-          "number": 48,
-          "name": "the seed doe",
+          "number": 20,
+          "name": "Doctor Dré and Ed Lover, \"Weird Al\" Yankovic",
+          "airdate": "1993-12-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 20 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Seed 'Doe' [240p].mp4",
@@ -976,18 +418,18 @@
             "seconds": 299,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 15
           },
           "alternates": []
         },
         {
-          "number": 49,
-          "name": "the sheryl crow all i wanna do oct 20",
+          "number": 21,
+          "name": "Anna Marie Goddard, Kenny Anderson, Bryan Adams, Gaius \"Ringo\" Farnham",
+          "airdate": "1993-12-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 21 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Sheryl Crow 'All I Wanna Do' - Oct. 20, 1994 [240p].mp4",
@@ -996,38 +438,18 @@
             "seconds": 305,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 29
           },
           "alternates": []
         },
         {
-          "number": 50,
-          "name": "the sheryl crow leaving las vegas mar 28th",
+          "number": 22,
+          "name": "Alicia Silverstone, Daniel Baldwin, and Kid 'n Play",
+          "airdate": "1993-12-07",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Sheryl Crow 'Leaving Las Vegas' - Mar. 28th 1994 [240p].mp4",
-            "name": "The Jon Stewart Show - Sheryl Crow 'Leaving Las Vegas' - Mar. 28th 1994 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Sheryl%20Crow%20'Leaving%20Las%20Vegas'%20-%20Mar.%2028th%201994%20%5B240p%5D.mp4",
-            "seconds": 416,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 42,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "the sinead oconnor john i love you",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 22 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Sinead O'Connor 'John, I Love You' - 1994 [360p].mp4",
@@ -1036,18 +458,18 @@
             "seconds": 347,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 33,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 33
           },
           "alternates": []
         },
         {
-          "number": 52,
-          "name": "the sinead oconnor thank you for hearing me",
+          "number": 23,
+          "name": "Cindy Crawford, Tony Bennett",
+          "airdate": "1993-12-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 23 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Sinead O'Connor 'Thank You For Hearing Me' - 1994  [360p].mp4",
@@ -1056,38 +478,18 @@
             "seconds": 309,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 29
           },
           "alternates": []
         },
         {
-          "number": 53,
-          "name": "the slayer seasons in the abyss",
+          "number": 24,
+          "name": "Tawny Kitaen, Kurt Loder, cast of MTV's The State",
+          "airdate": "1993-12-10",
           "state": "REVIEW",
           "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Slayer 'Seasons In The Abyss' [240p].mp4",
-            "name": "The Jon Stewart Show - Slayer 'Seasons In The Abyss' [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Slayer%20'Seasons%20In%20The%20Abyss'%20%5B240p%5D.mp4",
-            "seconds": 307,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 29,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "the spearhead hole in the bucket",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 24 of 31 in \"MTV The Jon Stewart Show: Best of Live M\"",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
             "file": "The Jon Stewart Show - Spearhead 'Hole In The Bucket' - 1995 [].mp4",
@@ -1096,471 +498,1518 @@
             "seconds": 266,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 26
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Dan Aykroyd, Anna Chlumsky, Dig, Huun-Huur-Tu",
+          "airdate": "1994-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Ben Stiller, Us3, Miss USA",
+          "airdate": "1994-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Rachel Hunter, The Juliana Hatfield Three, Jennifer Tilly",
+          "airdate": "1994-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Stephen Baldwin, Janeane Garofalo, John S. Hall, Maggie Estep",
+          "airdate": "1994-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Nicole Eggert, Danzig, Kurt Loder",
+          "airdate": "1994-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Sugar Ray Leonard, Candlebox",
+          "airdate": "1994-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Kellie Martin, Blind Melon",
+          "airdate": "1994-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Katherine Heigl, Crash Test Dummies, Michael Madsen",
+          "airdate": "1994-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Steven Weber, Redd Kross",
+          "airdate": "1994-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Michael J. Fox, Anthony Clark, Eddie Layton, Knicks City Dancers",
+          "airdate": "1994-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Olivia D'Abo, Hugh Grant, The Rosy Pistols",
+          "airdate": "1994-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Jim Rose, Karyn Parsons, Dana Gould",
+          "airdate": "1994-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Denis Leary, Tony! Toni! Toné!, Craig Fass & Brian Turtle & Mike Ginelli",
+          "airdate": "1994-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Anna Nicole Smith, James",
+          "airdate": "1994-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Marv Albert, Katey Sagal, Agfhan Whigs",
+          "airdate": "1994-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Kevin Spacey, Nick DiPaolo, David Lee Roth",
+          "airdate": "1994-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Elle Macpherson, Green Day, Warwick Davis",
+          "airdate": "1994-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Cuba Gooding, Jr., The Lemonheads",
+          "airdate": "1994-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Marlon Wayans, Rocket from the Crypt, Susan Olsen & Christopher Knight/ Brandon Cruz & Fred Berry",
+          "airdate": "1994-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Rikki Lake, Aida Turturro, Buffalo Tom",
+          "airdate": "1994-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Carol Alt, Melissa Etheridge, Teen Jeopardy! Matt Morris",
+          "airdate": "1994-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Jonathan Brandis, David Lee Russek, Me'Shell Ndegeocello, Cordell Jackson",
+          "airdate": "1994-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Conan O'Brien, Urge Overkill, Michael J. Fox",
+          "airdate": "1994-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Teri Hatcher, Sheryl Crow, vacuum boy Fred Stachnik, Dan Cortese",
+          "airdate": "1994-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "David Spade, Mike Judge, Anthrax",
+          "airdate": "1994-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Mary Stuart Masterson, Crowded House",
+          "airdate": "1994-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Ethan Hawke, Jennie Garth, Public Enemy",
+          "airdate": "1994-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Jean-Claude Van Damme, Laura San Giacomo, Johnny Cash",
+          "airdate": "1994-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Alicia Silverstone, Cameron Diaz, Meat Puppets",
+          "airdate": "1994-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Denis Leary, Bobby Bonilla, Curtis Williams, Jr., House of Pain",
+          "airdate": "1994-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Brendan Fraser, Chris Noth, Liv Tyler, Sonic Youth",
+          "airdate": "1994-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Bobcat Goldthwait, Robert Sean Leonard, Emma Samms, Sunny Day Real Estate",
+          "airdate": "1994-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Charlie Sheen, Vendela, Heavy D",
+          "airdate": "1994-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Eric Stoltz, Pattie D'Arbanville, Puck; Stabbing Westward",
+          "airdate": "1994-09-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Lou Diamond Phillips, Tori Spelling, Fugees",
+          "airdate": "1994-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Leeza Gibbons, Adrian Pasdar, Bill Maher, Weezer",
+          "airdate": "1994-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Eric Roberts, Allen Payne, Gin Blossoms, Tama Janowitz",
+          "airdate": "1994-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Ellen Degeneres, Parker Posey, Sean Nelson, Collective Soul, Iggy Pop",
+          "airdate": "1994-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Maury Povich, Terence Stamp, Helmet, Darius James",
+          "airdate": "1994-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Queen Latifah, Benjamin Bratt, King's X, Judy Blume",
+          "airdate": "1994-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Mayim Bialik, Jane Leeves, Gilby Clarke, Quentin Crisp",
+          "airdate": "1994-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Kelsey Grammer, Jasmine Guy, Nick DiPaolo, Brody Buster, Fury in the Slaughterhouse",
+          "airdate": "1994-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Fran Drescher, Brian Leetch, L7",
+          "airdate": "1994-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "John Stamos, Denny Dillon, G. Love & Special Sauce",
+          "airdate": "1994-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quentin Tarantino, Cynthia Gibb, Johnny Legend, The Mighty Mighty Bosstones",
+          "airdate": "1994-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Sarah Jessica Parker, Pamela Anderson, Terror Fabulous",
+          "airdate": "1994-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Bob Newhart, Reg E. Gaines, Malik Yoba, Love Spit Love",
+          "airdate": "1994-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Rob Morrow, Tom Robbins, Dave Brown, Coolio",
+          "airdate": "1994-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Garry Marshall, Robert Englund, Lisa Carson, They Might be Giants",
+          "airdate": "1994-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Karen Duffy, Corin Nemec, Lucky Vanous, Dada",
+          "airdate": "1994-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Fisher Stevens, Kevin Meaney, Spearhead",
+          "airdate": "1994-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Peter Weller, Nick Turturro, Lynn Snowden, Da Brat",
+          "airdate": "1994-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Marlee Matlin, Veronica Webb, Sponge",
+          "airdate": "1994-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Martha Plimpton, David Charvet, Jenny Simizu, Digable Planets",
+          "airdate": "1994-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Lauren Velez, Nichelle Nichols, Sheryl Crow",
+          "airdate": "1994-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Molly Ringwald, Gordon Clapp, Steve James, The Reverend Horton Heat",
+          "airdate": "1994-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Scott Bakula, Merrill Markoe, Oasis",
+          "airdate": "1994-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Margaret Cho, Noah Wyle, T. Coraghessan Boyle, Lucas Secon",
+          "airdate": "1994-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "John Larroquette, Arye Gross, Darnell Martin, Bad Religion",
+          "airdate": "1994-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Kim Coles, Paul Rudnick, Arrested Development, Coffin Joe",
+          "airdate": "1994-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Scott Baio, Gilbert Gottfried, Dr. Stephen Kaplan, The Cult",
+          "airdate": "1994-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Steven Weber, Antonio Sabato Jr., Frank Black, Instant Girl (Janet Bogardus, Joanna Heimbold and Susan Trout)",
+          "airdate": "1994-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Mark Curry, James LeGros, Kitty G., Grant Lee Buffalo",
+          "airdate": "1994-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "Lori Petty, John McGinley, Kevin Smith, Killing Joke",
+          "airdate": "1994-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "Andrea Martin, Griffin Dunne, Sinead O'Connor, Missy Giove",
+          "airdate": "1994-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "Ralph Macchio, Gabriela Sabatini, Megadeth",
+          "airdate": "1994-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "Daisy Fuentes, Johnny Hardwick, INXS",
+          "airdate": "1994-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "Julia Sweeney, Alan Zweibel, Compulsion",
+          "airdate": "1994-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "William Shatner, Marina Sirtis",
+          "airdate": "1994-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "Robert Klein, Montel Williams, Body Count with Ice-T",
+          "airdate": "1994-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "Sandra Bernhard, Jack Wagner, Jake Fogelnest, Diamanda Galas w/John Paul Jones",
+          "airdate": "1994-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "Grant Show, Robin Leach, Ice Cube & K-Dee",
+          "airdate": "1994-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "Malcolm McDowell, Natalie Portman, Jessica Yu, Fu Schnickens",
+          "airdate": "1994-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "Penelope Ann Miller, Dylan McDermott, Bill Walton, Aimee Mann, George Rodriguez",
+          "airdate": "1994-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "Cindy Crawford, A Martinez, Samiam",
+          "airdate": "1994-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "Tabitha Soren, Jada Pinkett, Dana Gould, Dishwalla",
+          "airdate": "1994-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "Peter Fonda, Jackee Harry, Marc Maron, Live",
+          "airdate": "1994-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "Ed Begley Jr., Kathy Najimy, Ralph Louis Harris, Freedy Johnston",
+          "airdate": "1994-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 53,
+          "name": "Jennifer Tilly, Yasmine Bleeth, Ed Lover & Dr. Dre",
+          "airdate": "1994-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 54,
+          "name": "Daphne Zuniga, B.D. Wong, Salt 'n' Pepa",
+          "airdate": "1994-11-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 55,
-          "name": "the stabbing westward nothing sep 21",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Stabbing Westward 'Nothing' - Sep. 21, 1994 [240p].mp4",
-            "name": "The Jon Stewart Show - Stabbing Westward 'Nothing' - Sep. 21, 1994 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Stabbing%20Westward%20'Nothing'%20-%20Sep.%2021%2C%201994%20%5B240p%5D.mp4",
-            "seconds": 284,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 26,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "John Tesh, Malcolm-Jamal Warner, Ivan Reitman, Letters to Cleo",
+          "airdate": "1994-11-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 56,
-          "name": "the sunny day real estate seven",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Sunny Day Real Estate 'Seven' [240p].mp4",
-            "name": "The Jon Stewart Show - Sunny Day Real Estate 'Seven' [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Sunny%20Day%20Real%20Estate%20'Seven'%20%5B240p%5D.mp4",
-            "seconds": 291,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 28,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Tim Daly, Terumi Matthews, Danzig",
+          "airdate": "1994-11-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 57,
-          "name": "the the breeders cannonball nov 15",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Breeders 'Cannonball' - Nov. 15, 1993[240p].mp4",
-            "name": "The Jon Stewart Show - The Breeders 'Cannonball' - Nov. 15, 1993[240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Breeders%20'Cannonball'%20-%20Nov.%2015%2C%201993%5B240p%5D.mp4",
-            "seconds": 246,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 19,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "David Brenner, Janeane Garofalo, Flaming Lips",
+          "airdate": "1994-11-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 58,
-          "name": "the the flaming lips she dont use jelly mountainside",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Flaming Lips 'She Don't Use Jelly', 'Mountainside' 1994 [240p].mp4",
-            "name": "The Jon Stewart Show - The Flaming Lips 'She Don't Use Jelly', 'Mountainside' 1994 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Flaming%20Lips%20'She%20Don't%20Use%20Jelly'%2C%20'Mountainside'%201994%20%5B240p%5D.mp4",
-            "seconds": 374,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Tim Matheson, Russ Meyer, Donal Logue, Scarface",
+          "airdate": "1994-11-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 59,
-          "name": "the the jayhawks blue apr 6",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Jayhawks 'Blue' - Apr. 6, 1995 [360p].mp4",
-            "name": "The Jon Stewart Show - The Jayhawks 'Blue' - Apr. 6, 1995 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Jayhawks%20'Blue'%20-%20Apr.%206%2C%201995%20%5B360p%5D.mp4",
-            "seconds": 229,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 22,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Julio Iglesias, Giancarlo Esposito, David Cross, John Vincent, Big Chief",
+          "airdate": "1994-12-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 60,
-          "name": "the the lemonheads big gay heart",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Lemonheads 'Big Gay Heart' - 1994 [240p].mp4",
-            "name": "The Jon Stewart Show - The Lemonheads 'Big Gay Heart' - 1994 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Lemonheads%20'Big%20Gay%20Heart'%20-%201994%20%5B240p%5D.mp4",
-            "seconds": 253,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 24,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Julianne Phillips, Bill Pullman, Brooke Smith, Buddy Guy",
+          "airdate": "1994-12-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 61,
-          "name": "the the lemonheads into your arms big gay heart the great big no mar",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Lemonheads 'Into Your Arms', 'Big Gay Heart', 'The Great Big No'- Mar. 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - The Lemonheads 'Into Your Arms', 'Big Gay Heart', 'The Great Big No'- Mar. 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Lemonheads%20'Into%20Your%20Arms'%2C%20'Big%20Gay%20Heart'%2C%20'The%20Great%20Big%20No'-%20Mar.%201994%20%5B360p%5D.mp4",
-            "seconds": 637,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 60,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Tawny Kitaen, Julianna Margulies, Dave Chappelle, Gabrielle Reece, Spell",
+          "airdate": "1994-12-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 62,
-          "name": "the the mighty mighty bosstones howwhywuz howwhyam",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Mighty Mighty BossToneS 'Howwhywuz, Howwhyam' - 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - The Mighty Mighty BossToneS 'Howwhywuz, Howwhyam' - 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Mighty%20Mighty%20BossToneS%20'Howwhywuz%2C%20Howwhyam'%20-%201994%20%5B360p%5D.mp4",
-            "seconds": 93,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 8,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Sally Kellerman, Hammer, Pete Droge",
+          "airdate": "1994-12-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 63,
-          "name": "the the mighty mighty bosstones pictures to prove it",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Mighty Mighty BossToneS 'Pictures to Prove It' - 1994 [360p].mp4",
-            "name": "The Jon Stewart Show - The Mighty Mighty BossToneS 'Pictures to Prove It' - 1994 [360p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Mighty%20Mighty%20BossToneS%20'Pictures%20to%20Prove%20It'%20-%201994%20%5B360p%5D.mp4",
-            "seconds": 257,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 24,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Jean-Claude Van Damme, Marcia Cross, Brian Regan, Zhane, Aerosmith",
+          "airdate": "1994-12-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 64,
-          "name": "the the notorious b i g big poppa",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Notorious B.I.G. 'Big Poppa' [360p] .mp4",
-            "name": "The Jon Stewart Show - The Notorious B.I.G. 'Big Poppa' [360p] ",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Notorious%20B.I.G.%20'Big%20Poppa'%20%5B360p%5D%20.mp4",
-            "seconds": 252,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 24,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Madeleine Kahn, Eriq LaSalle, The Figgs",
+          "airdate": "1994-12-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 65,
-          "name": "the the roots proceed",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - The Roots 'Proceed' - 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - The Roots 'Proceed' - 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20The%20Roots%20'Proceed'%20-%201995%20%5B480p%5D.mp4",
-            "seconds": 240,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 23,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Brooke Shields, Al Roker, The Jon Spencer Blues Explosion, Johnny Legend",
+          "airdate": "1994-12-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 66,
-          "name": "the they might be giants snail shell",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - They Might Be Giants 'Snail Shell' - 1994 [240p].mp4",
-            "name": "The Jon Stewart Show - They Might Be Giants 'Snail Shell' - 1994 [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20They%20Might%20Be%20Giants%20'Snail%20Shell'%20-%201994%20%5B240p%5D.mp4",
-            "seconds": 220,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 21,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Lauren Holly, Paul Rudnick, Brian Hartt, Method Man",
+          "airdate": "1994-12-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 67,
-          "name": "the toadies possum kingdom",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Toadies 'Possum Kingdom'  - 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - Toadies 'Possum Kingdom'  - 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Toadies%20'Possum%20Kingdom'%20%20-%201995%20%5B480p%5D.mp4",
-            "seconds": 310,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 30,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Lorenzo Lamas, Claire Danes, Larry Miller, American Music Club",
+          "airdate": "1994-12-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 68,
-          "name": "the urge overkill positive bleeding",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Urge Overkill 'Positive Bleeding' - 1994 [720p].mp4",
-            "name": "The Jon Stewart Show - Urge Overkill 'Positive Bleeding' - 1994 [720p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Urge%20Overkill%20'Positive%20Bleeding'%20-%201994%20%5B720p%5D.mp4",
-            "seconds": 218,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Jason Priestley, Gail O'Grady, Royal Jelly, Dante Centuori",
+          "airdate": "1994-12-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 69,
-          "name": "the van halen aftershock",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Van Halen 'Aftershock' - 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - Van Halen 'Aftershock' - 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Van%20Halen%20'Aftershock'%20-%201995%20%5B480p%5D.mp4",
-            "seconds": 353,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 34,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Paul Provenza, Roma Maffia, Pete Rock & CL Smooth, Aerosmith",
+          "airdate": "1994-12-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 70,
-          "name": "the van halen aftershock tc56",
+          "name": "Dick Clark, Henry Thomas, Kellie Williams, Pop Will Eat Itself",
+          "airdate": "1994-12-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Dick Clark, Henry Thomas, Kellie Williams, Pop Will Eat Itself\" (0.61)",
             "item": "20250326_20250326_0609",
             "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Van Halen 'Aftershock' - 1995 tc56 [480p].mp4",
-            "name": "The Jon Stewart Show - Van Halen 'Aftershock' - 1995 tc56 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Van%20Halen%20'Aftershock'%20-%201995%20tc56%20%5B480p%5D.mp4",
-            "seconds": 348,
+            "file": "The Jon Stewart Show - Pop Will Eat Itself (Dick Clark Introduces them) [240p].mp4",
+            "name": "The Jon Stewart Show - Pop Will Eat Itself (Dick Clark Introduces them) [240p]",
+            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Pop%20Will%20Eat%20Itself%20(Dick%20Clark%20Introduces%20them)%20%5B240p%5D.mp4",
+            "seconds": 370,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 34,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 36
           },
           "alternates": []
         },
         {
           "number": 71,
-          "name": "the van halen amsterdam tc56",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Van Halen 'Amsterdam' - 1995 tc56 [480p].mp4",
-            "name": "The Jon Stewart Show - Van Halen 'Amsterdam' - 1995 tc56 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Van%20Halen%20'Amsterdam'%20-%201995%20tc56%20%5B480p%5D.mp4",
-            "seconds": 327,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 31,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Robert Pastorelli, Michael Rappaport, Jose Eber, Girls Against Boys",
+          "airdate": "1995-01-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 72,
-          "name": "the van halen cant stop loving you",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Van Halen 'Cant Stop Loving You' [240p].mp4",
-            "name": "The Jon Stewart Show - Van Halen 'Cant Stop Loving You' [240p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Van%20Halen%20'Cant%20Stop%20Loving%20You'%20%5B240p%5D.mp4",
-            "seconds": 179,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Eric Bogosian, Victoria Jacobs, Robert Picardo, Hootie & the Blowfish",
+          "airdate": "1995-01-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 73,
-          "name": "the van halen i cant stop loving you",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Van Halen 'I Can't Stop Loving You' 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - Van Halen 'I Can't Stop Loving You' 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Van%20Halen%20'I%20Can't%20Stop%20Loving%20You'%201995%20%5B480p%5D.mp4",
-            "seconds": 183,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 17,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Rolanda Watts, Eve Plumb, Libby Langdon, Magnapop",
+          "airdate": "1995-01-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 74,
-          "name": "the warren zevon mutineer hd",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Warren Zevon 'Mutineer' - 1995 (HD)[720p].mp4",
-            "name": "The Jon Stewart Show - Warren Zevon 'Mutineer' - 1995 (HD)[720p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Warren%20Zevon%20'Mutineer'%20-%201995%20(HD)%5B720p%5D.mp4",
-            "seconds": 249,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 70,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Christopher Lambert, Shanice, Toby Huss, Soul Coughing",
+          "airdate": "1995-01-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 75,
-          "name": "the wax california mar 29",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - WAX 'California' - Mar. 29, 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - WAX 'California' - Mar. 29, 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20WAX%20'California'%20-%20Mar.%2029%2C%201995%20%5B480p%5D.mp4",
-            "seconds": 149,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 15,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Aidan Quinn, Lisa Kudrow, Omar Epps, Craig Mack",
+          "airdate": "1995-01-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 76,
-          "name": "the wax who is next mar 29",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - WAX 'Who Is Next' - Mar. 29, 1995 [480p].mp4",
-            "name": "The Jon Stewart Show - WAX 'Who Is Next' - Mar. 29, 1995 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20WAX%20'Who%20Is%20Next'%20-%20Mar.%2029%2C%201995%20%5B480p%5D.mp4",
-            "seconds": 138,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 14,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Courtney Cox, Joe Torry, Julie Moran, The Roots",
+          "airdate": "1995-01-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 77,
-          "name": "the weezer undone the sweater song",
-          "state": "REVIEW",
-          "file": {
-            "item": "20250326_20250326_0609",
-            "itemTitle": "MTV The Jon Stewart Show: Best of Live Music Acts",
-            "file": "The Jon Stewart Show - Weezer 'Undone', 'The Sweater Song' - 1994 [480p].mp4",
-            "name": "The Jon Stewart Show - Weezer 'Undone', 'The Sweater Song' - 1994 [480p]",
-            "url": "https://archive.org/download/20250326_20250326_0609/The%20Jon%20Stewart%20Show%20-%20Weezer%20'Undone'%2C%20'The%20Sweater%20Song'%20-%201994%20%5B480p%5D.mp4",
-            "seconds": 256,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 25,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Tom Jones, Chris Noth, Laura Kightlinger",
+          "airdate": "1995-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 78,
+          "name": "Laurence Fishburne, Jackie Mason, Bush",
+          "airdate": "1995-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 79,
+          "name": "María Conchita Alonso, Thomas Haden Church, Gil Scott-Heron",
+          "airdate": "1995-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 80,
+          "name": "Kevin Bacon, Holly Robinson, Sean Naegeli, Seed",
+          "airdate": "1995-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 81,
+          "name": "Robert Townsend, Lacey Chabert, Slash's Snakepit",
+          "airdate": "1995-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 82,
+          "name": "Tony Bennett, Tyra Banks, Rev. Ivan Stang",
+          "airdate": "1995-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 83,
+          "name": "Kellie Martin, Richard Jeni, Crash Test Dummies",
+          "airdate": "1995-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 84,
+          "name": "Stuttering John, Yasmine Bleeth, Zoe Cassavetes, Sofia Coppola, Mista Grimm",
+          "airdate": "1995-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 85,
+          "name": "Jeff Fahey, Jason London, Lisa Palac, Mary J. Blige, Paul Gordon, Irving Gordon",
+          "airdate": "1995-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 86,
+          "name": "Christian Slater, Branford Marsalis, Vendela Kirsebom, Warren G, Tony Little, Steven Weber",
+          "airdate": "1995-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 87,
+          "name": "Halle Berry, Corbin Bernsen, Dom Irrera, The Brian Setzer Orchestra, Jeffrey Tambor, Garry Shandling",
+          "airdate": "1995-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 88,
+          "name": "Faith Ford, Kelsey Grammer, Barry White, Johnny Galecki",
+          "airdate": "1995-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 89,
+          "name": "Dean Cain, Alexandra Paul, Christine Taylor, Collective Sou",
+          "airdate": "1995-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 90,
+          "name": "Kate Mulgrew, Sammy Hagar, Eddie Van Halen, Amber Smith, Sponge",
+          "airdate": "1995-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 91,
+          "name": "Blair Underwood, Chelsi Smith, Peter Berg, Mighty Mighty Bosstones",
+          "airdate": "1995-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 92,
+          "name": "Nancy Travis, Patti Davis, Melina Kannakaredes, Brownstone, Fabio",
+          "airdate": "1995-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 93,
+          "name": "Tony Goldwyn, Henriette Mantel, The The",
+          "airdate": "1995-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 94,
+          "name": "David Schwimmer, Cindy Adams, Bridgette Wilson, Ass Ponys",
+          "airdate": "1995-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 95,
+          "name": "Adam Sandler, Daniela Peštová, Aaron Schwartz & Shaun Weiss, Slayer",
+          "airdate": "1995-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 96,
+          "name": "Deion Sanders, Kylie Travis, Extreme, Emmanuel Yarborough",
+          "airdate": "1995-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 97,
+          "name": "Dick Cavett, Julie White, Jackie Kallen, James Toney, Dinosaur Jr.",
+          "airdate": "1995-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 98,
+          "name": "David Brenner, Stephanie Hodge, Leila Kenzle, Run-DMC",
+          "airdate": "1995-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 99,
+          "name": "Lara Flynn Boyle, Mickey Spillane, Jonathan Taylor Thomas, Fossil",
+          "airdate": "1995-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 100,
+          "name": "Steven Weber, Patsy Kensit, Rebecca Gayheart, Helmet",
+          "airdate": "1995-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 101,
+          "name": "Randy Quaid, John Leguizamo, Douglas McGrath, Elastica",
+          "airdate": "1995-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 102,
+          "name": "Amanda Donohoe, Gary Cole, Bock & Craig, Crystal Waters",
+          "airdate": "1995-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 103,
+          "name": "D.B. Sweeney, Ed Lover & Dr. Dre, Lucille Treganowan, Face to Face",
+          "airdate": "1995-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 104,
+          "name": "David Carradine, Isabella Hoffman, Jacques Boyreau, Toadies, Harvey Sid Fisher",
+          "airdate": "1995-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 105,
+          "name": "Miranda Richardson, Julia Campbell, Quicksand",
+          "airdate": "1995-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 106,
+          "name": "Michael McKean, Karyn Parsons, Dave Attell, Ned's Atomic Dustbin",
+          "airdate": "1995-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 107,
+          "name": "Jennifer Tilly, Tia and Tamera Mowry, Judi Sheppard Missett, Goo Goo Dolls",
+          "airdate": "1995-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 108,
+          "name": "Richard Belzer, Joe Morton, David Feldman, Blues Traveler",
+          "airdate": "1995-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 109,
+          "name": "Matt LeBlanc, Tracey Gold, Sky Cries Mary",
+          "airdate": "1995-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 110,
+          "name": "Julie Warner, John Shea, Lee Evans, Ol' Dirty Bastard",
+          "airdate": "1995-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 111,
+          "name": "Robert Sean Leonard, Rachel Griffiths, Sammy, Johnny Legend",
+          "airdate": "1995-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 112,
+          "name": "Malcolm McDowell, Jean Smart, Karen Finely, Victoria Williams",
+          "airdate": "1995-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 113,
+          "name": "Lori Petty, Alicia Witt, Marc John Jefferies, Wax",
+          "airdate": "1995-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 114,
+          "name": "Anthony LaPaglia, Lisa Rinna, Matt Borlenghi, Guided by Voices",
+          "airdate": "1995-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 115,
+          "name": "Olivia D'Abo, Minnie Driver, Notorious B.I.G., Puffy & Cease",
+          "airdate": "1995-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 116,
+          "name": "Jack Klugman, Toni Collette, Michael Easton, Matthew Sweet",
+          "airdate": "1995-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 117,
+          "name": "Levar Burton, Nicole Eggert, Chad Allen, Our Lady Peace",
+          "airdate": "1995-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 118,
+          "name": "Margaret Cho, Rebecca Lobo, Suzzanne Douglas, Catherine",
+          "airdate": "1995-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 119,
+          "name": "Eric Stoltz, Talisa Soto, The Jayhawks, Ron Palillo",
+          "airdate": "1995-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 120,
+          "name": "Naomi Campbell, Elle MacPherson, Claudia Schiffer, John C. McGinley, A.J. Johnson, Rappin 4-Tay w/The Spinners",
+          "airdate": "1995-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 121,
+          "name": "Pauly Shore, Nancy Sinatra, Satchel",
+          "airdate": "1995-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 122,
+          "name": "Chris Farley, Julianne Phillips, Chris Whitley, D. L. Hughley",
+          "airdate": "1995-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 123,
+          "name": "Elizabeth McGovern, Charles Oakley, Chris Tucker, Better Than Ezra",
+          "airdate": "1995-04-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 124,
+          "name": "Ed Begley Jr., Michael DeLorenzo, Leslie Uggams, Spearhead",
+          "airdate": "1995-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 125,
+          "name": "Frank Whaley, Mia Kirshner, Peter Horton, Soul For Real",
+          "airdate": "1995-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 126,
+          "name": "Teri Hatcher, Richard Grieco, Michael Jai White, Subway",
+          "airdate": "1995-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 127,
+          "name": "Bobcat Goldthwait, B.D. Wong, Lydia & Joan Wilen, Jill Sobule",
+          "airdate": "1995-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 128,
+          "name": "Sam Elliott, Sadie Frost, Stomp, Sons of Elvis",
+          "airdate": "1995-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 129,
+          "name": "Gabriel Byrne, Van Halen, Eddie Van Halen, Sammy Hagar, Alex Van Halen, Michael Anthony",
+          "airdate": "1995-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 130,
+          "name": "Peter Gallagher, Nia Long, Mike Watt w/ Dave Grohl, Pat Smear & Eddie Vedder, Theo Kogan",
+          "airdate": "1995-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 131,
+          "name": "María Conchita Alonso, Jeremy Piven, Jude Law, Portishead",
+          "airdate": "1995-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 132,
+          "name": "Daphne Zuniga, Adam West, Shudder to Think",
+          "airdate": "1995-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 133,
+          "name": "Queen Latifah, Essi Morales, Lee Day, Queen Latifah, Yo-Yo, Patra, & Nefertiti",
+          "airdate": "1995-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 134,
+          "name": "Matthew Broderick, John Leguizamo, Harry Connick Jr.",
+          "airdate": "1995-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 135,
+          "name": "Dave Foley, Cynthia Stevenson, Elizabeth Arnold, Toad the Wet Sprocket",
+          "airdate": "1995-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 136,
+          "name": "Matthew Perry, Colm Meaney, Morwenna Banks, Monster Magnet",
+          "airdate": "1995-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 137,
+          "name": "Jimmy Smits, John Henton, Elina Löwensohn, P.O.L. / Parade of Losers",
+          "airdate": "1995-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 138,
+          "name": "Susan Lucci, Juliana Hatfield, Julie Cialini",
+          "airdate": "1995-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 139,
+          "name": "LL Cool J, Pepper Johnson, Adina Howard",
+          "airdate": "1995-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 140,
+          "name": "Bronson Pinchot, Tichina Arnold, Clancy Brown, Naughty by Nature",
+          "airdate": "1995-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 141,
+          "name": "Martha Plimpton, William McNamara, Heather Tom, Bush",
+          "airdate": "1995-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 142,
+          "name": "Jennifer Aniston, Park Overall, Randy Savage, Dionne Farris",
+          "airdate": "1995-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 143,
+          "name": "Brett Butler, Gilbert Gottfried, Kim Alexis, Girls Against Boys",
+          "airdate": "1995-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 144,
+          "name": "Moira Kelly, Gillian Anderson, David \"The Rock\" Nelson, Montell Jordan",
+          "airdate": "1995-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 145,
+          "name": "Dolph Lundgren, Henry Thomas, Clyde Peeling, Corrosion of Conformity",
+          "airdate": "1995-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 146,
+          "name": "Kim Fields, John Salley, Brandy",
+          "airdate": "1995-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 147,
+          "name": "Martin Mull, Kellie Martin, Joe Torry, Peter Murphy",
+          "airdate": "1995-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 148,
+          "name": "Penelope Ann Miller, Kristin Davis, Stan Lee, Sugar Ray",
+          "airdate": "1995-05-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 149,
+          "name": "Tara Fitzgerald, Ice-T, D-Knowledge, Faith No More",
+          "airdate": "1995-05-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 150,
+          "name": "George Clooney, Christina Ricci, Bad Religion",
+          "airdate": "1995-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 151,
+          "name": "Kim Coles, Margaret Cho, Jamie Walters, Hum",
+          "airdate": "1995-06-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 152,
+          "name": "Sherry Stringfield, Branford Marsalis with Buckshot LeFonque, Terry Murphy",
+          "airdate": "1995-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 153,
+          "name": "Robert Conrad, Katherine Heigl, Shabba Ranks",
+          "airdate": "1995-06-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 154,
+          "name": "Robert Klein, Parker Posey, Lady Bunny, Lypsinka & Formika, Warren Zevon",
+          "airdate": "1995-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 155,
+          "name": "Frank Whaley, Chris Isaak, Viva & Jerry",
+          "airdate": "1995-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 156,
+          "name": "John Leguizamo, Vanessa Marcil, Suzanne Westenhoefer, Belly",
+          "airdate": "1995-06-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 157,
+          "name": "David Brenner, Ted Nugent, Joe Krathwohl, Morphine",
+          "airdate": "1995-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 158,
+          "name": "María Conchita Alonso, Johnny Galecki, Gina LaMarca, Stu Kamens, Throwing Muses",
+          "airdate": "1995-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 159,
+          "name": "Mariel Hemingway, Elina Löwensohn, Cameron Bancroft, Marilyn Manson",
+          "airdate": "1995-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 160,
+          "name": "David Letterman, Kevin Meaney, Buffalo Tom",
+          "airdate": "1995-06-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

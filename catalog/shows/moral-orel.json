@@ -3,7 +3,7 @@
   "slug": "moral-orel",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:06.614Z",
+  "matchedAt": "2026-10-15T03:17:30.438Z",
   "tvmaze": {
     "id": 1960,
     "name": "Moral Orel",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 43,
     "live": 1,
-    "review": 0,
-    "missing": 42,
-    "pct": 2
+    "review": 1,
+    "missing": 41,
+    "pct": 5
   },
   "seasons": [
     {
@@ -34,8 +34,20 @@
           "number": 2,
           "name": "The Lord's Greatest Gift",
           "airdate": "2006-01-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Lord's Greatest Gift\" (0.95)",
+            "item": "moral-orel-the-lords-greatest-gift-s-01-e-01-widescreen",
+            "itemTitle": "Moral Orel - The Lord's Greatest Gift (S01E01) (Widescreen)",
+            "file": "Moral Orel - The Lord's Greatest Gift (S01E01) (Widescreen).mp4",
+            "name": "Moral Orel - The Lord's Greatest Gift (S01E01) (Widescreen)",
+            "url": "https://archive.org/download/moral-orel-the-lords-greatest-gift-s-01-e-01-widescreen/Moral%20Orel%20-%20The%20Lord's%20Greatest%20Gift%20(S01E01)%20(Widescreen).mp4",
+            "seconds": 715,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 127
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "chips",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:29.250Z",
+  "matchedAt": "2026-10-15T03:18:37.409Z",
   "tvmaze": {
     "id": 881,
     "name": "CHiPs",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 139,
-    "live": 20,
-    "review": 2,
+    "live": 22,
+    "review": 0,
     "missing": 117,
     "pct": 16
   },
@@ -100,9 +100,9 @@
           "number": 4,
           "name": "Moving Violation",
           "airdate": "1977-10-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chi-ps-s-01-e-01-pilot",
             "itemTitle": "CHPs S 01",
@@ -200,9 +200,9 @@
           "number": 9,
           "name": "Hustle",
           "airdate": "1977-11-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chi-ps-s-01-e-01-pilot",
             "itemTitle": "CHPs S 01",

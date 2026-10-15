@@ -3,7 +3,7 @@
   "slug": "barney-miller",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:26.892Z",
+  "matchedAt": "2026-10-15T03:18:33.555Z",
   "tvmaze": {
     "id": 5782,
     "name": "Barney Miller",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 170,
-    "live": 145,
-    "review": 17,
-    "missing": 8,
-    "pct": 95
+    "live": 164,
+    "review": 0,
+    "missing": 6,
+    "pct": 96
   },
   "seasons": [
     {
@@ -146,9 +146,9 @@
           "number": 7,
           "name": "The Bureaucrat",
           "airdate": "1975-03-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -186,9 +186,9 @@
           "number": 9,
           "name": "The Vigilante",
           "airdate": "1975-03-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -226,9 +226,9 @@
           "number": 11,
           "name": "The Escape Artist",
           "airdate": "1975-04-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -411,9 +411,9 @@
           "number": 7,
           "name": "Grand Hotel",
           "airdate": "1975-10-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -578,9 +578,9 @@
           "number": 14,
           "name": "Protection",
           "airdate": "1975-12-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -1017,9 +1017,9 @@
           "number": 13,
           "name": "Community Relations",
           "airdate": "1977-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -1117,9 +1117,9 @@
           "number": 18,
           "name": "Moonlighting",
           "airdate": "1977-02-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -1177,16 +1177,54 @@
           "number": 21,
           "name": "Strike (1)",
           "airdate": "1977-03-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "barney-miller",
+            "itemTitle": "Barney Miller Series",
+            "file": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S03E21 (Strike Pt1).mp4",
+            "name": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S03E21 (Strike Pt1)",
+            "url": "https://archive.org/download/barney-miller/Barney%20Miller%201975-1982%20(Complete%20TV%20series%20in%20MP4%20format)%2FBarney%20Miller%20S03E21%20(Strike%20Pt1).mp4",
+            "seconds": 1467,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 310
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Strike (1)\" (0.71)",
+              "item": "barney-miller",
+              "itemTitle": "Barney Miller Series",
+              "file": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S03E22 (Strike Pt2).mp4",
+              "name": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S03E22 (Strike Pt2)",
+              "url": "https://archive.org/download/barney-miller/Barney%20Miller%201975-1982%20(Complete%20TV%20series%20in%20MP4%20format)%2FBarney%20Miller%20S03E22%20(Strike%20Pt2).mp4",
+              "seconds": 1528,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 328
+            }
+          ]
         },
         {
           "number": 22,
           "name": "Strike (2)",
           "airdate": "1977-03-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "barney-miller",
+            "itemTitle": "Barney Miller Series",
+            "file": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S03E22 (Strike Pt2).mp4",
+            "name": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S03E22 (Strike Pt2)",
+            "url": "https://archive.org/download/barney-miller/Barney%20Miller%201975-1982%20(Complete%20TV%20series%20in%20MP4%20format)%2FBarney%20Miller%20S03E22%20(Strike%20Pt2).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 328
+          },
           "alternates": []
         }
       ]
@@ -1358,9 +1396,9 @@
           "number": 9,
           "name": "Thanksgiving Story",
           "airdate": "1977-11-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -1693,9 +1731,9 @@
           "number": 3,
           "name": "The Search",
           "airdate": "1978-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -1773,9 +1811,9 @@
           "number": 7,
           "name": "The Prisoner",
           "airdate": "1978-10-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -1969,9 +2007,9 @@
           "number": 18,
           "name": "Middle Age",
           "airdate": "1979-02-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -2029,9 +2067,9 @@
           "number": 21,
           "name": "Identity",
           "airdate": "1979-03-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -2069,9 +2107,9 @@
           "number": 23,
           "name": "Graveyard Shift",
           "airdate": "1979-05-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -2134,9 +2172,9 @@
           "number": 2,
           "name": "The Photographer",
           "airdate": "1979-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -2689,9 +2727,9 @@
           "number": 8,
           "name": "Field Associate",
           "airdate": "1981-01-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -2963,9 +3001,9 @@
           "number": 21,
           "name": "The Rainmaker",
           "airdate": "1981-05-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",
@@ -3262,9 +3300,9 @@
           "number": 13,
           "name": "Hunger Strike",
           "airdate": "1982-02-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "barney-miller",
             "itemTitle": "Barney Miller Series",

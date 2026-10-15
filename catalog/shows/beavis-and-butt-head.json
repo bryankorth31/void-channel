@@ -3,7 +3,7 @@
   "slug": "beavis-and-butt-head",
   "type": "Animated",
   "network": "MTV",
-  "matchedAt": "2026-10-15T01:19:03.081Z",
+  "matchedAt": "2026-10-15T03:17:26.212Z",
   "tvmaze": {
     "id": 910,
     "name": "Beavis and Butt-Head",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 210,
-    "live": 11,
-    "review": 105,
+    "live": 12,
+    "review": 104,
     "missing": 94,
     "pct": 55
   },
@@ -2126,7 +2126,22 @@
             "playable": true,
             "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x29 - Generación en crisis [DVD+VHS by JP+JUANITOPOWER].mp4",
+              "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x29 - Generación en crisis [DVD+VHS by JP+JUANITOPOWER]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x29%20-%20Generaci%C3%B3n%20en%20crisis%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%5D.mp4",
+              "seconds": 650,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 30,
@@ -3071,21 +3086,36 @@
           "number": 31,
           "name": "Screamers",
           "airdate": "1995-07-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 0.85,
             "why": "S/E in filename + title match",
-            "item": "beavis-butt-head-1992-97",
-            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers.mp4",
-            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers",
-            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E31%20Screamers.mp4",
+            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+            "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x31 - Screamers.mp4",
+            "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x31 - Screamers",
+            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x31%20-%20Screamers.mp4",
             "seconds": 647,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 65
+            "langRisk": true,
+            "sizeMB": 64
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E31%20Screamers.mp4",
+              "seconds": 647,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 65
+            }
+          ]
         },
         {
           "number": 32,

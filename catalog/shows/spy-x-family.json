@@ -3,21 +3,20 @@
   "slug": "spy-x-family",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.038Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.254Z",
   "tvmaze": {
-    "id": null,
-    "name": "SPY x FAMILY",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "id": 59698,
+    "name": "Spy×Family",
+    "runtime": 30,
+    "premiered": "2022-04-09",
+    "network": "TV Tokyo"
   },
   "coverage": {
-    "total": 13,
+    "total": 50,
     "live": 0,
-    "review": 13,
-    "missing": 0,
-    "pct": 100
+    "review": 1,
+    "missing": 49,
+    "pct": 2
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "Operation Strix",
+          "airdate": "2022-04-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "spy-x-family-ep-1",
             "itemTitle": "Spy X Family Episode 1 (English Dub)",
             "file": "spy x family ep 1.mp4",
@@ -36,254 +38,410 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 89,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 89
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "s2 cap 01",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 01.mp4",
-            "name": "Spy x Family S2 cap 01",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2001.mp4",
-            "seconds": 1761,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 183,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Secure a Wife",
+          "airdate": "2022-04-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "s2 cap 02",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 02.mp4",
-            "name": "Spy x Family S2 cap 02",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2002.mp4",
-            "seconds": 1998,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 305,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Prepare for the Interview",
+          "airdate": "2022-04-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "s2 cap 03",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 03.mp4",
-            "name": "Spy x Family S2 cap 03",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2003.mp4",
-            "seconds": 1370,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 212,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Prestigious School's Interview",
+          "airdate": "2022-04-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "s2 cap 04",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 04.mp4",
-            "name": "Spy x Family S2 cap 04",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2004.mp4",
-            "seconds": 1674,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 254,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Will They Pass Or Fail?",
+          "airdate": "2022-05-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "s2 cap 05",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 05.mp4",
-            "name": "Spy x Family S2 cap 05",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2005.mp4",
-            "seconds": 1601,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 247,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Friendship Scheme",
+          "airdate": "2022-05-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "s2 cap 06",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 06.mp4",
-            "name": "Spy x Family S2 cap 06",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2006.mp4",
-            "seconds": 1452,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 225,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Target's Second Son",
+          "airdate": "2022-05-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "s2 cap 07",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 07.mp4",
-            "name": "Spy x Family S2 cap 07",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2007.mp4",
-            "seconds": 1796,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 274,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Counter-Secret Police Cover Operation",
+          "airdate": "2022-05-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "s2 cap 08",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 08.mp4",
-            "name": "Spy x Family S2 cap 08",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2008.mp4",
-            "seconds": 1740,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 269,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Show Off How In Love You Are",
+          "airdate": "2022-06-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "s2 cap 09",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 09.mp4",
-            "name": "Spy x Family S2 cap 09",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2009.mp4",
-            "seconds": 1489,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 215,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Great Dodgeball Plan",
+          "airdate": "2022-06-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "s2 cap 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 10.mp4",
-            "name": "Spy x Family S2 cap 10",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2010.mp4",
-            "seconds": 1762,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 271,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Stella",
+          "airdate": "2022-06-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "s2 cap 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 11.mp4",
-            "name": "Spy x Family S2 cap 11",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2011.mp4",
-            "seconds": 2148,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 222,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Penguin Park",
+          "airdate": "2022-06-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "s2 cap 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "spy-x-family-s2-darkrai",
-            "itemTitle": "Spy x Family Season 2 | Darkraimola",
-            "file": "Spy x Family S2 cap 12.mp4",
-            "name": "Spy x Family S2 cap 12",
-            "url": "https://archive.org/download/spy-x-family-s2-darkrai/Spy%20x%20Family%20S2%20cap%2012.mp4",
-            "seconds": 1550,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 239,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Project Apple",
+          "airdate": "2022-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Disarm the Time Bomb",
+          "airdate": "2022-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "A New Family Member",
+          "airdate": "2022-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Yor's Kitchen / The Informant's Great Romance Plan",
+          "airdate": "2022-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Carry Out the Griffin Plan / Fullmetal Lady / Omelet Rice♡",
+          "airdate": "2022-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Uncle the Private Tutor / Daybreak",
+          "airdate": "2022-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "A Revenge Plot Against Desmond / Mama Becomes the Wind",
+          "airdate": "2022-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Investigate the General Hospital / Decipher the Perplexing Code",
+          "airdate": "2022-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Nightfall / First Fit of Jealousy",
+          "airdate": "2022-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Underground Tennis Tournament: The Campbelldon",
+          "airdate": "2022-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Unwavering Path",
+          "airdate": "2022-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "The Role of a Mother and Wife / Shopping With Friends",
+          "airdate": "2022-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "First Contact",
+          "airdate": "2022-12-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Follow Papa and Mama",
+          "airdate": "2023-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Bond's Strategy to Stay Alive / Damian's Field Research Trip",
+          "airdate": "2023-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Mission and Family / The Elegant Bondman / The Heart of a Child/Waking Up",
+          "airdate": "2023-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Pastry of Knowledge / The Informant's Great Romance Plan II",
+          "airdate": "2023-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Plan to Cross the Border",
+          "airdate": "2023-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Fearsome Luxury Cruise Ship",
+          "airdate": "2023-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Who Is This Mission For?",
+          "airdate": "2023-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Symphony Upon the Ship / Sis's Herb Tea",
+          "airdate": "2023-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Hand That Connects to the Future",
+          "airdate": "2023-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Enjoy the Resort to the Fullest / Bragging About Vacation",
+          "airdate": "2023-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Berlint in Love / Nightfall's Daily Life",
+          "airdate": "2023-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Part of the Family",
+          "airdate": "2023-12-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Berlint Panic | The Informant and Nightfall",
+          "airdate": "2025-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Avoid Getting Tonitrus Bolts | ■■■■'s Memories I",
+          "airdate": "2025-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "■■■■'s Memories II",
+          "airdate": "2025-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Behind the Scandal | The Path to an Imperial Scholar",
+          "airdate": "2025-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Mommy-Friends Scheme",
+          "airdate": "2025-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "White Jealousy | The Eden College Busjacking Incident",
+          "airdate": "2025-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Red Circus",
+          "airdate": "2025-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Take Down the Busjacker",
+          "airdate": "2025-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Anya's Era Has Come",
+          "airdate": "2025-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Austin's Troubles | A Normal Mixer | Moon Landing",
+          "airdate": "2025-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Extreme Level 3 Situation",
+          "airdate": "2025-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Battle to the Death in the Sewers",
+          "airdate": "2025-12-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "A World Where We Cannot Survive",
+          "airdate": "2025-12-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "benson",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:27.240Z",
+  "matchedAt": "2026-10-15T03:18:34.135Z",
   "tvmaze": {
     "id": 7348,
     "name": "Benson",
@@ -785,7 +785,21 @@
             "playable": true,
             "sizeMB": 630
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Benson in the Hospital\" (0.80)",
+              "item": "benson-s-02",
+              "itemTitle": "Benson - Season 2",
+              "file": "202_Benson_In_The_Hospital.mp4",
+              "name": "202_Benson_In_The_Hospital",
+              "url": "https://archive.org/download/benson-s-02/202_Benson_In_The_Hospital.mp4",
+              "seconds": 1299,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 3,

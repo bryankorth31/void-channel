@@ -3,7 +3,7 @@
   "slug": "the-rifleman",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:26.246Z",
+  "matchedAt": "2026-10-15T03:18:32.727Z",
   "tvmaze": {
     "id": 3877,
     "name": "The Rifleman",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 168,
-    "live": 0,
-    "review": 3,
-    "missing": 165,
-    "pct": 2
+    "live": 2,
+    "review": 4,
+    "missing": 162,
+    "pct": 4
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "The Sharpshooter",
           "airdate": "1958-09-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-rifleman-tv-1958-colorized-s01e01-the-sharpshooter",
             "itemTitle": "The Rifleman TV 1958 colorized s01e01 The Sharpshooter",
@@ -62,9 +62,9 @@
           "number": 4,
           "name": "The Marshal",
           "airdate": "1958-10-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-rifleman-tv-1958-s01e04-the-marshal",
             "itemTitle": "The Rifleman TV 1958 colorized s01e04 The Marshal",
@@ -346,9 +346,35 @@
           "number": 38,
           "name": "Outlaw's Inheritance",
           "airdate": "1959-06-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Outlaw's Inheritance\" (0.95)",
+            "item": "The_Rifleman_-_Outlaws_Inheritance",
+            "itemTitle": "The Rifleman - Outlaw's Inheritance",
+            "file": "The_Rifleman_-_Outlaws_Inheritance.ogv",
+            "name": "The_Rifleman_-_Outlaws_Inheritance",
+            "url": "https://archive.org/download/The_Rifleman_-_Outlaws_Inheritance/The_Rifleman_-_Outlaws_Inheritance.ogv",
+            "seconds": 1477,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 124
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Outlaw's Inheritance\" (0.95)",
+              "item": "The_Rifleman_-_Outlaws_Inheritance",
+              "itemTitle": "The Rifleman - Outlaw's Inheritance",
+              "file": "The_Rifleman_-_Outlaws_Inheritance_512kb.mp4",
+              "name": "The_Rifleman_-_Outlaws_Inheritance_512kb",
+              "url": "https://archive.org/download/The_Rifleman_-_Outlaws_Inheritance/The_Rifleman_-_Outlaws_Inheritance_512kb.mp4",
+              "seconds": 1477,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 107
+            }
+          ]
         },
         {
           "number": 39,
@@ -487,9 +513,35 @@
           "number": 15,
           "name": "Day of the Hunter",
           "airdate": "1960-01-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Day of the Hunter\" (0.96)",
+            "item": "The_Rifleman_-_Day_Of_The_Hunter",
+            "itemTitle": "The Rifleman - Day Of The Hunter",
+            "file": "The_Rifleman_-_Day_Of_The_Hunter.ogv",
+            "name": "The_Rifleman_-_Day_Of_The_Hunter",
+            "url": "https://archive.org/download/The_Rifleman_-_Day_Of_The_Hunter/The_Rifleman_-_Day_Of_The_Hunter.ogv",
+            "seconds": 1530,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Day of the Hunter\" (0.95)",
+              "item": "The_Rifleman_-_Day_Of_The_Hunter",
+              "itemTitle": "The Rifleman - Day Of The Hunter",
+              "file": "The_Rifleman_-_Day_Of_The_Hunter_512kb.mp4",
+              "name": "The_Rifleman_-_Day_Of_The_Hunter_512kb",
+              "url": "https://archive.org/download/The_Rifleman_-_Day_Of_The_Hunter/The_Rifleman_-_Day_Of_The_Hunter_512kb.mp4",
+              "seconds": 1530,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 111
+            }
+          ]
         },
         {
           "number": 16,
@@ -886,8 +938,20 @@
           "number": 25,
           "name": "The Prisoner",
           "airdate": "1961-03-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Prisoner\" (0.95)",
+            "item": "dvd-transfer-165",
+            "itemTitle": "DVD Transfer 165 (May 27, 2023 PlutoTV Recordings)",
+            "file": "Title 7 (The Rifleman - The Prisoner - S3E14).m4v",
+            "name": "Title 7 (The Rifleman - The Prisoner - S3E14)",
+            "url": "https://archive.org/download/dvd-transfer-165/Title%207%20(The%20Rifleman%20-%20The%20Prisoner%20-%20S3E14).m4v",
+            "seconds": 1796,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {

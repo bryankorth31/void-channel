@@ -3,21 +3,20 @@
   "slug": "deaths-game",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.302Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:11.021Z",
   "tvmaze": {
-    "id": null,
+    "id": 70384,
     "name": "Death's Game",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 52,
+    "premiered": "2023-12-15",
+    "network": "TVING"
   },
   "coverage": {
-    "total": 6,
-    "live": 0,
-    "review": 6,
-    "missing": 0,
-    "pct": 100
+    "total": 8,
+    "live": 4,
+    "review": 2,
+    "missing": 2,
+    "pct": 75
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "Death",
+          "airdate": "2023-12-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "deaths-game-s-01-ep-01",
             "itemTitle": "DEATHS GAME S 01 EP 01",
             "file": "DEATHS GAME S01 EP01.mp4",
@@ -36,21 +38,18 @@
             "seconds": 3330,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 273,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 273
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
+          "name": "The Reason You're Going to Hell",
+          "airdate": "2023-12-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "deaths-game-s-01-ep-02",
             "itemTitle": "DEATHS GAME S 01 EP 02",
             "file": "DEATHS GAME S01 EP02.mp4",
@@ -59,21 +58,34 @@
             "seconds": 3512,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 259,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 259
           },
           "alternates": []
         },
         {
+          "number": 3,
+          "name": "Death Can't Take Anything Away",
+          "airdate": "2023-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Reason You're Afraid of Death",
+          "airdate": "2023-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 5,
-          "name": "kporama",
-          "state": "REVIEW",
+          "name": "It Is Impossible to Break Free and Fight against Death",
+          "airdate": "2024-01-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "deaths.-game.-s-01-e-05-kporama.net-sd",
             "itemTitle": "Deaths. Game. S 01 E 05 [ Kporama.net] SD",
             "file": "Deaths.Game.S01E05 [Kporama.net] SD.ia.mp4",
@@ -82,21 +94,32 @@
             "seconds": 3549,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 272,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 272
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "deaths.-game.-s-01-e-05-kporama.net-sd",
+              "itemTitle": "Deaths. Game. S 01 E 05 [ Kporama.net] SD",
+              "file": "Deaths.Game.S01E05 [Kporama.net] SD.mp4",
+              "name": "Deaths.Game.S01E05 [Kporama.net] SD",
+              "url": "https://archive.org/download/deaths.-game.-s-01-e-05-kporama.net-sd/Deaths.Game.S01E05%20%5BKporama.net%5D%20SD.mp4",
+              "seconds": 3549,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 272
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "kporama",
-          "state": "REVIEW",
+          "name": "Memory",
+          "airdate": "2024-01-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "deaths.-game.-s-01-e-06-kporama.net-sd_202401",
             "itemTitle": "Deaths. Game. S 01 E 06 [ Kporama.net] SD",
             "file": "Deaths.Game.S01E06 [Kporama.net] SD.ia.mp4",
@@ -105,21 +128,58 @@
             "seconds": 3478,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 267,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 267
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "deaths.-game.-s-01-e-06-kporama.net-sd_202401",
+              "itemTitle": "Deaths. Game. S 01 E 06 [ Kporama.net] SD",
+              "file": "Deaths.Game.S01E06 [Kporama.net] SD.mp4",
+              "name": "Deaths.Game.S01E06 [Kporama.net] SD",
+              "url": "https://archive.org/download/deaths.-game.-s-01-e-06-kporama.net-sd_202401/Deaths.Game.S01E06%20%5BKporama.net%5D%20SD.mp4",
+              "seconds": 3478,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 267
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "deaths.-game.-s-01-e-06-kporama.net-sd",
+              "itemTitle": "Deaths. Game. S 01 E 06 [ Kporama.net] SD",
+              "file": "Deaths.Game.S01E06 [Kporama.net] SD.ia.mp4",
+              "name": "Deaths.Game.S01E06 [Kporama",
+              "url": "https://archive.org/download/deaths.-game.-s-01-e-06-kporama.net-sd/Deaths.Game.S01E06%20%5BKporama.net%5D%20SD.ia.mp4",
+              "seconds": 3478,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 267
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "deaths.-game.-s-01-e-06-kporama.net-sd",
+              "itemTitle": "Deaths. Game. S 01 E 06 [ Kporama.net] SD",
+              "file": "Deaths.Game.S01E06 [Kporama.net] SD.mp4",
+              "name": "Deaths.Game.S01E06 [Kporama.net] SD",
+              "url": "https://archive.org/download/deaths.-game.-s-01-e-06-kporama.net-sd/Deaths.Game.S01E06%20%5BKporama.net%5D%20SD.mp4",
+              "seconds": 3478,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 267
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "kporama",
-          "state": "REVIEW",
+          "name": "Opportunity",
+          "airdate": "2024-01-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "deaths.-game.-s-01-e-07-kporama.net-sd",
             "itemTitle": "Deaths. Game. S 01 E 07 [ Kporama.net] SD",
             "file": "Deaths.Game.S01E07 [Kporama.net] SD.ia.mp4",
@@ -128,21 +188,32 @@
             "seconds": 2309,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 173,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 173
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "deaths.-game.-s-01-e-07-kporama.net-sd",
+              "itemTitle": "Deaths. Game. S 01 E 07 [ Kporama.net] SD",
+              "file": "Deaths.Game.S01E07 [Kporama.net] SD.mp4",
+              "name": "Deaths.Game.S01E07 [Kporama.net] SD",
+              "url": "https://archive.org/download/deaths.-game.-s-01-e-07-kporama.net-sd/Deaths.Game.S01E07%20%5BKporama.net%5D%20SD.mp4",
+              "seconds": 2309,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 173
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "kporama net hd",
-          "state": "REVIEW",
+          "name": "Don't Go Looking For Death. Death Will Come Find You.",
+          "airdate": "2024-01-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "deaths.-game.-s-01-e-08-kporama.net-hd",
             "itemTitle": "Deaths. Game. S 01 E 08 [ Kporama.net] HD",
             "file": "Deaths.Game.S01E08 [Kporama.net] HD.mp4",
@@ -151,13 +222,7 @@
             "seconds": 2426,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 490,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 490
           },
           "alternates": []
         }

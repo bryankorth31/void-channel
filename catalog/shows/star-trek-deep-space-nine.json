@@ -3,7 +3,7 @@
   "slug": "star-trek-deep-space-nine",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Syndicated",
-  "matchedAt": "2026-10-15T01:19:12.878Z",
+  "matchedAt": "2026-10-15T03:17:39.655Z",
   "tvmaze": {
     "id": 493,
     "name": "Star Trek: Deep Space Nine",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 176,
-    "live": 27,
-    "review": 126,
-    "missing": 23,
-    "pct": 87
+    "live": 28,
+    "review": 131,
+    "missing": 17,
+    "pct": 90
   },
   "seasons": [
     {
@@ -374,9 +374,37 @@
           "number": 18,
           "name": "Dramatis Personae",
           "airdate": "1993-05-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+            "file": "Star Trek Deep Space Nine 1x18 Dramatis Personae.mp4",
+            "name": "Star Trek Deep Space Nine 1x18 Dramatis Personae",
+            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%201x18%20Dramatis%20Personae.mp4",
+            "seconds": 2616,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 395
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+              "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+              "file": "Star Trek Deep Space Nine 1x18 Dramatis Personae..ia.mp4",
+              "name": "Star Trek Deep Space Nine 1x18 Dramatis Personae.",
+              "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%201x18%20Dramatis%20Personae..ia.mp4",
+              "seconds": 2616,
+              "format": "h.264 IA",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 256
+            }
+          ]
         },
         {
           "number": 19,
@@ -831,8 +859,21 @@
           "number": 18,
           "name": "Profit and Loss",
           "airdate": "1994-03-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+            "file": "Star Trek Deep Space Nine 2x18 Pertes et Profits.mp4",
+            "name": "Star Trek Deep Space Nine 2x18 Pertes et Profits",
+            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%202x18%20Pertes%20et%20Profits.mp4",
+            "seconds": 2616,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 357
+          },
           "alternates": []
         },
         {
@@ -2068,8 +2109,21 @@
           "number": 1,
           "name": "Apocalypse Rising",
           "airdate": "1996-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+            "file": "Star Trek Deep Space Nine 5x01 L'Apocalypse.mp4",
+            "name": "Star Trek Deep Space Nine 5x01 L'Apocalypse",
+            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%205x01%20L'Apocalypse.mp4",
+            "seconds": 2618,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 358
+          },
           "alternates": []
         },
         {
@@ -2479,8 +2533,21 @@
           "number": 21,
           "name": "Soldiers of the Empire",
           "airdate": "1997-04-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+            "file": "Star Trek Deep Space Nine 5x21 Les Soldats De L'Empire.mp4",
+            "name": "Star Trek Deep Space Nine 5x21 Les Soldats De L'Empire",
+            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%205x21%20Les%20Soldats%20De%20L'Empire.mp4",
+            "seconds": 2616,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 358
+          },
           "alternates": []
         },
         {
@@ -2702,8 +2769,21 @@
           "number": 6,
           "name": "Sacrifice of Angels",
           "airdate": "1997-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+            "file": "Star Trek Deep Space Nine 6x06 Le Sacrifice Des Anges.mp4",
+            "name": "Star Trek Deep Space Nine 6x06 Le Sacrifice Des Anges",
+            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%206x06%20Le%20Sacrifice%20Des%20Anges.mp4",
+            "seconds": 2605,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 358
+          },
           "alternates": []
         },
         {
@@ -3046,8 +3126,21 @@
           "number": 23,
           "name": "Profit and Lace",
           "airdate": "1998-05-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-deep-space-nine-la-serie-v.f.-1993-1997",
+            "itemTitle": "Star Trek ☆ Deep Space Nine ☆ La Série V.F. ☆ 1993-1997",
+            "file": "Star Trek Deep Space Nine 6x23 Profits Dans La Dentelle.mp4",
+            "name": "Star Trek Deep Space Nine 6x23 Profits Dans La Dentelle",
+            "url": "https://archive.org/download/star-trek-deep-space-nine-la-serie-v.f.-1993-1997/Star%20Trek%20Deep%20Space%20Nine%206x23%20Profits%20Dans%20La%20Dentelle.mp4",
+            "seconds": 2603,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 357
+          },
           "alternates": []
         },
         {

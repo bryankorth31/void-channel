@@ -3,19 +3,18 @@
   "slug": "all-of-us-are-dead",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.260Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.489Z",
   "tvmaze": {
-    "id": null,
+    "id": 47199,
     "name": "All of Us Are Dead",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 61,
+    "premiered": "2022-01-28",
+    "network": "Netflix"
   },
   "coverage": {
     "total": 12,
-    "live": 0,
-    "review": 12,
+    "live": 12,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "of nkiri com niovnfdinvodfnbogfonfgobnofgnboigfnobnifgoinb",
-          "state": "REVIEW",
+          "name": "Episode 1",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E01.(NKIRI.COM).niovnfdinvodfnbogfonfgobnofgnboigfnobnifgoinb.mp4",
@@ -36,21 +38,33 @@
             "seconds": 3983,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 385,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 385
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "720p-all-of-us-are-dead-episode-4",
+              "itemTitle": "[ 720p ] All Of Us Are Dead Episode 4",
+              "file": "[ 720p ] All of Us Are Dead Episode 1.mkv",
+              "name": "[ 720p ] All of Us Are Dead Episode 1",
+              "url": "https://archive.org/download/720p-all-of-us-are-dead-episode-4/%5B%20720p%20%5D%20All%20of%20Us%20Are%20Dead%20Episode%201.mkv",
+              "seconds": 3983,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 576
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "of nkiri com niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
-          "state": "REVIEW",
+          "name": "Episode 2",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E02.(NKIRI.COM).niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb.mp4",
@@ -59,21 +73,18 @@
             "seconds": 4201,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 406,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 406
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "of nkiri com niovnfionvodfnboigfnobingfoibnolgfjmhj",
-          "state": "REVIEW",
+          "name": "Episode 3",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E03.(NKIRI.COM).niovnfionvodfnboigfnobingfoibnolgfjmhj.mp4",
@@ -82,21 +93,18 @@
             "seconds": 3739,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 361,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 361
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "of nkiri com vouifnovndfonvdfnboigfnboigfnbonoginbgfinb",
-          "state": "REVIEW",
+          "name": "Episode 4",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E04.(NKIRI.COM).vouifnovndfonvdfnboigfnboigfnbonoginbgfinb.mp4",
@@ -105,21 +113,18 @@
             "seconds": 4293,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 415,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 415
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "of nkiri com noinfovnodfnvdfnbongboigfnbogfnbobgily",
-          "state": "REVIEW",
+          "name": "Episode 5",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E05.(NKIRI.COM).noinfovnodfnvdfnbongboigfnbogfnbobgily.mp4",
@@ -128,21 +133,18 @@
             "seconds": 3378,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 327,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 327
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "of nkiri com nivfndobnonbgfbnognboignbingoibgoibgg",
-          "state": "REVIEW",
+          "name": "Episode 6",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E06.(NKIRI.COM).nivfndobnonbgfbnognboignbingoibgoibgg.mp4",
@@ -151,21 +153,18 @@
             "seconds": 4005,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 390,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 390
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "of nkiri com niovnfodnvoinodfnvondoibngoinbfoigbfgil",
-          "state": "REVIEW",
+          "name": "Episode 7",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E07.(NKIRI.COM).niovnfodnvoinodfnvondoibngoinbfoigbfgil.mp4",
@@ -174,21 +173,18 @@
             "seconds": 3572,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 345,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 345
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "of nkiri com noivnofnvodnvnfvnifdvniofdnvoifnvofoivvfv",
-          "state": "REVIEW",
+          "name": "Episode 8",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E08.(NKIRI.COM).noivnofnvodnvnfvnifdvniofdnvoifnvofoivvfv.mp4",
@@ -197,21 +193,18 @@
             "seconds": 3450,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 332,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 332
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "of nkiri com nivofndvnodfnognbongfobngofivfvvnbogi",
-          "state": "REVIEW",
+          "name": "Episode 9",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E09.(NKIRI.COM).nivofndvnodfnognbongfobngofivfvvnbogi.mp4",
@@ -220,21 +213,18 @@
             "seconds": 3653,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 354,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 354
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "of nkiri com niovnfdoinvoifdnogibnoigfbnoifgnboingfoinhgy",
-          "state": "REVIEW",
+          "name": "Episode 10",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E10.(NKIRI.COM).niovnfdoinvoifdnogibnoigfbnoifgnboingfoinhgy.mp4",
@@ -243,21 +233,18 @@
             "seconds": 3232,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 309,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 309
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "of nkiri com nivnfoidvdoifbnfgibnogfinboigfnbiofgboing",
-          "state": "REVIEW",
+          "name": "Episode 11",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E11.(NKIRI.COM).nivnfoidvdoifbnfgibnogfinboigfnbiofgboing.mp4",
@@ -266,21 +253,18 @@
             "seconds": 3338,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 322,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 322
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "of nkiri com nvionfodnvondbongfobnofgnbonbonboigfoibn",
-          "state": "REVIEW",
+          "name": "Episode 12",
+          "airdate": "2022-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "all.of.-us.-are.-dead.-s-01-e-02.-nkiri.-com.niovnfdiovoidnfobingfonbofgnbongfobinogfinboigfnb",
             "itemTitle": "All of Us Are Dead (K-Drama)",
             "file": "All.of.Us.Are.Dead.S01E12.(NKIRI.COM).nvionfodnvondbongfobnofgnbonbonboigfoibn.mp4",
@@ -289,13 +273,7 @@
             "seconds": 3182,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 309,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 309
           },
           "alternates": []
         }

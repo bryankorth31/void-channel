@@ -3,21 +3,20 @@
   "slug": "the-seven-deadly-sins",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.030Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.141Z",
   "tvmaze": {
-    "id": null,
+    "id": 8524,
     "name": "The Seven Deadly Sins",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2014-10-05",
+    "network": "TV Tokyo"
   },
   "coverage": {
-    "total": 14,
-    "live": 0,
-    "review": 14,
-    "missing": 0,
-    "pct": 100
+    "total": 96,
+    "live": 1,
+    "review": 8,
+    "missing": 87,
+    "pct": 9
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the 01 en muse in",
-          "state": "REVIEW",
+          "name": "The Seven Deadly Sins",
+          "airdate": "2014-10-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-seven-deadly-sins-episode-01-s-1-e-01-en-sub-muse-in_202601",
             "itemTitle": "The Seven Deadly Sins Episode 01 ( S 1 E 01) [ EN Sub] Muse IN",
             "file": "The Seven Deadly Sins - Episode 01 (S1E01) [EN Sub] _ Muse IN.mp4",
@@ -36,44 +38,32 @@
             "seconds": 1470,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 77,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 77
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
+              "item": "Sevendeadlysinss1cridz",
+              "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
+              "file": "The Seven Deadly Sins (Sub) Episode 002 - Watch The Seven Deadly Sins (Sub) Episode 002 online in high quality.MP4",
+              "name": "The Seven Deadly Sins (Sub) Episode 002 - Watch The Seven Deadly Sins (Sub) Episode 002 online in high quality",
+              "url": "https://archive.org/download/Sevendeadlysinss1cridz/The%20Seven%20Deadly%20Sins%20(Sub)%20Episode%20002%20-%20Watch%20The%20Seven%20Deadly%20Sins%20(Sub)%20Episode%20002%20online%20in%20high%20quality.MP4",
+              "seconds": 1469,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 90
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "the watch the online in high quality",
+          "name": "The Sword of the Holy Knight",
+          "airdate": "2014-10-12",
           "state": "REVIEW",
           "file": {
-            "item": "Sevendeadlysinss1cridz",
-            "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
-            "file": "The Seven Deadly Sins (Sub) Episode 002 - Watch The Seven Deadly Sins (Sub) Episode 002 online in high quality.MP4",
-            "name": "The Seven Deadly Sins (Sub) Episode 002 - Watch The Seven Deadly Sins (Sub) Episode 002 online in high quality",
-            "url": "https://archive.org/download/Sevendeadlysinss1cridz/The%20Seven%20Deadly%20Sins%20(Sub)%20Episode%20002%20-%20Watch%20The%20Seven%20Deadly%20Sins%20(Sub)%20Episode%20002%20online%20in%20high%20quality.MP4",
-            "seconds": 1469,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 90,
-            "ep": {
-              "season": 0,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "the watch the online in high quality",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 003 - Watch The Seven Deadly Sins (Sub) Episode 003 online in high quality.MP4",
@@ -82,21 +72,18 @@
             "seconds": 1476,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 81,
-            "ep": {
-              "season": 0,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 81
           },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "the watch the online in high quality",
+          "number": 3,
+          "name": "Sin of the Sleeping Forest",
+          "airdate": "2014-10-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 004 - Watch The Seven Deadly Sins (Sub) Episode 004 online in high quality.MP4",
@@ -105,21 +92,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 88,
-            "ep": {
-              "season": 0,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 88
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "the watch the online in high quality",
+          "number": 4,
+          "name": "A Little Girl's Dream",
+          "airdate": "2014-10-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 005 - Watch The Seven Deadly Sins (Sub) Episode 005 online in high quality.MP4",
@@ -128,21 +112,18 @@
             "seconds": 1470,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 94,
-            "ep": {
-              "season": 0,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 94
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "the watch the online in high quality",
+          "number": 5,
+          "name": "Even If You Should Die",
+          "airdate": "2014-11-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 006 - Watch The Seven Deadly Sins (Sub) Episode 006 online in high quality.MP4",
@@ -151,21 +132,18 @@
             "seconds": 1476,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 93,
-            "ep": {
-              "season": 0,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 93
           },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "the watch the online in high quality",
+          "number": 6,
+          "name": "The Poem of Beginnings",
+          "airdate": "2014-11-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 007 - Watch The Seven Deadly Sins (Sub) Episode 007 online in high quality.MP4",
@@ -174,21 +152,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 87,
-            "ep": {
-              "season": 0,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 87
           },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "the watch the online in high quality",
+          "number": 7,
+          "name": "A Touching Reunion",
+          "airdate": "2014-11-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 008 - Watch The Seven Deadly Sins (Sub) Episode 008 online in high quality.MP4",
@@ -197,21 +172,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 87,
-            "ep": {
-              "season": 0,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 87
           },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "the watch the online in high quality",
+          "number": 8,
+          "name": "The Fearsome Pursuer",
+          "airdate": "2014-11-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 009 - Watch The Seven Deadly Sins (Sub) Episode 009 online in high quality.MP4",
@@ -220,21 +192,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 94,
-            "ep": {
-              "season": 0,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 94
           },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "the watch the online in high quality",
+          "number": 9,
+          "name": "Dark Pulse",
+          "airdate": "2014-11-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 9 in \"The Seven Deadly Sins ( Sub) Episode 005\"",
             "item": "Sevendeadlysinss1cridz",
             "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
             "file": "The Seven Deadly Sins (Sub) Episode 010 - Watch The Seven Deadly Sins (Sub) Episode 010 online in high quality.MP4",
@@ -243,74 +212,128 @@
             "seconds": 1470,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 101,
-            "ep": {
-              "season": 0,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 101
           },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Vaizel Fighting Festival",
+          "airdate": "2014-12-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "podcast feat",
-          "state": "REVIEW",
-          "file": {
-            "item": "seven-deadly-sins-podcast-feat.-bria-topper-aka-talia-satania",
-            "itemTitle": "Seven Deadly Sins Podcast Feat. Bria Topper (aka Talia Satania)",
-            "file": "Seven Deadly Sins Podcast Feat. Bria Topper (aka Talia Satania).ia.mp4",
-            "name": "Seven Deadly Sins Podcast Feat",
-            "url": "https://archive.org/download/seven-deadly-sins-podcast-feat.-bria-topper-aka-talia-satania/Seven%20Deadly%20Sins%20Podcast%20Feat.%20Bria%20Topper%20(aka%20Talia%20Satania).ia.mp4",
-            "seconds": 1864,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 116,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Pent-up Feelings",
+          "airdate": "2014-12-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "podcast feat bria topper aka talia satania",
-          "state": "REVIEW",
-          "file": {
-            "item": "seven-deadly-sins-podcast-feat.-bria-topper-aka-talia-satania",
-            "itemTitle": "Seven Deadly Sins Podcast Feat. Bria Topper (aka Talia Satania)",
-            "file": "Seven Deadly Sins Podcast Feat. Bria Topper (aka Talia Satania).mp4",
-            "name": "Seven Deadly Sins Podcast Feat. Bria Topper (aka Talia Satania)",
-            "url": "https://archive.org/download/seven-deadly-sins-podcast-feat.-bria-topper-aka-talia-satania/Seven%20Deadly%20Sins%20Podcast%20Feat.%20Bria%20Topper%20(aka%20Talia%20Satania).mp4",
-            "seconds": 1864,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 116,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Bloodcurdling Cannon",
+          "airdate": "2014-12-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "tokyo bon makudonarudo namewee ft meu ninomiya",
-          "state": "REVIEW",
-          "file": {
-            "item": "Sevendeadlysinss1cridz",
-            "itemTitle": "The Seven Deadly Sins ( Sub) Episode 005 Watch The Seven Deadly Sins ( Sub) Episode 005 Online In High Quality",
-            "file": "Tokyo Bon 東京盆踊り2020 (Makudonarudo) Namewee黃明志 ft.Meu Ninomiya二宮芽生.mp4",
-            "name": "Tokyo Bon 東京盆踊り2020 (Makudonarudo) Namewee黃明志 ft.Meu Ninomiya二宮芽生",
-            "url": "https://archive.org/download/Sevendeadlysinss1cridz/Tokyo%20Bon%20%E6%9D%B1%E4%BA%AC%E7%9B%86%E8%B8%8A%E3%82%8A2020%20(Makudonarudo)%20Namewee%E9%BB%83%E6%98%8E%E5%BF%97%20ft.Meu%20Ninomiya%E4%BA%8C%E5%AE%AE%E8%8A%BD%E7%94%9F.mp4",
-            "seconds": 300,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 50,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Angel of Destruction",
+          "airdate": "2014-12-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "A Reader of Books",
+          "airdate": "2015-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Unholy Knight",
+          "airdate": "2015-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Legends, Provoked",
+          "airdate": "2015-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The First Sacrifice",
+          "airdate": "2015-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Even If It Costs Me My Life",
+          "airdate": "2015-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Fairy King Waits in Vain",
+          "airdate": "2015-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Courage Charm",
+          "airdate": "2015-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Looming Threat",
+          "airdate": "2015-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "What I Can Do for You",
+          "airdate": "2015-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Despair Descends",
+          "airdate": "2015-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "The Heroes",
+          "airdate": "2015-03-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -319,26 +342,589 @@
       "season": 2,
       "episodes": [
         {
+          "number": 1,
+          "name": "Revival of the Demon Clan",
+          "airdate": "2018-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Existence and Proof",
+          "airdate": "2018-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Sacred Treasure Lostvayne",
+          "airdate": "2018-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Ten Commandments on the Move",
+          "airdate": "2018-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 5,
-          "name": "the revival of the commandments 05",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-seven-deadly-sins-revival-of-the-commandments-episode-05-s-2-e-05-english-sub",
-            "itemTitle": "The Seven Deadly Sins Revival Of The Commandments Episode 05 ( S 2 E 05) English Sub",
-            "file": "The Seven Deadly Sins Revival of the Commandments - Episode 05 (S2E05) English Sub.mp4",
-            "name": "The Seven Deadly Sins Revival of the Commandments - Episode 05 (S2E05) English Sub",
-            "url": "https://archive.org/download/the-seven-deadly-sins-revival-of-the-commandments-episode-05-s-2-e-05-english-sub/The%20Seven%20Deadly%20Sins%20Revival%20of%20the%20Commandments%20-%20Episode%2005%20(S2E05)%20English%20Sub.mp4",
-            "seconds": 1470,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Overwhelming Violence",
+          "airdate": "2018-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Great Holy Knight Atones for His Sins",
+          "airdate": "2018-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Where Memories Lead",
+          "airdate": "2018-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Druids' Holy Land",
+          "airdate": "2018-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Promise with the Loved One",
+          "airdate": "2018-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "What We Lacked",
+          "airdate": "2018-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Father and Son",
+          "airdate": "2018-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Where Love is Found",
+          "airdate": "2018-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Farewell, My Beloved Thief",
+          "airdate": "2018-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Master of the Sun",
+          "airdate": "2018-04-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "A Horrifying Confession",
+          "airdate": "2018-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Death Trap Labyrinth",
+          "airdate": "2018-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Legendary Figures",
+          "airdate": "2018-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "For Whom Does That Light Shine?",
+          "airdate": "2018-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Meliodas vs. The Ten Commandments",
+          "airdate": "2018-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "In Search of Hope",
+          "airdate": "2018-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Certain Warmth",
+          "airdate": "2018-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Return of the Sins",
+          "airdate": "2018-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Hero Rises!",
+          "airdate": "2018-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "As Long as You Are Here",
+          "airdate": "2018-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Light That Disperses Darkness",
+          "airdate": "2019-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Memories of the Holy War",
+          "airdate": "2019-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Those Without Light",
+          "airdate": "2019-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Ten Commandments vs. The Four Archangels",
+          "airdate": "2019-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Emotional Maelstrom",
+          "airdate": "2019-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "We Call That Love",
+          "airdate": "2019-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Deadly Sins Unite!",
+          "airdate": "2019-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Doll Seeks Love",
+          "airdate": "2019-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Cursed Lovers",
+          "airdate": "2019-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "That is Our Way of Life",
+          "airdate": "2019-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Hateful Cannot Rest",
+          "airdate": "2019-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Love is a Maiden's Power",
+          "airdate": "2019-12-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Almighty vs. The Greatest Evil",
+          "airdate": "2020-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "A New Threat",
+          "airdate": "2020-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "To Our Captain",
+          "airdate": "2020-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Seven Deadly Sins End",
+          "airdate": "2020-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Our Choices",
+          "airdate": "2020-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "March of the Saints",
+          "airdate": "2020-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Holy War Accord",
+          "airdate": "2020-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Child of Hope",
+          "airdate": "2020-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Beginning of the Holy War",
+          "airdate": "2020-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "War-torn Britannia",
+          "airdate": "2020-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The One Twisted by Darkness",
+          "airdate": "2020-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Rampaging Love",
+          "airdate": "2020-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "From Purgatory",
+          "airdate": "2021-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "A Meeting with the Unknown",
+          "airdate": "2021-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A Single-Minded Love",
+          "airdate": "2021-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Victims of the Holy War",
+          "airdate": "2021-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Tragic Strike",
+          "airdate": "2021-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Confront Despair!!",
+          "airdate": "2021-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Hope, Conflict, and Despair",
+          "airdate": "2021-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Doorway to Hope",
+          "airdate": "2021-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "That Which Gathers",
+          "airdate": "2021-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Salvation of the Sun",
+          "airdate": "2021-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The One Who Stands Against a God",
+          "airdate": "2021-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "We'll All Be Your Strength",
+          "airdate": "2021-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The End of a Long Journey",
+          "airdate": "2021-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Farewell, Seven Deadly Sins",
+          "airdate": "2021-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Fated Brothers",
+          "airdate": "2021-04-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Final Battle",
+          "airdate": "2021-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Voice Calling Your Name",
+          "airdate": "2021-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The King Sings Alone",
+          "airdate": "2021-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Struggle",
+          "airdate": "2021-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Mortal Enemies",
+          "airdate": "2021-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "What the Witch Had Always Wanted",
+          "airdate": "2021-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "A Taste of Chaos",
+          "airdate": "2021-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "An Everlasting Kingdom",
+          "airdate": "2021-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Heirs",
+          "airdate": "2021-06-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

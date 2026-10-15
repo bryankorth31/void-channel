@@ -3,7 +3,7 @@
   "slug": "the-life-of-birds",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:19.501Z",
+  "matchedAt": "2026-10-15T03:18:20.379Z",
   "tvmaze": {
     "id": 4996,
     "name": "The Life of Birds",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 10,
     "live": 0,
-    "review": 5,
-    "missing": 5,
-    "pct": 50
+    "review": 10,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -94,8 +94,20 @@
           "number": 3,
           "name": "The Insatiable Appetite",
           "airdate": "1998-11-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Insatiable Appetite\" (0.95)",
+            "item": "the_life_of_birds",
+            "itemTitle": "The Life Of Birds ★ BBC Nature series - with MKV Files",
+            "file": "the_life_of_birds_03_the_insatiable_appetite.mp4",
+            "name": "the_life_of_birds_03_the_insatiable_appetite",
+            "url": "https://archive.org/download/the_life_of_birds/the_life_of_birds_03_the_insatiable_appetite.mp4",
+            "seconds": 2950,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 560
+          },
           "alternates": []
         },
         {
@@ -170,16 +182,40 @@
           "number": 6,
           "name": "Signals and Songs",
           "airdate": "1998-11-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Signals and Songs\" (0.95)",
+            "item": "the_life_of_birds",
+            "itemTitle": "The Life Of Birds ★ BBC Nature series - with MKV Files",
+            "file": "the_life_of_birds_06_signals_and_songs.mp4",
+            "name": "the_life_of_birds_06_signals_and_songs",
+            "url": "https://archive.org/download/the_life_of_birds/the_life_of_birds_06_signals_and_songs.mp4",
+            "seconds": 2961,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 804
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Finding Partners",
           "airdate": "1998-12-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Finding Partners\" (0.95)",
+            "item": "the_life_of_birds",
+            "itemTitle": "The Life Of Birds ★ BBC Nature series - with MKV Files",
+            "file": "the_life_of_birds_07_finding_partners.mp4",
+            "name": "the_life_of_birds_07_finding_partners",
+            "url": "https://archive.org/download/the_life_of_birds/the_life_of_birds_07_finding_partners.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 669
+          },
           "alternates": []
         },
         {
@@ -220,16 +256,40 @@
           "number": 9,
           "name": "The Problems of Parenthood",
           "airdate": "1998-12-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Problems of Parenthood\" (0.95)",
+            "item": "the_life_of_birds",
+            "itemTitle": "The Life Of Birds ★ BBC Nature series - with MKV Files",
+            "file": "the_life_of_birds_09_the_problems_of_parenthood.mp4",
+            "name": "the_life_of_birds_09_the_problems_of_parenthood",
+            "url": "https://archive.org/download/the_life_of_birds/the_life_of_birds_09_the_problems_of_parenthood.mp4",
+            "seconds": 2952,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 984
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "The Limits of Endurance",
           "airdate": "1998-12-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Limits of Endurance\" (0.95)",
+            "item": "the_life_of_birds",
+            "itemTitle": "The Life Of Birds ★ BBC Nature series - with MKV Files",
+            "file": "the_life_of_birds_10_the_limits_of_endurance.mp4",
+            "name": "the_life_of_birds_10_the_limits_of_endurance",
+            "url": "https://archive.org/download/the_life_of_birds/the_life_of_birds_10_the_limits_of_endurance.mp4",
+            "seconds": 3280,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 627
+          },
           "alternates": []
         }
       ]

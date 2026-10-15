@@ -3,7 +3,7 @@
   "slug": "star-trek-enterprise",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-15T01:19:13.190Z",
+  "matchedAt": "2026-10-15T03:17:40.143Z",
   "tvmaze": {
     "id": 714,
     "name": "Star Trek: Enterprise",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 98,
-    "live": 0,
+    "live": 1,
     "review": 28,
-    "missing": 70,
-    "pct": 29
+    "missing": 69,
+    "pct": 30
   },
   "seasons": [
     {
@@ -118,8 +118,21 @@
           "number": 6,
           "name": "Terra Nova",
           "airdate": "2001-10-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
+            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
+            "file": "Star Trek Enterprise 1x06 Terra Nova (La Colonie Perdue) multilang.mp4",
+            "name": "Star Trek Enterprise 1x06 Terra Nova (La Colonie Perdue) multilang",
+            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x06%20Terra%20Nova%20(La%20Colonie%20Perdue)%20multilang.mp4",
+            "seconds": 2671,
+            "format": "h.264",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 268
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "star-trek-voyager",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-15T01:19:13.037Z",
+  "matchedAt": "2026-10-15T03:17:39.925Z",
   "tvmaze": {
     "id": 492,
     "name": "Star Trek: Voyager",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 172,
-    "live": 42,
-    "review": 105,
-    "missing": 25,
-    "pct": 85
+    "live": 49,
+    "review": 108,
+    "missing": 15,
+    "pct": 91
   },
   "seasons": [
     {
@@ -103,7 +103,21 @@
             "playable": true,
             "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Time and Again\" (1.00)",
+              "item": "star-trek-voyager-s-1-e-1-caretaker",
+              "itemTitle": "Star Trek: Voyager - The Complete First Season",
+              "file": "Star Trek Voyager S1 E3 - Time and Again.mp4",
+              "name": "Star Trek Voyager S1 E3 - Time and Again",
+              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E3%20-%20Time%20and%20Again.mp4",
+              "seconds": 2754,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
+            }
+          ]
         },
         {
           "number": 5,
@@ -432,7 +446,35 @@
             "playable": true,
             "sizeMB": 172
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Heroes and Demons\" (1.00)",
+              "item": "star-trek-voyager-s-1-e-1-caretaker",
+              "itemTitle": "Star Trek: Voyager - The Complete First Season",
+              "file": "Star Trek Voyager S1 E11 - Heroes and Demons.mp4",
+              "name": "Star Trek Voyager S1 E11 - Heroes and Demons",
+              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E11%20-%20Heroes%20and%20Demons.mp4",
+              "seconds": 2751,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 209
+            },
+            {
+              "conf": 0.7,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x12 Heros et Demons.mp4",
+              "name": "Star Trek Voyager 1x12 Heros et Demons",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x12%20Heros%20et%20Demons.mp4",
+              "seconds": 2638,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 577
+            }
+          ]
         },
         {
           "number": 13,
@@ -643,8 +685,21 @@
           "number": 2,
           "name": "Initiations",
           "airdate": "1995-09-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 2x02 Initiations.mp4",
+            "name": "Star Trek Voyager 2x02 Initiations",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%202x02%20Initiations.mp4",
+            "seconds": 2640,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 570
+          },
           "alternates": []
         },
         {
@@ -869,8 +924,21 @@
           "number": 14,
           "name": "Alliances",
           "airdate": "1996-01-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 2x14 Alliances.mp4",
+            "name": "Star Trek Voyager 2x14 Alliances",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%202x14%20Alliances.mp4",
+            "seconds": 2641,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 574
+          },
           "alternates": []
         },
         {
@@ -1395,8 +1463,21 @@
           "number": 14,
           "name": "Alter Ego",
           "airdate": "1997-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 3x14 Alter Ego.mp4",
+            "name": "Star Trek Voyager 3x14 Alter Ego",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%203x14%20Alter%20Ego.mp4",
+            "seconds": 2643,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 346
+          },
           "alternates": []
         },
         {
@@ -1621,8 +1702,21 @@
           "number": 26,
           "name": "Scorpion, Part I",
           "airdate": "1997-05-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 3x26 Scorpion (Part 1).mp4",
+            "name": "Star Trek Voyager 3x26 Scorpion (Part 1)",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%203x26%20Scorpion%20(Part%201).mp4",
+            "seconds": 2647,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 554
+          },
           "alternates": []
         }
       ]
@@ -1634,8 +1728,21 @@
           "number": 1,
           "name": "Scorpion, Part II",
           "airdate": "1997-09-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 4x01 Scorpion (Part 2).mp4",
+            "name": "Star Trek Voyager 4x01 Scorpion (Part 2)",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%204x01%20Scorpion%20(Part%202).mp4",
+            "seconds": 2642,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 577
+          },
           "alternates": []
         },
         {
@@ -1881,8 +1988,21 @@
           "number": 14,
           "name": "Message in a Bottle",
           "airdate": "1998-01-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 4x14 Le Message Dans La Bouteille.mp4",
+            "name": "Star Trek Voyager 4x14 Le Message Dans La Bouteille",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%204x14%20Le%20Message%20Dans%20La%20Bouteille.mp4",
+            "seconds": 2648,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 579
+          },
           "alternates": []
         },
         {
@@ -2590,8 +2710,21 @@
           "number": 24,
           "name": "Relativity",
           "airdate": "1999-05-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 5x24 L'USS Relativity.mp4",
+            "name": "Star Trek Voyager 5x24 L'USS Relativity",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%205x24%20L'USS%20Relativity.mp4",
+            "seconds": 2642,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 578
+          },
           "alternates": []
         },
         {
@@ -2681,8 +2814,21 @@
           "number": 2,
           "name": "Survival Instinct",
           "airdate": "1999-09-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 6x02 Instinct De Survie.mp4",
+            "name": "Star Trek Voyager 6x02 Instinct De Survie",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%206x02%20Instinct%20De%20Survie.mp4",
+            "seconds": 2530,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 306
+          },
           "alternates": []
         },
         {
@@ -2836,8 +2982,21 @@
           "number": 10,
           "name": "Pathfinder",
           "airdate": "1999-12-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 6x10 Le Projet Pathfinder.mp4",
+            "name": "Star Trek Voyager 6x10 Le Projet Pathfinder",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%206x10%20Le%20Projet%20Pathfinder.mp4",
+            "seconds": 2524,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 552
+          },
           "alternates": []
         },
         {
@@ -3566,8 +3725,21 @@
           "number": 21,
           "name": "Friendship One",
           "airdate": "2001-04-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 7x21 Friendship 1.mp4",
+            "name": "Star Trek Voyager 7x21 Friendship 1",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%207x21%20Friendship%201.mp4",
+            "seconds": 2526,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 527
+          },
           "alternates": []
         },
         {

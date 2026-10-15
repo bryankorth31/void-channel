@@ -3,21 +3,20 @@
   "slug": "shaman-king",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.163Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:06.013Z",
   "tvmaze": {
-    "id": null,
+    "id": 4097,
     "name": "Shaman King",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2001-07-04",
+    "network": "TV Tokyo"
   },
   "coverage": {
     "total": 64,
-    "live": 0,
-    "review": 64,
-    "missing": 0,
-    "pct": 100
+    "live": 49,
+    "review": 0,
+    "missing": 15,
+    "pct": 77
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "01 yoh morty andyscot",
-          "state": "REVIEW",
+          "name": "The Boy Who Dances with Ghosts",
+          "airdate": "2001-07-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 101 (01) yoh, morty! (andyscot).mp4",
@@ -36,44 +38,26 @@
             "seconds": 1220,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "02 guardian ghost andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 102 (02) guardian ghost (andyscot) (dvd-rip).mp4",
-            "name": "shaman king 102 (02) guardian ghost (andyscot) (dvd-rip)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20102%20(02)%20guardian%20ghost%20(andyscot)%20(dvd-rip).mp4",
-            "seconds": 1221,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Waiting Samurai",
+          "airdate": "2001-07-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "03 lenny andyscot",
-          "state": "REVIEW",
+          "name": "Another Shaman",
+          "airdate": "2001-07-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 103 (03) lenny (andyscot) (dvd-rip).mp4",
@@ -82,21 +66,18 @@
             "seconds": 1217,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 120,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 120
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "04 perfect unity andyscot",
-          "state": "REVIEW",
+          "name": "Hyoi 100",
+          "airdate": "2001-07-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 104 (04) perfect unity (andyscot).mp4",
@@ -105,21 +86,18 @@
             "seconds": 1229,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "05 a new order andyscot",
-          "state": "REVIEW",
+          "name": "The Shaman That is Mature for Her Age",
+          "airdate": "2001-08-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 105 (05) a new order (andyscot).mp4",
@@ -128,21 +106,18 @@
             "seconds": 1203,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "06 the kung fu master andyscot",
-          "state": "REVIEW",
+          "name": "Kung Fu Master",
+          "airdate": "2001-08-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 106 (06) the kung-fu master (andyscot).mp4",
@@ -151,21 +126,18 @@
             "seconds": 1229,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "07 pai long attacks andyscot",
-          "state": "REVIEW",
+          "name": "Pailong, Fists of Fury",
+          "airdate": "2001-08-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 107 (07) pai long attacks! (andyscot).mp4",
@@ -174,21 +146,18 @@
             "seconds": 1191,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 114,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 114
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "08 the rio deal andyscot",
-          "state": "REVIEW",
+          "name": "Shaman Life",
+          "airdate": "2001-08-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 108 (08) the rio deal (andyscot).mp4",
@@ -197,21 +166,18 @@
             "seconds": 1183,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 113,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 113
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "09 northern boarder andyscot",
-          "state": "REVIEW",
+          "name": "The Boy from the North",
+          "airdate": "2001-08-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 109 (09) northern boarder (andyscot).mp4",
@@ -220,21 +186,18 @@
             "seconds": 1215,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "10 the infamous tokageroh andyscot",
-          "state": "REVIEW",
+          "name": "The Fate of 600 Years",
+          "airdate": "2001-09-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 110 (10) the infamous tokageroh (andyscot).mp4",
@@ -243,21 +206,18 @@
             "seconds": 1192,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "11 vendetta andyscot",
-          "state": "REVIEW",
+          "name": "Rain That Falls in Spring",
+          "airdate": "2001-09-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 111 (11) vendetta (andyscot).mp4",
@@ -266,21 +226,18 @@
             "seconds": 1221,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "12 a new andyscot",
-          "state": "REVIEW",
+          "name": "The Star That Signals the Beginning",
+          "airdate": "2001-09-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 112 (12) a new shaman (andyscot).mp4",
@@ -289,21 +246,18 @@
             "seconds": 1223,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "13 the destiny star andyscot",
-          "state": "REVIEW",
+          "name": "Over Soul",
+          "airdate": "2001-09-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 113 (13) the destiny star (andyscot).mp4",
@@ -312,21 +266,18 @@
             "seconds": 1224,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "14 the fight andyscot",
-          "state": "REVIEW",
+          "name": "Shaman Fight",
+          "airdate": "2001-10-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 114 (14) the shaman fight (andyscot).mp4",
@@ -335,21 +286,18 @@
             "seconds": 1218,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "15 faust viii andyscot",
-          "state": "REVIEW",
+          "name": "Bone Killers",
+          "airdate": "2001-10-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 115 (15) faust VIII (andyscot).mp4",
@@ -358,21 +306,18 @@
             "seconds": 1263,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 121
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "16 the rain of the bones andyscot",
-          "state": "REVIEW",
+          "name": "Faust Love",
+          "airdate": "2001-10-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 116 (16) the rain of the bones (andyscot).mp4",
@@ -381,21 +326,18 @@
             "seconds": 1213,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "17 road trip andyscot",
-          "state": "REVIEW",
+          "name": "Journey to the Best Place",
+          "airdate": "2001-10-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 117 (17) road trip (andyscot).mp4",
@@ -404,21 +346,18 @@
             "seconds": 1221,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "18 the tunnel of tartarus andyscot",
-          "state": "REVIEW",
+          "name": "Yoh",
+          "airdate": "2001-10-31",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 118 (18) the tunnel of tartarus (andyscot).mp4",
@@ -427,21 +366,58 @@
             "seconds": 1221,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Yoh\" (0.95)",
+              "item": "shaman-king-jetix-tv-rip-andyscot",
+              "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
+              "file": "shaman king 119 (19) yoh versus lenny (andyscot).mp4",
+              "name": "shaman king 119 (19) yoh versus lenny (andyscot)",
+              "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20119%20(19)%20yoh%20versus%20lenny%20(andyscot).mp4",
+              "seconds": 1276,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Yoh\" (0.95)",
+              "item": "shaman-king-jetix-tv-rip-andyscot",
+              "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
+              "file": "shaman king 101 (01) yoh, morty! (andyscot).mp4",
+              "name": "shaman king 101 (01) yoh, morty! (andyscot)",
+              "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20101%20(01)%20yoh%2C%20morty!%20(andyscot).mp4",
+              "seconds": 1220,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 117
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Yoh\" (0.95)",
+              "item": "shaman-king-jetix-tv-rip-andyscot",
+              "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
+              "file": "shaman king 161 (61) yoh and goodbye (andyscot).mp4",
+              "name": "shaman king 161 (61) yoh and goodbye (andyscot)",
+              "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20161%20(61)%20yoh%20and%20goodbye%20(andyscot).mp4",
+              "seconds": 1156,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 111
+            }
+          ]
         },
         {
           "number": 19,
-          "name": "19 yoh versus lenny andyscot",
-          "state": "REVIEW",
+          "name": "Big Soul of the Two",
+          "airdate": "2001-11-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 119 (19) yoh versus lenny (andyscot).mp4",
@@ -450,44 +426,26 @@
             "seconds": 1276,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 122
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "20 one two three draw andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 120 (20) one, two, three, draw (andyscot).mp4",
-            "name": "shaman king 120 (20) one, two, three, draw (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20120%20(20)%20one%2C%20two%2C%20three%2C%20draw%20(andyscot).mp4",
-            "seconds": 1265,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Soul Mata Cemetery",
+          "airdate": "2001-11-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
-          "name": "21 a call to adventure andyscot",
-          "state": "REVIEW",
+          "name": "Believe",
+          "airdate": "2001-11-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 121 (21) a call to adventure (andyscot).mp4",
@@ -496,90 +454,42 @@
             "seconds": 1278,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 122
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "22 the dynasty challenged andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 122 (22) the dynasty challenged (andyscot).mp4",
-            "name": "shaman king 122 (22) the dynasty challenged (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20122%20(22)%20the%20dynasty%20challenged%20(andyscot).mp4",
-            "seconds": 1270,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Our Deadly Blows",
+          "airdate": "2001-11-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
-          "name": "23 the dynasty fight andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 123 (23) the dynasty fight (andyscot).mp4",
-            "name": "shaman king 123 (23) the dynasty fight (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20123%20(23)%20the%20dynasty%20fight%20(andyscot).mp4",
-            "seconds": 1219,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Awakened, Nyan Nyan Doushi",
+          "airdate": "2001-12-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 24,
-          "name": "24 a new dynasty andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 124 (24) a new dynasty (andyscot).mp4",
-            "name": "shaman king 124 (24) a new dynasty (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20124%20(24)%20a%20new%20dynasty%20(andyscot).mp4",
-            "seconds": 1275,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Invulnerable En Tao",
+          "airdate": "2001-12-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 25,
-          "name": "25 journey andyscot",
-          "state": "REVIEW",
+          "name": "To Shaman's Journey",
+          "airdate": "2001-12-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 125 (25) shaman journey (andyscot).mp4",
@@ -588,21 +498,18 @@
             "seconds": 1221,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 26,
-          "name": "26 the second round begins andyscot",
-          "state": "REVIEW",
+          "name": "Big America",
+          "airdate": "2001-12-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 126 (26) the second round begins (andyscot).mp4",
@@ -611,21 +518,18 @@
             "seconds": 1227,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 27,
-          "name": "27 the dowser andyscot",
-          "state": "REVIEW",
+          "name": "Dawsing Revolution",
+          "airdate": "2002-01-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 127 (27) the dowser (andyscot).mp4",
@@ -634,67 +538,34 @@
             "seconds": 1204,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 27
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
           "alternates": []
         },
         {
           "number": 28,
-          "name": "28 lost boy found andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 128 (28) lost boy found (andyscot).mp4",
-            "name": "shaman king 128 (28) lost boy found (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20128%20(28)%20lost%20boy%20found%20(andyscot).mp4",
-            "seconds": 1216,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 28
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Lyserg Avenger",
+          "airdate": "2002-01-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 29,
-          "name": "29 the nature of nature andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 129 (29) the nature of nature (andyscot).mp4",
-            "name": "shaman king 129 (29) the nature of nature (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20129%20(29)%20the%20nature%20of%20nature%20(andyscot).mp4",
-            "seconds": 1192,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 114,
-            "ep": {
-              "season": 1,
-              "episode": 29
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Burning Tenacity",
+          "airdate": "2002-01-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 30,
-          "name": "30 oracle bell down andyscot",
-          "state": "REVIEW",
+          "name": "The Silver Oracle Bell",
+          "airdate": "2002-01-30",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 130 (30) oracle bell down (andyscot).mp4",
@@ -703,21 +574,18 @@
             "seconds": 1221,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 30
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 31,
-          "name": "31 ghost town andyscot",
-          "state": "REVIEW",
+          "name": "The Forest of Faeries",
+          "airdate": "2002-02-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 131 (31) ghost town (andyscot).mp4",
@@ -726,21 +594,18 @@
             "seconds": 1210,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 31
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 32,
-          "name": "32 a very trey day andyscot",
-          "state": "REVIEW",
+          "name": "Horo-Horo's Taste of a Bitter Friend",
+          "airdate": "2002-02-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 132 (32) a very trey day (andyscot).mp4",
@@ -749,21 +614,18 @@
             "seconds": 1289,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 1,
-              "episode": 32
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
           "alternates": []
         },
         {
           "number": 33,
-          "name": "33 zeke attack andyscot",
-          "state": "REVIEW",
+          "name": "The Mysterious Asakura",
+          "airdate": "2002-02-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 133 (33) zeke attack (andyscot).mp4",
@@ -772,21 +634,18 @@
             "seconds": 1228,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 33
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 34,
-          "name": "34 the great western spa andyscot",
-          "state": "REVIEW",
+          "name": "American Hot Springs",
+          "airdate": "2002-02-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 134 (34) the great western spa (andyscot).mp4",
@@ -795,21 +654,18 @@
             "seconds": 1216,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 34
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 35,
-          "name": "35 vampire ambush andyscot",
-          "state": "REVIEW",
+          "name": "The Vampire Legend",
+          "airdate": "2002-03-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 135 (35) vampire ambush (andyscot).mp4",
@@ -818,21 +674,18 @@
             "seconds": 1177,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 113,
-            "ep": {
-              "season": 1,
-              "episode": 35
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 113
           },
           "alternates": []
         },
         {
           "number": 36,
-          "name": "36 winged destroyers andyscot",
-          "state": "REVIEW",
+          "name": "Angel's Pistol",
+          "airdate": "2002-03-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 136 (36) winged destroyers (andyscot).mp4",
@@ -841,21 +694,18 @@
             "seconds": 1195,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 36
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
           "alternates": []
         },
         {
           "number": 37,
-          "name": "37 punch line andyscot",
-          "state": "REVIEW",
+          "name": "Joke King",
+          "airdate": "2002-03-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 137 (37) punch line (andyscot).mp4",
@@ -864,21 +714,18 @@
             "seconds": 1214,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 37
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 38,
-          "name": "38 five great chiefs andyscot",
-          "state": "REVIEW",
+          "name": "The Legend of Seminoa",
+          "airdate": "2002-03-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 138 (38) five great chiefs (andyscot).mp4",
@@ -887,21 +734,18 @@
             "seconds": 1210,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 38
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 39,
-          "name": "39 goth assault andyscot",
-          "state": "REVIEW",
+          "name": "Flower Team",
+          "airdate": "2002-04-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 139 (39) goth assault (andyscot).mp4",
@@ -910,21 +754,18 @@
             "seconds": 1207,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 39
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
           "alternates": []
         },
         {
           "number": 40,
-          "name": "40 a touch of evil andyscot",
-          "state": "REVIEW",
+          "name": "Super Notes on Shamanic Powers",
+          "airdate": "2002-04-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 140 (40) a touch of evil (andyscot).mp4",
@@ -933,21 +774,18 @@
             "seconds": 1281,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 1,
-              "episode": 40
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
           "alternates": []
         },
         {
           "number": 41,
-          "name": "41 perfect possesion andyscot",
-          "state": "REVIEW",
+          "name": "Explosive Over Souls",
+          "airdate": "2002-04-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 141 (41) perfect possesion (andyscot).mp4",
@@ -956,44 +794,26 @@
             "seconds": 1279,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 41
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 122
           },
           "alternates": []
         },
         {
           "number": 42,
-          "name": "42 the double medium andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 142 (42) the double medium (andyscot).mp4",
-            "name": "shaman king 142 (42) the double medium (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20142%20(42)%20the%20double%20medium%20(andyscot).mp4",
-            "seconds": 1277,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 42
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Spirit of Sword",
+          "airdate": "2002-04-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 43,
-          "name": "43 lyserg lost andyscot",
-          "state": "REVIEW",
+          "name": "Battle of Gods",
+          "airdate": "2002-05-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 143 (43) lyserg lost (andyscot).mp4",
@@ -1002,21 +822,18 @@
             "seconds": 1284,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 1,
-              "episode": 43
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
           "alternates": []
         },
         {
           "number": 44,
-          "name": "44 the ice team cometh andyscot",
-          "state": "REVIEW",
+          "name": "One More Push",
+          "airdate": "2002-05-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 144 (44) the ice team cometh (andyscot).mp4",
@@ -1025,67 +842,34 @@
             "seconds": 1280,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 44
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 122
           },
           "alternates": []
         },
         {
           "number": 45,
-          "name": "45 doby village or bust andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 145 (45) doby village or bust (andyscot).mp4",
-            "name": "shaman king 145 (45) doby village or bust (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20145%20(45)%20doby%20village%20or%20bust%20(andyscot).mp4",
-            "seconds": 1274,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 122,
-            "ep": {
-              "season": 1,
-              "episode": 45
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Great Spirits",
+          "airdate": "2002-05-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 46,
-          "name": "46 family feud andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 146 (46) family feud (andyscot).mp4",
-            "name": "shaman king 146 (46) family feud (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20146%20(46)%20family%20feud%20(andyscot).mp4",
-            "seconds": 1191,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 114,
-            "ep": {
-              "season": 1,
-              "episode": 46
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Dead Spirit of Tao",
+          "airdate": "2002-05-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 47,
-          "name": "47 sand storm andyscot",
-          "state": "REVIEW",
+          "name": "Really Naive",
+          "airdate": "2002-05-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 147 (47) sand storm (andyscot).mp4",
@@ -1094,21 +878,18 @@
             "seconds": 1205,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 47
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 48,
-          "name": "48 the prophecy andyscot",
-          "state": "REVIEW",
+          "name": "Dragon Missionary",
+          "airdate": "2002-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 148 (48) the prophecy (andyscot).mp4",
@@ -1117,44 +898,26 @@
             "seconds": 1229,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 48
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 49,
-          "name": "49 gladiators andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 149 (49) gladiators (andyscot).mp4",
-            "name": "shaman king 149 (49) gladiators (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20149%20(49)%20gladiators%20(andyscot).mp4",
-            "seconds": 1208,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 49
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Doctor Doctor",
+          "airdate": "2002-06-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 50,
-          "name": "50 hearts of darkness andyscot",
-          "state": "REVIEW",
+          "name": "I Have a Darkness in My Heart",
+          "airdate": "2002-06-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 150 (50) hearts of darkness (andyscot).mp4",
@@ -1163,21 +926,18 @@
             "seconds": 1220,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 50
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 51,
-          "name": "51 spirit busters andyscot",
-          "state": "REVIEW",
+          "name": "Shaman Hunt",
+          "airdate": "2002-06-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 151 (51) spirit busters (andyscot).mp4",
@@ -1186,21 +946,18 @@
             "seconds": 1194,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 114,
-            "ep": {
-              "season": 1,
-              "episode": 51
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 114
           },
           "alternates": []
         },
         {
           "number": 52,
-          "name": "52 the way of the rice andyscot",
-          "state": "REVIEW",
+          "name": "Special Training!? Everyone Gathers",
+          "airdate": "2002-07-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 152 (52) the way of the rice (andyscot).mp4",
@@ -1209,44 +966,26 @@
             "seconds": 1228,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 52
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 53,
-          "name": "53 double jeopardy andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 153 (53) double jeopardy (andyscot).mp4",
-            "name": "shaman king 153 (53) double jeopardy (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20153%20(53)%20double%20jeopardy%20(andyscot).mp4",
-            "seconds": 1234,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 53
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Bye Bye",
+          "airdate": "2002-07-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 54,
-          "name": "54 x caliber andyscot",
-          "state": "REVIEW",
+          "name": "The Eighth Angel",
+          "airdate": "2002-07-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 154 (54) x-caliber (andyscot).mp4",
@@ -1255,21 +994,18 @@
             "seconds": 1213,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 54
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 55,
-          "name": "55 bait and switch andyscot",
-          "state": "REVIEW",
+          "name": "Gate of Babylon",
+          "airdate": "2002-07-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 155 (55) bait and switch (andyscot).mp4",
@@ -1278,21 +1014,18 @@
             "seconds": 1235,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 119,
-            "ep": {
-              "season": 1,
-              "episode": 55
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 119
           },
           "alternates": []
         },
         {
           "number": 56,
-          "name": "56 the wrath of babylon andyscot",
-          "state": "REVIEW",
+          "name": "Door of Babylon",
+          "airdate": "2002-07-31",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 156 (56) the wrath of babylon (andyscot).mp4",
@@ -1301,44 +1034,26 @@
             "seconds": 1225,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 56
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
           "number": 57,
-          "name": "57 secret path andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 157 (57) secret path (andyscot).mp4",
-            "name": "shaman king 157 (57) secret path (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20157%20(57)%20secret%20path%20(andyscot).mp4",
-            "seconds": 1228,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 57
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Shaman Fight Ends?",
+          "airdate": "2002-08-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 58,
-          "name": "58 the forbidden forest andyscot",
-          "state": "REVIEW",
+          "name": "Flaming Angel",
+          "airdate": "2002-08-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 158 (58) the forbidden forest (andyscot).mp4",
@@ -1347,44 +1062,26 @@
             "seconds": 1208,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 58
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
         },
         {
           "number": 59,
-          "name": "59 star sanctuary andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 159 (59) star sanctuary (andyscot).mp4",
-            "name": "shaman king 159 (59) star sanctuary (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20159%20(59)%20star%20sanctuary%20(andyscot).mp4",
-            "seconds": 1217,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": 1,
-              "episode": 59
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Holy Ground of the Stars",
+          "airdate": "2002-08-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 60,
-          "name": "60 unity andyscot",
-          "state": "REVIEW",
+          "name": "Friend",
+          "airdate": "2002-08-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 160 (60) unity (andyscot).mp4",
@@ -1393,21 +1090,18 @@
             "seconds": 1231,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 118,
-            "ep": {
-              "season": 1,
-              "episode": 60
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
           "number": 61,
-          "name": "61 yoh and goodbye andyscot",
-          "state": "REVIEW",
+          "name": "Eternal Farewell",
+          "airdate": "2002-09-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 161 (61) yoh and goodbye (andyscot).mp4",
@@ -1416,21 +1110,18 @@
             "seconds": 1156,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 111,
-            "ep": {
-              "season": 1,
-              "episode": 61
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 111
           },
           "alternates": []
         },
         {
           "number": 62,
-          "name": "62 rage and furyoku andyscot",
-          "state": "REVIEW",
+          "name": "Die! Collision!",
+          "airdate": "2002-09-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 162 (62) rage and furyoku (andyscot).mp4",
@@ -1439,44 +1130,26 @@
             "seconds": 1263,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 120,
-            "ep": {
-              "season": 1,
-              "episode": 62
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 120
           },
           "alternates": []
         },
         {
           "number": 63,
-          "name": "63 the is dead andyscot",
-          "state": "REVIEW",
-          "file": {
-            "item": "shaman-king-jetix-tv-rip-andyscot",
-            "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
-            "file": "shaman king 163 (63) the king is dead (andyscot).mp4",
-            "name": "shaman king 163 (63) the king is dead (andyscot)",
-            "url": "https://archive.org/download/shaman-king-jetix-tv-rip-andyscot/shaman%20king%20163%20(63)%20the%20king%20is%20dead%20(andyscot).mp4",
-            "seconds": 1205,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 63
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "A Place Where I Belong",
+          "airdate": "2002-09-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 64,
-          "name": "64 long live the andyscot",
-          "state": "REVIEW",
+          "name": "Epilogue",
+          "airdate": "2002-09-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shaman-king-jetix-tv-rip-andyscot",
             "itemTitle": "Shaman King (2001) Jetix TV Rip (andyscot)",
             "file": "shaman king 164 (64) long live the king (andyscot).mp4",
@@ -1485,13 +1158,7 @@
             "seconds": 1198,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 64
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
           "alternates": []
         }

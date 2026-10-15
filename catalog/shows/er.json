@@ -3,7 +3,7 @@
   "slug": "er",
   "type": "Drama",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:08.385Z",
+  "matchedAt": "2026-10-15T03:17:33.555Z",
   "tvmaze": {
     "id": 547,
     "name": "ER",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 331,
     "live": 0,
-    "review": 22,
-    "missing": 309,
+    "review": 23,
+    "missing": 308,
     "pct": 7
   },
   "seasons": [
@@ -2184,8 +2184,20 @@
           "number": 13,
           "name": "Middleman",
           "airdate": "2005-02-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Middleman\" (1.00)",
+            "item": "recordedyoungstownvhs4",
+            "itemTitle": "Blank VHS Tape: Widow On The Hill, Thursday Night Network Stuff (2005)",
+            "file": "ER - Middleman.mp4",
+            "name": "ER - Middleman",
+            "url": "https://archive.org/download/recordedyoungstownvhs4/ER%20-%20Middleman.mp4",
+            "seconds": 3657,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1681
+          },
           "alternates": []
         },
         {

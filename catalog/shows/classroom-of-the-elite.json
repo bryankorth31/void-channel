@@ -3,21 +3,20 @@
   "slug": "classroom-of-the-elite",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.108Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:03.808Z",
   "tvmaze": {
-    "id": null,
+    "id": 29180,
     "name": "Classroom of the Elite",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2017-07-12",
+    "network": "AT-X"
   },
   "coverage": {
-    "total": 13,
+    "total": 54,
     "live": 0,
-    "review": 13,
-    "missing": 0,
-    "pct": 100
+    "review": 12,
+    "missing": 42,
+    "pct": 22
   },
   "seasons": [
     {
@@ -25,32 +24,46 @@
       "episodes": [
         {
           "number": 1,
-          "name": "of the 1 1 japanese",
+          "name": "What is evil? Whatever springs from weakness.",
+          "airdate": "2017-07-12",
           "state": "REVIEW",
           "file": {
-            "item": "classroom-of-the-elite-season-1-episode-1-japanese",
-            "itemTitle": "Classroom Of The Elite Season 1 Episode 1 Japanese",
-            "file": "Classroom of the Elite Season 1 Episode 1 Japanese.mp4",
-            "name": "Classroom of the Elite Season 1 Episode 1 Japanese",
-            "url": "https://archive.org/download/classroom-of-the-elite-season-1-episode-1-japanese/Classroom%20of%20the%20Elite%20Season%201%20Episode%201%20Japanese.mp4",
-            "seconds": 1440,
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
+            "item": "episode-11_202602",
+            "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+            "file": "Classroom of the Elite/Season 1/1x01 What is Evil? Whatever Springs from Weakness.mp4",
+            "name": "Classroom of the Elite/Season 1/1x01 What is Evil? Whatever Springs from Weakness",
+            "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2F1x01%20What%20is%20Evil%3F%20Whatever%20Springs%20from%20Weakness.mp4",
+            "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1459,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 241
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00003.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00003",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.1%2FYOUZITSU_1%2FBDMV%2FSTREAM%2F00003.mp4",
+              "seconds": 1442,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "it takes a great talent and skill to conceal ones talent and skill",
+          "name": "It takes a great talent and skill to conceal one's talent and skill.",
+          "airdate": "2017-07-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x02 It Takes a Great Talent and Skill to Conceal One's Talent and Skill.mp4",
@@ -59,21 +72,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 208,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 208
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00004.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00004",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.1%2FYOUZITSU_1%2FBDMV%2FSTREAM%2F00004.mp4",
+              "seconds": 1440,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "man is an animal that makes bargains no other animal does this no dog exchanges bones with another",
+          "name": "Man is an animal that makes bargains: no other animal does this - no dog exchanges bones with another.",
+          "airdate": "2017-07-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x03 Man is an Animal that makes Bargains: No Other Animal Does This - No Dog exchanges Bones with Another.mp4",
@@ -82,21 +106,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 226,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 226
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00005.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00005",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.1%2FYOUZITSU_1%2FBDMV%2FSTREAM%2F00005.mp4",
+              "seconds": 1442,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "we should not be upset that others hide the truth from us when we hide it from ourselves",
+          "name": "We should not be upset that others hide the truth from us, when we hide it so often from ourselves.",
+          "airdate": "2017-08-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x04 We Should not be Upset that Others Hide the Truth from Us When We Hide it from Ourselves.mp4",
@@ -105,21 +140,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 255,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 255
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.2/YOUZITSU_2/BDMV/STREAM/00005.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.2/YOUZITSU_2/BDMV/STREAM/00005",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.2%2FYOUZITSU_2%2FBDMV%2FSTREAM%2F00005.mp4",
+              "seconds": 1442,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "hell is other people",
+          "name": "Hell is other people.",
+          "airdate": "2017-08-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x05 Hell is other People.mp4",
@@ -128,21 +174,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 221,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 221
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.2/YOUZITSU_2/BDMV/STREAM/00006.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.2/YOUZITSU_2/BDMV/STREAM/00006",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.2%2FYOUZITSU_2%2FBDMV%2FSTREAM%2F00006.mp4",
+              "seconds": 1440,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "there are two kinds of lies one concerns an accomplished fact the other concerns a future duty",
+          "name": "There are two kinds of lies; one concerns an accomplished fact, the other concerns a future duty.",
+          "airdate": "2017-08-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x06 There are Two Kinds of Lies; One concerns an Accomplished Fact, the Other concerns a Future Duty.mp4",
@@ -151,21 +208,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 251,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 251
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.2/YOUZITSU_2/BDMV/STREAM/00007.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.2/YOUZITSU_2/BDMV/STREAM/00007",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.2%2FYOUZITSU_2%2FBDMV%2FSTREAM%2F00007.mp4",
+              "seconds": 1442,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "nothing is as dangerous as an ignorant friend a wise enemy is to be preferred",
+          "name": "Nothing is as dangerous as an ignorant friend; a wise enemy is to be preferred.",
+          "airdate": "2017-08-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x07 Nothing is as Dangerous as an Ignorant Friend; A Wise Enemy is to be Preferred.mp4",
@@ -174,21 +242,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 245,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 245
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.3/YOUZITSU_3/BDMV/STREAM/00005.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.3/YOUZITSU_3/BDMV/STREAM/00005",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.3%2FYOUZITSU_3%2FBDMV%2FSTREAM%2F00005.mp4",
+              "seconds": 1441,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "abandon all hope ye who enter here",
+          "name": "Abandon all hope, ye who enter here.",
+          "airdate": "2017-08-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x08 Abandon All Hope, Ye Who enter Here.mp4",
@@ -197,21 +276,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 241,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 241
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.4/YOUZITSU_4/BDMV/STREAM/00005.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.4/YOUZITSU_4/BDMV/STREAM/00005",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.4%2FYOUZITSU_4%2FBDMV%2FSTREAM%2F00005.mp4",
+              "seconds": 1442,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "man is condemned to be free",
+          "name": "Man is condemned to be free.",
+          "airdate": "2017-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x09 Man is Condemned to be Free.mp4",
@@ -220,21 +310,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 211,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 211
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.4/YOUZITSU_4/BDMV/STREAM/00006.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.4/YOUZITSU_4/BDMV/STREAM/00006",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.4%2FYOUZITSU_4%2FBDMV%2FSTREAM%2F00006.mp4",
+              "seconds": 1440,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "every man has in himself the most dangerous traitor of all",
+          "name": "Every man has in himself the most dangerous traitor of all.",
+          "airdate": "2017-09-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x10 Every Man has in Himself the Most Dangerous Traitor of All.mp4",
@@ -243,21 +344,32 @@
             "seconds": 1441,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 231,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 231
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
+              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
+              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
+              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.4/YOUZITSU_4/BDMV/STREAM/00007.mp4",
+              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.4/YOUZITSU_4/BDMV/STREAM/00007",
+              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.4%2FYOUZITSU_4%2FBDMV%2FSTREAM%2F00007.mp4",
+              "seconds": 1437,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "what people commonly call fate is mostly their own stupidity",
+          "name": "What People Commonly Call Fate Is Mostly Their Own Stupidity.",
+          "airdate": "2017-09-20",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x11 What People Commonly call Fate is Mostly their Own Stupidity.mp4",
@@ -266,21 +378,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 280,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 280
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "genius lives only one story above madness",
+          "name": "Genius lives only one story above madness.",
+          "airdate": "2017-09-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
             "file": "Classroom of the Elite/Season 1/1x12 Genius Lives Only One Story Above Madness.mp4",
@@ -289,34 +398,359 @@
             "seconds": 1436,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 207,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 207
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Remember to Keep a Clear Head in Difficult Times",
+          "airdate": "2022-07-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "There Are Two Main Human Sins from Which All the Others Derive: Impatience and Indolence",
+          "airdate": "2022-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Greatest Souls Are Capable of the Greatest Vices as Well as of the Greatest Virtues",
+          "airdate": "2022-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Material Has to Be Created",
+          "airdate": "2022-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Every Failure Is a Step to Success",
+          "airdate": "2022-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Adversity Is the First Path to Truth",
+          "airdate": "2022-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "To Doubt Everything or to Believe Everything Are Two Equally Convenient Solutions; Both Dispense with the Necessity of Reflection.",
+          "airdate": "2022-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Wound Is at Her Heart.",
+          "airdate": "2022-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "If You Make a Mistake and Do Not Correct It, This Is Called a Mistake",
+          "airdate": "2022-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "People, Often Deceived by An Illusive Good, Desire Their Own Ruin.",
+          "airdate": "2022-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "A Man Who Cannot Command Himself Will Always Be a Slave.",
+          "airdate": "2022-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Force Without Wisdom Falls of Its Own Weight.",
+          "airdate": "2022-09-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "of the 2 epis dios 5 6",
-          "state": "REVIEW",
-          "file": {
-            "item": "classroom-of-the-elite-season-2-episodios-5-6",
-            "itemTitle": "Classroom Of The Elite Season 2 Episódios 5-6",
-            "file": "Classroom of The Elite Season 2 Episódios 5-6.mp4",
-            "name": "Classroom of The Elite Season 2 Episódios 5-6",
-            "url": "https://archive.org/download/classroom-of-the-elite-season-2-episodios-5-6/Classroom%20of%20The%20Elite%20Season%202%20Epis%C3%B3dios%205-6.mp4",
-            "seconds": 2629,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 767,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Worst Enemy You Can Meet Will Always Be Yourself.",
+          "airdate": "2022-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Strongest Principle of Growth Lies in the Human Choice.",
+          "airdate": "2024-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Man is Wolf to Man.",
+          "airdate": "2024-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "We never forget what we endeavor to forget.",
+          "airdate": "2024-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "To Work You Have the Right, But Not to the Fruits Thereof.",
+          "airdate": "2024-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Fortune favors the bold.",
+          "airdate": "2024-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "It is Better to Receive an Injury than to Inflict One.",
+          "airdate": "2024-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "People Will Do Anything, No Matter How Absurd, In Order to Avoid Facing Their Own Souls.",
+          "airdate": "2024-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Those Who Cannot Remember the Past are Condemned to Repeat it.",
+          "airdate": "2024-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Extreme justice is extreme injustice",
+          "airdate": "2024-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The first cause of Absurd conclusions I ascribe to the want of Method",
+          "airdate": "2024-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "There Is Only One Rule in Love Bring Happiness to Those You Love.",
+          "airdate": "2024-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Change your desires rather than the order of the world.",
+          "airdate": "2024-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Love Is the Best Teacher.",
+          "airdate": "2024-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Assassin From the White Room",
+          "airdate": "2026-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Contract and Payment",
+          "airdate": "2026-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Determination of a Leader",
+          "airdate": "2026-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "To Whom the Blade Turns",
+          "airdate": "2026-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Twenty-Million Man",
+          "airdate": "2026-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "A Tumultuous Scramble",
+          "airdate": "2026-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Plotting",
+          "airdate": "2026-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Subject of the Dragons' Gaze",
+          "airdate": "2026-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "A Disquieting Beginning",
+          "airdate": "2026-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Love Uncommunicated",
+          "airdate": "2026-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Connection",
+          "airdate": "2026-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "After Vengeance",
+          "airdate": "2026-05-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Obscured By the Rain",
+          "airdate": "2026-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Extraordinary Prodigy",
+          "airdate": "2026-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Power and Will",
+          "airdate": "2026-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "For a Desired Future",
+          "airdate": "2026-06-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

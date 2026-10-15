@@ -3,31 +3,49 @@
   "slug": "kaiju-no-8",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.116Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:04.015Z",
   "tvmaze": {
-    "id": null,
+    "id": 73362,
     "name": "Kaiju No. 8",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2024-04-13",
+    "network": "TV Tokyo"
   },
   "coverage": {
-    "total": 3,
+    "total": 24,
     "live": 0,
-    "review": 3,
-    "missing": 0,
-    "pct": 100
+    "review": 4,
+    "missing": 20,
+    "pct": 17
   },
   "seasons": [
     {
       "season": 1,
       "episodes": [
         {
-          "number": 4,
-          "name": "4 animepahe 01",
+          "number": 1,
+          "name": "The Man Who Became a Kaiju",
+          "airdate": "2024-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Kaiju Who Defeats Kaiju",
+          "airdate": "2024-04-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Revenge Match",
+          "airdate": "2024-04-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "kaiju-no-8-ep-4-animepahe-01",
             "itemTitle": "Kaiju No 8 Ep 4 Animepahe 01",
             "file": "Kaiju No 8 Ep 4 animepahe-01.mp4",
@@ -36,21 +54,18 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 581,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 581
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "5 animepahe",
+          "number": 4,
+          "name": "Fortitude 9.8",
+          "airdate": "2024-05-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "kaiju-no-8-ep-5-animepahe",
             "itemTitle": "Kaiju No 8 Ep 5 Animepahe",
             "file": "Kaiju No 8 Ep 5 animepahe.mp4",
@@ -59,21 +74,18 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 295,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 295
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "6 animepahe",
+          "number": 5,
+          "name": "Joining Up!",
+          "airdate": "2024-05-11",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "kaiju-no-8-ep-4-animepahe-01",
             "itemTitle": "Kaiju No 8 Ep 4 Animepahe 01",
             "file": "Kaiju No 8 Ep 6 animepahe.mp4",
@@ -82,14 +94,183 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 525,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 525
           },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Sagamihara Neutralization Operation At Daybreak",
+          "airdate": "2024-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Kaiju No. 9",
+          "airdate": "2024-05-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Welcome to the Defense Force",
+          "airdate": "2024-06-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Attack on Tachikawa Base",
+          "airdate": "2024-06-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Secret Revealed",
+          "airdate": "2024-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Kaiju No. 8 Captured",
+          "airdate": "2024-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Kafka Hibino",
+          "airdate": "2024-06-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Kaiju Weapon",
+          "airdate": "2025-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Next Generation's Trial",
+          "airdate": "2025-07-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "anime-dub-hindi-kaiju-no.-8-s-02-e-02-1080p-web-dl-multi-audio-esub",
+            "itemTitle": "[ Anime Dub Hindi] Kaiju No. 8 S 02 E 02 1080p WEB DL Multi Audio Esub",
+            "file": "[AnimeDubHindi] Kaiju No.8 S02E02 1080p WEB-DL Multi Audio Esub.mp4",
+            "name": "[AnimeDubHindi] Kaiju No.8 S02E02 1080p WEB-DL Multi Audio Esub",
+            "url": "https://archive.org/download/anime-dub-hindi-kaiju-no.-8-s-02-e-02-1080p-web-dl-multi-audio-esub/%5BAnimeDubHindi%5D%20Kaiju%20No.8%20S02E02%201080p%20WEB-DL%20Multi%20Audio%20Esub.mp4",
+            "seconds": 1420,
+            "format": "h.264",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 141
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Strongest Division",
+          "airdate": "2025-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Man Called Isao Shinomiya",
+          "airdate": "2025-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "I Want to Be Strong",
+          "airdate": "2025-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Compatible User",
+          "airdate": "2025-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Wall",
+          "airdate": "2025-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Destiny",
+          "airdate": "2025-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Omen",
+          "airdate": "2025-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Cataclysms",
+          "airdate": "2025-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Second Wave",
+          "airdate": "2025-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "TBA",
+          "airdate": "",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

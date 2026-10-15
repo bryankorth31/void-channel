@@ -3,21 +3,20 @@
   "slug": "komi-cant-communicate",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.140Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:05.140Z",
   "tvmaze": {
-    "id": null,
+    "id": 56939,
     "name": "Komi Can't Communicate",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 24,
+    "premiered": "2021-10-07",
+    "network": "TV Tokyo"
   },
   "coverage": {
-    "total": 2,
-    "live": 0,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "total": 24,
+    "live": 1,
+    "review": 0,
+    "missing": 23,
+    "pct": 4
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "san",
-          "state": "REVIEW",
+          "name": "It's just, I wish I could speak.",
+          "airdate": "2021-10-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "komi-cant-communicate-S1-E1",
             "itemTitle": "Komi Can't Communicate S1 E1",
             "file": "Komi san S1 E1.mp4",
@@ -36,34 +38,197 @@
             "seconds": 1432,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 272,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 272
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "komi-cant-communicate-season-2-episode-2",
-            "itemTitle": "Komi Can’t Communicate Season 2",
-            "file": "Komi Can’t Communicate Season 2.mp4",
-            "name": "Komi Can’t Communicate Season 2",
-            "url": "https://archive.org/download/komi-cant-communicate-season-2-episode-2/Komi%20Can%E2%80%99t%20Communicate%20Season%202.mp4",
-            "seconds": 1432,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 86,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "It's just a childhood friend. / I'm not a killer. / It's just my first errand.",
+          "airdate": "2021-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "It's just stage fright. / It's just a cell phone. / It's just a student election. / It's just an accidental call. / It's just a game.",
+          "airdate": "2021-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "It's just a physical. / It's just a crush.",
+          "airdate": "2021-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "It's just my summer uniform. / It's just a fitness test. / It's just veggies. Garlic. Lots of lard. Soy sauce. / It's just a blood pact.",
+          "airdate": "2021-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "It's just a joke. / It's just shopping. / It's just the hair salon. / It's just an unsettling feeling. / It's just a study group. / It's just summer break.",
+          "airdate": "2021-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "It's just the pool. / It's just shaved ice. / It's just a library. / It's just a park.",
+          "airdate": "2021-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "It's just Obon. / It's just a festival. / It's just the end of summer.",
+          "airdate": "2021-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "It's just a country kid. / It's just a video game. / It's just a part-time job. / It's just... something on your face.",
+          "airdate": "2021-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "It's just sports day. / It's just emotional pangs. / It's just photo stickers.",
+          "airdate": "2021-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "It's just a performance for the culture festival. / It's just festival preparations. / It's just flyers distribution. / It's just the culture festival eve. / It's just maids.",
+          "airdate": "2021-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "It's just the culture festival. / It's just the post-festival. / It's just the after-party.",
+          "airdate": "2021-12-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "It's just the arrival of winter. / It's just a delinquent. / It's just studying at Nakanaka's. / It's just a final exam.",
+          "airdate": "2022-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "It's just a typhoon. / It's just a fantasy. / It's just a cat cafe. / It's just the 'I love you game'.",
+          "airdate": "2022-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "It's just a feeling. / It's just a fantasy, part 2. / It's just an invitation to lunch. / It's just roasted sweet potatoes.",
+          "airdate": "2022-04-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "It's just a merry Christmas.",
+          "airdate": "2022-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "It's just a snowman. / It's just a snowball fight. / It's just the end of the year. / It's just New Year's.",
+          "airdate": "2022-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "It's just everyone's New Years. / It's just ice skating. / It's just a cold.",
+          "airdate": "2022-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "It's just a misunderstanding. / It's just a hallucination. / It's just a narcissist. / It's just a group decision for the school trip.",
+          "airdate": "2022-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "It's just the school field trip.",
+          "airdate": "2022-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "It's just day 2 of the field trip.",
+          "airdate": "2022-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "It's just Valentine's Day.",
+          "airdate": "2022-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "It's just ripped tights. / It's just an oni and her club. / It's just a pushover. / It's just a fight.",
+          "airdate": "2022-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "It's just White Day. / It has just been one year.",
+          "airdate": "2022-06-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

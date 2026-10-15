@@ -3,21 +3,20 @@
   "slug": "to-love-ru",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.173Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:06.542Z",
   "tvmaze": {
-    "id": null,
-    "name": "To Love Ru",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "id": 5196,
+    "name": "To-Love-Ru",
+    "runtime": 25,
+    "premiered": "2008-04-03",
+    "network": "BS11"
   },
   "coverage": {
-    "total": 32,
-    "live": 0,
-    "review": 32,
-    "missing": 0,
-    "pct": 100
+    "total": 64,
+    "live": 26,
+    "review": 0,
+    "missing": 38,
+    "pct": 41
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "The Girl Who Fell From the Sky",
+          "airdate": "2008-04-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x1.mp4",
@@ -36,21 +38,33 @@
             "seconds": 1510,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 59,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 59
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 6 in \"To Love Ru\"",
+              "item": "to-love-ru_202109",
+              "itemTitle": "To Love Ru",
+              "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 01.mkv",
+              "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 01",
+              "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2001.mkv",
+              "seconds": 1423,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 797
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "A Broken Engagement!?",
+          "airdate": "2008-04-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x2.mp4",
@@ -59,21 +73,33 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 62,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 62
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 6 in \"To Love Ru\"",
+              "item": "to-love-ru_202109",
+              "itemTitle": "To Love Ru",
+              "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 02.mkv",
+              "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 02",
+              "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2002.mkv",
+              "seconds": 1428,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 716
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "Love Triangle",
+          "airdate": "2008-04-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x3.mp4",
@@ -82,21 +108,33 @@
             "seconds": 1511,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 90,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 90
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 6 in \"To Love Ru\"",
+              "item": "to-love-ru_202109",
+              "itemTitle": "To Love Ru",
+              "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 03.mkv",
+              "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 03",
+              "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2003.mkv",
+              "seconds": 1426,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 766
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "A Love Apron From Outer Space",
+          "airdate": "2008-04-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x4.mp4",
@@ -105,21 +143,33 @@
             "seconds": 1511,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 95,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 95
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 6 in \"To Love Ru\"",
+              "item": "to-love-ru_202109",
+              "itemTitle": "To Love Ru",
+              "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 04.mkv",
+              "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 04",
+              "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2004.mkv",
+              "seconds": 1428,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 844
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "The Queen's Challenge",
+          "airdate": "2008-05-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x5.mp4",
@@ -128,21 +178,33 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 70,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 70
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 6 in \"To Love Ru\"",
+              "item": "to-love-ru_202109",
+              "itemTitle": "To Love Ru",
+              "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 05.mkv",
+              "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 05",
+              "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2005.mkv",
+              "seconds": 1426,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 889
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "The Alien Assassin",
+          "airdate": "2008-05-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x6.mp4",
@@ -151,21 +213,33 @@
             "seconds": 1511,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 82,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 82
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 6 in \"To Love Ru\"",
+              "item": "to-love-ru_202109",
+              "itemTitle": "To Love Ru",
+              "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 06.mkv",
+              "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 06",
+              "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2006.mkv",
+              "seconds": 1428,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 901
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "All Men Should Be Like This!",
+          "airdate": "2008-05-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x7.mp4",
@@ -174,21 +248,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 62,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 62
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "The Prefect of Spotless Integrity",
+          "airdate": "2008-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x8.mp4",
@@ -197,21 +268,18 @@
             "seconds": 1511,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 94,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 94
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "From a Shining Star, With Love",
+          "airdate": "2008-05-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x9.mp4",
@@ -220,21 +288,18 @@
             "seconds": 1510,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 90,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 90
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
+          "name": "A Space Entertainer",
+          "airdate": "2008-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x10.mp4",
@@ -243,21 +308,18 @@
             "seconds": 1511,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 89,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 89
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
+          "name": "Golden Darkness",
+          "airdate": "2008-06-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x11.mp4",
@@ -266,21 +328,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 73,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 73
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
+          "name": "A Frightening Field Day!",
+          "airdate": "2008-06-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x12.mp4",
@@ -289,21 +348,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 70,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 70
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Episode 13",
-          "state": "REVIEW",
+          "name": "The Greatest Man in the Universe",
+          "airdate": "2008-06-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x13.mp4",
@@ -312,21 +368,18 @@
             "seconds": 1510,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 59,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 59
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "Episode 14",
-          "state": "REVIEW",
+          "name": "A Secret Between the Two of Us",
+          "airdate": "2008-07-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x14.mp4",
@@ -335,21 +388,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 52,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 52
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "Episode 15",
-          "state": "REVIEW",
+          "name": "Princess of the Jungle",
+          "airdate": "2008-07-10",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x15.mp4",
@@ -358,21 +408,18 @@
             "seconds": 1449,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 66,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 66
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "Episode 16",
-          "state": "REVIEW",
+          "name": "Run's Surprise Confession",
+          "airdate": "2008-07-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x16.mp4",
@@ -381,21 +428,18 @@
             "seconds": 1509,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 60,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 60
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "Episode 17",
-          "state": "REVIEW",
+          "name": "The Ghost in the Old School Building",
+          "airdate": "2008-07-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x17.mp4",
@@ -404,21 +448,18 @@
             "seconds": 1510,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 51,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 51
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
+          "name": "Saruyama, the Gift",
+          "airdate": "2008-07-31",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x18.mp4",
@@ -427,21 +468,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 61,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 61
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "Episode 19",
-          "state": "REVIEW",
+          "name": "Hell's Hot Springs: Alien Girls and Colorful Exposed Bodies",
+          "airdate": "2008-08-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x19.mp4",
@@ -450,21 +488,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 57,
-            "ep": {
-              "season": 1,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 57
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "Episode 20",
-          "state": "REVIEW",
+          "name": "Explosive Heat Magical Girl Kyouko Flame",
+          "airdate": "2008-08-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x20.mp4",
@@ -473,21 +508,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 61,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 61
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "Episode 21",
-          "state": "REVIEW",
+          "name": "A Chronicle of Bloodshed at Yuuki Inn",
+          "airdate": "2008-08-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x21.mp4",
@@ -496,21 +528,18 @@
             "seconds": 1449,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 60,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 60
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "Episode 22",
-          "state": "REVIEW",
+          "name": "A Frightening School Festival!",
+          "airdate": "2008-08-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x22.mp4",
@@ -519,21 +548,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 61,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 61
           },
           "alternates": []
         },
         {
           "number": 23,
-          "name": "Episode 23",
-          "state": "REVIEW",
+          "name": "Saruyama's Tales of the Inner Chambers",
+          "airdate": "2008-09-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x23.mp4",
@@ -542,21 +568,18 @@
             "seconds": 1455,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 81,
-            "ep": {
-              "season": 1,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 81
           },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "Episode 24",
-          "state": "REVIEW",
+          "name": "With Shyness",
+          "airdate": "2008-09-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x24.mp4",
@@ -565,21 +588,18 @@
             "seconds": 1455,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 58,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 58
           },
           "alternates": []
         },
         {
           "number": 25,
-          "name": "Episode 25",
-          "state": "REVIEW",
+          "name": "Earth's Final Night",
+          "airdate": "2008-09-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x25.mp4",
@@ -588,21 +608,18 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 54,
-            "ep": {
-              "season": 1,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 54
           },
           "alternates": []
         },
         {
           "number": 26,
-          "name": "Episode 26",
-          "state": "REVIEW",
+          "name": "Lala",
+          "airdate": "2008-09-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "to-love-ru-1x-4_202104",
             "itemTitle": "To Love Ru 1x 4",
             "file": "To Love-Ru 1x26.mp4",
@@ -611,140 +628,327 @@
             "seconds": 1450,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 61,
-            "ep": {
-              "season": 1,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 61
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Once More From Here / Bathhouse Battle / Tick-tock: The Sound of Love",
+          "airdate": "2010-10-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 27,
-          "name": "motto to 01",
-          "state": "REVIEW",
-          "file": {
-            "item": "to-love-ru_202109",
-            "itemTitle": "To Love Ru",
-            "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 01.mkv",
-            "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 01",
-            "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2001.mkv",
-            "seconds": 1423,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 797,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Things You See In the Dark / Meet the Yuuki Family! / Sleepover Party",
+          "airdate": "2010-10-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 28,
-          "name": "motto to 02",
-          "state": "REVIEW",
-          "file": {
-            "item": "to-love-ru_202109",
-            "itemTitle": "To Love Ru",
-            "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 02.mkv",
-            "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 02",
-            "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2002.mkv",
-            "seconds": 1428,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 716,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Love's Special Prescription / How Glasses Make You Look / You Are My Cinderella",
+          "airdate": "2010-10-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 29,
-          "name": "motto to 03",
-          "state": "REVIEW",
-          "file": {
-            "item": "to-love-ru_202109",
-            "itemTitle": "To Love Ru",
-            "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 03.mkv",
-            "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 03",
-            "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2003.mkv",
-            "seconds": 1426,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 766,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "Yami-Yami Fashion / Wonderful Love / The Twins Escape",
+          "airdate": "2010-10-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 30,
-          "name": "motto to 04",
-          "state": "REVIEW",
-          "file": {
-            "item": "to-love-ru_202109",
-            "itemTitle": "To Love Ru",
-            "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 04.mkv",
-            "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 04",
-            "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2004.mkv",
-            "seconds": 1428,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 844,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "Love Queen!? / Let's Play a Practical Joke / Chocolates Are Sweet Love",
+          "airdate": "2010-11-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 31,
-          "name": "motto to 05",
-          "state": "REVIEW",
-          "file": {
-            "item": "to-love-ru_202109",
-            "itemTitle": "To Love Ru",
-            "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 05.mkv",
-            "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 05",
-            "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2005.mkv",
-            "seconds": 1426,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 889,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "Beach Girls / Late Night Tutor / Love Master",
+          "airdate": "2010-11-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 32,
-          "name": "motto to 06",
-          "state": "REVIEW",
-          "file": {
-            "item": "to-love-ru_202109",
-            "itemTitle": "To Love Ru",
-            "file": "To Love Ru/Motto To Love Ru/Motto To Love Ru 06.mkv",
-            "name": "To Love Ru/Motto To Love Ru/Motto To Love Ru 06",
-            "url": "https://archive.org/download/to-love-ru_202109/To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2FMotto%20To%20Love%20Ru%2006.mkv",
-            "seconds": 1428,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 901,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 7,
+          "name": "Yami Clinic / Feelings of Hostility / Haruna-chan Acting Strange",
+          "airdate": "2010-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Get Bigger! / Wonderful Life / Transformative Feeling",
+          "airdate": "2010-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "For Whom the Bell Tolls / Out Of Control Nuisance / Pop Star In Love",
+          "airdate": "2010-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Pollen Telepathy / Girl's Feelings / Heartthrob Mail",
+          "airdate": "2010-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "All Noisy on the Sister Front ~ False Love? ~ Love Forecast",
+          "airdate": "2010-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "I Love You / I Love You 2 / I Love You 3",
+          "airdate": "2010-12-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Continue",
+          "airdate": "2012-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Doubt and Dish",
+          "airdate": "2012-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Each Speculation",
+          "airdate": "2012-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "True Smile ~Peace and Anxiety~",
+          "airdate": "2012-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "A Man? Woman ~The Changing Ones~",
+          "airdate": "2012-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Metamorphose ~Time for a Change...~",
+          "airdate": "2012-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Sisters ~The Invention of Happiness~",
+          "airdate": "2012-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Bad Mood ~Bonds of Happiness~",
+          "airdate": "2012-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "True Self ~True Face in the Darkness~",
+          "airdate": "2012-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Past ~Memories Leading to Tomorrow~",
+          "airdate": "2012-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Right Thing ~What is a Way of Life?~",
+          "airdate": "2012-12-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Room ~A Maiden's Feelings~",
+          "airdate": "2012-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Unconsciously ~Light-Headed and Heart-Pounding~",
+          "airdate": "2015-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Uneasy ~An Uncertain Heart~",
+          "airdate": "2015-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "After a Storm Comes a Calm ~Friend~",
+          "airdate": "2015-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Summer Festival ~Beginning of the Festival~",
+          "airdate": "2015-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "New Move ~Two of a Kind?~",
+          "airdate": "2015-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Manservant ~Competition~",
+          "airdate": "2015-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Resistance ~I Know, But Still~",
+          "airdate": "2015-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Danger ~Peril~",
+          "airdate": "2015-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Kiss ~What Lies Beyond a Kiss~",
+          "airdate": "2015-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "True Character ~True Identity Revealed!?~",
+          "airdate": "2015-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Beginning of Darkness ~That Time~",
+          "airdate": "2015-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Prediction Is Impossible ~Rampaging Darkness~",
+          "airdate": "2015-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Power and Power ~Protector and Protected~",
+          "airdate": "2015-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Bright Future ~Arigatou~",
+          "airdate": "2015-10-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

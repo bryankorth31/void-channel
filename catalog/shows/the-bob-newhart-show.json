@@ -3,7 +3,7 @@
   "slug": "the-bob-newhart-show",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:27.566Z",
+  "matchedAt": "2026-10-15T03:18:34.721Z",
   "tvmaze": {
     "id": 5734,
     "name": "The Bob Newhart Show",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 142,
-    "live": 0,
+    "live": 1,
     "review": 132,
-    "missing": 10,
-    "pct": 93
+    "missing": 9,
+    "pct": 94
   },
   "seasons": [
     {
@@ -274,8 +274,20 @@
           "number": 14,
           "name": "His Busiest Season",
           "airdate": "1972-12-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheBobNewhartShow",
+            "itemTitle": "The Bob Newhart Show",
+            "file": "The Bob Newhart Show - Season 1/The Bob Newhart Show s01e14 - His Busiest Season.mp4",
+            "name": "The Bob Newhart Show - Season 1/The Bob Newhart Show s01e14 - His Busiest Season",
+            "url": "https://archive.org/download/TheBobNewhartShow/The%20Bob%20Newhart%20Show%20-%20Season%201%2FThe%20Bob%20Newhart%20Show%20s01e14%20-%20His%20Busiest%20Season.mp4",
+            "seconds": 1512,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157
+          },
           "alternates": []
         },
         {

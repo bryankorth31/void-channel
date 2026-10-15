@@ -3,21 +3,20 @@
   "slug": "control-z",
   "type": "World TV",
   "network": "MX",
-  "matchedAt": "2026-10-15T01:19:17.277Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.554Z",
   "tvmaze": {
-    "id": null,
+    "id": 47415,
     "name": "Control Z",
-    "runtime": null,
-    "premiered": null,
-    "network": "MX"
+    "runtime": 38,
+    "premiered": "2020-05-22",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 8,
-    "live": 0,
-    "review": 8,
-    "missing": 0,
-    "pct": 100
+    "total": 24,
+    "live": 8,
+    "review": 0,
+    "missing": 16,
+    "pct": 33
   },
   "seasons": [
     {
@@ -25,32 +24,60 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "La chica del cumpleaños",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
-            "item": "control-z-1",
-            "itemTitle": "Control Z 1",
-            "file": "Control z 1x1.mp4",
-            "name": "Control z 1x1",
-            "url": "https://archive.org/download/control-z-1/Control%20z%201x1.mp4",
-            "seconds": 2159,
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "t-1.-ep-1-control-z-la-chica-del-cumpleanos",
+            "itemTitle": "[ T 1. Ep 1] Control Z La Chica Del Cumpleaños",
+            "file": "[T1.Ep1] Control Z - La chica del cumpleaños.mp4",
+            "name": "[T1.Ep1] Control Z - La chica del cumpleaños",
+            "url": "https://archive.org/download/t-1.-ep-1-control-z-la-chica-del-cumpleanos/%5BT1.Ep1%5D%20Control%20Z%20-%20La%20chica%20del%20cumplea%C3%B1os.mp4",
+            "seconds": 2158,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 189,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 172
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "control-z-1",
+              "itemTitle": "Control Z 1",
+              "file": "Control z 1x1.mp4",
+              "name": "Control z 1x1",
+              "url": "https://archive.org/download/control-z-1/Control%20z%201x1.mp4",
+              "seconds": 2159,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 189
+            },
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "control.-z.-s-01-e-03_202006",
+              "itemTitle": "Control. Z. S 01 E 03",
+              "file": "Control.Z.S01E01.mp4",
+              "name": "Control.Z.S01E01",
+              "url": "https://archive.org/download/control.-z.-s-01-e-03_202006/Control.Z.S01E01.mp4",
+              "seconds": 2122,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 859
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "Víctimas",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control.-z.-s-01-e-03_202006",
             "itemTitle": "Control. Z. S 01 E 03",
             "file": "Control.Z.S01E02.mp4",
@@ -59,21 +86,32 @@
             "seconds": 2208,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 230,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 230
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "control-z-1",
+              "itemTitle": "Control Z 1",
+              "file": "Control z 1x2.mp4",
+              "name": "Control z 1x2",
+              "url": "https://archive.org/download/control-z-1/Control%20z%201x2.mp4",
+              "seconds": 2208,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "Idiotas",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control.-z.-s-01-e-03_202006",
             "itemTitle": "Control. Z. S 01 E 03",
             "file": "Control.Z.S01E03.mp4",
@@ -82,21 +120,32 @@
             "seconds": 2383,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 247,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 247
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "control-z-1",
+              "itemTitle": "Control Z 1",
+              "file": "Control z 1x3.mp4",
+              "name": "Control z 1x3",
+              "url": "https://archive.org/download/control-z-1/Control%20z%201x3.mp4",
+              "seconds": 2383,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 159
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "Clase nocturna",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control-z-1",
             "itemTitle": "Control Z 1",
             "file": "Control z 1x4.mp4",
@@ -105,21 +154,18 @@
             "seconds": 2479,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 137,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "Cara a cara",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control-z-1",
             "itemTitle": "Control Z 1",
             "file": "Control z 1x5.mp4",
@@ -128,21 +174,18 @@
             "seconds": 2243,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 112,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 112
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "¿Qué tanto conoces a Javier?",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control-z-1",
             "itemTitle": "Control Z 1",
             "file": "Control z 1x6.mp4",
@@ -151,21 +194,18 @@
             "seconds": 2068,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 111,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 111
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "Control Z",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control-z-1",
             "itemTitle": "Control Z 1",
             "file": "Control z 1x7.mp4",
@@ -174,21 +214,18 @@
             "seconds": 2169,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 123,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "Enemigo público",
+          "airdate": "2020-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "control-z-1",
             "itemTitle": "Control Z 1",
             "file": "Control z 1x8.mp4",
@@ -197,14 +234,146 @@
             "seconds": 2293,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 135,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 135
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "No se puede enterrar el pasado",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "El Regreso",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Necesidades",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Nada que esconder",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Nuevos placeres",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Un minuto de silencio",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Control Z",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "La última venganza",
+          "airdate": "2021-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "¿Creías que me iba a olvidar de ti?",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "¿María?",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Has llegado a tu destino",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Heridas abiertas",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Helena",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Game Master",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Yo soy @todostussecretos",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Graduación",
+          "airdate": "2022-07-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

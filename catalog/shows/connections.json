@@ -3,7 +3,7 @@
   "slug": "connections",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:21.145Z",
+  "matchedAt": "2026-10-15T03:18:22.820Z",
   "tvmaze": {
     "id": 6103,
     "name": "Connections",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 40,
-    "live": 0,
+    "live": 40,
     "review": 0,
-    "missing": 40,
-    "pct": 0
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -26,81 +26,541 @@
           "number": 1,
           "name": "The Trigger Effect",
           "airdate": "1978-10-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E01 - The Trigger Effect.mp4",
+            "name": "Connections/S01/S01E01 - The Trigger Effect",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E01%20-%20The%20Trigger%20Effect.mp4",
+            "seconds": 2970,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 292
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Trigger Effect\" (0.95)",
+              "item": "james-burke-connections_s01e01",
+              "itemTitle": "Connections Episode 1: The Trigger Effect",
+              "file": "Connections.E01.The.Trigger.Effect.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "name": "Connections.E01.The.Trigger.Effect.NTSC.DVD.DD2.0.x264-NaRB",
+              "url": "https://archive.org/download/james-burke-connections_s01e01/Connections.E01.The.Trigger.Effect.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "seconds": 2970,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD2 0)",
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E01 - The Trigger Effect.mp4",
+              "name": "Connections/Season 1/Connections S01E01 - The Trigger Effect",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E01%20-%20The%20Trigger%20Effect.mp4",
+              "seconds": 2970,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E01 - The Trigger Effect.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E01 - The Trigger Effect",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E01%20-%20The%20Trigger%20Effect.mp4",
+              "seconds": 2970,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 292
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Death in the Morning",
           "airdate": "1978-10-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E02 - Death in the Morning.mp4",
+            "name": "Connections/S01/S01E02 - Death in the Morning",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E02%20-%20Death%20in%20the%20Morning.mp4",
+            "seconds": 2961,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 291
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Death in the Morning\" (0.95)",
+              "item": "james-burke-connections_s01e02",
+              "itemTitle": "Connections Episode 2: Death in the Morning",
+              "file": "Connections.E02.Death.in.the.Morning.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "name": "Connections.E02.Death.in.the.Morning.NTSC.DVD.DD2.0.x264-NaRB",
+              "url": "https://archive.org/download/james-burke-connections_s01e02/Connections.E02.Death.in.the.Morning.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "seconds": 2961,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD2 0)",
+              "sizeMB": 307
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E02 - Death in the Morning.mp4",
+              "name": "Connections/Season 1/Connections S01E02 - Death in the Morning",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E02%20-%20Death%20in%20the%20Morning.mp4",
+              "seconds": 2961,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 307
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E02 - Death in the Morning.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E02 - Death in the Morning",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E02%20-%20Death%20in%20the%20Morning.mp4",
+              "seconds": 2961,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Distant Voices",
           "airdate": "1978-10-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E03 - Distant Voices.mp4",
+            "name": "Connections/S01/S01E03 - Distant Voices",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E03%20-%20Distant%20Voices.mp4",
+            "seconds": 3022,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 296
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E03 - Distant Voices.mp4",
+              "name": "Connections/Season 1/Connections S01E03 - Distant Voices",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E03%20-%20Distant%20Voices.mp4",
+              "seconds": 3022,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 313
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E03 - Distant Voices.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E03 - Distant Voices",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E03%20-%20Distant%20Voices.mp4",
+              "seconds": 3022,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 296
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Faith in Numbers",
           "airdate": "1978-11-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E04 - Faith in Numbers.mp4",
+            "name": "Connections/S01/S01E04 - Faith in Numbers",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E04%20-%20Faith%20in%20Numbers.mp4",
+            "seconds": 2974,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 292
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E04 - Faith in Numbers.mp4",
+              "name": "Connections/Season 1/Connections S01E04 - Faith in Numbers",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E04%20-%20Faith%20in%20Numbers.mp4",
+              "seconds": 2974,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E04 - Faith in Numbers.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E04 - Faith in Numbers",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E04%20-%20Faith%20in%20Numbers.mp4",
+              "seconds": 2974,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 292
+            }
+          ]
         },
         {
           "number": 5,
           "name": "The Wheel of Fortune",
           "airdate": "1978-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E05 - The Wheel of Fortune.mp4",
+            "name": "Connections/S01/S01E05 - The Wheel of Fortune",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E05%20-%20The%20Wheel%20of%20Fortune.mp4",
+            "seconds": 2974,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 292
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Wheel of Fortune\" (0.95)",
+              "item": "james-burke-connections_s01e05",
+              "itemTitle": "Connections Episode 5: The Wheel of Fortune",
+              "file": "Connections.E05.The.Wheel.of.Fortune.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "name": "Connections.E05.The.Wheel.of.Fortune.NTSC.DVD.DD2.0.x264-NaRB",
+              "url": "https://archive.org/download/james-burke-connections_s01e05/Connections.E05.The.Wheel.of.Fortune.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "seconds": 2974,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD2 0)",
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E05 - The Wheel of Fortune.mp4",
+              "name": "Connections/Season 1/Connections S01E05 - The Wheel of Fortune",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E05%20-%20The%20Wheel%20of%20Fortune.mp4",
+              "seconds": 2974,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E05 - The Wheel of Fortune.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E05 - The Wheel of Fortune",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E05%20-%20The%20Wheel%20of%20Fortune.mp4",
+              "seconds": 2974,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 292
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Thunder in the Skies",
           "airdate": "1978-11-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E06 - Thunder in the Skies.mp4",
+            "name": "Connections/S01/S01E06 - Thunder in the Skies",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E06%20-%20Thunder%20in%20the%20Skies.mp4",
+            "seconds": 2973,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 291
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Thunder in the Skies\" (0.95)",
+              "item": "james-burke-connections_s01e06",
+              "itemTitle": "Connections Episode 6: Thunder in the Skies",
+              "file": "Connections.E06.Thunder.in.the.Skies.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "name": "Connections.E06.Thunder.in.the.Skies.NTSC.DVD.DD2.0.x264-NaRB",
+              "url": "https://archive.org/download/james-burke-connections_s01e06/Connections.E06.Thunder.in.the.Skies.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "seconds": 2973,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD2 0)",
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E06 - Thunder in the Skies.mp4",
+              "name": "Connections/Season 1/Connections S01E06 - Thunder in the Skies",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E06%20-%20Thunder%20in%20the%20Skies.mp4",
+              "seconds": 2973,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E06 - Thunder in the Skies.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E06 - Thunder in the Skies",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E06%20-%20Thunder%20in%20the%20Skies.mp4",
+              "seconds": 2973,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 7,
           "name": "The Long Chain",
           "airdate": "1978-11-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E07 - The Long Chain.mp4",
+            "name": "Connections/S01/S01E07 - The Long Chain",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E07%20-%20The%20Long%20Chain.mp4",
+            "seconds": 2977,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 292
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E07 - The Long Chain.mp4",
+              "name": "Connections/Season 1/Connections S01E07 - The Long Chain",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E07%20-%20The%20Long%20Chain.mp4",
+              "seconds": 2977,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E07 - The Long Chain.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E07 - The Long Chain",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E07%20-%20The%20Long%20Chain.mp4",
+              "seconds": 2977,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 292
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Eat, Drink and Be Merry",
           "airdate": "1978-12-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E08 - Eat, Drink and Be Merry.mp4",
+            "name": "Connections/S01/S01E08 - Eat, Drink and Be Merry",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E08%20-%20Eat%2C%20Drink%20and%20Be%20Merry.mp4",
+            "seconds": 3003,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 295
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Eat, Drink and Be Merry\" (0.95)",
+              "item": "james-burke-connections_s01e08",
+              "itemTitle": "Connections Episode 8: Eat Drink and be Merry",
+              "file": "Connections.E08.Eat.Drink.and.Be.Merry.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "name": "Connections.E08.Eat.Drink.and.Be.Merry.NTSC.DVD.DD2.0.x264-NaRB",
+              "url": "https://archive.org/download/james-burke-connections_s01e08/Connections.E08.Eat.Drink.and.Be.Merry.NTSC.DVD.DD2.0.x264-NaRB.mp4",
+              "seconds": 3003,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD2 0)",
+              "sizeMB": 312
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E08 - Eat, Drink and Be Merry.mp4",
+              "name": "Connections/Season 1/Connections S01E08 - Eat, Drink and Be Merry",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E08%20-%20Eat%2C%20Drink%20and%20Be%20Merry.mp4",
+              "seconds": 3003,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 312
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E08 - Eat, Drink and Be Merry.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E08 - Eat, Drink and Be Merry",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E08%20-%20Eat%2C%20Drink%20and%20Be%20Merry.mp4",
+              "seconds": 3003,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 295
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Countdown",
           "airdate": "1978-12-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E09 - Countdown.mp4",
+            "name": "Connections/S01/S01E09 - Countdown",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E09%20-%20Countdown.mp4",
+            "seconds": 2970,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 291
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E09 - Countdown.mp4",
+              "name": "Connections/Season 1/Connections S01E09 - Countdown",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E09%20-%20Countdown.mp4",
+              "seconds": 2970,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E09 - Countdown.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E09 - Countdown",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E09%20-%20Countdown.mp4",
+              "seconds": 2970,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Yesterday, Tomorrow and You",
           "airdate": "1978-12-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S01/S01E10 - Yesterday, Tomorrow and You.mp4",
+            "name": "Connections/S01/S01E10 - Yesterday, Tomorrow and You",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS01%2FS01E10%20-%20Yesterday%2C%20Tomorrow%20and%20You.mp4",
+            "seconds": 2967,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 291
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 1/Connections S01E10 - Yesterday, Tomorrow and You.mp4",
+              "name": "Connections/Season 1/Connections S01E10 - Yesterday, Tomorrow and You",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%201%2FConnections%20S01E10%20-%20Yesterday%2C%20Tomorrow%20and%20You.mp4",
+              "seconds": 2967,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "connections-1978-complete-first-series",
+              "itemTitle": "Connections (1978) Complete First Series",
+              "file": "Connections (1978) - Season 01/Connections (1978) - S01E10 - Yesterday, Tomorrow and You.mp4",
+              "name": "Connections (1978) - Season 01/Connections (1978) - S01E10 - Yesterday, Tomorrow and You",
+              "url": "https://archive.org/download/connections-1978-complete-first-series/Connections%20(1978)%20-%20Season%2001%2FConnections%20(1978)%20-%20S01E10%20-%20Yesterday%2C%20Tomorrow%20and%20You.mp4",
+              "seconds": 2967,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         }
       ]
     },
@@ -111,161 +571,681 @@
           "number": 1,
           "name": "Revolutions",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E01 - Revolutions.mp4",
+            "name": "Connections/S02/S02E01 - Revolutions",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E01%20-%20Revolutions.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E01 - Revolutions.mp4",
+              "name": "Connections/Season 2/Connections S02E01 - Revolutions",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E01%20-%20Revolutions.mp4",
+              "seconds": 1322,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 113
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Sentimental Journeys",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E02 - Sentimental Journeys.mp4",
+            "name": "Connections/S02/S02E02 - Sentimental Journeys",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E02%20-%20Sentimental%20Journeys.mp4",
+            "seconds": 1312,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E02 - Sentimental Journeys.mp4",
+              "name": "Connections/Season 2/Connections S02E02 - Sentimental Journeys",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E02%20-%20Sentimental%20Journeys.mp4",
+              "seconds": 1312,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 115
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Getting It Together",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E03 - Getting it Together.mp4",
+            "name": "Connections/S02/S02E03 - Getting it Together",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E03%20-%20Getting%20it%20Together.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E03 - Getting It Together.mp4",
+              "name": "Connections/Season 2/Connections S02E03 - Getting It Together",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E03%20-%20Getting%20It%20Together.mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Whodunit?",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E04 - Whodunit.mp4",
+            "name": "Connections/S02/S02E04 - Whodunit",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E04%20-%20Whodunit.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E04 - Whodunit.mp4",
+              "name": "Connections/Season 2/Connections S02E04 - Whodunit",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E04%20-%20Whodunit.mp4",
+              "seconds": 1323,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 69
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Something for Nothing",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E05 - Something for Nothing.mp4",
+            "name": "Connections/S02/S02E05 - Something for Nothing",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E05%20-%20Something%20for%20Nothing.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E05 - Something for Nothing.mp4",
+              "name": "Connections/Season 2/Connections S02E05 - Something for Nothing",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E05%20-%20Something%20for%20Nothing.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 70
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Echoes of the Past",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E06 - Echoes of the Past.mp4",
+            "name": "Connections/S02/S02E06 - Echoes of the Past",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E06%20-%20Echoes%20of%20the%20Past.mp4",
+            "seconds": 1320,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E06 - Echoes of the Past.mp4",
+              "name": "Connections/Season 2/Connections S02E06 - Echoes of the Past",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E06%20-%20Echoes%20of%20the%20Past.mp4",
+              "seconds": 1321,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 66
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Photo Finish",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E07 - Photo Finish.mp4",
+            "name": "Connections/S02/S02E07 - Photo Finish",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E07%20-%20Photo%20Finish.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E07 - Photo Finish.mp4",
+              "name": "Connections/Season 2/Connections S02E07 - Photo Finish",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E07%20-%20Photo%20Finish.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Separate Ways",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E08 - Separate Ways.mp4",
+            "name": "Connections/S02/S02E08 - Separate Ways",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E08%20-%20Separate%20Ways.mp4",
+            "seconds": 1321,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E08 - Separate Ways.mp4",
+              "name": "Connections/Season 2/Connections S02E08 - Separate Ways",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E08%20-%20Separate%20Ways.mp4",
+              "seconds": 1321,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 72
+            }
+          ]
         },
         {
           "number": 9,
           "name": "High Times",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E09 - High Times.mp4",
+            "name": "Connections/S02/S02E09 - High Times",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E09%20-%20High%20Times.mp4",
+            "seconds": 1323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E09 - High Times.mp4",
+              "name": "Connections/Season 2/Connections S02E09 - High Times",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E09%20-%20High%20Times.mp4",
+              "seconds": 1323,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 67
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Deja Vu",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E10 - Deja Vu.mp4",
+            "name": "Connections/S02/S02E10 - Deja Vu",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E10%20-%20Deja%20Vu.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E10 - Deja Vu.mp4",
+              "name": "Connections/Season 2/Connections S02E10 - Deja Vu",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E10%20-%20Deja%20Vu.mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 11,
           "name": "New Harmony",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E11 - New Harmony.mp4",
+            "name": "Connections/S02/S02E11 - New Harmony",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E11%20-%20New%20Harmony.mp4",
+            "seconds": 1329,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E11 - New Harmony.mp4",
+              "name": "Connections/Season 2/Connections S02E11 - New Harmony",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E11%20-%20New%20Harmony.mp4",
+              "seconds": 1329,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 66
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Hot Pickle",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E12 - Hot Pickle.mp4",
+            "name": "Connections/S02/S02E12 - Hot Pickle",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E12%20-%20Hot%20Pickle.mp4",
+            "seconds": 1307,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E12 - Hot Pickle.mp4",
+              "name": "Connections/Season 2/Connections S02E12 - Hot Pickle",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E12%20-%20Hot%20Pickle.mp4",
+              "seconds": 1308,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 76
+            }
+          ]
         },
         {
           "number": 13,
           "name": "The Big Spin",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E13 - The Big Spin.mp4",
+            "name": "Connections/S02/S02E13 - The Big Spin",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E13%20-%20The%20Big%20Spin.mp4",
+            "seconds": 1323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E13 - The Big Spin.mp4",
+              "name": "Connections/Season 2/Connections S02E13 - The Big Spin",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E13%20-%20The%20Big%20Spin.mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Bright Ideas",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E14 - Bright Ideas.mp4",
+            "name": "Connections/S02/S02E14 - Bright Ideas",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E14%20-%20Bright%20Ideas.mp4",
+            "seconds": 1318,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E14 - Bright Ideas.mp4",
+              "name": "Connections/Season 2/Connections S02E14 - Bright Ideas",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E14%20-%20Bright%20Ideas.mp4",
+              "seconds": 1318,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 64
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Making Waves",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E15 - Making Waves.mp4",
+            "name": "Connections/S02/S02E15 - Making Waves",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E15%20-%20Making%20Waves.mp4",
+            "seconds": 1327,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E15 - Making Waves.mp4",
+              "name": "Connections/Season 2/Connections S02E15 - Making Waves",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E15%20-%20Making%20Waves.mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 116
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Routes",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E16 - Routes.mp4",
+            "name": "Connections/S02/S02E16 - Routes",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E16%20-%20Routes.mp4",
+            "seconds": 1327,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E16 - Routes.mp4",
+              "name": "Connections/Season 2/Connections S02E16 - Routes",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E16%20-%20Routes.mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 115
+            }
+          ]
         },
         {
           "number": 17,
           "name": "One Word",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E17 - One Word.mp4",
+            "name": "Connections/S02/S02E17 - One Word",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E17%20-%20One%20Word.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E17 - One Word.mp4",
+              "name": "Connections/Season 2/Connections S02E17 - One Word",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E17%20-%20One%20Word.mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 69
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Sign Here",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E18 - Sign Here.mp4",
+            "name": "Connections/S02/S02E18 - Sign Here",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E18%20-%20Sign%20Here.mp4",
+            "seconds": 1325,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E18 - Sign Here.mp4",
+              "name": "Connections/Season 2/Connections S02E18 - Sign Here",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E18%20-%20Sign%20Here.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Better Than the Real Thing",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E19 - Better Than the Real Thing.mp4",
+            "name": "Connections/S02/S02E19 - Better Than the Real Thing",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E19%20-%20Better%20Than%20the%20Real%20Thing.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E19 - Better Than the Real Thing.mp4",
+              "name": "Connections/Season 2/Connections S02E19 - Better Than the Real Thing",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E19%20-%20Better%20Than%20the%20Real%20Thing.mp4",
+              "seconds": 1322,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Flexible Response",
           "airdate": "1994-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S02/S02E20 - Flexible Response.mp4",
+            "name": "Connections/S02/S02E20 - Flexible Response",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS02%2FS02E20%20-%20Flexible%20Response.mp4",
+            "seconds": 1326,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 2/Connections S02E20 - Flexible Response.mp4",
+              "name": "Connections/Season 2/Connections S02E20 - Flexible Response",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%202%2FConnections%20S02E20%20-%20Flexible%20Response.mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 67
+            }
+          ]
         }
       ]
     },
@@ -276,81 +1256,341 @@
           "number": 1,
           "name": "Feedback",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E01 - Feedback.mp4",
+            "name": "Connections/S03/S03E01 - Feedback",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E01%20-%20Feedback.mp4",
+            "seconds": 3135,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 315
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E01 - Feedback.mp4",
+              "name": "Connections/Season 3/Connections S03E01 - Feedback",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E01%20-%20Feedback.mp4",
+              "seconds": 3135,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 160
+            }
+          ]
         },
         {
           "number": 2,
           "name": "What's in a Name?",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E02 - What's in a Name.mp4",
+            "name": "Connections/S03/S03E02 - What's in a Name",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E02%20-%20What's%20in%20a%20Name.mp4",
+            "seconds": 3121,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 313
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E02 - What's in a Name.mp4",
+              "name": "Connections/Season 3/Connections S03E02 - What's in a Name",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E02%20-%20What's%20in%20a%20Name.mp4",
+              "seconds": 3119,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 149
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Drop the Apple",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E03 - Drop the Apple.mp4",
+            "name": "Connections/S03/S03E03 - Drop the Apple",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E03%20-%20Drop%20the%20Apple.mp4",
+            "seconds": 3121,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 313
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E03 - Drop the Apple.mp4",
+              "name": "Connections/Season 3/Connections S03E03 - Drop the Apple",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E03%20-%20Drop%20the%20Apple.mp4",
+              "seconds": 3122,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Invisible Object",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E04 - An Invisible Object.mp4",
+            "name": "Connections/S03/S03E04 - An Invisible Object",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E04%20-%20An%20Invisible%20Object.mp4",
+            "seconds": 3127,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 317
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E04 - An Invisible Object.mp4",
+              "name": "Connections/Season 3/Connections S03E04 - An Invisible Object",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E04%20-%20An%20Invisible%20Object.mp4",
+              "seconds": 3127,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 178
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Life is No Picnic",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E05 - Life is No Picnic.mp4",
+            "name": "Connections/S03/S03E05 - Life is No Picnic",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E05%20-%20Life%20is%20No%20Picnic.mp4",
+            "seconds": 3126,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 315
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E05 - Life Is No Picnic.mp4",
+              "name": "Connections/Season 3/Connections S03E05 - Life Is No Picnic",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E05%20-%20Life%20Is%20No%20Picnic.mp4",
+              "seconds": 3127,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Elementary Stuff",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E06 - Elementary Stuff.mp4",
+            "name": "Connections/S03/S03E06 - Elementary Stuff",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E06%20-%20Elementary%20Stuff.mp4",
+            "seconds": 3126,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 317
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E06 - Elementary Stuff.mp4",
+              "name": "Connections/Season 3/Connections S03E06 - Elementary Stuff",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E06%20-%20Elementary%20Stuff.mp4",
+              "seconds": 3127,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
+            }
+          ]
         },
         {
           "number": 7,
           "name": "A Special Place",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E07 - A Special Place.mp4",
+            "name": "Connections/S03/S03E07 - A Special Place",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E07%20-%20A%20Special%20Place.mp4",
+            "seconds": 3127,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 316
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E07 - A Special Place.mp4",
+              "name": "Connections/Season 3/Connections S03E07 - A Special Place",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E07%20-%20A%20Special%20Place.mp4",
+              "seconds": 3127,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 162
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Fire From the Sky",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E08 - Fire from the Sky.mp4",
+            "name": "Connections/S03/S03E08 - Fire from the Sky",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E08%20-%20Fire%20from%20the%20Sky.mp4",
+            "seconds": 3127,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 315
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E08 - Fire From the Sky.mp4",
+              "name": "Connections/Season 3/Connections S03E08 - Fire From the Sky",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E08%20-%20Fire%20From%20the%20Sky.mp4",
+              "seconds": 3127,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 172
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Hit the Water",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E09 - Hit the Water.mp4",
+            "name": "Connections/S03/S03E09 - Hit the Water",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E09%20-%20Hit%20the%20Water.mp4",
+            "seconds": 3127,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 314
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E09 - Hit the Water.mp4",
+              "name": "Connections/Season 3/Connections S03E09 - Hit the Water",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E09%20-%20Hit%20the%20Water.mp4",
+              "seconds": 3125,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 211
+            }
+          ]
         },
         {
           "number": 10,
           "name": "In Touch",
           "airdate": "1997-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "bbc-connections-1978",
+            "itemTitle": "Connections (James Burke / BBC Documentary Series)",
+            "file": "Connections/S03/S03E10 - In Touch.mp4",
+            "name": "Connections/S03/S03E10 - In Touch",
+            "url": "https://archive.org/download/bbc-connections-1978/Connections%2FS03%2FS03E10%20-%20In%20Touch.mp4",
+            "seconds": 3127,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 315
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "ConnectionsByJamesBurke",
+              "itemTitle": "Connections by James Burke (Seasons 1-3)",
+              "file": "Connections/Season 3/Connections S03E10 - In Touch.mp4",
+              "name": "Connections/Season 3/Connections S03E10 - In Touch",
+              "url": "https://archive.org/download/ConnectionsByJamesBurke/Connections%2FSeason%203%2FConnections%20S03E10%20-%20In%20Touch.mp4",
+              "seconds": 3127,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 182
+            }
+          ]
         }
       ]
     }

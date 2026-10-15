@@ -3,180 +3,65 @@
   "slug": "station-zero",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-15T01:19:07.846Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:32.230Z",
   "tvmaze": {
-    "id": null,
+    "id": 48543,
     "name": "Station Zero",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "1999-03-08",
     "network": "MTV"
   },
   "coverage": {
-    "total": 13,
+    "total": 20,
     "live": 0,
-    "review": 13,
-    "missing": 0,
-    "pct": 100
+    "review": 8,
+    "missing": 12,
+    "pct": 40
   },
   "seasons": [
     {
       "season": 1,
       "episodes": [
         {
-          "number": 11,
-          "name": "ssz 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2010 - ssz episode 11.mp4",
-            "name": "2010 - ssz episode 11",
-            "url": "https://archive.org/download/2007-sszepisode-10/2010%20-%20ssz%20episode%2011.mp4",
-            "seconds": 1254,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 1,
+          "name": "Pilot",
+          "airdate": "1999-03-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "ssz 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2010 - ssz episode 12.mp4",
-            "name": "2010 - ssz episode 12",
-            "url": "https://archive.org/download/2007-sszepisode-10/2010%20-%20ssz%20episode%2012.mp4",
-            "seconds": 1429,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Balls-O-Meter",
+          "airdate": "1999-03-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "ssz 13",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2010 - ssz episode 13.mp4",
-            "name": "2010 - ssz episode 13",
-            "url": "https://archive.org/download/2007-sszepisode-10/2010%20-%20ssz%20episode%2013.mp4",
-            "seconds": 1509,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 151,
-            "ep": {
-              "season": null,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Uptown, Baby",
+          "airdate": "1999-03-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "sszepisode1",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2007 - sszepisode1.mp4",
-            "name": "2007 - sszepisode1",
-            "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode1.mp4",
-            "seconds": 1400,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "Old-School Thursday",
+          "airdate": "1999-03-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "sszepisode2done",
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "1999-03-12",
           "state": "REVIEW",
           "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2007 - sszepisode2done.mp4",
-            "name": "2007 - sszepisode2done",
-            "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode2done.mp4",
-            "seconds": 1491,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 150,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "sszepisode3",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2007 - sszepisode3.mp4",
-            "name": "2007 - sszepisode3",
-            "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode3.mp4",
-            "seconds": 1548,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "sszepisode4",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2007 - sszepisode4.mp4",
-            "name": "2007 - sszepisode4",
-            "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode4.mp4",
-            "seconds": 1401,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "sszepisode5",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Episode 5\" (0.82)",
             "item": "2007-sszepisode-10",
             "itemTitle": "Space Station Zero (Full Series)",
             "file": "2007 - sszepisode5.mp4",
@@ -185,18 +70,45 @@
             "seconds": 1578,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 158,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 158
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Episode 5\" (0.71)",
+              "item": "2007-sszepisode-10",
+              "itemTitle": "Space Station Zero (Full Series)",
+              "file": "2007 - sszepisode3.mp4",
+              "name": "2007 - sszepisode3",
+              "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode3.mp4",
+              "seconds": 1548,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Episode 5\" (0.71)",
+              "item": "2007-sszepisode-10",
+              "itemTitle": "Space Station Zero (Full Series)",
+              "file": "2007 - sszepisode4.mp4",
+              "name": "2007 - sszepisode4",
+              "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode4.mp4",
+              "seconds": 1401,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
-          "number": 19,
-          "name": "sszepisode6done",
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "1999-03-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Episode 6\" (0.67)",
             "item": "2007-sszepisode-10",
             "itemTitle": "Space Station Zero (Full Series)",
             "file": "2007 - sszepisode6done.mp4",
@@ -205,18 +117,18 @@
             "seconds": 1640,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 164,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "sszepisode7",
+          "number": 7,
+          "name": "Episode 7",
+          "airdate": "1999-03-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Episode 7\" (0.82)",
             "item": "2007-sszepisode-10",
             "itemTitle": "Space Station Zero (Full Series)",
             "file": "2007 - sszepisode7.mp4",
@@ -225,18 +137,18 @@
             "seconds": 1491,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 149,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 149
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "sszepisode8",
+          "number": 8,
+          "name": "Episode 8",
+          "airdate": "1999-03-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Episode 8\" (0.82)",
             "item": "2007-sszepisode-10",
             "itemTitle": "Space Station Zero (Full Series)",
             "file": "2007 - sszepisode8.mp4",
@@ -245,38 +157,26 @@
             "seconds": 1339,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 134,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 134
           },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "sszepisode9",
-          "state": "REVIEW",
-          "file": {
-            "item": "2007-sszepisode-10",
-            "itemTitle": "Space Station Zero (Full Series)",
-            "file": "2007 - sszepisode9.mp4",
-            "name": "2007 - sszepisode9",
-            "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode9.mp4",
-            "seconds": 1198,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 120,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 9,
+          "name": "Episode 9",
+          "airdate": "1999-03-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "sszepisode10",
+          "number": 10,
+          "name": "Episode 10",
+          "airdate": "1999-03-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Episode 10\" (0.84)",
             "item": "2007-sszepisode-10",
             "itemTitle": "Space Station Zero (Full Series)",
             "file": "2007 - sszepisode10.mp4",
@@ -285,10 +185,137 @@
             "seconds": 1830,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 183,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 183
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Episode 10\" (0.78)",
+              "item": "2007-sszepisode-10",
+              "itemTitle": "Space Station Zero (Full Series)",
+              "file": "2007 - sszepisode1.mp4",
+              "name": "2007 - sszepisode1",
+              "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode1.mp4",
+              "seconds": 1400,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "Episode 11",
+          "airdate": "1999-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Episode 12",
+          "airdate": "1999-03-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "2007-sszepisode-10",
+            "itemTitle": "Space Station Zero (Full Series)",
+            "file": "2010 - ssz episode 12.mp4",
+            "name": "2010 - ssz episode 12",
+            "url": "https://archive.org/download/2007-sszepisode-10/2010%20-%20ssz%20episode%2012.mp4",
+            "seconds": 1429,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Episode 13",
+          "airdate": "1999-03-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "2007-sszepisode-10",
+            "itemTitle": "Space Station Zero (Full Series)",
+            "file": "2010 - ssz episode 13.mp4",
+            "name": "2010 - ssz episode 13",
+            "url": "https://archive.org/download/2007-sszepisode-10/2010%20-%20ssz%20episode%2013.mp4",
+            "seconds": 1509,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 151
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Episode 14",
+          "airdate": "1999-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Episode 15",
+          "airdate": "1999-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Episode 16",
+          "airdate": "1999-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Episode 17",
+          "airdate": "1999-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Episode 18",
+          "airdate": "1999-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Episode 19",
+          "airdate": "1999-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Episode 20",
+          "airdate": "1999-04-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Episode 20\" (0.64)",
+            "item": "2007-sszepisode-10",
+            "itemTitle": "Space Station Zero (Full Series)",
+            "file": "2007 - sszepisode2done.mp4",
+            "name": "2007 - sszepisode2done",
+            "url": "https://archive.org/download/2007-sszepisode-10/2007%20-%20sszepisode2done.mp4",
+            "seconds": 1491,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
           },
           "alternates": []
         }

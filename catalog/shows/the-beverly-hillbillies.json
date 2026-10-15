@@ -3,7 +3,7 @@
   "slug": "the-beverly-hillbillies",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:23.513Z",
+  "matchedAt": "2026-10-15T03:18:28.278Z",
   "tvmaze": {
     "id": 2139,
     "name": "The Beverly Hillbillies",
@@ -28,19 +28,33 @@
           "airdate": "1962-09-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 72 in \"BEVERLY HILLBILLIES S 2 D 1. Title 12\"",
-            "item": "beverly-hillbillies-s-2-d-1.-title-12",
-            "itemTitle": "BEVERLY HILLBILLIES S 2 D 1. Title 12",
-            "file": "BEVERLY_HILLBILLIES_S2_D1.Title2.mp4",
-            "name": "BEVERLY_HILLBILLIES_S2_D1.Title2",
-            "url": "https://archive.org/download/beverly-hillbillies-s-2-d-1.-title-12/BEVERLY_HILLBILLIES_S2_D1.Title2.mp4",
-            "seconds": 1547,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"The Clampetts Strike Oil\" (1.00)",
+            "item": "thebeverlyhillbilliestheclampettsstrikeoilhq",
+            "itemTitle": "The Beverly Hillbillies - The Clampetts Strike Oil S01 E01",
+            "file": "The Beverly Hillbillies - The Clampetts Strike Oil HQ.mp4",
+            "name": "The Beverly Hillbillies - The Clampetts Strike Oil HQ",
+            "url": "https://archive.org/download/thebeverlyhillbilliestheclampettsstrikeoilhq/The%20Beverly%20Hillbillies%20-%20The%20Clampetts%20Strike%20Oil%20HQ.mp4",
+            "seconds": 1936,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 330
+            "sizeMB": 201
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 72 in \"BEVERLY HILLBILLIES S 2 D 1. Title 12\"",
+              "item": "beverly-hillbillies-s-2-d-1.-title-12",
+              "itemTitle": "BEVERLY HILLBILLIES S 2 D 1. Title 12",
+              "file": "BEVERLY_HILLBILLIES_S2_D1.Title2.mp4",
+              "name": "BEVERLY_HILLBILLIES_S2_D1.Title2",
+              "url": "https://archive.org/download/beverly-hillbillies-s-2-d-1.-title-12/BEVERLY_HILLBILLIES_S2_D1.Title2.mp4",
+              "seconds": 1547,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 330
+            }
+          ]
         },
         {
           "number": 2,

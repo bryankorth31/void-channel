@@ -3,21 +3,20 @@
   "slug": "squid-game",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.254Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:09.875Z",
   "tvmaze": {
-    "id": null,
+    "id": 43687,
     "name": "Squid Game",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 59,
+    "premiered": "2021-09-17",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 32,
-    "live": 0,
-    "review": 32,
-    "missing": 0,
-    "pct": 100
+    "total": 22,
+    "live": 10,
+    "review": 9,
+    "missing": 3,
+    "pct": 86
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "01 red light green light",
+          "name": "Red Light, Green Light",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Red Light, Green Light\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "01 squid game red light green light.mp4",
@@ -36,18 +38,33 @@
             "seconds": 3582,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 398,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 398
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "squid-game-s-01-e-01-2160p-hdr-multi-audio.mkv",
+              "itemTitle": "Squid Game S01E01 – Red Light, Green Light (2160p HDR Multi-Audio)",
+              "file": "Squid Game S01E01 2160p HDR MultiAudio.mkv.mp4",
+              "name": "Squid Game S01E01 2160p HDR MultiAudio.mkv",
+              "url": "https://archive.org/download/squid-game-s-01-e-01-2160p-hdr-multi-audio.mkv/Squid%20Game%20S01E01%202160p%20HDR%20MultiAudio.mkv.mp4",
+              "seconds": 3582,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 352
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "02 hell",
+          "name": "Hell",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hell\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "02. squid game hell.mp4",
@@ -56,18 +73,33 @@
             "seconds": 3753,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 417,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 417
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "squid-game-s-01-e-02-2160p-hdr-multi-audio.mkv",
+              "itemTitle": "Squid Game S01E02 – Hell (2160p HDR Multi-Audio)",
+              "file": "Squid Game S01E02 2160p HDR MultiAudio.mkv.mp4",
+              "name": "Squid Game S01E02 2160p HDR MultiAudio.mkv",
+              "url": "https://archive.org/download/squid-game-s-01-e-02-2160p-hdr-multi-audio.mkv/Squid%20Game%20S01E02%202160p%20HDR%20MultiAudio.mkv.mp4",
+              "seconds": 3752,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 373
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "03 the man with the umbrella",
+          "name": "The Man with the Umbrella",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Man with the Umbrella\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "03 squid game the man with the umbrella.mp4",
@@ -76,18 +108,18 @@
             "seconds": 3246,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 360,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 360
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "04 stick to the team",
+          "name": "Stick to the Team",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Stick to the Team\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "04 squid game stick to the team.mp4",
@@ -96,18 +128,18 @@
             "seconds": 3294,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 366,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 366
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "05 a fair world",
+          "name": "A Fair World",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Fair World\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "05 squid game a fair world.mp4",
@@ -116,18 +148,18 @@
             "seconds": 3096,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 343,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 343
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "06 gganbu",
+          "name": "Gganbu",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Gganbu\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "06 squid game gganbu.mp4",
@@ -136,18 +168,18 @@
             "seconds": 3698,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 411,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 411
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "07 vips",
+          "name": "VIPS",
+          "airdate": "2021-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"VIPS\" (0.95)",
             "item": "squid-game-full-movie",
             "itemTitle": "squid-game-full-movie",
             "file": "07 squid game vips.mp4",
@@ -156,311 +188,24 @@
             "seconds": 3478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 386,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 386
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "08 front man",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "08 squid game front man.mp4",
-            "name": "08 squid game front man",
-            "url": "https://archive.org/download/squid-game-full-movie/08%20squid%20game%20front%20man.mp4",
-            "seconds": 1935,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 214,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Front Man",
+          "airdate": "2021-09-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "09 one lucky day",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "09 squid game one lucky day.mp4",
-            "name": "09 squid game one lucky day",
-            "url": "https://archive.org/download/squid-game-full-movie/09%20squid%20game%20one%20lucky%20day.mp4",
-            "seconds": 3330,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "10 bread and lottery",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "10 squid game bread and lottery.mp4",
-            "name": "10 squid game bread and lottery",
-            "url": "https://archive.org/download/squid-game-full-movie/10%20squid%20game%20bread%20and%20lottery.mp4",
-            "seconds": 3923,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "11 halloween party",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "11 squid game halloween party.mp4",
-            "name": "11 squid game halloween party",
-            "url": "https://archive.org/download/squid-game-full-movie/11%20squid%20game%20halloween%20party.mp4",
-            "seconds": 3099,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 291,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "12 squid game 001.mp4",
-            "name": "12 squid game 001",
-            "url": "https://archive.org/download/squid-game-full-movie/12%20squid%20game%20001.mp4",
-            "seconds": 3716,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 349,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "13 six legs",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "13 squid game six legs.mp4",
-            "name": "13 squid game six legs",
-            "url": "https://archive.org/download/squid-game-full-movie/13%20squid%20game%20six%20legs.mp4",
-            "seconds": 3763,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 353,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "14 one more",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "14 squid game one more game.mp4",
-            "name": "14 squid game one more game",
-            "url": "https://archive.org/download/squid-game-full-movie/14%20squid%20game%20one%20more%20game.mp4",
-            "seconds": 4564,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 430,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "Episode 15",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "15 squid game o x.mp4",
-            "name": "15 squid game o x",
-            "url": "https://archive.org/download/squid-game-full-movie/15%20squid%20game%20o%20x.mp4",
-            "seconds": 3136,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 294,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "16 friend or foe",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "16 squid game friend or foe.mp4",
-            "name": "16 squid game friend or foe",
-            "url": "https://archive.org/download/squid-game-full-movie/16%20squid%20game%20friend%20or%20foe.mp4",
-            "seconds": 3616,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 340,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "17 keys and knives",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "17 squid game keys and knives.mp4",
-            "name": "17 squid game keys and knives",
-            "url": "https://archive.org/download/squid-game-full-movie/17%20squid%20game%20keys%20and%20knives.mp4",
-            "seconds": 3433,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 322,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "18 the starry night",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "18 squid game season the starry night.mp4",
-            "name": "18 squid game season the starry night",
-            "url": "https://archive.org/download/squid-game-full-movie/18%20squid%20game%20season%20the%20starry%20night.mp4",
-            "seconds": 3602,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 281,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "19 its not your fault",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "19 squid game its not your fault.mp4",
-            "name": "19 squid game its not your fault",
-            "url": "https://archive.org/download/squid-game-full-movie/19%20squid%20game%20its%20not%20your%20fault.mp4",
-            "seconds": 3962,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 246,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "Episode 20",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "20 squid game 222.mp4",
-            "name": "20 squid game 222",
-            "url": "https://archive.org/download/squid-game-full-movie/20%20squid%20game%20222.mp4",
-            "seconds": 3973,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 311,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "21 circle triangle square",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "21 squid game circle triangle square.mp4",
-            "name": "21 squid game circle triangle square",
-            "url": "https://archive.org/download/squid-game-full-movie/21%20squid%20game%20circle%20triangle%20square.mp4",
-            "seconds": 3776,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 295,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "22 humans are",
-          "state": "REVIEW",
-          "file": {
-            "item": "squid-game-full-movie",
-            "itemTitle": "squid-game-full-movie",
-            "file": "22 squid game humans are.mp4",
-            "name": "22 squid game humans are",
-            "url": "https://archive.org/download/squid-game-full-movie/22%20squid%20game%20humans%20are.mp4",
-            "seconds": 3350,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 262,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "One Lucky Day",
+          "airdate": "2021-09-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -470,9 +215,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "Bread and Lottery",
+          "airdate": "2024-12-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "squid.-game.-s-02-e-01",
             "itemTitle": "[Pt Dub] Squid Game Season 02 EP1",
             "file": "Squid.Game.S02E01.mp4",
@@ -481,21 +229,52 @@
             "seconds": 3923,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 299,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 299
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bread and Lottery\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "10 squid game bread and lottery.mp4",
+              "name": "10 squid game bread and lottery",
+              "url": "https://archive.org/download/squid-game-full-movie/10%20squid%20game%20bread%20and%20lottery.mp4",
+              "seconds": 3923,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 370
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Halloween Party",
+          "airdate": "2024-12-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Halloween Party\" (0.95)",
+            "item": "squid-game-full-movie",
+            "itemTitle": "squid-game-full-movie",
+            "file": "11 squid game halloween party.mp4",
+            "name": "11 squid game halloween party",
+            "url": "https://archive.org/download/squid-game-full-movie/11%20squid%20game%20halloween%20party.mp4",
+            "seconds": 3099,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 291
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "001",
+          "airdate": "2024-12-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "squid.-game.-s-02-e-03",
             "itemTitle": "[Pt Dub] Squid Game Season 02 EP3",
             "file": "Squid.Game.S02E03.mp4",
@@ -504,21 +283,46 @@
             "seconds": 3716,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 295,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 295
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Episode 6",
+          "number": 4,
+          "name": "Six Legs",
+          "airdate": "2024-12-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Six Legs\" (0.95)",
+            "item": "squid-game-full-movie",
+            "itemTitle": "squid-game-full-movie",
+            "file": "13 squid game six legs.mp4",
+            "name": "13 squid game six legs",
+            "url": "https://archive.org/download/squid-game-full-movie/13%20squid%20game%20six%20legs.mp4",
+            "seconds": 3763,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 353
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "One More Game",
+          "airdate": "2024-12-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "O ﻿ X",
+          "airdate": "2024-12-26",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "squid.-game.-s-02-e-06",
             "itemTitle": "[Pt Dub] Squid Game Season 02 EP6",
             "file": "Squid.Game.S02E06.mp4",
@@ -527,21 +331,32 @@
             "seconds": 3136,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 280,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 280
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"O ﻿ X\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "15 squid game o x.mp4",
+              "name": "15 squid game o x",
+              "url": "https://archive.org/download/squid-game-full-movie/15%20squid%20game%20o%20x.mp4",
+              "seconds": 3136,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 294
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "Friend or Foe",
+          "airdate": "2024-12-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "squid.-game.-s-02-e-07",
             "itemTitle": "[Pt Dub] Squid Game Season 02 EP7",
             "file": "Squid.Game.S02E07.mp4",
@@ -550,15 +365,23 @@
             "seconds": 3616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 292,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 292
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Friend or Foe\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "16 squid game friend or foe.mp4",
+              "name": "16 squid game friend or foe",
+              "url": "https://archive.org/download/squid-game-full-movie/16%20squid%20game%20friend%20or%20foe.mp4",
+              "seconds": 3616,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 340
+            }
+          ]
         }
       ]
     },
@@ -567,9 +390,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "keys and knives",
-          "state": "REVIEW",
+          "name": "Keys and Knives",
+          "airdate": "2025-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "squid-game-s-03-e-02-the-starry-night",
             "itemTitle": "Squid Game Season 3",
             "file": "Squid Game - S03E01 - Keys and Knives.mp4",
@@ -578,21 +404,32 @@
             "seconds": 3433,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 789,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 789
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Keys and Knives\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "17 squid game keys and knives.mp4",
+              "name": "17 squid game keys and knives",
+              "url": "https://archive.org/download/squid-game-full-movie/17%20squid%20game%20keys%20and%20knives.mp4",
+              "seconds": 3433,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 322
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "the starry night",
-          "state": "REVIEW",
+          "name": "The Starry Night",
+          "airdate": "2025-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "squid-game-s-03-e-02-the-starry-night",
             "itemTitle": "Squid Game Season 3",
             "file": "Squid Game - S03E02 - The Starry Night.mp4",
@@ -601,21 +438,18 @@
             "seconds": 3602,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1209,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1209
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "its not your fault",
-          "state": "REVIEW",
+          "name": "It's Not Your Fault",
+          "airdate": "2025-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "squid-game-s-03-e-02-the-starry-night",
             "itemTitle": "Squid Game Season 3",
             "file": "Squid Game - S03E03 - It's Not Your Fault.mp4",
@@ -624,21 +458,32 @@
             "seconds": 3962,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 958,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 958
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"It's Not Your Fault\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "19 squid game its not your fault.mp4",
+              "name": "19 squid game its not your fault",
+              "url": "https://archive.org/download/squid-game-full-movie/19%20squid%20game%20its%20not%20your%20fault.mp4",
+              "seconds": 3962,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 246
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "222",
+          "airdate": "2025-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "squid-game-s-03-e-02-the-starry-night",
             "itemTitle": "Squid Game Season 3",
             "file": "Squid Game - S03E04 - 222.mp4",
@@ -647,21 +492,18 @@
             "seconds": 3973,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 815,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 815
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "○△□",
+          "airdate": "2025-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "squid-game-s-03-e-02-the-starry-night",
             "itemTitle": "Squid Game Season 3",
             "file": "Squid Game - S03E05 - ○△□.mp4",
@@ -670,21 +512,18 @@
             "seconds": 3776,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 849,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 849
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "humans are",
-          "state": "REVIEW",
+          "name": "Humans Are…",
+          "airdate": "2025-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "squid-game-s-03-e-02-the-starry-night",
             "itemTitle": "Squid Game Season 3",
             "file": "Squid Game - S03E06 - Humans Are....mp4",
@@ -693,15 +532,23 @@
             "seconds": 3350,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 728,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 728
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Humans Are…\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "22 squid game humans are.mp4",
+              "name": "22 squid game humans are",
+              "url": "https://archive.org/download/squid-game-full-movie/22%20squid%20game%20humans%20are.mp4",
+              "seconds": 3350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 262
+            }
+          ]
         }
       ]
     }

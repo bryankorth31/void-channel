@@ -3,21 +3,20 @@
   "slug": "vincenzo",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.287Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.721Z",
   "tvmaze": {
-    "id": null,
+    "id": 52656,
     "name": "Vincenzo",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 90,
+    "premiered": "2021-02-20",
+    "network": "tvN"
   },
   "coverage": {
-    "total": 4,
+    "total": 20,
     "live": 0,
-    "review": 4,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 20,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,82 +24,162 @@
       "episodes": [
         {
           "number": 1,
-          "name": "loveftmarriageanddivorceep13",
-          "state": "REVIEW",
-          "file": {
-            "item": "vincenzo-ep-05",
-            "itemTitle": "1456",
-            "file": "LoveftMarriageAndDivorceEP13.mp4",
-            "name": "LoveftMarriageAndDivorceEP13",
-            "url": "https://archive.org/download/vincenzo-ep-05/LoveftMarriageAndDivorceEP13.mp4",
-            "seconds": 4016,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1340,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 1",
+          "airdate": "2021-02-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "peruggia the louvre employee who stole the mona lisa",
-          "state": "REVIEW",
-          "file": {
-            "item": "vincenzo-peruggia-the-louvre-employee-who-stole-the-mona-lisa",
-            "itemTitle": "Vincenzo Peruggia The Louvre Employee Who Stole The Mona Lisa",
-            "file": "Vincenzo Peruggia_ The Louvre Employee Who Stole The Mona Lisa.mp4",
-            "name": "Vincenzo Peruggia_ The Louvre Employee Who Stole The Mona Lisa",
-            "url": "https://archive.org/download/vincenzo-peruggia-the-louvre-employee-who-stole-the-mona-lisa/Vincenzo%20Peruggia_%20The%20Louvre%20Employee%20Who%20Stole%20The%20Mona%20Lisa.mp4",
-            "seconds": 5155,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1340,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 2",
+          "airdate": "2021-02-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "vincenzoep05",
-          "state": "REVIEW",
-          "file": {
-            "item": "vincenzo-ep-05",
-            "itemTitle": "1456",
-            "file": "VincenzoEP05.mp4",
-            "name": "VincenzoEP05",
-            "url": "https://archive.org/download/vincenzo-ep-05/VincenzoEP05.mp4",
-            "seconds": 4685,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1574,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 3",
+          "airdate": "2021-02-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "vincenzoep08",
-          "state": "REVIEW",
-          "file": {
-            "item": "vincenzo-ep-08",
-            "itemTitle": "Vincenzo EP 08",
-            "file": "VincenzoEP08.mp4",
-            "name": "VincenzoEP08",
-            "url": "https://archive.org/download/vincenzo-ep-08/VincenzoEP08.mp4",
-            "seconds": 5042,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1679,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Episode 4",
+          "airdate": "2021-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "2021-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "2021-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Episode 7",
+          "airdate": "2021-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Episode 8",
+          "airdate": "2021-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Episode 9",
+          "airdate": "2021-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Episode 10",
+          "airdate": "2021-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Episode 11",
+          "airdate": "2021-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Episode 12",
+          "airdate": "2021-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Episode 13",
+          "airdate": "2021-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Episode 14",
+          "airdate": "2021-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Episode 15",
+          "airdate": "2021-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Episode 16",
+          "airdate": "2021-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Episode 17",
+          "airdate": "2021-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Episode 18",
+          "airdate": "2021-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Episode 19",
+          "airdate": "2021-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Episode 20",
+          "airdate": "2021-05-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

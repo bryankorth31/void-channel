@@ -3,77 +3,33 @@
   "slug": "high-school-dxd",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.049Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.698Z",
   "tvmaze": {
-    "id": null,
+    "id": 5304,
     "name": "High School DxD",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2012-01-06",
+    "network": "AT-X"
   },
   "coverage": {
-    "total": 26,
+    "total": 48,
     "live": 0,
-    "review": 26,
-    "missing": 0,
-    "pct": 100
+    "review": 12,
+    "missing": 36,
+    "pct": 25
   },
   "seasons": [
     {
       "season": 1,
       "episodes": [
         {
-          "number": 2,
-          "name": "hsdxd 02 censored",
+          "number": 1,
+          "name": "I Got a Girlfriend!",
+          "airdate": "2012-01-06",
           "state": "REVIEW",
           "file": {
-            "item": "hsdx-d-ep-02-censored",
-            "itemTitle": "High School DxD Season 1 (Censored)",
-            "file": "HSDxD Ep 02 (Censored).mp4",
-            "name": "HSDxD Ep 02 (Censored)",
-            "url": "https://archive.org/download/hsdx-d-ep-02-censored/HSDxD%20Ep%2002%20(Censored).mp4",
-            "seconds": 1217,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 224,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "hsdxd 03 censored",
-          "state": "REVIEW",
-          "file": {
-            "item": "hsdx-d-ep-02-censored",
-            "itemTitle": "High School DxD Season 1 (Censored)",
-            "file": "HSDxD Ep 03 (Censored).mp4",
-            "name": "HSDxD Ep 03 (Censored)",
-            "url": "https://archive.org/download/hsdx-d-ep-02-censored/HSDxD%20Ep%2003%20(Censored).mp4",
-            "seconds": 1216,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 223,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "dxd01 locura anime",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 12 in \"high school dxd tem1\"",
             "item": "dxd-01-locura-anime",
             "itemTitle": "high school dxd tem1",
             "file": "DXD01(Locura Anime).mp4",
@@ -82,18 +38,32 @@
             "seconds": 1424,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 12 in \"High School DxD S2\"",
+              "item": "high-school-dxd-new-s2",
+              "itemTitle": "High School DxD S2",
+              "file": "High School DxD S2 01.mp4",
+              "name": "High School DxD S2 01",
+              "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2001.mp4",
+              "seconds": 1614,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
-          "number": 5,
-          "name": "dxd02 locura anime",
+          "number": 2,
+          "name": "I Stopped Being a Human!",
+          "airdate": "2012-01-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 12 in \"high school dxd tem1\"",
             "item": "dxd-01-locura-anime",
             "itemTitle": "high school dxd tem1",
             "file": "DXD02(Locura Anime).mp4",
@@ -102,258 +72,32 @@
             "seconds": 1424,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 12 in \"High School DxD S2\"",
+              "item": "high-school-dxd-new-s2",
+              "itemTitle": "High School DxD S2",
+              "file": "High School DxD S2 02.mp4",
+              "name": "High School DxD S2 02",
+              "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2002.mp4",
+              "seconds": 1614,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
-          "number": 6,
-          "name": "dxd03 locura anime",
+          "number": 3,
+          "name": "I Made A New Friend!",
+          "airdate": "2012-01-20",
           "state": "REVIEW",
           "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD03(Locura Anime).mp4",
-            "name": "DXD03(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD03(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 129,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "dxd04 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD04(Locura Anime).mp4",
-            "name": "DXD04(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD04(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 127,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "dxd05 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD05(Locura Anime).mp4",
-            "name": "DXD05(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD05(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "dxd06 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD06(Locura Anime).mp4",
-            "name": "DXD06(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD06(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "dxd07 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD07(Locura Anime).mp4",
-            "name": "DXD07(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD07(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "dxd08 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD08(Locura Anime).mp4",
-            "name": "DXD08(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD08(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "dxd09 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD09(Locura Anime).mp4",
-            "name": "DXD09(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD09(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "dxd10 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD10(Locura Anime).mp4",
-            "name": "DXD10(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD10(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "dxd11 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD11(Locura Anime).mp4",
-            "name": "DXD11(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD11(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 130,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "dxd12 locura anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dxd-01-locura-anime",
-            "itemTitle": "high school dxd tem1",
-            "file": "DXD12(Locura Anime).mp4",
-            "name": "DXD12(Locura Anime)",
-            "url": "https://archive.org/download/dxd-01-locura-anime/DXD12(Locura%20Anime).mp4",
-            "seconds": 1424,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 132,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "Episode 16",
-          "state": "REVIEW",
-          "file": {
-            "item": "high-school-dxd-new-s2",
-            "itemTitle": "High School DxD S2",
-            "file": "High School DxD S2 01.mp4",
-            "name": "High School DxD S2 01",
-            "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2001.mp4",
-            "seconds": 1614,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "Episode 17",
-          "state": "REVIEW",
-          "file": {
-            "item": "high-school-dxd-new-s2",
-            "itemTitle": "High School DxD S2",
-            "file": "High School DxD S2 02.mp4",
-            "name": "High School DxD S2 02",
-            "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2002.mp4",
-            "seconds": 1614,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 03.mp4",
@@ -362,18 +106,32 @@
             "seconds": 1613,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 159,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 159
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD03(Locura Anime).mp4",
+              "name": "DXD03(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD03(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
-          "number": 19,
-          "name": "Episode 19",
+          "number": 4,
+          "name": "I'm Saving My Friend!",
+          "airdate": "2012-01-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 04.mp4",
@@ -382,18 +140,32 @@
             "seconds": 1614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD04(Locura Anime).mp4",
+              "name": "DXD04(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD04(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
-          "number": 20,
-          "name": "Episode 20",
+          "number": 5,
+          "name": "I'm Going to Overthrow my Ex-Girlfriend!",
+          "airdate": "2012-02-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 05.mp4",
@@ -402,18 +174,32 @@
             "seconds": 1612,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 186,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 186
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD05(Locura Anime).mp4",
+              "name": "DXD05(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD05(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
+            }
+          ]
         },
         {
-          "number": 21,
-          "name": "Episode 21",
+          "number": 6,
+          "name": "My Job as a Devil!",
+          "airdate": "2012-02-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 06.mp4",
@@ -422,38 +208,66 @@
             "seconds": 1612,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD06(Locura Anime).mp4",
+              "name": "DXD06(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD06(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
-          "number": 22,
-          "name": "Episode 22",
+          "number": 7,
+          "name": "I Get a Familiar!",
+          "airdate": "2012-02-17",
           "state": "REVIEW",
           "file": {
-            "item": "high-school-dxd-new-s2",
-            "itemTitle": "High School DxD S2",
-            "file": "High School DxD S2 07.mp4",
-            "name": "High School DxD S2 07",
-            "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2007.mp4",
-            "seconds": 1614,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 12 in \"high school dxd tem1\"",
+            "item": "dxd-01-locura-anime",
+            "itemTitle": "high school dxd tem1",
+            "file": "DXD07(Locura Anime).mp4",
+            "name": "DXD07(Locura Anime)",
+            "url": "https://archive.org/download/dxd-01-locura-anime/DXD07(Locura%20Anime).mp4",
+            "seconds": 1424,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 12 in \"High School DxD S2\"",
+              "item": "high-school-dxd-new-s2",
+              "itemTitle": "High School DxD S2",
+              "file": "High School DxD S2 07.mp4",
+              "name": "High School DxD S2 07",
+              "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2007.mp4",
+              "seconds": 1614,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
-          "number": 23,
-          "name": "Episode 23",
+          "number": 8,
+          "name": "I Pick a Fight!",
+          "airdate": "2012-02-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 08.mp4",
@@ -462,58 +276,100 @@
             "seconds": 1614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD08(Locura Anime).mp4",
+              "name": "DXD08(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD08(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
-          "number": 24,
-          "name": "Episode 24",
+          "number": 9,
+          "name": "My Training Begins!",
+          "airdate": "2012-03-02",
           "state": "REVIEW",
           "file": {
-            "item": "high-school-dxd-new-s2",
-            "itemTitle": "High School DxD S2",
-            "file": "High School DxD S2 09.mp4",
-            "name": "High School DxD S2 09",
-            "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2009.mp4",
-            "seconds": 1613,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 12 in \"high school dxd tem1\"",
+            "item": "dxd-01-locura-anime",
+            "itemTitle": "high school dxd tem1",
+            "file": "DXD09(Locura Anime).mp4",
+            "name": "DXD09(Locura Anime)",
+            "url": "https://archive.org/download/dxd-01-locura-anime/DXD09(Locura%20Anime).mp4",
+            "seconds": 1424,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 124
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 12 in \"High School DxD S2\"",
+              "item": "high-school-dxd-new-s2",
+              "itemTitle": "High School DxD S2",
+              "file": "High School DxD S2 09.mp4",
+              "name": "High School DxD S2 09",
+              "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2009.mp4",
+              "seconds": 1613,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
-          "number": 25,
-          "name": "Episode 25",
+          "number": 10,
+          "name": "Beginning of the Decisive Battle!",
+          "airdate": "2012-03-09",
           "state": "REVIEW",
           "file": {
-            "item": "high-school-dxd-new-s2",
-            "itemTitle": "High School DxD S2",
-            "file": "High School DxD S2 10.mp4",
-            "name": "High School DxD S2 10",
-            "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2010.mp4",
-            "seconds": 1614,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 12 in \"high school dxd tem1\"",
+            "item": "dxd-01-locura-anime",
+            "itemTitle": "high school dxd tem1",
+            "file": "DXD10(Locura Anime).mp4",
+            "name": "DXD10(Locura Anime)",
+            "url": "https://archive.org/download/dxd-01-locura-anime/DXD10(Locura%20Anime).mp4",
+            "seconds": 1424,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 109,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 12 in \"High School DxD S2\"",
+              "item": "high-school-dxd-new-s2",
+              "itemTitle": "High School DxD S2",
+              "file": "High School DxD S2 10.mp4",
+              "name": "High School DxD S2 10",
+              "url": "https://archive.org/download/high-school-dxd-new-s2/High%20School%20DxD%20S2%2010.mp4",
+              "seconds": 1614,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 109
+            }
+          ]
         },
         {
-          "number": 26,
-          "name": "Episode 26",
+          "number": 11,
+          "name": "High Praises During the Decisive Battle!",
+          "airdate": "2012-03-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 11.mp4",
@@ -522,18 +378,32 @@
             "seconds": 1614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 171
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD11(Locura Anime).mp4",
+              "name": "DXD11(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD11(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
         },
         {
-          "number": 27,
-          "name": "s2 12 end",
+          "number": 12,
+          "name": "I Came to Carry Out My Promise!",
+          "airdate": "2012-03-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 12 in \"High School DxD S2\"",
             "item": "high-school-dxd-new-s2",
             "itemTitle": "High School DxD S2",
             "file": "High School DxD S2 12 END.mp4",
@@ -542,11 +412,325 @@
             "seconds": 1599,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"high school dxd tem1\"",
+              "item": "dxd-01-locura-anime",
+              "itemTitle": "high school dxd tem1",
+              "file": "DXD12(Locura Anime).mp4",
+              "name": "DXD12(Locura Anime)",
+              "url": "https://archive.org/download/dxd-01-locura-anime/DXD12(Locura%20Anime).mp4",
+              "seconds": 1424,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Another Disquieting Premonition!",
+          "airdate": "2013-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Holy Sword is Here!",
+          "airdate": "2013-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "I'll Destroy the Holy Swords!",
+          "airdate": "2013-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "A Strong Enemy Appeared!",
+          "airdate": "2013-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Decisive Battle at Kuoh Academy!",
+          "airdate": "2013-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Go, Occult Research Club!",
+          "airdate": "2013-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Summer! Bathing Suits! I'm in Trouble!",
+          "airdate": "2013-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Class Observation Begins!",
+          "airdate": "2013-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "I Got a Junior!",
+          "airdate": "2013-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Various Three-way Deadlocks!",
+          "airdate": "2013-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Leaders' Summit Begins!",
+          "airdate": "2013-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Two Heavenly Dragon, Collide!",
+          "airdate": "2013-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Summer Break! Off to the Underworld!",
+          "airdate": "2015-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Young Devils Gather!",
+          "airdate": "2015-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Cat and Dragon",
+          "airdate": "2015-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Interception, Commence!",
+          "airdate": "2015-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Last Day of the Summer Vacation!",
+          "airdate": "2015-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Second Semester, Starts!",
+          "airdate": "2015-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Night Before the Battle!",
+          "airdate": "2015-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "I'll Rescue Asia!",
+          "airdate": "2015-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Dragon of Dragon!",
+          "airdate": "2015-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Occult Research Club Vanishes!?",
+          "airdate": "2015-06-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "I Will Fight!",
+          "airdate": "2015-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "All the Time, Eternally!",
+          "airdate": "2015-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "That's Right, Let's Go to Kyoto",
+          "airdate": "2018-04-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "School Trip, an Abrupt Attack",
+          "airdate": "2018-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Group of Heroes has Arrived",
+          "airdate": "2018-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Showdown! Gremory Family vs. Hero Faction in Kyoto",
+          "airdate": "2018-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "My Potential Released!",
+          "airdate": "2018-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The School Trip is in Pandemonium",
+          "airdate": "2018-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "We Are Preparing for the School Festival!",
+          "airdate": "2018-05-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "A Girl's Heart is Complicated",
+          "airdate": "2018-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Deciding Battle of the Strongest Youth, Begins!",
+          "airdate": "2018-06-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "As a Family Member of Rias Gremory",
+          "airdate": "2018-06-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Man Against Man",
+          "airdate": "2018-06-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Lion Heart of the School Festival",
+          "airdate": "2018-07-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

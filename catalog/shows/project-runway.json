@@ -3,47 +3,1164 @@
   "slug": "project-runway",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-15T01:19:17.412Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:15.261Z",
   "tvmaze": {
-    "id": null,
+    "id": 687,
     "name": "Project Runway",
-    "runtime": null,
-    "premiered": null,
-    "network": "US"
+    "runtime": 60,
+    "premiered": "2004-12-01",
+    "network": "Freeform"
   },
   "coverage": {
-    "total": 2,
-    "live": 0,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "total": 303,
+    "live": 1,
+    "review": 0,
+    "missing": 302,
+    "pct": 0
   },
   "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Innovation",
+          "airdate": "2004-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Vision",
+          "airdate": "2004-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Commercial Appeal",
+          "airdate": "2004-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Collaboration",
+          "airdate": "2005-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "\"Model\" Clients",
+          "airdate": "2005-01-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Making a Splash",
+          "airdate": "2005-01-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Design a Collection",
+          "airdate": "2005-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Postal Uniform Challenge",
+          "airdate": "2005-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Design for the Red Carpet",
+          "airdate": "2005-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Reunion",
+          "airdate": "2005-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Season Finale",
+          "airdate": "2005-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Road to the Runway",
+          "airdate": "2005-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Clothes Off Your Back",
+          "airdate": "2005-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "All Dolled Up",
+          "airdate": "2005-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Team Lingerie",
+          "airdate": "2005-12-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Social Scene",
+          "airdate": "2006-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Window Shopping",
+          "airdate": "2006-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "On Thin Ice",
+          "airdate": "2006-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Inspiration",
+          "airdate": "2006-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Flower Power",
+          "airdate": "2006-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Makeover",
+          "airdate": "2006-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "What's Your Line",
+          "airdate": "2006-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Reunion",
+          "airdate": "2006-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2006-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2006-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Wall to Wall Fashion",
+          "airdate": "2006-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Fit for a Queen",
+          "airdate": "2006-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Designer's Best Friend",
+          "airdate": "2006-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Reap What You Sew",
+          "airdate": "2006-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Iconic Statement",
+          "airdate": "2006-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Waste Not, Want Not",
+          "airdate": "2006-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Everyday Woman",
+          "airdate": "2006-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "High Flying Fashion",
+          "airdate": "2006-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Couture Du Jour",
+          "airdate": "2006-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Black and White",
+          "airdate": "2006-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "What the Elle?",
+          "airdate": "2006-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Reunion",
+          "airdate": "2006-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2006-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2006-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Sew Me What You Got",
+          "airdate": "2007-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "I Started Crying",
+          "airdate": "2007-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Fashion Giant",
+          "airdate": "2007-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Trendsetter",
+          "airdate": "2007-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "What's the Skinny?",
+          "airdate": "2007-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Eye Candy",
+          "airdate": "2008-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "What a Girl Wants",
+          "airdate": "2008-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "En Garde!",
+          "airdate": "2008-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Even Designers Get the Blues",
+          "airdate": "2008-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Raw Talent",
+          "airdate": "2008-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Art of Fashion",
+          "airdate": "2008-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Reunion",
+          "airdate": "2008-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2008-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2008-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Let's Start from the Beginning",
+          "airdate": "2008-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Grass is Always Greener",
+          "airdate": "2008-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Bright Lights/Big City",
+          "airdate": "2008-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Rings of Glory",
+          "airdate": "2008-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Welcome to the Jungle",
+          "airdate": "2008-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Good Queen Fun",
+          "airdate": "2008-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Fashion That Drives You",
+          "airdate": "2008-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Double O Fashion",
+          "airdate": "2008-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "What's Your Sign",
+          "airdate": "2008-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Transformation",
+          "airdate": "2008-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Rock N' Runway",
+          "airdate": "2008-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Nature Calls",
+          "airdate": "2008-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2008-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2008-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
     {
       "season": 6,
       "episodes": [
         {
+          "number": 1,
+          "name": "Welcome to Los Angeles!",
+          "airdate": "2009-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "We Expect Fashion",
+          "airdate": "2009-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Rumble on the Runway",
+          "airdate": "2009-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "What a Woman Wants",
+          "airdate": "2009-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Fashion Headliners",
+          "airdate": "2009-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Lights, Camera, Sew!",
+          "airdate": "2009-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Sky is the Limit",
+          "airdate": "2009-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "A Fashionable New Beginning",
+          "airdate": "2009-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Sequins, Feathers and Fur, Oh My!",
+          "airdate": "2009-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Around the World in Two Days",
+          "airdate": "2009-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Best of the Best",
+          "airdate": "2009-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Art of Design",
+          "airdate": "2009-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 13,
-          "name": "runaway 6 13",
-          "state": "REVIEW",
-          "file": {
-            "item": "project-runaway-season-6-episode-13",
-            "itemTitle": "Project Runway Season 6 Episode 13",
-            "file": "Project Runaway Season 6 Episode 13.mp4",
-            "name": "Project Runaway Season 6 Episode 13",
-            "url": "https://archive.org/download/project-runaway-season-6-episode-13/Project%20Runaway%20Season%206%20Episode%2013.mp4",
-            "seconds": 2596,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 159,
-            "ep": {
-              "season": 6,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Finale, Part 1",
+          "airdate": "2009-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2009-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Back to New York",
+          "airdate": "2010-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Fashion Farm",
+          "airdate": "2010-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Hi's and Lows of Fashion",
+          "airdate": "2010-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Design Your Heart Out",
+          "airdate": "2010-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Run for Cover",
+          "airdate": "2010-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "A Little Bit of Fashion",
+          "airdate": "2010-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Hard Wear",
+          "airdate": "2010-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Elements of Fashion",
+          "airdate": "2010-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Takin' It to the Street",
+          "airdate": "2010-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Hey, That's My Fabric",
+          "airdate": "2010-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Sew Much Pressure",
+          "airdate": "2010-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Big, Top Designers",
+          "airdate": "2010-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2010-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2010-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "And Sew It Begins",
+          "airdate": "2010-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Larger Than Life",
+          "airdate": "2010-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "It's a Party",
+          "airdate": "2010-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Hats Off to You",
+          "airdate": "2010-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "There IS an I in Team",
+          "airdate": "2010-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "You Can Totally Wear That Again",
+          "airdate": "2010-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "What's Mine is Yours",
+          "airdate": "2010-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "A Rough Day on the Runway",
+          "airdate": "2010-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Race to the Finish",
+          "airdate": "2010-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "There's a Pattern Here",
+          "airdate": "2010-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "A Look in the Line",
+          "airdate": "2010-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "We're in a New York State of Mind",
+          "airdate": "2010-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2010-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2010-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 9,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Come As You Are",
+          "airdate": "2011-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "My Pet Project",
+          "airdate": "2011-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Go Big or Go Home",
+          "airdate": "2011-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "All About Nina",
+          "airdate": "2011-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Off the Track",
+          "airdate": "2011-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Art of the Matter",
+          "airdate": "2011-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Can't We Just All Get Along?",
+          "airdate": "2011-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "What Women Want",
+          "airdate": "2011-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Image is Everything",
+          "airdate": "2011-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Sew 70's",
+          "airdate": "2011-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "This is for the Birds",
+          "airdate": "2011-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Finale Challenge",
+          "airdate": "2011-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2011-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2011-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 10,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "A Times Square Anniversary Party",
+          "airdate": "2012-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Candy Couture",
+          "airdate": "2012-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Welcome Back (or not) to the Runway",
+          "airdate": "2012-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Women On the Go",
+          "airdate": "2012-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "It's My Way On the Runway",
+          "airdate": "2012-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Fix My Friend",
+          "airdate": "2012-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Oh My Lord and Taylor",
+          "airdate": "2012-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Starving Artist",
+          "airdate": "2012-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "It's All About Me",
+          "airdate": "2012-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "I Get a Kick Out of Fashion",
+          "airdate": "2012-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "It's Fashion Baby",
+          "airdate": "2012-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "In a Place Far, Far Away",
+          "airdate": "2012-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2012-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2012-10-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -53,9 +1170,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "msd",
-          "state": "REVIEW",
+          "name": "There is No I in Team",
+          "airdate": "2013-01-24",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "Project.Runway.S11E01",
             "itemTitle": "Project. Runway. S 11 E 01",
             "file": "Project.Runway.S11E01.480p.HDTV.x264-mSD.mp4",
@@ -64,14 +1184,1383 @@
             "seconds": 3782,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 393,
-            "ep": {
-              "season": 11,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 393
           },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Spin Out",
+          "airdate": "2013-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Surprise Me",
+          "airdate": "2013-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Ultimate Hard and Soft",
+          "airdate": "2013-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "A Little Bit Country, A Little Bit Rock and Roll",
+          "airdate": "2013-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Senior Fling",
+          "airdate": "2013-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "A Sticky Situation",
+          "airdate": "2013-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Take It All Off!",
+          "airdate": "2013-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "He Said, She Said",
+          "airdate": "2013-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Art of Fashion",
+          "airdate": "2013-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Finally on My Own",
+          "airdate": "2013-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Europe, Here We Come",
+          "airdate": "2013-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2013-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2013-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Reunion",
+          "airdate": "2013-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 12,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Sky's the Limit",
+          "airdate": "2013-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Million Dollar Runway",
+          "airdate": "2013-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "An Unconventional Coney Island",
+          "airdate": "2013-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Tie the Knot",
+          "airdate": "2013-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "YOU Choose Your Materials!",
+          "airdate": "2013-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Let's Go Glamping!",
+          "airdate": "2013-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Shoes First!",
+          "airdate": "2013-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Having a Field Day",
+          "airdate": "2013-09-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Let's Do Brunch",
+          "airdate": "2013-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Project Runway SuperFan!",
+          "airdate": "2013-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Next Generation...",
+          "airdate": "2013-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Butterfly Effect",
+          "airdate": "2013-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2013-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2013-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Reunion",
+          "airdate": "2013-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 13,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Judges Decide",
+          "airdate": "2014-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Unconventional Movie Nite",
+          "airdate": "2014-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Welcome to the Future",
+          "airdate": "2014-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "A Suitable Twist",
+          "airdate": "2014-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Klum of Doom",
+          "airdate": "2014-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Rock the Wedding",
+          "airdate": "2014-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Priceless Runway",
+          "airdate": "2014-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Rainway",
+          "airdate": "2014-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "American Girl Doll",
+          "airdate": "2014-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Muse on the Street",
+          "airdate": "2014-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Highest Bidder",
+          "airdate": "2014-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Fashion Week: Who's In & Who's Out",
+          "airdate": "2014-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2014-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2014-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Reunion",
+          "airdate": "2014-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 14,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Mad Dash Mayhem",
+          "airdate": "2015-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "It's All in the Cards",
+          "airdate": "2015-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Shut Up & Sew",
+          "airdate": "2015-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Fashion Flip",
+          "airdate": "2015-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Gunn and Heid",
+          "airdate": "2015-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Lace to the Finish",
+          "airdate": "2015-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Haute Tech Couture",
+          "airdate": "2015-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Broadway or Bust",
+          "airdate": "2015-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Make It Sell",
+          "airdate": "2015-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Crew's All In",
+          "airdate": "2015-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Runway's in 3D!",
+          "airdate": "2015-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Roll Out the Red Carpet",
+          "airdate": "2015-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2015-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2015-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Reunion",
+          "airdate": "2015-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 15,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "An Unconventional Launch Party",
+          "airdate": "2016-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Just Fabulous!",
+          "airdate": "2016-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Blacklight or Daylight?",
+          "airdate": "2016-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Sink or Swim",
+          "airdate": "2016-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "There's No \"I\" In \"Team\"",
+          "airdate": "2016-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "There IS Crying in Fashion",
+          "airdate": "2016-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Welcome to the Urban Jungle",
+          "airdate": "2016-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Project Pop Up",
+          "airdate": "2016-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Life is Full of Surprises",
+          "airdate": "2016-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "A Power Trip",
+          "airdate": "2016-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Bold Innovation",
+          "airdate": "2016-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "An Unconventional Trip",
+          "airdate": "2016-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2016-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2016-12-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Reunion",
+          "airdate": "2016-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 16,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "One Size Does Not Fit All",
+          "airdate": "2017-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "An Unconventional Recycling",
+          "airdate": "2017-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A Leap of Innovation!",
+          "airdate": "2017-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "We're Sleeping Wear?",
+          "airdate": "2017-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Descending Into Good and Evil",
+          "airdate": "2017-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Models Off Duty",
+          "airdate": "2017-09-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Ultimate Faceoff",
+          "airdate": "2017-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Client on the Go",
+          "airdate": "2017-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "A 'Little' Avant Garde",
+          "airdate": "2017-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Driving Miss Unconventional",
+          "airdate": "2017-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Warrior Fashion",
+          "airdate": "2017-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "There's Snow Business Like Sew Business",
+          "airdate": "2017-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2017-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2017-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Reunion",
+          "airdate": "2017-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 17,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "First Impressions",
+          "airdate": "2019-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Future is Here",
+          "airdate": "2019-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "All the Rage",
+          "airdate": "2019-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Survive in Style",
+          "airdate": "2019-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "High Fashion to High Street",
+          "airdate": "2019-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Power Play",
+          "airdate": "2019-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Elegance is the New Black",
+          "airdate": "2019-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Blame It on Rio",
+          "airdate": "2019-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Stitch is Back",
+          "airdate": "2019-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "What Do You Care About?",
+          "airdate": "2019-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "New York City of Dreams",
+          "airdate": "2019-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Art of Fashion",
+          "airdate": "2019-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "One Elle of a Day",
+          "airdate": "2019-06-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Final Runway",
+          "airdate": "2019-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 18,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Blast Off",
+          "airdate": "2019-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Cats of the Urban Jungle",
+          "airdate": "2019-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Sleigh the Runway",
+          "airdate": "2019-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Ultimate Upcycle",
+          "airdate": "2020-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "She's Sew Unusual",
+          "airdate": "2020-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "There Is Only One You",
+          "airdate": "2020-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Project Runway X Ashley Longshore",
+          "airdate": "2020-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Sheer Genius",
+          "airdate": "2020-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Suit Yourself",
+          "airdate": "2020-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Live and Let Tie Dye",
+          "airdate": "2020-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Olympic Game Plan",
+          "airdate": "2020-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Height of Avant Garde Fashion",
+          "airdate": "2020-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Finale, Part 1",
+          "airdate": "2020-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale, Part 2",
+          "airdate": "2020-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 19,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "A Colorful Return",
+          "airdate": "2021-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "#STREETWEAR",
+          "airdate": "2021-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "If You Got It, Haunt It",
+          "airdate": "2021-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Flower Power",
+          "airdate": "2021-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Go for the Gold… Sequin",
+          "airdate": "2021-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Fashion Is Back, Baby!",
+          "airdate": "2021-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Are You Fur Real?",
+          "airdate": "2021-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Couch Couture",
+          "airdate": "2021-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Last Straw",
+          "airdate": "2021-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Housewives",
+          "airdate": "2022-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Haute Hair",
+          "airdate": "2022-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Model as Muse",
+          "airdate": "2022-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Sky Is the Limit",
+          "airdate": "2022-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Finale",
+          "airdate": "2022-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 20,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Meet the All-Stars",
+          "airdate": "2023-06-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Project Redemption",
+          "airdate": "2023-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Toying with Fashion",
+          "airdate": "2023-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Coronation Day",
+          "airdate": "2023-06-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Seeing Red",
+          "airdate": "2023-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Like Totally '90s",
+          "airdate": "2023-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Fashion, Inside Out",
+          "airdate": "2023-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Uncut Hems",
+          "airdate": "2023-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Below Decked Out",
+          "airdate": "2023-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Freedom",
+          "airdate": "2023-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Double Bind",
+          "airdate": "2023-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Let Me See Your Peacock!",
+          "airdate": "2023-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Sky's the Limit",
+          "airdate": "2023-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Finale",
+          "airdate": "2023-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 21,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "New House / New Rules",
+          "airdate": "2025-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Feel the Burn",
+          "airdate": "2025-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Boring to Brilliant",
+          "airdate": "2025-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Sew Elementary",
+          "airdate": "2025-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Complimentary Couture",
+          "airdate": "2025-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Hit the Streets",
+          "airdate": "2025-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Runway Rodeo",
+          "airdate": "2025-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Threads of Confidence",
+          "airdate": "2025-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Something Wicked",
+          "airdate": "2025-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "See You on the Runway",
+          "airdate": "2025-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 22,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "22 for Season 22",
+          "airdate": "2026-07-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Ready, Set, Redemption!",
+          "airdate": "2026-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "In It to Win It",
+          "airdate": "2026-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Catwalk on the Wild Side",
+          "airdate": "2026-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Viva la Fashion",
+          "airdate": "2026-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Devil's in the Details",
+          "airdate": "2026-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Battle of the Seasons",
+          "airdate": "2026-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Designing with the Stars",
+          "airdate": "2026-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Put a Ring on It",
+          "airdate": "2026-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Finale",
+          "airdate": "2026-09-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

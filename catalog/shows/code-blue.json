@@ -3,21 +3,20 @@
   "slug": "code-blue",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-15T01:19:21.450Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:25.237Z",
   "tvmaze": {
-    "id": null,
+    "id": 4676,
     "name": "Code Blue",
-    "runtime": null,
-    "premiered": null,
-    "network": "TLC"
+    "runtime": 54,
+    "premiered": "2008-07-03",
+    "network": "Fuji TV"
   },
   "coverage": {
-    "total": 24,
+    "total": 32,
     "live": 0,
-    "review": 24,
-    "missing": 0,
-    "pct": 100
+    "review": 11,
+    "missing": 21,
+    "pct": 34
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "codeblue01 a security barrier device regardless of os or applications by kenji toda",
+          "name": "Decision",
+          "airdate": "2008-07-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2013/CodeBlue01   A Security Barrier Device Regardless of OS or Applications by Kenji Toda.mp4",
@@ -36,78 +38,18 @@
             "seconds": 3197,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 94,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 94
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "codeblue01 fight against citadel in japan by you nakatsuru",
+          "name": "Responsibility",
+          "airdate": "2008-07-10",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   Fight Against Citadel in Japan by You Nakatsuru.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   Fight Against Citadel in Japan by You Nakatsuru",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20Fight%20Against%20Citadel%20in%20Japan%20by%20You%20Nakatsuru.mp4",
-            "seconds": 3196,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 94,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "codeblue01 html5 security and headers x crawling response header by tomoyuki shigemori",
-          "state": "REVIEW",
-          "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   HTML5 Security & Headers - X-Crawling-Response-Header - by Tomoyuki Shigemori.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   HTML5 Security & Headers - X-Crawling-Response-Header - by Tomoyuki Shigemori",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20HTML5%20Security%20%26%20Headers%20-%20X-Crawling-Response-Header%20-%20by%20Tomoyuki%20Shigemori.mp4",
-            "seconds": 1480,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 44,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "codeblue01 intel management engine secrets by igor skochinsky",
-          "state": "REVIEW",
-          "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   Intel Management Engine Secrets by Igor Skochinsky.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   Intel Management Engine Secrets by Igor Skochinsky",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20Intel%20Management%20Engine%20Secrets%20by%20Igor%20Skochinsky.mp4",
-            "seconds": 3227,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 75,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "codeblue01 keynote in the icu by jeff moss",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2013/CodeBlue01   Keynote - CODE BLUE in the ICU by Jeff Moss.mp4",
@@ -116,58 +58,18 @@
             "seconds": 2932,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 104,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 104
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "codeblue01 keynote ctf all the cool kids are doing it by chris eagle",
+          "number": 3,
+          "name": "Sudden Change",
+          "airdate": "2008-07-17",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   Keynote - CTF - All the Cool Kids are doing it by Chris Eagle.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   Keynote - CTF - All the Cool Kids are doing it by Chris Eagle",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20Keynote%20-%20CTF%20-%20All%20the%20Cool%20Kids%20are%20doing%20it%20by%20Chris%20Eagle.mp4",
-            "seconds": 4116,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "codeblue01 libinjection from sqli to xss by nick galbreath",
-          "state": "REVIEW",
-          "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   libinjection  from SQLi to XSS by Nick Galbreath.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   libinjection  from SQLi to XSS by Nick Galbreath",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20libinjection%20%20from%20SQLi%20to%20XSS%20by%20Nick%20Galbreath.mp4",
-            "seconds": 1232,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 44,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "codeblue01 networked home appliances and vulnerabilities by yukihisa horibe",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2013/CodeBlue01   Networked Home Appliances and Vulnerabilities. by Yukihisa Horibe.mp4",
@@ -176,38 +78,18 @@
             "seconds": 3551,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 105,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 105
           },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "codeblue01 o checker malicious document file detection tool by yuuhei ootsubo",
+          "number": 4,
+          "name": "Mother's Love",
+          "airdate": "2008-07-24",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   o-checker - Malicious document file detection tool by Yuuhei Ootsubo.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   o-checker - Malicious document file detection tool by Yuuhei Ootsubo",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20o-checker%20-%20Malicious%20document%20file%20detection%20tool%20by%20Yuuhei%20Ootsubo.mp4",
-            "seconds": 3501,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 103,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "codeblue01 preventing hard disk firmware manipulation attack and disaster recovery",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2013/CodeBlue01   Preventing hard disk firmware manipulation attack and disaster recovery.mp4",
@@ -216,38 +98,18 @@
             "seconds": 3358,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 65,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 65
           },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "codeblue01 scada software or swiss cheese software by celil unuver",
+          "number": 5,
+          "name": "The Past",
+          "airdate": "2008-07-31",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2013/CodeBlue01   SCADA Software or Swiss Cheese Software by Celil UNUVER.mp4",
-            "name": "CODE BLUE 2013/CodeBlue01   SCADA Software or Swiss Cheese Software by Celil UNUVER",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202013%2FCodeBlue01%20%20%20SCADA%20Software%20or%20Swiss%20Cheese%20Software%20by%20Celil%20UNUVER.mp4",
-            "seconds": 2129,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 50,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "codeblue01 the current state of automotive security by chris valasek",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2013/CodeBlue01   The Current State of Automotive Security by Chris Valasek.mp4",
@@ -256,18 +118,18 @@
             "seconds": 3330,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 98,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 98
           },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "codeblue01 various tricks for remote linux exploits by seokha lee wh1ant",
+          "number": 6,
+          "name": "Unconditional Love",
+          "airdate": "2008-08-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2013/CodeBlue01   various tricks for remote linux exploits by Seokha Lee (wh1ant).mp4",
@@ -276,38 +138,18 @@
             "seconds": 2749,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 81,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 81
           },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "ben schmidt and paul makowski embedded security in the land of the rising sun",
+          "number": 7,
+          "name": "Confession",
+          "airdate": "2008-08-14",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Ben Schmidt & Paul Makowski- Embedded Security in The Land of the Rising Sun.mp4",
-            "name": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Ben Schmidt & Paul Makowski- Embedded Security in The Land of the Rising Sun",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202014%20(2014%2012%2018-19)%2FCODE%20BLUE%202014%20%20%20Ben%20Schmidt%20%26%20Paul%20Makowski-%20Embedded%20Security%20in%20The%20Land%20of%20the%20Rising%20Sun.mp4",
-            "seconds": 3891,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 91,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "david jacoby how i hacked my home",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   David Jacoby - How I Hacked My Home.mp4",
@@ -316,38 +158,18 @@
             "seconds": 2713,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 63,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 63
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "david seidman microsoft vulnerability research how to be a finder as a vendor",
+          "number": 8,
+          "name": "Unavoidable Decision",
+          "airdate": "2008-08-21",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   David Seidman - Microsoft Vulnerability Research  How to be a Finder as a Vendor.mp4",
-            "name": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   David Seidman - Microsoft Vulnerability Research  How to be a Finder as a Vendor",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202014%20(2014%2012%2018-19)%2FCODE%20BLUE%202014%20%20%20David%20Seidman%20-%20Microsoft%20Vulnerability%20Research%20%20How%20to%20be%20a%20Finder%20as%20a%20Vendor.mp4",
-            "seconds": 2480,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 57,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "dongcheol hong drone attack by malware and network hacking",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Dongcheol Hong - Drone attack by malware and network hacking.mp4",
@@ -356,38 +178,18 @@
             "seconds": 3284,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 96,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 96
           },
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "hiroshi shinotsuka how to avoid the detection by malware",
+          "number": 9,
+          "name": "Broken Bond",
+          "airdate": "2008-08-28",
           "state": "REVIEW",
           "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Hiroshi Shinotsuka - how to avoid the Detection by Malware.mp4",
-            "name": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Hiroshi Shinotsuka - how to avoid the Detection by Malware",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202014%20(2014%2012%2018-19)%2FCODE%20BLUE%202014%20%20%20Hiroshi%20Shinotsuka%20-%20how%20to%20avoid%20the%20Detection%20by%20Malware.mp4",
-            "seconds": 1506,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 35,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "ilfak guilfanov keynote the story of ida pro",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Ilfak Guilfanov - Keynote   The story of IDA Pro.mp4",
@@ -396,18 +198,18 @@
             "seconds": 3195,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 55,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 55
           },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "keren elazari keynote the 5 biggest problems of cyber security",
+          "number": 10,
+          "name": "Wavering Heart",
+          "airdate": "2008-09-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Keren Elazari - Keynote   The 5 biggest problems of cyber security.mp4",
@@ -416,18 +218,18 @@
             "seconds": 3613,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 106,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 106
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "kuniyasu suzaki devicedisenabler",
+          "number": 11,
+          "name": "Life and Death",
+          "airdate": "2008-09-11",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 13 in \"CODE BLUE Archive\"",
             "item": "CODEBLUEArchiveInfocon",
             "itemTitle": "CODE BLUE Archive",
             "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Kuniyasu Suzaki - DeviceDisEnabler.mp4",
@@ -436,71 +238,186 @@
             "seconds": 2987,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 70,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 70
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Miracle of Holy Night",
+          "airdate": "2010-01-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "takahiro matsuki and dennis kengo oka",
-          "state": "REVIEW",
-          "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Takahiro Matsuki & Dennis Kengo Oka.mp4",
-            "name": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   Takahiro Matsuki & Dennis Kengo Oka",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202014%20(2014%2012%2018-19)%2FCODE%20BLUE%202014%20%20%20Takahiro%20Matsuki%20%26%20Dennis%20Kengo%20Oka.mp4",
-            "seconds": 3369,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 99,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Own Way",
+          "airdate": "2010-01-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "the active use and exploitation of microsoft s application compatibility framework",
-          "state": "REVIEW",
-          "file": {
-            "item": "CODEBLUEArchiveInfocon",
-            "itemTitle": "CODE BLUE Archive",
-            "file": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   The active use and exploitation of Microsoft s Application Compatibility Framework.mp4",
-            "name": "CODE BLUE 2014 (2014 12 18-19)/CODE BLUE 2014   The active use and exploitation of Microsoft s Application Compatibility Framework",
-            "url": "https://archive.org/download/CODEBLUEArchiveInfocon/CODE%20BLUE%202014%20(2014%2012%2018-19)%2FCODE%20BLUE%202014%20%20%20The%20active%20use%20and%20exploitation%20of%20Microsoft%20s%20Application%20Compatibility%20Framework.mp4",
-            "seconds": 3145,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 73,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Truth and Lies",
+          "airdate": "2010-01-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "hoops to end homelessness 1 23 18",
-          "state": "REVIEW",
-          "file": {
-            "item": "Code_Blue_Hoops_to_End_Homelessness_-_1_23_18",
-            "itemTitle": "“Code Blue” & “Hoops to End Homelessness” - 1/23/18",
-            "file": "Code_Blue_Hoops_to_End_Homelessness_-_1_23_18.mp4",
-            "name": "Code_Blue_Hoops_to_End_Homelessness_-_1_23_18",
-            "url": "https://archive.org/download/Code_Blue_Hoops_to_End_Homelessness_-_1_23_18/Code_Blue_Hoops_to_End_Homelessness_-_1_23_18.mp4",
-            "seconds": 1665,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 173,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "Bygone Days",
+          "airdate": "2010-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Lovers",
+          "airdate": "2010-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Secret",
+          "airdate": "2010-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Guilt",
+          "airdate": "2010-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Reason",
+          "airdate": "2010-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Wounds of the Heart",
+          "airdate": "2010-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Crossroads",
+          "airdate": "2010-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Graduation ~ Definition of Miracle",
+          "airdate": "2010-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "A Far Off Wish",
+          "airdate": "2017-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Guiding People",
+          "airdate": "2017-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Thing More Important Than Life",
+          "airdate": "2017-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Effect of a Smile",
+          "airdate": "2017-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Person to Get Close to",
+          "airdate": "2017-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Other Side of Discouragement",
+          "airdate": "2017-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Compensation of Failure",
+          "airdate": "2017-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Lonely Night",
+          "airdate": "2017-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "One Hour of Fate",
+          "airdate": "2017-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Beyond the Darkness",
+          "airdate": "2017-09-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

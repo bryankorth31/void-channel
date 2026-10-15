@@ -3,21 +3,20 @@
   "slug": "dr-stone",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.053Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.844Z",
   "tvmaze": {
-    "id": null,
-    "name": "Dr. STONE",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "id": 42372,
+    "name": "Dr. Stone",
+    "runtime": 30,
+    "premiered": "2019-07-05",
+    "network": "Tokyo MX"
   },
   "coverage": {
-    "total": 71,
-    "live": 0,
-    "review": 71,
-    "missing": 0,
-    "pct": 100
+    "total": 94,
+    "live": 62,
+    "review": 1,
+    "missing": 31,
+    "pct": 67
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "mundo de piedra",
-          "state": "REVIEW",
+          "name": "Stone World",
+          "airdate": "2019-07-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x01 - Mundo de piedra.mp4",
@@ -36,21 +38,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP01.mp4",
+              "name": "Dr Stone S01 EP01",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP01.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 109
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "rey del mundo de piedra",
-          "state": "REVIEW",
+          "name": "King of The Stone World",
+          "airdate": "2019-07-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x02 - Rey del mundo de piedra.mp4",
@@ -59,21 +72,18 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "armas de la ciencia",
-          "state": "REVIEW",
+          "name": "Weapons of Science",
+          "airdate": "2019-07-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x03 - Armas de la ciencia.mp4",
@@ -82,21 +92,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP03.mp4",
+              "name": "Dr Stone S01 EP03",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP03.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 114
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "dispara la se al de humo",
-          "state": "REVIEW",
+          "name": "Fire the Smoke Signal",
+          "airdate": "2019-07-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x04 - Dispara la señal de humo.mp4",
@@ -105,21 +126,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP04.mp4",
+              "name": "Dr Stone S01 EP04",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP04.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 105
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "el principio del mundo de piedra",
-          "state": "REVIEW",
+          "name": "Stone World the Beginning",
+          "airdate": "2019-08-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x05 - El principio del mundo de piedra.mp4",
@@ -128,44 +160,66 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP05.mp4",
+              "name": "Dr Stone S01 EP05",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP05.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 114
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "Two Nations of the Stone World",
+          "airdate": "2019-08-09",
+          "state": "LIVE",
           "file": {
-            "item": "dr-stone-s-01-ep-10",
-            "itemTitle": "Dr Stone S01",
-            "file": "Dr Stone S01 EP06.mp4",
-            "name": "Dr Stone S01 EP06",
-            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP06.mp4",
-            "seconds": 1446,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 1x06 - Dos países del mundo de piedra.mp4",
+            "name": "Dr. Stone - 1x06 - Dos países del mundo de piedra",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x06%20-%20Dos%20pa%C3%ADses%20del%20mundo%20de%20piedra.mp4",
+            "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 177,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP06.mp4",
+              "name": "Dr Stone S01 EP06",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP06.mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 177
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "el paradero de dos millones de a os",
-          "state": "REVIEW",
+          "name": "Where Two Million Years Have Gone",
+          "airdate": "2019-08-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x07 - El paradero de dos millones de años.mp4",
@@ -174,21 +228,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP07.mp4",
+              "name": "Dr Stone S01 EP07",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP07.mp4",
+              "seconds": 1447,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 110
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "camino de piedra",
-          "state": "REVIEW",
+          "name": "Stone Road",
+          "airdate": "2019-08-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x08 - Camino de piedra.mp4",
@@ -197,90 +262,120 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP08.mp4",
+              "name": "Dr Stone S01 EP08",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP08.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 111
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "Let There Be the Light of Science",
+          "airdate": "2019-08-30",
+          "state": "LIVE",
           "file": {
-            "item": "dr-stone-s-01-ep-10",
-            "itemTitle": "Dr Stone S01",
-            "file": "Dr Stone S01 EP09.mp4",
-            "name": "Dr Stone S01 EP09",
-            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP09.mp4",
-            "seconds": 1446,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 179,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "dr-stone-s-01-ep-10",
-            "itemTitle": "Dr Stone S01",
-            "file": "Dr Stone S01 EP10.mp4",
-            "name": "Dr Stone S01 EP10",
-            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP10.mp4",
-            "seconds": 1446,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 180,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "mundo claro",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. Stone - 1x11 - Mundo claro.mp4",
-            "name": "Dr. Stone - 1x11 - Mundo claro",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x11%20-%20Mundo%20claro.mp4",
+            "file": "Dr. Stone - 1x09 - Que se haga la luz de la ciencia.mp4",
+            "name": "Dr. Stone - 1x09 - Que se haga la luz de la ciencia",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x09%20-%20Que%20se%20haga%20la%20luz%20de%20la%20ciencia.mp4",
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP09.mp4",
+              "name": "Dr Stone S01 EP09",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP09.mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 179
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "name": "A Flimsy Alliance",
+          "airdate": "2019-09-06",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 1x10 - Una tenue alianza.mp4",
+            "name": "Dr. Stone - 1x10 - Una tenue alianza",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x10%20-%20Una%20tenue%20alianza.mp4",
+            "seconds": 1442,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 168
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP10.mp4",
+              "name": "Dr Stone S01 EP10",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP10.mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 180
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "Clear World",
+          "airdate": "2019-09-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dr-stone-s-01-ep-10",
+            "itemTitle": "Dr Stone S01",
+            "file": "Dr Stone S01 EP011.mp4",
+            "name": "Dr Stone S01 EP011",
+            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP011.mp4",
+            "seconds": 1448,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 112
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "compa eros espalda con espalda",
-          "state": "REVIEW",
+          "name": "Buddies Back to Back",
+          "airdate": "2019-09-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x12 - Compañeros espalda con espalda.mp4",
@@ -289,21 +384,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP12.mp4",
+              "name": "Dr Stone S01 EP12",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP12.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "guerrero enmascarado",
-          "state": "REVIEW",
+          "name": "Masked Warrior",
+          "airdate": "2019-09-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x13 - Guerrero enmascarado.mp4",
@@ -312,21 +418,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP13.mp4",
+              "name": "Dr Stone S01 EP13",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP13.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "amo de la llama",
-          "state": "REVIEW",
+          "name": "Master of Flame",
+          "airdate": "2019-10-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x14 - Amo de la llama.mp4",
@@ -335,21 +452,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP14.mp4",
+              "name": "Dr Stone S01 EP14",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP14.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 106
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "la culminaci n de 2 millones de a os",
-          "state": "REVIEW",
+          "name": "The Culmination of Two Million Years",
+          "airdate": "2019-10-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x15 - La culminación de 2 millones de años.mp4",
@@ -358,21 +486,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP15.mp4",
+              "name": "Dr Stone S01 EP15",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP15.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 109
+            }
+          ]
         },
         {
           "number": 16,
-          "name": "una historia para la eternidad",
-          "state": "REVIEW",
+          "name": "A Tale for the Ages",
+          "airdate": "2019-10-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x16 - Una historia para la eternidad.mp4",
@@ -381,21 +520,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP16.mp4",
+              "name": "Dr Stone S01 EP16",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP16.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 102
+            }
+          ]
         },
         {
           "number": 17,
-          "name": "cien noches y mil cielos",
-          "state": "REVIEW",
+          "name": "A Hundred Nights and a Thousand Skies",
+          "airdate": "2019-10-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x17 - Cien noches y mil cielos.mp4",
@@ -404,21 +554,32 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP17.mp4",
+              "name": "Dr Stone S01 EP17",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP17.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 106
+            }
+          ]
         },
         {
           "number": 18,
-          "name": "guerra de piedra",
-          "state": "REVIEW",
+          "name": "Stone Wars",
+          "airdate": "2019-11-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x18 - Guerra de piedra.mp4",
@@ -427,44 +588,66 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP18.mp4",
+              "name": "Dr Stone S01 EP18",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP18.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 111
+            }
+          ]
         },
         {
           "number": 19,
-          "name": "Episode 19",
-          "state": "REVIEW",
+          "name": "To Modernity",
+          "airdate": "2019-11-08",
+          "state": "LIVE",
           "file": {
-            "item": "dr-stone-s-01-ep-10",
-            "itemTitle": "Dr Stone S01",
-            "file": "Dr Stone S01 EP19.mp4",
-            "name": "Dr Stone S01 EP19",
-            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP19.mp4",
-            "seconds": 1446,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 1x19 - A la modernidad.mp4",
+            "name": "Dr. Stone - 1x19 - A la modernidad",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x19%20-%20A%20la%20modernidad.mp4",
+            "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 178,
-            "ep": {
-              "season": null,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP19.mp4",
+              "name": "Dr Stone S01 EP19",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP19.mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 178
+            }
+          ]
         },
         {
           "number": 20,
-          "name": "la era de la energ a",
-          "state": "REVIEW",
+          "name": "The Age of Energy",
+          "airdate": "2019-11-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x20 - La era de la energía.mp4",
@@ -473,44 +656,40 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP20.mp4",
+              "name": "Dr Stone S01 EP20",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP20.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 109
+            }
+          ]
         },
         {
           "number": 21,
-          "name": "club de manualidades pesadas",
-          "state": "REVIEW",
-          "file": {
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. Stone - 1x21 - Club de manualidades pesadas.mp4",
-            "name": "Dr. Stone - 1x21 - Club de manualidades pesadas",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x21%20-%20Club%20de%20manualidades%20pesadas.mp4",
-            "seconds": 1442,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Spartan Crafts Club",
+          "airdate": "2019-11-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
-          "name": "el tesoro",
-          "state": "REVIEW",
+          "name": "The Treasure",
+          "airdate": "2019-11-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x22 - El tesoro.mp4",
@@ -519,21 +698,18 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 23,
-          "name": "ola de ciencia",
-          "state": "REVIEW",
+          "name": "Wave of Science",
+          "airdate": "2019-12-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x23 - Ola de ciencia.mp4",
@@ -542,21 +718,18 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "o do a distancias infinitas",
-          "state": "REVIEW",
+          "name": "Voices Over Infinite Distance",
+          "airdate": "2019-12-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 1x24 - Oído a distancias infinitas.mp4",
@@ -565,93 +738,7 @@
             "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 1,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "Episode 25",
-          "state": "REVIEW",
-          "file": {
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. STONE Special Episode – RYUSUI.ia.mp4",
-            "name": "Dr",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20STONE%20Special%20Episode%20%E2%80%93%20RYUSUI.ia.mp4",
-            "seconds": 3290,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 436,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "Episode 26",
-          "state": "REVIEW",
-          "file": {
-            "item": "dr-stone-s-01-ep-10",
-            "itemTitle": "Dr Stone S01",
-            "file": "Dr Stone S01EP02.mp4",
-            "name": "Dr Stone S01EP02",
-            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01EP02.mp4",
-            "seconds": 1448,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 111,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "delivers todays anime",
-          "state": "REVIEW",
-          "file": {
-            "item": "dr.-stone-delivers-todays-anime",
-            "itemTitle": "Dr. Stone Delivers! Today's Anime",
-            "file": "Dr. Stone Delivers! - Today's Anime.mp4",
-            "name": "Dr. Stone Delivers! - Today's Anime",
-            "url": "https://archive.org/download/dr.-stone-delivers-todays-anime/Dr.%20Stone%20Delivers!%20-%20Today's%20Anime.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 325,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "special ryusui",
-          "state": "REVIEW",
-          "file": {
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. STONE Special Episode – RYUSUI.mp4",
-            "name": "Dr. STONE Special Episode – RYUSUI",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20STONE%20Special%20Episode%20%E2%80%93%20RYUSUI.mp4",
-            "seconds": 3290,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 436,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         }
@@ -662,32 +749,32 @@
       "episodes": [
         {
           "number": 1,
-          "name": "wars 2 1 subtitle bahasa indonesia",
-          "state": "REVIEW",
+          "name": "Stone Wars Beginning",
+          "airdate": "2021-01-14",
+          "state": "LIVE",
           "file": {
-            "item": "dr.-stone-stone-wars-season-2-episode-1-subtitle-bahasa-indonesia",
-            "itemTitle": "BAJOTZ21 Dr. Stone Stone Wars [ Season 2] Episode 1 Subtitle Bahasa Indonesia",
-            "file": "Dr. Stone Stone Wars [Season 2] Episode 1 Subtitle Bahasa Indonesia.mp4",
-            "name": "Dr. Stone Stone Wars [Season 2] Episode 1 Subtitle Bahasa Indonesia",
-            "url": "https://archive.org/download/dr.-stone-stone-wars-season-2-episode-1-subtitle-bahasa-indonesia/Dr.%20Stone%20Stone%20Wars%20%5BSeason%202%5D%20Episode%201%20Subtitle%20Bahasa%20Indonesia.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 2x01 - Comienza la Stone Wars.mp4",
+            "name": "Dr. Stone - 2x01 - Comienza la Stone Wars",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%202x01%20-%20Comienza%20la%20Stone%20Wars.mp4",
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 238,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "l nea directa",
-          "state": "REVIEW",
+          "name": "Hot Line",
+          "airdate": "2021-01-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x02 - Línea directa.mp4",
@@ -696,21 +783,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "los muertos llaman",
-          "state": "REVIEW",
+          "name": "Call From the Dead",
+          "airdate": "2021-01-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x03 - Los muertos llaman.mp4",
@@ -719,21 +803,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "marcha de todas las unidades",
-          "state": "REVIEW",
+          "name": "Full Assault",
+          "airdate": "2021-02-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x04 - Marcha de todas las unidades.mp4",
@@ -742,21 +823,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "gorila de vapor",
-          "state": "REVIEW",
+          "name": "Steam Gorilla",
+          "airdate": "2021-02-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x05 - Gorila de vapor.mp4",
@@ -765,21 +843,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "escapar de prisi n",
-          "state": "REVIEW",
+          "name": "Prison Break",
+          "airdate": "2021-02-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x06 - Escapar de prisión.mp4",
@@ -788,21 +863,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "misi n secreta",
-          "state": "REVIEW",
+          "name": "Secret Mission",
+          "airdate": "2021-02-25",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x07 - Misión secreta.mp4",
@@ -811,21 +883,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "batalla final",
-          "state": "REVIEW",
+          "name": "Final Battle",
+          "airdate": "2021-03-04",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x08 - Batalla final.mp4",
@@ -834,21 +903,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "el que destruye el que salva",
-          "state": "REVIEW",
+          "name": "To Destroy and to Save",
+          "airdate": "2021-03-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x09 - El que destruye, el que salva.mp4",
@@ -857,21 +923,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "el d o m s fuerte de la humanidad",
-          "state": "REVIEW",
+          "name": "Humanity's Strongest Tag Team",
+          "airdate": "2021-03-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x10 - El dúo más fuerte de la humanidad.mp4",
@@ -880,21 +943,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "pr logo de",
-          "state": "REVIEW",
+          "name": "Prologue of Dr. Stone",
+          "airdate": "2021-03-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 2x11 - Prólogo de Dr. Stone.mp4",
@@ -903,13 +963,7 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 2,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         }
@@ -920,9 +974,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "un nuevo mapamundi",
-          "state": "REVIEW",
+          "name": "New World Map",
+          "airdate": "2023-04-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x01 - Un nuevo mapamundi.mp4",
@@ -931,21 +988,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "lo quiero virtud",
-          "state": "REVIEW",
+          "name": "Greed Equals Justice",
+          "airdate": "2023-04-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x02 - Lo quiero = Virtud.mp4",
@@ -954,21 +1008,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "primer contacto",
-          "state": "REVIEW",
+          "name": "First Contact",
+          "airdate": "2023-04-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x03 - Primer contacto.mp4",
@@ -977,21 +1028,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "los ojos de la ciencia",
-          "state": "REVIEW",
+          "name": "Eyes of Science",
+          "airdate": "2023-04-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x04 - Los ojos de la ciencia.mp4",
@@ -1000,44 +1048,26 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "el barco cient fico perseo",
-          "state": "REVIEW",
-          "file": {
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. Stone - 3x05 - El barco científico Perseo.mp4",
-            "name": "Dr. Stone - 3x05 - El barco científico Perseo",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%203x05%20-%20El%20barco%20cient%C3%ADfico%20Perseo.mp4",
-            "seconds": 1440,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Science Vessel Perseus",
+          "airdate": "2023-05-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "cofre del tesoro",
-          "state": "REVIEW",
+          "name": "Treasure Box",
+          "airdate": "2023-05-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x06 - Cofre del tesoro.mp4",
@@ -1046,21 +1076,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "la luz de la esperanza y la desesperaci n",
-          "state": "REVIEW",
+          "name": "Ray of Despair, Ray of Hope",
+          "airdate": "2023-05-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x07 - La luz de la esperanza y la desesperación.mp4",
@@ -1069,44 +1096,26 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "el as est en el barco cient fico",
-          "state": "REVIEW",
-          "file": {
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. Stone - 3x08 - El as está en el barco científico.mp4",
-            "name": "Dr. Stone - 3x08 - El as está en el barco científico",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%203x08%20-%20El%20as%20est%C3%A1%20en%20el%20barco%20cient%C3%ADfico.mp4",
-            "seconds": 1440,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Trump Card Aboard the Vessel of Science",
+          "airdate": "2023-05-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "ciencia hermosa",
-          "state": "REVIEW",
+          "name": "Beautiful Science",
+          "airdate": "2023-06-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x09 - Ciencia hermosa.mp4",
@@ -1115,21 +1124,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "guerras cient ficas",
-          "state": "REVIEW",
+          "name": "Science Wars",
+          "airdate": "2023-06-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x10 - Guerras científicas.mp4",
@@ -1138,21 +1144,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "haremos un milagro",
-          "state": "REVIEW",
+          "name": "With This Fist, a Miracle",
+          "airdate": "2023-06-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x11 - Haremos un milagro.mp4",
@@ -1161,44 +1164,26 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "el reino cient fico contraataca",
-          "state": "REVIEW",
-          "file": {
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. Stone - 3x12 - El reino científico contraataca.mp4",
-            "name": "Dr. Stone - 3x12 - El reino científico contraataca",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%203x12%20-%20El%20reino%20cient%C3%ADfico%20contraataca.mp4",
-            "seconds": 1440,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Kingdom of Science Strikes Back",
+          "airdate": "2023-10-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "el verdadero rostro de medusa",
-          "state": "REVIEW",
+          "name": "Medusa's True Face",
+          "airdate": "2023-10-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x13 - El verdadero rostro de Medusa.mp4",
@@ -1207,21 +1192,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "maniobras intelectuales",
-          "state": "REVIEW",
+          "name": "Deal Game, Test of Wit",
+          "airdate": "2023-10-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x14 - Maniobras intelectuales.mp4",
@@ -1230,21 +1212,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "batalla decisiva tridimensional",
-          "state": "REVIEW",
+          "name": "Three-Dimensional Battle",
+          "airdate": "2023-11-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x15 - Batalla decisiva tridimensional.mp4",
@@ -1253,21 +1232,18 @@
             "seconds": 1438,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "refriega por todo el territorio",
-          "state": "REVIEW",
+          "name": "Total War",
+          "airdate": "2023-11-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x16 - Refriega por todo el territorio.mp4",
@@ -1276,21 +1252,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "episodio 17",
-          "state": "REVIEW",
+          "name": "Joker",
+          "airdate": "2023-11-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x17 - Episodio 17.mp4",
@@ -1299,21 +1272,18 @@
             "seconds": 1438,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "episodio 18",
-          "state": "REVIEW",
+          "name": "Flicker of Doom",
+          "airdate": "2023-11-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x18 - Episodio 18.mp4",
@@ -1322,21 +1292,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "episodio 19",
-          "state": "REVIEW",
+          "name": "Last Man Standing",
+          "airdate": "2023-11-30",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x19 - Episodio 19.mp4",
@@ -1345,21 +1312,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "episodio 20",
-          "state": "REVIEW",
+          "name": "First Dream",
+          "airdate": "2023-12-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x20 - Episodio 20.mp4",
@@ -1368,21 +1332,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "episodio 21",
-          "state": "REVIEW",
+          "name": "Treasure Island",
+          "airdate": "2023-12-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x21 - Episodio 21.mp4",
@@ -1391,21 +1352,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "episodio 22",
-          "state": "REVIEW",
+          "name": "Beyond the New World",
+          "airdate": "2023-12-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 3x22 - Episodio 22.mp4",
@@ -1414,13 +1372,7 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
           "alternates": []
         }
@@ -1431,9 +1383,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "ryusui vs",
-          "state": "REVIEW",
+          "name": "RYUSUI VS. SENKU",
+          "airdate": "2025-01-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone 4x01 - RYUSUI VS. SENKU.ia.mp4",
@@ -1442,21 +1397,32 @@
             "seconds": 1440,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 196,
-            "ep": {
-              "season": 4,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 196
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "15.dr.-stone-86031",
+              "itemTitle": "15.Dr. Stone - 86031",
+              "file": "Dr. Stone 4x01 - RYUSUI VS. SENKU.mp4",
+              "name": "Dr. Stone 4x01 - RYUSUI VS. SENKU",
+              "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%204x01%20-%20RYUSUI%20VS.%20SENKU.mp4",
+              "seconds": 1440,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 196
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "episodio 2",
-          "state": "REVIEW",
+          "name": "SCIENCE JOURNEY",
+          "airdate": "2025-01-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x02 - Episodio 2.mp4",
@@ -1465,21 +1431,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 185,
-            "ep": {
-              "season": 4,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 185
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "trampa de luz en la oscuridad",
-          "state": "REVIEW",
+          "name": "Light Trap in the Darkness",
+          "airdate": "2025-01-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x03 - Trampa de luz en la oscuridad.mp4",
@@ -1488,21 +1451,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 216,
-            "ep": {
-              "season": 4,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 216
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "Dr. X",
+          "airdate": "2025-01-30",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x04.mp4",
@@ -1511,21 +1471,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 231,
-            "ep": {
-              "season": 4,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 231
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "DOCTOR VS. DOCTOR",
+          "airdate": "2025-02-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x05.mp4",
@@ -1534,21 +1491,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 4,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "SCIENCE IS ELEGANT",
+          "airdate": "2025-02-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x06.mp4",
@@ -1557,21 +1511,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 191,
-            "ep": {
-              "season": 4,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 191
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "The Two Scientists",
+          "airdate": "2025-02-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x07.mp4",
@@ -1580,21 +1531,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 4,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "LOCK ON",
+          "airdate": "2025-02-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x08.mp4",
@@ -1603,21 +1551,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 172,
-            "ep": {
-              "season": 4,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 172
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "Light of Science",
+          "airdate": "2025-03-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x09.mp4",
@@ -1626,21 +1571,18 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 179,
-            "ep": {
-              "season": 4,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 179
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
+          "name": "Dirty Roads",
+          "airdate": "2025-03-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "15.dr.-stone-86031",
             "itemTitle": "15.Dr. Stone - 86031",
             "file": "Dr. Stone - 4x10.mp4",
@@ -1649,14 +1591,224 @@
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 196,
-            "ep": {
-              "season": 4,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 196
           },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Those Who Know the Rules; Those Who Make Them",
+          "airdate": "2025-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Reunion",
+          "airdate": "2025-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Watching the Same Moon",
+          "airdate": "2025-07-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "EARTH RACE",
+          "airdate": "2025-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Escape",
+          "airdate": "2025-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Medusa Mechanism",
+          "airdate": "2025-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Sickening Yet Beautiful",
+          "airdate": "2025-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Diamond Heart",
+          "airdate": "2025-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Stone Sanctuary",
+          "airdate": "2025-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "What I Once Sought to Destroy",
+          "airdate": "2025-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Our Dr. Stone",
+          "airdate": "2025-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Until We Meet Again",
+          "airdate": "2025-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Scientist, All Alone",
+          "airdate": "2025-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Whole New World",
+          "airdate": "2025-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Future Engine",
+          "airdate": "2026-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Fire",
+          "airdate": "2026-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "The Universe Is Written in the Language of Mathematics",
+          "airdate": "2026-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "The Dawn of Computers",
+          "airdate": "2026-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "The Truth About Rockets",
+          "airdate": "2026-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Stone to Space",
+          "airdate": "2026-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Unknown Known",
+          "airdate": "2026-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Challengers of Science",
+          "airdate": "2026-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "Wanting Everything",
+          "airdate": "2026-05-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "Countdown",
+          "airdate": "2026-06-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "Giant Step",
+          "airdate": "2026-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "Why-Man",
+          "airdate": "2026-06-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "Ushers of an Exhilarating Future",
+          "airdate": "2026-06-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

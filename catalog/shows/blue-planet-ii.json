@@ -3,7 +3,7 @@
   "slug": "blue-planet-ii",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:19.429Z",
+  "matchedAt": "2026-10-15T03:18:20.295Z",
   "tvmaze": {
     "id": 25504,
     "name": "Blue Planet II",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 7,
-    "live": 6,
+    "live": 7,
     "review": 0,
-    "missing": 1,
-    "pct": 86
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -170,8 +170,21 @@
           "number": 4,
           "name": "Big Blue",
           "airdate": "2017-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "BluePlanetIISeason012017Remux2160p",
+            "itemTitle": "Blue Planet II Season 01 2017 ( Remux 2160p)",
+            "file": "Blue.Planet.II.2017.S01E04.Big.Blue.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "name": "Blue.Planet.II.2017.S01E04.Big.Blue.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR",
+            "url": "https://archive.org/download/BluePlanetIISeason012017Remux2160p/Blue.Planet.II.2017.S01E04.Big.Blue.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mp4",
+            "seconds": 2997,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (DTS)",
+            "sizeMB": 312
+          },
           "alternates": []
         },
         {

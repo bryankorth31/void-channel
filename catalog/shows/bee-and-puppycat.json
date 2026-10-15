@@ -3,19 +3,18 @@
   "slug": "bee-and-puppycat",
   "type": "Internet Comedy",
   "network": "Web",
-  "matchedAt": "2026-10-15T01:19:16.999Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:57.772Z",
   "tvmaze": {
-    "id": null,
+    "id": 66543,
     "name": "Bee and PuppyCat",
-    "runtime": null,
-    "premiered": null,
-    "network": "Web"
+    "runtime": 26,
+    "premiered": "2022-09-06",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 14,
+    "total": 16,
     "live": 0,
-    "review": 14,
+    "review": 16,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "1 gentle touch",
+          "name": "Again for the First Time",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 1 - Gentle Touch.mp4",
@@ -36,21 +38,18 @@
             "seconds": 1374,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 121
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "2 little fingers",
+          "name": "Who Would Want This?",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 2 - Little Fingers.mp4",
@@ -59,21 +58,18 @@
             "seconds": 1386,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 120,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 120
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "3 snow and violets",
+          "name": "What Do You Want to Be?",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 3 - Snow and Violets.mp4",
@@ -82,21 +78,86 @@
             "seconds": 1373,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 212,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 212
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "4 day off work",
+          "name": "Gentle Touch",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Gentle Touch\" (0.95)",
+            "item": "bee-and-puppycat-lazy-in-space_202508",
+            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+            "file": "ep 1 - Gentle Touch.mp4",
+            "name": "ep 1 - Gentle Touch",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%201%20-%20Gentle%20Touch.mp4",
+            "seconds": 1374,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 121
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 4 - Day Off Work.mp4",
+              "name": "ep 4 - Day Off Work",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%204%20-%20Day%20Off%20Work.mp4",
+              "seconds": 1378,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Little Fingers",
+          "airdate": "2022-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Little Fingers\" (0.96)",
+            "item": "bee-and-puppycat-lazy-in-space_202508",
+            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+            "file": "ep 2 - Little Fingers.mp4",
+            "name": "ep 2 - Little Fingers",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%202%20-%20Little%20Fingers.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 5 - My Favorite.mp4",
+              "name": "ep 5 - My Favorite",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%205%20-%20My%20Favorite.mp4",
+              "seconds": 1372,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "name": "Day Off Work",
+          "airdate": "2022-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Day Off Work\" (0.95)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 4 - Day Off Work.mp4",
@@ -105,113 +166,66 @@
             "seconds": 1378,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 117,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "5 my favorite",
-          "state": "REVIEW",
-          "file": {
-            "item": "bee-and-puppycat-lazy-in-space_202508",
-            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 5 - My Favorite.mp4",
-            "name": "ep 5 - My Favorite",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%205%20-%20My%20Favorite.mp4",
-            "seconds": 1372,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "6 did you remember",
-          "state": "REVIEW",
-          "file": {
-            "item": "bee-and-puppycat-lazy-in-space_202508",
-            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 6 - Did You Remember.mp4",
-            "name": "ep 6 - Did You Remember",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%206%20-%20Did%20You%20Remember.mp4",
-            "seconds": 1377,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 152,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 6 - Did You Remember.mp4",
+              "name": "ep 6 - Did You Remember",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%206%20-%20Did%20You%20Remember.mp4",
+              "seconds": 1377,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "7 bird friend",
+          "name": "Snow and Violets",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Snow and Violets\" (0.96)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 7 - Bird Friend.mp4",
-            "name": "ep 7 - Bird Friend",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%207%20-%20Bird%20Friend.mp4",
-            "seconds": 1381,
+            "file": "ep 3 - Snow and Violets.mp4",
+            "name": "ep 3 - Snow and Violets",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%203%20-%20Snow%20and%20Violets.mp4",
+            "seconds": 1373,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 212
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 7 - Bird Friend.mp4",
+              "name": "ep 7 - Bird Friend",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%207%20-%20Bird%20Friend.mp4",
+              "seconds": 1381,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "8 two clown noses",
+          "name": "Funny Lying",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
-            "item": "bee-and-puppycat-lazy-in-space_202508",
-            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 8 - Two Clown Noses.mp4",
-            "name": "ep 8 - Two Clown Noses",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%208%20-%20Two%20Clown%20Noses.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "9 funny lying",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Funny Lying\" (0.95)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 9 - Funny Lying.mp4",
@@ -220,67 +234,120 @@
             "seconds": 1423,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 186,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 186
           },
           "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "My Favorite",
+          "airdate": "2022-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"My Favorite\" (0.95)",
+            "item": "bee-and-puppycat-lazy-in-space_202508",
+            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+            "file": "ep 5 - My Favorite.mp4",
+            "name": "ep 5 - My Favorite",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%205%20-%20My%20Favorite.mp4",
+            "seconds": 1372,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 163
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 9 - Funny Lying.mp4",
+              "name": "ep 9 - Funny Lying",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%209%20-%20Funny%20Lying.mp4",
+              "seconds": 1423,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 186
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "10 golden eyes",
+          "name": "Did You Remember",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Did You Remember\" (0.96)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 10 - Golden Eyes.mp4",
-            "name": "ep 10 - Golden Eyes",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2010%20-%20Golden%20Eyes.mp4",
-            "seconds": 1388,
+            "file": "ep 6 - Did You Remember.mp4",
+            "name": "ep 6 - Did You Remember",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%206%20-%20Did%20You%20Remember.mp4",
+            "seconds": 1377,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 125,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 152
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 10 - Golden Eyes.mp4",
+              "name": "ep 10 - Golden Eyes",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2010%20-%20Golden%20Eyes.mp4",
+              "seconds": 1388,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "11 why dont you help me",
+          "name": "Bird Friend",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Bird Friend\" (0.95)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 11 - Why Don't You Help Me.mp4",
-            "name": "ep 11 - Why Don't You Help Me",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2011%20-%20Why%20Don't%20You%20Help%20Me.mp4",
-            "seconds": 1380,
+            "file": "ep 7 - Bird Friend.mp4",
+            "name": "ep 7 - Bird Friend",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%207%20-%20Bird%20Friend.mp4",
+            "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 121,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 11 - Why Don't You Help Me.mp4",
+              "name": "ep 11 - Why Don't You Help Me",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2011%20-%20Why%20Don't%20You%20Help%20Me.mp4",
+              "seconds": 1380,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "12 now im really alone",
+          "name": "Two Clown Noses",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 12 - Now I'm Really Alone.mp4",
@@ -289,21 +356,92 @@
             "seconds": 1391,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 130
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "13 i wont leave you alone",
+          "name": "Golden Eyes",
+          "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Golden Eyes\" (0.95)",
+            "item": "bee-and-puppycat-lazy-in-space_202508",
+            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+            "file": "ep 10 - Golden Eyes.mp4",
+            "name": "ep 10 - Golden Eyes",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2010%20-%20Golden%20Eyes.mp4",
+            "seconds": 1388,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 125
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 13 - I Won't Leave You Alone.mp4",
+              "name": "ep 13 - I Won't Leave You Alone",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2013%20-%20I%20Won't%20Leave%20You%20Alone.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 218
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "name": "Why Don't You Help Me",
+          "airdate": "2022-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Why Don't You Help Me\" (0.95)",
+            "item": "bee-and-puppycat-lazy-in-space_202508",
+            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+            "file": "ep 11 - Why Don't You Help Me.mp4",
+            "name": "ep 11 - Why Don't You Help Me",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2011%20-%20Why%20Don't%20You%20Help%20Me.mp4",
+            "seconds": 1380,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 121
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Now I'm Really Alone",
+          "airdate": "2022-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Now I'm Really Alone\" (0.95)",
+            "item": "bee-and-puppycat-lazy-in-space_202508",
+            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+            "file": "ep 12 - Now I'm Really Alone.mp4",
+            "name": "ep 12 - Now I'm Really Alone",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2012%20-%20Now%20I'm%20Really%20Alone.mp4",
+            "seconds": 1391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "I Won't Leave You Alone",
+          "airdate": "2022-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"I Won't Leave You Alone\" (0.95)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
             "file": "ep 13 - I Won't Leave You Alone.mp4",
@@ -312,33 +450,7 @@
             "seconds": 1373,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 218,
-            "ep": {
-              "season": null,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "and s1 full cartoon hangover",
-          "state": "REVIEW",
-          "file": {
-            "item": "bee-and-puppycat-lazy-in-space_202508",
-            "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "Bee & Puppycat S1 full cartoon-hangover.mp4",
-            "name": "Bee & Puppycat S1 full cartoon-hangover",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/Bee%20%26%20Puppycat%20S1%20full%20cartoon-hangover.mp4",
-            "seconds": 3983,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 465,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 218
           },
           "alternates": []
         }

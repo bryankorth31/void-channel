@@ -3,7 +3,7 @@
   "slug": "the-six-million-dollar-man",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:29.185Z",
+  "matchedAt": "2026-10-15T03:18:37.327Z",
   "tvmaze": {
     "id": 1500,
     "name": "The Six Million Dollar Man",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 101,
     "live": 0,
-    "review": 0,
-    "missing": 101,
-    "pct": 0
+    "review": 1,
+    "missing": 100,
+    "pct": 1
   },
   "seasons": [
     {
@@ -279,8 +279,20 @@
           "number": 19,
           "name": "The Bionic Woman (1)",
           "airdate": "1975-03-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The Bionic Woman (1)\" (0.63)",
+            "item": "galaxy-con-live-comicon-actors-from-six-million-dollar-man-lee-majors-bionic-wom",
+            "itemTitle": "Galaxy Con Live Comicon Actors From Six Million Dollar Man Lee Majors & Bionic Woman Lindsay Wagner 9 27 2020",
+            "file": "GalaxyCon Live Comicon actors from Six Million Dollar Man Lee Majors & Bionic Woman Lindsay Wagner 9-27-2020.mp4",
+            "name": "GalaxyCon Live Comicon actors from Six Million Dollar Man Lee Majors & Bionic Woman Lindsay Wagner 9-27-2020",
+            "url": "https://archive.org/download/galaxy-con-live-comicon-actors-from-six-million-dollar-man-lee-majors-bionic-wom/GalaxyCon%20Live%20Comicon%20actors%20from%20Six%20Million%20Dollar%20Man%20Lee%20Majors%20%26%20Bionic%20Woman%20Lindsay%20Wagner%209-27-2020.mp4",
+            "seconds": 3009,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 615
+          },
           "alternates": []
         },
         {

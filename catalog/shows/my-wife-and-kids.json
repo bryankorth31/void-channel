@@ -3,7 +3,7 @@
   "slug": "my-wife-and-kids",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-15T01:19:00.462Z",
+  "matchedAt": "2026-10-15T03:17:23.152Z",
   "tvmaze": {
     "id": 952,
     "name": "My Wife and Kids",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 123,
-    "live": 94,
-    "review": 13,
-    "missing": 16,
-    "pct": 87
+    "live": 107,
+    "review": 1,
+    "missing": 15,
+    "pct": 88
   },
   "seasons": [
     {
@@ -126,9 +126,9 @@
           "number": 6,
           "name": "Working It",
           "airdate": "2001-04-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -140,7 +140,21 @@
             "playable": true,
             "sizeMB": 260
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Working It\" (0.95)",
+              "item": "my-wife-and-kids-complete-series_202511",
+              "itemTitle": "My Wife & Kids: The Complete Series",
+              "file": "My Wife & Kids S02E22 - Working Relationship.mp4",
+              "name": "My Wife & Kids S02E22 - Working Relationship",
+              "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S02E22%20-%20Working%20Relationship.mp4",
+              "seconds": 1270,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 252
+            }
+          ]
         },
         {
           "number": 7,
@@ -226,9 +240,9 @@
           "number": 11,
           "name": "Hair Today, Gone Tomorrow",
           "airdate": "2001-05-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -625,9 +639,9 @@
           "number": 19,
           "name": "Failure to Communicate",
           "airdate": "2002-02-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -685,17 +699,29 @@
           "number": 22,
           "name": "Working Relationship",
           "airdate": "2002-03-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "my-wife-and-kids-complete-series_202511",
+            "itemTitle": "My Wife & Kids: The Complete Series",
+            "file": "My Wife & Kids S02E22 - Working Relationship.mp4",
+            "name": "My Wife & Kids S02E22 - Working Relationship",
+            "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S02E22%20-%20Working%20Relationship.mp4",
+            "seconds": 1270,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 252
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "Jr. Kyle, Boy Genius",
           "airdate": "2002-03-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -826,9 +852,9 @@
           "number": 1,
           "name": "The Kyles Go to Hawaii (1)",
           "airdate": "2002-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -846,9 +872,9 @@
           "number": 2,
           "name": "The Kyles Go to Hawaii (2)",
           "airdate": "2002-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -866,9 +892,9 @@
           "number": 3,
           "name": "The Kyles Go to Hawaii (3)",
           "airdate": "2002-10-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -986,9 +1012,9 @@
           "number": 9,
           "name": "Sister Story",
           "airdate": "2002-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -1174,9 +1200,9 @@
           "number": 19,
           "name": "Jury Duty",
           "airdate": "2003-02-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -1262,9 +1288,9 @@
           "number": 24,
           "name": "The Big Bang Theory",
           "airdate": "2003-05-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -1599,9 +1625,9 @@
           "number": 14,
           "name": "Moving on Out",
           "airdate": "2004-01-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -1932,9 +1958,9 @@
           "number": 4,
           "name": "Class Reunion",
           "airdate": "2004-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "my-wife-and-kids-complete-series_202511",
             "itemTitle": "My Wife & Kids: The Complete Series",
@@ -2074,7 +2100,21 @@
             "playable": true,
             "sizeMB": 235
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Careful What You Wish For\" (0.95)",
+              "item": "my-wife-and-kids-complete-series_202511",
+              "itemTitle": "My Wife & Kids: The Complete Series",
+              "file": "My Wife & Kids S05E12 - Careful What You Wish For.mp4",
+              "name": "My Wife & Kids S05E12 - Careful What You Wish For",
+              "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E12%20-%20Careful%20What%20You%20Wish%20For.mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 260
+            }
+          ]
         },
         {
           "number": 12,

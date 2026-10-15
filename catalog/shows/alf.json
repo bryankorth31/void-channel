@@ -3,7 +3,7 @@
   "slug": "alf",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-15T01:19:30.158Z",
+  "matchedAt": "2026-10-15T03:18:38.644Z",
   "tvmaze": {
     "id": 848,
     "name": "ALF",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 102,
-    "live": 76,
-    "review": 22,
+    "live": 77,
+    "review": 21,
     "missing": 4,
     "pct": 96
   },
@@ -226,21 +226,35 @@
           "number": 11,
           "name": "On the Road Again",
           "airdate": "1986-12-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "alf-complete",
-            "itemTitle": "ALF (Complete Series)",
-            "file": "S01E11 - On the Road Again.mp4",
-            "name": "S01E11 - On the Road Again",
-            "url": "https://archive.org/download/alf-complete/S01E11%20-%20On%20the%20Road%20Again.mp4",
-            "seconds": 1425,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+            "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+            "file": "Alf - The Animated Adventures S01e11 (Salad Wars)_AI Upscale.mp4",
+            "name": "Alf - The Animated Adventures S01e11 (Salad Wars)_AI Upscale",
+            "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e11%20(Salad%20Wars)_AI%20Upscale.mp4",
+            "seconds": 1434,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 637
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "alf-complete",
+              "itemTitle": "ALF (Complete Series)",
+              "file": "S01E11 - On the Road Again.mp4",
+              "name": "S01E11 - On the Road Again",
+              "url": "https://archive.org/download/alf-complete/S01E11%20-%20On%20the%20Road%20Again.mp4",
+              "seconds": 1425,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 12,

@@ -1,0 +1,69 @@
+{
+  "show": "Sci-Trek",
+  "slug": "sci-trek",
+  "type": "Documentary & Geographic",
+  "network": "Discovery",
+  "matchedAt": "2026-10-15T03:18:25.468Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Sci-Trek",
+    "runtime": null,
+    "premiered": null,
+    "network": "Discovery"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "creatures of the abyss dc",
+          "state": "REVIEW",
+          "file": {
+            "item": "sci-trek-creatures-of-the-abyss-dc-1997",
+            "itemTitle": "Sci Trek: Creatures of the Abyss",
+            "file": "Sci Trek Creatures of the Abyss DC 1997.mp4",
+            "name": "Sci Trek Creatures of the Abyss DC 1997",
+            "url": "https://archive.org/download/sci-trek-creatures-of-the-abyss-dc-1997/Sci%20Trek%20Creatures%20of%20the%20Abyss%20DC%201997.mp4",
+            "seconds": 2749,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 267,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "scitrek 3 minutes to impact our numbers up",
+          "state": "REVIEW",
+          "file": {
+            "item": "sci-trek-3-minutes-to-impact-our-numbers-up",
+            "itemTitle": "Sci Trek: 3 Minutes to Impact: Our Number's Up",
+            "file": "SciTrek 3 Minutes to Impact Our Numbers Up.mp4",
+            "name": "SciTrek 3 Minutes to Impact Our Numbers Up",
+            "url": "https://archive.org/download/sci-trek-3-minutes-to-impact-our-numbers-up/SciTrek%203%20Minutes%20to%20Impact%20Our%20Numbers%20Up.mp4",
+            "seconds": 2829,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 275,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

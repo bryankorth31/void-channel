@@ -3,7 +3,7 @@
   "slug": "firefly",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-15T01:19:14.570Z",
+  "matchedAt": "2026-10-15T03:17:42.110Z",
   "tvmaze": {
     "id": 180,
     "name": "Firefly",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 14,
     "live": 0,
-    "review": 12,
-    "missing": 2,
-    "pct": 86
+    "review": 13,
+    "missing": 1,
+    "pct": 93
   },
   "seasons": [
     {
@@ -296,8 +296,20 @@
           "number": 13,
           "name": "The Message",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Message\" (0.95)",
+            "item": "firefly_202601",
+            "itemTitle": "Firefly (2002) Complete Series",
+            "file": "Firefly E14 - The Message.mp4",
+            "name": "Firefly E14 - The Message",
+            "url": "https://archive.org/download/firefly_202601/Firefly%20E14%20-%20The%20Message.mp4",
+            "seconds": 2645,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 332
+          },
           "alternates": []
         },
         {

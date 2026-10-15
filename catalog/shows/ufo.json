@@ -3,7 +3,7 @@
   "slug": "ufo",
   "type": "Classic TV",
   "network": "ITV",
-  "matchedAt": "2026-10-15T01:19:35.349Z",
+  "matchedAt": "2026-10-15T03:18:45.830Z",
   "tvmaze": {
     "id": 5919,
     "name": "UFO",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 26,
     "live": 9,
-    "review": 14,
-    "missing": 3,
-    "pct": 88
+    "review": 17,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -60,7 +60,21 @@
             "playable": true,
             "sizeMB": 277
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Exposed\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.02.Exposed.mp4",
+              "name": "UFO.02.Exposed",
+              "url": "https://archive.org/download/UFO.complete/UFO.02.Exposed.mp4",
+              "seconds": 2967,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 308
+            }
+          ]
         },
         {
           "number": 3,
@@ -305,7 +319,21 @@
             "playable": true,
             "sizeMB": 276
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Square Triangle\" (0.95)",
+              "item": "UFO.complete",
+              "itemTitle": "UFO. (Complete Series)",
+              "file": "UFO.10.The Square Triangle.mp4",
+              "name": "UFO.10.The Square Triangle",
+              "url": "https://archive.org/download/UFO.complete/UFO.10.The%20Square%20Triangle.mp4",
+              "seconds": 2976,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 309
+            }
+          ]
         },
         {
           "number": 11,
@@ -425,16 +453,40 @@
           "number": 16,
           "name": "The Man Who Came Back",
           "airdate": "1971-02-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Man Who Came Back\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.16.The Man Who Came Back.mp4",
+            "name": "UFO.16.The Man Who Came Back",
+            "url": "https://archive.org/download/UFO.complete/UFO.16.The%20Man%20Who%20Came%20Back.mp4",
+            "seconds": 2962,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 308
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "The Dalotek Affair",
           "airdate": "1971-02-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Dalotek Affair\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.17.The Dalotek Affair.mp4",
+            "name": "UFO.17.The Dalotek Affair",
+            "url": "https://archive.org/download/UFO.complete/UFO.17.The%20Dalotek%20Affair.mp4",
+            "seconds": 2971,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 309
+          },
           "alternates": []
         },
         {
@@ -501,8 +553,20 @@
           "number": 21,
           "name": "Computer Affair",
           "airdate": "1971-05-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Computer Affair\" (0.95)",
+            "item": "UFO.complete",
+            "itemTitle": "UFO. (Complete Series)",
+            "file": "UFO.21.Computer Affair.mp4",
+            "name": "UFO.21.Computer Affair",
+            "url": "https://archive.org/download/UFO.complete/UFO.21.Computer%20Affair.mp4",
+            "seconds": 2953,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 307
+          },
           "alternates": []
         },
         {

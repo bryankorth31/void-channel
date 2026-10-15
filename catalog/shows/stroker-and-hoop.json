@@ -3,7 +3,7 @@
   "slug": "stroker-and-hoop",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:06.368Z",
+  "matchedAt": "2026-10-15T03:17:30.147Z",
   "tvmaze": {
     "id": 26522,
     "name": "Stroker and Hoop",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 13,
-    "live": 8,
-    "review": 5,
+    "live": 13,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -46,9 +46,9 @@
           "number": 2,
           "name": "The Five Diamonds (a.k.a. A Hard Act to Follow)",
           "airdate": "2005-09-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "stroker-and-hoop",
             "itemTitle": "Stroker & Hoop — Complete Series",
@@ -66,9 +66,9 @@
           "number": 3,
           "name": "Tinfoiled Again (a.k.a. Star Crossed Livers)",
           "airdate": "2005-09-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "stroker-and-hoop",
             "itemTitle": "Stroker & Hoop — Complete Series",
@@ -86,9 +86,9 @@
           "number": 4,
           "name": "The Rube Job (a.k.a. Revenge is a Dish Best Served Fried)",
           "airdate": "2005-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "stroker-and-hoop",
             "itemTitle": "Stroker & Hoop — Complete Series",
@@ -160,9 +160,9 @@
           "number": 7,
           "name": "Quiller Instinct (a.k.a. Peeping Todd)",
           "airdate": "2005-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "stroker-and-hoop",
             "itemTitle": "Stroker & Hoop — Complete Series",
@@ -234,9 +234,9 @@
           "number": 10,
           "name": "I Saw Stroker Killing Santa (a.k.a. A Cold, Dead, White Christmas)",
           "airdate": "2005-12-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "stroker-and-hoop",
             "itemTitle": "Stroker & Hoop — Complete Series",
@@ -248,7 +248,21 @@
             "playable": true,
             "sizeMB": 440
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "stroker-hoop",
+              "itemTitle": "Stroker & Hoop",
+              "file": "Stroker & Hoop - 110 - I Saw Stroker Killing Santa Claus.mp4",
+              "name": "Stroker & Hoop - 110 - I Saw Stroker Killing Santa Claus",
+              "url": "https://archive.org/download/stroker-hoop/Stroker%20%26%20Hoop%20-%20110%20-%20I%20Saw%20Stroker%20Killing%20Santa%20Claus.mp4",
+              "seconds": 1349,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 11,

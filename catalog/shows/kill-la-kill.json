@@ -3,21 +3,20 @@
   "slug": "kill-la-kill",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.145Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:05.324Z",
   "tvmaze": {
-    "id": null,
+    "id": 754,
     "name": "Kill la Kill",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2013-10-04",
+    "network": "MBS"
   },
   "coverage": {
-    "total": 12,
+    "total": 24,
     "live": 0,
     "review": 12,
-    "missing": 0,
-    "pct": 100
+    "missing": 12,
+    "pct": 50
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "If Only I Had Thorns Like a Thistle...",
+          "airdate": "2013-10-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP1.MP4",
@@ -36,21 +38,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 361,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 361
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
+          "name": "So Sexy, I`m Going to Faint",
+          "airdate": "2013-10-11",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP2.MP4",
@@ -59,21 +58,18 @@
             "seconds": 1468,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 354,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 354
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
+          "name": "Junketsu",
+          "airdate": "2013-10-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP3.MP4",
@@ -82,21 +78,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 355,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 355
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
+          "name": "Dawn of a Miserable Morning",
+          "airdate": "2013-10-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP4.MP4",
@@ -105,21 +98,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 355,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 355
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
+          "name": "Hikigane (Trigger)",
+          "airdate": "2013-11-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP5.MP4",
@@ -128,21 +118,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 263,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 263
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
+          "name": "Don't Toy Me on a Whim",
+          "airdate": "2013-11-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP6.MP4",
@@ -151,21 +138,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 346,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 346
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Episode 7",
+          "name": "A Loser I Can`t Hate",
+          "airdate": "2013-11-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP7.MP4",
@@ -174,21 +158,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 354,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 354
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Episode 8",
+          "name": "I`ll Wipe My Own Tears",
+          "airdate": "2013-11-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP8.mp4",
@@ -197,21 +178,18 @@
             "seconds": 1468,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 385,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 385
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Episode 9",
+          "name": "A Once in a Lifetime Chance",
+          "airdate": "2013-11-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP9.MP4",
@@ -220,21 +198,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 348,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 348
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
+          "name": "I Want to Know More About You",
+          "airdate": "2013-12-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP10.MP4",
@@ -243,21 +218,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 357,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 357
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Episode 11",
+          "name": "I'm Not Your Cute Woman",
+          "airdate": "2013-12-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP11.MP4",
@@ -266,21 +238,18 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 348,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 348
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Episode 12",
+          "name": "Spit Your Sadness Away",
+          "airdate": "2013-12-20",
           "state": "REVIEW",
           "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
             "item": "ep-25_202506",
             "itemTitle": "Kill La Kill Dub",
             "file": "EP12.MP4",
@@ -289,14 +258,104 @@
             "seconds": 1469,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 332,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 332
           },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Feeling Like Scattered Roses... When You Are Near",
+          "airdate": "2014-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Ride Like the Wind",
+          "airdate": "2014-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Don't Stop Me Now",
+          "airdate": "2014-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Girl Can't Help It",
+          "airdate": "2014-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Tell Me Why",
+          "airdate": "2014-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Into the Night",
+          "airdate": "2014-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Raindrops Keep Falling on My Head",
+          "airdate": "2014-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Far from the Madding Crowd",
+          "airdate": "2014-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Incomplete",
+          "airdate": "2014-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Tell Me How You Feel",
+          "airdate": "2014-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Imitation Gold",
+          "airdate": "2014-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Past the Infinite Darkness",
+          "airdate": "2014-03-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

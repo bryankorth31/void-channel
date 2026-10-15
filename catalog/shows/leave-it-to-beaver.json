@@ -3,7 +3,7 @@
   "slug": "leave-it-to-beaver",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:23.407Z",
+  "matchedAt": "2026-10-15T03:18:28.153Z",
   "tvmaze": {
     "id": 2128,
     "name": "Leave It to Beaver",
@@ -5425,19 +5425,33 @@
           "airdate": "1963-06-20",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "S/E in filename + title match",
-            "item": "leave-it-to-beaver-the-complete-series-1957-1963",
-            "itemTitle": "Leave It to Beaver (The Complete Series) [1957 - 1963]",
-            "file": "Leave It to Beaver (The Complete Series) [1957 - 1963]/Season 6/S06E39 - Family Scrapbook.mp4",
-            "name": "Leave It to Beaver (The Complete Series) [1957 - 1963]/Season 6/S06E39 - Family Scrapbook",
-            "url": "https://archive.org/download/leave-it-to-beaver-the-complete-series-1957-1963/Leave%20It%20to%20Beaver%20(The%20Complete%20Series)%20%5B1957%20-%201963%5D%2FSeason%206%2FS06E39%20-%20Family%20Scrapbook.mp4",
-            "seconds": 1536,
+            "conf": 0.8,
+            "why": "title ~ \"Family Scrapbook\" (0.95)",
+            "item": "the-new-leave-it-to-beaver-still-the-beaver-1984-1989",
+            "itemTitle": "The New Leave It to Beaver (Still the Beaver) [1984 - 1989] (All 101 Episodes)",
+            "file": "The New Leave It to Beaver (Still the Beaver) [1984 - 1989]/S03E25 - Family Scrapbook II.mp4",
+            "name": "The New Leave It to Beaver (Still the Beaver) [1984 - 1989]/S03E25 - Family Scrapbook II",
+            "url": "https://archive.org/download/the-new-leave-it-to-beaver-still-the-beaver-1984-1989/The%20New%20Leave%20It%20to%20Beaver%20(Still%20the%20Beaver)%20%5B1984%20-%201989%5D%2FS03E25%20-%20Family%20Scrapbook%20II.mp4",
+            "seconds": 1609,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 837
+            "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "S/E in filename + title match",
+              "item": "leave-it-to-beaver-the-complete-series-1957-1963",
+              "itemTitle": "Leave It to Beaver (The Complete Series) [1957 - 1963]",
+              "file": "Leave It to Beaver (The Complete Series) [1957 - 1963]/Season 6/S06E39 - Family Scrapbook.mp4",
+              "name": "Leave It to Beaver (The Complete Series) [1957 - 1963]/Season 6/S06E39 - Family Scrapbook",
+              "url": "https://archive.org/download/leave-it-to-beaver-the-complete-series-1957-1963/Leave%20It%20to%20Beaver%20(The%20Complete%20Series)%20%5B1957%20-%201963%5D%2FSeason%206%2FS06E39%20-%20Family%20Scrapbook.mp4",
+              "seconds": 1536,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 837
+            }
+          ]
         }
       ]
     }

@@ -3,7 +3,7 @@
   "slug": "the-living-planet",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-15T01:19:19.456Z",
+  "matchedAt": "2026-10-15T03:18:20.326Z",
   "tvmaze": {
     "id": 13066,
     "name": "The Living Planet",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 12,
     "live": 0,
-    "review": 10,
-    "missing": 2,
-    "pct": 83
+    "review": 12,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -26,9 +26,50 @@
           "number": 1,
           "name": "The Building of the Earth",
           "airdate": "1984-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Building of the Earth\" (0.95)",
+            "item": "living-planet",
+            "itemTitle": "The Living Planet ★ BBC Nature series - with MKV Files",
+            "file": "living_planet_01_the_building_of_the_earth.mp4",
+            "name": "living_planet_01_the_building_of_the_earth",
+            "url": "https://archive.org/download/living-planet/living_planet_01_the_building_of_the_earth.mp4",
+            "seconds": 3395,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1013
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Building of the Earth\" (0.95)",
+              "item": "TheLivingPlanet1TheBuildingOfTheEarthBluRay576i",
+              "itemTitle": "The Living Planet 1 The Building Of The Earth [ Blu Ray 576i]",
+              "file": "1-The Building of the Earth[BD-576i-43][AC3-Eng-Ita][Sub-Eng][The Living Planet-BBC 1984].mp4",
+              "name": "1-The Building of the Earth[BD-576i-43][AC3-Eng-Ita][Sub-Eng][The Living Planet-BBC 1984]",
+              "url": "https://archive.org/download/TheLivingPlanet1TheBuildingOfTheEarthBluRay576i/1-The%20Building%20of%20the%20Earth%5BBD-576i-43%5D%5BAC3-Eng-Ita%5D%5BSub-Eng%5D%5BThe%20Living%20Planet-BBC%201984%5D.mp4",
+              "seconds": 3280,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 341
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Building of the Earth\" (0.95)",
+              "item": "bbc-the-living-planet",
+              "itemTitle": "BBC The Living Planet (1984)",
+              "file": "BBC.The.Living.Planet.01of12.The.Building.of.the.Earth.720p.x265.AAC.MVGroup.org.mp4",
+              "name": "BBC.The.Living.Planet.01of12.The.Building.of.the.Earth.720p.x265.AAC.MVGroup.org",
+              "url": "https://archive.org/download/bbc-the-living-planet/BBC.The.Living.Planet.01of12.The.Building.of.the.Earth.720p.x265.AAC.MVGroup.org.mp4",
+              "seconds": 3395,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 337
+            }
+          ]
         },
         {
           "number": 2,
@@ -410,9 +451,36 @@
           "number": 12,
           "name": "New Worlds",
           "airdate": "1984-04-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"New Worlds\" (0.95)",
+            "item": "living-planet",
+            "itemTitle": "The Living Planet ★ BBC Nature series - with MKV Files",
+            "file": "living_planet_12_new_worlds.mp4",
+            "name": "living_planet_12_new_worlds",
+            "url": "https://archive.org/download/living-planet/living_planet_12_new_worlds.mp4",
+            "seconds": 3387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1384
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"New Worlds\" (0.95)",
+              "item": "bbc-the-living-planet",
+              "itemTitle": "BBC The Living Planet (1984)",
+              "file": "BBC.The.Living.Planet.12of12.New.Worlds.720p.x265.AAC.MVGroup.org.mp4",
+              "name": "BBC.The.Living.Planet.12of12.New.Worlds.720p.x265.AAC.MVGroup.org",
+              "url": "https://archive.org/download/bbc-the-living-planet/BBC.The.Living.Planet.12of12.New.Worlds.720p.x265.AAC.MVGroup.org.mp4",
+              "seconds": 3387,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 338
+            }
+          ]
         }
       ]
     }

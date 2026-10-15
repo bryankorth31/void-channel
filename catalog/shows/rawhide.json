@@ -3,7 +3,7 @@
   "slug": "rawhide",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:25.133Z",
+  "matchedAt": "2026-10-15T03:18:31.082Z",
   "tvmaze": {
     "id": 3488,
     "name": "Rawhide",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 218,
     "live": 0,
-    "review": 5,
-    "missing": 213,
-    "pct": 2
+    "review": 7,
+    "missing": 211,
+    "pct": 3
   },
   "seasons": [
     {
@@ -323,8 +323,20 @@
           "number": 17,
           "name": "Incident of Fear in the Streets",
           "airdate": "1959-05-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Incident of Fear in the Streets\" (0.79)",
+            "item": "rawhide-fear-in-the-streets",
+            "itemTitle": "Rawhide - Incident of Fear in the Streets",
+            "file": "Rawhide - fear in the streets.mp4",
+            "name": "Rawhide - fear in the streets",
+            "url": "https://archive.org/download/rawhide-fear-in-the-streets/Rawhide%20-%20fear%20in%20the%20streets.mp4",
+            "seconds": 3064,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
@@ -709,8 +721,20 @@
           "number": 9,
           "name": "Incident of the Captive",
           "airdate": "1960-12-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Incident of the Captive\" (1.00)",
+            "item": "rawhide-incident-of-the-captive",
+            "itemTitle": "Rawhide -  Incident Of The Captive",
+            "file": "Rawhide - Incident of the Captive.mp4",
+            "name": "Rawhide - Incident of the Captive",
+            "url": "https://archive.org/download/rawhide-incident-of-the-captive/Rawhide%20-%20Incident%20of%20the%20Captive.mp4",
+            "seconds": 3117,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161
+          },
           "alternates": []
         },
         {

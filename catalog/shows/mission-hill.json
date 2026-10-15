@@ -3,7 +3,7 @@
   "slug": "mission-hill",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:06.259Z",
+  "matchedAt": "2026-10-15T03:17:29.994Z",
   "tvmaze": {
     "id": 7761,
     "name": "Mission Hill",
@@ -604,19 +604,33 @@
           "airdate": "2002-08-11",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "mission-hill-broadcast-version",
-            "itemTitle": "mission hill broadcast version",
-            "file": "113 - Plan 9 from Mission Hill.mp4",
-            "name": "113 - Plan 9 from Mission Hill",
-            "url": "https://archive.org/download/mission-hill-broadcast-version/113%20-%20Plan%209%20from%20Mission%20Hill.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "mission-hill-preservation",
+            "itemTitle": "Mission Hill Preservation",
+            "file": "113 - Plan 9 from Mission Hill (or I Married a Gay Man from Outer Space).mp4",
+            "name": "113 - Plan 9 from Mission Hill (or I Married a Gay Man from Outer Space)",
+            "url": "https://archive.org/download/mission-hill-preservation/113%20-%20Plan%209%20from%20Mission%20Hill%20(or%20I%20Married%20a%20Gay%20Man%20from%20Outer%20Space).mp4",
             "seconds": 1356,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 368
+            "sizeMB": 186
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "mission-hill-broadcast-version",
+              "itemTitle": "mission hill broadcast version",
+              "file": "113 - Plan 9 from Mission Hill.mp4",
+              "name": "113 - Plan 9 from Mission Hill",
+              "url": "https://archive.org/download/mission-hill-broadcast-version/113%20-%20Plan%209%20from%20Mission%20Hill.mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            }
+          ]
         }
       ]
     }

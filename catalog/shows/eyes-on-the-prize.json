@@ -3,7 +3,7 @@
   "slug": "eyes-on-the-prize",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-15T01:19:21.130Z",
+  "matchedAt": "2026-10-15T03:18:22.667Z",
   "tvmaze": {
     "id": 21307,
     "name": "Eyes on the Prize",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 14,
     "live": 0,
-    "review": 9,
-    "missing": 5,
-    "pct": 64
+    "review": 12,
+    "missing": 2,
+    "pct": 86
   },
   "seasons": [
     {
@@ -168,8 +168,20 @@
           "number": 6,
           "name": "Bridge to Freedom,1965",
           "airdate": "1987-02-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Bridge to Freedom,1965\" (0.67)",
+            "item": "20221119_20221119_0723",
+            "itemTitle": "Eyes On The Prize (PBS)",
+            "file": "Eyes On The Prize - (Part 6) Bridge to Freedom 1965.mp4",
+            "name": "Eyes On The Prize - (Part 6) Bridge to Freedom 1965",
+            "url": "https://archive.org/download/20221119_20221119_0723/Eyes%20On%20The%20Prize%20-%20(Part%206)%20Bridge%20to%20Freedom%201965.mp4",
+            "seconds": 3335,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176
+          },
           "alternates": []
         }
       ]
@@ -243,8 +255,20 @@
           "number": 4,
           "name": "The Promised Land, 1967-1968",
           "airdate": "1990-02-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The Promised Land, 1967-1968\" (0.67)",
+            "item": "20221119_20221119_0723",
+            "itemTitle": "Eyes On The Prize (PBS)",
+            "file": "Eyes On The Prize - (Part 10) The Promised Land 1967–1968.mp4",
+            "name": "Eyes On The Prize - (Part 10) The Promised Land 1967–1968",
+            "url": "https://archive.org/download/20221119_20221119_0723/Eyes%20On%20The%20Prize%20-%20(Part%2010)%20The%20Promised%20Land%201967%E2%80%931968.mp4",
+            "seconds": 3452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 229
+          },
           "alternates": []
         },
         {
@@ -279,8 +303,20 @@
           "number": 7,
           "name": "The Keys to the Kingdom, 1974-1980",
           "airdate": "1990-02-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The Keys to the Kingdom, 1974-1980\" (0.65)",
+            "item": "20221119_20221119_0723",
+            "itemTitle": "Eyes On The Prize (PBS)",
+            "file": "Eyes On The Prize - (Part 13) The Keys to the Kingdom 1974–1980.mp4",
+            "name": "Eyes On The Prize - (Part 13) The Keys to the Kingdom 1974–1980",
+            "url": "https://archive.org/download/20221119_20221119_0723/Eyes%20On%20The%20Prize%20-%20(Part%2013)%20The%20Keys%20to%20the%20Kingdom%201974%E2%80%931980.mp4",
+            "seconds": 3441,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 169
+          },
           "alternates": []
         },
         {

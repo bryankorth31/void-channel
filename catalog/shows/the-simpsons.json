@@ -3,7 +3,7 @@
   "slug": "the-simpsons",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-15T01:19:02.242Z",
+  "matchedAt": "2026-10-15T03:17:25.217Z",
   "tvmaze": {
     "id": 83,
     "name": "The Simpsons",
@@ -14,8 +14,8 @@
   "coverage": {
     "total": 806,
     "live": 0,
-    "review": 1,
-    "missing": 805,
+    "review": 2,
+    "missing": 804,
     "pct": 0
   },
   "seasons": [
@@ -621,8 +621,20 @@
           "number": 13,
           "name": "Selma's Choice",
           "airdate": "1993-01-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Selma's Choice\" (0.95)",
+            "item": "TheSimpsonsPartialTVStuffMid90s",
+            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
+            "file": "The Simpsons- Selma's Choice (most).mp4",
+            "name": "The Simpsons- Selma's Choice (most)",
+            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Selma's%20Choice%20(most).mp4",
+            "seconds": 1465,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 723
+          },
           "alternates": []
         },
         {

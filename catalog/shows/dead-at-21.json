@@ -3,21 +3,20 @@
   "slug": "dead-at-21",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-15T01:19:07.871Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:17:32.659Z",
   "tvmaze": {
-    "id": null,
+    "id": 30033,
     "name": "Dead at 21",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "1994-06-15",
     "network": "MTV"
   },
   "coverage": {
     "total": 13,
-    "live": 0,
-    "review": 13,
-    "missing": 0,
-    "pct": 100
+    "live": 11,
+    "review": 1,
+    "missing": 1,
+    "pct": 92
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "Dead at 21",
+          "airdate": "1994-06-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 1 - Dead At 21.mp4",
@@ -36,21 +38,45 @@
             "seconds": 1370,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 554,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 554
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 01 - Dead at 21.mp4",
+              "name": "Episode 01 - Dead at 21",
+              "url": "https://archive.org/download/dead-at-21/Episode%2001%20-%20Dead%20at%2021.mp4",
+              "seconds": 1370,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 1 - Dead at 21.mp4",
+              "name": "Episode 1 - Dead at 21",
+              "url": "https://archive.org/download/dead-at-21/Episode%201%20-%20Dead%20at%2021.mp4",
+              "seconds": 1370,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "at 2 brain salad",
-          "state": "REVIEW",
+          "name": "Brain Salad",
+          "airdate": "1994-06-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 2 - Brain Salad.mp4",
@@ -59,44 +85,53 @@
             "seconds": 1313,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 520,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 520
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 02 - Brain Salad.mp4",
+              "name": "Episode 02 - Brain Salad",
+              "url": "https://archive.org/download/dead-at-21/Episode%2002%20-%20Brain%20Salad.mp4",
+              "seconds": 1314,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 2 - Brain Salad.mp4",
+              "name": "Episode 2 - Brain Salad",
+              "url": "https://archive.org/download/dead-at-21/Episode%202%20-%20Brain%20Salad.mp4",
+              "seconds": 1314,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "at 3 love minus zero",
-          "state": "REVIEW",
-          "file": {
-            "item": "dead-at-21_202409",
-            "itemTitle": "Dead At 21",
-            "file": "Dead At 21 Episode 3 - Love Minus Zero.mp4",
-            "name": "Dead At 21 Episode 3 - Love Minus Zero",
-            "url": "https://archive.org/download/dead-at-21_202409/Dead%20At%2021%20Episode%203%20-%20Love%20Minus%20Zero.mp4",
-            "seconds": 1248,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 500,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Love Minus Zero",
+          "airdate": "1994-06-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "at 4 shock the monkey",
-          "state": "REVIEW",
+          "name": "Shock the Monkey",
+          "airdate": "1994-07-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 4 - Shock The Monkey.mp4",
@@ -105,21 +140,45 @@
             "seconds": 1356,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 553,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 553
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 04 - Shock the Monkey.mp4",
+              "name": "Episode 04 - Shock the Monkey",
+              "url": "https://archive.org/download/dead-at-21/Episode%2004%20-%20Shock%20the%20Monkey.mp4",
+              "seconds": 1356,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 4 - Shock the Monkey.mp4",
+              "name": "Episode 4 - Shock the Monkey",
+              "url": "https://archive.org/download/dead-at-21/Episode%204%20-%20Shock%20the%20Monkey.mp4",
+              "seconds": 1356,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "at 5 gone daddy gone",
-          "state": "REVIEW",
+          "name": "Gone Daddy Gone",
+          "airdate": "1994-07-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 5 - Gone Daddy Gone.mp4",
@@ -128,21 +187,45 @@
             "seconds": 1321,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 552,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 552
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 05 - Gone Daddy Gone.mp4",
+              "name": "Episode 05 - Gone Daddy Gone",
+              "url": "https://archive.org/download/dead-at-21/Episode%2005%20-%20Gone%20Daddy%20Gone.mp4",
+              "seconds": 1321,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 5 - Gone Daddy Gone.mp4",
+              "name": "Episode 5 - Gone Daddy Gone",
+              "url": "https://archive.org/download/dead-at-21/Episode%205%20-%20Gone%20Daddy%20Gone.mp4",
+              "seconds": 1321,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "at 6 use your illusion",
-          "state": "REVIEW",
+          "name": "Use Your Illusion",
+          "airdate": "1994-07-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 6 - Use Your Illusion.mp4",
@@ -151,21 +234,45 @@
             "seconds": 1324,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 534,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 534
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 06 - Use Your Illusion.mp4",
+              "name": "Episode 06 - Use Your Illusion",
+              "url": "https://archive.org/download/dead-at-21/Episode%2006%20-%20Use%20Your%20Illusion.mp4",
+              "seconds": 1324,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 6 - Use Your Illusion.mp4",
+              "name": "Episode 6 - Use Your Illusion",
+              "url": "https://archive.org/download/dead-at-21/Episode%206%20-%20Use%20Your%20Illusion.mp4",
+              "seconds": 1324,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "at 7 live for today",
-          "state": "REVIEW",
+          "name": "Live for Today",
+          "airdate": "1994-07-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 7 - Live for Today.mp4",
@@ -174,21 +281,45 @@
             "seconds": 1358,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 577,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 577
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 07 - Live for Today.mp4",
+              "name": "Episode 07 - Live for Today",
+              "url": "https://archive.org/download/dead-at-21/Episode%2007%20-%20Live%20for%20Today.mp4",
+              "seconds": 1308,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 7 - Live for Today.mp4",
+              "name": "Episode 7 - Live for Today",
+              "url": "https://archive.org/download/dead-at-21/Episode%207%20-%20Live%20for%20Today.mp4",
+              "seconds": 1308,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "at 8 tie your mother down",
-          "state": "REVIEW",
+          "name": "Tie Your Mother Down",
+          "airdate": "1994-08-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 8 - Tie Your Mother Down.mp4",
@@ -197,21 +328,45 @@
             "seconds": 1308,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 574,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 574
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 08 - Tie Your Mother Down.mp4",
+              "name": "Episode 08 - Tie Your Mother Down",
+              "url": "https://archive.org/download/dead-at-21/Episode%2008%20-%20Tie%20Your%20Mother%20Down.mp4",
+              "seconds": 1310,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 8 - Tie Your Mother Down.mp4",
+              "name": "Episode 8 - Tie Your Mother Down",
+              "url": "https://archive.org/download/dead-at-21/Episode%208%20-%20Tie%20Your%20Mother%20Down.mp4",
+              "seconds": 1310,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "at 9 cry baby cry",
-          "state": "REVIEW",
+          "name": "Cry Baby Cry",
+          "airdate": "1994-08-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 9 - Cry Baby Cry.mp4",
@@ -220,21 +375,45 @@
             "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 549,
-            "ep": {
-              "season": null,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 549
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 09 - Cry Baby Cry.mp4",
+              "name": "Episode 09 - Cry Baby Cry",
+              "url": "https://archive.org/download/dead-at-21/Episode%2009%20-%20Cry%20Baby%20Cry.mp4",
+              "seconds": 1337,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            },
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 9 - Cry Baby Cry.mp4",
+              "name": "Episode 9 - Cry Baby Cry",
+              "url": "https://archive.org/download/dead-at-21/Episode%209%20-%20Cry%20Baby%20Cry.mp4",
+              "seconds": 1337,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "at 10 life during wartime",
-          "state": "REVIEW",
+          "name": "Life During Wartime",
+          "airdate": "1994-08-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 10 - Life During Wartime.mp4",
@@ -243,21 +422,32 @@
             "seconds": 1316,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 527,
-            "ep": {
-              "season": null,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 527
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 10 - Life During Wartime.mp4",
+              "name": "Episode 10 - Life During Wartime",
+              "url": "https://archive.org/download/dead-at-21/Episode%2010%20-%20Life%20During%20Wartime.mp4",
+              "seconds": 1324,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "at 11 hotel california",
-          "state": "REVIEW",
+          "name": "Hotel California",
+          "airdate": "1994-08-24",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 11 - Hotel California.mp4",
@@ -266,21 +456,32 @@
             "seconds": 1291,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 536,
-            "ep": {
-              "season": null,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 536
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 11 - Hotel California.mp4",
+              "name": "Episode 11 - Hotel California",
+              "url": "https://archive.org/download/dead-at-21/Episode%2011%20-%20Hotel%20California.mp4",
+              "seconds": 1291,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "at 12 in through the out door part 1",
-          "state": "REVIEW",
+          "name": "In Through the Out Door (1)",
+          "airdate": "1994-08-31",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 12 - In Through The Out Door - Part 1.mp4",
@@ -289,21 +490,32 @@
             "seconds": 1321,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 516,
-            "ep": {
-              "season": null,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 516
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 12 - In Through the Out Door - Part 1.mp4",
+              "name": "Episode 12 - In Through the Out Door - Part 1",
+              "url": "https://archive.org/download/dead-at-21/Episode%2012%20-%20In%20Through%20the%20Out%20Door%20-%20Part%201.mp4",
+              "seconds": 1321,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "at 13 in through the out door part 2",
-          "state": "REVIEW",
+          "name": "In Through the Out Door (2)",
+          "airdate": "1994-09-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "dead-at-21_202409",
             "itemTitle": "Dead At 21",
             "file": "Dead At 21 Episode 13 - In Through The Out Door - Part 2.mp4",
@@ -312,15 +524,23 @@
             "seconds": 1331,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 543,
-            "ep": {
-              "season": null,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 543
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "dead-at-21",
+              "itemTitle": "Dead At 21 (1994)",
+              "file": "Episode 13 - In Through the Out Door - Part 2.mp4",
+              "name": "Episode 13 - In Through the Out Door - Part 2",
+              "url": "https://archive.org/download/dead-at-21/Episode%2013%20-%20In%20Through%20the%20Out%20Door%20-%20Part%202.mp4",
+              "seconds": 1331,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         }
       ]
     }

@@ -3,7 +3,7 @@
   "slug": "peep-show",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-15T01:19:16.337Z",
+  "matchedAt": "2026-10-15T03:17:44.270Z",
   "tvmaze": {
     "id": 383,
     "name": "Peep Show",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 54,
-    "live": 41,
-    "review": 11,
-    "missing": 2,
-    "pct": 96
+    "live": 53,
+    "review": 0,
+    "missing": 1,
+    "pct": 98
   },
   "seasons": [
     {
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Warring Factions",
           "airdate": "2003-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s01",
             "itemTitle": "Peep Show - S01 - AI Enhanced (J909)",
@@ -42,7 +42,20 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "peep-show-warring-factions-full-episode-series-1-episode-1",
+              "itemTitle": "Peep Show Warring Factions FULL EPISODE Series 1, Episode 1",
+              "file": "Peep Show _   Warring Factions   _ FULL EPISODE _ Series 1, Episode 1.mp4",
+              "name": "Peep Show _   Warring Factions   _ FULL EPISODE _ Series 1, Episode 1",
+              "url": "https://archive.org/download/peep-show-warring-factions-full-episode-series-1-episode-1/Peep%20Show%20_%20%20%20Warring%20Factions%20%20%20_%20FULL%20EPISODE%20_%20Series%201%2C%20Episode%201.mp4",
+              "seconds": 1432,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 302
+            },
+            {
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "TerenceMcKenna2000",
               "itemTitle": "peep show",
@@ -55,7 +68,7 @@
               "sizeMB": 190
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "peep-show-series1",
               "itemTitle": "Peep Show - Series 1 (2003)",
@@ -454,9 +467,9 @@
           "number": 4,
           "name": "University Challenge",
           "airdate": "2004-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s02",
             "itemTitle": "Peep Show - S02 - AI Enhanced (J909)",
@@ -470,7 +483,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "TerenceMcKenna2000",
               "itemTitle": "peep show",
@@ -483,7 +496,7 @@
               "sizeMB": 205
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "peep-show-series2",
               "itemTitle": "Peep Show - Series 2 (2004)",
@@ -501,9 +514,48 @@
           "number": 5,
           "name": "The Man Show",
           "airdate": "2004-12-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "peep-show-s02",
+            "itemTitle": "Peep Show - S02 - AI Enhanced (J909)",
+            "file": "Peep Show (2004) - S02E05 - The Man Show.mp4",
+            "name": "Peep Show (2004) - S02E05 - The Man Show",
+            "url": "https://archive.org/download/peep-show-s02/Peep%20Show%20(2004)%20-%20S02E05%20-%20The%20Man%20Show.mp4",
+            "seconds": 1549,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 637
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "TerenceMcKenna2000",
+              "itemTitle": "peep show",
+              "file": "Peep Show S02E05 The Man Show.mp4",
+              "name": "Peep Show S02E05 The Man Show",
+              "url": "https://archive.org/download/TerenceMcKenna2000/Peep%20Show%20S02E05%20The%20Man%20Show.mp4",
+              "seconds": 1551,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "peep-show-series2",
+              "itemTitle": "Peep Show - Series 2 (2004)",
+              "file": "Peep Show 2x05 The Man Show.mp4",
+              "name": "Peep Show 2x05 The Man Show",
+              "url": "https://archive.org/download/peep-show-series2/Peep%20Show%202x05%20The%20Man%20Show.mp4",
+              "seconds": 1543,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 88
+            }
+          ]
         },
         {
           "number": 6,
@@ -715,9 +767,9 @@
           "number": 4,
           "name": "Sistering",
           "airdate": "2005-12-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s03",
             "itemTitle": "Peep Show - S03 - AI Enhanced (J909)",
@@ -731,7 +783,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "TerenceMcKenna2000",
               "itemTitle": "peep show",
@@ -744,7 +796,7 @@
               "sizeMB": 186
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "peep-show-series3",
               "itemTitle": "Peep Show - Series 3 (2005)",
@@ -861,9 +913,9 @@
           "number": 1,
           "name": "Sophie's Parents",
           "airdate": "2007-04-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s04",
             "itemTitle": "Peep Show - S04 - AI Enhanced (J909)",
@@ -877,7 +929,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "peep-show-series4",
               "itemTitle": "Peep Show - Series 4 (2007)",
@@ -1262,9 +1314,9 @@
           "number": 5,
           "name": "Jeremy's Manager",
           "airdate": "2008-05-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s05",
             "itemTitle": "Peep Show - S05 - AI Enhanced (J909)",
@@ -1278,7 +1330,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone",
               "itemTitle": "Peep Show - Series 5 (2008)",
@@ -1291,7 +1343,7 @@
               "sizeMB": 196
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "peep-show-s-05-e-06-mark-s-women-720p-web-dl-h-265-bone",
               "itemTitle": "Peep Show - Series 5 (2008)",
@@ -1413,9 +1465,9 @@
           "number": 4,
           "name": "The Affair",
           "airdate": "2009-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s-06",
             "itemTitle": "Peep show - series 6 (2009)",
@@ -1481,9 +1533,9 @@
           "number": 1,
           "name": "St Hospitals",
           "airdate": "2010-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s-07",
             "itemTitle": "Peep Show - Series 7 (2010)",
@@ -1549,9 +1601,9 @@
           "number": 5,
           "name": "Seasonal Beatings",
           "airdate": "2010-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s-07",
             "itemTitle": "Peep Show - Series 7 (2010)",
@@ -1628,9 +1680,9 @@
           "number": 2,
           "name": "Business Secrets of the Pharaohs",
           "airdate": "2012-12-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s-08-e-05-chairman-mark",
             "itemTitle": "Peep Show - Series 8 (2012)",
@@ -1648,9 +1700,9 @@
           "number": 3,
           "name": "The Love Bunker",
           "airdate": "2012-12-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s-08-e-05-chairman-mark",
             "itemTitle": "Peep Show - Series 8 (2012)",
@@ -1668,9 +1720,9 @@
           "number": 4,
           "name": "Big Mad Andy",
           "airdate": "2012-12-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "peep-show-s-08-e-05-chairman-mark",
             "itemTitle": "Peep Show - Series 8 (2012)",

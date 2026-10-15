@@ -3,7 +3,7 @@
   "slug": "gilligans-island",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:24.509Z",
+  "matchedAt": "2026-10-15T03:18:30.186Z",
   "tvmaze": {
     "id": 4041,
     "name": "Gilligan's Island",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 98,
-    "live": 0,
-    "review": 91,
+    "live": 1,
+    "review": 90,
     "missing": 7,
     "pct": 93
   },
@@ -1664,33 +1664,33 @@
           "number": 18,
           "name": "The Hunter",
           "airdate": "1967-01-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "gilligans-island-complete-tv-series",
-            "itemTitle": "Gilligan's Island Complete TV Series",
-            "file": "Season 03/Gilligans.Island.S03E18.The.Hunter.mp4",
-            "name": "Season 03/Gilligans.Island.S03E18.The.Hunter",
-            "url": "https://archive.org/download/gilligans-island-complete-tv-series/Season%2003%2FGilligans.Island.S03E18.The.Hunter.mp4",
-            "seconds": 1516,
+            "item": "gilligans-island-s-3-e-18-the-hunter-25min",
+            "itemTitle": "Gilligan's Island S3 E18 The Hunter - 25min",
+            "file": "Gilligan's Island S3 E18 The Hunter - 25min.mp4",
+            "name": "Gilligan's Island S3 E18 The Hunter - 25min",
+            "url": "https://archive.org/download/gilligans-island-s-3-e-18-the-hunter-25min/Gilligan's%20Island%20S3%20E18%20The%20Hunter%20-%2025min.mp4",
+            "seconds": 1522,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 890
+            "sizeMB": 149
           },
           "alternates": [
             {
               "conf": 0.6,
               "why": "S/E in filename + title match",
-              "item": "gilligans-island-s-3-e-18-the-hunter-25min",
-              "itemTitle": "Gilligan's Island S3 E18 The Hunter - 25min",
-              "file": "Gilligan's Island S3 E18 The Hunter - 25min.mp4",
-              "name": "Gilligan's Island S3 E18 The Hunter - 25min",
-              "url": "https://archive.org/download/gilligans-island-s-3-e-18-the-hunter-25min/Gilligan's%20Island%20S3%20E18%20The%20Hunter%20-%2025min.mp4",
-              "seconds": 1522,
+              "item": "gilligans-island-complete-tv-series",
+              "itemTitle": "Gilligan's Island Complete TV Series",
+              "file": "Season 03/Gilligans.Island.S03E18.The.Hunter.mp4",
+              "name": "Season 03/Gilligans.Island.S03E18.The.Hunter",
+              "url": "https://archive.org/download/gilligans-island-complete-tv-series/Season%2003%2FGilligans.Island.S03E18.The.Hunter.mp4",
+              "seconds": 1516,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 149
+              "sizeMB": 890
             }
           ]
         },

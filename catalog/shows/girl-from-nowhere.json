@@ -3,31 +3,142 @@
   "slug": "girl-from-nowhere",
   "type": "World TV",
   "network": "TH",
-  "matchedAt": "2026-10-15T01:19:17.293Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:10.856Z",
   "tvmaze": {
-    "id": null,
+    "id": 39998,
     "name": "Girl from Nowhere",
-    "runtime": null,
-    "premiered": null,
-    "network": "TH"
+    "runtime": 54,
+    "premiered": "2018-08-08",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 8,
-    "live": 0,
-    "review": 8,
-    "missing": 0,
-    "pct": 100
+    "total": 21,
+    "live": 8,
+    "review": 0,
+    "missing": 13,
+    "pct": 38
   },
   "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Ugly Truth",
+          "airdate": "2018-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Apologies",
+          "airdate": "2018-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Trophy",
+          "airdate": "2018-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Hi-So",
+          "airdate": "2018-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Social Love",
+          "airdate": "2018-09-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Wonderwall Part 1",
+          "airdate": "2018-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Wonderwall Part 2",
+          "airdate": "2018-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Lost & Found",
+          "airdate": "2018-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Trap",
+          "airdate": "2018-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Thank You, Teacher",
+          "airdate": "2018-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Rank",
+          "airdate": "2018-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "BFF Part 1",
+          "airdate": "2018-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "BFF Part 2",
+          "airdate": "2018-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
     {
       "season": 2,
       "episodes": [
         {
           "number": 1,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "Pregnant",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E01.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -36,21 +147,32 @@
             "seconds": 2932,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 495,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 495
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E01.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E01.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E01.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2932,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 495
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "True Love",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E02.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -59,21 +181,32 @@
             "seconds": 2308,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 390,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 390
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E02.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E02.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E02.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2308,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 390
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "Minnie and the Four Bodies",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E03.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -82,21 +215,32 @@
             "seconds": 2658,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 449,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 449
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E03.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E03.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E03.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2658,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 449
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "Yuri",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E04.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -105,21 +249,32 @@
             "seconds": 2536,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 427,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 427
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E04.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E04.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E04.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2536,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 427
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "SOTUS",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E05.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -128,21 +283,32 @@
             "seconds": 2766,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 468,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 468
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E05.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E05.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E05.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2766,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 468
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "Liberation",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E06.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -151,21 +317,32 @@
             "seconds": 2912,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 496,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 496
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E06.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E06.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E06.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2912,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 496
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "JennyX",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E07.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -174,21 +351,32 @@
             "seconds": 2954,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 501,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 501
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E07.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E07.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E07.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2954,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 501
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "thai",
-          "state": "REVIEW",
+          "name": "The Judgement",
+          "airdate": "2021-05-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "girl-from-nowhere-2018-complete-s-02-480p",
             "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
             "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E08.THAI.WEBRip.x264-ION10.ia.mp4",
@@ -197,15 +385,23 @@
             "seconds": 2614,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 443,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 443
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "girl-from-nowhere-2018-complete-s-02-480p",
+              "itemTitle": "Girl From Nowhere ( 2018) ( COMPLETE) ( S 02) ( 480p)",
+              "file": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E08.THAI.WEBRip.x264-ION10.mp4",
+              "name": "Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10/Girl.from.Nowhere.S02E08.THAI.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/girl-from-nowhere-2018-complete-s-02-480p/Girl.from.Nowhere.S02.THAI.WEBRip.x264-ION10%2FGirl.from.Nowhere.S02E08.THAI.WEBRip.x264-ION10.mp4",
+              "seconds": 2614,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 443
+            }
+          ]
         }
       ]
     }

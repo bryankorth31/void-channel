@@ -3,7 +3,7 @@
   "slug": "bojack-horseman",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-15T01:19:15.698Z",
+  "matchedAt": "2026-10-15T03:17:43.516Z",
   "tvmaze": {
     "id": 184,
     "name": "BoJack Horseman",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 76,
     "live": 23,
-    "review": 20,
-    "missing": 33,
-    "pct": 57
+    "review": 21,
+    "missing": 32,
+    "pct": 58
   },
   "seasons": [
     {
@@ -1087,8 +1087,20 @@
           "number": 2,
           "name": "The BoJack Horseman Show",
           "airdate": "2016-07-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
+            "item": "bojack-horseman-eas-scenarios",
+            "itemTitle": "BoJack Horseman - Full Series (EAS SCENARIOS, FAKE/FANMADE)",
+            "file": "S03E02 The BoJack Horseman Show - What's Up Bitches, BoJack is Attacking You.mp4",
+            "name": "S03E02 The BoJack Horseman Show - What's Up Bitches, BoJack is Attacking You",
+            "url": "https://archive.org/download/bojack-horseman-eas-scenarios/S03E02%20The%20BoJack%20Horseman%20Show%20-%20What's%20Up%20Bitches%2C%20BoJack%20is%20Attacking%20You.mp4",
+            "seconds": 3223,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 549
+          },
           "alternates": []
         },
         {

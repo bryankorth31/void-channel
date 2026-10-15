@@ -3,7 +3,7 @@
   "slug": "in-living-color",
   "type": "Sketch and Comedy",
   "network": "FOX",
-  "matchedAt": "2026-10-15T01:19:21.828Z",
+  "matchedAt": "2026-10-15T03:18:26.141Z",
   "tvmaze": {
     "id": 6050,
     "name": "In Living Color",
@@ -13,10 +13,10 @@
   },
   "coverage": {
     "total": 127,
-    "live": 13,
+    "live": 14,
     "review": 0,
-    "missing": 114,
-    "pct": 10
+    "missing": 113,
+    "pct": 11
   },
   "seasons": [
     {
@@ -710,8 +710,20 @@
           "number": 25,
           "name": "Best of Season 3",
           "airdate": "1992-04-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "in-living-color-s-01-e-12",
+            "itemTitle": "In Living Color: The Complete Series (1990–1994)",
+            "file": "Season 3/In Living Color - S03E25.mp4",
+            "name": "Season 3/In Living Color - S03E25",
+            "url": "https://archive.org/download/in-living-color-s-01-e-12/Season%203%2FIn%20Living%20Color%20-%20S03E25.mp4",
+            "seconds": 1334,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178
+          },
           "alternates": []
         },
         {

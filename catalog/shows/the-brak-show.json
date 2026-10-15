@@ -3,7 +3,7 @@
   "slug": "the-brak-show",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:05.668Z",
+  "matchedAt": "2026-10-15T03:17:29.244Z",
   "tvmaze": {
     "id": 6234,
     "name": "The Brak Show",
@@ -108,7 +108,21 @@
             "playable": true,
             "sizeMB": 67
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"War Next Door\" (0.95)",
+              "item": "the-brak-show_202512",
+              "itemTitle": "The Brak Show (2000) Complete Series",
+              "file": "The Brak Show S1 E04 - War Next Door.mp4",
+              "name": "The Brak Show S1 E04 - War Next Door",
+              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S1%20E04%20-%20War%20Next%20Door.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 21
+            }
+          ]
         },
         {
           "number": 4,
@@ -128,7 +142,21 @@
             "playable": true,
             "sizeMB": 65
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Time Machine\" (0.95)",
+              "item": "the-brak-show_202512",
+              "itemTitle": "The Brak Show (2000) Complete Series",
+              "file": "The Brak Show S1 E03 - Time Machine.mp4",
+              "name": "The Brak Show S1 E03 - Time Machine",
+              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S1%20E03%20-%20Time%20Machine.mp4",
+              "seconds": 681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 28
+            }
+          ]
         },
         {
           "number": 5,
@@ -413,31 +441,31 @@
           "airdate": "2002-05-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the.-brak.-show.-s-02-e-05.720p.-hmax.-webrip.x-264-galaxy-tv",
-            "itemTitle": "The Brak Show Season 2",
-            "file": "The.Brak.Show.S02E04.720p.HMAX.WEBRip.x264-GalaxyTV.mp4",
-            "name": "The.Brak.Show.S02E04.720p.HMAX.WEBRip.x264-GalaxyTV",
-            "url": "https://archive.org/download/the.-brak.-show.-s-02-e-05.720p.-hmax.-webrip.x-264-galaxy-tv/The.Brak.Show.S02E04.720p.HMAX.WEBRip.x264-GalaxyTV.mp4",
-            "seconds": 686,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-brak-show_202512",
+            "itemTitle": "The Brak Show (2000) Complete Series",
+            "file": "The Brak Show S2 E04 - President Dad.mp4",
+            "name": "The Brak Show S2 E04 - President Dad",
+            "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S2%20E04%20-%20President%20Dad.mp4",
+            "seconds": 689,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 66
+            "sizeMB": 28
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-brak-show_202512",
-              "itemTitle": "The Brak Show (2000) Complete Series",
-              "file": "The Brak Show S2 E04 - President Dad.mp4",
-              "name": "The Brak Show S2 E04 - President Dad",
-              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S2%20E04%20-%20President%20Dad.mp4",
-              "seconds": 689,
-              "format": "MPEG4",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the.-brak.-show.-s-02-e-05.720p.-hmax.-webrip.x-264-galaxy-tv",
+              "itemTitle": "The Brak Show Season 2",
+              "file": "The.Brak.Show.S02E04.720p.HMAX.WEBRip.x264-GalaxyTV.mp4",
+              "name": "The.Brak.Show.S02E04.720p.HMAX.WEBRip.x264-GalaxyTV",
+              "url": "https://archive.org/download/the.-brak.-show.-s-02-e-05.720p.-hmax.-webrip.x-264-galaxy-tv/The.Brak.Show.S02E04.720p.HMAX.WEBRip.x264-GalaxyTV.mp4",
+              "seconds": 686,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 28
+              "sizeMB": 66
             }
           ]
         },
@@ -472,6 +500,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 29
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Brakstreet\" (0.95)",
+              "item": "the-brak-show_202512",
+              "itemTitle": "The Brak Show (2000) Complete Series",
+              "file": "The Brak Show S2 E09 - Brakstreet.mp4",
+              "name": "The Brak Show S2 E09 - Brakstreet",
+              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S2%20E09%20-%20Brakstreet.mp4",
+              "seconds": 691,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 36
             }
           ]
         },
@@ -553,6 +594,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 30
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Runaway\" (0.95)",
+              "item": "the-brak-show_202512",
+              "itemTitle": "The Brak Show (2000) Complete Series",
+              "file": "The Brak Show S2 E08 - Runaway.mp4",
+              "name": "The Brak Show S2 E08 - Runaway",
+              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S2%20E08%20-%20Runaway.mp4",
+              "seconds": 703,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 27
             }
           ]
         },
@@ -703,20 +757,33 @@
           "airdate": "2003-10-05",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "TBSS3",
-            "itemTitle": "The Brak Show Season 3",
-            "file": "The.Brak.Show.S03E01.1080p.WEBRip.x265-INFINITY.mp4",
-            "name": "The.Brak.Show.S03E01.1080p.WEBRip.x265-INFINITY",
-            "url": "https://archive.org/download/TBSS3/The.Brak.Show.S03E01.1080p.WEBRip.x265-INFINITY.mp4",
-            "seconds": 691,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-brak-show_202512",
+            "itemTitle": "The Brak Show (2000) Complete Series",
+            "file": "The Brak Show S3 E01 - Braklet Prince of Spaceland.mp4",
+            "name": "The Brak Show S3 E01 - Braklet Prince of Spaceland",
+            "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S3%20E01%20-%20Braklet%20Prince%20of%20Spaceland.mp4",
+            "seconds": 693,
             "format": "MPEG4",
             "playable": true,
-            "codecRisk": "video (x265)",
-            "sizeMB": 193
+            "sizeMB": 35
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "TBSS3",
+              "itemTitle": "The Brak Show Season 3",
+              "file": "The.Brak.Show.S03E01.1080p.WEBRip.x265-INFINITY.mp4",
+              "name": "The.Brak.Show.S03E01.1080p.WEBRip.x265-INFINITY",
+              "url": "https://archive.org/download/TBSS3/The.Brak.Show.S03E01.1080p.WEBRip.x265-INFINITY.mp4",
+              "seconds": 691,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 193
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -729,19 +796,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 67
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-brak-show_202512",
-              "itemTitle": "The Brak Show (2000) Complete Series",
-              "file": "The Brak Show S3 E01 - Braklet Prince of Spaceland.mp4",
-              "name": "The Brak Show S3 E01 - Braklet Prince of Spaceland",
-              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S3%20E01%20-%20Braklet%20Prince%20of%20Spaceland.mp4",
-              "seconds": 693,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 35
             }
           ]
         },
@@ -991,20 +1045,33 @@
           "airdate": "2003-11-16",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "TBSS3",
-            "itemTitle": "The Brak Show Season 3",
-            "file": "The.Brak.Show.S03E07.1080p.WEBRip.x265-INFINITY.mp4",
-            "name": "The.Brak.Show.S03E07.1080p.WEBRip.x265-INFINITY",
-            "url": "https://archive.org/download/TBSS3/The.Brak.Show.S03E07.1080p.WEBRip.x265-INFINITY.mp4",
-            "seconds": 678,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-brak-show_202512",
+            "itemTitle": "The Brak Show (2000) Complete Series",
+            "file": "The Brak Show S3 E07 - All That I Desire You.mp4",
+            "name": "The Brak Show S3 E07 - All That I Desire You",
+            "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S3%20E07%20-%20All%20That%20I%20Desire%20You.mp4",
+            "seconds": 680,
             "format": "MPEG4",
             "playable": true,
-            "codecRisk": "video (x265)",
-            "sizeMB": 190
+            "sizeMB": 36
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "TBSS3",
+              "itemTitle": "The Brak Show Season 3",
+              "file": "The.Brak.Show.S03E07.1080p.WEBRip.x265-INFINITY.mp4",
+              "name": "The.Brak.Show.S03E07.1080p.WEBRip.x265-INFINITY",
+              "url": "https://archive.org/download/TBSS3/The.Brak.Show.S03E07.1080p.WEBRip.x265-INFINITY.mp4",
+              "seconds": 678,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 190
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1017,19 +1084,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 65
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "the-brak-show_202512",
-              "itemTitle": "The Brak Show (2000) Complete Series",
-              "file": "The Brak Show S3 E07 - All That I Desire You.mp4",
-              "name": "The Brak Show S3 E07 - All That I Desire You",
-              "url": "https://archive.org/download/the-brak-show_202512/The%20Brak%20Show%20S3%20E07%20-%20All%20That%20I%20Desire%20You.mp4",
-              "seconds": 680,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 36
             }
           ]
         },

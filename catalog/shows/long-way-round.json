@@ -3,21 +3,20 @@
   "slug": "long-way-round",
   "type": "Documentary & Geographic",
   "network": "Sky One",
-  "matchedAt": "2026-10-15T01:19:21.426Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:23.434Z",
   "tvmaze": {
-    "id": null,
+    "id": 2249,
     "name": "Long Way Round",
-    "runtime": null,
-    "premiered": null,
-    "network": "Sky One"
+    "runtime": 60,
+    "premiered": "2004-10-18",
+    "network": "Sky Showcase"
   },
   "coverage": {
-    "total": 8,
+    "total": 7,
     "live": 0,
-    "review": 8,
-    "missing": 0,
-    "pct": 100
+    "review": 2,
+    "missing": 5,
+    "pct": 29
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "1 preparation",
+          "name": "Preparation",
+          "airdate": "2004-10-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Preparation\" (0.95)",
             "item": "longwayroundmf",
             "itemTitle": "Long Way Round MF Edit",
             "file": "1 Preparation.mp4",
@@ -36,38 +38,26 @@
             "seconds": 3362,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 988,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 988
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "2 londontorussia",
-          "state": "REVIEW",
-          "file": {
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "2 LondonToRussia.mp4",
-            "name": "2 LondonToRussia",
-            "url": "https://archive.org/download/longwayroundmf/2%20LondonToRussia.mp4",
-            "seconds": 3551,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 930,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "London to Volgograd",
+          "airdate": "2004-10-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "3 kazakhstan",
+          "name": "Kazakhstan",
+          "airdate": "2004-11-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Kazakhstan\" (0.95)",
             "item": "longwayroundmf",
             "itemTitle": "Long Way Round MF Edit",
             "file": "3 Kazakhstan.mp4",
@@ -76,111 +66,40 @@
             "seconds": 2659,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 650,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 650
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "4 mongolia",
-          "state": "REVIEW",
-          "file": {
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "4 Mongolia.mp4",
-            "name": "4 Mongolia",
-            "url": "https://archive.org/download/longwayroundmf/4%20Mongolia.mp4",
-            "seconds": 2741,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 720,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Barnaul to Western Mongolia",
+          "airdate": "2004-11-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "5 mongoliatosiberia",
-          "state": "REVIEW",
-          "file": {
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "5 MongoliaToSiberia.mp4",
-            "name": "5 MongoliaToSiberia",
-            "url": "https://archive.org/download/longwayroundmf/5%20MongoliaToSiberia.mp4",
-            "seconds": 2712,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 771,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Western Mongolia to Yakutsk",
+          "airdate": "2004-11-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "6 road of bones",
-          "state": "REVIEW",
-          "file": {
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "6 Road Of Bones.mp4",
-            "name": "6 Road Of Bones",
-            "url": "https://archive.org/download/longwayroundmf/6%20Road%20Of%20Bones.mp4",
-            "seconds": 2757,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 891,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Yakutsk to Magadan (The Road of Bones)",
+          "airdate": "2004-11-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "7 north america",
-          "state": "REVIEW",
-          "file": {
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "7 North America.mp4",
-            "name": "7 North America",
-            "url": "https://archive.org/download/longwayroundmf/7%20North%20America.mp4",
-            "seconds": 3996,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1414,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "8 one year later",
-          "state": "REVIEW",
-          "file": {
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "8 One Year Later.mp4",
-            "name": "8 One Year Later",
-            "url": "https://archive.org/download/longwayroundmf/8%20One%20Year%20Later.mp4",
-            "seconds": 4215,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1248,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Anchorage to New York",
+          "airdate": "2004-11-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

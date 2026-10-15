@@ -3,21 +3,20 @@
   "slug": "skeleton-knight-in-another-world",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.227Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:07.908Z",
   "tvmaze": {
-    "id": null,
+    "id": 60258,
     "name": "Skeleton Knight in Another World",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 30,
+    "premiered": "2022-04-07",
+    "network": "AT-X"
   },
   "coverage": {
-    "total": 39,
-    "live": 0,
-    "review": 39,
-    "missing": 0,
-    "pct": 100
+    "total": 24,
+    "live": 12,
+    "review": 0,
+    "missing": 12,
+    "pct": 50
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "The Wandering Knight Sets Out to Make the World a Better Place",
+          "airdate": "2022-04-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E01.mp4",
@@ -36,21 +38,45 @@
             "seconds": 1434,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 142,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Wandering Knight Sets Out to Make the World a Better Place\" (0.79)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 01 - The Wandering Knight Sets Out to Make the World a Better Place.mp4",
+              "name": "Skeleton Knight in Another World - 01 - The Wandering Knight Sets Out to Make the World a Better Place",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2001%20-%20The%20Wandering%20Knight%20Sets%20Out%20to%20Make%20the%20World%20a%20Better%20Place.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 01 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 01 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2001%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 252
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "A First Job, a Girl's Wish, and an Approaching Shadow",
+          "airdate": "2022-04-14",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E02.mp4",
@@ -59,21 +85,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A First Job, a Girl's Wish, and an Approaching Shadow\" (0.96)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 02 - A First Job, a Girl`s Wish, and an Approaching Shadow.mp4",
+              "name": "Skeleton Knight in Another World - 02 - A First Job, a Girl`s Wish, and an Approaching Shadow",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2002%20-%20A%20First%20Job%2C%20a%20Girl%60s%20Wish%2C%20and%20an%20Approaching%20Shadow.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 02 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 02 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2002%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 219
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "An Austere Elf Dances for Her Comrades",
+          "airdate": "2022-04-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E03.mp4",
@@ -82,21 +132,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 116,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"An Austere Elf Dances for Her Comrades\" (0.95)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 03 - An Austere Elf Dances for Her Comrades.mp4",
+              "name": "Skeleton Knight in Another World - 03 - An Austere Elf Dances for Her Comrades",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2003%20-%20An%20Austere%20Elf%20Dances%20for%20Her%20Comrades.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 03 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 03 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2003%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 211
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "Infiltrating the Slave Market! In Search of the World's Evil",
+          "airdate": "2022-04-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E04.mp4",
@@ -105,21 +179,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 87,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 87
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Infiltrating the Slave Market! In Search of the World's Evil\" (0.88)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 04 - Infiltrating the Slave Market! In Search of the World`s Evil.mp4",
+              "name": "Skeleton Knight in Another World - 04 - Infiltrating the Slave Market! In Search of the World`s Evil",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2004%20-%20Infiltrating%20the%20Slave%20Market!%20In%20Search%20of%20the%20World%60s%20Evil.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 04 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 04 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2004%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 156
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "A Secret Revealed, and a Bond Forged",
+          "airdate": "2022-05-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E05.mp4",
@@ -128,21 +226,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 106,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 106
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Secret Revealed, and a Bond Forged\" (0.95)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 05 - A Secret Revealed, and a Bond Forged.mp4",
+              "name": "Skeleton Knight in Another World - 05 - A Secret Revealed, and a Bond Forged",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2005%20-%20A%20Secret%20Revealed%2C%20and%20a%20Bond%20Forged.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 05 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 05 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2005%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "Learning About the Darkness of This World at the Elf Village",
+          "airdate": "2022-05-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E06.mp4",
@@ -151,21 +273,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 115,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Learning About the Darkness of This World at the Elf Village\" (0.89)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 06 - Learning About the Darkness of This World at the Elf Village.mp4",
+              "name": "Skeleton Knight in Another World - 06 - Learning About the Darkness of This World at the Elf Village",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2006%20-%20Learning%20About%20the%20Darkness%20of%20This%20World%20at%20the%20Elf%20Village.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 06 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 06 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2006%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 199
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
+          "name": "A Miracle for the High-Minded Princess",
+          "airdate": "2022-05-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E07.mp4",
@@ -174,21 +320,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 129,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Miracle for the High-Minded Princess\" (0.95)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 07 - A Miracle for the High-Minded Princess.mp4",
+              "name": "Skeleton Knight in Another World - 07 - A Miracle for the High-Minded Princess",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2007%20-%20A%20Miracle%20for%20the%20High-Minded%20Princess.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 07 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 07 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2007%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 226
+            }
+          ]
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "Allied! Dashing Through the Darkness With the Beastpeople!",
+          "airdate": "2022-05-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E08.mp4",
@@ -197,21 +367,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 99,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 99
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Allied! Dashing Through the Darkness With the Beastpeople!\" (0.96)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 08 - Allied! Dashing Through the Darkness with the Beastpeople!.mp4",
+              "name": "Skeleton Knight in Another World - 08 - Allied! Dashing Through the Darkness with the Beastpeople!",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2008%20-%20Allied!%20Dashing%20Through%20the%20Darkness%20with%20the%20Beastpeople!.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 08 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 08 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2008%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 178
+            }
+          ]
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "The Capital in Chaos and a Maiden's Oath",
+          "airdate": "2022-06-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E09.mp4",
@@ -220,21 +414,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 106,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 106
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Capital in Chaos and a Maiden's Oath\" (0.95)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 09 - The Capital in Chaos and a Maiden`s Oath.mp4",
+              "name": "Skeleton Knight in Another World - 09 - The Capital in Chaos and a Maiden`s Oath",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2009%20-%20The%20Capital%20in%20Chaos%20and%20a%20Maiden%60s%20Oath.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 09 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 09 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2009%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 178
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
+          "name": "Hope for the Future Found in the Desert",
+          "airdate": "2022-06-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E10.mp4",
@@ -243,21 +461,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 119,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 119
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hope for the Future Found in the Desert\" (0.95)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 10 - Hope for the Future Found in the Desert.mp4",
+              "name": "Skeleton Knight in Another World - 10 - Hope for the Future Found in the Desert",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2010%20-%20Hope%20for%20the%20Future%20Found%20in%20the%20Desert.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 10 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 10 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2010%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
+          "name": "The Monster-Taming Barbarian Laughs in the Darkness",
+          "airdate": "2022-06-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E11.mp4",
@@ -266,21 +508,45 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 90,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 90
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Monster-Taming Barbarian Laughs in the Darkness\" (0.96)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 11 - The Monster-Taming Barbarian Laughs in the Darkness.mp4",
+              "name": "Skeleton Knight in Another World - 11 - The Monster-Taming Barbarian Laughs in the Darkness",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2011%20-%20The%20Monster-Taming%20Barbarian%20Laughs%20in%20the%20Darkness.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 11 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 11 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2011%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 157
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
+          "name": "I Shall Cut Through the World's Evils!",
+          "airdate": "2022-06-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "skeleton-knight-in-another-world-s-01-e-01",
             "itemTitle": "Skeleton Knight In Another World S 01 E 01",
             "file": "Skeleton Knight in Another World - S01E12.mp4",
@@ -289,554 +555,136 @@
             "seconds": 1430,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 98,
-            "ep": {
-              "season": 1,
-              "episode": 12
+            "sizeMB": 98
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"I Shall Cut Through the World's Evils!\" (0.80)",
+              "item": "skeleton-knight-in-another-world-d-2-t-04",
+              "itemTitle": "Skeleton Knight In Another World",
+              "file": "Skeleton Knight in Another World - 12 - I Shall Cut Through the World`s Evils!.mp4",
+              "name": "Skeleton Knight in Another World - 12 - I Shall Cut Through the World`s Evils!",
+              "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2012%20-%20I%20Shall%20Cut%20Through%20the%20World%60s%20Evils!.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"Skeleton Knight In Another World S1\"",
+              "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
+              "itemTitle": "Skeleton Knight In Another World S1",
+              "file": "[AH] Gaikotsu Kishi-sama - 12 (1080p).mkv.mp4",
+              "name": "[AH] Gaikotsu Kishi-sama - 12 (1080p).mkv",
+              "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2012%20(1080p).mkv.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Duel to the Death? Silver Knight VS Silver Knight!",
+          "airdate": "2026-07-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "ah gaikotsu kishi sama 01",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 01 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 01 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2001%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 252,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "The Toxic Fangs of Assassination Target the Elvish Blade",
+          "airdate": "2026-07-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "ah gaikotsu kishi sama 02",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 02 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 02 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2002%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 219,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "The Fall of Villains and the Dance of Sibling Love",
+          "airdate": "2026-07-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "ah gaikotsu kishi sama 03",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 03 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 03 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2003%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 211,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "The Cursed Village Where the Saint's Soul Roams",
+          "airdate": "2026-07-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "ah gaikotsu kishi sama 04",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 04 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 04 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2004%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 156,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "Terror! Shadows of Undeath Lurking Down Below",
+          "airdate": "2026-08-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "ah gaikotsu kishi sama 05",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 05 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 05 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2005%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 181,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "The Nature of This World Floats Upon the Dragon King's Spring",
+          "airdate": "2026-08-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "ah gaikotsu kishi sama 06",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 06 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 06 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2006%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 199,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 7,
+          "name": "The Spirit of Chivalry Blooms at the Shinobi Village!",
+          "airdate": "2026-08-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "ah gaikotsu kishi sama 07",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 07 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 07 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2007%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 226,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 8,
+          "name": "The Sea Hears the Tale of the Tragic Kunoichi's Past",
+          "airdate": "2026-08-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "ah gaikotsu kishi sama 08",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 08 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 08 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2008%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 9,
+          "name": "Reunited to the Sound of a Dark Beast's Howl",
+          "airdate": "2026-08-31",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "ah gaikotsu kishi sama 09",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 09 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 09 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2009%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 178,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 10,
+          "name": "The Cold-Blooded Code! Hunting a Brother With Tears in Her Eyes",
+          "airdate": "2026-09-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "ah gaikotsu kishi sama 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 10 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 10 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2010%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 200,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 11,
+          "name": "Blood Duel! Death Amidst the Collapsing City",
+          "airdate": "2026-09-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "ah gaikotsu kishi sama 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 11 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 11 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2011%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 157,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "ah gaikotsu kishi sama 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "kusathegrass-anime-skeleton-knight-in-another-world-s1",
-            "itemTitle": "Skeleton Knight In Another World S1",
-            "file": "[AH] Gaikotsu Kishi-sama - 12 (1080p).mkv.mp4",
-            "name": "[AH] Gaikotsu Kishi-sama - 12 (1080p).mkv",
-            "url": "https://archive.org/download/kusathegrass-anime-skeleton-knight-in-another-world-s1/%5BAH%5D%20Gaikotsu%20Kishi-sama%20-%2012%20(1080p).mkv.mp4",
-            "seconds": 1430,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "in 01 the wandering sets out to make the a better place",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 01 - The Wandering Knight Sets Out to Make the World a Better Place.mp4",
-            "name": "Skeleton Knight in Another World - 01 - The Wandering Knight Sets Out to Make the World a Better Place",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2001%20-%20The%20Wandering%20Knight%20Sets%20Out%20to%20Make%20the%20World%20a%20Better%20Place.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "in 02 a first job a girl s wish and an approaching shadow",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 02 - A First Job, a Girl`s Wish, and an Approaching Shadow.mp4",
-            "name": "Skeleton Knight in Another World - 02 - A First Job, a Girl`s Wish, and an Approaching Shadow",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2002%20-%20A%20First%20Job%2C%20a%20Girl%60s%20Wish%2C%20and%20an%20Approaching%20Shadow.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 145,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "in 03 an austere elf dances for her comrades",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 03 - An Austere Elf Dances for Her Comrades.mp4",
-            "name": "Skeleton Knight in Another World - 03 - An Austere Elf Dances for Her Comrades",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2003%20-%20An%20Austere%20Elf%20Dances%20for%20Her%20Comrades.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "in 04 infiltrating the slave market in search of the s evil",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 04 - Infiltrating the Slave Market! In Search of the World`s Evil.mp4",
-            "name": "Skeleton Knight in Another World - 04 - Infiltrating the Slave Market! In Search of the World`s Evil",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2004%20-%20Infiltrating%20the%20Slave%20Market!%20In%20Search%20of%20the%20World%60s%20Evil.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "in 05 a secret revealed and a bond forged",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 05 - A Secret Revealed, and a Bond Forged.mp4",
-            "name": "Skeleton Knight in Another World - 05 - A Secret Revealed, and a Bond Forged",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2005%20-%20A%20Secret%20Revealed%2C%20and%20a%20Bond%20Forged.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "in 06 learning about the darkness of this at the elf village",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 06 - Learning About the Darkness of This World at the Elf Village.mp4",
-            "name": "Skeleton Knight in Another World - 06 - Learning About the Darkness of This World at the Elf Village",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2006%20-%20Learning%20About%20the%20Darkness%20of%20This%20World%20at%20the%20Elf%20Village.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 143,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "in 07 a miracle for the high minded princess",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 07 - A Miracle for the High-Minded Princess.mp4",
-            "name": "Skeleton Knight in Another World - 07 - A Miracle for the High-Minded Princess",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2007%20-%20A%20Miracle%20for%20the%20High-Minded%20Princess.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "in 08 allied dashing through the darkness with the beastpeople",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 08 - Allied! Dashing Through the Darkness with the Beastpeople!.mp4",
-            "name": "Skeleton Knight in Another World - 08 - Allied! Dashing Through the Darkness with the Beastpeople!",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2008%20-%20Allied!%20Dashing%20Through%20the%20Darkness%20with%20the%20Beastpeople!.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "in 09 the capital in chaos and a maiden s oath",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 09 - The Capital in Chaos and a Maiden`s Oath.mp4",
-            "name": "Skeleton Knight in Another World - 09 - The Capital in Chaos and a Maiden`s Oath",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2009%20-%20The%20Capital%20in%20Chaos%20and%20a%20Maiden%60s%20Oath.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 145,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "in 10 hope for the future found in the desert",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 10 - Hope for the Future Found in the Desert.mp4",
-            "name": "Skeleton Knight in Another World - 10 - Hope for the Future Found in the Desert",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2010%20-%20Hope%20for%20the%20Future%20Found%20in%20the%20Desert.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "in 11 the monster taming barbarian laughs in the darkness",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 11 - The Monster-Taming Barbarian Laughs in the Darkness.mp4",
-            "name": "Skeleton Knight in Another World - 11 - The Monster-Taming Barbarian Laughs in the Darkness",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2011%20-%20The%20Monster-Taming%20Barbarian%20Laughs%20in%20the%20Darkness.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 144,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "in 12 i shall cut through the s evils",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World - 12 - I Shall Cut Through the World`s Evils!.mp4",
-            "name": "Skeleton Knight in Another World - 12 - I Shall Cut Through the World`s Evils!",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20-%2012%20-%20I%20Shall%20Cut%20Through%20the%20World%60s%20Evils!.mp4",
-            "seconds": 1432,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 145,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "Episode 37",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World D2_t04.mp4",
-            "name": "Skeleton Knight in Another World D2_t04",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20D2_t04.mp4",
-            "seconds": 5738,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 582,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "Episode 38",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-d-2-t-04",
-            "itemTitle": "Skeleton Knight In Another World",
-            "file": "Skeleton Knight in Another World D2_t05.mp4",
-            "name": "Skeleton Knight in Another World D2_t05",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-d-2-t-04/Skeleton%20Knight%20in%20Another%20World%20D2_t05.mp4",
-            "seconds": 317,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 32,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "in final",
-          "state": "REVIEW",
-          "file": {
-            "item": "skeleton-knight-in-another-world-final",
-            "itemTitle": "Skeleton Knight In Another World FINAL",
-            "file": "Skeleton Knight in Another World FINAL.mp4",
-            "name": "Skeleton Knight in Another World FINAL",
-            "url": "https://archive.org/download/skeleton-knight-in-another-world-final/Skeleton%20Knight%20in%20Another%20World%20FINAL.mp4",
-            "seconds": 1425,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 574,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 12,
+          "name": "Divine Punishment! The Skeleton Metes Out Justice That Obliterates Evil!",
+          "airdate": "2026-09-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

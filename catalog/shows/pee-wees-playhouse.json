@@ -3,7 +3,7 @@
   "slug": "pee-wees-playhouse",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-15T01:19:31.682Z",
+  "matchedAt": "2026-10-15T03:18:41.008Z",
   "tvmaze": {
     "id": 727,
     "name": "Pee-Wee's Playhouse",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 45,
     "live": 0,
-    "review": 32,
-    "missing": 13,
-    "pct": 71
+    "review": 36,
+    "missing": 9,
+    "pct": 80
   },
   "seasons": [
     {
@@ -106,16 +106,40 @@
           "number": 5,
           "name": "Just Another Day",
           "airdate": "1986-11-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Just Another Day\" (0.95)",
+            "item": "peewee-playhouse",
+            "itemTitle": "Pee Wee's Playhouse Complete Series - 45 Episodes + Extras",
+            "file": "Pee Wee's Playhouse/Pee-Wee Vol 1 Disc 1 E05 Just Another Day.mp4",
+            "name": "Pee Wee's Playhouse/Pee-Wee Vol 1 Disc 1 E05 Just Another Day",
+            "url": "https://archive.org/download/peewee-playhouse/Pee%20Wee's%20Playhouse%2FPee-Wee%20Vol%201%20Disc%201%20E05%20Just%20Another%20Day.mp4",
+            "seconds": 1465,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 343
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Beauty Makeover",
           "airdate": "1986-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Beauty Makeover\" (0.95)",
+            "item": "peewee-playhouse",
+            "itemTitle": "Pee Wee's Playhouse Complete Series - 45 Episodes + Extras",
+            "file": "Pee Wee's Playhouse/Pee-Wee Vol 1 Disc 1 E06 Beauty Makeover.mp4",
+            "name": "Pee Wee's Playhouse/Pee-Wee Vol 1 Disc 1 E06 Beauty Makeover",
+            "url": "https://archive.org/download/peewee-playhouse/Pee%20Wee's%20Playhouse%2FPee-Wee%20Vol%201%20Disc%201%20E06%20Beauty%20Makeover.mp4",
+            "seconds": 1466,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 342
+          },
           "alternates": []
         },
         {
@@ -464,8 +488,20 @@
           "number": 1,
           "name": "Reba Eats and Pterri Runs",
           "airdate": "1988-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Reba Eats and Pterri Runs\" (0.95)",
+            "item": "peewee-playhouse",
+            "itemTitle": "Pee Wee's Playhouse Complete Series - 45 Episodes + Extras",
+            "file": "Pee Wee's Playhouse/Pee-Wee Vol 2 Disc 6 E24 Reba Eats and Pterri Runs.mp4",
+            "name": "Pee Wee's Playhouse/Pee-Wee Vol 2 Disc 6 E24 Reba Eats and Pterri Runs",
+            "url": "https://archive.org/download/peewee-playhouse/Pee%20Wee's%20Playhouse%2FPee-Wee%20Vol%202%20Disc%206%20E24%20Reba%20Eats%20and%20Pterri%20Runs.mp4",
+            "seconds": 1398,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 342
+          },
           "alternates": []
         },
         {
@@ -782,8 +818,20 @@
           "number": 8,
           "name": "Camping Out",
           "airdate": "1990-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Camping Out\" (0.95)",
+            "item": "peewee-playhouse",
+            "itemTitle": "Pee Wee's Playhouse Complete Series - 45 Episodes + Extras",
+            "file": "Pee Wee's Playhouse/Pee-Wee Vol 2 Disc 10 E43 Camping Out.mp4",
+            "name": "Pee Wee's Playhouse/Pee-Wee Vol 2 Disc 10 E43 Camping Out",
+            "url": "https://archive.org/download/peewee-playhouse/Pee%20Wee's%20Playhouse%2FPee-Wee%20Vol%202%20Disc%2010%20E43%20Camping%20Out.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 348
+          },
           "alternates": []
         },
         {

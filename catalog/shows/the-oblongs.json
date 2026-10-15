@@ -3,7 +3,7 @@
   "slug": "the-oblongs",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:06.287Z",
+  "matchedAt": "2026-10-15T03:17:30.025Z",
   "tvmaze": {
     "id": 6327,
     "name": "The Oblongs",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 13,
-    "live": 11,
-    "review": 1,
+    "live": 12,
+    "review": 0,
     "missing": 1,
     "pct": 92
   },
@@ -548,9 +548,9 @@
           "number": 4,
           "name": "My Name is Robbie",
           "airdate": "2002-10-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "oblongs-higher-quality",
             "itemTitle": "The Oblongs - Complete Series & Extras",
@@ -564,7 +564,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "oblongs",
               "itemTitle": "The Oblongs (2001)",

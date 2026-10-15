@@ -3,19 +3,18 @@
   "slug": "vagabond",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-15T01:19:17.311Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:11.150Z",
   "tvmaze": {
-    "id": null,
+    "id": 38725,
     "name": "Vagabond",
-    "runtime": null,
-    "premiered": null,
-    "network": "KR"
+    "runtime": 70,
+    "premiered": "2019-09-20",
+    "network": "SBS"
   },
   "coverage": {
-    "total": 17,
-    "live": 0,
-    "review": 17,
+    "total": 16,
+    "live": 2,
+    "review": 14,
     "missing": 0,
     "pct": 100
   },
@@ -25,69 +24,106 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the king",
-          "state": "REVIEW",
+          "name": "Episode 1",
+          "airdate": "2019-09-20",
+          "state": "LIVE",
           "file": {
-            "item": "TheVagabondKing1930",
-            "itemTitle": "The Vagabond King (1930)",
-            "file": "1230 - The Vagabond King (1930).mp4",
-            "name": "1230 - The Vagabond King (1930)",
-            "url": "https://archive.org/download/TheVagabondKing1930/1230%20-%20The%20Vagabond%20King%20(1930).mp4",
-            "seconds": 6258,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "mkv-drama.-org-vagabond.-s-01-e-01.-nf.x-264.1080p",
+            "itemTitle": "01 VAGABOND",
+            "file": "[MkvDrama.Org]Vagabond.S01E01.NF.x264.1080p.ia.mp4",
+            "name": "[MkvDrama.Org]Vagabond.S01E01.NF.x264",
+            "url": "https://archive.org/download/mkv-drama.-org-vagabond.-s-01-e-01.-nf.x-264.1080p/%5BMkvDrama.Org%5DVagabond.S01E01.NF.x264.1080p.ia.mp4",
+            "seconds": 3686,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 1496,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2262
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "mkv-drama.-org-vagabond.-s-01-e-01.-nf.x-264.1080p",
+              "itemTitle": "01 VAGABOND",
+              "file": "[MkvDrama.Org]Vagabond.S01E01.NF.x264.1080p.mp4",
+              "name": "[MkvDrama.Org]Vagabond.S01E01.NF.x264.1080p",
+              "url": "https://archive.org/download/mkv-drama.-org-vagabond.-s-01-e-01.-nf.x-264.1080p/%5BMkvDrama.Org%5DVagabond.S01E01.NF.x264.1080p.mp4",
+              "seconds": 3686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2262
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 16 in \"Vagabond\"",
+              "item": "vagabond-14",
+              "itemTitle": "Vagabond",
+              "file": "Vagabond01.mp4",
+              "name": "Vagabond01",
+              "url": "https://archive.org/download/vagabond-14/Vagabond01.mp4",
+              "seconds": 3595,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 364
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "vagabond01",
-          "state": "REVIEW",
+          "name": "Episode 2",
+          "airdate": "2019-09-21",
+          "state": "LIVE",
           "file": {
-            "item": "vagabond-14",
-            "itemTitle": "Vagabond",
-            "file": "Vagabond01.mp4",
-            "name": "Vagabond01",
-            "url": "https://archive.org/download/vagabond-14/Vagabond01.mp4",
-            "seconds": 3595,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "mkv-drama.-org-vagabond.-s-01-e-02.-nf.x-264.1080p",
+            "itemTitle": "02 VAGABOND",
+            "file": "[MkvDrama.Org]Vagabond.S01E02.NF.x264.1080p.ia.mp4",
+            "name": "[MkvDrama.Org]Vagabond.S01E02.NF.x264",
+            "url": "https://archive.org/download/mkv-drama.-org-vagabond.-s-01-e-02.-nf.x-264.1080p/%5BMkvDrama.Org%5DVagabond.S01E02.NF.x264.1080p.ia.mp4",
+            "seconds": 3689,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 364,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2265
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "mkv-drama.-org-vagabond.-s-01-e-02.-nf.x-264.1080p",
+              "itemTitle": "02 VAGABOND",
+              "file": "[MkvDrama.Org]Vagabond.S01E02.NF.x264.1080p.mp4",
+              "name": "[MkvDrama.Org]Vagabond.S01E02.NF.x264.1080p",
+              "url": "https://archive.org/download/mkv-drama.-org-vagabond.-s-01-e-02.-nf.x-264.1080p/%5BMkvDrama.Org%5DVagabond.S01E02.NF.x264.1080p.mp4",
+              "seconds": 3689,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2265
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 16 in \"Vagabond\"",
+              "item": "vagabond-14",
+              "itemTitle": "Vagabond",
+              "file": "Vagabond02.mp4",
+              "name": "Vagabond02",
+              "url": "https://archive.org/download/vagabond-14/Vagabond02.mp4",
+              "seconds": 3669,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 371
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "vagabond02",
+          "name": "Episode 3",
+          "airdate": "2019-09-27",
           "state": "REVIEW",
           "file": {
-            "item": "vagabond-14",
-            "itemTitle": "Vagabond",
-            "file": "Vagabond02.mp4",
-            "name": "Vagabond02",
-            "url": "https://archive.org/download/vagabond-14/Vagabond02.mp4",
-            "seconds": 3669,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 371,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "vagabond03",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond03.mp4",
@@ -96,18 +132,18 @@
             "seconds": 3776,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 381,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 381
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "vagabond04",
+          "number": 4,
+          "name": "Episode 4",
+          "airdate": "2019-09-28",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond04.mp4",
@@ -116,18 +152,18 @@
             "seconds": 3612,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 361,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 361
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "vagabond05",
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "2019-10-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond05.mp4",
@@ -136,18 +172,18 @@
             "seconds": 3780,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 381,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 381
           },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "vagabond06",
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "2019-10-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond06.mp4",
@@ -156,18 +192,18 @@
             "seconds": 3607,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 365,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 365
           },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "vagabond07",
+          "number": 7,
+          "name": "Episode 7",
+          "airdate": "2019-10-11",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond07.mp4",
@@ -176,18 +212,18 @@
             "seconds": 3753,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 379,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 379
           },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "vagabond08",
+          "number": 8,
+          "name": "Episode 8",
+          "airdate": "2019-10-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond08.mp4",
@@ -196,18 +232,18 @@
             "seconds": 3680,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 369,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 369
           },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "vagabond09",
+          "number": 9,
+          "name": "Episode 9",
+          "airdate": "2019-10-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond09.mp4",
@@ -216,18 +252,18 @@
             "seconds": 3766,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 375,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 375
           },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "vagabond10",
+          "number": 10,
+          "name": "Episode 10",
+          "airdate": "2019-10-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond10.mp4",
@@ -236,18 +272,18 @@
             "seconds": 3698,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 368,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 368
           },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "vagabond11",
+          "number": 11,
+          "name": "Episode 11",
+          "airdate": "2019-10-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond11.mp4",
@@ -256,18 +292,18 @@
             "seconds": 3634,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 361,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 361
           },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "vagabond12",
+          "number": 12,
+          "name": "Episode 12",
+          "airdate": "2019-10-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond12.mp4",
@@ -276,18 +312,18 @@
             "seconds": 3620,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 358,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 358
           },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "vagabond13",
+          "number": 13,
+          "name": "Episode 13",
+          "airdate": "2019-11-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond13.mp4",
@@ -296,18 +332,18 @@
             "seconds": 4030,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 399,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 399
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "vagabond14",
+          "number": 14,
+          "name": "Episode 14",
+          "airdate": "2019-11-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond14.mp4",
@@ -316,18 +352,18 @@
             "seconds": 3740,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 371,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 371
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "vagabond15",
+          "number": 15,
+          "name": "Episode 15",
+          "airdate": "2019-11-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond15.mp4",
@@ -336,18 +372,18 @@
             "seconds": 3898,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 388,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 388
           },
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "vagabond16",
+          "number": 16,
+          "name": "Episode 16",
+          "airdate": "2019-11-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 16 in \"Vagabond\"",
             "item": "vagabond-14",
             "itemTitle": "Vagabond",
             "file": "Vagabond16.mp4",
@@ -356,10 +392,7 @@
             "seconds": 3772,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 379,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 379
           },
           "alternates": []
         }

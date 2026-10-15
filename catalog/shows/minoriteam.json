@@ -3,7 +3,7 @@
   "slug": "minoriteam",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-15T01:19:06.565Z",
+  "matchedAt": "2026-10-15T03:17:30.384Z",
   "tvmaze": {
     "id": 33020,
     "name": "Minoriteam",
@@ -13,8 +13,8 @@
   },
   "coverage": {
     "total": 20,
-    "live": 19,
-    "review": 1,
+    "live": 20,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -26,9 +26,9 @@
           "number": 1,
           "name": "Operation Blackout",
           "airdate": "2005-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Minoriteam",
             "itemTitle": "Minoriteam Season 1",
@@ -42,7 +42,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "minoriteam-s-01e-01-operation-blackout-rtv",
               "itemTitle": "Minoriteam - Operation Blackout (2005 Pilot)",
@@ -55,18 +55,30 @@
               "sizeMB": 67
             },
             {
-              "conf": 0.6,
-              "why": "absolute episode number",
-              "item": "minoriteam_complete_series",
-              "itemTitle": "Minoriteam (2005) [Complete Series + Extras]",
-              "file": "Minoriteam.Ep01.Illegal.Aliens.WEB-DL.AAC2.0.H264-Atomsk.mkv",
-              "name": "Minoriteam.Ep01.Illegal.Aliens.WEB-DL.AAC2.0.H264-Atomsk",
-              "url": "https://archive.org/download/minoriteam_complete_series/Minoriteam.Ep01.Illegal.Aliens.WEB-DL.AAC2.0.H264-Atomsk.mkv",
-              "seconds": 692,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 144
+              "conf": 0.8,
+              "why": "title ~ \"Operation Blackout\" (0.95)",
+              "item": "minoriteam.s01e00.operation.blackout.4K.UPGRAYEDD",
+              "itemTitle": "minoriteam.s01e00.operation.blackout.4K.UPGRAYEDD",
+              "file": "Minoriteam.S01e00.Operation.Blackout.4K.Upgrayedd.mp4",
+              "name": "Minoriteam.S01e00.Operation.Blackout.4K.Upgrayedd",
+              "url": "https://archive.org/download/minoriteam.s01e00.operation.blackout.4K.UPGRAYEDD/Minoriteam.S01e00.Operation.Blackout.4K.Upgrayedd.mp4",
+              "seconds": 701,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2808
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Operation Blackout\" (0.95)",
+              "item": "minoriteam.s01e00.operation.blackout.4K.UPGRAYEDD",
+              "itemTitle": "minoriteam.s01e00.operation.blackout.4K.UPGRAYEDD",
+              "file": "Minoriteam.S01e00.Operation.Blackout.4K.Upgrayedd.ia.mp4",
+              "name": "Minoriteam.S01e00.Operation.Blackout.4K",
+              "url": "https://archive.org/download/minoriteam.s01e00.operation.blackout.4K.UPGRAYEDD/Minoriteam.S01e00.Operation.Blackout.4K.Upgrayedd.ia.mp4",
+              "seconds": 701,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 68
             }
           ]
         },
@@ -76,19 +88,32 @@
           "airdate": "2006-03-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "minoriteam-s-01-e-12-the-internet",
-            "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
-            "file": "Minoriteam - S01 E02 - El Dia Gigante.MP4",
-            "name": "Minoriteam - S01 E02 - El Dia Gigante",
-            "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/Minoriteam%20-%20S01%20E02%20-%20El%20Dia%20Gigante.MP4",
-            "seconds": 665,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "Minoriteam",
+            "itemTitle": "Minoriteam Season 1",
+            "file": "Minoriteam - S01E02 - Tribe and Prejudice.mp4",
+            "name": "Minoriteam - S01E02 - Tribe and Prejudice",
+            "url": "https://archive.org/download/Minoriteam/Minoriteam%20-%20S01E02%20-%20Tribe%20and%20Prejudice.mp4",
+            "seconds": 682,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 83
+            "sizeMB": 66
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "minoriteam-s-01-e-12-the-internet",
+              "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
+              "file": "Minoriteam - S01 E02 - El Dia Gigante.MP4",
+              "name": "Minoriteam - S01 E02 - El Dia Gigante",
+              "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/Minoriteam%20-%20S01%20E02%20-%20El%20Dia%20Gigante.MP4",
+              "seconds": 665,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 83
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -103,31 +128,17 @@
               "sizeMB": 83
             },
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "Minoriteam",
-              "itemTitle": "Minoriteam Season 1",
-              "file": "Minoriteam - S01E02 - Tribe and Prejudice.mp4",
-              "name": "Minoriteam - S01E02 - Tribe and Prejudice",
-              "url": "https://archive.org/download/Minoriteam/Minoriteam%20-%20S01E02%20-%20Tribe%20and%20Prejudice.mp4",
-              "seconds": 682,
-              "format": "h.264",
+              "conf": 0.8,
+              "why": "title ~ \"Tribe and Prejudice\" (0.95)",
+              "item": "minoriteam.s01e01.tribe..prejudice.4k.upgrayedd",
+              "itemTitle": "minoriteam.s01e01.Tribe.&.Prejudice.4K.UPGRAYEDD",
+              "file": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd.mp4",
+              "name": "Minoriteam.S01e01.Tribe.&.Prejudice.4K.Upgrayedd",
+              "url": "https://archive.org/download/minoriteam.s01e01.tribe..prejudice.4k.upgrayedd/Minoriteam.S01e01.Tribe.%26.Prejudice.4K.Upgrayedd.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 66
-            },
-            {
-              "conf": 0.6,
-              "why": "absolute episode number",
-              "item": "minoriteam_complete_series",
-              "itemTitle": "Minoriteam (2005) [Complete Series + Extras]",
-              "file": "Minoriteam.Ep02.Tax.Day.WEB-DL.AAC2.0.H264-Atomsk.mkv",
-              "name": "Minoriteam.Ep02.Tax.Day.WEB-DL.AAC2.0.H264-Atomsk",
-              "url": "https://archive.org/download/minoriteam_complete_series/Minoriteam.Ep02.Tax.Day.WEB-DL.AAC2.0.H264-Atomsk.mkv",
-              "seconds": 670,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 138
+              "sizeMB": 2750
             }
           ]
         },
@@ -437,19 +448,32 @@
           "airdate": "2006-04-30",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "minoriteam-s-01-e-12-the-internet",
-            "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
-            "file": "Minoriteam - S01 E08 - Women's Sufferage.mp4",
-            "name": "Minoriteam - S01 E08 - Women's Sufferage",
-            "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/Minoriteam%20-%20S01%20E08%20-%20Women's%20Sufferage.mp4",
-            "seconds": 684,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "Minoriteam",
+            "itemTitle": "Minoriteam Season 1",
+            "file": "Minoriteam - S01E08 - And Justice For Some.mp4",
+            "name": "Minoriteam - S01E08 - And Justice For Some",
+            "url": "https://archive.org/download/Minoriteam/Minoriteam%20-%20S01E08%20-%20And%20Justice%20For%20Some.mp4",
+            "seconds": 683,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 65
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "minoriteam-s-01-e-12-the-internet",
+              "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
+              "file": "Minoriteam - S01 E08 - Women's Sufferage.mp4",
+              "name": "Minoriteam - S01 E08 - Women's Sufferage",
+              "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/Minoriteam%20-%20S01%20E08%20-%20Women's%20Sufferage.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 67
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -464,31 +488,17 @@
               "sizeMB": 67
             },
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "Minoriteam",
-              "itemTitle": "Minoriteam Season 1",
-              "file": "Minoriteam - S01E08 - And Justice For Some.mp4",
-              "name": "Minoriteam - S01E08 - And Justice For Some",
-              "url": "https://archive.org/download/Minoriteam/Minoriteam%20-%20S01E08%20-%20And%20Justice%20For%20Some.mp4",
-              "seconds": 683,
-              "format": "h.264",
+              "conf": 0.8,
+              "why": "title ~ \"And Justice For Some\" (1.00)",
+              "item": "minoriteam-s-01-e-12-the-internet",
+              "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
+              "file": "Minoriteam - S01 E07 - And Justice For Some.mp4",
+              "name": "Minoriteam - S01 E07 - And Justice For Some",
+              "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/Minoriteam%20-%20S01%20E07%20-%20And%20Justice%20For%20Some.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 65
-            },
-            {
-              "conf": 0.6,
-              "why": "absolute episode number",
-              "item": "minoriteam_complete_series",
-              "itemTitle": "Minoriteam (2005) [Complete Series + Extras]",
-              "file": "Minoriteam.Ep08.The.Internet.2.0.WEB-DL.AAC2.0.H264-Atomsk.mkv",
-              "name": "Minoriteam.Ep08.The.Internet.2.0.WEB-DL.AAC2.0.H264-Atomsk",
-              "url": "https://archive.org/download/minoriteam_complete_series/Minoriteam.Ep08.The.Internet.2.0.WEB-DL.AAC2.0.H264-Atomsk.mkv",
-              "seconds": 706,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 149
+              "sizeMB": 60
             }
           ]
         },

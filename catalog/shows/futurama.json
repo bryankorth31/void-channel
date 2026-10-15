@@ -3,7 +3,7 @@
   "slug": "futurama",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-15T01:19:02.505Z",
+  "matchedAt": "2026-10-15T03:17:25.492Z",
   "tvmaze": {
     "id": 538,
     "name": "Futurama",
@@ -14,9 +14,9 @@
   "coverage": {
     "total": 164,
     "live": 3,
-    "review": 1,
-    "missing": 160,
-    "pct": 2
+    "review": 2,
+    "missing": 159,
+    "pct": 3
   },
   "seasons": [
     {
@@ -459,8 +459,21 @@
           "number": 1,
           "name": "Roswell That Ends Well",
           "airdate": "2001-12-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Roswell That Ends Well\" (0.95)",
+            "item": "futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502",
+            "itemTitle": "Futurama episodes and all movies",
+            "file": "Futurama S03E19 Roswell That Ends Well  [1080p x265 10bit Joy].mp4",
+            "name": "Futurama S03E19 Roswell That Ends Well  [1080p x265 10bit Joy]",
+            "url": "https://archive.org/download/futurama.-benders.-big.-score.-2007.720p.-web-dl.x-265-heteam_202502/Futurama%20S03E19%20Roswell%20That%20Ends%20Well%20%20%5B1080p%20x265%2010bit%20Joy%5D.mp4",
+            "seconds": 1492,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 134
+          },
           "alternates": []
         },
         {

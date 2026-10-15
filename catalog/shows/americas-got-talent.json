@@ -3,21 +3,20 @@
   "slug": "americas-got-talent",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-15T01:19:17.378Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:12.529Z",
   "tvmaze": {
-    "id": null,
+    "id": 289,
     "name": "America's Got Talent",
-    "runtime": null,
-    "premiered": null,
-    "network": "US"
+    "runtime": 120,
+    "premiered": "2006-06-21",
+    "network": "NBC"
   },
   "coverage": {
-    "total": 80,
-    "live": 0,
-    "review": 80,
-    "missing": 0,
-    "pct": 100
+    "total": 501,
+    "live": 41,
+    "review": 0,
+    "missing": 460,
+    "pct": 8
   },
   "seasons": [
     {
@@ -25,45 +24,2220 @@
       "episodes": [
         {
           "number": 1,
-          "name": "nbc woc incomplete 08 17",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas-got-talent-nbc-woc-incomplete-2006-08-17",
-            "itemTitle": " americas got talent nbc woc incomplete 2006 08 17",
-            "file": "americas-got-talent-nbc-woc-incomplete-2006-08-17.mp4",
-            "name": "americas-got-talent-nbc-woc-incomplete-2006-08-17",
-            "url": "https://archive.org/download/americas-got-talent-nbc-woc-incomplete-2006-08-17/americas-got-talent-nbc-woc-incomplete-2006-08-17.mp4",
-            "seconds": 3420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 356,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Auditions 1",
+          "airdate": "2006-06-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "a holiday of champions web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e00.a.holiday.of.champions.720p.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s13e00.a.holiday.of.champions.720p.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e00.a.holiday.of.champions.720p.web.x264-tbs.mp4",
-            "seconds": 2474,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 241,
-            "ep": {
-              "season": 13,
-              "episode": 0
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Auditions 2",
+          "airdate": "2006-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2006-06-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2006-07-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Semi-Final 1",
+          "airdate": "2006-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Semi-Final 1 - Results",
+          "airdate": "2006-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Semi-Final 2",
+          "airdate": "2006-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Semi-Final 2 - Results",
+          "airdate": "2006-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Semi-Final 3",
+          "airdate": "2006-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Semi-Final 3 - Results",
+          "airdate": "2006-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Semi-Final 4",
+          "airdate": "2006-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Semi-Final 4 - Results",
+          "airdate": "2006-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Wildcard Show",
+          "airdate": "2006-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Wildcard Show - Results",
+          "airdate": "2006-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Final",
+          "airdate": "2006-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Winner Announced",
+          "airdate": "2006-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Dallas Audition",
+          "airdate": "2007-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Los Angeles Audition",
+          "airdate": "2007-06-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Chicago Audition",
+          "airdate": "2007-06-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "New York Audition",
+          "airdate": "2007-06-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Las Vegas Callbacks, Part 1",
+          "airdate": "2007-07-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Las Vegas Callbacks, Part 2",
+          "airdate": "2007-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Performance Episode #1",
+          "airdate": "2007-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Performance Episode #2",
+          "airdate": "2007-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Performance Episode #3",
+          "airdate": "2007-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Performance Episode #4",
+          "airdate": "2007-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Final Performances",
+          "airdate": "2007-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Season Finale",
+          "airdate": "2007-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1, New York & Los Angeles",
+          "airdate": "2008-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2, Los Angeles & New York",
+          "airdate": "2008-06-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3, Dallas, Chicago & Atlanta",
+          "airdate": "2008-07-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4, Atlanta",
+          "airdate": "2008-07-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5, Atlanta",
+          "airdate": "2008-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 6, New York & Los Angeles",
+          "airdate": "2008-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 7, MySpace",
+          "airdate": "2008-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Vegas Week 1",
+          "airdate": "2008-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Vegas Week 2",
+          "airdate": "2008-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Live Show 1, Top 40",
+          "airdate": "2008-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Live Show 2, Top 40 & Live Show 1 Results",
+          "airdate": "2008-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Live Show 3, Top 40 & Live Show 2 Results",
+          "airdate": "2008-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Live Show 4, Top 40 & Live Show 3 Result",
+          "airdate": "2008-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Live Show 5, Top 20 & Live Show 4 Results",
+          "airdate": "2008-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Live Show 6, Top 20",
+          "airdate": "2008-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Live Show 5 & 6 Results",
+          "airdate": "2008-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Live Show 7, Top 10",
+          "airdate": "2008-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Live Show 7 Results",
+          "airdate": "2008-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Finals, Top 5",
+          "airdate": "2008-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Finale & The Finals Results",
+          "airdate": "2008-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Audition Show #1 New York, Chicago, Seattle",
+          "airdate": "2009-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Audition Show #2 Seattle(2), Miami",
+          "airdate": "2009-06-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Audition Show #3 New York(2), Chicago(2)",
+          "airdate": "2009-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Audition Show #4 Houston, Miami(2)",
+          "airdate": "2009-07-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Audition Show #5 Los Angeles",
+          "airdate": "2009-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Audition Show #6 Houston(2)",
+          "airdate": "2009-07-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Audition Show #7 New York(3)",
+          "airdate": "2009-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Audition Show #8 Seattle(3)",
+          "airdate": "2009-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "MySpace.com audition show",
+          "airdate": "2009-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Final audition show",
+          "airdate": "2009-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Vegas Verdicts (1)",
+          "airdate": "2009-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Vegas Verdicts (2)",
+          "airdate": "2009-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals, Group 1",
+          "airdate": "2009-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals, Group 1 Results",
+          "airdate": "2009-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals, Group 2",
+          "airdate": "2009-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals, Group 2 Results",
+          "airdate": "2009-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals, Group 3",
+          "airdate": "2009-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Quarterfinals, Group 3 Results",
+          "airdate": "2009-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quarterfinals, Group 4",
+          "airdate": "2009-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Quarterfinals, Group 4 Results",
+          "airdate": "2009-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semifinals, Group 1",
+          "airdate": "2009-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Semifinals, Group 1 Results",
+          "airdate": "2009-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Semifinals, Group 2",
+          "airdate": "2009-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Semifinals, Group 2 Results",
+          "airdate": "2009-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Final Performances",
+          "airdate": "2009-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Finale",
+          "airdate": "2009-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Los Angeles auditions",
+          "airdate": "2010-06-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Dallas auditions",
+          "airdate": "2010-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "New York Auditions Day 1",
+          "airdate": "2010-06-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "New York Auditions Day 2",
+          "airdate": "2010-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Orlando Auditions Day 1",
+          "airdate": "2010-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Orlando Auditions Day 2",
+          "airdate": "2010-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Portland Auditions Day 1",
+          "airdate": "2010-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Portland Auditions Day 2",
+          "airdate": "2010-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Chicago auditions",
+          "airdate": "2010-06-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Final Auditions",
+          "airdate": "2010-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Las Vegas Week - Day 1",
+          "airdate": "2010-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Las Vegas Week - Day 2",
+          "airdate": "2010-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals, Group 1",
+          "airdate": "2010-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals, Group 1 Results",
+          "airdate": "2010-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals, Group 2",
+          "airdate": "2010-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals, Group 2 Results",
+          "airdate": "2010-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals, Group 3",
+          "airdate": "2010-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Quarterfinals, Group 3 Results",
+          "airdate": "2010-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quarterfinals, Group 4",
+          "airdate": "2010-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Quarterfinals, Group 4 Results",
+          "airdate": "2010-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Group 5: YouTube",
+          "airdate": "2010-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Group 5: YouTube Results",
+          "airdate": "2010-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Wild Card Show",
+          "airdate": "2010-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Wild Card Show - Results",
+          "airdate": "2010-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Semi-Final #1",
+          "airdate": "2010-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Semi-Final #1 - Results",
+          "airdate": "2010-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Semi-Final #2",
+          "airdate": "2010-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Semi-Final #2 - Results",
+          "airdate": "2010-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Top Ten - Performances",
+          "airdate": "2010-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Top Ten - Results",
+          "airdate": "2010-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Finals, Performances",
+          "airdate": "2010-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "The Winner Is...",
+          "airdate": "2010-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Los Angeles Auditions & Atlanta Auditions",
+          "airdate": "2011-05-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Seattle Auditions",
+          "airdate": "2011-06-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Houston auditions",
+          "airdate": "2011-06-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Minneapolis auditions",
+          "airdate": "2011-06-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Seattle auditions, Part 2",
+          "airdate": "2011-06-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Atlanta Auditions (Part 2)",
+          "airdate": "2011-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "New York Auditions",
+          "airdate": "2011-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "New York auditions, Part 2",
+          "airdate": "2011-06-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Auditions Episode 9",
+          "airdate": "2011-06-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Final auditions",
+          "airdate": "2011-07-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Las Vegas Week (Part 1)",
+          "airdate": "2011-07-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Las Vegas Week (Part 2)",
+          "airdate": "2011-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals, Group 1",
+          "airdate": "2011-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals, Group 1 Results",
+          "airdate": "2011-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals, Group 2",
+          "airdate": "2011-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals, Group 2 Results",
+          "airdate": "2011-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals, Group 3",
+          "airdate": "2011-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Quarterfinals, Group 3 Results",
+          "airdate": "2011-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quarterfinals, Group 4",
+          "airdate": "2011-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Quarterfinals, Group 4 Results",
+          "airdate": "2011-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Week 11, Night 1 - YouTube Special",
+          "airdate": "2011-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Week 11, Night 2 - YouTube Special (Results)",
+          "airdate": "2011-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Wildcard Show",
+          "airdate": "2011-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Wildcard Show (Results)",
+          "airdate": "2011-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Semi-Finals Part 1 Performances",
+          "airdate": "2011-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Semi-Finals Part 1 Results",
+          "airdate": "2011-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Semi-Finals Part 2 Performances",
+          "airdate": "2011-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Semi-Finals Part 2 Results",
+          "airdate": "2011-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Top 10 Perform",
+          "airdate": "2011-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Top 10 Results",
+          "airdate": "2011-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "The Finals - Top 4 Perform",
+          "airdate": "2011-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Finale",
+          "airdate": "2011-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Los Angeles and St. Louis Auditions",
+          "airdate": "2012-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "San Francisco Auditions",
+          "airdate": "2012-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "New York Auditions (Part 1)",
+          "airdate": "2012-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "New York Auditions (Part 2)",
+          "airdate": "2012-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Tampa Bay Auditions (Part 1)",
+          "airdate": "2012-05-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "St. Louis Auditions (Part 2)",
+          "airdate": "2012-05-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Austin Auditions (Part 1)",
+          "airdate": "2012-06-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Austin Auditions (Part 2)",
+          "airdate": "2012-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Tampa Bay Auditions (Part 2)",
+          "airdate": "2012-06-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Final Auditions",
+          "airdate": "2012-06-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Hopefuls perform for the judges in Las Vegas (1)",
+          "airdate": "2012-06-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Hopefuls perform for the judges in Las Vegas (2)",
+          "airdate": "2012-06-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Hopefuls perform for the judges in Las Vegas (3)",
+          "airdate": "2012-06-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals, Group 1",
+          "airdate": "2012-07-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals, Group 1 Results",
+          "airdate": "2012-07-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals, Group 2",
+          "airdate": "2012-07-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals, Group 2 Results",
+          "airdate": "2012-07-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Quarterfinals, Group 3",
+          "airdate": "2012-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quarterfinals, Group 3 Results",
+          "airdate": "2012-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Quarterfinals, Group 4",
+          "airdate": "2012-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Quarterfinals, Group 4 Results",
+          "airdate": "2012-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "YouTube Snapple Special",
+          "airdate": "2012-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "YouTube Snapple Special (results)",
+          "airdate": "2012-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Wildcard Show",
+          "airdate": "2012-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Wildcard Show (Results)",
+          "airdate": "2012-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Semifinals, Round 1 (performances)",
+          "airdate": "2012-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Semifinals, Round 1 (results)",
+          "airdate": "2012-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Semifinals, Round 2 (performances)",
+          "airdate": "2012-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Semifinals, Round 2 (results)",
+          "airdate": "2012-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Finals (performances)",
+          "airdate": "2012-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "Finale",
+          "airdate": "2012-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "Winner Announced",
+          "airdate": "2012-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Season 8 Premiere",
+          "airdate": "2013-06-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Week 2: San Antonio and New Orleans",
+          "airdate": "2013-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Week 3: Chicago",
+          "airdate": "2013-06-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Week 4: New York and Los Angeles",
+          "airdate": "2013-06-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Week 5: Chicago and San Antonio",
+          "airdate": "2013-07-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Week 6: Los Angeles, New Orleans and New York City",
+          "airdate": "2013-07-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Week 6, Night 2",
+          "airdate": "2013-07-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Vegas Week, Night 1",
+          "airdate": "2013-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Vegas Week, Night 2",
+          "airdate": "2013-07-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Live from Radio City, Week 1 Performances",
+          "airdate": "2013-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Live from Radio City, Week 1 Results",
+          "airdate": "2013-07-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Live from Radio City, Week 2 Performances",
+          "airdate": "2013-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Live from Radio City, Week 2 Results",
+          "airdate": "2013-07-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Live from Radio City, Week 3 Performances",
+          "airdate": "2013-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Live from Radio City, Week 3 Results",
+          "airdate": "2013-08-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Live from Radio City, Week 4 Performances",
+          "airdate": "2013-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Live from Radio City, Week 4 Results",
+          "airdate": "2013-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Live from Radio City, Week 5 Performances",
+          "airdate": "2013-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Live from Radio City, Week 5 Results",
+          "airdate": "2013-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Semifinals, Week 1 Performances",
+          "airdate": "2013-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semifinals, Week 1 Results",
+          "airdate": "2013-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Semifinals, Week 2 Performances",
+          "airdate": "2013-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Semifinals, Week 2 Results",
+          "airdate": "2013-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Finals, Week 1 - The Top 12 Performances",
+          "airdate": "2013-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Finals, Week 1 Results",
+          "airdate": "2013-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Finals, Week 2 - The Top 6 Performances",
+          "airdate": "2013-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "The Season 8 Finale",
+          "airdate": "2013-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 9,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Season 9 Premiere",
+          "airdate": "2014-05-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions Week 2",
+          "airdate": "2014-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions Week 3",
+          "airdate": "2014-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions Week 4",
+          "airdate": "2014-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions Week 5",
+          "airdate": "2014-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions Week 6",
+          "airdate": "2014-07-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Best of Season 9 Auditions",
+          "airdate": "2014-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Judgment Week: Night 1",
+          "airdate": "2014-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Judgment Week: Night 2",
+          "airdate": "2014-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Quarterfinals, Week #1 (Performances)",
+          "airdate": "2014-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Quarterfinals, Week #1 (Results)",
+          "airdate": "2014-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Quarterfinals, Week #2 (Performances)",
+          "airdate": "2014-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals, Week #2 (Results)",
+          "airdate": "2014-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals, Week #3 (Performances)",
+          "airdate": "2014-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals, Week #3 (Results)",
+          "airdate": "2014-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals, Week #4 (Performances)",
+          "airdate": "2014-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals, Week #4 (Results)",
+          "airdate": "2014-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Semifinals: Week 1 Performances",
+          "airdate": "2014-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Semifinals, Week #1 (Results)",
+          "airdate": "2014-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Semifinals: Week 2 Performances",
+          "airdate": "2014-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semifinals, Week #2 (Results)",
+          "airdate": "2014-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Top 12 (Performances)",
+          "airdate": "2014-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Top 12 (Results)",
+          "airdate": "2014-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Finale: Performances",
+          "airdate": "2014-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Finale: Results",
+          "airdate": "2014-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 10,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Season 10 Premiere",
+          "airdate": "2015-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions Week 2",
+          "airdate": "2015-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions Week 3",
+          "airdate": "2015-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Extreme Auditions",
+          "airdate": "2015-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions Week 5",
+          "airdate": "2015-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions Week 6",
+          "airdate": "2015-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions Week 7",
+          "airdate": "2015-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Judge Cuts Week 1",
+          "airdate": "2015-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Judge Cuts Week 2",
+          "airdate": "2015-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Best of Auditions",
+          "airdate": "2015-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Judge Cuts Week 3",
+          "airdate": "2015-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "10 Year Anniversary Special",
+          "airdate": "2015-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Judge Cuts Week 4",
+          "airdate": "2015-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "World's Got Talent",
+          "airdate": "2015-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Live Performances 1",
+          "airdate": "2015-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Live Results (1)",
+          "airdate": "2015-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Live Performances 2",
+          "airdate": "2015-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Live Results (2)",
+          "airdate": "2015-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Live Performances 3",
+          "airdate": "2015-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Live Results (3)",
+          "airdate": "2015-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semi-Final Performances 1",
+          "airdate": "2015-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Semi-Final Results (1)",
+          "airdate": "2015-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Semi-Final Performances 2",
+          "airdate": "2015-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Semi-Final Results (2)",
+          "airdate": "2015-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Finale Performances",
+          "airdate": "2015-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Finale Results",
+          "airdate": "2015-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 11,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions Week 1",
+          "airdate": "2016-05-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions Week 2",
+          "airdate": "2016-06-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions Week 3",
+          "airdate": "2016-06-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions Week 4",
+          "airdate": "2016-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions Week 5",
+          "airdate": "2016-06-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions Week 6",
+          "airdate": "2016-07-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Best of Auditions",
+          "airdate": "2016-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Judge Cuts, Night 1",
+          "airdate": "2016-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Judge Cuts, Night 2",
+          "airdate": "2016-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Judge Cuts, Night 3",
+          "airdate": "2016-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Judge Cuts, Night 4",
+          "airdate": "2016-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Live Performances 1",
+          "airdate": "2016-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Live Results 1",
+          "airdate": "2016-07-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Live Performances 2",
+          "airdate": "2016-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Live Results 2",
+          "airdate": "2016-08-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Live Performances 3",
+          "airdate": "2016-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Live Results 3",
+          "airdate": "2016-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Live Semi Finals 1",
+          "airdate": "2016-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Semifinals Results 1",
+          "airdate": "2016-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Semifinals 2",
+          "airdate": "2016-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semifinals Results 2",
+          "airdate": "2016-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Live Finale Performances",
+          "airdate": "2016-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Live Finale Results",
+          "airdate": "2016-09-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -73,9 +2247,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions, Week 1",
+          "airdate": "2017-05-30",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E01.720p.WEB.x264-TBS[eztv].mp4",
@@ -84,21 +2261,18 @@
             "seconds": 5136,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 487,
-            "ep": {
-              "season": 12,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 487
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions, Week 2",
+          "airdate": "2017-06-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E02.WEB.x264-TBS[eztv].mp4",
@@ -107,21 +2281,18 @@
             "seconds": 5136,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 486,
-            "ep": {
-              "season": 12,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 486
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions, Week 3",
+          "airdate": "2017-06-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E03.WEB.x264-TBS[eztv].mp4",
@@ -130,21 +2301,18 @@
             "seconds": 5136,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 485,
-            "ep": {
-              "season": 12,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 485
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions, Week 4",
+          "airdate": "2017-06-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E04.WEB.x264-TBS[eztv].mp4",
@@ -153,21 +2321,18 @@
             "seconds": 5125,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 485,
-            "ep": {
-              "season": 12,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 485
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions, Week 5",
+          "airdate": "2017-06-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E05.WEB.x264-TBS[eztv].mp4",
@@ -176,21 +2341,18 @@
             "seconds": 5126,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 485,
-            "ep": {
-              "season": 12,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 485
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions, Week 6",
+          "airdate": "2017-07-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E06.720p.WEB.x264-TBS[eztv].mp4",
@@ -199,44 +2361,26 @@
             "seconds": 5126,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 483,
-            "ep": {
-              "season": 12,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 483
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
-            "itemTitle": "Americas got Talent S12",
-            "file": "Americas.Got.Talent.S12E07.720p.WEB.x264-TBS[eztv].mp4",
-            "name": "Americas.Got.Talent.S12E07.720p.WEB.x264-TBS[eztv]",
-            "url": "https://archive.org/download/americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv/Americas.Got.Talent.S12E07.720p.WEB.x264-TBS%5Beztv%5D.mp4",
-            "seconds": 2566,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 240,
-            "ep": {
-              "season": 12,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Best of Auditions",
+          "airdate": "2017-07-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Judge Cuts, Night 1",
+          "airdate": "2017-07-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E08.WEB.x264-TBS[eztv].mp4",
@@ -245,21 +2389,18 @@
             "seconds": 5125,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 485,
-            "ep": {
-              "season": 12,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 485
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Judge Cuts, Night 2",
+          "airdate": "2017-07-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E09.WEB.x264-TBS[eztv].mp4",
@@ -268,21 +2409,18 @@
             "seconds": 5126,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 487,
-            "ep": {
-              "season": 12,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 487
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Judge Cuts, Night 3",
+          "airdate": "2017-08-01",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E10.WEB.x264-TBS[eztv].mp4",
@@ -291,21 +2429,18 @@
             "seconds": 5126,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 486,
-            "ep": {
-              "season": 12,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 486
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Judge Cuts, Night 4",
+          "airdate": "2017-08-08",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E11.WEB.x264-TBS[eztv].mp4",
@@ -314,21 +2449,18 @@
             "seconds": 5126,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 486,
-            "ep": {
-              "season": 12,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 486
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Road to Finals",
+          "airdate": "2017-08-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E12.WEB.x264-TBS[eztv].mp4",
@@ -337,21 +2469,18 @@
             "seconds": 5126,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 485,
-            "ep": {
-              "season": 12,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 485
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Live Show 1",
+          "airdate": "2017-08-15",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E13.WEB.x264-TBS[eztv].mp4",
@@ -360,44 +2489,26 @@
             "seconds": 5114,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 488,
-            "ep": {
-              "season": 12,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 488
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
-            "itemTitle": "Americas got Talent S12",
-            "file": "Americas.Got.Talent.S12E14.WEB.x264-TBS[eztv].mp4",
-            "name": "Americas.Got.Talent.S12E14.WEB.x264-TBS[eztv]",
-            "url": "https://archive.org/download/americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv/Americas.Got.Talent.S12E14.WEB.x264-TBS%5Beztv%5D.mp4",
-            "seconds": 2549,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 242,
-            "ep": {
-              "season": 12,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 1",
+          "airdate": "2017-08-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Live Show 2",
+          "airdate": "2017-08-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E15.WEB.x264-TBS[eztv].mp4",
@@ -406,44 +2517,26 @@
             "seconds": 5114,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 488,
-            "ep": {
-              "season": 12,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 488
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
-            "itemTitle": "Americas got Talent S12",
-            "file": "Americas.Got.Talent.S12E16.WEB.x264-TBS[eztv].mp4",
-            "name": "Americas.Got.Talent.S12E16.WEB.x264-TBS[eztv]",
-            "url": "https://archive.org/download/americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv/Americas.Got.Talent.S12E16.WEB.x264-TBS%5Beztv%5D.mp4",
-            "seconds": 2518,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 239,
-            "ep": {
-              "season": 12,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 2",
+          "airdate": "2017-08-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Live Show 3",
+          "airdate": "2017-08-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E17.WEB.x264-TBS[eztv].mp4",
@@ -452,44 +2545,26 @@
             "seconds": 5107,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 487,
-            "ep": {
-              "season": 12,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 487
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
-            "itemTitle": "Americas got Talent S12",
-            "file": "Americas.Got.Talent.S12E18.WEB.x264-TBS[eztv].mp4",
-            "name": "Americas.Got.Talent.S12E18.WEB.x264-TBS[eztv]",
-            "url": "https://archive.org/download/americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv/Americas.Got.Talent.S12E18.WEB.x264-TBS%5Beztv%5D.mp4",
-            "seconds": 2545,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 242,
-            "ep": {
-              "season": 12,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 3",
+          "airdate": "2017-08-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Semifinals 1",
+          "airdate": "2017-09-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E19.WEB.x264-TBS[eztv].mp4",
@@ -498,44 +2573,26 @@
             "seconds": 5100,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 486,
-            "ep": {
-              "season": 12,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 486
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
-            "itemTitle": "Americas got Talent S12",
-            "file": "Americas.Got.Talent.S12E20.720p.WEB.x264-TBS[eztv].mp4",
-            "name": "Americas.Got.Talent.S12E20.720p.WEB.x264-TBS[eztv]",
-            "url": "https://archive.org/download/americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv/Americas.Got.Talent.S12E20.720p.WEB.x264-TBS%5Beztv%5D.mp4",
-            "seconds": 2553,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 243,
-            "ep": {
-              "season": 12,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Semifinals Results 1",
+          "airdate": "2017-09-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Live Semifinals 2",
+          "airdate": "2017-09-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E21.WEB.x264-TBS[eztv].mp4",
@@ -544,44 +2601,26 @@
             "seconds": 5079,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 483,
-            "ep": {
-              "season": 12,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 483
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
-            "itemTitle": "Americas got Talent S12",
-            "file": "Americas.Got.Talent.S12E22.WEB.x264-TBS[eztv].mp4",
-            "name": "Americas.Got.Talent.S12E22.WEB.x264-TBS[eztv]",
-            "url": "https://archive.org/download/americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv/Americas.Got.Talent.S12E22.WEB.x264-TBS%5Beztv%5D.mp4",
-            "seconds": 2553,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 242,
-            "ep": {
-              "season": 12,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Semifinals Results 2",
+          "airdate": "2017-09-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "The Live Performance Finals",
+          "airdate": "2017-09-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E23.WEB.x264-TBS[eztv].mp4",
@@ -590,21 +2629,18 @@
             "seconds": 5130,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 489,
-            "ep": {
-              "season": 12,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 489
           },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "The Live Results Finale",
+          "airdate": "2017-09-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.-got.-talent.-s-12-e-06.720p.-web.x-264-tbseztv",
             "itemTitle": "Americas got Talent S12",
             "file": "Americas.Got.Talent.S12E24.WEB.x264-TBS[eztv].mp4",
@@ -613,13 +2649,7 @@
             "seconds": 5100,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 485,
-            "ep": {
-              "season": 12,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 485
           },
           "alternates": []
         }
@@ -630,9 +2660,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions 1",
+          "airdate": "2018-05-29",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "Americas.Got.Talent.S13E01.WEB.x264-TBS[eztv].mp4",
@@ -641,21 +2674,18 @@
             "seconds": 5074,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 496,
-            "ep": {
-              "season": 13,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 496
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "Auditions 2",
+          "airdate": "2018-06-05",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "Americas.Got.Talent.S13E02.WEBRip.x264-ION10.ia.mp4",
@@ -664,21 +2694,32 @@
             "seconds": 5064,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 863,
-            "ep": {
-              "season": 13,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 863
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
+              "itemTitle": "Americas got Talent S13",
+              "file": "Americas.Got.Talent.S13E02.WEBRip.x264-ION10.mp4",
+              "name": "Americas.Got.Talent.S13E02.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E02.WEBRip.x264-ION10.mp4",
+              "seconds": 5064,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 863
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "Auditions 3",
+          "airdate": "2018-06-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "Americas.Got.Talent.S13E03.WEBRip.x264-ION10.ia.mp4",
@@ -687,44 +2728,40 @@
             "seconds": 5064,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 865,
-            "ep": {
-              "season": 13,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 865
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
+              "itemTitle": "Americas got Talent S13",
+              "file": "Americas.Got.Talent.S13E03.WEBRip.x264-ION10.mp4",
+              "name": "Americas.Got.Talent.S13E03.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E03.WEBRip.x264-ION10.mp4",
+              "seconds": 5064,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 865
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E04.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E04.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E04.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4939,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 848,
-            "ep": {
-              "season": 13,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Auditions 4",
+          "airdate": "2018-06-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Auditions 5",
+          "airdate": "2018-06-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e05.web.x264-tbs.mp4",
@@ -733,44 +2770,26 @@
             "seconds": 5064,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 495,
-            "ep": {
-              "season": 13,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 495
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e06.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s13e06.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e06.web.x264-tbs.mp4",
-            "seconds": 5024,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 491,
-            "ep": {
-              "season": 13,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Auditions 6",
+          "airdate": "2018-07-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Best of Auditions",
+          "airdate": "2018-07-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e07.web.x264-tbs.mp4",
@@ -779,21 +2798,18 @@
             "seconds": 5064,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 494,
-            "ep": {
-              "season": 13,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 494
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Judge Cuts 1",
+          "airdate": "2018-07-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e08.720p.web.x264-tbs.mp4",
@@ -802,159 +2818,66 @@
             "seconds": 5064,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 494,
-            "ep": {
-              "season": 13,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 494
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E09.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E09.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E09.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4972,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 846,
-            "ep": {
-              "season": 13,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Judge Cuts 2",
+          "airdate": "2018-07-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E10.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E10.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E10.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4949,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 839,
-            "ep": {
-              "season": 13,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Judge Cuts 3",
+          "airdate": "2018-07-31",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E11.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E11.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E11.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4946,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 836,
-            "ep": {
-              "season": 13,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Judge Cuts 4",
+          "airdate": "2018-08-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E12.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E12.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E12.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 2492,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 422,
-            "ep": {
-              "season": 13,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Road to Lives",
+          "airdate": "2018-08-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Episode 13",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E13.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E13.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E13.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4660,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 793,
-            "ep": {
-              "season": 13,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Quarter Finals 1",
+          "airdate": "2018-08-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
-          "name": "Episode 14",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E14.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E14.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E14.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 2335,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 398,
-            "ep": {
-              "season": 13,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 1",
+          "airdate": "2018-08-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
-          "name": "Episode 15",
-          "state": "REVIEW",
+          "name": "Live Quarter Finals 2",
+          "airdate": "2018-08-21",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "Americas.Got.Talent.S13E15.WEBRip.x264-ION10.ia.mp4",
@@ -963,90 +2886,56 @@
             "seconds": 5056,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 861,
-            "ep": {
-              "season": 13,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 861
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
+              "itemTitle": "Americas got Talent S13",
+              "file": "Americas.Got.Talent.S13E15.WEBRip.x264-ION10.mp4",
+              "name": "Americas.Got.Talent.S13E15.WEBRip.x264-ION10",
+              "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E15.WEBRip.x264-ION10.mp4",
+              "seconds": 5056,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 861
+            }
+          ]
         },
         {
           "number": 16,
-          "name": "Episode 16",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E16.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E16.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E16.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 2259,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 384,
-            "ep": {
-              "season": 13,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 2",
+          "airdate": "2018-08-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
-          "name": "Episode 17",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E17.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S13E17.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E17.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4619,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 784,
-            "ep": {
-              "season": 13,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Quarter Finals 3",
+          "airdate": "2018-08-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e18.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s13e18.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e18.web.x264-tbs.mp4",
-            "seconds": 2559,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 247,
-            "ep": {
-              "season": 13,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 3",
+          "airdate": "2018-08-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Live Semi Finals 1",
+          "airdate": "2018-09-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e19.web.x264-tbs.mp4",
@@ -1055,44 +2944,26 @@
             "seconds": 5057,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 492,
-            "ep": {
-              "season": 13,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 492
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e20.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s13e20.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e20.web.x264-tbs.mp4",
-            "seconds": 2562,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 249,
-            "ep": {
-              "season": 13,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 4",
+          "airdate": "2018-09-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Live Semi Finals 2",
+          "airdate": "2018-09-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e21.web.x264-tbs.mp4",
@@ -1101,44 +2972,26 @@
             "seconds": 5056,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 493,
-            "ep": {
-              "season": 13,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 493
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e22.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s13e22.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e22.web.x264-tbs.mp4",
-            "seconds": 2556,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 248,
-            "ep": {
-              "season": 13,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 5",
+          "airdate": "2018-09-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Live Performance Finals",
+          "airdate": "2018-09-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e23.web.x264-tbs.mp4",
@@ -1147,21 +3000,18 @@
             "seconds": 5074,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 494,
-            "ep": {
-              "season": 13,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 494
           },
           "alternates": []
         },
         {
           "number": 24,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Live Results Finale",
+          "airdate": "2018-09-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
             "itemTitle": "Americas got Talent S13",
             "file": "americas.got.talent.s13e24.web.x264-tbs.mp4",
@@ -1170,82 +3020,7 @@
             "seconds": 5046,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 490,
-            "ep": {
-              "season": 13,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e29.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s13e29.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e29.web.x264-tbs.mp4",
-            "seconds": 5124,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 499,
-            "ep": {
-              "season": 13,
-              "episode": 29
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "americas.got.talent.s13e30.web.h264-tbs.mp4",
-            "name": "americas.got.talent.s13e30.web.h264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/americas.got.talent.s13e30.web.h264-tbs.mp4",
-            "seconds": 5121,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 510,
-            "ep": {
-              "season": 13,
-              "episode": 30
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "msd eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s13e08.720p.web.x264-tbs",
-            "itemTitle": "Americas got Talent S13",
-            "file": "Americas.Got.Talent.S13E31.480p.x264-mSD[eztv].mp4",
-            "name": "Americas.Got.Talent.S13E31.480p.x264-mSD[eztv]",
-            "url": "https://archive.org/download/americas.got.talent.s13e08.720p.web.x264-tbs/Americas.Got.Talent.S13E31.480p.x264-mSD%5Beztv%5D.mp4",
-            "seconds": 5094,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 496,
-            "ep": {
-              "season": 13,
-              "episode": 31
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 490
           },
           "alternates": []
         }
@@ -1256,9 +3031,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
+          "name": "Auditions 1",
+          "airdate": "2019-05-28",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E01.WEB.h264-TBS[eztv].mp4",
@@ -1267,21 +3045,18 @@
             "seconds": 5114,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 508,
-            "ep": {
-              "season": 14,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 508
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "msd eztv",
-          "state": "REVIEW",
+          "name": "Auditions 2",
+          "airdate": "2019-06-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E02.480p.x264-mSD[eztv].mp4",
@@ -1290,21 +3065,18 @@
             "seconds": 5088,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 496,
-            "ep": {
-              "season": 14,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 496
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "msd eztv",
-          "state": "REVIEW",
+          "name": "Auditions 3",
+          "airdate": "2019-06-11",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E03.480p.x264-mSD[eztv].mp4",
@@ -1313,21 +3085,18 @@
             "seconds": 5121,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 503,
-            "ep": {
-              "season": 14,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 503
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "msd eztv",
-          "state": "REVIEW",
+          "name": "Auditions 4",
+          "airdate": "2019-06-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E04.480p.x264-mSD[eztv].mp4",
@@ -1336,21 +3105,18 @@
             "seconds": 5121,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 504,
-            "ep": {
-              "season": 14,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 504
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "msd eztv",
-          "state": "REVIEW",
+          "name": "Auditions 5",
+          "airdate": "2019-06-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E05.480p.x264-mSD[eztv].mp4",
@@ -1359,21 +3125,18 @@
             "seconds": 5121,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 504,
-            "ep": {
-              "season": 14,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 504
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "msd eztv",
-          "state": "REVIEW",
+          "name": "Best of Auditions",
+          "airdate": "2019-07-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E06.480p.x264-mSD[eztv].mp4",
@@ -1382,21 +3145,18 @@
             "seconds": 5061,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 497,
-            "ep": {
-              "season": 14,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 497
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Auditions 6",
+          "airdate": "2019-07-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "americas.got.talent.s14e07.web.h264-tbs.mp4",
@@ -1405,44 +3165,26 @@
             "seconds": 5096,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 505,
-            "ep": {
-              "season": 14,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 505
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E08.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E08.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E08.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 5015,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 850,
-            "ep": {
-              "season": 14,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Judge Cuts 1",
+          "airdate": "2019-07-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "msd eztv",
-          "state": "REVIEW",
+          "name": "Judge Cuts 2",
+          "airdate": "2019-07-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "Americas.Got.Talent.S14E09.480p.x264-mSD[eztv].mp4",
@@ -1451,44 +3193,26 @@
             "seconds": 5124,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 498,
-            "ep": {
-              "season": 14,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 498
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E10.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E10.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E10.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 5005,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 847,
-            "ep": {
-              "season": 14,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Judge Cuts 3",
+          "airdate": "2019-07-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "web tbs",
-          "state": "REVIEW",
+          "name": "Judge Cuts 4",
+          "airdate": "2019-08-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "americas.got.talent.s14e11.web.h264-tbs.mp4",
@@ -1497,21 +3221,18 @@
             "seconds": 5085,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 507,
-            "ep": {
-              "season": 14,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 507
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "web trump",
-          "state": "REVIEW",
+          "name": "Quarter Finals 1",
+          "airdate": "2019-08-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "americas.got.talent.s14e12.web.h264-trump.mp4",
@@ -1520,44 +3241,26 @@
             "seconds": 5102,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 497,
-            "ep": {
-              "season": 14,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 497
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e13.720p.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s14e13.720p.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e13.720p.web.x264-tbs.mp4",
-            "seconds": 2592,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 250,
-            "ep": {
-              "season": 14,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 1",
+          "airdate": "2019-08-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
-          "name": "web trump",
-          "state": "REVIEW",
+          "name": "Quarter Finals 2",
+          "airdate": "2019-08-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "americas.got.talent.s14e14.web.h264-trump.mp4",
@@ -1566,205 +3269,82 @@
             "seconds": 5129,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 496,
-            "ep": {
-              "season": 14,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 496
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e15.web.x264-tbs.mp4",
-            "name": "americas.got.talent.s14e15.web.x264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e15.web.x264-tbs.mp4",
-            "seconds": 2590,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 251,
-            "ep": {
-              "season": 14,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 2",
+          "airdate": "2019-08-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
-          "name": "Episode 16",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E16.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E16.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E16.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4677,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 795,
-            "ep": {
-              "season": 14,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Quarter Finals 3",
+          "airdate": "2019-08-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
-          "name": "Episode 17",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E17.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E17.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E17.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 2361,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 400,
-            "ep": {
-              "season": 14,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 3",
+          "airdate": "2019-08-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E18.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E18.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E18.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4682,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 795,
-            "ep": {
-              "season": 14,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Semifinals 1",
+          "airdate": "2019-09-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
-          "name": "web trump",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e19.web.x264-trump.mp4",
-            "name": "americas.got.talent.s14e19.web.x264-trump",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e19.web.x264-trump.mp4",
-            "seconds": 2590,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 251,
-            "ep": {
-              "season": 14,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 4",
+          "airdate": "2019-09-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
-          "name": "Episode 20",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E20.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E20.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E20.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4726,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 803,
-            "ep": {
-              "season": 14,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Semifinals 2",
+          "airdate": "2019-09-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
-          "name": "web trump",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e21.internal.720p.web.x264-trump.mp4",
-            "name": "americas.got.talent.s14e21.internal.720p.web.x264-trump",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e21.internal.720p.web.x264-trump.mp4",
-            "seconds": 2590,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 251,
-            "ep": {
-              "season": 14,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Results 5",
+          "airdate": "2019-09-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
-          "name": "Episode 22",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "Americas.Got.Talent.S14E22.WEBRip.x264-ION10.ia.mp4",
-            "name": "Americas.Got.Talent.S14E22.WEBRip",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/Americas.Got.Talent.S14E22.WEBRip.x264-ION10.ia.mp4",
-            "seconds": 4660,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 810,
-            "ep": {
-              "season": 14,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Finals",
+          "airdate": "2019-09-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 23,
-          "name": "web trump",
-          "state": "REVIEW",
+          "name": "Live Results Finale",
+          "airdate": "2019-09-18",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "americas.got.talent.s14e14.web.h264-trump",
             "itemTitle": "Americas Got Talent S14",
             "file": "americas.got.talent.s14e23.web.x264-trump.mp4",
@@ -1773,106 +3353,1315 @@
             "seconds": 5127,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 497,
-            "ep": {
-              "season": 14,
-              "episode": 23
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 497
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 15,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2020-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2020-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2020-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2020-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5",
+          "airdate": "2020-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 6",
+          "airdate": "2020-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 7",
+          "airdate": "2020-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "AGT: Best of Auditions",
+          "airdate": "2020-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Judge Cuts",
+          "airdate": "2020-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "AGT: 15th Anniversary Special",
+          "airdate": "2020-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Live Show 1",
+          "airdate": "2020-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Results Show 1",
+          "airdate": "2020-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Live Show 2",
+          "airdate": "2020-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Results Show 2",
+          "airdate": "2020-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Live Show 3",
+          "airdate": "2020-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Results Show 3",
+          "airdate": "2020-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Live Show 4",
+          "airdate": "2020-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Results Show 4",
+          "airdate": "2020-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Semi-Finals 1",
+          "airdate": "2020-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Results Show 5",
+          "airdate": "2020-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semi-Finals 2",
+          "airdate": "2020-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Results Show 6",
+          "airdate": "2020-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Live Finals",
+          "airdate": "2020-09-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 24,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e24.web.h264-tbs[eztv].mp4",
-            "name": "americas.got.talent.s14e24.web.h264-tbs[eztv]",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e24.web.h264-tbs%5Beztv%5D.mp4",
-            "seconds": 5121,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 508,
-            "ep": {
-              "season": 14,
-              "episode": 24
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Countdown to the Finale",
+          "airdate": "2020-09-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 25,
-          "name": "web tbs eztv",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e25.web.h264-tbs[eztv].mp4",
-            "name": "americas.got.talent.s14e25.web.h264-tbs[eztv]",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e25.web.h264-tbs%5Beztv%5D.mp4",
-            "seconds": 5094,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 506,
-            "ep": {
-              "season": 14,
-              "episode": 25
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Live Finale Results",
+          "airdate": "2020-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 16,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2021-06-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e26.web.h264-tbs.mp4",
-            "name": "americas.got.talent.s14e26.web.h264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e26.web.h264-tbs.mp4",
-            "seconds": 5122,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 509,
-            "ep": {
-              "season": 14,
-              "episode": 26
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2021-06-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 28,
-          "name": "web tbs",
-          "state": "REVIEW",
-          "file": {
-            "item": "americas.got.talent.s14e14.web.h264-trump",
-            "itemTitle": "Americas Got Talent S14",
-            "file": "americas.got.talent.s14e28.web.h264-tbs.mp4",
-            "name": "americas.got.talent.s14e28.web.h264-tbs",
-            "url": "https://archive.org/download/americas.got.talent.s14e14.web.h264-trump/americas.got.talent.s14e28.web.h264-tbs.mp4",
-            "seconds": 5121,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 507,
-            "ep": {
-              "season": 14,
-              "episode": 28
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2021-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2021-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5",
+          "airdate": "2021-06-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 6",
+          "airdate": "2021-07-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 7",
+          "airdate": "2021-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Auditions 8",
+          "airdate": "2021-07-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Quarterfinals 1",
+          "airdate": "2021-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Quarterfinals Results 1",
+          "airdate": "2021-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Quarterfinals 2",
+          "airdate": "2021-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Quarterfinals Results 2",
+          "airdate": "2021-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals 3",
+          "airdate": "2021-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals Results 3",
+          "airdate": "2021-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Semi-Finals 1",
+          "airdate": "2021-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Semi-Finals Results 1",
+          "airdate": "2021-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Semifinals 2",
+          "airdate": "2021-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Semifinals Results 2",
+          "airdate": "2021-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Finale",
+          "airdate": "2021-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Finale Results",
+          "airdate": "2021-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 17,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2022-05-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2022-06-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2022-06-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2022-06-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5",
+          "airdate": "2022-06-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Simon's Favorite Golden Buzzers",
+          "airdate": "2022-07-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 6",
+          "airdate": "2022-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Auditions 7",
+          "airdate": "2022-07-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Auditions 8",
+          "airdate": "2022-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Auditions End and Judge Deliberations",
+          "airdate": "2022-08-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Qualifiers 1",
+          "airdate": "2022-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Qualifiers 1 Results",
+          "airdate": "2022-08-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Qualifiers 2",
+          "airdate": "2022-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Qualifiers 2 Results",
+          "airdate": "2022-08-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Qualifiers 3",
+          "airdate": "2022-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Qualifiers 3 Results",
+          "airdate": "2022-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Qualifiers 4",
+          "airdate": "2022-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Qualifiers 4 Results",
+          "airdate": "2022-08-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Qualifiers 5",
+          "airdate": "2022-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Qualifiers 5 Results",
+          "airdate": "2022-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Finale",
+          "airdate": "2022-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Finale Results",
+          "airdate": "2022-09-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 18,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2023-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2023-06-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2023-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2023-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5",
+          "airdate": "2023-06-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 6",
+          "airdate": "2023-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 7",
+          "airdate": "2023-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Simon's Most Memorable Auditions",
+          "airdate": "2023-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Auditions 8",
+          "airdate": "2023-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Auditions 9",
+          "airdate": "2023-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Road to Lives",
+          "airdate": "2023-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Qualifiers 1",
+          "airdate": "2023-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Qualifiers 1 Results",
+          "airdate": "2023-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Qualifiers 2",
+          "airdate": "2023-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Qualifiers 2 Results",
+          "airdate": "2023-08-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Qualifiers 3",
+          "airdate": "2023-09-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Qualifiers 3 Results",
+          "airdate": "2023-09-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Qualifiers 4",
+          "airdate": "2023-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Qualifiers 4 Results",
+          "airdate": "2023-09-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Qualifiers 5",
+          "airdate": "2023-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Qualifiers 5 Results",
+          "airdate": "2023-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Finale Performances",
+          "airdate": "2023-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Countdown to the Finale",
+          "airdate": "2023-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Finale Results",
+          "airdate": "2023-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 19,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2024-05-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2024-06-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2024-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2024-06-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5",
+          "airdate": "2024-07-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 6",
+          "airdate": "2024-07-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 7",
+          "airdate": "2024-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Auditions 8",
+          "airdate": "2024-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Quarterfinals 1",
+          "airdate": "2024-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Quarterfinals 1 Results",
+          "airdate": "2024-08-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Quarterfinals 2",
+          "airdate": "2024-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Quarterfinals 2 Results",
+          "airdate": "2024-08-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals 3",
+          "airdate": "2024-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals 3 Results",
+          "airdate": "2024-08-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals 4",
+          "airdate": "2024-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals 4 Results",
+          "airdate": "2024-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Semi-Finals",
+          "airdate": "2024-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Semi-Finals Results",
+          "airdate": "2024-09-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Finale Performances",
+          "airdate": "2024-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Countdown to the Finale",
+          "airdate": "2024-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Finale Results",
+          "airdate": "2024-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 20,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2025-05-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2025-06-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2025-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2025-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Auditions 5",
+          "airdate": "2025-06-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 6",
+          "airdate": "2025-07-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 7",
+          "airdate": "2025-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Greatest Golden Buzzers!",
+          "airdate": "2025-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Auditions 8",
+          "airdate": "2025-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Auditions 9",
+          "airdate": "2025-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "AGT 20th Birthday Party",
+          "airdate": "2025-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Quarterfinals 1",
+          "airdate": "2025-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals 1 Results",
+          "airdate": "2025-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals 2",
+          "airdate": "2025-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals 2 Results",
+          "airdate": "2025-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals 3",
+          "airdate": "2025-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals 3 Results",
+          "airdate": "2025-09-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Quarterfinals 4",
+          "airdate": "2025-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quarterfinals 4 Results",
+          "airdate": "2025-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Semifinals",
+          "airdate": "2025-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semifinals Results",
+          "airdate": "2025-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Final Performances",
+          "airdate": "2025-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Countdown to the Finale",
+          "airdate": "2025-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Finale Results",
+          "airdate": "2025-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 21,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Auditions 1",
+          "airdate": "2026-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Auditions 2",
+          "airdate": "2026-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Auditions 3",
+          "airdate": "2026-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Auditions 4",
+          "airdate": "2026-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "AGT: July 4th Party in the USA",
+          "airdate": "2026-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Auditions 5",
+          "airdate": "2026-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Auditions 6",
+          "airdate": "2026-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Auditions 7",
+          "airdate": "2026-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Live Acts Revealed",
+          "airdate": "2026-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Judges' Callbacks 1",
+          "airdate": "2026-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Judges' Callbacks 2",
+          "airdate": "2026-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Quarterfinals 1",
+          "airdate": "2026-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Quarterfinals 1 Results",
+          "airdate": "2026-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Quarterfinals 2",
+          "airdate": "2026-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Quarterfinals 2 Results",
+          "airdate": "2026-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Quarterfinals 3",
+          "airdate": "2026-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Quarterfinals 3 Results",
+          "airdate": "2026-09-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Quarterfinals 4",
+          "airdate": "2026-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Quarterfinals 4 Results",
+          "airdate": "2026-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Semifinals",
+          "airdate": "2026-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Semifinals Results",
+          "airdate": "2026-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Finale",
+          "airdate": "2026-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Finale Results",
+          "airdate": "2026-09-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

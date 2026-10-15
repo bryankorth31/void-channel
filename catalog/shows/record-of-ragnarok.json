@@ -3,21 +3,20 @@
   "slug": "record-of-ragnarok",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-15T01:19:17.052Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:02.759Z",
   "tvmaze": {
-    "id": null,
+    "id": 54353,
     "name": "Record of Ragnarok",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 25,
+    "premiered": "2021-06-17",
+    "network": "Netflix"
   },
   "coverage": {
-    "total": 11,
-    "live": 0,
-    "review": 11,
-    "missing": 0,
-    "pct": 100
+    "total": 42,
+    "live": 11,
+    "review": 0,
+    "missing": 31,
+    "pct": 26
   },
   "seasons": [
     {
@@ -25,9 +24,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
+          "name": "Ragnarok",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E1.mp4",
@@ -36,21 +38,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "state": "REVIEW",
+          "name": "Worthy Opponent",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E2.mp4",
@@ -59,21 +58,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "state": "REVIEW",
+          "name": "Killer Move",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E3.mp4",
@@ -82,21 +78,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 215,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 215
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "state": "REVIEW",
+          "name": "Joy",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E4.mp4",
@@ -105,21 +98,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "state": "REVIEW",
+          "name": "FILE No.00000000001",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E5.mp4",
@@ -128,21 +118,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
+          "name": "Great Emulation",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E6.mp4",
@@ -151,21 +138,26 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
+          "number": 7,
+          "name": "Expelled from Paradise",
+          "airdate": "2021-06-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
+          "name": "Grace Abounding",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E8.mp4",
@@ -174,21 +166,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
+          "name": "Tyrant of the Ocean",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E9.mp4",
@@ -197,21 +186,18 @@
             "seconds": 1480,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 215,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 215
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "Episode 10",
-          "state": "REVIEW",
+          "name": "Greatest Loser",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E10.mp4",
@@ -220,21 +206,18 @@
             "seconds": 1478,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Episode 11",
-          "state": "REVIEW",
+          "name": "The Swallow Gazes into the Abyss",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E11.mp4",
@@ -243,21 +226,18 @@
             "seconds": 1480,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Episode 12",
-          "state": "REVIEW",
+          "name": "And Ragnarok Goes On",
+          "airdate": "2021-06-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "paxror",
             "itemTitle": "Record Of Ragnarok",
             "file": "Record of Ragnarok (2021) S1E12.mp4",
@@ -266,14 +246,258 @@
             "seconds": 1486,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Good vs. Evil",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Indomitable War God",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Birth of a Monster",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Final Labor",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Requiem",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Conflicting Motives",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Hundred Seals",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Pinnacle of 1116",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Resonance",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Brink",
+          "airdate": "2023-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Round Six",
+          "airdate": "2023-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Zero",
+          "airdate": "2023-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Strongest Puberty in History",
+          "airdate": "2023-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Legend of the Underworld",
+          "airdate": "2023-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Way of Light",
+          "airdate": "2023-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Prologue: Recollections",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "King vs. King",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Chi You",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "A Promise and an Oath",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Pride of the King of Helheim",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Return of the King",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Satan",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Light vs. Shadow",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "A Curse and a Prayer",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Torch Passed On",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Progress",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Sun God and the Rebellious Hero",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Pride vs. Pride",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Know Thyself",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "A Clash of Souls",
+          "airdate": "2025-12-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

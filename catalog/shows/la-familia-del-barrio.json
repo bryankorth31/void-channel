@@ -3,21 +3,20 @@
   "slug": "la-familia-del-barrio",
   "type": "World TV",
   "network": "MX",
-  "matchedAt": "2026-10-15T01:19:17.314Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-15T03:18:11.207Z",
   "tvmaze": {
-    "id": null,
+    "id": 89778,
     "name": "La Familia del Barrio",
-    "runtime": null,
-    "premiered": null,
-    "network": "MX"
+    "runtime": 30,
+    "premiered": "2013-05-05",
+    "network": "MTV"
   },
   "coverage": {
-    "total": 1,
+    "total": 94,
     "live": 0,
-    "review": 1,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 94,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,22 +24,774 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "la-familia-del-barrio_202607",
-            "itemTitle": "La Familia Del Barrio",
-            "file": "La Familia del Barrio.mp4",
-            "name": "La Familia del Barrio",
-            "url": "https://archive.org/download/la-familia-del-barrio_202607/La%20Familia%20del%20Barrio.mp4",
-            "seconds": 4687,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 795,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Padre mío",
+          "airdate": "2013-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Maura",
+          "airdate": "2013-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Santa erección",
+          "airdate": "2013-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "El Enemigo del Abuelo",
+          "airdate": "2013-05-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "El Sirviente del Amor",
+          "airdate": "2013-06-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Preñada",
+          "airdate": "2013-06-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "San Itario",
+          "airdate": "2013-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "El seguro millonario",
+          "airdate": "2013-06-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "El Cambio",
+          "airdate": "2013-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Secuestrado",
+          "airdate": "2013-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Lárgate - Parte I",
+          "airdate": "2013-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Lárgate - Parte II",
+          "airdate": "2013-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Juan Erection",
+          "airdate": "2015-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "El Heredero",
+          "airdate": "2015-03-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "El Noruego Hipster",
+          "airdate": "2015-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Explotación Laboral",
+          "airdate": "2015-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Gordilandia",
+          "airdate": "2015-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "El Pasita",
+          "airdate": "2015-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Vámonos",
+          "airdate": "2015-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Academia de Policía",
+          "airdate": "2015-04-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "5 Minutos de Fama",
+          "airdate": "2015-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "ADN",
+          "airdate": "2015-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "La lista",
+          "airdate": "2015-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Familia del barrio",
+          "airdate": "2015-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "La criada",
+          "airdate": "2015-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "El riñón",
+          "airdate": "2015-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "El presi",
+          "airdate": "2015-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "El fin",
+          "airdate": "2015-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Especial de Navidad",
+          "airdate": "2015-12-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "La boda",
+          "airdate": "2016-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "El magnate",
+          "airdate": "2016-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "El ciego",
+          "airdate": "2016-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "El museo",
+          "airdate": "2016-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Especial Acashore",
+          "airdate": "2016-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "El campeón",
+          "airdate": "2016-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "La guayama",
+          "airdate": "2016-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Olaf",
+          "airdate": "2016-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "¿Y dónde está Irma?",
+          "airdate": "2016-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "La guerra",
+          "airdate": "2016-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "La visita inesperada",
+          "airdate": "2016-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "La flor de Lupe",
+          "airdate": "2016-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Especial Navidad",
+          "airdate": "2016-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Lady Pantufla",
+          "airdate": "2017-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Voodoo",
+          "airdate": "2017-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Enojado",
+          "airdate": "2017-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "El Regreso de Papá",
+          "airdate": "2017-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Problemón Go",
+          "airdate": "2017-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Zombies",
+          "airdate": "2017-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "El Donador",
+          "airdate": "2017-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Gaspar Enamorado",
+          "airdate": "2017-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "La Chamba",
+          "airdate": "2017-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Pelu el Payaso",
+          "airdate": "2017-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "El Lentejas",
+          "airdate": "2017-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "La Fundación",
+          "airdate": "2017-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Sueño Americano",
+          "airdate": "2017-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Gasolinazo",
+          "airdate": "2017-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Efecto Mariposa",
+          "airdate": "2017-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Calentamiento Global",
+          "airdate": "2017-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "El Crédito",
+          "airdate": "2017-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "El Circo",
+          "airdate": "2017-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "El día del Padre",
+          "airdate": "2017-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Peladino",
+          "airdate": "2017-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Pal' Gabacho",
+          "airdate": "2017-05-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "Juntos otra vez",
+          "airdate": "2017-06-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "Road Trip",
+          "airdate": "2017-06-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "Nos vamos a New York",
+          "airdate": "2017-06-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "La Gran Manzana",
+          "airdate": "2017-06-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "El Regreso",
+          "airdate": "2017-07-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "La herencia",
+          "airdate": "2018-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "El Casting",
+          "airdate": "2018-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Vida de Crimen",
+          "airdate": "2018-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "El hueso",
+          "airdate": "2018-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "La Mataviejitas",
+          "airdate": "2018-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "¿Quién fue?",
+          "airdate": "2018-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "La Familia de las Lomas",
+          "airdate": "2018-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "El Tigre",
+          "airdate": "2018-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "El Robot",
+          "airdate": "2018-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "La luchadora",
+          "airdate": "2018-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Desalojados",
+          "airdate": "2018-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "El Principio del Final",
+          "airdate": "2018-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "El final del final",
+          "airdate": "2018-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Pobre otra vez",
+          "airdate": "2018-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "El Club de la Pelea",
+          "airdate": "2018-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Mickey",
+          "airdate": "2018-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Contagiados",
+          "airdate": "2018-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Acapulco",
+          "airdate": "2018-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Mental",
+          "airdate": "2018-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Suertudote",
+          "airdate": "2018-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Célibe",
+          "airdate": "2018-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Los Lambreton",
+          "airdate": "2018-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Contracara",
+          "airdate": "2018-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "2x2=4",
+          "airdate": "2018-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "El agua",
+          "airdate": "2018-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Navidad con los Lambreton",
+          "airdate": "2018-12-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
