@@ -1,0 +1,976 @@
+{
+  "show": "The Tick",
+  "slug": "the-tick",
+  "type": "Animated",
+  "network": "Cartoon",
+  "matchedAt": "2026-10-15T19:18:53.106Z",
+  "addedAt": "2026-10-15T17:22:35.205Z",
+  "tvmaze": {
+    "id": 14116,
+    "name": "The Tick",
+    "runtime": 28,
+    "premiered": "2016-08-19",
+    "network": "Prime Video"
+  },
+  "coverage": {
+    "total": 22,
+    "live": 15,
+    "review": 5,
+    "missing": 2,
+    "pct": 91
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Pilot",
+          "airdate": "2016-08-19",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E01 - The Tick vs. The Idea Men.mp4",
+            "name": "S1E01 - The Tick vs. The Idea Men",
+            "url": "https://archive.org/download/the-tick-full-series/S1E01%20-%20The%20Tick%20vs.%20The%20Idea%20Men.mp4",
+            "seconds": 1212,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 442
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E01 - The Tick vs. The Idea Men (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E01 - The Tick vs. The Idea Men (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E01%20-%20The%20Tick%20vs.%20The%20Idea%20Men%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1213,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 117
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E01 - The Tick vs. The Idea Men.mp4",
+              "name": "The Tick/1/S01E01 - The Tick vs. The Idea Men",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E01%20-%20The%20Tick%20vs.%20The%20Idea%20Men.mp4",
+              "seconds": 1213,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 117
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S1E13 - The Tick vs. Arthur's Bank Account.mp4",
+              "name": "S1E13 - The Tick vs. Arthur's Bank Account",
+              "url": "https://archive.org/download/the-tick-full-series/S1E13%20-%20The%20Tick%20vs.%20Arthur's%20Bank%20Account.mp4",
+              "seconds": 1231,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 466
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Where's My Mind",
+          "airdate": "2017-08-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 11 in \"The Tick (Full Series)\"",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S2E11 - Tick vs. The Big Nothing.mp4",
+            "name": "S2E11 - Tick vs. The Big Nothing",
+            "url": "https://archive.org/download/the-tick-full-series/S2E11%20-%20Tick%20vs.%20The%20Big%20Nothing.mp4",
+            "seconds": 1230,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 402
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 13 in \"The Tick\"",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E11 - Tick vs. the Big Nothing.mp4",
+              "name": "The Tick/2/S02E11 - Tick vs. the Big Nothing",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E11%20-%20Tick%20vs.%20the%20Big%20Nothing.mp4",
+              "seconds": 1230,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Secret / Identity",
+          "airdate": "2017-08-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 11 in \"The Tick (Full Series)\"",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S3E01 - That Mustache Feeling.mp4",
+            "name": "S3E01 - That Mustache Feeling",
+            "url": "https://archive.org/download/the-tick-full-series/S3E01%20-%20That%20Mustache%20Feeling.mp4",
+            "seconds": 1203,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 326
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 13 in \"The Tick\"",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E12 - Tick vs. Reno, Nevada.mp4",
+              "name": "The Tick/2/S02E12 - Tick vs. Reno, Nevada",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E12%20-%20Tick%20vs.%20Reno%2C%20Nevada.mp4",
+              "seconds": 1230,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Party Crashers",
+          "airdate": "2017-08-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 11 in \"The Tick (Full Series)\"",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S3E02 - The Tick vs. Dot and Neil's Wedding.mp4",
+            "name": "S3E02 - The Tick vs. Dot and Neil's Wedding",
+            "url": "https://archive.org/download/the-tick-full-series/S3E02%20-%20The%20Tick%20vs.%20Dot%20and%20Neil's%20Wedding.mp4",
+            "seconds": 1194,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 449
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 13 in \"The Tick\"",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E13 - Grandpa Wore Tights.mp4",
+              "name": "The Tick/2/S02E13 - Grandpa Wore Tights",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E13%20-%20Grandpa%20Wore%20Tights.mp4",
+              "seconds": 1227,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Fear of Flying",
+          "airdate": "2017-08-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 11 in \"The Tick (Full Series)\"",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S3E03 - Sidekicks Don't Kiss.mp4",
+            "name": "S3E03 - Sidekicks Don't Kiss",
+            "url": "https://archive.org/download/the-tick-full-series/S3E03%20-%20Sidekicks%20Don't%20Kiss.mp4",
+            "seconds": 1200,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 587
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 13 in \"The Tick\"",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/3/S03E01 - That Mustache Feeling.mp4",
+              "name": "The Tick/3/S03E01 - That Mustache Feeling",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F3%2FS03E01%20-%20That%20Mustache%20Feeling.mp4",
+              "seconds": 1203,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 120
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "name": "Rising",
+          "airdate": "2017-08-25",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E06 - The Tick vs. El Seed.mp4",
+            "name": "S1E06 - The Tick vs. El Seed",
+            "url": "https://archive.org/download/the-tick-full-series/S1E06%20-%20The%20Tick%20vs.%20El%20Seed.mp4",
+            "seconds": 1192,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 492
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E06 - The Tick vs. el Seed (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E06 - The Tick vs. el Seed (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E06%20-%20The%20Tick%20vs.%20el%20Seed%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1192,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 115
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E06 - The Tick vs. el Seed.mp4",
+              "name": "The Tick/1/S01E06 - The Tick vs. el Seed",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E06%20-%20The%20Tick%20vs.%20el%20Seed.mp4",
+              "seconds": 1192,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 115
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E04 - Tick vs. Arthur.mp4",
+              "name": "S3E04 - Tick vs. Arthur",
+              "url": "https://archive.org/download/the-tick-full-series/S3E04%20-%20Tick%20vs.%20Arthur.mp4",
+              "seconds": 1201,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 419
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Tale from the Crypt",
+          "airdate": "2018-02-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E07 - The Tick vs. The Tick.mp4",
+            "name": "S1E07 - The Tick vs. The Tick",
+            "url": "https://archive.org/download/the-tick-full-series/S1E07%20-%20The%20Tick%20vs.%20The%20Tick.mp4",
+            "seconds": 1230,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 442
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E07 - The Tick vs. the Tick (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E07 - The Tick vs. the Tick (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E07%20-%20The%20Tick%20vs.%20the%20Tick%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1230,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E07 - The Tick vs. the Tick.mp4",
+              "name": "The Tick/1/S01E07 - The Tick vs. the Tick",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E07%20-%20The%20Tick%20vs.%20the%20Tick.mp4",
+              "seconds": 1230,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E06 - Tick vs. Filth.mp4",
+              "name": "S3E06 - Tick vs. Filth",
+              "url": "https://archive.org/download/the-tick-full-series/S3E06%20-%20Tick%20vs.%20Filth.mp4",
+              "seconds": 1201,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 400
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "name": "After Midnight",
+          "airdate": "2018-02-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E08 - The Tick vs. The Uncommon Cold.mp4",
+            "name": "S1E08 - The Tick vs. The Uncommon Cold",
+            "url": "https://archive.org/download/the-tick-full-series/S1E08%20-%20The%20Tick%20vs.%20The%20Uncommon%20Cold.mp4",
+            "seconds": 1227,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 460
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E08 - The Tick vs. the Uncommon Cold (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E08 - The Tick vs. the Uncommon Cold (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E08%20-%20The%20Tick%20vs.%20the%20Uncommon%20Cold%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1227,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E08 - The Tick vs. the Uncommon Cold.mp4",
+              "name": "The Tick/1/S01E08 - The Tick vs. the Uncommon Cold",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E08%20-%20The%20Tick%20vs.%20the%20Uncommon%20Cold.mp4",
+              "seconds": 1227,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E07 - Tick vs. Europe.mp4",
+              "name": "S3E07 - Tick vs. Europe",
+              "url": "https://archive.org/download/the-tick-full-series/S3E07%20-%20Tick%20vs.%20Europe.mp4",
+              "seconds": 1201,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 483
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "My Dinner with Android",
+          "airdate": "2018-02-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E09 - The Tick vs. Brain Child.mp4",
+            "name": "S1E09 - The Tick vs. Brain Child",
+            "url": "https://archive.org/download/the-tick-full-series/S1E09%20-%20The%20Tick%20vs.%20Brain%20Child.mp4",
+            "seconds": 1233,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 507
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E09 - The Tick vs. Brainchild (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E09 - The Tick vs. Brainchild (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E09%20-%20The%20Tick%20vs.%20Brainchild%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1233,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E09 - The Tick vs. Brainchild.mp4",
+              "name": "The Tick/1/S01E09 - The Tick vs. Brainchild",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E09%20-%20The%20Tick%20vs.%20Brainchild.mp4",
+              "seconds": 1233,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E08 - Tick vs. Science.mp4",
+              "name": "S3E08 - Tick vs. Science",
+              "url": "https://archive.org/download/the-tick-full-series/S3E08%20-%20Tick%20vs.%20Science.mp4",
+              "seconds": 1202,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 479
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "name": "Risky Bismuth",
+          "airdate": "2018-02-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E10 - The Tick vs. Pineapple Pokopo.mp4",
+            "name": "S1E10 - The Tick vs. Pineapple Pokopo",
+            "url": "https://archive.org/download/the-tick-full-series/S1E10%20-%20The%20Tick%20vs.%20Pineapple%20Pokopo.mp4",
+            "seconds": 1231,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 479
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E10 - The Tick vs. Pineapple Pokopo (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E10 - The Tick vs. Pineapple Pokopo (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E10%20-%20The%20Tick%20vs.%20Pineapple%20Pokopo%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E10 - The Tick vs. Pineapple Pokopo.mp4",
+              "name": "The Tick/1/S01E10 - The Tick vs. Pineapple Pokopo",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E10%20-%20The%20Tick%20vs.%20Pineapple%20Pokopo.mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E09 - Tick vs. Prehistory.mp4",
+              "name": "S3E09 - Tick vs. Prehistory",
+              "url": "https://archive.org/download/the-tick-full-series/S3E09%20-%20Tick%20vs.%20Prehistory.mp4",
+              "seconds": 1203,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 494
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "The Beginning of the End",
+          "airdate": "2018-02-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E11 - The Tick vs. The Mole-Men.mp4",
+            "name": "S1E11 - The Tick vs. The Mole-Men",
+            "url": "https://archive.org/download/the-tick-full-series/S1E11%20-%20The%20Tick%20vs.%20The%20Mole-Men.mp4",
+            "seconds": 1234,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 434
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E11 - The Tick vs. the Mole-Men (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E11 - The Tick vs. the Mole-Men (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E11%20-%20The%20Tick%20vs.%20the%20Mole-Men%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1234,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E11 - The Tick vs. the Mole-Men.mp4",
+              "name": "The Tick/1/S01E11 - The Tick vs. the Mole-Men",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E11%20-%20The%20Tick%20vs.%20the%20Mole-Men.mp4",
+              "seconds": 1234,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 11 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E10 - Tick vs. Education.mp4",
+              "name": "S3E10 - Tick vs. Education",
+              "url": "https://archive.org/download/the-tick-full-series/S3E10%20-%20Tick%20vs.%20Education.mp4",
+              "seconds": 1201,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 478
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "name": "The End of the Beginning (Of the Start of the Dawn of the Age of Superheroes)",
+          "airdate": "2018-02-23",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 13 in \"The Tick\"",
+            "item": "ds-store_20260105_1106",
+            "itemTitle": "The Tick",
+            "file": "The Tick/3/S03E09 - Tick vs. Prehistory.mp4",
+            "name": "The Tick/3/S03E09 - Tick vs. Prehistory",
+            "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F3%2FS03E09%20-%20Tick%20vs.%20Prehistory.mp4",
+            "seconds": 1203,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 117
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Lesson One: Think Quick!",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E01 - The Little Wooden Boy and the Belly of Love (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E01 - The Little Wooden Boy and the Belly of Love (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E01%20-%20The%20Little%20Wooden%20Boy%20and%20the%20Belly%20of%20Love%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1228,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 122
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E01 - The Little Wooden Boy and the Belly of Love.mp4",
+              "name": "The Tick/2/S02E01 - The Little Wooden Boy and the Belly of Love",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E01%20-%20The%20Little%20Wooden%20Boy%20and%20the%20Belly%20of%20Love.mp4",
+              "seconds": 1228,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E01 - The Little Wooden Boy and The Belly of Love.mp4",
+              "name": "S2E01 - The Little Wooden Boy and The Belly of Love",
+              "url": "https://archive.org/download/the-tick-full-series/S2E01%20-%20The%20Little%20Wooden%20Boy%20and%20The%20Belly%20of%20Love.mp4",
+              "seconds": 1228,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 441
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "A.E.G.I.S and You",
+          "airdate": "2019-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Hot Beige!",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E03 - Armless But Not Harmless (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E03 - Armless But Not Harmless (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E03%20-%20Armless%20But%20Not%20Harmless%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1231,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 122
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E03 - Armless But Not Harmless.mp4",
+              "name": "The Tick/2/S02E03 - Armless But Not Harmless",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E03%20-%20Armless%20But%20Not%20Harmless.mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E03 - Armless But Not Harmless.mp4",
+              "name": "S2E03 - Armless But Not Harmless",
+              "url": "https://archive.org/download/the-tick-full-series/S2E03%20-%20Armless%20But%20Not%20Harmless.mp4",
+              "seconds": 1231,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 457
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Blood and Cake",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E04 - Coach Fussell's Lament (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E04 - Coach Fussell's Lament (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E04%20-%20Coach%20Fussell's%20Lament%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1229,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 122
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E04 - Coach Fussell's Lament.mp4",
+              "name": "The Tick/2/S02E04 - Coach Fussell's Lament",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E04%20-%20Coach%20Fussell's%20Lament.mp4",
+              "seconds": 1229,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Magic is Real",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S2E05 - Coach Fussell's Lament.mp4",
+            "name": "S2E05 - Coach Fussell's Lament",
+            "url": "https://archive.org/download/the-tick-full-series/S2E05%20-%20Coach%20Fussell's%20Lament.mp4",
+            "seconds": 1229,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 463
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Categorically Speaking",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E06 - Bloomsday (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E06 - Bloomsday (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E06%20-%20Bloomsday%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1229,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 122
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E06 - Bloomsday.mp4",
+              "name": "The Tick/2/S02E06 - Bloomsday",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E06%20-%20Bloomsday.mp4",
+              "seconds": 1229,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E06 - Bloomsday.mp4",
+              "name": "S2E06 - Bloomsday",
+              "url": "https://archive.org/download/the-tick-full-series/S2E06%20-%20Bloomsday.mp4",
+              "seconds": 1229,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 470
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Lei-Lo, Ho!",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E07 - Evil Sits Down for a Moment (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E07 - Evil Sits Down for a Moment (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E07%20-%20Evil%20Sits%20Down%20for%20a%20Moment%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1232,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 119
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E07 - Evil Sits Down for a Moment.mp4",
+              "name": "The Tick/2/S02E07 - Evil Sits Down for a Moment",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E07%20-%20Evil%20Sits%20Down%20for%20a%20Moment.mp4",
+              "seconds": 1232,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E07 - Evil Sits Down for a Moment.mp4",
+              "name": "S2E07 - Evil Sits Down for a Moment",
+              "url": "https://archive.org/download/the-tick-full-series/S2E07%20-%20Evil%20Sits%20Down%20for%20a%20Moment.mp4",
+              "seconds": 1232,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 440
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "name": "Joan!",
+          "airdate": "2019-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "In the Woods",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E09 - Ants in Pants! (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E09 - Ants in Pants! (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E09%20-%20Ants%20in%20Pants!%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1225,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 119
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E09 - Ants in Pants!.mp4",
+              "name": "The Tick/2/S02E09 - Ants in Pants!",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E09%20-%20Ants%20in%20Pants!.mp4",
+              "seconds": 1225,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E09 - Ants in Pants!.mp4",
+              "name": "S2E09 - Ants in Pants!",
+              "url": "https://archive.org/download/the-tick-full-series/S2E09%20-%20Ants%20in%20Pants!.mp4",
+              "seconds": 1225,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 397
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "name": "Choose Love!",
+          "airdate": "2019-04-05",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S2E10 - The Tick Loves Santa!.mp4",
+            "name": "S2E10 - The Tick Loves Santa!",
+            "url": "https://archive.org/download/the-tick-full-series/S2E10%20-%20The%20Tick%20Loves%20Santa!.mp4",
+            "seconds": 1231,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 504
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S02E10 - The Tick Loves Santa! (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S02E10 - The Tick Loves Santa! (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E10%20-%20The%20Tick%20Loves%20Santa!%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E10 - The Tick Loves Santa!.mp4",
+              "name": "The Tick/2/S02E10 - The Tick Loves Santa!",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E10%20-%20The%20Tick%20Loves%20Santa!.mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

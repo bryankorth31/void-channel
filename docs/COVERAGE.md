@@ -1,6 +1,6 @@
 # Coverage
 
-1821 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1866 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -17,11 +17,14 @@
 | Andromeda | Sci-Fi, Fantasy and Horror | 110 | 110 | 0 | 0 | 100% |
 | Arcane | Streaming Era | 18 | 0 | 18 | 0 | 100% |
 | Archer | Animated | 96 | 0 | 96 | 0 | 100% |
+| As Told by Ginger | Animated | 75 | 0 | 75 | 0 | 100% |
 | Ask a Ninja | Internet Comedy | 9 | 0 | 9 | 0 | 100% |
 | Assassination Classroom | Anime | 47 | 47 | 0 | 0 | 100% |
 | Babylon 5 | Sci-Fi, Fantasy and Horror | 166 | 0 | 166 | 0 | 100% |
 | Band of Brothers | Drama | 10 | 10 | 0 | 0 | 100% |
 | Battlestar Galactica (1978) | Classic TV | 22 | 0 | 22 | 0 | 100% |
+| Beast Machines: Transformers | Animated | 26 | 15 | 11 | 0 | 100% |
+| Beast Wars: Transformers | Animated | 52 | 52 | 0 | 0 | 100% |
 | Bee and PuppyCat | Internet Comedy | 16 | 0 | 16 | 0 | 100% |
 | Ben 10: Alien Force | Animated | 46 | 0 | 46 | 0 | 100% |
 | Benson | Classic TV | 158 | 158 | 0 | 0 | 100% |
@@ -30,6 +33,7 @@
 | Beyond the Boundary | Anime | 12 | 0 | 12 | 0 | 100% |
 | Bibleman | Drama | 19 | 0 | 19 | 0 | 100% |
 | Big Train | British and Beyond | 12 | 12 | 0 | 0 | 100% |
+| Biker Mice from Mars | Animated | 28 | 22 | 6 | 0 | 100% |
 | Black Books | British and Beyond | 18 | 0 | 18 | 0 | 100% |
 | BLACK TORCH | Anime | 12 | 0 | 12 | 0 | 100% |
 | Blue Planet II | Documentary & Geographic | 21 | 0 | 21 | 0 | 100% |
@@ -39,13 +43,17 @@
 | Bravest Warriors | Internet Comedy | 115 | 0 | 115 | 0 | 100% |
 | Breaking Bad | Drama | 62 | 18 | 44 | 0 | 100% |
 | Buffy the Vampire Slayer | Sci-Fi, Fantasy and Horror | 181 | 0 | 181 | 0 | 100% |
+| Bump in the Night | Animated | 26 | 26 | 0 | 0 | 100% |
 | Cadfael | British and Beyond | 13 | 13 | 0 | 0 | 100% |
 | Cagney & Lacey | Classic TV | 125 | 124 | 1 | 0 | 100% |
+| Capitol Critters | Animated | 13 | 13 | 0 | 0 | 100% |
+| Captain Planet and the Planeteers | Animated | 113 | 99 | 14 | 0 | 100% |
 | Caressing My Hibernating Bear | Anime | 9 | 0 | 9 | 0 | 100% |
 | Chainsaw Man | Anime | 12 | 0 | 12 | 0 | 100% |
 | Chainsmoker Cat | Anime | 2 | 0 | 2 | 0 | 100% |
 | Charlie the Unicorn | Internet Comedy | 13 | 0 | 13 | 0 | 100% |
 | Classic Concentration | Classic TV | 825 | 0 | 825 | 0 | 100% |
+| Clerks: The Animated Series | Animated | 30 | 0 | 30 | 0 | 100% |
 | Clone High | MTV | 13 | 13 | 0 | 0 | 100% |
 | Coach | 90s Sitcoms | 200 | 199 | 0 | 1 | 100% |
 | Concentration | Classic TV | 251 | 2 | 249 | 0 | 100% |
@@ -61,6 +69,7 @@
 | Davey and Goliath | Classic TV | 66 | 60 | 6 | 0 | 100% |
 | Death Note | Anime | 37 | 37 | 0 | 0 | 100% |
 | Die Harald Schmidt Show | Reality & Talk | 687 | 0 | 687 | 0 | 100% |
+| Dilbert | Animated | 30 | 0 | 30 | 0 | 100% |
 | Dimension 20 | Internet Comedy | 370 | 0 | 370 | 0 | 100% |
 | Diners, Drive-Ins and Dives | Documentary & Geographic | 29 | 0 | 29 | 0 | 100% |
 | Dogfights | Documentary & Geographic | 29 | 0 | 29 | 0 | 100% |
@@ -70,7 +79,9 @@
 | Downtown | MTV | 13 | 0 | 13 | 0 | 100% |
 | Dragon Ball DAIMA | Anime | 20 | 20 | 0 | 0 | 100% |
 | Drawn Together | Animated | 36 | 35 | 1 | 0 | 100% |
+| Duckman | Animated | 156 | 0 | 156 | 0 | 100% |
 | Dynasties | Documentary & Geographic | 9 | 4 | 5 | 0 | 100% |
+| Earthworm Jim | Animated | 23 | 19 | 4 | 0 | 100% |
 | Ed, Edd n Eddy | Animated | 133 | 0 | 133 | 0 | 100% |
 | Eight Is Enough | Classic TV | 112 | 110 | 2 | 0 | 100% |
 | El hormiguero | Reality & Talk | 3 | 0 | 3 | 0 | 100% |
@@ -81,12 +92,16 @@
 | Everwood | Drama | 89 | 0 | 89 | 0 | 100% |
 | Everybody Loves Raymond | 90s Sitcoms | 209 | 209 | 0 | 0 | 100% |
 | Everything Is Terrible! | Internet Comedy | 498 | 0 | 498 | 0 | 100% |
+| Exosquad | Animated | 52 | 52 | 0 | 0 | 100% |
 | Extraordinary Attorney Woo | World TV | 16 | 11 | 5 | 0 | 100% |
+| Extreme Ghostbusters | Animated | 40 | 40 | 0 | 0 | 100% |
+| Family Dog | Animated | 45 | 0 | 45 | 0 | 100% |
 | Family Guy | Animated | 20 | 0 | 20 | 0 | 100% |
 | Farscape | Sci-Fi, Fantasy and Horror | 88 | 86 | 2 | 0 | 100% |
 | Fat Guy Stuck in Internet | Adult Swim | 10 | 10 | 0 | 0 | 100% |
 | Fawlty Towers | Classic TV | 12 | 12 | 0 | 0 | 100% |
 | Fighting Spirit | Anime | 83 | 0 | 83 | 0 | 100% |
+| Fish Police | Animated | 6 | 6 | 0 | 0 | 100% |
 | Fishing with John | 2000s and Later Sitcoms | 6 | 6 | 0 | 0 | 100% |
 | Flowers | British and Beyond | 12 | 12 | 0 | 0 | 100% |
 | Forbidden Science | Late Night | 13 | 12 | 1 | 0 | 100% |
@@ -99,6 +114,8 @@
 | Game Changer | Internet Comedy | 105 | 0 | 105 | 0 | 100% |
 | Generation War | World TV | 5 | 0 | 5 | 0 | 100% |
 | Ghost in the Shell: Stand Alone Complex | Anime | 160 | 0 | 160 | 0 | 100% |
+| God, the Devil and Bob | Animated | 13 | 13 | 0 | 0 | 100% |
+| Godzilla: The Series | Animated | 40 | 40 | 0 | 0 | 100% |
 | Golden Time | Anime | 24 | 0 | 24 | 0 | 100% |
 | Good Mythical Morning | Internet Comedy | 722 | 0 | 722 | 0 | 100% |
 | Gravity Falls | Streaming Era | 40 | 40 | 0 | 0 | 100% |
@@ -139,6 +156,7 @@
 | Jonathan Strange & Mr Norrell | British and Beyond | 7 | 7 | 0 | 0 | 100% |
 | Jury Duty | Streaming Era | 8 | 0 | 8 | 0 | 100% |
 | Just Shoot Me | 90s Sitcoms | 99 | 0 | 99 | 0 | 100% |
+| KaBlam! | Animated | 153 | 0 | 153 | 0 | 100% |
 | Kenichi: The Mightiest Disciple | Anime | 50 | 50 | 0 | 0 | 100% |
 | Kenny vs. Spenny | British and Beyond | 413 | 0 | 413 | 0 | 100% |
 | Knowing Me, Knowing You with Alan Partridge | British and Beyond | 6 | 0 | 6 | 0 | 100% |
@@ -156,9 +174,12 @@
 | McGee and Me! | Drama | 12 | 0 | 12 | 0 | 100% |
 | MDR um 4 | Reality & Talk | 8 | 0 | 8 | 0 | 100% |
 | Medical Detectives | Documentary & Geographic | 33 | 0 | 33 | 0 | 100% |
+| Megas XLR | Animated | 26 | 26 | 0 | 0 | 100% |
+| Men in Black: The Series | Animated | 53 | 53 | 0 | 0 | 100% |
 | Michael & Michael Have Issues | Sketch and Comedy | 7 | 6 | 1 | 0 | 100% |
 | Michael Palin: Around the World in 80 Days | Documentary & Geographic | 7 | 0 | 7 | 0 | 100% |
 | Mieruko-chan | Anime | 12 | 12 | 0 | 0 | 100% |
+| Mighty Max | Animated | 40 | 40 | 0 | 0 | 100% |
 | Minoriteam | Adult Swim | 176 | 0 | 176 | 0 | 100% |
 | Mission Hill | Adult Swim | 13 | 13 | 0 | 0 | 100% |
 | Money Heist | World TV | 33 | 0 | 33 | 0 | 100% |
@@ -209,6 +230,7 @@
 | Remote Control | MTV | 43 | 0 | 43 | 0 | 100% |
 | Revenge of Others | World TV | 12 | 2 | 10 | 0 | 100% |
 | Review | 2000s and Later Sitcoms | 148 | 0 | 148 | 0 | 100% |
+| Road Rovers | Animated | 13 | 13 | 0 | 0 | 100% |
 | Robin of Sherwood | Classic TV | 26 | 26 | 0 | 0 | 100% |
 | Sally Jessy Raphael | Classic TV | 6 | 0 | 6 | 0 | 100% |
 | Samurai Champloo | Anime | 26 | 26 | 0 | 0 | 100% |
@@ -227,6 +249,7 @@
 | Six Feet Under | Drama | 63 | 60 | 3 | 0 | 100% |
 | SK8 the Infinity | Anime | 4 | 0 | 4 | 0 | 100% |
 | Snuff Box | British and Beyond | 6 | 0 | 6 | 0 | 100% |
+| Sonic the Hedgehog | Animated | 118 | 0 | 118 | 0 | 100% |
 | Sound! Euphonium | Anime | 68 | 0 | 68 | 0 | 100% |
 | Space: 1999 | Classic TV | 48 | 48 | 0 | 0 | 100% |
 | Spaced | British and Beyond | 14 | 14 | 0 | 0 | 100% |
@@ -242,6 +265,7 @@
 | Sue Thomas: F.B.Eye | Drama | 57 | 57 | 0 | 0 | 100% |
 | Summer Time Rendering | Anime | 26 | 0 | 26 | 0 | 100% |
 | Superjail! | Adult Swim | 56 | 0 | 56 | 0 | 100% |
+| SWAT Kats: The Radical Squadron | Animated | 22 | 0 | 22 | 0 | 100% |
 | Takopi's Original Sin | Anime | 6 | 0 | 6 | 0 | 100% |
 | Tales of the Unexplained | Documentary & Geographic | 4 | 0 | 4 | 0 | 100% |
 | TaleSpin | Animated | 65 | 0 | 65 | 0 | 100% |
@@ -321,6 +345,7 @@
 | Tigtone | Adult Swim | 20 | 20 | 0 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 29 | 1 | 0 | 100% |
 | Tomorrow with Tom Snyder | Classic TV | 2 | 0 | 2 | 0 | 100% |
+| Toonami | Animated | 4 | 0 | 4 | 0 | 100% |
 | Total Request Live | MTV | 66 | 0 | 66 | 0 | 100% |
 | Trains Unlimited | Documentary & Geographic | 6 | 0 | 6 | 0 | 100% |
 | Twenty Five Twenty One | World TV | 16 | 16 | 0 | 0 | 100% |
@@ -403,6 +428,7 @@
 | 30 Rock | 2000s and Later Sitcoms | 138 | 127 | 3 | 8 | 94% |
 | Aqua Teen Hunger Force | Adult Swim | 143 | 131 | 3 | 9 | 94% |
 | Courage the Cowardly Dog | Animated | 53 | 0 | 50 | 3 | 94% |
+| Foster's Home for Imaginary Friends | Animated | 79 | 73 | 1 | 5 | 94% |
 | Tales from the Crypt | Sci-Fi, Fantasy and Horror | 93 | 32 | 55 | 6 | 94% |
 | The Bob Newhart Show | Classic TV | 142 | 1 | 132 | 9 | 94% |
 | When Life Gives You Tangerines | World TV | 16 | 15 | 0 | 1 | 94% |
@@ -422,6 +448,7 @@
 | Eureka | Sci-Fi, Fantasy and Horror | 76 | 68 | 1 | 7 | 91% |
 | Leave It to Beaver | Classic TV | 234 | 77 | 137 | 20 | 91% |
 | Star Trek: Voyager | Sci-Fi, Fantasy and Horror | 172 | 49 | 108 | 15 | 91% |
+| The Tick | Animated | 22 | 15 | 5 | 2 | 91% |
 | Forensic Files | Documentary & Geographic | 400 | 2 | 358 | 40 | 90% |
 | Hellsing Ultimate | Anime | 10 | 1 | 8 | 1 | 90% |
 | Saul of the Mole Men | Adult Swim | 20 | 18 | 0 | 2 | 90% |
@@ -437,7 +464,9 @@
 | Adventures in Odyssey | Animated | 17 | 0 | 15 | 2 | 88% |
 | Anne of Green Gables | Classic TV | 8 | 7 | 0 | 1 | 88% |
 | Hazbin Hotel | Internet Comedy | 16 | 0 | 14 | 2 | 88% |
+| Histeria! | Animated | 52 | 26 | 20 | 6 | 88% |
 | My Wife and Kids | 2000s and Later Sitcoms | 123 | 107 | 1 | 15 | 88% |
+| Street Sharks | Animated | 40 | 19 | 16 | 5 | 88% |
 | The Osbournes | MTV | 51 | 0 | 45 | 6 | 88% |
 | Scrapheap Challenge | Documentary & Geographic | 143 | 0 | 124 | 19 | 87% |
 | Cobra Kai | Streaming Era | 65 | 56 | 0 | 9 | 86% |
@@ -481,6 +510,7 @@
 | Batman: The Animated Series | Animated | 85 | 60 | 0 | 25 | 71% |
 | Blackadder | Classic TV | 24 | 12 | 5 | 7 | 71% |
 | Alfred Hitchcock Presents | Classic TV | 268 | 187 | 0 | 81 | 70% |
+| Codename: Kids Next Door | Animated | 139 | 64 | 33 | 42 | 70% |
 | Dragon Ball Super | Anime | 131 | 16 | 76 | 39 | 70% |
 | Teach You a Lesson | World TV | 10 | 7 | 0 | 3 | 70% |
 | The Day the Universe Changed | Documentary & Geographic | 10 | 7 | 0 | 3 | 70% |
@@ -511,6 +541,7 @@
 | Rome: Rise and Fall of an Empire | Documentary & Geographic | 13 | 0 | 8 | 5 | 62% |
 | 12 oz. Mouse | Adult Swim | 31 | 0 | 19 | 12 | 61% |
 | NTSF:SD:SUV:: | Adult Swim | 38 | 17 | 6 | 15 | 61% |
+| The Grim Adventures of Billy & Mandy | Animated | 161 | 62 | 36 | 63 | 61% |
 | Black Mirror | British and Beyond | 32 | 19 | 0 | 13 | 59% |
 | Babylon Berlin | World TV | 48 | 28 | 0 | 20 | 58% |
 | BoJack Horseman | Streaming Era | 76 | 23 | 21 | 32 | 58% |
@@ -523,12 +554,14 @@
 | Powerpuff Girls Z | Anime | 52 | 0 | 29 | 23 | 56% |
 | The Mary Tyler Moore Show | Classic TV | 168 | 48 | 46 | 74 | 56% |
 | Beavis and Butt-Head | Animated | 210 | 12 | 104 | 94 | 55% |
+| The Critic | Animated | 33 | 0 | 18 | 15 | 55% |
 | Super Password | Classic TV | 1147 | 620 | 0 | 527 | 54% |
 | The Ascent of Man | Documentary & Geographic | 13 | 0 | 7 | 6 | 54% |
 | Ancient Aliens | Streaming Era | 292 | 72 | 83 | 137 | 53% |
 | Avatar: The Last Airbender | Animated | 15 | 0 | 8 | 7 | 53% |
 | Mr. Robot | Streaming Era | 45 | 20 | 4 | 21 | 53% |
 | Providence | Drama | 96 | 51 | 0 | 45 | 53% |
+| The Adventures of Jimmy Neutron, Boy Genius | Animated | 76 | 0 | 40 | 36 | 53% |
 | Hell's Paradise | Anime | 25 | 13 | 0 | 12 | 52% |
 | Invader Zim | Animated | 46 | 7 | 17 | 22 | 52% |
 | Solo Leveling | Anime | 25 | 0 | 13 | 12 | 52% |
@@ -557,6 +590,7 @@
 | Cow and Chicken | Animated | 103 | 26 | 22 | 55 | 47% |
 | The Avengers | Classic TV | 161 | 50 | 25 | 86 | 47% |
 | Freakazoid! | Animated | 46 | 18 | 3 | 25 | 46% |
+| Stressed Eric | Animated | 13 | 6 | 0 | 7 | 46% |
 | Baseball | Documentary & Geographic | 11 | 0 | 5 | 6 | 45% |
 | Highlander: The Series | Sci-Fi, Fantasy and Horror | 40 | 0 | 18 | 22 | 45% |
 | The Jellies! | Adult Swim | 20 | 8 | 1 | 11 | 45% |
@@ -609,6 +643,7 @@
 | Kingdom | World TV | 40 | 0 | 12 | 28 | 30% |
 | MythBusters | Documentary & Geographic | 273 | 1 | 80 | 192 | 30% |
 | Star Trek: Enterprise | Sci-Fi, Fantasy and Horror | 98 | 1 | 28 | 69 | 30% |
+| ChalkZone | Animated | 129 | 4 | 34 | 91 | 29% |
 | Long Way Round | Documentary & Geographic | 7 | 0 | 2 | 5 | 29% |
 | Webster | Classic TV | 144 | 4 | 36 | 104 | 28% |
 | Curb Your Enthusiasm | 2000s and Later Sitcoms | 120 | 0 | 32 | 88 | 27% |
@@ -709,6 +744,7 @@
 | Ancient Discoveries | Documentary & Geographic | 42 | 0 | 3 | 39 | 7% |
 | Below Deck | Reality & Talk | 188 | 13 | 0 | 175 | 7% |
 | Chicago Med | Streaming Era | 223 | 15 | 0 | 208 | 7% |
+| Eek! The Cat | Animated | 75 | 3 | 2 | 70 | 7% |
 | Happy Days | Classic TV | 255 | 15 | 2 | 238 | 7% |
 | Salad Fingers | Internet Comedy | 14 | 0 | 1 | 13 | 7% |
 | Doug | Animated | 169 | 0 | 10 | 159 | 6% |
@@ -764,6 +800,7 @@
 | Spartacus | Drama | 33 | 1 | 0 | 32 | 3% |
 | The Comeback | 2000s and Later Sitcoms | 29 | 0 | 1 | 28 | 3% |
 | The Prince of Tennis II U-17 WORLD CUP | Anime | 39 | 0 | 1 | 38 | 3% |
+| The Wild Thornberrys | Animated | 91 | 2 | 1 | 88 | 3% |
 | Wild West Tech | Documentary & Geographic | 34 | 0 | 1 | 33 | 3% |
 | American Chopper | Documentary & Geographic | 167 | 2 | 2 | 163 | 2% |
 | American Experience | Documentary & Geographic | 420 | 4 | 6 | 410 | 2% |
@@ -863,6 +900,7 @@
 | A Tale of the Secret Saint | Anime | 13 | 0 | 0 | 13 | 0% |
 | A Wild Last Boss Appeared! | Anime | 24 | 0 | 0 | 24 | 0% |
 | A.D. The Bible Continues | Streaming Era | 12 | 0 | 0 | 12 | 0% |
+| Aaahh!!! Real Monsters | Animated | 102 | 0 | 0 | 102 | 0% |
 | Abbott Elementary | Streaming Era | 99 | 0 | 0 | 99 | 0% |
 | Ace of the Diamond | Anime | 202 | 0 | 0 | 202 | 0% |
 | Africa | Documentary & Geographic | 6 | 0 | 0 | 6 | 0% |
@@ -971,6 +1009,7 @@
 | Carnivale | Sci-Fi, Fantasy and Horror | 24 | 0 | 0 | 24 | 0% |
 | Case Closed | Anime | 2 | 0 | 0 | 2 | 0% |
 | Catastrophe | British and Beyond | 24 | 0 | 0 | 24 | 0% |
+| CatDog | Animated | 131 | 0 | 0 | 131 | 0% |
 | Catfish: The TV Show | MTV | 245 | 0 | 0 | 245 | 0% |
 | Catherine the Great | British and Beyond | 4 | 0 | 0 | 4 | 0% |
 | Cathouse | Late Night | 17 | 0 | 0 | 17 | 0% |
@@ -1328,6 +1367,7 @@
 | Merlin | British and Beyond | 65 | 0 | 0 | 65 | 0% |
 | Metalocalypse | Adult Swim | 62 | 0 | 0 | 62 | 0% |
 | Middlemarch | British and Beyond | 6 | 0 | 0 | 6 | 0% |
+| Mike Tyson Mysteries | Animated | 70 | 0 | 0 | 70 | 0% |
 | MINDHUNTER | Streaming Era | 19 | 0 | 0 | 19 | 0% |
 | Miss Kobayashi's Dragon Maid | Anime | 25 | 0 | 0 | 25 | 0% |
 | Mo | Streaming Era | 16 | 0 | 0 | 16 | 0% |
@@ -1441,6 +1481,7 @@
 | Real Girl | Anime | 24 | 0 | 0 | 24 | 0% |
 | Real Husbands of Hollywood | 2000s and Later Sitcoms | 58 | 0 | 0 | 58 | 0% |
 | Really Big Things | Documentary & Geographic | 20 | 0 | 0 | 20 | 0% |
+| ReBoot | Animated | 8 | 0 | 0 | 8 | 0% |
 | Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship! | Anime | 12 | 0 | 0 | 12 | 0% |
 | REBORN! | Anime | 23 | 0 | 0 | 23 | 0% |
 | Red River | Anime | 24 | 0 | 0 | 24 | 0% |
@@ -1461,6 +1502,7 @@
 | Rob Dyrdek's Fantasy Factory | MTV | 75 | 0 | 0 | 75 | 0% |
 | Robin Hood | British and Beyond | 10 | 0 | 0 | 10 | 0% |
 | Roc | 90s Sitcoms | 71 | 0 | 0 | 71 | 0% |
+| Rocket Power | Animated | 118 | 0 | 0 | 118 | 0% |
 | Rocko's Modern Life | Animated | 100 | 0 | 0 | 100 | 0% |
 | Romantic Killer | Anime | 12 | 0 | 0 | 12 | 0% |
 | Rome | Drama | 22 | 0 | 0 | 22 | 0% |
@@ -1547,6 +1589,7 @@
 | Swarm | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | Sweet Home | World TV | 26 | 0 | 0 | 26 | 0% |
 | Sword Art Online | Anime | 96 | 0 | 0 | 96 | 0% |
+| Sym-Bionic Titan | Animated | 20 | 0 | 0 | 20 | 0% |
 | Taboo | British and Beyond | 8 | 0 | 0 | 8 | 0% |
 | TANK CHAIR | Anime | 12 | 0 | 0 | 12 | 0% |
 | Taxi | Classic TV | 114 | 0 | 0 | 114 | 0% |
@@ -1563,6 +1606,7 @@
 | The 700 Club | Classic TV | 1500 | 0 | 0 | 1500 | 0% |
 | The Amazing Race | Reality & Talk | 467 | 0 | 0 | 467 | 0% |
 | The Andy Williams Show | Classic TV | 105 | 0 | 0 | 105 | 0% |
+| The Angry Beavers | Animated | 123 | 0 | 0 | 123 | 0% |
 | The Arena | Reality & Talk | 13 | 0 | 0 | 13 | 0% |
 | The Arsenio Hall Show | Classic TV | 158 | 0 | 0 | 158 | 0% |
 | The Bear | Streaming Era | 46 | 0 | 0 | 46 | 0% |
@@ -1604,6 +1648,7 @@
 | The Eminence in Shadow | Anime | 32 | 0 | 0 | 32 | 0% |
 | The Eric Andre Show | Adult Swim | 60 | 0 | 0 | 60 | 0% |
 | The Expanse | Streaming Era | 62 | 0 | 0 | 62 | 0% |
+| The Fairly OddParents | Animated | 269 | 0 | 0 | 269 | 0% |
 | The Fast Show | British and Beyond | 26 | 0 | 0 | 26 | 0% |
 | The FBI Files | Documentary & Geographic | 118 | 0 | 0 | 118 | 0% |
 | The First 48 | Documentary & Geographic | 561 | 0 | 0 | 561 | 0% |
