@@ -22,7 +22,7 @@ button{background:#5fd4ff;border:0;color:#07080c;padding:12px 18px;border-radius
 .w{color:#f3c969;font-size:13px;margin-top:10px;text-shadow:0 1px 6px rgba(0,0,0,.9)}
 @media(max-width:600px){body{background-image:url(/assets/brand/bg/sign-pink-m.jpg)}}
 </style></head><body><form method="post"><p>before AI slop, there was human creativity</p>
-<input type="password" name="p" placeholder="password" autofocus><button>enter</button>${wrong ? '<div class="w">not it</div>' : ''}</form></body></html>`;
+<input type="password" name="p" placeholder="password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus><button>enter</button>${wrong ? '<div class="w">not it. capitals and spaces do not matter, so check the spelling</div>' : ''}</form></body></html>`;
 
 // After the password: back to the page they asked for, never to //evil.example/… (a protocol-relative open redirect).
 const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\/+/, '/'); return (/^\/[^\\]*$/.test(p) ? p : '/') + x.search; };
@@ -36,7 +36,8 @@ export async function onRequest({ request, env, next }) {
   if (cookies.split(';').some((c) => c.trim() === `${COOKIE}=${want}`)) return next();
   if (request.method === 'POST') {
     const form = await request.formData().catch(() => null);
-    if (form && form.get('p') === secret) {
+    const norm = (v) => String(v || '').normalize('NFKC').replace(/[\s​-‍﻿]+/g, '').toLowerCase(); // phones add capitals, trailing spaces and invisible characters when a password is pasted from a text
+    if (form && norm(form.get('p')) === norm(secret)) {
       const host = new URL(request.url).hostname;
       const domain = /(^|\.)voidtv\.net$/.test(host) ? '; Domain=voidtv.net' : ''; // one password for www and the bare domain
       return new Response(null, { status: 303, headers: { Location: safePath(request.url), 'Set-Cookie': `${COOKIE}=${want}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax${domain}` } });
