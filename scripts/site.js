@@ -60,6 +60,10 @@ fs.writeFileSync(path.join(OUT, '_redirects'), hostRules);
 const fnSrc = path.join(ROOT, 'functions');
 if (fs.existsSync(fnSrc)) fs.cpSync(fnSrc, path.join(OUT, 'functions'), { recursive: true });
 const brandSrc = path.join(ROOT, 'assets', 'brand');
+// The VOID player (player/): one script bundle and one stylesheet, cached with the rest of /assets.
+{ const P = path.join(ROOT, 'player', 'src'); const dst = path.join(OUT, 'assets', 'player'); fs.mkdirSync(dst, { recursive: true });
+  fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
+  fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css')); }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 fs.writeFileSync(path.join(OUT, '_headers'), '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');

@@ -10,6 +10,7 @@
  *   freeze      the clock (sound) keeps moving but no new picture frames arrive
  *   drift       picture frames arrive, but behind the sound by more than DRIFT_S
  *   error       the media element reports an error
+ *   silent      the copy plays but no sound is decoded (an audio codec this browser lacks)
  *   slow-start  nothing plays within START_MS of asking
  *
  * What it does, in escalating steps, per source:
@@ -83,9 +84,20 @@
       act({ type: 'set-source', index: si, source: src(), at: goodT, play: want });
     }
 
-    function nextSource(reason, now) {
+    // newFile: skip the other servers of the same copy (a decode error or a silent copy is the file's fault,
+    // so the same file from another server cannot help).
+    function nextSource(reason, now, newFile) {
       const from = src();
-      if (si + 1 >= sources.length) {
+      let j = si + 1;
+      if (newFile && from && from.fileKey != null) while (j < sources.length && sources[j].fileKey === from.fileKey) j++;
+      if (reason === 'silent' && j >= sources.length) {
+        pending = null;
+        emit({ type: 'silent-final', source: from && from.label, at: now });
+        note({ at: now, did: 'notice', reason });
+        act({ type: 'show-notice', reason: 'silent' });
+        return;
+      }
+      if (j >= sources.length) {
         setState('failed', now);
         pending = null;
         emit({ type: 'failed', reason, source: from && from.label, at: now });
@@ -93,7 +105,7 @@
         act({ type: 'show-failure', reason });
         return;
       }
-      si += 1; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0;
+      si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0;
       totals.switches += 1;
       pending = { kind: reason, step: 'switch', at: now };
       settleUntil = now + C.SETTLE_MS;
@@ -110,13 +122,13 @@
       const n = history.length;
       totals.actions += 1;
       let step;
-      if (kind === 'slow-start') step = 'switch';
+      if (kind === 'slow-start' || kind === 'silent') step = 'switch';
       else if (kind === 'error-fatal') step = 'switch';
       else if (kind === 'error-net') step = n === 1 ? 'reload' : 'switch';
       else step = n === 1 ? 'nudge' : n === 2 ? 'reload' : 'switch';
       emit({ type: 'action', kind, step, source: src() && src().label, t: goodT, n, at: now });
       note({ at: now, did: step, kind, n });
-      if (step === 'switch') return nextSource(kind, now);
+      if (step === 'switch') return nextSource(kind, now, kind === 'error-fatal' || kind === 'silent');
       pending = { kind, step, at: now };
       settleUntil = now + C.SETTLE_MS + (step === 'reload' ? C.SETTLE_MS : 0);
       setState('recovering', now);
@@ -134,7 +146,9 @@
       if (state === 'failed' || state === 'idle') return;
       if (s.ended) { if (state !== 'ended') { setState('ended', now); emit({ type: 'ended', at: now }); } return; }
       if (s.paused) {
-        if (state !== 'loading' && state !== 'recovering') setState('paused', now);
+        // Waiting for an autoplay to start is "loading"; an episode nobody asked to play yet is simply paused
+        // (so the page shows a play button, not an endless spinner).
+        if (state !== 'recovering' && !(state === 'loading' && want)) setState('paused', now);
         lastProgressAt = now; lastFrameAt = now; bufferingSince = 0; driftRun = 0;
         return;
       }
@@ -233,6 +247,7 @@
         emit({ type: 'error', code, net: !!net, source: src() && src().label, at: now });
         return escalate(net ? 'error-net' : 'error-fatal', now);
       }
+      if (name === 'silent') { if (state === 'failed' || state === 'ended') return; emit({ type: 'silent', source: src() && src().label, at: now }); return escalate('silent', now); }
       if (name === 'user-play') { want = true; if (!startedAt) askedAt = now; return; }
       if (name === 'user-pause') { want = false; return; }
       if (name === 'user-seek') { settleUntil = now + C.SETTLE_MS; driftRun = 0; bufferingSince = 0; lastProgressAt = now; lastFrameAt = now; if (info && typeof info.t === 'number') goodT = info.t; return; }

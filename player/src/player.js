@@ -19,7 +19,7 @@
   const fmt = (t) => { t = Math.max(0, t | 0); const h = (t / 3600) | 0, m = ((t % 3600) / 60) | 0, x = t % 60; return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(x).padStart(2, '0'); };
 
   const DEFAULTS = {
-    skipBack: 10, skipFwd: 30, storageKey: 'voidplayer', globalKeys: false, resolveServers: true, metadataTimeoutMs: 2500,
+    skipBack: 10, skipFwd: 30, arrowSkip: 10, volumeKeys: true, storageKey: 'voidplayer', globalKeys: false, resolveServers: true, metadataTimeoutMs: 2500,
     onEvent: null, onEnded: null, onNext: null, onPrev: null, onReport: null, config: null,
   };
 
@@ -90,8 +90,8 @@
       files.forEach((f, i) => {
         const tag = 'copy' + (i + 1);
         const s = srv[i];
-        if (s && f.path) s.hosts.forEach((h, k) => list.push({ url: 'https://' + h + s.dir + '/' + f.path, label: tag + (k ? '@backup' : '@primary'), file: f, server: h }));
-        list.push({ url: f.url, label: tag + '@archive', file: f, server: 'archive.org' });
+        if (s && f.path) s.hosts.forEach((h, k) => list.push({ url: 'https://' + h + s.dir + '/' + f.path, label: tag + (k ? '@backup' : '@primary'), file: f, fileKey: i, server: h }));
+        list.push({ url: f.url, label: tag + '@archive', file: f, fileKey: i, server: 'archive.org' });
       });
       this._emit({ type: 'load', id: ep.id, title: ep.title, sources: list.map((x) => x.label), at: now() });
       this._setMedia(ep);
@@ -127,6 +127,8 @@
       });
     }
     destroy() {
+      if (this.ep) this._emit({ type: 'summary', summary: this.core.summary(), at: now() });
+      this.ep = null;
       clearInterval(this._loop);
       if (this._raf && root.cancelAnimationFrame) cancelAnimationFrame(this._raf);
       this._timers.forEach((t) => { clearInterval(t); clearTimeout(t); });
@@ -214,7 +216,7 @@
       }, { passive: false });
       ['mousemove', 'touchstart', 'focusin'].forEach((ev) => this._on(r, ev, () => this._show(), { passive: true }));
       this._on(r, 'keydown', (e) => this._key(e));
-      if (this.o.globalKeys) this._on(document, 'keydown', (e) => { if (!r.contains(e.target) && e.target === document.body) this._key(e); });
+      if (this.o.globalKeys) this._on(document, 'keydown', (e) => { if (!r.contains(e.target)) this._key(e, true); });
 
       this._on(ui.seek, 'input', () => { if (v.duration) { this.seek(ui.seek.value / 1000 * v.duration); } this._show(); });
       this._on(ui.vol, 'input', () => { v.volume = ui.vol.value / 100; v.muted = +ui.vol.value === 0; store.set(this.o.storageKey + ':vol', String(v.volume)); this._show(); });
@@ -244,6 +246,7 @@
         return;
       }
       if (a.type === 'show-failure') return this._failure(a.reason);
+      if (a.type === 'show-notice') return this._notice(a.reason);
     }
 
     // Swap the source on the ONE video element, shutting the previous stream down properly first.
@@ -255,6 +258,19 @@
       v.addEventListener('loadedmetadata', onMeta);
       v.src = url;
       v.load();
+      // Silent copy check: some copies carry sound this browser cannot decode (AC3, DTS...). Chromium and Safari
+      // count decoded audio bytes; zero after a few seconds of playing with the sound on means a silent copy.
+      const mine = url;
+      const onPlaying = () => {
+        v.removeEventListener('playing', onPlaying);
+        const t = setTimeout(() => {
+          this._timers.delete(t);
+          if (v.getAttribute('src') !== mine || v.paused || v.muted || v.volume === 0 || v.currentTime < 2) return;
+          if (typeof v.webkitAudioDecodedByteCount === 'number' && v.webkitAudioDecodedByteCount === 0) this.core.event('silent', now());
+        }, 4500);
+        this._timers.add(t);
+      };
+      v.addEventListener('playing', onPlaying);
       if (play) { const p = v.play(); if (p && p.catch) p.catch((e) => { if (e && e.name === 'NotAllowedError') this._needTap(); }); }
     }
     _teardown(keepUi) {
@@ -307,22 +323,28 @@
       }
     }
 
-    _key(e) {
+    _key(e, outside) {
+      if (e.defaultPrevented) return;
       if (e.ctrlKey || e.metaKey || e.altKey) return; // never steal browser shortcuts (Ctrl+C, Ctrl+F, Alt+←)
       const t = e.target;
       if (t && t.matches && t.matches('input:not([type=range]),textarea,select,[contenteditable],[contenteditable] *')) return;
       const onButton = t && t.tagName === 'BUTTON';
       const k = e.key;
+      // Keys pressed elsewhere on the page: letters still drive the player, but Space, Enter and arrows
+      // belong to whatever link or button has focus there.
+      if (outside && (k === ' ' || k === 'Enter' || k.startsWith('Arrow')) && t && t.closest && t.closest('a,button,[role=button],[tabindex]:not(body)')) return;
       if ((k === ' ' || k === 'Enter') && onButton) return; // the focused button handles it
       if (t && t.type === 'range' && (k === 'ArrowLeft' || k === 'ArrowRight' || k === 'ArrowUp' || k === 'ArrowDown')) return; // the slider handles its own arrows
       // TV remotes: Left/Right move between focused controls instead of seeking.
-      if (onButton && (k === 'ArrowLeft' || k === 'ArrowRight')) { this._moveFocus(t, k === 'ArrowRight' ? 1 : -1); e.preventDefault(); return; }
+      if (onButton && !outside && (k === 'ArrowLeft' || k === 'ArrowRight')) { this._moveFocus(t, k === 'ArrowRight' ? 1 : -1); e.preventDefault(); return; }
       let did = true;
       if (k === ' ' || k === 'k' || k === 'K' || k === 'MediaPlayPause') this.toggle();
-      else if (k === 'ArrowLeft' || k === 'j' || k === 'J') this.skip(-this.o.skipBack);
-      else if (k === 'ArrowRight' || k === 'l' || k === 'L') this.skip(this.o.skipFwd);
-      else if (k === 'ArrowUp' && !onButton) { this.v.volume = Math.min(1, this.v.volume + 0.1); this.v.muted = false; store.set(this.o.storageKey + ':vol', String(this.v.volume)); }
-      else if (k === 'ArrowDown' && !onButton) { this.v.volume = Math.max(0, this.v.volume - 0.1); store.set(this.o.storageKey + ':vol', String(this.v.volume)); }
+      else if (k === 'ArrowLeft') this.skip(-this.o.arrowSkip);
+      else if (k === 'ArrowRight') this.skip(this.o.arrowSkip);
+      else if (k === 'j' || k === 'J') this.skip(-this.o.skipBack);
+      else if (k === 'l' || k === 'L') this.skip(this.o.skipFwd);
+      else if (k === 'ArrowUp' && !onButton && this.o.volumeKeys) { this.v.volume = Math.min(1, this.v.volume + 0.1); this.v.muted = false; store.set(this.o.storageKey + ':vol', String(this.v.volume)); }
+      else if (k === 'ArrowDown' && !onButton && this.o.volumeKeys) { this.v.volume = Math.max(0, this.v.volume - 0.1); store.set(this.o.storageKey + ':vol', String(this.v.volume)); }
       else if (k === 'f' || k === 'F') this._do('fs');
       else if (k === 'm' || k === 'M') this._do('mute');
       else if (k === 'c' || k === 'C') this._captions();
@@ -418,6 +440,18 @@
         if (c === 'retry') { this._hideCard(); this.core.event('retry', now()); }
         if (c === 'next' && this.o.onNext) { this._hideCard(); this.o.onNext(this); }
         if (c === 'report' && this.o.onReport) this.o.onReport(this.diagnostics(), this);
+      });
+    }
+
+    _notice(reason) {
+      if (reason !== 'silent') return;
+      const f = this.ep && (this.ep.files || [])[0];
+      this._card('<p class="vpx-k">No sound for this episode in this browser</p><p class="vpx-dim">Its sound is in a format this browser cannot play, and we have no other copy. Edge, Safari and most TVs can play it, or download it for VLC.</p>'
+        + '<div class="vpx-acts"><button data-c="keep" class="vpx-primary">Keep watching</button>'
+        + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
+        + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '') + '</div>', (c) => {
+        this._hideCard();
+        if (c === 'next' && this.o.onNext) this.o.onNext(this);
       });
     }
 

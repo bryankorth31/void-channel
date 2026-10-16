@@ -91,7 +91,19 @@ Polo: two servers, both serving at several times the 0.1 MB/s the episode needs.
   on a screen where it happens (the TV PC, testers' devices). The lab records every episode's result for
   exactly that.
 
-## Connecting it to VOIDtv later (the contract)
+## Status: connected to VOIDtv on 16 October 2026
+
+`player/tools/connect-voidtv.js` applied the contract below to `scripts/lib/app.js` and `scripts/site.js`
+(every anchor checked, old player removed entirely: `vpMarkup`, `vpInit`, `vpSync`, `vpFlash`, `vpCaptions`,
+the TV page's built-in-controls video and the site's playback keys). Verified on a local build before going
+live: show page plays from the primary server; N moves to the next episode in a fresh player and the old
+video is emptied; leaving the show leaves no video playing; Live TV tunes in at the live point and ↑/↓
+surfing replaces the player cleanly; resume picks up at the saved position; K, ←/→ and Ctrl+C behave;
+phone width fits; an unstarted episode shows a play button, not a spinner.
+
+To undo: `git revert` the connecting commit; the player folder stays as it was.
+
+## Connecting it to VOIDtv (the contract)
 
 1. **Data.** Each episode needs `files`: the output of `rankEpisode(ep)` from `tools/rank-sources.js`
    (`url`, `item`, `path`, `format`, `mbps`, `needs`, `conf`). `scripts/site.js` would write these into the

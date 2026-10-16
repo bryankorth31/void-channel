@@ -6,9 +6,9 @@ const assert = require('node:assert');
 const VoidCore = require('../src/core.js');
 
 const SOURCES = [
-  { url: 'https://ia1/a.mp4', label: 'copy1@primary' },
-  { url: 'https://ia2/a.mp4', label: 'copy1@backup' },
-  { url: 'https://archive.org/download/x/b.mp4', label: 'copy2@archive' },
+  { url: 'https://ia1/a.mp4', label: 'copy1@primary', fileKey: 0 },
+  { url: 'https://ia2/a.mp4', label: 'copy1@backup', fileKey: 0 },
+  { url: 'https://archive.org/download/x/b.mp4', label: 'copy2@archive', fileKey: 1 },
 ];
 
 // A tiny world: a playhead, a frame counter, and the core in the middle.
@@ -103,14 +103,31 @@ test('network error: one retry on the same source, then switch, then a clear fai
   assert.strictEqual(w.core.sourceIndex, 2);
   w.core.event('error', w.now, { code: 4 }); w.run(1000);
   assert.strictEqual(w.core.state, 'failed');
+  assert.strictEqual(w.kinds('failed').length, 1);
   assert.strictEqual(w.acts('show-failure').length, 1);
 });
 
-test('decode or format error switches straight away (retrying the same file cannot help)', () => {
+test('decode or format error skips to a different copy (the same file from the backup server cannot help)', () => {
   const w = world(); w.load(); w.run(5000);
   w.core.event('error', w.now, { code: 3 });
   assert.strictEqual(w.kinds('action')[0].step, 'switch');
-  assert.strictEqual(w.core.sourceIndex, 1);
+  assert.strictEqual(w.core.sourceIndex, 2);
+  assert.strictEqual(w.core.source.label, 'copy2@archive');
+});
+
+test('a copy with no sound switches to a different copy, keeping position', () => {
+  const w = world(); w.load(); w.run(8000);
+  w.core.event('silent', w.now);
+  assert.strictEqual(w.core.sourceIndex, 2);
+  assert.ok(w.acts('set-source').pop().at > 6);
+});
+
+test('no sound on the last copy keeps playing and shows a notice instead of failing', () => {
+  const w = world(); w.load(SOURCES.slice(2)); w.run(8000);
+  w.core.event('silent', w.now); w.run(3000);
+  assert.strictEqual(w.acts('show-notice').length, 1);
+  assert.notStrictEqual(w.core.state, 'failed');
+  assert.strictEqual(w.kinds('silent-final').length, 1);
 });
 
 test('slow start: nothing plays for 15 s, so the next source is tried', () => {
@@ -163,4 +180,16 @@ test('summary reports watch time, stall time and rebuffer ratio', () => {
   assert.ok(s.stallMs >= 3000 && s.stallMs <= 4500, 'stall time ' + s.stallMs);
   assert.ok(s.rebufferRatio > 0 && s.rebufferRatio < 0.2);
   assert.strictEqual(s.stalls, 1);
+});
+
+test('an episode opened without autoplay shows as paused, not loading', () => {
+  const w = world(); w.core.load(SOURCES, 0, w.now, false); w.paused = true; w.run(3000, 'stall');
+  assert.strictEqual(w.core.state, 'paused');
+  assert.strictEqual(w.kinds('action').length, 0);
+});
+
+test('autoplay blocked by the browser falls back to paused with a play button', () => {
+  const w = world(); w.load(); w.paused = true; w.core.event('user-pause', w.now); w.run(20000, 'stall');
+  assert.strictEqual(w.core.state, 'paused');
+  assert.strictEqual(w.kinds('action').length, 0, 'no slow-start switching for a viewer who has not pressed play');
 });
