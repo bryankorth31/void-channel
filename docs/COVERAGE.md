@@ -1,6 +1,6 @@
 # Coverage
 
-2110 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+2115 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -221,6 +221,7 @@
 | Neon Genesis Evangelion | Anime | 140 | 0 | 140 | 0 | 100% |
 | Oh My Venus | World TV | 16 | 0 | 16 | 0 | 100% |
 | One Foot in the Grave | British and Beyond | 126 | 0 | 126 | 0 | 100% |
+| Onyx Equinox | Streaming Era | 12 | 0 | 12 | 0 | 100% |
 | Orphan Black | British and Beyond | 58 | 0 | 58 | 0 | 100% |
 | Ouran High School Host Club | Anime | 26 | 0 | 26 | 0 | 100% |
 | Outlaw Star | Animated | 132 | 0 | 132 | 0 | 100% |
@@ -445,6 +446,7 @@
 | Bill Nye the Science Guy | Documentary & Geographic | 100 | 80 | 17 | 3 | 97% |
 | Corner Gas | British and Beyond | 107 | 18 | 86 | 3 | 97% |
 | Harvey Birdman, Attorney at Law | Adult Swim | 39 | 38 | 0 | 1 | 97% |
+| Hilda | Streaming Era | 34 | 33 | 0 | 1 | 97% |
 | Soap | Classic TV | 90 | 87 | 0 | 3 | 97% |
 | Star Trek: The Next Generation | Sci-Fi, Fantasy and Horror | 178 | 172 | 0 | 6 | 97% |
 | The Bernie Mac Show | 2000s and Later Sitcoms | 104 | 100 | 1 | 3 | 97% |
@@ -1100,6 +1102,7 @@
 | Bosch | Streaming Era | 68 | 0 | 0 | 68 | 0% |
 | Boston Legal | Drama | 101 | 0 | 0 | 101 | 0% |
 | Brad Neely's Harg Nallin' Sclopio Peepio | Adult Swim | 10 | 0 | 0 | 10 | 0% |
+| Brassic | Streaming Era | 49 | 0 | 0 | 49 | 0% |
 | Breaking News | Internet Comedy | 13 | 0 | 0 | 13 | 0% |
 | Brideshead Revisited | Classic TV | 11 | 0 | 0 | 11 | 0% |
 | Bridgerton | Streaming Era | 32 | 0 | 0 | 32 | 0% |
@@ -1427,6 +1430,7 @@
 | Kaguya-sama: Love Is War | Anime | 37 | 0 | 0 | 37 | 0% |
 | Kakegurui | Anime | 15 | 0 | 0 | 15 | 0% |
 | Kamisama Kiss | Anime | 25 | 0 | 0 | 25 | 0% |
+| Katy Keene | Streaming Era | 13 | 0 | 0 | 13 | 0% |
 | Keeping Up with the Kardashians | Reality & Talk | 272 | 0 | 0 | 272 | 0% |
 | KENGAN ASHURA | Anime | 52 | 0 | 0 | 52 | 0% |
 | Kevin Can F**k Himself | 2000s and Later Sitcoms | 16 | 0 | 0 | 16 | 0% |
@@ -1560,6 +1564,7 @@
 | MTV Cribs | MTV | 154 | 0 | 0 | 154 | 0% |
 | Mushi-Shi | Anime | 46 | 0 | 0 | 46 | 0% |
 | Mutual of Omaha's Wild Kingdom | Documentary & Geographic | 71 | 0 | 0 | 71 | 0% |
+| My Adventures with Superman | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | My Demon | World TV | 16 | 0 | 0 | 16 | 0% |
 | My Dress-Up Darling | Anime | 24 | 0 | 0 | 24 | 0% |
 | My First First Love | World TV | 16 | 0 | 0 | 16 | 0% |
