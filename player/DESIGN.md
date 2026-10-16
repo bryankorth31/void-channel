@@ -29,9 +29,24 @@ player.css  scoped under .vpx; brand colours as custom properties.
 icons.js    generated from brand-kit/icons/ui by tools/build-icons.js.
 ```
 
+### What the Archive actually does (measured 17 October)
+
+Range requests straight to an item's two storage servers usually answer in under 0.6 s at 0.6-1.6 MB/s,
+far above the 0.1 MB/s an episode needs. But intermittently a server takes 3.5 s to start sending, or sends
+nothing for over 20 s; once, both servers of Marco Polo hung at the same moment. Those hangs hit every
+viewer alike. The browser keeps only about 20-40 s of an episode buffered (Chromium aims for roughly
+10-20 s or 2-4 MB ahead for progressive files; we cannot raise it), and it never retries a hung request on
+another server. A hang longer than the buffer is a pause on screen. The storage servers do not allow pages
+to read video bytes (no CORS on 200/206, OPTIONS 405), so a player that keeps its own large buffer would
+need a relay in between; that is a separate decision (Cloudflare terms and cost).
+
 ### What the core watches (sampled every 250 ms, plus every presented frame)
 
-- **Stall:** the playhead stops while playing. Normal buffering is left alone for 6 s.
+- **Starved stall:** the playhead stops with under 1 s buffered: the server stopped sending. After 3 s the
+  player opens a fresh connection to the item's other server at the same moment; if that starves too, it
+  keeps cycling (the first may have recovered), and after two full passes it tries the next copy.
+- **Buffered stall:** the playhead stops with video still buffered (a browser hiccup). Left alone for 6 s,
+  then the nudge / reload / switch ladder below.
 - **Freeze:** the sound clock moves but no new frames arrive for 1.5 s, *while the page is actually being
   drawn*. Pages that report "visible" but draw nothing (hidden embedded views, covered windows, some TV
   browsers) get no frames for innocent reasons; the player checks the browser's drawing heartbeat

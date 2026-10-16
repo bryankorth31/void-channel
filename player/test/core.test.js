@@ -15,7 +15,7 @@ const SOURCES = [
 function world(opts = {}) {
   const events = [], actions = [];
   const core = VoidCore.create({ emit: (e) => events.push(e), act: (a) => actions.push(a), config: opts.config });
-  const w = { core, events, actions, now: 1000, t: 0, frames: 0, paused: false, seeking: false, ended: false, hidden: false, hasVideo: true, useFrames: opts.useFrames !== false, rvfc: !!opts.rvfc };
+  const w = { core, events, actions, now: 1000, t: 0, frames: 0, paused: false, seeking: false, ended: false, hidden: false, hasVideo: true, ahead: 20, useFrames: opts.useFrames !== false, rvfc: !!opts.rvfc };
   w.load = (srcs = SOURCES, at = 0) => { core.load(srcs, at, w.now, true); };
   // Advance time. mode: 'play' (picture and sound move), 'freeze' (sound moves, no frames), 'stall' (nothing moves),
   // 'drift' (frames arrive but lag the sound by `lag` seconds; needs rvfc).
@@ -27,7 +27,7 @@ function world(opts = {}) {
         w.frames += 6;
         if (w.rvfc) for (let k = 0; k < 6; k++) core.frame(w.t - lag - 0.03, w.t, w.now);
       }
-      core.sample({ now: w.now, t: w.t, paused: w.paused, seeking: w.seeking, ended: w.ended, ready: 4, hidden: w.hidden, hasVideo: w.hasVideo, frames: w.useFrames ? w.frames : undefined, dropped: 0, totalFrames: w.frames, ahead: 20 });
+      core.sample({ now: w.now, t: w.t, paused: w.paused, seeking: w.seeking, ended: w.ended, ready: 4, hidden: w.hidden, hasVideo: w.hasVideo, frames: w.useFrames ? w.frames : undefined, dropped: 0, totalFrames: w.frames, ahead: w.ahead });
     }
   };
   w.kinds = (type) => events.filter((e) => e.type === type);
@@ -192,4 +192,38 @@ test('autoplay blocked by the browser falls back to paused with a play button', 
   const w = world(); w.load(); w.paused = true; w.core.event('user-pause', w.now); w.run(20000, 'stall');
   assert.strictEqual(w.core.state, 'paused');
   assert.strictEqual(w.kinds('action').length, 0, 'no slow-start switching for a viewer who has not pressed play');
+});
+
+test('starved stall (server stopped sending): after 3 s, hop to the other server at the same moment', () => {
+  const w = world(); w.load(); w.run(20000); w.ahead = 0; w.run(4000, 'stall');
+  const a = w.kinds('action');
+  assert.strictEqual(a.length, 1);
+  assert.strictEqual(a[0].kind, 'starved');
+  assert.strictEqual(a[0].step, 'switch', 'no pointless nudge on a hung server');
+  assert.strictEqual(w.core.source.label, 'copy1@backup');
+  assert.ok(w.acts('set-source').pop().at >= 19, "keeps the viewer's place");
+});
+
+test('a short starved pause (2 s) is left to the browser', () => {
+  const w = world(); w.load(); w.run(10000); w.ahead = 0; w.run(2000, 'stall'); w.ahead = 20; w.run(10000);
+  assert.strictEqual(w.kinds('action').length, 0);
+});
+
+test('starvation recovers on the other server and is reported as fixed', () => {
+  const w = world(); w.load(); w.run(10000); w.ahead = 0; w.run(4000, 'stall'); w.ahead = 20; w.run(12000);
+  const r = w.kinds('recovered');
+  assert.strictEqual(r.length, 1);
+  assert.strictEqual(r[0].kind, 'starved');
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+test('servers that keep starving are cycled, then the next copy is tried', () => {
+  const w = world(); w.load(); w.run(10000); w.ahead = 0; w.run(40000, 'stall');
+  const path = w.kinds('switch').map((x) => x.to);
+  assert.deepStrictEqual(path.slice(0, 4), ['copy1@backup', 'copy1@primary', 'copy1@backup', 'copy2@archive']);
+});
+
+test('a stall with video still buffered keeps the gentle ladder (nudge first)', () => {
+  const w = world(); w.load(); w.run(10000); w.ahead = 15; w.run(7000, 'stall');
+  assert.strictEqual(w.kinds('action')[0].step, 'nudge');
 });

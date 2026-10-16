@@ -6,7 +6,11 @@
  * in plain Node (see ../test/core.test.js).
  *
  * Trouble it recognises:
- *   stall       the playhead stops moving while playing (the network or server is not keeping up)
+ *   stall       the playhead stops moving while playing. Two kinds:
+ *                 starved   nothing buffered ahead: the Archive server stopped sending (measured: its storage
+ *                           servers intermittently hang for 20 s or more). Answer: a fresh connection to the
+ *                           item's other server, quickly, cycling between servers before giving up on the copy.
+ *                 buffered  data is there but the playhead is stuck: a browser-side hiccup. Answer: the ladder.
  *   freeze      the clock (sound) keeps moving but no new picture frames arrive
  *   drift       picture frames arrive, but behind the sound by more than DRIFT_S
  *   error       the media element reports an error
@@ -30,6 +34,10 @@
   const DEFAULTS = {
     STALL_GRACE_MS: 6000,     // a normal buffering pause; only after this long do we act
     STALL_STEP_MS: 6000,      // how long each stall step gets before the next one
+    STARVED_S: 1,             // less than this buffered ahead = the server stopped sending
+    STARVE_MS: 3000,          // a starved stall this long moves to the item's other server
+    STARVE_STEP_MS: 4000,     // each further starved stretch moves on again
+    STARVE_CYCLES: 2,         // full passes over a copy's servers before trying the next copy
     FREEZE_MS: 1500,          // sound advancing with no new frames for this long = frozen picture
     DRIFT_S: 0.45,            // picture behind sound by more than this...
     DRIFT_FRAMES: 6,          // ...for this many frames in a row = drift
@@ -58,21 +66,23 @@
     let bufferingSince = 0, stallStep = 0;
     let pending = null;       // the action in flight: {kind, step, at}
     let history = [];         // trouble on the current source: [{kind, at}]
+    let starveSwitches = 0;   // server switches for starvation on the current copy
     let lastQualityAt = 0;
     const totals = { watchMs: 0, stallMs: 0, stalls: 0, freezes: 0, drifts: 0, errors: 0, actions: 0, recovered: 0, switches: 0, startupMs: null };
     let lastSampleAt = 0;
     const log = [];           // recent decisions, for diagnostics
-    const note = (o) => { log.push(o); if (log.length > 60) log.shift(); };
+    let t0 = 0;               // when the current episode was loaded; decisions are logged in seconds from here
+    const note = (o) => { o.sec = Math.round((o.at - t0) / 100) / 10; log.push(o); if (log.length > 80) log.shift(); };
 
     function src() { return sources[si] || null; }
     function setState(s, now) { if (state !== s) { const from = state; state = s; emit({ type: 'state', from, to: s, at: now }); } }
 
     function load(list, startAt, now, autoplay) {
       sources = (list || []).filter((s) => s && s.url);
-      log.length = 0; // diagnostics describe the current episode only
+      log.length = 0; t0 = now; // diagnostics describe the current episode only
       for (const k of Object.keys(totals)) totals[k] = k === 'startupMs' ? null : 0;
       totals.startupMs = null;
-      history = []; pending = null; driftRun = 0; bufferingSince = 0; stallStep = 0;
+      history = []; pending = null; driftRun = 0; bufferingSince = 0; stallStep = 0; starveSwitches = 0;
       goodT = Math.max(0, +startAt || 0);
       want = autoplay !== false;
       askedAt = now; startedAt = 0;
@@ -83,6 +93,29 @@
       settleUntil = now + C.SETTLE_MS;
       act({ type: 'set-source', index: si, source: src(), at: goodT, play: want });
     }
+
+    // Starved: hop to the copy's next server (cyclically: the first one may have recovered by now). After
+    // STARVE_CYCLES full passes without luck, the copy itself is the problem: try the next copy.
+    function hopServer(now) {
+      const cur = src();
+      const same = sources.map((x, k) => k).filter((k) => sources[k].fileKey === (cur && cur.fileKey));
+      if (cur && cur.fileKey == null) return nextSource('starved', now, false);
+      starveSwitches += 1;
+      if (same.length < 2 || starveSwitches > STARVE_LIMIT(same.length)) return nextSource('starved', now, true);
+      const at = same.indexOf(si);
+      const j = same[(at + 1) % same.length];
+      const from = cur;
+      si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0;
+      totals.switches += 1; totals.actions += 1;
+      pending = { kind: 'starved', step: 'switch', at: now };
+      settleUntil = now + C.SETTLE_MS;
+      setState('recovering', now);
+      emit({ type: 'action', kind: 'starved', step: 'switch', source: from && from.label, t: goodT, n: starveSwitches, at: now });
+      emit({ type: 'switch', reason: 'starved', from: from && from.label, to: src().label, t: goodT, at: now });
+      note({ at: now, did: 'switch', kind: 'starved', to: src().label, n: starveSwitches });
+      act({ type: 'set-source', index: si, source: src(), at: goodT, play: want });
+    }
+    const STARVE_LIMIT = (n) => n * C.STARVE_CYCLES - 1;
 
     // newFile: skip the other servers of the same copy (a decode error or a silent copy is the file's fault,
     // so the same file from another server cannot help).
@@ -105,6 +138,7 @@
         act({ type: 'show-failure', reason });
         return;
       }
+      if (newFile || (sources[j] && from && sources[j].fileKey !== from.fileKey)) starveSwitches = 0;
       si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0;
       totals.switches += 1;
       pending = { kind: reason, step: 'switch', at: now };
@@ -203,9 +237,15 @@
 
       // Stall: the playhead is not moving.
       if (!moved && now - lastProgressAt > 600) {
-        if (!bufferingSince) { bufferingSince = now; stallStep = 0; totals.stalls += 1; emit({ type: 'stall', t: s.t, ahead: s.ahead, at: now }); }
+        if (!bufferingSince) { bufferingSince = now; stallStep = 0; totals.stalls += 1; emit({ type: 'stall', t: s.t, ahead: s.ahead, at: now }); note({ at: now, did: 'stall', t: Math.round(s.t), ahead: Math.round((s.ahead || 0) * 10) / 10, ready: s.ready }); }
         if (state !== 'buffering' && state !== 'recovering') setState('buffering', now);
         const waited = now - bufferingSince;
+        const starved = (s.ahead || 0) < C.STARVED_S;
+        if (starved) {
+          const due = C.STARVE_MS + stallStep * C.STARVE_STEP_MS;
+          if (waited > due) { stallStep += 1; note({ at: now, did: 'starved', t: Math.round(s.t), waitedMs: Math.round(waited) }); return hopServer(now); }
+          return;
+        }
         const due = C.STALL_GRACE_MS + stallStep * C.STALL_STEP_MS;
         if (waited > due) { stallStep += 1; return escalate('stall', now); }
         return;
@@ -214,7 +254,8 @@
       // Freeze: sound clock moves, picture does not.
       if (moved && framesKnown && s.hasVideo !== false && !s.hidden && now - lastFrameAt > C.FREEZE_MS) {
         totals.freezes += 1;
-        emit({ type: 'freeze', t: s.t, ms: now - lastFrameAt, at: now });
+        emit({ type: 'freeze', t: s.t, ms: now - lastFrameAt, ahead: s.ahead, at: now });
+        note({ at: now, did: 'freeze', t: Math.round(s.t), ms: Math.round(now - lastFrameAt), ahead: Math.round((s.ahead || 0) * 10) / 10, dropped: s.dropped, frames: s.totalFrames });
         lastFrameAt = now;
         return escalate('freeze', now);
       }
@@ -230,6 +271,7 @@
       if (driftRun >= C.DRIFT_FRAMES) {
         totals.drifts += 1;
         emit({ type: 'drift', lag: Math.round(lag * 1000) / 1000, t, at: now });
+        note({ at: now, did: 'drift', t: Math.round(t), lag: Math.round(lag * 1000) / 1000 });
         driftRun = 0;
         escalate('drift', now);
       }

@@ -113,7 +113,33 @@
         readyState: v.readyState, networkState: v.networkState, error: v.error && v.error.code, size: v.videoWidth + 'x' + v.videoHeight,
         frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, pageDrawing: !!this._drawing, summary: this.core.summary(), decisions: this.core.log,
         events: this.events.slice(-40), ua: navigator.userAgent,
+        env: { screen: screen.width + 'x' + screen.height, dpr: root.devicePixelRatio, cores: navigator.hardwareConcurrency, memGB: navigator.deviceMemory, net: navigator.connection ? { type: navigator.connection.effectiveType, downMbps: navigator.connection.downlink, saveData: navigator.connection.saveData } : null, frameTiming: this._rvfc ? 'per-frame' : 'decoder-count', fullscreen: document.fullscreenElement === this.root },
       };
+    }
+    // "Stats for nerds": Shift+D, or stats(true). Shows what the player sees, live.
+    stats(on) {
+      const box = this.ui.stats;
+      on = on == null ? box.hidden : !!on;
+      box.hidden = !on;
+      clearInterval(this._statsT); this._timers.delete(this._statsT);
+      if (!on) return;
+      const draw = () => {
+        const d = this.diagnostics(), m = d.summary;
+        const lines = [
+          'state      ' + d.state + (d.pageDrawing ? '' : '  (page not drawn: freeze checks paused)'),
+          'source     ' + (d.source ? d.source.label + '  ' + d.source.url.split('/')[2] : '-'),
+          'time       ' + d.time + ' / ' + d.duration + ' s   buffered ahead ' + d.ahead + ' s',
+          'picture    ' + d.size + '   frames ' + (d.frames ? d.frames.total + ', dropped ' + d.frames.dropped : 'n/a') + '   timing ' + d.env.frameTiming,
+          'startup    ' + (m.startupMs == null ? '-' : (m.startupMs / 1000).toFixed(2) + ' s'),
+          'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
+          'fixes      tried ' + m.actions + '  worked ' + m.recovered + '  switches ' + m.switches,
+          'network    ' + (d.env.net ? d.env.net.type + ' ~' + d.env.net.downMbps + ' Mbps' : 'n/a'),
+          '',
+        ].concat(d.decisions.slice(-8).map((x) => String(x.sec).padStart(6) + 's  ' + x.did + (x.kind ? ' ' + x.kind : '') + (x.ms ? ' ' + x.ms + 'ms' : '') + (x.lag != null ? ' lag ' + x.lag + 's' : '') + (x.ahead != null ? ' ahead ' + x.ahead + 's' : '') + (x.to ? ' -> ' + x.to : '')));
+        box.querySelector('pre').textContent = lines.join(String.fromCharCode(10));
+      };
+      draw();
+      this._statsT = setInterval(draw, 500); this._timers.add(this._statsT);
     }
     // Shows an "up next" card with a countdown. Resolves true (play it) or false (cancelled).
     upNext(title, seconds) {
@@ -153,6 +179,7 @@
         + '<button type="button" class="vpx-big" data-a="toggle" aria-label="Play">' + (ICON.play || '') + '</button>'
         + '<div class="vpx-flash" aria-hidden="true"></div>'
         + '<div class="vpx-card" role="dialog" aria-live="assertive" hidden></div>'
+        + '<div class="vpx-stats" hidden><pre></pre><div><button type="button" data-s="copy">Copy for a report</button><button type="button" data-s="close" aria-label="Close stats">' + (ICON.close || 'x') + '</button></div></div>'
         + '<div class="vpx-bar">'
         + '<div class="vpx-title"></div>'
         + '<div class="vpx-seek"><div class="vpx-buf"></div><div class="vpx-played"></div><input type="range" min="0" max="1000" step="1" value="0" aria-label="Seek"></div>'
@@ -167,7 +194,7 @@
       this.root = r;
       this.v = r.querySelector('video');
       const q = (s) => r.querySelector(s);
-      this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), speed: q('.vpx-speed'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
+      this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), stats: q('.vpx-stats'), speed: q('.vpx-speed'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
       const sv = store.get(this.o.storageKey + ':vol');
       if (sv != null && !isNaN(+sv)) this.v.volume = Math.max(0, Math.min(1, +sv));
       this._syncVol();
@@ -194,6 +221,14 @@
       this._visible = true;
       if (typeof IntersectionObserver !== 'undefined') { this._io = new IntersectionObserver((es) => { this._visible = es[es.length - 1].isIntersecting; }); this._io.observe(r); }
 
+      this._on(this.ui.stats, 'click', (e) => {
+        const b = e.target.closest('[data-s]'); if (!b) return;
+        e.stopPropagation();
+        if (b.dataset.s === 'close') return this.stats(false);
+        const txt = JSON.stringify(this.diagnostics(), null, 1);
+        const done = () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy for a report'; }, 1500); };
+        if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => root.prompt('Copy this:', txt)); else root.prompt('Copy this:', txt);
+      });
       this._on(r, 'click', (e) => {
         const btn = e.target.closest('[data-a]');
         if (btn) { this._do(btn.dataset.a, btn); this._show(); return; }
@@ -338,7 +373,8 @@
       // TV remotes: Left/Right move between focused controls instead of seeking.
       if (onButton && !outside && (k === 'ArrowLeft' || k === 'ArrowRight')) { this._moveFocus(t, k === 'ArrowRight' ? 1 : -1); e.preventDefault(); return; }
       let did = true;
-      if (k === ' ' || k === 'k' || k === 'K' || k === 'MediaPlayPause') this.toggle();
+      if (k === 'D' && e.shiftKey) this.stats();
+      else if (k === ' ' || k === 'k' || k === 'K' || k === 'MediaPlayPause') this.toggle();
       else if (k === 'ArrowLeft') this.skip(-this.o.arrowSkip);
       else if (k === 'ArrowRight') this.skip(this.o.arrowSkip);
       else if (k === 'j' || k === 'J') this.skip(-this.o.skipBack);

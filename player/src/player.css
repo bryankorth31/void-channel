@@ -47,6 +47,13 @@
 .vpx-flash{position:absolute;top:50%;transform:translateY(-50%);padding:10px 16px;border-radius:999px;background:rgba(7,8,12,.7);font-weight:700;font-size:18px;opacity:0;transition:opacity .15s;pointer-events:none}
 .vpx-flash.on{opacity:1}.vpx-flash.l{left:12%}.vpx-flash.r{right:12%}
 
+/* stats for nerds (Shift+D) */
+.vpx-stats{position:absolute;left:10px;top:10px;max-width:calc(100% - 20px);background:rgba(7,8,12,.86);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:8px 10px;z-index:3;user-select:text}
+.vpx-stats[hidden]{display:none}
+.vpx-stats pre{margin:0 0 6px;font:11px/1.45 ui-monospace,Consolas,monospace;white-space:pre-wrap;color:var(--vpx-ink)}
+.vpx-stats div{display:flex;gap:6px}.vpx-stats button{appearance:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:inherit;border-radius:6px;padding:4px 8px;font:12px system-ui,sans-serif;cursor:pointer;display:inline-flex;align-items:center}
+.vpx-stats button svg{width:14px;height:14px}
+
 /* cards: up next, failure */
 .vpx-card{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:24px;text-align:center;background:rgba(7,8,12,.88)}
 .vpx-card[hidden]{display:none}
