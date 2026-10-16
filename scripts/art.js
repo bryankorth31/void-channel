@@ -10,7 +10,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const OUT = path.join(PROFILE.catalogDir, 'art.json');
 const IMG = 'https://image.tmdb.org/t/p/';

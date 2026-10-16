@@ -21,11 +21,11 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CENSUS = fs.existsSync(path.join(__dirname, 'show-probe-results.json'))
   ? JSON.parse(fs.readFileSync(path.join(__dirname, 'show-probe-results.json'), 'utf8')).results : [];
 const OUT_DIR = path.join(PROFILE.catalogDir, 'candidates');
-const OUT_MD = path.join(ROOT, 'docs', 'HUNT.md');
+const OUT_MD = path.join(PROFILE.docsDir, 'HUNT.md');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 

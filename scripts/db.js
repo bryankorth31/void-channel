@@ -12,7 +12,7 @@ const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const SHOWS_DIR = path.join(PROFILE.catalogDir, 'shows');
 const OUT = path.join(PROFILE.catalogDir, 'voidtv.db');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 
 for (const ext of ['', '-wal', '-shm']) { try { fs.unlinkSync(OUT + ext); } catch (e) {} }
 const db = new DatabaseSync(OUT);

@@ -13,11 +13,11 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const OUT_DIR = path.join(PROFILE.catalogDir, 'shows');
-const OUT_MD = path.join(ROOT, 'docs', 'COVERAGE.md');
+const OUT_MD = path.join(PROFILE.docsDir, 'COVERAGE.md');
 const LIVE = 0.85, REVIEW = 0.5;
 const REACT = /\b(reaction|reacts?|reacting|review|recap|commentary|breakdown|watch ?along|first time watching|normies|mark watches|group reaction|walkthrough|playthrough|gameplay|let'?s play|longplay|speedrun)\b/i;
 

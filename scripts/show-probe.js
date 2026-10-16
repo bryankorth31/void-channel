@@ -10,11 +10,12 @@
 //        node scripts/show-probe.js --missing  (re-probe only shows last marked NOT THERE)
 const fs = require('fs');
 const path = require('path');
+const PROFILE = require('./lib/profile');
 
 const ROOT = path.join(__dirname, '..');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const OUT_JSON = path.join(__dirname, 'show-probe-results.json');
-const OUT_MD = path.join(ROOT, 'docs', 'SHOW_PROBE.md');
+const OUT_MD = path.join(PROFILE.docsDir, 'SHOW_PROBE.md');
 const PAUSE_MS = 8000;
 const BACKOFF_MS = [60000, 120000, 240000];
 const ROWS = 200;

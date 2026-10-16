@@ -17,12 +17,12 @@ const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const SHOWS_DIR = path.join(PROFILE.catalogDir, 'shows');
 const OUT = path.join(PROFILE.catalogDir, 'scout.json');
-const OUT_MD = path.join(ROOT, 'docs', 'SCOUT.md');
+const OUT_MD = path.join(PROFILE.docsDir, 'SCOUT.md');
 
 const args = process.argv.slice(2);
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };

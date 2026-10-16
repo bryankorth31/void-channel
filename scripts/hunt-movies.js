@@ -15,7 +15,7 @@ const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const LIST = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'tvmovies-list.json'), 'utf8')).items;
 const OUT_DIR = path.join(PROFILE.catalogDir, 'movies');
-const OUT_MD = path.join(ROOT, 'docs', 'MOVIES.md');
+const OUT_MD = path.join(PROFILE.docsDir, 'MOVIES.md');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 
 let PAUSE_MS = 3000;

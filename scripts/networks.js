@@ -9,7 +9,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
-const LIST_PATH = path.join(__dirname, 'show-list.json');
+const LIST_PATH = PROFILE.listFile;
 const LIST = JSON.parse(fs.readFileSync(LIST_PATH, 'utf8'));
 const env = fs.existsSync(path.join(ROOT, 'backend', '.env')) ? fs.readFileSync(path.join(ROOT, 'backend', '.env'), 'utf8') : '';
 const TOKEN = (process.env.TMDB_READ_TOKEN || (env.match(/^TMDB_READ_TOKEN=(.+)$/m) || [])[1] || '').trim();
@@ -93,7 +93,7 @@ async function main() {
     if (list.length > 80) md.push(`| … and ${list.length - 80} more | | | | |`);
     md.push('');
   }
-  fs.writeFileSync(path.join(ROOT, 'docs', 'NETWORKS.md'), md.join('\n'));
+  fs.writeFileSync(path.join(PROFILE.docsDir, 'NETWORKS.md'), md.join('\n'));
   console.log(`${missing.length} missing of ${Object.keys(found).length} -> docs/NETWORKS.md`);
 
   if (add) {

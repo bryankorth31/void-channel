@@ -13,7 +13,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
-const LIST = JSON.parse(fs.readFileSync(path.join(__dirname, 'show-list.json'), 'utf8'));
+const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const ART = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'art.json'), 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const OUT_DIR = path.join(PROFILE.catalogDir, 'people');
