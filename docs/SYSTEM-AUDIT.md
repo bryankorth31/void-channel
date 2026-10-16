@@ -62,6 +62,14 @@ make it invisible or unrecoverable.
    channels use the browser's built-in controls (`<video id="v" controls>`), with no stall handling,
    no watchdog and no failover. (Confirmed.)
 
+9. **The live re-sync watchdog can raise false alarms.** (Confirmed in the player lab, 16 October.) The
+   watchdog added on 15 October (`vpSync` in `app.js`) treats "no new frames for 1.5 s" as a freeze when
+   the page says it is visible. Some pages say "visible" while drawing nothing: a hidden embedded view drew
+   zero animation frames in 2 s while reporting `visible`. In that state the new player, before it got a
+   drawing-heartbeat check, logged nine false freezes in 30 s. The live watchdog has the same blind spot
+   and would jump playback every 8 s there. Ordinary visible windows are unaffected. The new player
+   (`player/`) has the fix; the live site does not.
+
 ### Solutions, root cause first
 1. **Measure:** connect the analytics store in Cloudflare (your two-minute step), and send freezes and
    re-syncs to Sentry with device, browser and show. Two weeks of this says which of 1-4 dominates.
