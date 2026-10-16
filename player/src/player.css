@@ -1,0 +1,77 @@
+/* VOID player. Everything is scoped under .vpx so it can drop into VOIDtv (or any page) without leaking.
+   Colours follow the brand kit; override the custom properties to re-skin. */
+.vpx{--vpx-ink:#e8e8ee;--vpx-dim:#9aa0b4;--vpx-accent:#5fd4ff;--vpx-gold:#f2a93b;--vpx-bg:#000;--vpx-bar:rgba(7,8,12,.86);--vpx-focus:#5fd4ff;
+  position:relative;display:block;width:100%;aspect-ratio:16/9;background:var(--vpx-bg);color:var(--vpx-ink);overflow:hidden;border-radius:12px;
+  font:14px/1.3 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-tap-highlight-color:transparent;user-select:none;contain:layout paint}
+.vpx:focus{outline:none}.vpx:focus-visible{box-shadow:0 0 0 3px var(--vpx-focus) inset}
+.vpx video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
+.vpx-shade{position:absolute;inset:0}
+.vpx svg{width:22px;height:22px;display:block;flex:none}
+
+/* control bar */
+.vpx-bar{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 8px;background:linear-gradient(transparent,var(--vpx-bar) 55%);opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s;pointer-events:none}
+.vpx.show .vpx-bar,.vpx.paused .vpx-bar,.vpx:focus-within .vpx-bar{opacity:1;transform:none;pointer-events:auto}
+.vpx.show,.vpx.paused{cursor:default}.vpx:not(.show):not(.paused){cursor:none}
+.vpx-title{font-weight:600;margin:0 4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px #000}
+.vpx-row{display:flex;align-items:center;gap:2px}
+.vpx-row button,.vpx-btn{appearance:none;border:0;background:transparent;color:inherit;min-width:40px;height:40px;padding:0 8px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font:inherit;text-decoration:none}
+.vpx-row button:hover,.vpx-btn:hover{background:rgba(255,255,255,.1)}
+.vpx button:focus-visible,.vpx a:focus-visible,.vpx input:focus-visible{outline:3px solid var(--vpx-focus);outline-offset:2px}
+.vpx-row button.on,.vpx-speed.on{color:var(--vpx-accent)}
+.vpx-speed{font-weight:700;min-width:48px}
+.vpx-time{margin-left:8px;font-variant-numeric:tabular-nums;color:var(--vpx-dim);white-space:nowrap}
+.vpx-sp{flex:1}
+.vpx-vol{width:84px;accent-color:var(--vpx-accent)}
+
+/* seek bar: a big invisible range over thin painted tracks */
+.vpx-seek{position:relative;height:18px;margin:0 4px 4px;cursor:pointer}
+.vpx-seek::before,.vpx-buf,.vpx-played{content:"";position:absolute;left:0;top:7px;height:4px;border-radius:2px}
+.vpx-seek::before{right:0;background:rgba(255,255,255,.18)}
+.vpx-buf{background:rgba(255,255,255,.35);width:0}
+.vpx-played{background:var(--vpx-accent);width:0}
+.vpx-seek:hover .vpx-buf,.vpx-seek:hover .vpx-played,.vpx-seek:hover::before{top:6px;height:6px}
+.vpx-seek input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.vpx-seek input:focus-visible+*{outline:none}
+.vpx-seek:focus-within::before{box-shadow:0 0 0 2px var(--vpx-focus)}
+
+/* big play button, spinner, status line, skip flash */
+.vpx-big{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;border:0;background:rgba(7,8,12,.62);color:#fff;display:none;align-items:center;justify-content:center;cursor:pointer}
+.vpx-big svg{width:36px;height:36px;margin-left:4px}
+.vpx.paused:not(.wait) .vpx-big{display:flex}
+.vpx-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;gap:10px;text-align:center;pointer-events:none;text-shadow:0 1px 6px #000}
+.vpx.wait .vpx-status,.vpx.has-status .vpx-status{display:flex}
+.vpx-spin{width:44px;height:44px;border-radius:50%;border:3px solid rgba(255,255,255,.2);border-top-color:var(--vpx-accent);animation:vpx-spin .9s linear infinite}
+.vpx:not(.wait) .vpx-spin{display:none}
+.vpx-status-t{font-size:15px;color:var(--vpx-ink)}
+@keyframes vpx-spin{to{transform:rotate(360deg)}}
+.vpx-flash{position:absolute;top:50%;transform:translateY(-50%);padding:10px 16px;border-radius:999px;background:rgba(7,8,12,.7);font-weight:700;font-size:18px;opacity:0;transition:opacity .15s;pointer-events:none}
+.vpx-flash.on{opacity:1}.vpx-flash.l{left:12%}.vpx-flash.r{right:12%}
+
+/* cards: up next, failure */
+.vpx-card{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:24px;text-align:center;background:rgba(7,8,12,.88)}
+.vpx-card[hidden]{display:none}
+.vpx-k{margin:0;font-size:18px;font-weight:700}
+.vpx-t{margin:0;font-size:16px}
+.vpx-dim{color:var(--vpx-dim);margin:0;max-width:44ch}
+.vpx-acts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin-top:8px}
+.vpx-acts button,.vpx-acts .vpx-btn{appearance:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:inherit;min-height:44px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;font:inherit;text-decoration:none}
+.vpx-acts .vpx-primary{background:var(--vpx-gold);color:#07080c;border-color:var(--vpx-gold);font-weight:700}
+.vpx-acts svg{width:18px;height:18px}
+
+/* fullscreen: fill the screen, keep the picture's own shape */
+.vpx.fs,.vpx:fullscreen{border-radius:0;aspect-ratio:auto;width:100vw;height:100vh}
+.vpx:fullscreen .vpx-bar{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+
+/* phones: bigger targets, fewer controls */
+@media (max-width:600px){
+  .vpx-row button{min-width:44px;height:44px;padding:0 6px}
+  .vpx-vol,.vpx-row [data-a=pip]{display:none}
+  .vpx-time{font-size:12px;margin-left:2px}
+}
+/* TV / 10-foot screens: larger everything, focus you can see from the couch */
+@media (min-width:1600px) and (hover:none),(min-width:1900px){
+  .vpx{font-size:18px}.vpx svg{width:28px;height:28px}
+  .vpx-row button{min-width:56px;height:56px}
+  .vpx button:focus-visible{outline-width:4px}
+}
+@media (prefers-reduced-motion:reduce){.vpx-bar,.vpx-flash{transition:none}.vpx-spin{animation-duration:2s}}

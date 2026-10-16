@@ -1,0 +1,31 @@
+# VOID player
+
+The new video player, built apart from VOIDtv. It finds and fixes the playback situations that ruin
+watching (frozen picture, picture behind the sound, stalls, dead files and servers), and tells you every
+time it does. See `DESIGN.md` for how and why.
+
+## Try it
+
+Double-click **`player\LAB.cmd`**. It starts a small local server and opens the lab in your browser:
+
+1. Pick an episode on the left. It plays in the new player.
+2. **Live** shows what the player sees: which copy and which Archive server, buffer, dropped frames,
+   stalls, freezes, drifts, fixes, switches.
+3. **Decisions and events** lists every decision as it happens.
+4. **Try to break it** provokes failures on purpose so you can watch each recovery work.
+5. **Soak test** plays the list back to back. Leave it running on the TV PC to catch real freezes.
+6. **Session results** keeps a row per episode. **Copy all** puts them on the clipboard to send me or
+   compare between devices. **Copy diagnostics** captures one moment in detail.
+
+After "Both servers dead", reload the lab page; that test poisons the server cache for the session.
+
+## Commands
+
+```
+node --test player/test/core.test.js          run the 17 core scenarios
+node player/tools/rank-sources.js --lab        rebuild the lab's episode sample from the catalog
+node player/tools/rank-sources.js --stats      how the ranking would change the live catalog
+node player/tools/build-icons.js               refresh icons after editing brand-kit/icons/ui
+```
+
+Nothing in this folder is loaded by VOIDtv. Connecting it is a separate, deliberate step (end of DESIGN.md).

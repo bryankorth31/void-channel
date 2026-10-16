@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VOID Player Lab</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../src/player.css">
+<style>
+:root{--bg:#07080c;--card:#10121a;--line:rgba(255,255,255,.09);--ink:#e8e8ee;--dim:#9aa0b4;--cyan:#5fd4ff;--gold:#f2a93b;--red:#ff6b6b;--green:#5fe0a0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{display:flex;align-items:baseline;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+header b{font-size:18px}header span{color:var(--dim)}
+.wrap{display:grid;grid-template-columns:300px 1fr 360px;gap:14px;padding:14px}
+@media (max-width:1200px){.wrap{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}
+h3{margin:0 0 8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+.eps{max-height:78vh;overflow:auto}
+.eps button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:8px;color:var(--ink);padding:7px 8px;cursor:pointer;font:inherit}
+.eps button:hover,.eps button:focus-visible{background:rgba(255,255,255,.06);outline:none}.eps button.on{background:#0f2430;box-shadow:inset 3px 0 var(--cyan)}
+.eps small{display:block;color:var(--dim)}
+.grp{margin:10px 0 2px;color:var(--gold);font-size:12px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-variant-numeric:tabular-nums}
+.kv dt{color:var(--dim)}.kv dd{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st{font-weight:700}.st.playing{color:var(--green)}.st.buffering,.st.recovering,.st.loading{color:var(--gold)}.st.failed{color:var(--red)}
+.copies{font-size:12px;margin-top:6px}.copies div{padding:3px 0;border-top:1px solid var(--line)}.copies .cur{color:var(--cyan)}
+.log{font:12px/1.4 ui-monospace,Consolas,monospace;max-height:34vh;overflow:auto;white-space:pre-wrap}
+.log .w{color:var(--gold)}.log .e{color:var(--red)}.log .g{color:var(--green)}
+.btns{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.btns button{background:#161925;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 10px;cursor:pointer;font:inherit}
+.btns button:hover{border-color:var(--cyan)}
+.note{color:var(--dim);font-size:12px;margin:6px 0 0}
+table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}th{color:var(--dim);font-weight:500}
+label{color:var(--dim)}
+</style>
+</head>
+<body>
+<header><b>VOID Player Lab</b><span>the new player, apart from VOIDtv · real Archive episodes · live decisions</span></header>
+<div class="wrap">
+  <section class="panel"><h3>Episodes</h3><div class="eps" id="eps">Loading…</div></section>
+  <section>
+    <div id="stage"></div>
+    <div class="panel" style="margin-top:12px">
+      <h3>Try to break it</h3>
+      <div class="btns">
+        <button data-t="net">Network error</button>
+        <button data-t="decode">Decode error</button>
+        <button data-t="nudge">Catch-up jump</button>
+        <button data-t="deadcopy">Start on a dead copy</button>
+        <button data-t="deadservers">Both servers dead</button>
+        <button data-t="nothing">Nothing playable</button>
+      </div>
+      <p class="note">Network and decode errors are reported to the player's brain exactly as the browser would report them, so the real recovery steps run. The dead-copy tests use genuinely broken links. A real frozen picture can't be faked from a page; it is caught live while you watch, and logged below.</p>
+      <p><label><input type="checkbox" id="soak"> Soak test: play the next episode in the list automatically</label></p>
+    </div>
+    <div class="panel" style="margin-top:12px"><h3>Session results <button id="copyAll" style="float:right" class="btns">Copy all</button></h3><table><thead><tr><th>Episode</th><th>Start</th><th>Watched</th><th>Stalls</th><th>Freezes</th><th>Drifts</th><th>Fixed</th><th>Switches</th><th>End</th></tr></thead><tbody id="results"></tbody></table></div>
+  </section>
+  <section>
+    <div class="panel"><h3>Live</h3><dl class="kv" id="live"></dl><div class="copies" id="copies"></div>
+      <div class="btns"><button id="copyDiag">Copy diagnostics</button></div></div>
+    <div class="panel" style="margin-top:12px"><h3>Decisions and events</h3><div class="log" id="log"></div></div>
+  </section>
+</div>
+<script src="../src/core.js"></script>
+<script src="../src/icons.js"></script>
+<script src="../src/player.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  let EPS = [], cur = -1;
+  const results = JSON.parse(localStorage.getItem('vplab:results') || '[]');
+  const saveResults = () => { try { localStorage.setItem('vplab:results', JSON.stringify(results.slice(-200))); } catch (e) {} };
+
+  const player = VoidPlayer.create($('stage'), {
+    globalKeys: true,
+    onNext: () => playIndex(cur + 1),
+    onPrev: () => playIndex(cur - 1),
+    onEnded: async (p) => { if ($('soak').checked && EPS[cur + 1]) { if (await p.upNext(EPS[cur + 1].show + ' · ' + EPS[cur + 1].title, 8)) playIndex(cur + 1); } },
+    onEvent: (e) => { logEvent(e); if (e.type === 'summary' || e.type === 'failed') record(e); },
+  });
+  window.player = player; // for poking from the console
+
+  function logEvent(e) {
+    if (e.type === 'quality' && !e.dropPct) return;
+    const cls = /freeze|drift|stall|action|switch/.test(e.type) ? 'w' : /error|failed/.test(e.type) ? 'e' : /recovered|started/.test(e.type) ? 'g' : '';
+    const t = new Date().toLocaleTimeString();
+    const d = Object.assign({}, e); delete d.at; delete d.type;
+    const line = document.createElement('div'); line.className = cls;
+    line.textContent = t + '  ' + e.type + '  ' + JSON.stringify(d);
+    const log = $('log'); log.prepend(line); while (log.children.length > 150) log.lastChild.remove();
+  }
+  function record(e) {
+    if (cur < 0) return;
+    const s = e.summary || player.core.summary(), ep = EPS[cur];
+    const row = { id: ep.id, show: ep.show, title: ep.title, startupMs: s.startupMs, watchMin: Math.round((s.watchMs || 0) / 6000) / 10, stalls: s.stalls, freezes: s.freezes, drifts: s.drifts, recovered: s.recovered, switches: s.switches, end: e.type === 'failed' ? 'failed' : s.state, source: s.source, at: new Date().toISOString(), ua: navigator.userAgent };
+    const i = results.findIndex((r) => r.id === row.id && r.at.slice(0, 13) === row.at.slice(0, 13));
+    if (i >= 0) results[i] = row; else results.push(row);
+    saveResults(); drawResults();
+  }
+  function drawResults() {
+    $('results').innerHTML = results.slice(-30).reverse().map((r) => '<tr><td>' + esc(r.show + ' · ' + r.title) + '</td><td>' + (r.startupMs == null ? '–' : (r.startupMs / 1000).toFixed(1) + 's') + '</td><td>' + r.watchMin + 'm</td><td>' + r.stalls + '</td><td>' + r.freezes + '</td><td>' + r.drifts + '</td><td>' + r.recovered + '</td><td>' + r.switches + '</td><td>' + esc(r.end) + '</td></tr>').join('');
+  }
+
+  function playIndex(i) {
+    if (i < 0 || i >= EPS.length) return;
+    if (cur >= 0) record({ type: 'summary', summary: player.core.summary() });
+    cur = i;
+    document.querySelectorAll('.eps button').forEach((b) => b.classList.toggle('on', +b.dataset.i === i));
+    const ep = EPS[i];
+    player.load({ id: ep.id, title: 'S' + ep.season + 'E' + ep.n + ' · ' + ep.title, show: ep.show, files: ep.files }, { autoplay: true });
+    drawCopies();
+  }
+  function drawCopies() {
+    const ep = EPS[cur]; if (!ep) return;
+    const s = player.core.source;
+    $('copies').innerHTML = '<b>Copies, best first</b>' + ep.files.map((f, k) => '<div class="' + (s && s.file === f ? 'cur' : '') + '">' + (k + 1) + '. ' + esc(f.format) + ' · ' + (f.mbps ? f.mbps + ' Mbps' : '? Mbps') + (f.risk ? ' · risk: ' + f.risk : '') + (f.needs ? ' · needs ' + f.needs : '') + ' · conf ' + f.conf + '<br><small>' + esc(decodeURIComponent(f.path || f.url)) + '</small></div>').join('');
+  }
+  setInterval(() => {
+    if (cur < 0) return;
+    const d = player.diagnostics(), s = d.summary;
+    const rows = [['State', '<span class="st ' + d.state + '">' + d.state + '</span>'], ['Source', esc(d.source ? d.source.label : '–')], ['Server', esc(d.source ? d.source.url.split('/')[2] : '–')], ['Time', d.time + ' / ' + d.duration + ' s'], ['Buffered ahead', d.ahead + ' s'], ['Picture', esc(d.size)], ['Dropped frames', d.frames ? d.frames.dropped + ' of ' + d.frames.total : 'n/a'], ['Startup', s.startupMs == null ? '–' : (s.startupMs / 1000).toFixed(2) + ' s'], ['Stalls / time', s.stalls + ' / ' + (s.stallMs / 1000).toFixed(1) + ' s'], ['Freezes · drifts', s.freezes + ' · ' + s.drifts], ['Fixes tried · worked', s.actions + ' · ' + s.recovered], ['Copy/server switches', s.switches + ' (on ' + (s.sourceIndex + 1) + ' of ' + s.sources + ')'], ['Rebuffer ratio', (s.rebufferRatio * 100).toFixed(1) + '%'], ['Frame timing', player._rvfc ? 'per frame (best)' : 'decoder count (fallback)'], ['Page being drawn', d.pageDrawing ? 'yes' : 'no (freeze checks paused)']];
+    $('live').innerHTML = rows.map(([k, v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+    drawCopies();
+  }, 500);
+
+  // Fault tests
+  document.querySelector('.btns').addEventListener('click', (e) => {
+    const t = e.target.dataset.t; if (!t || cur < 0) return;
+    const ep = EPS[cur], now = performance.now();
+    if (t === 'net') player.core.event('error', now, { code: 2 });
+    if (t === 'decode') player.core.event('error', now, { code: 3 });
+    if (t === 'nudge') player._act({ type: 'seek', at: player.currentTime });
+    const fake = (f) => Object.assign({}, f, { item: 'void-lab-missing-item-' + Date.now(), path: 'missing.mp4', url: 'https://archive.org/download/void-lab-missing-item/missing.mp4' });
+    if (t === 'deadcopy') player.load({ id: ep.id, title: 'Starts on a dead copy', show: ep.show, files: [fake(ep.files[0])].concat(ep.files) }, { autoplay: true });
+    if (t === 'deadservers') { const f = ep.files[0]; VoidPlayer.servers(f.item).then((srv) => { if (srv) srv.hosts = ['ia000000.us.archive.org', 'ia000001.us.archive.org']; player.load({ id: ep.id, title: 'Both servers dead', show: ep.show, files: ep.files }, { autoplay: true }); }); }
+    if (t === 'nothing') player.load({ id: 'none', title: 'No playable copy', show: ep.show, files: [] }, { autoplay: true });
+  });
+  $('copyDiag').onclick = () => navigator.clipboard.writeText(JSON.stringify(player.diagnostics(), null, 1));
+  $('copyAll').onclick = () => navigator.clipboard.writeText(JSON.stringify(results, null, 1));
+
+  fetch('episodes.json').then((r) => r.json()).then((list) => {
+    EPS = list;
+    let last = '', h = '';
+    list.forEach((ep, i) => {
+      if (ep.why !== last) { h += '<div class="grp">' + esc(ep.why) + '</div>'; last = ep.why; }
+      const f = ep.files[0] || {};
+      h += '<button data-i="' + i + '">' + esc(ep.show) + ' · S' + ep.season + 'E' + ep.n + '<small>' + esc(ep.title) + ' · ' + ep.files.length + ' cop' + (ep.files.length === 1 ? 'y' : 'ies') + ' · ' + (f.mbps || '?') + ' Mbps ' + esc(f.format || '') + '</small></button>';
+    });
+    $('eps').innerHTML = h;
+    $('eps').onclick = (e) => { const b = e.target.closest('button'); if (b) playIndex(+b.dataset.i); };
+    drawResults();
+  }).catch(() => { $('eps').textContent = 'Could not load episodes.json. Run: node player/tools/rank-sources.js --lab'; });
+})();
+</script>
+</body>
+</html>
