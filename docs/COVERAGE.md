@@ -1,6 +1,6 @@
 # Coverage
 
-2102 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+2110 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -225,6 +225,7 @@
 | Ouran High School Host Club | Anime | 26 | 0 | 26 | 0 | 100% |
 | Outlaw Star | Animated | 132 | 0 | 132 | 0 | 100% |
 | Over the Garden Wall | Streaming Era | 10 | 10 | 0 | 0 | 100% |
+| Pantheon | Streaming Era | 16 | 8 | 8 | 0 | 100% |
 | Parasyte -the maxim- | Anime | 27 | 0 | 27 | 0 | 100% |
 | Password | Classic TV | 995 | 0 | 995 | 0 | 100% |
 | Perfect Hair Forever | Adult Swim | 9 | 9 | 0 | 0 | 100% |
@@ -1247,6 +1248,7 @@
 | El marginal | World TV | 43 | 0 | 0 | 43 | 0% |
 | Elementary | Streaming Era | 154 | 0 | 0 | 154 | 0% |
 | Empire | Reality & Talk | 102 | 0 | 0 | 102 | 0% |
+| Endeavour | Streaming Era | 35 | 0 | 0 | 35 | 0% |
 | Enlightened | Drama | 18 | 0 | 0 | 18 | 0% |
 | Entourage | 2000s and Later Sitcoms | 96 | 0 | 0 | 96 | 0% |
 | Euphoria | Streaming Era | 24 | 0 | 0 | 24 | 0% |
@@ -1362,6 +1364,7 @@
 | Hot Streets | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | House | Drama | 176 | 0 | 0 | 176 | 0% |
 | House of Cards | Streaming Era | 73 | 0 | 0 | 73 | 0% |
+| House of David | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | House of the Dragon | Streaming Era | 26 | 0 | 0 | 26 | 0% |
 | Housos | British and Beyond | 30 | 0 | 0 | 30 | 0% |
 | How I Met Your Mother | 2000s and Later Sitcoms | 208 | 0 | 1 | 207 | 0% |
@@ -1471,6 +1474,7 @@
 | Lonesome Dove | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | Look Around You | British and Beyond | 14 | 0 | 0 | 14 | 0% |
 | Lookism | World TV | 8 | 0 | 0 | 8 | 0% |
+| Looney Tunes Cartoons | Streaming Era | 232 | 0 | 0 | 232 | 0% |
 | Loose Women | Reality & Talk | 4954 | 0 | 0 | 4954 | 0% |
 | Los Espookys | 2000s and Later Sitcoms | 12 | 0 | 0 | 12 | 0% |
 | Lost Girl | British and Beyond | 77 | 0 | 0 | 77 | 0% |
@@ -1484,6 +1488,7 @@
 | Loveline | Late Night | 7 | 0 | 0 | 7 | 0% |
 | Lovesick | British and Beyond | 22 | 0 | 0 | 22 | 0% |
 | Lucifer | Streaming Era | 93 | 0 | 0 | 93 | 0% |
+| Lucky | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | Lucky Louie | 2000s and Later Sitcoms | 13 | 0 | 0 | 13 | 0% |
 | Luke Cage | Streaming Era | 26 | 0 | 0 | 26 | 0% |
 | Lupin | World TV | 18 | 0 | 0 | 18 | 0% |
@@ -1961,6 +1966,7 @@
 | The State | MTV | 24 | 0 | 0 | 24 | 0% |
 | The Strain | Streaming Era | 46 | 0 | 0 | 46 | 0% |
 | The Terminal List | Streaming Era | 16 | 0 | 0 | 16 | 0% |
+| The Terminal List: Dark Wolf | Streaming Era | 7 | 0 | 0 | 7 | 0% |
 | The Terror | Drama | 26 | 0 | 0 | 26 | 0% |
 | The Thorn Birds | Classic TV | 4 | 0 | 0 | 4 | 0% |
 | The Tonight Show Starring Jimmy Fallon | Reality & Talk | 2359 | 0 | 0 | 2359 | 0% |
@@ -1998,6 +2004,7 @@
 | Thunder 3 | Anime | 12 | 0 | 0 | 12 | 0% |
 | Thunderbirds | Classic TV | 32 | 0 | 0 | 32 | 0% |
 | Tim and Eric Awesome Show, Great Job! | Adult Swim | 50 | 0 | 0 | 50 | 0% |
+| Time | Streaming Era | 9 | 0 | 0 | 9 | 0% |
 | Time Machine | Documentary & Geographic | 3 | 0 | 0 | 3 | 0% |
 | Time Team | Documentary & Geographic | 221 | 0 | 0 | 221 | 0% |
 | Tiny Toon Adventures | Animated | 98 | 0 | 0 | 98 | 0% |
@@ -2088,6 +2095,7 @@
 | Wonderland | Reality & Talk | 44 | 0 | 0 | 44 | 0% |
 | Wonders of the Solar System | Documentary & Geographic | 5 | 0 | 0 | 5 | 0% |
 | World Without End | Drama | 8 | 0 | 0 | 8 | 0% |
+| Wu-Tang: An American Saga | Streaming Era | 30 | 0 | 0 | 30 | 0% |
 | WWE Superstars | Reality & Talk | 23 | 0 | 0 | 23 | 0% |
 | X-Men '97 | Streaming Era | 19 | 0 | 0 | 19 | 0% |
 | XO, Kitty | Streaming Era | 26 | 0 | 0 | 26 | 0% |

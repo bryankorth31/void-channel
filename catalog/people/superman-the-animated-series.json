@@ -320,5 +320,884 @@
    "episodes": 3
   }
  ],
- "fetchedAt": "2026-10-13T18:29:36.430Z"
+ "fetchedAt": "2026-10-13T18:29:36.430Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 34921,
+     "name": "Dan Riba",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1211813,
+     "name": "Paul Dini",
+     "photo": "https://image.tmdb.org/t/p/w185/yPRds0jAYIU1OETfZuwka5ro7lE.jpg"
+    },
+    {
+     "id": 34936,
+     "name": "Alan Burnett",
+     "photo": "https://image.tmdb.org/t/p/w185/3gNmuxxdQbZ6nX2F63SMQNVbmqz.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 4443,
+     "name": "Christopher McDonald",
+     "photo": "https://image.tmdb.org/t/p/w185/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg",
+     "as": "Jor-El (voice)"
+    },
+    {
+     "id": 35219,
+     "name": "Corey Burton",
+     "photo": "https://image.tmdb.org/t/p/w185/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
+     "as": "Brainiac / Councilman / Cop (voice)"
+    },
+    {
+     "id": 65598,
+     "name": "Tony Jay",
+     "photo": "https://image.tmdb.org/t/p/w185/rlL918sjBA5m6qVEjYDCKmxU7QO.jpg",
+     "as": "Sul-Van (voice)"
+    },
+    {
+     "id": 8049,
+     "name": "Roger Rose",
+     "photo": "https://image.tmdb.org/t/p/w185/huGiGhkcHFhtT027UyWy9tbO8IW.jpg",
+     "as": "Driver Cop / Councilman (voice)"
+    },
+    {
+     "id": 66881,
+     "name": "Finola Hughes",
+     "photo": "https://image.tmdb.org/t/p/w185/6VQEOrue9NrsC2VnkhzO6R8udWR.jpg",
+     "as": "Lara (voice)"
+    },
+    {
+     "id": 58511,
+     "name": "Brian George",
+     "photo": "https://image.tmdb.org/t/p/w185/mHjc58pfKkxtghhliPOnNz0SlcT.jpg",
+     "as": "Councilman (voice)"
+    },
+    {
+     "id": 3168348,
+     "name": "Jesse Batten",
+     "photo": null,
+     "as": "Baby Kal-El (voice)"
+    },
+    {
+     "id": 157085,
+     "name": "Vernee Watson",
+     "photo": "https://image.tmdb.org/t/p/w185/rUMtF1F6wrUHHfRkFlLz27xRoxd.jpg",
+     "as": "Female Worker / Councilwoman (voice)"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 34920,
+     "name": "Curt Geda",
+     "photo": "https://image.tmdb.org/t/p/w185/jRcadH8KfIBe4JZzifNC7Zmxrv6.jpg"
+    },
+    {
+     "id": 96337,
+     "name": "Scott Jeralds",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1211813,
+     "name": "Paul Dini",
+     "photo": "https://image.tmdb.org/t/p/w185/yPRds0jAYIU1OETfZuwka5ro7lE.jpg"
+    },
+    {
+     "id": 34936,
+     "name": "Alan Burnett",
+     "photo": "https://image.tmdb.org/t/p/w185/3gNmuxxdQbZ6nX2F63SMQNVbmqz.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 10477,
+     "name": "George Dzundza",
+     "photo": "https://image.tmdb.org/t/p/w185/wmnQQn0dFygl90M2N8tlWlpGHzV.jpg",
+     "as": "Perry White (voice)"
+    },
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 157536,
+     "name": "David Kaufman",
+     "photo": "https://image.tmdb.org/t/p/w185/gaNu7BzTgn768Yb7XAXzN3rSwgE.jpg",
+     "as": "Jimmy Olsen (voice)"
+    },
+    {
+     "id": 4443,
+     "name": "Christopher McDonald",
+     "photo": "https://image.tmdb.org/t/p/w185/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg",
+     "as": "Jor-El (voice)"
+    },
+    {
+     "id": 66881,
+     "name": "Finola Hughes",
+     "photo": "https://image.tmdb.org/t/p/w185/6VQEOrue9NrsC2VnkhzO6R8udWR.jpg",
+     "as": "Lara (voice)"
+    },
+    {
+     "id": 34983,
+     "name": "Tress MacNeille",
+     "photo": "https://image.tmdb.org/t/p/w185/gI2LsgByvSffQY34vabVnPmrHzw.jpg",
+     "as": "Ms. Stevenson / Annie's Mother / LexCorp Presenter (voice)"
+    },
+    {
+     "id": 61983,
+     "name": "Jason Marsden",
+     "photo": "https://image.tmdb.org/t/p/w185/53aVh2ka0b4ZyR8dO8hBTQxQ9hc.jpg",
+     "as": "Teenage Clark Kent (voice)"
+    },
+    {
+     "id": 1585201,
+     "name": "Miracle Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/cJup3nx1L2uzeUUmxWILi5EkcEG.jpg",
+     "as": "Danitra Evans / Annie (voice)"
+    },
+    {
+     "id": 160616,
+     "name": "Charles Howerton",
+     "photo": "https://image.tmdb.org/t/p/w185/oYUOLZb8RLwj0V2sdDMBO6aijlu.jpg",
+     "as": "Whirly Pilot (voice)"
+    },
+    {
+     "id": 56890,
+     "name": "Malcolm McDowell",
+     "photo": "https://image.tmdb.org/t/p/w185/hL8ep4Hqj6izX7IlzE7Bbcfq62w.jpg",
+     "as": "John Corben (voice)"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 34921,
+     "name": "Dan Riba",
+     "photo": null
+    },
+    {
+     "id": 34934,
+     "name": "Bruce Timm",
+     "photo": "https://image.tmdb.org/t/p/w185/4G64qCUGFQ1Sfwa6MK7CzwAaHyL.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1211813,
+     "name": "Paul Dini",
+     "photo": "https://image.tmdb.org/t/p/w185/yPRds0jAYIU1OETfZuwka5ro7lE.jpg"
+    },
+    {
+     "id": 34936,
+     "name": "Alan Burnett",
+     "photo": "https://image.tmdb.org/t/p/w185/3gNmuxxdQbZ6nX2F63SMQNVbmqz.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 10477,
+     "name": "George Dzundza",
+     "photo": "https://image.tmdb.org/t/p/w185/wmnQQn0dFygl90M2N8tlWlpGHzV.jpg",
+     "as": "Perry White (voice)"
+    },
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 157536,
+     "name": "David Kaufman",
+     "photo": "https://image.tmdb.org/t/p/w185/gaNu7BzTgn768Yb7XAXzN3rSwgE.jpg",
+     "as": "Jimmy Olsen (voice)"
+    },
+    {
+     "id": 56890,
+     "name": "Malcolm McDowell",
+     "photo": "https://image.tmdb.org/t/p/w185/hL8ep4Hqj6izX7IlzE7Bbcfq62w.jpg",
+     "as": "John Corben (voice)"
+    },
+    {
+     "id": 3168384,
+     "name": "Nick Savalas",
+     "photo": null,
+     "as": "Attorney (voice)"
+    },
+    {
+     "id": 160616,
+     "name": "Charles Howerton",
+     "photo": "https://image.tmdb.org/t/p/w185/oYUOLZb8RLwj0V2sdDMBO6aijlu.jpg",
+     "as": "Hans - Terrorist Guard (voice)"
+    },
+    {
+     "id": 35219,
+     "name": "Corey Burton",
+     "photo": "https://image.tmdb.org/t/p/w185/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
+     "as": "Brainiac (voice)"
+    },
+    {
+     "id": 15100,
+     "name": "Lauren Tom",
+     "photo": "https://image.tmdb.org/t/p/w185/fTKFspRRQ275AkzvtPERLZnXe0n.jpg",
+     "as": "Angela Chen (voice)"
+    },
+    {
+     "id": 18,
+     "name": "Brad Garrett",
+     "photo": "https://image.tmdb.org/t/p/w185/813ffbpoaoaJRdoe1yrbivboWKp.jpg",
+     "as": "Bibbo (voice)"
+    },
+    {
+     "id": 64811,
+     "name": "Mike Farrell",
+     "photo": "https://image.tmdb.org/t/p/w185/qfbWM9PEAEAeSXvJwm399ucjgxU.jpg",
+     "as": "Jonathan Kent (voice)"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 1236309,
+     "name": "Kazuhide Tomonaga",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 175473,
+     "name": "Marty Isenberg",
+     "photo": null
+    },
+    {
+     "id": 1220919,
+     "name": "Robert N. Skir",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 157536,
+     "name": "David Kaufman",
+     "photo": "https://image.tmdb.org/t/p/w185/gaNu7BzTgn768Yb7XAXzN3rSwgE.jpg",
+     "as": "Jimmy Olsen (voice)"
+    },
+    {
+     "id": 36058,
+     "name": "Bruce Weitz",
+     "photo": "https://image.tmdb.org/t/p/w185/gUERDPFoWOD0GmnjJyQe1tA7hau.jpg",
+     "as": "Bruno Mannheim (voice)"
+    },
+    {
+     "id": 24362,
+     "name": "Kevin Michael Richardson",
+     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
+     "as": "Cop / Thug (voice)"
+    },
+    {
+     "id": 167667,
+     "name": "Joe Lala",
+     "photo": "https://image.tmdb.org/t/p/w185/pIdGG4DyptUAe0BiQk2SPAQXEL.jpg",
+     "as": "Electrician (voice)"
+    },
+    {
+     "id": 159788,
+     "name": "Joe Nipote",
+     "photo": "https://image.tmdb.org/t/p/w185/7CmgLNSDj3iWVa45nGmwP6vY7nR.jpg",
+     "as": "\"Spider\" Spinelli (voice)"
+    },
+    {
+     "id": 4971,
+     "name": "Bud Cort",
+     "photo": "https://image.tmdb.org/t/p/w185/gJQQQLegkLNSMLz5zTrPXf4Lyf.jpg",
+     "as": "The Toyman (voice)"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 34928,
+     "name": "Toshihiko Masuda",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1214727,
+     "name": "Hilary Bader",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 44261,
+     "name": "John Rubinstein",
+     "photo": "https://image.tmdb.org/t/p/w185/9Ufrca4VnhnsN1Ec0i0QudPqS6L.jpg",
+     "as": "Peterson (voice)"
+    },
+    {
+     "id": 24519,
+     "name": "Scott Valentine",
+     "photo": "https://image.tmdb.org/t/p/w185/pbrMqDZKSRW4Bgd9x7fBCPpy1A0.jpg",
+     "as": "Sam Coralli (voice)"
+    },
+    {
+     "id": 1065,
+     "name": "Thomas F. Wilson",
+     "photo": "https://image.tmdb.org/t/p/w185/mVhm65ZVBIRIptWGiMIvoUy0Khi.jpg",
+     "as": "Joey (voice)"
+    },
+    {
+     "id": 167656,
+     "name": "John Garry",
+     "photo": null,
+     "as": "Hanes (voice)"
+    },
+    {
+     "id": 18,
+     "name": "Brad Garrett",
+     "photo": "https://image.tmdb.org/t/p/w185/813ffbpoaoaJRdoe1yrbivboWKp.jpg",
+     "as": "Bibbo / 'Neato' Coralli (voice)"
+    },
+    {
+     "id": 34983,
+     "name": "Tress MacNeille",
+     "photo": "https://image.tmdb.org/t/p/w185/gI2LsgByvSffQY34vabVnPmrHzw.jpg",
+     "as": "Tour Guide / Old Woman / Waitress (voice)"
+    },
+    {
+     "id": 56120,
+     "name": "Yuji Okumoto",
+     "photo": "https://image.tmdb.org/t/p/w185/eACYrrdj8kZnYMCpUTghbpJ9nVk.jpg",
+     "as": "Security Guard (voice)"
+    },
+    {
+     "id": 41420,
+     "name": "Lisa Edelstein",
+     "photo": "https://image.tmdb.org/t/p/w185/wWNU2koV7qksXLtXDtbuGcbnfa1.jpg",
+     "as": "Mercy Graves (voice)"
+    },
+    {
+     "id": 153606,
+     "name": "Victor Brandt",
+     "photo": "https://image.tmdb.org/t/p/w185/F1wHASA8PfHmYj759TBENb7vSy.jpg",
+     "as": "Professor Hamilton (voice)"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 34920,
+     "name": "Curt Geda",
+     "photo": "https://image.tmdb.org/t/p/w185/jRcadH8KfIBe4JZzifNC7Zmxrv6.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 212618,
+     "name": "Bob Goodman",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 10477,
+     "name": "George Dzundza",
+     "photo": "https://image.tmdb.org/t/p/w185/wmnQQn0dFygl90M2N8tlWlpGHzV.jpg",
+     "as": "Perry White (voice)"
+    },
+    {
+     "id": 157536,
+     "name": "David Kaufman",
+     "photo": "https://image.tmdb.org/t/p/w185/gaNu7BzTgn768Yb7XAXzN3rSwgE.jpg",
+     "as": "Jimmy Olsen (voice)"
+    },
+    {
+     "id": 591,
+     "name": "Brion James",
+     "photo": "https://image.tmdb.org/t/p/w185/qy5jIIsWrNCV1OVRaUiqYNhLLVT.jpg",
+     "as": "Parasite / Rudy Jones (voice)"
+    },
+    {
+     "id": 418,
+     "name": "Robert Patrick",
+     "photo": "https://image.tmdb.org/t/p/w185/qRv2Es9rZoloullTbzss3I5j1Mp.jpg",
+     "as": "LeBeau (voice)"
+    },
+    {
+     "id": 35038,
+     "name": "Mel Winkler",
+     "photo": "https://image.tmdb.org/t/p/w185/ctkcmCVzcUJWaGpEtHxwNPpEHw7.jpg",
+     "as": "Commissioner Henderson (voice)"
+    },
+    {
+     "id": 976171,
+     "name": "Philip Maurice Hayes",
+     "photo": "https://image.tmdb.org/t/p/w185/gK7Vs6W6acXXWJZCNpWjXLmeHEa.jpg",
+     "as": "Guard (voice)"
+    },
+    {
+     "id": 190828,
+     "name": "Tasia Valenza",
+     "photo": "https://image.tmdb.org/t/p/w185/5JElVuhYQd1FKkLc7LD32DExAg9.jpg",
+     "as": "Policewoman (voice)"
+    },
+    {
+     "id": 15100,
+     "name": "Lauren Tom",
+     "photo": "https://image.tmdb.org/t/p/w185/fTKFspRRQ275AkzvtPERLZnXe0n.jpg",
+     "as": "Angela Chen (voice)"
+    },
+    {
+     "id": 153606,
+     "name": "Victor Brandt",
+     "photo": "https://image.tmdb.org/t/p/w185/F1wHASA8PfHmYj759TBENb7vSy.jpg",
+     "as": "Professor Hamilton (voice)"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 1236311,
+     "name": "Kenji Hachizaki",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 34931,
+     "name": "Stan Berkowitz",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 1796029,
+     "name": "John Rubinow",
+     "photo": null,
+     "as": "Dr. Vale (voice)"
+    },
+    {
+     "id": 34982,
+     "name": "Jeff Bennett",
+     "photo": "https://image.tmdb.org/t/p/w185/6Fq3Q1e0Oz0j2J2fnFSl7fKCHd9.jpg",
+     "as": "Young Doctor (voice)"
+    },
+    {
+     "id": 64951,
+     "name": "Neil Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/pNgkQKw5k6z9kscDnOAwstcmNnt.jpg",
+     "as": "Male Anchor / Ralph (voice)"
+    },
+    {
+     "id": 2778048,
+     "name": "Jennifer Richards",
+     "photo": null,
+     "as": "Young Woman (voice)"
+    },
+    {
+     "id": 15100,
+     "name": "Lauren Tom",
+     "photo": "https://image.tmdb.org/t/p/w185/fTKFspRRQ275AkzvtPERLZnXe0n.jpg",
+     "as": "Angela Chen (voice)"
+    },
+    {
+     "id": 56890,
+     "name": "Malcolm McDowell",
+     "photo": "https://image.tmdb.org/t/p/w185/hL8ep4Hqj6izX7IlzE7Bbcfq62w.jpg",
+     "as": "John Corben / Metallo (voice)"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 34920,
+     "name": "Curt Geda",
+     "photo": "https://image.tmdb.org/t/p/w185/jRcadH8KfIBe4JZzifNC7Zmxrv6.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 182257,
+     "name": "Rich Fogel",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 157536,
+     "name": "David Kaufman",
+     "photo": "https://image.tmdb.org/t/p/w185/gaNu7BzTgn768Yb7XAXzN3rSwgE.jpg",
+     "as": "Jimmy Olsen (voice)"
+    },
+    {
+     "id": 4443,
+     "name": "Christopher McDonald",
+     "photo": "https://image.tmdb.org/t/p/w185/gK1XhbfD9Xd8s3VXRPpgDCluyZp.jpg",
+     "as": "Jor-El (voice)"
+    },
+    {
+     "id": 35035,
+     "name": "Townsend Coleman",
+     "photo": "https://image.tmdb.org/t/p/w185/aMVAo35uihg08G8uc4Q4FiAS5ku.jpg",
+     "as": "Programmer (voice)"
+    },
+    {
+     "id": 35219,
+     "name": "Corey Burton",
+     "photo": "https://image.tmdb.org/t/p/w185/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
+     "as": "Brainiac (voice)"
+    },
+    {
+     "id": 15100,
+     "name": "Lauren Tom",
+     "photo": "https://image.tmdb.org/t/p/w185/fTKFspRRQ275AkzvtPERLZnXe0n.jpg",
+     "as": "Angela Chen (voice)"
+    },
+    {
+     "id": 153606,
+     "name": "Victor Brandt",
+     "photo": "https://image.tmdb.org/t/p/w185/F1wHASA8PfHmYj759TBENb7vSy.jpg",
+     "as": "Professor Hamilton (voice)"
+    }
+   ]
+  },
+  "1x9": {
+   "d": [
+    {
+     "id": 34921,
+     "name": "Dan Riba",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1211813,
+     "name": "Paul Dini",
+     "photo": "https://image.tmdb.org/t/p/w185/yPRds0jAYIU1OETfZuwka5ro7lE.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 54859,
+     "name": "Sherman Howard",
+     "photo": "https://image.tmdb.org/t/p/w185/oaFzlV0kddSSSelh4VSIJaKt7Gf.jpg",
+     "as": "Preserver (voice)"
+    },
+    {
+     "id": 1280,
+     "name": "Don Harvey",
+     "photo": "https://image.tmdb.org/t/p/w185/dc10W0hRNxrO0IcwgKOcsUajtOG.jpg",
+     "as": "Gnaww (voice)"
+    },
+    {
+     "id": 78619,
+     "name": "David L. Lander",
+     "photo": "https://image.tmdb.org/t/p/w185/2cacF83gTLlFYcWaOWLA6emOInN.jpg",
+     "as": "Sqweek (voice)"
+    },
+    {
+     "id": 18,
+     "name": "Brad Garrett",
+     "photo": "https://image.tmdb.org/t/p/w185/813ffbpoaoaJRdoe1yrbivboWKp.jpg",
+     "as": "Lobo (voice)"
+    },
+    {
+     "id": 15100,
+     "name": "Lauren Tom",
+     "photo": "https://image.tmdb.org/t/p/w185/fTKFspRRQ275AkzvtPERLZnXe0n.jpg",
+     "as": "Angela Chen (voice)"
+    },
+    {
+     "id": 153606,
+     "name": "Victor Brandt",
+     "photo": "https://image.tmdb.org/t/p/w185/F1wHASA8PfHmYj759TBENb7vSy.jpg",
+     "as": "Professor Hamilton (voice)"
+    }
+   ]
+  },
+  "1x10": {
+   "d": [
+    {
+     "id": 34921,
+     "name": "Dan Riba",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1211813,
+     "name": "Paul Dini",
+     "photo": "https://image.tmdb.org/t/p/w185/yPRds0jAYIU1OETfZuwka5ro7lE.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 146184,
+     "name": "Lara Cody",
+     "photo": "https://image.tmdb.org/t/p/w185/4B6QwDEF7ZOECdCXdUh7Z4WGF0i.jpg",
+     "as": "Alien Girls (voice)"
+    },
+    {
+     "id": 54859,
+     "name": "Sherman Howard",
+     "photo": "https://image.tmdb.org/t/p/w185/oaFzlV0kddSSSelh4VSIJaKt7Gf.jpg",
+     "as": "Preserver (voice)"
+    },
+    {
+     "id": 13591,
+     "name": "Richard Moll",
+     "photo": "https://image.tmdb.org/t/p/w185/bDCcy2w8fZ5MAyxacGBW3qVzwwd.jpg",
+     "as": "Emperor Spooj (voice)"
+    },
+    {
+     "id": 1280,
+     "name": "Don Harvey",
+     "photo": "https://image.tmdb.org/t/p/w185/dc10W0hRNxrO0IcwgKOcsUajtOG.jpg",
+     "as": "Gnaww (voice)"
+    },
+    {
+     "id": 15831,
+     "name": "Frank Welker",
+     "photo": "https://image.tmdb.org/t/p/w185/aC37aQtsfZZDZN5y3paDTLJJHCi.jpg",
+     "as": "Serpent (voice)"
+    },
+    {
+     "id": 78619,
+     "name": "David L. Lander",
+     "photo": "https://image.tmdb.org/t/p/w185/2cacF83gTLlFYcWaOWLA6emOInN.jpg",
+     "as": "Sqweek (voice)"
+    },
+    {
+     "id": 18,
+     "name": "Brad Garrett",
+     "photo": "https://image.tmdb.org/t/p/w185/813ffbpoaoaJRdoe1yrbivboWKp.jpg",
+     "as": "Lobo (voice)"
+    }
+   ]
+  },
+  "1x11": {
+   "d": [
+    {
+     "id": 1236312,
+     "name": "Yuichiro Yano",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1214727,
+     "name": "Hilary Bader",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 6574,
+     "name": "Clancy Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
+     "as": "Lex Luthor (voice)"
+    },
+    {
+     "id": 113906,
+     "name": "Valri Bromfield",
+     "photo": "https://image.tmdb.org/t/p/w185/kUnKkvmBWOTtvZbPhHeQ1TFqseP.jpg",
+     "as": "Big Susan (voice)"
+    },
+    {
+     "id": 4758,
+     "name": "Joely Fisher",
+     "photo": "https://image.tmdb.org/t/p/w185/aHJxw4cbpoxvi7LNbnuA1c6jPPO.jpg",
+     "as": "Lana Lang (voice)"
+    },
+    {
+     "id": 16476,
+     "name": "Larry Drake",
+     "photo": "https://image.tmdb.org/t/p/w185/VkS3sb0gpLEY0AW7M92RO0m60b.jpg",
+     "as": "Mr. Eelan (voice)"
+    },
+    {
+     "id": 1901616,
+     "name": "Lee Magnuson",
+     "photo": null,
+     "as": "Terrorist (voice)"
+    },
+    {
+     "id": 1054484,
+     "name": "Lauri Fraser",
+     "photo": "https://image.tmdb.org/t/p/w185/g1bNvk5LLnD31bKQwEAVL4w1bSr.jpg",
+     "as": "Lizzie (voice)"
+    },
+    {
+     "id": 41420,
+     "name": "Lisa Edelstein",
+     "photo": "https://image.tmdb.org/t/p/w185/wWNU2koV7qksXLtXDtbuGcbnfa1.jpg",
+     "as": "Mercy Graves (voice)"
+    }
+   ]
+  },
+  "1x12": {
+   "d": [
+    {
+     "id": 34920,
+     "name": "Curt Geda",
+     "photo": "https://image.tmdb.org/t/p/w185/jRcadH8KfIBe4JZzifNC7Zmxrv6.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 193471,
+     "name": "Mark Evanier",
+     "photo": "https://image.tmdb.org/t/p/w185/51ZkLfwFsVXx2OH57nw5gpj6axT.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13919,
+     "name": "Michael York",
+     "photo": "https://image.tmdb.org/t/p/w185/ha9Nh8We778sUg8QyDE1IRATzDY.jpg",
+     "as": "Kanto (voice)"
+    },
+    {
+     "id": 36058,
+     "name": "Bruce Weitz",
+     "photo": "https://image.tmdb.org/t/p/w185/gUERDPFoWOD0GmnjJyQe1tA7hau.jpg",
+     "as": "Bruno Mannheim (voice)"
+    },
+    {
+     "id": 593,
+     "name": "Joanna Cassidy",
+     "photo": "https://image.tmdb.org/t/p/w185/cgyR6QLZdC6apR8eHnhgqDQmqyr.jpg",
+     "as": "Maggie Sawyer (voice)"
+    },
+    {
+     "id": 976171,
+     "name": "Philip Maurice Hayes",
+     "photo": "https://image.tmdb.org/t/p/w185/gK7Vs6W6acXXWJZCNpWjXLmeHEa.jpg",
+     "as": "Blaine (voice)"
+    },
+    {
+     "id": 24362,
+     "name": "Kevin Michael Richardson",
+     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
+     "as": "Al (voice)"
+    },
+    {
+     "id": 46946,
+     "name": "Joseph Bologna",
+     "photo": "https://image.tmdb.org/t/p/w185/zAyV5p4prwRXtL00xkJCHLBBUJ8.jpg",
+     "as": "Dan Turpin (voice)"
+    },
+    {
+     "id": 15100,
+     "name": "Lauren Tom",
+     "photo": "https://image.tmdb.org/t/p/w185/fTKFspRRQ275AkzvtPERLZnXe0n.jpg",
+     "as": "Angela Chen (voice)"
+    },
+    {
+     "id": 11086,
+     "name": "Michael Ironside",
+     "photo": "https://image.tmdb.org/t/p/w185/mzHmxtKcMJjDqWxKd67mKQJFW1B.jpg",
+     "as": "Darkseid (voice)"
+    }
+   ]
+  },
+  "1x13": {
+   "d": [
+    {
+     "id": 1236314,
+     "name": "Hiroyuki Aoyama",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 34931,
+     "name": "Stan Berkowitz",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 591,
+     "name": "Brion James",
+     "photo": "https://image.tmdb.org/t/p/w185/qy5jIIsWrNCV1OVRaUiqYNhLLVT.jpg",
+     "as": "Parasite / Rudy Jones (voice)"
+    },
+    {
+     "id": 1248,
+     "name": "Brian Cox",
+     "photo": "https://image.tmdb.org/t/p/w185/scSjbFCTRngXlkJRoKptM5kQGw7.jpg",
+     "as": "Dr. Earl Garver (voice)"
+    },
+    {
+     "id": 593,
+     "name": "Joanna Cassidy",
+     "photo": "https://image.tmdb.org/t/p/w185/cgyR6QLZdC6apR8eHnhgqDQmqyr.jpg",
+     "as": "Maggie Sawyer (voice)"
+    },
+    {
+     "id": 2446706,
+     "name": "Rosalyn Sidewater",
+     "photo": null,
+     "as": "Doctor (voice)"
+    },
+    {
+     "id": 46946,
+     "name": "Joseph Bologna",
+     "photo": "https://image.tmdb.org/t/p/w185/zAyV5p4prwRXtL00xkJCHLBBUJ8.jpg",
+     "as": "Dan Turpin (voice)"
+    },
+    {
+     "id": 153606,
+     "name": "Victor Brandt",
+     "photo": "https://image.tmdb.org/t/p/w185/F1wHASA8PfHmYj759TBENb7vSy.jpg",
+     "as": "Professor Hamilton (voice)"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-16T07:34:06.423Z"
 }

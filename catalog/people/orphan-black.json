@@ -322,5 +322,788 @@
    "episodes": 4
   }
  ],
- "fetchedAt": "2026-10-13T18:37:07.377Z"
+ "fetchedAt": "2026-10-13T18:37:07.377Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 43,
+     "name": "John Fawcett",
+     "photo": "https://image.tmdb.org/t/p/w185/ArR5IXmo5yqjH4I6kcO9W5u9rDC.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 5883,
+     "name": "Graeme Manson",
+     "photo": "https://image.tmdb.org/t/p/w185/qFWtM1gN21RTpKZjoTY5JE20E7H.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 36814,
+     "name": "Diana Salvatore",
+     "photo": "https://image.tmdb.org/t/p/w185/uHL63N0ee6LPSzNO8sg7VNrnhXb.jpg",
+     "as": "Bobby"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    },
+    {
+     "id": 108895,
+     "name": "Elizabeth Saunders",
+     "photo": "https://image.tmdb.org/t/p/w185/j3gPh9XkEJb789p7U0JgA1CFnpC.jpg",
+     "as": "Dr. Anita Bowers"
+    },
+    {
+     "id": 180933,
+     "name": "Domenico Fiore",
+     "photo": "https://image.tmdb.org/t/p/w185/4m3P4dlL8sQ7PHROEAbIspBCbTA.jpg",
+     "as": "Police Captain"
+    },
+    {
+     "id": 1557412,
+     "name": "Justin Skye Conley",
+     "photo": "https://image.tmdb.org/t/p/w185/svqQ8sZbacpZpKGnnqvYYMiQet7.jpg",
+     "as": "Exec"
+    },
+    {
+     "id": 1234315,
+     "name": "Nicholas Rose",
+     "photo": "https://image.tmdb.org/t/p/w185/nzQW8KMZndQgoMeWoVmO6Le2vmW.jpg",
+     "as": "Colin"
+    },
+    {
+     "id": 1459703,
+     "name": "Ivan Sherry",
+     "photo": "https://image.tmdb.org/t/p/w185/pIt5mSM6xZgZTcXP5X9QuVlc90V.jpg",
+     "as": "Internal Affairs Suit"
+    },
+    {
+     "id": 1793716,
+     "name": "Marqus Bobesich",
+     "photo": "https://image.tmdb.org/t/p/w185/nQvy6gaUX5pHJf6xKDiGCrYEcDk.jpg",
+     "as": "Rockabilly Bob"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 43,
+     "name": "John Fawcett",
+     "photo": "https://image.tmdb.org/t/p/w185/ArR5IXmo5yqjH4I6kcO9W5u9rDC.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 5883,
+     "name": "Graeme Manson",
+     "photo": "https://image.tmdb.org/t/p/w185/qFWtM1gN21RTpKZjoTY5JE20E7H.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 1274210,
+     "name": "Millie Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/bsGbF60FABFvieeYWtbnaxSQOwh.jpg",
+     "as": "Gemma Hendrix"
+    },
+    {
+     "id": 559281,
+     "name": "Drew Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/dnGGLwChFNJaRDEygvfMIPLiTOZ.jpg",
+     "as": "Oscar Hendrix"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    },
+    {
+     "id": 108895,
+     "name": "Elizabeth Saunders",
+     "photo": "https://image.tmdb.org/t/p/w185/j3gPh9XkEJb789p7U0JgA1CFnpC.jpg",
+     "as": "Dr. Anita Bowers"
+    },
+    {
+     "id": 180933,
+     "name": "Domenico Fiore",
+     "photo": "https://image.tmdb.org/t/p/w185/4m3P4dlL8sQ7PHROEAbIspBCbTA.jpg",
+     "as": "Police Captain"
+    },
+    {
+     "id": 1459703,
+     "name": "Ivan Sherry",
+     "photo": "https://image.tmdb.org/t/p/w185/pIt5mSM6xZgZTcXP5X9QuVlc90V.jpg",
+     "as": "Internal Affairs Suit"
+    },
+    {
+     "id": 1793716,
+     "name": "Marqus Bobesich",
+     "photo": "https://image.tmdb.org/t/p/w185/nQvy6gaUX5pHJf6xKDiGCrYEcDk.jpg",
+     "as": "Rockabilly Bob"
+    },
+    {
+     "id": 1793717,
+     "name": "Jamila Fleming",
+     "photo": null,
+     "as": "Sherry"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 1224779,
+     "name": "David Frazee",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 5883,
+     "name": "Graeme Manson",
+     "photo": "https://image.tmdb.org/t/p/w185/qFWtM1gN21RTpKZjoTY5JE20E7H.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1309774,
+     "name": "Kristian Bruun",
+     "photo": "https://image.tmdb.org/t/p/w185/m2yXWJAQEWYPF5Q7DHqJtj3r9mc.jpg",
+     "as": "Donald 'Donnie' Hendrix"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 1228319,
+     "name": "Natalie Lisinska",
+     "photo": "https://image.tmdb.org/t/p/w185/pjF0OpAQNJKuxmxHeTOOepFXBrk.jpg",
+     "as": "Aynsley Norris"
+    },
+    {
+     "id": 1274210,
+     "name": "Millie Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/bsGbF60FABFvieeYWtbnaxSQOwh.jpg",
+     "as": "Gemma Hendrix"
+    },
+    {
+     "id": 559281,
+     "name": "Drew Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/dnGGLwChFNJaRDEygvfMIPLiTOZ.jpg",
+     "as": "Oscar Hendrix"
+    },
+    {
+     "id": 88929,
+     "name": "Jean Yoon",
+     "photo": "https://image.tmdb.org/t/p/w185/ce8sXtsy7HNGWG0xqSo4QTaghjM.jpg",
+     "as": "Janis Beckwith"
+    },
+    {
+     "id": 1228347,
+     "name": "Raymond Ablack",
+     "photo": "https://image.tmdb.org/t/p/w185/me0E8jsxP03dnXOeT6ohSRyxPSM.jpg",
+     "as": "Raj Singh"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    },
+    {
+     "id": 1793724,
+     "name": "Tyler Murree",
+     "photo": "https://image.tmdb.org/t/p/w185/6x1j2bXiBeIreeVMW15Xg8nwZvN.jpg",
+     "as": "Forensic Clerk"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 72952,
+     "name": "Grant Harvey",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 59931,
+     "name": "Karen Walton",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1309774,
+     "name": "Kristian Bruun",
+     "photo": "https://image.tmdb.org/t/p/w185/m2yXWJAQEWYPF5Q7DHqJtj3r9mc.jpg",
+     "as": "Donald 'Donnie' Hendrix"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 88929,
+     "name": "Jean Yoon",
+     "photo": "https://image.tmdb.org/t/p/w185/ce8sXtsy7HNGWG0xqSo4QTaghjM.jpg",
+     "as": "Janis Beckwith"
+    },
+    {
+     "id": 1228347,
+     "name": "Raymond Ablack",
+     "photo": "https://image.tmdb.org/t/p/w185/me0E8jsxP03dnXOeT6ohSRyxPSM.jpg",
+     "as": "Raj Singh"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    },
+    {
+     "id": 1260011,
+     "name": "Jack Fulton",
+     "photo": "https://image.tmdb.org/t/p/w185/6o53Mllthcmt5CRkvIwGgmHAYgc.jpg",
+     "as": "Trevor"
+    },
+    {
+     "id": 1237730,
+     "name": "Jane Spence",
+     "photo": "https://image.tmdb.org/t/p/w185/mDJRRnUSL5YSlhbNYIn91JgDl5u.jpg",
+     "as": "Trevor's Mom"
+    },
+    {
+     "id": 1512137,
+     "name": "Jamillah Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/h82NrZnDKpzCfAaHyCfs8ODsyhb.jpg",
+     "as": "ND Officer"
+    },
+    {
+     "id": 1796797,
+     "name": "Michael Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/eZrk95bblzGT4QouyK5sodvDOG8.jpg",
+     "as": "Swat Officer"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 20976,
+     "name": "T.J. Scott",
+     "photo": "https://image.tmdb.org/t/p/w185/2sDOBP18EL5qeGTRt1SUHAIfdWa.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1230717,
+     "name": "Alex Levine",
+     "photo": "https://image.tmdb.org/t/p/w185/3Dsb8uvO6IzP51agwtnNQ0fe8mg.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1556338,
+     "name": "Josh Vokey",
+     "photo": "https://image.tmdb.org/t/p/w185/f0mAeoeO3JYff9O1TbhfWdGI20A.jpg",
+     "as": "Scott Smith"
+    },
+    {
+     "id": 1309774,
+     "name": "Kristian Bruun",
+     "photo": "https://image.tmdb.org/t/p/w185/m2yXWJAQEWYPF5Q7DHqJtj3r9mc.jpg",
+     "as": "Donald 'Donnie' Hendrix"
+    },
+    {
+     "id": 461309,
+     "name": "Evelyne Brochu",
+     "photo": "https://image.tmdb.org/t/p/w185/11rEHdNfqH6WLJDufd1H0MSIrP6.jpg",
+     "as": "Delphine Cormier"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 10210,
+     "name": "Daniel Kash",
+     "photo": "https://image.tmdb.org/t/p/w185/v8xa3aFbdk0t7RXpXiLlXI7QepH.jpg",
+     "as": "Tomas"
+    },
+    {
+     "id": 1274210,
+     "name": "Millie Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/bsGbF60FABFvieeYWtbnaxSQOwh.jpg",
+     "as": "Gemma Hendrix"
+    },
+    {
+     "id": 559281,
+     "name": "Drew Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/dnGGLwChFNJaRDEygvfMIPLiTOZ.jpg",
+     "as": "Oscar Hendrix"
+    },
+    {
+     "id": 46906,
+     "name": "David Richmond-Peck",
+     "photo": "https://image.tmdb.org/t/p/w185/3qPzkWzWdTbNh8fsAVqlQ7VAoJb.jpg",
+     "as": "Olivier Duval"
+    },
+    {
+     "id": 1228347,
+     "name": "Raymond Ablack",
+     "photo": "https://image.tmdb.org/t/p/w185/me0E8jsxP03dnXOeT6ohSRyxPSM.jpg",
+     "as": "Raj Singh"
+    },
+    {
+     "id": 1234315,
+     "name": "Nicholas Rose",
+     "photo": "https://image.tmdb.org/t/p/w185/nzQW8KMZndQgoMeWoVmO6Le2vmW.jpg",
+     "as": "Colin"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 43,
+     "name": "John Fawcett",
+     "photo": "https://image.tmdb.org/t/p/w185/ArR5IXmo5yqjH4I6kcO9W5u9rDC.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1260785,
+     "name": "Will Pascoe",
+     "photo": "https://image.tmdb.org/t/p/w185/sK5YNp34osiDiZItpGN7wkuD06l.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1309774,
+     "name": "Kristian Bruun",
+     "photo": "https://image.tmdb.org/t/p/w185/m2yXWJAQEWYPF5Q7DHqJtj3r9mc.jpg",
+     "as": "Donald 'Donnie' Hendrix"
+    },
+    {
+     "id": 461309,
+     "name": "Evelyne Brochu",
+     "photo": "https://image.tmdb.org/t/p/w185/11rEHdNfqH6WLJDufd1H0MSIrP6.jpg",
+     "as": "Delphine Cormier"
+    },
+    {
+     "id": 40009,
+     "name": "Matt Frewer",
+     "photo": "https://image.tmdb.org/t/p/w185/gh91nUlR6C7rYhDhjab7cAZQlIt.jpg",
+     "as": "Dr. Aldous Leekie"
+    },
+    {
+     "id": 1228319,
+     "name": "Natalie Lisinska",
+     "photo": "https://image.tmdb.org/t/p/w185/pjF0OpAQNJKuxmxHeTOOepFXBrk.jpg",
+     "as": "Aynsley Norris"
+    },
+    {
+     "id": 33337,
+     "name": "Eric Johnson",
+     "photo": "https://image.tmdb.org/t/p/w185/oSwKvCo9duqcOfUAYPLdNHyXnna.jpg",
+     "as": "Chad Norris"
+    },
+    {
+     "id": 1274210,
+     "name": "Millie Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/bsGbF60FABFvieeYWtbnaxSQOwh.jpg",
+     "as": "Gemma Hendrix"
+    },
+    {
+     "id": 559281,
+     "name": "Drew Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/dnGGLwChFNJaRDEygvfMIPLiTOZ.jpg",
+     "as": "Oscar Hendrix"
+    },
+    {
+     "id": 46906,
+     "name": "David Richmond-Peck",
+     "photo": "https://image.tmdb.org/t/p/w185/3qPzkWzWdTbNh8fsAVqlQ7VAoJb.jpg",
+     "as": "Olivier Duval"
+    },
+    {
+     "id": 1793729,
+     "name": "Priya Rao",
+     "photo": "https://image.tmdb.org/t/p/w185/pEmDbtdIs6h8PURdlIJ0fwTjndN.jpg",
+     "as": "Meera Kumar"
+    },
+    {
+     "id": 1140031,
+     "name": "Earl McLean Jr.",
+     "photo": null,
+     "as": "Teddy"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 51034,
+     "name": "Brett Sullivan",
+     "photo": "https://image.tmdb.org/t/p/w185/yJnzBZi4gsLRkuKN4mW6JELegow.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1357434,
+     "name": "Tony Elliott",
+     "photo": "https://image.tmdb.org/t/p/w185/1V9WhrYqYj59ZtgSeva9xvWPTY7.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 461309,
+     "name": "Evelyne Brochu",
+     "photo": "https://image.tmdb.org/t/p/w185/11rEHdNfqH6WLJDufd1H0MSIrP6.jpg",
+     "as": "Delphine Cormier"
+    },
+    {
+     "id": 40009,
+     "name": "Matt Frewer",
+     "photo": "https://image.tmdb.org/t/p/w185/gh91nUlR6C7rYhDhjab7cAZQlIt.jpg",
+     "as": "Dr. Aldous Leekie"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 10210,
+     "name": "Daniel Kash",
+     "photo": "https://image.tmdb.org/t/p/w185/v8xa3aFbdk0t7RXpXiLlXI7QepH.jpg",
+     "as": "Tomas"
+    },
+    {
+     "id": 88929,
+     "name": "Jean Yoon",
+     "photo": "https://image.tmdb.org/t/p/w185/ce8sXtsy7HNGWG0xqSo4QTaghjM.jpg",
+     "as": "Janis Beckwith"
+    },
+    {
+     "id": 46906,
+     "name": "David Richmond-Peck",
+     "photo": "https://image.tmdb.org/t/p/w185/3qPzkWzWdTbNh8fsAVqlQ7VAoJb.jpg",
+     "as": "Olivier Duval"
+    },
+    {
+     "id": 51040,
+     "name": "Sarain Boylan",
+     "photo": "https://image.tmdb.org/t/p/w185/g0mKNj6ZVMryPPc5z0IdrIdywSj.jpg",
+     "as": "Astrid"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    },
+    {
+     "id": 1234315,
+     "name": "Nicholas Rose",
+     "photo": "https://image.tmdb.org/t/p/w185/nzQW8KMZndQgoMeWoVmO6Le2vmW.jpg",
+     "as": "Colin"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 166437,
+     "name": "Ken Girotti",
+     "photo": "https://image.tmdb.org/t/p/w185/gzTr9lnkR5FLzM6ezQYlwoSG0Wv.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 59931,
+     "name": "Karen Walton",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 461309,
+     "name": "Evelyne Brochu",
+     "photo": "https://image.tmdb.org/t/p/w185/11rEHdNfqH6WLJDufd1H0MSIrP6.jpg",
+     "as": "Delphine Cormier"
+    },
+    {
+     "id": 40009,
+     "name": "Matt Frewer",
+     "photo": "https://image.tmdb.org/t/p/w185/gh91nUlR6C7rYhDhjab7cAZQlIt.jpg",
+     "as": "Dr. Aldous Leekie"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 1228319,
+     "name": "Natalie Lisinska",
+     "photo": "https://image.tmdb.org/t/p/w185/pjF0OpAQNJKuxmxHeTOOepFXBrk.jpg",
+     "as": "Aynsley Norris"
+    },
+    {
+     "id": 33337,
+     "name": "Eric Johnson",
+     "photo": "https://image.tmdb.org/t/p/w185/oSwKvCo9duqcOfUAYPLdNHyXnna.jpg",
+     "as": "Chad Norris"
+    },
+    {
+     "id": 46906,
+     "name": "David Richmond-Peck",
+     "photo": "https://image.tmdb.org/t/p/w185/3qPzkWzWdTbNh8fsAVqlQ7VAoJb.jpg",
+     "as": "Olivier Duval"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    },
+    {
+     "id": 1234315,
+     "name": "Nicholas Rose",
+     "photo": "https://image.tmdb.org/t/p/w185/nzQW8KMZndQgoMeWoVmO6Le2vmW.jpg",
+     "as": "Colin"
+    },
+    {
+     "id": 1793729,
+     "name": "Priya Rao",
+     "photo": "https://image.tmdb.org/t/p/w185/pEmDbtdIs6h8PURdlIJ0fwTjndN.jpg",
+     "as": "Meera Kumar"
+    }
+   ]
+  },
+  "1x9": {
+   "d": [
+    {
+     "id": 20976,
+     "name": "T.J. Scott",
+     "photo": "https://image.tmdb.org/t/p/w185/2sDOBP18EL5qeGTRt1SUHAIfdWa.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1230717,
+     "name": "Alex Levine",
+     "photo": "https://image.tmdb.org/t/p/w185/3Dsb8uvO6IzP51agwtnNQ0fe8mg.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1556338,
+     "name": "Josh Vokey",
+     "photo": "https://image.tmdb.org/t/p/w185/f0mAeoeO3JYff9O1TbhfWdGI20A.jpg",
+     "as": "Scott Smith"
+    },
+    {
+     "id": 1309774,
+     "name": "Kristian Bruun",
+     "photo": "https://image.tmdb.org/t/p/w185/m2yXWJAQEWYPF5Q7DHqJtj3r9mc.jpg",
+     "as": "Donald 'Donnie' Hendrix"
+    },
+    {
+     "id": 461309,
+     "name": "Evelyne Brochu",
+     "photo": "https://image.tmdb.org/t/p/w185/11rEHdNfqH6WLJDufd1H0MSIrP6.jpg",
+     "as": "Delphine Cormier"
+    },
+    {
+     "id": 40009,
+     "name": "Matt Frewer",
+     "photo": "https://image.tmdb.org/t/p/w185/gh91nUlR6C7rYhDhjab7cAZQlIt.jpg",
+     "as": "Dr. Aldous Leekie"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 1212964,
+     "name": "Melanie Nicholls-King",
+     "photo": "https://image.tmdb.org/t/p/w185/lgDou5t3q8IsW5IlyJJtzVPESvz.jpg",
+     "as": "Amelia"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 10210,
+     "name": "Daniel Kash",
+     "photo": "https://image.tmdb.org/t/p/w185/v8xa3aFbdk0t7RXpXiLlXI7QepH.jpg",
+     "as": "Tomas"
+    },
+    {
+     "id": 1228319,
+     "name": "Natalie Lisinska",
+     "photo": "https://image.tmdb.org/t/p/w185/pjF0OpAQNJKuxmxHeTOOepFXBrk.jpg",
+     "as": "Aynsley Norris"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    }
+   ]
+  },
+  "1x10": {
+   "d": [
+    {
+     "id": 43,
+     "name": "John Fawcett",
+     "photo": "https://image.tmdb.org/t/p/w185/ArR5IXmo5yqjH4I6kcO9W5u9rDC.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 5883,
+     "name": "Graeme Manson",
+     "photo": "https://image.tmdb.org/t/p/w185/qFWtM1gN21RTpKZjoTY5JE20E7H.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1556338,
+     "name": "Josh Vokey",
+     "photo": "https://image.tmdb.org/t/p/w185/f0mAeoeO3JYff9O1TbhfWdGI20A.jpg",
+     "as": "Scott Smith"
+    },
+    {
+     "id": 1309774,
+     "name": "Kristian Bruun",
+     "photo": "https://image.tmdb.org/t/p/w185/m2yXWJAQEWYPF5Q7DHqJtj3r9mc.jpg",
+     "as": "Donald 'Donnie' Hendrix"
+    },
+    {
+     "id": 461309,
+     "name": "Evelyne Brochu",
+     "photo": "https://image.tmdb.org/t/p/w185/11rEHdNfqH6WLJDufd1H0MSIrP6.jpg",
+     "as": "Delphine Cormier"
+    },
+    {
+     "id": 40009,
+     "name": "Matt Frewer",
+     "photo": "https://image.tmdb.org/t/p/w185/gh91nUlR6C7rYhDhjab7cAZQlIt.jpg",
+     "as": "Dr. Aldous Leekie"
+    },
+    {
+     "id": 1102607,
+     "name": "Skyler Wexler",
+     "photo": "https://image.tmdb.org/t/p/w185/pw4TMfKu9zIeubRJ7o1e7IUhfXT.jpg",
+     "as": "Kira Manning"
+    },
+    {
+     "id": 1212964,
+     "name": "Melanie Nicholls-King",
+     "photo": "https://image.tmdb.org/t/p/w185/lgDou5t3q8IsW5IlyJJtzVPESvz.jpg",
+     "as": "Amelia"
+    },
+    {
+     "id": 44248,
+     "name": "Ron Lea",
+     "photo": "https://image.tmdb.org/t/p/w185/jxSFEsvAOej3326HZG0KWPFc2NU.jpg",
+     "as": "Lieutenant Gavin Hardcastle"
+    },
+    {
+     "id": 1228319,
+     "name": "Natalie Lisinska",
+     "photo": "https://image.tmdb.org/t/p/w185/pjF0OpAQNJKuxmxHeTOOepFXBrk.jpg",
+     "as": "Aynsley Norris"
+    },
+    {
+     "id": 77210,
+     "name": "Matthew Bennett",
+     "photo": "https://image.tmdb.org/t/p/w185/32bw21SoRJNddrhWPOZ149irOgi.jpg",
+     "as": "Daniel Rosen"
+    },
+    {
+     "id": 180924,
+     "name": "Inga Cadranel",
+     "photo": "https://image.tmdb.org/t/p/w185/hUkbZpavTooaFZDcwrvRN7KIcct.jpg",
+     "as": "Detective Angela \"Angie\" Deangelis"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-16T07:37:11.896Z"
 }
