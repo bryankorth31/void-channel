@@ -1,6 +1,6 @@
 # Coverage
 
-1944 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
+1983 shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.
 
 | Show | Row | Episodes | Live | Review | Missing | Covered |
 |---|---|---|---|---|---|---|
@@ -169,6 +169,7 @@
 | Knowing Me, Knowing You with Alan Partridge | British and Beyond | 6 | 0 | 6 | 0 | 100% |
 | Korgoth of Barbaria | Adult Swim | 1 | 1 | 0 | 0 | 100% |
 | Later with Bob Costas | Classic TV | 6 | 0 | 6 | 0 | 100% |
+| Less Than Kind | British and Beyond | 40 | 0 | 40 | 0 | 100% |
 | LIAR GAME | Anime | 51 | 0 | 51 | 0 | 100% |
 | Limmy's Show | British and Beyond | 51 | 0 | 51 | 0 | 100% |
 | Lingerie | Late Night | 26 | 0 | 26 | 0 | 100% |
@@ -195,6 +196,7 @@
 | Monogatari | Anime | 8 | 0 | 8 | 0 | 100% |
 | Monster | Anime | 387 | 0 | 387 | 0 | 100% |
 | Monty Python's Flying Circus | Classic TV | 59 | 0 | 59 | 0 | 100% |
+| Moone Boy | British and Beyond | 18 | 18 | 0 | 0 | 100% |
 | Moral Orel | Adult Swim | 93 | 0 | 93 | 0 | 100% |
 | Morgenmagazin | Reality & Talk | 14 | 0 | 14 | 0 | 100% |
 | Mr. Queen | World TV | 20 | 0 | 20 | 0 | 100% |
@@ -212,6 +214,7 @@
 | Neon Genesis Evangelion | Anime | 140 | 0 | 140 | 0 | 100% |
 | Oh My Venus | World TV | 16 | 0 | 16 | 0 | 100% |
 | One Foot in the Grave | British and Beyond | 126 | 0 | 126 | 0 | 100% |
+| Orphan Black | British and Beyond | 58 | 0 | 58 | 0 | 100% |
 | Ouran High School Host Club | Anime | 26 | 0 | 26 | 0 | 100% |
 | Outlaw Star | Animated | 132 | 0 | 132 | 0 | 100% |
 | Over the Garden Wall | Streaming Era | 10 | 10 | 0 | 0 | 100% |
@@ -255,11 +258,13 @@
 | Secret Lives | Reality & Talk | 2 | 0 | 2 | 0 | 100% |
 | Serial Experiments Lain | Anime | 13 | 0 | 13 | 0 | 100% |
 | Sex Bytes | Late Night | 13 | 0 | 13 | 0 | 100% |
+| Sherlock | British and Beyond | 12 | 10 | 2 | 0 | 100% |
 | Shin Chan | Anime | 171 | 0 | 171 | 0 | 100% |
 | Shootout! | Documentary & Geographic | 22 | 18 | 4 | 0 | 100% |
 | Sifl & Olly | MTV | 20 | 20 | 0 | 0 | 100% |
 | Six Feet Under | Drama | 63 | 60 | 3 | 0 | 100% |
 | SK8 the Infinity | Anime | 4 | 0 | 4 | 0 | 100% |
+| Slings & Arrows | British and Beyond | 18 | 18 | 0 | 0 | 100% |
 | Snuff Box | British and Beyond | 6 | 0 | 6 | 0 | 100% |
 | Sonic the Hedgehog | Animated | 118 | 0 | 118 | 0 | 100% |
 | Sound! Euphonium | Anime | 68 | 0 | 68 | 0 | 100% |
@@ -333,10 +338,12 @@
 | The PJs | Animated | 43 | 43 | 0 | 0 | 100% |
 | The Prisoner | Classic TV | 6 | 6 | 0 | 0 | 100% |
 | The Quintessential Quintuplets | Anime | 24 | 0 | 24 | 0 | 100% |
+| The Red Green Show | British and Beyond | 302 | 295 | 6 | 1 | 100% |
 | The Ren & Stimpy Show | Animated | 39 | 0 | 39 | 0 | 100% |
 | The Richard Pryor Show | Classic TV | 4 | 4 | 0 | 0 | 100% |
 | The Rockford Files | Classic TV | 135 | 0 | 135 | 0 | 100% |
 | The Roosevelts: An Intimate History | Documentary & Geographic | 7 | 6 | 1 | 0 | 100% |
+| The Savage Eye | British and Beyond | 26 | 0 | 26 | 0 | 100% |
 | The Secret Life of Machines | Documentary & Geographic | 18 | 16 | 2 | 0 | 100% |
 | The Show with Ze Frank | Internet Comedy | 246 | 0 | 246 | 0 | 100% |
 | The Simpsons | Animated | 22 | 0 | 22 | 0 | 100% |
@@ -357,6 +364,7 @@
 | This Week in History | Documentary & Geographic | 2 | 0 | 2 | 0 | 100% |
 | Tic-Tac-Dough | Classic TV | 10 | 0 | 10 | 0 | 100% |
 | Tigtone | Adult Swim | 20 | 20 | 0 | 0 | 100% |
+| Todd and the Book of Pure Evil | British and Beyond | 26 | 26 | 0 | 0 | 100% |
 | Tom Goes to the Mayor | Adult Swim | 30 | 29 | 1 | 0 | 100% |
 | Tomorrow with Tom Snyder | Classic TV | 2 | 0 | 2 | 0 | 100% |
 | Toonami | Animated | 4 | 0 | 4 | 0 | 100% |
@@ -418,6 +426,7 @@
 | Sliders | Sci-Fi, Fantasy and Horror | 87 | 82 | 3 | 2 | 98% |
 | Trollhunters: Tales of Arcadia | Streaming Era | 52 | 51 | 0 | 1 | 98% |
 | Bill Nye the Science Guy | Documentary & Geographic | 100 | 80 | 17 | 3 | 97% |
+| Corner Gas | British and Beyond | 107 | 18 | 86 | 3 | 97% |
 | Harvey Birdman, Attorney at Law | Adult Swim | 39 | 38 | 0 | 1 | 97% |
 | Soap | Classic TV | 90 | 87 | 0 | 3 | 97% |
 | Star Trek: The Next Generation | Sci-Fi, Fantasy and Horror | 178 | 172 | 0 | 6 | 97% |
@@ -524,10 +533,12 @@
 | Marco Polo | Streaming Era | 20 | 15 | 0 | 5 | 75% |
 | Roots | Classic TV | 8 | 0 | 6 | 2 | 75% |
 | Wilfred (AU) | British and Beyond | 16 | 0 | 12 | 4 | 75% |
+| Continuum | British and Beyond | 42 | 0 | 31 | 11 | 74% |
 | Baywatch | Drama | 233 | 28 | 142 | 63 | 73% |
 | Family Matters | 90s Sitcoms | 215 | 0 | 158 | 57 | 73% |
 | Though I Am an Inept Villainess | Anime | 11 | 8 | 0 | 3 | 73% |
 | Wilfred | 2000s and Later Sitcoms | 49 | 0 | 36 | 13 | 73% |
+| Top Gear | British and Beyond | 229 | 164 | 1 | 64 | 72% |
 | Batman: The Animated Series | Animated | 85 | 60 | 0 | 25 | 71% |
 | Blackadder | Classic TV | 24 | 12 | 5 | 7 | 71% |
 | Alfred Hitchcock Presents | Classic TV | 268 | 187 | 0 | 81 | 70% |
@@ -596,6 +607,7 @@
 | Fallout | Streaming Era | 16 | 0 | 8 | 8 | 50% |
 | It's Okay to Not Be Okay | World TV | 16 | 0 | 8 | 8 | 50% |
 | Kill la Kill | Anime | 24 | 0 | 12 | 12 | 50% |
+| Life on Mars | British and Beyond | 16 | 8 | 0 | 8 | 50% |
 | ONE PIECE | Streaming Era | 16 | 8 | 0 | 8 | 50% |
 | Our Last Crusade or the Rise of a New World | Anime | 24 | 0 | 12 | 12 | 50% |
 | Rascal Does Not Dream of Bunny Girl Senpai | Anime | 26 | 9 | 4 | 13 | 50% |
@@ -612,6 +624,7 @@
 | Hana-Kimi | Anime | 25 | 0 | 12 | 13 | 48% |
 | Cow and Chicken | Animated | 103 | 26 | 22 | 55 | 47% |
 | The Avengers | Classic TV | 161 | 50 | 25 | 86 | 47% |
+| Whose Line Is It Anyway? | British and Beyond | 431 | 204 | 0 | 227 | 47% |
 | Freakazoid! | Animated | 46 | 18 | 3 | 25 | 46% |
 | Stressed Eric | Animated | 13 | 6 | 0 | 7 | 46% |
 | Baseball | Documentary & Geographic | 11 | 0 | 5 | 6 | 45% |
@@ -627,6 +640,7 @@
 | Poldark | British and Beyond | 43 | 18 | 0 | 25 | 42% |
 | Shameless | Drama | 134 | 56 | 0 | 78 | 42% |
 | The Judy Garland Show | Classic TV | 26 | 9 | 2 | 15 | 42% |
+| Kath & Kim | British and Beyond | 17 | 7 | 0 | 10 | 41% |
 | To Love Ru | Anime | 64 | 26 | 0 | 38 | 41% |
 | Minor Adjustments | 90s Sitcoms | 20 | 1 | 7 | 12 | 40% |
 | Moonlighting | Classic TV | 67 | 24 | 3 | 40 | 40% |
@@ -651,6 +665,7 @@
 | Control Z | World TV | 24 | 8 | 0 | 16 | 33% |
 | Cosmos | Streaming Era | 39 | 1 | 12 | 26 | 33% |
 | Cosmos: A Personal Voyage | Documentary & Geographic | 39 | 13 | 0 | 26 | 33% |
+| Prime Suspect | British and Beyond | 15 | 0 | 5 | 10 | 33% |
 | Sister, Sister | 90s Sitcoms | 119 | 22 | 17 | 80 | 33% |
 | Teasing Master Takagi-san | Anime | 36 | 0 | 12 | 24 | 33% |
 | The Dinah Shore Chevy Show | Classic TV | 3 | 0 | 1 | 2 | 33% |
@@ -679,6 +694,7 @@
 | Record of Ragnarok | Anime | 42 | 11 | 0 | 31 | 26% |
 | Scissor Seven | World TV | 54 | 0 | 14 | 40 | 26% |
 | Tales from the Darkside | Classic TV | 89 | 23 | 0 | 66 | 26% |
+| Hardy Bucks | British and Beyond | 20 | 3 | 2 | 15 | 25% |
 | High School DxD | Anime | 48 | 0 | 12 | 36 | 25% |
 | Hornblower | British and Beyond | 8 | 0 | 2 | 6 | 25% |
 | King the Land | World TV | 16 | 0 | 4 | 12 | 25% |
@@ -773,6 +789,7 @@
 | Chicago Med | Streaming Era | 223 | 15 | 0 | 208 | 7% |
 | Eek! The Cat | Animated | 75 | 3 | 2 | 70 | 7% |
 | Happy Days | Classic TV | 255 | 15 | 2 | 238 | 7% |
+| Mock the Week | British and Beyond | 15 | 0 | 1 | 14 | 7% |
 | Salad Fingers | Internet Comedy | 14 | 0 | 1 | 13 | 7% |
 | Doug | Animated | 169 | 0 | 10 | 159 | 6% |
 | New York Undercover | Drama | 89 | 0 | 5 | 84 | 6% |
@@ -862,6 +879,7 @@
 | Unsolved History | Documentary & Geographic | 46 | 0 | 1 | 45 | 2% |
 | VeggieTales | Animated | 51 | 0 | 1 | 50 | 2% |
 | Wonder Woman | Classic TV | 60 | 0 | 1 | 59 | 2% |
+| Would I Lie to You? | British and Beyond | 184 | 3 | 0 | 181 | 2% |
 | Angel | Sci-Fi, Fantasy and Horror | 110 | 1 | 0 | 109 | 1% |
 | Anthony Bourdain: No Reservations | Documentary & Geographic | 177 | 1 | 1 | 175 | 1% |
 | Arrow | Sci-Fi, Fantasy and Horror | 170 | 1 | 0 | 169 | 1% |
@@ -902,6 +920,7 @@
 | The Parent 'Hood | 90s Sitcoms | 90 | 0 | 1 | 89 | 1% |
 | The Universe | Documentary & Geographic | 88 | 0 | 1 | 87 | 1% |
 | The Wayans Bros. | 90s Sitcoms | 102 | 1 | 0 | 101 | 1% |
+| This Hour Has 22 Minutes | British and Beyond | 555 | 8 | 0 | 547 | 1% |
 | This Old House | Documentary & Geographic | 1196 | 0 | 9 | 1187 | 1% |
 | Trading Spaces | Documentary & Geographic | 357 | 0 | 2 | 355 | 1% |
 | Trauma: Life in the E.R. | Documentary & Geographic | 71 | 1 | 0 | 70 | 1% |
@@ -994,6 +1013,7 @@
 | Beef | Streaming Era | 18 | 0 | 0 | 18 | 0% |
 | Beef House | Adult Swim | 6 | 0 | 0 | 6 | 0% |
 | Beelzebub | Anime | 60 | 0 | 0 | 60 | 0% |
+| Being Human | British and Beyond | 36 | 0 | 0 | 36 | 0% |
 | Being Mary Jane | Streaming Era | 51 | 0 | 0 | 51 | 0% |
 | Berserk | Anime | 25 | 0 | 0 | 25 | 0% |
 | Best of the Worst | Internet Comedy | 6 | 0 | 0 | 6 | 0% |
@@ -1040,6 +1060,7 @@
 | Burning Love | Internet Comedy | 21 | 0 | 0 | 21 | 0% |
 | Caesar's Hour | Classic TV | 13 | 0 | 0 | 13 | 0% |
 | Californication | 2000s and Later Sitcoms | 84 | 0 | 0 | 84 | 0% |
+| Call Me Fitz | British and Beyond | 48 | 0 | 0 | 48 | 0% |
 | Call the Midwife | Streaming Era | 117 | 0 | 0 | 117 | 0% |
 | Camelot | Drama | 10 | 0 | 0 | 10 | 0% |
 | Candid Camera | Classic TV | 10 | 0 | 0 | 10 | 0% |
@@ -1097,6 +1118,7 @@
 | Cops | Documentary & Geographic | 1278 | 0 | 4 | 1274 | 0% |
 | Corporate | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Cosmos: A Spacetime Odyssey | Documentary & Geographic | 39 | 0 | 0 | 39 | 0% |
+| Cracker | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Crazy Ex-Girlfriend | 2000s and Later Sitcoms | 62 | 0 | 0 | 62 | 0% |
 | Criminal Minds | Drama | 364 | 0 | 0 | 364 | 0% |
 | CSI: Miami | Drama | 232 | 0 | 0 | 232 | 0% |
@@ -1105,6 +1127,7 @@
 | Cumbia Ninja | World TV | 21 | 0 | 0 | 21 | 0% |
 | Cutting Edge | Documentary & Geographic | 104 | 0 | 0 | 104 | 0% |
 | Da Vinci's Demons | Drama | 28 | 0 | 0 | 28 | 0% |
+| Da Vinci's Inquest | British and Beyond | 91 | 0 | 0 | 91 | 0% |
 | Daemons of the Shadow Realm | Anime | 24 | 0 | 0 | 24 | 0% |
 | Dallas | Classic TV | 356 | 0 | 0 | 356 | 0% |
 | Dandivine | Anime | 12 | 0 | 0 | 12 | 0% |
@@ -1139,6 +1162,7 @@
 | Dinah! | Classic TV | 51 | 0 | 0 | 51 | 0% |
 | Dispatches from Elsewhere | Drama | 10 | 0 | 0 | 10 | 0% |
 | Doctor Thorne | British and Beyond | 3 | 0 | 0 | 3 | 0% |
+| Doctor Who | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Doctors | World TV | 3387 | 0 | 0 | 3387 | 0% |
 | Documentary Now! | Sketch and Comedy | 27 | 0 | 0 | 27 | 0% |
 | Domina | British and Beyond | 16 | 0 | 0 | 16 | 0% |
@@ -1153,6 +1177,7 @@
 | Drake & Josh | 2000s and Later Sitcoms | 55 | 0 | 0 | 55 | 0% |
 | Dream Corp LLC | Adult Swim | 28 | 0 | 0 | 28 | 0% |
 | Drunk History | Internet Comedy | 70 | 0 | 0 | 70 | 0% |
+| Durham County | British and Beyond | 18 | 0 | 0 | 18 | 0% |
 | Dynasty | Reality & Talk | 108 | 0 | 0 | 108 | 0% |
 | Early Edition | Drama | 90 | 0 | 0 | 90 | 0% |
 | Eastbound & Down | 2000s and Later Sitcoms | 29 | 0 | 0 | 29 | 0% |
@@ -1298,6 +1323,7 @@
 | Independent Lens | Documentary & Geographic | 546 | 0 | 0 | 546 | 0% |
 | Infinite Challenge | Reality & Talk | 616 | 0 | 0 | 616 | 0% |
 | Insecure | Streaming Era | 44 | 0 | 0 | 44 | 0% |
+| Intelligence | British and Beyond | 13 | 0 | 0 | 13 | 0% |
 | Intervention | Documentary & Geographic | 361 | 0 | 0 | 361 | 0% |
 | Into the West | Drama | 6 | 0 | 0 | 6 | 0% |
 | Invention | Documentary & Geographic | 7 | 0 | 0 | 7 | 0% |
@@ -1355,6 +1381,7 @@
 | Legacies | Streaming Era | 68 | 0 | 0 | 68 | 0% |
 | Legit | 2000s and Later Sitcoms | 26 | 0 | 0 | 26 | 0% |
 | Let's Make a Deal | Classic TV | 1686 | 0 | 0 | 1686 | 0% |
+| Letterkenny | British and Beyond | 74 | 0 | 0 | 74 | 0% |
 | Life | Documentary & Geographic | 32 | 0 | 0 | 32 | 0% |
 | Life After People | Documentary & Geographic | 28 | 0 | 0 | 28 | 0% |
 | Life on Earth | Documentary & Geographic | 13 | 0 | 0 | 13 | 0% |
@@ -1372,6 +1399,7 @@
 | Lookism | World TV | 8 | 0 | 0 | 8 | 0% |
 | Loose Women | Reality & Talk | 4954 | 0 | 0 | 4954 | 0% |
 | Los Espookys | 2000s and Later Sitcoms | 12 | 0 | 0 | 12 | 0% |
+| Lost Girl | British and Beyond | 77 | 0 | 0 | 77 | 0% |
 | Lost Worlds | Documentary & Geographic | 31 | 0 | 0 | 31 | 0% |
 | Louie | 2000s and Later Sitcoms | 61 | 0 | 0 | 61 | 0% |
 | Louis Theroux's Weird Weekends | British and Beyond | 16 | 0 | 0 | 16 | 0% |
@@ -1385,6 +1413,7 @@
 | Lucky Louie | 2000s and Later Sitcoms | 13 | 0 | 0 | 13 | 0% |
 | Luke Cage | Streaming Era | 26 | 0 | 0 | 26 | 0% |
 | Lupin | World TV | 18 | 0 | 0 | 18 | 0% |
+| Luther | British and Beyond | 20 | 0 | 0 | 20 | 0% |
 | Lycoris Recoil | Anime | 13 | 0 | 0 | 13 | 0% |
 | M*A*S*H | Classic TV | 10 | 0 | 0 | 10 | 0% |
 | Made in Abyss | Anime | 25 | 0 | 0 | 25 | 0% |
@@ -1427,6 +1456,7 @@
 | Middlemarch | British and Beyond | 6 | 0 | 0 | 6 | 0% |
 | Mike Tyson Mysteries | Animated | 70 | 0 | 0 | 70 | 0% |
 | MINDHUNTER | Streaming Era | 19 | 0 | 0 | 19 | 0% |
+| Misfits | British and Beyond | 36 | 0 | 0 | 36 | 0% |
 | Miss Kobayashi's Dragon Maid | Anime | 25 | 0 | 0 | 25 | 0% |
 | Mo | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | Mob Psycho 100 | Anime | 37 | 0 | 0 | 37 | 0% |
@@ -1537,6 +1567,7 @@
 | Psychoville | British and Beyond | 13 | 0 | 0 | 13 | 0% |
 | PSYREN | Anime | 12 | 0 | 0 | 12 | 0% |
 | Punk'd | MTV | 76 | 0 | 0 | 76 | 0% |
+| Puppets Who Kill | British and Beyond | 52 | 0 | 0 | 52 | 0% |
 | Queen of Tears | World TV | 16 | 0 | 0 | 16 | 0% |
 | Queen Sugar | Streaming Era | 88 | 0 | 0 | 88 | 0% |
 | Quotidien | Reality & Talk | 1514 | 0 | 0 | 1514 | 0% |
@@ -1576,6 +1607,7 @@
 | Romelia War Chronicle | Anime | 13 | 0 | 0 | 13 | 0% |
 | Room Raiders | MTV | 31 | 0 | 0 | 31 | 0% |
 | Rowan & Martin's Laugh-In | Classic TV | 141 | 0 | 0 | 141 | 0% |
+| Royal Canadian Air Farce | British and Beyond | 348 | 0 | 0 | 348 | 0% |
 | Royal Crackers | Adult Swim | 20 | 0 | 0 | 20 | 0% |
 | Run Coyote Run | World TV | 39 | 0 | 0 | 39 | 0% |
 | Running Man | Reality & Talk | 815 | 0 | 0 | 815 | 0% |
@@ -1590,6 +1622,7 @@
 | Saturday Night Live | Classic TV | 1017 | 0 | 0 | 1017 | 0% |
 | Scarecrow and Mrs. King | Classic TV | 88 | 0 | 0 | 88 | 0% |
 | Scarlet Heart: Ryeo | World TV | 20 | 0 | 0 | 20 | 0% |
+| Schitt's Creek | British and Beyond | 79 | 0 | 0 | 79 | 0% |
 | Scientific American Frontiers | Documentary & Geographic | 96 | 0 | 0 | 96 | 0% |
 | Scrabble | Classic TV | 38 | 0 | 0 | 38 | 0% |
 | SEAL Team | Streaming Era | 114 | 0 | 0 | 114 | 0% |
@@ -1613,6 +1646,7 @@
 | Simon & Simon | Classic TV | 156 | 0 | 0 | 156 | 0% |
 | Singled Out | MTV | 20 | 0 | 0 | 20 | 0% |
 | SKAM | World TV | 43 | 0 | 0 | 43 | 0% |
+| Skins | British and Beyond | 10 | 0 | 0 | 10 | 0% |
 | Slam Dunk | Anime | 101 | 0 | 0 | 101 | 0% |
 | Smack the Pony | British and Beyond | 22 | 0 | 0 | 22 | 0% |
 | Smallville | Sci-Fi, Fantasy and Horror | 217 | 0 | 1 | 216 | 0% |
@@ -1634,6 +1668,7 @@
 | Spawn | Animated | 530 | 0 | 0 | 530 | 0% |
 | Spider-Man | Animated | 65 | 0 | 0 | 65 | 0% |
 | Split Second | Classic TV | 165 | 0 | 0 | 165 | 0% |
+| Spooks | British and Beyond | 86 | 0 | 0 | 86 | 0% |
 | Spy | British and Beyond | 16 | 0 | 0 | 16 | 0% |
 | Squidbillies | Adult Swim | 133 | 0 | 0 | 133 | 0% |
 | Star Trek | Classic TV | 79 | 0 | 0 | 79 | 0% |
@@ -1660,6 +1695,7 @@
 | Sym-Bionic Titan | Animated | 20 | 0 | 0 | 20 | 0% |
 | Taboo | British and Beyond | 8 | 0 | 0 | 8 | 0% |
 | TANK CHAIR | Anime | 12 | 0 | 0 | 12 | 0% |
+| Taskmaster | British and Beyond | 200 | 0 | 0 | 200 | 0% |
 | Taxi | Classic TV | 114 | 0 | 0 | 114 | 0% |
 | Taxicab Confessions | Late Night | 14 | 0 | 0 | 14 | 0% |
 | Teachers | British and Beyond | 6 | 0 | 0 | 6 | 0% |
@@ -1759,6 +1795,7 @@
 | The Last of Us | Streaming Era | 16 | 0 | 0 | 16 | 0% |
 | The Late Late Show with Craig Ferguson | Reality & Talk | 2119 | 0 | 0 | 2119 | 0% |
 | The Late Late Show with James Corden | Reality & Talk | 1196 | 0 | 0 | 1196 | 0% |
+| The Late Show | British and Beyond | 6 | 0 | 0 | 6 | 0% |
 | The Late Show with David Letterman | Classic TV | 4262 | 0 | 0 | 4262 | 0% |
 | The Late Show with Stephen Colbert | Reality & Talk | 1807 | 0 | 0 | 1807 | 0% |
 | The League of Gentlemen | British and Beyond | 21 | 0 | 0 | 21 | 0% |
@@ -1864,6 +1901,7 @@
 | Tomorrow | World TV | 16 | 0 | 0 | 16 | 0% |
 | Top Ten | Documentary & Geographic | 171 | 0 | 0 | 171 | 0% |
 | Toradora! | Anime | 25 | 0 | 0 | 25 | 0% |
+| Torchwood | British and Beyond | 41 | 0 | 0 | 41 | 0% |
 | Touch Your Heart | World TV | 16 | 0 | 0 | 16 | 0% |
 | Touched by an Angel | Drama | 211 | 0 | 0 | 211 | 0% |
 | Treasure Quest | Documentary & Geographic | 12 | 0 | 0 | 12 | 0% |
@@ -1886,6 +1924,7 @@
 | Undressed | Late Night | 223 | 0 | 0 | 223 | 0% |
 | Upstairs, Downstairs | Classic TV | 9 | 0 | 0 | 9 | 0% |
 | Upstart Crow | British and Beyond | 18 | 0 | 0 | 18 | 0% |
+| Utopia | British and Beyond | 40 | 0 | 0 | 40 | 0% |
 | Vampire Knight | Anime | 26 | 0 | 0 | 26 | 0% |
 | Vanity Fair | British and Beyond | 7 | 0 | 0 | 7 | 0% |
 | Variety Studio: Actors on Actors | Reality & Talk | 142 | 0 | 0 | 142 | 0% |
