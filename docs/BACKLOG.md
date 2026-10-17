@@ -66,6 +66,31 @@ the UI cyan moves to the neon blue too.
   kids bands, preschool is the gap). Needs Bryan's answers to the four questions at the end, and a legal
   view on the COPPA posture, before building.
 
+### 7. Keep watching while browsing (mini player)
+- Wanted: when a viewer goes back to browse, the show keeps playing in a small window with close,
+  play/pause, back/forward and expand (expand returns to the show page at the same moment).
+- How it fits the new player: today every page change shuts the player down (`killPlayer()`, added when the
+  player was connected). Instead, if it is playing, move the player into a small fixed "dock" in the corner.
+  Moving the element in one step does not interrupt playback. The dock gets its own compact controls; expand
+  re-opens the show page and re-attaches the same player, so nothing reloads.
+- The browser's own picture-in-picture (the PiP button) already shows play/pause and, through Media Session,
+  skip and next buttons in its floating window, and can float over other apps. Chrome and Edge 116+ also
+  offer "Document Picture-in-Picture", which can hold our own controls including expand. Firefox and Safari
+  only do the basic version.
+- Truly automatic browser PiP (floating over other apps without a click) is limited by browsers to special
+  cases, so the in-page dock is the dependable "automatic" behaviour; the PiP button stays for floating
+  outside the site.
+- Decide: does Live TV also dock, or stop, when leaving the TV page? (Probably dock, labelled with the channel.)
+
+### 8. Remove the "review" label from episodes
+- 31,215 of 50,820 shown episodes (61%) carry it, mostly (20,605) from shows with no TVmaze episode list,
+  where titles and order come from the files. On 6 in 10 episodes the label means nothing to a viewer.
+- What it is for: the builder's "not sure this file is that episode". That need is internal: HQ's review
+  queue, the kids site (review episodes never appear there), and item 5's library standard (shows that are
+  mostly review are the first to fix or filter). Viewers keep the "Wrong file?" button.
+- Do: hide the label and its hint text on the site; keep the state in the data. Also find out why 4,570
+  episodes matched by "S/E in filename + title match" (normally a confident match) still ended up in review.
+
 ## Still open from earlier
 - Cloudflare: add Analytics Engine binding `VOIDTV_EVENTS` (dataset `voidtv_events`) on the voidtvsite
   Pages project and retry the deployment; optionally `CF_ACCOUNT_ID` / `CF_ANALYTICS_TOKEN` in backend/.env.
