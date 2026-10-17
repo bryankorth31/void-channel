@@ -104,6 +104,43 @@ classics, strict safety. Before the site exists:
   If Bryan's new mark is not in yet, make a side-by-side proposal (current vs neon) with
   `brand-kit/tools/make_app_icons.py`; do not deploy brand changes without him.
 
+## 8b. Motion graphics kit: stings for every place VOID needs motion
+
+Bryan wants a full motion package. Build it as a kit in `brand-kit/motion/` with the HyperFrames skills
+(`/motion-graphics` for each sting; renders MP4 and transparent WebM/MOV). Existing pieces to replace or reuse:
+`assets/brand/video/sting.mp4`, `reel.mp4`, `set.mp4`.
+
+**Depends on:** Bryan's redrawn mark (or the vector marks in `brand-kit/marks/`) and the neon colour decision
+(item 8). Start with the pieces marked *no logo needed*; make the logo-led ones once the mark is settled.
+
+| # | Place | Piece | Length | Format | Notes |
+|---|---|---|---|---|---|
+| 1 | Brand master | Logo sting: static resolving into the mark, with a short sound logo | 3-4 s | 1080p and 4K MP4 + transparent WebM/MOV | Every other sting derives from this one |
+| 2 | Gate page | Seamless wordmark/neon loop behind the password box | 8 s loop | muted WebM/MP4 under 1.5 MB, plus a still | Must not slow the gate; still frame for reduced motion |
+| 3 | Player loading | "Tuning in" signal animation, replacing the spinner | 1.5-2 s loop | Lottie or CSS/SVG (no video) | *No logo needed.* A video can't play while a video loads |
+| 4 | Player recovery | "Reconnecting / switching servers" static-to-signal flicker | 1-2 s loop | Lottie or CSS/SVG | *No logo needed.* Calm, not alarming |
+| 5 | Player failure | "No signal" card with gentle static | 2-4 s loop | Lottie or CSS/SVG | *No logo needed* |
+| 6 | Up next | Countdown ring and title slide-in | 10 s | CSS (the player's card) | *No logo needed* |
+| 7 | Play all / As aired | "You're watching VOIDtv" ident between episodes or blocks | 3 s | MP4 + WebM | Optional per viewer; never delays a first play |
+| 8 | As aired blocks | Retro "We'll be right back" and "Now back to..." bumpers, 1980s-90s look | 3-5 s each | MP4 | Fits the Saturday-morning rows |
+| 9 | VOIDtv Kids | Bright, friendly sting and loading loop | 3 s, 2 s loop | MP4 + Lottie | No flashing, no fast flicker (section on safety) |
+| 10 | Social | Vertical 9:16 and square 1:1 stings; YouTube intro and 20 s end screen | 3-6 s, 20 s | MP4 | Safe areas for captions and platform buttons |
+| 11 | TV apps | Fire TV / Android TV splash | 3-5 s | 1920×1080 MP4 | Matches the banners in `brand-kit/app-icons/tv/` |
+| 12 | HQ and beta apps | Small splash or loading mark | 1-2 s | Lottie/CSS or animated PNG | Gold HQ tile, beta badge |
+| 13 | QR scans | Short splash when a merch QR opens the site | 1-2 s | CSS/Lottie | Only once per visit |
+| 14 | Sound | Sound logo on its own and as stems | 2-3 s | WAV + MP3 | Loudness-normalised for web and social |
+
+**Rules for every piece:**
+- **Photosensitivity:** no more than three flashes a second (WCAG 2.3.1); the static effect must respect it.
+- **Reduced motion:** when a viewer's device asks for less motion, the site shows a still frame instead.
+- **Weight:** anything shown on the site stays small; UI animations are Lottie/CSS, not video.
+- **Colours:** the agreed neon palette (item 8); cyan, gold and pink as accents.
+- **Masters:** keep the HyperFrames source for every sting so later colour or logo changes re-render the set.
+
+**Done when:** pieces 3-6 are live in the player (they need no logo); the logo-led pieces are rendered from the
+settled mark, previewed with Bryan, then wired in; everything lives in `brand-kit/motion/` with a README of
+sizes and uses.
+
 ## 9. Decisions to ask Bryan at the start (one message)
 
 1. Kids domain: which name (`voidtvkids.com`, `voidtvkids.net`, `voidkidstv.com`, `voidkids.tv`, `voidtv.kids`)?
@@ -124,3 +161,4 @@ classics, strict safety. Before the site exists:
 - Every player change keeps `node --test player/test/core.test.js` green and adds a test for the new behaviour.
 - Commit with the attribution line; push only verified work; confirm `version.txt` after each deploy.
 - Bryan wants root causes, not band-aids: if a fix only hides a symptom, say so and propose the real fix.
+6. Motion graphics: approve the 14-piece shot list (section 8b) and say which pieces matter most first.
