@@ -5,7 +5,7 @@ Nothing is built yet. This is the plan to agree before building.
 
 ## The short version
 
-VOIDtv Kids should be a **separate site built by the same system** (a kit profile, e.g. kids.voidtv.net),
+VOIDtv Kids should be a **separate site built by the same system** (a kit profile on its own domain; see section 8a),
 not a filter on VOIDtv. Every show on it is **approved by a person**, backed by an **official age rating**,
 and matched **strictly** (no guessed episodes). It collects **no personal data**, links nowhere outside
 itself, and needs a grown-up to leave it. It shares the new player and the catalog builder.
@@ -114,10 +114,24 @@ Saturday-morning cartoons of section 2. If even half of these 40 titles land wit
 each, the kids library plausibly doubles or triples from its ~2,400 episodes. That is an estimate until the
 hunt runs.
 
-**Current PBS shows** are a different case from commercial franchises. Recommended: include PBS titles of
-every era (public, educational, and thinly uploaded anyway), keep commercial franchises out (Bluey, Paw
-Patrol, Peppa Pig, Cocomelon, current Disney Junior). Confirm with the legal review, since current PBS shows
+**Decided (Bryan, 17 Oct): all of PBS, every era.** Confirm with the legal review, since current PBS shows
 are still owned by their producers.
+
+## 2b. Commercial kids shows: "if we can" (Archive uploads and junk share, 17 Oct)
+
+Bryan sees value in the commercial shows too. They split into three tiers by risk:
+
+| Tier | Shows (uploads, junk share) | Why this tier | Rule |
+|---|---|---|---|
+| A. Commercial classics | Care Bears (286, 2%), The Smurfs (266, 3%), He-Man (229, 6%), Muppet Babies (111, 6%), My Little Pony (1,016, 9%), Rugrats (600, 21%) | Same risk class as what VOIDtv already carries (DuckTales, Darkwing Duck, Animaniacs) | Include with the standard seven checks; Rugrats gets per-file approval (over 20% junk) |
+| B. Current, mostly clean | Blue's Clues (777, 6%), Dora (496, 6%), Bubble Guppies (90, 6%), Bluey (584, 8%), Mickey Mouse Clubhouse (166, 10%), PJ Masks (90, 10%), Doc McStuffins (17, 0%) | Owned by the most active enforcers (Disney, Paramount/Nickelodeon, BBC Studios, eOne); uploads get taken down | Only after the legal review says yes; daily link checks for this tier; be ready to pull a brand within a day of any request |
+| C. Current, junk-heavy | Paw Patrol (217, 21%), Peppa Pig (567, 21%), Cocomelon (125, 45%) | Active enforcers **and** heavy meme/toy-video junk; Cocomelon uploads are mostly nursery-rhyme compilations | Recommend leaving out; if included, every file approved by a person |
+
+"Junk share" counts uploads flagged in title, subject or description (memes, parodies, horror edits, toy
+unboxings, "surprise eggs", nursery-rhyme compilations). Unlabelled junk is caught by the other checks.
+
+Whatever the tier, a public takedown contact on the kids site is worth having: a rights holder who can ask
+VOIDtv directly is less likely to escalate.
 
 ## 3a. Safety against badly named uploads, measured
 
@@ -216,9 +230,9 @@ site folder (fixed 16 Oct so profiles never write into VOIDtv's files).
   no session IDs, aggregate counts only (for example "episode X played N times today"), no IP storage, no
   third-party scripts. The UK Age Appropriate Design Code points the same way for UK visitors.
 - **Copyright.** Kids brands are among the most actively enforced. VOIDtv's model (linking to files the
-  Archive hosts) stays the same, but leave out current franchises (Bluey, Paw Patrol, Peppa Pig, Cocomelon,
-  current Disney Junior) entirely: they are widely available legally and most likely to draw takedowns.
-  Favour pre-2010 classics, public-domain cartoons and educational public television.
+  Archive hosts) stays the same. All of PBS is in; commercial shows follow the tiers in section 2b (classics
+  yes, current clean ones only after the legal review, junk-heavy ones recommended out). Keep a takedown
+  contact and pull a brand within a day of a request.
 - **The password gate** stays on the kids site during testing, like VOIDtv.
 
 ## 7. Phases
@@ -239,13 +253,37 @@ site folder (fixed 16 Oct so profiles never write into VOIDtv's files).
 | A wrong file reaches a child (the Parkers failure) | allowlist, strict matching, contact-sheet review, one-report pulls the episode, doctor light |
 | Unrated adult animation slips in | "no rating" always needs a person; MTV/Adult Swim networks auto-denied |
 | Collecting children's data by accident | no identifiers by design; no third-party requests; audit before launch |
-| Takedown pressure on kids brands | leave out current franchises; prefer classics and public domain |
+| Takedown pressure on kids brands | commercial tiers (2b); legal review before tier B; takedown contact; daily link checks; pull a brand within a day |
 | A child wanders into VOIDtv | separate site; grown-up check to leave |
 | Archive hangs pause playback | same player and server switching as VOIDtv; the relay decision applies to both |
 
+## 8a. Its own domain (recommended)
+
+A separate domain for VOIDtv Kids makes sense, more than a kids.voidtv.net subdomain:
+
+- **Reputation and filters.** Parental controls, school filters and safe-search classify sites largely by
+  domain. voidtv.net carries adult animation, late-night TV and rough reality shows; a kids subdomain
+  inherits that classification and any complaint against the main site. A separate domain can be classified
+  as a children's and education site on its own merits.
+- **A clean privacy story.** Its own privacy policy, its own analytics settings (no identifiers), and no
+  cookies shared with VOIDtv: today's password-gate cookie is set for all of voidtv.net, subdomains included.
+- **Parents remember a plain name**, and a child cannot click their way from it to the grown-up site.
+- **Cost:** a domain at roughly $10-20 a year; hosting stays free on Cloudflare Pages as its own project. The
+  kit already builds a profile into its own folder, so a second site is little extra upkeep.
+- **Keep the family name** ("VOIDtv Kids") and point kids.voidtv.net at the new domain.
+
+Names checked on 17 Oct that show no DNS records yet (a quick sign, not proof; confirm at a registrar):
+`voidtvkids.com`, `voidtvkids.net`, `voidkidstv.com`, `voidkids.tv`, `kidsvoid.tv`, and `voidtv.kids`.
+`voidkids.com` is taken. The `.kids` ending is run with its own child-safety content rules; read its
+requirements before choosing it, since they may suit the site well but add conditions.
+
+One naming thought: "void" reads as dark or empty to some parents. "VOIDtv Kids" keeps the brand; the
+logo and colours (bright, friendly, not late-night neon) do most of the softening.
+
 ## 9. Questions for Bryan
 
-1. Separate site (recommended) or a locked section inside voidtv.net?
+1. ~~Separate site or a section?~~ Separate site on its own domain (section 8a). Which name?
 2. Ages: both bands, or start with Big kids only (where most of the library is) and add Little after the hunt?
 3. Family sitcoms rated TV-G (Full House, ALF, Punky Brewster): Kids, or keep them on VOIDtv only?
 4. Who approves shows: you alone, or trusted testers with HQ access?
+5. Commercial shows: tier A (classics) in; tier B (current, mostly clean) after the legal review; tier C (Paw Patrol, Peppa Pig, Cocomelon) out, or in with per-file approval?
