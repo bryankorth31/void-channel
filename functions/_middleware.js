@@ -21,8 +21,15 @@ input{background:rgba(7,8,12,.78);border:1px solid rgba(255,255,255,.14);color:#
 button{background:#5fd4ff;border:0;color:#07080c;padding:12px 18px;border-radius:10px;font:inherit;font-weight:600;margin-left:6px;cursor:pointer}
 .w{color:#f3c969;font-size:13px;margin-top:10px;text-shadow:0 1px 6px rgba(0,0,0,.9)}
 @media(max-width:600px){body{background-image:url(/assets/brand/bg/sign-pink-m.jpg)}}
-</style></head><body><form method="post"><p>before AI slop, there was human creativity</p>
-<input type="password" name="p" placeholder="password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus><button>enter</button>${wrong ? '<div class="w">not it. capitals and spaces do not matter, so check the spelling</div>' : ''}</form></body></html>`;
+#gv{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity .8s;pointer-events:none}#gv.on{opacity:1}form{position:relative;z-index:1}
+</style></head><body><video id="gv" muted loop playsinline aria-hidden="true"></video><form method="post"><p>before AI slop, there was human creativity</p>
+<input type="password" name="p" placeholder="password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus><button>enter</button>${wrong ? '<div class="w">not it. capitals and spaces do not matter, so check the spelling</div>' : ''}</form>
+<script>/* HQ's Promos tab can set a silent loop (assets/brand/promos/promos.json, slot "gate"). It starts after the page has
+loaded so it never slows the gate, and is skipped for reduced motion and data saver; the still picture stays underneath. */
+addEventListener('load',function(){var v=document.getElementById('gv');if(!v||!window.fetch||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var c=navigator.connection;if(c&&(c.saveData||/2g/.test(c.effectiveType||'')))return;
+fetch('/assets/brand/promos/promos.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(j){var g=j&&j.slots&&j.slots.gate;if(!g||!g.shapes)return;var s=innerHeight>innerWidth?(g.shapes.tall||g.shapes.wide):(g.shapes.wide||g.shapes.tall);if(!s)return;
+v.src='/assets/brand/promos/'+encodeURIComponent(s.src);v.addEventListener('playing',function(){v.className='on'},{once:true});var p=v.play();if(p&&p.catch)p.catch(function(){})}).catch(function(){})});
+</script></body></html>`;
 
 // After the password: back to the page they asked for, never to //evil.example/… (a protocol-relative open redirect).
 const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\/+/, '/'); return (/^\/[^\\]*$/.test(p) ? p : '/') + x.search; };

@@ -21,6 +21,8 @@ function nodeBin() {
   return { bin: process.execPath, env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' } };
 }
 const CACHE = path.join(PROFILE.catalogDir, 'cache');
+const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
+promos.init({ nodeBin, cache: CACHE });
 const FILES = {
   list: PROFILE.listFile,
   overrides: path.join(PROFILE.catalogDir, 'overrides.json'),
@@ -263,6 +265,28 @@ const server = http.createServer(async (req, res) => {
       if (req.method === 'OPTIONS') { res.writeHead(204); return res.end(); }
       if (req.method === 'POST') { const b = await body(req); fs.mkdirSync(CACHE, { recursive: true }); fs.appendFileSync(path.join(CACHE, 'probe.jsonl'), JSON.stringify({ at: new Date().toISOString(), ...b }) + '\n'); return send(res, 200, { ok: true }); }
       return send(res, 200, { lines: tail(path.join(CACHE, 'probe.jsonl'), 50).split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean) });
+    }
+    // ---- motion and promos (scripts/lib/promos.js) ----
+    if (p === '/api/motion') return send(res, 200, await promos.motionStatus());
+    if (p === '/api/motion/start' && req.method === 'POST') { const b = await body(req); return send(res, 200, await promos.motionStart({ restart: !!b.restart })); }
+    if (p === '/api/promos') return send(res, 200, { ...promos.overview(), motion: await promos.motionStatus() });
+    if (p.startsWith('/api/promos/task/')) return send(res, 200, promos.task(p.slice(17)) || { state: 'unknown' });
+    if (p.startsWith('/api/promos/') && req.method === 'POST') {
+      const b = await body(req); const act = p.slice(12);
+      const ACTS = { send: promos.send, place: promos.place, unplace: promos.unplace, move: promos.move, rename: promos.rename, remove: promos.remove, share: promos.share, 'open-share': promos.openShare, 'go-live': promos.goLive };
+      if (!ACTS[act]) return send(res, 404, { error: 'unknown action' });
+      return send(res, 200, await ACTS[act](b));
+    }
+    if (p === '/api/promos/live') return send(res, 200, promos.liveStatus());
+    if (p === '/media') { // HQ's own previews of renders and site copies; Range so long videos seek
+      const f = promos.mediaPath(url.searchParams.get('f')); const size = fs.statSync(f).size;
+      const type = /\.jpg$/i.test(f) ? 'image/jpeg' : /\.webm$/i.test(f) ? 'video/webm' : 'video/mp4';
+      const m = /bytes=(\d*)-(\d*)/.exec(req.headers.range || '');
+      if (!m) { res.writeHead(200, { 'content-type': type, 'content-length': size, 'accept-ranges': 'bytes', 'cache-control': 'no-store' }); return fs.createReadStream(f).pipe(res); }
+      const a = m[1] ? +m[1] : Math.max(0, size - +m[2]), z = m[1] && m[2] ? Math.min(+m[2], size - 1) : size - 1;
+      if (a >= size || a > z) { res.writeHead(416, { 'content-range': `bytes */${size}` }); return res.end(); }
+      res.writeHead(206, { 'content-type': type, 'content-length': z - a + 1, 'content-range': `bytes ${a}-${z}/${size}`, 'accept-ranges': 'bytes', 'cache-control': 'no-store' });
+      return fs.createReadStream(f, { start: a, end: z }).pipe(res);
     }
     if (p.startsWith('/api/analytics/')) { const name = p.slice(15); if (!cfa.configured()) return send(res, 200, { unconfigured: true, rows: [] }); return send(res, 200, { rows: await cfa.report(name, url.searchParams.get('days') || 7) }); }
     return send(res, 404, { error: 'not found' });
