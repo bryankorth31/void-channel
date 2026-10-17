@@ -133,6 +133,42 @@ unboxings, "surprise eggs", nursery-rhyme compilations). Unlabelled junk is caug
 Whatever the tier, a public takedown contact on the kids site is worth having: a rights holder who can ask
 VOIDtv directly is less likely to escalate.
 
+## 2c. Classic cartoons: Hanna-Barbera and the colour era through Saturday morning (Bryan, 17 Oct)
+
+Almost none of these are in VOIDtv's show list today (it was built from 1990-onward TV listings with kids'
+shows excluded); of 38 checked, only TMNT, Underdog, G.I. Joe, ThunderCats and Inspector Gadget are listed,
+and four of those have never been hunted. This whole era is new ground, and the Archive is rich in it and
+mostly clean. Uploads and junk share, 17 Oct:
+
+| Group | Titles (uploads, junk share) |
+|---|---|
+| Hanna-Barbera, 1958-1970 | Scooby-Doo (1,710, 4%), The Flintstones (331, 11%), The Jetsons (157, 5%), Yogi Bear (93, 3%), Top Cat (93, 5%), Space Ghost (81, 1%), Wacky Races (55, 3%), The Herculoids (51, 0%), Huckleberry Hound (42, 2%), Jonny Quest (37, 2%), Josie and the Pussycats (29, 3%) |
+| Hanna-Barbera, 1970s | Laff-a-Lympics (32, 0%), Super Friends (24, 0%), Hong Kong Phooey (17, 5%), Captain Caveman (12, 0%), Speed Buggy (8, 0%) |
+| Theatrical classics on TV | Looney Tunes (1,445, 2%), Tom and Jerry (989, 2%), Popeye (718, 2%), Bugs Bunny (456, 3%), The Pink Panther (278, 1%), Woody Woodpecker (195, 9%), Mighty Mouse (121, 2%) |
+| Other 1960s TV | Underdog (230, 5%), Rocky and Bullwinkle (110, 2%) |
+| Saturday morning, 1970s-80s | The Smurfs (518, 4%), Alvin and the Chipmunks (339, 3%), Muppet Babies (111, 4%), Snorks (89, 1%), Garfield and Friends (85, 1%), Fat Albert (65, 10%) |
+| Action, 1980s | TMNT (605, 3%), G.I. Joe (200, 11%), Inspector Gadget (176, 3%), ThunderCats (108, 8%), The Real Ghostbusters (56, **26%**); Transformers and Pac-Man counts are inflated by films and games |
+| Broadcast recordings | "saturday morning" (2,561, 1%): whole mornings as aired |
+
+Two cautions specific to this era:
+
+1. **Dated content.** Some classic shorts carry racial caricature or wartime propaganda: the Looney Tunes
+   "Censored Eleven", WWII-era Popeye and Bugs Bunny shorts, Tom and Jerry's original Mammy Two-Shoes
+   scenes, some early Hanna-Barbera gags. Ratings rarely exist for these old shows, so a person decides
+   anyway: the HQ review gets a "dated content" flag, and a known-problem list of titles is denied up front.
+   The 1990s-2000s edited TV versions (the ones broadcast on Cartoon Network and Boomerang) are usually the
+   safer uploads to prefer.
+2. **Shorts are short.** Theatrical cartoons run 6-8 minutes, so the runtime check compares against each
+   show's own official runtime rather than a fixed minimum; otherwise real shorts would be thrown out with
+   the memes.
+
+**Saturday-morning broadcast recordings** (whole mornings with the original cereal and toy ads) are wonderful
+nostalgia for grown-ups but are full of advertising aimed at children. Recommend: put them on **VOIDtv** as a
+"Saturday Morning, as aired" row for adults, and give **VOIDtv Kids** the episodes only.
+
+The same hunt feeds both sites: VOIDtv gains a classic-cartoon library for nostalgic adults, and the kids
+site takes the approved, strictly matched subset.
+
 ## 3a. Safety against badly named uploads, measured
 
 Uploads carrying a kids show's name but flagged in title, subject or description as memes, parodies or
@@ -287,3 +323,4 @@ logo and colours (bright, friendly, not late-night neon) do most of the softenin
 3. Family sitcoms rated TV-G (Full House, ALF, Punky Brewster): Kids, or keep them on VOIDtv only?
 4. Who approves shows: you alone, or trusted testers with HQ access?
 5. Commercial shows: tier A (classics) in; tier B (current, mostly clean) after the legal review; tier C (Paw Patrol, Peppa Pig, Cocomelon) out, or in with per-file approval?
+6. Saturday-morning broadcast recordings (with original ads): on VOIDtv as an "as aired" row for adults, and episodes only on Kids?
