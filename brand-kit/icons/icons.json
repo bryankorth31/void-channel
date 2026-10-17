@@ -1,0 +1,472 @@
+[
+ {
+  "name": "play",
+  "group": "player",
+  "meaning": "Play"
+ },
+ {
+  "name": "pause",
+  "group": "player",
+  "meaning": "Pause"
+ },
+ {
+  "name": "stop",
+  "group": "player",
+  "meaning": "Stop"
+ },
+ {
+  "name": "prev",
+  "group": "player",
+  "meaning": "Previous episode"
+ },
+ {
+  "name": "next",
+  "group": "player",
+  "meaning": "Next episode"
+ },
+ {
+  "name": "back10",
+  "group": "player",
+  "meaning": "Back 10 seconds"
+ },
+ {
+  "name": "fwd10",
+  "group": "player",
+  "meaning": "Forward 10 seconds"
+ },
+ {
+  "name": "fwd30",
+  "group": "player",
+  "meaning": "Forward 30 seconds"
+ },
+ {
+  "name": "volume",
+  "group": "player",
+  "meaning": "Volume"
+ },
+ {
+  "name": "volume-low",
+  "group": "player",
+  "meaning": "Volume low"
+ },
+ {
+  "name": "mute",
+  "group": "player",
+  "meaning": "Muted"
+ },
+ {
+  "name": "captions",
+  "group": "player",
+  "meaning": "Captions / subtitles"
+ },
+ {
+  "name": "pip",
+  "group": "player",
+  "meaning": "Picture in picture"
+ },
+ {
+  "name": "fullscreen",
+  "group": "player",
+  "meaning": "Fullscreen"
+ },
+ {
+  "name": "exit-fullscreen",
+  "group": "player",
+  "meaning": "Exit fullscreen"
+ },
+ {
+  "name": "speed",
+  "group": "player",
+  "meaning": "Playback speed"
+ },
+ {
+  "name": "up-next",
+  "group": "player",
+  "meaning": "Up next / episode list"
+ },
+ {
+  "name": "settings",
+  "group": "player",
+  "meaning": "Settings / adjust"
+ },
+ {
+  "name": "download",
+  "group": "player",
+  "meaning": "Download"
+ },
+ {
+  "name": "retry",
+  "group": "player",
+  "meaning": "Retry / reload"
+ },
+ {
+  "name": "no-signal",
+  "group": "player",
+  "meaning": "Won't play / no signal"
+ },
+ {
+  "name": "home",
+  "group": "browse",
+  "meaning": "Home"
+ },
+ {
+  "name": "search",
+  "group": "browse",
+  "meaning": "Search"
+ },
+ {
+  "name": "tv",
+  "group": "browse",
+  "meaning": "TV channels"
+ },
+ {
+  "name": "live",
+  "group": "browse",
+  "meaning": "Live / on now"
+ },
+ {
+  "name": "movie",
+  "group": "browse",
+  "meaning": "Movies"
+ },
+ {
+  "name": "archive",
+  "group": "browse",
+  "meaning": "Internet Archive source"
+ },
+ {
+  "name": "collection",
+  "group": "browse",
+  "meaning": "Collection / tag"
+ },
+ {
+  "name": "menu",
+  "group": "browse",
+  "meaning": "Menu"
+ },
+ {
+  "name": "close",
+  "group": "browse",
+  "meaning": "Close"
+ },
+ {
+  "name": "back",
+  "group": "browse",
+  "meaning": "Back"
+ },
+ {
+  "name": "chevron-left",
+  "group": "browse",
+  "meaning": "Previous / scroll left"
+ },
+ {
+  "name": "chevron-right",
+  "group": "browse",
+  "meaning": "Next / scroll right / see all"
+ },
+ {
+  "name": "chevron-down",
+  "group": "browse",
+  "meaning": "Expand"
+ },
+ {
+  "name": "chevron-up",
+  "group": "browse",
+  "meaning": "Collapse"
+ },
+ {
+  "name": "arrow-up",
+  "group": "browse",
+  "meaning": "Move up / back to top"
+ },
+ {
+  "name": "arrow-down",
+  "group": "browse",
+  "meaning": "Move down"
+ },
+ {
+  "name": "external",
+  "group": "browse",
+  "meaning": "Opens elsewhere"
+ },
+ {
+  "name": "grid",
+  "group": "browse",
+  "meaning": "Grid view"
+ },
+ {
+  "name": "list",
+  "group": "browse",
+  "meaning": "List view"
+ },
+ {
+  "name": "filter",
+  "group": "browse",
+  "meaning": "Filter"
+ },
+ {
+  "name": "sort",
+  "group": "browse",
+  "meaning": "Sort"
+ },
+ {
+  "name": "shuffle",
+  "group": "browse",
+  "meaning": "Shuffle / surprise me"
+ },
+ {
+  "name": "history",
+  "group": "browse",
+  "meaning": "Continue watching / history"
+ },
+ {
+  "name": "calendar",
+  "group": "browse",
+  "meaning": "Air date"
+ },
+ {
+  "name": "clock",
+  "group": "browse",
+  "meaning": "Runtime"
+ },
+ {
+  "name": "person",
+  "group": "browse",
+  "meaning": "Person / cast"
+ },
+ {
+  "name": "people",
+  "group": "browse",
+  "meaning": "Cast and crew"
+ },
+ {
+  "name": "globe",
+  "group": "browse",
+  "meaning": "Country / language"
+ },
+ {
+  "name": "heart",
+  "group": "mine",
+  "meaning": "Favourite"
+ },
+ {
+  "name": "heart-filled",
+  "group": "mine",
+  "meaning": "Favourited (on)"
+ },
+ {
+  "name": "bookmark",
+  "group": "mine",
+  "meaning": "Watchlist"
+ },
+ {
+  "name": "bookmark-filled",
+  "group": "mine",
+  "meaning": "On watchlist (on)"
+ },
+ {
+  "name": "star",
+  "group": "mine",
+  "meaning": "Top rated"
+ },
+ {
+  "name": "star-filled",
+  "group": "mine",
+  "meaning": "Rated (on)"
+ },
+ {
+  "name": "thumbs-up",
+  "group": "mine",
+  "meaning": "More like this"
+ },
+ {
+  "name": "thumbs-down",
+  "group": "mine",
+  "meaning": "Less like this"
+ },
+ {
+  "name": "flag",
+  "group": "mine",
+  "meaning": "Report a problem"
+ },
+ {
+  "name": "check",
+  "group": "mine",
+  "meaning": "Done / watched"
+ },
+ {
+  "name": "plus",
+  "group": "mine",
+  "meaning": "Add"
+ },
+ {
+  "name": "lock",
+  "group": "mine",
+  "meaning": "Password / private"
+ },
+ {
+  "name": "share",
+  "group": "mine",
+  "meaning": "Share"
+ },
+ {
+  "name": "donate",
+  "group": "mine",
+  "meaning": "Donate (CASH)"
+ },
+ {
+  "name": "info",
+  "group": "mine",
+  "meaning": "About / info"
+ },
+ {
+  "name": "help",
+  "group": "mine",
+  "meaning": "Help / wrong info"
+ },
+ {
+  "name": "warning",
+  "group": "mine",
+  "meaning": "Warning"
+ },
+ {
+  "name": "bug",
+  "group": "beta",
+  "meaning": "Something broke"
+ },
+ {
+  "name": "looks-off",
+  "group": "beta",
+  "meaning": "Looks off"
+ },
+ {
+  "name": "idea",
+  "group": "beta",
+  "meaning": "Idea"
+ },
+ {
+  "name": "camera",
+  "group": "beta",
+  "meaning": "Add screenshot"
+ },
+ {
+  "name": "send",
+  "group": "beta",
+  "meaning": "Send report"
+ },
+ {
+  "name": "reply",
+  "group": "beta",
+  "meaning": "Reply"
+ },
+ {
+  "name": "person-plus",
+  "group": "beta",
+  "meaning": "Invite tester"
+ },
+ {
+  "name": "pause-circle",
+  "group": "beta",
+  "meaning": "Paused tester"
+ },
+ {
+  "name": "dashboard",
+  "group": "hq",
+  "meaning": "Overview"
+ },
+ {
+  "name": "shows",
+  "group": "hq",
+  "meaning": "Shows"
+ },
+ {
+  "name": "jobs",
+  "group": "hq",
+  "meaning": "Jobs (running scripts)"
+ },
+ {
+  "name": "reports",
+  "group": "hq",
+  "meaning": "Reports from viewers"
+ },
+ {
+  "name": "analytics",
+  "group": "hq",
+  "meaning": "Analytics"
+ },
+ {
+  "name": "qr",
+  "group": "hq",
+  "meaning": "QR codes"
+ },
+ {
+  "name": "add-shows",
+  "group": "hq",
+  "meaning": "Add shows"
+ },
+ {
+  "name": "home-order",
+  "group": "hq",
+  "meaning": "Home order (rows)"
+ },
+ {
+  "name": "health",
+  "group": "hq",
+  "meaning": "Health / doctor"
+ },
+ {
+  "name": "catalog",
+  "group": "hq",
+  "meaning": "Catalog data"
+ },
+ {
+  "name": "deploy",
+  "group": "hq",
+  "meaning": "Publish / deploy"
+ },
+ {
+  "name": "device-phone",
+  "group": "hq",
+  "meaning": "Phone"
+ },
+ {
+  "name": "device-desktop",
+  "group": "hq",
+  "meaning": "Desktop"
+ },
+ {
+  "name": "shield",
+  "group": "hq",
+  "meaning": "Gate / security"
+ },
+ {
+  "name": "eye-off",
+  "group": "hq",
+  "meaning": "Hidden"
+ },
+ {
+  "name": "edit",
+  "group": "hq",
+  "meaning": "Edit"
+ },
+ {
+  "name": "copy",
+  "group": "hq",
+  "meaning": "Copy"
+ },
+ {
+  "name": "trash",
+  "group": "hq",
+  "meaning": "Remove"
+ },
+ {
+  "name": "link",
+  "group": "hq",
+  "meaning": "Link"
+ },
+ {
+  "name": "power",
+  "group": "hq",
+  "meaning": "Stop job"
+ }
+]
