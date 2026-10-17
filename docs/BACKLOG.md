@@ -60,6 +60,12 @@ the UI cyan moves to the neon blue too.
 - Tools that already exist: `scripts/match.js` (rules), `player/tools/rank-sources.js --stats` (file quality
   per episode), HQ overrides (hide), `docs/SYSTEM-AUDIT.md` (known catalog flaws).
 
+### 6. VOIDtv Kids
+- Plan written: `docs/KIDS.md` (separate kit profile; allowlist with official TMDB age ratings, strict
+  matching, HQ review with frame contact sheets; no personal data; ~54 shows / 2,400 episodes play today in
+  kids bands, preschool is the gap). Needs Bryan's answers to the four questions at the end, and a legal
+  view on the COPPA posture, before building.
+
 ## Still open from earlier
 - Cloudflare: add Analytics Engine binding `VOIDTV_EVENTS` (dataset `voidtv_events`) on the voidtvsite
   Pages project and retry the deployment; optionally `CF_ACCOUNT_ID` / `CF_ANALYTICS_TOKEN` in backend/.env.
