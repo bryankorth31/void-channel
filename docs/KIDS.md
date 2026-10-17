@@ -196,8 +196,10 @@ site folder (fixed 16 Oct so profiles never write into VOIDtv's files).
   Little (TV-Y) and Big (adds TV-Y7 and TV-G).
 - **Home:** big poster tiles, few words. Rows like *Saturday Morning*, *Learn Something* (Bill Nye, Carmen
   Sandiego, Reading Rainbow), *Classic Cartoons*, *Favourites* (on this device only).
-- **Kids TV:** two or three always-on channels (Saturday Morning, Learning, Cartoon Classics) using the same
-  live-schedule system as VOIDtv's Live TV. The best fit for little ones: press one button, it plays.
+- **Play all instead of live channels** (Bryan, 17 Oct: less interested in Live TV). Each show and each row
+  gets a big "Play all" that keeps going episode after episode, starting where the child left off. Same
+  press-one-button ease for little ones, but on demand, so nothing is missed or mid-episode. No kids live
+  channels are planned.
 - **Grown-up controls,** behind a grown-up check (hold a button for three seconds, then answer a simple
   question): age band, daily time limit, a bedtime that ends playback after the current episode, and the
   way back to VOIDtv. All stored on the device; no account.
@@ -227,7 +229,7 @@ site folder (fixed 16 Oct so profiles never write into VOIDtv's files).
 | 1. Kit seams | Per-profile branding and feature switches; analytics "no identifiers" mode; self-hosted art | 1-2 sessions |
 | 2. Catalog | Ratings in the builder; strict-match profile flag; HQ Kids review with contact sheets; approve the ~54 shows that play today plus Carmen Sandiego and other unrated wins | 2 sessions |
 | 3. Hunt | Preschool and learning titles from section 2; strict match; review | 1 session plus the hunt's run time |
-| 4. Experience | Kids home, kids channels, grown-up controls, time limits, kids player settings | 2 sessions |
+| 4. Experience | Kids home, Play all, grown-up controls, time limits, kids player settings | 2 sessions |
 | 5. Pilot | Testers with children via the beta app; fix; then a "Kids" door on VOIDtv | ongoing |
 
 ## 8. Risks

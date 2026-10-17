@@ -80,7 +80,8 @@ the UI cyan moves to the neon blue too.
 - Truly automatic browser PiP (floating over other apps without a click) is limited by browsers to special
   cases, so the in-page dock is the dependable "automatic" behaviour; the PiP button stays for floating
   outside the site.
-- Decide: does Live TV also dock, or stop, when leaving the TV page? (Probably dock, labelled with the channel.)
+- Live TV is low priority (Bryan, 17 Oct): leaving the TV page simply stops it; no docking work for Live TV.
+  Put effort into on-demand watching instead.
 
 ### 8. Remove the "review" label from episodes
 - 31,215 of 50,820 shown episodes (61%) carry it, mostly (20,605) from shows with no TVmaze episode list,
