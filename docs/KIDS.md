@@ -13,6 +13,14 @@ itself, and needs a grown-up to leave it. It shares the new player and the catal
 There is enough to open with: about **54 shows and 2,400 episodes** play today in the Little, Big-kids and
 All-ages bands, before hunting a single new show. Preschool is the gap (3 shows), and the Archive can fill it.
 
+## Bryan's direction (17 October)
+
+- **Old school and classic through current PBS Kids**, with Sesame Street and Mister Rogers at the heart.
+- **Play it safe** about inappropriate or badly named uploads, **but build a bigger collection.**
+
+Both fit: the collection grows by hunting many more shows; safety comes from how strictly each show's files
+are checked, not from keeping the list short. Sections 2a and 3a below are the plan for exactly this.
+
 ## 1. What VOIDtv already has
 
 TMDB content ratings were fetched for all 1,687 animated, family and kids shows in our list (cached in
@@ -53,6 +61,98 @@ What this tells us:
 A first hunt of 60-100 preschool and learning titles (Mister Rogers, Reading Rainbow, Sesame Street,
 Schoolhouse Rock, 3-2-1 Contact, Square One, Ghostwriter, Shining Time Station, Lamb Chop's Play-Along,
 Barney, Arthur, Magic School Bus...) would close the Little-kids gap.
+
+## 2a. The lineup: classic to current PBS Kids (Archive uploads by title, 17 Oct)
+
+Counts are items whose title contains the name; "Arthur" and "Zoom" are inflated by unrelated uses.
+
+| Era | Show (first aired) | Archive items |
+|---|---|---|
+| Classic | Captain Kangaroo (1955) | 12 |
+| | Mister Rogers' Neighborhood (1968) | 80 |
+| | Sesame Street (1969) | 6,205 |
+| | The Electric Company (1971) | 88 |
+| | ZOOM (1972) | inflated |
+| | Schoolhouse Rock (1973) | 100 |
+| | 3-2-1 Contact (1980) | 69 |
+| | Reading Rainbow (1983) | 244 |
+| | Thomas the Tank Engine (1984) | 745 |
+| | Square One TV (1987) | 76 |
+| | Shining Time Station (1989) | 160 |
+| 1990s PBS | Barney & Friends (1992) | 395 |
+| | Lamb Chop's Play-Along (1992) | 29 |
+| | Ghostwriter (1992) | 59 |
+| | The Big Comfy Couch (1992) | 48 |
+| | Bill Nye the Science Guy (1993) | 266 |
+| | The Magic School Bus (1994) | 227 |
+| | Wishbone (1995) | 102 |
+| | Arthur (1996) | inflated (3,250) |
+| | Kratts' Creatures (1996) | 16 |
+| | Teletubbies (1998) | 1,584 |
+| | Zoboomafoo (1999) | 141 |
+| | Dragon Tales (1999) | 196 |
+| 2000s PBS | Between the Lions (2000) | 106 |
+| | Clifford the Big Red Dog (2000) | 722 |
+| | Caillou (2000) | 1,665 (64% memes, see 3a) |
+| | Cyberchase (2002) | 231 |
+| | Liberty's Kids (2002) | 22 |
+| | Curious George (2006) | 268 |
+| | Super Why! (2007) | 122 |
+| | WordGirl (2007) | 69 |
+| | Martha Speaks (2008) | 60 |
+| | Sid the Science Kid (2008) | 268 |
+| | Dinosaur Train (2009) | 30 |
+| Current PBS | Wild Kratts (2011) | 37 |
+| | Daniel Tiger's Neighborhood (2012) | 27 |
+| | Peg + Cat (2013) | 35 |
+| | Odd Squad (2014) | 65 |
+| | Nature Cat (2015) | 71 |
+| | Molly of Denali (2019) | 12 |
+
+Plus what already plays (Captain Planet, Carmen Sandiego, Bill Nye, DuckTales, Darkwing Duck...) and the
+Saturday-morning cartoons of section 2. If even half of these 40 titles land with a few dozen clean episodes
+each, the kids library plausibly doubles or triples from its ~2,400 episodes. That is an estimate until the
+hunt runs.
+
+**Current PBS shows** are a different case from commercial franchises. Recommended: include PBS titles of
+every era (public, educational, and thinly uploaded anyway), keep commercial franchises out (Bluey, Paw
+Patrol, Peppa Pig, Cocomelon, current Disney Junior). Confirm with the legal review, since current PBS shows
+are still owned by their producers.
+
+## 3a. Safety against badly named uploads, measured
+
+Uploads carrying a kids show's name but flagged in title, subject or description as memes, parodies or
+horror edits ("YouTube Poop", "G Major" effects, "gets grounded", GoAnimate, fake "lost episodes", .EXE,
+creepypasta, "sped up", ear-rape...):
+
+| Name | Uploads | Flagged junk | Share |
+|---|---|---|---|
+| Caillou | 1,665 | 1,078 | 64% |
+| Peppa Pig | 567 | 100 | 17% |
+| SpongeBob | 4,025 | 568 | 14% |
+| Sesame Street | 6,205 | 331 | 5% |
+| Arthur | 3,250 | 163 | 5% |
+| Barney | 2,652 | 116 | 4% |
+| Thomas the Tank Engine | 745 | 32 | 4% |
+| Teletubbies | 1,584 | 63 | 3% |
+| Mister Rogers | 80 | 2 | 2% |
+
+Words only catch junk that labels itself, so the kids builder stacks independent checks. A file must pass
+all of them:
+
+1. **Word filter** on title, subject, description and filename (the vocabulary above, kept as a list in
+   the kids profile and extended whenever something slips past).
+2. **Episode match** to the show's official episode list (TVmaze) by season/episode, title or air date.
+   No guessed order, no self-listing.
+3. **Runtime check** against the show's real runtime. Memes and edits are mostly 1-5 minutes; a Sesame
+   Street episode is ~55, a PBS half-hour ~25.
+4. **Source reputation:** prefer broadcast recordings and complete-season uploads; an uploader whose other
+   items are flagged junk is denied entirely.
+5. **Junk-heavy names get stricter treatment:** where more than 20% of a name's uploads are flagged (Caillou,
+   Peppa, SpongeBob), every item needs a person's approval, not just the show.
+6. **Frame review in HQ:** a contact sheet of frames from three random episodes per show, from the Archive's
+   own thumbnails, before the show goes live; new seasons get the same check.
+7. **One report pulls the episode** from the kids site until a person has looked.
 
 ## 3. Non-negotiables
 
