@@ -149,6 +149,7 @@ sizes and uses.
 3. Relay server for zero pauses (about €4-6/month): get a legal view first, or not now?
 4. Live TV: keep as is, hide, or remove?
 5. Satire row: approve the candidate list together, or Bryan picks from it later?
+6. Motion graphics: approve the 14-piece shot list (section 8b) and say which pieces matter most first.
 
 ## House rules for every agent
 
@@ -161,4 +162,3 @@ sizes and uses.
 - Every player change keeps `node --test player/test/core.test.js` green and adds a test for the new behaviour.
 - Commit with the attribution line; push only verified work; confirm `version.txt` after each deploy.
 - Bryan wants root causes, not band-aids: if a fix only hides a symptom, say so and propose the real fix.
-6. Motion graphics: approve the 14-piece shot list (section 8b) and say which pieces matter most first.
