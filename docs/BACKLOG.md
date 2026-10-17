@@ -92,6 +92,35 @@ the UI cyan moves to the neon blue too.
 - Do: hide the label and its hint text on the site; keep the state in the data. Also find out why 4,570
   episodes matched by "S/E in filename + title match" (normally a confident match) still ended up in review.
 
+### 9. New filters: 420 & stoner comedy, satire, conspiracies (and pseudo-history out of History)
+- Bryan does not want Ancient Aliens and programmes like it counted as history or discovery content.
+- Data: TMDB keywords fetched for 12,701 shows (`catalog/cache/tmdb-keywords.json`). Candidates per tag:
+  `node scripts/tag-candidates.js` (changes nothing; prints a checklist with what plays today).
+  - **Conspiracies & the Unexplained:** 104 non-fiction candidates, 8 playing. Ancient Aliens (155 episodes)
+    is tagged History and "History Channel Classic" today; also Haunted History, UFO Files, MonsterQuest,
+    Sightings, Ghost Adventures, Destination Truth. Title-only matches need a person: Ancient Rome, Ancient
+    Inventions and Ancient Discoveries are real history.
+  - **420 & Stoner Comedy:** TMDB barely tags these, so it is mostly a hand-picked list (22 candidates, 6
+    playing: Aqua Teen Hunger Force 134, Workaholics 86, That '70s Show 53, Off the Air 24, Xavier:
+    Renegade Angel 20, Trailer Park Boys 11). Broad City, High Maintenance, Weeds, Squidbillies are listed
+    but not playing; Disjointed, Bong Appétit, Weediquette are not listed. Reefer Madness (1936) is public
+    domain and a natural camp special for this row.
+  - **Satire:** 216 candidates, 42 playing (The Red Green Show, MST3K, Review, 30 Rock, Summer Heights High,
+    Sledge Hammer!, BoJack Horseman...). The keyword is loose; curate rather than auto-tag.
+- Do: add the three tags; a show tagged Conspiracies loses its History / Discovery / Science tags so it never
+  lands in those rows; add the rows to the home order; confirm candidates by hand (an HQ tag editor would make
+  this a two-minute job for future tags).
+
+### 10. "As aired": Saturday mornings and network blocks on VOIDtv (with the commercials)
+- Decided: full broadcast recordings, ads included, go on **VOIDtv** for nostalgic adults (the last VOID had
+  Saturday morning in its kids area; the ads and the nostalgia suit grown-ups better). Kids gets episodes only.
+- Archive counts, 17 Oct: Nickelodeon with commercials/bumpers 1,580; Cartoon Network with commercials/
+  bumpers 934; Toonami 774; Fox Kids 438; Saturday mornings on CBS/NBC/ABC 285; Kids' WB 271; ABC One
+  Saturday Morning / ABC Kids 258; SNICK 156; USA Cartoon Express 14; VHS-sourced cartoon recordings 910.
+- These are programming blocks, not episodes: they need their own catalog kind (network, date aired, block
+  name, length), ordered by air date, not matched to episode lists. Rows like "Saturday Morning, as aired",
+  "Toonami", "SNICK", "90s Nick", "Fox Kids".
+
 ## Still open from earlier
 - Cloudflare: add Analytics Engine binding `VOIDTV_EVENTS` (dataset `voidtv_events`) on the voidtvsite
   Pages project and retry the deployment; optionally `CF_ACCOUNT_ID` / `CF_ANALYTICS_TOKEN` in backend/.env.

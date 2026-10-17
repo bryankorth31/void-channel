@@ -133,6 +133,18 @@ unboxings, "surprise eggs", nursery-rhyme compilations). Unlabelled junk is caug
 Whatever the tier, a public takedown contact on the kids site is worth having: a rights holder who can ask
 VOIDtv directly is less likely to escalate.
 
+## Decided (Bryan, 17 Oct): the VOID approach applies to Kids too
+
+These cartoons have outlived the business models that made them and were made for people's good; keeping
+them away from children is not VOID's approach, on VOIDtv or any other VOID service. Today's children's
+programming is often mind-numbing; the older shows are better, and for parents who already put a screen in
+front of their kids, this is a more engaging option. So classic cartoons, commercial classics included, are
+in. The safety checks in section 3a stay exactly as strict, because they are about what is actually in a
+file (memes, horror edits, dated caricature), not about who owns a show.
+
+Saturday-morning broadcast recordings with their original commercials: **on VOIDtv** (see the backlog's
+"as aired" item); Kids gets the episodes only.
+
 ## 2c. Classic cartoons: Hanna-Barbera and the colour era through Saturday morning (Bryan, 17 Oct)
 
 Almost none of these are in VOIDtv's show list today (it was built from 1990-onward TV listings with kids'
