@@ -1,0 +1,781 @@
+{
+  "show": "Signal",
+  "slug": "signal",
+  "type": "World TV",
+  "network": "KR",
+  "matchedAt": "2026-10-17T08:36:01.238Z",
+  "addedAt": "2026-10-17T08:36:01.238Z",
+  "tvmaze": {
+    "id": 9440,
+    "name": "Signal",
+    "runtime": 75,
+    "premiered": "2016-01-22",
+    "network": "tvN"
+  },
+  "coverage": {
+    "total": 16,
+    "live": 0,
+    "review": 16,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "You're Doomed",
+          "airdate": "2016-01-22",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP01.mp4",
+            "name": "SignalTHAIEP01",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP01.mp4",
+            "seconds": 4571,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1528
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP01.mp4",
+              "name": "SignalEP01",
+              "url": "https://archive.org/download/signal_11/SignalEP01.mp4",
+              "seconds": 4571,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1528
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal01.mp4",
+              "name": "Signal01",
+              "url": "https://archive.org/download/signal-16/Signal01.mp4",
+              "seconds": 4578,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 459
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "We Still Have a Chance",
+          "airdate": "2016-01-23",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP02.mp4",
+            "name": "SignalTHAIEP02",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP02.mp4",
+            "seconds": 3927,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1314
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP02.mp4",
+              "name": "SignalEP02",
+              "url": "https://archive.org/download/signal_11/SignalEP02.mp4",
+              "seconds": 3926,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1314
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal02.mp4",
+              "name": "Signal02",
+              "url": "https://archive.org/download/signal-16/Signal02.mp4",
+              "seconds": 3916,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 393
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "We Can Prevent the Killings",
+          "airdate": "2016-01-29",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP03.mp4",
+            "name": "SignalTHAIEP03",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP03.mp4",
+            "seconds": 3850,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1287
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP03.mp4",
+              "name": "SignalEP03",
+              "url": "https://archive.org/download/signal_11/SignalEP03.mp4",
+              "seconds": 3850,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1287
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal03.mp4",
+              "name": "Signal03",
+              "url": "https://archive.org/download/signal-16/Signal03.mp4",
+              "seconds": 3826,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 382
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "We Found the Killer",
+          "airdate": "2016-01-30",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP04.mp4",
+            "name": "SignalTHAIEP04",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP04.mp4",
+            "seconds": 3859,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1291
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP04.mp4",
+              "name": "SignalEP04",
+              "url": "https://archive.org/download/signal_11/SignalEP04.mp4",
+              "seconds": 3858,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1291
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal04.mp4",
+              "name": "Signal04",
+              "url": "https://archive.org/download/signal-16/Signal04.mp4",
+              "seconds": 3874,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 388
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Changing the Past Alters the Present",
+          "airdate": "2016-02-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP05.mp4",
+            "name": "SignalTHAIEP05",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP05.mp4",
+            "seconds": 4048,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1352
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP05.mp4",
+              "name": "SignalEP05",
+              "url": "https://archive.org/download/signal_11/SignalEP05.mp4",
+              "seconds": 4048,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1352
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal05.mp4",
+              "name": "Signal05",
+              "url": "https://archive.org/download/signal-16/Signal05.mp4",
+              "seconds": 4056,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 406
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "name": "Catch Him by All Means",
+          "airdate": "2016-02-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP06.mp4",
+            "name": "SignalTHAIEP06",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP06.mp4",
+            "seconds": 4199,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1406
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP06.mp4",
+              "name": "SignalEP06",
+              "url": "https://archive.org/download/signal_11/SignalEP06.mp4",
+              "seconds": 4199,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1406
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal06.mp4",
+              "name": "Signal06",
+              "url": "https://archive.org/download/signal-16/Signal06.mp4",
+              "seconds": 4179,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 419
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "We Must Dig Deeper",
+          "airdate": "2016-02-12",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP07.mp4",
+            "name": "SignalTHAIEP07",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP07.mp4",
+            "seconds": 4015,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1343
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP07.mp4",
+              "name": "SignalEP07",
+              "url": "https://archive.org/download/signal_11/SignalEP07.mp4",
+              "seconds": 4015,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1343
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal07.mp4",
+              "name": "Signal07",
+              "url": "https://archive.org/download/signal-16/Signal07.mp4",
+              "seconds": 3994,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 401
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "name": "How Are You Alive?",
+          "airdate": "2016-02-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP08.mp4",
+            "name": "SignalTHAIEP08",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP08.mp4",
+            "seconds": 4434,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1482
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP08.mp4",
+              "name": "SignalEP08",
+              "url": "https://archive.org/download/signal_11/SignalEP08.mp4",
+              "seconds": 4435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1482
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal08.mp4",
+              "name": "Signal08",
+              "url": "https://archive.org/download/signal-16/Signal08.mp4",
+              "seconds": 4448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 450
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Hongwon Dong Case",
+          "airdate": "2016-02-19",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP09.mp4",
+            "name": "SignalTHAIEP09",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP09.mp4",
+            "seconds": 4387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1465
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP09.mp4",
+              "name": "SignalEP09",
+              "url": "https://archive.org/download/signal_11/SignalEP09.mp4",
+              "seconds": 4387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1465
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal09.mp4",
+              "name": "Signal09",
+              "url": "https://archive.org/download/signal-16/Signal09.mp4",
+              "seconds": 4366,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 437
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "name": "Someone Has to Stop the Bad Guys",
+          "airdate": "2016-02-20",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP10.mp4",
+            "name": "SignalTHAIEP10",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP10.mp4",
+            "seconds": 4304,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1437
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP10.mp4",
+              "name": "SignalEP10",
+              "url": "https://archive.org/download/signal_11/SignalEP10.mp4",
+              "seconds": 4303,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1437
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal10.mp4",
+              "name": "Signal10",
+              "url": "https://archive.org/download/signal-16/Signal10.mp4",
+              "seconds": 4286,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 432
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "The One Last Case",
+          "airdate": "2016-02-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP11.mp4",
+            "name": "SignalTHAIEP11",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP11.mp4",
+            "seconds": 4661,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1555
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP11.mp4",
+              "name": "SignalEP11",
+              "url": "https://archive.org/download/signal_11/SignalEP11.mp4",
+              "seconds": 4661,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1555
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal11.mp4",
+              "name": "Signal11",
+              "url": "https://archive.org/download/signal-16/Signal11.mp4",
+              "seconds": 4640,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 464
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "name": "The Case Was Manipulated",
+          "airdate": "2016-02-27",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP12.mp4",
+            "name": "SignalTHAIEP12",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP12.mp4",
+            "seconds": 4662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1556
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP12.mp4",
+              "name": "SignalEP12",
+              "url": "https://archive.org/download/signal_11/SignalEP12.mp4",
+              "seconds": 4662,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1556
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal12.mp4",
+              "name": "Signal12",
+              "url": "https://archive.org/download/signal-16/Signal12.mp4",
+              "seconds": 4645,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 467
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "name": "The Real Assailant",
+          "airdate": "2016-03-04",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP13.mp4",
+            "name": "SignalTHAIEP13",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP13.mp4",
+            "seconds": 4401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1468
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP13.mp4",
+              "name": "SignalEP13",
+              "url": "https://archive.org/download/signal_11/SignalEP13.mp4",
+              "seconds": 4401,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1468
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal13.mp4",
+              "name": "Signal13",
+              "url": "https://archive.org/download/signal-16/Signal13.mp4",
+              "seconds": 4378,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 440
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "name": "Not Now, But Maybe in the Past",
+          "airdate": "2016-03-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 16 in \"Signal\"",
+            "item": "signal_11",
+            "itemTitle": "Signal",
+            "file": "SignalEP14.mp4",
+            "name": "SignalEP14",
+            "url": "https://archive.org/download/signal_11/SignalEP14.mp4",
+            "seconds": 4491,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1506
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 16 in \"Signal THAI\"",
+              "item": "signal-thaiep",
+              "itemTitle": "Signal THAI",
+              "file": "SignalTHAIEP14.mp4",
+              "name": "SignalTHAIEP14",
+              "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP14.mp4",
+              "seconds": 4423,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1480
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal14.mp4",
+              "name": "Signal14",
+              "url": "https://archive.org/download/signal-16/Signal14.mp4",
+              "seconds": 4452,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 447
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "name": "Is It Really You?",
+          "airdate": "2016-03-11",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP15.mp4",
+            "name": "SignalTHAIEP15",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP15.mp4",
+            "seconds": 4306,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1439
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP15.mp4",
+              "name": "SignalEP15",
+              "url": "https://archive.org/download/signal_11/SignalEP15.mp4",
+              "seconds": 4306,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1439
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal15.mp4",
+              "name": "Signal15",
+              "url": "https://archive.org/download/signal-16/Signal15.mp4",
+              "seconds": 4290,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 432
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "name": "If You Don't Give Up",
+          "airdate": "2016-03-12",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 16 in \"Signal THAI\"",
+            "item": "signal-thaiep",
+            "itemTitle": "Signal THAI",
+            "file": "SignalTHAIEP16.mp4",
+            "name": "SignalTHAIEP16",
+            "url": "https://archive.org/download/signal-thaiep/SignalTHAIEP16.mp4",
+            "seconds": 5315,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1777
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 16 in \"Signal\"",
+              "item": "signal_11",
+              "itemTitle": "Signal",
+              "file": "SignalEP16.mp4",
+              "name": "SignalEP16",
+              "url": "https://archive.org/download/signal_11/SignalEP16.mp4",
+              "seconds": 5315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1777
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 16 in \"Signal\"",
+              "item": "signal-16",
+              "itemTitle": "Signal",
+              "file": "Signal16.mp4",
+              "name": "Signal16",
+              "url": "https://archive.org/download/signal-16/Signal16.mp4",
+              "seconds": 5306,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 535
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

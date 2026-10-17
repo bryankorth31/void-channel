@@ -1,0 +1,582 @@
+{
+  "show": "The Trap",
+  "slug": "the-trap",
+  "type": "World TV",
+  "network": "DE",
+  "matchedAt": "2026-10-17T09:15:59.165Z",
+  "addedAt": "2026-10-17T09:15:59.166Z",
+  "tvmaze": {
+    "id": 5656,
+    "name": "The Trap Door",
+    "runtime": 5,
+    "premiered": "1986-10-06",
+    "network": "ITV1"
+  },
+  "coverage": {
+    "total": 40,
+    "live": 18,
+    "review": 1,
+    "missing": 21,
+    "pct": 48
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Breakfast Time",
+          "airdate": "1986-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Slither, Wriggle & Writhe",
+          "airdate": "1986-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Food for Thort",
+          "airdate": "1986-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Lurkings",
+          "airdate": "1986-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Gourmet's Delight",
+          "airdate": "1986-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Creepy Crawly",
+          "airdate": "1986-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Big Thing",
+          "airdate": "1986-10-14",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Thing\" (0.95)",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E15 - The Big Red Thing.mp4",
+            "name": "The Trap Door - S2 E15 - The Big Red Thing",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E15%20-%20The%20Big%20Red%20Thing.mp4",
+            "seconds": 248,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 47
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Ghoulies",
+          "airdate": "1986-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Dose",
+          "airdate": "1986-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Thingy",
+          "airdate": "1986-10-17",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S1 E10 - The Thingy.mp4",
+            "name": "The Trap Door - S1 E10 - The Thingy",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S1%20E10%20-%20The%20Thingy.mp4",
+            "seconds": 252,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 65
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Don't Let the Bed Bugs Bite",
+          "airdate": "1986-10-20",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S1 E11 - Don't Let The Bed Bugs Bite.mp4",
+            "name": "The Trap Door - S1 E11 - Don't Let The Bed Bugs Bite",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S1%20E11%20-%20Don't%20Let%20The%20Bed%20Bugs%20Bite.mp4",
+            "seconds": 253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 53
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Fester Rancid",
+          "airdate": "1986-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Pain",
+          "airdate": "1986-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Little Thing",
+          "airdate": "1986-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Don't Open That Trap Door",
+          "airdate": "1986-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Junk Food",
+          "airdate": "1986-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Yechh!",
+          "airdate": "1986-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Flyin' Wotsit Fingy",
+          "airdate": "1986-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Strange Goings On",
+          "airdate": "1986-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Midnight Snack",
+          "airdate": "1986-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Nasty Stuff",
+          "airdate": "1986-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Sniff That",
+          "airdate": "1986-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Vile Pile",
+          "airdate": "1986-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Slightly Weird",
+          "airdate": "1986-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Bye Bye Berk",
+          "airdate": "1986-11-07",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S1 E25 - Bye Bye Berk.mp4",
+            "name": "The Trap Door - S1 E25 - Bye Bye Berk",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S1%20E25%20-%20Bye%20Bye%20Berk.mp4",
+            "seconds": 256,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 70
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Scunge",
+          "airdate": "1986-11-08",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E1 - Scounge.mp4",
+            "name": "The Trap Door - S2 E1 - Scounge",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E1%20-%20Scounge.mp4",
+            "seconds": 253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 54
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Oh Globbits",
+          "airdate": "1986-11-09",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E2 - Oh Globbits.mp4",
+            "name": "The Trap Door - S2 E2 - Oh Globbits",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E2%20-%20Oh%20Globbits.mp4",
+            "seconds": 248,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 52
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Moany Boni",
+          "airdate": "1986-11-10",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E3 - Moany Boni.mp4",
+            "name": "The Trap Door - S2 E3 - Moany Boni",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E3%20-%20Moany%20Boni.mp4",
+            "seconds": 256,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 55
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Horrible Thing",
+          "airdate": "1986-11-11",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E4 - The Horrible Thing.mp4",
+            "name": "The Trap Door - S2 E4 - The Horrible Thing",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E4%20-%20The%20Horrible%20Thing.mp4",
+            "seconds": 253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 54
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Not Very Nice",
+          "airdate": "1986-11-12",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E5 - Not Very Nice.mp4",
+            "name": "The Trap Door - S2 E5 - Not Very Nice",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E5%20-%20Not%20Very%20Nice.mp4",
+            "seconds": 253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 49
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Bugs",
+          "airdate": "1986-11-13",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E6 - Bugs.mp4",
+            "name": "The Trap Door - S2 E6 - Bugs",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E6%20-%20Bugs.mp4",
+            "seconds": 256,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 55
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Yum Yum",
+          "airdate": "1986-11-14",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E7 - Yum Yum.mp4",
+            "name": "The Trap Door - S2 E7 - Yum Yum",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E7%20-%20Yum%20Yum.mp4",
+            "seconds": 259,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 55
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Birthday Surprise",
+          "airdate": "1986-11-15",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E8 - Birthday Surprise.mp4",
+            "name": "The Trap Door - S2 E8 - Birthday Surprise",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E8%20-%20Birthday%20Surprise.mp4",
+            "seconds": 257,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 56
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Stupid Thing",
+          "airdate": "1986-11-16",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E9 - The Stupid Thing.mp4",
+            "name": "The Trap Door - S2 E9 - The Stupid Thing",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E9%20-%20The%20Stupid%20Thing.mp4",
+            "seconds": 244,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 45
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Boo!",
+          "airdate": "1986-11-17",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E10 - Boo.mp4",
+            "name": "The Trap Door - S2 E10 - Boo",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E10%20-%20Boo.mp4",
+            "seconds": 254,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 53
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Lump",
+          "airdate": "1986-11-18",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E11 - The Lump.mp4",
+            "name": "The Trap Door - S2 E11 - The Lump",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E11%20-%20The%20Lump.mp4",
+            "seconds": 246,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 50
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Splund",
+          "airdate": "1986-11-19",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E12 - The Splund.mp4",
+            "name": "The Trap Door - S2 E12 - The Splund",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E12%20-%20The%20Splund.mp4",
+            "seconds": 255,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 53
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Nasty Beasty",
+          "airdate": "1986-11-20",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E13 - Nasty Beastie.mp4",
+            "name": "The Trap Door - S2 E13 - Nasty Beastie",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E13%20-%20Nasty%20Beastie.mp4",
+            "seconds": 252,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 52
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "What a Weirdo",
+          "airdate": "1986-11-21",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E14 - What a Weirdo.mp4",
+            "name": "The Trap Door - S2 E14 - What a Weirdo",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E14%20-%20What%20a%20Weirdo.mp4",
+            "seconds": 252,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 49
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Big Red Thing",
+          "airdate": "1986-11-22",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "TheTrapDoorCompleteSeries_201801",
+            "itemTitle": "The Trap Door (Complete Series)",
+            "file": "The Trap Door - S2 E15 - The Big Red Thing.mp4",
+            "name": "The Trap Door - S2 E15 - The Big Red Thing",
+            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E15%20-%20The%20Big%20Red%20Thing.mp4",
+            "seconds": 248,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 47
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
