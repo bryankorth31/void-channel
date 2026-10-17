@@ -1,0 +1,65 @@
+{
+  "show": "Wild Metropolis",
+  "slug": "wild-metropolis",
+  "type": "Documentary & Geographic",
+  "network": "CBC",
+  "matchedAt": "2026-10-17T10:48:45.884Z",
+  "addedAt": "2026-10-17T10:48:45.885Z",
+  "tvmaze": {
+    "id": 44526,
+    "name": "Wild Metropolis",
+    "runtime": 60,
+    "premiered": "2019-10-02",
+    "network": "PBS"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 1,
+    "missing": 2,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Residents",
+          "airdate": "2019-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Commuters",
+          "airdate": "2019-10-09",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Commuters\" (0.95)",
+            "item": "wild-metropolis",
+            "itemTitle": "Wild Metropolis ★ A BBC Earth Series - with Subtitles and MKV",
+            "file": "02 Commuters.mp4",
+            "name": "02 Commuters",
+            "url": "https://archive.org/download/wild-metropolis/02%20Commuters.mp4",
+            "seconds": 3397,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 562
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Survivors",
+          "airdate": "2019-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

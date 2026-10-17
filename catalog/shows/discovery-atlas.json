@@ -1,0 +1,139 @@
+{
+  "show": "Discovery Atlas",
+  "slug": "discovery-atlas",
+  "type": "Documentary & Geographic",
+  "network": "Discovery",
+  "matchedAt": "2026-10-17T10:01:06.854Z",
+  "addedAt": "2026-10-17T10:01:06.854Z",
+  "tvmaze": {
+    "id": 4841,
+    "name": "Discovery Atlas",
+    "runtime": 80,
+    "premiered": "2006-10-01",
+    "network": "Discovery"
+  },
+  "coverage": {
+    "total": 11,
+    "live": 0,
+    "review": 1,
+    "missing": 10,
+    "pct": 9
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "China Revealed",
+          "airdate": "2006-10-01",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"China Revealed\" (0.67)",
+            "item": "DiscoveryAtlasChinaRevealed",
+            "itemTitle": "Discovery Atlas - China Revealed",
+            "file": "DiscoveryAtlasChinaRevealed.mp4",
+            "name": "DiscoveryAtlasChinaRevealed",
+            "url": "https://archive.org/download/DiscoveryAtlasChinaRevealed/DiscoveryAtlasChinaRevealed.mp4",
+            "seconds": 6126,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 638
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Italy Revealed",
+          "airdate": "2006-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Brazil Revealed",
+          "airdate": "2006-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Australia Revealed",
+          "airdate": "2006-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Mexico Revealed",
+          "airdate": "2007-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "South Africa Revealed",
+          "airdate": "2007-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "India Revealed",
+          "airdate": "2007-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "France Revealed",
+          "airdate": "2008-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Japan Revealed",
+          "airdate": "2008-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Egypt Revealed",
+          "airdate": "2008-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Russia Revealed",
+          "airdate": "2008-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

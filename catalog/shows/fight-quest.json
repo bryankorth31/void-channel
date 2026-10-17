@@ -1,0 +1,164 @@
+{
+  "show": "Fight Quest",
+  "slug": "fight-quest",
+  "type": "Documentary & Geographic",
+  "network": "Discovery",
+  "matchedAt": "2026-10-17T11:05:26.702Z",
+  "addedAt": "2026-10-17T11:05:26.702Z",
+  "tvmaze": {
+    "id": 16206,
+    "name": "Fight Quest",
+    "runtime": 60,
+    "premiered": "2007-12-28",
+    "network": "Discovery"
+  },
+  "coverage": {
+    "total": 13,
+    "live": 0,
+    "review": 1,
+    "missing": 12,
+    "pct": 8
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "China (Wushu; Sanda)",
+          "airdate": "2007-12-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Philippines (Kali)",
+          "airdate": "2008-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Japan (Kyokushin Karate)",
+          "airdate": "2008-01-11",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Japan (Kyokushin Karate)\" (0.81)",
+            "item": "fight-quest-kyokushin",
+            "itemTitle": "Fight Quest - Kyokushin Karate",
+            "file": "Fight Quest - Karate Kyokushin.mp4",
+            "name": "Fight Quest - Karate Kyokushin",
+            "url": "https://archive.org/download/fight-quest-kyokushin/Fight%20Quest%20-%20Karate%20Kyokushin.mp4",
+            "seconds": 2608,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 272
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Japan (Kyokushin Karate)\" (0.63)",
+              "item": "fight-quest-kyokushin",
+              "itemTitle": "Fight Quest - Kyokushin Karate",
+              "file": "Maestros de Combate - Karate Kyokushin.mp4",
+              "name": "Maestros de Combate - Karate Kyokushin",
+              "url": "https://archive.org/download/fight-quest-kyokushin/Maestros%20de%20Combate%20-%20Karate%20Kyokushin.mp4",
+              "seconds": 2620,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1576
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Mexico (Boxing)",
+          "airdate": "2008-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Indonesia (Pencak Silat)",
+          "airdate": "2008-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "France (Savate)",
+          "airdate": "2008-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Korea (Hapkido)",
+          "airdate": "2008-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Brazil (Brazilian Jiu-Jitsu)",
+          "airdate": "2008-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Israel (Krav Maga)",
+          "airdate": "2008-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "USA (Kajukenbo)",
+          "airdate": "2008-02-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Bangkok (Muay Thai)",
+          "airdate": "2008-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "India (Kalaripayattu)",
+          "airdate": "2008-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Hong Kong (Wing Chun)",
+          "airdate": "2008-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

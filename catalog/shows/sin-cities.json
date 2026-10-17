@@ -1,0 +1,69 @@
+{
+  "show": "Sin Cities",
+  "slug": "sin-cities",
+  "type": "Documentary & Geographic",
+  "network": "Food Network",
+  "matchedAt": "2026-10-17T10:49:18.884Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Sin Cities",
+    "runtime": null,
+    "premiered": null,
+    "network": "Food Network"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "are all over the earth",
+          "state": "REVIEW",
+          "file": {
+            "item": "SINCITIESAREALLOVERTHEEARTH",
+            "itemTitle": "SIN CITIES ARE ALL OVER THE EARTH",
+            "file": "SIN CITIES ARE ALL OVER THE EARTH.mp4",
+            "name": "SIN CITIES ARE ALL OVER THE EARTH",
+            "url": "https://archive.org/download/SINCITIESAREALLOVERTHEEARTH/SIN%20CITIES%20ARE%20ALL%20OVER%20THE%20EARTH.mp4",
+            "seconds": 877,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 47,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "around the world",
+          "state": "REVIEW",
+          "file": {
+            "item": "SinCitiesAroundTheWorld",
+            "itemTitle": "Sin Cities Around The World",
+            "file": "Sin Cities Around The World.mp4",
+            "name": "Sin Cities Around The World",
+            "url": "https://archive.org/download/SinCitiesAroundTheWorld/Sin%20Cities%20Around%20The%20World.mp4",
+            "seconds": 1535,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 104,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
