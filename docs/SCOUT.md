@@ -1,6 +1,6 @@
 # Scout — media we are not looking for yet
 
-2026-10-14T12:20 · 74 Archive calls · 2186 leads from 4 sweeps + 25 trusted uploaders · 59 opened
+2026-10-17T11:30 · 0 Archive calls · 2158 leads from 4 sweeps + 25 trusted uploaders · 59 opened
 
 A lead is a group of Archive uploads whose titles read like a series we do not list. "Ep-shaped" counts files of 18–70 minutes in the best upload. Confirmed = TVmaze knows the show. Add a name to scripts/show-list.json (row suggested) and the hunt takes it from there.
 
@@ -34,17 +34,17 @@ A lead is a group of Archive uploads whose titles read like a series we do not l
 
 | Inferred title | Uploads | Ep-shaped | Sample upload | Sample title |
 |---|---|---|---|---|
-| city of midland | 18 | 2/2 | City_of_Midland_Word_on_the_Street_s_-_Season_2_Episode_1_-_More_Than_One_Way_to_Design_a_Street | City of Midland - Word on the Street(s): Season 2 Episode 1  |
+| city of midland | 17 | 2/2 | City_of_Midland_Word_on_the_Street_s_-_Season_2_Episode_1_-_More_Than_One_Way_to_Design_a_Street | City of Midland - Word on the Street(s): Season 2 Episode 1  |
 | age wise | 14 | 2/2 | apptvnc-Age_Wise_Season_1_Episode_1 | Age Wise - Season 1 Episode 1 |
 | libertarian listener | 13 | 2/2 | TheLibertarianListener-01x10 | The Libertarian Listener - Season 1, Episode 10 (TX: 27 May  |
 | mario and the manta rays | 13 | 2/2 | MYLMS101 | Mario And The Manta Rays Season 1 Episode 1 |
-| after hours with shane and chris | 11 | 2/2 | after-hours-with-shane-chris-season-1-ep-1 | After Hours With Shane & Chris, Season 1, EP # 1 |
 | lorong waktu | 11 | 2/2 | 02.HajiHusinMenjemputZidan | Lorong Waktu Season 2 Episode 02. Haji Husin Menjemput Zidan |
 | ciderville show | 11 | 2/2 | acttn-The_Ciderville_Show_-_Season_1_Episode_3 | The Ciderville Show: (Season 1, Episode 3) |
 | how old celebrity edition | 10 | 2/2 | How_Old_-_Celebrity_Edition_-_Season_1_Episode_10 | How Old?!?: Celebrity Edition - Season 1, Episode 10 |
 | religion in life | 10 | 2/2 | apptvnc-Religion_in_Life_Season_1_Episode_8 | Religion in Life - Season 1 Episode 8 |
 | redwolves and ramparts | 10 | 2/2 | asuar-Redwolves_and_Ramparts_-_Season_1-_Episode_3 | Redwolves and Ramparts: Season 1- Episode 3 |
 | o verao em que hikaru morreu | 10 | 2/2 | 20250930_O-Verao-em-que-Hikaru-Morreu-S01E10-mp4 | O-Verao-em-que-Hikaru-Morreu-S01E10 |
+| after hours with shane and chris | 9 | 2/2 | after-hours-with-shane-chris-season-1-ep-1 | After Hours With Shane & Chris, Season 1, EP # 1 |
 | happy tree friends and friends | 9 | 2/2 | Cartoonstar92_1767306343 | Happy tree friends and friends season 2 episode 20 |
 | buenos d as boone | 9 | 2/2 | apptvnc-Buenos_Dias_Boone_Season_1_Episode_6 | Buenos Días Boone Season 1 Episode 6 |
 | nerds and gnolls | 9 | 2/2 | apptvnc-Nerds_Gnolls_Season_1_Episode_5 | Nerds & Gnolls Season 1 Episode 5 |
@@ -79,4 +79,4 @@ TVmaze types among confirmed leads: Scripted 14 · Animation 3 · Documentary 3 
 
 Genres: Romance 11 · Drama 6 · Comedy 5 · Crime 2 · Children 2 · Family 1 · Thriller 1 · Mystery 1 · Food 1 · Medical 1 · History 1 · Music 1 · Adventure 1
 
-Archive subjects the leads carry (what uploaders call this stuff): community media 1063 · youtube 1062 · peg 1048 · public access tv 598 · public access 309 · maine 290 · california 284 · oregon 273 · county 268 · government access tv 260 · detective 260 · closed 259 · ashland 259 · valley 259 · weather 259 · jay 259 · sign 259 · astrology 258 · chico 258 · siskyou 258 · medford 258 · marnebass 258 · citizen television 258 · fair 258 · sacramento 258 · daily 258 · conan 258 · portland 258 · case 258 · forecast 258 · detective conan 258 · tonight 258 · ran 258 · brien 258 · douglas 258 · conan tv series 258 · kozmickev 257 · tv series 239 · cmntv 226 · kevin durkin 202
+Archive subjects the leads carry (what uploaders call this stuff): community media 1060 · youtube 1058 · peg 1045 · public access tv 596 · public access 309 · maine 289 · california 284 · oregon 273 · county 268 · detective 260 · government access tv 259 · closed 259 · ashland 259 · valley 259 · weather 259 · jay 259 · sign 259 · astrology 258 · chico 258 · siskyou 258 · medford 258 · marnebass 258 · citizen television 258 · fair 258 · sacramento 258 · daily 258 · conan 258 · portland 258 · case 258 · forecast 258 · detective conan 258 · tonight 258 · ran 258 · brien 258 · douglas 258 · conan tv series 258 · kozmickev 257 · tv series 231 · cmntv 226 · kevin durkin 202
