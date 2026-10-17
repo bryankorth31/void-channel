@@ -146,9 +146,12 @@
       seconds = seconds || 10;
       return new Promise((resolve) => {
         let n = seconds;
-        const draw = () => this._card('<p class="vpx-k">Up next</p><p class="vpx-t">' + esc(title) + '</p><div class="vpx-acts"><button data-c="go" class="vpx-primary">Play now</button><button data-c="stop">Cancel</button><span class="vpx-dim">' + n + 's</span></div>', (c) => { clearInterval(iv); this._timers.delete(iv); this._hideCard(); resolve(c === 'go'); });
-        draw();
-        const iv = setInterval(() => { n -= 1; if (n <= 0) { clearInterval(iv); this._timers.delete(iv); this._hideCard(); resolve(true); } else draw(); }, 1000);
+        const finish = (go) => { clearInterval(iv); this._timers.delete(iv); this._hideCard(); resolve(go); };
+        this._card('<p class="vpx-k">Up next</p><p class="vpx-t">' + esc(title) + '</p>'
+          + '<div class="vpx-acts"><span class="vpx-ring" aria-hidden="true"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="16"/><circle class="fg" cx="18" cy="18" r="16" style="animation-duration:' + seconds + 's"/></svg><b>' + n + '</b></span>'
+          + '<button data-c="go" class="vpx-primary">Play now</button><button data-c="stop">Cancel</button></div>', (c) => finish(c === 'go'), 'upnext');
+        const num = this.ui.card.querySelector('.vpx-ring b');
+        const iv = setInterval(() => { n -= 1; if (n <= 0) finish(true); else if (num) num.textContent = n; }, 1000);
         this._timers.add(iv);
       });
     }
@@ -175,7 +178,7 @@
       r.setAttribute('aria-label', 'Video player');
       r.innerHTML = '<video playsinline preload="metadata"></video>'
         + '<div class="vpx-shade" aria-hidden="true"></div>'
-        + '<div class="vpx-status" role="status" aria-live="polite"><span class="vpx-spin" aria-hidden="true"></span><span class="vpx-status-t"></span></div>'
+        + '<div class="vpx-status" role="status" aria-live="polite"><span class="vpx-sig" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="d" cx="24" cy="34" r="3.4"/><path class="a1" d="M17 27a10 10 0 0 1 14 0"/><path class="a2" d="M11.5 21.5a17.7 17.7 0 0 1 25 0"/><path class="a3" d="M6 16a25.4 25.4 0 0 1 36 0"/></svg></span><span class="vpx-status-t"></span></div>'
         + '<button type="button" class="vpx-big" data-a="toggle" aria-label="Play">' + (ICON.play || '') + '</button>'
         + '<div class="vpx-flash" aria-hidden="true"></div>'
         + '<div class="vpx-card" role="dialog" aria-live="assertive" hidden></div>'
@@ -328,6 +331,7 @@
       });
       const st = this.core.state;
       this.root.classList.toggle('wait', st === 'buffering' || st === 'loading' || st === 'recovering');
+      this.root.classList.toggle('recovering', st === 'recovering');
       if (st === 'playing' && this._statusUntil && now() > this._statusUntil) this._status('');
     }
     _ahead() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i) - v.currentTime; return 0; }
@@ -456,18 +460,19 @@
     }
     _needTap() { this.core.event('user-pause', now()); this.root.classList.add('paused'); this._show(); this.root.querySelector('.vpx-big').focus({ preventScroll: true }); }
 
-    _card(html, onPick) {
+    _card(html, onPick, look) {
       const c = this.ui.card;
+      c.className = 'vpx-card' + (look ? ' ' + look : '');
       c.innerHTML = html; c.hidden = false;
       c.onclick = (e) => { const b = e.target.closest('[data-c]'); if (b) onPick(b.dataset.c); };
       const first = c.querySelector('button'); if (first && !c.contains(document.activeElement)) first.focus({ preventScroll: true });
     }
-    _hideCard() { this.ui.card.hidden = true; this.ui.card.innerHTML = ''; }
+    _hideCard() { this.ui.card.hidden = true; this.ui.card.innerHTML = ''; this.ui.card.className = 'vpx-card'; }
     _failure(reason) {
       this._status('');
       const f = this.ep && (this.ep.files || [])[0];
       const net = /net|stall|slow/.test(reason || '');
-      this._card('<p class="vpx-k">' + (net ? 'The Archive is not sending this episode right now' : 'This episode will not play in this browser') + '</p>'
+      this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON['no-signal'] || '') + '</span><p class="vpx-k">' + (net ? 'The Archive is not sending this episode right now' : 'This episode will not play in this browser') + '</p>'
         + '<p class="vpx-dim">' + (net ? 'We tried every copy and both of its servers. They hiccup now and then; trying again in a minute usually works.' : 'We tried every copy we have. You can download the file and play it in VLC.') + '</p>'
         + '<div class="vpx-acts"><button data-c="retry" class="vpx-primary">' + (ICON.retry || '') + 'Try again</button>'
         + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
@@ -476,19 +481,19 @@
         if (c === 'retry') { this._hideCard(); this.core.event('retry', now()); }
         if (c === 'next' && this.o.onNext) { this._hideCard(); this.o.onNext(this); }
         if (c === 'report' && this.o.onReport) this.o.onReport(this.diagnostics(), this);
-      });
+      }, 'static');
     }
 
     _notice(reason) {
       if (reason !== 'silent') return;
       const f = this.ep && (this.ep.files || [])[0];
-      this._card('<p class="vpx-k">No sound for this episode in this browser</p><p class="vpx-dim">Its sound is in a format this browser cannot play, and we have no other copy. Edge, Safari and most TVs can play it, or download it for VLC.</p>'
+      this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON.mute || '') + '</span><p class="vpx-k">No sound for this episode in this browser</p><p class="vpx-dim">Its sound is in a format this browser cannot play, and we have no other copy. Edge, Safari and most TVs can play it, or download it for VLC.</p>'
         + '<div class="vpx-acts"><button data-c="keep" class="vpx-primary">Keep watching</button>'
         + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '') + '</div>', (c) => {
         this._hideCard();
         if (c === 'next' && this.o.onNext) this.o.onNext(this);
-      });
+      }, 'static');
     }
 
     _captions() {

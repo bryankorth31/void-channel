@@ -40,10 +40,20 @@
 .vpx.paused:not(.wait) .vpx-big{display:flex}
 .vpx-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;gap:10px;text-align:center;pointer-events:none;text-shadow:0 1px 6px #000}
 .vpx.wait .vpx-status,.vpx.has-status .vpx-status{display:flex}
-.vpx-spin{width:44px;height:44px;border-radius:50%;border:3px solid rgba(255,255,255,.2);border-top-color:var(--vpx-accent);animation:vpx-spin .9s linear infinite}
-.vpx:not(.wait) .vpx-spin{display:none}
+/* "tuning in": a broadcast signal pulsing outward (replaces the spinner). Smooth fades, no flashing. */
+.vpx-sig{width:56px;height:56px;display:block;filter:drop-shadow(0 0 6px rgba(95,212,255,.55))}
+.vpx-sig svg{width:100%;height:100%;overflow:visible}
+.vpx-sig path{fill:none;stroke:var(--vpx-accent);stroke-width:3.6;stroke-linecap:round;opacity:.18;animation:vpx-arc 1.6s ease-in-out infinite}
+.vpx-sig .d{fill:var(--vpx-accent)}
+.vpx-sig .a2{animation-delay:.2s}.vpx-sig .a3{animation-delay:.4s}
+@keyframes vpx-arc{0%,100%{opacity:.18}35%{opacity:1}70%{opacity:.18}}
+/* recovering (reconnecting / switching servers): gold, sweeping back in, a calm "searching" */
+.vpx.recovering .vpx-sig{filter:drop-shadow(0 0 6px rgba(242,169,59,.55))}
+.vpx.recovering .vpx-sig path{stroke:var(--vpx-gold);animation-direction:reverse;animation-duration:1.2s}
+.vpx.recovering .vpx-sig .d{fill:var(--vpx-gold)}
+.vpx:not(.wait) .vpx-sig{display:none}
 .vpx-status-t{font-size:15px;color:var(--vpx-ink)}
-@keyframes vpx-spin{to{transform:rotate(360deg)}}
+.vpx-status-t:not(:empty){background:rgba(7,8,12,.62);padding:6px 12px;border-radius:999px}
 .vpx-flash{position:absolute;top:50%;transform:translateY(-50%);padding:10px 16px;border-radius:999px;background:rgba(7,8,12,.7);font-weight:700;font-size:18px;opacity:0;transition:opacity .15s;pointer-events:none}
 .vpx-flash.on{opacity:1}.vpx-flash.l{left:12%}.vpx-flash.r{right:12%}
 
@@ -57,6 +67,20 @@
 /* cards: up next, failure */
 .vpx-card{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:24px;text-align:center;background:rgba(7,8,12,.88)}
 .vpx-card[hidden]{display:none}
+/* no signal: faint static that changes only twice a second (well under 3 flashes/s, WCAG 2.3.1) */
+.vpx-card.static::before{content:"";position:absolute;inset:0;opacity:.09;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");animation:vpx-static 1s steps(2) infinite}
+@keyframes vpx-static{0%{background-position:0 0}50%{background-position:-53px 29px}100%{background-position:31px -47px}}
+.vpx-card>*{position:relative}
+.vpx-nosig svg{width:44px;height:44px;opacity:.85}
+/* up next: a ring that drains over the countdown, with the seconds inside; the title slides in */
+.vpx-ring{position:relative;width:44px;height:44px;display:inline-grid;place-items:center;margin-right:4px}
+.vpx-ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.vpx-ring circle{fill:none;stroke-width:3}.vpx-ring .bg{stroke:rgba(255,255,255,.15)}
+.vpx-ring .fg{stroke:var(--vpx-gold);stroke-linecap:round;stroke-dasharray:100.53;stroke-dashoffset:0;animation:vpx-drain linear forwards}
+.vpx-ring b{font-variant-numeric:tabular-nums;font-size:15px}
+@keyframes vpx-drain{to{stroke-dashoffset:100.53}}
+.vpx-card.upnext .vpx-k,.vpx-card.upnext .vpx-t{animation:vpx-in .45s ease-out both}.vpx-card.upnext .vpx-t{animation-delay:.08s}
+@keyframes vpx-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .vpx-k{margin:0;font-size:18px;font-weight:700}
 .vpx-t{margin:0;font-size:16px}
 .vpx-dim{color:var(--vpx-dim);margin:0;max-width:44ch}
@@ -77,6 +101,16 @@
   .vpx-time{font-size:12px;margin-left:2px}
 }
 @container (max-width:420px){.vpx-row [data-a=back],.vpx-row [data-a=fwd]{display:none}}
+/* cards on small players: tighter, so the actions always fit inside the picture */
+@container (max-width:560px){
+  .vpx-card{padding:10px 14px;gap:4px;overflow:auto}
+  .vpx-k{font-size:15px}.vpx-t{font-size:14px}.vpx-dim{font-size:12px}
+  .vpx-nosig svg{width:28px;height:28px}
+  .vpx-acts{gap:6px;margin-top:4px}.vpx-acts button,.vpx-acts .vpx-btn{min-height:36px;padding:0 10px;font-size:13px}
+  .vpx-ring{width:36px;height:36px}.vpx-ring b{font-size:13px}
+}
+/* phone-sized players: the heading and the buttons; the explanation and icon give way */
+@container (max-width:420px){.vpx-card .vpx-dim,.vpx-nosig{display:none}.vpx-k{font-size:14px}}
 /* browsers without container queries fall back to the screen width */
 @supports not (container-type:inline-size){@media (max-width:600px){
   .vpx-row button{min-width:44px;height:44px;padding:0 6px}
@@ -89,4 +123,4 @@
   .vpx-row button{min-width:56px;height:56px}
   .vpx button:focus-visible{outline-width:4px}
 }
-@media (prefers-reduced-motion:reduce){.vpx-bar,.vpx-flash{transition:none}.vpx-spin{animation-duration:2s}}
+@media (prefers-reduced-motion:reduce){.vpx-bar,.vpx-flash{transition:none}.vpx-sig path{animation:none;opacity:.85}.vpx-card.static::before{animation:none}.vpx-card.upnext .vpx-k,.vpx-card.upnext .vpx-t{animation:none}}
