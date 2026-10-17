@@ -113,6 +113,12 @@ Bryan wants a full motion package. Build it as a kit in `brand-kit/motion/` with
 **Depends on:** Bryan's redrawn mark (or the vector marks in `brand-kit/marks/`) and the neon colour decision
 (item 8). Start with the pieces marked *no logo needed*; make the logo-led ones once the mark is settled.
 
+**Status 17 Oct:** pieces 3, 4, 5 and 6 are **done and live** in the player (signal "tuning in", gold recovery
+sweep with its reason, no-signal static card, up-next ring); preview all four at `player/lab/states.html`.
+Editable HyperFrames sources already exist for the logo sting (`videos/voidtv-sting`, 4 s, 1080p, no sound),
+the reel (`videos/voidtv-reel`, 40 s, 720p) and the TV-set loop (`videos/voidtv-set`, 13 s): derive pieces 1,
+2, 7-13 from them with the new mark and colours rather than starting over. Piece 14 (sound logo) is new.
+
 | # | Place | Piece | Length | Format | Notes |
 |---|---|---|---|---|---|
 | 1 | Brand master | Logo sting: static resolving into the mark, with a short sound logo | 3-4 s | 1080p and 4K MP4 + transparent WebM/MOV | Every other sting derives from this one |
