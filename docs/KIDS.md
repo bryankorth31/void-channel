@@ -48,7 +48,7 @@ What this tells us:
 | Programming | Archive items | Notes |
 |---|---|---|
 | Sesame Street | 6,205 | many are clips and songs, not episodes |
-| 1980s toy-line cartoons (Care Bears, My Little Pony, He-Man, ThunderCats, Smurfs) | 2,148 | the core of a "Saturday morning" channel |
+| 1980s toy-line cartoons (Care Bears, My Little Pony, He-Man, ThunderCats, Smurfs) | 2,148 | the core of a "Saturday morning" row |
 | Cartoon uploads shaped like episodes | 2,020 | needs strict matching |
 | Current franchises (Bluey, Paw Patrol, Peppa Pig, Cocomelon) | 1,490 | **leave out**: see section 6 |
 | Tagged "saturday morning cartoons" | 361 | |
@@ -186,7 +186,7 @@ site folder (fixed 16 Oct so profiles never write into VOIDtv's files).
    analytics mode, copy and page titles. This also finishes the white-label work the public-access demo
    exposed.
 6. **The same player**, with a kids setting: no download or Archive links, autoplay only within the same
-   show (or the approved channel), larger controls, captions on by default if present.
+   show (or the Play all list), larger controls, captions on by default if present.
 7. **Ongoing upkeep.** Link checks and nightly re-matches as for VOIDtv; a kids-specific doctor light that
    fails if any episode on the kids site is unapproved, unrated or REVIEW-state.
 
