@@ -123,8 +123,8 @@ function nodeProcesses() {
     const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object ProcessId,CreationDate,CommandLine | ConvertTo-Json -Compress"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
     let arr = out ? JSON.parse(out) : [];
     if (!Array.isArray(arr)) arr = [arr];
-    return arr.filter((p) => /scripts[\\/](hunt|hunt-movies|match|art|people|db|publish|scout|networks|nightly|site|candidates|tvmovies)\.js/.test(p.CommandLine || ''))
-      .map((p) => ({ pid: p.ProcessId, ours: JOBS.some((j) => !j.done && j.pid === p.ProcessId), cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
+    return arr.filter((p) => builderScript(p.CommandLine))
+      .map((p) => ({ pid: p.ProcessId, cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
   } catch (e) { return []; }
 }
 
@@ -137,9 +137,9 @@ const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { 
 // A process number is not an identity: Windows hands a finished program's number to the next program that starts.
 // So HQ keeps when each job's process was created (job.pstart) and, before it stops anything, reads the live process
 // again. One PowerShell call, about half a second, returns the creation time (UTC, to the millisecond) and command line.
-const infoScript = (pid) => `$p = Get-CimInstance Win32_Process -Filter 'ProcessId = ${pid}'; if ($p) { @{ created = $p.CreationDate.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ', [Globalization.CultureInfo]::InvariantCulture); cmd = [string]$p.CommandLine } | ConvertTo-Json -Compress }`;
+const infoScript = (pid) => `$p = Get-CimInstance Win32_Process -Filter 'ProcessId = ${pid}'; if ($p) { @{ created = $p.CreationDate.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ', [Globalization.CultureInfo]::InvariantCulture); cmd = [string]$p.CommandLine; name = [string]$p.Name } | ConvertTo-Json -Compress }`;
 const infoArgs = (pid) => ['-NoProfile', '-NonInteractive', '-Command', infoScript(pid)];
-function processInfo(pid) { // -> { created, cmd }, or null when no such process; throws when it cannot be read
+function processInfo(pid) { // -> { created, cmd, name }, or null when no such process; throws when it cannot be read
   if (!Number.isInteger(pid) || pid <= 0) return null;
   const out = execFileSync('powershell', infoArgs(pid), { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'], timeout: 15000 }).toString().trim();
   return out ? JSON.parse(out) : null;
@@ -150,6 +150,10 @@ const processInfoLater = (pid) => new Promise((ok) => { // never rejects: null w
 });
 // The command line of a job's process must name its own builder script, and nothing else counts: hunt.js is not hunt-movies.js.
 const scriptRe = (name) => new RegExp('scripts[\\\\/]' + String(name).replace(/[^\w-]/g, '') + '\\.js(?=[\\s"\']|$)', 'i');
+// The builder scripts HQ lists under "Running now" and is willing to stop. One list for both, so a program can only be stopped
+// if the page could have shown it.
+const LISTED = ['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'nightly', 'site', 'candidates', 'tvmovies'];
+const builderScript = (cmd) => LISTED.find((n) => scriptRe(n).test(cmd || '')) || null;
 // Is this live process the one HQ launched for this job? A job HQ launched this run has its creation time stored.
 // A job saved by an older HQ has none: HQ stamped job.started right after the launch, so the process must have been
 // created within seconds of that stamp. { ok } or { ok: false, why, gone | replaced }.
@@ -195,6 +199,24 @@ function stopHqJob(job, read = processInfo) {
   if (v.gone) return finished('That job had already ended.');
   if (!v.ok) { const r = refuse(v.why, 'Process ' + job.pid + ' is no longer that job (' + v.why + '), so HQ did not stop it.'); if (v.replaced) { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; r.changed = true; } return r; }
   try { execFileSync('taskkill', ['/PID', String(job.pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
+  return { status: 200, body: { ok: true, stopped: true } };
+}
+// Stop a node job HQ did not start: the Task Scheduler's nightly or publish, or a script run by hand in a terminal. The page
+// sends the process number together with the start time it showed in "Running now". HQ stops it only if the live process is
+// node.exe, has one of the builder scripts in its command line, and still has that creation time (to within 2 ms: the list and
+// this read format the time with different tools). A bare number, or a number now held by a different program, is refused (409).
+function stopListedProcess(pid, started, read = processInfo) {
+  const refuse = (why, error) => { console.log(`HQ stop refused: process ${pid} (page showed start ${String(started).slice(0, 30)}): ${why}`); return { status: 409, body: { error } }; };
+  if (!Number.isInteger(pid) || pid <= 0) return refuse('not a process number', 'That is not a process number.');
+  if (typeof started !== 'string' || Number.isNaN(Date.parse(started))) return refuse('no start time sent', 'HQ needs the start time the page showed along with the process number, so it can tell the program from another one given the same number. Reload the page and try again.');
+  if (pid === process.pid) return refuse('that is HQ itself', 'HQ will not stop itself.');
+  let live;
+  try { live = read(pid); } catch (e) { return refuse('could not read the process (' + String(e.message).slice(0, 60) + ')', 'HQ could not check that process, so it did not stop it.'); }
+  if (!live) return { status: 200, body: { ok: true, stopped: false, note: 'That process had already ended.' } };
+  if (!/^node(\.exe)?$/i.test(live.name || '')) return refuse('it is not node.exe (' + String(live.name).slice(0, 30) + ')', 'Process ' + pid + ' is not a node job, so HQ did not stop it.');
+  if (!builderScript(live.cmd)) return refuse('its command line names no builder script', 'Process ' + pid + ' is not one of the builder scripts, so HQ did not stop it.');
+  if (Math.abs(Date.parse(live.created) - Date.parse(started)) > 2) return refuse('it was created at a different time than the page showed', 'Process ' + pid + ' is not the one the page showed (a different program has that number now), so HQ did not stop it. Reload the page.');
+  try { execFileSync('taskkill', ['/PID', String(pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
   return { status: 200, body: { ok: true, stopped: true } };
 }
 
@@ -321,10 +343,9 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, startJob(b.name, b.args)); }
     if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running: j.done ? false : alive(j.pid) }); }
     if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no such job' }); const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body); }
-    if (p === '/api/processes/stop' && req.method === 'POST') { // only a process that is one of HQ's own jobs; the number in the request just picks the job record
+    if (p === '/api/processes/stop' && req.method === 'POST') { // never a bare number: one of HQ's own jobs (checked against the start time HQ stored) or a listed node job (checked against the start time the page showed)
       const b = await body(req); const pid = typeof b.pid === 'number' ? b.pid : NaN; const j = Number.isInteger(pid) ? JOBS.find((x) => !x.done && x.pid === pid) : null;
-      if (!j) { console.log('HQ stop refused: process ' + String(b.pid).slice(0, 12) + ' was not started by HQ'); return send(res, 409, { error: 'HQ stops only jobs it started. That process is not one of them; a job started by the Task Scheduler or in a terminal has to be stopped there.' }); }
-      const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body);
+      const r = j ? stopHqJob(j) : stopListedProcess(pid, b.started); if (r.changed) saveJobs(); return send(res, r.status, r.body);
     }
     if (p === '/api/log') { const name = (url.searchParams.get('name') || '').replace(/[^\w.-]/g, ''); return send(res, 200, { log: tail(path.join(CACHE, name), +url.searchParams.get('tail') || 100) }); }
     if (p === '/api/probe') { // playback probes (the player work, 14 Oct). Same rules as every other call: no wildcard CORS, no test page on another port.
@@ -369,5 +390,5 @@ function start(opts = {}) {
     });
   });
 }
-module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, sameProcess, processInfo, scriptRe } };
+module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, stopListedProcess, sameProcess, processInfo, scriptRe, builderScript } };
 if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });
