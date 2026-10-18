@@ -185,6 +185,9 @@ sizes and uses.
 8. Audit baseline: commit or set aside today's untracked work (`motion/`, `videos/voidtv-*`,
    `profiles/publicaccess/*`), push the 3 local commits, and relock `docs/BASELINE.md5` at the audit tag?
    The lock dates from 30 Jun and is missing most of today's files.
+9. *(from the Low Celly chat)* Low Celly Times has the same audit planned for 18 Oct
+   (`lowcountry-cells/docs/FABLE-TOMORROW.txt`). Run both on the same days, or one first? Both need Bryan's
+   checkpoints.
 
 ## 10. Careful whole-system audit, then HQ manual mode and rollout
 
@@ -255,6 +258,9 @@ rules below keep it careful *and* affordable.
     rebuilds for small fixes, the nonprofit ecosystem, kids safety, commercial classics in, Live TV a low
     priority.
 - **Bryan reads `docs/ASKS.md` before it is committed.** It quotes him, and the repo is on GitHub.
+- **Project items only** *(from the Low Celly chat)*. The chats also hold Bryan's private life: health, money,
+  legal matters and family. None of that goes into `docs/ASKS.md`, and the keeper never repeats it to other
+  agents.
 - **The keeper (the same agent, kept on):**
   - answers "did Bryan want X?" questions;
   - checks every proposed solution against the ledger before it reaches Bryan;
@@ -308,6 +314,11 @@ rules below keep it careful *and* affordable.
   - path traversal in `/media` and `/preview`;
   - command injection where they spawn processes (the motion server uses `shell: true`);
   - cross-site requests, since any web page can POST to 127.0.0.1.
+- **Shared code, two projects** *(from the Low Celly chat)*. The Low Celly Motion HQ
+  (`lowcountry-cells/motion`, port 8222) was built from this motion kit on 17 Oct. A finding in the shared parts
+  (process spawning, the `/preview` and `/files` paths, POSTs without an Origin check) is fixed in both projects.
+  Low Celly's copy already refuses POSTs from any page but its own (lowcountry-cells commit `5dff091`). The same
+  check suits HQ 8780 and the motion editor 8221.
 - **Electron:** `contextIsolation`, `nodeIntegration`, navigation limits.
 - **Beta app:** admin auth, KV access, invite codes, tester data.
 - **Supply chain:** dependencies, pinned versions, and integrity hashes for CDN scripts.
@@ -331,7 +342,10 @@ rules below keep it careful *and* affordable.
   - cost in money and usage;
   - risk to what already works;
   - whether Bryan can run or see them in HQ without AI;
+  - how easily it can be undone *(from the Low Celly chat)*;
   - fit with the ledger.
+- Keep the losing proposals and the reason each lost in `findings.json`, so a later session doesn't propose them
+  again *(from the Low Celly chat)*.
 - Build the winner with the best parts of the runners-up. The keeper checks it, then Bryan approves at a
   checkpoint.
 
