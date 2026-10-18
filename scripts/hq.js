@@ -8,7 +8,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const { spawn, execSync } = require('child_process');
+const { spawn, execSync, execFile, execFileSync } = require('child_process');
 const cfa = require('./lib/cfa');
 
 const ROOT = path.join(__dirname, '..');
@@ -124,7 +124,7 @@ function nodeProcesses() {
     let arr = out ? JSON.parse(out) : [];
     if (!Array.isArray(arr)) arr = [arr];
     return arr.filter((p) => /scripts[\\/](hunt|hunt-movies|match|art|people|db|publish|scout|networks|nightly|site|candidates|tvmovies)\.js/.test(p.CommandLine || ''))
-      .map((p) => ({ pid: p.ProcessId, cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
+      .map((p) => ({ pid: p.ProcessId, ours: JOBS.some((j) => !j.done && j.pid === p.ProcessId), cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
   } catch (e) { return []; }
 }
 
@@ -134,6 +134,32 @@ const JOBS = (() => { try { return JSON.parse(fs.readFileSync(JOBS_FILE, 'utf8')
 const saveJobs = () => { try { fs.mkdirSync(CACHE, { recursive: true }); fs.writeFileSync(JOBS_FILE, JSON.stringify(JOBS.slice(0, 60))); } catch (e) { /* best effort */ } };
 const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze']);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
+// A process number is not an identity: Windows hands a finished program's number to the next program that starts.
+// So HQ keeps when each job's process was created (job.pstart) and, before it stops anything, reads the live process
+// again. One PowerShell call, about half a second, returns the creation time (UTC, to the millisecond) and command line.
+const infoScript = (pid) => `$p = Get-CimInstance Win32_Process -Filter 'ProcessId = ${pid}'; if ($p) { @{ created = $p.CreationDate.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ', [Globalization.CultureInfo]::InvariantCulture); cmd = [string]$p.CommandLine } | ConvertTo-Json -Compress }`;
+const infoArgs = (pid) => ['-NoProfile', '-NonInteractive', '-Command', infoScript(pid)];
+function processInfo(pid) { // -> { created, cmd }, or null when no such process; throws when it cannot be read
+  if (!Number.isInteger(pid) || pid <= 0) return null;
+  const out = execFileSync('powershell', infoArgs(pid), { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'], timeout: 15000 }).toString().trim();
+  return out ? JSON.parse(out) : null;
+}
+const processInfoLater = (pid) => new Promise((ok) => { // never rejects: null when it cannot be read
+  if (!Number.isInteger(pid) || pid <= 0) return ok(null);
+  execFile('powershell', infoArgs(pid), { windowsHide: true, timeout: 15000 }, (err, out) => { try { ok(err || !String(out).trim() ? null : JSON.parse(String(out).trim())); } catch (e) { ok(null); } });
+});
+// The command line of a job's process must name its own builder script, and nothing else counts: hunt.js is not hunt-movies.js.
+const scriptRe = (name) => new RegExp('scripts[\\\\/]' + String(name).replace(/[^\w-]/g, '') + '\\.js(?=[\\s"\']|$)', 'i');
+// Is this live process the one HQ launched for this job? A job HQ launched this run has its creation time stored.
+// A job saved by an older HQ has none: HQ stamped job.started right after the launch, so the process must have been
+// created within seconds of that stamp. { ok } or { ok: false, why, gone | replaced }.
+function sameProcess(job, live) {
+  if (!live) return { ok: false, gone: true, why: 'no such process' };
+  if (!scriptRe(job.name).test(live.cmd || '')) return { ok: false, replaced: true, why: 'its command line is not scripts/' + job.name + '.js' };
+  const now = Date.parse(live.created || '');
+  if (job.pstart) return Date.parse(job.pstart) === now ? { ok: true } : { ok: false, replaced: true, why: 'it was created at a different time than the job HQ launched' };
+  return Math.abs(now - Date.parse(job.started || '')) <= 10000 ? { ok: true } : { ok: false, replaced: true, why: 'it was not created when this job was launched' };
+}
 function startJob(name, args) {
   if (!SCRIPTS.has(name)) throw new Error('unknown script ' + name);
   args = (args || []).map(String).slice(0, 20);
@@ -146,13 +172,31 @@ function startJob(name, args) {
   const nb = nodeBin();
   const child = spawn(nb.bin, [path.join(ROOT, 'scripts', name + '.js'), ...args], { cwd: ROOT, env: nb.env, detached: true, stdio: ['ignore', fd, fd], windowsHide: true });
   child.unref();
-  const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), log, done: null, code: null };
+  const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), pstart: null, log, done: null, code: null };
   child.on('exit', (code) => { job.done = new Date().toISOString(); job.code = code; saveJobs(); });
   JOBS.unshift(job); saveJobs();
+  // Keep when this process was created, so a later Stop can tell it from another program given the same number.
+  processInfoLater(child.pid).then((info) => { if (info && !job.done && scriptRe(name).test(info.cmd || '')) { job.pstart = info.created; saveJobs(); } });
   return job;
 }
 const jobList = () => JOBS.map((j) => { const running = j.done ? false : alive(j.pid); if (!running && !j.done) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; saveJobs(); } return { ...j, running, tail: tail(j.log, 3) }; });
-function stopJob(pid) { try { execSync(`taskkill /PID ${+pid} /T /F`, { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone */ } }
+// Stop one job that HQ started, never a bare process number. The job record says which process it was; before anything
+// is killed the live process must still be that one (same script in its command line, same creation time). If it is not,
+// nothing is killed (409), one line goes to the console, and a job whose number now belongs to another program is
+// marked finished so it stops showing as running. Returns { status, body, changed }; the caller saves the jobs file.
+function stopHqJob(job, read = processInfo) {
+  const refuse = (why, error) => { console.log(`HQ stop refused: process ${job.pid} is not job ${job.id} (${job.name}): ${why}`); return { status: 409, body: { error } }; };
+  if (job.done) return { status: 200, body: { ok: true, stopped: false, note: 'That job already finished.' } };
+  if (job.pid === process.pid) return refuse('that is HQ itself', 'HQ will not stop itself.');
+  let live;
+  try { live = read(job.pid); } catch (e) { return refuse('could not read the process (' + String(e.message).slice(0, 60) + ')', 'HQ could not check that process, so it did not stop it.'); }
+  const v = sameProcess(job, live);
+  const finished = (note) => { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; return { status: 200, body: { ok: true, stopped: false, note }, changed: true }; };
+  if (v.gone) return finished('That job had already ended.');
+  if (!v.ok) { const r = refuse(v.why, 'Process ' + job.pid + ' is no longer that job (' + v.why + '), so HQ did not stop it.'); if (v.replaced) { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; r.changed = true; } return r; }
+  try { execFileSync('taskkill', ['/PID', String(job.pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
+  return { status: 200, body: { ok: true, stopped: true } };
+}
 
 // ---- overrides --------------------------------------------------------------------------------
 function patchOverride(slug, body) {
@@ -276,8 +320,12 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses() });
     if (p === '/api/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, startJob(b.name, b.args)); }
     if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running: j.done ? false : alive(j.pid) }); }
-    if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (j) stopJob(j.pid); return send(res, 200, { ok: true }); }
-    if (p === '/api/processes/stop' && req.method === 'POST') { const b = await body(req); stopJob(b.pid); return send(res, 200, { ok: true }); }
+    if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no such job' }); const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body); }
+    if (p === '/api/processes/stop' && req.method === 'POST') { // only a process that is one of HQ's own jobs; the number in the request just picks the job record
+      const b = await body(req); const pid = typeof b.pid === 'number' ? b.pid : NaN; const j = Number.isInteger(pid) ? JOBS.find((x) => !x.done && x.pid === pid) : null;
+      if (!j) { console.log('HQ stop refused: process ' + String(b.pid).slice(0, 12) + ' was not started by HQ'); return send(res, 409, { error: 'HQ stops only jobs it started. That process is not one of them; a job started by the Task Scheduler or in a terminal has to be stopped there.' }); }
+      const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body);
+    }
     if (p === '/api/log') { const name = (url.searchParams.get('name') || '').replace(/[^\w.-]/g, ''); return send(res, 200, { log: tail(path.join(CACHE, name), +url.searchParams.get('tail') || 100) }); }
     if (p === '/api/probe') { // playback probes (the player work, 14 Oct). Same rules as every other call: no wildcard CORS, no test page on another port.
       if (req.method === 'POST') { const b = await body(req); fs.mkdirSync(CACHE, { recursive: true }); fs.appendFileSync(path.join(CACHE, 'probe.jsonl'), JSON.stringify({ at: new Date().toISOString(), ...b }) + '\n'); return send(res, 200, { ok: true }); }
@@ -321,5 +369,5 @@ function start(opts = {}) {
     });
   });
 }
-module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType } };
+module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, sameProcess, processInfo, scriptRe } };
 if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });
