@@ -122,6 +122,8 @@ function runtimeBand(seconds, rt) {
 async function openItem(id, m) {
   const j = await getJson('https://archive.org/metadata/' + encodeURIComponent(id), 'meta-' + id.replace(/[^a-z0-9._-]/gi, '_'));
   const meta = j.metadata || {};
+  // The Archive returns a list for the title when an item has several; the catalog and the SQLite mirror want one string.
+  const itemTitle = Array.isArray(meta.title) ? meta.title.join(' / ') : (meta.title == null ? '' : String(meta.title));
   const files = (j.files || []).filter((f) => VIDEO_FORMATS.has(f.format) && f.length);
   const byStem = new Map();
   for (const f of files) { const stem = f.name.replace(/\.ia\.mp4$/i, '').replace(/\.[^.]+$/, ''); (byStem.get(stem) || byStem.set(stem, []).get(stem)).push(f); }
@@ -130,10 +132,10 @@ async function openItem(id, m) {
     const best = group.find((f) => PLAYABLE.has(f.format) && f.source === 'original') || group.find((f) => PLAYABLE.has(f.format)) || group[0];
     const secs = parseFloat(best.length) || 0;
     const risk = codecRisk(best.name, best.format, PLAYABLE.has(best.format));
-    out.push({ item: id, itemTitle: meta.title, stem, file: best.name, format: best.format, playable: !risk, codecRisk: risk || undefined, seconds: Math.round(secs), sizeMB: Math.round((+best.size || 0) / 1e6),
+    out.push({ item: id, itemTitle: itemTitle, stem, file: best.name, format: best.format, playable: !risk, codecRisk: risk || undefined, seconds: Math.round(secs), sizeMB: Math.round((+best.size || 0) / 1e6),
       band: runtimeBand(secs, m.runtime), fileSim: titleSim(stem.split('/').pop(), m.title), url: `https://archive.org/download/${id}/${encodeURIComponent(best.name)}` });
   }
-  return { id, title: meta.title, uploader: meta.uploader, date: meta.date, files: out };
+  return { id, title: itemTitle, uploader: meta.uploader, date: meta.date, files: out };
 }
 
 function judge(f, it, m) {

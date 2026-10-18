@@ -236,7 +236,7 @@ async function openItem(id, show, tv) {
   const episodes = vids.filter((v) => v.band === 'episode' || v.band === 'double' || (!tv && (v.band === 'short' || v.band === 'half-hour' || v.band === 'hour')));
   const hits = episodes.filter((v) => v.nameHit).length;
   return {
-    id, title: m.title, uploader: m.uploader, date: m.date, collection: m.collection,
+    id, title: Array.isArray(m.title) ? m.title.join(' / ') : m.title, uploader: m.uploader, date: m.date, collection: m.collection,
     description: String(m.description || '').slice(0, 300),
     totalVideo: vids.length, episodeShaped: episodes.length, nameHits: hits,
     files: vids,

@@ -3,7 +3,10 @@
 // always a faithful, queryable copy. Open it with any SQLite viewer. No video is ever stored.
 // Usage: node scripts/db.js
 const fs = require('fs');
-const nz = (v) => (v === undefined ? null : v); // SQLite binds null, never undefined (self-listed episodes have no airdate)
+// SQLite binds null, never undefined (self-listed episodes have no airdate). It cannot bind a list or an object
+// either: the Archive returns a list for an item's title when it has several (a TV movie did, 18 Oct 2026, and the
+// mirror failed every night), so those are flattened to text here as well as at the source in the hunters.
+const nz = (v) => (v === undefined ? null : Array.isArray(v) ? v.join(' / ') : (v !== null && typeof v === 'object') ? JSON.stringify(v) : v);
 const run = (stmt, ...a) => stmt.run(...a.map(nz));
 const path = require('path');
 const { DatabaseSync } = require('node:sqlite');
