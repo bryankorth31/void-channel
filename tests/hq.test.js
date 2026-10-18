@@ -2,11 +2,16 @@
 // Starts this checkout's scripts/hq.js as a child process on a free port in 8790-8799 (never 8780), talks to it over
 // 127.0.0.1 only, and ends it by its own handle. Nothing here starts a job, opens a browser, touches a scheduled task,
 // or reaches the network. The only processes ever stopped are the harmless sleepers these tests start themselves.
+// HQ's state (jobs list, job logs, probe lines) goes to a temporary folder through HQ_STATE_DIR, made with fs.mkdtempSync and
+// removed at the end, so running this file never touches catalog/cache. The first jobs-list entries are seeded there, as if
+// an earlier HQ run had left them, to test Stop on jobs "reloaded after a restart" without starting a real job.
 const { test, before, after } = require('node:test');
 const assert = require('node:assert/strict');
 const { spawn } = require('node:child_process');
+const fs = require('node:fs');
 const http = require('node:http');
 const net = require('node:net');
+const os = require('node:os');
 const path = require('node:path');
 
 const ROOT = path.join(__dirname, '..');
@@ -14,6 +19,17 @@ const HQ_FILE = path.join(ROOT, 'scripts', 'hq.js');
 const WIN = process.platform === 'win32';
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
+
+// Set before hq.js is ever required in this process, and inherited by the HQ child: HQ keeps its state here.
+const STATE = fs.mkdtempSync(path.join(os.tmpdir(), 'hq-test-state-'));
+process.env.HQ_STATE_DIR = STATE;
+const REAL_CACHE = path.join(ROOT, 'catalog', 'cache');
+const readOrNull = (f) => { try { return fs.readFileSync(f, 'utf8'); } catch (e) { return null; } };
+const realBefore = { existed: fs.existsSync(REAL_CACHE), probe: readOrNull(path.join(REAL_CACHE, 'probe.jsonl')) };
+
+// A harmless node process whose command line names a builder script (as the nightly's children do) but which only sleeps.
+const kids = [];
+const fixture = (script = 'C:\\fake\\scripts\\hunt.js') => { const k = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', ...(script ? [script] : [])], { stdio: 'ignore', windowsHide: true }); kids.push(k); return k; };
 
 function canBind(port) {
   return new Promise((ok) => {
@@ -42,14 +58,29 @@ function call(port, method, urlPath, { headers = {}, body } = {}) {
   });
 }
 
-let hq = null, port = 0, token = '', hqOut = '', jobsAtStart = 0;
+let hq = null, port = 0, token = '', hqOut = '';
+let seed = {}; // the sleepers behind the seeded jobs: good1, good2, stale, and dead (a pid that has already exited)
 
 // A POST to /api/ping (does nothing) with whatever headers a case needs; defaults are a good call from HQ's own page.
 const ping = (headers) => call(port, 'POST', '/api/ping', { body: {}, headers: { 'content-type': 'application/json', origin: `http://127.0.0.1:${port}`, 'x-hq-token': token, ...headers } });
 
 before(async () => {
   port = await freePort();
-  hq = spawn(process.execPath, [HQ_FILE, '--port', String(port)], { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true });
+  // Seed the jobs file HQ will load, as an earlier HQ run would have left it.
+  const { processInfo } = require(HQ_FILE).stop;
+  seed = { good1: fixture(), good2: fixture(), stale: fixture() };
+  await wait(600);
+  const dead = spawn(process.execPath, ['-e', '0', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  await new Promise((r) => dead.once('exit', r));
+  seed.dead = dead;
+  const rec = (id, pid, pstart) => ({ id, name: 'hunt', args: [], pid, started: new Date().toISOString(), pstart, log: path.join(STATE, id + '.log'), done: null, code: null });
+  fs.writeFileSync(path.join(STATE, 'hq-jobs.json'), JSON.stringify([
+    rec('seedgood1', seed.good1.pid, processInfo(seed.good1.pid).created),
+    rec('seedgood2', seed.good2.pid, processInfo(seed.good2.pid).created),
+    rec('seedstale', seed.stale.pid, '2020-01-01T00:00:00.000Z'), // a recycled number: the stored start time is not this process's
+    rec('seeddead', dead.pid, '2020-01-01T00:00:00.000Z'),        // its process is gone
+  ]));
+  hq = spawn(process.execPath, [HQ_FILE, '--port', String(port)], { cwd: ROOT, env: { ...process.env, HQ_STATE_DIR: STATE }, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true });
   hq.stdout.on('data', (c) => { hqOut += c; });
   hq.stderr.on('data', (c) => { hqOut += c; });
   for (let i = 0; i < 100 && !/VOIDtv HQ at/.test(hqOut); i++) { if (hq.exitCode !== null) break; await wait(100); }
@@ -58,12 +89,17 @@ before(async () => {
   const m = /<meta name="hq-token" content="([0-9a-f]{64})">/.exec(page.text);
   assert.ok(m, 'the served page carries a 64 character hex token');
   token = m[1];
-  jobsAtStart = (await call(port, 'GET', '/api/jobs')).json.jobs.length;
 });
 
 after(async () => {
   if (hq && hq.exitCode === null) { const gone = new Promise((r) => hq.once('exit', r)); hq.kill(); await gone; }
+  for (const k of kids) if (k.exitCode === null) k.kill(); // only the sleepers this file started, by their own handles
+  fs.rmSync(STATE, { recursive: true, force: true });
 });
+
+// A POST to one of the stop routes, as the HQ page sends it.
+const stopCall = (urlPath, body) => call(port, 'POST', urlPath, { body, headers: { 'content-type': 'application/json', origin: `http://127.0.0.1:${port}`, 'x-hq-token': token } });
+const listed = async () => (await call(port, 'GET', '/api/jobs')).json;
 
 test('HQ test instance listens on a test port, not 8780', () => {
   assert.ok(port >= 8790 && port <= 8799);
@@ -159,7 +195,7 @@ test('every other method that changes things needs JSON and the token too', asyn
   assert.equal(pre.status, 403, 'a cross-origin preflight is refused');
 });
 
-test('GET /api/jobs still returns the job list shape', async () => {
+test('GET /api/jobs still returns the job list shape (the four seeded jobs, no new one)', async () => {
   const r = await call(port, 'GET', '/api/jobs');
   assert.equal(r.status, 200);
   assert.ok(Array.isArray(r.json.jobs));
@@ -170,9 +206,34 @@ test('GET /api/jobs still returns the job list shape', async () => {
     assert.equal(typeof j.running, 'boolean');
     assert.ok('pid' in j && 'started' in j && 'log' in j && 'tail' in j);
   }
-  for (const p of r.json.processes) assert.ok('pid' in p && 'cmd' in p && 'started' in p && typeof p.ours === 'boolean');
-  assert.equal(r.json.jobs.length, jobsAtStart, 'the test instance started no job');
-  assert.ok(r.json.processes.every((p) => p.ours === false || r.json.jobs.some((j) => j.pid === p.pid && !j.done)), 'a process is marked as HQ\'s only when it is one of HQ\'s open jobs');
+  assert.deepEqual(r.json.jobs.map((j) => j.id).sort(), ['seeddead', 'seedgood1', 'seedgood2', 'seedstale']);
+  assert.equal(r.json.jobs.find((j) => j.id === 'seedgood1').running, true);
+  for (const p of r.json.processes) assert.ok('pid' in p && 'cmd' in p && 'started' in p);
+  assert.match(r.json.processes[0].started, /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/);
+});
+
+test('"Running now" lists node jobs by their builder script, and nothing else', async () => {
+  const other = spawn('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 60 # C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  kids.push(other);
+  const plain = fixture(null); // node, no script in its command line
+  await wait(1200);
+  const { processes } = await listed();
+  const pids = processes.map((p) => p.pid);
+  assert.ok(pids.includes(seed.good1.pid) && pids.includes(seed.stale.pid), 'node jobs naming scripts\\hunt.js are listed');
+  assert.ok(!pids.includes(other.pid), 'a program that is not node.exe is not listed even if its command line names the script');
+  assert.ok(!pids.includes(plain.pid), 'a node process with no builder script is not listed');
+  const { builderScript } = require(HQ_FILE).stop;
+  assert.equal(builderScript('node.exe C:\\x\\scripts\\hunt-movies.js'), 'hunt-movies');
+  assert.equal(builderScript('node.exe C:\\x\\scripts\\hq.js --port 1'), null);
+});
+
+test('HQ keeps its state in HQ_STATE_DIR: the seeded dead job was marked finished in the temporary jobs file', async () => {
+  await listed();
+  const saved = JSON.parse(fs.readFileSync(path.join(STATE, 'hq-jobs.json'), 'utf8'));
+  const dead = saved.find((j) => j.id === 'seeddead');
+  assert.ok(dead.done, 'the finished time was written to the temp file');
+  assert.equal(dead.code, -1);
+  assert.ok(!saved.find((j) => j.id === 'seedgood1').done);
 });
 
 test('/api/probe obeys the same rules (no wildcard CORS, token on POST)', async () => {
@@ -189,23 +250,91 @@ test('POST /api/jobs/<unknown>/stop is a 404 and starts nothing', async () => {
   assert.equal(stop.status, 404);
 });
 
-test('POST /api/processes/stop with a pid HQ did not start is refused (409) and nothing is killed', { skip: !WIN && 'Windows only' }, async () => {
-  const sleeper = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
-  try {
-    await wait(300);
-    assert.ok(alive(sleeper.pid));
-    const headers = { 'content-type': 'application/json', origin: `http://127.0.0.1:${port}`, 'x-hq-token': token };
-    for (const pid of [sleeper.pid, hq.pid, process.pid, 4, 0, -1, String(sleeper.pid), null, undefined]) {
-      const r = await call(port, 'POST', '/api/processes/stop', { body: pid === undefined ? {} : { pid }, headers });
-      assert.equal(r.status, 409, 'pid ' + JSON.stringify(pid));
-      assert.match(r.json.error, /only jobs it started/);
-    }
-    assert.ok(alive(sleeper.pid), 'the sleeper was not killed');
-    assert.ok(alive(hq.pid), 'HQ itself was not killed');
-    assert.ok(alive(process.pid));
-  } finally {
-    sleeper.kill();
+// ---- Stop over HTTP ------------------------------------------------------------------------------------------
+
+test('POST /api/processes/stop with a bare number (no start time) is refused (409) and nothing is killed', { skip: !WIN && 'Windows only' }, async () => {
+  const foreign = fixture();
+  await wait(400);
+  for (const pid of [foreign.pid, hq.pid, process.pid, 4, 0, -1, String(foreign.pid), null, undefined]) {
+    const r = await stopCall('/api/processes/stop', pid === undefined ? {} : { pid });
+    assert.equal(r.status, 409, 'pid ' + JSON.stringify(pid));
+    assert.match(r.json.error, /process number|start time/);
   }
+  assert.ok(alive(foreign.pid), 'the listed node process was not killed');
+  assert.ok(alive(hq.pid), 'HQ itself was not killed');
+  assert.ok(alive(process.pid));
+});
+
+test('a listed node process with the wrong started time is refused (409) and nothing is killed; the matching one is stopped', { skip: !WIN && 'Windows only' }, async () => {
+  const target = fixture();
+  await wait(500);
+  const bystander = fixture(); // another listed process, created later: its start time must not work for the first one's number
+  await wait(1000);
+  const { processes } = await listed();
+  const shown = processes.find((p) => p.pid === target.pid), other = processes.find((p) => p.pid === bystander.pid);
+  assert.ok(shown && other, 'both are in the "Running now" list the page shows');
+  const plus = (iso, ms) => new Date(Date.parse(iso) + ms).toISOString();
+  for (const [why, started] of [
+    ['an old time', '2020-01-01T00:00:00.000Z'],
+    ['one second later', plus(shown.started, 1000)],
+    ['ten milliseconds earlier', plus(shown.started, -10)],
+    ['another process\'s time (what a recycled number would look like)', other.started],
+    ['not a time', 'soon'],
+    ['a number', 12345],
+    ['nothing', undefined],
+  ]) {
+    const r = await stopCall('/api/processes/stop', started === undefined ? { pid: target.pid } : { pid: target.pid, started });
+    assert.equal(r.status, 409, why);
+    assert.ok(alive(target.pid), why + ': nothing was killed');
+  }
+  const ok = await stopCall('/api/processes/stop', { pid: target.pid, started: shown.started });
+  assert.equal(ok.status, 200);
+  assert.equal(ok.json.stopped, true);
+  await wait(500);
+  assert.ok(!alive(target.pid), 'the matching one was stopped');
+  assert.ok(alive(bystander.pid), 'the other listed process was not touched');
+  assert.equal((await stopCall('/api/processes/stop', { pid: target.pid, started: shown.started })).json.stopped, false, 'stopping it again finds nothing to stop');
+});
+
+test('Stop refuses what is not a node builder job even when the start time is right', { skip: !WIN && 'Windows only' }, async () => {
+  const { processInfo } = require(HQ_FILE).stop;
+  const plain = fixture(null);
+  const ps = spawn('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 60 # C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  kids.push(ps);
+  await wait(1500);
+  for (const [why, pid] of [['HQ itself', hq.pid], ['a node process with no builder script', plain.pid], ['powershell whose command line names scripts\\hunt.js', ps.pid]]) {
+    const r = await stopCall('/api/processes/stop', { pid, started: processInfo(pid).created });
+    assert.equal(r.status, 409, why);
+    assert.ok(alive(pid), why + ': still running');
+  }
+});
+
+test('a job HQ started itself (here: reloaded from the jobs file) is stopped from its stored start time, by id or by number', { skip: !WIN && 'Windows only' }, async () => {
+  const byId = await stopCall('/api/jobs/seedgood1/stop', {});
+  assert.equal(byId.status, 200);
+  assert.equal(byId.json.stopped, true);
+  const byPid = await stopCall('/api/processes/stop', { pid: seed.good2.pid }); // no start time needed: HQ has it
+  assert.equal(byPid.status, 200);
+  assert.equal(byPid.json.stopped, true);
+  await wait(500);
+  assert.ok(!alive(seed.good1.pid) && !alive(seed.good2.pid), 'both were stopped');
+  assert.ok(alive(seed.stale.pid), 'the one whose number is held by a different process was not');
+});
+
+test('a reloaded job whose stored start time does not match the live process is refused (409), left running, and marked finished', { skip: !WIN && 'Windows only' }, async () => {
+  const r = await stopCall('/api/jobs/seedstale/stop', {});
+  assert.equal(r.status, 409);
+  assert.match(r.json.error, /no longer that job/);
+  assert.ok(alive(seed.stale.pid), 'nothing was killed');
+  const job = (await listed()).jobs.find((j) => j.id === 'seedstale');
+  assert.equal(job.running, false, 'it no longer shows as running');
+  const saved = JSON.parse(fs.readFileSync(path.join(STATE, 'hq-jobs.json'), 'utf8')).find((j) => j.id === 'seedstale');
+  assert.ok(saved.done, 'and that is saved');
+  // the same number, now seen as a listed node process, can still be stopped with the start time the page shows
+  const shown = (await listed()).processes.find((p) => p.pid === seed.stale.pid);
+  const again = await stopCall('/api/processes/stop', { pid: seed.stale.pid, started: shown.started });
+  assert.equal(again.status, 200);
+  assert.equal(again.json.stopped, true);
 });
 
 // ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
@@ -219,6 +348,7 @@ test('stop: a job whose process is still the one HQ launched is stopped, and onl
     const info = processInfo(target.pid);
     assert.ok(info && /scripts[\\/]hunt\.js/.test(info.cmd), 'the live command line is readable');
     assert.match(info.created, /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/);
+    assert.match(info.name, /^node(\.exe)?$/i);
     const job = { id: 't1', name: 'hunt', args: [], pid: target.pid, started: new Date().toISOString(), pstart: info.created, done: null, code: null };
     const r = stopHqJob(job);
     assert.equal(r.status, 200);
@@ -309,6 +439,34 @@ test('stop: a process that cannot be read is not stopped', () => {
   }
 });
 
+test('stopListedProcess: every refusal happens before anything is killed (the read is replaced and the number cannot exist)', () => {
+  const { stopListedProcess } = require(HQ_FILE).stop;
+  const realLog = console.log; const lines = [];
+  console.log = (...a) => lines.push(a.join(' '));
+  try {
+    const t0 = '2026-10-18T12:00:00.000Z';
+    const live = (extra) => () => ({ created: t0, cmd: '"C:\\node\\node.exe" C:\\v\\scripts\\nightly.js', name: 'node.exe', ...extra });
+    const cases = [
+      ['no start time', 999999, undefined, live()],
+      ['a start time that is not a time', 999999, 'soon', live()],
+      ['a number that is not an integer', 1.5, t0, live()],
+      ['a negative number', -4, t0, live()],
+      ['HQ itself', process.pid, t0, live()],
+      ['a process that cannot be read', 999999, t0, () => { throw new Error('no powershell'); }],
+      ['not node.exe', 999999, t0, live({ name: 'powershell.exe' })],
+      ['no builder script in the command line', 999999, t0, live({ cmd: 'node.exe C:\\v\\scripts\\hq.js --port 1' })],
+      ['a start time half a second off', 999999, '2026-10-18T12:00:00.500Z', live()],
+    ];
+    for (const [why, pid, started, read] of cases) assert.equal(stopListedProcess(pid, started, read).status, 409, why);
+    assert.equal(lines.length, cases.length, 'one console line per refusal');
+    assert.equal(stopListedProcess(999999, t0, () => null).body.stopped, false, 'a number nobody holds is "already ended"');
+    assert.equal(stopListedProcess(999999, '2026-10-18T12:00:00.002Z', live()).status, 200, '2 ms apart still counts as the same start time (the kill then finds no such process)');
+    assert.equal(lines.length, cases.length, 'and those two refused nothing');
+  } finally {
+    console.log = realLog;
+  }
+});
+
 test('stop: the command line match is exact on the script name', () => {
   const { scriptRe } = require(HQ_FILE).stop;
   assert.ok(scriptRe('hunt').test('"C:\\node\\node.exe" C:\\Users\\bryan\\void-channel\\scripts\\hunt.js --pause 3'));
@@ -372,4 +530,12 @@ test('hqcheck.probe fails against an HQ that has no /api/ping (started before th
   } finally {
     await new Promise((ok) => notFound.close(ok));
   }
+});
+
+// ---- last: nothing above touched the tree's catalog/cache ----------------------------------------------------
+
+test('running this file left catalog/cache alone: not created if it was not there, probe.jsonl unchanged, state went to the temp folder', () => {
+  if (!realBefore.existed) assert.ok(!fs.existsSync(REAL_CACHE), 'catalog/cache was not there before and still is not');
+  assert.equal(readOrNull(path.join(REAL_CACHE, 'probe.jsonl')), realBefore.probe);
+  assert.ok(fs.existsSync(path.join(STATE, 'hq-jobs.json')), 'HQ wrote its jobs file into the temp state folder instead');
 });
