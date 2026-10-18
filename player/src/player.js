@@ -406,7 +406,15 @@
       const r = this.root;
       r.classList.add('vpx-show');
       clearTimeout(this._hideT);
-      this._hideT = setTimeout(() => { if (!this.v.paused && !r.contains(document.activeElement && document.activeElement.closest('.vpx-row') ? document.activeElement : null)) r.classList.remove('vpx-show'); }, 3000);
+      this._hideT = setTimeout(() => { if (this.v.paused) return; if (this._holdBar()) return this._show(); r.classList.remove('vpx-show'); }, 3000);
+    }
+    // Controls stay up only while a control has keyboard focus (someone tabbing through them). Focus left behind by
+    // a mouse click (the fullscreen button, the player itself) and a resting mouse are no reason to cover the
+    // picture; any mouse move, tap or key brings the controls straight back.
+    _holdBar() {
+      const bar = this.root.querySelector('.vpx-bar'), a = document.activeElement;
+      if (!bar || !a || !bar.contains(a)) return false;
+      try { return a.matches(':focus-visible'); } catch (e) { return false; }
     }
     _icons() {
       const p = this.v.paused;

@@ -14,7 +14,11 @@
 
 /* control bar */
 .vpx-bar{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 8px;background:linear-gradient(transparent,var(--vpx-bar) 55%);opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s;pointer-events:none}
-.vpx.vpx-show .vpx-bar,.vpx.paused .vpx-bar,.vpx:focus-within .vpx-bar{opacity:1;transform:none;pointer-events:auto}
+.vpx.vpx-show .vpx-bar,.vpx.paused .vpx-bar{opacity:1;transform:none;pointer-events:auto}
+/* keyboard focus on a control keeps the bar up; a mouse click does not (.vpx:focus-within did, and since the player
+   itself takes focus on click, it kept the controls over the picture for good, fullscreen included). Its own rule,
+   so a browser without :has drops only this line. */
+.vpx-bar:has(:focus-visible){opacity:1;transform:none;pointer-events:auto}
 .vpx.vpx-show,.vpx.paused{cursor:default}.vpx:not(.vpx-show):not(.paused){cursor:none}
 .vpx-title{font-weight:600;margin:0 4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px #000}
 .vpx-row{display:flex;align-items:center;gap:2px}
