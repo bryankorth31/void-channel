@@ -21,7 +21,9 @@ function nodeBin() {
   try { const w = execSync('where node', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().split(/\r?\n/).find((l) => /node\.exe$/i.test(l.trim())); if (w) return { bin: w.trim(), env: process.env }; } catch (e) { /* fall through */ }
   return { bin: process.execPath, env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' } };
 }
-const CACHE = path.join(PROFILE.catalogDir, 'cache');
+// HQ's own state (the jobs list, job logs, probe lines) lives here. HQ_STATE_DIR points it at another folder; the tests use a
+// temporary one so that running them never touches catalog/cache.
+const CACHE = process.env.HQ_STATE_DIR ? path.resolve(process.env.HQ_STATE_DIR) : path.join(PROFILE.catalogDir, 'cache');
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
 promos.init({ nodeBin, cache: CACHE });
 const FILES = {
