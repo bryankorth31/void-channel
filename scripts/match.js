@@ -111,21 +111,89 @@ const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json'))
 const DEAD_FILE = path.join(PROFILE.catalogDir, 'dead-files.json');
 function readDead() { try { return JSON.parse(fs.readFileSync(DEAD_FILE, 'utf8')); } catch (e) { return {}; } } // linkcheck.js retires files the Archive no longer serves
 function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
+// ---- The self-list fallback: what it may take, and why the strict pass turned files away ----
+// Every episode-band file the strict loop sees gets one tag:
+//   placed          the strict pass placed it (an option for some episode at REVIEW or better)
+//   no-match        episode-shaped, but no S/E, airdate or title in it fits the TVmaze list
+//   other-show      it, or its item, names a different show on our list
+//   reaction        a reaction, review, recap or walkthrough
+//   foreign         a dub or another language
+//   not-named       neither the file nor its item title names the show
+//   before-premiere dated before the show existed
+//   wrong-length    outside the episode and double-episode bands
+// The fallback may use only 'placed' and 'no-match' files: the other tags are reasons that still hold when a looser matcher looks again.
+// 'wrong-length' is the exception: the strict pass skipped those files before reading their names, and its bands are only a guess when TVmaze
+// gives no runtime (a 3-minute web episode is a 'clip'), so the fallback judges them again, by the runtime band when there is one and by name.
+function rejectionTag(why) { return why.other ? 'other-show' : why.react ? 'reaction' : why.foreign ? 'foreign' : why.notNamed ? 'not-named' : 'no-match'; }
+
+// Words that make an upload something other than an episode. Always tested on norm()ed text: Archive names join words with
+// underscores, and an underscore is a word character, so a boundary never shows up in the raw name. The show's own name is
+// taken out first, so a show called "Best of the Worst" or "Radio Free Roscoe" does not reject itself.
+const JUNK_ITEM = /\b(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)\b/i;
+const JUNK_FILE = /\b(podcast|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)\b/i;
+const EXTRAS = /\b(extras?|bonus|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|promos?|trailers?|interviews?|outtakes?|making of|commentary)\b/i;
+function stripShow(text, cores) { let t = ' ' + norm(text) + ' '; for (const c of cores || []) if (c) t = t.split(' ' + c + ' ').join('  '); return t.replace(/\s+/g, ' ').trim(); }
+const isJunkItem = (text, cores) => JUNK_ITEM.test(stripShow(text, cores));
+const isJunkFile = (name, cores) => JUNK_FILE.test(stripShow(name, cores));
+const isExtras = (text, cores) => EXTRAS.test(stripShow(text, cores));
+// Inside the TVmaze runtime band: the same single-episode and double-episode bands the strict pass cuts files into.
+function inRuntimeBand(seconds, runtimeMin) {
+  if (!(seconds > 0) || !(runtimeMin > 0)) return false;
+  const m = seconds / 60;
+  return (m >= runtimeMin * 0.7 && m <= runtimeMin * 1.35) || (m >= runtimeMin * 1.7 && m <= runtimeMin * 2.5);
+}
+// The small number in a file name once the show name, S/E, years and quality tags are taken out ("Parker's Puzzle (7)" gives 7).
+function episodeNumberOf(name, cores) {
+  const t = stripShow(name, cores).replace(/\bs\d{1,2}\s?e\d{1,3}\b|\b\d{1,2}x\d{1,3}\b|\b(?:19|20)\d{2}\b/g, ' ').replace(QUALITY_RE, ' ');
+  const m = /\b(\d{1,3})\b/.exec(t);
+  return m ? +m[1] : null;
+}
+const hasSeasonEpisode = (f) => !!(f.ep && f.ep.season != null && f.ep.episode != null);
+// The files the fallback may list for a show TVmaze knows: items whose TITLE names the show, files the strict pass placed or
+// found no match for, inside the runtime band, and with positive episode evidence (S/E, an airdate, or one of 5+ numbered files
+// in the same item). Files the strict pass placed need no further evidence. ctx.whyNot(file, item) gives the reason a skipped-for-length file would have been turned away.
+function fallbackCand(cand, tags, ctx) {
+  const { tv, cores } = ctx;
+  const tagOf = (f, it) => { const t = tags.get(f); return t === 'wrong-length' && ctx.whyNot ? ctx.whyNot(f, it) : t; };
+  const items = [];
+  for (const it of cand.items) {
+    if (!ctx.namesShow(it.title || '')) continue; // an identifier or a description is free text; only the title counts
+    if (isExtras(it.title, cores) || isExtras(it.id, cores)) continue;
+    let files = it.files.filter((f) => { const t = tagOf(f, it); return (t === 'no-match' || t === 'placed') && !isExtras(f.name, cores) && (!tv.runtime || inRuntimeBand(f.seconds, tv.runtime)); });
+    const run = new Set(files.map((f) => episodeNumberOf(f.name, cores)).filter((n) => n != null));
+    files = files.filter((f) => tags.get(f) === 'placed' || hasSeasonEpisode(f) || fileDate(f.name) || (run.size >= 5 && episodeNumberOf(f.name, cores) != null));
+    if (files.length) items.push({ ...it, files });
+  }
+  return { ...cand, items };
+}
+
+// Read one show's inputs, decide its grid (gridFor), and write the grid only when it is the one that ships.
 function matchShow(entry) {
   const show = entry.name;
   const cf = path.join(CAND_DIR, slug(show) + '.json');
   if (!fs.existsSync(cf)) return null;
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
-  const ov = readOverrides()[slug(show)] || {};
+  const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, firstAdded });
+  if (r.noTvmaze) { try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return r; }
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+  writeRetry(path.join(OUT_DIR, r.slug + '.json'), JSON.stringify(r, null, 2));
+  return r;
+}
+
+// The decision for one show, with no disk access of its own: its grid, or { noTvmaze: true } when there is nothing to list.
+// ctx: ov (this show's overrides), readDead, firstAdded, and tags (a Map the caller may pass in to see why each file was placed or turned away).
+function gridFor(entry, cand, tv, ctx = {}) {
+  const show = entry.name;
+  const ov = ctx.ov || {};
+  const tags = ctx.tags || new Map();
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
   const aliases = (ov.aliases || []).map(norm).filter(Boolean);
-  const tv = loadTv(show);
-  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, ((readOverrides()[slug(show)] || {}).aliases || []).map(norm).filter(Boolean)); if (sg) return sg; try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return { show, type: entry.type, network: entry.network, noTvmaze: true }; }
+  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, aliases); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
   const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
-  const DEAD = readDead();
+  const DEAD = (ctx.readDead || (() => ({})))();
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
   const byDate = new Map(tv.episodes.filter((e) => e.airdate).map((e) => [e.airdate, e]));
   const firstYear = tv.premiered ? +tv.premiered.slice(0, 4) : 0;
@@ -144,7 +212,7 @@ function matchShow(entry) {
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
       if (!tv.runtime && (f.band === 'half-hour' || f.band === 'hour' || f.band === 'short')) f.band = 'episode';
       if (tv.runtime && f.seconds && !(f.band === 'episode' || f.band === 'double')) { const m = f.seconds / 60, rt = tv.runtime; f.band = m < 4 ? 'clip' : (m >= rt * 0.7 && m <= rt * 1.35) ? 'episode' : (m >= rt * 1.7 && m <= rt * 2.5) ? 'double' : m > rt * 4 ? 'block' : 'odd'; }
-      if (!(f.band === 'episode' || f.band === 'double')) continue;
+      if (!(f.band === 'episode' || f.band === 'double')) { tags.set(f, 'wrong-length'); continue; }
       const fileNamesOther = namesOtherShow(f.name, show);
       const fp = titlePart(f.name, showWords);
       let candidates = [];
@@ -152,7 +220,7 @@ function matchShow(entry) {
       const fd = fileDate(f.name) || fileDate(item.title || '');
       let dateHit = false;
       if (fd && byDate.has(fd)) { candidates.push({ ep: byDate.get(fd), base: 0.75, why: 'airdate in filename' }); dateHit = true; }
-      else if (fd && firstYear && +fd.slice(0, 4) < firstYear) { dateRejected++; continue; }
+      else if (fd && firstYear && +fd.slice(0, 4) < firstYear) { dateRejected++; tags.set(f, 'before-premiere'); continue; }
       // 1. S/E in the filename
       if (f.ep && f.ep.season != null && byKey.has(`${f.ep.season}x${f.ep.episode}`)) {
         candidates.push({ ep: byKey.get(`${f.ep.season}x${f.ep.episode}`), base: 0.6, why: 'S/E in filename' });
@@ -171,18 +239,25 @@ function matchShow(entry) {
         if (existing) { existing.base += bestSim >= 0.8 ? 0.3 : 0.15; existing.why += ' + title match'; }
         else candidates.push({ ep: best, base: bestSim >= 0.8 ? 0.5 : 0.3, why: `title ~ "${best.name}" (${bestSim.toFixed(2)})` });
       }
-      if (!candidates.length) { if (f.band === 'episode' && !fileNamesOther) unmatched.push(f); continue; }
+      // Why a file that is not placed was turned away. The scores below stay as they were; the tag only decides what the fallback may reuse.
+      const pen = { other: false, notNamed: false }; let placedAny = false;
+      const tagWhy = () => ({ other: pen.other, react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: pen.notNamed });
+      if (!candidates.length) {
+        if (f.band === 'episode' && !fileNamesOther) unmatched.push(f);
+        pen.other = fileNamesOther || (itemNamesOther && !namesShow(f.name)); pen.notNamed = !namesShow(f.name) && !itemTitled;
+        tags.set(f, rejectionTag(tagWhy())); continue;
+      }
       for (const c of candidates) {
         let conf = c.base;
         if (f.nameHit) conf += 0.15; else if (itemNamesMe) conf += 0.1;
         conf += f.band === 'episode' ? 0.15 : 0.05;
-        if (!namesShow(f.name) && !itemTitled) conf -= 0.5; // only the description mentioned us: a spin-off, a same-cast show, a dump
+        if (!namesShow(f.name) && !itemTitled) { conf -= 0.5; pen.notNamed = true; } // only the description mentioned us: a spin-off, a same-cast show, a dump
         // Reaction and review channels upload "S01E01 - Title - Group Reaction": the right name, the wrong video (B caught Sunny and FMA, 2026-10-14).
         if (REACT.test(f.name) || REACT.test(item.title || '')) conf -= 0.7;
         // An episode title that happens to be another show's name ("Blind Date", "Succession") is not a foreign file when the file also names our show.
         const fileOther = fileNamesOther && !(namesShow(f.name) && otherShowCores(f.name, show).every((core) => norm(c.ep.name).includes(core)));
-        if (fileOther) conf -= 0.6; else if (itemNamesOther && !namesShow(f.name)) conf -= 0.4; // "Star Trek" in the file is not "Star Trek: Enterprise"
-        else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) conf -= 0.45; // foreign title: words that are neither the show nor an episode
+        if (fileOther) { conf -= 0.6; pen.other = true; } else if (itemNamesOther && !namesShow(f.name)) { conf -= 0.4; pen.other = true; } // "Star Trek" in the file is not "Star Trek: Enterprise"
+        else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) { conf -= 0.45; pen.notNamed = true; } // foreign title: words that are neither the show nor an episode
         const foreign = !!(langRisk(f.name) || langRisk(item.title));
         if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
         if (!f.playable) conf -= 0.1;
@@ -190,8 +265,10 @@ function matchShow(entry) {
         if (process.env.MATCH_DEBUG) console.log(`  [debug] ${f.name.slice(0, 60)} -> ${c.ep.season}x${c.ep.number} conf ${conf.toFixed(2)} (${c.why}; band ${f.band}; names ${namesShow(f.name)}/${itemTitled}; other ${fileNamesOther}/${itemNamesOther})`);
         if (conf < REVIEW && !(ov.acceptFiles || []).includes(item.id + '|' + f.name)) continue; // an accepted file is kept whatever the judges say
         const risk = codecRisk(f.name, f.format, f.playable);
+        placedAny = true;
         push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
       }
+      tags.set(f, placedAny ? 'placed' : rejectionTag(tagWhy()));
     }
     // Sequence fallback: a DVD/season rip whose files carry no names ("Disc 1 10", "VTS_03_1").
     // If the ITEM names the show, holds 5+ unplaced episode-length files and no other show, offer
@@ -234,26 +311,23 @@ function matchShow(entry) {
   }
   // When the TVmaze list and the uploads do not speak the same language (web series on DVD, toon collections),
   // self-listing places far more files and says so. Not when the files were turned away for being too old: those belong elsewhere.
+  // It may use only files the strict pass could not place for lack of a match (see fallbackCand), and nothing is written here:
+  // the grid reaches disk only if it is the one returned.
   const placed = live + review;
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
   if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
-    // Extras, bonus discs and promo reels are not episodes; nor are clips a fraction of the show's runtime when the runtime is known.
-    const EXTRAS = /\b(extras?|bonus|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|promos?|trailers?|interviews?|outtakes?|making of|commentary)\b/i;
-    const minSec = tv.runtime >= 15 ? tv.runtime * 60 * 0.4 : 0;
-    const cand2 = { ...cand, items: cand.items.filter((it) => !EXTRAS.test(it.title || '') && !EXTRAS.test(it.id || '')).map((it) => ({ ...it, files: it.files.filter((f) => { if (f.seconds && f.seconds < minSec) return false; if (EXTRAS.test(f.name || '')) return false; const d = fileDate(f.name) || fileDate(it.title || ''); return !(d && firstYear && +d.slice(0, 4) < firstYear); }) })) };
-    const sg = selfGrid(entry, cand2, aliases);
+    const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
+    const sg = selfGrid(entry, fallbackCand(cand, tags, { tv, namesShow, cores: [core, ...aliases], whyNot }), aliases);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
-    if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; writeRetry(path.join(OUT_DIR, sg.slug + '.json'), JSON.stringify(sg, null, 2)); return sg; }
+    if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; return sg; }
   }
   const total = tv.episodes.length;
   const out = {
-    show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), addedAt: firstAdded(slug(show), live + review > 0),
+    show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), addedAt: (ctx.firstAdded || (() => undefined))(slug(show), live + review > 0),
     tvmaze: { id: tv.id, name: tv.name, runtime: tv.runtime, premiered: tv.premiered, network: tv.network },
     coverage: { total, live, review, missing: total - live - review, pct: Math.round(((live + review) / total) * 100) },
     seasons,
   };
-  fs.mkdirSync(OUT_DIR, { recursive: true });
-  writeRetry(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
   return out;
 }
 
@@ -266,18 +340,21 @@ function selfGrid(entry, cand, aliases) {
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
-  const JUNK = /\b(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)\b/i;
+  const cores = [core, ...aliases];
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
-    const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));
-    const named = names(item.title || '') || idn.includes(core.replace(/ /g, ''));
-    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !/\b(podcast|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)\b/i.test(norm(f.name)));
+    // What an upload is comes from its TITLE. An Archive identifier is free text the uploader chose ("parkers-puzzle-cooking-kids-27-and-exercise"),
+    // so it counts only when at least half of the video file names also name the show.
+    const starts = t.startsWith(core) || t.startsWith('the ' + core);
+    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !isJunkFile(f.name, cores));
+    const idHit = idn.includes(core.replace(/ /g, '')) || aliases.some((a) => idn.includes(a.replace(/ /g, '')));
+    const named = names(item.title || '') || (idHit && vids.length > 0 && vids.filter((f) => names(f.name)).length / vids.length >= 0.5);
     const distinct = new Set(vids.map((f) => variantKey(f.name))).size; // format variants count once
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
     const net = norm(entry.network || '').replace(/ /g, '');
     const mentionsNet = !!net && net.length > 2 && (norm((item.title || '') + ' ' + item.id + ' ' + (Array.isArray(item.collection) ? item.collection.join(' ') : item.collection || '')).replace(/ /g, '').includes(net));
     return { item, starts, named, vids, distinct, med, mentionsNet };
-  }).filter((x) => x.named && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !(JUNK.test(norm((x.item.title || '') + ' ' + x.item.id)) && !x.starts) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
+  }).filter((x) => x.named && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !isJunkItem((x.item.title || '') + ' ' + x.item.id, cores) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
   if (!items.length) return null;
   // when some uploads name the network (channel101-yacht-rock), the ones that do not are someone else's Yacht Rock
   const netItems = items.filter((x) => x.mentionsNet); if (netItems.length) items.splice(0, items.length, ...netItems);
@@ -305,8 +382,6 @@ function selfGrid(entry, cand, aliases) {
   const out = { show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), selfListed: true,
     tvmaze: { id: null, name: show, runtime: null, premiered: null, network: entry.network },
     coverage: { total, live: 0, review: total, missing: 0, pct: 100 }, seasons: list };
-  fs.mkdirSync(OUT_DIR, { recursive: true });
-  writeRetry(path.join(OUT_DIR, out.slug + '.json'), JSON.stringify(out, null, 2));
   return out;
 }
 
@@ -342,4 +417,6 @@ function main() {
   if (!partial) writeCoverage(rows); // a filtered run leaves the full report alone
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
-main();
+if (require.main === module) main();
+module.exports = { norm, tagText, slug, REACT, QUALITY_RE, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
+  fallbackCand, gridFor, selfGrid, matchShow, fileDate };
