@@ -27,6 +27,25 @@ const REAL_CACHE = path.join(ROOT, 'catalog', 'cache');
 const readOrNull = (f) => { try { return fs.readFileSync(f, 'utf8'); } catch (e) { return null; } };
 const realBefore = { existed: fs.existsSync(REAL_CACHE), probe: readOrNull(path.join(REAL_CACHE, 'probe.jsonl')) };
 
+// Job launches are stubbed in THIS process, before hq.js is first required here: hq.js takes `spawn` from child_process when it
+// loads, so it gets this wrapper. A call that launches a builder script (detached, scripts/<name>.js) is recorded and answered
+// with a fake child that never runs; every other call goes to the real spawn. The HQ child process started further down is a
+// separate process and is not affected. Used by the publish-flag test, which needs a real POST /api/jobs but must not run a job.
+const cp = require('node:child_process');
+const realSpawn = cp.spawn;
+const jobLaunches = [];
+cp.spawn = function (cmd, args, opts) {
+  if (Array.isArray(args) && opts && opts.detached && /[\\/]scripts[\\/][\w-]+\.js$/.test(String(args[0]))) {
+    jobLaunches.push({ cmd, script: args[0], args: args.slice(1) });
+    if (Array.isArray(opts.stdio) && Number.isInteger(opts.stdio[1])) fs.closeSync(opts.stdio[1]); // the log handle HQ opened for the child
+    const fake = new (require('node:events'))();
+    fake.pid = 999997; // not a number any process can hold (Windows process numbers are multiples of 4)
+    fake.unref = () => {};
+    return fake;
+  }
+  return realSpawn.apply(this, arguments);
+};
+
 // A harmless node process whose command line names a builder script (as the nightly's children do) but which only sleeps.
 const kids = [];
 const fixture = (script = 'C:\\fake\\scripts\\hunt.js') => { const k = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', ...(script ? [script] : [])], { stdio: 'ignore', windowsHide: true }); kids.push(k); return k; };
@@ -335,6 +354,58 @@ test('a reloaded job whose stored start time does not match the live process is 
   const again = await stopCall('/api/processes/stop', { pid: seed.stale.pid, started: shown.started });
   assert.equal(again.status, 200);
   assert.equal(again.json.stopped, true);
+});
+
+// ---- publish with a flag (the HQ buttons "Publish anyway (shrink)" and "Push with other commits") -------------------
+
+test('POST /api/jobs with name publish and args ["--allow-shrink"] (and "--allow-other-commits") passes the argument check; the launch is stubbed so nothing runs', async () => {
+  // A second HQ server, inside this process, so that the stubbed spawn above is the one it uses. It has its own page and token.
+  // (It shares the temp state folder with the child HQ, and saves its job list there; the tests after this one do not read that file.)
+  const { start } = require(HQ_FILE);
+  const p = await freePort([port]);
+  const srv = await start({ port: p });
+  try {
+    const tok = /<meta name="hq-token" content="([0-9a-f]{64})">/.exec((await call(p, 'GET', '/')).text)[1];
+    const post = (body) => call(p, 'POST', '/api/jobs', { body, headers: { 'content-type': 'application/json', origin: `http://127.0.0.1:${p}`, 'x-hq-token': tok } });
+    const before = jobLaunches.length;
+    for (const flag of ['--allow-shrink', '--allow-other-commits']) {
+      const r = await post({ name: 'publish', args: [flag] });
+      assert.equal(r.status, 200, flag);
+      assert.equal(r.json.name, 'publish');
+      assert.deepEqual(r.json.args, [flag]);
+    }
+    assert.equal((await post({ name: 'publish', args: [] })).status, 200, 'and the plain publish button still works');
+    assert.equal(jobLaunches.length - before, 3, 'HQ asked to launch exactly three jobs');
+    const [shrink, other, plain] = jobLaunches.slice(before);
+    assert.match(shrink.script, /scripts[\\/]publish\.js$/);
+    assert.deepEqual(shrink.args, ['--allow-shrink']);
+    assert.deepEqual(other.args, ['--allow-other-commits']);
+    assert.deepEqual(plain.args, []);
+    // the argument check still refuses what it should, and refused calls launch nothing
+    for (const bad of [['--allow-shrink; calc'], ['$(whoami)'], ['a|b'], ['`x`']]) {
+      const r = await post({ name: 'publish', args: bad });
+      assert.equal(r.status, 500, JSON.stringify(bad));
+      assert.match(r.json.error, /argument not allowed/);
+    }
+    assert.equal((await post({ name: 'notascript', args: ['--allow-shrink'] })).status, 500);
+    assert.equal(jobLaunches.length - before, 3, 'refused calls launched nothing');
+  } finally {
+    await new Promise((ok) => srv.server.close(ok));
+  }
+});
+
+test('the HQ page has the two publish buttons, their confirm texts, and the new help rows', async () => {
+  const page = (await call(port, 'GET', '/')).text;
+  assert.ok(page.includes(`onclick="publish()">Publish now</button>`));
+  assert.ok(page.includes(`onclick="publish('--allow-shrink')"`) && page.includes('>Publish anyway (shrink)</button>'));
+  assert.ok(page.includes(`onclick="publish('--allow-other-commits')"`) && page.includes('>Push with other commits</button>'));
+  for (const ask of [
+    'Commit the catalog and docs and push to GitHub? Cloudflare rebuilds the site in about a minute.',
+    'The catalog is more than 10% smaller than the last published one. Publish it anyway?',
+    'Other commits are waiting on this PC. Push them together with the catalog?',
+  ]) assert.ok(page.includes(ask), ask);
+  assert.ok(/async function publish\(flag\)\{[^]*?api\('\/api\/jobs',\{name:'publish',args:flag\?\[flag\]:\[\]\}\)/.test(page), 'publish() goes through api(), the helper that sends the token');
+  for (const word of ['<b>unpushed</b> yellow', '<b>unpushed</b> red', '<b>addresses</b> red', '<b>refused</b>', '<b>held</b>']) assert.ok(page.includes(word), word);
 });
 
 // ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
