@@ -55,7 +55,9 @@ async function main() {
   // 4. running jobs
   try {
     const out = run('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object -ExpandProperty CommandLine"');
-    const hunts = (out.match(/hunt(-movies)?\.js|scout\.js/g) || []).length;
+    // Count only the scripts that talk to the Archive. A wrapper such as profiles/kids/kids-hunt.js spawns
+    // scripts/hunt.js as a child: counting both made two kids queues look like four jobs (red light, nightly hunts skipped).
+    const hunts = (out.match(/(?:^|[\s"'\\/])scripts[\\/](hunt|hunt-movies|scout)\.js(?=[\s"']|$)/gm) || []).length;
     add('jobs', hunts > 2 ? 'red' : 'green', hunts + ' Archive-facing job(s) running (ceiling 2)', hunts > 2 ? 'Stop one from HQ > Jobs; three at once gets this address throttled.' : undefined);
   } catch (e) { add('jobs', 'yellow', 'could not list processes'); }
 

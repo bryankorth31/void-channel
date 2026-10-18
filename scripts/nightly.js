@@ -21,7 +21,8 @@ const log = (m) => { const line = `${new Date().toISOString()} ${m}`; console.lo
 function huntsRunning() {
   try {
     const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object -ExpandProperty CommandLine"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
-    return (out.match(/hunt(-movies)?\.js/g) || []).length;
+    // Only the scripts that talk to the Archive count; a wrapper that spawns scripts/hunt.js is not a second job.
+    return (out.match(/(?:^|[\s"'\\/])scripts[\\/](hunt|hunt-movies|scout)\.js(?=[\s"']|$)/gm) || []).length;
   } catch (_) { return 0; }
 }
 
