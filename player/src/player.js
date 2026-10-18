@@ -176,7 +176,7 @@
       r.tabIndex = 0;
       r.setAttribute('role', 'region');
       r.setAttribute('aria-label', 'Video player');
-      r.innerHTML = '<video playsinline preload="metadata"></video>'
+      r.innerHTML = '<video class="vpx-video" playsinline preload="metadata"></video>'
         + '<div class="vpx-shade" aria-hidden="true"></div>'
         + '<div class="vpx-status" role="status" aria-live="polite"><span class="vpx-sig" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="vpx-d" cx="24" cy="34" r="3.4"/><path class="a1" d="M17 27a10 10 0 0 1 14 0"/><path class="a2" d="M11.5 21.5a17.7 17.7 0 0 1 25 0"/><path class="a3" d="M6 16a25.4 25.4 0 0 1 36 0"/></svg></span><span class="vpx-status-t"></span></div>'
         + '<button type="button" class="vpx-big" data-a="toggle" aria-label="Play">' + (ICON.play || '') + '</button>'
