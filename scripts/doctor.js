@@ -15,7 +15,8 @@ const { taskNames } = require('./lib/tasks');
 const checks = [];
 const add = (id, level, msg, fix) => checks.push({ id, level, msg, fix: fix || undefined }); // level: green | yellow | red
 const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
-const gitOut = (args) => execFileSync('git', args, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'], windowsHide: true, maxBuffer: 64 * 1024 * 1024 }).toString().trim(); // no shell, so a format string needs no quoting
+const gitRaw = (args) => execFileSync('git', ['-c', 'core.quotepath=off', ...args], { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'], windowsHide: true, maxBuffer: 256 * 1024 * 1024 }).toString(); // no shell, so a format string needs no quoting
+const gitOut = (args) => gitRaw(args).trim();
 const tailLines = (p, n) => { try { return fs.readFileSync(p, 'utf8').trim().split('\n').slice(-n); } catch (e) { return []; } };
 const hours = (iso) => (Date.now() - new Date(iso).getTime()) / 36e5;
 
@@ -29,20 +30,28 @@ const GENERIC_TLD = new Set(['com', 'net', 'org', 'edu', 'gov', 'mil', 'int', 'i
 const isTld = (s) => { const t = s.toLowerCase(); return !MEDIA_END.has(t) && (/^[a-z]{2}$/.test(t) || GENERIC_TLD.has(t)); };
 function scanAddresses(dir) {
   const out = { scanned: 0, files: 0, hits: 0, where: [] };
+  const scanFile = (p) => {
+    out.scanned++;
+    let buf; try { buf = fs.readFileSync(p); } catch (e) { return; } // tracked but missing on disk: nothing to read
+    if (buf.indexOf(64) < 0) return;
+    const text = buf.toString('utf8'); let n = 0;
+    for (const m of text.matchAll(ADDR)) {
+      const run = /^[A-Za-z0-9.-]*/.exec(text.slice(m.index + m[0].indexOf('@') + 1))[0].replace(/\.+$/, '');
+      if (isTld(run.split('.').pop())) n++;
+    }
+    if (n) { out.hits += n; out.files++; if (out.where.length < 3) out.where.push(path.relative(ROOT, p).replace(/\\/g, '/')); }
+  };
+  // What counts is what git tracks (what gets published): the .json files git lists under the catalog folder. Ignored files such as
+  // catalog/cache, catalog/voidtv.db or a generated preview are not read. Without git (not a repository) every .json under the folder is read.
+  let listed = null;
+  try { listed = gitRaw(['ls-files', '-z', '--', path.relative(ROOT, dir).replace(/\\/g, '/')]).split('\0').filter((f) => /\.json$/i.test(f)); } catch (e) { /* no git here */ }
+  if (listed) { for (const f of listed) scanFile(path.join(ROOT, f)); return out; }
   const walk = (d, top) => {
     let ents; try { ents = fs.readdirSync(d, { withFileTypes: true }); } catch (e) { return; }
     for (const e of ents) {
       const p = path.join(d, e.name);
       if (e.isDirectory()) { if (!(top && e.name === 'cache')) walk(p, false); continue; }
-      out.scanned++;
-      let buf; try { buf = fs.readFileSync(p); } catch (e2) { continue; }
-      if (buf.indexOf(64) < 0) continue;
-      const text = buf.toString('utf8'); let n = 0;
-      for (const m of text.matchAll(ADDR)) {
-        const run = /^[A-Za-z0-9.-]*/.exec(text.slice(m.index + m[0].indexOf('@') + 1))[0].replace(/\.+$/, '');
-        if (isTld(run.split('.').pop())) n++;
-      }
-      if (n) { out.hits += n; out.files++; if (out.where.length < 3) out.where.push(path.relative(ROOT, p).replace(/\\/g, '/')); }
+      if (/\.json$/i.test(e.name)) scanFile(p);
     }
   };
   walk(dir, true);
@@ -75,9 +84,14 @@ async function main() {
   // 1b. unpushed: commits on master that origin/master does not have yet. Local refs only, no fetch (no network in the doctor).
   //     Yellow while a commit that publish did not make waits (publish will not push it); red once a "Catalog:" commit has waited over 30 minutes.
   try {
-    const rows = gitOut(['log', '--format=%ct%x09%s', 'origin/master..master']).split('\n').map((l) => l.trim()).filter(Boolean)
-      .map((l) => { const i = l.indexOf('\t'); return { at: +l.slice(0, i) * 1000, subject: l.slice(i + 1) }; });
-    const own = rows.filter((r) => /^Catalog: /.test(r.subject)), other = rows.filter((r) => !/^Catalog: /.test(r.subject));
+    // Same rule as publish.js: a commit is publish's own only when its subject starts with "Catalog:" and it touches nothing outside the catalog, docs and list paths.
+    const ownPaths = [PROFILE.catalogDir, PROFILE.docsDir, PROFILE.listFile].map((p) => path.relative(ROOT, p).replace(/\\/g, '/'));
+    const inOwn = (f) => ownPaths.some((p) => f === p || f.startsWith(p + '/'));
+    const rows = gitRaw(['log', '--format=%x01%ct%x09%s', '--name-only', 'origin/master..master']).split('\x01').filter((b) => b.trim()).map((b) => {
+      const [head, ...files] = b.split('\n'); const i = head.indexOf('\t');
+      return { at: +head.slice(0, i) * 1000, subject: head.slice(i + 1).trim(), own: /^Catalog: /.test(head.slice(i + 1)) && files.map((f) => f.trim()).filter(Boolean).every(inOwn) };
+    });
+    const own = rows.filter((r) => r.own), other = rows.filter((r) => !r.own);
     const waited = own.length ? Math.round((Date.now() - Math.min(...own.map((r) => r.at))) / 60000) : 0;
     const names = other.slice(0, 4).map((r) => r.subject.slice(0, 60)).join(' | ') + (other.length > 4 ? ` | and ${other.length - 4} more` : '');
     if (own.length && waited > 30) add('unpushed', 'red', `${own.length} Catalog commit${own.length === 1 ? '' : 's'} waiting ${waited} min to be pushed` + (other.length ? `, with ${other.length} other commit${other.length === 1 ? '' : 's'}` : ''), 'The push failed or is being held. publish.log has the reason; node scripts/publish.js tries the push again (it pushes waiting commits first).');

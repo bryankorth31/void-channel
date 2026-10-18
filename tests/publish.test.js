@@ -434,6 +434,11 @@ test('the doctor: publish light follows the last outcome line, unpushed turns ye
   d = doctor();
   assert.strictEqual(d.unpushed.level, 'yellow');
   assert.match(d.unpushed.msg, /Work from another chat/);
+  // a commit titled Catalog: that also changes a script is not publish's own: yellow however long it waits
+  write(c.work, 'scripts/slipped-in.js', '// x\n');
+  git(c.work, 'add', 'scripts/slipped-in.js');
+  execFileSync('git', ['commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (touches a script)'], { cwd: c.work, env: { ...process.env, GIT_COMMITTER_DATE: ago(200), GIT_AUTHOR_DATE: ago(200) } });
+  assert.strictEqual(doctor().unpushed.level, 'yellow');
   // a Catalog commit that has waited over 30 minutes: red
   write(c.work, 'catalog/shows/test-show-0.json', JSON.stringify(grid(0, 6), null, 2) + '\n');
   git(c.work, 'add', 'catalog');
@@ -443,6 +448,10 @@ test('the doctor: publish light follows the last outcome line, unpushed turns ye
   assert.match(d.unpushed.msg, /1 Catalog commit waiting/);
   // addresses: an address in the text is counted and the file named; Archive file names that only look like one are not
   putShow(c.work, 3, 5, (g) => { g.seasons[0].episodes[0].file.file = 'Clip@720p.mp4'; g.seasons[0].episodes[0].file.name = 'Clip@Sessions.at.West54th.PBS.tv-vhs.XviD'; });
+  assert.strictEqual(doctor().addresses.level, 'green');
+  // a file git ignores is never published, so it is not scanned (catalog/voidtv.db and generated previews are like this)
+  write(c.work, '.gitignore', 'catalog/cache/\ncatalog/ignored-preview.json\n');
+  write(c.work, 'catalog/ignored-preview.json', JSON.stringify({ note: 'Contact writer@example.org' }) + '\n');
   assert.strictEqual(doctor().addresses.level, 'green');
   putShow(c.work, 4, 5, (g) => { g.seasons[0].episodes[0].name = 'Contact writer@example.org'; });
   d = doctor();
