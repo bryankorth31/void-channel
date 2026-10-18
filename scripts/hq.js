@@ -221,15 +221,25 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.png': 'image/png', '.jpg':
 const send = (res, code, body, type) => { res.writeHead(code, { 'content-type': type || 'application/json; charset=utf-8', 'cache-control': 'no-store' }); res.end(type ? body : JSON.stringify(body)); };
 const body = (req) => new Promise((ok, no) => { let d = ''; req.on('data', (c) => { d += c; if (d.length > 2e6) no(new Error('too big')); }); req.on('end', () => { try { ok(d ? JSON.parse(d) : {}); } catch (e) { no(e); } }); });
 
+// Who may talk to HQ. Only this server's own address on the port it is really listening on: a page served from
+// another localhost port, or from another site, is not "local" for this purpose (CF-004).
+const selfAddrs = (port) => ['127.0.0.1', 'localhost', '[::1]'].map((h) => h + ':' + port);
+const hostAllowed = (host, port) => !!port && selfAddrs(port).includes(String(host || '').toLowerCase());
+// No Origin header at all (curl, node, a plain same-origin GET) is fine here. One that is present must be this
+// server's own page. "null" (sandboxed frames, local files) is refused: HQ's page is always served over http by HQ itself.
+const originAllowed = (origin, port) => origin === undefined || (!!port && selfAddrs(port).some((a) => 'http://' + a === String(origin).toLowerCase()));
+// The media type is the part before any ";". "text/plain;x=application/json" is text/plain, not JSON.
+const mediaType = (h) => String(h || '').split(';')[0].trim().toLowerCase();
+
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://x');
   const p = url.pathname;
-  // Local only: a web page in the owner's browser must not be able to drive HQ (publish, taskkill, overrides).
-  const host = req.headers.host || '', origin = req.headers.origin || '';
-  const local = (h) => /^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$/.test(h);
-  if (!local(host)) return send(res, 403, { error: 'HQ answers localhost only' });
-  if (origin && !local(origin.replace(/^https?:\/\//, ''))) return send(res, 403, { error: 'cross-origin request refused' });
-  if (req.method === 'POST' && p !== '/api/probe' && !/application\/json/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'JSON only' });
+  // Local only, and only HQ's own page: a web page in the owner's browser, or one served from another local port,
+  // must not be able to drive HQ (publish, taskkill, overrides). Order matters: host, origin, media type.
+  const port = server.address() && server.address().port;
+  if (!hostAllowed(req.headers.host, port)) return send(res, 403, { error: 'HQ answers its own address only' });
+  if (!originAllowed(req.headers.origin, port)) return send(res, 403, { error: 'cross-origin request refused' });
+  if (req.method !== 'GET' && req.method !== 'HEAD' && mediaType(req.headers['content-type']) !== 'application/json') return send(res, 415, { error: 'JSON only' });
   const SLUG_OK = /^[a-z0-9][a-z0-9-]*$/;
   try {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html')), MIME['.html']);
@@ -260,9 +270,7 @@ const server = http.createServer(async (req, res) => {
     if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (j) stopJob(j.pid); return send(res, 200, { ok: true }); }
     if (p === '/api/processes/stop' && req.method === 'POST') { const b = await body(req); stopJob(b.pid); return send(res, 200, { ok: true }); }
     if (p === '/api/log') { const name = (url.searchParams.get('name') || '').replace(/[^\w.-]/g, ''); return send(res, 200, { log: tail(path.join(CACHE, name), +url.searchParams.get('tail') || 100) }); }
-    if (p === '/api/probe') { // playback probes from a test page on this PC (cross-origin from the local site server)
-      res.setHeader('access-control-allow-origin', '*'); res.setHeader('access-control-allow-headers', 'content-type');
-      if (req.method === 'OPTIONS') { res.writeHead(204); return res.end(); }
+    if (p === '/api/probe') { // playback probes (the player work, 14 Oct). Same rules as every other call: no wildcard CORS, no test page on another port.
       if (req.method === 'POST') { const b = await body(req); fs.mkdirSync(CACHE, { recursive: true }); fs.appendFileSync(path.join(CACHE, 'probe.jsonl'), JSON.stringify({ at: new Date().toISOString(), ...b }) + '\n'); return send(res, 200, { ok: true }); }
       return send(res, 200, { lines: tail(path.join(CACHE, 'probe.jsonl'), 50).split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean) });
     }
@@ -304,5 +312,5 @@ function start(opts = {}) {
     });
   });
 }
-module.exports = { start, PORT, ROOT };
+module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType } };
 if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });
