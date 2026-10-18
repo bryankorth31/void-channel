@@ -289,7 +289,10 @@ function homeOrder() {
 
 // ---- http -------------------------------------------------------------------------------------
 const MIME = { '.html': 'text/html; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff2': 'font/woff2', '.js': 'text/javascript', '.css': 'text/css' };
-const send = (res, code, body, type) => { res.writeHead(code, { 'content-type': type || 'application/json; charset=utf-8', 'cache-control': 'no-store' }); res.end(type ? body : JSON.stringify(body)); };
+// HQ's own page must not be framed by another site (an invisible frame over a "Publish" click). The page frames the motion editor,
+// not the other way round, so this does not affect it. Both the old header and its CSP form, for every browser.
+const NO_FRAMING = { 'x-frame-options': 'SAMEORIGIN', 'content-security-policy': "frame-ancestors 'self'" };
+const send = (res, code, body, type) => { res.writeHead(code, { 'content-type': type || 'application/json; charset=utf-8', 'cache-control': 'no-store', ...(/^text\/html/.test(type || '') ? NO_FRAMING : {}) }); res.end(type ? body : JSON.stringify(body)); };
 const body = (req) => new Promise((ok, no) => { let d = ''; req.on('data', (c) => { d += c; if (d.length > 2e6) no(new Error('too big')); }); req.on('end', () => { try { ok(d ? JSON.parse(d) : {}); } catch (e) { no(e); } }); });
 
 // Who may talk to HQ. Only this server's own address on the port it is really listening on: a page served from

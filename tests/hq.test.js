@@ -72,7 +72,7 @@ function call(port, method, urlPath, { headers = {}, body } = {}) {
     const req = http.request({ host: '127.0.0.1', port, path: urlPath, method, headers: { ...(data ? { 'content-length': Buffer.byteLength(data) } : {}), ...sent }, timeout: 15000 }, (res) => {
       let text = '';
       res.on('data', (c) => { text += c; });
-      res.on('end', () => { let json = null; try { json = JSON.parse(text); } catch (e) { /* not json */ } ok({ status: res.statusCode, text, json }); });
+      res.on('end', () => { let json = null; try { json = JSON.parse(text); } catch (e) { /* not json */ } ok({ status: res.statusCode, text, json, headers: res.headers }); });
     });
     req.on('error', no);
     req.on('timeout', () => req.destroy(new Error('timed out')));
@@ -134,6 +134,17 @@ test('the page HQ serves carries the token, the placeholder is gone, and the pag
   assert.ok(page.text.includes(`content="${token}"`));
   assert.ok(page.text.includes("'x-hq-token':HQ_TOKEN"), 'api() sends X-HQ-Token on every POST');
   assert.ok(!hqOut.includes(token), 'the token is not in the server log');
+});
+
+test('HQ\'s page cannot be framed by another site: X-Frame-Options SAMEORIGIN and frame-ancestors \'self\' on the HTML responses', async () => {
+  for (const p of ['/', '/index.html']) {
+    const r = await call(port, 'GET', p);
+    assert.equal(r.status, 200, p);
+    assert.equal(r.headers['x-frame-options'], 'SAMEORIGIN', p);
+    assert.equal(r.headers['content-security-policy'], "frame-ancestors 'self'", p);
+  }
+  // the header belongs to the page; it is not needed on JSON answers
+  assert.equal((await call(port, 'GET', '/api/jobs')).headers['x-frame-options'], undefined);
 });
 
 test('the token is new each start: it is 64 hex characters and not a fixed string', () => {
