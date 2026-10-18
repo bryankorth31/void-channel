@@ -337,7 +337,7 @@ test('the doctor: publish light follows the last outcome line, unpushed turns ye
 
 test('the hunters mask address text in the free-text fields they copy, and none writes the uploader address', () => {
   const dir = path.join(__dirname, '..', 'scripts');
-  const wrapped = { 'hunt.js': ['description: noEmail(', 'title: noEmail('], 'hunt-movies.js': ['const itemTitle = noEmail(', 'title: noEmail(m.title)', 'overview: noEmail(m.overview)'], 'scout.js': ['title: noEmail(L.title)', 'sampleTitle: noEmail(best.title)'] };
+  const wrapped = { 'hunt.js': ['description: noEmail(', 'title: noEmail('], 'hunt-movies.js': ['const itemTitle = noEmail(', 'title: noEmail(m.title)', 'overview: noEmail(m.overview)'], 'scout.js': ['title: noEmail(L.title)', 'sampleTitle: noEmail(best.title)'], 'tvmovies.js': ['title: noEmail(m.title)', 'original: noEmail(', 'overview: noEmail(m.overview', 'noEmail(c.name)'] };
   for (const [file, needles] of Object.entries(wrapped)) {
     const src = fs.readFileSync(path.join(dir, file), 'utf8');
     const line = src.split(/\r?\n/).find((l) => l.startsWith('const noEmail = '));
