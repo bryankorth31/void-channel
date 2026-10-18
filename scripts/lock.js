@@ -15,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
 const LOCKFILE = path.join(ROOT, 'docs', 'BASELINE.md5');
@@ -26,9 +27,21 @@ const EXCLUDE_DIRS = new Set([
 ]);
 // Directories skipped by EXACT relative path (so we don't nuke same-named dirs elsewhere,
 // e.g. mobile/src/data is source; only backend/data is runtime state).
+// catalog/ is data the builder writes (35,000+ grids and candidates), not source; the lock is for source.
 const EXCLUDE_PATHS = new Set([
-  'backend/data',
+  'backend/data', 'catalog', 'audit',
 ]);
+// Per-profile data and site output (profiles/<name>/catalog, site, site-preview, site-assets) are data too.
+const EXCLUDE_PATH_RE = /^profiles\/[^/]+\/(catalog|site|site-preview|site-assets)$/;
+
+// Everything git ignores (node_modules, caches, renders, generated motion pieces, the local excludes in
+// .git/info/exclude) stays out of the lock as well, so the lock and the repo agree on what "source" means.
+function gitIgnored() {
+  try {
+    const out = execSync('git ls-files --others --ignored --exclude-standard --directory -z', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    return new Set(out.split('\0').filter(Boolean).map((p) => p.replace(/\\/g, '/')));
+  } catch (e) { return new Set(); }
+}
 // Exact filenames that are runtime state or the lock itself — never source.
 const EXCLUDE_FILES = new Set([
   '.DS_Store', 'hearts.json', 'codec-cache.json', 'wiki-cache.json',
@@ -40,16 +53,19 @@ const isExcludedFile = (name) =>
   EXCLUDE_FILES.has(name) || name.endsWith('.log') || name === '.env' || name.endsWith('.env');
 
 // Walk the tree, returning POSIX-style relative paths, sorted.
-function enumerate(dir, rel, out) {
+function enumerate(dir, rel, out, ignored) {
+  if (!ignored) ignored = gitIgnored();
   for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
     if (ent.isDirectory()) {
       if (EXCLUDE_DIRS.has(ent.name)) continue;
       const childRel = rel ? `${rel}/${ent.name}` : ent.name;
-      if (EXCLUDE_PATHS.has(childRel)) continue;
-      enumerate(path.join(dir, ent.name), childRel, out);
+      if (EXCLUDE_PATHS.has(childRel) || EXCLUDE_PATH_RE.test(childRel) || ignored.has(childRel + '/')) continue;
+      enumerate(path.join(dir, ent.name), childRel, out, ignored);
     } else if (ent.isFile()) {
       if (isExcludedFile(ent.name)) continue;
-      out.push(rel ? `${rel}/${ent.name}` : ent.name);
+      const fileRel = rel ? `${rel}/${ent.name}` : ent.name;
+      if (ignored.has(fileRel)) continue;
+      out.push(fileRel);
     }
   }
   return out;
