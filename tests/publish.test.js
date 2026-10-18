@@ -334,3 +334,19 @@ test('the doctor: publish light follows the last outcome line, unpushed turns ye
   assert.strictEqual(d.addresses.level, 'red');
   assert.match(d.addresses.msg, /^1 address-shaped string in 1 catalog file, e\.g\. catalog\/shows\/test-show-4\.json/);
 });
+
+test('the hunters mask address text in the free-text fields they copy, and none writes the uploader address', () => {
+  const dir = path.join(__dirname, '..', 'scripts');
+  const wrapped = { 'hunt.js': ['description: noEmail(', 'title: noEmail('], 'hunt-movies.js': ['const itemTitle = noEmail(', 'title: noEmail(m.title)', 'overview: noEmail(m.overview)'], 'scout.js': ['title: noEmail(L.title)', 'sampleTitle: noEmail(best.title)'] };
+  for (const [file, needles] of Object.entries(wrapped)) {
+    const src = fs.readFileSync(path.join(dir, file), 'utf8');
+    const line = src.split(/\r?\n/).find((l) => l.startsWith('const noEmail = '));
+    assert.ok(line, file + ' defines noEmail');
+    const noEmail = new Function(line + '; return noEmail;')();                 // the helper exactly as the script has it
+    assert.strictEqual(noEmail('Write to a.b+c@mail.example.org or x@y.co.uk today'), 'Write to [email] or [email] today');
+    assert.strictEqual(noEmail('no address here'), 'no address here');
+    assert.strictEqual(noEmail(undefined), undefined);
+    for (const n of needles) assert.ok(src.includes(n), `${file} should contain ${n}`);
+    assert.ok(!/uploader: (m|o|meta)\.uploader/.test(src), file + ' must not write the uploader address');
+  }
+});

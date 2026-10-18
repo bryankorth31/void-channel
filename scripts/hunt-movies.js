@@ -13,6 +13,9 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+// Free text copied from the Archive (descriptions, titles) or from TMDB (overviews) can carry an e-mail address. It is masked here, before
+// anything is written, so a hunt can never put an address into committed data (and publish never has to refuse for that reason).
+const noEmail = (s) => (typeof s === 'string' ? s.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '[email]') : s);
 const LIST = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'tvmovies-list.json'), 'utf8')).items;
 const OUT_DIR = path.join(PROFILE.catalogDir, 'movies');
 const OUT_MD = path.join(PROFILE.docsDir, 'MOVIES.md');
@@ -123,7 +126,7 @@ async function openItem(id, m) {
   const j = await getJson('https://archive.org/metadata/' + encodeURIComponent(id), 'meta-' + id.replace(/[^a-z0-9._-]/gi, '_'));
   const meta = j.metadata || {};
   // The Archive returns a list for the title when an item has several; the catalog and the SQLite mirror want one string.
-  const itemTitle = Array.isArray(meta.title) ? meta.title.join(' / ') : (meta.title == null ? '' : String(meta.title));
+  const itemTitle = noEmail(Array.isArray(meta.title) ? meta.title.join(' / ') : (meta.title == null ? '' : String(meta.title)));
   const files = (j.files || []).filter((f) => VIDEO_FORMATS.has(f.format) && f.length);
   const byStem = new Map();
   for (const f of files) { const stem = f.name.replace(/\.ia\.mp4$/i, '').replace(/\.[^.]+$/, ''); (byStem.get(stem) || byStem.set(stem, []).get(stem)).push(f); }
@@ -166,7 +169,7 @@ async function huntMovie(m) {
   picks.sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
   const best = picks[0] || null;
   const state = !best ? 'MISSING' : (best.conf >= LIVE && best.playable) ? 'LIVE' : 'REVIEW';
-  const out = { tmdbId: m.tmdbId, kind: m.kind, title: m.title, year: m.year, runtime: m.runtime, rating: m.rating, votes: m.votes, poster: m.poster, backdrop: m.backdrop, overview: m.overview, genres: m.genres,
+  const out = { tmdbId: m.tmdbId, kind: m.kind, title: noEmail(m.title), year: m.year, runtime: m.runtime, rating: m.rating, votes: m.votes, poster: m.poster, backdrop: m.backdrop, overview: noEmail(m.overview), genres: m.genres,
     huntedAt: new Date().toISOString(), archiveMentions: items.length, itemsOpened: opened, state, file: best, alternates: picks.slice(1, 4) };
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, `${slug(m.title)}-${m.year || 'x'}.json`), JSON.stringify(out, null, 2));
