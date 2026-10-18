@@ -99,12 +99,30 @@ function loadTv(show) {
 }
 
 // Does this text name a DIFFERENT show from our list? (right length, wrong show guard)
-const OTHER_SHOWS = LIST.shows.map((s) => ({ name: s.name, core: norm(s.name).replace(/^the /, '') })).filter((s) => s.core.split(' ').length >= 2 || s.core.length >= 6);
-function otherShowCores(text, show) { const t = norm(text), me = norm(show).replace(/^the /, ''); return OTHER_SHOWS.filter((o) => o.core !== me && !me.includes(o.core) && !o.core.includes(me) && t.includes(o.core)).map((o) => o.core); }
-function namesOtherShow(text, show) {
-  const t = norm(text), me = norm(show).replace(/^the /, '');
-  return OTHER_SHOWS.some((o) => o.core !== me && !me.includes(o.core) && !o.core.includes(me) && t.includes(o.core));
+// Only list titles of two or more words and six or more letters count. A one-word title ("Season", "Family", "Collection",
+// "Extras") is also an ordinary word in file names, and a show called "The Season" had turned every "Season 2" into a wrong show.
+// Matching is by whole words on normalised text, after "Season N", SxxEyy and quality tags are taken out of the text, and a
+// title that holds one of those words could never match, so it is not listed.
+const NOISE_RE = /\bseasons? \d{1,2}\b|\bs\d{1,2} ?e\d{1,3}\b|\b\d{1,2}x\d{1,3}\b/g;
+const forOtherShow = (text) => ' ' + norm(text).replace(NOISE_RE, ' ').replace(QUALITY_RE, ' ').replace(/\s+/g, ' ').trim() + ' ';
+function makeOtherShows(shows) {
+  const seen = new Set();
+  return shows.map((s) => ({ name: s.name, core: norm(s.name).replace(/^the /, '') }))
+    .filter((o) => o.core.split(' ').length >= 2 && o.core.replace(/[^a-z]/g, '').length >= 6 && forOtherShow(o.core) === ' ' + o.core + ' ' && !seen.has(o.core) && seen.add(o.core))
+    .map((o) => ({ ...o, needle: ' ' + o.core + ' ' }));
 }
+const OTHER_SHOWS = makeOtherShows(LIST.shows);
+// One is the other, or contains it as whole words ("star trek" and "star trek enterprise" are one family, not a wrong show).
+const sameWords = (a, b) => a === b || (' ' + a + ' ').includes(' ' + b + ' ') || (' ' + b + ' ').includes(' ' + a + ' ');
+// The titles of other shows (not this one, not its aliases, not its family) that the text names. `aliases` are normalised;
+// `list` is the detector's list of titles (makeOtherShows), the whole show list unless a test or self-test passes its own.
+function otherShowCores(text, show, aliases = [], list = OTHER_SHOWS) {
+  const t = forOtherShow(text), mine = [norm(show).replace(/^the /, ''), ...aliases];
+  return list.filter((o) => t.includes(o.needle) && !mine.some((m) => sameWords(o.core, m))).map((o) => o.core);
+}
+function namesOtherShow(text, show, aliases = [], list = OTHER_SHOWS) { return otherShowCores(text, show, aliases, list).length > 0; }
+// Other names a show goes by, for the matcher's own tests. catalog/overrides.json aliases (set from HQ) add to these.
+const BUILTIN_ALIASES = { 'forensic-files': ['Medical Detectives'] }; // Forensic Files began as Medical Detectives; both are on the list
 
 const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 // Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
@@ -187,7 +205,7 @@ function gridFor(entry, cand, tv, ctx = {}) {
   const ov = ctx.ov || {};
   const tags = ctx.tags || new Map();
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
-  const aliases = (ov.aliases || []).map(norm).filter(Boolean);
+  const aliases = [...(ov.aliases || []), ...(BUILTIN_ALIASES[slug(show)] || [])].map(norm).filter(Boolean);
   if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, aliases); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
@@ -205,7 +223,7 @@ function gridFor(entry, cand, tv, ctx = {}) {
   for (const item of cand.items) {
     const itemText = `${item.title || ''} ${item.description || ''} ${item.id}`;
     const itemNamesMe = norm(itemText).includes(core) || norm(item.id).includes(core.replace(/ /g, ''));
-    const itemNamesOther = namesOtherShow(item.title || '', show);
+    const itemNamesOther = namesOtherShow(item.title || '', show, aliases);
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
     const unmatched = []; // episode-band files this item could not place by number or title
     for (const f of item.files) {
@@ -213,7 +231,7 @@ function gridFor(entry, cand, tv, ctx = {}) {
       if (!tv.runtime && (f.band === 'half-hour' || f.band === 'hour' || f.band === 'short')) f.band = 'episode';
       if (tv.runtime && f.seconds && !(f.band === 'episode' || f.band === 'double')) { const m = f.seconds / 60, rt = tv.runtime; f.band = m < 4 ? 'clip' : (m >= rt * 0.7 && m <= rt * 1.35) ? 'episode' : (m >= rt * 1.7 && m <= rt * 2.5) ? 'double' : m > rt * 4 ? 'block' : 'odd'; }
       if (!(f.band === 'episode' || f.band === 'double')) { tags.set(f, 'wrong-length'); continue; }
-      const fileNamesOther = namesOtherShow(f.name, show);
+      const fileNamesOther = namesOtherShow(f.name, show, aliases);
       const fp = titlePart(f.name, showWords);
       let candidates = [];
       // 0. A date in the name: an exact airdate places the file; a date from before the show existed means it is another show's file (Late Night with Conan O'Brien under Conan).
@@ -255,7 +273,7 @@ function gridFor(entry, cand, tv, ctx = {}) {
         // Reaction and review channels upload "S01E01 - Title - Group Reaction": the right name, the wrong video (B caught Sunny and FMA, 2026-10-14).
         if (REACT.test(f.name) || REACT.test(item.title || '')) conf -= 0.7;
         // An episode title that happens to be another show's name ("Blind Date", "Succession") is not a foreign file when the file also names our show.
-        const fileOther = fileNamesOther && !(namesShow(f.name) && otherShowCores(f.name, show).every((core) => norm(c.ep.name).includes(core)));
+        const fileOther = fileNamesOther && !(namesShow(f.name) && otherShowCores(f.name, show, aliases).every((core) => forOtherShow(c.ep.name).includes(' ' + core + ' ')));
         if (fileOther) { conf -= 0.6; pen.other = true; } else if (itemNamesOther && !namesShow(f.name)) { conf -= 0.4; pen.other = true; } // "Star Trek" in the file is not "Star Trek: Enterprise"
         else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) { conf -= 0.45; pen.notNamed = true; } // foreign title: words that are neither the show nor an episode
         const foreign = !!(langRisk(f.name) || langRisk(item.title));
@@ -418,5 +436,5 @@ function main() {
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
 if (require.main === module) main();
-module.exports = { norm, tagText, slug, REACT, QUALITY_RE, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
+module.exports = { norm, tagText, slug, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
   fallbackCand, gridFor, selfGrid, matchShow, fileDate };
