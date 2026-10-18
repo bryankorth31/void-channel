@@ -13,6 +13,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const { writeIfChanged } = require('./lib/writeIfChanged');
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const ART = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'art.json'), 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
@@ -149,7 +150,7 @@ async function main() {
     const slugs = Object.keys(p.shows);
     for (const x of slugs) for (const y of slugs) if (x !== y) { (showLinks[x] = showLinks[x] || {}); (showLinks[x][y] = showLinks[x][y] || []).push(+id); }
   }
-  fs.writeFileSync(GRAPH, JSON.stringify({ builtAt: new Date().toISOString(), people: graphPeople, showLinks }));
+  writeIfChanged(GRAPH, { builtAt: new Date().toISOString(), people: graphPeople, showLinks }, ['builtAt'], 0); // compact, and left alone when only builtAt differs
   console.log(`\n${done} shows credited this run, ${epShows} got episode credits (${skipped} without TMDB id). ${Object.keys(people).length} people seen, ${connectors.length} connect 2+ shows, ${Object.keys(showLinks).length} shows have connections. -> catalog/people/, catalog/graph.json`);
   const top = connectors.map(([id, p]) => [p.name, Object.keys(p.shows).length]).sort((a, b) => b[1] - a[1]).slice(0, 12);
   console.log('most connected: ' + top.map(([n, k]) => `${n} (${k})`).join(', '));

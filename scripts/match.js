@@ -8,11 +8,11 @@
 // Writes catalog/shows/<slug>.json (the grid the site will read) and docs/COVERAGE.md.
 // No network. Usage: node scripts/match.js [name substring]
 const fs = require('fs');
-const writeRetry = (file, text) => { for (let a = 0; ; a++) { try { fs.writeFileSync(file, text); return; } catch (e) { if (a >= 4) throw e; const until = Date.now() + 150 * (a + 1); while (Date.now() < until) {} } } };
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const { writeIfChanged } = require('./lib/writeIfChanged');
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
@@ -194,7 +194,7 @@ function matchShow(entry) {
   const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, firstAdded });
   if (r.noTvmaze) { try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return r; }
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  writeRetry(path.join(OUT_DIR, r.slug + '.json'), JSON.stringify(r, null, 2));
+  writeIfChanged(path.join(OUT_DIR, r.slug + '.json'), r); // untouched when only matchedAt differs, so a re-match of an unchanged show leaves the file and its old stamp alone
   return r;
 }
 
