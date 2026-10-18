@@ -12,7 +12,13 @@ agents, and what needs Bryan. Background for every item: `docs/BACKLOG.md`, `doc
      since 17 Oct (each has a timeline: stalls with buffer level, freezes, drifts, server switches, fixes).
    - `version.txt` on voidtv.net matches `git log -1` (the deploy is current).
    - Whether Bryan added the Cloudflare Analytics Engine binding (`VOIDTV_EVENTS`); if yes, HQ > Analytics.
-3. Ask Bryan the open decisions in one message (section 9), then start packages 1 and 2 in parallel.
+3. Ask Bryan the open decisions in one message (section 9).
+4. Freeze the audit baseline and run the machine checks (section 10, ground rules 1-2).
+5. Start packages 1 and 2 in the real tree, and package 10's phases A-D in the audit worktree; those phases edit
+   nothing. Packages 1, 2 and 5 log their findings in the shared `docs/audit/findings.json`.
+
+Realistic scope: package 10 runs over several days (see its schedule). Today's priority is 0, 1, 2 and 10's
+phases A-D; packages 3 and 4 if time allows; 6, 7, 8 and the logo-led motion pieces wait unless they block launch.
 
 ## 1. Streaming pauses and audio stutter (highest viewer impact)
 
@@ -73,6 +79,9 @@ Goal: wrong-show files never reach the site, and the library meets a standard Br
 
 ## 5. Delivery safety before opening day (audit section 4; suits parallel agents)
 
+*Now runs inside package 10:* its Cloudflare inspector covers these items, and they are on the launch criteria
+(10H). The list stays here as the known starting findings.
+
 - Gate and Functions routing from one switch, so pages stop costing Function calls once the password is off
   (today every request counts against the 100k/day free limit); rate limit on `/api/e`; file-count guard
   (14,750 of 20,000 per deploy); refuse a catalog that shrank more than ~10%; publish retries a failed push.
@@ -119,6 +128,21 @@ Editable HyperFrames sources already exist for the logo sting (`videos/voidtv-st
 the reel (`videos/voidtv-reel`, 40 s, 720p) and the TV-set loop (`videos/voidtv-set`, 13 s): derive pieces 1,
 2, 7-13 from them with the new mark and colours rather than starting over. Piece 14 (sound logo) is new.
 
+**Later on 17 Oct:**
+- **TV-and-static stings, rendered in 16:9 and 9:16 (no sound yet):** each lives in `videos/<name>/`, with its
+  renders in `renders/`:
+  - `voidtv-tvwall`, the TV wall (Bryan approved this style);
+  - `voidtv-tunein`, an intro;
+  - `voidtv-hold`, an ident;
+  - `voidtv-poweroff`, an outro whose dot becomes the "." in voidtv.net;
+  - `voidtv-stack`, the "free tv · no ads · no account" ad.
+- **The motion editor kit** is in `motion/` (`Start-HQ.cmd`, port 8221): 4 base pieces plus 21 ads in 16:9,
+  9:16 and 4:5.
+- **HQ** gained Motion and Promos tabs (`scripts/lib/promos.js`): send renders to slots on voidtv.net (gate,
+  home, /promos), make share copies, and a separate "Go live" commit. It was committed as `63d7c0967`; on the
+  night of 17 Oct master was 3 commits ahead of origin (not pushed), and `motion/` and `videos/voidtv-*` were
+  untracked.
+
 | # | Place | Piece | Length | Format | Notes |
 |---|---|---|---|---|---|
 | 1 | Brand master | Logo sting: static resolving into the mark, with a short sound logo | 3-4 s | 1080p and 4K MP4 + transparent WebM/MOV | Every other sting derives from this one |
@@ -156,6 +180,226 @@ sizes and uses.
 4. Live TV: keep as is, hide, or remove?
 5. Satire row: approve the candidate list together, or Bryan picks from it later?
 6. Motion graphics: approve the 14-piece shot list (section 8b) and say which pieces matter most first.
+7. Rollout (section 10, phase H): does "publish to the greater world" mean opening voidtv.net to the public
+   (password gate off) once the audit's critical fixes are in, and does it include starting the ads?
+8. Audit baseline: commit or set aside today's untracked work (`motion/`, `videos/voidtv-*`,
+   `profiles/publicaccess/*`), push the 3 local commits, and relock `docs/BASELINE.md5` at the audit tag?
+   The lock dates from 30 Jun and is missing most of today's files.
+
+## 10. Careful whole-system audit, then HQ manual mode and rollout
+
+Bryan's ask (17 Oct), in short:
+- A slow, careful audit of the whole build: debugging code, correct functionality, every connection, and every
+  security weakness.
+- It is led by an agent that knows everything he has asked for and every solution he chose.
+- After the passive inspection, solutions compete to find the best real-world fix.
+- The fixes are built into the HQ admin app so he can run them by hand when no AI is available.
+- He gets a full walkthrough, then everything is finished and published for the public rollout.
+
+**This is a multi-day package.** Careful beats fast, and every claim carries a file:line or a reproduction. The
+rules below keep it careful *and* affordable.
+
+### Ground rules (they make it efficient)
+
+1. **Audit a frozen copy.**
+   - First commit or set aside today's loose work (`git status`):
+     - 3 local commits are not pushed;
+     - `motion/`, `videos/voidtv-*` and `profiles/publicaccess/*` are untracked.
+   - Then tag `audit-base-2026-10-18` and give the inspectors a separate worktree at that tag
+     (`git worktree add ../void-audit audit-base-2026-10-18`). Packages 1 and 2 keep editing the real tree,
+     and the ground never moves under the inspectors.
+   - Before a fix, its finding is re-checked against the latest code.
+2. **Machines before agents.** Run the existing checks first and give their output to every inspector. They are
+   cheap, objective, and they point the agents at real problems:
+   - `node scripts/doctor.js`;
+   - `node --test player/test/core.test.js`;
+   - `node scripts/lock.js verify`;
+   - `npm audit` in each package;
+   - a secret-pattern scan of git history;
+   - the local site build's checks;
+   - a 200-show linkcheck sample;
+   - the Sentry trouble export.
+3. **One findings file.** All findings go into `docs/audit/findings.json`, including the known ones from packages
+   1, 2 and 5. Duplicates are merged by code, not by agents, and `docs/AUDIT-2026-10-18.md` is generated from
+   it. Nothing gets fixed twice in two different ways.
+4. **Effort matches severity:**
+   - **Critical:** data or secret exposure, site down, or deploy broken.
+   - **High:** viewers see it (pauses, wrong show, broken page) or money is at risk.
+   - Only critical and high get 3-way adversarial verification and 3 competing solutions.
+   - Medium and low get one check and one proposal, reviewed in batches.
+5. **The right model per stage.** Use a cheaper model for mechanical sweeps (inventories, grep-style searches,
+   extraction). Use the strongest model for security, judging, and the keeper. Cap each phase's agent count and
+   report what was skipped.
+6. **One owner per file at a time.** Two chats collided today. The keeper keeps `docs/audit/OWNERS.md`, which says
+   who is editing what, and agents check it before editing.
+7. **Bryan's time:** one message for decisions at the start, then two approval checkpoints per day (midday, end of
+   day). Each checkpoint is a short list with a recommendation per item.
+
+### A. The asks ledger and its keeper
+
+- **Don't have agents read the raw chats.**
+  - There are 71 VoidTV chats since early September, about 1.6 GB of transcripts in 38 folders under
+    `~/.claude/projects/`. This chat alone is about 100 MB.
+  - A small script extracts only Bryan's own typed messages, with date and chat id, into a file **outside git**
+    (it is private conversation). Agent replies and tool output are left out.
+  - The script blanks secrets before any model sees them: the values in `backend/.env` and anything shaped like
+    a token or key become "[secret]".
+  - The script is `scripts/asks-extract.js`, and it stays in HQ so the ledger can be refreshed without AI.
+- **The ledger agent:** works from that extract plus `docs/BACKLOG.md`, `docs/KIDS.md`, this file and
+  `docs/SYSTEM-AUDIT.md`. It writes `docs/ASKS.md`, listing every request and solution choice with:
+  - the date;
+  - Bryan's words in short;
+  - the status: done, open, changed his mind, or superseded;
+  - where it lives in the code;
+  - his standing rules: the house rules below, the name always "voidtv.net", root causes not band-aids, no full
+    rebuilds for small fixes, the nonprofit ecosystem, kids safety, commercial classics in, Live TV a low
+    priority.
+- **Bryan reads `docs/ASKS.md` before it is committed.** It quotes him, and the repo is on GitHub.
+- **The keeper (the same agent, kept on):**
+  - answers "did Bryan want X?" questions;
+  - checks every proposed solution against the ledger before it reaches Bryan;
+  - brings conflicting asks to Bryan rather than settling them silently.
+
+### B. Passive inspection (read-only, in the audit worktree)
+
+**Areas (one inspector each, each given the ledger and the machine results):**
+- **Site:** `scripts/site.js`, `scripts/lib/app.js` and the player bundle, plus the live site.
+- **Player:** `player/`, meaning the core, the connect layer and Sentry reporting.
+- **Catalog pipeline:** match, hunt, scout, linkcheck, art and publish, plus the nightly and scheduled tasks.
+- **Cloudflare:** `functions/`, `site/_routes.json`, the limits (100k Function calls a day, 20,000 files,
+  25 MiB per file), the domain and analytics. This absorbs package 5.
+- **HQ:**
+  - `scripts/hq.js`, `scripts/hq/index.html` and `hq-app/main.js`;
+  - `scripts/lib/promos.js`, with the Motion and Promos tabs;
+  - `scripts/doctor.js`;
+  - `scripts/lock.js`. Its `docs/BASELINE.md5` dates from 30 Jun and lacks most of today's files; Bryan decides
+    whether to relock at the audit base.
+- **Also:** the beta app (`beta/`), `backend/`, `motion/` and `videos/`.
+
+**Journeys (tracers that cross the areas).** Most breakages live at the seams between parts, which is Bryan's
+"all connections connecting". Trace each journey end to end and check every hand-off:
+- **Visitor:** gate → browse → play → server hop → next episode → (mini player).
+- **Nightly:** hunt → match → publish → Cloudflare build → live → linkcheck → doctor.
+- **HQ button:** click → script → git → deploy → `version.txt`.
+- **Tester:** invite → beta app → report → admin.
+- **Promo:** Motion → render → Promos → Go live → gate, home and `/promos` on the site.
+
+**Connections map:** written to `docs/CONNECTIONS.md`, with a diagram. Record:
+- every caller → callee link;
+- every port;
+- the files each part reads and writes;
+- every outside service: Internet Archive, TMDB, TVmaze, Sentry, Cloudflare, GitHub, jsDelivr.
+
+**House rules apply:** muted probes only, at most two Archive-facing jobs, no Play clicks.
+
+### C. Security review (own inspectors, read-only)
+
+- **Secrets:**
+  - how `backend/.env` is handled;
+  - leaked keys or tokens in git history;
+  - what the built site exposes (source maps, keys in bundles). The Sentry DSN is public by design.
+- **Functions:**
+  - every gate bypass path (`/assets/brand/`, `/q/`, `version.txt`, `qr.json`);
+  - cookie flags and rate limits;
+  - abuse of `/api/e` and bot handling;
+  - security headers (CSP, framing, referrer).
+- **XSS:** every place Archive or TMDB text reaches HTML in `app.js`, HQ and the promos page.
+- **Local servers:** HQ (8780) and the motion editor (8221) bind to 127.0.0.1, which is good. Still check:
+  - path traversal in `/media` and `/preview`;
+  - command injection where they spawn processes (the motion server uses `shell: true`);
+  - cross-site requests, since any web page can POST to 127.0.0.1.
+- **Electron:** `contextIsolation`, `nodeIntegration`, navigation limits.
+- **Beta app:** admin auth, KV access, invite codes, tester data.
+- **Supply chain:** dependencies, pinned versions, and integrity hashes for CDN scripts.
+
+### D. Verify
+
+- Each critical or high finding gets three agents trying to refute it: does it reproduce, and is it already
+  handled? Medium and low findings are batch-checked.
+- **Every confirmed finding gets one reproduction**, written once and used three times:
+  - the proof;
+  - the regression test that must fail before the fix and pass after;
+  - when it is operational, the HQ check.
+
+### E. Competing solutions (critical and high only)
+
+- Three independent proposals: the smallest correct fix, a root-cause redesign, and an operational fix run from
+  HQ.
+- Judge them on:
+  - whether they fix the root cause;
+  - real-world reliability for viewers;
+  - cost in money and usage;
+  - risk to what already works;
+  - whether Bryan can run or see them in HQ without AI;
+  - fit with the ledger.
+- Build the winner with the best parts of the runners-up. The keeper checks it, then Bryan approves at a
+  checkpoint.
+
+### F. Manual mode in HQ (works with no AI at all)
+
+- **Extend the doctor; don't build a new system.**
+  - `scripts/doctor.js` already writes checks as `{id, level, msg, fix}` to `catalog/cache/health.json`, and
+    HQ's Overview shows them as lights.
+  - Add a **System check** page that lists every check, with:
+    - the plain-language result;
+    - what it means;
+    - a button for the safe fix, or numbered manual steps.
+  - The same code runs from the button and from `node scripts/doctor.js --check <id>`.
+- **Build this frame on day 1, before any fix.** Each fix then adds its check as it lands.
+- **Generate `docs/RUNBOOK.md` from the check list,** so the manual can't drift from HQ. HQ Help links to it.
+- **At least these checks:**
+  - the deploy is current;
+  - Functions use against the limit;
+  - file count and the catalog-shrink guard;
+  - dead links and wrong-show picks;
+  - player trouble rate;
+  - lock drift;
+  - secret exposure and dependency warnings;
+  - local servers (8780, 8221);
+  - the beta app;
+  - refreshing the asks ledger.
+
+### G. Walkthrough with Bryan, in slices
+
+- Show each group of checks as it lands, not all at the end.
+- Finish with a **fire drill**: safely simulate the common failures (stale deploy, dead links, motion editor
+  down, failed publish) and have Bryan fix each one in HQ with no AI.
+
+### H. Solve, publish, roll out
+
+- **Write the launch criteria first** (go/no-go list, approved by Bryan) and rank all audit work against them:
+  - no open critical findings;
+  - the playback pause rate in Sentry under the target from package 1;
+  - Functions routing ready for the gate to come off (package 5's items);
+  - the catalog standard met;
+  - the System check all green.
+- **Fixes:** small verified commits, deployed, `version.txt` confirmed, Sentry watched.
+- **Staged rollout:**
+  1. the gate comes off (only when Bryan says, decision 7) with no ads;
+  2. watch for 48 hours;
+  3. start the ads.
+- **Rollback:** Cloudflare Pages lets you return to an earlier deployment. Put the steps in HQ.
+
+### Schedule and shape
+
+**Days:**
+- **Day 1 (18 Oct):** ground rules 1-2 (baseline and machine checks), then A, B, C and D. Packages 1 and 2 continue
+  in the real tree. The HQ System check frame is built in the afternoon.
+- **Day 2:** E with Bryan's approvals; the launch criteria; the first critical and high fixes, each with its HQ
+  check.
+- **Day 3 on:** the remaining fixes, the walkthrough slices, the fire drill, then the rollout.
+- **Later:** packages 6, 7, 8 and the logo-led motion pieces wait unless they block the launch criteria.
+
+**Ultracode shape:** one workflow per phase (A → B and C → D → E → F/H, with G in slices), so Fable and Bryan stay
+in the loop between phases.
+
+**Done when:**
+- `docs/ASKS.md` (read by Bryan), `docs/CONNECTIONS.md`, `docs/audit/findings.json` and
+  `docs/AUDIT-2026-10-18.md` exist;
+- every confirmed critical and high finding is fixed with a test and an HQ check, or has Bryan's decision;
+- the fire drill passed with no AI;
+- the launch criteria are met;
+- the rollout has started, or Bryan has chosen its date.
 
 ## House rules for every agent
 

@@ -10,14 +10,14 @@
 
 /* control bar */
 .vpx-bar{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 8px;background:linear-gradient(transparent,var(--vpx-bar) 55%);opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s;pointer-events:none}
-.vpx.show .vpx-bar,.vpx.paused .vpx-bar,.vpx:focus-within .vpx-bar{opacity:1;transform:none;pointer-events:auto}
-.vpx.show,.vpx.paused{cursor:default}.vpx:not(.show):not(.paused){cursor:none}
+.vpx.vpx-show .vpx-bar,.vpx.paused .vpx-bar,.vpx:focus-within .vpx-bar{opacity:1;transform:none;pointer-events:auto}
+.vpx.vpx-show,.vpx.paused{cursor:default}.vpx:not(.vpx-show):not(.paused){cursor:none}
 .vpx-title{font-weight:600;margin:0 4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px #000}
 .vpx-row{display:flex;align-items:center;gap:2px}
 .vpx-row button,.vpx-btn{appearance:none;border:0;background:transparent;color:inherit;min-width:40px;height:40px;padding:0 8px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font:inherit;text-decoration:none}
 .vpx-row button:hover,.vpx-btn:hover{background:rgba(255,255,255,.1)}
 .vpx button:focus-visible,.vpx a:focus-visible,.vpx input:focus-visible{outline:3px solid var(--vpx-focus);outline-offset:2px}
-.vpx-row button.on,.vpx-speed.on{color:var(--vpx-accent)}
+.vpx-row button.vpx-on,.vpx-speed.vpx-on{color:var(--vpx-accent)}
 .vpx-speed{font-weight:700;min-width:48px}
 .vpx-time{margin-left:8px;font-variant-numeric:tabular-nums;color:var(--vpx-dim);white-space:nowrap}
 .vpx-sp{flex:1}
@@ -37,25 +37,25 @@
 /* big play button, spinner, status line, skip flash */
 .vpx-big{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;border:0;background:rgba(7,8,12,.62);color:#fff;display:none;align-items:center;justify-content:center;cursor:pointer}
 .vpx-big svg{width:36px;height:36px;margin-left:4px}
-.vpx.paused:not(.wait) .vpx-big{display:flex}
+.vpx.paused:not(.vpx-wait) .vpx-big{display:flex}
 .vpx-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;gap:10px;text-align:center;pointer-events:none;text-shadow:0 1px 6px #000}
-.vpx.wait .vpx-status,.vpx.has-status .vpx-status{display:flex}
+.vpx.vpx-wait .vpx-status,.vpx.vpx-has-status .vpx-status{display:flex}
 /* "tuning in": a broadcast signal pulsing outward (replaces the spinner). Smooth fades, no flashing. */
 .vpx-sig{width:56px;height:56px;display:block;filter:drop-shadow(0 0 6px rgba(95,212,255,.55))}
 .vpx-sig svg{width:100%;height:100%;overflow:visible}
 .vpx-sig path{fill:none;stroke:var(--vpx-accent);stroke-width:3.6;stroke-linecap:round;opacity:.18;animation:vpx-arc 1.6s ease-in-out infinite}
-.vpx-sig .d{fill:var(--vpx-accent)}
+.vpx-sig .vpx-d{fill:var(--vpx-accent)}
 .vpx-sig .a2{animation-delay:.2s}.vpx-sig .a3{animation-delay:.4s}
 @keyframes vpx-arc{0%,100%{opacity:.18}35%{opacity:1}70%{opacity:.18}}
 /* recovering (reconnecting / switching servers): gold, sweeping back in, a calm "searching" */
-.vpx.recovering .vpx-sig{filter:drop-shadow(0 0 6px rgba(242,169,59,.55))}
-.vpx.recovering .vpx-sig path{stroke:var(--vpx-gold);animation-direction:reverse;animation-duration:1.2s}
-.vpx.recovering .vpx-sig .d{fill:var(--vpx-gold)}
-.vpx:not(.wait) .vpx-sig{display:none}
+.vpx.vpx-recovering .vpx-sig{filter:drop-shadow(0 0 6px rgba(242,169,59,.55))}
+.vpx.vpx-recovering .vpx-sig path{stroke:var(--vpx-gold);animation-direction:reverse;animation-duration:1.2s}
+.vpx.vpx-recovering .vpx-sig .vpx-d{fill:var(--vpx-gold)}
+.vpx:not(.vpx-wait) .vpx-sig{display:none}
 .vpx-status-t{font-size:15px;color:var(--vpx-ink)}
 .vpx-status-t:not(:empty){background:rgba(7,8,12,.62);padding:6px 12px;border-radius:999px}
 .vpx-flash{position:absolute;top:50%;transform:translateY(-50%);padding:10px 16px;border-radius:999px;background:rgba(7,8,12,.7);font-weight:700;font-size:18px;opacity:0;transition:opacity .15s;pointer-events:none}
-.vpx-flash.on{opacity:1}.vpx-flash.l{left:12%}.vpx-flash.r{right:12%}
+.vpx-flash.vpx-on{opacity:1}.vpx-flash.vpx-l{left:12%}.vpx-flash.vpx-r{right:12%}
 
 /* stats for nerds (Shift+D) */
 .vpx-stats{position:absolute;left:10px;top:10px;max-width:calc(100% - 20px);background:rgba(7,8,12,.86);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:8px 10px;z-index:3;user-select:text}
@@ -90,7 +90,7 @@
 .vpx-acts svg{width:18px;height:18px}
 
 /* fullscreen: fill the screen, keep the picture's own shape */
-.vpx.fs,.vpx:fullscreen{border-radius:0;aspect-ratio:auto;width:100vw;height:100vh}
+.vpx.vpx-fs,.vpx:fullscreen{border-radius:0;aspect-ratio:auto;width:100vw;height:100vh}
 .vpx:fullscreen .vpx-bar{padding-bottom:max(8px,env(safe-area-inset-bottom))}
 
 /* narrow players (phones, side columns): bigger targets, fewer controls. Keyed to the PLAYER's width, so it

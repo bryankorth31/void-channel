@@ -178,7 +178,7 @@
       r.setAttribute('aria-label', 'Video player');
       r.innerHTML = '<video playsinline preload="metadata"></video>'
         + '<div class="vpx-shade" aria-hidden="true"></div>'
-        + '<div class="vpx-status" role="status" aria-live="polite"><span class="vpx-sig" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="d" cx="24" cy="34" r="3.4"/><path class="a1" d="M17 27a10 10 0 0 1 14 0"/><path class="a2" d="M11.5 21.5a17.7 17.7 0 0 1 25 0"/><path class="a3" d="M6 16a25.4 25.4 0 0 1 36 0"/></svg></span><span class="vpx-status-t"></span></div>'
+        + '<div class="vpx-status" role="status" aria-live="polite"><span class="vpx-sig" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="vpx-d" cx="24" cy="34" r="3.4"/><path class="a1" d="M17 27a10 10 0 0 1 14 0"/><path class="a2" d="M11.5 21.5a17.7 17.7 0 0 1 25 0"/><path class="a3" d="M6 16a25.4 25.4 0 0 1 36 0"/></svg></span><span class="vpx-status-t"></span></div>'
         + '<button type="button" class="vpx-big" data-a="toggle" aria-label="Play">' + (ICON.play || '') + '</button>'
         + '<div class="vpx-flash" aria-hidden="true"></div>'
         + '<div class="vpx-card" role="dialog" aria-live="assertive" hidden></div>'
@@ -236,7 +236,7 @@
         const btn = e.target.closest('[data-a]');
         if (btn) { this._do(btn.dataset.a, btn); this._show(); return; }
         if (e.target === v || e.target.classList.contains('vpx-shade')) {
-          if (this._touch) { r.classList.contains('show') && !v.paused ? r.classList.remove('show') : this._show(); return; }
+          if (this._touch) { r.classList.contains('vpx-show') && !v.paused ? r.classList.remove('vpx-show') : this._show(); return; }
           clearTimeout(this._clickT); this._clickT = setTimeout(() => this.toggle(), 220);
         }
       });
@@ -264,10 +264,10 @@
       this._on(v, 'volumechange', () => this._syncVol());
       this._on(v, 'timeupdate', () => this._progress());
       this._on(v, 'progress', () => this._progress());
-      this._on(v, 'loadedmetadata', () => { this._progress(); if (v.textTracks.length) { ui.cc.classList.add('has'); v.textTracks[0].mode = 'hidden'; } });
+      this._on(v, 'loadedmetadata', () => { this._progress(); if (v.textTracks.length) { ui.cc.classList.add('vpx-has'); v.textTracks[0].mode = 'hidden'; } });
       this._on(v, 'error', () => { if (!v.getAttribute('src')) return; this.core.event('error', now(), { code: v.error && v.error.code, neverLoaded: v.readyState === 0 }); });
       this._on(v, 'ended', () => { this._icons(); this._emit({ type: 'summary', summary: this.core.summary(), at: now() }); if (this.o.onEnded) this.o.onEnded(this); });
-      this._on(document, 'fullscreenchange', () => { const on = document.fullscreenElement === r; r.classList.toggle('fs', on); ui.fs.innerHTML = ICON[on ? 'exit-fullscreen' : 'fullscreen'] || ''; ui.fs.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); });
+      this._on(document, 'fullscreenchange', () => { const on = document.fullscreenElement === r; r.classList.toggle('vpx-fs', on); ui.fs.innerHTML = ICON[on ? 'exit-fullscreen' : 'fullscreen'] || ''; ui.fs.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); });
       this._on(root, 'pagehide', () => this._emit({ type: 'summary', summary: this.core.summary(), at: now() }));
       this._icons();
     }
@@ -330,8 +330,8 @@
         frames: this._rvfc ? this._frames : total, dropped, totalFrames: total, ahead: this._ahead(),
       });
       const st = this.core.state;
-      this.root.classList.toggle('wait', st === 'buffering' || st === 'loading' || st === 'recovering');
-      this.root.classList.toggle('recovering', st === 'recovering');
+      this.root.classList.toggle('vpx-wait', st === 'buffering' || st === 'loading' || st === 'recovering');
+      this.root.classList.toggle('vpx-recovering', st === 'recovering');
       if (st === 'playing' && this._statusUntil && now() > this._statusUntil) this._status('');
     }
     _ahead() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i) - v.currentTime; return 0; }
@@ -352,7 +352,7 @@
       if (a === 'fwd') return this.skip(this.o.skipFwd);
       if (a === 'mute') { v.muted = !v.muted; if (!v.muted && v.volume === 0) v.volume = 0.5; return; }
       if (a === 'cc') return this._captions();
-      if (a === 'speed') { const r = [1, 1.25, 1.5, 1.75, 2, 0.75]; v.playbackRate = r[(r.indexOf(v.playbackRate) + 1) % r.length]; this.ui.speed.textContent = v.playbackRate + '×'; this.ui.speed.classList.toggle('on', v.playbackRate !== 1); return; }
+      if (a === 'speed') { const r = [1, 1.25, 1.5, 1.75, 2, 0.75]; v.playbackRate = r[(r.indexOf(v.playbackRate) + 1) % r.length]; this.ui.speed.textContent = v.playbackRate + '×'; this.ui.speed.classList.toggle('vpx-on', v.playbackRate !== 1); return; }
       if (a === 'pip') { if (document.pictureInPictureElement) document.exitPictureInPicture().catch(() => {}); else if (v.requestPictureInPicture) v.requestPictureInPicture().catch(() => {}); return; }
       if (a === 'next') { if (this.o.onNext) this.o.onNext(this); return; }
       if (a === 'fs') {
@@ -404,9 +404,9 @@
 
     _show() {
       const r = this.root;
-      r.classList.add('show');
+      r.classList.add('vpx-show');
       clearTimeout(this._hideT);
-      this._hideT = setTimeout(() => { if (!this.v.paused && !r.contains(document.activeElement && document.activeElement.closest('.vpx-row') ? document.activeElement : null)) r.classList.remove('show'); }, 3000);
+      this._hideT = setTimeout(() => { if (!this.v.paused && !r.contains(document.activeElement && document.activeElement.closest('.vpx-row') ? document.activeElement : null)) r.classList.remove('vpx-show'); }, 3000);
     }
     _icons() {
       const p = this.v.paused;
@@ -433,17 +433,17 @@
     _resetUi() {
       const ui = this.ui;
       ui.seek.value = 0; ui.played.style.width = '0%'; ui.buf.style.width = '0%'; ui.time.textContent = '0:00 / 0:00'; ui.seek.removeAttribute('aria-valuetext');
-      ui.cc.classList.remove('has', 'on'); this._status('');
+      ui.cc.classList.remove('vpx-has', 'vpx-on'); this._status('');
       [...this.v.querySelectorAll('track')].forEach((t) => t.remove()); // captions picked for the last episode do not belong to this one
     }
     _status(text, ms) {
       this.ui.statusT.textContent = text || '';
-      this.root.classList.toggle('has-status', !!text);
+      this.root.classList.toggle('vpx-has-status', !!text);
       this._statusUntil = text && ms ? now() + ms : 0;
     }
     _flash(text, side) {
       const f = this.ui.flash;
-      f.textContent = text; f.className = 'vpx-flash on ' + side;
+      f.textContent = text; f.className = 'vpx-flash vpx-on vpx-' + side;
       clearTimeout(this._flashT); this._flashT = setTimeout(() => { f.className = 'vpx-flash'; }, 650);
     }
     _setTitle() { this.ui.title.textContent = this.ep ? [this.ep.show, this.ep.title].filter(Boolean).join(' · ') : ''; }
@@ -498,7 +498,7 @@
 
     _captions() {
       const v = this.v, btn = this.ui.cc, tracks = [...v.textTracks];
-      if (tracks.length) { const t = tracks[0]; t.mode = t.mode === 'showing' ? 'hidden' : 'showing'; btn.classList.toggle('on', t.mode === 'showing'); return; }
+      if (tracks.length) { const t = tracks[0]; t.mode = t.mode === 'showing' ? 'hidden' : 'showing'; btn.classList.toggle('vpx-on', t.mode === 'showing'); return; }
       const i = document.createElement('input');
       i.type = 'file'; i.accept = '.srt,.vtt,text/vtt,text/plain';
       i.onchange = async () => {
@@ -508,7 +508,7 @@
         if (!/^﻿?WEBVTT/.test(txt)) txt = 'WEBVTT\n\n' + txt.replace(/\r/g, '').replace(/(\d{1,2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2');
         const tr = document.createElement('track');
         tr.kind = 'subtitles'; tr.label = f.name; tr.srclang = 'en'; tr.src = URL.createObjectURL(new Blob([txt], { type: 'text/vtt' }));
-        v.appendChild(tr); tr.track.mode = 'showing'; btn.classList.add('on');
+        v.appendChild(tr); tr.track.mode = 'showing'; btn.classList.add('vpx-on');
         this._emit({ type: 'captions-file', at: now() });
       };
       i.click();

@@ -28,4 +28,12 @@ node player/tools/rank-sources.js --stats      how the ranking would change the 
 node player/tools/build-icons.js               refresh icons after editing brand-kit/icons/ui
 ```
 
-Nothing in this folder is loaded by VOIDtv. Connecting it is a separate, deliberate step (end of DESIGN.md).
+VOIDtv bundles `src/` into `assets/player/voidplayer.js` at build time (`scripts/site.js`).
+
+## Class names
+
+Every class the player puts on the page starts with `vpx-` (states too: `vpx-show`, `vpx-wait`, `vpx-fs`,
+`vpx-recovering`, `vpx-on`...), so the host page's CSS can't reach inside. Short names leaked once:
+VOIDtv's decorative `.fs` rule put a dark radial vignette on the fullscreen video (17 Oct 2026).
+The one exception is `paused` on the root, which VOIDtv reads on purpose (`.vpx:not(.paused)` pauses the
+background effects while a video plays). Keep new classes prefixed.

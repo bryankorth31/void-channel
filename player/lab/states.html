@@ -20,8 +20,8 @@ figure{margin:0}figcaption{margin-top:6px;color:#9aa0b4;font-size:12px}
 <script>
 const mk = (id) => VoidPlayer.create(document.getElementById(id), { resolveServers: false, onNext: () => {} });
 const freeze = (p) => { clearInterval(p._loop); p.root.classList.remove('paused'); };
-const a = mk('s1'); freeze(a); a.root.classList.add('wait');
-const b = mk('s2'); freeze(b); b.root.classList.add('wait', 'recovering'); b._status('Switching to the backup server…');
+const a = mk('s1'); freeze(a); a.root.classList.add('vpx-wait');
+const b = mk('s2'); freeze(b); b.root.classList.add('vpx-wait', 'vpx-recovering'); b._status('Switching to the backup server…');
 const c = mk('s3'); freeze(c); c.ep = { files: [{ url: '#' }] }; c._failure('stall');
 const d = mk('s4'); freeze(d); d.upNext('The Wolf and the Deer', 10);
 </script></body></html>
