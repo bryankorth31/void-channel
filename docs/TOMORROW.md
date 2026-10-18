@@ -105,7 +105,9 @@ classics, strict safety. Before the site exists:
 - **The name:** "voidtv.net kids" (Bryan's naming rule).
 - **Where it lives:**
   - data in `profiles/kids/` (untracked; excluded in `.git/info/exclude` until reviewed);
-  - code on branch `kids` in the worktree `C:\Users\bryan\void-kids` (uncommitted; review its diff).
+  - code on branch `kids` in the worktree `C:\Users\bryan\void-kids`, committed locally as f6947bf2d. It is not
+    pushed or merged; review it with `git diff master...kids`.
+  - backup of the data: `C:\Users\bryan\void-channel-backups\voidtv-kids-data-2026-10-18.zip`.
 - **Done so far:**
   - the lineup of 121 shows, TVmaze-pinned and rated;
   - Archive hunts, run all night;
