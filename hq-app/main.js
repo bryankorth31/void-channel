@@ -42,6 +42,8 @@ function createWindow() {
     width: 1440, height: 920, minWidth: 900, minHeight: 600, backgroundColor: '#07080c', title: 'VOIDtv HQ', icon: ICON,
     autoHideMenuBar: true, webPreferences: { contextIsolation: true, sandbox: true },
   });
+  // The page comes from HQ itself, so it carries HQ's per-start token (a meta tag the page sends back as X-HQ-Token) and
+  // its calls arrive with Origin http://127.0.0.1:<port>, which HQ accepts. This window needs no token of its own.
   win.loadURL(`http://127.0.0.1:${PORT}/`);
   win.webContents.setWindowOpenHandler(({ url }) => { if (/^https?:\/\//i.test(url)) shell.openExternal(url); return { action: 'deny' }; });
   win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith(`http://127.0.0.1:${PORT}/`)) { e.preventDefault(); if (/^https?:\/\//i.test(url)) shell.openExternal(url); } });

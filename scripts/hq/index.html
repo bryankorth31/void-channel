@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>VOIDtv HQ</title>
+<meta name="hq-token" content="__HQ_TOKEN__">
 <link rel="icon" href="/brand/favicon.png">
 <style>
 @font-face{font-family:'Unbounded';font-weight:200 900;src:url(/brand/fonts/unbounded-latin.woff2) format('woff2')}
@@ -37,7 +38,8 @@ video{width:100%;max-width:720px;background:#000;border-radius:8px}
 <main id="main"></main>
 <script>
 const $=(s,r)=>(r||document).querySelector(s);const jq=(v)=>esc(JSON.stringify(String(v==null?'':v)));const esc=(s)=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const api=async(p,o)=>{const r=await fetch(p,o?{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(o)}:undefined);const j=await r.json();if(j.error)throw new Error(j.error);return j};
+const HQ_TOKEN=(document.querySelector('meta[name=hq-token]')||{}).content||''; // HQ writes a fresh secret into this page each time it starts; every POST sends it back
+const api=async(p,o)=>{const r=await fetch(p,o?{method:'POST',headers:{'content-type':'application/json','x-hq-token':HQ_TOKEN},body:JSON.stringify(o)}:undefined);const j=await r.json();if(j.error)throw new Error(j.error);return j};
 const fmt=(n)=>n==null?'':Number(n).toLocaleString();const pct=(a,b)=>b?Math.round(a/b*100):0;
 const TABS=[['overview','Overview'],['shows','Shows'],['jobs','Jobs'],['reports','Reports'],['analytics','Analytics'],['qr','QR codes'],['add','Add shows'],['order','Home order'],['motion','Motion'],['promos','Promos'],['help','Help']];
 let tab=location.hash.slice(1).split('/')[0]||'overview';let showSlug=location.hash.split('/')[1]||null;

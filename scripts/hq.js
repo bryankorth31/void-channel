@@ -7,6 +7,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { spawn, execSync } = require('child_process');
 const cfa = require('./lib/cfa');
 
@@ -230,19 +231,27 @@ const hostAllowed = (host, port) => !!port && selfAddrs(port).includes(String(ho
 const originAllowed = (origin, port) => origin === undefined || (!!port && selfAddrs(port).some((a) => 'http://' + a === String(origin).toLowerCase()));
 // The media type is the part before any ";". "text/plain;x=application/json" is text/plain, not JSON.
 const mediaType = (h) => String(h || '').split(';')[0].trim().toLowerCase();
+// A new secret every time HQ starts. It is written into the page HQ serves (a meta tag) and nowhere else: not in a URL,
+// not in a log. Every call that changes anything must send it back as X-HQ-Token. A page from another origin cannot
+// read HQ's page, so it cannot learn it; the desktop app and a browser tab both get it by loading the page from HQ.
+const TOKEN = crypto.randomBytes(32).toString('hex');
+const tokenOk = (given) => { const a = Buffer.from(String(given || '')), b = Buffer.from(TOKEN); return a.length === b.length && crypto.timingSafeEqual(a, b); };
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://x');
   const p = url.pathname;
   // Local only, and only HQ's own page: a web page in the owner's browser, or one served from another local port,
-  // must not be able to drive HQ (publish, taskkill, overrides). Order matters: host, origin, media type.
+  // must not be able to drive HQ (publish, taskkill, overrides). Order matters: host, origin, media type, token.
   const port = server.address() && server.address().port;
   if (!hostAllowed(req.headers.host, port)) return send(res, 403, { error: 'HQ answers its own address only' });
   if (!originAllowed(req.headers.origin, port)) return send(res, 403, { error: 'cross-origin request refused' });
-  if (req.method !== 'GET' && req.method !== 'HEAD' && mediaType(req.headers['content-type']) !== 'application/json') return send(res, 415, { error: 'JSON only' });
+  const changes = req.method !== 'GET' && req.method !== 'HEAD'; // anything that is not a plain read needs JSON and the token
+  if (changes && mediaType(req.headers['content-type']) !== 'application/json') return send(res, 415, { error: 'JSON only' });
+  if (changes && !tokenOk(req.headers['x-hq-token'])) return send(res, 401, { error: 'HQ token missing or wrong. Reload this page: HQ was restarted since it was opened.' });
   const SLUG_OK = /^[a-z0-9][a-z0-9-]*$/;
   try {
-    if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html')), MIME['.html']);
+    if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
+    if (p === '/api/ping' && req.method === 'POST') return send(res, 200, { ok: true }); // does nothing; the doctor and the tests use it to see whether the guards above let a call through
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
     if (p === '/api/overview') return send(res, 200, overview());
     if (p === '/api/health') return send(res, 200, readJson(path.join(CACHE, 'health.json'), { level: 'none', checks: [] }));
