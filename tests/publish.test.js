@@ -283,3 +283,54 @@ test('publish.log is cut back to its last megabyte', () => {
   assert.match(lines[0], /^2026-10-01T00:00:00\.000Z old line \d+ x+$/); // starts on a whole line
   assert.match(lines[lines.length - 1], /nothing new$/);
 });
+
+test('the doctor: publish light follows the last outcome line, unpushed turns yellow then red, addresses are counted', () => {
+  const c = fresh();
+  const root = path.join(__dirname, '..');
+  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  git(c.work, 'add', 'scripts', 'player');
+  git(c.work, 'commit', '-q', '-m', 'Add the tooling for this test');
+  git(c.work, 'push', '-q', 'origin', 'master');
+  const doctor = () => {
+    const e = { ...process.env }; delete e.VOID_PROFILE;
+    spawnSync(process.execPath, [path.join(c.work, 'scripts', 'doctor.js'), '--quick'], { cwd: TMP, encoding: 'utf8', env: e });
+    const h = JSON.parse(fs.readFileSync(path.join(c.work, 'catalog', 'cache', 'health.json'), 'utf8'));
+    return Object.fromEntries(h.checks.map((x) => [x.id, x]));
+  };
+  const ago = (min) => new Date(Date.now() - min * 60000).toISOString();
+  // level with origin, nothing logged, no addresses
+  let d = doctor();
+  assert.strictEqual(d.unpushed.level, 'green');
+  assert.strictEqual(d.addresses.level, 'green');
+  assert.strictEqual(d.publish.level, 'yellow');
+  // a failure followed by thousands of warning lines is still red (it used to read as "no publish has run yet")
+  write(c.work, 'catalog/cache/publish.log', `${ago(30)} FAILED: push to origin/master did not go through (x)\n` + 'warning: LF will be replaced by CRLF\n'.repeat(5000));
+  assert.strictEqual(doctor().publish.level, 'red');
+  write(c.work, 'catalog/cache/publish.log', `${ago(30)} held: 1 other commit waiting: Fix (not pushed)\n`);
+  assert.strictEqual(doctor().publish.level, 'yellow');
+  write(c.work, 'catalog/cache/publish.log', `${ago(30)} refused: shrink: shows 10 -> 2\n`);
+  assert.strictEqual(doctor().publish.level, 'red');
+  write(c.work, 'catalog/cache/publish.log', `${ago(30)} nothing new\n`);
+  assert.strictEqual(doctor().publish.level, 'green');
+  // a commit that publish did not make is waiting: yellow, named by subject
+  write(c.work, 'notes.txt', 'x\n');
+  git(c.work, 'add', 'notes.txt');
+  git(c.work, 'commit', '-q', '-m', 'Work from another chat');
+  d = doctor();
+  assert.strictEqual(d.unpushed.level, 'yellow');
+  assert.match(d.unpushed.msg, /Work from another chat/);
+  // a Catalog commit that has waited over 30 minutes: red
+  write(c.work, 'catalog/shows/test-show-0.json', JSON.stringify(grid(0, 6), null, 2) + '\n');
+  git(c.work, 'add', 'catalog');
+  execFileSync('git', ['commit', '-q', '-m', 'Catalog: 10 shows, 51 episodes (1 files)'], { cwd: c.work, env: { ...process.env, GIT_COMMITTER_DATE: ago(120), GIT_AUTHOR_DATE: ago(120) } });
+  d = doctor();
+  assert.strictEqual(d.unpushed.level, 'red');
+  assert.match(d.unpushed.msg, /1 Catalog commit waiting/);
+  // addresses: an address in the text is counted and the file named; Archive file names that only look like one are not
+  putShow(c.work, 3, 5, (g) => { g.seasons[0].episodes[0].file.file = 'Clip@720p.mp4'; g.seasons[0].episodes[0].file.name = 'Clip@Sessions.at.West54th.PBS.tv-vhs.XviD'; });
+  assert.strictEqual(doctor().addresses.level, 'green');
+  putShow(c.work, 4, 5, (g) => { g.seasons[0].episodes[0].name = 'Contact writer@example.org'; });
+  d = doctor();
+  assert.strictEqual(d.addresses.level, 'red');
+  assert.match(d.addresses.msg, /^1 address-shaped string in 1 catalog file, e\.g\. catalog\/shows\/test-show-4\.json/);
+});
