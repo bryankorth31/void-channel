@@ -545,6 +545,39 @@ test('stopListedProcess: every refusal happens before anything is killed (the re
   }
 });
 
+test('stopListedProcess: a creation time that is null, missing or not a date is refused (409) and a real listed process is not killed', { skip: !WIN && 'Windows only' }, async () => {
+  const { stopListedProcess, sameProcess, processInfo } = require(HQ_FILE).stop;
+  const victim = fixture();
+  await wait(500);
+  const real = processInfo(victim.pid);
+  const realLog = console.log; const lines = [];
+  console.log = (...a) => lines.push(a.join(' '));
+  try {
+    for (const created of [null, undefined, '', 'garbage', 'NaN', 0 / 0]) {
+      // the read is replaced by one that returns the real node.exe and its real command line, but a creation time that cannot be read
+      const r = stopListedProcess(victim.pid, real.created, () => ({ ...real, created }));
+      assert.equal(r.status, 409, JSON.stringify(created));
+      assert.match(r.body.error, /could not read when that process started/);
+      assert.ok(alive(victim.pid), JSON.stringify(created) + ': the process was not killed');
+    }
+    assert.equal(lines.length, 6, 'one console line per refusal');
+    // the same rule on the path for jobs HQ started: an unreadable time never counts as a match
+    const cmd = real.cmd;
+    for (const created of [null, undefined, 'garbage']) {
+      assert.equal(sameProcess({ name: 'art', pstart: real.created, started: real.created }, { cmd, created }).ok, false, 'stored start time, live time ' + created);
+      assert.equal(sameProcess({ name: 'art', pstart: null, started: real.created }, { cmd, created }).ok, false, 'no stored start time, live time ' + created);
+    }
+  } finally {
+    console.log = realLog;
+  }
+  // and with a readable time it is stopped, so the refusals above were about the time and nothing else
+  const ok = stopListedProcess(victim.pid, real.created, () => real);
+  assert.equal(ok.status, 200);
+  assert.equal(ok.body.stopped, true);
+  await wait(500);
+  assert.ok(!alive(victim.pid));
+});
+
 test('stop: the command line match is exact on the script name', () => {
   const { scriptRe } = require(HQ_FILE).stop;
   assert.ok(scriptRe('hunt').test('"C:\\node\\node.exe" C:\\Users\\bryan\\void-channel\\scripts\\hunt.js --pause 3'));

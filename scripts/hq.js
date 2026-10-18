@@ -217,7 +217,9 @@ function stopListedProcess(pid, started, read = processInfo) {
   if (!live) return { status: 200, body: { ok: true, stopped: false, note: 'That process had already ended.' } };
   if (!/^node(\.exe)?$/i.test(live.name || '')) return refuse('it is not node.exe (' + String(live.name).slice(0, 30) + ')', 'Process ' + pid + ' is not a node job, so HQ did not stop it.');
   if (!builderScript(live.cmd)) return refuse('its command line names no builder script', 'Process ' + pid + ' is not one of the builder scripts, so HQ did not stop it.');
-  if (Math.abs(Date.parse(live.created) - Date.parse(started)) > 2) return refuse('it was created at a different time than the page showed', 'Process ' + pid + ' is not the one the page showed (a different program has that number now), so HQ did not stop it. Reload the page.');
+  const apart = Math.abs(Date.parse(live.created) - Date.parse(started)); // NaN when the live time is missing or not a date
+  if (!Number.isFinite(apart)) return refuse('its creation time could not be read', 'HQ could not read when that process started, so it did not stop it.');
+  if (apart > 2) return refuse('it was created at a different time than the page showed', 'Process ' + pid + ' is not the one the page showed (a different program has that number now), so HQ did not stop it. Reload the page.');
   try { execFileSync('taskkill', ['/PID', String(pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
   return { status: 200, body: { ok: true, stopped: true } };
 }
