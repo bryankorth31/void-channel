@@ -1,0 +1,331 @@
+// Tests for the matcher (scripts/match.js), its write helper (scripts/lib/writeIfChanged.js) and the doctor self-test
+// (scripts/lib/matchcheck.js).   Run:  node --test tests/match.test.js
+// Nothing here touches the catalog, the network or the real grids: the data is made up, and files go to a temp folder.
+const { test, describe } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+
+const M = require('../scripts/match.js');
+const { writeIfChanged, writeTextIfChanged } = require('../scripts/lib/writeIfChanged');
+const { matcherCheck } = require('../scripts/lib/matchcheck');
+
+// ---------------------------------------------------------------- made-up data
+let uid = 0;
+const mkFile = (name, o = {}) => ({ name, file: name, format: 'h.264', playable: true, seconds: 1800, band: 'episode', sizeMB: 100, nameHit: /zork/i.test(name), ep: null, url: 'https://example.invalid/f' + (uid++), ...o });
+const se = (season, episode) => ({ season, episode });
+const WORDS = ['Quokka Parade', 'Velvet Anchor', 'Marble Harvest', 'Copper Lantern', 'Silent Orchard', 'Tangled Compass', 'Hollow Lighthouse', 'Brass Meadow', 'Frozen Carnival', 'Paper Thunder'];
+const mkTv = () => ({ id: 1, name: 'Zork Show', runtime: 30, premiered: '2000-01-01', network: 'Nowhere', episodes: WORDS.map((w, i) => ({ season: 1 + (i >> 2), number: (i % 4) + 1, name: w, airdate: '2000-02-' + String(i + 1).padStart(2, '0') })) });
+const ENTRY = { name: 'Zork Show', type: 'Test', network: 'Nowhere' };
+const range = (n) => Array.from({ length: n }, (_, i) => i + 1);
+const pad2 = (n) => String(n).padStart(2, '0');
+// Run one made-up upload through the whole decision for "Zork Show"; returns the grid and the tag of every file.
+function run(files, { title = 'Zork Show Season 9', id = 'zork-show-season-9', tv = mkTv() } = {}) {
+  const tags = new Map();
+  const grid = M.gridFor(ENTRY, { items: [{ id, title, files }] }, tv, { tags, ov: {} });
+  return { grid, tags, tagList: files.map((f) => tags.get(f)) };
+}
+const noWrites = (fn) => { // run fn with every disk write replaced by a thrower; the matcher's decision code must not write
+  const keep = { w: fs.writeFileSync, m: fs.mkdirSync, u: fs.unlinkSync };
+  const boom = () => { throw new Error('unexpected write'); };
+  fs.writeFileSync = boom; fs.mkdirSync = boom; fs.unlinkSync = boom;
+  try { return fn(); } finally { fs.writeFileSync = keep.w; fs.mkdirSync = keep.m; fs.unlinkSync = keep.u; }
+};
+
+// ---------------------------------------------------------------- CP-002: the four boundary tests
+describe('boundary tests on normalised text (CP-002)', () => {
+  test('a walkthrough with underscores in its name is junk; the raw name never matched a boundary', () => {
+    const raw = 'Fullmetal_Alchemist_3_Kami_o_Tsugu_Shoujo_HD_Walkthrough_part_1_of_7';
+    assert.equal(/\bwalkthrough\b/i.test(raw), false, 'the raw name has no boundary, which is why the test has to run on norm()ed text');
+    assert.equal(M.isJunkFile(raw, ['fullmetal alchemist']), true);
+    assert.equal(M.isJunkItem('Fullmetal Alchemist 3 Kami o Tsugu Shoujo Walkthrough PS2', ['fullmetal alchemist']), true);
+    assert.equal(M.isJunkItem('Walkthrough PS2', []), true);
+  });
+  test('junk words are matched as whole words only', () => {
+    for (const t of ['Show Name Compilation', 'Show Name Best Of 2005', 'Show Name Cast Reunion Podcast', 'Show_Name_Mix_Tape', 'Show Name Ad']) assert.equal(M.isJunkItem(t, []), true, t);
+    for (const t of ['The Bad Road Show', 'Remixed Radiator Springs Madness', 'Reunion Special', 'Gadgets and Admirals']) assert.equal(M.isJunkItem(t, []), false, t);
+  });
+  test('the show\'s own name is not junk', () => {
+    assert.equal(M.isJunkItem('Best of the Worst Season 2', ['best of the worst']), false);
+    assert.equal(M.isJunkItem('Best of the Worst Season 2 Recap', ['best of the worst']), true);
+  });
+  test('file-level junk: commentary, bonus disc, behind the scenes', () => {
+    for (const n of ['Show_S01E01_Commentary.mp4', 'Show.S01.Bonus.Disc.mkv', 'Show_Behind_the_Scenes_2.mp4']) assert.equal(M.isJunkFile(n, ['show']), true, n);
+    assert.equal(M.isJunkFile('Show_S01E01_The_Pilot.mp4', ['show']), false);
+  });
+  test('a format variant of one file counts once; two episodes stay two', () => {
+    assert.equal(M.variantKey('Show_Name_512Kb.mp4'), M.variantKey('Show_Name.mp4'));
+    assert.equal(M.variantKey('Show_Name_h264_720p.mp4'), 'show name');
+    assert.equal(M.variantKey('Show Name 720p.mp4'), M.variantKey('Show Name 1080p.mp4'));
+    assert.notEqual(M.variantKey('Show_Name_01.mp4'), M.variantKey('Show_Name_02.mp4'));
+  });
+  test('extras are caught on normalised text too', () => {
+    assert.equal(M.isExtras('Show_Behind_the_Scenes_01', ['show']), true);
+    assert.equal(M.isExtras('Show_S01E01', ['show']), false);
+  });
+  test('no script holds a stray control character (the backspace bytes were invisible in a plain print)', () => {
+    const dirs = [path.join(__dirname, '..', 'scripts'), path.join(__dirname, '..', 'scripts', 'lib')];
+    for (const d of dirs) for (const f of fs.readdirSync(d).filter((x) => x.endsWith('.js'))) {
+      const b = fs.readFileSync(path.join(d, f));
+      let line = 1;
+      for (let i = 0; i < b.length; i++) {
+        if (b[i] === 10) line++;
+        else if (b[i] < 32 && b[i] !== 9 && b[i] !== 13) assert.fail(`${f} line ${line} holds control byte ${b[i]}`);
+      }
+    }
+  });
+});
+
+// ---------------------------------------------------------------- CP-004: the wrong-show detector
+describe('wrong-show detector (CP-004)', () => {
+  const shows = M.makeOtherShows([{ name: 'The Season' }, { name: 'Family' }, { name: 'Collection' }, { name: 'Extras' }, { name: 'Breaking Bad' }, { name: 'Star Trek' }, { name: 'Medical Detectives' }, { name: 'M*A*S*H' }, { name: 'Hard Knocks: In Season' }]);
+  test('one-word titles and short titles are not show names; two words and six letters are', () => {
+    assert.deepEqual(shows.map((o) => o.core).sort(), ['breaking bad', 'medical detectives', 'star trek']);
+  });
+  test('"The Season" no longer makes "Season" another show', () => {
+    assert.equal(M.namesOtherShow('Forensic Files S03E04 Season 3 720p', 'Forensic Files', [], shows), false);
+    assert.equal(M.namesOtherShow('Murphy Brown Season 5 Collection Extras Family', 'Murphy Brown', [], shows), false);
+  });
+  test('a true other show is still caught, by whole words', () => {
+    assert.equal(M.namesOtherShow('Breaking Bad S01E01 720p', 'Better Call Saul', [], shows), true);
+    assert.equal(M.namesOtherShow('Breaking_Bad_-_S02E03.mp4', 'Better Call Saul', [], shows), true);
+    assert.equal(M.namesOtherShow('Breaking Badger Tales', 'Better Call Saul', [], shows), false, 'a longer word is not the same word');
+    assert.equal(M.namesOtherShow('Star Trekking Across Europe', 'Some Travel Show', [], shows), false);
+  });
+  test('Season N, SxxEyy and quality tags are taken out before matching', () => {
+    assert.equal(M.forOtherShow('Show.Name.Season.12.S01E02.720p.x264.mp4').trim(), 'show name');
+    assert.equal(M.forOtherShow('Show Name 2x05 HDTV Complete').trim(), 'show name');
+  });
+  test('a show and its own family are never "another show"', () => {
+    assert.equal(M.namesOtherShow('Star Trek Enterprise S01E01', 'Star Trek: Enterprise', [], shows), false);
+    assert.equal(M.namesOtherShow('Star Trek S01E01', 'Star Trek: Enterprise', [], shows), false);
+  });
+  test('Medical Detectives is Forensic Files', () => {
+    assert.equal(M.namesOtherShow('Medical Detectives S01E02 Death by Design', 'Forensic Files', [], shows), true, 'without the alias it reads as a different show');
+    assert.equal(M.namesOtherShow('Medical Detectives S01E02 Death by Design', 'Forensic Files', ['medical detectives'], shows), false);
+    assert.ok(M.BUILTIN_ALIASES['forensic-files'].includes('Medical Detectives'));
+  });
+  test('the real list gives a usable detector (multi-word titles only, "season" is not one)', () => {
+    assert.ok(M.OTHER_SHOWS.length > 1000);
+    assert.ok(!M.OTHER_SHOWS.some((o) => o.core.split(' ').length < 2 || o.core.replace(/[^a-z]/g, '').length < 6));
+    assert.equal(M.namesOtherShow('Forensic Files S03E04 Season 3 720p', 'Forensic Files'), false);
+  });
+});
+
+// ---------------------------------------------------------------- CP-001: reason tags and the fallback gate
+describe('rejection reasons (CP-001)', () => {
+  test('the tag is the strongest reason, other-show first', () => {
+    assert.equal(M.rejectionTag({ other: true, react: true, foreign: true, notNamed: true }), 'other-show');
+    assert.equal(M.rejectionTag({ react: true, foreign: true, notNamed: true }), 'reaction');
+    assert.equal(M.rejectionTag({ foreign: true, notNamed: true }), 'foreign');
+    assert.equal(M.rejectionTag({ notNamed: true }), 'not-named');
+    assert.equal(M.rejectionTag({}), 'no-match');
+  });
+  test('the strict loop tags every kind of file', () => {
+    assert.ok(M.OTHER_SHOWS.some((o) => o.core === 'breaking bad'), 'this test needs Breaking Bad on the real list');
+    const files = [
+      mkFile('Zork Show S01E02.mp4', { ep: se(1, 2) }),            // placed
+      mkFile('Zork Show S09E09.mp4', { ep: se(9, 9) }),            // no episode 9x9 on the TVmaze list
+      mkFile('Zork Show Reaction S09E01.mp4', { ep: se(9, 1) }),   // a reaction
+      mkFile('Breaking Bad Zork Show S09E02.mp4', { ep: se(9, 2) }), // another show on our list
+      mkFile('Zork Show Film Vostfr.mp4'),                         // a dub
+      mkFile('Zork Show 1985-03-04.mp4'),                          // dated before the show existed
+      mkFile('Zork Show Odd Length.mp4', { band: 'odd', seconds: 900 }), // outside the bands
+    ];
+    const { tagList } = run(files);
+    assert.deepEqual(tagList, ['placed', 'no-match', 'reaction', 'other-show', 'foreign', 'before-premiere', 'wrong-length']);
+  });
+  test('a file that neither it nor its upload title names the show is not-named', () => {
+    const f = mkFile('Some Clip.mp4');
+    assert.deepEqual(run([f], { title: 'Random Upload', id: 'random' }).tagList, ['not-named']);
+  });
+});
+
+describe('the self-list fallback gate (CP-001)', () => {
+  const evidence = (n) => range(n).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+  test('accepts no-match files with S/E evidence from an upload whose title names the show', () => {
+    const { grid, tagList } = run(evidence(25));
+    assert.ok(tagList.every((t) => t === 'no-match'));
+    assert.equal(grid.selfListed, true);
+    assert.equal(grid.tvmazeWeak.placed, 0);
+    assert.equal(grid.seasons[0].episodes.length, 25);
+  });
+  test('refuses files rejected as another show', () => {
+    const files = range(25).map((i) => mkFile(`Breaking Bad Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    const { grid, tagList } = run(files);
+    assert.ok(tagList.every((t) => t === 'other-show'));
+    assert.equal(grid.selfListed, undefined);
+    assert.equal(grid.coverage.review + grid.coverage.live, 0);
+  });
+  test('refuses reactions and walkthroughs', () => {
+    const files = range(25).map((i) => mkFile(`Zork Show Reaction S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    const { grid, tagList } = run(files);
+    assert.ok(tagList.every((t) => t === 'reaction'));
+    assert.equal(grid.selfListed, undefined);
+  });
+  test('refuses foreign dubs', () => {
+    const files = range(25).map((i) => mkFile(`Zork Show Vostfr S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    const { grid } = run(files);
+    assert.equal(grid.selfListed, undefined);
+  });
+  test('refuses files with no positive episode evidence', () => {
+    const files = range(25).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`));
+    assert.equal(run(files).grid.selfListed, undefined);
+  });
+  test('a numbered run of five or more in one item is evidence; four is not', () => {
+    const pool = (n) => {
+      const files = [...range(n).map((i) => mkFile(`Zork Show Part ${i}.mp4`)), ...range(10).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`))];
+      return { cand: { items: [{ id: 'zork', title: 'Zork Show', files }] }, tags: new Map(files.map((f) => [f, 'no-match'])) };
+    };
+    const ctx = { tv: { runtime: 30 }, namesShow: () => true, cores: ['zork show'] };
+    const four = pool(4), five = pool(5);
+    assert.equal(M.fallbackCand(four.cand, four.tags, ctx).items.length, 0, 'four numbered files are not a run');
+    assert.equal(M.fallbackCand(five.cand, five.tags, ctx).items[0].files.length, 5, 'five are, and the unnumbered clips stay out');
+    assert.equal(run(range(25).map((i) => mkFile(`Zork Show Part ${i}.mp4`))).grid.selfListed, true, 'a whole upload of numbered files is accepted');
+  });
+  test('refuses files outside the TVmaze runtime band', () => {
+    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i), seconds: 900 }));
+    assert.equal(run(files).grid.selfListed, undefined);
+  });
+  test('files skipped for length are judged again: kept when TVmaze has no runtime, refused outside a known runtime band', () => {
+    const clips = (name) => range(25).map((i) => mkFile(name(i), { ep: se(9, i), band: 'clip', seconds: 200 }));
+    const plain = (i) => 'Zork Show S09E' + pad2(i) + '.mp4';
+    assert.equal(run(clips(plain), { tv: { ...mkTv(), runtime: null } }).grid.selfListed, true, 'a 3-minute web episode is not a wrong length when the runtime is unknown');
+    assert.equal(run(clips(plain)).grid.selfListed, undefined, 'a 3-minute file is outside the band of a 30-minute show');
+    assert.equal(run(clips((i) => 'Zork Show Reaction S09E' + pad2(i) + '.mp4'), { tv: { ...mkTv(), runtime: null } }).grid.selfListed, undefined, 'skipped for length does not excuse a reaction');
+    assert.equal(run(clips((i) => 'Breaking Bad Zork Show S09E' + pad2(i) + '.mp4'), { tv: { ...mkTv(), runtime: null } }).grid.selfListed, undefined, 'or another show');
+    const tagged = run(clips(plain), { tv: { ...mkTv(), runtime: null } }).tagList;
+    assert.ok(tagged.every((t) => t === 'wrong-length'), 'the tag stays wrong-length; the fallback judges it');
+  });
+  test('refuses uploads whose title does not name the show, even if the identifier does', () => {
+    const { grid } = run(evidence(25), { title: 'Mystery Upload', id: 'zork-show-s09' });
+    assert.equal(grid.selfListed, undefined);
+  });
+  test('files the strict pass placed stay eligible without further evidence', () => {
+    const files = [...range(4).map((i) => mkFile(`Zork Show S01E0${i}.mp4`, { ep: se(1, i) })), ...evidence(21)];
+    const { tagList, grid } = run(files);
+    assert.deepEqual(tagList.slice(0, 4), ['placed', 'placed', 'placed', 'placed']);
+    assert.equal(grid.selfListed, true);
+    assert.equal(grid.seasons.reduce((n, s) => n + s.episodes.length, 0), 25);
+  });
+  test('decisions write nothing to disk', () => {
+    noWrites(() => { run(evidence(25)); run(range(25).map((i) => mkFile(`Zork Show Reaction S09E${pad2(i)}.mp4`, { ep: se(9, i) }))); });
+  });
+});
+
+// ---------------------------------------------------------------- CP-003: the identifier rule
+describe('Archive identifier rule (CP-003)', () => {
+  const parkers = { name: 'The Parkers', type: 'Sitcom', network: 'UPN' };
+  const vids = (names) => names.map((n) => mkFile(n, { seconds: 1700, nameHit: false }));
+  const item = (id, title, names) => ({ id, title, files: vids(names) });
+  test('an identifier that starts with the name, with neither the title nor the file names naming the show, is not the show', () => {
+    const it = item('parkers-puzzle-cooking-kids-27-and-exercise', 'All Kids Videos Collection #4', range(40).map((i) => 'Tiny Tots Worship ' + i + '.mp4'));
+    assert.equal(noWrites(() => M.selfGrid(parkers, { items: [it] }, [])), null);
+  });
+  test('an identifier match counts when half or more of the file names also name the show', () => {
+    const it = item('parkers-season-1', 'Season 1 DVD rips', range(10).map((i) => 'The Parkers - Episode ' + pad2(i) + '.mp4'));
+    const g = noWrites(() => M.selfGrid(parkers, { items: [it] }, []));
+    assert.ok(g && g.selfListed);
+    assert.equal(g.seasons[0].episodes.length, 10);
+  });
+  test('an identifier match with under half the file names naming the show is refused', () => {
+    const names = [...range(3).map((i) => 'The Parkers - Episode ' + pad2(i) + '.mp4'), ...range(7).map((i) => 'Something Else Entirely ' + i + '.mp4')];
+    assert.equal(noWrites(() => M.selfGrid(parkers, { items: [item('parkers-season-1', 'Season 1 DVD rips', names)] }, [])), null);
+  });
+  test('a title that starts with the show name still goes through the junk test', () => {
+    const it = item('whatever', 'The Parkers Walkthrough PS2', range(10).map((i) => 'The Parkers part ' + i + '.mp4'));
+    assert.equal(noWrites(() => M.selfGrid(parkers, { items: [it] }, [])), null);
+  });
+  test('a title that names the show is enough, whatever the identifier says', () => {
+    const it = item('xyz123', 'The Parkers Complete Series', range(8).map((i) => 'The Parkers ' + pad2(i) + '.mp4'));
+    const g = M.selfGrid(parkers, { items: [it] }, []);
+    assert.ok(g && g.seasons[0].episodes.length === 8);
+  });
+  test('format variants of the same file do not make a small upload look like a season', () => {
+    const names = [];
+    for (const i of range(3)) for (const tag of ['', '_512kb', '_h264', '_720p']) names.push('The_Parkers_' + i + tag + '.mp4');
+    const it = item('parkers-odds-and-ends', 'Odds and Ends', names);
+    assert.equal(noWrites(() => M.selfGrid(parkers, { items: [it] }, [])), null, 'twelve files, three episodes: under the five a season needs');
+  });
+  test('episodeNumberOf, stripShow and inRuntimeBand', () => {
+    assert.equal(M.episodeNumberOf('Parker’s Puzzle (7)', ['parkers']), 7);
+    assert.equal(M.episodeNumberOf('The_Parkers_S01E02_720p.mp4', ['parkers']), null);
+    assert.equal(M.stripShow('The_Parkers_Walkthrough', ['parkers']), 'the walkthrough');
+    assert.equal(M.inRuntimeBand(1800, 30), true);
+    assert.equal(M.inRuntimeBand(3600, 30), true, 'a double episode');
+    assert.equal(M.inRuntimeBand(900, 30), false);
+    assert.equal(M.inRuntimeBand(5400, 30), false);
+    assert.equal(M.inRuntimeBand(1800, null), false);
+  });
+});
+
+// ---------------------------------------------------------------- CP-006: writeIfChanged
+describe('writeIfChanged (CP-006)', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'wic-'));
+  const f = (n) => path.join(dir, n);
+  const grid = (stamp, extra = {}) => ({ show: 'Zork Show', slug: 'zork-show', matchedAt: stamp, seasons: [{ season: 1, episodes: [{ number: 1, state: 'LIVE' }] }], ...extra });
+  test('writes a new file', () => {
+    assert.equal(writeIfChanged(f('a.json'), grid('2026-01-01T00:00:00.000Z')), true);
+    assert.equal(JSON.parse(fs.readFileSync(f('a.json'), 'utf8')).matchedAt, '2026-01-01T00:00:00.000Z');
+  });
+  test('does not write when only matchedAt differs, and the old timestamp stays', () => {
+    const before = fs.readFileSync(f('a.json'), 'utf8');
+    assert.equal(writeIfChanged(f('a.json'), grid('2026-12-31T23:59:59.000Z')), false);
+    assert.equal(fs.readFileSync(f('a.json'), 'utf8'), before);
+    assert.equal(JSON.parse(before).matchedAt, '2026-01-01T00:00:00.000Z');
+  });
+  test('writes when the content differs, with the new timestamp', () => {
+    assert.equal(writeIfChanged(f('a.json'), grid('2026-06-06T00:00:00.000Z', { addedAt: '2026-06-06' })), true);
+    const now = JSON.parse(fs.readFileSync(f('a.json'), 'utf8'));
+    assert.equal(now.matchedAt, '2026-06-06T00:00:00.000Z');
+    assert.equal(now.addedAt, '2026-06-06');
+  });
+  test('values that JSON drops (undefined) do not count as a change', () => {
+    assert.equal(writeIfChanged(f('a.json'), grid('2030-01-01T00:00:00.000Z', { addedAt: '2026-06-06', codecRisk: undefined })), false);
+  });
+  test('writes when the old file is unreadable', () => {
+    fs.writeFileSync(f('bad.json'), '{ not json');
+    assert.equal(writeIfChanged(f('bad.json'), grid('2026-01-01T00:00:00.000Z')), true);
+    assert.equal(JSON.parse(fs.readFileSync(f('bad.json'), 'utf8')).slug, 'zork-show');
+  });
+  test('builtAt and sweptAt are stamps too; compact output when indent is 0', () => {
+    assert.equal(writeIfChanged(f('g.json'), { builtAt: 'x', people: { 1: 'a' } }, ['builtAt'], 0), true);
+    assert.equal(fs.readFileSync(f('g.json'), 'utf8'), '{"builtAt":"x","people":{"1":"a"}}');
+    assert.equal(writeIfChanged(f('g.json'), { builtAt: 'y', people: { 1: 'a' } }, ['builtAt'], 0), false);
+    assert.equal(writeIfChanged(f('s.json'), { sweptAt: 'x', n: 1 }), true);
+    assert.equal(writeIfChanged(f('s.json'), { sweptAt: 'z', n: 1 }), false);
+    assert.equal(writeIfChanged(f('s.json'), { sweptAt: 'z', n: 2 }), true);
+  });
+  test('a text report is left alone when only its stamp line differs (line endings aside)', () => {
+    const stamp = /Swept \d{4}-\d{2}-\d{2}T\d{2}:\d{2}/g;
+    assert.equal(writeTextIfChanged(f('r.md'), '# R\nSwept 2026-10-17T03:30. rows\n', stamp), true);
+    fs.writeFileSync(f('r.md'), '# R\r\nSwept 2026-10-17T03:30. rows\r\n'); // as git on Windows would check it out
+    assert.equal(writeTextIfChanged(f('r.md'), '# R\nSwept 2026-10-18T03:31. rows\n', stamp), false);
+    assert.equal(writeTextIfChanged(f('r.md'), '# R\nSwept 2026-10-18T03:31. more rows\n', stamp), true);
+  });
+  test('cleanup', () => { fs.rmSync(dir, { recursive: true, force: true }); assert.equal(fs.existsSync(dir), false); });
+});
+
+// ---------------------------------------------------------------- the doctor self-test
+describe('matcher self-test for the doctor', () => {
+  test('passes on the current matcher and lists self-listed grids over a TVmaze list', () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'mc-'));
+    try {
+      const pick = (title) => ({ state: 'REVIEW', file: { itemTitle: title } });
+      fs.writeFileSync(path.join(dir, 'weak.json'), JSON.stringify({ show: 'The Parkers', slug: 'the-parkers', selfListed: true, tvmazeWeak: { id: 1, placed: 1 }, seasons: [{ season: 1, episodes: [pick('The Parkers : WSBK'), pick('All Kids Videos Collection #4'), pick('All Kids Videos Collection #3'), pick('The Parkers Walkthrough PS2')] }] }));
+      fs.writeFileSync(path.join(dir, 'plain.json'), JSON.stringify({ show: 'Plain', slug: 'plain', seasons: [{ season: 1, episodes: [pick('x')] }] }));
+      const r = matcherCheck({ showsDir: dir });
+      assert.equal(r.ok, true, r.detail);
+      assert.equal(r.warn, true);
+      assert.equal(r.fallback.count, 1);
+      assert.equal(r.fallback.scanned, 2);
+      assert.deepEqual(r.fallback.grids.map((g) => [g.slug, g.picks, g.unnamed, g.share, g.junk]), [['the-parkers', 4, 2, 0.5, 1]]);
+      assert.match(r.detail, /self-tests pass; 1 fallback grid/);
+      const clean = matcherCheck({ showsDir: path.join(dir, 'nothing-here') });
+      assert.equal(clean.ok, true);
+      assert.equal(clean.warn, false);
+      assert.equal(clean.fallback.count, 0);
+    } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+  });
+});
