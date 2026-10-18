@@ -322,6 +322,15 @@ rules below keep it careful *and* affordable.
 
 ### C. Security review (own inspectors, read-only)
 
+- **Known finding (18 Oct, 3:40 AM): third-party emails in the public repo.**
+  - **What:** 2,478 of 2,850 committed `catalog/candidates/*.json` files carry Internet Archive uploaders' email
+    addresses (the `uploader` field). They are republished in a public GitHub repo.
+  - **Not needed:** the site builds from `catalog/shows`, which carries none. The kids branch already keeps every
+    profile's candidates out of git and masks emails in its reports.
+  - **Options to decide:**
+    - stop committing candidates;
+    - or store a short hash instead of the address;
+    - and whether to scrub history, which is Bryan's call because it rewrites published history.
 - **Secrets:**
   - how `backend/.env` is handled;
   - leaked keys or tokens in git history;
