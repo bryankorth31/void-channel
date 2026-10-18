@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Motion Pack HQ</title>
+<link rel="stylesheet" href="/preview/title-card/fonts/fonts.css" />
+<style>
+:root { --ink: #07060a; --panel: #110e26; --panel2: #0c0a1c; --line: #2c2660; --gold: #e6bb45; --goldHi: #fff3bf; --goldD: #8a5f0e; --text: #f4efe4; --mute: #a49d8e; --neon: #a43cff; --blue: #1d3fd1; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(120% 80% at 10% 0%, #1a1440 0%, var(--ink) 55%); color: var(--text); font: 500 15px/1.4 Inter, system-ui, sans-serif; min-height: 100vh; }
+button, input, select { font: inherit; }
+header { display: flex; align-items: center; gap: 14px; padding: 14px 22px; border-bottom: 1px solid var(--line); background: rgba(7,6,10,.6); position: sticky; top: 0; z-index: 5; backdrop-filter: blur(8px); }
+.brand { font: 400 30px/1 Anton, sans-serif; letter-spacing: .04em; background: linear-gradient(#fff6c8, #f3cf5a 35%, #b8861b 65%, #f7dc7a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.brand small { font: 400 26px/1 "Great Vibes", cursive; margin-left: 6px; }
+.tabs { display: flex; gap: 6px; margin-left: 10px; }
+.tab { padding: 9px 16px; border-radius: 999px; text-decoration: none; color: var(--mute); font-weight: 700; font-size: 14px; letter-spacing: .04em; box-shadow: inset 0 0 0 1px var(--line); }
+.tab[aria-current="page"] { color: #1b1206; background: linear-gradient(#fff3bf, #f0c84d 45%, #b8861b); box-shadow: none; }
+.tab.out { color: #f1d27a; }
+#status { margin-left: auto; font-size: 13px; color: var(--mute); }
+#status.ok { color: #9be39b; } #status.busy { color: var(--goldHi); }
+.app { display: grid; grid-template-columns: 250px minmax(0, 1fr) 380px; gap: 18px; padding: 18px 22px 40px; max-width: 1700px; margin: 0 auto; }
+@media (max-width: 1200px) { .app { grid-template-columns: 220px minmax(0,1fr); } aside.edit { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .app { grid-template-columns: 1fr; } }
+.card { background: linear-gradient(180deg, var(--panel), var(--panel2)); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+nav.parts { padding: 10px; display: flex; flex-direction: column; gap: 6px; align-self: start; position: sticky; top: 76px; }
+nav.parts h3, .edit h3 { font: 800 11px/1 Inter; letter-spacing: .16em; text-transform: uppercase; color: var(--mute); margin: 10px 8px 6px; }
+.part { display: grid; grid-template-columns: 26px 1fr; gap: 2px 10px; align-items: center; text-align: left; padding: 10px; border-radius: 10px; border: 0; background: transparent; color: var(--text); cursor: pointer; }
+.part:hover { background: rgba(230,187,69,.08); }
+.part[aria-current="true"] { background: linear-gradient(90deg, rgba(230,187,69,.22), rgba(230,187,69,.05)); box-shadow: inset 2px 0 0 var(--gold); }
+.part .n { grid-row: span 2; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 800 12px/1 Inter; color: #1b1206; background: linear-gradient(#fff3bf, #f0c84d 45%, #b8861b); }
+.part .t { font-weight: 700; } .part .s { font-size: 12px; color: var(--mute); }
+.part.look .n { background: linear-gradient(#e2bcff, #a43cff); color: #fff; }
+main { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.stagewrap { padding: 16px; }
+.titlebar { display: flex; align-items: baseline; gap: 12px; margin: 0 4px 12px; flex-wrap: wrap; }
+.titlebar h2 { margin: 0; font: 400 30px/1 Anton, sans-serif; letter-spacing: .04em; color: var(--goldHi); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chipx { font: 700 11px/1 Inter; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); padding: 6px 9px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); }
+#frameBox { position: relative; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #050407; box-shadow: 0 0 0 1px #2c2660; }
+#frameBox.overlay { background: repeating-conic-gradient(#1b1b24 0 25%, #121219 0 50%) 0 0 / 40px 40px; }
+
+#frame { position: absolute; left: 0; top: 0; border: 0; transform-origin: 0 0; background: transparent; }
+.transport { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.round { width: 46px; height: 46px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center; background: linear-gradient(#fff3bf, #f0c84d 40%, #b8861b); box-shadow: 0 4px 0 #4a3106; }
+.round:active { transform: translateY(2px); box-shadow: 0 2px 0 #4a3106; }
+.round svg { width: 18px; height: 18px; fill: #1b1206; }
+input[type=range] { flex: 1; accent-color: var(--gold); }
+#time { font: 700 13px/1 Inter; color: var(--mute); font-variant-numeric: tabular-nums; min-width: 86px; text-align: right; }
+.hint { color: var(--mute); font-size: 13px; margin: 10px 4px 0; }
+aside.edit { padding: 6px 14px 16px; align-self: start; }
+.field { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+.field label { font-size: 12px; font-weight: 700; color: var(--mute); display: flex; justify-content: space-between; }
+.field input[type=text], select { width: 100%; padding: 11px 12px; border-radius: 10px; border: 0; color: var(--text); background: #0a0818; box-shadow: inset 0 0 0 1.5px var(--line); outline: none; }
+.field input[type=text]:focus, select:focus { box-shadow: inset 0 0 0 1.5px var(--gold); }
+.colorrow { display: grid; grid-template-columns: 44px 1fr auto; gap: 8px; align-items: center; }
+input[type=color] { width: 44px; height: 40px; border: 0; padding: 0; background: none; cursor: pointer; }
+.useshow { font-size: 12px; color: var(--mute); background: none; border: 0; cursor: pointer; text-decoration: underline; padding: 0 2px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 22px; border-radius: 999px; border: 0; cursor: pointer;
+  font: 400 18px/1 Anton, sans-serif; letter-spacing: .07em; text-transform: uppercase; width: 100%; }
+.btn.gold { color: #1b1206; background: linear-gradient(#fff3bf, #f0c84d 30%, #b8861b 62%, #f7dc7a 82%, #8a5f0e); box-shadow: inset 0 1px 0 #fffbe6, 0 5px 0 #4a3106, 0 10px 22px rgba(0,0,0,.5); }
+.btn.gold:disabled { filter: grayscale(.6) brightness(.7); cursor: progress; }
+.btn.ghost { color: #f1d27a; background: transparent; box-shadow: inset 0 0 0 2px #6e5420; height: 42px; font-size: 15px; }
+.bar { height: 10px; border-radius: 999px; background: #0a0818; box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; margin-top: 10px; }
+.bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #8a5f0e, #f0c84d, #fff3bf); transition: width .3s; }
+#jobMsg { font-size: 13px; color: var(--mute); margin-top: 6px; min-height: 18px; }
+.renders { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.rend { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; padding: 10px 12px; border-radius: 10px; background: #0a0818; box-shadow: inset 0 0 0 1px var(--line); font-size: 13px; }
+.rend a { color: #f1d27a; font-weight: 700; text-decoration: none; }
+.rend .when { color: var(--mute); font-size: 12px; }
+.rend video { grid-column: 1 / -1; width: 100%; border-radius: 8px; background: #000; }
+.sep { height: 1px; background: var(--line); margin: 16px 0 6px; }
+.empty { color: var(--mute); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span id="brandName">Motion Pack</span><small>HQ</small></div>
+  <div id="status">Loading</div>
+</header>
+<div class="app">
+  <nav class="parts card" id="parts" aria-label="Parts of the show package"></nav>
+  <main>
+    <section class="card stagewrap">
+      <div class="titlebar"><h2 id="ptitle"></h2><div class="chips" id="pchips"></div></div>
+      <div id="frameBox"><iframe id="frame" title="Preview" scrolling="no"></iframe></div>
+      <div class="transport">
+        <button class="round" id="play" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+        <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Scrub" />
+        <span id="time">0.0 / 0.0 s</span>
+      </div>
+      <p class="hint" id="hint"></p>
+    </section>
+  </main>
+  <aside class="edit card" id="edit"></aside>
+</div>
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const api = async (url, body) => { const r = await fetch(url, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {}); if (!r.ok) throw new Error((await r.json()).error || r.status); return r.json(); };
+let curT = 0, lastNow = 0;
+let SPEC, CONTENT, current = "sting", tl = null, playing = false, version = 0, saveTimer = null, keepTime = 0;
+const status = (t, cls = "") => { const s = $("#status"); s.textContent = t; s.className = cls; };
+
+async function boot() {
+  [SPEC, CONTENT] = await Promise.all([api("/api/spec"), api("/api/content")]);
+  const nav = $("#parts");
+  nav.innerHTML = `<h3>Show-wide</h3><button class="part look" data-id="__look"><span class="n">★</span><span class="t">Show look</span><span class="s">Fonts, colors and background for every piece</span></button><h3>The pieces</h3>` +
+    Object.entries(SPEC.pieces).map(([id, p], i) => `<button class="part" data-id="${id}"><span class="n">${i + 1}</span><span class="t">${p.title}</span><span class="s">${p.w > p.h ? "Wide" : "Vertical"} · ${p.dur}s${p.overlay ? " · overlay" : ""}</span></button>`).join("");
+  nav.addEventListener("click", (e) => { const b = e.target.closest(".part"); if (b) select(b.dataset.id); });
+  $("#play").onclick = togglePlay;
+  $("#scrub").oninput = (e) => { if (!tl) return; pause(); curT = clipDur() * e.target.value / 1000; seekTo(curT); };
+  $("#frame").addEventListener("load", onFrameLoad);
+  window.addEventListener("resize", fitFrame);
+  document.getElementById("brandName").textContent = SPEC.brand; document.title = SPEC.brand + " HQ";
+  select(new URLSearchParams(location.search).get("part") || Object.keys(SPEC.pieces)[0]);
+  status("Ready", "ok");
+}
+
+const HERO = {};
+function select(id) {
+  current = id; keepTime = HERO[id] ?? (id === "__look" ? 3 : (SPEC.pieces[id]?.dur || 5) * 0.6);
+  document.querySelectorAll(".part").forEach((b) => b.setAttribute("aria-current", String(b.dataset.id === id)));
+  history.replaceState(null, "", "?part=" + id);
+  if (id === "__look") { renderLookEditor(); showPreview(Object.keys(SPEC.pieces)[0]); $("#ptitle").textContent = "Show look"; $("#pchips").innerHTML = `<span class="chipx">Applies to every piece</span>`; $("#hint").textContent = "Changing a color here updates every piece. A part can still set its own look on its page."; return; }
+  const p = SPEC.pieces[id];
+  $("#ptitle").textContent = p.title;
+  $("#pchips").innerHTML = [p.w + " × " + p.h, p.dur + " s", p.format.toUpperCase(), p.overlay ? "Transparent overlay" : ""].filter(Boolean).map((t) => `<span class="chipx">${t}</span>`).join("");
+  $("#hint").textContent = p.overlay ? "Shown over a checkerboard here. The finished file has a see-through background for laying over footage." : "Edits save on their own and the preview reloads.";
+  renderPartEditor(id); showPreview(id); loadRenders(id);
+}
+
+// ---------- preview ----------
+function showPreview(id) {
+  const p = SPEC.pieces[id]; const f = $("#frame");
+  f.width = p.w; f.height = p.h; f.style.width = p.w + "px"; f.style.height = p.h + "px";
+  $("#frameBox").classList.toggle("overlay", !!p.overlay);
+  $("#frameBox").dataset.piece = id;
+  fitFrame();
+  f.src = `/preview/${id}/index.html?v=${++version}`;
+}
+function fitFrame() {
+  const id = $("#frameBox").dataset.piece; if (!id) return; const p = SPEC.pieces[id];
+  const box = $("#frameBox"); const maxW = box.parentElement.clientWidth - 32; const maxH = Math.min(window.innerHeight * 0.62, 760);
+  const s = Math.min(maxW / p.w, maxH / p.h);
+  box.style.width = Math.round(p.w * s) + "px"; box.style.height = Math.round(p.h * s) + "px";
+  $("#frame").style.transform = `scale(${s})`;
+}
+function clipDur() { const id = $("#frameBox").dataset.piece; return id ? SPEC.pieces[id].dur : 1; }
+function seekTo(t) { if (!tl) return; tl.seek(Math.min(t, tl.duration()), false); /* false = run onUpdate callbacks (count-ups), as the renderer does */ const d = clipDur(); $("#scrub").value = Math.round(1000 * t / d); $("#time").textContent = t.toFixed(1) + " / " + d.toFixed(1) + " s"; }
+function onFrameLoad() {
+  const w = $("#frame").contentWindow; tl = null;
+  const grab = (tries = 0) => {
+    const t = w.__timelines && w.__timelines.main;
+    if (!t) return tries < 50 && setTimeout(() => grab(tries + 1), 60);
+    tl = t; tl.pause();
+    w.document.fonts.ready.then(() => { curT = Math.min(keepTime, clipDur()); seekTo(curT); if (playing) play(); });
+  };
+  grab();
+}
+function loop(now) { if (!playing || !tl) return; curT += (now - lastNow) / 1000; lastNow = now; if (curT >= clipDur()) curT = 0; seekTo(curT); requestAnimationFrame(loop); }
+function play() { if (!tl) return; playing = true; if (curT >= clipDur() - 0.01) curT = 0; lastNow = performance.now(); requestAnimationFrame(loop); $("#playIcon").innerHTML = '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>'; }
+function pause() { playing = false; $("#playIcon").innerHTML = '<path d="M7 4.5v15l13-7.5z"/>'; }
+function togglePlay() { playing ? pause() : play(); }
+function reloadPreview() { keepTime = curT; showPreview($("#frameBox").dataset.piece); }
+
+// ---------- editors ----------
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+const fontOptions = (kind, val, allowInherit) => (allowInherit ? `<option value="">Use show look</option>` : "") + SPEC.fonts[kind].map((f) => `<option value="${f}" style="font-family:'${f}'" ${f === val ? "selected" : ""}>${f}</option>`).join("");
+function lookFields(values, inherit) {
+  return SPEC.theme.map((f) => {
+    const v = values[f.key] || ""; const shown = v || CONTENT.theme[f.key];
+    if (f.type === "select") return `<div class="field"><label>${f.label}</label><select data-style="${f.key}">${inherit ? '<option value="">Use show look</option>' : ""}${f.options.map((o) => `<option ${o === v || (!inherit && o === shown) ? "selected" : ""}>${o}</option>`).join("")}</select></div>`;
+    if (f.type.startsWith("font")) return `<div class="field"><label>${f.label}</label><select data-style="${f.key}">${fontOptions(f.type === "font-display" ? "display" : "script", v || (inherit ? "" : shown), inherit)}</select></div>`;
+    return `<div class="field"><label>${f.label}${inherit && !v ? " <span>show look</span>" : ""}</label><div class="colorrow"><input type="color" data-style="${f.key}" value="${shown}"/><input type="text" data-hex="${f.key}" value="${shown}" maxlength="7"/>${inherit && v ? `<button class="useshow" data-clear="${f.key}">Use show look</button>` : "<span></span>"}</div></div>`;
+  }).join("");
+}
+function renderPartEditor(id) {
+  const p = SPEC.pieces[id]; const item = CONTENT.pieces[id];
+  $("#edit").innerHTML = `<h3>Words</h3>` +
+    (p.fields.length ? p.fields.map((f) => `<div class="field"><label>${f.label}<span>${(item.fields[f.key] || "").length}/${f.max}</span></label><input type="text" data-field="${f.key}" maxlength="${f.max}" value="${esc(item.fields[f.key])}"/></div>`).join("") : `<p class="empty">This part has no words. Its look follows the colors below.</p>`) +
+    `<button class="btn gold" id="renderBtn" style="margin-top:8px">Make video</button><div class="bar"><i id="barFill"></i></div><div id="jobMsg"></div>
+     <h3 style="margin-top:14px">Finished files</h3><div class="renders" id="renders"><p class="empty">Nothing made yet.</p></div>
+     <div class="sep"></div><h3>Look for this part</h3>` + lookFields(item.style || {}, true) +
+    `<div class="sep"></div><button class="btn ghost" id="resetBtn">Reset this part</button>`;
+  wireEditor((payload) => api(`/api/piece/${id}`, payload).then((r) => { CONTENT.pieces[id] = r.piece; }));
+  $("#renderBtn").onclick = () => makeVideo(id);
+  $("#resetBtn").onclick = async () => { if (!confirm("Put this part back to its starting words and look?")) return; const r = await api(`/api/reset/${id}`, {}); CONTENT.pieces[id] = r.piece; renderPartEditor(id); reloadPreview(); };
+}
+function renderLookEditor() {
+  $("#edit").innerHTML = `<h3>Show look</h3>` + lookFields(CONTENT.theme, false) + `<p class="empty">Saved changes rebuild every piece.</p>`;
+  wireEditor((payload) => api(`/api/theme`, payload.style).then((r) => { CONTENT = r.content; }));
+}
+function wireEditor(save) {
+  const ed = $("#edit");
+  const collect = () => {
+    const fields = {}, style = {};
+    ed.querySelectorAll("[data-field]").forEach((i) => (fields[i.dataset.field] = i.value));
+    ed.querySelectorAll("select[data-style]").forEach((i) => (style[i.dataset.style] = i.value));
+    ed.querySelectorAll("input[type=color][data-style]").forEach((i) => { const t = ed.querySelector(`[data-hex="${i.dataset.style}"]`); if (i.dataset.touched || current === "__look") style[i.dataset.style] = i.value; });
+    return { fields, style };
+  };
+  const queue = () => { status("Saving", "busy"); clearTimeout(saveTimer); saveTimer = setTimeout(async () => {
+    try { await save(collect()); status("Saved", "ok"); reloadPreview(); } catch (e) { status("Not saved: " + e.message); } }, 450); };
+  ed.querySelectorAll("[data-field]").forEach((i) => i.addEventListener("input", () => { i.previousElementSibling.querySelector("span").textContent = `${i.value.length}/${i.maxLength}`; queue(); }));
+  ed.querySelectorAll("select[data-style]").forEach((i) => i.addEventListener("change", queue));
+  ed.querySelectorAll("input[type=color][data-style]").forEach((i) => i.addEventListener("input", () => { i.dataset.touched = "1"; ed.querySelector(`[data-hex="${i.dataset.style}"]`).value = i.value; queue(); }));
+  ed.querySelectorAll("[data-hex]").forEach((t) => t.addEventListener("change", () => { if (/^#[0-9a-f]{6}$/i.test(t.value)) { const c = ed.querySelector(`input[type=color][data-style="${t.dataset.hex}"]`); c.value = t.value; c.dataset.touched = "1"; queue(); } }));
+  ed.querySelectorAll("[data-clear]").forEach((b) => b.addEventListener("click", async () => {
+    const st = { ...(CONTENT.pieces[current].style || {}) }; st[b.dataset.clear] = "";
+    const r = await api(`/api/piece/${current}`, { style: st }); CONTENT.pieces[current] = r.piece; renderPartEditor(current); reloadPreview(); }));
+}
+
+// ---------- rendering ----------
+async function makeVideo(id) {
+  const btn = $("#renderBtn"); btn.disabled = true; btn.textContent = "Making video"; $("#jobMsg").textContent = "Starting";
+  let job = await api(`/api/render/${id}`, {});
+  while (job.state === "running") {
+    $("#barFill").style.width = Math.max(4, job.pct || 0) + "%";
+    $("#jobMsg").textContent = `${Math.round(job.pct || 0)}% · ${job.log?.slice(-1)[0] || "working"}`.slice(0, 90);
+    await new Promise((r) => setTimeout(r, 700)); job = await api(`/api/job/${job.id}`);
+  }
+  btn.disabled = false; btn.textContent = "Make video";
+  if (job.state === "done") { $("#barFill").style.width = "100%"; $("#jobMsg").textContent = `Done in ${job.seconds}s · ${(job.size / 1048576).toFixed(1)} MB`; status("Video ready", "ok"); }
+  else { $("#barFill").style.width = "0"; $("#jobMsg").textContent = "That one failed. " + (job.log?.slice(-2).join(" ") || ""); status("Render failed"); }
+  if (current === id) loadRenders(id);
+}
+async function loadRenders(id) {
+  const list = await api(`/api/renders/${id}`); const box = $("#renders"); if (!box) return;
+  box.innerHTML = list.length ? list.slice(0, 6).map((r, i) => `<div class="rend"><span>${r.file.replace(new RegExp("^" + SPEC.slug + "-"), "")}<br/><span class="when">${new Date(r.at).toLocaleString()} · ${(r.size / 1048576).toFixed(1)} MB</span></span>
+    <a href="/files/${encodeURIComponent(r.file)}?download">Download</a>${i === 0 ? `<video src="/files/${encodeURIComponent(r.file)}" controls muted playsinline></video>` : ""}</div>`).join("") : `<p class="empty">Nothing made yet.</p>`;
+}
+boot().catch((e) => status("Could not load: " + e.message));
+</script>
+</body>
+</html>
