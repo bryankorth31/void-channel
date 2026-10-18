@@ -217,6 +217,34 @@ test('every other method that changes things needs JSON and the token too', asyn
   assert.equal(pre.status, 403, 'a cross-origin preflight is refused');
 });
 
+// A request written by hand on a socket, so the request line can be anything (http.request would refuse "//").
+function raw(requestLine, host) {
+  return new Promise((ok) => {
+    const s = net.connect(port, '127.0.0.1');
+    let text = '';
+    s.setTimeout(5000, () => { s.destroy(); ok({ status: 0, text, error: 'timed out' }); });
+    s.on('data', (c) => { text += c; });
+    s.on('error', (e) => ok({ status: 0, text, error: e.code || e.message }));
+    s.on('close', () => ok({ status: +(/^HTTP\/1\.1 (\d{3})/.exec(text) || [])[1] || 0, text }));
+    s.write(`${requestLine} HTTP/1.1\r\nHost: ${host === undefined ? '127.0.0.1:' + port : host}\r\nConnection: close\r\n\r\n`);
+  });
+}
+
+test('a request for "//" (and other addresses new URL cannot parse) gets a 400, not a crash; HQ answers the next request', async () => {
+  for (const target of ['GET //', 'GET ///', 'POST //', 'GET //\\']) {
+    const r = await raw(target);
+    // a POST without JSON or token is refused by the guards first (415); either way HQ answers and stays up
+    assert.ok(r.status >= 400 && r.status < 500, `${target}: got ${r.status} ${r.error || ''}`);
+    assert.equal(hq.exitCode, null, `${target}: HQ is still running`);
+  }
+  assert.equal((await raw('GET //')).status, 400, 'GET // is a 400 bad address');
+  assert.equal((await raw('GET //', 'evil.example')).status, 403, 'the Host check runs before the address is parsed');
+  assert.equal((await raw('GET /api/show/%zz')).status, 500, 'a bad percent escape inside a route is an error answer, not a crash');
+  const after = await call(port, 'GET', '/api/jobs');
+  assert.equal(after.status, 200, 'and the next ordinary request works');
+  assert.equal(hq.exitCode, null);
+});
+
 test('GET /api/jobs still returns the job list shape (the four seeded jobs, no new one)', async () => {
   const r = await call(port, 'GET', '/api/jobs');
   assert.equal(r.status, 200);

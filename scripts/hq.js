@@ -308,8 +308,6 @@ const TOKEN = crypto.randomBytes(32).toString('hex');
 const tokenOk = (given) => { const a = Buffer.from(String(given || '')), b = Buffer.from(TOKEN); return a.length === b.length && crypto.timingSafeEqual(a, b); };
 
 const server = http.createServer(async (req, res) => {
-  const url = new URL(req.url, 'http://x');
-  const p = url.pathname;
   // Local only, and only HQ's own page: a web page in the owner's browser, or one served from another local port,
   // must not be able to drive HQ (publish, taskkill, overrides). Order matters: host, origin, media type, token.
   const port = server.address() && server.address().port;
@@ -318,6 +316,10 @@ const server = http.createServer(async (req, res) => {
   const changes = req.method !== 'GET' && req.method !== 'HEAD'; // anything that is not a plain read needs JSON and the token
   if (changes && mediaType(req.headers['content-type']) !== 'application/json') return send(res, 415, { error: 'JSON only' });
   if (changes && !tokenOk(req.headers['x-hq-token'])) return send(res, 401, { error: 'HQ token missing or wrong. Reload this page: HQ was restarted since it was opened.' });
+  // Only now parse the address, and never let a bad one throw: new URL('//', ...) is an error, and an error out of this async
+  // handler is an unhandled rejection that ends the HQ process. A page could send that request with no token.
+  let url; try { url = new URL(req.url, 'http://x'); } catch (e) { return send(res, 400, { error: 'bad address' }); }
+  const p = url.pathname;
   const SLUG_OK = /^[a-z0-9][a-z0-9-]*$/;
   try {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
