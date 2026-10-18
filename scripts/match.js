@@ -53,6 +53,9 @@ function titlePart(stem, showWords) {
   return t.replace(/\s+/g, ' ').trim();
 }
 function tokens(s) { return norm(s).split(' ').filter((w) => w && !STOP.has(w)); }
+// "Show.mp4" and "Show_512kb.mp4" are one episode in two formats: strip the format tags from normalised text and count them once.
+const FORMAT_TAGS = /\b(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)\b/g;
+const variantKey = (name) => norm(name).replace(FORMAT_TAGS, ' ').replace(/\s+/g, ' ').trim();
 
 // Episode-title similarity: Dice on the cleaned strings, boosted by whole-token overlap.
 function titleSim(filePart, epName) {
@@ -263,18 +266,18 @@ function selfGrid(entry, cand, aliases) {
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
-  const JUNK = /(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)/i;
+  const JUNK = /\b(compilation|meme|mix|tribute|reaction|reacts?|review|best of|top \d+|mashup|trailer|promo|commercial|ad|podcast|radio|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)\b/i;
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     const starts = t.startsWith(core) || t.startsWith('the ' + core) || idn.startsWith(core.replace(/ /g, ''));
     const named = names(item.title || '') || idn.includes(core.replace(/ /g, ''));
-    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !/(podcast|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)/i.test(f.name));
-    const distinct = new Set(vids.map((f) => norm(f.name).replace(/(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)/g, '').trim())).size; // format variants count once
+    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !/\b(podcast|audiobook|walkthrough|playthrough|gameplay|longplay|speedrun|recap|commentary|normies|extras?|bonus disc|behind the scenes|deleted scenes?|featurettes?|bloopers?|gag reel|outtakes?|making of)\b/i.test(norm(f.name)));
+    const distinct = new Set(vids.map((f) => variantKey(f.name))).size; // format variants count once
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
     const net = norm(entry.network || '').replace(/ /g, '');
     const mentionsNet = !!net && net.length > 2 && (norm((item.title || '') + ' ' + item.id + ' ' + (Array.isArray(item.collection) ? item.collection.join(' ') : item.collection || '')).replace(/ /g, '').includes(net));
     return { item, starts, named, vids, distinct, med, mentionsNet };
-  }).filter((x) => x.named && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !(JUNK.test((x.item.title || '') + ' ' + x.item.id) && !x.starts) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
+  }).filter((x) => x.named && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !(JUNK.test(norm((x.item.title || '') + ' ' + x.item.id)) && !x.starts) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
   if (!items.length) return null;
   // when some uploads name the network (channel101-yacht-rock), the ones that do not are someone else's Yacht Rock
   const netItems = items.filter((x) => x.mentionsNet); if (netItems.length) items.splice(0, items.length, ...netItems);
@@ -296,7 +299,7 @@ function selfGrid(entry, cand, aliases) {
   for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); const nm = titlePart(f.name, showWords); (seasons[se] = seasons[se] || []).push({ number: ep, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + ep), state: 'REVIEW', file: f, alternates: [] }); }
   loose.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
   const seen = new Set(); let next = (seasons[1] || []).reduce((m, e) => Math.max(m, e.number), 0);
-  for (const f of loose) { const key = norm(f.name).replace(/(512kb|64kb|h264|h 264|mp4|mpeg4|hd|sd|720p|1080p|480p|ia)/g, '').trim(); if (seen.has(key)) continue; seen.add(key); next++; const nm = titlePart(f.name, showWords); (seasons[1] = seasons[1] || []).push({ number: next, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
+  for (const f of loose) { const key = variantKey(f.name); if (seen.has(key)) continue; seen.add(key); next++; const nm = titlePart(f.name, showWords); (seasons[1] = seasons[1] || []).push({ number: next, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
   const list = Object.keys(seasons).map(Number).sort((a, b) => a - b).map((se) => ({ season: se, episodes: seasons[se].sort((a, b) => a.number - b.number) }));
   const total = list.reduce((m, se) => m + se.episodes.length, 0);
   const out = { show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), selfListed: true,
