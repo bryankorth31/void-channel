@@ -101,6 +101,28 @@ classics, strict safety. Before the site exists:
   with ratings; the hunt itself is Archive-facing (two jobs at most, see rules).
 - **Done when:** a `kids` profile builds a small local site from approved shows only, with VOIDtv branding gone.
 
+**Built overnight 17-18 Oct (the Voidtv chat).**
+- **The name:** "voidtv.net kids" (Bryan's naming rule).
+- **Where it lives:**
+  - data in `profiles/kids/` (untracked; excluded in `.git/info/exclude` until reviewed);
+  - code on branch `kids` in the worktree `C:\Users\bryan\void-kids` (uncommitted; review its diff).
+- **Done so far:**
+  - the lineup of 121 shows, TVmaze-pinned and rated;
+  - Archive hunts, run all night;
+  - strict matching (`scripts/lib/strict.js`), with VOIDtv output proven identical;
+  - the kids site build: approved-only plus `--preview`, feature switches, kids theme, Play all;
+  - the kids gate (`GATE_BRAND=kids`) and the COPPA-safe analytics switch (`ANALYTICS_MODE=aggregate`);
+  - self-hosted posters (115) and descriptions (119);
+  - the review sheet and `approve.js`, `HQ-KIDS.cmd` (port 8782), and the domain steps.
+- **Start here:** `profiles/kids/docs/OVERNIGHT.md`, then `DEPLOY-KIDS.md` and `REVIEW.html`.
+- **Also fixed in the branch:** hunts treated slow connection timeouts on this PC as Archive refusals and waited
+  minutes each; they now retry in seconds.
+- **Bryan's direction (18 Oct, about 3 AM):**
+  - Build voidtv.net kids from what worked on voidtv.net and the lessons learned there (`profiles/kids/docs/FROM-VOIDTV.md`).
+  - Put it on its own domain.
+  - Link the two sites to each other through a "portal" area, the start of a VOID universe of sites. The kids side
+    keeps a grown-up check before any way out.
+
 ## 7. "As aired" network blocks on VOIDtv
 
 - Backlog item 10: a new catalog kind for broadcast blocks (network, date aired, block, length), a scout that lists
@@ -414,6 +436,25 @@ in the loop between phases.
 - the fire drill passed with no AI;
 - the launch criteria are met;
 - the rollout has started, or Bryan has chosen its date.
+
+## 11. The VOID universe: Void University and Void School on their own domain (Bryan, 18 Oct)
+
+Bryan, about 3 AM: look at Void University and a Void School / home-school site with Fable. It goes on **its own
+domain** and links to voidtv.net and voidtv.net kids through the shared "portal" area. Diversify the sources beyond
+Gutenberg and LibriVox, then build a system that turns free-use material into lesson plans with **a local model on
+his PC**.
+- **Read first:** `docs/VOID_UNIVERSITY.md`. Its "18 Oct additions" section has the new sources, the licence
+  rules, the local lesson-plan builder and the first slice. Its 13 Oct sections already cover the course machine,
+  the open curricula (Core Knowledge, EngageNY, CK-12, OpenStax) and Void School.
+- **Reuse:** the kit profile system, as voidtv.net kids did (`profiles/kids/` is the template). Lessons follow the
+  same allowlist rule: a person approves before anything publishes.
+- **First slice:** three public-domain books into reviewed lessons with LibriVox read-along, built locally. Plus a
+  sources table with licences.
+- **Decisions for Bryan:**
+  1. Name and domain for University and School. They're one site or two; follow the naming rule.
+  2. Audience first: home-school families K-8, adult learners, or both.
+  3. Who reviews lessons.
+  4. Which local model, after a quick test of two on his card.
 
 ## House rules for every agent
 

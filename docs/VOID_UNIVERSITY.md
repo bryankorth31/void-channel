@@ -522,6 +522,71 @@ after the School rows exist and one strand is done with care.
 School, starting with ONE strand end to end (B picks; history/civics or science would use the
 library hardest) done with care before the second strand begins.
 
+## 18 Oct additions: own domain, more sources, lessons from a local model (B, about 3 AM)
+
+B: Void University and a Void School / home-school site, built out with Fable, on **its own domain**. It links to
+voidtv.net and voidtv.net kids through the same "portal" area: one VOID universe of sites, each its own domain.
+Diversify where material comes from (Gutenberg and LibriVox are two), then build a system that turns free-use
+material (Gutenberg ebooks first) into lesson plans with **a local model on B's PC**.
+
+**More sources, beyond the bodies listed above.** The licence travels with every item. Keep a per-item record of
+source, licence, attribution and URL, like the kids show approvals.
+- **Texts:**
+  - HathiTrust (full-view public-domain volumes);
+  - Wikisource (CC BY-SA);
+  - Perseus Digital Library (Greek and Latin classics with translations, mostly CC BY-SA);
+  - Chronicling America at the Library of Congress (US newspapers 1770-1963; primary sources for history lessons);
+  - Biodiversity Heritage Library (natural history books and plates, mostly public domain);
+  - Open Library and the Archive's texts, but **public-domain scans only**: its lending library is in copyright.
+    Never.
+  - Faded Page and Project Gutenberg Canada and Australia: public domain *there*. Check US status per title.
+- **Audio and music:**
+  - LibriVox (above);
+  - Musopen (public-domain recordings and scores);
+  - IMSLP (public-domain sheet music; check each score's licence);
+  - Library of Congress National Jukebox (historic recordings, streaming terms apply).
+- **Images and media:**
+  - Smithsonian Open Access (CC0, millions of items);
+  - NASA, NOAA, USGS and the National Archives (US government works are generally public domain; logos and
+    endorsement rules apply);
+  - Library of Congress "free to use" sets;
+  - Wikimedia Commons (check each file).
+- **Film:**
+  - Prelinger Archives on the Archive (educational and ephemeral films, largely public domain);
+  - NASA and National Archives films.
+- **Open textbooks and curricula** (adding to Core Knowledge, EngageNY, CK-12, OpenStax and Khan above):
+  - Open Textbook Library (University of Minnesota);
+  - LibreTexts (mostly CC BY-NC-SA);
+  - OER Commons and MERLOT (directories: check each item's licence).
+- **Licence rules:**
+  - Public domain and CC0: use freely.
+  - CC BY: credit.
+  - SA (share-alike): lesson plans built from it carry the same licence.
+  - NC (non-commercial): VOID is a nonprofit with no ads, which fits, but get counsel's view before relying on NC
+    for anything donation-funded.
+
+**The local lesson-plan builder (on B's PC; no paid model needed, so it keeps working without AI access).**
+- **Runtime:** a local runner (Ollama or LM Studio) with an instruct model that fits the RTX 5060 Ti's 16 GB.
+  Candidates: Qwen 2.5 14B (Apache-2.0), Gemma 3 12B, Mistral NeMo 12B, Llama 3.1 8B; check each licence. Add a
+  local embedding model for retrieval.
+- **Pipeline:**
+  1. Read Project Gutenberg's catalogue file (not a crawl).
+  2. Pick books by subject and reading level (Flesch-Kincaid).
+  3. Fetch the plain text once from a mirror, politely, and cache it.
+  4. Strip the Project Gutenberg header, or keep it with their licence.
+  5. Split by chapter, then generate a lesson per chapter: outcome, vocabulary, the reading, discussion questions,
+     an activity, a short check, a grade band and the time it takes.
+  6. Link the LibriVox reading of the same book for read-along, plus any VOID documentary or episode on the
+     subject (X-Ray).
+- **Review:** output goes to a review inbox. A person approves every lesson before it is published, as with kids
+  shows. Nothing reaches a child or family unreviewed. A school site aimed at children under 13 follows the same
+  COPPA design as voidtv.net kids: no identifiers, no accounts, no links out without a grown-up.
+- **Sharing the GPU:** the card is shared with the local animation pipeline (`C:\Users\bryan\sprite-forge\LOCAL-ANIMATION-PLAN.md`,
+  overnight queue), so lesson jobs go into the same queue rather than competing.
+- **First slice:** three public-domain books (for example Aesop's Fables, *Alice's Adventures in Wonderland*,
+  *The Story of My Life*), turned into reviewed lessons with LibriVox audio links, viewable locally.
+  Alongside it, a sources table with licences.
+
 ## Order of operations
 
 VoidTV to live first (TV world, nightly job, domain swap). Then: READ mode (the reader B already
