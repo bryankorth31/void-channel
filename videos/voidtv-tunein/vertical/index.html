@@ -1,0 +1,953 @@
+<!doctype html>
+<!-- GENERATED from ../index.html by ../make-vertical.mjs. Do not edit; edit ../index.html and re-run. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>voidtv.net tuning in 9x16</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Unbounded";
+        src: url(assets/fonts/unbounded-latin.woff2) format("woff2");
+        font-weight: 200 900;
+        font-display: block;
+      }
+      /* PALETTE: every colour in this file lives here (tvwall shot-plan palette + derived alpha/light tokens) */
+      :root {
+        --bg: #07080c;
+        --pink_core: #ff4fc8;
+        --pink_glow: #dc20a9;
+        --blue_core: #5fe3ff;
+        --blue_glow: #0ac1e0;
+        --violet: #a954e3;
+        --carrier_hot: #2a1446;
+        --carrier_mid: #160c2a;
+        --carrier_edge: #0a0812;
+        --cabinet_dark: #15131c;
+        --cabinet_mid: #221d2b;
+        --cabinet_edge: #2e2838;
+        --wall_gap: #050508;
+        --knob: #0e0d13;
+        --knob_rim: #3a3346;
+        --static_base: #b7bcc8;
+        /* screen tints (multiply) */
+        --tint_ice: rgb(168, 186, 255);
+        --tint_violet: rgb(200, 150, 255);
+        /* light the screen throws into the room */
+        --light_static: rgb(146, 156, 240);
+        --light_pic: var(--violet);
+        --beam: rgb(206, 210, 255);
+        /* channel OSD: phosphor cyan from the blue tokens */
+        --osd: var(--blue_core);
+        --osd_glow: var(--blue_glow);
+        --osd_edge: rgba(2, 4, 10, 0.88);
+        /* derived alphas */
+        --black: rgb(0, 0, 0);
+        --hum: rgba(0, 0, 0, 0.3);
+        --seam: rgba(0, 0, 0, 0.5);
+        --sheen: rgba(255, 255, 255, 0.09);
+        --refl: rgba(255, 255, 255, 0.05);
+        --scan: rgba(0, 0, 0, 0.1);
+        --pgrid: rgba(0, 0, 0, 0.06);
+        --bulge: rgba(0, 0, 0, 0.34);
+        --inset_a: rgba(0, 0, 0, 0.4);
+        --inset_b: rgba(0, 0, 0, 0.5);
+        --contact: rgba(0, 0, 0, 0.7);
+        --vig: rgba(7, 8, 12, 0.85);
+        --none: rgba(0, 0, 0, 0);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Unbounded", sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #svgdefs {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+      /* camera wrapper: everything except vignette + film grain; transform written by frame() only */
+      #cam {
+        position: absolute;
+        inset: 0;
+      }
+      .layer {
+        position: absolute;
+        inset: 0;
+      }
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.1;
+        background: radial-gradient(closest-side, var(--violet) 0%, var(--none) 100%);
+      }
+      /* light the screen throws: .lt-s while it shows static, .lt-p once it shows the picture */
+      .lt {
+        position: absolute;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      .glow-s,
+      .pool-s {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--light_static) 0%, var(--none) 100%);
+      }
+      .glow-p {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--light_pic) 0%, var(--none) 100%);
+      }
+      .pool-pk {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      .pool-cy {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      .streak-s {
+        background: linear-gradient(180deg, var(--light_static) 0%, var(--none) 100%);
+      }
+      .streak-pk {
+        background: linear-gradient(180deg, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      .streak-cy {
+        background: linear-gradient(180deg, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      #contact {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--contact) 0%, var(--none) 100%);
+      }
+      #tv {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: visible;
+      }
+      .cspill {
+        overflow: hidden;
+      }
+      /* the screen */
+      #screen {
+        position: absolute;
+        overflow: hidden;
+      }
+      #screen > div {
+        position: absolute;
+      }
+      .off {
+        inset: 0;
+        background: radial-gradient(ellipse at 35% 30%, var(--cabinet_dark) 0%, var(--knob) 70%);
+      }
+      #raster {
+        inset: 0;
+        overflow: hidden;
+        background: var(--bg);
+        transform-origin: 50% 50%;
+        opacity: 0;
+        visibility: hidden;
+      }
+      #raster > div {
+        position: absolute;
+      }
+      #grain,
+      #streakgrain {
+        left: 0;
+        top: 0;
+        background: var(--static_base);
+        transform: scale(3);
+        transform-origin: 0 0;
+        image-rendering: pixelated;
+        opacity: 0.9;
+      }
+      #grain {
+        filter: url(#snow) contrast(1.6) brightness(1.2);
+      }
+      #streakgrain {
+        position: absolute;
+        filter: url(#streakf) contrast(1.6) brightness(1.2);
+      }
+      #tear {
+        left: 0;
+        width: 100%;
+        top: 0;
+        height: 20%;
+        overflow: hidden;
+        background: var(--bg);
+        opacity: 0;
+      }
+      #tear .seam {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        background: var(--seam);
+      }
+      #static-tint {
+        inset: 0;
+        background: linear-gradient(160deg, var(--violet) 0%, var(--blue_glow) 100%);
+        mix-blend-mode: screen;
+        opacity: 0.12;
+      }
+      #tint {
+        inset: 0;
+        background: linear-gradient(150deg, var(--tint_violet) 0%, var(--tint_ice) 70%);
+        mix-blend-mode: multiply;
+      }
+      #hum {
+        left: 0;
+        width: 100%;
+        top: 0;
+        height: 30%;
+        opacity: 0;
+        background: linear-gradient(180deg, var(--none) 0%, var(--hum) 35%, var(--hum) 65%, var(--none) 100%);
+      }
+      #beam {
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--beam);
+        box-shadow:
+          0 0 10px var(--violet),
+          0 0 34px var(--light_static);
+        transform-origin: 50% 50%;
+        opacity: 0;
+      }
+      /* the locked picture: overscanned so the sync-lock slide never shows an edge */
+      #pic {
+        opacity: 0;
+        background: radial-gradient(
+          var(--carrier-size, 300px 200px) at 50% 50%,
+          var(--carrier_hot) 0%,
+          var(--carrier_mid) 38%,
+          var(--carrier_edge) 70%,
+          var(--bg) 100%
+        );
+      }
+      #wmwrap {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        transform-origin: 50% 50%;
+      }
+      .npool {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      #npool-pink {
+        background: radial-gradient(closest-side, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      #npool-cyan {
+        background: radial-gradient(closest-side, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      /* the wordmark (brand-kit neon recipe, as in voidtv-tvwall) */
+      .wm-stack {
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
+      .wm {
+        grid-area: 1 / 1;
+        font-family: "Unbounded", sans-serif;
+        font-size: var(--fs, 54px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .wm b,
+      .wm i {
+        font-weight: 700;
+        font-style: normal;
+      }
+      .wm-core,
+      .wm-bloom {
+        position: relative;
+        z-index: 2;
+      }
+      .wm-bloom {
+        z-index: 1;
+        opacity: 0;
+        filter: blur(calc(var(--fs, 54px) * 0.1413));
+      }
+      .wm-core {
+        filter: blur(0.6px);
+      }
+      .wm .wm-a {
+        color: var(--pink_core);
+        text-shadow:
+          0 0 0.12em var(--pink_glow),
+          0 0 0.45em var(--pink_glow);
+      }
+      .wm .wm-b {
+        color: var(--blue_core);
+        text-shadow:
+          0 0 0.12em var(--blue_glow),
+          0 0 0.45em var(--blue_glow);
+      }
+      /* RGB ghost copies (chromatic-glitch form A): brand glows, screen blend, behind the core */
+      .wm.rgb {
+        position: relative;
+        z-index: 0;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      .wm.rgb .wm-a,
+      .wm.rgb .wm-b {
+        color: inherit;
+        text-shadow: none;
+      }
+      .wm.warm {
+        color: var(--pink_glow);
+      }
+      .wm.cool {
+        color: var(--blue_glow);
+      }
+      /* channel OSD, generated by the set itself, so it never tears with the signal */
+      #osd {
+        font-family: "Unbounded", sans-serif;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        color: var(--osd);
+        text-shadow:
+          0 0 2px var(--osd_edge),
+          0.05em 0.06em 0 var(--osd_edge),
+          0 0 0.35em var(--osd_glow);
+        opacity: 0;
+        visibility: hidden;
+      }
+      .glass {
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 28% 18%, var(--refl) 0%, var(--none) 42%),
+          linear-gradient(115deg, var(--sheen) 0%, var(--none) 30%),
+          repeating-linear-gradient(0deg, var(--scan) 0 1px, var(--none) 1px 3px),
+          repeating-linear-gradient(90deg, var(--pgrid) 0 1px, var(--none) 1px 4px),
+          radial-gradient(ellipse at center, var(--none) 58%, var(--bulge) 100%);
+      }
+      /* vignette component recipe */
+      #hf-vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, var(--none) 50%, var(--vig) 100%);
+      }
+      #film-grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: url(assets/textures/noise.png);
+        mix-blend-mode: overlay;
+        opacity: 0.05;
+      }
+      /* cabinet SVG classes */
+      .cab {
+        fill: url(#gCab);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1.5;
+      }
+      .sur {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .panel {
+        fill: url(#gPanel);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .knob {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1.5;
+      }
+      .ring {
+        fill: none;
+        stroke: var(--knob_rim);
+        stroke-width: 1;
+        stroke-opacity: 0.7;
+      }
+      .tick {
+        stroke: var(--knob_rim);
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+      .slot {
+        fill: var(--wall_gap);
+      }
+      .foot {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .dome {
+        fill: url(#gCab);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .rod {
+        stroke: var(--knob_rim);
+        stroke-linecap: round;
+      }
+      .rod-rim {
+        stroke: var(--violet);
+        stroke-opacity: 0.3;
+        stroke-width: 1;
+        stroke-linecap: round;
+      }
+      .led {
+        fill: var(--pink_glow);
+        opacity: 0;
+      }
+      .led-off {
+        fill: var(--knob_rim);
+      }
+      .rim {
+        fill: none;
+        stroke: var(--violet);
+        stroke-opacity: 0.35;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="6"
+      data-fps="30"
+      data-width="1080"
+      data-height="1920"
+    >
+      <svg id="svgdefs" aria-hidden="true">
+        <filter id="snow" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="1" stitchTiles="stitch" result="n" />
+          <feColorMatrix type="saturate" values="0" in="n" result="g" />
+          <feComponentTransfer in="g">
+            <feFuncR type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1" />
+            <feFuncG type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1" />
+            <feFuncB type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1" />
+          </feComponentTransfer>
+        </filter>
+        <!-- the torn band: same tables, stretched horizontally into sync streaks -->
+        <filter id="streakf" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence id="turb2" type="fractalNoise" baseFrequency="0.035 0.9" numOctaves="1" seed="501" stitchTiles="stitch" result="n" />
+          <feColorMatrix type="saturate" values="0" in="n" result="g" />
+          <feComponentTransfer in="g">
+            <feFuncR type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1" />
+            <feFuncG type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1" />
+            <feFuncB type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1" />
+          </feComponentTransfer>
+        </filter>
+      </svg>
+      <section id="stage" class="clip" data-start="0" data-duration="6" data-track-index="0">
+        <div id="cam" data-layout-allow-overflow="true">
+          <div id="haze" class="layer" data-layout-allow-overflow="true"></div>
+          <div id="room" class="layer" data-layout-allow-overflow="true"></div>
+          <svg id="tv" aria-hidden="true" data-layout-allow-overflow="true"></svg>
+          <div id="cabspill" class="layer" data-layout-allow-overflow="true"></div>
+          <div id="screen" data-layout-allow-overflow="true">
+            <div class="off"></div>
+            <div id="raster">
+              <div id="grain"></div>
+              <div id="tear"><div id="streakgrain"></div><div class="seam"></div></div>
+              <div id="static-tint"></div>
+              <div id="tint"></div>
+              <div id="hum"></div>
+            </div>
+            <div id="beam"></div>
+            <div id="pic" data-layout-allow-overflow="true">
+              <div id="wmwrap" data-layout-allow-overflow="true">
+                <div class="npool" id="npool-pink"></div>
+                <div class="npool" id="npool-cyan"></div>
+                <div class="wm-stack" id="wm-stack" role="img" aria-label="voidtv.net"></div>
+              </div>
+            </div>
+            <div id="osd" data-layout-allow-occlusion="true">CH 02</div>
+            <div class="glass" id="glass"></div>
+          </div>
+        </div>
+        <div id="hf-vignette" data-layout-allow-occlusion="true"></div>
+        <div id="film-grain" data-layout-allow-occlusion="true"></div>
+      </section>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+
+        // ---------------------------------------------------------------- data
+        var root = document.getElementById("root");
+        var W = Number(root.dataset.width);
+        var H = Number(root.dataset.height);
+        var FMT = W > H ? "16x9" : "9x16";
+        var DUR = 6;
+
+        // scr: [centre x, centre y, width, height] of the 4:3 tube in frame px
+        var CONFIGS = {
+          "16x9": {
+            scr: [960, 470, 520, 390],
+            antenna: [0.5, 38], // rod length (x screen height), spread (deg from vertical)
+            fs: 54, // on-screen word: ink 6.33em = 342px, 66% of the tube
+            finalInk: 1250, // push-through ends with the word 1250px wide (65% of 1920)
+            gEnd: 4.6, // camera scale at the end of the push: the tube overfills 1920x1080
+            carrier: "300px 200px",
+            osd: 0.078,
+            bloomHold: 0.5,
+            poolPink: 0.24,
+          },
+          "9x16": {
+            scr: [540, 820, 680, 510], // TV body centred at y~886, slightly above the middle
+            antenna: [0.4, 36],
+            fs: 73, // ink 462px, 68% of the tube
+            finalInk: 918, // 85% of 1080
+            gEnd: 4.4, // the tube overfills 1080x1920
+            carrier: "380px 260px",
+            osd: 0.072,
+            // the word sits on a hotter part of the carrier here; these keep its pink core >= 3:1 (WCAG large text)
+            bloomHold: 0.4,
+            poolPink: 0.17,
+          },
+        };
+        var CFG = CONFIGS[FMT];
+        var CX = W / 2;
+        var CY = H / 2;
+        var SCX = CFG.scr[0], SCY = CFG.scr[1], SW = CFG.scr[2], SH = CFG.scr[3];
+        var SX = SCX - SW / 2, SY = SCY - SH / 2;
+        var FS = CFG.fs;
+        var INK_EM = 6.33;
+        var inkW = INK_EM * FS;
+        var RAD = 0.12 * SH;
+
+        // beat times (shared by both aspects)
+        var T_ON = 0.05; // power-on: dot -> line
+        var T_OPEN = 0.2; // line -> full raster
+        var T_OSD = 0.72; // CH 02
+        var SLIPS = [1.28, 1.83]; // CH 03, CH 04 (static slips: tear + hum roll)
+        var T_HUNT = 2.05; // the signal ghosts in on CH 04
+        var T_LOCK = 3.0; // sync lock
+        var P0 = 3.8, P1 = 4.75; // push through the glass; hold 4.75-6.0
+
+        // perspective: glass at depth 1, the sign deeper at depth K, so it grows slower than the glass
+        var LN_CREEP = Math.log(1.03);
+        var LN_END = Math.log(CFG.gEnd);
+        var S_END = CFG.finalInk / inkW;
+        var D_END = 1 - 1 / CFG.gEnd;
+        var K = D_END / (1 - 1 / S_END);
+
+        root.style.setProperty("--fs", FS + "px");
+        root.style.setProperty("--carrier-size", CFG.carrier);
+
+        // deterministic helpers (no Math.random, no clocks)
+        function glitchHash(n) {
+          var x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
+          return x - Math.floor(x);
+        }
+        function lcg(k) {
+          var s = (Math.imul(k + 0x9e37, 1664525) + 1013904223) >>> 0;
+          s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+          return s;
+        }
+        function r1(v) {
+          return Math.round(v * 10) / 10;
+        }
+        function clamp01(v) {
+          return v < 0 ? 0 : v > 1 ? 1 : v;
+        }
+        function px(v) {
+          return r1(v) + "px";
+        }
+        function box(el, x, y, w, h) {
+          el.style.left = px(x);
+          el.style.top = px(y);
+          el.style.width = px(w);
+          el.style.height = px(h);
+        }
+        function div(cls, id, x, y, w, h, peak, extra) {
+          return (
+            '<div class="' + cls + '"' + (id ? ' id="' + id + '"' : "") + (peak != null ? ' data-peak="' + peak + '"' : "") +
+            ' style="left:' + px(x) + ";top:" + px(y) + ";width:" + px(w) + ";height:" + px(h) + ";" + (extra || "") + '"></div>'
+          );
+        }
+
+        // ---------------------------------------------------------------- the set
+        var side = 0.085 * SW, topm = 0.1 * SH, chin = 0.36 * SH;
+        var cabX = SX - side, cabY = SY - topm, cabW = SW + 2 * side, cabH = SH + topm + chin;
+        var cabR = 0.045 * cabW;
+        var footH = 0.035 * SH;
+        var floorY = cabY + cabH + footH;
+
+        function rect(cls, x, y, w, h, rx, id) {
+          return '<rect class="' + cls + '"' + (id ? ' id="' + id + '"' : "") + ' x="' + r1(x) + '" y="' + r1(y) + '" width="' + r1(w) + '" height="' + r1(h) + '" rx="' + r1(rx) + '"/>';
+        }
+        function circ(cls, x, y, rr, id) {
+          return '<circle class="' + cls + '"' + (id ? ' id="' + id + '"' : "") + ' cx="' + r1(x) + '" cy="' + r1(y) + '" r="' + r1(rr) + '"/>';
+        }
+        function line(cls, x1, y1, x2, y2, sw) {
+          return '<line class="' + cls + '" x1="' + r1(x1) + '" y1="' + r1(y1) + '" x2="' + r1(x2) + '" y2="' + r1(y2) + '"' + (sw ? ' style="stroke-width:' + r1(sw) + 'px"' : "") + "/>";
+        }
+        var M = 400;
+        var svg = "<defs>";
+        svg += '<linearGradient id="gCab" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cabinet_mid)"/><stop offset="1" style="stop-color:var(--cabinet_dark)"/></linearGradient>';
+        svg += '<linearGradient id="gPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cabinet_dark)"/><stop offset="1" style="stop-color:var(--knob)"/></linearGradient>';
+        svg += '<mask id="hole" maskUnits="userSpaceOnUse" x="' + -M + '" y="' + -M + '" width="' + (W + 2 * M) + '" height="' + (H + 2 * M) + '">';
+        svg += '<rect x="' + -M + '" y="' + -M + '" width="' + (W + 2 * M) + '" height="' + (H + 2 * M) + '" fill="white"/>';
+        svg += '<rect x="' + r1(SX) + '" y="' + r1(SY) + '" width="' + SW + '" height="' + SH + '" rx="' + r1(RAD) + '" fill="black"/>';
+        svg += "</mask></defs>";
+        // rabbit-ear antenna
+        var rodW = Math.max(2.5, 0.0055 * SW);
+        var domeRx = 0.075 * SW, domeRy = 0.038 * SW;
+        var aL = CFG.antenna[0] * SH, aA = (CFG.antenna[1] * Math.PI) / 180;
+        var by = cabY - domeRy * 0.55;
+        [-1, 1].forEach(function (d) {
+          var bx = SCX + d * 0.012 * SW;
+          var tx = bx + d * aL * Math.sin(aA), ty = by - aL * Math.cos(aA);
+          svg += line("rod", bx, by, tx, ty, rodW);
+          svg += line("rod-rim", bx - 1, by - 1, tx - 1, ty - 1);
+          svg += circ("knob", tx, ty, 0.009 * SW);
+        });
+        svg += '<path class="dome" d="M' + r1(SCX - domeRx) + "," + r1(cabY + 2) + " A" + r1(domeRx) + " " + r1(domeRy) + " 0 0 1 " + r1(SCX + domeRx) + "," + r1(cabY + 2) + ' Z"/>';
+        // feet
+        svg += rect("foot", cabX + 0.12 * cabW, cabY + cabH - 6, 0.12 * cabW, footH + 6, 4);
+        svg += rect("foot", cabX + 0.76 * cabW, cabY + cabH - 6, 0.12 * cabW, footH + 6, 4);
+        // the cabinet, its bezel ring and the control chin (screen hole masked out)
+        svg += '<g mask="url(#hole)">';
+        svg += rect("cab", cabX, cabY, cabW, cabH, cabR);
+        var bez = 0.026 * SW;
+        svg += rect("sur", SX - bez, SY - bez, SW + 2 * bez, SH + 2 * bez, RAD + bez);
+        var pTop = SY + SH + bez + 0.035 * SH, pBot = cabY + cabH - 0.045 * SH;
+        var pH = pBot - pTop, pMid = (pTop + pBot) / 2;
+        svg += rect("panel", cabX + 0.05 * cabW, pTop, 0.9 * cabW, pH, 8);
+        // speaker grille
+        var nSlots = 6;
+        for (var k = 0; k < nSlots; k++) {
+          svg += rect("slot", cabX + 0.09 * cabW, pTop + pH * (0.2 + (k * 0.6) / (nSlots - 1)) - 0.006 * SH, 0.38 * cabW, 0.012 * SH, 0.006 * SH);
+        }
+        // power LED
+        var ledR = Math.max(2.6, 0.006 * SW);
+        svg += circ("led-off", cabX + 0.575 * cabW, pMid, ledR);
+        svg += circ("led", cabX + 0.575 * cabW, pMid, ledR, "led");
+        // channel dial: 12 detents and a pointer that clicks round on each change
+        var dX = cabX + 0.7 * cabW, dR = 0.27 * pH;
+        for (var j = 0; j < 12; j++) {
+          var a = (j / 12) * Math.PI * 2;
+          svg += line("tick", dX + Math.sin(a) * dR * 1.22, pMid - Math.cos(a) * dR * 1.22, dX + Math.sin(a) * dR * 1.36, pMid - Math.cos(a) * dR * 1.36, 1.5);
+        }
+        svg += circ("knob", dX, pMid, dR);
+        svg += circ("ring", dX, pMid, dR * 0.72);
+        svg += '<g id="dial-ptr">' + line("tick", dX, pMid - dR * 0.3, dX, pMid - dR * 0.86, 2.5) + "</g>";
+        // volume knob
+        var vX = cabX + 0.86 * cabW, vR = 0.19 * pH;
+        svg += circ("knob", vX, pMid, vR);
+        svg += line("tick", vX, pMid - vR * 0.3, vX + vR * 0.5, pMid - vR * 0.74, 2);
+        // violet rim on the top and left edges
+        var cr = cabX + cabW, cb = cabY + cabH;
+        svg += '<path class="rim" d="M' + r1(cabX + 0.75) + "," + r1(cb - cabR) + " L" + r1(cabX + 0.75) + "," + r1(cabY + cabR) + " Q" + r1(cabX + 0.75) + "," + r1(cabY + 0.75) + " " + r1(cabX + cabR) + "," + r1(cabY + 0.75) + " L" + r1(cr - cabR) + "," + r1(cabY + 0.75) + '"/>';
+        svg += "</g>";
+        var tvEl = document.getElementById("tv");
+        tvEl.setAttribute("width", W);
+        tvEl.setAttribute("height", H);
+        tvEl.setAttribute("viewBox", "0 0 " + W + " " + H);
+        tvEl.innerHTML = svg;
+
+        // haze blobs (constant opacity, slow drift)
+        var hz = [
+          [0.28, 0.32, 0.5, 0.42],
+          [0.72, 0.5, 0.55, 0.45],
+          [0.5, 0.82, 0.62, 0.3],
+        ];
+        document.getElementById("haze").innerHTML = hz
+          .map(function (b) {
+            var bw = b[2] * Math.max(W, H), bh = b[3] * Math.max(W, H);
+            return '<div class="blob" style="left:' + px(b[0] * W - bw / 2) + ";top:" + px(b[1] * H - bh / 2) + ";width:" + px(bw) + ";height:" + px(bh) + '"></div>';
+          })
+          .join("");
+
+        // room light: halo in the haze, floor pool, wet-floor streaks (static colour, then the picture's)
+        var room = "";
+        room += div("lt lt-s glow-s", null, SCX - 1.4 * SW, SCY - 1.2 * SH, 2.8 * SW, 2.4 * SH, 0.2);
+        room += div("lt lt-p glow-p", null, SCX - 1.3 * SW, SCY - 1.1 * SH, 2.6 * SW, 2.2 * SH, 0.16);
+        room += div("lt lt-s pool-s", null, SCX - 1.0 * cabW, floorY - 0.13 * SH, 2.0 * cabW, 0.36 * SH, 0.24);
+        room += div("lt lt-p pool-pk", null, SCX - 0.22 * SW - 0.55 * cabW, floorY - 0.11 * SH, 1.1 * cabW, 0.3 * SH, 0.2);
+        room += div("lt lt-p pool-cy", null, SCX + 0.3 * SW - 0.45 * cabW, floorY - 0.11 * SH, 0.9 * cabW, 0.3 * SH, 0.18);
+        var sb = "filter:blur(" + r1(0.035 * SH) + "px)";
+        room += div("lt lt-s streak-s", null, SCX - 0.35 * SW, floorY + 4, 0.7 * SW, 0.6 * SH, 0.13, sb);
+        room += div("lt lt-p streak-pk", null, SCX - 0.135 * inkW - 0.28 * inkW, floorY + 4, 0.56 * inkW, 0.6 * SH, 0.2, sb);
+        room += div("lt lt-p streak-cy", null, SCX + 0.37 * inkW - 0.12 * inkW, floorY + 4, 0.24 * inkW, 0.6 * SH, 0.2, sb);
+        room += '<div id="contact" style="left:' + px(SCX - 0.55 * cabW) + ";top:" + px(floorY - 0.04 * SH) + ";width:" + px(1.1 * cabW) + ";height:" + px(0.08 * SH) + '"></div>';
+        document.getElementById("room").innerHTML = room;
+
+        // the screen's light on the cabinet face
+        var cg = function (inner) {
+          return "background:radial-gradient(ellipse " + px(0.72 * cabW) + " " + px(0.66 * cabH) + " at " + px(SCX - cabX) + " " + px(SCY - cabY) + "," + inner + ");border-radius:" + px(cabR);
+        };
+        document.getElementById("cabspill").innerHTML =
+          div("lt lt-s cspill", null, cabX, cabY, cabW, cabH, 0.46, cg("var(--light_static) 0%,var(--none) 100%")) +
+          div("lt lt-p cspill", null, cabX, cabY, cabW, cabH, 0.36, cg("var(--light_pic) 0%,var(--none) 100%"));
+
+        // screen
+        var scrEl = document.getElementById("screen");
+        box(scrEl, SX - 2, SY - 2, SW + 4, SH + 4);
+        scrEl.style.borderRadius = px(RAD + 2);
+        var SWW = SW + 4, SHH = SH + 4;
+        var gw = Math.ceil(SWW / 3) + 2, gh = Math.ceil(SHH / 3) + 2;
+        var grainEl = document.getElementById("grain");
+        grainEl.style.width = gw + "px";
+        grainEl.style.height = gh + "px";
+        var tearOver = 0.15 * SW;
+        var sgEl = document.getElementById("streakgrain");
+        sgEl.style.left = px(-tearOver);
+        sgEl.style.width = Math.ceil((SWW + 2 * tearOver) / 3) + 2 + "px";
+        sgEl.style.height = Math.ceil((0.3 * SHH) / 3) + 2 + "px";
+        var beamEl = document.getElementById("beam");
+        beamEl.style.top = px(SHH / 2 - 2);
+        var PADX = 0.25 * SW, PADY = 0.7 * SH;
+        var picEl = document.getElementById("pic");
+        box(picEl, -PADX, -PADY, SWW + 2 * PADX, SHH + 2 * PADY);
+        var osdEl = document.getElementById("osd");
+        osdEl.style.top = px(0.085 * SH);
+        osdEl.style.right = px(0.085 * SW);
+        osdEl.style.fontSize = px(CFG.osd * SH);
+        var glassEl = document.getElementById("glass");
+        glassEl.style.boxShadow = "inset 0 0 " + Math.round(0.38 * SH) + "px var(--inset_a),inset 0 0 8px var(--inset_b)";
+        glassEl.style.borderRadius = px(RAD + 2);
+
+        // the wordmark: ghosts, bloom, core share one grid cell; neon pools behind it
+        var WM_INNER = '<b class="wm-a">voidtv</b><i class="wm-b">.net</i>';
+        function wm(cls) {
+          var hidden = cls.indexOf("core") < 0;
+          return '<span class="wm ' + cls + '"' + (hidden ? ' aria-hidden="true" data-layout-ignore' : "") + ">" + WM_INNER + "</span>";
+        }
+        document.getElementById("wm-stack").innerHTML = wm("rgb warm") + wm("rgb cool") + wm("wm-bloom") + wm("wm-core");
+        // the vignette is transparent over the word (50% stop); its covering the core is intentional layering
+        document.querySelectorAll("#wm-stack .wm-core b, #wm-stack .wm-core i").forEach(function (el) {
+          el.setAttribute("data-layout-allow-occlusion", "true");
+        });
+        var arrW = inkW * 1.3;
+        var pcx = (SWW + 2 * PADX) / 2, pcy = (SHH + 2 * PADY) / 2;
+        [["npool-pink", 0.315], ["npool-cyan", 0.815]].forEach(function (p) {
+          var el = document.getElementById(p[0]);
+          var pw = 0.7 * arrW, ph = 0.45 * arrW;
+          box(el, pcx - arrW / 2 + p[1] * arrW - pw / 2, pcy - ph / 2, pw, ph);
+        });
+
+        // ---------------------------------------------------------------- timeline
+        var tl = gsap.timeline({ paused: true });
+        function lights(sel, a, b, dur, ease, at, later) {
+          document.querySelectorAll(sel).forEach(function (el) {
+            var pk = Number(el.dataset.peak);
+            var to = { opacity: r1(b * pk * 1000) / 1000, duration: dur, ease: ease };
+            if (later) to.immediateRender = false;
+            tl.fromTo(el, { opacity: r1(a * pk * 1000) / 1000 }, to, at);
+          });
+        }
+        tl.fromTo("#haze", { x: 0 }, { x: 40, duration: DUR, ease: "none" }, 0);
+
+        // POWER ON 0.03-0.62: LED, a dot stretches to a glowing line, the line opens to a full raster.
+        // One monotonic brightening: the raster's area only grows; the line is never brighter than the static.
+        tl.fromTo("#led", { opacity: 0 }, { opacity: 0.8, duration: 0.08, ease: "power1.out" }, 0.03);
+        tl.fromTo("#raster", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.04, ease: "none" }, T_ON);
+        tl.fromTo("#raster", { scaleX: 0.03 }, { scaleX: 1, duration: 0.16, ease: "power2.out" }, T_ON);
+        tl.fromTo("#raster", { scaleY: 0.008 }, { scaleY: 1, duration: 0.42, ease: "power2.inOut" }, T_OPEN);
+        tl.fromTo("#beam", { scaleX: 0.03, opacity: 0 }, { scaleX: 1, opacity: 0.85, duration: 0.16, ease: "power2.out" }, T_ON);
+        tl.fromTo("#beam", { opacity: 0.85 }, { opacity: 0, duration: 0.34, ease: "power1.inOut", immediateRender: false }, 0.3);
+        lights(".lt-s", 0, 0.1, 0.15, "power1.in", T_ON, false);
+        lights(".lt-s", 0.1, 1, 0.42, "power2.inOut", T_OPEN, true);
+
+        // STATIC 0.6-3.0: OSD up; the number, tear, hum roll and dial are driven by frame()
+        tl.fromTo("#osd", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.04, ease: "none" }, T_OSD);
+
+        // SIGNAL HUNTING 2.05-3.0 on CH 04: a faint rolling ghost of the picture
+        tl.fromTo("#pic", { opacity: 0 }, { opacity: 0.3, duration: 0.9, ease: "sine.in" }, T_HUNT);
+
+        // LOCK 3.0-3.4: one monotonic darkening, static -> picture
+        tl.fromTo("#raster", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.3, ease: "power1.in", immediateRender: false }, T_LOCK);
+        tl.fromTo("#pic", { opacity: 0.3 }, { opacity: 1, duration: 0.26, ease: "power2.out", immediateRender: false }, T_LOCK);
+        lights(".lt-s", 1, 0, 0.3, "power1.in", T_LOCK, true);
+        lights(".lt-p", 0, 1, 0.45, "power2.out", T_LOCK + 0.02, false);
+        tl.fromTo("#wm-stack .wm-bloom", { opacity: 0 }, { opacity: 0.4, duration: 0.4, ease: "sine.out" }, T_LOCK + 0.05);
+        tl.fromTo("#osd", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.3, ease: "power1.inOut", immediateRender: false }, 3.45);
+
+        // PUSH THROUGH 3.8-4.75 (camera in frame()): scanlines and bulge fade, the neon cleans up and blooms
+        tl.fromTo("#glass", { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "sine.inOut" }, 3.95);
+        tl.fromTo("#wm-stack .wm-core", { filter: "blur(0.6px)" }, { filter: "blur(0px)", duration: 0.55, ease: "sine.inOut" }, 3.95);
+        tl.fromTo("#npool-pink", { opacity: 0 }, { opacity: CFG.poolPink, duration: 0.9, ease: "sine.out" }, 3.9);
+        tl.fromTo("#npool-cyan", { opacity: 0 }, { opacity: 0.26, duration: 0.9, ease: "sine.out" }, 3.9);
+        tl.fromTo("#wm-stack .wm-bloom", { opacity: 0.4 }, { opacity: 0.85, duration: 0.6, ease: "sine.inOut", immediateRender: false }, 4.15);
+
+        // HOLD 4.75-6.0: one gentle partial bloom settle, a slow creep, nothing pulses
+        tl.fromTo("#wm-stack .wm-bloom", { opacity: 0.85 }, { opacity: CFG.bloomHold, duration: 1.0, ease: "sine.inOut", immediateRender: false }, P1);
+
+        // ---------------------------------------------------------------- procedural layer
+        // One driver; every per-frame value is a pure function of time.
+        var turb = document.getElementById("turb");
+        var turb2 = document.getElementById("turb2");
+        var film = document.getElementById("film-grain");
+        var camEl = document.getElementById("cam");
+        var wrapEl = document.getElementById("wmwrap");
+        var humEl = document.getElementById("hum");
+        var tearEl = document.getElementById("tear");
+        var dialEl = document.getElementById("dial-ptr");
+        var picRgb = document.querySelectorAll("#wm-stack .rgb");
+        camEl.style.transformOrigin = px(SCX) + " " + px(SCY);
+        var p2io = gsap.parseEase("power2.inOut");
+        var p3in = gsap.parseEase("power3.in");
+        var p3out = gsap.parseEase("power3.out");
+        var lastSeed = -1, lastCh = "";
+        var TEAR_Y = [0.24, 0.5];
+        var JIT = 0.018 * SW;
+
+        function setRgb(els, amp, f, salt, maxSplit, alpha) {
+          for (var layer = 0; layer < els.length; layer++) {
+            var el = els[layer];
+            if (amp > 0.0005) {
+              var jx = (glitchHash(f * 13 + layer * 7 + salt) * 2 - 1) * maxSplit * amp;
+              var jy = (glitchHash(f * 29 + layer * 11 + salt) * 2 - 1) * maxSplit * 0.35 * amp;
+              el.style.transform = "translate(" + jx.toFixed(2) + "px," + jy.toFixed(2) + "px)";
+              el.style.opacity = String(alpha);
+            } else {
+              el.style.transform = "none";
+              el.style.opacity = "0";
+            }
+          }
+        }
+
+        function frame(t) {
+          var f = Math.floor(t * 30 + 1e-4); // frame index
+          var g = Math.floor(f / 2); // 2-frame step
+
+          // static: one new seed per frame while it is on screen (fine 3px cells, constant mean)
+          var seed = 1 + Math.min(f, 100);
+          if (seed !== lastSeed) {
+            turb.setAttribute("seed", String(seed));
+            turb2.setAttribute("seed", String(seed + 500));
+            lastSeed = seed;
+          }
+          // film grain: noise.png offset from a seeded LCG every 2 frames
+          var n = lcg(g);
+          film.style.backgroundPosition = (n % 160) + "px " + ((n >>> 9) % 160) + "px";
+
+          // channel slips: hum bar rolls top->bottom, a band tears into sync streaks
+          var humY = null, tear = null;
+          for (var j = 0; j < SLIPS.length; j++) {
+            var tc = SLIPS[j];
+            var u = (t - (tc - 0.15)) / 0.5;
+            if (u >= 0 && u < 1) humY = (-0.32 + 1.32 * u) * SHH;
+            var v = (t - (tc - 0.06)) / 0.3;
+            if (v >= 0 && v < 1) {
+              tear = {
+                y: (TEAR_Y[j] + 0.22 * v) * SHH,
+                h: (0.2 - 0.08 * v) * SHH,
+                x: (glitchHash(f * 7 + j * 13) * 2 - 1) * 0.05 * SW + 0.07 * SW * (1 - v),
+              };
+            }
+          }
+          if (humY !== null) {
+            humEl.style.opacity = "1";
+            humEl.style.transform = "translateY(" + humY.toFixed(1) + "px)";
+          } else {
+            humEl.style.opacity = "0";
+          }
+          if (tear) {
+            tearEl.style.opacity = "1";
+            tearEl.style.top = tear.y.toFixed(1) + "px";
+            tearEl.style.height = tear.h.toFixed(1) + "px";
+            tearEl.style.transform = "translateX(" + tear.x.toFixed(1) + "px)";
+          } else {
+            tearEl.style.opacity = "0";
+          }
+
+          // OSD number and the channel dial (one detent per change)
+          var ch = t < SLIPS[0] ? "CH 02" : t < SLIPS[1] ? "CH 03" : "CH 04";
+          if (ch !== lastCh) {
+            osdEl.textContent = ch;
+            lastCh = ch;
+          }
+          var ang = -60;
+          for (var q = 0; q < SLIPS.length; q++) ang += 30 * p3out(clamp01((t - (SLIPS[q] - 0.08)) / 0.14));
+          dialEl.setAttribute("transform", "rotate(" + ang.toFixed(2) + " " + r1(dX) + " " + r1(pMid) + ")");
+
+          // the picture: rolls up unlocked on CH 04, then catches in one sync-lock move
+          var py = 0.45, pxo = 0, rgbAmp = 0;
+          if (t >= T_HUNT && t < T_LOCK) {
+            py = 0.45 - 0.29 * ((t - T_HUNT) / (T_LOCK - T_HUNT));
+            pxo = (glitchHash(g * 13 + 5) * 2 - 1) * JIT;
+            rgbAmp = 0.35;
+          } else if (t >= T_LOCK && t < T_LOCK + 0.42) {
+            var lu = (t - T_LOCK) / 0.42;
+            py = 0.16 * (1 - p3out(lu));
+            pxo = (glitchHash(g * 13 + 5) * 2 - 1) * JIT * (1 - lu) * (1 - lu);
+            var ru = (t - T_LOCK) / 0.4;
+            rgbAmp = ru < 1 ? 1 - p3in(ru) : 0;
+          } else if (t >= T_LOCK + 0.42) {
+            py = 0;
+          }
+          picEl.style.transform = "translate(" + pxo.toFixed(2) + "px," + (py * SH).toFixed(2) + "px)";
+          setRgb(picRgb, rgbAmp, f, 31, 0.11 * FS, 0.8);
+
+          // camera: slow creep, then the push through the glass (log-scale eased, so the zoom rate is smooth)
+          var lnG, e = 0;
+          if (t < P0) {
+            lnG = (LN_CREEP * t) / P0;
+          } else {
+            e = p2io(clamp01((t - P0) / (P1 - P0)));
+            lnG = LN_CREEP + (LN_END - LN_CREEP) * e;
+          }
+          var G = Math.exp(lnG);
+          var D = 1 - 1 / G;
+          var S = K / (K - D);
+          var ox = (CX - SCX) * e, oy = (CY - SCY) * e;
+          camEl.style.transform = "translate(" + ox.toFixed(2) + "px," + oy.toFixed(2) + "px) scale(" + G.toFixed(5) + ")";
+          var creep = t > P1 ? 1 + (0.012 * (t - P1)) / (DUR - P1) : 1;
+          wrapEl.style.transform = "scale(" + ((S * creep) / G).toFixed(5) + ")";
+        }
+        var clock = { t: 0 };
+        tl.fromTo(
+          clock,
+          { t: 0 },
+          {
+            t: DUR,
+            duration: DUR,
+            ease: "none",
+            onUpdate: function () {
+              frame(clock.t);
+            },
+          },
+          0,
+        );
+        frame(0);
+
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>voidtv.net tv wall</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Unbounded";
+        src: url(assets/fonts/unbounded-latin.woff2) format("woff2");
+        font-weight: 200 900;
+        font-display: block;
+      }
+      /* PALETTE: every colour in this file lives here (shot-plan palette + derived alpha/multiply tokens) */
+      :root {
+        --bg: #07080c;
+        --pink_core: #ff4fc8;
+        --pink_glow: #dc20a9;
+        --blue_core: #5fe3ff;
+        --blue_glow: #0ac1e0;
+        --violet: #a954e3;
+        --carrier_hot: #2a1446;
+        --carrier_mid: #160c2a;
+        --carrier_edge: #0a0812;
+        --cabinet_dark: #15131c;
+        --cabinet_mid: #221d2b;
+        --cabinet_edge: #2e2838;
+        --wall_gap: #050508;
+        --knob: #0e0d13;
+        --knob_rim: #3a3346;
+        --static_base: #b7bcc8;
+        /* screen tints (multiply) */
+        --tint_ice: rgb(168, 186, 255);
+        --tint_violet: rgb(200, 150, 255);
+        --tint_cyan: rgb(150, 225, 255);
+        --tint_pink: rgb(255, 160, 225);
+        --tint_neutral: rgb(220, 222, 232);
+        /* derived alphas */
+        --black: rgb(0, 0, 0);
+        --hum: rgba(0, 0, 0, 0.15);
+        --sheen: rgba(255, 255, 255, 0.09);
+        --refl: rgba(255, 255, 255, 0.05);
+        --scan: rgba(0, 0, 0, 0.1);
+        --pgrid: rgba(0, 0, 0, 0.06);
+        --bulge: rgba(0, 0, 0, 0.34);
+        --inset_a: rgba(0, 0, 0, 0.4);
+        --inset_b: rgba(0, 0, 0, 0.5);
+        --vig: rgba(7, 8, 12, 0.85);
+        --none: rgba(0, 0, 0, 0);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Unbounded", sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #svgdefs {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+      /* camera wrapper: everything except vignette + film grain */
+      #cam {
+        position: absolute;
+        inset: 0;
+        transform-origin: 50% 50%;
+      }
+      /* the wall: DoF blur + brightness target; also the isolation group for the tint multiplies */
+      #wall {
+        position: absolute;
+        inset: 0;
+        --dof: 0px;
+        --wb: 1;
+        filter: blur(var(--dof)) brightness(var(--wb));
+      }
+      /* ONE frame-size static plane under every screen */
+      #static {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      #grain {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 640px;
+        height: 360px;
+        background: var(--static_base);
+        filter: url(#snow) contrast(1.6) brightness(1.2);
+        transform: scale(3);
+        transform-origin: 0 0;
+        image-rendering: pixelated;
+        opacity: 0.9;
+      }
+      #static-tint {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(160deg, var(--violet) 0%, var(--blue_glow) 100%);
+        mix-blend-mode: screen;
+        opacity: 0.1;
+      }
+      #screens,
+      #haze {
+        position: absolute;
+        inset: 0;
+      }
+      #cabinets {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: visible;
+      }
+      /* a screen: NOT a stacking context, so .tint multiplies the shared static below it */
+      .scr {
+        position: absolute;
+        overflow: hidden;
+      }
+      .scr > div {
+        position: absolute;
+        inset: 0;
+      }
+      .tint {
+        mix-blend-mode: multiply;
+      }
+      .t-ice {
+        background: var(--tint_ice);
+      }
+      .t-violet {
+        background: var(--tint_violet);
+      }
+      .t-cyan {
+        background: var(--tint_cyan);
+      }
+      .t-pink {
+        background: var(--tint_pink);
+      }
+      .t-neutral {
+        background: var(--tint_neutral);
+      }
+      .scr > .dim {
+        background: var(--black);
+      }
+      .scr > .hum {
+        bottom: auto;
+        height: 22%;
+        opacity: 0;
+        background: linear-gradient(180deg, var(--none) 0%, var(--hum) 30%, var(--hum) 70%, var(--none) 100%);
+      }
+      /* dark glass halves: the power-on opens from the centre line */
+      .scr > .off {
+        background: radial-gradient(ellipse at 35% 30%, var(--cabinet_dark) 0%, var(--knob) 70%);
+      }
+      .scr > .off-top {
+        inset: 0 0 calc(50% - 1px) 0;
+        transform-origin: 50% 0%;
+      }
+      .scr > .off-bot {
+        inset: calc(50% - 1px) 0 0 0;
+        transform-origin: 50% 100%;
+      }
+      .scr > .ghost {
+        opacity: 0;
+      }
+      .scr > .sig {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .pic {
+        position: absolute;
+        background: var(--bg);
+      }
+      .plate {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        display: grid;
+        place-items: center;
+      }
+      .carrier {
+        background: radial-gradient(
+          var(--carrier-size, 650px 310px) at 50% 50%,
+          var(--carrier_hot) 0%,
+          var(--carrier_mid) 38%,
+          var(--carrier_edge) 70%,
+          var(--bg) 100%
+        );
+      }
+      .scr > .glass {
+        background:
+          radial-gradient(ellipse at 28% 18%, var(--refl) 0%, var(--none) 42%),
+          linear-gradient(115deg, var(--sheen) 0%, var(--none) 30%),
+          repeating-linear-gradient(0deg, var(--scan) 0 1px, var(--none) 1px 3px),
+          repeating-linear-gradient(90deg, var(--pgrid) 0 1px, var(--none) 1px 4px),
+          radial-gradient(ellipse at center, var(--none) 58%, var(--bulge) 100%);
+      }
+      /* the wordmark (brand-kit neon recipe) */
+      .wm-stack {
+        display: grid;
+        place-items: center;
+      }
+      .wm {
+        grid-area: 1 / 1;
+        font-family: "Unbounded", sans-serif;
+        font-size: var(--fs, 184px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .wm b,
+      .wm i {
+        font-weight: 700;
+        font-style: normal;
+      }
+      .wm-base,
+      .wm-core,
+      .wm-bloom {
+        position: relative;
+        z-index: 2;
+      }
+      .wm-bloom {
+        z-index: 1;
+      }
+      .wm .wm-a {
+        color: var(--pink_core);
+        text-shadow:
+          0 0 0.12em var(--pink_glow),
+          0 0 0.45em var(--pink_glow);
+      }
+      .wm .wm-b {
+        color: var(--blue_core);
+        text-shadow:
+          0 0 0.12em var(--blue_glow),
+          0 0 0.45em var(--blue_glow);
+      }
+      .pic .wm-base {
+        filter: blur(0.5px);
+      }
+      /* RGB ghost copies (chromatic-glitch form A): brand glows, screen blend, behind the base */
+      .wm.rgb {
+        position: relative;
+        z-index: 0;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      .wm.rgb .wm-a,
+      .wm.rgb .wm-b {
+        color: inherit;
+        text-shadow: none;
+      }
+      .wm.warm {
+        color: var(--pink_glow);
+      }
+      .wm.cool {
+        color: var(--blue_glow);
+      }
+      .wm-bloom {
+        opacity: 0;
+        filter: blur(calc(var(--fs, 184px) * 0.1413)); /* 26px at 184px */
+      }
+      /* spill light pools: above the wall, below the free word */
+      #spill {
+        position: absolute;
+        inset: 0;
+        mix-blend-mode: screen;
+      }
+      .pool {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      #pool-pink {
+        background: radial-gradient(closest-side, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      #pool-cyan {
+        background: radial-gradient(closest-side, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.12;
+        background: radial-gradient(closest-side, var(--violet) 0%, var(--none) 100%);
+      }
+      /* the free neon word, positioned by centre */
+      #wm {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        visibility: hidden;
+      }
+      /* vignette component recipe */
+      #hf-vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, var(--none) 50%, var(--vig) 100%);
+      }
+      #film-grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: url(assets/textures/noise.png);
+        mix-blend-mode: overlay;
+        opacity: 0.05;
+      }
+      /* cabinet SVG classes */
+      .gap {
+        fill: var(--wall_gap);
+      }
+      .cab {
+        fill: url(#gCab);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .sur {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .panel {
+        fill: url(#gPanel);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .knob {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1.5;
+      }
+      .tick {
+        stroke: var(--knob_rim);
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+      .slot {
+        fill: var(--wall_gap);
+      }
+      .btn {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1;
+      }
+      .led {
+        fill: var(--pink_glow);
+        opacity: 0.75;
+      }
+      .led-off {
+        fill: var(--knob_rim);
+      }
+      .rim {
+        fill: none;
+        stroke: var(--violet);
+        stroke-opacity: 0.35;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-31sd"
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="7"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <svg data-hf-id="hf-emdn" id="svgdefs" aria-hidden="true">
+        <filter data-hf-id="hf-j7bq" id="snow" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence data-hf-id="hf-lrcf" id="turb" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="1" stitchTiles="stitch" result="n" />
+          <feColorMatrix data-hf-id="hf-01d5" type="saturate" values="0" in="n" result="g" />
+          <feComponentTransfer data-hf-id="hf-jh3m" in="g">
+            <feFuncR data-hf-id="hf-s5mr" type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1" />
+            <feFuncG data-hf-id="hf-7wbv" type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1" />
+            <feFuncB data-hf-id="hf-gtyy" type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1" />
+          </feComponentTransfer>
+        </filter>
+      </svg>
+      <section data-hf-id="hf-4r57" id="stage" class="clip" data-start="0" data-duration="7" data-track-index="0">
+        <div data-hf-id="hf-ftaq" id="cam">
+          <div data-hf-id="hf-bbjc" id="wall" data-layout-allow-overflow="true">
+            <div data-hf-id="hf-f5xr" id="static"><div data-hf-id="hf-f6d6" id="grain"></div><div data-hf-id="hf-kab3" id="static-tint"></div></div>
+            <div data-hf-id="hf-33bv" id="screens" data-layout-allow-overflow="true"></div>
+            <svg data-hf-id="hf-ttvd" id="cabinets" aria-hidden="true" data-layout-allow-overflow="true"></svg>
+            <div data-hf-id="hf-nmbu" id="haze" data-layout-allow-overflow="true"></div>
+          </div>
+          <div data-hf-id="hf-f8ta" id="spill" data-layout-allow-overflow="true">
+            <div data-hf-id="hf-tg0j" class="pool" id="pool-pink"></div>
+            <div data-hf-id="hf-m05e" class="pool" id="pool-cyan"></div>
+          </div>
+          <div data-hf-id="hf-emh9" id="wm" role="img" aria-label="voidtv.net">
+            <div data-hf-id="hf-2ipm" class="wm-stack" id="wm-stack"></div>
+          </div>
+        </div>
+        <div data-hf-id="hf-kjz0" id="hf-vignette" data-layout-allow-occlusion="true"></div>
+        <div data-hf-id="hf-9lcj" id="film-grain" data-layout-allow-occlusion="true"></div>
+      </section>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+
+        // ---------------------------------------------------------------- data
+        var root = document.getElementById("root");
+        var W = Number(root.dataset.width);
+        var H = Number(root.dataset.height);
+        var FMT = W > H ? "16x9" : "9x16";
+
+        // [id, type, tint, cabX, cabY, cabW, cabH, scrX, scrY, scrW, scrH] in frame px (shot-plan content.layout)
+        var CONFIGS = {
+          "16x9": {
+            layout: [["tv-a1","portable","ice",-20,-46,250,218,0,-26,210,161],["tv-a2","console","violet",236,-46,318,218,252,-24,224,168],["tv-a3","monitor","neutral",560,-46,262,218,576,-30,230,174],["tv-a4","console","cyan",828,-46,312,218,844,-24,224,168],["tv-a5","dead","none",1146,-46,246,218,1166,-26,206,161],["tv-a6","console","ice",1398,-46,326,218,1414,-24,224,168],["tv-a7","portable","pink",1730,-46,252,218,1750,-26,212,161],["tv-b1","console","neutral",-120,178,322,222,-103,200,228,171],["tv-b2","portable","violet",208,178,258,222,228,198,218,164],["tv-b3","monitor","ice",472,178,296,222,489,195,262,176],["tv-b4","console","pink",774,178,324,222,791,200,228,171],["tv-b5","portable","cyan",1104,178,252,222,1124,198,212,164],["tv-b6","console","violet",1362,178,318,222,1379,200,228,171],["tv-b7","monitor","ice",1686,178,360,222,1703,195,326,176],["tv-c1","console","violet",-60,406,390,284,-39,434,278,219],["tv-c2","wide","ice",336,406,461,284,354,424,425,232],["tv-c3","wide","neutral",803,406,429,284,821,424,393,232],["tv-c4","wide","cyan",1238,406,359,284,1256,424,323,232],["tv-c5","console","violet",1603,406,380,284,1624,434,268,219],["tv-d1","monitor","cyan",-100,696,270,204,-85,711,240,162],["tv-d2","console","ice",176,696,300,204,191,716,209,157],["tv-d3","portable","pink",482,696,236,204,500,714,200,151],["tv-d4","console","neutral",724,696,304,204,739,716,209,157],["tv-d5","dead","none",1034,696,232,204,1052,714,196,151],["tv-d6","console","violet",1272,696,298,204,1287,716,209,157],["tv-d7","portable","ice",1576,696,236,204,1594,714,200,151],["tv-d8","monitor","neutral",1818,696,250,204,1833,711,220,162],["tv-e1","console","violet",-40,906,318,220,-24,928,225,169],["tv-e2","portable","neutral",284,906,256,220,304,926,216,163],["tv-e3","console","ice",546,906,320,220,562,928,225,169],["tv-e4","monitor","pink",872,906,300,220,888,922,268,175],["tv-e5","console","cyan",1178,906,316,220,1194,928,225,169],["tv-e6","portable","violet",1500,906,254,220,1520,926,214,163],["tv-e7","console","ice",1760,906,330,220,1776,928,225,169]],
+            band: ["tv-c2", "tv-c3", "tv-c4"],
+            hum: ["tv-b3", "tv-d6", "tv-e4"],
+            font: 184,
+            falloff: 1150,
+            lift: -6,
+            inkEm: 6.33,
+            grain: [640, 360],
+            carrier: "650px 310px",
+            bloomHold: 0.55,
+            spillPink: 0.38,
+          },
+          "9x16": {
+            layout: [["tv-a1","console","ice",-30,-60,300,210,-14,-39,216,162],["tv-a2","portable","violet",276,-60,244,210,295,-41,206,155],["tv-a3","console","neutral",526,-60,302,210,542,-39,216,162],["tv-a4","portable","cyan",834,-60,270,210,865,-41,207,155],["tv-b1","portable","pink",-90,156,230,196,-72,174,193,145],["tv-b2","console","ice",146,156,282,196,161,176,201,151],["tv-b3","monitor","violet",434,156,250,196,449,171,220,156],["tv-b4","console","neutral",690,156,284,196,705,176,201,151],["tv-b5","portable","ice",980,156,230,196,998,174,193,145],["tv-c1","monitor","cyan",-20,358,262,208,-4,374,230,165],["tv-c2","dead","none",248,358,236,208,267,377,198,154],["tv-c3","console","violet",490,358,298,208,506,379,213,160],["tv-c4","portable","ice",794,358,240,208,813,377,202,154],["tv-c5","monitor","neutral",1040,358,250,208,1056,374,218,165],["tv-d1","console","violet",-70,572,420,292,-48,601,300,225],["tv-d2","portable","ice",356,572,344,292,384,598,288,216],["tv-d3","console","cyan",706,572,430,292,728,601,300,225],["tv-e1","portable","violet",-40,870,187,196,-22,888,151,145],["tv-e2","wide","ice",153,870,284,196,171,888,248,144],["tv-e3","wide","neutral",443,870,254,196,461,888,218,144],["tv-e4","wide","cyan",703,870,244,196,721,888,208,144],["tv-e5","portable","violet",953,870,200,196,971,888,164,145],["tv-f1","console","ice",-110,1072,316,218,-94,1094,224,168],["tv-f2","portable","pink",212,1072,256,218,232,1092,215,161],["tv-f3","console","neutral",474,1072,318,218,490,1094,224,168],["tv-f4","monitor","violet",798,1072,310,218,814,1088,278,174],["tv-g1","portable","cyan",-30,1296,232,198,-12,1314,195,146],["tv-g2","console","violet",208,1296,286,198,223,1316,203,152],["tv-g3","dead","none",500,1296,232,198,518,1314,195,146],["tv-g4","console","ice",738,1296,288,198,753,1316,203,152],["tv-g5","portable","neutral",1032,1296,232,198,1050,1314,195,146],["tv-h1","console","neutral",-80,1500,312,216,-64,1522,221,166],["tv-h2","monitor","ice",238,1500,276,216,254,1516,244,172],["tv-h3","console","pink",520,1500,314,216,536,1522,221,166],["tv-h4","portable","violet",840,1500,270,216,868,1519,213,160],["tv-i1","portable","ice",-50,1722,276,238,-29,1743,234,177],["tv-i2","console","violet",232,1722,344,238,250,1746,244,183],["tv-i3","portable","cyan",582,1722,276,238,603,1743,234,177],["tv-i4","console","neutral",864,1722,344,238,882,1746,244,183]],
+            band: ["tv-e2", "tv-e3", "tv-e4"],
+            hum: ["tv-b3", "tv-g4", "tv-h2"],
+            font: 104,
+            falloff: 1250,
+            lift: -4,
+            inkEm: 6.33,
+            grain: [360, 640],
+            carrier: "430px 290px",
+            // the 104px word sits on proportionally more glow; these keep its core >= 3:1 (WCAG large text)
+            bloomHold: 0.45,
+            spillPink: 0.3,
+          },
+        };
+        var CFG = CONFIGS[FMT];
+        var CX = W / 2;
+        var CY = H / 2;
+        var FS = CFG.font;
+        var PAD = 300; // the on-screen picture overscans each screen so the vertical-hold slide never shows an edge
+
+        root.style.setProperty("--fs", FS + "px");
+        root.style.setProperty("--carrier-size", CFG.carrier);
+        var grainEl = document.getElementById("grain");
+        grainEl.style.width = CFG.grain[0] + "px";
+        grainEl.style.height = CFG.grain[1] + "px";
+
+        // deterministic helpers (no Math.random, no clocks)
+        function glitchHash(n) {
+          var x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
+          return x - Math.floor(x);
+        }
+        function lcg(k) {
+          var s = (Math.imul(k + 0x9e37, 1664525) + 1013904223) >>> 0;
+          s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+          return s;
+        }
+        function r1(v) {
+          return Math.round(v * 10) / 10;
+        }
+
+        var WM_INNER = '<b class="wm-a">voidtv</b><i class="wm-b">.net</i>';
+        function wm(cls) {
+          var hidden = cls.indexOf("base") < 0 && cls.indexOf("core") < 0;
+          return '<span class="wm ' + cls + '"' + (hidden ? ' aria-hidden="true" data-layout-ignore' : "") + ">" + WM_INNER + "</span>";
+        }
+
+        // word box (estimated ink width 6.33em) expanded by 0.5em: only screens touching it carry a word copy
+        var inkW = CFG.inkEm * FS;
+        var box = { l: CX - inkW / 2 - 0.5 * FS, r: CX + inkW / 2 + 0.5 * FS, t: CY - 0.42 * FS - 0.5 * FS, b: CY + 0.42 * FS + 0.5 * FS };
+
+        // ---------------------------------------------------------------- build the wall
+        var screens = CFG.layout.map(function (r, i) {
+          var s = { id: r[0], type: r[1], tint: r[2], cx: r[3], cy: r[4], cw: r[5], ch: r[6], x: r[7], y: r[8], w: r[9], h: r[10], idx: i };
+          s.shelf = s.id.charCodeAt(3) - 97;
+          s.dead = s.type === "dead";
+          s.band = CFG.band.indexOf(s.id) >= 0;
+          s.hum = CFG.hum.indexOf(s.id) >= 0;
+          s.mx = s.x + s.w / 2;
+          s.my = s.y + s.h / 2;
+          s.dist = Math.hypot(s.mx - CX, s.my - CY);
+          s.rad = r1(0.14 * s.h);
+          s.word = s.x < box.r && s.x + s.w > box.l && s.y < box.b && s.y + s.h > box.t;
+          return s;
+        });
+
+        // screens (DOM)
+        var sHtml = "";
+        screens.forEach(function (s) {
+          var X = s.x - 2, Y = s.y - 2, SW = s.w + 4, SH = s.h + 4;
+          var o = '<div class="scr" id="scr-' + s.id + '" style="left:' + X + "px;top:" + Y + "px;width:" + SW + "px;height:" + SH + "px;border-radius:" + (s.rad + 2) + 'px">';
+          if (!s.dead) {
+            o += '<div class="tint t-' + s.tint + '"></div>';
+            o += '<div class="dim" style="opacity:' + (0.45 * Math.min(1, Math.max(0, s.dist / CFG.falloff))).toFixed(3) + '"></div>';
+          }
+          if (s.hum) o += '<div class="hum"></div>';
+          o += '<div class="off off-top"></div><div class="off off-bot"></div>';
+          if (s.band) {
+            o += '<div class="ghost" aria-hidden="true" data-layout-ignore><div class="plate" style="left:' + -X + "px;top:" + -Y + 'px"><div class="wm-stack">' + wm("wm-base") + "</div></div></div>";
+          }
+          if (!s.dead) {
+            o += '<div class="sig" aria-hidden="true" data-layout-ignore><div class="pic" style="left:' + (-PAD - X) + "px;top:" + (-PAD - Y) + "px;width:" + (W + 2 * PAD) + "px;height:" + (H + 2 * PAD) + 'px">';
+            o += '<div class="plate carrier" style="left:' + PAD + "px;top:" + PAD + "px;width:" + W + "px;height:" + H + 'px">';
+            if (s.word) {
+              o += '<div class="wm-stack">' + (s.band ? wm("rgb warm") + wm("rgb cool") : "") + wm("wm-base") + "</div>";
+            }
+            o += "</div></div></div>";
+          }
+          var ins = Math.round(0.38 * s.h);
+          o += '<div class="glass" style="box-shadow:inset 0 0 ' + ins + "px var(--inset_a),inset 0 0 8px var(--inset_b);border-radius:" + (s.rad + 2) + 'px"></div>';
+          o += "</div>";
+          sHtml += o;
+        });
+        var screensEl = document.getElementById("screens");
+        screensEl.innerHTML = sHtml;
+        // plates inside the ghost layer are frame-sized too
+        Array.prototype.forEach.call(screensEl.querySelectorAll(".ghost .plate"), function (p) {
+          p.style.width = W + "px";
+          p.style.height = H + "px";
+        });
+
+        // cabinets (one SVG, screen holes masked out)
+        function rect(cls, x, y, w, h, rx) {
+          return '<rect class="' + cls + '" x="' + r1(x) + '" y="' + r1(y) + '" width="' + r1(w) + '" height="' + r1(h) + '" rx="' + r1(rx) + '"/>';
+        }
+        function circ(cls, x, y, rr) {
+          return '<circle class="' + cls + '" cx="' + r1(x) + '" cy="' + r1(y) + '" r="' + r1(rr) + '"/>';
+        }
+        function line(cls, x1, y1, x2, y2) {
+          return '<line class="' + cls + '" x1="' + r1(x1) + '" y1="' + r1(y1) + '" x2="' + r1(x2) + '" y2="' + r1(y2) + '"/>';
+        }
+        var M = 400;
+        var svg = "<defs>";
+        svg += '<linearGradient id="gCab" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cabinet_mid)"/><stop offset="1" style="stop-color:var(--cabinet_dark)"/></linearGradient>';
+        svg += '<linearGradient id="gPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cabinet_dark)"/><stop offset="1" style="stop-color:var(--knob)"/></linearGradient>';
+        svg += '<mask id="holes" maskUnits="userSpaceOnUse" x="' + -M + '" y="' + -M + '" width="' + (W + 2 * M) + '" height="' + (H + 2 * M) + '">';
+        svg += '<rect x="' + -M + '" y="' + -M + '" width="' + (W + 2 * M) + '" height="' + (H + 2 * M) + '" fill="white"/>';
+        screens.forEach(function (s) {
+          svg += '<rect x="' + s.x + '" y="' + s.y + '" width="' + s.w + '" height="' + s.h + '" rx="' + s.rad + '" fill="black"/>';
+        });
+        svg += "</mask></defs>";
+        svg += '<g mask="url(#holes)">';
+        svg += rect("gap", -M, -M, W + 2 * M, H + 2 * M, 0);
+        screens.forEach(function (s) {
+          var cr = s.cx + s.cw, cb = s.cy + s.ch, sr = s.x + s.w, sb = s.y + s.h, h = s.ch;
+          var o = rect("cab", s.cx, s.cy, s.cw, s.ch, 10);
+          o += rect("sur", s.x - 7, s.y - 7, s.w + 14, s.h + 14, s.rad + 7);
+          var ledCls = s.dead ? "led-off" : "led";
+          if (s.type === "console") {
+            var pw = 0.27 * h, px = sr + (cr - sr - pw) / 2;
+            o += rect("panel", px, s.cy + 0.1 * h, pw, 0.78 * h, 6);
+            var kr = Math.min(pw * 0.3, 0.068 * h);
+            [0.25, 0.43].forEach(function (f) {
+              o += circ("knob", px + pw / 2, s.cy + f * h, kr);
+              o += line("tick", px + pw / 2, s.cy + f * h - kr * 0.85, px + pw / 2, s.cy + f * h - kr * 0.3);
+            });
+            for (var k = 0; k < 5; k++) o += rect("slot", px + pw * 0.16, s.cy + (0.56 + k * 0.055) * h, pw * 0.68, 3, 1.5);
+            o += circ(ledCls, px + pw / 2, s.cy + 0.83 * h, 2.6);
+          } else if (s.type === "wide") {
+            var cyy = sb + (cb - sb) / 2;
+            for (var d = 0; d < 3; d++) o += circ("knob", cr - 30 - d * 16, cyy, 4.5);
+            o += circ(ledCls, s.cx + 30, cyy, 2.6);
+            o += rect("slot", s.cx + 44, cyy - 1.5, 60, 3, 1.5);
+          } else {
+            // portable, monitor, dead: a chin with a power LED and two buttons
+            var chy = sb + (cb - sb) / 2;
+            o += circ(ledCls, cr - 0.12 * s.cw, chy, 2.6);
+            o += rect("btn", cr - 0.12 * s.cw - 34, chy - 3.5, 16, 7, 3);
+            o += rect("btn", cr - 0.12 * s.cw - 56, chy - 3.5, 16, 7, 3);
+            if (s.type === "monitor") o += rect("slot", s.cx + 0.1 * s.cw, chy - 1.5, 0.22 * s.cw, 3, 1.5);
+          }
+          o += '<path class="rim" d="M' + (s.cx + 0.75) + "," + (cb - 12) + " L" + (s.cx + 0.75) + "," + (s.cy + 10) + " Q" + (s.cx + 0.75) + "," + (s.cy + 0.75) + " " + (s.cx + 10) + "," + (s.cy + 0.75) + " L" + (cr - 12) + "," + (s.cy + 0.75) + '"/>';
+          svg += o;
+        });
+        svg += "</g>";
+        var cabEl = document.getElementById("cabinets");
+        cabEl.setAttribute("width", W);
+        cabEl.setAttribute("height", H);
+        cabEl.setAttribute("viewBox", "0 0 " + W + " " + H);
+        cabEl.innerHTML = svg;
+
+        // haze blobs
+        var hz = [
+          [0.22, 0.3, 0.55, 0.5],
+          [0.7, 0.62, 0.6, 0.55],
+          [0.46, 0.9, 0.5, 0.4],
+        ];
+        document.getElementById("haze").innerHTML = hz
+          .map(function (b) {
+            var bw = b[2] * Math.max(W, H), bh = b[3] * Math.max(W, H);
+            return '<div class="blob" style="left:' + r1(b[0] * W - bw / 2) + "px;top:" + r1(b[1] * H - bh / 2) + "px;width:" + r1(bw) + "px;height:" + r1(bh) + 'px"></div>';
+          })
+          .join("");
+
+        // free wordmark: ghosts, bloom, core share one grid cell
+        document.getElementById("wm-stack").innerHTML = wm("rgb warm") + wm("rgb cool") + wm("wm-bloom") + wm("wm-core");
+        // the vignette is transparent over the word (50% stop); its covering the core is intentional layering
+        document.querySelectorAll("#wm .wm-core b, #wm .wm-core i").forEach(function (el) {
+          el.setAttribute("data-layout-allow-occlusion", "true");
+        });
+
+        // spill pools sized from the arrival word width (cam space)
+        var arrW = inkW * 1.3;
+        var wl = CX - arrW / 2;
+        [["pool-pink", 0.315], ["pool-cyan", 0.815]].forEach(function (p) {
+          var el = document.getElementById(p[0]);
+          var pw = 0.7 * arrW, ph = 0.45 * arrW;
+          el.style.left = r1(wl + p[1] * arrW - pw / 2) + "px";
+          el.style.top = r1(CY - ph / 2) + "px";
+          el.style.width = r1(pw) + "px";
+          el.style.height = r1(ph) + "px";
+        });
+
+        // ---------------------------------------------------------------- timeline
+        var tl = gsap.timeline({ paused: true });
+        var lit = screens.filter(function (s) {
+          return !s.dead;
+        });
+        lit.forEach(function (s) {
+          var el = document.getElementById("scr-" + s.id);
+          s.el = el;
+          s.offs = el.querySelectorAll(".off");
+          s.sig = el.querySelector(".sig");
+          s.pic = el.querySelector(".pic");
+          s.ghost = el.querySelector(".ghost");
+          s.humEl = el.querySelector(".hum");
+          s.rgb = el.querySelectorAll(".pic .rgb");
+        });
+
+        // camera: one continuous push (the film's current); haze drift
+        tl.fromTo("#cam", { scale: 1 }, { scale: 1.045, duration: 7, ease: "none" }, 0);
+        tl.fromTo("#haze", { x: 0 }, { x: 60, duration: 7, ease: "none" }, 0);
+
+        // POWER-ON CASCADE 0.04-0.52: nearest the word first, accelerating
+        var byDist = lit.slice().sort(function (a, b) {
+          return a.dist - b.dist;
+        });
+        byDist.forEach(function (s, k) {
+          var u = k / (byDist.length - 1);
+          var at = 0.04 + 0.32 * (1 - Math.pow(1 - u, 1.6));
+          tl.fromTo(s.offs, { scaleY: 1 }, { scaleY: 0, duration: 0.16, ease: "power2.out" }, at);
+        });
+
+        // SIGNAL HUNTING 1.55-2.2: band screens catch a ghost of the word
+        var band = lit.filter(function (s) {
+          return s.band;
+        });
+        band.forEach(function (s) {
+          tl.fromTo(s.ghost, { opacity: 0 }, { opacity: 0.16, duration: 0.65, ease: "sine.in" }, 1.55);
+        });
+
+        // LOCK WAVE 2.20-3.15: the single static-to-signal transition, in waveRank order
+        lit.forEach(function (s) {
+          var c = s.mx / 160;
+          s.rank = c + s.shelf * 0.35 + Math.sin(s.shelf * 1.7 + c * 0.42) * 1.1;
+        });
+        var byRank = lit.slice().sort(function (a, b) {
+          return a.rank - b.rank;
+        });
+        byRank.forEach(function (s, k) {
+          var at = 2.2 + (k * 0.61) / (byRank.length - 1);
+          s.lock = at;
+          tl.fromTo(s.sig, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.22, ease: "power2.out" }, at);
+          tl.fromTo(s.pic, { y: r1(0.14 * s.h) }, { y: 0, duration: 0.34, ease: "power3.out" }, at);
+        });
+        // the static plane is fully covered by 3.3 s
+        tl.set("#static", { autoAlpha: 0 }, 3.3);
+
+        // EMERGENCE 3.30-4.45: the sign pulls free of the glass
+        tl.fromTo("#wm", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.18, ease: "power1.out" }, 3.3);
+        tl.fromTo("#wm", { scale: 1, y: 0 }, { scale: 1.29, y: CFG.lift, duration: 1.15, ease: "expo.inOut" }, 3.3);
+        tl.fromTo("#wall", { "--dof": "0px", "--wb": 1 }, { "--dof": "3.5px", "--wb": 0.62, duration: 1.05, ease: "sine.inOut" }, 3.4);
+        tl.fromTo(".pic .wm-stack", { opacity: 1 }, { opacity: 0.4, duration: 1.1, ease: "power1.inOut" }, 3.35);
+        tl.fromTo("#pool-pink", { opacity: 0 }, { opacity: CFG.spillPink, duration: 1.1, ease: "sine.out" }, 3.5);
+        tl.fromTo("#pool-cyan", { opacity: 0 }, { opacity: 0.32, duration: 1.1, ease: "sine.out" }, 3.5);
+        tl.fromTo("#wm .wm-bloom", { opacity: 0 }, { opacity: 0.85, duration: 0.55, ease: "power2.in" }, 3.9);
+
+        // HOLD / LOCKUP 4.45-7.0: sustained travel, one gentle settle, nothing pulses
+        tl.to("#wm", { scale: 1.32, duration: 2.55, ease: "none" }, 4.45);
+        tl.to("#wm .wm-bloom", { opacity: CFG.bloomHold, duration: 0.95, ease: "sine.out" }, 4.45);
+        tl.to(".pic .wm-stack", { opacity: 0.2, duration: 1.75, ease: "sine.out" }, 4.45);
+
+        // PROCEDURAL LAYER: one driver; every per-frame value is a pure function of time
+        var turb = document.getElementById("turb");
+        var film = document.getElementById("film-grain");
+        var wmRgb = document.querySelectorAll("#wm .rgb");
+        var p3in = gsap.parseEase("power3.in");
+        var lastSeed = -1;
+        function setRgb(els, amp, f, salt, maxSplit, alpha) {
+          for (var layer = 0; layer < els.length; layer++) {
+            var el = els[layer];
+            if (amp > 0.0005) {
+              var jx = (glitchHash(f * 13 + layer * 7 + salt) * 2 - 1) * maxSplit * amp;
+              var jy = (glitchHash(f * 29 + layer * 11 + salt) * 2 - 1) * maxSplit * 0.35 * amp;
+              el.style.transform = "translate(" + jx.toFixed(2) + "px," + jy.toFixed(2) + "px)";
+              el.style.opacity = String(alpha);
+            } else {
+              el.style.transform = "none";
+              el.style.opacity = "0";
+            }
+          }
+        }
+        function frame(t) {
+          var f = Math.floor(t * 30 + 1e-4); // frame index
+          var g = Math.floor(f / 2); // 2-frame step
+          // static: one new seed per frame until it is hidden
+          var seed = 1 + Math.min(f, 102);
+          if (seed !== lastSeed) {
+            turb.setAttribute("seed", String(seed));
+            lastSeed = seed;
+          }
+          // film grain: noise.png offset from a seeded LCG every 2 frames
+          var n = lcg(g);
+          film.style.backgroundPosition = (n % 160) + "px " + ((n >>> 9) % 160) + "px";
+          // hum bars: 22% band rolling top->bottom, 1.5 s period, 0.5-3.2 s
+          lit.forEach(function (s) {
+            if (!s.humEl) return;
+            if (t >= 0.5 && t <= 3.2) {
+              var ph = ((t - 0.5) / 1.5) % 1;
+              s.humEl.style.opacity = "1";
+              s.humEl.style.transform = "translateY(" + ((-0.22 + ph * 1.22) * (s.h + 4)).toFixed(2) + "px)";
+            } else {
+              s.humEl.style.opacity = "0";
+            }
+          });
+          band.forEach(function (s, j) {
+            // signal hunting jitter (quantized every 2 frames), amp 1 -> 0.4, held until the lock covers it
+            var hx = 0;
+            if (t >= 1.55 && t < s.lock + 0.22) {
+              var amp = t < 2.2 ? 1 - 0.6 * ((t - 1.55) / 0.65) : 0.4;
+              hx = amp * (glitchHash(g * 13 + s.idx * 7) * 2 - 1) * 14;
+            }
+            s.ghost.style.transform = "translateX(" + hx.toFixed(2) + "px)";
+            // RGB split during the lock: amp 1 -> 0 over 0.34 s, max 4 px
+            var lu = (t - s.lock) / 0.34;
+            var la = lu >= 0 && lu < 1 ? 1 - p3in(lu) : 0;
+            setRgb(s.rgb, la, f, j * 31, 4, 0.75);
+          });
+          // the free word at lift-off: amp 0.6 -> 0 over 3.30-3.70
+          var wu = (t - 3.3) / 0.4;
+          var wa = wu >= 0 && wu < 1 ? 0.6 * (1 - p3in(wu)) : 0;
+          setRgb(wmRgb, wa, f, 97, 12, 0.8);
+        }
+        var clock = { t: 0 };
+        tl.fromTo(
+          clock,
+          { t: 0 },
+          {
+            t: 7,
+            duration: 7,
+            ease: "none",
+            onUpdate: function () {
+              frame(clock.t);
+            },
+          },
+          0,
+        );
+        frame(0);
+
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

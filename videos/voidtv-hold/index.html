@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>voidtv.net vertical hold</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Unbounded";
+        src: url(assets/fonts/unbounded-latin.woff2) format("woff2");
+        font-weight: 200 900;
+        font-display: block;
+      }
+      /* PALETTE: every colour in this file lives here (tvwall shot-plan palette + derived alpha/multiply tokens) */
+      :root {
+        --bg: #07080c;
+        --pink_core: #ff4fc8;
+        --pink_glow: #dc20a9;
+        --blue_core: #5fe3ff;
+        --blue_glow: #0ac1e0;
+        --violet: #a954e3;
+        --carrier_hot: #2a1446;
+        --carrier_mid: #160c2a;
+        --carrier_edge: #0a0812;
+        --wall_gap: #050508;
+        --static_base: #b7bcc8;
+        /* derived */
+        --blank: #040309; /* blanking bar core: near-black, never pure black */
+        --tag: #b9b1cf; /* tagline: quiet lavender grey */
+        --tint_violet: rgb(200, 158, 255);
+        --tint_ice: rgb(158, 184, 255);
+        --black: rgb(0, 0, 0);
+        --hum: rgba(0, 0, 0, 0.3);
+        --scan_line: rgba(3, 2, 8, 0.5);
+        --ag_r: rgb(255, 92, 110);
+        --ag_g: rgb(110, 255, 150);
+        --ag_b: rgb(110, 130, 255);
+        --sheen: rgba(255, 255, 255, 0.06);
+        --refl: rgba(220, 225, 255, 0.06);
+        --edge: rgba(0, 0, 0, 0.62);
+        --vig: rgba(7, 8, 12, 0.7);
+        --none: rgba(0, 0, 0, 0);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Unbounded", sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #svgdefs {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+      .layer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      /* ---------------------------------------------------------------- the picture (rolls) */
+      #pic-fx {
+        position: absolute;
+        inset: 0;
+        background: var(--carrier_mid);
+      }
+      #pic-clip {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      #strip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .cell {
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+      /* the vertical-blanking bar: soft edges, near-black core */
+      .vbar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(180deg, var(--carrier_mid) 0%, var(--blank) 26%, var(--blank) 74%, var(--carrier_mid) 100%);
+      }
+      .plate {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: radial-gradient(var(--field-size, 70% 62%) at 50% var(--field-y, 46%), var(--carrier_hot) 0%, var(--carrier_mid) 78%);
+      }
+      /* the wordmark (brand-kit neon recipe) */
+      .wm-stack {
+        display: grid;
+        place-items: center;
+      }
+      .wm {
+        grid-area: 1 / 1;
+        font-family: "Unbounded", sans-serif;
+        font-size: var(--fs, 200px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .wm b,
+      .wm i {
+        font-weight: 700;
+        font-style: normal;
+      }
+      .wm-base,
+      .wm-bloom {
+        position: relative;
+        z-index: 2;
+      }
+      .wm-bloom {
+        z-index: 1;
+        opacity: 0;
+        filter: blur(calc(var(--fs, 200px) * 0.1413));
+      }
+      .wm-base {
+        filter: blur(0.5px);
+      }
+      .wm .wm-a {
+        color: var(--pink_core);
+        text-shadow:
+          0 0 0.12em var(--pink_glow),
+          0 0 0.45em var(--pink_glow);
+      }
+      .wm .wm-b {
+        color: var(--blue_core);
+        text-shadow:
+          0 0 0.12em var(--blue_glow),
+          0 0 0.45em var(--blue_glow);
+      }
+      /* RGB ghost copies (chromatic split): brand glows, screen blend, behind the base */
+      .wm.rgb {
+        position: relative;
+        z-index: 0;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      .wm.rgb .wm-a,
+      .wm.rgb .wm-b {
+        color: inherit;
+        text-shadow: none;
+      }
+      .wm.warm {
+        color: var(--pink_glow);
+      }
+      .wm.cool {
+        color: var(--blue_glow);
+      }
+      /* ---------------------------------------------------------------- tagline (after the lock) */
+      #tag-layer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      #tag {
+        font-family: "Unbounded", sans-serif;
+        font-weight: 400;
+        font-size: var(--tfs, 36px);
+        line-height: 1;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        color: var(--tag);
+        opacity: 0;
+        visibility: hidden;
+      }
+      /* ---------------------------------------------------------------- static (one full-frame plane) */
+      /* opaque + isolated: the turbulence has a varying alpha, so the tint must never reach the picture below */
+      #static {
+        overflow: hidden;
+        isolation: isolate;
+        background: var(--bg);
+      }
+      #grain {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 640px;
+        height: 360px;
+        background: var(--static_base);
+        filter: url(#snow) contrast(1.6) brightness(1.6);
+        transform: scale(3);
+        transform-origin: 0 0;
+        image-rendering: pixelated;
+      }
+      #static-tint {
+        background: linear-gradient(160deg, var(--tint_violet) 0%, var(--tint_ice) 100%);
+        mix-blend-mode: multiply;
+      }
+      #static-glow {
+        background: linear-gradient(160deg, var(--violet) 0%, var(--blue_glow) 100%);
+        mix-blend-mode: screen;
+        opacity: 0.12;
+      }
+      .hum {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(180deg, var(--none) 0%, var(--hum) 32%, var(--hum) 68%, var(--none) 100%);
+      }
+      /* ---------------------------------------------------------------- glass */
+      #halo {
+        mix-blend-mode: screen;
+      }
+      .pool {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      #pool-pink {
+        background: radial-gradient(closest-side, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      #pool-cyan {
+        background: radial-gradient(closest-side, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      #scan {
+        overflow: visible;
+      }
+      #scan path {
+        fill: none;
+        stroke: var(--scan_line);
+        stroke-width: 1.5;
+      }
+      /* aperture-grille RGB triads */
+      #grille {
+        background: repeating-linear-gradient(90deg, var(--ag_r) 0 1px, var(--ag_g) 1px 2px, var(--ag_b) 2px 3px);
+        mix-blend-mode: multiply;
+        opacity: 0.2;
+      }
+      #refl {
+        background:
+          radial-gradient(ellipse 44% 34% at 27% 19%, var(--refl) 0%, var(--none) 100%),
+          linear-gradient(118deg, var(--sheen) 0%, var(--none) 34%);
+      }
+      #hf-vignette {
+        background: radial-gradient(ellipse at center, var(--none) 52%, var(--vig) 100%);
+      }
+      #tube {
+        overflow: visible;
+      }
+      #tube .bezel {
+        fill: var(--bg);
+      }
+      #tube .rimshade {
+        fill: none;
+        stroke: var(--edge);
+      }
+      #film-grain {
+        background: url(assets/textures/noise.png);
+        mix-blend-mode: overlay;
+        opacity: 0.05;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="6"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <svg id="svgdefs" aria-hidden="true">
+        <!-- static snow (tvwall recipe): one new seed per frame -->
+        <filter id="snow" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="1" stitchTiles="stitch" result="n" />
+          <feColorMatrix type="saturate" values="0" in="n" result="g" />
+          <feComponentTransfer in="g">
+            <feFuncR type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1" />
+            <feFuncG type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1" />
+            <feFuncB type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1" />
+          </feComponentTransfer>
+        </filter>
+        <!-- vertical hold: vertical smear while it rolls + per-line horizontal tracking wobble -->
+        <filter id="hold" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feGaussianBlur id="vblur" in="SourceGraphic" stdDeviation="0 0" edgeMode="duplicate" result="b" />
+          <feTurbulence id="wt1" type="fractalNoise" baseFrequency="0 0.011" numOctaves="2" seed="3" result="t1" />
+          <feTurbulence id="wt2" type="fractalNoise" baseFrequency="0 0.09" numOctaves="1" seed="5" result="t2" />
+          <feComposite in="t1" in2="t2" operator="arithmetic" k1="0" k2="0.72" k3="0.28" k4="0" result="tm" />
+          <feColorMatrix in="tm" type="matrix" values="1 0 0 0 0  0 0 0 0 0.5  0 0 0 0 0  0 0 0 0 1" result="map" />
+          <feDisplacementMap id="wdisp" in="b" in2="map" scale="0" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+      <section id="stage" class="clip" data-start="0" data-duration="6" data-track-index="0">
+        <div id="pic-fx" data-layout-allow-overflow="true">
+          <div id="pic-clip" data-layout-allow-overflow="true">
+            <div id="strip" data-layout-allow-overflow="true"></div>
+          </div>
+        </div>
+        <div id="tag-layer" class="layer">
+          <div id="tag" data-layout-allow-occlusion="true">free tv · no ads · no account</div>
+        </div>
+        <div id="static" class="layer" data-layout-allow-occlusion="true">
+          <div id="grain"></div>
+          <div id="static-tint" class="layer"></div>
+          <div id="static-glow" class="layer"></div>
+          <div class="hum" data-layout-allow-overflow="true"></div>
+          <div class="hum" data-layout-allow-overflow="true"></div>
+          <div class="hum" data-layout-allow-overflow="true"></div>
+        </div>
+        <div id="halo" class="layer" data-layout-allow-occlusion="true">
+          <div class="pool" id="pool-pink"></div>
+          <div class="pool" id="pool-cyan"></div>
+        </div>
+        <svg id="scan" class="layer" aria-hidden="true" data-layout-allow-occlusion="true"></svg>
+        <div id="grille" class="layer" data-layout-allow-occlusion="true"></div>
+        <div id="refl" class="layer" data-layout-allow-occlusion="true"></div>
+        <div id="hf-vignette" class="layer" data-layout-allow-occlusion="true"></div>
+        <svg id="tube" class="layer" aria-hidden="true" data-layout-allow-occlusion="true"></svg>
+        <div id="film-grain" class="layer" data-layout-allow-occlusion="true"></div>
+      </section>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+
+        // ---------------------------------------------------------------- format
+        var root = document.getElementById("root");
+        var W = Number(root.dataset.width);
+        var H = Number(root.dataset.height);
+        var FMT = W > H ? "16x9" : "9x16";
+        var CONFIGS = {
+          // word: font px (ink ~6.33em), word centre y, tagline font px and its centre y
+          "16x9": { font: 200, wordY: 497, tagFont: 36, tagY: 664, field: "64% 60%" },
+          // 9:16: word ~85% of the width; everything sits between y=250 and y=1520 (platform UI)
+          "9x16": { font: 145, wordY: 860, tagFont: 30, tagY: 990, field: "92% 34%" },
+        };
+        var CFG = CONFIGS[FMT];
+        var FS = CFG.font;
+        var M = Math.min(W, H);
+        var B = Math.round(0.13 * H); // blanking bar height
+        var P = H + B; // one roll period: bar + picture
+
+        root.style.setProperty("--fs", FS + "px");
+        root.style.setProperty("--tfs", CFG.tagFont + "px");
+        root.style.setProperty("--field-size", CFG.field);
+        root.style.setProperty("--field-y", ((CFG.wordY / H) * 100).toFixed(2) + "%");
+
+        // deterministic helpers (no Math.random, no clocks)
+        function glitchHash(n) {
+          var x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
+          return x - Math.floor(x);
+        }
+        function lcg(k) {
+          var s = (Math.imul(k + 0x9e37, 1664525) + 1013904223) >>> 0;
+          s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+          return s;
+        }
+        function r1(v) {
+          return Math.round(v * 10) / 10;
+        }
+
+        var WM_INNER = '<b class="wm-a">voidtv</b><i class="wm-b">.net</i>';
+        function wm(cls, real) {
+          return '<span class="wm ' + cls + '"' + (real ? "" : ' aria-hidden="true" data-layout-ignore') + ">" + WM_INNER + "</span>";
+        }
+
+        // ---------------------------------------------------------------- picture strip: [bar][picture] x 2
+        var strip = document.getElementById("strip");
+        strip.style.height = 2 * P + "px";
+        var sHtml = "";
+        for (var k = 0; k < 2; k++) {
+          var real = k === 1; // cell 1 is the one that comes to rest
+          sHtml += '<div class="cell" style="top:' + k * P + "px;height:" + P + 'px"' + (real ? "" : " data-layout-ignore") + ">";
+          sHtml += '<div class="vbar" style="height:' + B + 'px"></div>';
+          sHtml += '<div class="plate" style="top:' + B + "px;height:" + H + "px;padding-top:" + (CFG.wordY - FS / 2) + 'px">';
+          sHtml += '<div class="wm-stack sig"' + (real ? ' role="img" aria-label="voidtv.net"' : "") + ">";
+          sHtml += wm("rgb warm") + wm("rgb cool") + wm("wm-bloom") + wm("wm-base", real);
+          sHtml += "</div></div></div>";
+        }
+        strip.innerHTML = sHtml;
+        strip.querySelectorAll(".wm-base b, .wm-base i").forEach(function (el) {
+          el.setAttribute("data-layout-allow-occlusion", "true");
+        });
+
+        // tagline
+        document.getElementById("tag-layer").style.paddingTop = CFG.tagY - CFG.tagFont / 2 + "px";
+
+        // static plane
+        var grainEl = document.getElementById("grain");
+        grainEl.style.width = Math.ceil(W / 3) + "px";
+        grainEl.style.height = Math.ceil(H / 3) + "px";
+        var HB = Math.round(0.24 * H); // hum band height
+        var hums = document.querySelectorAll(".hum");
+        hums.forEach(function (h) {
+          h.style.height = HB + "px";
+        });
+
+        // halation pools around the resting word (pink under "voidtv", cyan under ".net")
+        var inkW = 6.33 * FS;
+        [["pool-pink", 0.315, 0.66], ["pool-cyan", 0.815, 0.5]].forEach(function (p) {
+          var el = document.getElementById(p[0]);
+          var pw = p[2] * inkW * 1.2, ph = 1.6 * FS;
+          el.style.left = r1(W / 2 - inkW / 2 + p[1] * inkW - pw / 2) + "px";
+          el.style.top = r1(CFG.wordY - ph / 2) + "px";
+          el.style.width = r1(pw) + "px";
+          el.style.height = r1(ph) + "px";
+        });
+
+        // ---------------------------------------------------------------- glass: curved scanlines (barrel)
+        // barrel map y' = cy + dy * (1 - K * (dx^2 + dy^2) / R^2): every scanline is a parabola in x,
+        // drawn exactly as one quadratic bezier.
+        var CX = W / 2, CY = H / 2, K = 0.04, RN = Math.max(W, H) / 2;
+        function bowY(dy, dx) {
+          return CY + dy * (1 - (K * (dx * dx + dy * dy)) / (RN * RN));
+        }
+        var scan = document.getElementById("scan");
+        scan.setAttribute("width", W);
+        scan.setAttribute("height", H);
+        scan.setAttribute("viewBox", "0 0 " + W + " " + H);
+        var lines = "";
+        var PITCH = 4;
+        var reach = Math.ceil((H / 2) * 1.08 / PITCH) * PITCH;
+        for (var dy = -reach + PITCH / 2; dy < reach; dy += PITCH) {
+          var ym = bowY(dy, 0), ye = bowY(dy, W / 2);
+          if (Math.max(ym, ye) < -2 || Math.min(ym, ye) > H + 2) continue;
+          lines += '<path d="M-2 ' + r1(ye) + " Q" + CX + " " + r1(2 * ym - ye) + " " + (W + 2) + " " + r1(ye) + '"/>';
+        }
+        scan.innerHTML = lines;
+
+        // ---------------------------------------------------------------- glass: tube face (rounded corners, bowed sides)
+        var tube = document.getElementById("tube");
+        tube.setAttribute("width", W);
+        tube.setAttribute("height", H);
+        tube.setAttribute("viewBox", "0 0 " + W + " " + H);
+        var IN = 0.013 * M, BU = 0.026 * M, RC = 0.115 * M;
+        var x0 = IN, y0 = IN, x1 = W - IN, y1 = H - IN;
+        var face =
+          "M" + r1(x0 + RC) + " " + r1(y0) +
+          " Q" + r1(CX) + " " + r1(y0 - 2 * BU) + " " + r1(x1 - RC) + " " + r1(y0) +
+          " Q" + r1(x1) + " " + r1(y0) + " " + r1(x1) + " " + r1(y0 + RC) +
+          " Q" + r1(x1 + 2 * BU) + " " + r1(CY) + " " + r1(x1) + " " + r1(y1 - RC) +
+          " Q" + r1(x1) + " " + r1(y1) + " " + r1(x1 - RC) + " " + r1(y1) +
+          " Q" + r1(CX) + " " + r1(y1 + 2 * BU) + " " + r1(x0 + RC) + " " + r1(y1) +
+          " Q" + r1(x0) + " " + r1(y1) + " " + r1(x0) + " " + r1(y1 - RC) +
+          " Q" + r1(x0 - 2 * BU) + " " + r1(CY) + " " + r1(x0) + " " + r1(y0 + RC) +
+          " Q" + r1(x0) + " " + r1(y0) + " " + r1(x0 + RC) + " " + r1(y0) + " Z";
+        var E = 200;
+        var tHtml = "<defs>";
+        tHtml += '<filter id="tube-soft" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="' + r1(0.006 * M) + '"/></filter>';
+        tHtml += '<filter id="tube-wide" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="' + r1(0.045 * M) + '"/></filter>';
+        tHtml += '<clipPath id="tube-in"><path d="' + face + '"/></clipPath>';
+        tHtml += "</defs>";
+        // inner edge falloff following the curved face
+        tHtml += '<g clip-path="url(#tube-in)"><path class="rimshade" d="' + face + '" stroke-width="' + r1(0.16 * M) + '" filter="url(#tube-wide)"/></g>';
+        // the dark tube corners / bezel outside the face
+        tHtml += '<path class="bezel" fill-rule="evenodd" filter="url(#tube-soft)" d="M' + -E + " " + -E + " H" + (W + E) + " V" + (H + E) + " H" + -E + " Z " + face + '"/>';
+        tube.innerHTML = tHtml;
+
+        // ---------------------------------------------------------------- the roll (pure function of time, in periods)
+        var T0 = 1.2, T1 = 3.6, T2 = 4.2;
+        var V0 = 0.8, VP = 1.4, V1 = 0.2; // rolls per second: static-phase hum, picture arrival, end of the slow-down
+        var DEF = 0.08; // the hold catches with the picture 8% of a period short of lock
+        var NX = 1.526; // slow-down shape exponent (chosen so the hum starts in the top quarter)
+        var ZETA = 0.4, WN = 11; // lock: one small overshoot, settled by ~4.1 s
+        var NLOCK = 3;
+        var DA = V0 * T0 + ((VP - V0) * T0) / 3;
+        var DB = (T1 - T0) * (V1 + (VP - V1) / (NX + 1));
+        var O0 = NLOCK - DEF - DA - DB;
+        var WD = WN * Math.sqrt(1 - ZETA * ZETA);
+        var SPC = (-V1 + ZETA * WN * DEF) / WD;
+        function spring(tau) {
+          var e = Math.exp(-ZETA * WN * tau);
+          var x = e * (DEF * Math.cos(WD * tau) + SPC * Math.sin(WD * tau));
+          var q = Math.min(1, Math.max(0, (tau - 0.42) / 0.18));
+          return x * (1 - q * q * (3 - 2 * q));
+        }
+        function roll(t) {
+          if (t <= T0) return O0 + V0 * t + ((VP - V0) * t * t * t) / (3 * T0 * T0);
+          if (t <= T1) {
+            var s = (t - T0) / (T1 - T0);
+            return O0 + DA + (T1 - T0) * (V1 * s + ((VP - V1) * (1 - Math.pow(1 - s, NX + 1))) / (NX + 1));
+          }
+          if (t < T2) return NLOCK - spring(t - T1);
+          return NLOCK;
+        }
+        function frac(v) {
+          return v - Math.floor(v);
+        }
+
+        // ---------------------------------------------------------------- timeline
+        var tl = gsap.timeline({ paused: true });
+
+        // 0-1.2 static; 1.2 the picture arrives under it; the snow thins out monotonically by 3.0
+        tl.fromTo("#pic-fx", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.02, ease: "none" }, T0 - 0.05);
+        tl.fromTo("#static", { opacity: 1 }, { opacity: 0.3, duration: 0.28, ease: "power2.out" }, T0);
+        tl.to("#static", { autoAlpha: 0, duration: 1.5, ease: "sine.inOut" }, T0 + 0.3);
+        // weak signal strengthens while the hold slips (one monotonic rise)
+        tl.fromTo(".sig", { opacity: 0.55 }, { opacity: 0.85, duration: 2.9, ease: "sine.in" }, T0);
+        // 4.2 locked: scanlines ease off a little, the word blooms to full neon, tagline arrives
+        tl.to(".sig", { opacity: 1, duration: 0.5, ease: "sine.out" }, T2);
+        tl.fromTo(".wm-bloom", { opacity: 0 }, { opacity: 0.58, duration: 0.6, ease: "power2.out" }, T2);
+        tl.fromTo("#pool-pink", { opacity: 0 }, { opacity: 0.2, duration: 0.7, ease: "sine.out" }, T2);
+        tl.fromTo("#pool-cyan", { opacity: 0 }, { opacity: 0.3, duration: 0.7, ease: "sine.out" }, T2);
+        tl.fromTo("#scan", { opacity: 1 }, { opacity: 0.6, duration: 0.9, ease: "sine.inOut" }, T2);
+        tl.fromTo("#grille", { opacity: 0.2 }, { opacity: 0.14, duration: 0.9, ease: "sine.inOut" }, T2);
+        tl.fromTo("#tag", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: "power2.out" }, 4.3);
+
+        // PROCEDURAL LAYER: one driver; every per-frame value is a pure function of time
+        var turb = document.getElementById("turb");
+        var vblur = document.getElementById("vblur");
+        var wt1 = document.getElementById("wt1");
+        var wt2 = document.getElementById("wt2");
+        var wdisp = document.getElementById("wdisp");
+        var picFx = document.getElementById("pic-fx");
+        var film = document.getElementById("film-grain");
+        var rgbEls = strip.querySelectorAll(".rgb");
+        var lastSeed = -1, lastG = -1, filterOn = null;
+        var SIGMA_MAX = 0.011 * H, WOB = 90 * (W / 1920), SPLIT = 0.045 * FS;
+        function frame(t) {
+          var f = Math.floor(t * 30 + 1e-4);
+          var g = Math.floor(f / 2);
+          // static: one new seed per frame while it is visible
+          var seed = 1 + Math.min(f, 92);
+          if (seed !== lastSeed) {
+            turb.setAttribute("seed", String(seed));
+            lastSeed = seed;
+          }
+          // film grain: noise.png offset from a seeded LCG every 2 frames
+          var n = lcg(g);
+          film.style.backgroundPosition = (n % 160) + "px " + ((n >>> 9) % 160) + "px";
+
+          // roll phase -> strip position (content moves down; rest = picture exactly fills the glass)
+          var o = roll(t);
+          var ph = frac(o + 1e-9);
+          if (o >= NLOCK - 1e-9 && o <= NLOCK + 1e-9) ph = 0;
+          strip.style.transform = "translateY(" + (-B - P + ph * P).toFixed(2) + "px)";
+
+          // hum band in the static rides the same phase, so it hands over to the blanking bar at 1.2 s
+          var c = ph * P - B / 2;
+          for (var i = 0; i < hums.length; i++) {
+            hums[i].style.transform = "translateY(" + (c + (i - 1) * P - HB / 2).toFixed(2) + "px)";
+          }
+
+          // speed in rolls/s drives smear, tracking wobble and RGB split (all shrink as it slows)
+          var v = Math.abs(roll(t + 0.004) - roll(t - 0.004)) / 0.008;
+          var sf = t < T0 - 0.05 || t >= T2 ? 0 : Math.min(1, v / VP);
+          if (sf > 0.004) {
+            if (filterOn !== true) {
+              picFx.style.filter = "url(#hold)";
+              filterOn = true;
+            }
+            var pxpf = (v * P) / 30;
+            vblur.setAttribute("stdDeviation", "0 " + Math.min(SIGMA_MAX, 0.2 * pxpf).toFixed(2));
+            wdisp.setAttribute("scale", (WOB * Math.pow(sf, 0.8)).toFixed(2));
+            if (g !== lastG) {
+              wt1.setAttribute("seed", String(3 + g));
+              wt2.setAttribute("seed", String(101 + g));
+              lastG = g;
+            }
+          } else if (filterOn !== false) {
+            picFx.style.filter = "none";
+            filterOn = false;
+          }
+          var ax = SPLIT * sf;
+          for (var j = 0; j < rgbEls.length; j++) {
+            var el = rgbEls[j];
+            if (ax > 0.25) {
+              var dir = j % 2 === 0 ? -1 : 1;
+              var jx = dir * ax * (0.75 + 0.5 * glitchHash(g * 13 + j * 7));
+              var jy = (glitchHash(g * 29 + j * 11) * 2 - 1) * ax * 0.25;
+              el.style.transform = "translate(" + jx.toFixed(2) + "px," + jy.toFixed(2) + "px)";
+              el.style.opacity = "0.75";
+            } else {
+              el.style.transform = "none";
+              el.style.opacity = "0";
+            }
+          }
+        }
+        var clock = { t: 0 };
+        tl.fromTo(
+          clock,
+          { t: 0 },
+          {
+            t: 6,
+            duration: 6,
+            ease: "none",
+            onUpdate: function () {
+              frame(clock.t);
+            },
+          },
+          0,
+        );
+        frame(0);
+
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

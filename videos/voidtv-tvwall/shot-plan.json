@@ -1,0 +1,1270 @@
+{
+  "project": "voidtv-tvwall",
+  "category": "logo-reveal",
+  "needs_search": false,
+  "duration_s": 7.0,
+  "fps": 30,
+  "canvas": {
+    "w": 1920,
+    "h": 1080,
+    "aspect": "16:9"
+  },
+  "variants": [
+    {
+      "w": 1080,
+      "h": 1920,
+      "aspect": "9:16",
+      "status": "later",
+      "how": "Same index.html, same timeline and beat times. Swap content.layout['9x16'] (shelves and TV rects), content.wordmark.placement['9x16'] (font-size 104px, centred at 540,960) and the static plane size (360x640 at 3x). No new motion is authored."
+    }
+  ],
+  "entry": "index.html at the project root, replacing the blank example. This matches voidtv-sting and voidtv-set on this machine and the project CLAUDE.md. Root id 'main'. GSAP from https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js, as in the earlier projects.",
+  "style": "Dark, wet-alley neon. A wall of stacked old CRT sets in near-black plastic, lit only by its own screens. The screens show cold blue-violet static, then lock, together, onto one broadcast picture: the neon voidtv.net spread across the wall like a video wall. The sign then pulls free of the glass and floats toward the viewer as real neon, lighting the cabinets pink and cyan. Look reference: assets/ref/wall.jpg (reference only, never rendered). The energy is confident and slow-burning, not frantic. No white flashes, no strobing.",
+  "palette": {
+    "bg": "#07080c",
+    "pink_core": "#ff4fc8",
+    "pink_glow": "#dc20a9",
+    "blue_core": "#5fe3ff",
+    "blue_glow": "#0ac1e0",
+    "violet": "#a954e3",
+    "carrier_hot": "#2a1446",
+    "carrier_mid": "#160c2a",
+    "carrier_edge": "#0a0812",
+    "cabinet_dark": "#15131c",
+    "cabinet_mid": "#221d2b",
+    "cabinet_edge": "#2e2838",
+    "wall_gap": "#050508",
+    "knob": "#0e0d13",
+    "knob_rim": "#3a3346",
+    "static_base": "#b7bcc8"
+  },
+  "palette_rule": {
+    "text": "All colours are CSS custom properties on :root. No other hex values appear in the markup. The brand colours are exact: voidtv is #ff4fc8 with #dc20a9 glow, .net is #5fe3ff with #0ac1e0 glow."
+  },
+  "font": {
+    "family": "Unbounded",
+    "file": "assets/fonts/unbounded-latin.woff2",
+    "weight": 700,
+    "letter_spacing": 0,
+    "line_height": 1,
+    "face": "@font-face { font-family: 'Unbounded'; src: url(assets/fonts/unbounded-latin.woff2) format('woff2'); font-weight: 200 900; font-display: block; }",
+    "note": "Brand-kit recipe from brand-kit/ads/src/voidtv-wordmark-neon-3000.html: Unbounded 700, letter-spacing 0, lowercase, 'voidtv' and '.net' as two spans. Measured from the kit's lockup PNG, the ink width is about 6.33em and the ascender height about 0.84em."
+  },
+  "export": "mp4",
+  "audio": "none (unnarrated; no SFX in this pass)",
+  "asset_needs": [],
+  "assets": "assets/index.md lists everything. Used: fonts/unbounded-latin.woff2 and textures/noise.png; textures/static.png is a fallback; ref/wall.jpg is reference only and is never loaded.",
+  "brief": "A wall of old CRT televisions fills the dark frame. In the first half-second the sets blink on from the centre outward, each opening from a thin centre line to full static. For a beat the wall is all cold blue-violet snow, and the camera creeps in. Then the middle row starts to catch a ghost of a signal, and a wave of sync-lock rolls left to right across every screen. The static gives way, set by set, to one picture spanning the whole wall: a deep violet glow with the neon 'voidtv.net' across the middle row, broken by the bezels. After a breath, the sign pulls free of the glass. The bezels fill in, the word becomes real neon and travels toward the viewer while the wall drops back into soft focus and takes on its pink and cyan light. It lands, ignites to full glow and holds on a clean lockup. Dominant motif: one broadcast picture that becomes a physical object coming out of the screens. The static-to-signal resolve is a single transition.",
+  "block": "wordmark-tiles",
+  "customize": {
+    "reuse": "Run `npx hyperframes add wordmark-tiles` to get its source (it lands in compositions/components/wordmark-tiles.html). Port its mechanic into the root index.html rather than mounting it. The mechanic is: every tile shows a correctly cropped fragment of ONE shared wordmark surface (the --wt-fragment-x/y offsets), tiles resolve in a spatially modulated wave order (the waveRank formula), and a fixed-seed LCG is used. Delete the component file afterwards, or leave it unreferenced.",
+    "replace": "Uniform tile grid -> the CRT shelves in content.layout. Flat colour noise faces -> the shared feTurbulence static plane. Uppercase/800/-0.035em text -> brand lowercase Unbounded 700, letter-spacing 0. The 6.5 s IN/HOLD/OUT envelope -> this plan's beats; there is NO out-fade, the film ends on the hold. Tile fragment = a wall-sized 'picture' div offset by -(screen.x - wall.x), -(screen.y - wall.y) inside each screen's overflow:hidden rounded rect.",
+    "wave_rank": "rank = cx/160 + shelfIndex*0.35 + sin(shelfIndex*1.7 + (cx/160)*0.42)*1.1, where cx is the screen centre x in frame px. Sort ascending; lower ranks lock first. This keeps the word reading left to right ('voidtv' before '.net') while neighbouring shelves ripple.",
+    "supporting_items": [
+      {
+        "name": "yt-screen-warp",
+        "type": "component",
+        "use": "Copy only the .yt-screen-fx overlay recipe (sheen at 115deg, 1px scanlines every 3px, pixel grid, inset 0 0 90px vignette) as the per-screen glass layer, opacity 1 from t=0. Do NOT use its 3D-warp wrapper; the wall stays flat to camera."
+      },
+      {
+        "name": "vignette",
+        "type": "component",
+        "use": "Frame-level radial vignette above everything except the grain: transparent at 50%, rgba(7,8,12,.85) at 100%."
+      },
+      {
+        "name": "chromatic-glitch",
+        "type": "rule (hyperframes-animation/rules)",
+        "use": "Form A, RGB ghost copies behind a base copy, driven by one amplitude-envelope proxy and a quantized-time hash (never Math.random). Two uses: (1) per band screen during its lock, amp 1->0 over 0.34 s, max split 4 px; (2) the free wordmark at lift-off, amp 0.6->0 over 3.30-3.70 s. Ghost colours are the brand glows (#dc20a9 and #0ac1e0) with mix-blend screen, not pure red and blue."
+      },
+      {
+        "name": "depth-of-field-blur",
+        "type": "rule",
+        "use": "Mechanic 3, 'blur the cluster while pushing in'. #wall gets --dof 0->3.5px and brightness 1->0.62 in the same window as the wordmark's push. The wordmark is the focal layer and stays at --dof 0, z-index above #wall."
+      },
+      {
+        "name": "ambient-glow-bloom",
+        "type": "rule",
+        "use": "Form A hero bloom only, as the .wm-bloom copy behind the word: one rise landing on the arrival and one gentle settle. Skip the idle 'breathe'; nothing pulses during the hold."
+      }
+    ],
+    "considered_not_used": [
+      "logo-outro: piece assembly plus a URL pill; here the name IS the URL, so a pill would duplicate it.",
+      "logo-sting: it fires a white impact frame, which breaks the photosensitivity rule.",
+      "caption-neon-glow: the brand-kit neon recipe takes precedence.",
+      "grain-overlay: CSS keyframes; brand noise.png is stepped on the timeline instead.",
+      "fractal-noise / gabor-noise (WebGPU): headless-render risk. The feTurbulence static is already proven on this machine (voidtv-sting, voidtv-set)."
+    ],
+    "catalog_misses_to_report": "The catalog has no CRT/TV-static block and no 'CRT power-on' or 'video wall of TVs' item. Searches: 'tv static noise', 'crt tv power on', 'video wall grid of screens'. Before hand-authoring those parts, the Builder should report them with `npx hyperframes feedback --search-miss \"<query>\" --wanted \"<move>\" --tier words`."
+  },
+  "layers": [
+    "#root (1920x1080, overflow hidden, background var(--bg))",
+    "  #stage.clip (0-7 s, track 0, inset 0)",
+    "    #cam: camera wrapper, transform-origin at the word centre (960px 540px). Holds everything below except #vignette and #grain.",
+    "      #wall: --dof blur and brightness target",
+    "        #static: ONE frame-size plane, a 640x360 grain div scaled 3x with filter url(#snow), plus #static-tint (violet->blue gradient, blend screen, opacity .10)",
+    "        per screen (absolutely positioned at its screen rect +2px, border-radius 14% of screen height, overflow hidden), bottom to top:",
+    "          .tint (constant multiply colour, by tint key)",
+    "          .dim (black, constant opacity by distance falloff)",
+    "          .hum (3 non-band screens only: slow rolling dark band)",
+    "          .off-top / .off-bot (dark glass halves for power-on; they stay on dead TVs)",
+    "          .ghost (band screens only: pre-lock ghost of the wordmark crop)",
+    "          .sig (the locked picture: wall-sized .pic crop = carrier gradient + wordmark copy; plus 2 RGB ghost copies on band screens)",
+    "          .glass (yt-screen-fx overlay + CRT bulge inset shadow + faint reflection)",
+    "        #cabinets: ONE inline SVG with <mask id='holes'> (white full rect, black rounded rects at every screen). The masked group holds the wall-gap fill, cabinet rounded rects (radius 10, gradient fills), side panels with 2 knobs and 5 speaker slots, chins with a power LED, and a 1.5px violet rim on top and left edges at .35.",
+    "        #haze: 2-3 soft violet radial blobs, opacity .12, drifting x +60px over 7 s linear (constant opacity)",
+    "      #spill: two radial light pools (pink under 'voidtv', cyan under '.net'), blend screen, ABOVE #wall and BELOW #wm",
+    "      #wm: the free neon wordmark, z-index above #wall/#spill; children .wm-ghosts (2 RGB copies), .wm-bloom (blurred copy), .wm-core",
+    "    #vignette",
+    "    #grain (noise.png tile, blend overlay, opacity .05)"
+  ],
+  "content": {
+    "logo": null,
+    "wordmark": {
+      "text": "voidtv.net",
+      "markup": "<span class='wm'><b class='wm-a'>voidtv</b><i class='wm-b'>.net</i></span> (b and i reset to weight 700, normal style)",
+      "core_css": ".wm-a{color:var(--pink_core);text-shadow:0 0 .12em var(--pink_glow),0 0 .45em var(--pink_glow)} .wm-b{color:var(--blue_core);text-shadow:0 0 .12em var(--blue_glow),0 0 .45em var(--blue_glow)}",
+      "bloom_css": ".wm-bloom: same markup, filter blur(26px) brightness(1.25), opacity animated (see timeline), behind .wm-core",
+      "on_screen_css": "The copy inside each .pic uses the same markup and font-size plus filter blur(0.5px). Scanlines come from .glass on top, so it reads as a TV picture of the neon.",
+      "placement": {
+        "16x9": {
+          "font_size_px": 184,
+          "center": [
+            960,
+            540
+          ],
+          "ink_box_est_xywh": [
+            378,
+            463,
+            1164,
+            155
+          ],
+          "positioning": "position:absolute; left:960px; top:540px; centred with xPercent:-50, yPercent:-50. The free #wm and every .pic copy are positioned by CENTRE in wall coordinates, so the crops register exactly whatever the real glyph metrics are."
+        },
+        "9x16": {
+          "font_size_px": 104,
+          "center": [
+            540,
+            960
+          ],
+          "ink_box_est_xywh": [
+            211,
+            916,
+            658,
+            87
+          ]
+        }
+      },
+      "final_scale": "Total on-screen scale at 7.0 s = cam 1.045 x own 1.32 = 1.379. 16:9 ink width about 1605 px (157 px side margin). 9:16 about 907 px (86 px margin, above the 80 px title-safe).",
+      "never": "Never 'VOIDtv', never uppercase, never colours swapped. No tagline, no mark, no URL pill. The name is the URL."
+    },
+    "tagline": null,
+    "url": "voidtv.net (the wordmark itself)",
+    "tv_types": {
+      "console": "4:3 screen at the left (insets left .075h, top .10h, bottom .13h), side panel .27h wide at the right with 2 knobs and 5 speaker slots",
+      "portable": "4:3 screen centred (insets .09h at sides and top, .17h chin), small chin with LED",
+      "monitor": "thin bezel .075h, chin .13h, screen fills the rest (any aspect)",
+      "wide": "middle-shelf sets that carry the word: bezel 18px on sides and top, chin 34px with 3 knob dots; screen fills the rest",
+      "dead": "portable geometry, screen stays OFF all film (dark glass, faint diagonal reflection). It never shows static or the picture.",
+      "screen_radius": "border-radius = 14% of screen height (CRT corners). The SVG hole uses the same radius."
+    },
+    "tints": {
+      "ice": "multiply rgb(168,186,255)",
+      "violet": "multiply rgb(200,150,255)",
+      "cyan": "multiply rgb(150,225,255)",
+      "pink": "multiply rgb(255,160,225)",
+      "neutral": "multiply rgb(220,222,232)",
+      "none": "dead set",
+      "falloff": ".dim opacity = 0.45 * clamp(dist/1150, 0, 1), where dist = screen centre to word centre (use 1250 for 9:16). Constant; never animated."
+    },
+    "layout": {
+      "format": "[id, type, tint, cabX, cabY, cabW, cabH, scrX, scrY, scrW, scrH] in frame px. Shelves stack with 6px gaps; cabinets in a shelf sit 6px apart; shelves are offset like bricks and overscan the frame edges on purpose.",
+      "band_shelf": {
+        "16x9": "c (y 406, h 284): tv-c2, tv-c3, tv-c4 are the wide sets carrying the word",
+        "9x16": "e (y 870, h 196): tv-e2, tv-e3, tv-e4"
+      },
+      "seam_check": "Measured from kit metrics, the band seams fall at 779-821 and 1214-1256 (16:9) and 419-461 and 679-721 (9:16). They cut only the bowls of 'd' and 'n'. No seam may cover the 'i' or the '.'. Check the 3.25 s snapshot; if real glyph metrics differ, move the nearest band seam 20-40px by trading width between the neighbouring band TVs.",
+      "16x9": [
+        [
+          "tv-a1",
+          "portable",
+          "ice",
+          -20,
+          -46,
+          250,
+          218,
+          0,
+          -26,
+          210,
+          161
+        ],
+        [
+          "tv-a2",
+          "console",
+          "violet",
+          236,
+          -46,
+          318,
+          218,
+          252,
+          -24,
+          224,
+          168
+        ],
+        [
+          "tv-a3",
+          "monitor",
+          "neutral",
+          560,
+          -46,
+          262,
+          218,
+          576,
+          -30,
+          230,
+          174
+        ],
+        [
+          "tv-a4",
+          "console",
+          "cyan",
+          828,
+          -46,
+          312,
+          218,
+          844,
+          -24,
+          224,
+          168
+        ],
+        [
+          "tv-a5",
+          "dead",
+          "none",
+          1146,
+          -46,
+          246,
+          218,
+          1166,
+          -26,
+          206,
+          161
+        ],
+        [
+          "tv-a6",
+          "console",
+          "ice",
+          1398,
+          -46,
+          326,
+          218,
+          1414,
+          -24,
+          224,
+          168
+        ],
+        [
+          "tv-a7",
+          "portable",
+          "pink",
+          1730,
+          -46,
+          252,
+          218,
+          1750,
+          -26,
+          212,
+          161
+        ],
+        [
+          "tv-b1",
+          "console",
+          "neutral",
+          -120,
+          178,
+          322,
+          222,
+          -103,
+          200,
+          228,
+          171
+        ],
+        [
+          "tv-b2",
+          "portable",
+          "violet",
+          208,
+          178,
+          258,
+          222,
+          228,
+          198,
+          218,
+          164
+        ],
+        [
+          "tv-b3",
+          "monitor",
+          "ice",
+          472,
+          178,
+          296,
+          222,
+          489,
+          195,
+          262,
+          176
+        ],
+        [
+          "tv-b4",
+          "console",
+          "pink",
+          774,
+          178,
+          324,
+          222,
+          791,
+          200,
+          228,
+          171
+        ],
+        [
+          "tv-b5",
+          "portable",
+          "cyan",
+          1104,
+          178,
+          252,
+          222,
+          1124,
+          198,
+          212,
+          164
+        ],
+        [
+          "tv-b6",
+          "console",
+          "violet",
+          1362,
+          178,
+          318,
+          222,
+          1379,
+          200,
+          228,
+          171
+        ],
+        [
+          "tv-b7",
+          "monitor",
+          "ice",
+          1686,
+          178,
+          360,
+          222,
+          1703,
+          195,
+          326,
+          176
+        ],
+        [
+          "tv-c1",
+          "console",
+          "violet",
+          -60,
+          406,
+          390,
+          284,
+          -39,
+          434,
+          278,
+          219
+        ],
+        [
+          "tv-c2",
+          "wide",
+          "ice",
+          336,
+          406,
+          461,
+          284,
+          354,
+          424,
+          425,
+          232
+        ],
+        [
+          "tv-c3",
+          "wide",
+          "neutral",
+          803,
+          406,
+          429,
+          284,
+          821,
+          424,
+          393,
+          232
+        ],
+        [
+          "tv-c4",
+          "wide",
+          "cyan",
+          1238,
+          406,
+          359,
+          284,
+          1256,
+          424,
+          323,
+          232
+        ],
+        [
+          "tv-c5",
+          "console",
+          "violet",
+          1603,
+          406,
+          380,
+          284,
+          1624,
+          434,
+          268,
+          219
+        ],
+        [
+          "tv-d1",
+          "monitor",
+          "cyan",
+          -100,
+          696,
+          270,
+          204,
+          -85,
+          711,
+          240,
+          162
+        ],
+        [
+          "tv-d2",
+          "console",
+          "ice",
+          176,
+          696,
+          300,
+          204,
+          191,
+          716,
+          209,
+          157
+        ],
+        [
+          "tv-d3",
+          "portable",
+          "pink",
+          482,
+          696,
+          236,
+          204,
+          500,
+          714,
+          200,
+          151
+        ],
+        [
+          "tv-d4",
+          "console",
+          "neutral",
+          724,
+          696,
+          304,
+          204,
+          739,
+          716,
+          209,
+          157
+        ],
+        [
+          "tv-d5",
+          "dead",
+          "none",
+          1034,
+          696,
+          232,
+          204,
+          1052,
+          714,
+          196,
+          151
+        ],
+        [
+          "tv-d6",
+          "console",
+          "violet",
+          1272,
+          696,
+          298,
+          204,
+          1287,
+          716,
+          209,
+          157
+        ],
+        [
+          "tv-d7",
+          "portable",
+          "ice",
+          1576,
+          696,
+          236,
+          204,
+          1594,
+          714,
+          200,
+          151
+        ],
+        [
+          "tv-d8",
+          "monitor",
+          "neutral",
+          1818,
+          696,
+          250,
+          204,
+          1833,
+          711,
+          220,
+          162
+        ],
+        [
+          "tv-e1",
+          "console",
+          "violet",
+          -40,
+          906,
+          318,
+          220,
+          -24,
+          928,
+          225,
+          169
+        ],
+        [
+          "tv-e2",
+          "portable",
+          "neutral",
+          284,
+          906,
+          256,
+          220,
+          304,
+          926,
+          216,
+          163
+        ],
+        [
+          "tv-e3",
+          "console",
+          "ice",
+          546,
+          906,
+          320,
+          220,
+          562,
+          928,
+          225,
+          169
+        ],
+        [
+          "tv-e4",
+          "monitor",
+          "pink",
+          872,
+          906,
+          300,
+          220,
+          888,
+          922,
+          268,
+          175
+        ],
+        [
+          "tv-e5",
+          "console",
+          "cyan",
+          1178,
+          906,
+          316,
+          220,
+          1194,
+          928,
+          225,
+          169
+        ],
+        [
+          "tv-e6",
+          "portable",
+          "violet",
+          1500,
+          906,
+          254,
+          220,
+          1520,
+          926,
+          214,
+          163
+        ],
+        [
+          "tv-e7",
+          "console",
+          "ice",
+          1760,
+          906,
+          330,
+          220,
+          1776,
+          928,
+          225,
+          169
+        ]
+      ],
+      "9x16": [
+        [
+          "tv-a1",
+          "console",
+          "ice",
+          -30,
+          -60,
+          300,
+          210,
+          -14,
+          -39,
+          216,
+          162
+        ],
+        [
+          "tv-a2",
+          "portable",
+          "violet",
+          276,
+          -60,
+          244,
+          210,
+          295,
+          -41,
+          206,
+          155
+        ],
+        [
+          "tv-a3",
+          "console",
+          "neutral",
+          526,
+          -60,
+          302,
+          210,
+          542,
+          -39,
+          216,
+          162
+        ],
+        [
+          "tv-a4",
+          "portable",
+          "cyan",
+          834,
+          -60,
+          270,
+          210,
+          865,
+          -41,
+          207,
+          155
+        ],
+        [
+          "tv-b1",
+          "portable",
+          "pink",
+          -90,
+          156,
+          230,
+          196,
+          -72,
+          174,
+          193,
+          145
+        ],
+        [
+          "tv-b2",
+          "console",
+          "ice",
+          146,
+          156,
+          282,
+          196,
+          161,
+          176,
+          201,
+          151
+        ],
+        [
+          "tv-b3",
+          "monitor",
+          "violet",
+          434,
+          156,
+          250,
+          196,
+          449,
+          171,
+          220,
+          156
+        ],
+        [
+          "tv-b4",
+          "console",
+          "neutral",
+          690,
+          156,
+          284,
+          196,
+          705,
+          176,
+          201,
+          151
+        ],
+        [
+          "tv-b5",
+          "portable",
+          "ice",
+          980,
+          156,
+          230,
+          196,
+          998,
+          174,
+          193,
+          145
+        ],
+        [
+          "tv-c1",
+          "monitor",
+          "cyan",
+          -20,
+          358,
+          262,
+          208,
+          -4,
+          374,
+          230,
+          165
+        ],
+        [
+          "tv-c2",
+          "dead",
+          "none",
+          248,
+          358,
+          236,
+          208,
+          267,
+          377,
+          198,
+          154
+        ],
+        [
+          "tv-c3",
+          "console",
+          "violet",
+          490,
+          358,
+          298,
+          208,
+          506,
+          379,
+          213,
+          160
+        ],
+        [
+          "tv-c4",
+          "portable",
+          "ice",
+          794,
+          358,
+          240,
+          208,
+          813,
+          377,
+          202,
+          154
+        ],
+        [
+          "tv-c5",
+          "monitor",
+          "neutral",
+          1040,
+          358,
+          250,
+          208,
+          1056,
+          374,
+          218,
+          165
+        ],
+        [
+          "tv-d1",
+          "console",
+          "violet",
+          -70,
+          572,
+          420,
+          292,
+          -48,
+          601,
+          300,
+          225
+        ],
+        [
+          "tv-d2",
+          "portable",
+          "ice",
+          356,
+          572,
+          344,
+          292,
+          384,
+          598,
+          288,
+          216
+        ],
+        [
+          "tv-d3",
+          "console",
+          "cyan",
+          706,
+          572,
+          430,
+          292,
+          728,
+          601,
+          300,
+          225
+        ],
+        [
+          "tv-e1",
+          "portable",
+          "violet",
+          -40,
+          870,
+          187,
+          196,
+          -22,
+          888,
+          151,
+          145
+        ],
+        [
+          "tv-e2",
+          "wide",
+          "ice",
+          153,
+          870,
+          284,
+          196,
+          171,
+          888,
+          248,
+          144
+        ],
+        [
+          "tv-e3",
+          "wide",
+          "neutral",
+          443,
+          870,
+          254,
+          196,
+          461,
+          888,
+          218,
+          144
+        ],
+        [
+          "tv-e4",
+          "wide",
+          "cyan",
+          703,
+          870,
+          244,
+          196,
+          721,
+          888,
+          208,
+          144
+        ],
+        [
+          "tv-e5",
+          "portable",
+          "violet",
+          953,
+          870,
+          200,
+          196,
+          971,
+          888,
+          164,
+          145
+        ],
+        [
+          "tv-f1",
+          "console",
+          "ice",
+          -110,
+          1072,
+          316,
+          218,
+          -94,
+          1094,
+          224,
+          168
+        ],
+        [
+          "tv-f2",
+          "portable",
+          "pink",
+          212,
+          1072,
+          256,
+          218,
+          232,
+          1092,
+          215,
+          161
+        ],
+        [
+          "tv-f3",
+          "console",
+          "neutral",
+          474,
+          1072,
+          318,
+          218,
+          490,
+          1094,
+          224,
+          168
+        ],
+        [
+          "tv-f4",
+          "monitor",
+          "violet",
+          798,
+          1072,
+          310,
+          218,
+          814,
+          1088,
+          278,
+          174
+        ],
+        [
+          "tv-g1",
+          "portable",
+          "cyan",
+          -30,
+          1296,
+          232,
+          198,
+          -12,
+          1314,
+          195,
+          146
+        ],
+        [
+          "tv-g2",
+          "console",
+          "violet",
+          208,
+          1296,
+          286,
+          198,
+          223,
+          1316,
+          203,
+          152
+        ],
+        [
+          "tv-g3",
+          "dead",
+          "none",
+          500,
+          1296,
+          232,
+          198,
+          518,
+          1314,
+          195,
+          146
+        ],
+        [
+          "tv-g4",
+          "console",
+          "ice",
+          738,
+          1296,
+          288,
+          198,
+          753,
+          1316,
+          203,
+          152
+        ],
+        [
+          "tv-g5",
+          "portable",
+          "neutral",
+          1032,
+          1296,
+          232,
+          198,
+          1050,
+          1314,
+          195,
+          146
+        ],
+        [
+          "tv-h1",
+          "console",
+          "neutral",
+          -80,
+          1500,
+          312,
+          216,
+          -64,
+          1522,
+          221,
+          166
+        ],
+        [
+          "tv-h2",
+          "monitor",
+          "ice",
+          238,
+          1500,
+          276,
+          216,
+          254,
+          1516,
+          244,
+          172
+        ],
+        [
+          "tv-h3",
+          "console",
+          "pink",
+          520,
+          1500,
+          314,
+          216,
+          536,
+          1522,
+          221,
+          166
+        ],
+        [
+          "tv-h4",
+          "portable",
+          "violet",
+          840,
+          1500,
+          270,
+          216,
+          868,
+          1519,
+          213,
+          160
+        ],
+        [
+          "tv-i1",
+          "portable",
+          "ice",
+          -50,
+          1722,
+          276,
+          238,
+          -29,
+          1743,
+          234,
+          177
+        ],
+        [
+          "tv-i2",
+          "console",
+          "violet",
+          232,
+          1722,
+          344,
+          238,
+          250,
+          1746,
+          244,
+          183
+        ],
+        [
+          "tv-i3",
+          "portable",
+          "cyan",
+          582,
+          1722,
+          276,
+          238,
+          603,
+          1743,
+          234,
+          177
+        ],
+        [
+          "tv-i4",
+          "console",
+          "neutral",
+          864,
+          1722,
+          344,
+          238,
+          882,
+          1746,
+          244,
+          183
+        ]
+      ]
+    },
+    "static": {
+      "method": "SVG filter #snow exactly as in voidtv-set: feTurbulence fractalNoise baseFrequency '0.95 0.55', numOctaves 1, stitchTiles stitch; feColorMatrix saturate 0; feComponentTransfer discrete tables R '0 0.04 0.18 0.62 0.92 1', G '0 0.05 0.19 0.64 0.93 1', B '0.02 0.08 0.22 0.68 0.96 1'. Grain div 640x360 (9:16: 360x640), background var(--static_base), filter url(#snow) contrast(1.6) brightness(.95), scale(3) from 0 0, image-rendering pixelated.",
+      "seed": "tl.to(seed, {v: 103, duration: 3.4, ease: 'none', snap: {v: 1}, onUpdate: set feTurbulence seed}, 0). That is one new seed per frame (30/s), deterministic by time. Hide #static with a timeline set autoAlpha 0 at 3.30 (it is fully covered by then); seeking back restores it.",
+      "level": "Target mean relative luminance per lit screen after tint and dim: 0.22-0.38. Static plane opacity .9. Grain cells about 3px.",
+      "fallback": "If the render is too slow: assets/textures/static.png as background, background-position stepped every frame from a seeded LCG (offsets 0-319px), same tints."
+    }
+  },
+  "beats": [
+    0.0,
+    0.04,
+    0.52,
+    1.55,
+    2.2,
+    3.15,
+    3.3,
+    4.45,
+    7.0
+  ],
+  "timeline": [
+    {
+      "t": [
+        0.0,
+        7.0
+      ],
+      "what": "Camera: #cam scale 1.000 -> 1.045, ease none (one continuous push, the film's current). Haze drifts x +60px, ease none."
+    },
+    {
+      "t": [
+        0.0,
+        0.04
+      ],
+      "what": "Frame 0: the wall is visible but dark. Cabinets show their violet rim light and every screen is off (dark glass). Not an empty black frame."
+    },
+    {
+      "t": [
+        0.04,
+        0.52
+      ],
+      "what": "POWER-ON CASCADE (hook). Each non-dead screen: .off-top scaleY 1->0 (origin top) and .off-bot scaleY 1->0 (origin bottom), 0.16 s, power2.out. The picture opens from a centre line at the static's own brightness, with NO over-bright line. Order: distance from the word centre, nearest first. Starts spread over 0.04-0.36 s with the gaps shrinking (accelerating cascade). Each screen turns on once and never off again."
+    },
+    {
+      "t": [
+        0.52,
+        1.55
+      ],
+      "what": "STATIC WALL. Grain changes every frame. On 3 non-band screens (16:9: tv-b3, tv-d6, tv-e4; 9:16: tv-b3, tv-g4, tv-h2), .hum is a 22%-tall band, rgba(0,0,0,.15), rolling top->bottom at a 1.5 s period from 0.5 to 3.2 s (finite tween, ease none). Nothing else moves except the camera."
+    },
+    {
+      "t": [
+        1.55,
+        2.2
+      ],
+      "what": "SIGNAL HUNTING. Band screens only: .ghost (the same crop as .sig's wordmark, no carrier) rises opacity 0 -> 0.16 (sine.in, monotonic). x jitters by a quantized hash every 2 frames: offset = amp * (hash(step*13 + screenIndex*7)*2-1) * 14px, with amp 1 -> 0.4. Anticipation: the viewer sees something is coming through."
+    },
+    {
+      "t": [
+        2.2,
+        3.15
+      ],
+      "what": "LOCK WAVE: the single static-to-signal transition. Screens in waveRank order; starts spread over 2.20-2.81 s (about 0.02 s per screen, 16:9 has 32 lit screens). Per screen: .sig autoAlpha 0->1, 0.22 s power2.out. Its .pic slides y +14% of screen height -> 0 (a vertical-hold settle), 0.34 s power3.out. On band screens the RGB ghost amp goes 1->0 over 0.34 s. The static fades under it. Every screen goes static -> picture exactly once. The wall's mean brightness falls monotonically."
+    },
+    {
+      "t": [
+        3.15,
+        3.3
+      ],
+      "what": "STILLNESS. One complete picture across the wall: the carrier (wall-sized radial gradient ellipse about 1300x620 at the word centre, var(--carrier_hot) 0% -> var(--carrier_mid) 38% -> var(--carrier_edge) 70% -> var(--bg) 100%) with the neon word across the band, broken by bezels. Hold still for a beat before the climax."
+    },
+    {
+      "t": [
+        3.3,
+        4.45
+      ],
+      "what": "EMERGENCE (the signature move). #wm autoAlpha 0->1 over 3.30-3.48 (power1.out): the bezel gaps fill and the word becomes one object. #wm scale 1 -> 1.29 and y 0 -> -6px (9:16: -4px), 3.30-4.45, ease expo.inOut. It lifts off slowly, rushes toward camera and decelerates into place, with no overshoot. #wm RGB ghosts amp 0.6->0 over 3.30-3.70 (the signal becomes physical). #wall --dof 0 -> 3.5px and brightness 1 -> 0.62, 3.40-4.45, sine.inOut. On-screen word copies (.pic .wm) opacity 1 -> 0.40, 3.35-4.45; that afterglow stays at wall scale, so the parallax shows the separation. #spill pink 0 -> .38 and cyan 0 -> .32, 3.50-4.60, sine.out. Pool centres at 31.5% and 81.5% of the word width from its left edge, radius about 0.7 x 0.45 of the word width. .wm-bloom 0 -> .85, 3.90-4.45, power2.in (ignition lands on arrival)."
+    },
+    {
+      "t": [
+        4.45,
+        7.0
+      ],
+      "what": "HOLD / LOCKUP. #wm scale 1.29 -> 1.32, ease none (sustained travel, not a wobble). .wm-bloom .85 -> .55, 4.45-5.40, sine.out, then constant. On-screen afterglow .40 -> .20, 4.45-6.20, sine.out. Nothing pulses or flickers. 6.5-7.0 is clean and still apart from the push. The last frame is a share-ready lockup: no fade-out, the film cuts out on the hold."
+    },
+    {
+      "t": [
+        0.0,
+        7.0
+      ],
+      "what": "Grain: noise.png background-position stepped every 2 frames from a seeded LCG (onUpdate of a snapped proxy), opacity .05, blend overlay."
+    }
+  ],
+  "photosensitivity": {
+    "standard": "WCAG 2.3.1 (three flashes or below threshold). No large area may change brightness in opposing directions more than 3 times in any 1 s.",
+    "rules": [
+      "Static grain may change every frame. It is fine-grained (about 3px cells) and each screen's mean luminance stays constant (same filter tables, fixed per-screen tint and dim). No per-screen brightness modulation.",
+      "Power-on: each screen goes off -> on once, at the static's own level. No over-bright line or bloom on power-on.",
+      "The lock wave is ONE monotonic darkening per screen, staggered across about 0.9 s. No flash frame.",
+      "Free word arrival: one rise (fade in plus bloom) and one gentle partial settle (.85 -> .55 over 0.95 s). No neon flicker or stutter anywhere.",
+      "Hum bars: 3 small screens, 15% darker band, 0.67 Hz, ending at 3.2 s.",
+      "Do NOT copy voidtv-sting's #flash element or any white impact frame."
+    ],
+    "verify": "After the draft render: ffmpeg -> per-frame mean relative luminance in a 6x4 grid of windows (about 320x270 at 16:9; 180x480 at 9:16). Flag any transition >= 10% where the darker state is < 0.80, and count opposing pairs in every sliding 1 s window. Must be <= 3 per window everywhere (expected 0-1)."
+  },
+  "proof_times": [
+    0.0,
+    0.3,
+    1.2,
+    2.0,
+    2.7,
+    3.25,
+    3.9,
+    4.6,
+    6.9
+  ],
+  "risks": [
+    "Glyph metrics: the band seams were placed from kit-measured em widths. Confirm at 3.25 s that the 'i' and '.' are fully on screen glass.",
+    "Font timing: positions are centre-anchored, so crops register regardless of metrics. Use font-display:block on the local woff2 so nothing captures a fallback face.",
+    "Performance: one feTurbulence plane (hidden after 3.3 s), about 32 overflow-clipped .pic copies with text-shadow, and a blur filter on #wall from 3.4 s. If renders crawl, put the wordmark only into .pic copies whose screen intersects the word box plus 0.5em, and use the static.png fallback.",
+    "Blend contexts: the .tint multiply layers must sit inside #wall with #static (same isolation group), or they multiply the wrong backdrop once #wall gets its filter.",
+    "9:16 margin is 86px at the end. Keep the total final scale at 1.379 or less.",
+    "Seek safety: every delayed reveal is a timeline fromTo / autoAlpha. Nothing is gsap.set at page load on a later element, and no CSS transitions or animations."
+  ],
+  "decisions": [
+    "Category logo-reveal: a brand sting/lockup with user-supplied branding. No search is needed, so asset_needs is empty.",
+    "Procedural CSS/SVG wall instead of the wall.jpg plate. The plate has the sign baked across the middle and an extra neon sign top-right, and its about 40 irregular screens can't be re-laid for 9:16. A shelf-based procedural wall is deterministic and re-lays by swapping one data array.",
+    "The resolve is a 'video wall' picture: one image spans all screens (wordmark-tiles crop mechanic). The neon then leaves the glass as a separate object, so 'comes out of the screens' is literal.",
+    "No end mark. mark-neon-proposal.svg is still a proposal, and the name is the brand in all advertising.",
+    "No fade-out. The final frame doubles as a share image (same convention as voidtv-sting).",
+    "Unbounded 700 + brand-kit glow recipe, rather than a catalog caption style.",
+    "Duration 7.0 s at 30 fps = 210 frames."
+  ]
+}

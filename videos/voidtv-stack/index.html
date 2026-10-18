@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>voidtv.net the message</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Unbounded";
+        src: url(assets/fonts/unbounded-latin.woff2) format("woff2");
+        font-weight: 200 900;
+        font-display: block;
+      }
+      /* PALETTE: every colour in this file lives here (voidtv-tvwall shot-plan palette + derived alpha/multiply tokens) */
+      :root {
+        --bg: #07080c;
+        --pink_core: #ff4fc8;
+        --pink_glow: #dc20a9;
+        --blue_core: #5fe3ff;
+        --blue_glow: #0ac1e0;
+        --violet: #a954e3;
+        --carrier_hot: #2a1446;
+        --carrier_mid: #160c2a;
+        --carrier_edge: #0a0812;
+        --cabinet_dark: #15131c;
+        --cabinet_mid: #221d2b;
+        --cabinet_edge: #2e2838;
+        --wall_gap: #050508;
+        --knob: #0e0d13;
+        --knob_rim: #3a3346;
+        --static_base: #b7bcc8;
+        /* screen tints (multiply) */
+        --tint_ice: rgb(168, 186, 255);
+        --tint_violet: rgb(200, 150, 255);
+        --tint_cyan: rgb(150, 225, 255);
+        --tint_pink: rgb(255, 160, 225);
+        --tint_neutral: rgb(220, 222, 232);
+        /* derived alphas */
+        --black: rgb(0, 0, 0);
+        --hum: rgba(0, 0, 0, 0.15);
+        --sheen: rgba(255, 255, 255, 0.09);
+        --refl: rgba(255, 255, 255, 0.05);
+        --scan: rgba(0, 0, 0, 0.1);
+        --pgrid: rgba(0, 0, 0, 0.06);
+        --bulge: rgba(0, 0, 0, 0.34);
+        --inset_a: rgba(0, 0, 0, 0.4);
+        --inset_b: rgba(0, 0, 0, 0.5);
+        --vig: rgba(7, 8, 12, 0.85);
+        --none: rgba(0, 0, 0, 0);
+        --top_sheen: rgba(255, 255, 255, 0.07);
+        --floor_near: rgba(21, 19, 28, 0.5);
+        --floor_far: rgba(7, 8, 12, 0.88);
+        --contact: rgba(0, 0, 0, 0.8);
+        --reflect: rgba(0, 0, 0, 0.42);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Unbounded", sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #svgdefs {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+      /* camera wrapper: everything except vignette + film grain; transform-origin = the big screen's centre */
+      #cam {
+        position: absolute;
+        inset: 0;
+      }
+      #room,
+      #haze,
+      #floorfx {
+        position: absolute;
+        inset: 0;
+      }
+      #backglow {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        background: radial-gradient(closest-side, var(--carrier_hot) 0%, var(--carrier_mid) 45%, var(--none) 100%);
+      }
+      .pool {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      .pk {
+        background: radial-gradient(closest-side, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      .cy {
+        background: radial-gradient(closest-side, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      /* the heap: one box ending exactly on the floor line, mirrored below it (wet-floor reflection) */
+      #pile {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        --shade: 0.6;
+        --dof: 0px;
+      }
+      .tv {
+        position: absolute;
+        transform-origin: 50% 100%;
+      }
+      .tv.word {
+        filter: blur(var(--dof));
+      }
+      svg.cab {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: visible;
+      }
+      /* a screen: its own isolation group, so .tint multiplies only this screen's static */
+      .scr {
+        position: absolute;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .scr > div {
+        position: absolute;
+        inset: 0;
+      }
+      .scr > .static {
+        overflow: hidden;
+        background: var(--bg);
+      }
+      .grain {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: var(--static_base);
+        transform: scale(3);
+        transform-origin: 0 0;
+        image-rendering: pixelated;
+        opacity: 0.9;
+      }
+      .stint {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(160deg, var(--violet) 0%, var(--blue_glow) 100%);
+        mix-blend-mode: screen;
+        opacity: 0.1;
+      }
+      .tint {
+        mix-blend-mode: multiply;
+      }
+      .t-ice {
+        background: var(--tint_ice);
+      }
+      .t-violet {
+        background: var(--tint_violet);
+      }
+      .t-cyan {
+        background: var(--tint_cyan);
+      }
+      .t-pink {
+        background: var(--tint_pink);
+      }
+      .t-neutral {
+        background: var(--tint_neutral);
+      }
+      .scr > .dim,
+      .scr > .dimmer {
+        background: var(--black);
+      }
+      .scr > .dimmer {
+        opacity: 0;
+      }
+      .scr > .hum {
+        bottom: auto;
+        height: 22%;
+        opacity: 0;
+        background: linear-gradient(180deg, var(--none) 0%, var(--hum) 30%, var(--hum) 70%, var(--none) 100%);
+      }
+      /* dark glass halves: the power-on opens from the centre line */
+      .scr > .off {
+        background: radial-gradient(ellipse at 35% 30%, var(--cabinet_dark) 0%, var(--knob) 70%);
+      }
+      .scr > .off-top {
+        inset: 0 0 calc(50% - 1px) 0;
+        transform-origin: 50% 0%;
+      }
+      .scr > .off-bot {
+        inset: calc(50% - 1px) 0 0 0;
+        transform-origin: 50% 100%;
+      }
+      .scr > .ghost {
+        opacity: 0;
+        display: grid;
+        place-items: center;
+      }
+      .scr > .sig {
+        opacity: 0;
+        visibility: hidden;
+      }
+      /* the locked picture overscans the glass so the vertical-hold roll never shows an edge */
+      .pic {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -25%;
+        height: 150%;
+        background: radial-gradient(
+          ellipse 72% 52% at 50% 50%,
+          var(--carrier_hot) 0%,
+          var(--carrier_mid) 42%,
+          var(--carrier_edge) 78%,
+          var(--bg) 100%
+        );
+      }
+      .jit {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .bed {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        mix-blend-mode: screen;
+        background:
+          radial-gradient(ellipse 30% 20% at 36% 50%, var(--pink_glow) 0%, var(--none) 100%),
+          radial-gradient(ellipse 18% 18% at 77% 50%, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      .scr > .glass {
+        background:
+          radial-gradient(ellipse at 28% 18%, var(--refl) 0%, var(--none) 42%),
+          linear-gradient(115deg, var(--sheen) 0%, var(--none) 30%),
+          repeating-linear-gradient(0deg, var(--scan) 0 1px, var(--none) 1px 3px),
+          repeating-linear-gradient(90deg, var(--pgrid) 0 1px, var(--none) 1px 4px),
+          radial-gradient(ellipse at center, var(--none) 58%, var(--bulge) 100%);
+      }
+      /* neon words (brand-kit neon recipe) */
+      .w-stack {
+        display: grid;
+        place-items: center;
+      }
+      .w {
+        grid-area: 1 / 1;
+        position: relative;
+        z-index: 2;
+        font-family: "Unbounded", sans-serif;
+        font-size: var(--fs, 64px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .w b,
+      .w i {
+        font-weight: 700;
+        font-style: normal;
+      }
+      .w.p,
+      .w .wm-a {
+        color: var(--pink_core);
+        text-shadow:
+          0 0 0.12em var(--pink_glow),
+          0 0 0.45em var(--pink_glow);
+      }
+      .w.b,
+      .w .wm-b {
+        color: var(--blue_core);
+        text-shadow:
+          0 0 0.12em var(--blue_glow),
+          0 0 0.45em var(--blue_glow);
+      }
+      .w.bloom {
+        z-index: 1;
+        opacity: 0;
+        filter: blur(calc(var(--fs, 64px) * 0.28));
+      }
+      /* RGB ghost copies (chromatic split at the lock): brand glows, screen blend, behind the core */
+      .w.rgb {
+        z-index: 0;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      .w.rgb,
+      .w.rgb b,
+      .w.rgb i,
+      .ghost .w,
+      .ghost .w b,
+      .ghost .w i {
+        text-shadow: none;
+      }
+      .w.rgb.warm,
+      .w.rgb.warm b,
+      .w.rgb.warm i {
+        color: var(--pink_glow);
+      }
+      .w.rgb.cool,
+      .w.rgb.cool b,
+      .w.rgb.cool i {
+        color: var(--blue_glow);
+      }
+      /* haze and screen light in the air */
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.12;
+        background: radial-gradient(closest-side, var(--violet) 0%, var(--none) 100%);
+      }
+      .halo {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      /* floor: a dark glossy plane over the reflection */
+      #floor {
+        position: absolute;
+        background: linear-gradient(180deg, var(--floor_near) 0%, var(--floor_far) 55%, var(--bg) 100%);
+        backdrop-filter: blur(6px);
+      }
+      .contact {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--contact) 0%, var(--none) 100%);
+      }
+      /* vignette component recipe */
+      #hf-vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, var(--none) 50%, var(--vig) 100%);
+      }
+      #film-grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: url(assets/textures/noise.png);
+        mix-blend-mode: overlay;
+        opacity: 0.05;
+      }
+      /* cabinet SVG classes */
+      .body-plastic {
+        fill: url(#gCab);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .body-dark {
+        fill: url(#gDark);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .body-wood {
+        fill: var(--cabinet_mid);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .grl {
+        fill: none;
+        stroke: var(--cabinet_dark);
+        stroke-linecap: round;
+      }
+      .grl.hi {
+        stroke: var(--cabinet_edge);
+      }
+      .grl.lo {
+        stroke: var(--knob);
+      }
+      .sheen {
+        fill: none;
+        stroke: var(--top_sheen);
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+      .sur {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .trim {
+        fill: none;
+        stroke: var(--knob_rim);
+        stroke-width: 2;
+      }
+      .panel {
+        fill: url(#gPanel);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .knob {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1.5;
+      }
+      .knob-in {
+        fill: var(--cabinet_dark);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .tick {
+        stroke: var(--knob_rim);
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+      .tick-s {
+        stroke: var(--knob_rim);
+        stroke-width: 1.2;
+        stroke-linecap: round;
+      }
+      .slot {
+        fill: var(--wall_gap);
+      }
+      .grille {
+        fill: url(#pDots);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .btn {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1;
+      }
+      .led-base {
+        fill: var(--knob_rim);
+      }
+      .led {
+        fill: var(--pink_glow);
+        opacity: 0;
+      }
+      .rim {
+        fill: none;
+        stroke: var(--violet);
+        stroke-opacity: 0.35;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+      .shade {
+        fill: var(--black);
+        opacity: var(--shade);
+      }
+      .xtra {
+        opacity: calc(1 - var(--shade));
+      }
+      .rod {
+        fill: none;
+        stroke: var(--knob_rim);
+        stroke-linecap: round;
+      }
+      .tip {
+        fill: var(--knob_rim);
+      }
+      .handle {
+        fill: none;
+        stroke: var(--knob_rim);
+        stroke-linecap: round;
+      }
+      .handle-in {
+        fill: none;
+        stroke: var(--knob);
+        stroke-linecap: round;
+      }
+      .foot {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .spill {
+        opacity: 0;
+      }
+      .lit {
+        fill: none;
+        stroke-width: 3;
+        opacity: 0;
+      }
+      .lit.p {
+        stroke: var(--pink_glow);
+      }
+      .lit.b {
+        stroke: var(--blue_glow);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="7"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <svg id="svgdefs" aria-hidden="true">
+        <defs>
+          <linearGradient id="gCab" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color: var(--cabinet_mid)" />
+            <stop offset="1" style="stop-color: var(--cabinet_dark)" />
+          </linearGradient>
+          <linearGradient id="gDark" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color: var(--cabinet_dark)" />
+            <stop offset="1" style="stop-color: var(--knob)" />
+          </linearGradient>
+          <linearGradient id="gPanel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color: var(--cabinet_dark)" />
+            <stop offset="1" style="stop-color: var(--knob)" />
+          </linearGradient>
+          <pattern id="pDots" width="6" height="6" patternUnits="userSpaceOnUse">
+            <rect width="6" height="6" style="fill: var(--knob)" />
+            <circle cx="3" cy="3" r="1.5" style="fill: var(--wall_gap)" />
+          </pattern>
+        </defs>
+        <g id="snowdefs"></g>
+      </svg>
+      <section id="stage" class="clip" data-start="0" data-duration="7" data-track-index="0">
+        <div id="cam">
+          <div id="room" data-layout-allow-overflow="true">
+            <div id="backglow"></div>
+            <div class="pool pk" id="back-pk"></div>
+            <div class="pool cy" id="back-cy"></div>
+          </div>
+          <div id="pile" data-layout-allow-overflow="true"></div>
+          <div id="floor" data-layout-allow-overflow="true"></div>
+          <div id="floorfx" data-layout-allow-overflow="true">
+            <div class="pool pk" id="floor-pk"></div>
+            <div class="pool cy" id="floor-cy"></div>
+          </div>
+          <div id="haze" data-layout-allow-overflow="true"></div>
+        </div>
+        <div id="hf-vignette" data-layout-allow-occlusion="true"></div>
+        <div id="film-grain" data-layout-allow-occlusion="true"></div>
+      </section>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+
+        // ---------------------------------------------------------------- data
+        var root = document.getElementById("root");
+        var W = Number(root.dataset.width);
+        var H = Number(root.dataset.height);
+        var FMT = W > H ? "16x9" : "9x16";
+
+        // [id, word, neon, type, finish, x, y, w, h, sx, sy, sw, sh, rot, tint, dim]
+        // cabinet rect (x,y,w,h) in frame px; screen rect (sx,sy,sw,sh) inside the cabinet
+        var CONFIGS = {
+          "16x9": {
+            floor: 905,
+            tvs: [
+              ["big", "", "", "big", "wood", 615, 375, 690, 520, 60, 36, 570, 408, 0, "ice", 0.3],
+              ["free", "free", "p", "portable", "plastic", 655, 150, 290, 225, 20, 20, 196, 150, -2.5, "violet", 0.2],
+              ["tv", "tv", "b", "antenna", "dark", 975, 135, 300, 240, 20, 22, 206, 158, 2, "ice", 0.2],
+              ["no1", "no", "p", "monitor", "plastic", 110, 690, 255, 215, 22, 20, 211, 152, 0, "cyan", 0.22],
+              ["ads", "ads", "b", "console", "wood", 345, 635, 310, 270, 18, 22, 205, 168, 0, "violet", 0.2],
+              ["account", "account", "b", "wide", "dark", 1495, 650, 360, 255, 22, 22, 316, 176, 0, "neutral", 0.24],
+              ["no2", "no", "p", "rounded", "plastic", 1265, 685, 250, 220, 25, 24, 200, 148, 0, "ice", 0.2],
+            ],
+            cap: 64,
+            fill: 0.78,
+            wmFill: 0.82,
+            push: [1.6, -75],
+            reflect: 260,
+            dof: 2.2,
+            bloomPeak: 0.4,
+            bed: 0.06,
+            backglow: [960, 600, 2000, 1150],
+          },
+          "9x16": {
+            floor: 1655,
+            tvs: [
+              ["big", "", "", "big", "wood", 90, 990, 900, 653, 60, 38, 780, 540, 0, "ice", 0.3],
+              ["no2", "no", "p", "rounded", "plastic", 130, 750, 330, 240, 30, 26, 270, 170, 0, "ice", 0.2],
+              ["account", "account", "b", "console", "dark", 470, 714, 470, 276, 24, 22, 340, 226, 0, "neutral", 0.24],
+              ["no1", "no", "p", "monitor", "plastic", 150, 510, 300, 240, 24, 22, 252, 168, 1, "cyan", 0.22],
+              ["ads", "ads", "b", "console", "wood", 520, 470, 360, 244, 20, 22, 240, 176, -1, "violet", 0.2],
+              ["free", "free", "p", "portable", "plastic", 165, 285, 310, 225, 20, 20, 212, 160, -2, "violet", 0.2],
+              ["tv", "tv", "b", "antenna", "dark", 560, 250, 300, 220, 20, 20, 206, 150, 2.5, "ice", 0.2],
+            ],
+            cap: 66,
+            fill: 0.78,
+            wmFill: 0.84,
+            push: [1.25, -338],
+            reflect: 300,
+            dof: 2,
+            bloomPeak: 0.26,
+            bed: 0.03,
+            backglow: [540, 960, 1500, 1900],
+          },
+        };
+        var CFG = CONFIGS[FMT];
+        var F = CFG.floor;
+        // reading order of the six word sets, and their lock times (0.4 s apart: never more than 3 per second)
+        var READ = ["free", "tv", "no1", "ads", "no2", "account"];
+        var LOCKS = [1.05, 1.45, 1.85, 2.25, 2.65, 3.05];
+        var BIG_LOCK = 3.6;
+        // power-on order 0.06-1.0 s (scattered, one blink-on per set)
+        var POWER = ["tv", "big", "account", "free", "no2", "ads", "no1"];
+
+        // deterministic helpers (no Math.random, no clocks)
+        function glitchHash(n) {
+          var x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
+          return x - Math.floor(x);
+        }
+        function lcg(k) {
+          var s = (Math.imul(k + 0x9e37, 1664525) + 1013904223) >>> 0;
+          s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+          return s;
+        }
+        function r1(v) {
+          return Math.round(v * 10) / 10;
+        }
+        function clamp01(v) {
+          return Math.max(0, Math.min(1, v));
+        }
+
+        var tvs = CFG.tvs.map(function (r, k) {
+          var s = { id: r[0], word: r[1], neon: r[2], type: r[3], finish: r[4], x: r[5], y: r[6], w: r[7], h: r[8], sx: r[9], sy: r[10], sw: r[11], sh: r[12], rot: r[13], tint: r[14], dim: r[15], k: k };
+          s.big = s.id === "big";
+          s.rad = r1((s.type === "rounded" ? 0.2 : 0.13) * s.sh);
+          s.cr = s.type === "rounded" ? 30 : s.big ? 14 : 12; // cabinet corner radius
+          s.scx = s.x + s.sx + s.sw / 2; // screen centre, frame px
+          s.scy = s.y + s.sy + s.sh / 2;
+          return s;
+        });
+        var byId = {};
+        tvs.forEach(function (s) {
+          byId[s.id] = s;
+        });
+        var big = byId.big;
+        var CX = big.scx;
+        var CY = big.scy;
+        var words = READ.map(function (id) {
+          return byId[id];
+        });
+
+        // ---------------------------------------------------------------- svg helpers
+        function rect(cls, x, y, w, h, rx, extra) {
+          return '<rect class="' + cls + '" x="' + r1(x) + '" y="' + r1(y) + '" width="' + r1(w) + '" height="' + r1(h) + '" rx="' + r1(rx || 0) + '"' + (extra || "") + "/>";
+        }
+        function circ(cls, x, y, rr, extra) {
+          return '<circle class="' + cls + '" cx="' + r1(x) + '" cy="' + r1(y) + '" r="' + r1(rr) + '"' + (extra || "") + "/>";
+        }
+        function line(cls, x1, y1, x2, y2, extra) {
+          return '<line class="' + cls + '" x1="' + r1(x1) + '" y1="' + r1(y1) + '" x2="' + r1(x2) + '" y2="' + r1(y2) + '"' + (extra || "") + "/>";
+        }
+        function rr(x, y, w, h, r) {
+          return "M" + r1(x + r) + "," + r1(y) + " H" + r1(x + w - r) + " A" + r + "," + r + " 0 0 1 " + r1(x + w) + "," + r1(y + r) + " V" + r1(y + h - r) + " A" + r + "," + r + " 0 0 1 " + r1(x + w - r) + "," + r1(y + h) + " H" + r1(x + r) + " A" + r + "," + r + " 0 0 1 " + r1(x) + "," + r1(y + h - r) + " V" + r1(y + r) + " A" + r + "," + r + " 0 0 1 " + r1(x + r) + "," + r1(y) + " Z";
+        }
+        function dial(x, y, rr, ticks) {
+          var o = "";
+          if (ticks) {
+            for (var i = 0; i < 12; i++) {
+              var a = (i / 12) * Math.PI * 2;
+              o += line("tick-s", x + Math.cos(a) * (rr + 3), y + Math.sin(a) * (rr + 3), x + Math.cos(a) * (rr + 6.5), y + Math.sin(a) * (rr + 6.5));
+            }
+          }
+          o += circ("knob", x, y, rr);
+          o += circ("knob-in", x, y, rr * 0.62);
+          o += line("tick", x, y - rr * 0.9, x, y - rr * 0.35);
+          return o;
+        }
+        function led(s, x, y) {
+          return circ("led-base", x, y, 2.8) + circ("led", x, y, 2.6, ' id="led-' + s.id + '"');
+        }
+
+        // one cabinet, drawn in its own local space (0,0 = cabinet top-left), screen hole masked out
+        function cabinet(s) {
+          var w = s.w, h = s.h, id = s.id;
+          var sr = s.sx + s.sw, sb = s.sy + s.sh;
+          var o = '<svg class="cab" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + " " + h + '" aria-hidden="true">';
+          // defs: cabinet clip (outline minus the screen hole, even-odd; no offscreen mask region), spill gradient
+          o += "<defs>";
+          o += '<clipPath id="cp-' + id + '" clipPathUnits="userSpaceOnUse"><path clip-rule="evenodd" d="' + rr(0, 0, w, h, s.cr) + " " + rr(s.sx, s.sy, s.sw, s.sh, s.rad) + '"/></clipPath>';
+          if (s.big) {
+            o += '<radialGradient id="sp-' + id + '-a" gradientUnits="userSpaceOnUse" cx="' + r1(s.sx + 0.3 * s.sw) + '" cy="' + r1(s.sy + s.sh / 2) + '" r="' + r1(0.62 * s.sw) + '">';
+            o += '<stop offset="0" style="stop-color:var(--pink_glow);stop-opacity:1"/><stop offset="1" style="stop-color:var(--pink_glow);stop-opacity:0"/></radialGradient>';
+            o += '<radialGradient id="sp-' + id + '-b" gradientUnits="userSpaceOnUse" cx="' + r1(s.sx + 0.78 * s.sw) + '" cy="' + r1(s.sy + s.sh / 2) + '" r="' + r1(0.5 * s.sw) + '">';
+            o += '<stop offset="0" style="stop-color:var(--blue_glow);stop-opacity:1"/><stop offset="1" style="stop-color:var(--blue_glow);stop-opacity:0"/></radialGradient>';
+          } else {
+            // light from the big screen: strongest on the side that faces it
+            var vx = CX - (s.x + w / 2), vy = CY - (s.y + h / 2), d = Math.hypot(vx, vy) || 1;
+            var R = 0.62 * Math.max(w, h);
+            var col = s.x + w / 2 < CX ? "var(--pink_glow)" : "var(--blue_glow)";
+            o += '<linearGradient id="sp-' + id + '" gradientUnits="userSpaceOnUse" x1="' + r1(w / 2 + (vx / d) * R) + '" y1="' + r1(h / 2 + (vy / d) * R) + '" x2="' + r1(w / 2 - (vx / d) * R * 0.5) + '" y2="' + r1(h / 2 - (vy / d) * R * 0.5) + '">';
+            o += '<stop offset="0" style="stop-color:' + col + ';stop-opacity:1"/><stop offset="1" style="stop-color:' + col + ';stop-opacity:0"/></linearGradient>';
+            s.spillMax = r1(0.38 * clamp01(1.3 - d / (1.5 * big.sw)) * 100) / 100;
+          }
+          o += "</defs>";
+
+          // extras behind/around the body (they emerge from the dark as the room lights up)
+          var xo = '<g class="xtra">';
+          if (s.type === "portable") {
+            var hx1 = 0.2 * w, hx2 = 0.8 * w, hy = -Math.min(46, 0.2 * h);
+            xo += '<path class="handle" style="stroke-width:10" d="M' + r1(hx1) + ",4 C" + r1(hx1) + "," + r1(hy) + " " + r1(hx2) + "," + r1(hy) + " " + r1(hx2) + ',4"/>';
+            xo += '<path class="handle-in" style="stroke-width:4" d="M' + r1(hx1) + ",4 C" + r1(hx1) + "," + r1(hy) + " " + r1(hx2) + "," + r1(hy) + " " + r1(hx2) + ',4"/>';
+            xo += rect("foot", hx1 - 9, -8, 18, 16, 4) + rect("foot", hx2 - 9, -8, 18, 16, 4);
+          } else if (s.type === "antenna") {
+            var bx = 0.5 * w;
+            var tips = [
+              [bx - 0.34 * w, -0.52 * h],
+              [bx + 0.3 * w, -0.47 * h],
+            ];
+            tips.forEach(function (tp, j) {
+              var sx0 = bx + (j ? 5 : -5), sy0 = -6;
+              var mx = sx0 + (tp[0] - sx0) * 0.45, my = sy0 + (tp[1] - sy0) * 0.45;
+              xo += '<path class="rod" style="stroke-width:4" d="M' + r1(sx0) + "," + sy0 + " L" + r1(mx) + "," + r1(my) + '"/>';
+              xo += '<path class="rod" style="stroke-width:2.2" d="M' + r1(mx) + "," + r1(my) + " L" + r1(tp[0]) + "," + r1(tp[1]) + '"/>';
+              xo += circ("tip", tp[0], tp[1], 4);
+            });
+            xo += '<ellipse class="knob" cx="' + r1(bx) + '" cy="2" rx="30" ry="14"/>';
+          } else if (s.big) {
+            var fh = Math.max(0, F - (s.y + h)) + 2;
+            xo += rect("foot", 0.08 * w, h - 4, 0.09 * w, fh + 2, 3) + rect("foot", 0.83 * w, h - 4, 0.09 * w, fh + 2, 3);
+          }
+          xo += "</g>";
+          o += xo;
+          o += '<g clip-path="url(#cp-' + id + ')">';
+
+          // body
+          o += rect("body-" + s.finish, 0, 0, w, h, s.cr);
+          if (s.finish === "wood") {
+            // dark wood grain from the cabinet tones, seeded per set
+            o += "<g>";
+            var n = Math.round(h / 8);
+            for (var i = 0; i < n; i++) {
+              var q = lcg(s.k * 131 + i);
+              var y0 = ((i + 0.5) * h) / n;
+              var a1 = ((q % 9) - 4) * 0.9, a2 = (((q >>> 5) % 9) - 4) * 0.9, a3 = (((q >>> 10) % 7) - 3) * 0.7;
+              var cls = (q >>> 15) % 3 === 0 ? "grl hi" : (q >>> 15) % 3 === 1 ? "grl lo" : "grl";
+              var sw = 0.8 + ((q >>> 18) % 5) * 0.35;
+              o += '<path class="' + cls + '" style="stroke-width:' + r1(sw) + '" d="M-6,' + r1(y0) + " C" + r1(w * 0.3) + "," + r1(y0 + a1) + " " + r1(w * 0.62) + "," + r1(y0 + a2) + " " + (w + 6) + "," + r1(y0 + a3) + '"/>';
+            }
+            o += "</g>";
+          } else {
+            o += '<path class="sheen" d="M' + (s.cr + 2) + ",2.5 L" + (w - s.cr - 2) + ',2.5"/>';
+          }
+
+          // controls
+          var ledXY = null;
+          var pr = w - sr;
+          if (s.big) {
+            var chT = sb + 9, chH = h - chT - 8, chY = chT + chH / 2;
+            o += rect("grille", s.sx, chT + 6, 0.44 * s.sw, chH - 12, 4);
+            var dr = Math.min(26, chH * 0.32);
+            o += dial(sr - dr - 6, chY, dr, true);
+            o += dial(sr - 3 * dr - 34, chY, dr * 0.82, true);
+            for (var b = 0; b < 3; b++) o += rect("btn", s.sx + 0.5 * s.sw + b * 24, chY - 4, 18, 8, 3);
+            ledXY = [s.sx + 0.5 * s.sw + 3 * 24 + 8, chY];
+          } else if (pr >= 50) {
+            var px = sr + 10, pw = w - px - 10;
+            o += rect("panel", px, s.sy, pw, s.sh, 6);
+            if (pw >= 70) {
+              var bigR = Math.min(pw * 0.3, 0.11 * h);
+              o += dial(px + pw / 2, s.sy + bigR + 14, bigR, true);
+              o += dial(px + pw / 2, s.sy + 2 * bigR + 34, bigR * 0.5, false);
+              for (var k1 = 0; k1 < 5; k1++) o += rect("slot", px + pw * 0.2, s.sy + 2 * bigR + 56 + k1 * 8, pw * 0.6, 3, 1.5);
+            } else {
+              var kr = Math.min(pw * 0.3, 0.07 * h);
+              o += dial(px + pw / 2, s.sy + 0.18 * s.sh + kr * 0.4, kr, false);
+              o += dial(px + pw / 2, s.sy + 0.42 * s.sh, kr, false);
+              for (var k2 = 0; k2 < 4; k2++) o += rect("slot", px + pw * 0.18, s.sy + (0.6 + k2 * 0.07) * s.sh, pw * 0.64, 3, 1.5);
+            }
+            ledXY = [px + pw / 2, s.sy + s.sh - 10];
+          }
+          var pb = h - sb;
+          if (!s.big && pb >= 34) {
+            var cyy = sb + 7 + (pb - 7) / 2;
+            if (s.type === "wide" || s.type === "rounded") {
+              for (var d3 = 0; d3 < 3; d3++) o += dial(sr - 14 - d3 * 22, cyy, 6.5, false);
+              o += rect("slot", s.sx + 34, cyy - 1.5, 0.22 * s.sw, 3, 1.5);
+              if (!ledXY) ledXY = [s.sx + 18, cyy];
+            } else {
+              o += rect("btn", sr - 0.1 * s.sw - 38, cyy - 3.5, 16, 7, 3);
+              o += rect("btn", sr - 0.1 * s.sw - 60, cyy - 3.5, 16, 7, 3);
+              o += rect("slot", s.sx + 0.06 * s.sw, cyy - 1.5, 0.26 * s.sw, 3, 1.5);
+              if (!ledXY) ledXY = [sr - 0.1 * s.sw, cyy];
+            }
+          }
+          if (!ledXY) ledXY = [w - 14, h - 12];
+
+          // bezel, trim, screen-edge light, rim highlight
+          o += rect("sur", s.sx - 7, s.sy - 7, s.sw + 14, s.sh + 14, s.rad + 7);
+          if (s.finish === "wood") o += rect("trim", s.sx - 11, s.sy - 11, s.sw + 22, s.sh + 22, s.rad + 11);
+          if (!s.big) o += rect("lit " + s.neon, s.sx - 4.5, s.sy - 4.5, s.sw + 9, s.sh + 9, s.rad + 4.5, ' id="lit-' + id + '"');
+          o += '<path class="rim" d="M0.75,' + (h - s.cr) + " L0.75," + s.cr + " Q0.75,0.75 " + s.cr + ",0.75 L" + (w - s.cr) + ',0.75"/>';
+          // light spill from the big screen (opacity tweened), then the dark-room shade
+          if (s.big) {
+            o += '<g class="spill" id="spill-' + id + '">' + rect("", 0, 0, w, h, s.cr, ' style="fill:url(#sp-' + id + '-a)"') + rect("", 0, 0, w, h, s.cr, ' style="fill:url(#sp-' + id + '-b)"') + "</g>";
+          } else {
+            o += rect("spill", 0, 0, w, h, s.cr, ' id="spill-' + id + '" style="fill:url(#sp-' + id + ')"');
+          }
+          o += rect("shade", 0, 0, w, h, s.cr);
+          o += led(s, ledXY[0], ledXY[1]);
+          o += "</g></svg>";
+          return o;
+        }
+
+        // ---------------------------------------------------------------- build (after the font is ready, so words are measured)
+        function build() {
+          var ctx = document.createElement("canvas").getContext("2d");
+          ctx.font = '700 100px "Unbounded"';
+          function metrics(text) {
+            var m = ctx.measureText(text);
+            var l = m.actualBoundingBoxLeft / 100, r = m.actualBoundingBoxRight / 100;
+            var a = m.actualBoundingBoxAscent / 100, d = m.actualBoundingBoxDescent / 100;
+            var fa = (m.fontBoundingBoxAscent || 96) / 100, fd = (m.fontBoundingBoxDescent || 24) / 100;
+            var adv = m.width / 100;
+            // offsets (em) that put the ink centre on the line-box centre (line-height 1)
+            var baseline = (1 - fa - fd) / 2 + fa;
+            return { inkW: l + r || adv, inkH: a + d || 0.75, dx: adv / 2 - (r - l) / 2, dy: 0.5 - (baseline - (a - d) / 2) };
+          }
+          function stackStyle(fs, m) {
+            return "--fs:" + fs + "px;transform:translate(" + r1(m.dx * fs) + "px," + r1(m.dy * fs) + "px)";
+          }
+          var WM = '<b class="wm-a">voidtv</b><i class="wm-b">.net</i>';
+          var WM_CORE = '<b class="wm-a" data-layout-allow-occlusion="true">voidtv</b><i class="wm-b" data-layout-allow-occlusion="true">.net</i>';
+          function copies(s, inner, cls) {
+            var hid = ' aria-hidden="true" data-layout-ignore';
+            return (
+              '<span class="w rgb warm"' + hid + ">" + inner + "</span>" +
+              '<span class="w rgb cool"' + hid + ">" + inner + "</span>" +
+              '<span class="w bloom ' + cls + '"' + hid + ">" + inner + "</span>" +
+              '<span class="w core ' + cls + '" data-layout-allow-occlusion="true"' + (s.big ? ' role="img" aria-label="voidtv.net"' : "") + ">" + (s.big ? WM_CORE : inner) + "</span>"
+            );
+          }
+
+          var pile = document.getElementById("pile");
+          pile.style.height = F + "px";
+          pile.style.webkitBoxReflect = "below 0px linear-gradient(to bottom, transparent calc(100% - " + CFG.reflect + "px), var(--reflect) 100%)";
+          var html = "";
+          tvs.forEach(function (s, k) {
+            var X = s.sx - 2, Y = s.sy - 2, SW = s.sw + 4, SH = s.sh + 4;
+            var o = '<div class="tv' + (s.big ? " big" : " word") + '" id="tv-' + s.id + '" style="left:' + s.x + "px;top:" + s.y + "px;width:" + s.w + "px;height:" + s.h + "px" + (s.rot ? ";transform:rotate(" + s.rot + "deg)" : "") + '">';
+            o += '<div class="scr" id="scr-' + s.id + '" style="left:' + X + "px;top:" + Y + "px;width:" + SW + "px;height:" + SH + "px;border-radius:" + (s.rad + 2) + 'px">';
+            var gw = Math.ceil(SW / 3) + 1, gh = Math.ceil(SH / 3) + 1;
+            o += '<div class="static"><div class="grain" style="width:' + gw + "px;height:" + gh + "px;filter:url(#snow" + k + ') contrast(1.6) brightness(1.2)"></div><div class="stint"></div></div>';
+            o += '<div class="tint t-' + s.tint + '"></div>';
+            o += '<div class="dim" style="opacity:' + s.dim + '"></div>';
+            if (s.big) o += '<div class="hum"></div>';
+            o += '<div class="off off-top"></div><div class="off off-bot"></div>';
+            if (s.big) {
+              var mw = metrics("voidtv.net");
+              s.fs = Math.round(Math.min((CFG.wmFill * s.sw) / mw.inkW, (0.34 * s.sh) / mw.inkH));
+              o += '<div class="ghost" aria-hidden="true" data-layout-ignore><div class="w-stack" style="' + stackStyle(s.fs, mw) + '"><span class="w">' + WM + "</span></div></div>";
+              o += '<div class="sig"><div class="pic"><div class="jit"><div class="bed"></div><div class="w-stack" style="' + stackStyle(s.fs, mw) + '">' + copies(s, WM, "wm") + "</div></div></div></div>";
+            } else {
+              var m = metrics(s.word);
+              s.fs = Math.round(Math.min((CFG.fill * s.sw) / m.inkW, (0.42 * s.sh) / m.inkH, CFG.cap));
+              o += '<div class="sig"><div class="pic"><div class="jit"><div class="w-stack" style="' + stackStyle(s.fs, m) + '">' + copies(s, s.word, s.neon) + "</div></div></div></div>";
+              o += '<div class="dimmer"></div>';
+            }
+            o += '<div class="glass" style="box-shadow:inset 0 0 ' + Math.round(0.38 * s.sh) + "px var(--inset_a),inset 0 0 8px var(--inset_b);border-radius:" + (s.rad + 2) + 'px"></div>';
+            o += "</div>";
+            o += cabinet(s);
+            o += "</div>";
+            html += o;
+          });
+          pile.innerHTML = html;
+
+          // one static filter per screen (same tables as tvwall; its own seed so no two screens match)
+          var snow = "";
+          tvs.forEach(function (s, k) {
+            snow += '<filter id="snow' + k + '" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">';
+            snow += '<feTurbulence id="turb' + k + '" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="' + (1 + k * 97) + '" stitchTiles="stitch" result="n"/>';
+            snow += '<feColorMatrix type="saturate" values="0" in="n" result="g"/>';
+            snow += '<feComponentTransfer in="g"><feFuncR type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1"/><feFuncG type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1"/><feFuncB type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1"/></feComponentTransfer>';
+            snow += "</filter>";
+          });
+          document.getElementById("snowdefs").innerHTML = snow;
+
+          // room light: cold back glow, pink/cyan pools behind the heap, floor, contact shadows
+          function place(el, cx, cy, w, h) {
+            el.style.left = r1(cx - w / 2) + "px";
+            el.style.top = r1(cy - h / 2) + "px";
+            el.style.width = r1(w) + "px";
+            el.style.height = r1(h) + "px";
+          }
+          var bgl = CFG.backglow;
+          place(document.getElementById("backglow"), bgl[0], bgl[1], bgl[2], bgl[3]);
+          place(document.getElementById("back-pk"), CX - 0.3 * big.sw, CY, 2.4 * big.sw, 2.1 * big.sh);
+          place(document.getElementById("back-cy"), CX + 0.32 * big.sw, CY, 2.0 * big.sw, 2.0 * big.sh);
+          place(document.getElementById("floor-pk"), CX - 0.24 * big.sw, F + 46, 1.5 * big.sw, 190);
+          place(document.getElementById("floor-cy"), CX + 0.28 * big.sw, F + 46, 1.2 * big.sw, 170);
+          var floor = document.getElementById("floor");
+          floor.style.left = -W + "px";
+          floor.style.top = F + "px";
+          floor.style.width = 3 * W + "px";
+          floor.style.height = H + "px";
+          var ffx = document.getElementById("floorfx");
+          tvs.forEach(function (s) {
+            if (s.y + s.h < F - 14 && !s.big) return;
+            var c = document.createElement("div");
+            c.className = "contact";
+            place(c, s.x + s.w / 2, F + 1, s.w * 1.08, 34);
+            ffx.insertBefore(c, ffx.firstChild);
+          });
+
+          // haze: drifting violet blobs, per-word light in the air, big-screen glow
+          var hz = FMT === "16x9" ? [[0.25, 0.32, 0.55, 0.45], [0.72, 0.58, 0.6, 0.5], [0.48, 0.86, 0.5, 0.35]] : [[0.3, 0.24, 0.8, 0.6], [0.72, 0.4, 0.85, 0.6], [0.45, 0.97, 0.8, 0.45]];
+          var hzHtml = hz
+            .map(function (b) {
+              var bw = b[2] * Math.max(W, H) * (FMT === "16x9" ? 1 : 0.62), bh = b[3] * Math.max(W, H) * (FMT === "16x9" ? 1 : 0.62);
+              return '<div class="blob" style="left:' + r1(b[0] * W - bw / 2) + "px;top:" + r1(b[1] * H - bh / 2) + "px;width:" + r1(bw) + "px;height:" + r1(bh) + 'px"></div>';
+            })
+            .join("");
+          words.forEach(function (s) {
+            hzHtml += '<div class="halo ' + (s.neon === "p" ? "pk" : "cy") + '" id="halo-' + s.id + '" style="left:' + r1(s.scx - s.sw) + "px;top:" + r1(s.scy - 1.1 * s.sh) + "px;width:" + r1(2 * s.sw) + "px;height:" + r1(2.2 * s.sh) + 'px"></div>';
+          });
+          hzHtml += '<div class="halo pk" id="halo-big-pk" style="left:' + r1(CX - 0.22 * big.sw - 0.8 * big.sw) + "px;top:" + r1(CY - 0.85 * big.sh) + "px;width:" + r1(1.6 * big.sw) + "px;height:" + r1(1.7 * big.sh) + 'px"></div>';
+          hzHtml += '<div class="halo cy" id="halo-big-cy" style="left:' + r1(CX + 0.28 * big.sw - 0.6 * big.sw) + "px;top:" + r1(CY - 0.8 * big.sh) + "px;width:" + r1(1.2 * big.sw) + "px;height:" + r1(1.6 * big.sh) + 'px"></div>';
+          document.getElementById("haze").innerHTML = hzHtml;
+
+          // camera pivots on the big screen
+          var cam = document.getElementById("cam");
+          cam.style.transformOrigin = CX + "px " + CY + "px";
+
+          // element handles
+          tvs.forEach(function (s, k) {
+            var el = document.getElementById("scr-" + s.id);
+            s.offs = el.querySelectorAll(".off");
+            s.stat = el.querySelector(".static");
+            s.sig = el.querySelector(".sig");
+            s.pic = el.querySelector(".pic");
+            s.jit = el.querySelector(".jit");
+            s.rgb = el.querySelectorAll(".rgb");
+            s.bloom = el.querySelector(".bloom");
+            s.dimmer = el.querySelector(".dimmer");
+            s.humEl = el.querySelector(".hum");
+            s.ghost = el.querySelector(".ghost");
+            s.bed = el.querySelector(".bed");
+            s.led = document.getElementById("led-" + s.id);
+            s.lit = document.getElementById("lit-" + s.id);
+            s.spill = document.getElementById("spill-" + s.id);
+            s.halo = document.getElementById("halo-" + s.id);
+            s.turb = document.getElementById("turb" + k);
+            s.lastSeed = -1;
+          });
+
+          // ---------------------------------------------------------------- timeline
+          var tl = gsap.timeline({ paused: true });
+
+          // camera: one slow drift (the film's current), then the push-in toward the big set
+          tl.fromTo(cam, { scale: 1, y: 0 }, { scale: 1.03, y: 0, duration: 4.6, ease: "none" }, 0);
+          tl.fromTo(cam, { scale: 1.03, y: 0 }, { scale: CFG.push[0], y: CFG.push[1], duration: 2.4, ease: "sine.inOut", immediateRender: false }, 4.6);
+          tl.fromTo("#haze .blob", { x: 0 }, { x: 50, duration: 7, ease: "none" }, 0);
+
+          // POWER-ON 0.06-1.0: each set blinks on once, to its static's own level; the room lifts with them
+          POWER.forEach(function (id, k) {
+            var s = byId[id];
+            var at = 0.06 + k * 0.13;
+            tl.fromTo(s.offs, { scaleY: 1 }, { scaleY: 0, duration: 0.16, ease: "power2.out" }, at);
+            tl.fromTo(s.led, { opacity: 0 }, { opacity: 0.85, duration: 0.12, ease: "none" }, at);
+          });
+          tl.fromTo(pile, { "--shade": 0.6 }, { "--shade": 0, duration: 1.0, ease: "sine.out" }, 0.05);
+          tl.fromTo("#backglow", { opacity: 0 }, { opacity: 0.9, duration: 1.0, ease: "sine.out" }, 0.08);
+          tl.fromTo("#haze", { opacity: 0.35 }, { opacity: 1, duration: 1.0, ease: "sine.out" }, 0.08);
+
+          // THE MESSAGE 1.05-3.4: one set at a time, in reading order, static -> neon word (one darkening per screen)
+          words.forEach(function (s, k) {
+            var at = LOCKS[k];
+            s.lockAt = at;
+            s.rgbDur = 0.34;
+            s.split = 0.07 * s.fs;
+            tl.fromTo(s.sig, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.22, ease: "power2.out" }, at);
+            tl.fromTo(s.pic, { y: r1(0.18 * s.sh) }, { y: 0, duration: 0.34, ease: "power3.out" }, at);
+            tl.fromTo(s.lit, { opacity: 0 }, { opacity: 0.5, duration: 0.3, ease: "sine.out" }, at);
+            tl.fromTo(s.halo, { opacity: 0 }, { opacity: 0.1, duration: 0.35, ease: "sine.out" }, at);
+            tl.set(s.stat, { autoAlpha: 0 }, at + 0.26);
+          });
+
+          // SIGNAL HUNTING 3.25-3.6: a ghost of the name drifts in the big set's static
+          tl.fromTo(big.ghost, { opacity: 0 }, { opacity: 0.14, duration: 0.35, ease: "sine.in" }, 3.25);
+
+          // THE LOCK 3.6: the big set catches voidtv.net
+          big.lockAt = BIG_LOCK;
+          big.rgbDur = 0.42;
+          big.split = 0.12 * big.fs;
+          tl.fromTo(big.sig, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.24, ease: "power2.out" }, BIG_LOCK);
+          tl.fromTo(big.pic, { y: r1(0.2 * big.sh) }, { y: 0, duration: 0.42, ease: "power3.out" }, BIG_LOCK);
+          tl.set(big.stat, { autoAlpha: 0 }, BIG_LOCK + 0.3);
+          tl.fromTo(big.bloom, { opacity: 0 }, { opacity: 0.2, duration: 0.6, ease: "sine.out" }, BIG_LOCK + 0.15);
+          tl.fromTo(big.bed, { opacity: 0 }, { opacity: CFG.bed, duration: 0.8, ease: "sine.out" }, BIG_LOCK + 0.15);
+
+          // SPILL 3.7-4.6: pink and cyan light falls on the cabinets, the floor and the air
+          tvs.forEach(function (s) {
+            var mx = s.big ? 0.36 : s.spillMax;
+            tl.fromTo(s.spill, { opacity: 0 }, { opacity: r1(mx * 80) / 100, duration: 0.9, ease: "sine.out" }, 3.7);
+            tl.fromTo(s.spill, { opacity: r1(mx * 80) / 100 }, { opacity: mx, duration: 1.0, ease: "sine.inOut", immediateRender: false }, 4.6);
+          });
+          tl.fromTo(["#back-pk", "#back-cy"], { opacity: 0 }, { opacity: 0.4, duration: 0.9, ease: "sine.out" }, 3.7);
+          tl.fromTo(["#floor-pk", "#floor-cy"], { opacity: 0 }, { opacity: 0.38, duration: 0.9, ease: "sine.out" }, 3.7);
+          tl.fromTo(["#halo-big-pk", "#halo-big-cy"], { opacity: 0 }, { opacity: 0.07, duration: 0.9, ease: "sine.out" }, 3.7);
+          tl.fromTo(["#back-pk", "#back-cy"], { opacity: 0.4 }, { opacity: 0.5, duration: 1.0, ease: "sine.inOut", immediateRender: false }, 4.6);
+          tl.fromTo(["#halo-big-pk", "#halo-big-cy"], { opacity: 0.07 }, { opacity: 0.07, duration: 1.0, ease: "sine.inOut", immediateRender: false }, 4.6);
+
+          // THE WORDS STEP BACK 3.75-4.55: one gentle dimming of all six word screens together
+          var dimmers = words.map(function (s) {
+            return s.dimmer;
+          });
+          var lits = words.map(function (s) {
+            return s.lit;
+          });
+          var halos = words.map(function (s) {
+            return s.halo;
+          });
+          tl.fromTo(dimmers, { opacity: 0 }, { opacity: 0.62, duration: 0.8, ease: "sine.inOut" }, 3.75);
+          tl.fromTo(lits, { opacity: 0.5 }, { opacity: 0.16, duration: 0.8, ease: "sine.inOut", immediateRender: false }, 3.75);
+          tl.fromTo(halos, { opacity: 0.1 }, { opacity: 0.04, duration: 0.8, ease: "sine.inOut", immediateRender: false }, 3.75);
+
+          // PUSH-IN 4.6-7.0: the name blooms to full neon; the heap falls out of focus around it
+          tl.fromTo(big.bloom, { opacity: 0.2 }, { opacity: CFG.bloomPeak, duration: 1.2, ease: "sine.inOut", immediateRender: false }, 4.6);
+                    tl.fromTo(pile, { "--dof": "0px" }, { "--dof": CFG.dof + "px", duration: 2.0, ease: "sine.inOut" }, 4.6);
+
+          // PROCEDURAL LAYER: one driver; every per-frame value is a pure function of time
+          var film = document.getElementById("film-grain");
+          var p3in = gsap.parseEase("power3.in");
+          var locked = words.concat([big]);
+          function setRgb(els, amp, f, salt, maxSplit, alpha) {
+            for (var layer = 0; layer < els.length; layer++) {
+              var el = els[layer];
+              if (amp > 0.0005) {
+                var jx = (glitchHash(f * 13 + layer * 7 + salt) * 2 - 1) * maxSplit * amp + (layer ? -1 : 1) * maxSplit * 0.5 * amp;
+                var jy = (glitchHash(f * 29 + layer * 11 + salt) * 2 - 1) * maxSplit * 0.35 * amp;
+                el.style.transform = "translate(" + jx.toFixed(2) + "px," + jy.toFixed(2) + "px)";
+                el.style.opacity = String(alpha);
+              } else {
+                el.style.transform = "none";
+                el.style.opacity = "0";
+              }
+            }
+          }
+          function frame(t) {
+            var f = Math.floor(t * 30 + 1e-4); // frame index
+            var g = Math.floor(f / 2); // 2-frame step
+            // static: one new seed per frame per screen, frozen once its picture has locked over it
+            tvs.forEach(function (s, k) {
+              var stop = Math.round((s.lockAt + 0.3) * 30);
+              var seed = 1 + k * 97 + Math.min(f, stop);
+              if (seed !== s.lastSeed) {
+                s.turb.setAttribute("seed", String(seed));
+                s.lastSeed = seed;
+              }
+            });
+            // film grain: noise.png offset from a seeded LCG every 2 frames
+            var n = lcg(g);
+            film.style.backgroundPosition = (n % 160) + "px " + ((n >>> 9) % 160) + "px";
+            // hum bar on the big set's static: 22% band rolling top->bottom, 1.5 s period, 0.5-3.6 s
+            if (t >= 0.5 && t <= BIG_LOCK + 0.3) {
+              var ph = ((t - 0.5) / 1.5) % 1;
+              big.humEl.style.opacity = "1";
+              big.humEl.style.transform = "translateY(" + ((-0.22 + ph * 1.22) * (big.sh + 4)).toFixed(2) + "px)";
+            } else {
+              big.humEl.style.opacity = "0";
+            }
+            // big-set signal hunting: horizontal ghost jitter, amp 1 -> 0.4, quantized every 2 frames
+            var hx = 0;
+            if (t >= 3.25 && t < BIG_LOCK + 0.24) {
+              var amp = t < BIG_LOCK ? 1 - 0.6 * ((t - 3.25) / 0.35) : 0.4;
+              hx = amp * (glitchHash(g * 13 + 5) * 2 - 1) * 0.03 * big.sw;
+            }
+            big.ghost.style.transform = "translateX(" + hx.toFixed(2) + "px)";
+            // each lock: RGB split decaying over its rgbDur, and a short horizontal sync wobble on the picture
+            locked.forEach(function (s, j) {
+              var lu = (t - s.lockAt) / s.rgbDur;
+              var la = lu >= 0 && lu < 1 ? 1 - p3in(lu) : 0;
+              setRgb(s.rgb, la, f, j * 31, s.split, 0.75);
+              var wu = (t - s.lockAt) / 0.24;
+              var wx = wu >= 0 && wu < 1 ? (1 - wu) * (1 - wu) * (glitchHash(f * 17 + j * 3) * 2 - 1) * 0.035 * s.sw : 0;
+              s.jit.style.transform = "translateX(" + wx.toFixed(2) + "px)";
+            });
+          }
+          var clock = { t: 0 };
+          tl.fromTo(
+            clock,
+            { t: 0 },
+            {
+              t: 7,
+              duration: 7,
+              ease: "none",
+              onUpdate: function () {
+                frame(clock.t);
+              },
+            },
+            0,
+          );
+          frame(0);
+
+          window.__timelines["main"] = tl;
+          tl.seek(0);
+          if (typeof window.__hfForceTimelineRebind === "function") window.__hfForceTimelineRebind();
+        }
+
+        var built = false;
+        function once() {
+          if (built) return;
+          built = true;
+          build();
+        }
+        if (document.fonts && document.fonts.load) {
+          document.fonts.load('700 100px "Unbounded"').then(once, once);
+        } else {
+          once();
+        }
+      })();
+    </script>
+  </body>
+</html>

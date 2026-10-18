@@ -1,0 +1,30 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "registry": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry",
+  "paths": {
+    "blocks": "compositions",
+    "components": "compositions/components",
+    "assets": "assets"
+  },
+  "media": {
+    "autoProxy": true
+  },
+  "authoringSkill": "motion-graphics",
+  "registryItems": [
+    {
+      "name": "wordmark-tiles",
+      "type": "hyperframes:component",
+      "target": "compositions/components/wordmark-tiles.html"
+    },
+    {
+      "name": "yt-screen-warp",
+      "type": "hyperframes:component",
+      "target": "compositions/components/yt-screen-warp.html"
+    },
+    {
+      "name": "vignette",
+      "type": "hyperframes:component",
+      "target": "compositions/components/vignette.html"
+    }
+  ]
+}

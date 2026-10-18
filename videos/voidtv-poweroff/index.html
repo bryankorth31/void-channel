@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>voidtv.net signing off</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Unbounded";
+        src: url(assets/fonts/unbounded-latin.woff2) format("woff2");
+        font-weight: 200 900;
+        font-display: block;
+      }
+      /* PALETTE: every colour in this file lives here (tvwall shot-plan palette + derived tokens) */
+      :root {
+        --bg: #07080c;
+        --pink_core: #ff4fc8;
+        --pink_glow: #dc20a9;
+        --blue_core: #5fe3ff;
+        --blue_glow: #0ac1e0;
+        --violet: #a954e3;
+        --carrier_hot: #2a1446;
+        --carrier_mid: #160c2a;
+        --carrier_edge: #0a0812;
+        --cabinet_dark: #15131c;
+        --cabinet_mid: #221d2b;
+        --cabinet_edge: #2e2838;
+        --wall_gap: #050508;
+        --knob: #0e0d13;
+        --knob_rim: #3a3346;
+        --static_base: #b7bcc8;
+        /* derived */
+        --phosphor: #f9c2ea; /* afterglow pink-white: relative luminance ~0.65, the same as the picture's brightest pixel (blue core) */
+        --glass_off: #0a0b0e;
+        --glass_off_hi: #121318;
+        --tag: #8f86a6; /* quiet lavender grey for the tagline (5.8:1 on --bg) */
+        --black: rgb(0, 0, 0);
+        --none: rgba(0, 0, 0, 0);
+        --hum: rgba(0, 0, 0, 0.13);
+        --sheen: rgba(255, 255, 255, 0.07);
+        --refl: rgba(255, 255, 255, 0.045);
+        --scan: rgba(0, 0, 0, 0.16);
+        --pgrid: rgba(0, 0, 0, 0.07);
+        --bulge: rgba(0, 0, 0, 0.42);
+        --inset_a: rgba(0, 0, 0, 0.45);
+        --inset_b: rgba(0, 0, 0, 0.55);
+        --vig: rgba(7, 8, 12, 0.85);
+        --bevel: rgba(255, 255, 255, 0.035);
+        --hal_in: rgba(169, 84, 227, 0.34);
+        --hal_out: rgba(42, 20, 70, 0.55);
+        --shadow: rgba(0, 0, 0, 0.75);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Unbounded", sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #svgdefs {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+      /* camera wrapper: the room and the TV. --L is the light the screen throws (1 on, 0 dark) */
+      #cam {
+        position: absolute;
+        inset: 0;
+        --L: 1;
+        --L2: 1; /* L squared: the room glows clear sooner, so their faint gradients never sit long enough to band */
+      }
+      .abs {
+        position: absolute;
+      }
+      .cut {
+        position: absolute;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+      }
+      /* room light from the screen */
+      #wallglow {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--violet) 0%, var(--carrier_hot) 46%, var(--none) 100%);
+        opacity: calc(var(--L2) * 0.36);
+      }
+      #floorglow {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--violet) 0%, var(--carrier_hot) 52%, var(--none) 100%);
+        opacity: calc(var(--L2) * 0.44);
+      }
+      #contact {
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--shadow) 0%, var(--none) 100%);
+      }
+      /* the TV */
+      #tv {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: visible;
+      }
+      #tv-body {
+        opacity: calc(0.1 + 0.9 * var(--L));
+      }
+      .back {
+        fill: var(--bg);
+      }
+      .cab {
+        fill: url(#gCab);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1.5;
+      }
+      .bevel {
+        fill: none;
+        stroke: var(--bevel);
+        stroke-width: 1.5;
+      }
+      .sur {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1.5;
+      }
+      .panel {
+        fill: url(#gPanel);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .slot {
+        fill: var(--wall_gap);
+      }
+      .knob {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1.5;
+      }
+      .knob-cap {
+        fill: var(--cabinet_dark);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .tick {
+        stroke: var(--knob_rim);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+      .btn {
+        fill: var(--knob);
+        stroke: var(--knob_rim);
+        stroke-width: 1;
+      }
+      .foot {
+        fill: var(--knob);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1;
+      }
+      .dome {
+        fill: url(#gCab);
+        stroke: var(--cabinet_edge);
+        stroke-width: 1.5;
+      }
+      .rod {
+        fill: none;
+        stroke: var(--knob_rim);
+        stroke-linecap: round;
+      }
+      .rod-tip {
+        fill: var(--knob_rim);
+      }
+      .led {
+        fill: var(--pink_glow);
+      }
+      .led-off {
+        fill: var(--knob_rim);
+      }
+      .rim {
+        fill: none;
+        stroke: var(--violet);
+        stroke-opacity: 0.32;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+      /* halation: the screen's light spilling onto the bezel (outside the glass only) */
+      #halation {
+        box-shadow:
+          0 0 34px 6px var(--hal_in),
+          0 0 120px 30px var(--hal_out);
+        opacity: var(--L);
+      }
+      /* the screen */
+      #screen {
+        overflow: hidden;
+      }
+      #screen > div {
+        position: absolute;
+        inset: 0;
+      }
+      #glass-off {
+        background: radial-gradient(ellipse at 50% 45%, var(--glass_off_hi) 0%, var(--glass_off) 75%);
+      }
+      #screen-dim {
+        background: var(--bg);
+        opacity: calc(0.8 - 0.8 * var(--L));
+      }
+      #pic {
+        transform-origin: 50% 50%;
+        overflow: hidden;
+      }
+      .carrier {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 78% 74% at 50% 48%,
+          var(--carrier_hot) 0%,
+          var(--carrier_mid) 62%,
+          var(--carrier_edge) 100%
+        );
+      }
+      .pic-word {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        --fs: var(--pfs);
+      }
+      #grain {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: var(--static_base);
+        filter: url(#snow) contrast(1.6) brightness(1.2);
+        transform: scale(3);
+        transform-origin: 0 0;
+        image-rendering: pixelated;
+        mix-blend-mode: screen;
+        opacity: 0.075;
+      }
+      #hum {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 24%;
+        background: linear-gradient(180deg, var(--none) 0%, var(--hum) 30%, var(--hum) 70%, var(--none) 100%);
+      }
+      #glass {
+        background:
+          repeating-linear-gradient(0deg, var(--scan) 0 1px, var(--none) 1px 3px),
+          repeating-linear-gradient(90deg, var(--pgrid) 0 1px, var(--none) 1px 4px),
+          radial-gradient(ellipse at center, var(--none) 56%, var(--bulge) 100%);
+      }
+      #sheen {
+        background:
+          radial-gradient(ellipse at 28% 18%, var(--refl) 0%, var(--none) 42%),
+          linear-gradient(115deg, var(--sheen) 0%, var(--none) 30%);
+        opacity: var(--L);
+      }
+      /* the wordmark (brand-kit neon recipe, as in voidtv-tvwall) */
+      .wm-stack {
+        display: grid;
+        place-items: center;
+      }
+      .wm {
+        grid-area: 1 / 1;
+        font-family: "Unbounded", sans-serif;
+        font-size: var(--fs, 242px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .wm b,
+      .wm i {
+        font-weight: 700;
+        font-style: normal;
+      }
+      .wm-base,
+      .wm-core {
+        position: relative;
+        z-index: 2;
+      }
+      .wm .wm-a {
+        color: var(--pink_core);
+        text-shadow:
+          0 0 0.12em var(--pink_glow),
+          0 0 0.45em var(--pink_glow);
+      }
+      .wm .wm-b {
+        color: var(--blue_core);
+        text-shadow:
+          0 0 0.12em var(--blue_glow),
+          0 0 0.45em var(--blue_glow);
+      }
+      .pic-word .wm-base {
+        filter: blur(0.5px);
+      }
+      .pic-word .wm-bloom {
+        opacity: 0.5;
+      }
+      /* fixed CRT misconvergence: brand-glow ghosts 1.5 px either side, behind the base */
+      .wm.rgb {
+        position: relative;
+        z-index: 0;
+        opacity: 0.45;
+        mix-blend-mode: screen;
+      }
+      .wm.rgb .wm-a,
+      .wm.rgb .wm-b {
+        color: inherit;
+        text-shadow: none;
+      }
+      .wm.warm {
+        color: var(--pink_glow);
+        transform: translateX(-1.5px);
+      }
+      .wm.cool {
+        color: var(--blue_glow);
+        transform: translateX(1.5px);
+      }
+      .wm-bloom {
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        filter: blur(calc(var(--fs, 242px) * 0.1413));
+      }
+      /* lockup spill light (after ignition) */
+      #spill {
+        position: absolute;
+        inset: 0;
+        mix-blend-mode: screen;
+      }
+      .pool {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      #pool-pink {
+        background: radial-gradient(closest-side, var(--pink_glow) 0%, var(--none) 100%);
+      }
+      #pool-cyan {
+        background: radial-gradient(closest-side, var(--blue_glow) 0%, var(--none) 100%);
+      }
+      /* the lockup: ignites outward from the period (radial mask centred on the "." ) */
+      #lock {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        --rv: 0px;
+        --mx: 50%;
+        --my: 50%;
+        --feather: 300px;
+        -webkit-mask-image: radial-gradient(circle at var(--mx) var(--my), var(--black) calc(var(--rv) - var(--feather)), var(--none) var(--rv));
+        mask-image: radial-gradient(circle at var(--mx) var(--my), var(--black) calc(var(--rv) - var(--feather)), var(--none) var(--rv));
+        opacity: 0;
+        visibility: hidden;
+      }
+      #tag {
+        font-family: "Unbounded", sans-serif;
+        font-weight: 400;
+        font-size: var(--tfs, 42px);
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        padding-left: 0.05em; /* balances the trailing letter-space so the line stays centred */
+        color: var(--tag);
+        white-space: nowrap;
+        opacity: 0;
+      }
+      /* the beam: CRT line -> afterglow dot -> the period (frame coordinates, outside the camera) */
+      #beam {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+      }
+      #beam-core,
+      #beam-blue {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 999px;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+      }
+      #beam-core {
+        background: var(--phosphor);
+        box-shadow:
+          0 0 5px 1px var(--pink_core),
+          0 0 22px 5px var(--pink_glow),
+          0 0 56px 8px var(--carrier_hot);
+      }
+      #beam-blue {
+        background: var(--blue_core);
+        box-shadow:
+          0 0 calc(var(--fs) * 0.12) var(--blue_glow),
+          0 0 calc(var(--fs) * 0.45) var(--blue_glow);
+      }
+      #hf-vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, var(--none) 50%, var(--vig) 100%);
+      }
+      #film-grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: url(assets/textures/noise.png);
+        mix-blend-mode: overlay;
+        opacity: 0.05;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <svg id="svgdefs" aria-hidden="true">
+        <filter id="snow" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.95 0.55" numOctaves="1" seed="1" stitchTiles="stitch" result="n" />
+          <feColorMatrix type="saturate" values="0" in="n" result="g" />
+          <feComponentTransfer in="g">
+            <feFuncR type="discrete" tableValues="0 0.04 0.18 0.62 0.92 1" />
+            <feFuncG type="discrete" tableValues="0 0.05 0.19 0.64 0.93 1" />
+            <feFuncB type="discrete" tableValues="0.02 0.08 0.22 0.68 0.96 1" />
+          </feComponentTransfer>
+        </filter>
+      </svg>
+      <section id="stage" class="clip" data-start="0" data-duration="5" data-track-index="0">
+        <div id="cam" data-layout-allow-overflow="true">
+          <div class="cut" id="wall-cut" data-layout-allow-overflow="true"><div class="abs" id="wallglow"></div></div>
+          <div class="cut" id="floor-cut" data-layout-allow-overflow="true"><div class="abs" id="floorglow"></div><div class="abs" id="contact"></div></div>
+          <svg id="tv" aria-hidden="true" data-layout-allow-overflow="true"></svg>
+          <div class="abs" id="halation"></div>
+          <div class="abs" id="screen">
+            <div id="glass-off"></div>
+            <div id="screen-dim"></div>
+            <div id="pic" aria-hidden="true" data-layout-ignore>
+              <div class="carrier"></div>
+              <div class="pic-word"><div class="wm-stack" id="pic-stack"></div></div>
+              <div id="grain"></div>
+              <div id="hum"></div>
+            </div>
+            <div id="glass"></div>
+            <div id="sheen"></div>
+          </div>
+        </div>
+        <div id="spill" data-layout-allow-overflow="true">
+          <div class="pool" id="pool-pink"></div>
+          <div class="pool" id="pool-cyan"></div>
+        </div>
+        <div id="lock">
+          <div class="wm-stack" id="lock-stack" role="img" aria-label="voidtv.net"></div>
+          <div id="tag" data-layout-allow-occlusion="true">free tv · no ads · no account</div>
+        </div>
+        <div id="beam" aria-hidden="true" data-layout-ignore>
+          <div id="beam-core"></div>
+          <div id="beam-blue"></div>
+        </div>
+        <div id="hf-vignette" data-layout-allow-occlusion="true"></div>
+        <div id="film-grain" data-layout-allow-occlusion="true"></div>
+      </section>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+
+        // ---------------------------------------------------------------- layout per aspect
+        var root = document.getElementById("root");
+        var W = Number(root.dataset.width);
+        var H = Number(root.dataset.height);
+        var FMT = W > H ? "16x9" : "9x16";
+
+        // scr: screen centre + size; bez: side/top/chin; fs: lockup font (ink ~6.33em = 80% of width);
+        // lockCY: lockup centre (9:16 keeps it inside the 250 px top / 400 px bottom safe zone)
+        var CONFIGS = {
+          "16x9": {
+            scr: { cx: 960, cy: 506, w: 600, h: 450 },
+            bez: { side: 56, top: 50, chin: 146 },
+            rods: [[-27, 196], [37, 178]],
+            fs: 242,
+            tfs: 42,
+            gap: 0.25,
+            lockCY: 540,
+            pfs: 68,
+            feather: 300,
+            rvEnd: 1900,
+            dot0: 28,
+            line: 3.5,
+            bloom: 0.55,
+            pools: [0.3, 0.26],
+          },
+          "9x16": {
+            scr: { cx: 540, cy: 846, w: 700, h: 525 },
+            bez: { side: 54, top: 50, chin: 150 },
+            rods: [[-26, 226], [36, 202]],
+            fs: 136,
+            tfs: 30,
+            gap: 0.3,
+            lockCY: 880,
+            pfs: 79,
+            feather: 200,
+            rvEnd: 1200,
+            dot0: 18,
+            line: 3.5,
+            bloom: 0.45,
+            pools: [0.26, 0.22],
+          },
+        };
+        var C = CONFIGS[FMT];
+        var SX = C.scr.cx, SY = C.scr.cy, SW = C.scr.w, SH = C.scr.h;
+        var SL = SX - SW / 2, ST = SY - SH / 2;
+        var RAD = Math.round(0.1 * SH);
+        var CABX = SL - C.bez.side, CABY = ST - C.bez.top, CABW = SW + 2 * C.bez.side, CABH = SH + C.bez.top + C.bez.chin;
+        var FOOT_H = 12;
+        var FLOOR = CABY + CABH + FOOT_H;
+        var FS = C.fs;
+
+        // beats (s)
+        var T = {
+          off: 1.2, // power-off begins: vertical squeeze
+          lineIn: 1.4, // the line forms out of the squeezed picture
+          line: 1.5, // squeeze complete
+          shrink: 1.53, // line starts shrinking horizontally
+          dot: 1.88, // a dot
+          drift0: 2.05, // the afterglow dot drifts toward the period
+          grow0: 2.3,
+          tint0: 2.55, // pink-white -> blue
+          land: 3.0, // dot on the period; the lockup ignites
+          lit: 3.78, // lockup complete -> final hold (1.22 s)
+        };
+
+        root.style.setProperty("--fs", FS + "px");
+        root.style.setProperty("--pfs", C.pfs + "px");
+        root.style.setProperty("--tfs", C.tfs + "px");
+
+        function r1(v) {
+          return Math.round(v * 10) / 10;
+        }
+        function place(id, x, y, w, h) {
+          var el = document.getElementById(id);
+          el.style.left = r1(x) + "px";
+          el.style.top = r1(y) + "px";
+          el.style.width = r1(w) + "px";
+          el.style.height = r1(h) + "px";
+          return el;
+        }
+
+        // ---------------------------------------------------------------- build: room
+        var cam = document.getElementById("cam");
+        cam.style.transformOrigin = SX + "px " + SY + "px"; // push in on the screen centre, so the beam never shifts
+        var wallCut = document.getElementById("wall-cut");
+        wallCut.style.top = "0px";
+        wallCut.style.height = FLOOR + "px";
+        var floorCut = document.getElementById("floor-cut");
+        floorCut.style.top = FLOOR + "px";
+        floorCut.style.bottom = "0px";
+        place("wallglow", SX - 1.3 * CABW, SY - 30 - 0.8 * CABH, 2.6 * CABW, 1.6 * CABH);
+        place("floorglow", SX - 0.98 * CABW, -0.2 * CABH, 1.96 * CABW, 0.5 * CABH);
+        place("contact", SX - 0.56 * CABW, -18, 1.12 * CABW, 40);
+
+        // ---------------------------------------------------------------- build: the TV (front-on, chin controls, rabbit ears)
+        function rect(cls, x, y, w, h, rx, extra) {
+          return '<rect class="' + cls + '" x="' + r1(x) + '" y="' + r1(y) + '" width="' + r1(w) + '" height="' + r1(h) + '" rx="' + r1(rx) + '"' + (extra || "") + "/>";
+        }
+        function circ(cls, x, y, rr, extra) {
+          return '<circle class="' + cls + '" cx="' + r1(x) + '" cy="' + r1(y) + '" r="' + r1(rr) + '"' + (extra || "") + "/>";
+        }
+        function line(cls, x1, y1, x2, y2, sw) {
+          return '<line class="' + cls + '" x1="' + r1(x1) + '" y1="' + r1(y1) + '" x2="' + r1(x2) + '" y2="' + r1(y2) + '" stroke-width="' + sw + '"/>';
+        }
+        var crx = Math.round(0.045 * CABW);
+        var domeW = 0.17 * CABW, domeH = 0.05 * CABW;
+        var feet = function (cls) {
+          var fw = 0.13 * CABW;
+          return rect(cls, CABX + 0.11 * CABW, CABY + CABH - 4, fw, FOOT_H + 4, 3) + rect(cls, CABX + CABW - 0.11 * CABW - fw, CABY + CABH - 4, fw, FOOT_H + 4, 3);
+        };
+        var domePath = function (cls) {
+          return '<path class="' + cls + '" d="M' + r1(SX - domeW / 2) + "," + r1(CABY + 2) + " A" + r1(domeW / 2) + "," + r1(domeH) + " 0 0 1 " + r1(SX + domeW / 2) + "," + r1(CABY + 2) + ' Z"/>';
+        };
+        var svg = "<defs>";
+        svg += '<linearGradient id="gCab" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cabinet_mid)"/><stop offset="1" style="stop-color:var(--cabinet_dark)"/></linearGradient>';
+        svg += '<linearGradient id="gPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cabinet_dark)"/><stop offset="1" style="stop-color:var(--knob)"/></linearGradient>';
+        svg += "</defs>";
+        // backing silhouette in the room colour: dimming the body sinks it to black instead of showing the wall glow through
+        svg += '<g id="tv-back">' + rect("back", CABX, CABY, CABW, CABH, crx) + feet("back") + domePath("back") + "</g>";
+        svg += '<g id="tv-body">';
+        // rabbit ears
+        var baseY = CABY - domeH * 0.55;
+        C.rods.forEach(function (rd, k) {
+          var a = (rd[0] * Math.PI) / 180, len = rd[1];
+          var x0 = SX + (k ? 7 : -7), x1 = x0 + Math.sin(a) * len, y1 = baseY - Math.cos(a) * len;
+          var xm = x0 + Math.sin(a) * len * 0.55, ym = baseY - Math.cos(a) * len * 0.55;
+          svg += line("rod", x0, baseY, xm, ym, 4.5) + line("rod", xm, ym, x1, y1, 2.6) + circ("rod-tip", x1, y1, 4);
+        });
+        svg += domePath("dome");
+        svg += feet("foot");
+        svg += rect("cab", CABX, CABY, CABW, CABH, crx);
+        svg += rect("bevel", CABX + 9, CABY + 9, CABW - 18, CABH - 18, crx - 6);
+        svg += rect("sur", SL - 16, ST - 16, SW + 32, SH + 32, RAD + 12);
+        // chin: speaker grille, two knobs, power button + LED
+        var px = CABX + 30, py = ST + SH + 16 + 16, pw = CABW - 60, ph = CABY + CABH - 20 - py;
+        svg += rect("panel", px, py, pw, ph, 10);
+        var slots = 6;
+        for (var k = 0; k < slots; k++) {
+          var sy = py + ph * (0.2 + (0.6 * k) / (slots - 1));
+          svg += rect("slot", px + 0.05 * pw, sy - 2, 0.34 * pw, 4, 2);
+        }
+        var kr = Math.min(0.3 * ph, 30);
+        [0.6, 0.735].forEach(function (f, j) {
+          var kx = px + f * pw, ky = py + ph / 2;
+          svg += circ("knob", kx, ky, kr) + circ("knob-cap", kx, ky, kr * 0.62);
+          var ang = j ? 0.7 : -0.5;
+          svg += line("tick", kx + Math.sin(ang) * kr * 0.25, ky - Math.cos(ang) * kr * 0.25, kx + Math.sin(ang) * kr * 0.85, ky - Math.cos(ang) * kr * 0.85, 2.5);
+        });
+        svg += rect("btn", px + 0.855 * pw, py + ph / 2 - 7, 0.05 * pw, 14, 4);
+        svg += circ("led-off", px + 0.94 * pw, py + ph / 2, 3.2);
+        svg += circ("led", px + 0.94 * pw, py + ph / 2, 3.2, ' id="led"');
+        // backlit rim: the wall glow catches the silhouette's top and upper sides
+        var rimY = CABY + CABH * 0.55;
+        svg +=
+          '<path class="rim" d="M' + r1(CABX + 0.75) + "," + r1(rimY) + " L" + r1(CABX + 0.75) + "," + r1(CABY + crx) + " Q" + r1(CABX + 0.75) + "," + r1(CABY + 0.75) + " " + r1(CABX + crx) + "," + r1(CABY + 0.75) +
+          " L" + r1(CABX + CABW - crx) + "," + r1(CABY + 0.75) + " Q" + r1(CABX + CABW - 0.75) + "," + r1(CABY + 0.75) + " " + r1(CABX + CABW - 0.75) + "," + r1(CABY + crx) + " L" + r1(CABX + CABW - 0.75) + "," + r1(rimY) + '"/>';
+        svg += "</g>";
+        var tvEl = document.getElementById("tv");
+        tvEl.setAttribute("width", W);
+        tvEl.setAttribute("height", H);
+        tvEl.setAttribute("viewBox", "0 0 " + W + " " + H);
+        tvEl.innerHTML = svg;
+
+        // ---------------------------------------------------------------- build: screen + picture
+        place("halation", SL, ST, SW, SH).style.borderRadius = RAD + "px";
+        var scr = place("screen", SL, ST, SW, SH);
+        scr.style.borderRadius = RAD + "px";
+        document.getElementById("glass").style.boxShadow = "inset 0 0 " + Math.round(0.36 * SH) + "px var(--inset_a), inset 0 0 10px var(--inset_b)";
+        var grainEl = document.getElementById("grain");
+        grainEl.style.width = Math.ceil(SW / 3) + "px";
+        grainEl.style.height = Math.ceil(SH / 3) + "px";
+
+        var WM_INNER = '<b class="wm-a">voidtv</b><i class="wm-b">.net</i>';
+        function wm(cls) {
+          var hidden = cls.indexOf("core") < 0;
+          return '<span class="wm ' + cls + '"' + (hidden ? ' aria-hidden="true" data-layout-ignore' : "") + ">" + WM_INNER + "</span>";
+        }
+        document.getElementById("pic-stack").innerHTML = wm("wm-bloom") + wm("rgb warm") + wm("rgb cool") + wm("wm-base");
+        document.getElementById("lock-stack").innerHTML = wm("wm-bloom") + wm("wm-core");
+        document.querySelectorAll("#lock .wm-core b, #lock .wm-core i").forEach(function (el) {
+          el.setAttribute("data-layout-allow-occlusion", "true");
+        });
+
+        // ---------------------------------------------------------------- build: lockup
+        var lock = document.getElementById("lock");
+        var shift = 2 * (H / 2 - C.lockCY);
+        lock.style.paddingBottom = Math.max(0, shift) + "px";
+        lock.style.paddingTop = Math.max(0, -shift) + "px";
+        lock.style.setProperty("--feather", C.feather + "px");
+        var GAP = Math.round(C.gap * FS);
+        document.getElementById("tag").style.marginTop = GAP + "px";
+        var inkW = 6.33 * FS;
+        var wordCY = C.lockCY - (GAP + 1.2 * C.tfs) / 2; // word box centre: the flex column centres word + gap + tag line
+        [["pool-pink", 0.3, C.pools[0]], ["pool-cyan", 0.82, C.pools[1]]].forEach(function (p) {
+          var pw = 0.62 * inkW, ph = 0.42 * inkW;
+          place(p[0], SX - inkW / 2 + p[1] * inkW - pw / 2, wordCY - ph / 2, pw, ph);
+        });
+
+        // ---------------------------------------------------------------- the period, in fixed composition coordinates
+        // Unbounded 700, measured once in headless Chrome (Range + canvas ink metrics), in em of the word box:
+        // the "." ink centre sits +0.917em right of and +0.27em below the centre of the 6.36em x 1em word box;
+        // its ink is 0.24em x 0.23em. The lockup is centred, so no runtime measurement is needed.
+        var PERIOD_EM = { dx: 0.9172, dy: 0.27, d: 0.235 };
+        var P = { x: W / 2 + PERIOD_EM.dx * FS, y: wordCY + PERIOD_EM.dy * FS, d: PERIOD_EM.d * FS };
+        lock.style.setProperty("--mx", r1(P.x) + "px");
+        lock.style.setProperty("--my", r1(P.y) + "px");
+
+        // ---------------------------------------------------------------- timeline
+        var tl = gsap.timeline({ paused: true });
+
+        // camera: one slow push on the screen centre for the whole piece
+        tl.fromTo("#cam", { scale: 1 }, { scale: 1.06, duration: 5, ease: "none" }, 0);
+        function camScale(t) {
+          return 1 + (0.06 * Math.min(Math.max(t, 0), 5)) / 5;
+        }
+
+        // POWER-OFF: the picture squeezes into the line (no brightening), the LED goes out
+        tl.fromTo("#pic", { scaleY: 1 }, { scaleY: 0.02, duration: T.line - T.off, ease: "power2.in" }, T.off);
+        tl.fromTo("#pic", { opacity: 1 }, { opacity: 0, duration: 0.07, ease: "none" }, T.line - 0.06);
+        tl.fromTo("#led", { opacity: 0.8 }, { opacity: 0, duration: 0.14, ease: "power1.out" }, T.off);
+
+        // IGNITION 3.00-3.78: one slow move outward from the period; then the hold
+        var IGN = T.lit - T.land;
+        tl.fromTo("#lock", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.55, ease: "power1.out" }, T.land);
+        tl.fromTo("#lock", { "--rv": "0px" }, { "--rv": C.rvEnd + "px", duration: IGN, ease: "sine.inOut" }, T.land);
+        tl.fromTo("#lock .wm-bloom", { opacity: 0 }, { opacity: C.bloom, duration: IGN - 0.1, ease: "sine.inOut" }, T.land + 0.1);
+        tl.fromTo("#tag", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "sine.inOut" }, T.lit - 0.5);
+        tl.fromTo("#pool-pink", { opacity: 0 }, { opacity: C.pools[0], duration: IGN, ease: "sine.out" }, T.land);
+        tl.fromTo("#pool-cyan", { opacity: 0 }, { opacity: C.pools[1], duration: IGN, ease: "sine.out" }, T.land);
+
+        // ---------------------------------------------------------------- procedural layer (pure functions of t)
+        var turb = document.getElementById("turb");
+        var film = document.getElementById("film-grain");
+        var vig = document.getElementById("hf-vignette");
+        var hum = document.getElementById("hum");
+        var core = document.getElementById("beam-core");
+        var blue = document.getElementById("beam-blue");
+        var beam = document.getElementById("beam");
+        var e2in = gsap.parseEase("power2.in");
+        var sio = gsap.parseEase("sine.inOut");
+        var sout = gsap.parseEase("sine.out");
+        function cl(v) {
+          return v < 0 ? 0 : v > 1 ? 1 : v;
+        }
+        function seg(t, a, b) {
+          return cl((t - a) / (b - a));
+        }
+        function lerp(a, b, u) {
+          return a + (b - a) * u;
+        }
+        function lcg(n) {
+          var s = (Math.imul(n + 0x9e37, 1664525) + 1013904223) >>> 0;
+          s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+          return s;
+        }
+        // the light the screen throws: ONE monotonic darkening, 1 -> 0 over 1.2-3.0
+        function lightAt(t) {
+          if (t < T.off) return 1;
+          if (t < T.line) {
+            var u = seg(t, T.off, T.line);
+            return 1 - 0.64 * u * u;
+          }
+          if (t < T.dot) return 0.36 - 0.24 * seg(t, T.line, T.dot);
+          var v = 1 - seg(t, T.dot, T.land);
+          return 0.12 * v * v;
+        }
+        function show(el, o) {
+          el.style.opacity = o.toFixed(3);
+          el.style.visibility = o > 0.001 ? "visible" : "hidden";
+        }
+        var lastSeed = -1;
+        function frame(t) {
+          var f = Math.floor(t * 30 + 1e-4);
+          var L = lightAt(t);
+          cam.style.setProperty("--L", L.toFixed(4));
+          cam.style.setProperty("--L2", (L * L).toFixed(4));
+          // the vignette only has work while the room is lit; over the bare room colour it is a no-op that bands by 1/255
+          vig.style.opacity = L.toFixed(4);
+          // fine static on the picture: one seed per frame while the picture exists (constant mean)
+          var seed = 1 + Math.min(f, Math.round(T.line * 30) + 1);
+          if (seed !== lastSeed) {
+            turb.setAttribute("seed", String(seed));
+            lastSeed = seed;
+          }
+          // film grain: noise.png offset from a seeded LCG every 2 frames
+          var n = lcg(Math.floor(f / 2));
+          film.style.backgroundPosition = (n % 160) + "px " + ((n >>> 9) % 160) + "px";
+          // hum bar: slow downward drift (0.16 screen heights per second)
+          var ph = (0.3 + t * 0.16) % 1;
+          hum.style.transform = "translateY(" + ((-0.24 + ph * 1.24) * SH).toFixed(1) + "px)";
+
+          // the beam: line -> dot -> period, all in frame px
+          var cs = camScale(t);
+          var lineW = SW * cs * 0.97;
+          var x = SX, y = SY, w = 0, h = 0, co = 0, bo = 0;
+          if (t >= T.lineIn && t < T.dot) {
+            co = seg(t, T.lineIn, T.line);
+            var u = e2in(seg(t, T.shrink, T.dot));
+            w = lerp(lineW, C.dot0, u);
+            var hu = cl((u - 0.55) / 0.45);
+            h = lerp(C.line, C.dot0, hu * hu);
+          } else if (t >= T.dot) {
+            var g = sio(seg(t, T.grow0, T.land));
+            w = h = lerp(C.dot0, P.d, g);
+            var m = sio(seg(t, T.drift0, T.land));
+            x = lerp(SX, P.x, m);
+            y = lerp(SY, P.y, m);
+            // afterglow: fades slowly (1 -> 0.55), then hands over to the blue of ".net"
+            var glow = lerp(1, 0.55, sout(seg(t, T.dot, T.tint0)));
+            var tint = sio(seg(t, T.tint0, T.land));
+            co = glow * (1 - tint);
+            bo = glow * tint;
+            if (t >= T.land) {
+              bo = lerp(0.55, 1, sout(seg(t, T.land, T.land + 0.3)));
+              bo *= 1 - sio(seg(t, T.land + 0.45, T.lit));
+            }
+          }
+          beam.style.transform = "translate(" + x.toFixed(2) + "px," + y.toFixed(2) + "px)";
+          core.style.width = w.toFixed(2) + "px";
+          core.style.height = h.toFixed(2) + "px";
+          blue.style.width = w.toFixed(2) + "px";
+          blue.style.height = h.toFixed(2) + "px";
+          show(core, co);
+          show(blue, bo);
+        }
+        var clock = { t: 0 };
+        tl.fromTo(
+          clock,
+          { t: 0 },
+          {
+            t: 5,
+            duration: 5,
+            ease: "none",
+            onUpdate: function () {
+              frame(clock.t);
+            },
+          },
+          0,
+        );
+        frame(0);
+
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>
