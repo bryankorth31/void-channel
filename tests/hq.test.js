@@ -47,8 +47,11 @@ cp.spawn = function (cmd, args, opts) {
 };
 
 // A harmless node process whose command line names a builder script (as the nightly's children do) but which only sleeps.
+// The script is art.js on purpose: HQ lists and stops it, but scripts/doctor.js (jobs light) and scripts/nightly.js (two Archive
+// jobs at once) count only hunt.js, hunt-movies.js and scout.js, so a sleeper left running during a real doctor or nightly pass
+// can never look like an Archive job.
 const kids = [];
-const fixture = (script = 'C:\\fake\\scripts\\hunt.js') => { const k = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', ...(script ? [script] : [])], { stdio: 'ignore', windowsHide: true }); kids.push(k); return k; };
+const fixture = (script = 'C:\\fake\\scripts\\art.js') => { const k = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', ...(script ? [script] : [])], { stdio: 'ignore', windowsHide: true }); kids.push(k); return k; };
 
 function canBind(port) {
   return new Promise((ok) => {
@@ -89,10 +92,10 @@ before(async () => {
   const { processInfo } = require(HQ_FILE).stop;
   seed = { good1: fixture(), good2: fixture(), stale: fixture() };
   await wait(600);
-  const dead = spawn(process.execPath, ['-e', '0', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const dead = spawn(process.execPath, ['-e', '0', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   await new Promise((r) => dead.once('exit', r));
   seed.dead = dead;
-  const rec = (id, pid, pstart) => ({ id, name: 'hunt', args: [], pid, started: new Date().toISOString(), pstart, log: path.join(STATE, id + '.log'), done: null, code: null });
+  const rec = (id, pid, pstart) => ({ id, name: 'art', args: [], pid, started: new Date().toISOString(), pstart, log: path.join(STATE, id + '.log'), done: null, code: null });
   fs.writeFileSync(path.join(STATE, 'hq-jobs.json'), JSON.stringify([
     rec('seedgood1', seed.good1.pid, processInfo(seed.good1.pid).created),
     rec('seedgood2', seed.good2.pid, processInfo(seed.good2.pid).created),
@@ -232,18 +235,22 @@ test('GET /api/jobs still returns the job list shape (the four seeded jobs, no n
 });
 
 test('"Running now" lists node jobs by their builder script, and nothing else', async () => {
-  const other = spawn('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 60 # C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const other = spawn('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 60 # C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   kids.push(other);
   const plain = fixture(null); // node, no script in its command line
   await wait(1200);
   const { processes } = await listed();
   const pids = processes.map((p) => p.pid);
-  assert.ok(pids.includes(seed.good1.pid) && pids.includes(seed.stale.pid), 'node jobs naming scripts\\hunt.js are listed');
+  assert.ok(pids.includes(seed.good1.pid) && pids.includes(seed.stale.pid), 'node jobs naming scripts\\art.js are listed');
   assert.ok(!pids.includes(other.pid), 'a program that is not node.exe is not listed even if its command line names the script');
   assert.ok(!pids.includes(plain.pid), 'a node process with no builder script is not listed');
-  const { builderScript } = require(HQ_FILE).stop;
+  const { builderScript, processInfo } = require(HQ_FILE).stop;
   assert.equal(builderScript('node.exe C:\\x\\scripts\\hunt-movies.js'), 'hunt-movies');
   assert.equal(builderScript('node.exe C:\\x\\scripts\\hq.js --port 1'), null);
+  assert.equal(builderScript('node.exe C:\\fake\\scripts\\art.js'), 'art', 'the sleepers use a name that is on HQ\'s allowlist');
+  for (const k of [seed.good1, seed.stale]) { // and not one the doctor or the nightly counts as an Archive job
+    assert.ok(!/scripts[\\/](hunt|hunt-movies|scout)\.js/.test(processInfo(k.pid).cmd), 'a test sleeper must not look like a hunt, a TV-movie hunt or a scout');
+  }
 });
 
 test('HQ keeps its state in HQ_STATE_DIR: the seeded dead job was marked finished in the temporary jobs file', async () => {
@@ -318,10 +325,10 @@ test('a listed node process with the wrong started time is refused (409) and not
 test('Stop refuses what is not a node builder job even when the start time is right', { skip: !WIN && 'Windows only' }, async () => {
   const { processInfo } = require(HQ_FILE).stop;
   const plain = fixture(null);
-  const ps = spawn('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 60 # C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const ps = spawn('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', 'Start-Sleep -Seconds 60 # C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   kids.push(ps);
   await wait(1500);
-  for (const [why, pid] of [['HQ itself', hq.pid], ['a node process with no builder script', plain.pid], ['powershell whose command line names scripts\\hunt.js', ps.pid]]) {
+  for (const [why, pid] of [['HQ itself', hq.pid], ['a node process with no builder script', plain.pid], ['powershell whose command line names scripts\\art.js', ps.pid]]) {
     const r = await stopCall('/api/processes/stop', { pid, started: processInfo(pid).created });
     assert.equal(r.status, 409, why);
     assert.ok(alive(pid), why + ': still running');
@@ -412,15 +419,15 @@ test('the HQ page has the two publish buttons, their confirm texts, and the new 
 
 test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {
   const { stopHqJob, processInfo } = require(HQ_FILE).stop;
-  const target = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
-  const bystander = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const target = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
+  const bystander = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   try {
     await wait(500);
     const info = processInfo(target.pid);
-    assert.ok(info && /scripts[\\/]hunt\.js/.test(info.cmd), 'the live command line is readable');
+    assert.ok(info && /scripts[\\/]art\.js/.test(info.cmd), 'the live command line is readable');
     assert.match(info.created, /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/);
     assert.match(info.name, /^node(\.exe)?$/i);
-    const job = { id: 't1', name: 'hunt', args: [], pid: target.pid, started: new Date().toISOString(), pstart: info.created, done: null, code: null };
+    const job = { id: 't1', name: 'art', args: [], pid: target.pid, started: new Date().toISOString(), pstart: info.created, done: null, code: null };
     const r = stopHqJob(job);
     assert.equal(r.status, 200);
     assert.equal(r.body.stopped, true);
@@ -434,17 +441,17 @@ test('stop: a job whose process is still the one HQ launched is stopped, and onl
 
 test('stop: refused (409, nothing killed) when the start time, the script or HQ itself does not match', { skip: !WIN && 'Windows only' }, async () => {
   const { stopHqJob, processInfo } = require(HQ_FILE).stop;
-  const sleeper = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const sleeper = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   const realLog = console.log; const lines = [];
   try {
     await wait(500);
     const info = processInfo(sleeper.pid);
-    const base = { id: 't2', name: 'hunt', args: [], pid: sleeper.pid, started: new Date().toISOString(), pstart: info.created, done: null, code: null };
+    const base = { id: 't2', name: 'art', args: [], pid: sleeper.pid, started: new Date().toISOString(), pstart: info.created, done: null, code: null };
     console.log = (...a) => lines.push(a.join(' '));
     const cases = [
       ['start time differs (a recycled number)', { ...base, pstart: '2020-01-01T00:00:00.000Z' }],
-      ['another script name (hunt.js is not match.js)', { ...base, name: 'match' }],
-      ['a name that is only a prefix (hunt is not hunt-movies)', { ...base, name: 'hunt-movies' }],
+      ['another script name (art.js is not match.js)', { ...base, name: 'match' }],
+      ['a longer name that starts the same (art is not art-x)', { ...base, name: 'art-x' }],
       ['an older job with no stored time, launched long ago', { ...base, pstart: null, started: '2020-01-01T00:00:00.000Z' }],
       ['a stored time that is not a time', { ...base, pstart: 'soon' }],
     ];
@@ -467,11 +474,11 @@ test('stop: refused (409, nothing killed) when the start time, the script or HQ 
 
 test('stop: an older job with no stored time still passes when the process was created right after the launch stamp', { skip: !WIN && 'Windows only' }, async () => {
   const { stopHqJob, processInfo } = require(HQ_FILE).stop;
-  const sleeper = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const sleeper = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   try {
     await wait(500);
     const info = processInfo(sleeper.pid);
-    const job = { id: 't3', name: 'hunt', args: [], pid: sleeper.pid, started: new Date(Date.parse(info.created) + 900).toISOString(), pstart: null, done: null, code: null };
+    const job = { id: 't3', name: 'art', args: [], pid: sleeper.pid, started: new Date(Date.parse(info.created) + 900).toISOString(), pstart: null, done: null, code: null };
     const r = stopHqJob(job);
     assert.equal(r.status, 200);
     assert.equal(r.body.stopped, true);
@@ -484,10 +491,10 @@ test('stop: an older job with no stored time still passes when the process was c
 
 test('stop: a job whose process has already ended is marked finished and nothing is killed', { skip: !WIN && 'Windows only' }, async () => {
   const { stopHqJob } = require(HQ_FILE).stop;
-  const quick = spawn(process.execPath, ['-e', '0', 'C:\\fake\\scripts\\hunt.js'], { stdio: 'ignore', windowsHide: true });
+  const quick = spawn(process.execPath, ['-e', '0', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   await new Promise((r) => quick.once('exit', r));
   await wait(200);
-  const job = { id: 't4', name: 'hunt', args: [], pid: quick.pid, started: new Date().toISOString(), pstart: '2026-01-01T00:00:00.000Z', done: null, code: null };
+  const job = { id: 't4', name: 'art', args: [], pid: quick.pid, started: new Date().toISOString(), pstart: '2026-01-01T00:00:00.000Z', done: null, code: null };
   const r = stopHqJob(job);
   assert.equal(r.status, 200);
   assert.equal(r.body.stopped, false);
@@ -501,7 +508,7 @@ test('stop: a process that cannot be read is not stopped', () => {
   const { stopHqJob } = require(HQ_FILE).stop;
   const realLog = console.log; console.log = () => {};
   try {
-    const job = { id: 't5', name: 'hunt', args: [], pid: 999999, started: new Date().toISOString(), pstart: null, done: null, code: null };
+    const job = { id: 't5', name: 'art', args: [], pid: 999999, started: new Date().toISOString(), pstart: null, done: null, code: null };
     const r = stopHqJob(job, () => { throw new Error('powershell is not available'); });
     assert.equal(r.status, 409);
     assert.equal(job.done, null, 'a job that could not be checked is left as it was');
