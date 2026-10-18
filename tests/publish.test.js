@@ -270,6 +270,121 @@ test('no flags: the scheduled run, started from inside its own tree, finds the s
   assert.strictEqual(originSubject(c), 'Catalog: 11 shows, 55 episodes (1 files)');
 });
 
+// A copy of the scripts inside the clone, so a run can start from that tree with no --root (and write its log there). With stub: true,
+// assemble() also rewrites one file after it has run, which is what a hunt writing into catalog/ during a publish looks like.
+const STUB_APP = "const fs = require('fs');\nconst real = require('./app-real');\nmodule.exports = { assemble() { const d = real.assemble(); if (process.env.TEST_DRIFT_FILE) fs.writeFileSync(process.env.TEST_DRIFT_FILE, process.env.TEST_DRIFT_TEXT); return d; } };\n";
+function copyTools(work, stub) {
+  const root = path.join(__dirname, '..');
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  const app = fs.readFileSync(path.join(root, 'scripts/lib/app.js'), 'utf8');
+  if (stub) { write(work, 'scripts/lib/app-real.js', app); write(work, 'scripts/lib/app.js', STUB_APP); } else write(work, 'scripts/lib/app.js', app);
+}
+function runCopy(work, args = [], env = {}) {
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', ...env };
+  delete e.VOID_PROFILE;
+  const r = spawnSync(process.execPath, [path.join(work, 'scripts', 'publish.js'), ...args], { cwd: TMP, encoding: 'utf8', env: e });
+  return { status: r.status, out: (r.stdout || '') + (r.stderr || '') };
+}
+
+test('a push that origin rejects is not retried: one FAILED line says origin has moved on', () => {
+  const c = fresh(), other = path.join(c.dir, 'other');
+  git(c.dir, 'clone', '-q', c.origin, other);
+  for (const [k, v] of [['user.name', 'Test'], ['user.email', 'test@example.invalid'], ['commit.gpgsign', 'false']]) git(other, 'config', k, v);
+  write(other, 'elsewhere.txt', 'pushed from another machine\n');
+  git(other, 'add', 'elsewhere.txt');
+  git(other, 'commit', '-q', '-m', 'Work from another machine');
+  git(other, 'push', '-q', 'origin', 'master');                                // origin now has a commit this clone lacks
+  putShow(c.work, 10);
+  const r = publish(c.work, [], { PUBLISH_BACKOFF_MS: '5000,5000,5000' });     // a retry would wait 5 s each; a stop is immediate
+  assert.strictEqual(r.status, 1, r.out);
+  const lines = logLines(c.work);
+  assert.strictEqual(lines.filter((l) => /push attempt/.test(l)).length, 0, 'a rejected push must not be retried');
+  assert.strictEqual(lines.filter((l) => /FAILED:/.test(l)).length, 1);
+  assert.match(outcome(c.work), /FAILED: push to origin\/master was rejected because origin\/master has moved on \(.*\[rejected\].*\); pull or rebase by hand/);
+  assert.strictEqual(ahead(c.work), '1');                                     // the commit is kept
+});
+
+test('an option it does not know is refused with exit 2 and nothing is done', () => {
+  const c = fresh(), before = head(c.work);
+  putShow(c.work, 10);
+  for (const bad of [['--dry-run'], ['--dryrun'], ['--allow-shrink=1'], ['stray'], ['--allow-other']]) {
+    const r = publish(c.work, bad);
+    assert.strictEqual(r.status, 2, bad.join(' ') + ': ' + r.out);
+    assert.match(outcome(c.work), /refused: unknown option .* \(known: --allow-shrink, --allow-other-commits, --dry, --root <folder>\)/);
+    assert.match(r.out, /Known options: /);
+    assert.strictEqual(head(c.work), before);
+    assert.strictEqual(staged(c.work), '');
+  }
+  assert.match(publish(c.work, ['--dry', '--dry-run']).out, /dry: refused: unknown option "--dry-run"/); // a known option beside an unknown one does not rescue it
+  // --root=DIR is one unknown word, not a root: started from a copy inside the clone it must not publish that clone
+  copyTools(c.work);
+  const r = runCopy(c.work, [`--root=${c.work}`]);
+  assert.strictEqual(r.status, 2, r.out);
+  assert.match(outcome(c.work), /refused: unknown option "--root=/);
+  assert.strictEqual(head(c.work), before);
+  assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (12 files)');
+  // --root with no folder, and with a folder that does not exist
+  assert.strictEqual(runCopy(c.work, ['--root']).status, 2);
+  const r2 = runCopy(c.work, ['--root', path.join(c.dir, 'no-such-folder')]);
+  assert.strictEqual(r2.status, 2, r2.out);
+  assert.ok(!fs.existsSync(path.join(c.dir, 'no-such-folder')), 'a bad --root must not create the folder');
+  assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (12 files)');
+});
+
+test('a file that changes after it was scanned is caught in the commit itself: the commit is undone, nothing is pushed', () => {
+  const drift = (file, text, expect, extra) => {
+    const c = fresh(), before = head(c.work);
+    copyTools(c.work, true);
+    putShow(c.work, 10);                                                      // clean when staged and scanned
+    const r = runCopy(c.work, [], { TEST_DRIFT_FILE: path.join(c.work, file), TEST_DRIFT_TEXT: text });
+    assert.strictEqual(r.status, 1, r.out);
+    assert.match(outcome(c.work), expect);
+    assert.match(outcome(c.work), /the commit was undone and nothing was pushed/);
+    assert.strictEqual(head(c.work), before, 'the commit must be undone');
+    assert.strictEqual(staged(c.work), '');
+    assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (12 files)');
+    if (extra) extra(c);
+  };
+  const withName = (name) => { const g = grid(10, 5); g.seasons[0].episodes[0].name = name; return JSON.stringify(g, null, 2) + '\n'; };
+  drift('catalog/shows/test-show-10.json', withName('Contact writer@example.org'), /refused: catalog\/shows\/test-show-10\.json carries an address-shaped string in the commit/,
+    (c) => assert.ok(fs.readFileSync(path.join(c.work, 'catalog/shows/test-show-10.json'), 'utf8').includes('writer@'), 'the file on disk is left for a person to fix'));
+  drift('catalog/shows/test-show-10.json', '{ "broken": ', /refused: catalog\/shows\/test-show-10\.json \(.*\) is not valid JSON in the commit/);
+  drift('scripts/show-list.json', '{ "types": [', /refused: scripts\/show-list\.json \(.*\) is not valid JSON in the commit/);        // the list file is checked too
+  drift('docs/README.md', 'TOKEN=abcdef1234567890abcdef\n', /refused: docs\/README\.md carries token-shaped text in the commit/); // tracked and unchanged when staged, so only the commit sees it
+});
+
+test('a broken list file is refused like a broken catalog file', () => {
+  const c = fresh(), before = head(c.work);
+  write(c.work, 'scripts/show-list.json', '{ "types": [');
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 1, r.out);
+  assert.match(outcome(c.work), /refused: scripts\/show-list\.json is not valid JSON/);
+  assert.strictEqual(head(c.work), before);
+});
+
+test('a commit titled Catalog: that also touches other files is not publish\'s own, and holds the push', () => {
+  const c = fresh();
+  write(c.work, 'scripts/slipped-in.js', '// not a catalog file\n');
+  git(c.work, 'add', 'scripts/slipped-in.js');
+  git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (but it changes a script)');
+  assert.strictEqual(publish(c.work).status, 0);                              // not one of publish's own commits, so nothing of publish's is waiting
+  assert.match(outcome(c.work), /nothing new$/);
+  assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (12 files)');
+  putShow(c.work, 10);
+  assert.strictEqual(publish(c.work).status, 0);
+  assert.match(outcome(c.work), /held: 1 other commit waiting: Catalog: 10 shows, 50 episodes \(but it changes a script\) \[also touches files outside the catalog, docs and list\]/);
+  assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (12 files)');
+  assert.strictEqual(ahead(c.work), '2');
+});
+
+test('the default push limits fit inside the nightly\'s 20 minute step for publish', () => {
+  const src = fs.readFileSync(PUBLISH, 'utf8');
+  const perTry = +/PUBLISH_PUSH_TIMEOUT_MS \|\| (\d+)/.exec(src)[1] / 1000;
+  const waits = /PUBLISH_BACKOFF_MS \|\| '([\d,]+)'/.exec(src)[1].split(',').map(Number).reduce((a, b) => a + b, 0) / 1000;
+  const tries = /PUBLISH_BACKOFF_MS \|\| '([\d,]+)'/.exec(src)[1].split(',').length + 1;
+  assert.ok(perTry * tries + waits <= 11 * 60, `worst case ${perTry * tries + waits} s`);
+});
+
 test('publish.log is cut back to its last megabyte', () => {
   const c = fresh();
   const old = Array.from({ length: 40000 }, (_, i) => `2026-10-01T00:00:00.000Z old line ${i} ${'x'.repeat(40)}`).join('\n') + '\n';

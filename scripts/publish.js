@@ -6,15 +6,19 @@
 //   * It stages and commits only its own paths (the profile's catalog folder, docs folder and list file),
 //     by path. Anything else that is staged, or already committed on this PC, is never swept in.
 //   * It only runs on master. On any other branch it logs one FAILED line and stops.
-//   * It will not push while commits that publish did not make (subject not starting with "Catalog:")
-//     are waiting to be pushed. It still makes its own commit, so the work is kept, and logs "held".
-//     --allow-other-commits pushes them anyway.
-//   * A push that fails is retried three times (10 s, 30 s, 90 s apart), each try with a time limit. If it
+//   * It will not push while commits that publish did not make are waiting to be pushed. A commit is publish's
+//     own only when its subject starts with "Catalog:" and it touches nothing outside the three paths above.
+//     It still makes its own commit, so the work is kept, and logs "held". --allow-other-commits pushes them anyway.
+//   * A push that fails is retried three times (10 s, 30 s, 90 s apart), each try limited to 120 s. If it
 //     still fails, the commit stays local and the next run pushes it first, even when nothing new is staged.
+//     A push that origin rejects (it has commits this PC lacks) is not retried: one FAILED line says so.
 //   * Before committing it refuses when the playable shows or episodes fell more than 10% against the last
 //     published counts (kept in catalog/cache/publish-state.json), when a catalog .json file does not
 //     parse, or when the staged diff adds an address-shaped or token-shaped string. --allow-shrink lets a
 //     real shrink through.
+//   * The commit takes the files as they are at commit time, so the commit itself is checked again (every .json in
+//     it parses, nothing added carries an address or token). On a hit the commit is undone and nothing is pushed.
+//   * An option it does not know (--dry-run, --root=DIR) is refused with exit 2, never ignored.
 //   * catalog/cache/publish.log is cut back to its last 1 MB whenever it grows past that.
 // Every run ends with one dated line the doctor reads: "nothing new", "pushed <hash>: <message>",
 // "refused: <reason>", "FAILED: <one line>" or "held: <n> other commits waiting: <subjects>".
@@ -23,33 +27,48 @@
 //   --root <dir>  work on that repository instead of this one (the tests use it); the catalog, docs and
 //                 list paths move there with it
 // Environment (for tests): PUBLISH_BACKOFF_MS="10000,30000,90000" waits between push tries,
-// PUBLISH_PUSH_TIMEOUT_MS="240000" time limit for one push.
+// PUBLISH_PUSH_TIMEOUT_MS="120000" time limit for one push.
 const path = require('path');
 const fs = require('fs');
 const { execFileSync } = require('child_process');
 
 const PROFILE = require('./lib/profile');
 const argv = process.argv.slice(2);
+// Only these exact options are accepted. Anything else (a typo such as --dry-run, or --root=DIR) is refused, never ignored:
+// an ignored option would turn a hoped-for dry run into a real publish.
+const FLAGS = ['--allow-shrink', '--allow-other-commits', '--dry'];
+const KNOWN = '--allow-shrink, --allow-other-commits, --dry, --root <folder>';
+const unknown = [];
+let rootArg = null;
+for (let i = 0; i < argv.length; i++) {
+  if (FLAGS.includes(argv[i])) continue;
+  if (argv[i] === '--root' && rootArg === null && argv[i + 1] && !argv[i + 1].startsWith('--')) { rootArg = argv[++i]; continue; }
+  unknown.push(argv[i]);
+}
+if (rootArg !== null && !fs.existsSync(path.resolve(rootArg))) { unknown.push(`--root ${rootArg} (no such folder)`); rootArg = null; }
 const has = (f) => argv.includes(f);
 const ALLOW_SHRINK = has('--allow-shrink'), ALLOW_OTHER = has('--allow-other-commits'), DRY = has('--dry');
-const rootAt = argv.indexOf('--root');
-if (rootAt >= 0 && (!argv[rootAt + 1] || argv[rootAt + 1].startsWith('--'))) { console.error('--root needs a folder'); process.exit(1); }
-const ROOT = rootAt >= 0 ? path.resolve(argv[rootAt + 1]) : path.join(__dirname, '..');
+const ROOT = rootArg !== null ? path.resolve(rootArg) : path.join(__dirname, '..');
 // The profile module works out its paths from the script's own tree. With --root they are moved to the other tree
 // before anything (assemble() included) reads them. Without --root nothing here changes.
-if (rootAt >= 0) for (const k of ['catalogDir', 'docsDir', 'listFile']) PROFILE[k] = path.join(ROOT, path.relative(PROFILE.ROOT, PROFILE[k]));
+if (rootArg !== null) for (const k of ['catalogDir', 'docsDir', 'listFile']) PROFILE[k] = path.join(ROOT, path.relative(PROFILE.ROOT, PROFILE[k]));
 
 const rel = (p) => path.relative(ROOT, p).replace(/\\/g, '/');
 const CATALOG = rel(PROFILE.catalogDir);
-const PATHS = [CATALOG, rel(PROFILE.docsDir), rel(PROFILE.listFile)].filter((p) => fs.existsSync(path.join(ROOT, p)));
+// The three paths publish owns. A commit counts as publish's own only when it touches nothing outside them.
+const OWN_PATHS = [CATALOG, rel(PROFILE.docsDir), rel(PROFILE.listFile)];
+const inOwnPaths = (f) => OWN_PATHS.some((p) => f === p || f.startsWith(p + '/'));
+const PATHS = OWN_PATHS.filter((p) => fs.existsSync(path.join(ROOT, p)));
 // Hand-written drafts can live in docs/_drafts; they are never published (F-011).
 const SPEC = [...PATHS, ':(exclude)' + rel(PROFILE.docsDir) + '/_drafts'];
 const LOG = path.join(PROFILE.catalogDir, 'cache', 'publish.log');
 const STATE = path.join(PROFILE.catalogDir, 'cache', 'publish-state.json');
 const LOG_MAX = 1024 * 1024;
 const BACKOFF = (process.env.PUBLISH_BACKOFF_MS || '10000,30000,90000').split(',').map((n) => Math.max(0, +n || 0));
-const PUSH_TIMEOUT = +process.env.PUBLISH_PUSH_TIMEOUT_MS || 240000;
+// 120 s a try: four tries plus the waits are about 10.5 minutes at worst, inside the nightly's 20 minute step for publish.
+const PUSH_TIMEOUT = +process.env.PUBLISH_PUSH_TIMEOUT_MS || 120000;
 const OWN = /^Catalog: /;
+const REJECTED = /! \[rejected\]|non-fast-forward|fetch first|Updates were rejected/i; // origin has commits this PC lacks: trying again cannot help
 const COUNTS = /^Catalog: (\d+) shows, (\d+) episodes/;
 // Address-shaped and token-shaped text. An Archive file name can look like an address ("show@720p.mp4", or a stem such as
 // "clip@Sessions.at.West54th.PBS.tv-vhs.XviD") and is the Archive's own public path, so what follows the @ must end in something that
@@ -67,6 +86,11 @@ const log = (m) => {
   try { fs.mkdirSync(path.dirname(LOG), { recursive: true }); fs.appendFileSync(LOG, line + '\n'); } catch (_) {}
 };
 const sleep = (ms) => { if (ms > 0) Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms); };
+if (unknown.length) {
+  console.error(`Known options: ${KNOWN}`);
+  log(`refused: unknown option ${unknown.map((u) => JSON.stringify(u)).join(', ')} (known: ${KNOWN}); nothing was staged, committed or pushed`);
+  process.exit(2);
+}
 
 // git, run without a shell so a commit message needs no quoting. Line-ending warnings are switched off (they could
 // fill the log with thousands of lines), and the output limit is large for the same reason.
@@ -76,9 +100,10 @@ function git(args, timeout) {
     env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
   }).toString();
 }
+const raw = (e) => (e && e.stderr && e.stderr.toString()) || (e && e.message) || String(e);
 // The last three lines of a git error that are not line-ending warnings, on one line.
 function why(e) {
-  const text = (e && e.stderr && e.stderr.toString()) || (e && e.message) || String(e);
+  const text = raw(e);
   const lines = text.split(/\r?\n/).map((s) => s.trim()).filter((l) => l && !/^(warning:|The file will have its original line endings)/i.test(l));
   return (lines.slice(-3).join(' | ') || 'unknown error').slice(0, 600);
 }
@@ -94,10 +119,15 @@ function trimLog() {
   } catch (_) {}
 }
 
-// Commits that are on this PC and not yet on origin/master, newest first.
+// Commits that are on this PC and not yet on origin/master, newest first. A commit is publish's own (own: true) only when its
+// subject starts with "Catalog:" AND everything it touched is inside publish's three paths; any other commit holds the push.
 function getAhead() {
   const out = git(['log', '--format=%h%x09%s', 'origin/master..HEAD']).trim();
-  return out ? out.split('\n').map((l) => { const i = l.indexOf('\t'); return { hash: l.slice(0, i), subject: l.slice(i + 1).trim() }; }) : [];
+  const rows = out ? out.split('\n').map((l) => { const i = l.indexOf('\t'); return { hash: l.slice(0, i), subject: l.slice(i + 1).trim() }; }) : [];
+  for (const r of rows) {
+    r.own = OWN.test(r.subject) && git(['diff-tree', '--no-commit-id', '--name-only', '-r', '-z', r.hash]).split('\0').filter(Boolean).every(inOwnPaths);
+  }
+  return rows;
 }
 
 function readState() {
@@ -129,12 +159,10 @@ function hasAddress(text) {
   }
   return false;
 }
-// Staged files that would reach the public repository carrying an address or a token.
-function leaks(files) {
-  let candidates;
-  try { candidates = git(['diff', '--cached', '--name-only', '-z', '--diff-filter=ACMR', '-G' + SEARCH, '--', ...SPEC]).split('\0').filter(Boolean); } catch (_) { candidates = files; }
+// Looks at the added lines of each candidate file for an address or a token. diffOf(file) gives that file's diff.
+function scanAdded(candidates, diffOf) {
   for (const f of candidates) {
-    for (const line of git(['diff', '--cached', '-U0', '--no-color', '--', ':(literal)' + f]).split('\n')) {
+    for (const line of diffOf(f).split('\n')) {
       if (line[0] !== '+' || line.startsWith('+++')) continue;
       if (TOKEN.test(line)) return { file: f, what: 'token-shaped text' };
       if (hasAddress(line)) return { file: f, what: 'an address-shaped string' };
@@ -142,34 +170,69 @@ function leaks(files) {
   }
   return null;
 }
+// Staged files that would reach the public repository carrying an address or a token.
+function leaks(files) {
+  let candidates;
+  try { candidates = git(['diff', '--cached', '--name-only', '-z', '--diff-filter=ACMR', '-G' + SEARCH, '--', ...SPEC]).split('\0').filter(Boolean); } catch (_) { candidates = files; }
+  return scanAdded(candidates, (f) => git(['diff', '--cached', '-U0', '--no-color', '--', ':(literal)' + f]));
+}
+// The first of these paths whose content in the commit (not the working tree) is not valid JSON, else null. One git process for all of them.
+function badJsonInCommit(hash, paths) {
+  const out = execFileSync('git', ['cat-file', '--batch'], { cwd: ROOT, windowsHide: true, input: paths.map((p) => `${hash}:${p}`).join('\n') + '\n', maxBuffer: 1024 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+  let pos = 0;
+  for (const p of paths) {
+    const nl = out.indexOf(10, pos), m = /^[0-9a-f]+ blob (\d+)$/.exec(out.toString('utf8', pos, nl));
+    if (!m) return `${p} (cannot be read from the commit)`;
+    const size = +m[1];
+    try { JSON.parse(out.toString('utf8', nl + 1, nl + 1 + size)); } catch (e) { return `${p} (${String(e.message).slice(0, 80)})`; }
+    pos = nl + 1 + size + 1;
+  }
+  return null;
+}
+// The commit just made takes the working-tree content of the paths at commit time, which can differ from what was scanned (a hunt may have
+// written a file in between). So the commit itself is checked: every .json in it parses and what it added carries no address or token.
+// Returns a reason, or null when the commit is fine.
+function problemInCommit(hash) {
+  const names = (extra) => git(['diff-tree', '--no-commit-id', '--name-only', '-r', '-z', '--diff-filter=ACMR', ...extra, hash]).split('\0').filter(Boolean);
+  const files = names([]);
+  const json = files.filter((f) => /\.json$/i.test(f));
+  const bad = json.length && badJsonInCommit(hash, json);
+  if (bad) return `${bad} is not valid JSON in the commit`;
+  let candidates;
+  try { candidates = names(['-G' + SEARCH]); } catch (_) { candidates = files; }
+  const leak = scanAdded(candidates, (f) => git(['show', '--format=', '-U0', '--no-color', hash, '--', ':(literal)' + f]));
+  return leak ? `${leak.file} carries ${leak.what} in the commit` : null;
+}
 
 // Push, with the other-commits check and the retries. Logs its own outcome line. Returns 'pushed', 'held', 'none' or 'failed'.
 // "extra" counts a commit a dry run would have made.
 function pushStep(counts, extra) {
   let ahead;
   try { ahead = getAhead(); } catch (e) { log('FAILED: cannot compare with origin/master: ' + why(e)); return 'failed'; }
-  const others = ahead.filter((c) => !OWN.test(c.subject));
+  const others = ahead.filter((c) => !c.own);
   if (others.length && !ALLOW_OTHER) {
-    const names = others.slice(0, 5).map((c) => c.subject.slice(0, 70)).join(' | ') + (others.length > 5 ? ` | and ${others.length - 5} more` : '');
+    const names = others.slice(0, 5).map((c) => c.subject.slice(0, 70) + (OWN.test(c.subject) ? ' [also touches files outside the catalog, docs and list]' : '')).join(' | ') + (others.length > 5 ? ` | and ${others.length - 5} more` : '');
     log(`held: ${others.length} other commit${others.length === 1 ? '' : 's'} waiting: ${names} (not pushed; run with --allow-other-commits to push them with the catalog)`);
     return 'held';
   }
   if (!ahead.length && !extra) return 'none';
   if (DRY) { log(`would push ${ahead.length + (extra || 0)} commit${ahead.length + (extra || 0) === 1 ? '' : 's'} to origin/master`); return 'pushed'; }
-  const tries = BACKOFF.length + 1; let last = '', ok = false;
+  const tries = BACKOFF.length + 1; let last = '', ok = false, rejected = null;
   for (let i = 0; i < tries && !ok; i++) {
     try { git(['push', '-q', 'origin', 'master'], PUSH_TIMEOUT); ok = true; }
     catch (e) {
       last = why(e);
-      if (/! \[rejected\]|non-fast-forward|fetch first/i.test(last)) { last = 'origin/master has moved on, pull or rebase by hand: ' + last; break; } // trying again cannot help
+      // The rejection words come first in git's output and the advice lines come last, so look at all of it before it is cut to three lines.
+      if (REJECTED.test(raw(e))) { rejected = (raw(e).split(/\r?\n/).find((l) => /\[rejected\]/.test(l)) || last).trim(); break; } // trying again cannot help
       if (i < tries - 1) { log(`push attempt ${i + 1} of ${tries} did not go through, trying again in ${Math.round(BACKOFF[i] / 1000)} s: ${last.slice(0, 200)}`); sleep(BACKOFF[i]); }
     }
   }
+  if (rejected) { log(`FAILED: push to origin/master was rejected because origin/master has moved on (${rejected.slice(0, 200)}); pull or rebase by hand, then run publish again`); return 'failed'; }
   if (!ok) { log(`FAILED: push to origin/master did not go through (${last})`); return 'failed'; }
   const head = git(['log', '-1', '--format=%h%x09%s']).trim().split('\t');
   log(`pushed ${head[0]}: ${head[1]}`);
   // The newest Catalog commit that just went out sets the counts the next shrink check compares against.
-  const newest = ahead.find((c) => COUNTS.test(c.subject)), m = newest && COUNTS.exec(newest.subject);
+  const newest = ahead.find((c) => c.own && COUNTS.test(c.subject)), m = newest && COUNTS.exec(newest.subject);
   if (m) writeState(+m[1], +m[2], newest.hash); else if (counts) writeState(counts.shows, counts.eps, head[0]);
   return 'pushed';
 }
@@ -182,7 +245,7 @@ function main() {
   if (!PATHS.length) { log('nothing new'); return 0; }
   let ahead;
   try { ahead = getAhead(); } catch (e) { log('FAILED: cannot compare with origin/master: ' + why(e)); return 1; }
-  const waiting = ahead.some((c) => OWN.test(c.subject)); // own commits from an earlier run whose push did not go through
+  const waiting = ahead.some((c) => c.own); // own commits from an earlier run whose push did not go through
 
   try { git(['add', '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }
   const changed = git(['diff', '--cached', '--name-only', '-z', '--', ...SPEC]).split('\0').filter(Boolean);
@@ -193,8 +256,8 @@ function main() {
   // Each refusal puts the index back and still lets an older, already checked commit go out first.
   const refuse = (reason) => { unstage(); if (waiting && pushStep() === 'failed') return 1; log('refused: ' + reason); return 1; };
 
-  for (const f of changed) { // a catalog file that does not parse would break the site build
-    if (!f.startsWith(CATALOG + '/') || !/\.json$/i.test(f) || !fs.existsSync(path.join(ROOT, f))) continue;
+  for (const f of changed) { // a catalog file (or the list) that does not parse would break the site build
+    if (!/\.json$/i.test(f) || !fs.existsSync(path.join(ROOT, f))) continue;
     try { JSON.parse(fs.readFileSync(path.join(ROOT, f), 'utf8')); } catch (e) { return refuse(`${f} is not valid JSON (${String(e.message).slice(0, 100)})`); }
   }
   const { assemble } = require('./lib/app');
@@ -211,6 +274,13 @@ function main() {
   const msg = `Catalog: ${shows} shows, ${eps} episodes (${changed.length} files)`;
   if (DRY) { log(`would commit ${changed.length} files: ${msg}`); unstage(); return pushStep(null, 1) === 'failed' ? 1 : 0; }
   try { git(['commit', '-q', '-m', msg, '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }
+  // The commit took the files as they are now, not as they were scanned. Check the commit itself before anything leaves this PC.
+  let hash, problem;
+  try { hash = git(['rev-parse', 'HEAD']).trim(); problem = problemInCommit(hash); } catch (e) { problem = `the commit could not be checked (${why(e)})`; }
+  if (problem) {
+    try { git(['reset', '--soft', 'HEAD~1']); } catch (e) { log(`FAILED: the new commit ${String(hash).slice(0, 9)} is not safe to publish (${problem}) and could not be undone (${why(e)}); it was not pushed`); return 1; }
+    return refuse(`${problem}; the commit was undone and nothing was pushed`);
+  }
   return pushStep({ shows, eps }) === 'failed' ? 1 : 0;
 }
 
