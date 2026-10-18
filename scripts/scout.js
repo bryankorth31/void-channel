@@ -17,6 +17,10 @@ const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+// Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
+// a short hash instead (first 12 hex characters of sha1 of the trimmed, lowercased address): enough to tell uploaders
+// apart (scripts/hunt.js candidates, scripts/scout.js via), not enough to read who they are.
+const uploaderHash = (u) => (u ? require('crypto').createHash('sha1').update(String(u).trim().toLowerCase()).digest('hex').slice(0, 12) : undefined);
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
@@ -155,7 +159,7 @@ async function main() {
   // 2. Uploader neighbours
   const uploaders = trustedUploaders();
   console.log(`  ${uploaders.length} trusted uploaders`);
-  for (const [u] of uploaders) { try { for (const it of await scrapeQuery(`uploader:(${u}) AND mediatype:movies`, `scout-up-${slug(u)}`, 2)) addLead(it, 'uploader ' + u); } catch (e) { console.log(`  ${u}: ${e.message}`); break; } }
+  for (const [u] of uploaders) { try { for (const it of await scrapeQuery(`uploader:(${u}) AND mediatype:movies`, `scout-up-${slug(u)}`, 2)) addLead(it, 'uploader ' + uploaderHash(u)); } catch (e) { console.log(`  ${u}: ${e.message}`); break; } }
   console.log(`  ${leads.size} leads after uploaders`);
 
   // 3. Rank leads, open the best item of the top ones, confirm with TVmaze

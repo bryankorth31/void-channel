@@ -135,7 +135,7 @@ async function openItem(id, m) {
     out.push({ item: id, itemTitle: itemTitle, stem, file: best.name, format: best.format, playable: !risk, codecRisk: risk || undefined, seconds: Math.round(secs), sizeMB: Math.round((+best.size || 0) / 1e6),
       band: runtimeBand(secs, m.runtime), fileSim: titleSim(stem.split('/').pop(), m.title), url: `https://archive.org/download/${id}/${encodeURIComponent(best.name)}` });
   }
-  return { id, title: itemTitle, uploader: meta.uploader, date: meta.date, files: out };
+  return { id, title: itemTitle, date: meta.date, files: out };
 }
 
 function judge(f, it, m) {
@@ -159,7 +159,7 @@ async function huntMovie(m) {
   for (const it of items.slice(0, ITEMS_TO_OPEN)) {
     try {
       const o = await openItem(it.identifier, m); opened++;
-      for (const f of o.files) { const conf = judge(f, it, m); if (conf >= REVIEW) picks.push({ conf: +conf.toFixed(2), ...f, itemTitle: o.title, uploader: o.uploader }); }
+      for (const f of o.files) { const conf = judge(f, it, m); if (conf >= REVIEW) picks.push({ conf: +conf.toFixed(2), ...f, itemTitle: o.title }); }
     } catch (e) { if (/budget/.test(e.message)) throw e; }
   }
   // A file that plays in a browser beats a cleaner one that will not; unplayable picks are never LIVE.

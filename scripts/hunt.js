@@ -21,6 +21,10 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+// Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
+// a short hash instead (first 12 hex characters of sha1 of the trimmed, lowercased address): enough to tell uploaders
+// apart (scripts/hunt.js candidates, scripts/scout.js via), not enough to read who they are.
+const uploaderHash = (u) => (u ? require('crypto').createHash('sha1').update(String(u).trim().toLowerCase()).digest('hex').slice(0, 12) : undefined);
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CENSUS = fs.existsSync(path.join(__dirname, 'show-probe-results.json'))
   ? JSON.parse(fs.readFileSync(path.join(__dirname, 'show-probe-results.json'), 'utf8')).results : [];
@@ -236,7 +240,7 @@ async function openItem(id, show, tv) {
   const episodes = vids.filter((v) => v.band === 'episode' || v.band === 'double' || (!tv && (v.band === 'short' || v.band === 'half-hour' || v.band === 'hour')));
   const hits = episodes.filter((v) => v.nameHit).length;
   return {
-    id, title: Array.isArray(m.title) ? m.title.join(' / ') : m.title, uploader: m.uploader, date: m.date, collection: m.collection,
+    id, title: Array.isArray(m.title) ? m.title.join(' / ') : m.title, uploaderHash: uploaderHash(m.uploader), date: m.date, collection: m.collection,
     description: String(m.description || '').slice(0, 300),
     totalVideo: vids.length, episodeShaped: episodes.length, nameHits: hits,
     files: vids,
