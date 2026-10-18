@@ -33,6 +33,16 @@ function fileDate(t) {
   if (m) return m[3] + '-' + m[1].padStart(2, '0') + '-' + m[2].padStart(2, '0');
   return null;
 }
+// Free text from TVmaze and from Archive items (episode names, item titles, file names, summaries) sometimes holds an email address.
+// None may reach a grid, because the publish guard refuses any catalog file that gains one. An address-shaped string becomes "[email]";
+// in a url the @ is written as %40, which is the same address for the Archive and no longer looks like one. Non-text values pass through.
+const EMAIL_RE = /[\p{L}\p{N}._%+\-]+@[\p{L}\p{N}\-]+(?:\.[\p{L}\p{N}\-]+)+/gu;
+function noEmail(v, key) {
+  if (typeof v === 'string') return key === 'url' ? v.replace(/@/g, '%40') : v.replace(EMAIL_RE, '[email]');
+  if (Array.isArray(v)) return v.map((x) => noEmail(x, key));
+  if (v && typeof v === 'object') { const o = {}; for (const k of Object.keys(v)) o[k] = noEmail(v[k], k); return o; }
+  return v;
+}
 function slug(s) { return norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); }
 const STOP = new Set(['the', 'a', 'an', 'and', 'of', 'to', 'in', 'on', 'at', 'for', 'with', 'is', 'it', 'part']);
 const QUALITY_RE = /\b(\d{3,4}p|x26[45]|h ?26[45]|hevc|aac|ac3|dvdrip|webrip|web dl|hdtv|bluray|bdrip|xvid|divx|mp4|mkv|avi|proper|repack|internal|uncut|uncensored|dual audio|multi|eng|english|sub(bed|s)?|dub(bed)?|fine cut|rough cut|complete|season|episode|ep|disc|dvd|vhs|rip|hq|lq|remaster(ed)?)\b/g;
@@ -200,7 +210,9 @@ function matchShow(entry) {
 
 // The decision for one show, with no disk access of its own: its grid, or { noTvmaze: true } when there is nothing to list.
 // ctx: ov (this show's overrides), readDead, firstAdded, and tags (a Map the caller may pass in to see why each file was placed or turned away).
-function gridFor(entry, cand, tv, ctx = {}) {
+// Every grid leaves through noEmail: the episode names, titles and file names it copies from TVmaze and from Archive items are masked.
+function gridFor(entry, cand, tv, ctx = {}) { return noEmail(decideGrid(entry, cand, tv, ctx)); }
+function decideGrid(entry, cand, tv, ctx) {
   const show = entry.name;
   const ov = ctx.ov || {};
   const tags = ctx.tags || new Map();
@@ -281,7 +293,7 @@ function gridFor(entry, cand, tv, ctx = {}) {
         if (!f.playable) conf -= 0.1;
         conf = Math.max(0, Math.min(1, conf));
         if (process.env.MATCH_DEBUG) console.log(`  [debug] ${f.name.slice(0, 60)} -> ${c.ep.season}x${c.ep.number} conf ${conf.toFixed(2)} (${c.why}; band ${f.band}; names ${namesShow(f.name)}/${itemTitled}; other ${fileNamesOther}/${itemNamesOther})`);
-        if (conf < REVIEW && !(ov.acceptFiles || []).includes(item.id + '|' + f.name)) continue; // an accepted file is kept whatever the judges say
+        if (conf < REVIEW && ![item.id + '|' + f.name, item.id + '|' + noEmail(f.name)].some((k) => (ov.acceptFiles || []).includes(k))) continue; // an accepted file is kept whatever the judges say
         const risk = codecRisk(f.name, f.format, f.playable);
         placedAny = true;
         push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
@@ -314,10 +326,10 @@ function gridFor(entry, cand, tv, ctx = {}) {
       // A file that plays in a browser beats a cleaner-named one that will not; then confidence.
       // B's decisions from HQ (catalog/overrides.json): rejectFiles never show again; acceptFiles win the
       // episode outright at full confidence (he watched it play), even when the codec judge was unsure.
-      const fkey = (p) => p.item + '|' + p.name;
+      const fkeys = (p) => [p.item + '|' + p.name, p.item + '|' + noEmail(p.name)]; // HQ and linkcheck key a file by the name the grid shows, which is the masked one
       const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]), accepted = new Set(ov.acceptFiles || []);
-      let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !rejected.has(fkey(o))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
-      const acc = opts.find((o) => accepted.has(fkey(o)));
+      let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !fkeys(o).some((k) => rejected.has(k))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
+      const acc = opts.find((o) => fkeys(o).some((k) => accepted.has(k)));
       if (acc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; opts = [acc, ...opts.filter((o) => o !== acc)]; }
       const pick = opts[0] || null;
       const state = !pick ? 'MISSING' : (pick.conf >= LIVE && (pick.playable || acc === pick)) ? 'LIVE' : 'REVIEW';
@@ -400,7 +412,7 @@ function selfGrid(entry, cand, aliases) {
   const out = { show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), selfListed: true,
     tvmaze: { id: null, name: show, runtime: null, premiered: null, network: entry.network },
     coverage: { total, live: 0, review: total, missing: 0, pct: 100 }, seasons: list };
-  return out;
+  return noEmail(out);
 }
 
 function writeCoverage(rows) {
@@ -436,5 +448,5 @@ function main() {
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
 if (require.main === module) main();
-module.exports = { norm, tagText, slug, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
+module.exports = { norm, tagText, slug, noEmail, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
   fallbackCand, gridFor, selfGrid, matchShow, fileDate };

@@ -307,6 +307,37 @@ describe('writeIfChanged (CP-006)', () => {
   test('cleanup', () => { fs.rmSync(dir, { recursive: true, force: true }); assert.equal(fs.existsSync(dir), false); });
 });
 
+// ---------------------------------------------------------------- the address mask
+describe('address mask', () => {
+  test('no address-shaped text reaches a grid: episode names, titles, file names, summaries and urls are masked', () => {
+    assert.equal(M.noEmail('mail me at a.b+c@d-e.co.uk now'), 'mail me at [email] now');
+    assert.equal(M.noEmail('@handle, 5 @ 6, foo@bar and 50% off'), '@handle, 5 @ 6, foo@bar and 50% off', 'a lone @ or an address with no dot is not an address');
+    assert.deepEqual(M.noEmail(['Zoë@café.fr', 7, null, { a: 'x@y.zz', url: 'https://archive.org/download/i/a@b.com.mp4' }]), ['[email]', 7, null, { a: '[email]', url: 'https://archive.org/download/i/a%40b.com.mp4' }]);
+    // a strict grid: the TVmaze show and episode names, the Archive item title, a file name and its url all carry an address
+    const tv = mkTv();
+    tv.name = 'Zork Show (info@zork.tv)';
+    tv.episodes[1].name = 'Velvet Anchor bob@example.com';
+    const f = mkFile('Zork Show S01E02 [uploader@site.net].mp4', { ep: se(1, 2), url: 'https://archive.org/download/zork/Zork%20Show%20S01E02%20[uploader@site.net].mp4' });
+    const strict = run([f], { title: 'Zork Show Season 1 (write to fan@example.org)', tv }).grid;
+    const text = JSON.stringify(strict);
+    assert.ok(!text.includes('@'), 'no @ is left anywhere in the grid');
+    assert.ok(text.includes('[email]'));
+    assert.equal(strict.seasons[0].episodes[1].file.name, 'Zork Show S01E02 [[email]].mp4');
+    assert.equal(strict.seasons[0].episodes[1].name, 'Velvet Anchor [email]');
+    // a self-listed grid
+    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)} (rip by ripper@example.net).mp4`, { ep: se(9, i) }));
+    const self = run(files, { title: 'Zork Show Season 9 (contact: me@example.org)' }).grid;
+    assert.equal(self.selfListed, true);
+    assert.ok(!JSON.stringify(self).includes('@'));
+    // HQ and linkcheck key a file by the name the grid shows, which is the masked one: a file rejected under that name stays rejected
+    const item = { id: 'zork-show-season-1', title: 'Zork Show Season 1', files: [mkFile('Zork Show S01E02 [uploader@site.net].mp4', { ep: se(1, 2) })] };
+    const kept = M.gridFor(ENTRY, { items: [item] }, mkTv(), { ov: {} });
+    assert.ok(kept.seasons[0].episodes[1].file, 'placed when nothing rejects it');
+    const rejected = M.gridFor(ENTRY, { items: [item] }, mkTv(), { ov: { rejectFiles: ['zork-show-season-1|Zork Show S01E02 [[email]].mp4'] } });
+    assert.equal(rejected.seasons[0].episodes[1].file, null);
+  });
+});
+
 // ---------------------------------------------------------------- the doctor self-test
 describe('matcher self-test for the doctor', () => {
   test('passes on the current matcher and lists self-listed grids over a TVmaze list', () => {

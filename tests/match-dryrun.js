@@ -101,6 +101,7 @@ const canon = (x) => {
 };
 const same = (a, b) => { const A = { ...a }, B = { ...b }; for (const k of ['matchedAt', 'addedAt']) { delete A[k]; delete B[k]; } return JSON.stringify(canon(A)) === JSON.stringify(canon(B)); };
 const SE_TITLE = /S\/E in filename \+ title match/;
+const ADDRESS = /[\p{L}\p{N}._%+\-]+@[\p{L}\p{N}\-]+(?:\.[\p{L}\p{N}\-]+)+/gu; // anything address-shaped in a grid, which the publish guard would refuse
 const fmt = (n) => Number(n).toLocaleString('en-US');
 const pad = (s, n) => String(s).padEnd(n), lpad = (s, n) => String(s).padStart(n);
 const secs = (ms) => (ms / 1000).toFixed(1) + ' s';
@@ -112,7 +113,7 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
   if (!keepOverlay) { overlay.clear(); deleted.clear(); }
   const t0 = Date.now(), snap = { ...attempts.byName };
   const shows = new Map(), eps = new Map(), picks = [], errors = [], types = new Map();
-  let identical = 0, compared = 0, ran = 0;
+  let identical = 0, compared = 0, ran = 0, addresses = 0;
   const entries = LIST.shows.filter((e) => !onlySlug || slugOf(e.name) === onlySlug);
   entries.forEach((entry, i) => {
     progress(label, i, entries.length);
@@ -120,6 +121,7 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
     try { r = mod.matchShow(entry); } catch (e) { errors.push(entry.name + ': ' + e.message); return; }
     if (!r) return;
     ran++;
+    if (!r.noTvmaze) addresses += (JSON.stringify(r).match(ADDRESS) || []).length;
     const slug = slugOf(entry.name);
     const sh = shipped.get(slug);
     if (sh && !r.noTvmaze) { compared++; if (same(r, sh)) identical++; }
@@ -142,7 +144,7 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
     shows.set(slug, s);
   });
   const w = {}; for (const k of Object.keys(attempts.byName)) w[k] = attempts.byName[k] - (snap[k] || 0);
-  return { label, shows, eps, picks, errors, ran, identical, compared, types, ms: Date.now() - t0, writes: w };
+  return { label, shows, eps, picks, errors, ran, identical, compared, addresses, types, ms: Date.now() - t0, writes: w };
 }
 
 function totals(p) {
@@ -171,7 +173,7 @@ const shippedBefore = readShipped();
 const placedIn = (g) => (g && g.seasons ? g.seasons.reduce((n, se) => n + se.episodes.filter((e) => e.file).length, 0) : 0);
 
 // ---------------------------------------------------------------- run
-const EMPTY = { label: 'skipped', shows: new Map(), eps: new Map(), picks: [], errors: [], ran: 0, identical: 0, compared: 0, types: new Map(), ms: 0, writes: {} };
+const EMPTY = { label: 'skipped', shows: new Map(), eps: new Map(), picks: [], errors: [], ran: 0, identical: 0, compared: 0, addresses: 0, types: new Map(), ms: 0, writes: {} };
 let B = EMPTY;
 if (BEFORE) { console.error('before pass...'); B = runPass('before', BEFORE, shippedBefore.grids); }
 console.error('after pass...');
@@ -236,6 +238,7 @@ say('TIMING AND WRITES');
 say('  before pass ' + secs(B.ms) + ', after pass ' + secs(A.ms) + (A2 ? ', after pass again ' + secs(A2.ms) : '') + '   (shows with candidates: ' + B.ran + ' and ' + A.ran + ')');
 say('  failures: before ' + B.errors.length + ', after ' + A.errors.length + (A.errors.length ? '  e.g. ' + A.errors.slice(0, 3).join(' | ') : ''));
 if (BEFORE) say('  harness check: the old matcher reproduced ' + B.identical + ' of ' + B.compared + ' shipped grids exactly (ignoring matchedAt and addedAt)');
+say('  address-shaped strings in the grids it built: before ' + B.addresses + ', after ' + A.addresses + (A.addresses === 0 ? '  (none reaches a grid)' : '  (EXPECTED 0, investigate)'));
 say('  grid files written in one run: before ' + gridWrites(B) + ' (every grid, every run, including self-lists it then threw away)');
 say('                                 after  ' + gridWrites(A) + ' (grids whose content differs from the shipped file; first run after the change)');
 if (A2) say('                                 after, run again on the result: ' + gridWrites(A2) + (gridWrites(A2) === 0 ? '  (a repeat run writes nothing)' : '  (EXPECTED 0, investigate)'));
