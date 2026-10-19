@@ -74,6 +74,7 @@
     async load(ep, opts) {
       opts = opts || {};
       this.ep = ep;
+      this._summed = false; this._fail = null; // a new episode: its end-of-play figures are due again
       this._teardown(); // stop the previous episode now, not after the server lookup
       this._resetUi();
       this._setTitle();
@@ -108,7 +109,7 @@
       const v = this.v, q = v.getVideoPlaybackQuality ? v.getVideoPlaybackQuality() : null;
       return {
         when: new Date().toISOString(), episode: this.ep && { id: this.ep.id, title: this.ep.title, show: this.ep.show },
-        state: this.core.state, source: this.core.source && { label: this.core.source.label, url: this.core.source.url },
+        state: this.core.state, failure: this._fail || null, source: this.core.source && { label: this.core.source.label, url: this.core.source.url },
         time: Math.round(v.currentTime * 10) / 10, duration: Math.round((v.duration || 0) * 10) / 10, ahead: Math.round(this._ahead() * 10) / 10,
         readyState: v.readyState, networkState: v.networkState, error: v.error && v.error.code, size: v.videoWidth + 'x' + v.videoHeight,
         frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, pageDrawing: !!this._drawing, summary: this.core.summary(), decisions: this.core.log,
@@ -131,11 +132,11 @@
           'time       ' + d.time + ' / ' + d.duration + ' s   buffered ahead ' + d.ahead + ' s',
           'picture    ' + d.size + '   frames ' + (d.frames ? d.frames.total + ', dropped ' + d.frames.dropped : 'n/a') + '   timing ' + d.env.frameTiming,
           'startup    ' + (m.startupMs == null ? '-' : (m.startupMs / 1000).toFixed(2) + ' s'),
-          'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
+          'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s, longest ' + ((m.longestPauseMs || 0) / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
           'fixes      tried ' + m.actions + '  worked ' + m.recovered + '  switches ' + m.switches,
           'network    ' + (d.env.net ? d.env.net.type + ' ~' + d.env.net.downMbps + ' Mbps' : 'n/a'),
           '',
-        ].concat(d.decisions.slice(-8).map((x) => String(x.sec).padStart(6) + 's  ' + x.did + (x.kind ? ' ' + x.kind : '') + (x.ms ? ' ' + x.ms + 'ms' : '') + (x.lag != null ? ' lag ' + x.lag + 's' : '') + (x.ahead != null ? ' ahead ' + x.ahead + 's' : '') + (x.to ? ' -> ' + x.to : '')));
+        ].concat(d.decisions.slice(-8).map((x) => String(x.sec).padStart(6) + 's  ' + x.did + (x.kind ? ' ' + x.kind : '') + (x.trigger ? ' by ' + x.trigger : '') + (x.ms ? ' ' + x.ms + 'ms' : '') + (x.lag != null ? ' lag ' + x.lag + 's' : '') + (x.ahead != null ? ' ahead ' + x.ahead + 's' : '') + (x.to ? ' -> ' + x.to : '')));
         box.querySelector('pre').textContent = lines.join(String.fromCharCode(10));
       };
       draw();
@@ -156,7 +157,7 @@
       });
     }
     destroy() {
-      if (this.ep) this._emit({ type: 'summary', summary: this.core.summary(), at: now() });
+      this._emitSummary();
       this.ep = null;
       clearInterval(this._loop);
       if (this._raf && root.cancelAnimationFrame) cancelAnimationFrame(this._raf);
@@ -266,9 +267,9 @@
       this._on(v, 'progress', () => this._progress());
       this._on(v, 'loadedmetadata', () => { this._progress(); if (v.textTracks.length) { ui.cc.classList.add('vpx-has'); v.textTracks[0].mode = 'hidden'; } });
       this._on(v, 'error', () => { if (!v.getAttribute('src')) return; this.core.event('error', now(), { code: v.error && v.error.code, neverLoaded: v.readyState === 0 }); });
-      this._on(v, 'ended', () => { this._icons(); this._emit({ type: 'summary', summary: this.core.summary(), at: now() }); if (this.o.onEnded) this.o.onEnded(this); });
+      this._on(v, 'ended', () => { this._icons(); this._emitSummary(); if (this.o.onEnded) this.o.onEnded(this); });
       this._on(document, 'fullscreenchange', () => { const on = document.fullscreenElement === r; r.classList.toggle('vpx-fs', on); ui.fs.innerHTML = ICON[on ? 'exit-fullscreen' : 'fullscreen'] || ''; ui.fs.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); });
-      this._on(root, 'pagehide', () => this._emit({ type: 'summary', summary: this.core.summary(), at: now() }));
+      this._on(root, 'pagehide', () => this._emitSummary());
       this._icons();
     }
 
@@ -283,7 +284,7 @@
         if (a.delayMs) { const t = setTimeout(go, a.delayMs); this._timers.add(t); } else go();
         return;
       }
-      if (a.type === 'show-failure') return this._failure(a.reason);
+      if (a.type === 'show-failure') return this._failure(a.reason, a.cause, a.code);
       if (a.type === 'show-notice') return this._notice(a.reason);
     }
 
@@ -328,6 +329,7 @@
         now: now(), t: v.currentTime, paused: v.paused, seeking: v.seeking, ended: v.ended, ready: v.readyState, hidden,
         hasVideo: v.readyState >= 1 ? v.videoWidth > 0 : undefined,
         frames: this._rvfc ? this._frames : total, dropped, totalFrames: total, ahead: this._ahead(),
+        bufEnd: this._bufEnd(), duration: v.duration, networkState: v.networkState, // the buffer watch (SP-021)
       });
       const st = this.core.state;
       this.root.classList.toggle('vpx-wait', st === 'buffering' || st === 'loading' || st === 'recovering');
@@ -335,6 +337,16 @@
       if (st === 'playing' && this._statusUntil && now() > this._statusUntil) this._status('');
     }
     _ahead() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i) - v.currentTime; return 0; }
+    // Where the buffered range under the playhead ends (the playhead itself when nothing is buffered there).
+    _bufEnd() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i); return v.currentTime; }
+    // The end-of-play figures, once per episode: on ended, on leaving (destroy) or on pagehide, whichever comes first.
+    // The frame counts come from the video element, which the core does not see.
+    _emitSummary() {
+      if (!this.ep || this._summed) return;
+      this._summed = true;
+      const q = this.v.getVideoPlaybackQuality ? this.v.getVideoPlaybackQuality() : null;
+      this._emit({ type: 'summary', summary: this.core.summary(), frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, at: now() });
+    }
 
     _emit(e) {
       this.events.push(e); if (this.events.length > 200) this.events.shift();
@@ -476,12 +488,13 @@
       const first = c.querySelector('button'); if (first && !c.contains(document.activeElement)) first.focus({ preventScroll: true });
     }
     _hideCard() { this.ui.card.hidden = true; this.ui.card.innerHTML = ''; this.ui.card.className = 'vpx-card'; }
-    _failure(reason) {
+    _failure(reason, cause, code) {
       this._status('');
+      this._fail = { reason: reason || '', cause: cause || '', code: code == null ? null : code, at: Math.round(now()) }; // the Report button sends this with the diagnostics
       const f = this.ep && (this.ep.files || [])[0];
-      const net = /net|stall|slow/.test(reason || '');
+      const net = cause === 'network'; // the core decides the cause; the page does not guess it from the reason text
       this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON['no-signal'] || '') + '</span><p class="vpx-k">' + (net ? 'The Archive is not sending this episode right now' : 'This episode will not play in this browser') + '</p>'
-        + '<p class="vpx-dim">' + (net ? 'We tried every copy and both of its servers. They hiccup now and then; trying again in a minute usually works.' : 'We tried every copy we have. You can download the file and play it in VLC.') + '</p>'
+        + '<p class="vpx-dim">' + (net ? 'We tried every copy and every server we could reach. They hiccup now and then; trying again in a minute usually works.' : 'We tried every copy we have. You can download the file and play it in VLC.') + '</p>'
         + '<div class="vpx-acts"><button data-c="retry" class="vpx-primary">' + (ICON.retry || '') + 'Try again</button>'
         + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '')
