@@ -7,8 +7,10 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const PROFILE = require('./profile');
 const { rankEpisode } = require('../../player/tools/rank-sources');
-// The JSON loader the browser code inlines as a plain function, so the page and the tests run the same code (SP-006).
+// Two helpers the browser code inlines as plain functions, so the page and the tests run the same code:
+// the one JSON loader (SP-006) and the pure parts of saving and importing Mine (SP-012).
 const { fetchJsonSource: FETCH_JSON_SRC } = require('./app-fetch');
+const { meSource: ME_SRC } = require('./app-me');
 // Builds what the browser gets per episode: the best copy (url/item/p/f/m) plus same-episode backups (alt),
 // ranked by player/tools/rank-sources.js (lighter clean copies first; wrong-episode "alternates" dropped).
 function epOut(e) {
@@ -392,10 +394,27 @@ const $=(id)=>document.getElementById(id);
 const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
 // MINE: list, likes, history and reports live in one blob (voidtv:me) so a later sync code can move it whole.
-const ME=(()=>{let m=null;try{m=JSON.parse(localStorage.getItem('voidtv:me')||'null')}catch(_){}if(!m||m.v!==1)m={v:1,list:{},likes:{},history:{},reports:{}};
+// A save writes what this tab CHANGED onto what is stored right now (see scripts/lib/app-me.js), so a tab that only
+// plays a video cannot erase a like or a list entry saved in another tab. TAB names this tab in the history record.
+const ME_KEY='voidtv:me';
+let ME_BASE=null,ME_RAW=null;
+${ME_SRC}
+const TAB=(()=>{try{let t=sessionStorage.getItem('voidtv:tab');if(!t){t=window.crypto&&crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36);sessionStorage.setItem('voidtv:tab',t)}return t}catch(_){return Math.random().toString(36).slice(2)+Date.now().toString(36)}})();
+const ME=(()=>{let raw=null,m=null;try{raw=localStorage.getItem(ME_KEY);m=JSON.parse(raw||'null')}catch(_){}ME_RAW=raw;m=meClean(m);ME_BASE=meCopy(m);
  try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}catch(e){}localStorage.removeItem(k)}}catch(_){}
  return m})();
-function saveMe(){try{localStorage.setItem('voidtv:me',JSON.stringify(ME))}catch(_){}}
+function mePlaying(slug,se,e){const c=VP&&VP._cur;return !!(c&&c.slug===slug&&c.se===se&&c.e===e&&VP.v&&!VP.v.paused)}
+function meSync(){let raw=null;try{raw=localStorage.getItem(ME_KEY)}catch(_){return false}
+ const ops=meDiff(ME_BASE,ME);if(!ops.length&&raw===ME_RAW)return false;
+ let st=null;try{st=JSON.parse(raw||'null')}catch(_){}
+ const merged=meApply(meClean(st),ops,{tab:TAB,now:Date.now(),playing:mePlaying});let out=raw;
+ if(ops.length||(raw!=null&&st===null)){try{out=JSON.stringify(merged);localStorage.setItem(ME_KEY,out)}catch(_){return false}}
+ const changed=meDiff(ME,merged).length>0;for(const k of Object.keys(ME))delete ME[k];Object.assign(ME,merged);ME_BASE=meCopy(merged);ME_RAW=out;return changed}
+function saveMe(){meSync()}
+function meChanged(){if(state.view==='me')render();else if(state.show)document.querySelectorAll('.mine[data-slug="'+state.show.slug+'"]').forEach(e=>{e.innerHTML=acts(state.show)})}
+window.addEventListener('storage',(ev)=>{if(ev.key&&ev.key!==ME_KEY)return;if(meSync())meChanged()});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&meSync())meChanged()});
+meSync();
 const hidden=(s)=>ME.likes[s.slug]===-1;
 const isAdult=(s)=>!!(s&&(s.adult||s.type==='Late Night'||(s.tags||[]).includes('Late Night')));
 const gated=(s)=>isAdult(s)&&!ME.adult;
@@ -422,7 +441,9 @@ function repBtn(s,se,ep){const on=!!ME.reports[repKey(s,se,ep)];return '<button 
 function shareMoment(){const s=state.show,se=s.seasons[state.se],ep=se.episodes[state.e];const t=VP?Math.floor(VP.currentTime):0;const u=location.origin+urlFor(s.slug)+'?s='+se.season+'&e='+ep.n+(t>5?'&t='+t:'');const done=()=>{const b=$('share');if(b){b.innerHTML='<i class="ico check"></i>Link copied';setTimeout(()=>{if($('share'))$('share').innerHTML='<i class="ico arrow-up"></i>Share this moment'},2200)}};if(navigator.clipboard)navigator.clipboard.writeText(u).then(done,()=>prompt('Copy this link',u));else prompt('Copy this link',u)}
 function report(){const s=state.show,se=s.seasons[state.se],ep=se.episodes[state.e],k=repKey(s,se,ep);if(ME.reports[k])delete ME.reports[k];else{ME.reports[k]={show:s.show,season:se.season,ep:ep.n,name:ep.name,item:ep.item,url:ep.url,at:Date.now()};track('report',{slug:s.slug,ep:se.season+'x'+ep.n,x:(ep.item||'')+' '+(ep.url||'').slice(-90)})}saveMe();const b=$('rep');if(b)b.outerHTML=repBtn(s,se,ep)}
 function exportMe(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(ME,null,1)],{type:'application/json'}));a.download='voidtv-mine.json';a.click()}
-function importMe(f){if(!f)return;f.text().then(t=>{if(t.length>2e6)throw 0;const m=JSON.parse(t);if(!m||m.v!==1)throw 0;const ok=k=>/^[a-z0-9-]{1,120}$/.test(k);for(const k of ['list','likes','history','reports']){const src=m[k];if(!src||typeof src!=='object'||Array.isArray(src))continue;for(const [sl,val] of Object.entries(src)){if(!ok(sl))continue;if(k==='likes'&&![1,-1,0].includes(val))continue;if(k==='list'&&typeof val!=='number')continue;if((k==='history'||k==='reports')&&(!val||typeof val!=='object'||Array.isArray(val)))continue;ME[k][sl]=val}}saveMe();render()}).catch(()=>alert('That file is not a VOIDtv export.'))}
+// An import is merged, never laid over: per entry the newest time wins, every entry is checked (numbers where numbers
+// belong), and a reported file's key (show/season/episode, with slashes) has its own pattern. See meImportMerge.
+function importMe(f){if(!f)return;f.text().then(t=>{if(t.length>2e6)throw 0;meImportMerge(ME,JSON.parse(t))}).then(()=>{saveMe();render()},()=>alert('That file is not a VOIDtv export.'))}
 function clearMe(){ME.list={};ME.likes={};ME.history={};ME.reports={};saveMe();render()}
 function mePage(){const cont=histShows(),mine=listShows(),liked=likedShows(),hid=Object.keys(ME.likes).filter(k=>ME.likes[k]===-1).map(k=>BY_SLUG[k]).filter(Boolean),reps=Object.entries(ME.reports).sort((a,b)=>b[1].at-a[1].at);
  let h='<div class="me"><button class="back" onclick="go(\\'\\')"><i class="ico back"></i> Browse</button><div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/ui/doors/mine.png" alt=""><div><h1>Mine</h1></div></div><p class="g">Your list, likes and watch history live in this browser only for now. Export to move them to another device; a sync code is coming.</p><div class="acts"><button class="btn" onclick="exportMe()">Export</button><label class="btn">Import<input type="file" accept="application/json,.json" style="display:none" onchange="importMe(this.files[0])"></label><button class="btn" onclick="if(confirm(\\'Clear your list, likes and history on this device?\\'))clearMe()">Clear</button></div>';
@@ -662,7 +683,7 @@ async function go(slug,replace){state.person=null;state.open=null;state.menu=nul
 function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(true)}
 function next(){const s=state.show;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
 function remember(){const s=state.show;const r=ME.history[s.slug];ME.history[s.slug]={se:state.se,e:state.e,at:Date.now(),pos:(r&&r.se===state.se&&r.e===state.e)?(r.pos||0):0};saveMe()}
-function resume(s){const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
+function resume(s){meSync();const r=ME.history[s.slug];if(r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e])return r;return{se:0,e:0}}
 function bgReel(view){const v=document.querySelector('.bgvid');if(!v)return;const want=false;if(want){if(!v.getAttribute('src')){v.src=BASE+'assets/brand/video/reel.mp4';v.load()}v.classList.add('on');v.play().catch(()=>{})}else{v.classList.remove('on');if(!v.paused)v.pause()}}
 function render(){const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;document.body.dataset.view=state.show?'show':state.view==='me'?'me':state.view==='person'?'person':state.view==='tv'?'tv':any?'grid':'home';bgReel(document.body.dataset.view);document.body.dataset.era=(state.show?state.show.type:state.type)==='Classic TV'?'classic':'';if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else if(state.view==='about')keepTracks(aboutPage);else if(state.view==='cash')keepTracks(cashPage);else if(state.view==='promos')keepTracks(promosPage);else keepTracks(browse);watchTracks();promoFill();setTimeout(field,0);const rk=location.pathname+'|'+document.body.dataset.view;if(rk!==state.lastRk){state.lastRk=rk;track('view',{slug:state.show?state.show.slug:(state.view==='person'?'p'+state.personId:''),x:state.type||state.tag||''})}}
 document.addEventListener('keydown',(k)=>{if(k.ctrlKey||k.metaKey||k.altKey)return;if(k.target.matches&&k.target.matches('input:not([type=range]),select,textarea,[contenteditable]'))return;if(k.key==='/'){k.preventDefault();$('q').focus();return}if(state.view==='tv'&&(k.key==='ArrowUp'||k.key==='ArrowDown')){k.preventDefault();surf(k.key==='ArrowUp'?-1:1);return}if(k.key==='Escape'&&state.show&&!document.fullscreenElement)go('')});
