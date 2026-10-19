@@ -264,6 +264,8 @@ function matchShow(entry) {
 
 // The decision for one show, with no disk access of its own: its grid, or { noTvmaze: true } when there is nothing to list.
 // ctx: ov (this show's overrides), readDead, firstAdded, and tags (a Map the caller may pass in to see why each file was placed or turned away).
+// HQ and linkcheck key a file by the item and the name the grid shows, which is the masked one; the raw name is tried too.
+const fileKeys = (itemId, name) => [itemId + '|' + name, itemId + '|' + noEmail(name)];
 // Every grid leaves through noEmail: the episode names, titles and file names it copies from TVmaze and from Archive items are masked.
 function gridFor(entry, cand, tv, ctx = {}) { return noEmail(decideGrid(entry, cand, tv, ctx)); }
 function decideGrid(entry, cand, tv, ctx) {
@@ -272,13 +274,16 @@ function decideGrid(entry, cand, tv, ctx) {
   const tags = ctx.tags || new Map();
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
   const aliases = [...(ov.aliases || []), ...(BUILTIN_ALIASES[slug(show)] || [])].map(norm).filter(Boolean);
-  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, aliases); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
+  const DEAD = (ctx.readDead || (() => ({})))();
+  const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]); // B's rejections in HQ, and the files linkcheck retired
+  // The self-list paths (no TVmaze list, and the fallback) read the raw item files, not the strict pass's options, so a rejected or dead file is taken out of their candidates here.
+  const withoutRejected = (c) => rejected.size ? { ...c, items: c.items.map((it) => ({ ...it, files: it.files.filter((f) => !fileKeys(it.id, f.name).some((k) => rejected.has(k))) })).filter((it) => it.files.length) } : c;
+  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const nets = typeof tv.network === 'string' && norm(tv.network) ? [norm(tv.network)] : []; // the show's own network, for the title test
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
   const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
-  const DEAD = (ctx.readDead || (() => ({})))();
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
   const byDate = new Map(tv.episodes.filter((e) => e.airdate).map((e) => [e.airdate, e]));
   const firstYear = tv.premiered ? +tv.premiered.slice(0, 4) : 0;
@@ -382,8 +387,8 @@ function decideGrid(entry, cand, tv, ctx) {
       // A file that plays in a browser beats a cleaner-named one that will not; then confidence.
       // B's decisions from HQ (catalog/overrides.json): rejectFiles never show again; acceptFiles win the
       // episode outright at full confidence (he watched it play), even when the codec judge was unsure.
-      const fkeys = (p) => [p.item + '|' + p.name, p.item + '|' + noEmail(p.name)]; // HQ and linkcheck key a file by the name the grid shows, which is the masked one
-      const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]), accepted = new Set(ov.acceptFiles || []);
+      const fkeys = (p) => fileKeys(p.item, p.name);
+      const accepted = new Set(ov.acceptFiles || []);
       let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !fkeys(o).some((k) => rejected.has(k))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
       const acc = opts.find((o) => fkeys(o).some((k) => accepted.has(k)));
       if (acc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; opts = [acc, ...opts.filter((o) => o !== acc)]; }
@@ -403,7 +408,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
   if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
-    const sg = selfGrid(entry, fallbackCand(cand, tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets);
+    const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
     if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; return sg; }
   }

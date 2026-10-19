@@ -220,6 +220,28 @@ describe('the self-list fallback gate (CP-001)', () => {
     assert.equal(grid.selfListed, true);
     assert.equal(grid.seasons.reduce((n, s) => n + s.episodes.length, 0), 25);
   });
+  test('files rejected in HQ or retired as dead stay out of the self-list, by the raw or the masked name, with or without a TVmaze list', () => {
+    const id = 'zork-show-season-9';
+    const listed = (grid) => grid.seasons.flatMap((s) => s.episodes).map((e) => e.file && e.file.name);
+    const build = (files, tv, ov = {}, dead = {}) => M.gridFor(ENTRY, { items: [{ id, title: 'Zork Show Season 9', files }] }, tv, { tags: new Map(), ov, readDead: () => dead });
+    assert.equal(listed(build(evidence(25), mkTv())).length, 25, 'nothing rejected: all listed');
+    const g = build(evidence(25), mkTv(), { rejectFiles: [id + '|Zork Show S09E03.mp4'] }, { [id + '|Zork Show S09E04.mp4']: { at: 'x' } });
+    assert.equal(g.selfListed, true);
+    assert.ok(!listed(g).includes('Zork Show S09E03.mp4'), 'rejected in HQ');
+    assert.ok(!listed(g).includes('Zork Show S09E04.mp4'), 'retired by linkcheck');
+    assert.equal(listed(g).length, 23);
+    // HQ keys a file by the name the grid shows, which has the address masked; the raw name works too
+    const mailed = () => evidence(25).map((f, i) => (i === 4 ? { ...f, name: 'Zork Show S09E05 bob@example.com.mp4' } : f));
+    assert.ok(listed(build(mailed(), mkTv())).includes('Zork Show S09E05 [email]'), 'listed with the address masked');
+    assert.ok(!listed(build(mailed(), mkTv(), { rejectFiles: [id + '|Zork Show S09E05 [email]'] })).some((n) => /S09E05/.test(n || '')), 'rejected by the masked name');
+    assert.ok(!listed(build(mailed(), mkTv(), { rejectFiles: [id + '|Zork Show S09E05 bob@example.com.mp4'] })).some((n) => /S09E05/.test(n || '')), 'rejected by the raw name');
+    // a show with no TVmaze list is listed from its own files: the same filter
+    const plain = () => range(6).map((i) => mkFile(`Zork Show Episode ${pad2(i)}.mp4`));
+    assert.equal(listed(build(plain(), null)).length, 6);
+    const n = listed(build(plain(), null, { rejectFiles: [id + '|Zork Show Episode 02.mp4'] }, { [id + '|Zork Show Episode 03.mp4']: {} }));
+    assert.deepEqual(n.filter((x) => /Episode 0[23]/.test(x)), [], 'neither the rejected nor the dead file');
+    assert.equal(n.length, 4);
+  });
   test('decisions write nothing to disk', () => {
     noWrites(() => { run(evidence(25)); run(range(25).map((i) => mkFile(`Zork Show Reaction S09E${pad2(i)}.mp4`, { ep: se(9, i) }))); });
   });
