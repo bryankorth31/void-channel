@@ -42,9 +42,15 @@ need a relay in between; that is a separate decision (Cloudflare terms and cost)
 
 ### What the core watches (sampled every 250 ms, plus every presented frame)
 
+- **Buffer watch (hop before the picture stops):** the buffered end has not moved for 4 s while less than
+  10 s is buffered ahead, and the picture is still playing (or has just stopped with under 1 s left). The
+  download has stalled, so the core opens a fresh connection to the item's other server now, instead of
+  waiting for the picture to stop and then 3.6 s more. See "The buffer watch" below.
 - **Starved stall:** the playhead stops with under 1 s buffered: the server stopped sending. After 3 s the
   player opens a fresh connection to the item's other server at the same moment; if that starves too, it
-  keeps cycling (the first may have recovered), and after two full passes it tries the next copy.
+  keeps cycling (the first may have recovered), and after two full passes it tries the next copy. A copy
+  with one server only (the lookup failed) has nowhere to hop: if it is the last source it is reloaded once
+  before the player gives up (the Archive link may redirect to another server), and never more than once.
 - **Buffered stall:** the playhead stops with video still buffered (a browser hiccup). Left alone for 6 s,
   then the nudge / reload / switch ladder below.
 - **Freeze:** the sound clock moves but no new frames arrive for 1.5 s, *while the page is actually being
@@ -65,10 +71,97 @@ need a relay in between; that is a separate decision (Cloudflare terms and cost)
 3. **Switch** to the next source: same copy on the backup server, then the Archive's normal link, then the
    next copy. Position is kept.
 4. **Fail** honestly: "The Archive is not sending this episode right now" or "will not play in this
-   browser", with Try again, Download, Next episode and Report. Never an endless spinner.
+   browser", with Try again, Download, Next episode and Report. Never an endless spinner. Which text is
+   shown is decided by the cause the core attaches to the failure, never by the page (next section).
 
 After every action it waits 2.5 s before judging again, and only reports "recovered" after 5 s of clean
 playback.
+
+### Why it failed: the cause table
+
+The `failed` event and the `show-failure` action carry `cause`: `network`, `format` or `playback`, plus
+`reason` (what the last trouble was) and `code` (the last media error code, if any). The card text, the
+analytics code and the Sentry title all follow the cause. Before this table the page guessed from the reason
+text with a regex, so an Archive hang that ended as `starved` was shown as "will not play in this browser",
+told the viewer to download the file, and was logged as "format not supported" (finding SP-019).
+The last trouble decides the cause when an episode ends after mixed trouble. In the table, "`error` event"
+means the analytics event of that name (blob1 = `error`, the number in n), not an event inside the core; the `pq:`
+names are the `x` of an `act` event (step before kind: `pq:action:<step>:<kind>`).
+
+| Reason | Cause | Viewer sees | Logged | Core does next |
+|---|---|---|---|---|
+| `starved` (picture stopped with under 1 s buffered, or the buffer watch fired) | network | "Reconnecting..." then "Switching to a backup copy..."; if everything fails: "The Archive is not sending this episode right now" with Try again, Download, Next, Report | `pq:stall` (pos = seconds buffered), `pq:action:switch:starved`, `pq:switch>copy1@backup`; on failure an `error` event with n = 2 and Sentry "Playback failed (network)" | hop to the copy's other server, cycling twice, then the next copy; a lone last server is reloaded once (`pq:action:retry:starved`); then fail |
+| `stall` (picture stopped with video buffered) | network | "Catching up...", "Reconnecting...", then the same card | `pq:stall`, `pq:action:nudge:stall`, `pq:action:reload:stall`, `pq:action:switch:stall` | nudge at 6 s, reload at 12 s, switch at 18 s; after the last source, fail |
+| `slow-start` (nothing plays within 15 s) | network | "Reconnecting...", the same card at the end | `pq:action:switch:slow-start` | next source at once, each gets its own 15 s |
+| `error-net` (media error 2, or a source that never loaded) | network | "Reconnecting...", the same card at the end | `error` event n = 2, `pq:action:reload:error-net` then `pq:action:switch:error-net` | reload once after 1.5 s, then the next source, then fail |
+| `error-fatal` with code 3 (decode error) | format | "This episode will not play in this browser", with Download, Next, Report | `error` event n = 3, Sentry "Playback failed (decode)" | skip to the next copy at once (another server of the same file cannot help); then fail |
+| `error-fatal` with code 4 (not supported) | format | the same card | `error` event n = 4, Sentry "(format not supported)" | the same |
+| `error-fatal` with code 1 (aborted) | playback | the same card | `error` event n = 1, Sentry "(aborted)" | the same |
+| `freeze`, `drift` (repeated until the ladder ends) | playback | nothing at first, then "Switching to a backup copy..."; the same card at the end | `pq:freeze`, `pq:drift`, `pq:action:*`; on failure an `error` event with n = 0 | nudge, reload, switch, then fail |
+| `silent` (no sound decoded) | playback | "Switching to a backup copy..."; on the last copy the notice "No sound for this episode in this browser", and it keeps playing | `pq:silent`, `pq:silent-final`; no `error` event | next copy; the last copy keeps playing with the notice |
+| `no-sources` (no copy this browser can play) | format | "This episode will not play in this browser" | `error` event n = 4 | fail at once |
+
+There is no separate `error-decode` or `error-format` reason in the core: both are `error-fatal`, told apart
+by `code`. A decode error keeps its own number (3) in the logs so Sentry can tell it from a file type the
+browser does not support (4). The report sent from the failure card carries `cause`, `reason` and `code`.
+
+### The buffer watch
+
+Every earlier trigger waited for the picture to stop, so the best case was about 4 s of stopped picture
+plus the new connection (measured 0.1 to 3.5 s), and a "no pause over 3 seconds" goal was out of reach
+(finding SP-021). The browser keeps 10 to 40 s of video ahead, so a hang shorter than that never shows
+until the buffer is gone. The core now also watches where the buffered range ends:
+
+- **When it fires:** the buffered end has not advanced by more than 0.05 s for 4 s (`BUFFER_STALL_MS`) and
+  less than 10 s (`BUFFER_LOW_S`) is buffered ahead, while the picture plays (or has stopped with under 1 s
+  buffered). It counts as a starving stall: one `stall` event (with `trigger: "buffer"`, `ahead`, `flatMs`
+  and `grewS`, the seconds of video the buffer gained in the last 10 s or so) and then the same hop to the
+  other server. The hop discards what was buffered (one reused `<video>`), so the pause the viewer sees is
+  the new connection's start, not 4 s of waiting plus that.
+- **When it never fires:** while the viewer has paused, is seeking, or the episode has ended (each also
+  restarts the 4 s clock); while the buffer is still growing, however slowly (a slow line is not a hung
+  server); while the browser itself paused the download (`networkState` idle, the browser decided it had
+  enough); when the whole file is buffered (a flat buffer at the end of the file); when the file length is
+  not known; when the playhead is stuck with video buffered (a browser hiccup, the gentle ladder's job);
+  and not during the 2.5 s settle after any action.
+- **Pause maths:** the stopped time the summary reports (`stallMs`, `rebufferRatio`, `longestPauseMs`) now
+  runs from the moment the picture stopped, or the hop, to the picture coming back, across hops. Before,
+  a hop reset the clock and the pauses that matter most were not counted.
+- **Known risk to watch in the soak test:** if some browser keeps `networkState` at "loading" while it holds
+  its download back on purpose, a healthy session shows `stall` events with `trigger: "buffer"` and
+  needless hops. Healthy play must show none; if it does, raise `BUFFER_STALL_MS` or lower `BUFFER_LOW_S`
+  in the config block at the top of `core.js`.
+
+### What leaves the page
+
+Everything goes through the host's `onEvent`. VOIDtv's `vpEvent` (in `scripts/lib/app.js`) sends, through
+the existing `/api/e` intake (no server change; `pos`, `dur` and `n` are stored as numbers):
+
+| Event | Sent as | Numbers |
+|---|---|---|
+| first picture | `act` `pq:started` | n = start time in ms |
+| a stall | `act` `pq:stall` | pos = seconds buffered when it began |
+| trouble and fixes | `act` `pq:<event>[:<step>][:<kind>][><to>]`, for example `pq:freeze`, `pq:drift`, `pq:action:nudge:freeze`, `pq:switch>copy1@backup`, `pq:recovered:switch:starved`, `pq:silent` | none |
+| end of play (once per episode: on ended, on leaving the page, or on pagehide, whichever is first; only if something played) | `act` `pq:summary` | pos = rebuffer ratio x 1000, dur = watch time in ms, n = dropped frames x 1000 / frames |
+| failure | `error` | n = 2 network, 3 decode, 4 format, otherwise the media error code (0 if none) |
+| Report on the failure card | `report` | x = `fail:<cause>:<reason> <item>` |
+
+The summary is flushed at once (the page's own pagehide handler runs before the player's and would
+otherwise have missed it). Sentry gets the same trouble reports as before, now also sent on pagehide
+because the lazy SDK is loaded (`Sentry.forceLoad()`) when the first picture appears; nothing is added that
+identifies a viewer (`sendDefaultPii` stays false).
+
+Reading it without any AI (Cloudflare dashboard, Analytics Engine SQL, dataset `voidtv_events`):
+
+```
+-- median and slowest-tenth start time, in ms, and how many plays
+SELECT quantileWeighted(0.5)(double3, _sample_interval) AS median_ms, quantileWeighted(0.9)(double3, _sample_interval) AS p90_ms, SUM(_sample_interval) AS plays
+FROM voidtv_events WHERE timestamp > NOW() - INTERVAL '7' DAY AND blob1 = 'act' AND blob14 = 'pq:started'
+
+-- plays, average rebuffer ratio (per mille) and average dropped frames (per mille), split by device and browser
+SELECT blob8 AS device, blob9 AS browser, SUM(_sample_interval) AS plays, SUM(double1 * _sample_interval) / SUM(_sample_interval) AS rebuffer_permille, SUM(double3 * _sample_interval) / SUM(_sample_interval) AS dropped_permille
+FROM voidtv_events WHERE timestamp > NOW() - INTERVAL '7' DAY AND blob1 = 'act' AND blob14 = 'pq:summary' GROUP BY device, browser ORDER BY plays DESC
+```
 
 ### Server lookup
 
@@ -92,11 +185,20 @@ Polo: two servers, both serving at several times the 0.1 MB/s the episode needs.
 
 ## Testing
 
-- `node --test player/test/core.test.js` — 17 scenarios: healthy play, short buffering left alone,
+- `node --test player/test/core.test.js`: 47 scenarios: healthy play, short buffering left alone,
   freeze nudged and recovered, repeated freezes escalate to the backup server, drift caught, natural lag
   ignored, long stall ladder, network error retry then switch then fail, decode error switches at once,
   slow start, paused viewer untouched, hidden tab, browsers without frame timing, viewer seeking, Retry,
-  no sources, summary maths.
+  no sources, summary maths, starved stalls and server cycling; and since fix batch B: the cause of every
+  kind of failure, a lone server reloaded once, the buffer watch (fires on a flat buffer while playing;
+  silent while paused, seeking, ended, growing, idle, complete or unmeasured; waits out the settle time)
+  and the pause maths across hops.
+- `player/lab/hop.html`: the same core driven by invented samples on a made-up clock: no video, nothing
+  downloaded. It shows, with and without the buffer watch, how long after the download stops the core
+  hops, how long the picture stays stopped, and the cause of a final failure. Seven cases carry an "as
+  designed" badge. Open it from the lab's header link, or double-click `player\LAB.cmd` and go to `/lab/hop.html`.
+- `player/lab/states.html`: every card and motion state frozen on a real player, no video: tuning in,
+  recovering, the network failure card, the format failure card, up next.
 - `player/lab/` — the real thing against real Archive episodes, with live diagnostics and fault buttons.
   Verified 16 October: plays from the primary server (2.7 s to first frame, 56 s buffered); a network
   error reloads in place then moves to the backup server keeping position; a dead first copy moves to the
