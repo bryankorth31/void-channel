@@ -9,7 +9,7 @@ const path = require('path');
 
 const M = require('../scripts/match.js');
 const { writeIfChanged, writeTextIfChanged } = require('../scripts/lib/writeIfChanged');
-const { matcherCheck } = require('../scripts/lib/matchcheck');
+const { matcherCheck, seTitleCheck, sameDayCheck, matcherLight } = require('../scripts/lib/matchcheck');
 
 // ---------------------------------------------------------------- made-up data
 let uid = 0;
@@ -598,5 +598,78 @@ describe('matcher self-test for the doctor', () => {
       assert.equal(clean.warn, false);
       assert.equal(clean.fallback.count, 0);
     } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+  });
+});
+
+// ---------------------------------------------------------------- the doctor's checks on the grids on disk
+describe('doctor checks on the grids on disk (CP-004, CP-005)', () => {
+  const withDir = (fn) => { const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'mc2-')); try { return fn(dir); } finally { fs.rmSync(dir, { recursive: true, force: true }); } };
+  const pick = (conf, extra = {}) => ({ number: 1, state: conf >= 0.85 ? 'LIVE' : 'REVIEW', file: { why: 'S/E in filename + title match', conf, playable: true, ...extra } });
+  const put = (dir, name, picks, o = {}) => fs.writeFileSync(path.join(dir, name + '.json'), JSON.stringify({ show: name, slug: name, matchedAt: (o.day || '2026-10-18') + 'T10:00:00.000Z', ...(o.extra || {}), seasons: [{ season: 1, episodes: picks }] }, null, 2));
+  const live = (n) => Array.from({ length: n }, () => pick(0.9));
+  const low = (n, extra) => Array.from({ length: n }, () => pick(0.6, extra));
+
+  test('seTitleCheck: the share of S/E-plus-title picks below 0.85 is near zero when healthy and warns when it is not', () => {
+    withDir((dir) => {
+      put(dir, 'a', live(39)); put(dir, 'b', low(1));
+      let r = seTitleCheck({ showsDir: dir });
+      assert.deepEqual([r.total, r.below, r.warn], [40, 1, false], 'one in forty is near zero');
+      put(dir, 'c', low(10));
+      r = seTitleCheck({ showsDir: dir });
+      assert.deepEqual([r.total, r.below, r.warn], [50, 11, true]);
+      assert.match(r.detail, /11 of 50 S\/E-plus-title picks sit below LIVE \(22\.0%/);
+    });
+  });
+  test('seTitleCheck counts only playable, unflagged picks from the S/E-plus-title route in strict grids', () => {
+    withDir((dir) => {
+      put(dir, 'a', live(20));
+      put(dir, 'unplayable', low(5, { playable: false }));
+      put(dir, 'foreign', low(5, { langRisk: 'dub' }));
+      put(dir, 'otherroute', [{ number: 1, state: 'REVIEW', file: { why: 'S/E in filename', conf: 0.6, playable: true } }, { number: 2, state: 'REVIEW', file: { why: 'title ~ "x" (0.70)', conf: 0.6, playable: true } }, { number: 3, state: 'REVIEW', file: { why: 'airdate in filename + title match', conf: 0.6, playable: true } }]);
+      put(dir, 'selflisted', low(5), { extra: { selfListed: true } });
+      const r = seTitleCheck({ showsDir: dir });
+      assert.deepEqual([r.total, r.below, r.warn], [20, 0, false]);
+      assert.equal(seTitleCheck({ showsDir: path.join(dir, 'nothing-here') }).warn, false);
+      assert.equal(seTitleCheck({ showsDir: path.join(dir, 'nothing-here') }).total, 0);
+    });
+  });
+  test('sameDayCheck warns when more than 20% of the grids carry one recent matchedAt day', () => {
+    const now = Date.parse('2026-10-18T12:00:00Z');
+    withDir((dir) => {
+      for (let i = 0; i < 8; i++) put(dir, 'old' + i, live(1), { day: '2026-09-' + String(10 + i) });
+      put(dir, 'new0', live(1)); put(dir, 'new1', live(1));
+      let r = sameDayCheck({ showsDir: dir, now });
+      assert.deepEqual([r.warn, r.count, r.grids, r.day], [false, 2, 10, '2026-10-18'], 'two in ten is 20%, not more than 20%');
+      put(dir, 'new2', live(1));
+      r = sameDayCheck({ showsDir: dir, now });
+      assert.deepEqual([r.warn, r.count, r.grids], [true, 3, 11]);
+      assert.match(r.detail, /27% of the grids \(3 of 11\) carry the matchedAt day 2026-10-18/);
+    });
+  });
+  test('sameDayCheck: one day long past is history, not a rewrite; and the stamp is read without parsing the grid', () => {
+    const now = Date.parse('2026-10-18T12:00:00Z');
+    withDir((dir) => {
+      for (let i = 0; i < 10; i++) put(dir, 'g' + i, live(1), { day: '2026-09-01' });
+      const r = sameDayCheck({ showsDir: dir, now });
+      assert.deepEqual([r.warn, r.sameDay, r.day], [false, true, '2026-09-01'], 'every grid on a month-old day: nothing is being restamped now');
+      assert.equal(sameDayCheck({ showsDir: dir, now, maxAgeDays: 60 }).warn, true, 'the age limit is an option');
+      fs.writeFileSync(path.join(dir, 'broken.json'), '{ "show": "b", "matchedAt": "2026-10-18T10:00:00.000Z", "seasons": [ this is not json');
+      assert.equal(sameDayCheck({ showsDir: dir, now }).grids, 11, 'the broken file still counts: only its first bytes are read');
+      assert.deepEqual([sameDayCheck({ showsDir: path.join(dir, 'nothing-here'), now }).warn, sameDayCheck({ showsDir: path.join(dir, 'nothing-here'), now }).grids], [false, 0]);
+    });
+  });
+  test('matcherLight: green on a clean folder, yellow with the reasons when a check warns', () => {
+    withDir((dir) => {
+      put(dir, 'a', live(30), { day: '2026-08-01' }); put(dir, 'b', live(30), { day: '2026-08-02' });
+      let r = matcherLight({ showsDir: dir });
+      assert.equal(r.level, 'green', r.detail);
+      assert.equal(r.fix, undefined);
+      put(dir, 'c', low(30), { day: '2026-08-03' });
+      r = matcherLight({ showsDir: dir });
+      assert.equal(r.level, 'yellow');
+      assert.match(r.detail, /30 of 90 S\/E-plus-title picks sit below LIVE/);
+      assert.match(r.fix, /scoring may have slipped/);
+      assert.equal(matcherLight({ showsDir: path.join(dir, 'nothing-here') }).level, 'green');
+    });
   });
 });

@@ -5,6 +5,9 @@
 //   warn     true when self-listed grids over a real TVmaze list still carry picks whose item title does not name the show, or junk
 //   fallback { count, grids: [{ slug, show, picks, unnamed, share, junk }] }, share = picks whose item title does not name the show,
 //            junk = picks whose item title or file name trips the junk test (walkthrough, recap, commentary, compilation...)
+// Two more checks read the grids on disk, each returns { warn, detail, ... }; matcherLight() puts all three on the one light the doctor shows:
+//   seTitleCheck({ showsDir })  CP-004: the share of S/E-plus-title picks that sit below LIVE (0.85). A healthy catalog is near zero (about 1%); the old scoring left 28%.
+//   sameDayCheck({ showsDir })  CP-005: more than 20% of the grids carrying one matchedAt day means a run restamped them all; matchedAt should move only when a grid's content does.
 const fs = require('fs');
 const path = require('path');
 const PROFILE = require('./profile');
@@ -62,4 +65,69 @@ function matcherCheck(opts = {}) {
   return { ok, detail: parts.join('; '), warn: ok && bad.length > 0, problems, fallback: { count: grids.length, scanned, grids } };
 }
 
-module.exports = { matcherCheck };
+const GRID_FILES = (dir) => { try { return fs.readdirSync(dir).filter((f) => f.endsWith('.json')); } catch (e) { return []; } };
+
+// CP-004. Among the picks that came from "S/E in filename + title match" (a file whose number AND title both fit the episode), those that are playable,
+// not language-flagged and still below 0.85 should be rare: the number and the title agree, so only a penalty (another show, a reaction) can hold one back.
+// Before the fix the old scoring left 4,516 of 16,000 (28%) there. Yellow above 5%.
+function seTitleCheck(opts = {}) {
+  const dir = opts.showsDir || path.join(PROFILE.catalogDir, 'shows');
+  const limit = opts.limit == null ? 0.05 : opts.limit;
+  let total = 0, below = 0, scanned = 0;
+  for (const f of GRID_FILES(dir)) {
+    let text;
+    try { text = fs.readFileSync(path.join(dir, f), 'utf8'); } catch (e) { continue; }
+    scanned++;
+    if (!text.includes('title match')) continue; // cheap test before the parse
+    let g;
+    try { g = JSON.parse(text); } catch (e) { continue; }
+    if (g.selfListed) continue;
+    for (const se of g.seasons || []) for (const e of se.episodes || []) {
+      const p = e.file;
+      if (!p || !/S\/E in filename \+ title match/.test(p.why || '') || !p.playable || p.langRisk) continue;
+      total++;
+      if (typeof p.conf === 'number' && p.conf < 0.85) below++;
+    }
+  }
+  const share = total ? below / total : 0;
+  const warn = total > 0 && share > limit;
+  const pct = (share * 100).toFixed(1) + '%';
+  return { warn, total, below, share: +share.toFixed(4), scanned, detail: total ? `${below} of ${total} S/E-plus-title picks sit below LIVE (${pct}${warn ? ', should be near zero: the scoring may have slipped' : ''})` : 'no S/E-plus-title picks to measure' };
+}
+
+// CP-005. A grid's matchedAt is the day its content last changed (writeIfChanged leaves the stamp alone otherwise), so one day should not hold most of the catalog.
+// More than 20% of the grids on one day means a run restamped them. A day older than maxAgeDays (3) is history, not a rewrite: after the first run with the
+// content-only writer most grids keep the old day for weeks, and that must not read as a fault. The stamp is read from the first bytes of each file, nothing is parsed.
+function sameDayCheck(opts = {}) {
+  const dir = opts.showsDir || path.join(PROFILE.catalogDir, 'shows');
+  const now = opts.now == null ? Date.now() : +opts.now;
+  const maxAgeDays = opts.maxAgeDays == null ? 3 : opts.maxAgeDays;
+  const days = new Map(); let n = 0;
+  const buf = Buffer.alloc(1200);
+  for (const f of GRID_FILES(dir)) {
+    let fd;
+    try { fd = fs.openSync(path.join(dir, f), 'r'); const len = fs.readSync(fd, buf, 0, buf.length, 0); const m = /"matchedAt"\s*:\s*"(\d{4}-\d\d-\d\d)/.exec(buf.toString('utf8', 0, len)); if (m) { n++; days.set(m[1], (days.get(m[1]) || 0) + 1); } } catch (e) { /* unreadable: the catalog check says so */ } finally { if (fd !== undefined) try { fs.closeSync(fd); } catch (e) { /* closed */ } }
+  }
+  const top = [...days.entries()].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? 1 : -1))[0];
+  if (!top) return { warn: false, grids: 0, days: 0, detail: 'no matchedAt stamps to measure' };
+  const [day, count] = top;
+  const share = count / n;
+  const ageDays = Math.max(0, (now - Date.parse(day + 'T23:59:59Z')) / 864e5);
+  const warn = share > 0.2 && ageDays <= maxAgeDays;
+  return { warn, grids: n, days: days.size, day, count, share: +share.toFixed(3), ageDays: +ageDays.toFixed(1), sameDay: share > 0.2,
+    detail: warn ? `${Math.round(share * 100)}% of the grids (${count} of ${n}) carry the matchedAt day ${day}: a run restamped them instead of leaving the unchanged ones alone` : `matchedAt spread over ${days.size} day(s), the most on ${day} (${Math.round(share * 100)}%)` };
+}
+
+// The doctor's "matcher" light in one call: red when a self-test fails, yellow when any of the three checks warns, green otherwise.
+//   const { level, detail, fix } = require('./lib/matchcheck').matcherLight({ showsDir });
+function matcherLight(opts = {}) {
+  const m = matcherCheck(opts);
+  if (!m.ok) return { level: 'red', detail: m.detail, fix: 'Run node --test tests/match.test.js; do not run a bulk match until the matcher passes.', ok: false, checks: { matcher: m } };
+  const t = seTitleCheck(opts), d = sameDayCheck(opts);
+  const fixes = [m.warn && 'Re-match the listed shows (HQ > Shows > Re-match now).',
+    t.warn && 'Most picks with a number and a title that fit should be LIVE: the scoring may have slipped. Run node --test tests/match.test.js, then node tests/match-dryrun.js (docs/RUNBOOK.md, matcher).',
+    d.warn && 'Most grids carry one matchedAt day: a run restamped them. Check that scripts/match.js writes through writeIfChanged (docs/RUNBOOK.md, matcher).'].filter(Boolean);
+  return { level: fixes.length ? 'yellow' : 'green', detail: [m.detail, t.detail, d.warn ? d.detail : ''].filter(Boolean).join('; '), fix: fixes.length ? fixes.join(' ') : undefined, ok: true, checks: { matcher: m, seTitle: t, sameDay: d } };
+}
+
+module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight };
