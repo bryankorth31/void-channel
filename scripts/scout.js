@@ -17,6 +17,13 @@ const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+// Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
+// a short hash instead (first 12 hex characters of sha1 of the trimmed, lowercased address): enough to tell uploaders
+// apart (scripts/hunt.js candidates, scripts/scout.js via), not enough to read who they are.
+const uploaderHash = (u) => (u ? require('crypto').createHash('sha1').update(String(u).trim().toLowerCase()).digest('hex').slice(0, 12) : undefined);
+// Free text copied from the Archive (descriptions, titles) or from TMDB (overviews) can carry an e-mail address. It is masked here, before
+// anything is written, so a hunt can never put an address into committed data (and publish never has to refuse for that reason).
+const noEmail = (s) => (typeof s === 'string' ? s.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '[email]') : s);
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
@@ -155,7 +162,7 @@ async function main() {
   // 2. Uploader neighbours
   const uploaders = trustedUploaders();
   console.log(`  ${uploaders.length} trusted uploaders`);
-  for (const [u] of uploaders) { try { for (const it of await scrapeQuery(`uploader:(${u}) AND mediatype:movies`, `scout-up-${slug(u)}`, 2)) addLead(it, 'uploader ' + u); } catch (e) { console.log(`  ${u}: ${e.message}`); break; } }
+  for (const [u] of uploaders) { try { for (const it of await scrapeQuery(`uploader:(${u}) AND mediatype:movies`, `scout-up-${slug(u)}`, 2)) addLead(it, 'uploader ' + uploaderHash(u)); } catch (e) { console.log(`  ${u}: ${e.message}`); break; } }
   console.log(`  ${leads.size} leads after uploaders`);
 
   // 3. Rank leads, open the best item of the top ones, confirm with TVmaze
@@ -172,7 +179,7 @@ async function main() {
     const tv = await tvmaze(L.title);
     const name = tv && tv.name ? tv.name : null;
     if (name && have.has(norm(name).replace(/^the /, ''))) continue;
-    proposals.push({ title: L.title, tvmaze: tv && tv.id ? { id: tv.id, name: tv.name, year: (tv.premiered || '').slice(0, 4), network: tv.network, type: tv.type, genres: tv.genres, language: tv.language, country: tv.country } : null, row: tv && tv.id ? rowFor(tv) : null, items: L.items.length, sample: best.identifier, sampleTitle: best.title, filesInSample: files, episodeShapedInSample: epShaped, downloads: L.downloads, via: L.via });
+    proposals.push({ title: noEmail(L.title), tvmaze: tv && tv.id ? { id: tv.id, name: tv.name, year: (tv.premiered || '').slice(0, 4), network: tv.network, type: tv.type, genres: tv.genres, language: tv.language, country: tv.country } : null, row: tv && tv.id ? rowFor(tv) : null, items: L.items.length, sample: best.identifier, sampleTitle: noEmail(best.title), filesInSample: files, episodeShapedInSample: epShaped, downloads: L.downloads, via: L.via });
     process.stdout.write(`  ${L.title}: ${L.items.length} items, ${epShaped} ep-shaped, ${tv && tv.id ? 'TVmaze ' + tv.name + ' (' + (tv.premiered || '').slice(0, 4) + ')' : 'no TVmaze'}\n`);
   }
 
