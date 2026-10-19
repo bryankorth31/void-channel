@@ -151,6 +151,8 @@ function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(PRO
 // one of the show's aliases (the aliases are tried the same way). Tested on lower-cased text with the punctuation kept, because norm() throws the separators away.
 const NAME_SEP = /[:|\/\\()\[\]{}"\u201c\u201d\uff1a\uff5c\uff0f\uff02\uff08\uff09\uff3b\uff3d\u3010\u3011\u300c\u300d\u300e\u300f]/;
 const NAME_DASH = /\s[-\u2013\u2014\u2015]|[-\u2013\u2014\u2015]\s/; // a dash separates only with a space beside it
+const NAME_MARK = /[\u2605\u2606\u2736\u2b50\u2022\u00b7\u2219\u25cf\u25e6\u30fb~\uff5e\u223c]/; // a star, a bullet or a tilde ends the name wherever it stands ("Mission Impossible \u2605 V.F.")
+const NAME_PUNCT = /\s[,.;!\uff0c\u3002\uff1b\uff01]|[,.;!\uff0c\u3002\uff1b\uff01]\s/; // a comma, period, semicolon or exclamation mark ends it only with a space beside it, so "Zork.Show.Jam" stays a longer title
 const NAME_TAIL = /^(?:s\d{1,2}(?:e\d{1,3})?|e\d{1,3}|\d+x\d{1,3}|\d+(?:st|nd|rd|th)?|eps?\d*|episodes?|seasons?|series|parts?|chapters?|volumes?|vol|discs?|complete|collection|full|uncut|remastered|videos?|hd|uhd|sd|4k|\d{3,4}p|x26[45]|h26[45]|hevc|dvds?|dvdrip|dvdiso|iso|blu?ray|bd(?:rip)?|web\w*|rip\w*|vhs|pal|ntsc|mp4|mkv|avi|ogv|mpe?g\d*|aac|ac3|xvid|divx|box|boxset)$/;
 const NAME_FILLER = new Set(['the', 'a', 'an', 'and', 'of', 'all']); // skipped before the check: "The Complete Series", "All Episodes"
 const nameRes = new Map();
@@ -164,7 +166,7 @@ function closesName(rest, nets = []) {
   const run = /^[^a-z0-9]*/.exec(rest)[0];
   if (run.length === rest.length) return true; // the name ends the text
   const gap = run.replace(/_/g, ' ');
-  if (NAME_SEP.test(gap) || NAME_DASH.test(gap)) return true; // a separator follows it
+  if (NAME_SEP.test(gap) || NAME_DASH.test(gap) || NAME_MARK.test(gap) || NAME_PUNCT.test(gap)) return true; // a separator follows it
   const toks = rest.slice(run.length).split(/[^a-z0-9]+/).filter(Boolean);
   for (const net of nets) { const w = net.split(' '); if (w.length && w.every((x, k) => toks[k] === x)) return true; } // "Dimension 20 Dropout": the show's own network after its name
   let i = 0;

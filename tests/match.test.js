@@ -309,6 +309,25 @@ describe('the upload title names the show', () => {
     const cores = ['zork show'];
     assert.deepEqual([M.titleNaming('Zork Show - Pilot', cores), M.titleNaming('Zork Show Jam', cores), M.titleNaming('Nothing like it', cores)], ['names', 'longer', 'none']);
   });
+  test('a star, bullet, tilde, comma, period, semicolon or exclamation mark after the name ends it (French "V.F." uploads, "Show, The Complete Series")', () => {
+    for (const [t, s] of [
+      ['Mission Impossible \u2605 V.F. \u2605 Saison 1', 'Mission: Impossible'], ['Star Trek Voyager \u2022 VF', 'Star Trek: Voyager'], ['Twilight Zone ~ V.F.', 'Twilight Zone'],
+      ['Star Trek Deep Space Nine; Saison 2', 'Star Trek: Deep Space Nine'], ['Zork Show \u2606 VF', 'Zork Show'], ['Zork Show\u2605VF', 'Zork Show'],
+      ['Zork Show, The Complete Series', 'Zork Show'], ['Zork Show. Season 2', 'Zork Show'], ['Zork Show! Season 2', 'Zork Show'],
+      ['Zork Show\uff5eVF', 'Zork Show'], ['Zork Show\uff0c Complete', 'Zork Show'],
+      // a name that itself ends in punctuation still stands
+      ['Everything Is Terrible!', 'Everything Is Terrible!'], ['Law & Order', 'Law & Order'], ['9-1-1', '9-1-1'],
+    ]) assert.equal(names(t, s), true, t);
+    for (const [t, s] of [
+      // glued continuations stay longer titles: a dot, dash or underscore between words is no separator, and a comma after the next word is not one after the name
+      ['Zork.Show.Jam', 'Zork Show'], ['Zork-Show-Jam', 'Zork Show'], ['Zork_Show_Jam', 'Zork Show'], ['Naruto.Shippuden.Complete', 'Naruto'],
+      ['Zork Show Jam, Season 2', 'Zork Show'], ['Monster Jam, Before It Sucked', 'Monster'], ['9-1-1 Lone Star', '9-1-1'],
+    ]) assert.equal(names(t, s), false, t);
+    // end to end: the fallback accepts the upload titled with the show and a star, and still refuses the longer title
+    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    assert.equal(run(files, { title: 'Zork Show \u2605 Fan Edits' }).grid.selfListed, true);
+    assert.equal(run(files, { title: 'Zork Show Jam \u2605 Fan Edits' }).grid.selfListed, undefined);
+  });
   test('whole words only: the name inside a longer word, or glued to digits, is not the name', () => {
     assert.equal(names('Unzork Show', 'Zork Show'), false);
     assert.equal(names('Zork Shows', 'Zork Show'), false);
