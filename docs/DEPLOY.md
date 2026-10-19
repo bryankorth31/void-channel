@@ -1,4 +1,4 @@
-# Deploying VOIDtv (the static site)
+# Deploying voidtv.net (the static site)
 
 The site is files. The builder on B's PC writes the catalog into `catalog/` (committed); the host
 runs `node scripts/site.js` and serves the `site/` folder. No server, no database, no keys.
