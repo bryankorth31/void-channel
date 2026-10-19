@@ -27,6 +27,25 @@ export const THEME_FIELDS = () => [
   { key: "image", label: "Background image", type: "select", def: "None", options: backgrounds() },
 ];
 
+// Theme values end up inside a <style> block, so they are held to a short list of shapes (audit finding CF-005).
+// A colour is #hex, rgb()/rgba() or hsl()/hsla(); a font is one of FONTS; the image is one of the files in shared/assets.
+// The editor checks values when they are saved. loadContent() and generate() check them again, because content.json can
+// also be edited by hand or by an older editor, and a bad entry must never reach a page.
+export const COLOR = /^(?:#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})|(?:rgb|rgba|hsl|hsla)\([-\d.% ,\/deg]{1,40}\))$/i;
+export function themeValue(field, v) { // the value when it is allowed for this field, otherwise null
+  if (typeof v !== "string") return null;
+  if (field.type === "select") return field.options.includes(v) ? v : null;
+  if (field.type === "font-display" || field.type === "font-script") return FONTS[field.type.slice(5)].includes(v) ? v : null;
+  if (field.type === "color") return COLOR.test(v) ? v : null;
+  return null;
+}
+// A theme with every value checked. A value that fails falls back to the field's default.
+const safeTheme = (t) => Object.fromEntries(THEME_FIELDS().map((f) => { const v = themeValue(f, t?.[f.key]); return [f.key, v === null ? f.def : v]; }));
+// A piece's own look: only the allowed values are kept ("" and unknown keys mean "use the show look" and are dropped).
+const safeStyle = (s) => Object.fromEntries(THEME_FIELDS().filter((f) => s && s[f.key] && themeValue(f, s[f.key]) !== null).map((f) => [f.key, s[f.key]]));
+// Last guard on the CSS text itself: keep only the characters a colour, a font name or an image file name needs.
+const cssSafe = (s) => String(s ?? "").replace(/[^A-Za-z0-9 #%.,()\/_-]/g, "");
+
 const F = (key, label, def, max = 60) => ({ key, label, def, max });
 export const PIECES = {
   "title-card": { title: "Title card", w: 1920, h: 1080, dur: 6, format: "mp4",
@@ -49,8 +68,8 @@ export function defaultContent() {
 export function loadContent() {
   if (!existsSync(CONTENT_FILE)) writeFileSync(CONTENT_FILE, JSON.stringify(defaultContent(), null, 2));
   const c = JSON.parse(readFileSync(CONTENT_FILE, "utf8")); const d = defaultContent();
-  c.theme = { ...d.theme, ...(c.theme || {}) }; c.pieces = c.pieces || {};
-  for (const id of Object.keys(PIECES)) { c.pieces[id] = c.pieces[id] || d.pieces[id]; c.pieces[id].fields = { ...d.pieces[id].fields, ...(c.pieces[id].fields || {}) }; c.pieces[id].style = c.pieces[id].style || {}; }
+  c.theme = safeTheme({ ...d.theme, ...(c.theme || {}) }); c.pieces = c.pieces || {};
+  for (const id of Object.keys(PIECES)) { c.pieces[id] = c.pieces[id] || d.pieces[id]; c.pieces[id].fields = { ...d.pieces[id].fields, ...(c.pieces[id].fields || {}) }; c.pieces[id].style = safeStyle(c.pieces[id].style); }
   return c;
 }
 export const saveContent = (c) => writeFileSync(CONTENT_FILE, JSON.stringify(c, null, 2));
@@ -62,13 +81,13 @@ const fit = (text, boxPx, basePx, em = 0.58) => Math.round(Math.min(basePx, boxP
 const GLINT = `<svg viewBox="-10 -10 20 20"><path d="M0-10L1.4-1.4 10 0 1.4 1.4 0 10-1.4 1.4-10 0-1.4-1.4Z" fill="#fff"/></svg>`;
 
 const BASE_CSS = (w, h, overlay, t) => `
-:root { --display: '${t.display}'; --script: '${t.script}'; --accentHi: ${t.accentHi}; --accent: ${t.accent}; --accentDeep: ${t.accentDeep};
-  --second: ${t.second}; --glow: ${t.glow}; --text: ${t.text}; --bg: ${t.bg}; }
+:root { --display: '${cssSafe(t.display)}'; --script: '${cssSafe(t.script)}'; --accentHi: ${cssSafe(t.accentHi)}; --accent: ${cssSafe(t.accent)}; --accentDeep: ${cssSafe(t.accentDeep)};
+  --second: ${cssSafe(t.second)}; --glow: ${cssSafe(t.glow)}; --text: ${cssSafe(t.text)}; --bg: ${cssSafe(t.bg)}; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: ${w}px; height: ${h}px; overflow: hidden; background: ${overlay ? "transparent" : "var(--bg)"}; }
 #root { position: relative; width: ${w}px; height: ${h}px; overflow: hidden; background: ${overlay ? "transparent" : "var(--bg)"}; font-family: Inter, sans-serif; color: var(--text); }
 .layer { position: absolute; inset: 0; }
-.bgimg { background: ${t.image && t.image !== "None" ? `url(assets/${t.image}) center / cover no-repeat` : `radial-gradient(70% 60% at 50% 40%, color-mix(in srgb, var(--glow) 35%, var(--bg)), var(--bg))`}; }
+.bgimg { background: ${t.image && t.image !== "None" ? `url(assets/${cssSafe(t.image)}) center / cover no-repeat` : `radial-gradient(70% 60% at 50% 40%, color-mix(in srgb, var(--glow) 35%, var(--bg)), var(--bg))`}; }
 .vig { background: radial-gradient(75% 70% at 50% 45%, transparent 35%, color-mix(in srgb, var(--bg) 92%, transparent) 100%); }
 .disp { font-family: var(--display), sans-serif; font-weight: 400; letter-spacing: .04em; line-height: 1; }
 .script { font-family: var(--script), cursive; }
@@ -169,7 +188,7 @@ const FONT_FILES = ["fonts.css", ...[...FONTS.display, ...FONTS.script, "Inter"]
 export function generate(id, content = loadContent()) {
   const spec = PIECES[id]; if (!spec) throw new Error("unknown piece " + id);
   const item = content.pieces[id];
-  const theme = { ...content.theme, ...Object.fromEntries(Object.entries(item.style || {}).filter(([, v]) => v)) };
+  const theme = safeTheme({ ...content.theme, ...Object.fromEntries(Object.entries(item.style || {}).filter(([, v]) => v)) });
   const html = page({ id, w: spec.w, h: spec.h, dur: spec.dur, overlay: !!spec.overlay, t: theme, ...BUILD[id](item.fields, spec, theme) });
   const dir = join(ROOT, id);
   for (const d of ["", "assets", "fonts", "renders"]) mkdirSync(join(dir, d), { recursive: true });

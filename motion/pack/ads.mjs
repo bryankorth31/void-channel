@@ -7,6 +7,8 @@
 
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const escName = (s) => esc(s).replace(/(voidtv)(\.net)/gi, '$1<span class="net">$2</span>');
+// A string literal for the page's inline <script>: JSON.stringify leaves "<" alone, so "</script>" in a text field would end the script block.
+const jsStr = (s) => JSON.stringify(s).replace(/</g, "\\u003c");
 // Font size from character counts at build time (never measured during render). em = average glyph width in ems.
 const fitLines = (text, boxW, base, em, lines = 1) => {
   const t = String(text || " "); const longest = Math.max(1, ...t.split(/\s+/).map((w) => w.length));
@@ -74,8 +76,8 @@ const SCENES = {
 ${stat(1, f.n1, f.l1, pos[0])}${stat(2, f.n2, f.l2, pos[1])}
 <div id="${p}-hl" class="center heavy white">${String(f.hl).split(/\s+/).map((x) => `<span class="wd">${escName(x)}</span>`).join(" ")}</div>${row("r1")}${row("r2")}`;
       const counter = (i, txt, t) => {
-        const m = String(txt).match(/^([^\d]*)([\d,.]+)(.*)$/); if (!m) return `tl.set("#${p}-n${i}", { textContent: ${JSON.stringify(String(txt))} }, ${t});`;
-        const N = parseFloat(m[2].replace(/,/g, "")), pre = JSON.stringify(m[1]), suf = JSON.stringify(m[3]);
+        const m = String(txt).match(/^([^\d]*)([\d,.]+)(.*)$/); if (!m) return `tl.set("#${p}-n${i}", { textContent: ${jsStr(String(txt))} }, ${t});`;
+        const N = parseFloat(m[2].replace(/,/g, "")), pre = jsStr(m[1]), suf = jsStr(m[3]);
         return `{ const o = { v: 0 }, el = document.getElementById("${p}-n${i}");
   tl.fromTo(o, { v: 0 }, { v: ${N}, duration: 1.4, ease: "power2.out", onUpdate: () => { el.textContent = ${pre} + Math.round(o.v).toLocaleString("en-US") + ${suf}; } }, ${t}); }`;
       };

@@ -10,9 +10,30 @@ import { spawn } from "node:child_process";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const PACK = join(HERE, "..", "pack");
 const KIT = JSON.parse(readFileSync(join(HERE, "..", "kit.json"), "utf8"));
-const { PIECES, THEME_FIELDS: TF, FONTS, loadContent, saveContent, generate, defaultContent } = await import(new URL("../pack/build-pack.mjs", import.meta.url));
+const { PIECES, THEME_FIELDS: TF, FONTS, loadContent, saveContent, generate, defaultContent, themeValue } = await import(new URL("../pack/build-pack.mjs", import.meta.url));
 const THEME_FIELDS = typeof TF === "function" ? TF() : TF;
 const PORT = Number(process.env.PORT || KIT.port || 8220);
+// Only this editor's own page may talk to it (audit finding CF-005). Host must be 127.0.0.1:<port> or localhost:<port>, which also
+// stops DNS rebinding. An Origin header, when the browser sends one, must be this server's own address. Anything that is not a plain
+// read must be JSON: "text/plain;x=application/json" is text/plain, and a web page can send that without a preflight.
+const SELF = [`127.0.0.1:${PORT}`, `localhost:${PORT}`];
+const hostOk = (h) => SELF.includes(String(h || "").toLowerCase());
+const originOk = (o) => o === undefined || SELF.some((a) => `http://${a}` === String(o).toLowerCase());
+const mediaType = (h) => String(h || "").split(";")[0].trim().toLowerCase();
+// The theme values in a request, checked. { clean } holds the allowed ones; { error } names the first one refused and nothing is saved.
+// allowEmpty lets one piece say "use the show look" with "".
+function cleanTheme(src, allowEmpty) {
+  const clean = {};
+  for (const f of THEME_FIELDS) {
+    if (!src || typeof src !== "object" || !(f.key in src)) continue;
+    const v = src[f.key];
+    if (allowEmpty && v === "") { clean[f.key] = ""; continue; }
+    const ok = themeValue(f, v);
+    if (ok === null) return { error: `${f.label}: that value is not allowed` };
+    clean[f.key] = ok;
+  }
+  return { clean };
+}
 const HF = KIT.hyperframes || "hyperframes@latest";
 const OUT = join(PACK, "renders");
 mkdirSync(OUT, { recursive: true });
@@ -25,10 +46,13 @@ const readBody = (req) => new Promise((ok, bad) => {
   req.on("data", (d) => { parts.push(d); n += d.length; if (n > 1e6) bad(new Error("too big")); });
   req.on("end", () => { try { const s = Buffer.concat(parts).toString("utf8"); ok(s ? JSON.parse(s) : {}); } catch (e) { bad(e); } });
 });
-function serveFile(res, base, rel, download) {
+// A second layer for the generated pages shown in the preview frame: even if something odd got into one, it cannot load script
+// from another site or send anything out. (The pages need their own inline script, GSAP, fonts and images, all from this server.)
+const PREVIEW_HEADERS = { "Content-Security-Policy": "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'", "X-Content-Type-Options": "nosniff" };
+function serveFile(res, base, rel, download, extra = {}) {
   const p = normalize(join(base, decodeURIComponent(rel)));
   if (!p.startsWith(normalize(base)) || !existsSync(p) || statSync(p).isDirectory()) return send(res, 404, { error: "not found" });
-  const headers = { "Content-Type": TYPES[extname(p).toLowerCase()] || "application/octet-stream", "Cache-Control": "no-store" };
+  const headers = { "Content-Type": TYPES[extname(p).toLowerCase()] || "application/octet-stream", "Cache-Control": "no-store", ...extra };
   if (download) headers["Content-Disposition"] = `attachment; filename="${p.split(/[\\/]/).pop()}"`;
   res.writeHead(200, headers); createReadStream(p).pipe(res);
 }
@@ -70,21 +94,30 @@ const rendersFor = (id) => readdirSync(OUT).filter((f) => f.startsWith(`${KIT.sl
 http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, "http://x"); const path = url.pathname;
+    if (!hostOk(req.headers.host)) return send(res, 403, { error: "this editor answers its own address only" });
+    if (!originOk(req.headers.origin)) return send(res, 403, { error: "cross-origin request refused" });
+    if (req.method !== "GET" && req.method !== "HEAD" && mediaType(req.headers["content-type"]) !== "application/json") return send(res, 415, { error: "JSON only" });
     if (path === "/" || path === "/index.html") return serveFile(res, HERE, "index.html");
         if (path === "/api/spec") return send(res, 200, { brand: KIT.brand, slug: KIT.slug, pieces: Object.fromEntries(Object.entries(PIECES).map(([k, v]) => [k, { title: v.title, w: v.w, h: v.h, dur: v.dur, format: v.format, overlay: !!v.overlay, fields: v.fields }])), theme: THEME_FIELDS, fonts: FONTS });
     if (path === "/api/content" && req.method === "GET") return send(res, 200, loadContent());
     let m;
+    if (path === "/api/theme/check" && req.method === "POST") { // checks only, saves nothing: the doctor uses it to see that a bad value is refused
+      const ck = cleanTheme(await readBody(req), false);
+      return ck.error ? send(res, 400, { error: ck.error }) : send(res, 200, { ok: true });
+    }
     if ((m = path.match(/^\/api\/theme$/)) && req.method === "POST") {
       const body = await readBody(req); const c = loadContent();
-      for (const f of THEME_FIELDS) if (typeof body[f.key] === "string" && (f.type !== "select" || f.options.includes(body[f.key]))) c.theme[f.key] = body[f.key].slice(0, 80);
+      const ck = cleanTheme(body, false); if (ck.error) return send(res, 400, { error: ck.error });
+      Object.assign(c.theme, ck.clean);
       saveContent(c); for (const id of Object.keys(PIECES)) generate(id, c);
       return send(res, 200, { ok: true, content: c });
     }
     if ((m = path.match(/^\/api\/piece\/([\w-]+)$/)) && req.method === "POST") {
       const id = m[1]; if (!PIECES[id]) return send(res, 404, { error: "unknown part" });
       const body = await readBody(req); const c = loadContent(); const item = c.pieces[id];
+      const ck = body.style ? cleanTheme(body.style, true) : { clean: {} }; if (ck.error) return send(res, 400, { error: ck.error });
       for (const f of PIECES[id].fields) if (typeof body.fields?.[f.key] === "string") item.fields[f.key] = body.fields[f.key].slice(0, f.max);
-      if (body.style) for (const f of THEME_FIELDS) if (typeof body.style[f.key] === "string" && (f.type !== "select" || body.style[f.key] === "" || f.options.includes(body.style[f.key]))) item.style[f.key] = body.style[f.key].slice(0, 80);
+      Object.assign(item.style, ck.clean);
       saveContent(c); generate(id, c);
       return send(res, 200, { ok: true, piece: item });
     }
@@ -99,7 +132,7 @@ http.createServer(async (req, res) => {
     }
     if ((m = path.match(/^\/api\/job\/(\d+)$/))) return send(res, 200, jobs.get(Number(m[1])) || { state: "unknown" });
     if ((m = path.match(/^\/api\/renders\/([\w-]+)$/))) return send(res, 200, rendersFor(m[1]));
-    if ((m = path.match(/^\/preview\/([\w-]+)\/(.*)$/)) && PIECES[m[1]]) return serveFile(res, join(PACK, m[1]), m[2] || "index.html");
+    if ((m = path.match(/^\/preview\/([\w-]+)\/(.*)$/)) && PIECES[m[1]]) return serveFile(res, join(PACK, m[1]), m[2] || "index.html", false, PREVIEW_HEADERS);
     if ((m = path.match(/^\/files\/(.+)$/))) return serveFile(res, OUT, m[1], url.searchParams.has("download"));
     if (path.startsWith("/static/")) return serveFile(res, join(HERE, "static"), path.slice(8));
     send(res, 404, { error: "not found" });

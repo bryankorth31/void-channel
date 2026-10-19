@@ -171,7 +171,7 @@ function lookFields(values, inherit) {
     const v = values[f.key] || ""; const shown = v || CONTENT.theme[f.key];
     if (f.type === "select") return `<div class="field"><label>${f.label}</label><select data-style="${f.key}">${inherit ? '<option value="">Use show look</option>' : ""}${f.options.map((o) => `<option ${o === v || (!inherit && o === shown) ? "selected" : ""}>${o}</option>`).join("")}</select></div>`;
     if (f.type.startsWith("font")) return `<div class="field"><label>${f.label}</label><select data-style="${f.key}">${fontOptions(f.type === "font-display" ? "display" : "script", v || (inherit ? "" : shown), inherit)}</select></div>`;
-    return `<div class="field"><label>${f.label}${inherit && !v ? " <span>show look</span>" : ""}</label><div class="colorrow"><input type="color" data-style="${f.key}" value="${shown}"/><input type="text" data-hex="${f.key}" value="${shown}" maxlength="7"/>${inherit && v ? `<button class="useshow" data-clear="${f.key}">Use show look</button>` : "<span></span>"}</div></div>`;
+    return `<div class="field"><label>${f.label}${inherit && !v ? " <span>show look</span>" : ""}</label><div class="colorrow"><input type="color" data-style="${f.key}" value="${esc(shown)}"/><input type="text" data-hex="${f.key}" value="${esc(shown)}" maxlength="7"/>${inherit && v ? `<button class="useshow" data-clear="${f.key}">Use show look</button>` : "<span></span>"}</div></div>`;
   }).join("");
 }
 function renderPartEditor(id) {
