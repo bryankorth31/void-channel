@@ -320,5 +320,637 @@
    "episodes": 2
   }
  ],
- "fetchedAt": "2026-10-13T18:31:42.902Z"
+ "fetchedAt": "2026-10-13T18:31:42.902Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 81727,
+     "name": "Darnell Martin",
+     "photo": "https://image.tmdb.org/t/p/w185/ckJYoBeDRT6DgqfyEA1LWdIQjr1.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13299,
+     "name": "Rita Moreno",
+     "photo": "https://image.tmdb.org/t/p/w185/zB0M77jr7tmsmWHEr2bWO2Xq66L.jpg",
+     "as": "Sister Peter Marie Reimondo"
+    },
+    {
+     "id": 18999,
+     "name": "J.K. Simmons",
+     "photo": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg",
+     "as": "Vernon Schillinger"
+    },
+    {
+     "id": 55861,
+     "name": "Kirk Acevedo",
+     "photo": "https://image.tmdb.org/t/p/w185/jFUHECwo7L3KOZ0HxCQytl90qed.jpg",
+     "as": "Miguel Alvarez"
+    },
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 2790508,
+     "name": "Ra Hanna",
+     "photo": "https://image.tmdb.org/t/p/w185/linVwuRZEAFWr61OyNSsz892NR6.jpg",
+     "as": "Nacim Bismilla"
+    },
+    {
+     "id": 20564,
+     "name": "Tony Musante",
+     "photo": "https://image.tmdb.org/t/p/w185/5OrTFkBfDZzUHZ0m1wojAD83npu.jpg",
+     "as": "Nino Schibetta"
+    },
+    {
+     "id": 1213612,
+     "name": "Sean Whitesell",
+     "photo": null,
+     "as": "Donald Groves"
+    },
+    {
+     "id": 288,
+     "name": "Jon Seda",
+     "photo": "https://image.tmdb.org/t/p/w185/4Wwgtvieu2j4f6AHqUMgnDFufa5.jpg",
+     "as": "Dino Ortolani"
+    },
+    {
+     "id": 1216182,
+     "name": "Steve Ryan",
+     "photo": "https://image.tmdb.org/t/p/w185/dqIpatrjynjxfc18JKb6mJJlKgX.jpg",
+     "as": "Officer Mike Healy"
+    },
+    {
+     "id": 122747,
+     "name": "O.L. Duke",
+     "photo": "https://image.tmdb.org/t/p/w185/wyOY4DSGNtvaU2MPu5OEaiaciI7.jpg",
+     "as": "Paul Markstram"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 17278,
+     "name": "Nick Gomez",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13299,
+     "name": "Rita Moreno",
+     "photo": "https://image.tmdb.org/t/p/w185/zB0M77jr7tmsmWHEr2bWO2Xq66L.jpg",
+     "as": "Sister Peter Marie Reimondo"
+    },
+    {
+     "id": 18999,
+     "name": "J.K. Simmons",
+     "photo": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg",
+     "as": "Vernon Schillinger"
+    },
+    {
+     "id": 55861,
+     "name": "Kirk Acevedo",
+     "photo": "https://image.tmdb.org/t/p/w185/jFUHECwo7L3KOZ0HxCQytl90qed.jpg",
+     "as": "Miguel Alvarez"
+    },
+    {
+     "id": 14592,
+     "name": "BD Wong",
+     "photo": "https://image.tmdb.org/t/p/w185/w7Hs9m6ocS2qlibvrLOvmyCKbAN.jpg",
+     "as": "Father Ray Mukada"
+    },
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 20564,
+     "name": "Tony Musante",
+     "photo": "https://image.tmdb.org/t/p/w185/5OrTFkBfDZzUHZ0m1wojAD83npu.jpg",
+     "as": "Nino Schibetta"
+    },
+    {
+     "id": 1213612,
+     "name": "Sean Whitesell",
+     "photo": null,
+     "as": "Donald Groves"
+    },
+    {
+     "id": 1216182,
+     "name": "Steve Ryan",
+     "photo": "https://image.tmdb.org/t/p/w185/dqIpatrjynjxfc18JKb6mJJlKgX.jpg",
+     "as": "Officer Mike Healy"
+    },
+    {
+     "id": 122747,
+     "name": "O.L. Duke",
+     "photo": "https://image.tmdb.org/t/p/w185/wyOY4DSGNtvaU2MPu5OEaiaciI7.jpg",
+     "as": "Paul Markstram"
+    },
+    {
+     "id": 155534,
+     "name": "Philip Scozzarella",
+     "photo": null,
+     "as": "Officer Joseph Mineo"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 36185,
+     "name": "Jean de Segonzac",
+     "photo": "https://image.tmdb.org/t/p/w185/hh8hRu4aj2vJn2qX0x0pAvNj5BX.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13299,
+     "name": "Rita Moreno",
+     "photo": "https://image.tmdb.org/t/p/w185/zB0M77jr7tmsmWHEr2bWO2Xq66L.jpg",
+     "as": "Sister Peter Marie Reimondo"
+    },
+    {
+     "id": 18999,
+     "name": "J.K. Simmons",
+     "photo": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg",
+     "as": "Vernon Schillinger"
+    },
+    {
+     "id": 55861,
+     "name": "Kirk Acevedo",
+     "photo": "https://image.tmdb.org/t/p/w185/jFUHECwo7L3KOZ0HxCQytl90qed.jpg",
+     "as": "Miguel Alvarez"
+    },
+    {
+     "id": 14592,
+     "name": "BD Wong",
+     "photo": "https://image.tmdb.org/t/p/w185/w7Hs9m6ocS2qlibvrLOvmyCKbAN.jpg",
+     "as": "Father Ray Mukada"
+    },
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 65928,
+     "name": "J.D. Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/xkvqaI7rOFehLIiJTA3laJpYVO9.jpg",
+     "as": "Kenny Wangler"
+    },
+    {
+     "id": 20564,
+     "name": "Tony Musante",
+     "photo": "https://image.tmdb.org/t/p/w185/5OrTFkBfDZzUHZ0m1wojAD83npu.jpg",
+     "as": "Nino Schibetta"
+    },
+    {
+     "id": 1213612,
+     "name": "Sean Whitesell",
+     "photo": null,
+     "as": "Donald Groves"
+    },
+    {
+     "id": 1216182,
+     "name": "Steve Ryan",
+     "photo": "https://image.tmdb.org/t/p/w185/dqIpatrjynjxfc18JKb6mJJlKgX.jpg",
+     "as": "Officer Mike Healy"
+    },
+    {
+     "id": 122747,
+     "name": "O.L. Duke",
+     "photo": "https://image.tmdb.org/t/p/w185/wyOY4DSGNtvaU2MPu5OEaiaciI7.jpg",
+     "as": "Paul Markstram"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 81727,
+     "name": "Darnell Martin",
+     "photo": "https://image.tmdb.org/t/p/w185/ckJYoBeDRT6DgqfyEA1LWdIQjr1.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13299,
+     "name": "Rita Moreno",
+     "photo": "https://image.tmdb.org/t/p/w185/zB0M77jr7tmsmWHEr2bWO2Xq66L.jpg",
+     "as": "Sister Peter Marie Reimondo"
+    },
+    {
+     "id": 18999,
+     "name": "J.K. Simmons",
+     "photo": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg",
+     "as": "Vernon Schillinger"
+    },
+    {
+     "id": 55861,
+     "name": "Kirk Acevedo",
+     "photo": "https://image.tmdb.org/t/p/w185/jFUHECwo7L3KOZ0HxCQytl90qed.jpg",
+     "as": "Miguel Alvarez"
+    },
+    {
+     "id": 14592,
+     "name": "BD Wong",
+     "photo": "https://image.tmdb.org/t/p/w185/w7Hs9m6ocS2qlibvrLOvmyCKbAN.jpg",
+     "as": "Father Ray Mukada"
+    },
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 65928,
+     "name": "J.D. Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/xkvqaI7rOFehLIiJTA3laJpYVO9.jpg",
+     "as": "Kenny Wangler"
+    },
+    {
+     "id": 20564,
+     "name": "Tony Musante",
+     "photo": "https://image.tmdb.org/t/p/w185/5OrTFkBfDZzUHZ0m1wojAD83npu.jpg",
+     "as": "Nino Schibetta"
+    },
+    {
+     "id": 1213612,
+     "name": "Sean Whitesell",
+     "photo": null,
+     "as": "Donald Groves"
+    },
+    {
+     "id": 1216182,
+     "name": "Steve Ryan",
+     "photo": "https://image.tmdb.org/t/p/w185/dqIpatrjynjxfc18JKb6mJJlKgX.jpg",
+     "as": "Officer Mike Healy"
+    },
+    {
+     "id": 122747,
+     "name": "O.L. Duke",
+     "photo": "https://image.tmdb.org/t/p/w185/wyOY4DSGNtvaU2MPu5OEaiaciI7.jpg",
+     "as": "Paul Markstram"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 155598,
+     "name": "Leslie Libman",
+     "photo": null
+    },
+    {
+     "id": 1233787,
+     "name": "Larry Williams",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13299,
+     "name": "Rita Moreno",
+     "photo": "https://image.tmdb.org/t/p/w185/zB0M77jr7tmsmWHEr2bWO2Xq66L.jpg",
+     "as": "Sister Peter Marie Reimondo"
+    },
+    {
+     "id": 18999,
+     "name": "J.K. Simmons",
+     "photo": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg",
+     "as": "Vernon Schillinger"
+    },
+    {
+     "id": 55861,
+     "name": "Kirk Acevedo",
+     "photo": "https://image.tmdb.org/t/p/w185/jFUHECwo7L3KOZ0HxCQytl90qed.jpg",
+     "as": "Miguel Alvarez"
+    },
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 2790508,
+     "name": "Ra Hanna",
+     "photo": "https://image.tmdb.org/t/p/w185/linVwuRZEAFWr61OyNSsz892NR6.jpg",
+     "as": "Nacim Bismilla"
+    },
+    {
+     "id": 65928,
+     "name": "J.D. Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/xkvqaI7rOFehLIiJTA3laJpYVO9.jpg",
+     "as": "Kenny Wangler"
+    },
+    {
+     "id": 20564,
+     "name": "Tony Musante",
+     "photo": "https://image.tmdb.org/t/p/w185/5OrTFkBfDZzUHZ0m1wojAD83npu.jpg",
+     "as": "Nino Schibetta"
+    },
+    {
+     "id": 1213612,
+     "name": "Sean Whitesell",
+     "photo": null,
+     "as": "Donald Groves"
+    },
+    {
+     "id": 1216182,
+     "name": "Steve Ryan",
+     "photo": "https://image.tmdb.org/t/p/w185/dqIpatrjynjxfc18JKb6mJJlKgX.jpg",
+     "as": "Officer Mike Healy"
+    },
+    {
+     "id": 122747,
+     "name": "O.L. Duke",
+     "photo": "https://image.tmdb.org/t/p/w185/wyOY4DSGNtvaU2MPu5OEaiaciI7.jpg",
+     "as": "Paul Markstram"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 47005,
+     "name": "Alan Taylor",
+     "photo": "https://image.tmdb.org/t/p/w185/sXC2wNRo7lshghNnNaPdWQ9sqKe.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 13299,
+     "name": "Rita Moreno",
+     "photo": "https://image.tmdb.org/t/p/w185/zB0M77jr7tmsmWHEr2bWO2Xq66L.jpg",
+     "as": "Sister Peter Marie Reimondo"
+    },
+    {
+     "id": 55861,
+     "name": "Kirk Acevedo",
+     "photo": "https://image.tmdb.org/t/p/w185/jFUHECwo7L3KOZ0HxCQytl90qed.jpg",
+     "as": "Miguel Alvarez"
+    },
+    {
+     "id": 1196493,
+     "name": "Craig muMs Grant",
+     "photo": "https://image.tmdb.org/t/p/w185/6bzAww7GzUFa4nrO2yThTaevEph.jpg",
+     "as": "Poet"
+    },
+    {
+     "id": 14592,
+     "name": "BD Wong",
+     "photo": "https://image.tmdb.org/t/p/w185/w7Hs9m6ocS2qlibvrLOvmyCKbAN.jpg",
+     "as": "Father Ray Mukada"
+    },
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 2790508,
+     "name": "Ra Hanna",
+     "photo": "https://image.tmdb.org/t/p/w185/linVwuRZEAFWr61OyNSsz892NR6.jpg",
+     "as": "Nacim Bismilla"
+    },
+    {
+     "id": 65928,
+     "name": "J.D. Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/xkvqaI7rOFehLIiJTA3laJpYVO9.jpg",
+     "as": "Kenny Wangler"
+    },
+    {
+     "id": 20564,
+     "name": "Tony Musante",
+     "photo": "https://image.tmdb.org/t/p/w185/5OrTFkBfDZzUHZ0m1wojAD83npu.jpg",
+     "as": "Nino Schibetta"
+    },
+    {
+     "id": 1213612,
+     "name": "Sean Whitesell",
+     "photo": null,
+     "as": "Donald Groves"
+    },
+    {
+     "id": 46395,
+     "name": "Stephen Gevedon",
+     "photo": "https://image.tmdb.org/t/p/w185/6VM3pEpwebjUKJvIlxzRu4LnBoP.jpg",
+     "as": "Scott Ross"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 81727,
+     "name": "Darnell Martin",
+     "photo": "https://image.tmdb.org/t/p/w185/ckJYoBeDRT6DgqfyEA1LWdIQjr1.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 65928,
+     "name": "J.D. Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/xkvqaI7rOFehLIiJTA3laJpYVO9.jpg",
+     "as": "Kenny Wangler"
+    },
+    {
+     "id": 65829,
+     "name": "Wood Harris",
+     "photo": "https://image.tmdb.org/t/p/w185/v3puIl2KncqUd6amDyD1Y0crzkF.jpg",
+     "as": "Officer Gordon Wood"
+    },
+    {
+     "id": 1233788,
+     "name": "Zuill Bailey",
+     "photo": null,
+     "as": "Eugene Dobbins"
+    },
+    {
+     "id": 155547,
+     "name": "Murphy Guyer",
+     "photo": "https://image.tmdb.org/t/p/w185/6axiNcYIZmaeRKyfCm3xBHC7KQL.jpg",
+     "as": "Officer Eddie Hunt"
+    },
+    {
+     "id": 6752,
+     "name": "Željko Ivanek",
+     "photo": "https://image.tmdb.org/t/p/w185/xLv19n8UvGJLxI7Z6RIv9eNXGmf.jpg",
+     "as": "Governor James Devlin"
+    },
+    {
+     "id": 39017,
+     "name": "George Morfogen",
+     "photo": "https://image.tmdb.org/t/p/w185/lCxlStkrbL4q8irt3c1vc6I76o8.jpg",
+     "as": "Bob Rebadow"
+    },
+    {
+     "id": 33658,
+     "name": "Skipp Sudduth",
+     "photo": "https://image.tmdb.org/t/p/w185/5vVP9t07OsJQcgxwNrDthNUtA1Y.jpg",
+     "as": "Lenny Burrano"
+    },
+    {
+     "id": 40377,
+     "name": "Roger Guenveur Smith",
+     "photo": "https://image.tmdb.org/t/p/w185/HN7w27Tss9HAHnqebnw6qWKk7z.jpg",
+     "as": "Huseni Mershah"
+    },
+    {
+     "id": 141610,
+     "name": "Luna Lauren Vélez",
+     "photo": "https://image.tmdb.org/t/p/w185/98BvmTJCZHx0jPv0oNcv04Jkmfb.jpg",
+     "as": "Dr. Gloria Nathan"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 36185,
+     "name": "Jean de Segonzac",
+     "photo": "https://image.tmdb.org/t/p/w185/hh8hRu4aj2vJn2qX0x0pAvNj5BX.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 116516,
+     "name": "Tom Fontana",
+     "photo": "https://image.tmdb.org/t/p/w185/xrgcRu8zvcLPtzQ7IoKqGFgZwYl.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 31164,
+     "name": "Adewale Akinnuoye-Agbaje",
+     "photo": "https://image.tmdb.org/t/p/w185/zdtwVtVmmm7VzYfu8xH7mbuTvrH.jpg",
+     "as": "Simon Adebisi"
+    },
+    {
+     "id": 65928,
+     "name": "J.D. Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/xkvqaI7rOFehLIiJTA3laJpYVO9.jpg",
+     "as": "Kenny Wangler"
+    },
+    {
+     "id": 11154,
+     "name": "Matt Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/qqPMm2lrjajJ1EpJ1jXEayz5oqP.jpg",
+     "as": "Officer Anthony Nowakowski"
+    },
+    {
+     "id": 1233788,
+     "name": "Zuill Bailey",
+     "photo": null,
+     "as": "Eugene Dobbins"
+    },
+    {
+     "id": 155547,
+     "name": "Murphy Guyer",
+     "photo": "https://image.tmdb.org/t/p/w185/6axiNcYIZmaeRKyfCm3xBHC7KQL.jpg",
+     "as": "Officer Eddie Hunt"
+    },
+    {
+     "id": 2257,
+     "name": "Terry Serpico",
+     "photo": "https://image.tmdb.org/t/p/w185/5UfDA4ySgYUhle7iXqOuhzAgghn.jpg",
+     "as": "Rebadow's Client"
+    },
+    {
+     "id": 6752,
+     "name": "Željko Ivanek",
+     "photo": "https://image.tmdb.org/t/p/w185/xLv19n8UvGJLxI7Z6RIv9eNXGmf.jpg",
+     "as": "Governor James Devlin"
+    },
+    {
+     "id": 39017,
+     "name": "George Morfogen",
+     "photo": "https://image.tmdb.org/t/p/w185/lCxlStkrbL4q8irt3c1vc6I76o8.jpg",
+     "as": "Bob Rebadow"
+    },
+    {
+     "id": 12974,
+     "name": "Leon",
+     "photo": "https://image.tmdb.org/t/p/w185/85JMKFAAKFznN72e6gNeUkcPRUz.jpg",
+     "as": "Jefferson Keane"
+    },
+    {
+     "id": 33835,
+     "name": "Tim Hopper",
+     "photo": "https://image.tmdb.org/t/p/w185/7QlEV2Bl4mEw5JS14cJGwRjNJBV.jpg",
+     "as": "Rick Donn"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-19T11:34:43.563Z"
 }
