@@ -22,32 +22,39 @@ One-time, in the Cloudflare dashboard (B does this; takes ten minutes):
 
 Every later push to `master` rebuilds and redeploys in about a minute.
 
-## The one switch: SITE_PASSWORD
+## The one switch: SITE_PASSWORD and GATE
 
-One setting decides both the password gate and how requests are routed, so the two cannot disagree
-(audit CF-002, CF-003, SP-016). In the Pages project `voidtvsite`: Settings > Variables and Secrets >
-the `SITE_PASSWORD` variable, in the Production list.
+Two plain-text settings decide both the password gate and how requests are routed, so the two cannot disagree
+(audit CF-002, CF-003, SP-016). In the Pages project `voidtvsite`: Settings > Variables and Secrets > the Production list.
+Do the checks in "Before you push this" (under Opening day, below) before the first deploy of this build.
 
-- **Type it as Text (plain text), not Secret.** The build reads the variable to choose the routes. Cloudflare
-  hides a Secret from the build, so a Secret looks like "not set" to the build and the pages would be
-  served with no password. The build log has a line starting `GATE:` that says which it saw, and `version.txt`
-  records it (below).
-- **Set = password on** (`gate=on`). `_routes.json` is `include /*, exclude /assets/*`: every page and data
-  file runs through the gate Function (`functions/_middleware.js`). Each of those requests counts against the
-  free allowance of 100,000 Function requests a day.
-- **Not set = site open** (`gate=off`). `_routes.json` is `include /api/*, /q/*`: pages and data files are plain
-  static files and do not count; only the analytics intake and the QR redirects run as Functions.
+The build cannot see an encrypted Secret. That is the fact the whole switch is built around: a build that sees no password
+cannot tell "there is none" from "it is a Secret", so **seeing nothing never opens the site**. Opening is something you
+say out loud, with a plain `GATE` = `off`.
+
+| what the build sees | gate | routes (`_routes.json`) | `version.txt` | what happens |
+|---|---|---|---|---|
+| `SITE_PASSWORD` (type Text) | on | `include /*, exclude /assets/*` | `gate=on` | every page and data file runs through the gate Function and counts against the free 100,000 Function requests a day |
+| `GATE` = `on` (type Text), with the password kept as a Secret | on | same | `gate=on` | the same; the running gate still checks the password from the Secret |
+| `GATE` = `off` (type Text) and no `SITE_PASSWORD` | off, the site is OPEN | `include /api/*, /q/*` | `gate=off` | pages and data files are plain static files and do not count; only the analytics intake and the QR redirects run as Functions |
+| `GATE` = `off` and `SITE_PASSWORD` both | | | | the build stops with exit 1 (they say opposite things); the old site stays up |
+| neither, on a Cloudflare build of VOIDtv | | | | the build stops with exit 1 and a message that names both variables; the old (gated) site stays up |
+| neither, on a local build or another profile (kids, public access) | off | narrow | `gate=off` | written open, with a note in the log. A local build runs no Functions, so the password does not apply to it; do not upload a local `site/` folder by hand to a project that should have a password |
+
+- **Type `SITE_PASSWORD` as Text (plain text), not Secret,** or keep it a Secret and add a Text `GATE` = `on` beside it. The
+  build log has a line starting `GATE:` that says which it saw, and `version.txt` records it (below).
+- **A Cloudflare build that stops with `GATE UNKNOWN` did the safe thing.** The old site stays up. Add the variable the
+  message names and Retry deployment.
 - **`--open` no longer exists.** It used to narrow the routes by hand while the variable said something else,
   and the two could disagree: the site came up open, with no password and no analytics. Passing it now fails the
   build at once (exit 2, message "--open no longer exists"), so an old build command is noticed and the old site
   stays up.
-- **If SITE_PASSWORD has to be a Secret** (the Text type is not offered, or B prefers it hidden): add a second variable,
-  type Text, named `GATE` with the value `on`. The build treats `GATE=on` as the gate being on; the running gate still
-  checks the password from the Secret. Remove both on opening day.
-- Preview deployments (other branches) have their own variable list. With none set they are open; only the
-  Production list matters for voidtv.net.
+- Preview deployments (other branches) have their own variable list. A preview build of VOIDtv with neither variable
+  is refused like the Production one, so set `GATE` there too (`on` keeps previews private, `off` leaves them open).
 - The doctor's `gate` light checks it from outside: it reads `gate=` from `https://voidtv.net/version.txt`, then
   `gate=on` must answer 401 on `/`, and `gate=off` must answer 200 on `/` and 200 on `/api/e`. A mismatch is red.
+  If `GATE` = `off` is set while the password is still saved as a Secret, the build opens the pages but the running site
+  still guards `/api/e`: the light is red with "`/api/e` answered 401".
 
 ## Swap day (B said go on 2026-10-14; password STAYS)
 
@@ -69,7 +76,30 @@ address, so the old www line never worked (audit F-004, CF-025).
 
 ## Opening day (whenever B says)
 
-Three clicks on the Cloudflare zone, then one in the Pages project. The first three can be done any time before;
+### Before you push this (once, before the first deploy of the one-switch build)
+
+Do this first, in this order. It takes five minutes and it is what keeps the password on. Nothing here changes what a visitor
+sees. Dashboard path: dash.cloudflare.com > Workers & Pages > `voidtvsite` > Settings > Variables and Secrets.
+
+1. **Production list: `SITE_PASSWORD` must be type Text** (its value can be read in the list), not Secret. The build cannot see
+   a Secret. If it is a Secret, either add a plain Text variable `GATE` = `on` beside it, or delete it and add it again as Text
+   with the same value (keep `GATE_KEY` as it is: the same password and the same key keep every visitor's 30-day cookie valid).
+   `GATE_KEY`, if it exists, may stay a Secret: only the running gate reads it.
+2. **Preview list:** if you want preview builds to work, add a Text `GATE` there too (`on` keeps them private). A VOIDtv build that
+   sees neither variable stops, in Preview as in Production.
+3. **Build command** under Settings > Builds: exactly `node scripts/site.js --base https://voidtv.net`. If it still carries
+   `--open`, the build stops with exit 2 and the old site stays up.
+4. `NODE_VERSION` = `24` is still there, and no `SITE_ALLOW_SHRINK` variable is set.
+5. **Push.** In the build log, find the line starting `GATE:`. It must say `GATE: on`. If the build stops with `GATE UNKNOWN`,
+   nothing was lost: the old site is still up. Do step 1 and Retry deployment.
+6. **Three minutes after the deploy goes live, run the full doctor:** HQ > Overview > Run doctor (or `node scripts/doctor.js`
+   without `--quick`). Do not wait for the nightly: its doctor runs seconds after a push and reads the previous deploy. Expect
+   `gate` green with "gate=on and the front page answers 401", and `https://voidtv.net/version.txt` showing `gate=on` on its
+   second line. If `gate` is red, the password is not guarding the pages: fix step 1 and Retry deployment before anything else.
+
+### The day itself
+
+Three clicks on the Cloudflare zone, then two in the Pages project. The first three can be done any time before;
 none of them changes what a visitor sees today. All paths below start at dash.cloudflare.com.
 
 1. **www to the bare domain, for good.** Select the `voidtv.net` domain > Rules > Redirect Rules > Create rule.
@@ -101,11 +131,17 @@ none of them changes what a visitor sees today. All paths below start at dash.cl
    `/api/e` also refuses, by itself, any request that does not carry `Sec-Fetch-Site: same-origin` (or `same-site`), any
    body over 16 KB, and any event whose show, episode, view or session id has the wrong shape (audit CF-013). A browser
    from before Safari 16.4 does not send that header, so its visits are not counted in analytics.
-4. **Open the site.** Workers & Pages > `voidtvsite` > Settings > Variables and Secrets > delete `SITE_PASSWORD` in the
-   Production list (and `GATE` if it was added), then Deployments > latest > Retry deployment. That is the whole launch.
+4. **Open the site.** Workers & Pages > `voidtvsite` > Settings > Variables and Secrets, Production list:
+   - delete `SITE_PASSWORD` (a Secret too), and delete `GATE` if it is there as `on`;
+   - add a variable of type **Text** named `GATE` with the value `off`;
+   - Deployments > latest > Retry deployment.
+
+   Both halves are needed. Deleting the password alone does not open the site: the build then sees neither variable and stops
+   with `GATE UNKNOWN`, the old gated site stays up, and nothing is lost. Adding `GATE` = `off` while the password is still
+   there also stops the build ("GATE=off but SITE_PASSWORD is also set").
 5. **Check, about two minutes later.** Open `https://voidtv.net/version.txt`: the second line must start `gate=off`.
-   Open `https://voidtv.net/` in a private window: no password page. Run the doctor (HQ > Overview > Run doctor, or
-   `node scripts/doctor.js`) and read these lights:
+   Open `https://voidtv.net/` in a private window: no password page (it answers 200). Run the full doctor (HQ > Overview > Run
+   doctor, or `node scripts/doctor.js`) and read these lights:
 
    | light | should read |
    |---|---|
@@ -119,8 +155,8 @@ none of them changes what a visitor sees today. All paths below start at dash.cl
 
    `gate` red with "`/api/e` answered 401" means a password is still set where the running site can see it, usually a
    Secret the build could not read; delete it, redeploy.
-6. **To close the site again:** add `SITE_PASSWORD` (type Text) and Retry deployment. `version.txt` returns to
-   `gate=on` and the doctor's `gate` light wants a 401.
+6. **To close the site again:** delete `GATE` (or set it to `on`), add `SITE_PASSWORD` (type Text), and Retry deployment.
+   `version.txt` returns to `gate=on` and the doctor's `gate` light wants a 401.
 
 ## What `version.txt` shows
 
@@ -175,7 +211,9 @@ open (home, a show, play an episode, search, the TV channel, the password page),
 - fewer than 100 shows (the list or the catalog did not load);
 - a catalog more than 10% smaller, in shows or episodes, than the last one that went out. On this PC that is
   `catalog/cache/publish-state.json`; on a Cloudflare build (which has no cache folder) it is the live `https://voidtv.net/version.txt`.
-  If the drop is meant, set `SITE_ALLOW_SHRINK` = `1` as a plain variable for that one deploy, then delete it;
+  A drop that is meant needs **two overrides**, because publish and the Cloudflare build each check it: `node scripts/publish.js --allow-shrink`
+  lets the push go out, and then a plain Text variable `SITE_ALLOW_SHRINK` = `1` (Production list) must be set for that one deploy
+  (Retry deployment), and deleted again afterwards. With only the first, the push goes through and the build is refused;
 - 19,500 files or more (Pages refuses 20,000), or any file over 24 MiB (Pages refuses 25 MiB). The output folder is deleted so
   nothing half-built can be deployed by hand.
 
