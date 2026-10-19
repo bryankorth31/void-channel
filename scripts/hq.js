@@ -7,7 +7,8 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { spawn, execSync } = require('child_process');
+const crypto = require('crypto');
+const { spawn, execSync, execFile, execFileSync } = require('child_process');
 const cfa = require('./lib/cfa');
 
 const ROOT = path.join(__dirname, '..');
@@ -20,7 +21,9 @@ function nodeBin() {
   try { const w = execSync('where node', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().split(/\r?\n/).find((l) => /node\.exe$/i.test(l.trim())); if (w) return { bin: w.trim(), env: process.env }; } catch (e) { /* fall through */ }
   return { bin: process.execPath, env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' } };
 }
-const CACHE = path.join(PROFILE.catalogDir, 'cache');
+// HQ's own state (the jobs list, job logs, probe lines) lives here. HQ_STATE_DIR points it at another folder; the tests use a
+// temporary one so that running them never touches catalog/cache.
+const CACHE = process.env.HQ_STATE_DIR ? path.resolve(process.env.HQ_STATE_DIR) : path.join(PROFILE.catalogDir, 'cache');
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
 promos.init({ nodeBin, cache: CACHE });
 const FILES = {
@@ -122,7 +125,7 @@ function nodeProcesses() {
     const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object ProcessId,CreationDate,CommandLine | ConvertTo-Json -Compress"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
     let arr = out ? JSON.parse(out) : [];
     if (!Array.isArray(arr)) arr = [arr];
-    return arr.filter((p) => /scripts[\\/](hunt|hunt-movies|match|art|people|db|publish|scout|networks|nightly|site|candidates|tvmovies)\.js/.test(p.CommandLine || ''))
+    return arr.filter((p) => builderScript(p.CommandLine))
       .map((p) => ({ pid: p.ProcessId, cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
   } catch (e) { return []; }
 }
@@ -133,6 +136,36 @@ const JOBS = (() => { try { return JSON.parse(fs.readFileSync(JOBS_FILE, 'utf8')
 const saveJobs = () => { try { fs.mkdirSync(CACHE, { recursive: true }); fs.writeFileSync(JOBS_FILE, JSON.stringify(JOBS.slice(0, 60))); } catch (e) { /* best effort */ } };
 const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze']);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
+// A process number is not an identity: Windows hands a finished program's number to the next program that starts.
+// So HQ keeps when each job's process was created (job.pstart) and, before it stops anything, reads the live process
+// again. One PowerShell call, about half a second, returns the creation time (UTC, to the millisecond) and command line.
+const infoScript = (pid) => `$p = Get-CimInstance Win32_Process -Filter 'ProcessId = ${pid}'; if ($p) { @{ created = $p.CreationDate.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ', [Globalization.CultureInfo]::InvariantCulture); cmd = [string]$p.CommandLine; name = [string]$p.Name } | ConvertTo-Json -Compress }`;
+const infoArgs = (pid) => ['-NoProfile', '-NonInteractive', '-Command', infoScript(pid)];
+function processInfo(pid) { // -> { created, cmd, name }, or null when no such process; throws when it cannot be read
+  if (!Number.isInteger(pid) || pid <= 0) return null;
+  const out = execFileSync('powershell', infoArgs(pid), { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'], timeout: 15000 }).toString().trim();
+  return out ? JSON.parse(out) : null;
+}
+const processInfoLater = (pid) => new Promise((ok) => { // never rejects: null when it cannot be read
+  if (!Number.isInteger(pid) || pid <= 0) return ok(null);
+  execFile('powershell', infoArgs(pid), { windowsHide: true, timeout: 15000 }, (err, out) => { try { ok(err || !String(out).trim() ? null : JSON.parse(String(out).trim())); } catch (e) { ok(null); } });
+});
+// The command line of a job's process must name its own builder script, and nothing else counts: hunt.js is not hunt-movies.js.
+const scriptRe = (name) => new RegExp('scripts[\\\\/]' + String(name).replace(/[^\w-]/g, '') + '\\.js(?=[\\s"\']|$)', 'i');
+// The builder scripts HQ lists under "Running now" and is willing to stop. One list for both, so a program can only be stopped
+// if the page could have shown it.
+const LISTED = ['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'nightly', 'site', 'candidates', 'tvmovies'];
+const builderScript = (cmd) => LISTED.find((n) => scriptRe(n).test(cmd || '')) || null;
+// Is this live process the one HQ launched for this job? A job HQ launched this run has its creation time stored.
+// A job saved by an older HQ has none: HQ stamped job.started right after the launch, so the process must have been
+// created within seconds of that stamp. { ok } or { ok: false, why, gone | replaced }.
+function sameProcess(job, live) {
+  if (!live) return { ok: false, gone: true, why: 'no such process' };
+  if (!scriptRe(job.name).test(live.cmd || '')) return { ok: false, replaced: true, why: 'its command line is not scripts/' + job.name + '.js' };
+  const now = Date.parse(live.created || '');
+  if (job.pstart) return Date.parse(job.pstart) === now ? { ok: true } : { ok: false, replaced: true, why: 'it was created at a different time than the job HQ launched' };
+  return Math.abs(now - Date.parse(job.started || '')) <= 10000 ? { ok: true } : { ok: false, replaced: true, why: 'it was not created when this job was launched' };
+}
 function startJob(name, args) {
   if (!SCRIPTS.has(name)) throw new Error('unknown script ' + name);
   args = (args || []).map(String).slice(0, 20);
@@ -145,13 +178,51 @@ function startJob(name, args) {
   const nb = nodeBin();
   const child = spawn(nb.bin, [path.join(ROOT, 'scripts', name + '.js'), ...args], { cwd: ROOT, env: nb.env, detached: true, stdio: ['ignore', fd, fd], windowsHide: true });
   child.unref();
-  const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), log, done: null, code: null };
+  const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), pstart: null, log, done: null, code: null };
   child.on('exit', (code) => { job.done = new Date().toISOString(); job.code = code; saveJobs(); });
   JOBS.unshift(job); saveJobs();
+  // Keep when this process was created, so a later Stop can tell it from another program given the same number.
+  processInfoLater(child.pid).then((info) => { if (info && !job.done && scriptRe(name).test(info.cmd || '')) { job.pstart = info.created; saveJobs(); } });
   return job;
 }
 const jobList = () => JOBS.map((j) => { const running = j.done ? false : alive(j.pid); if (!running && !j.done) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; saveJobs(); } return { ...j, running, tail: tail(j.log, 3) }; });
-function stopJob(pid) { try { execSync(`taskkill /PID ${+pid} /T /F`, { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone */ } }
+// Stop one job that HQ started, never a bare process number. The job record says which process it was; before anything
+// is killed the live process must still be that one (same script in its command line, same creation time). If it is not,
+// nothing is killed (409), one line goes to the console, and a job whose number now belongs to another program is
+// marked finished so it stops showing as running. Returns { status, body, changed }; the caller saves the jobs file.
+function stopHqJob(job, read = processInfo) {
+  const refuse = (why, error) => { console.log(`HQ stop refused: process ${job.pid} is not job ${job.id} (${job.name}): ${why}`); return { status: 409, body: { error } }; };
+  if (job.done) return { status: 200, body: { ok: true, stopped: false, note: 'That job already finished.' } };
+  if (job.pid === process.pid) return refuse('that is HQ itself', 'HQ will not stop itself.');
+  let live;
+  try { live = read(job.pid); } catch (e) { return refuse('could not read the process (' + String(e.message).slice(0, 60) + ')', 'HQ could not check that process, so it did not stop it.'); }
+  const v = sameProcess(job, live);
+  const finished = (note) => { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; return { status: 200, body: { ok: true, stopped: false, note }, changed: true }; };
+  if (v.gone) return finished('That job had already ended.');
+  if (!v.ok) { const r = refuse(v.why, 'Process ' + job.pid + ' is no longer that job (' + v.why + '), so HQ did not stop it.'); if (v.replaced) { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; r.changed = true; } return r; }
+  try { execFileSync('taskkill', ['/PID', String(job.pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
+  return { status: 200, body: { ok: true, stopped: true } };
+}
+// Stop a node job HQ did not start: the Task Scheduler's nightly or publish, or a script run by hand in a terminal. The page
+// sends the process number together with the start time it showed in "Running now". HQ stops it only if the live process is
+// node.exe, has one of the builder scripts in its command line, and still has that creation time (to within 2 ms: the list and
+// this read format the time with different tools). A bare number, or a number now held by a different program, is refused (409).
+function stopListedProcess(pid, started, read = processInfo) {
+  const refuse = (why, error) => { console.log(`HQ stop refused: process ${pid} (page showed start ${String(started).slice(0, 30)}): ${why}`); return { status: 409, body: { error } }; };
+  if (!Number.isInteger(pid) || pid <= 0) return refuse('not a process number', 'That is not a process number.');
+  if (typeof started !== 'string' || Number.isNaN(Date.parse(started))) return refuse('no start time sent', 'HQ needs the start time the page showed along with the process number, so it can tell the program from another one given the same number. Reload the page and try again.');
+  if (pid === process.pid) return refuse('that is HQ itself', 'HQ will not stop itself.');
+  let live;
+  try { live = read(pid); } catch (e) { return refuse('could not read the process (' + String(e.message).slice(0, 60) + ')', 'HQ could not check that process, so it did not stop it.'); }
+  if (!live) return { status: 200, body: { ok: true, stopped: false, note: 'That process had already ended.' } };
+  if (!/^node(\.exe)?$/i.test(live.name || '')) return refuse('it is not node.exe (' + String(live.name).slice(0, 30) + ')', 'Process ' + pid + ' is not a node job, so HQ did not stop it.');
+  if (!builderScript(live.cmd)) return refuse('its command line names no builder script', 'Process ' + pid + ' is not one of the builder scripts, so HQ did not stop it.');
+  const apart = Math.abs(Date.parse(live.created) - Date.parse(started)); // NaN when the live time is missing or not a date
+  if (!Number.isFinite(apart)) return refuse('its creation time could not be read', 'HQ could not read when that process started, so it did not stop it.');
+  if (apart > 2) return refuse('it was created at a different time than the page showed', 'Process ' + pid + ' is not the one the page showed (a different program has that number now), so HQ did not stop it. Reload the page.');
+  try { execFileSync('taskkill', ['/PID', String(pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
+  return { status: 200, body: { ok: true, stopped: true } };
+}
 
 // ---- overrides --------------------------------------------------------------------------------
 function patchOverride(slug, body) {
@@ -218,21 +289,44 @@ function homeOrder() {
 
 // ---- http -------------------------------------------------------------------------------------
 const MIME = { '.html': 'text/html; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff2': 'font/woff2', '.js': 'text/javascript', '.css': 'text/css' };
-const send = (res, code, body, type) => { res.writeHead(code, { 'content-type': type || 'application/json; charset=utf-8', 'cache-control': 'no-store' }); res.end(type ? body : JSON.stringify(body)); };
+// HQ's own page must not be framed by another site (an invisible frame over a "Publish" click). The page frames the motion editor,
+// not the other way round, so this does not affect it. Both the old header and its CSP form, for every browser.
+const NO_FRAMING = { 'x-frame-options': 'SAMEORIGIN', 'content-security-policy': "frame-ancestors 'self'" };
+const send = (res, code, body, type) => { res.writeHead(code, { 'content-type': type || 'application/json; charset=utf-8', 'cache-control': 'no-store', ...(/^text\/html/.test(type || '') ? NO_FRAMING : {}) }); res.end(type ? body : JSON.stringify(body)); };
 const body = (req) => new Promise((ok, no) => { let d = ''; req.on('data', (c) => { d += c; if (d.length > 2e6) no(new Error('too big')); }); req.on('end', () => { try { ok(d ? JSON.parse(d) : {}); } catch (e) { no(e); } }); });
 
+// Who may talk to HQ. Only this server's own address on the port it is really listening on: a page served from
+// another localhost port, or from another site, is not "local" for this purpose (CF-004).
+const selfAddrs = (port) => ['127.0.0.1', 'localhost', '[::1]'].map((h) => h + ':' + port);
+const hostAllowed = (host, port) => !!port && selfAddrs(port).includes(String(host || '').toLowerCase());
+// No Origin header at all (curl, node, a plain same-origin GET) is fine here. One that is present must be this
+// server's own page. "null" (sandboxed frames, local files) is refused: HQ's page is always served over http by HQ itself.
+const originAllowed = (origin, port) => origin === undefined || (!!port && selfAddrs(port).some((a) => 'http://' + a === String(origin).toLowerCase()));
+// The media type is the part before any ";". "text/plain;x=application/json" is text/plain, not JSON.
+const mediaType = (h) => String(h || '').split(';')[0].trim().toLowerCase();
+// A new secret every time HQ starts. It is written into the page HQ serves (a meta tag) and nowhere else: not in a URL,
+// not in a log. Every call that changes anything must send it back as X-HQ-Token. A page from another origin cannot
+// read HQ's page, so it cannot learn it; the desktop app and a browser tab both get it by loading the page from HQ.
+const TOKEN = crypto.randomBytes(32).toString('hex');
+const tokenOk = (given) => { const a = Buffer.from(String(given || '')), b = Buffer.from(TOKEN); return a.length === b.length && crypto.timingSafeEqual(a, b); };
+
 const server = http.createServer(async (req, res) => {
-  const url = new URL(req.url, 'http://x');
+  // Local only, and only HQ's own page: a web page in the owner's browser, or one served from another local port,
+  // must not be able to drive HQ (publish, taskkill, overrides). Order matters: host, origin, media type, token.
+  const port = server.address() && server.address().port;
+  if (!hostAllowed(req.headers.host, port)) return send(res, 403, { error: 'HQ answers its own address only' });
+  if (!originAllowed(req.headers.origin, port)) return send(res, 403, { error: 'cross-origin request refused' });
+  const changes = req.method !== 'GET' && req.method !== 'HEAD'; // anything that is not a plain read needs JSON and the token
+  if (changes && mediaType(req.headers['content-type']) !== 'application/json') return send(res, 415, { error: 'JSON only' });
+  if (changes && !tokenOk(req.headers['x-hq-token'])) return send(res, 401, { error: 'HQ token missing or wrong. Reload this page: HQ was restarted since it was opened.' });
+  // Only now parse the address, and never let a bad one throw: new URL('//', ...) is an error, and an error out of this async
+  // handler is an unhandled rejection that ends the HQ process. A page could send that request with no token.
+  let url; try { url = new URL(req.url, 'http://x'); } catch (e) { return send(res, 400, { error: 'bad address' }); }
   const p = url.pathname;
-  // Local only: a web page in the owner's browser must not be able to drive HQ (publish, taskkill, overrides).
-  const host = req.headers.host || '', origin = req.headers.origin || '';
-  const local = (h) => /^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$/.test(h);
-  if (!local(host)) return send(res, 403, { error: 'HQ answers localhost only' });
-  if (origin && !local(origin.replace(/^https?:\/\//, ''))) return send(res, 403, { error: 'cross-origin request refused' });
-  if (req.method === 'POST' && p !== '/api/probe' && !/application\/json/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'JSON only' });
   const SLUG_OK = /^[a-z0-9][a-z0-9-]*$/;
   try {
-    if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html')), MIME['.html']);
+    if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
+    if (p === '/api/ping' && req.method === 'POST') return send(res, 200, { ok: true }); // does nothing; the doctor and the tests use it to see whether the guards above let a call through
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
     if (p === '/api/overview') return send(res, 200, overview());
     if (p === '/api/health') return send(res, 200, readJson(path.join(CACHE, 'health.json'), { level: 'none', checks: [] }));
@@ -257,12 +351,13 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses() });
     if (p === '/api/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, startJob(b.name, b.args)); }
     if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running: j.done ? false : alive(j.pid) }); }
-    if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (j) stopJob(j.pid); return send(res, 200, { ok: true }); }
-    if (p === '/api/processes/stop' && req.method === 'POST') { const b = await body(req); stopJob(b.pid); return send(res, 200, { ok: true }); }
+    if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no such job' }); const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body); }
+    if (p === '/api/processes/stop' && req.method === 'POST') { // never a bare number: one of HQ's own jobs (checked against the start time HQ stored) or a listed node job (checked against the start time the page showed)
+      const b = await body(req); const pid = typeof b.pid === 'number' ? b.pid : NaN; const j = Number.isInteger(pid) ? JOBS.find((x) => !x.done && x.pid === pid) : null;
+      const r = j ? stopHqJob(j) : stopListedProcess(pid, b.started); if (r.changed) saveJobs(); return send(res, r.status, r.body);
+    }
     if (p === '/api/log') { const name = (url.searchParams.get('name') || '').replace(/[^\w.-]/g, ''); return send(res, 200, { log: tail(path.join(CACHE, name), +url.searchParams.get('tail') || 100) }); }
-    if (p === '/api/probe') { // playback probes from a test page on this PC (cross-origin from the local site server)
-      res.setHeader('access-control-allow-origin', '*'); res.setHeader('access-control-allow-headers', 'content-type');
-      if (req.method === 'OPTIONS') { res.writeHead(204); return res.end(); }
+    if (p === '/api/probe') { // playback probes (the player work, 14 Oct). Same rules as every other call: no wildcard CORS, no test page on another port.
       if (req.method === 'POST') { const b = await body(req); fs.mkdirSync(CACHE, { recursive: true }); fs.appendFileSync(path.join(CACHE, 'probe.jsonl'), JSON.stringify({ at: new Date().toISOString(), ...b }) + '\n'); return send(res, 200, { ok: true }); }
       return send(res, 200, { lines: tail(path.join(CACHE, 'probe.jsonl'), 50).split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean) });
     }
@@ -304,5 +399,5 @@ function start(opts = {}) {
     });
   });
 }
-module.exports = { start, PORT, ROOT };
+module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, stopListedProcess, sameProcess, processInfo, scriptRe, builderScript } };
 if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });
