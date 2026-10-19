@@ -112,6 +112,20 @@ function buildTv(shows, types) {
   return Object.assign({ v: 2 }, TVGRID.trimLib(lib, used), { sl, sp, channels });
 }
 
+// Which TV movies and specials the site shows. A movie ships only when the matcher is sure of it (state LIVE) or when a person
+// looked at it and approved it: catalog/overrides.json, key "movie-<tmdbId>", "approved": true (R-007: by hand, no AI).
+// A REVIEW movie is the matcher's guess and often another work under the film's title, so it stays hidden until a person says yes.
+// A movie with no playable file never ships, approved or not. The hard excludes (C-SPAN, hearings, news; R-005) are the last
+// gate and beat an approval. TV show episodes do not use this: a REVIEW episode still ships.
+let hardExcludeFn; // loaded on the first movie, so the small copies of the build the tests make (they hold no movies) need not carry hardexclude.js
+const movieApproved = (m, OV) => { const o = OV && OV['movie-' + m.tmdbId]; return !!o && o.approved === true; };
+function movieShips(m, OV) {
+  if (!m || !m.file || !m.file.playable || m.state === 'MISSING') return false;
+  hardExcludeFn = hardExcludeFn || require('./hardexclude').hardExclude;
+  if (hardExcludeFn({ title: m.file.itemTitle, stem: m.file.stem, item: m.file.item, collection: m.file.collection }, m.title)) return false;
+  return m.state === 'LIVE' || movieApproved(m, OV);
+}
+
 function assemble() {
   const LIST = readJson(PROFILE.listFile, { types: [], shows: [] });
   const ART = readJson(path.join(PROFILE.catalogDir, 'art.json'), {});
@@ -149,7 +163,7 @@ function assemble() {
   for (const f of (fs.existsSync(MOV_DIR) ? fs.readdirSync(MOV_DIR) : [])) {
     if (!f.endsWith('.json')) continue;
     const m = readJson(path.join(MOV_DIR, f), null);
-    if (!m || !m.file || !m.file.playable || m.state === 'MISSING') continue;
+    if (!movieShips(m, OV)) continue;
     const ref = TVM_BY_ID[m.tmdbId] || {};
     const companies = (ref.companies || []).join(' ');
     const tags = [];
@@ -1061,4 +1075,4 @@ ${JS}
 </script></body></html>`;
 }
 
-module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND };
+module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND, movieShips, movieApproved };
