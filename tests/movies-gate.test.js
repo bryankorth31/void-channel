@@ -218,5 +218,5 @@ test('the doctor shows the light under the name the runbook gives it', () => {
   assert.match(doctor, /add\('movies:review-hidden', g\.level, g\.detail, g\.fix\)/);
   const runbook = fs.readFileSync(path.join(REPO, 'docs/RUNBOOK.md'), 'utf8');
   assert.match(runbook, /^\| movies:review-hidden \|/m);
-  assert.doesNotMatch(runbook, /—/);
+  assert.doesNotMatch(runbook, new RegExp(String.fromCharCode(0x2014)));
 });
