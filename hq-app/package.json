@@ -1,7 +1,7 @@
 {
   "name": "voidtv-hq",
   "productName": "VOIDtv HQ",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The control room for VOIDtv: shows, files, jobs, publishing and analytics, on this PC.",
   "main": "main.js",
   "author": "Church of American Strength & Hope",
@@ -19,7 +19,7 @@
     "appId": "net.voidtv.hq",
     "productName": "VOIDtv HQ",
     "directories": { "output": "dist", "buildResources": "build" },
-    "files": ["main.js", "build/icon.png"],
+    "files": ["main.js", "lab.js", "build/icon.png", "build/icon.ico"],
     "asar": true,
     "win": { "target": [{ "target": "nsis", "arch": ["x64"] }], "icon": "build/icon.ico" },
     "nsis": {

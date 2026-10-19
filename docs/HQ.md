@@ -25,13 +25,32 @@ opinion on raw traffic.
 
 B (2026-10-14): "build the HQ as an actual app." `hq-app/` is an Electron shell: it starts
 `scripts/hq.js` inside its own process and shows it in a window titled VOIDtv HQ, with a tray icon
-(Open HQ, Open in browser, Start with Windows, Quit). Closing the window hides it to the tray; jobs it
+(Open HQ, Open in browser, Open player lab, Start with Windows, Quit). Closing the window hides it to the tray; jobs it
 started keep running even after Quit. It remembers where the repo is (app config), so a `git pull`
 updates HQ without reinstalling.
 
-- Installed at `%LOCALAPPDATA%ProgramsVOIDtv HQVOIDtv HQ.exe`; Start Menu entry "VOIDtv HQ".
-- Installer: `hq-app/dist/VOIDtv HQ Setup 1.0.0.exe` (not in git). Rebuild with
-  `cd hq-app && npm install && npm run dist`.
+- **The player lab is built in** (B, 19 Oct 2026; app 1.1.0). The **Player lab** button in the HQ header, or the tray's
+  **Open player lab**, opens `player/lab/` in its own window. HQ serves the `player/` folder on `127.0.0.1:8792`, the
+  same address `player\LAB.cmd` uses, from the moment it starts, so the lab address also works in Edge without LAB.cmd.
+  If LAB.cmd's server already holds the port, HQ uses it; if LAB.cmd is closed later, HQ takes the port over the next
+  time the lab is opened from HQ (until then the Edge address is dead). The button and the tray item bring an open lab
+  window forward at once and never reload a live page, so a running soak is safe; only a lab page that failed to load
+  is loaded again. The lab window is set
+  not to slow its timers and drawing when it sits behind other windows (Electron's backgroundThrottling off). That is a
+  setting, not yet a measurement: before trusting a long soak, cover the lab window for 5 to 10 minutes and check that
+  the Live panel keeps counting frames and never says hidden. It is Chromium, not Edge: a drift that shows in Edge and
+  not here points at Edge's own power features. The server answers only this PC's own names (127.0.0.1, localhost),
+  reads only inside `player/` and never lists folders. Code: `hq-app/lab.js`; tests: `tests/hq-lab.test.js`.
+- The header button needs the 1.1.0 app or LAB.cmd: with only `node scripts/hq.js` or `HQ.cmd` running, nothing serves
+  8792, so start `player\LAB.cmd` first.
+- The app's icon is the site's own artwork (`assets/brand`, crops of Bryan's 19 Oct favicon sheet), made by
+  `audit/drafts/favicon/hq_icons_site.py`: `hq-app/build/icon.ico` holds the site's favicon frames at 16, 32 and 48 px
+  (the glowing "vt" TV, the same as the browser tab), 24 px from the 48, and the glowing "voidtv" TV from
+  `icon-512.png` at 64, 128 and 256 px; `icon.png` is that TV at 512 px. The windows and the tray use the .ico on
+  Windows. If Windows still shows the old icon after installing, restart Explorer (its icon cache).
+- Installed at `%LOCALAPPDATA%\Programs\VOIDtv HQ\VOIDtv HQ.exe`; Start Menu entry "VOIDtv HQ".
+- Installer: `hq-app/dist/VOIDtv HQ Setup 1.1.0.exe` (not in git). Rebuild with
+  `cd hq-app && npm install && npm run dist`. Quit HQ from the tray before installing over it.
 - Only one copy runs at a time; launching it again just brings the window forward.
 - The plain `node scripts/hq.js` and `HQ.cmd` still work and serve the same page.
 

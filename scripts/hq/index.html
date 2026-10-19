@@ -34,7 +34,7 @@ video{width:100%;max-width:720px;background:#000;border-radius:8px}
 </style></head><body>
 <header><img src="/brand/icon-192.png" alt=""><span class="wm">VOID<span>tv</span></span><span class="hq">HQ</span>
 <nav id="nav"></nav>
-<div class="right"><span id="gitline"></span><button class="gold" onclick="publish()">Publish now</button><button class="sm" onclick="publish('--allow-shrink')" title="Use after publish.log says refused: the catalog is more than 10% smaller than the last published one">Publish anyway (shrink)</button><button class="sm" onclick="publish('--allow-other-commits')" title="Use after publish.log says held: commits from other chats are waiting on this PC">Push with other commits</button></div></header>
+<div class="right"><span id="gitline"></span><a class="btn" href="http://127.0.0.1:8792/lab/" target="_blank" rel="noopener" style="text-decoration:none" title="The player lab: test playback, sync and stalls on this PC. In the HQ app it opens in its own window.">Player lab</a><button class="gold" onclick="publish()">Publish now</button><button class="sm" onclick="publish('--allow-shrink')" title="Use after publish.log says refused: the catalog is more than 10% smaller than the last published one">Publish anyway (shrink)</button><button class="sm" onclick="publish('--allow-other-commits')" title="Use after publish.log says held: commits from other chats are waiting on this PC">Push with other commits</button></div></header>
 <main id="main"></main>
 <script>
 const $=(s,r)=>(r||document).querySelector(s);const jq=(v)=>esc(JSON.stringify(String(v==null?'':v)));const esc=(s)=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
